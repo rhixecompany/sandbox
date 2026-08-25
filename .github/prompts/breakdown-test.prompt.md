@@ -1,44 +1,134 @@
 ---
-name: breakdown-test
-title: Test Planning & Quality Assurance Prompt
-description: No description
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /breakdown-test
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: default
-    mcp_servers:
-    - filesystem
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /breakdown-test
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:code-quality
-- domain:planning
-- domain:testing
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Quality Standards Framework](#quality-standards-framework)
+  - [ISTQB Framework Application](#istqb-framework-application)
+  - [ISO 25010 Quality Model](#iso-25010-quality-model)
+- [Input Requirements](#input-requirements)
+  - [Core Feature Documents](#core-feature-documents)
+- [Output Format](#output-format)
+- [GitHub Issue Templates for Testing](#github-issue-templates-for-testing)
+  - [Test Strategy Issue Template](#test-strategy-issue-template)
+- [Test Strategy Overview](#test-strategy-overview)
+- [ISTQB Framework Application](#istqb-framework-application)
+- [ISO 25010 Quality Characteristics**Priority Assessment:**](#iso-25010-quality-characteristics**priority-assessment:**)
+- [Quality Gates](#quality-gates)
+- [Labels](#labels)
+- [Estimate](#estimate)
+  - [Playwright Test Implementation Issue Template](#playwright-test-implementation-issue-template)
+- [Test Implementation Scope](#test-implementation-scope)
+- [ISTQB Test Case Design](#istqb-test-case-design)
+- [Test Cases to Implement**Functional Tests:**](#test-cases-to-implement**functional-tests:**)
+- [Playwright Implementation Tasks](#playwright-implementation-tasks)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Labels](#labels)
+- [Estimate](#estimate)
+  - [Quality Assurance Issue Template](#quality-assurance-issue-template)
+- [Quality Validation Scope](#quality-validation-scope)
+- [ISO 25010 Quality Assessment**Quality Characteristics Validation:**](#iso-25010-quality-assessment**quality-characteristics-validation:**)
+- [Quality Gate](#quality-gate)
+- [Quality Metrics](#quality-metrics)
+- [Labels](#labels)
+- [Estimate](#estimate)
+- [Success Metrics](#success-metrics)
+  - [Test Coverage Metrics](#test-coverage-metrics)
+  - [Quality Validation Metrics](#quality-validation-metrics)
+  - [Process Efficiency Metrics](#process-efficiency-metrics)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Quality Standards Framework](#quality-standards-framework)
+- [ISTQB Framework Application](#istqb-framework-application)
+- [ISO 25010 Quality Model](#iso-25010-quality-model)
+- [Input Requirements](#input-requirements)
+- [Core Feature Documents](#core-feature-documents)
+- [Output Format](#output-format)
+- [GitHub Issue Templates for Testing](#github-issue-templates-for-testing)
+- [Test Strategy Issue Template](#test-strategy-issue-template)
+- [Test Strategy Overview](#test-strategy-overview)
+- [ISTQB Framework Application](#istqb-framework-application)
+- [ISO 25010 Quality Characteristics**Priority Assessment:**](#iso-25010-quality-characteristics**priority-assessment:**)
+- [Quality Gates](#quality-gates)
+- [Labels](#labels)
+- [Estimate](#estimate)
+- [Playwright Test Implementation Issue Template](#playwright-test-implementation-issue-template)
+- [Test Implementation Scope](#test-implementation-scope)
+- [ISTQB Test Case Design](#istqb-test-case-design)
+- [Test Cases to Implement**Functional Tests:**](#test-cases-to-implement**functional-tests:**)
+- [Playwright Implementation Tasks](#playwright-implementation-tasks)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Labels](#labels)
+- [Estimate](#estimate)
+- [Quality Assurance Issue Template](#quality-assurance-issue-template)
+- [Quality Validation Scope](#quality-validation-scope)
+- [ISO 25010 Quality Assessment**Quality Characteristics Validation:**](#iso-25010-quality-assessment**quality-characteristics-validation:**)
+- [Quality Gate](#quality-gate)
+- [Quality Metrics](#quality-metrics)
+- [Labels](#labels)
+- [Estimate](#estimate)
+- [Success Metrics](#success-metrics)
+- [Test Coverage Metrics](#test-coverage-metrics)
+- [Quality Validation Metrics](#quality-validation-metrics)
+- [Process Efficiency Metrics](#process-efficiency-metrics)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Test Planning and Quality Assurance prompt that generates comprehensive test strategies, task breakdowns, and quality validation plans for GitHub projects.
@@ -86,7 +176,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Quality Standards Framework
@@ -332,7 +422,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -340,7 +429,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 
@@ -351,5 +439,4 @@ Same-family prompts:
 - [`breakdown-feature-implementation.prompt.md`](breakdown-feature-implementation.prompt.md)
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
-
 

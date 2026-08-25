@@ -1,47 +1,75 @@
 ---
-name: declarative-agents
-title: Microsoft 365 Declarative Agents Development Kit
-description: Complete development kit for Microsoft 365 Copilot declarative agents with three comprehensive
-  workflows (basic, advanced, validation), TypeSpec support, and Microsoft 365 Agents Toolkit integration.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /declarative-agents
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /declarative-agents
-    flags: {}
-    help: Complete development kit for Microsoft 365 Copilot declarative agents with th...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Workflow 1: Basic Agent Creation](#workflow-1:-basic-agent-creation)
+- [Workflow 2: Advanced Enterprise Agent Design](#workflow-2:-advanced-enterprise-agent-design)
+- [Workflow 3: Validation & Optimization](#workflow-3:-validation-&-optimization)
+- [Core Features Across All Workflows](#core-features-across-all-workflows)
+  - [Microsoft 365 Agents Toolkit Integration](#microsoft-365-agents-toolkit-integration)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Workflow 1: Basic Agent Creation](#workflow-1:-basic-agent-creation)
+- [Workflow 2: Advanced Enterprise Agent Design](#workflow-2:-advanced-enterprise-agent-design)
+- [Workflow 3: Validation & Optimization](#workflow-3:-validation-&-optimization)
+- [Core Features Across All Workflows](#core-features-across-all-workflows)
+- [Microsoft 365 Agents Toolkit Integration](#microsoft-365-agents-toolkit-integration)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
@@ -90,12 +118,12 @@ Use when you need to declarative agents for the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Workflow 1: Basic Agent Creation
 
-**Perfect for**: New developers, simple agents, quick prototypesI'll guide you through:1. **Agent Planning**: Define purpose, target users, and core capabilities2. **Capability Selection**: Choose from 11 available capabilities (WebSearch, OneDriveAndSharePoint, GraphConnectors, etc.)3. **Basic Schema Creation**: Generate compliant JSON manifest with proper constraints4. **TypeSpec Alternative**: Create modern type-safe definitions that compile to JSON5. **Testing Setup**: Configure Agents Playground for local testing6. **Toolkit Integration**: Leverage Microsoft 365 Agents Toolkit for enhanced development
+**Perfect for**: New developers, simple agents, quick prototypesI'll guide you through:1. **Agent Planning**: Define purpose, target users, and core capabilities2. **Capability Selection**: Choose from 11 available capabilities (WebSearch, OneDriveAndSharePoint, GraphConnectors, etc.)3. **Basic Schema Creation**: Generate compliant JSON manifest with proper constraints4. **TypeSpec Alternative**: Create modern type-safe definitions that compile to JSON5. **Testing Setup**: Configure Agents Playground for local testing6. **Toolkit Integration**: use Microsoft 365 Agents Toolkit for enhanced development
 
 ## Workflow 2: Advanced Enterprise Agent Design
 
@@ -198,7 +226,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

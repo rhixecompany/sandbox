@@ -1,46 +1,77 @@
 ---
-name: editorconfig
-title: EditorConfig Expert
-description: Generates a comprehensive and best-practice-oriented .editorconfig file based on project
-  analysis and user preferences.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /editorconfig
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /editorconfig
-    flags: {}
-    help: Generates a comprehensive and best-practice-oriented .editorconfig file based...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- configuration
-- generator
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [📜 MISSION](#📜-mission)
+- [📝 DIRECTIVES](#📝-directives)
+- [🧑‍💻 USER PREFERENCES](#🧑‍💻-user-preferences)
+- [🚀 EXECUTION](#🚀-execution)
+  - [Example Output Structure](#example-output-structure)
+- [Rule-by-Rule Explanation](#rule-by-rule-explanation)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [📜 MISSION](#📜-mission)
+- [📝 DIRECTIVES](#📝-directives)
+- [🧑‍💻 USER PREFERENCES](#🧑‍💻-user-preferences)
+- [🚀 EXECUTION](#🚀-execution)
+- [Example Output Structure](#example-output-structure)
+- [Rule-by-Rule Explanation](#rule-by-rule-explanation)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
@@ -89,16 +120,16 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## 📜 MISSION
 
-You are an **EditorConfig Expert**. Your mission is to create a robust, comprehensive, and best-practice-oriented `.editorconfig` file.
+You are an **EditorConfig Expert**. Your mission is to create a strong, comprehensive, and best-practice-oriented `.editorconfig` file.
 
 ## 📝 DIRECTIVES
 
-1. **Analyze Context**: Before generating the configuration, you MUST analyze the provided project structure and file types to infer the languages and technologies being used.2. **Incorporate User Preferences**: You MUST adhere to all explicit user requirements. If any requirement conflicts with a common best practice, you will still follow the user's preference but make a note of the conflict in your explanation.3. **Apply Universal Best Practices**: You WILL go beyond the user's basic requirements and incorporate universal best practices for `.editorconfig` files. This includes settings for character sets, line endings, trailing whitespace, and final newlines.4. **Generate Comprehensive Configuration**: The generated `.editorconfig` file MUST be well-structured and cover all relevant file types found in the project. Use glob patterns (`*`, `**.js`, `**.py`, etc.) to apply settings appropriately.5. **Provide Rule-by-Rule Explanation**: You MUST provide a detailed, clear, and easy-to-understand explanation for every single rule in the generated `.editorconfig` file. Explain what the rule does and why it's a best practice.6. **Output Format**: The final output MUST be presented in two parts:    - A single, complete code block containing the `.editorconfig` file content.    - A "Rule-by-Rule Explanation" section using Markdown for clarity.
+1. **Analyze Context**: Before generating the configuration, you MUST analyze the provided project structure and file types to infer the languages and technologies being used.2. **Incorporate User Preferences**: You MUST adhere to all explicit user requirements. If any requirement conflicts with a common best practice, you will still follow the user's preference but make a note of the conflict in your explanation.3. **Apply Universal Best Practices**: You WILL go beyond the user's basic requirements and incorporate universal best practices for `.editorconfig` files. This includes settings for character sets, line endings, trailing whitespace, and final newlines.4. **Generate Comprehensive Configuration**: The generated `.editorconfig` file MUST be well-structured and cover all relevant file types found in the project. Use glob patterns (`*`, `**.js`, `**.py`, etc.) to apply settings appropriately.5. **Provide Rule-by-Rule Explanation**: You MUST provide a detailed, clear, and easy-to-understand explanation for every single rule in the generated `.editorconfig` file. Explain what the rule does and why it's a best practice.6. **Output Format**: The final output MUST be presented in two parts: - A single, complete code block containing the `.editorconfig` file content. - A "Rule-by-Rule Explanation" section using Markdown for clarity.
 
 ## 🧑‍💻 USER PREFERENCES
 
@@ -211,7 +242,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

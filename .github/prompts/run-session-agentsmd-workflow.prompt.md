@@ -1,47 +1,68 @@
 ---
-name: run-session-agentsmd-workflow
-title: Run Agents.md Workflow
-description: 'Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching,
-  and reporting.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /run-session-agentsmd-workflow
-toolsets:
-- file
-- terminal
-skills:
-- subagent-driven-development
-dependencies:
-- skill:subagent-driven-development
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /run-session-agentsmd-workflow
-    flags: {}
-    help: 'Execute the AGENTS.md session workflow: introspection, tool discovery, profil...'
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- git
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Resolve Scope](#phase-1:-resolve-scope)
+  - [Phase 2: Generate AGENTS](#phase-2:-generate-agents)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Resolve Scope](#phase-1:-resolve-scope)
+- [Phase 2: Generate AGENTS](#phase-2:-generate-agents)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.
@@ -66,7 +87,7 @@ Use this prompt when the user wants the workflow executed, not just designed.Thi
 - Workspace discovery and path resolution.
 - AGENTS.md authoring from local evidence.
 - Nested git repository handling.
-- Robust push/retry logic and fallback branch publishing.
+- strong push/retry logic and fallback branch publishing.
 - Compact verification reporting.
 
 ## Subagents
@@ -86,12 +107,12 @@ Use this prompt when the user wants the workflow executed, not just designed.Thi
 
 - Execute all phases unless genuinely blocked.
 - Resolve targets only from the provided argument and existing workspace paths.
-- For AGENTS.md generation:  - use local manifest and README evidence.  - include practical setup, workflow, testing, style, security, and troubleshooting sections.
-- For git operations:  - stage only AGENTS.md.  - commit message must be: docs: add or update AGENTS.md for agent guidance.  - push to normalized PR branch names:    - chore/agentsmd-YYYYMMDD-<repo>
+- For AGENTS.md generation: - use local manifest and README evidence. - include practical setup, workflow, testing, style, security, and troubleshooting sections.
+- For git operations: - stage only AGENTS.md. - commit message must be: docs: add or update AGENTS.md for agent guidance. - push to normalized PR branch names: - chore/agentsmd-YYYYMMDD-<repo>
 - If hooks fail due missing dependencies, retry commit with no-verify and record this.
 - If push fails because of remote divergence or oversized local history, use a clean-clone fallback and publish the branch.
 - Never force-push.
-- Always output a compact final table with:  - repo | branch | commit SHA | status.
+- Always output a compact final table with: - repo | branch | commit SHA | status.
 - Include explicit blocker notes for any failed repo.
 
 ## Phases
@@ -207,7 +228,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

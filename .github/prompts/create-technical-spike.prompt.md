@@ -1,44 +1,115 @@
 ---
-name: create-technical-spike
-title: Create Technical Spike Document
-description: Create time-boxed technical spike documents for researching and resolving critical development
-  decisions before implementation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /create-technical-spike
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /create-technical-spike
-    flags: {}
-    help: Create time-boxed technical spike documents for researching and resolving cri...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- generator
-- prompts
-- specification
-- typescript
-- architecture
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Summary](#summary)
+- [Research Question(s)](#research-questions)
+- [Investigation Plan](#investigation-plan)
+  - [Research Tasks](#research-tasks)
+  - [Success Criteria](#success-criteria)
+- [Technical Context](#technical-context)
+- [Research Findings](#research-findings)
+  - [Investigation Results](#investigation-results)
+  - [Prototype/Testing Notes](#prototype/testing-notes)
+  - [External Resources](#external-resources)
+- [Decision](#decision)
+  - [Recommendation](#recommendation)
+  - [Rationale](#rationale)
+  - [Implementation Notes](#implementation-notes)
+  - [Follow-up Actions](#follow-up-actions)
+- [Status History](#status-history)
+- [Categories for Technical Spikes](#categories-for-technical-spikes)
+- [File Naming Conventions](#file-naming-conventions)
+- [Best Practices for AI Agents](#best-practices-for-ai-agents)
+- [Research Strategy](#research-strategy)
+  - [Phase 1: Information Gathering](#phase-1:-information-gathering)
+  - [Phase 2: Validation & Testing](#phase-2:-validation-&-testing)
+  - [Phase 3: Decision & Documentation](#phase-3:-decision-&-documentation)
+- [Tools Usage](#tools-usage)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Summary](#summary)
+- [Research Question(s)](#research-questions)
+- [Investigation Plan](#investigation-plan)
+- [Research Tasks](#research-tasks)
+- [Success Criteria](#success-criteria)
+- [Technical Context](#technical-context)
+- [Research Findings](#research-findings)
+- [Investigation Results](#investigation-results)
+- [Prototype/Testing Notes](#prototype/testing-notes)
+- [External Resources](#external-resources)
+- [Decision](#decision)
+- [Recommendation](#recommendation)
+- [Rationale](#rationale)
+- [Implementation Notes](#implementation-notes)
+- [Follow-up Actions](#follow-up-actions)
+- [Status History](#status-history)
+- [Categories for Technical Spikes](#categories-for-technical-spikes)
+- [File Naming Conventions](#file-naming-conventions)
+- [Best Practices for AI Agents](#best-practices-for-ai-agents)
+- [Research Strategy](#research-strategy)
+- [Phase 1: Information Gathering](#phase-1:-information-gathering)
+- [Phase 2: Validation & Testing](#phase-2:-validation-&-testing)
+- [Phase 3: Decision & Documentation](#phase-3:-decision-&-documentation)
+- [Tools Usage](#tools-usage)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -119,9 +190,9 @@ title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴
 
 ## Status History
 
-| Date   | Status         | Notes                    || -----
+| Date | Status | Notes || -----
 
-- | -------------- | ------------------------ || [Date] | 🔴 Not Started | Spike created and scoped || [Date] | 🟡 In Progress | Research commenced       || [Date] | 🟢 Complete    | [Resolution summary]     |---_Last updated: [Date] by [Name]_```
+- | -------------- | ------------------------ || [Date] | 🔴 Not Started | Spike created and scoped || [Date] | 🟡 In Progress | Research commenced || [Date] | 🟢 Complete | [Resolution summary] |---_Last updated: [Date] by [Name]_```
 
 ## Categories for Technical Spikes
 
@@ -203,7 +274,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -224,7 +295,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -292,7 +363,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -300,7 +370,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

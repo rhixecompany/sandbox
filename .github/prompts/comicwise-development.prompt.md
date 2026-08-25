@@ -1,11 +1,61 @@
 ---
-title: "ComicWise Development Workflow"
-description: "Reusable prompt for ComicWise development sessions"
-applyTo: "**/*"
-tags: ["nextjs", "typescript", "drizzle", "react19", "development"]
+title: ComicWise Development Prompt
+description: Prompt for comicwise development prompt
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
 
-# ComicWise Development Prompt
+- [Project State Summary](#project-state-summary)
+  - [Tech Stack](#tech-stack)
+- [Quick Start (New Session)](#quick-start-new-session)
+- [Essential Commands](#essential-commands)
+- [Data Flow Architecture](#data-flow-architecture)
+- [Project Structure](#project-structure)
+- [Coding Rules (Enforced)](#coding-rules-enforced)
+- [Path Aliases (tsconfig.json)](#path-aliases-tsconfigjson)
+- [Common Patterns](#common-patterns)
+- [Database Schema Facts](#database-schema-facts)
+- [Testing Patterns](#testing-patterns)
+- [Quality Gate (Must Pass Before Commits)](#quality-gate-must-pass-before-commits)
+- [Environment Variables](#environment-variables)
+- [Reference Documentation](#reference-documentation)
+- [Common Troubleshooting](#common-troubleshooting)
+- [When Stuck](#when-stuck)
+- [Development Workflow](#development-workflow)
+- [Next Phase](#next-phase)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Project State Summary](#project-state-summary)
+- [Tech Stack](#tech-stack)
+- [Quick Start (New Session)](#quick-start-new-session)
+- [Essential Commands](#essential-commands)
+- [Data Flow Architecture](#data-flow-architecture)
+- [Project Structure](#project-structure)
+- [Coding Rules (Enforced)](#coding-rules-enforced)
+- [Path Aliases (tsconfig.json)](#path-aliases-tsconfigjson)
+- [Common Patterns](#common-patterns)
+- [Database Schema Facts](#database-schema-facts)
+- [Testing Patterns](#testing-patterns)
+- [Quality Gate (Must Pass Before Commits)](#quality-gate-must-pass-before-commits)
+- [Environment Variables](#environment-variables)
+- [Reference Documentation](#reference-documentation)
+- [Common Troubleshooting](#common-troubleshooting)
+- [When Stuck](#when-stuck)
+- [Development Workflow](#development-workflow)
+- [Next Phase](#next-phase)
+- [Template References](#template-references)
+
+
+
+
+## ComicWise Development Prompt
 
 **Version**: 1.0 **Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Ready**: ✅ Yes
 
@@ -34,59 +84,59 @@ tags: ["nextjs", "typescript", "drizzle", "react19", "development"]
 ## Quick Start (New Session)
 
 ```bash
-# 1. Install & setup
+## 1. Install & setup
 pnpm install
-cp .env.local.example .env.local    # Edit with your DATABASE_URL, AUTH_SECRET
+cp .env.local.example .env.local # Edit with your DATABASE_URL, AUTH_SECRET
 pnpm db:push
 
-# 2. Start development
-pnpm dev                            # Port 3000, Turbopack
+## 2. Start development
+pnpm dev # Port 3000, Turbopack
 
-# 3. Run quality gates
-pnpm validate                       # Runs: type-check, lint:fix, test, health checks
+## 3. Run quality gates
+pnpm validate # Runs: type-check, lint:fix, test, health checks
 ```
 
 ## Essential Commands
 
-| Command           | Purpose                         | Must Pass   |
+| Command | Purpose | Must Pass |
 | ----------------- | ------------------------------- | ----------- |
-| `pnpm dev`        | Start dev server (Turbopack)    | —           |
-| `pnpm type-check` | TypeScript validation           | ✅ 0 errors |
-| `pnpm lint:fix`   | ESLint + Prettier auto-fix      | ✅ All pass |
-| `pnpm test`       | Vitest unit tests (jsdom)       | ✅ 241/241  |
-| `pnpm build`      | Production build (Webpack)      | ✅ Success  |
-| `pnpm validate`   | All quality gates at once       | ✅ All pass |
-| `pnpm db:push`    | Apply schema changes (dev only) | —           |
-| `pnpm db:studio`  | Drizzle visual browser          | —           |
-| `pnpm seed:all`   | Populate database               | —           |
+| `pnpm dev` | Start dev server (Turbopack) | — |
+| `pnpm type-check` | TypeScript validation | ✅ 0 errors |
+| `pnpm lint:fix` | ESLint + Prettier auto-fix | ✅ All pass |
+| `pnpm test` | Vitest unit tests (jsdom) | ✅ 241/241 |
+| `pnpm build` | Production build (Webpack) | ✅ Success |
+| `pnpm validate` | All quality gates at once | ✅ All pass |
+| `pnpm db:push` | Apply schema changes (dev only) | — |
+| `pnpm db:studio` | Drizzle visual browser | — |
+| `pnpm seed:all` | Populate database | — |
 
 ## Data Flow Architecture
 
 ```
 HTTP Request
-    ↓
+↓
 Next.js Middleware (src/proxy.ts)
-  • Auth check (await auth())
-  • Route protection (/profile, /bookmarks, /ratings, /admin)
-    ↓
+• Auth check (await auth())
+• Route protection (/profile, /bookmarks, /ratings, /admin)
+↓
 Server Component (App Router page)
-  • Await async params/searchParams (v16 breaking change)
-  • Call DAL methods for data
-    ↓
+• Await async params/searchParams (v16 breaking change)
+• Call DAL methods for data
+↓
 DAL Layer (src/dal/*-dal.ts)
-  • All queries use Drizzle with eager loading (.with())
-  • Never use raw SQL or loop queries (no N+1)
-  • Return properly typed results ($inferSelect)
-    ↓
+• All queries use Drizzle with eager loading (.with())
+• Never use raw SQL or loop queries (no N+1)
+• Return properly typed results ($inferSelect)
+↓
 Client Component / Zustand / React Query
-  • Use props data from Server Component
-  • Zustand for UI state (reader mode, sidebar toggle)
-  • React Query for dynamic server state
-    ↓
+• Use props data from Server Component
+• Zustand for UI state (reader mode, sidebar toggle)
+• React Query for dynamic server state
+↓
 Server Actions (src/actions/*-actions.ts)
-  • Mutations: auth → validate → mutate → revalidate
-  • Never throw: return ActionResult<T> (ok + data/error)
-    ↓
+• Mutations: auth → validate → mutate → revalidate
+• Never throw: return ActionResult<T> (ok + data/error)
+↓
 HTTP Response
 ```
 
@@ -108,20 +158,20 @@ HTTP Response
 ## Path Aliases (tsconfig.json)
 
 ```typescript
-@/*        → ./src/*
-ui         → ./src/components/ui/*
-database   → ./src/database/*
-schemas    → ./src/schemas/*
-env        → ./src/lib/env.ts
-hooks      → ./src/hooks/*
-appConfig  → ./appConfig.ts
-lib        → ./src/lib/*
-types      → ./src/types/*
+@/* → ./src/*
+ui → ./src/components/ui/*
+database → ./src/database/*
+schemas → ./src/schemas/*
+env → ./src/lib/env.ts
+hooks → ./src/hooks/*
+appConfig → ./appConfig.ts
+lib → ./src/lib/*
+types → ./src/types/*
 components → ./src/components/*
-utils      → ./src/lib/utils.ts
-assets     → ./src/assets/*
-styles     → ./src/styles/*
-tests      → ./src/tests/*
+utils → ./src/lib/utils.ts
+assets → ./src/assets/*
+styles → ./src/styles/*
+tests → ./src/tests/*
 ```
 
 ## Common Patterns
@@ -154,14 +204,14 @@ tests      → ./src/tests/*
 ## Quality Gate (Must Pass Before Commits)
 
 ```bash
-# Run all quality gates at once
+## Run all quality gates at once
 pnpm validate
 
-# Or run individually
-pnpm type-check     # Must be 0 errors (blocks deployment)
-pnpm lint:fix       # Auto-fix and validate
-pnpm test           # Must pass 241/241 (no regressions)
-pnpm build          # Must succeed (production build)
+## Or run individually
+pnpm type-check # Must be 0 errors (blocks deployment)
+pnpm lint:fix # Auto-fix and validate
+pnpm test # Must pass 241/241 (no regressions)
+pnpm build # Must succeed (production build)
 ```
 
 ## Environment Variables
@@ -183,26 +233,26 @@ All validated via `src/lib/env.ts` at startup using Zod.
 
 ## Reference Documentation
 
-| File                                          | Purpose                                 | Scope                 |
+| File | Purpose | Scope |
 | --------------------------------------------- | --------------------------------------- | --------------------- |
-| `.github/copilot-instructions.md`             | Complete guide (2500+ lines)            | Global                |
-| `.github/prompts/comicwise-session.prompt.md` | Quick reference (400 lines)             | Session shortcuts     |
-| `.github/instructions/*.md`                   | Auto-loaded by file pattern (15+ files) | Specific file types   |
-| `docs/dev.content.md`                         | 26 sections with patterns & examples    | Development reference |
-| `docs/MASTER_PHASE_PLAN_4-6.md`               | Phase planning & task tracking          | Project roadmap       |
-| `AGENTS.md`                                   | This project's quick setup guide        | Quick start           |
+| `.github/copilot-instructions.md` | Complete guide (2500+ lines) | Global |
+| `.github/prompts/comicwise-session.prompt.md` | Quick reference (400 lines) | Session shortcuts |
+| `.github/instructions/*.md` | Auto-loaded by file pattern (15+ files) | Specific file types |
+| `docs/dev.content.md` | 26 sections with patterns & examples | Development reference |
+| `docs/MASTER_PHASE_PLAN_4-6.md` | Phase planning & task tracking | Project roadmap |
+| `AGENTS.md` | This project's quick setup guide | Quick start |
 
 ## Common Troubleshooting
 
-| Issue                             | Solution                                                             |
+| Issue | Solution |
 | --------------------------------- | -------------------------------------------------------------------- |
-| Type errors (TS2307)              | Check import path aliases in `tsconfig.json`                         |
-| N+1 query errors                  | Add `.with({ relations: true })` to DAL queries                      |
-| Action throws instead of returns  | Wrap in try-catch, return `ActionResult<T>`                          |
-| Styling not applying              | Check Tailwind v4 syntax (`bg-linear-to-br` not `bg-gradient-to-br`) |
-| DB connection fails               | Verify `DATABASE_URL` and run `pnpm db:studio` to test               |
-| Tests fail in CI but pass locally | Check mocks in `src/tests/setup-env.ts`                              |
-| Hydration mismatch                | Use `useCurrentYear()` hook not `new Date()` in server code          |
+| Type errors (TS2307) | Check import path aliases in `tsconfig.json` |
+| N+1 query errors | Add `.with({ relations: true })` to DAL queries |
+| Action throws instead of returns | Wrap in try-catch, return `ActionResult<T>` |
+| Styling not applying | Check Tailwind v4 syntax (`bg-linear-to-br` not `bg-gradient-to-br`) |
+| DB connection fails | Verify `DATABASE_URL` and run `pnpm db:studio` to test |
+| Tests fail in CI but pass locally | Check mocks in `src/tests/setup-env.ts` |
+| Hydration mismatch | Use `useCurrentYear()` hook not `new Date()` in server code |
 
 ## When Stuck
 

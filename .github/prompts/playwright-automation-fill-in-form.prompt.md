@@ -1,46 +1,82 @@
 ---
-name: playwright-automation-fill-in-form
-title: Playwright Automation Fill In Form
-description: Fill a form with Playwright MCP, stop before submission, and ask for a human review.
-version: 1.0.0
-license: MIT
-author: Alexa
-trigger: /playwright-automation-fill-in-form
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /playwright-automation-fill-in-form
-    flags: {}
-    help: Fill a form with Playwright MCP, stop before submission, and ask for a human ...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- mcp
-- ml
-- playwright
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Description](#description)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+  - [@browserA careful browser operator who fills the form field by field.](#@browsera-careful-browser-operator-who-fills-the-form-field-by-field)
+  - [@checkerA reviewer who verifies the form is ready but not submitted.](#@checkera-reviewer-who-verifies-the-form-is-ready-but-not-submitted)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Description](#description)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [@browserA careful browser operator who fills the form field by field.](#@browsera-careful-browser-operator-who-fills-the-form-field-by-field)
+- [@checkerA reviewer who verifies the form is ready but not submitted.](#@checkera-reviewer-who-verifies-the-form-is-ready-but-not-submitted)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Fill a form with Playwright MCP, stop before submission, and ask for a human review.
@@ -88,7 +124,7 @@ Use when you need to playwright form fill automation for the current workspace o
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Description
@@ -202,7 +238,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -210,7 +245,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

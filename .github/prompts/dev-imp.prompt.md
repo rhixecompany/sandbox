@@ -1,58 +1,123 @@
 ---
-name: dev-imp
-title: Development Implementation Manager
-description: Meta-prompt that discovers generator prompts, implements them, verifies, code-reviews, debugs,
-  reports.
-version: 1.0.0
-license: MIT
-author: OWL
-trigger: /dev-imp
-toolsets:
-- terminal
-- file
-- web
-skills:
-- subagent-driven-development
-dependencies:
-- skill:subagent-driven-development
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /dev-imp
-    flags: {}
-    help: Meta-prompt that discovers generator prompts, implements them, verifies, code...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- debugging
-- fix
-- generator
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Plans‑and‑Specs](#plans‑and‑specs)
+  - [Goal](#goal)
+  - [Success Criteria](#success-criteria)
+  - [Data Flow](#data-flow)
+  - [Strict Sequential Gates](#strict-sequential-gates)
+- [Scripts](#scripts)
+- [Profile](#profile)
+- [Personality](#personality)
+- [Tools](#tools)
+- [Personas](#personas)
+- [Phases (Execute in Order)](#phases-execute-in-order)
+  - [Phase 1: Discover & Select Generators](#phase-1:-discover-&-select-generators)
+  - [Phase 2: Implement Selected Generators](#phase-2:-implement-selected-generators)
+  - [Phase 3: Verify Implementation Status (Only After All Generators Complete)1. Check the target project state:](#phase-3:-verify-implementation-status-only-after-all-generators-complete1-check-the-target-project-state:)
+  - [Phase 4: Code Review Changed Files (Only After Verification Passes)](#phase-4:-code-review-changed-files-only-after-verification-passes)
+  - [Phase 5: Debug & Fix All Issues (Only After Code Review)](#phase-5:-debug-&-fix-all-issues-only-after-code-review)
+  - [Phase 6: Generate Implementation Report (Only After All Fixes Verified)](#phase-6:-generate-implementation-report-only-after-all-fixes-verified)
+- [Summary](#summary)
+- [Generators Executed](#generators-executed)
+- [Files Changed](#files-changed)
+- [Code Review Findings](#code-review-findings)
+  - [Critical](#critical)
+  - [Important](#important)
+  - [Minor](#minor)
+- [Fixes Applied](#fixes-applied)
+- [Verification](#verification)
+- [Final Status**All phases complete. Implementation ready for use.**](#final-status**all-phases-complete-implementation-ready-for-use**)
+  - [Report Style ("Crispy")](#report-style-"crispy")
+- [Edge Cases & Pitfalls](#edge-cases-&-pitfalls)
+- [Verification Checklist](#verification-checklist)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Plans‑and‑Specs](#plans‑and‑specs)
+- [Goal](#goal)
+- [Success Criteria](#success-criteria)
+- [Data Flow](#data-flow)
+- [Strict Sequential Gates](#strict-sequential-gates)
+- [Scripts](#scripts)
+- [Profile](#profile)
+- [Personality](#personality)
+- [Tools](#tools)
+- [Personas](#personas)
+- [Phases (Execute in Order)](#phases-execute-in-order)
+- [Phase 1: Discover & Select Generators](#phase-1:-discover-&-select-generators)
+- [Phase 2: Implement Selected Generators](#phase-2:-implement-selected-generators)
+- [Phase 3: Verify Implementation Status (Only After All Generators Complete)1. Check the target project state:](#phase-3:-verify-implementation-status-only-after-all-generators-complete1-check-the-target-project-state:)
+- [Phase 4: Code Review Changed Files (Only After Verification Passes)](#phase-4:-code-review-changed-files-only-after-verification-passes)
+- [Phase 5: Debug & Fix All Issues (Only After Code Review)](#phase-5:-debug-&-fix-all-issues-only-after-code-review)
+- [Phase 6: Generate Implementation Report (Only After All Fixes Verified)](#phase-6:-generate-implementation-report-only-after-all-fixes-verified)
+- [Summary](#summary)
+- [Generators Executed](#generators-executed)
+- [Files Changed](#files-changed)
+- [Code Review Findings](#code-review-findings)
+- [Critical](#critical)
+- [Important](#important)
+- [Minor](#minor)
+- [Fixes Applied](#fixes-applied)
+- [Verification](#verification)
+- [Final Status**All phases complete. Implementation ready for use.**](#final-status**all-phases-complete-implementation-ready-for-use**)
+- [Report Style ("Crispy")](#report-style-"crispy")
+- [Edge Cases & Pitfalls](#edge-cases-&-pitfalls)
+- [Verification Checklist](#verification-checklist)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Meta-prompt that discovers generator prompts, implements them, verifies, code-reviews, debugs, reports.
 
-# Development Implementation Manager
+## Development Implementation Manager
 
 ## Plans‑and‑Specs
 
@@ -74,7 +139,7 @@ Orchestrate the full lifecycle of running generator prompts against a target pro
 
 ```
 
-discover generators → user selects subset → implement each sequentially  → (only then) verify implementation status  → (only then) code-review all changed files  → (only then) debug and fix all issues  → (only then) re-verify all fixes  → (only then) generate implementation report
+discover generators → user selects subset → implement each sequentially → (only then) verify implementation status → (only then) code-review all changed files → (only then) debug and fix all issues → (only then) re-verify all fixes → (only then) generate implementation report
 ```
 
 ### Strict Sequential Gates
@@ -119,23 +184,23 @@ Analytical, thorough, quality-focused. Reports should be "crispy" — concise, s
 
 ### Phase 2: Implement Selected Generators
 
-For EACH selected generator (run one at a time, sequentially):1. Read the generator prompt file in full2. Determine the target project context (existing project in workspace or new project scaffolding)3. Delegate implementation via `delegate_task` with:   - **goal**: "Implement prompt `<name
+For EACH selected generator (run one at a time, sequentially):1. Read the generator prompt file in full2. Determine the target project context (existing project in workspace or new project scaffolding)3. Delegate implementation via `delegate_task` with: - **goal**: "Implement prompt `<name
 
-> ` against the target project"   - **context**: Full prompt content + project structure + any user-provided parameters   - **toolsets**: `[terminal, file, web]`4. Wait for completion5. Collect output and any errors6. Proceed to next generator ONLY when current one completes
+> ` against the target project" - **context**: Full prompt content + project structure + any user-provided parameters - **toolsets**: `[terminal, file, web]`4. Wait for completion5. Collect output and any errors6. Proceed to next generator ONLY when current one completes
 
 ### Phase 3: Verify Implementation Status (Only After All Generators Complete)1. Check the target project state:
 
-- All expected files exist (per each generator's spec)   - All expected modifications applied   - No partial or incomplete implementations   - Git status is clean or has expected changes2. Try to build/compile the project (`bun run build`, `dotnet build`, `cargo check`, etc.)3. Run the test suite if applicable4. Report any implementation gaps or failures
+- All expected files exist (per each generator's spec) - All expected modifications applied - No partial or incomplete implementations - Git status is clean or has expected changes2. Try to build/compile the project (`bun run build`, `dotnet build`, `cargo check`, etc.)3. Run the test suite if applicable4. Report any implementation gaps or failures
 
 ### Phase 4: Code Review Changed Files (Only After Verification Passes)
 
 For EVERY file changed by any generator:1. Read the full file content2. Check:
 
-- Correctness — does the code do what the spec intended?   - Style — matches project conventions and language idioms   - Edge cases — error handling, nulls, boundaries   - Security — no hardcoded secrets, injection vectors, permission issues   - Dependencies — properly declared in project manifest3. Collate findings into:   - **Critical Issues** (must fix before proceeding)   - **Important Issues** (should fix)   - **Minor Issues** (optional)   - **Praise** (what was done well)
+- Correctness — does the code do what the spec intended? - Style — matches project conventions and language idioms - Edge cases — error handling, nulls, boundaries - Security — no hardcoded secrets, injection vectors, permission issues - Dependencies — properly declared in project manifest3. Collate findings into: - **Critical Issues** (must fix before proceeding) - **Important Issues** (should fix) - **Minor Issues** (optional) - **Praise** (what was done well)
 
 ### Phase 5: Debug & Fix All Issues (Only After Code Review)
 
-1. For each **Critical** and **Important** issue:   - Root-cause the issue   - Apply fix   - Verify fix resolves the issue
+1. For each **Critical** and **Important** issue: - Root-cause the issue - Apply fix - Verify fix resolves the issue
 2. Re-run the test suite after all fixes
 3. Confirm no regressions
 4. Only proceed when zero Critical and zero Important issues remain
@@ -146,7 +211,7 @@ Write a file `dev-imp-report.md` at the PWD with crispy-format markdown:
 
 ```markdown
 
-# Dev Imp Report — <date>
+## Dev Imp Report — <date>
 
 ## Summary
 
@@ -233,7 +298,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -254,7 +319,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -311,7 +376,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Related Prompts
 

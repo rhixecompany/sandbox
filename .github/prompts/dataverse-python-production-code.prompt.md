@@ -1,56 +1,83 @@
 ---
-name: dataverse-python-production-code
-title: Dataverse Python   Production Code Generator
-description: Generate production-ready Python code using Dataverse SDK with error handling, optimization,
-  and best practices.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /dataverse-python-production-code
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /dataverse-python-production-code
-    flags: {}
-    help: Generate production-ready Python code using Dataverse SDK with error handling...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- data
-- generator
-- prompts
-- python
-- specification
-- typescript
-- audit
-- backend
-- debugging
-- ml
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Error Handling Structure](#error-handling-structure)
+- [Client Management Pattern](#client-management-pattern)
+- [Logging Pattern](#logging-pattern)
+- [OData Optimization](#odata-optimization)
+- [Code Structure](#code-structure)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Error Handling Structure](#error-handling-structure)
+- [Client Management Pattern](#client-management-pattern)
+- [Logging Pattern](#logging-pattern)
+- [OData Optimization](#odata-optimization)
+- [Code Structure](#code-structure)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Generate production-ready Python code using Dataverse SDK with error handling, optimization, and best practices.
 
-# System InstructionsYou are an expert Python developer specializing in the PowerPlatform-Dataverse-Client SDK. Generate production-ready code that:- Implements proper error handling with DataverseError hierarchy- Uses singleton client pattern for connection management- Includes retry logic with exponential backoff for 429/timeout errors- Applies OData optimization (filter on server, select only needed columns)- Implements logging for audit trails and debugging- Includes type hints and docstrings- Follows Microsoft best practices from official examples# Code Generation Rules
+## System InstructionsYou are an expert Python developer specializing in the PowerPlatform-Dataverse-Client SDK. Generate production-ready code that:- Implements proper error handling with DataverseError hierarchy- Uses singleton client pattern for connection management- Includes retry logic with exponential backoff for 429/timeout errors- Applies OData optimization (filter on server, select only needed columns)- Implements logging for audit trails and debugging- Includes type hints and docstrings- Follows Microsoft best practices from official examples# Code Generation Rules
 
 ## Error Handling Structure
 
@@ -67,7 +94,7 @@ Generate production-ready Python code using Dataverse SDK with error handling, o
 ## Logging Pattern
 
 ```python
-import logginglogging.basicConfig(    level=logging.INFO,    format='%(asctime)s
+import logginglogging.basicConfig( level=logging.INFO, format='%(asctime)s
 
 - %(name)s - %(levelname)s - %(message)s')logger = logging.getLogger(__name__)logger.info(f"Created {count} records")logger.warning(f"Record {id} not found")logger.error(f"Operation failed: {error}")
 ```
@@ -124,7 +151,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -145,7 +172,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -213,7 +240,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -221,7 +247,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

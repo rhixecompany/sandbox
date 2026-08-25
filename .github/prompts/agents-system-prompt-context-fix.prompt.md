@@ -1,49 +1,61 @@
 ---
-name: agents-system-prompt-context-fix
-title: Agents System Prompt Context Fix
-description: No description
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /agents-system-prompt-context-fix
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: default
-    mcp_servers:
-    - filesystem
-    - github
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /agents-system-prompt-context-fix
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:debug
-- language:typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Verification Checklist](#verification-checklist)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Workflow](#workflow)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Verification Checklist](#verification-checklist)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Workflow](#workflow)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Fix and verify Hermes/Copilot/Codex agent system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion.
 
-# Agents System Prompt Context Fix
+## Agents System Prompt Context Fix
 
 ## Context
 
@@ -161,7 +173,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -170,12 +181,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
-
 ## Related Prompts
 
 Same-family prompts:
 
 - [`agents-fix.prompt.md`](agents-fix.prompt.md)
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
-
 

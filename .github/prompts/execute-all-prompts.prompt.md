@@ -1,62 +1,73 @@
 ---
-name: execute-all-prompts
-title: Execute All Prompts Orchestrator
-description: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix,
-  agents-system-prompt-context-fix, sync-hermes-opencode, and test-providers-models. Each prompt runs
-  to completion before the next begins.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /execute-all-prompts
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:using-superpowers
-- skill:user-communication-preferences
-- skill:verification-before-completion
-- skill:subagent-driven-development
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /execute-all-prompts
-    flags: {}
-    help: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skil...'
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- audit
-- data
-- execution
-- fix
-- prompts
-- skills
-- testing
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Execution Rule](#execution-rule)
+- [Rules](#rules)
+- [Phase Contents](#phase-contents)
+- [Verification Checklist (Orchestrator Level)](#verification-checklist-orchestrator-level)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Execution Rule](#execution-rule)
+- [Rules](#rules)
+- [Phase Contents](#phase-contents)
+- [Verification Checklist (Orchestrator Level)](#verification-checklist-orchestrator-level)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, and test-providers-models. Each prompt runs to completion before the next begins.
 
-# Execute All Prompts Orchestrator
+## Execute All Prompts Orchestrator
 
 > Strict sequential execution. Phase N+1 begins only after Phase N is fully verified complete.
 
@@ -141,7 +152,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -209,7 +220,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -217,7 +227,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

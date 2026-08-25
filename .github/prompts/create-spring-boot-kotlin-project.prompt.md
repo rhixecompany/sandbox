@@ -1,51 +1,83 @@
 ---
-name: create-spring-boot-kotlin-project
-title: Create Spring Boot Kotlin project prompt
-description: Create Spring Boot Kotlin Project Skeleton.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /create-spring-boot-kotlin-project
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /create-spring-boot-kotlin-project
-    flags: {}
-    help: Create Spring Boot Kotlin Project Skeleton.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- docker
-- generator
-- java
-- prompts
-- spring
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Check Java version](#check-java-version)
+- [Download Spring Boot project template](#download-spring-boot-project-template)
+- [Unzip the downloaded file](#unzip-the-downloaded-file)
+- [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
+- [Add additional dependencies](#add-additional-dependencies)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Check Java version](#check-java-version)
+- [Download Spring Boot project template](#download-spring-boot-project-template)
+- [Unzip the downloaded file](#unzip-the-downloaded-file)
+- [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
+- [Add additional dependencies](#add-additional-dependencies)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Create Spring Boot Kotlin Project Skeleton.
 
-# Create Spring Boot Kotlin project prompt- Please make sure you have the following software installed on your system:  - Java 21  - Docker  - Docker Compose- If you need to custom the project name, please change the `artifactId` and the `packageName` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md)- If you need to update the Spring Boot version, please change the `bootVersion` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md#download-spring-boot-project-template)
+## Create Spring Boot Kotlin project prompt- Please make sure you have the following software installed on your system: - Java 21 - Docker - Docker Compose- If you need to custom the project name, please change the `artifactId` and the `packageName` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md)- If you need to update the Spring Boot version, please change the `bootVersion` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md#download-spring-boot-project-template)
 
 ## Check Java version
 
@@ -61,15 +93,15 @@ java -version
 
 ```shell
 curl https://start.spring.io/starter.zip \
-  -d artifactId=${input:projectName:demo-kotlin} \
-  -d bootVersion=3.4.5 \
-  -d dependencies=configuration-processor,webflux,data-r2dbc,postgresql,data-redis-reactive,data-mongodb-reactive,validation,cache,testcontainers \
-  -d javaVersion=21 \
-  -d language=kotlin \
-  -d packageName=com.example \
-  -d packaging=jar \
-  -d type=gradle-project-kotlin \
-  -o starter.zip
+-d artifactId=${input:projectName:demo-kotlin} \
+-d bootVersion=3.4.5 \
+-d dependencies=configuration-processor,webflux,data-r2dbc,postgresql,data-redis-reactive,data-mongodb-reactive,validation,cache,testcontainers \
+-d javaVersion=21 \
+-d language=kotlin \
+-d packageName=com.example \
+-d packaging=jar \
+-d type=gradle-project-kotlin \
+-o starter.zip
 ```
 
 ## Unzip the downloaded file
@@ -136,7 +168,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -157,7 +189,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -225,7 +257,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -233,7 +264,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

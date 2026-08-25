@@ -1,114 +1,115 @@
 ---
-name: repo.prompt
-title: Repo.Prompt
-description: Auto-generated prompt for /repo.prompt
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
 version: 1.0.0
-license: MIT
 author: Hermes Agent
-trigger: /repo.prompt
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: exec-assistant
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /repo.prompt
-    flags: {}
-    help: Auto-generated prompt for /repo.prompt
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
-tags:
-- agent-type:hermes
-scripts: []
 ---
-name: repo
-title: Repo Research Pipeline + Quick Onboarding
-description: 'Research all 17 projects via delegated sub-prompts: web search for similar projects, guides,
-  cheatsheets; create or update RESEARCH_REPORT.md per project in crisp markdown. Delegates web research
-  to web-research-pipeline.prompt.md and post-research ops to repo-management.prompt.md. Also includes
-  Quick Repo Onboarding (Q1-Q4): summarize repo in 5 bullets, find main entrypoint, check current directory,
-  set up GitHub PR workflow, check disk usage.'
-version: 2.2.0
-license: MIT
-author: Hermes Agent
-trigger: /repo
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- prompt:context-map
-- prompt:repo-management
-- prompt:repo-research-pipeline
-- prompt:repo-story-time
-- prompt:update-implementation-plan
-- prompt:web-research-pipeline
-- skill:brainstorming
-- skill:code-wiki
-- skill:content-research-writer
-- skill:gh-cli
-- skill:git-commit
-- skill:git-submodule-workflow
-- skill:github-repo-management
-- skill:plans-and-specs
-- skill:spike
-- skill:systematic-debugging
-- skill:web-research-pipeline
-- skill:writing-clearly-and-concisely
-- skill:writing-skills
-- skill:subagent-driven-development
-- skill:firecrawl-search
-- skill:firecrawl-scrape
-- tool:mcp-filesystem
-- tool:mcp-github
-- tool:mcp-memory
-- tool:mcp-sequential-thinking
-- tool:mcp-tavily
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /repo
-    flags: {}
-    help: 'Research all 17 projects via delegated sub-prompts: web search for similar pr...'
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
-tags:
-- agent-type:hermes
-- architecture
-- frontend
-- git
-- markdown
-- ml
-- performance
-- prompts
-- security
-- typescript
-- workflow
-scripts: []
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+  - [Repo Inventory (17 projects)](#repo-inventory-17-projects)
+- [Constraints](#constraints)
+- [Phases](#phases)
+  - [Phase 0: Prerequisites](#phase-0:-prerequisites)
+  - [Phase 1: Web Research (delegated)](#phase-1:-web-research-delegated)
+  - [Phase 2: Report Writing](#phase-2:-report-writing)
+- [Phase 3: Index & Cross-Reference](#phase-3:-index-&-cross-reference)
+  - [Phase 4: Verification](#phase-4:-verification)
+- [Quick Repo Onboarding](#quick-repo-onboarding)
+  - [Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."](#q1:-"summarize-this-repo-in-5-bullets-and-tell-me-what-the-main-entrypoint-is")
+  - [Q2: "Check my current directory and tell me what looks like the main project file."](#q2:-"check-my-current-directory-and-tell-me-what-looks-like-the-main-project-file")
+  - [Q3: "Help me set up a clean GitHub PR workflow for this codebase."](#q3:-"help-me-set-up-a-clean-github-pr-workflow-for-this-codebase")
+  - [Q4: "What's my disk usage? Show the top 5 largest directories."](#q4:-"what's-my-disk-usage?-show-the-top-5-largest-directories")
+- [Report Template](#report-template)
+- [Project: <name>](#project:-<name>)
+- [Similar Projects](#similar-projects)
+- [Key Findings](#key-findings)
+  - [<Technology/Topic>](#<technology/topic>)
+  - [<Technology/Topic>](#<technology/topic>)
+- [Cheatsheets & Quick Reference](#cheatsheets-&-quick-reference)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+- [Performance](#performance)
+- [Security](#security)
+- [Related Projects (in workspace)](#related-projects-in-workspace)
+- [Resources](#resources)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Skills Required](#skills-required)
+- [Actions](#actions)
+- [Secondary Goals](#secondary-goals)
+- [Related Prompts](#related-prompts)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Workflow](#workflow)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Tasks](#tasks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Repo Inventory (17 projects)](#repo-inventory-17-projects)
+- [Constraints](#constraints)
+- [Phases](#phases)
+- [Phase 0: Prerequisites](#phase-0:-prerequisites)
+- [Phase 1: Web Research (delegated)](#phase-1:-web-research-delegated)
+- [Phase 2: Report Writing](#phase-2:-report-writing)
+- [Phase 3: Index & Cross-Reference](#phase-3:-index-&-cross-reference)
+- [Phase 4: Verification](#phase-4:-verification)
+- [Quick Repo Onboarding](#quick-repo-onboarding)
+- [Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."](#q1:-"summarize-this-repo-in-5-bullets-and-tell-me-what-the-main-entrypoint-is")
+- [Q2: "Check my current directory and tell me what looks like the main project file."](#q2:-"check-my-current-directory-and-tell-me-what-looks-like-the-main-project-file")
+- [Q3: "Help me set up a clean GitHub PR workflow for this codebase."](#q3:-"help-me-set-up-a-clean-github-pr-workflow-for-this-codebase")
+- [Q4: "What's my disk usage? Show the top 5 largest directories."](#q4:-"what's-my-disk-usage?-show-the-top-5-largest-directories")
+- [Report Template](#report-template)
+- [Project: <name>](#project:-<name>)
+- [Similar Projects](#similar-projects)
+- [Key Findings](#key-findings)
+- [<Technology/Topic>](#<technology/topic>)
+- [<Technology/Topic>](#<technology/topic>)
+- [Cheatsheets & Quick Reference](#cheatsheets-&-quick-reference)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+- [Performance](#performance)
+- [Security](#security)
+- [Related Projects (in workspace)](#related-projects-in-workspace)
+- [Resources](#resources)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Skills Required](#skills-required)
+- [Actions](#actions)
+- [Secondary Goals](#secondary-goals)
+- [Related Prompts](#related-prompts)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Workflow](#workflow)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Tasks](#tasks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
@@ -121,8 +122,6 @@ Research each of the 17 projects under `projects/`. For every project:
 3. **Update** `RESEARCH_REPORT.md` if it exists — refresh findings, verify links, add new discoveries.
 
 4. **Create** `RESEARCH_REPORT.md` if missing — new report from the template in the Report Template section.
-
-
 
 **Output:** one `RESEARCH_REPORT.md` per project root. Updated `projects/RESEARCH_INDEX.md`.
 
@@ -137,25 +136,25 @@ Default action is **UPDATE** (refresh findings, verify links). Only fall back to
 
 ### Repo Inventory (17 projects)
 
-| #  | Project                      | Type                                             | Action   |
+| # | Project | Type | Action |
 | -- | ---------------------------- | ------------------------------------------------ | -------- |
-| 1  | Banking                      | Fintech (Next.js 16, Drizzle, Plaid/Dwolla)      | ✅ Update |
-| 2  | comicwise                    | Comic streaming (Next.js 15, Prisma, Stripe)     | ✅ Update |
-| 3  | cookiecutter-django-tailwind | Django + Tailwind template                       | ✅ Update |
-| 4  | Django-Scrapy-Selenium       | Web scraping (Django, Scrapy, Selenium)          | ✅ Update |
-| 5  | ecom                         | Ecommerce (DRF + React/Redux, PayPal)            | ✅ Update |
-| 6  | profile                      | Blog/CMS (Django, GCS, CKEditor)                 | ✅ Update |
-| 7  | Python-projects              | 18 beginner Python scripts                       | ✅ Update |
-| 8  | rhixe_scans                  | Comic reader (Next.js 15, Prisma, Stripe/PayPal) | ✅ Update |
-| 9  | rhixecompany-comics          | Comics platform (Django + Next.js 16)            | ✅ Update |
-| 10 | selenium_webdriver           | Browser automation (Node.js, ChromeDriver)       | ✅ Update |
-| 11 | university-libary-jsm        | Library mgmt (Next.js 15, Drizzle, Neon, Redis)  | ✅ Update |
-| 12 | xamehi                       | Full-stack (Django + Express + React)            | ✅ Update |
-| 13 | xamehi.tv                    | Streaming (DRF + React 17, Redux, MUI)           | ✅ Update |
-| 14 | youtube-downloader           | YouTube CLI (yt-dlp, curl_cffi)                  | ✅ Update |
-| 15 | Bash                         | Automation Toolkit (Bun/TypeScript)              | ✅ Update |
-| 16 | Resume_maker                 | Job Documents Generator (Bun/CLI)                | ✅ Update |
-| 17 | mcp-servers                  | Multi-language MCP server implementations        | ❌ Create |
+| 1 | Banking | Fintech (Next.js 16, Drizzle, Plaid/Dwolla) | ✅ Update |
+| 2 | comicwise | Comic streaming (Next.js 15, Prisma, Stripe) | ✅ Update |
+| 3 | cookiecutter-django-tailwind | Django + Tailwind template | ✅ Update |
+| 4 | Django-Scrapy-Selenium | Web scraping (Django, Scrapy, Selenium) | ✅ Update |
+| 5 | ecom | Ecommerce (DRF + React/Redux, PayPal) | ✅ Update |
+| 6 | profile | Blog/CMS (Django, GCS, CKEditor) | ✅ Update |
+| 7 | Python-projects | 18 beginner Python scripts | ✅ Update |
+| 8 | rhixe_scans | Comic reader (Next.js 15, Prisma, Stripe/PayPal) | ✅ Update |
+| 9 | rhixecompany-comics | Comics platform (Django + Next.js 16) | ✅ Update |
+| 10 | selenium_webdriver | Browser automation (Node.js, ChromeDriver) | ✅ Update |
+| 11 | university-libary-jsm | Library mgmt (Next.js 15, Drizzle, Neon, Redis) | ✅ Update |
+| 12 | xamehi | Full-stack (Django + Express + React) | ✅ Update |
+| 13 | xamehi.tv | Streaming (DRF + React 17, Redux, MUI) | ✅ Update |
+| 14 | youtube-downloader | YouTube CLI (yt-dlp, curl_cffi) | ✅ Update |
+| 15 | Bash | Automation Toolkit (Bun/TypeScript) | ✅ Update |
+| 16 | Resume_maker | Job Documents Generator (Bun/CLI) | ✅ Update |
+| 17 | mcp-servers | Multi-language MCP server implementations | ❌ Create |
 
 ## Constraints
 
@@ -222,7 +221,7 @@ Each subagent receives: project name, tech stack, query list, target report path
 ```python
 read_file("projects/<name>/README.md")
 read_file("projects/<name>/AGENTS.md")
-# Delegate to sub-prompt:
+## Delegate to sub-prompt:
 delegate_task(goal="Run web-research-pipeline prompt for project <name> with stack <tech>", toolsets=["web", "file", "mcp"])
 ```
 
@@ -246,14 +245,14 @@ Write or update `RESEARCH_REPORT.md` per project using the template in `## Repor
 **Actions:**
 
 ```python
-read_file("projects/<name>/RESEARCH_REPORT.md")  # if exists — for UPDATE
+read_file("projects/<name>/RESEARCH_REPORT.md") # if exists — for UPDATE
 write_file("projects/<name>/RESEARCH_REPORT.md", content=<report>)
-tool_call(name="mcp__tavily__tavily_extract", arguments={"urls": [url1, url2, url3]})  # verify key links
+tool_call(name="mcp__tavily__tavily_extract", arguments={"urls": [url1, url2, url3]}) # verify key links
 ```
 
 ---
 
-### Phase 3: Index & Cross-Reference
+## Phase 3: Index & Cross-Reference
 
 Update the master index. Verify cross-references are symmetric.
 
@@ -365,7 +364,7 @@ Templates cover:
 
 ```bash
 skill_view(name="monorepo-pr-workflow")
-read_file("AGENTS.md")  # for existing CI patterns
+read_file("AGENTS.md") # for existing CI patterns
 ls .github/workflows/ 2>/dev/null || echo 'no workflows yet'
 ```
 
@@ -381,7 +380,7 @@ ls .github/workflows/ 2>/dev/null || echo 'no workflows yet'
 
 ```bash
 du -sh --exclude='.git' --exclude='node_modules' --exclude='venv' --exclude='__pycache__' --exclude='dist' --exclude='build' --exclude='target' */ 2>/dev/null | sort -rh | head -5
-# Fallback for bare repos:
+## Fallback for bare repos:
 du -sh --exclude='.git' */ 2>/dev/null | sort -rh | head -5
 ```
 
@@ -402,9 +401,9 @@ Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or rem
 
 ## Similar Projects
 
-| Project | URL          | Why Relevant       |
+| Project | URL | Why Relevant |
 | ------- | ------------ | ------------------ |
-| <name>  | <github url> | <1-line relevance> |
+| <name> | <github url> | <1-line relevance> |
 
 ## Key Findings
 
@@ -418,9 +417,9 @@ Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or rem
 
 ## Cheatsheets & Quick Reference
 
-| Topic   | Resource | Type                      |
+| Topic | Resource | Type |
 | ------- | -------- | ------------------------- |
-| <topic> | <url>    | Cheatsheet / Guide / Docs |
+| <topic> | <url> | Cheatsheet / Guide / Docs |
 
 ## Best Practices
 
@@ -432,7 +431,7 @@ Every `RESEARCH_REPORT.md` must follow this structure exactly. Do not add or rem
 
 ## Common Pitfalls
 
-| Pitfall   | Impact   | Avoidance      |
+| Pitfall | Impact | Avoidance |
 | --------- | -------- | -------------- |
 | <pitfall> | <impact> | <one-line fix> |
 
@@ -451,28 +450,28 @@ List project name + shared technology. Must be symmetric.>
 
 ## Resources
 
-| Resource      | URL   | Description               |
+| Resource | URL | Description |
 | ------------- | ----- | ------------------------- |
 | Official Docs | <url> | <framework> documentation |
-| Community     | <url> | Forum / Discord / Reddit  |
-| Tutorial      | <url> | Key tutorial or guide     |
+| Community | <url> | Forum / Discord / Reddit |
+| Tutorial | <url> | Key tutorial or guide |
 ```
 
 ---
 
 ## Acceptance Criteria
 
-| Gate                      | Condition                              | Verification Command                                     |        |
-| ------------------------- | -------------------------------------- | -------------------------------------------------------- |        |
-| All 17 reports exist      | count = 17                             | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \ | wc -l` |
-| Each report ≥ 9 sections  | `grep -c '^## '` ≥ 9                   | per-report loop                                          |        |
-| No report under 1KB       | `wc -c` ≥ 1024                         | per-report loop                                          |        |
-| No report over 5KB        | `wc -c` ≤ 5120                         | per-report loop                                          |        |
-| 34 URL spot-checks pass   | `web_extract` non-404                  | Phase 4 step 3                                           |        |
-| RESEARCH_INDEX.md current | 17 rows, size + date correct           | read + verify                                            |        |
-| No fabricated findings    | every fact traces to `web_search`      | manual review                                            |        |
-| Scope respected           | no branch/migration work started       | agent self-check                                         |        |
-| Sub-prompts accessible    | `.github/prompts/*.prompt.md` resolves | file check                                               |        |
+| Gate | Condition | Verification Command | |
+| ------------------------- | -------------------------------------- | -------------------------------------------------------- | |
+| All 17 reports exist | count = 17 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \ | wc -l` |
+| Each report ≥ 9 sections | `grep -c '^## '` ≥ 9 | per-report loop | |
+| No report under 1KB | `wc -c` ≥ 1024 | per-report loop | |
+| No report over 5KB | `wc -c` ≤ 5120 | per-report loop | |
+| 34 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 | |
+| RESEARCH_INDEX.md current | 17 rows, size + date correct | read + verify | |
+| No fabricated findings | every fact traces to `web_search` | manual review | |
+| Scope respected | no branch/migration work started | agent self-check | |
+| Sub-prompts accessible | `.github/prompts/*.prompt.md` resolves | file check | |
 
 ---
 
@@ -481,22 +480,22 @@ List project name + shared technology. Must be symmetric.>
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-| Skill                           | Phase | Purpose                                       |
+| Skill | Phase | Purpose |
 | ------------------------------- | ----- | --------------------------------------------- |
-| `brainstorming`                 | 1     | Explore research angles per project           |
-| `plans-and-specs`               | 0     | Structure research plan                       |
-| `systematic-debugging`          | 0, 4  | Detect stale/missing reports                  |
-| `context7`                      | 1     | Library API docs and patterns                 |
-| `spike`                         | 0     | Prototype report format before batch          |
-| `writing-skills`                | 2     | Crisp, compact markdown writing               |
-| `content-research-writer`       | 2     | Research synthesis                            |
-| `repo-management`               | —     | Post-research: branch norm, CI, consolidation |
-| `repo-story-time`               | —     | Git history analysis and repo narrative       |
-| `web-research-pipeline`         | 1     | Delegated web search + extraction             |
-| `repo-research-pipeline`        | 1     | Multi-project research orchestrator           |
-| `github-repo-management`        | —     | GitHub repo operations for post-research      |
-| `code-wiki`                     | —     | Repo analysis for repo-story-time             |
-| `writing-clearly-and-concisely` | —     | Clean writing for repo-story-time             |
+| `brainstorming` | 1 | Explore research angles per project |
+| `plans-and-specs` | 0 | Structure research plan |
+| `systematic-debugging` | 0, 4 | Detect stale/missing reports |
+| `context7` | 1 | Library API docs and patterns |
+| `spike` | 0 | Prototype report format before batch |
+| `writing-skills` | 2 | Crisp, compact markdown writing |
+| `content-research-writer` | 2 | Research synthesis |
+| `repo-management` | — | Post-research: branch norm, CI, consolidation |
+| `repo-story-time` | — | Git history analysis and repo narrative |
+| `web-research-pipeline` | 1 | Delegated web search + extraction |
+| `repo-research-pipeline` | 1 | Multi-project research orchestrator |
+| `github-repo-management` | — | GitHub repo operations for post-research |
+| `code-wiki` | — | Repo analysis for repo-story-time |
+| `writing--and-concisely` | — | Clean writing for repo-story-time |
 
 ---
 
@@ -523,27 +522,27 @@ List project name + shared technology. Must be symmetric.>
 > Execute ONLY after Phase 4 verification passes for all 17 reports.
 > Full specifications live in `prompts/repo-management.prompt.md`.
 
-| # | Goal                                                                                          | Priority |
+| # | Goal | Priority |
 | - | --------------------------------------------------------------------------------------------- | -------- |
-| 1 | Consolidation — comicwise + Django-Scrapy-Selenium + selenium_webdriver → rhixecompany-comics | P1       |
-| 2 | Branch normalization — `development` + `production` only per repo                             | P2       |
-| 3 | Ignore file audit — fix all `.*ignore` files                                                  | P3       |
-| 4 | Dependency audit — clean package.json / requirements.txt                                      | P4       |
-| 5 | Bun migration — npm/pnpm → bun for JS/TS repos                                                | P5       |
-| 6 | CI workflow setup — GitHub Actions for all repos                                              | P6       |
+| 1 | Consolidation — comicwise + Django-Scrapy-Selenium + selenium_webdriver → rhixecompany-comics | P1 |
+| 2 | Branch normalization — `development` + `production` only per repo | P2 |
+| 3 | Ignore file audit — fix all `.*ignore` files | P3 |
+| 4 | Dependency audit — clean package.json / requirements.txt | P4 |
+| 5 | Bun migration — npm/pnpm → bun for JS/TS repos | P5 |
+| 6 | CI workflow setup — GitHub Actions for all repos | P6 |
 
 ---
 
 ## Related Prompts
 
-| Prompt                    | Location                                   | Purpose                                       |
+| Prompt | Location | Purpose |
 | ------------------------- | ------------------------------------------ | --------------------------------------------- |
-| `/bash-scripts-fix`       | `prompts/bash-scripts-fix.prompt.md`       | Script modernization for all 16 projects      |
-| `/workspace-consolidate`  | `prompts/workspace-consolidate.prompt.md`  | Workspace-level consolidation                 |
-| `/repo-management`        | `prompts/repo-management.prompt.md`        | Branch norm, Bun migration, CI, consolidation |
-| `/repo-story-time`        | `prompts/repo-story-time.prompt.md`        | Git history analysis and repo narrative       |
-| `/web-research-pipeline`  | `prompts/web-research-pipeline.prompt.md`  | Web search + extraction per project           |
-| `/repo-research-pipeline` | `prompts/repo-research-pipeline.prompt.md` | Multi-project research orchestrator           |
+| `/bash-scripts-fix` | `prompts/bash-scripts-fix.prompt.md` | Script modernization for all 16 projects |
+| `/workspace-consolidate` | `prompts/workspace-consolidate.prompt.md` | Workspace-level consolidation |
+| `/repo-management` | `prompts/repo-management.prompt.md` | Branch norm, Bun migration, CI, consolidation |
+| `/repo-story-time` | `prompts/repo-story-time.prompt.md` | Git history analysis and repo narrative |
+| `/web-research-pipeline` | `prompts/web-research-pipeline.prompt.md` | Web search + extraction per project |
+| `/repo-research-pipeline` | `prompts/repo-research-pipeline.prompt.md` | Multi-project research orchestrator |
 
 ---
 
@@ -556,11 +555,11 @@ List project name + shared technology. Must be symmetric.>
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona       | When to Use                            |
+| Persona | When to Use |
 | ------------- | -------------------------------------- |
 | **Developer** | Implementation, debugging, refactoring |
-| **Reviewer**  | Code review, quality assurance         |
-| **User**      | General purpose, operations            |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
 
 ## Personality
 
@@ -586,7 +585,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Workflow
 
@@ -600,13 +599,13 @@ See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton
 
 ## Verification Checklist
 
-| # | Gate       | Criterion                           |
+| # | Gate | Criterion |
 | - | ---------- | ----------------------------------- |
-| 1 | Scope      | Change matches the original request |
-| 2 | Quality    | Meets project standards             |
-| 3 | Tests      | Tests pass (if applicable)          |
-| 4 | Regression | No unintended side effects          |
-| 5 | Docs       | Changes documented if needed        |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 
@@ -623,29 +622,29 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server                | Purpose                                                |
+| Server | Purpose |
 | --------------------- | ------------------------------------------------------ |
-| `tavily`              | Web search + URL extraction (primary research backend) |
-| `fetch`               | Web page content extraction fallback                   |
-| `filesystem`          | File read/write operations                             |
-| `github`              | GitHub API operations                                  |
-| `memory`              | Persistent memory operations                           |
-| `sequential-thinking` | Structured reasoning for complex problems              |
-| `context7`            | Library API docs and patterns                          |
-| `ast-grep`            | AST-based code search and replace                      |
-| `playwright`          | Browser automation for interactive pages               |
+| `tavily` | Web search + URL extraction (primary research backend) |
+| `fetch` | Web page content extraction fallback |
+| `filesystem` | File read/write operations |
+| `github` | GitHub API operations |
+| `memory` | Persistent memory operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `context7` | Library API docs and patterns |
+| `ast-grep` | AST-based code search and replace |
+| `playwright` | Browser automation for interactive pages |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook                     | When              | Behavior                     |
+| Hook | When | Behavior |
 | ------------------------ | ----------------- | ---------------------------- |
-| `session-logger`         | session start/end | Logs session metadata        |
-| `governance-audit`       | session events    | Audits governance compliance |
-| `session-auto-commit`    | session end       | Auto-commits session state   |
-| `pre-exec-validate.sh`   | before commands   | Validates command execution  |
-| `post-exec-state-log.py` | after commands    | Appends state log            |
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
 
 ## Tasks
 

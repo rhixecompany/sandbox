@@ -1,48 +1,58 @@
 ---
-name: test-providers-models
-title: Test Providers & Models — Working-Model Verification and Agent Propagation
-description: Inventory authorized providers, probe live working free models only, rank by vision → reasoning → context, then configure Hermes and propagate the verified fallback chain to installed agents.
-version: 2.0.0
-license: MIT
-author: Hermes Agent
-trigger: /test-providers-models
-toolsets:
-- file
-- terminal
-- web
-- delegation
-skills: []
-dependencies:
-- skill:test-providers-models
-formatter: default
-metadata:
-  hermes:
-    profile: exec-assistant
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /test-providers-models
-    flags: {}
-    help: Inventory authorized LLM providers, probe live working free models, configure Hermes and propagate verified fallback chain to installed agents.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- configuration
-- ml
-- prompts
-- testing
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Rules](#rules)
+  - [Core Rules](#core-rules)
+  - [Domain Rules](#domain-rules)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Profiles](#profiles)
+- [Context Block (Generated at Runtime)](#context-block-generated-at-runtime)
+- [Delegation Plan (subagents)](#delegation-plan-subagents)
+- [Ranking Algorithm](#ranking-algorithm)
+- [Configure Hermes](#configure-hermes)
+- [Propagate to Installed Agents](#propagate-to-installed-agents)
+- [Phases](#phases)
+- [Verification](#verification)
+- [Pitfalls](#pitfalls)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Rules](#rules)
+- [Core Rules](#core-rules)
+- [Domain Rules](#domain-rules)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Profiles](#profiles)
+- [Context Block (Generated at Runtime)](#context-block-generated-at-runtime)
+- [Delegation Plan (subagents)](#delegation-plan-subagents)
+- [Ranking Algorithm](#ranking-algorithm)
+- [Configure Hermes](#configure-hermes)
+- [Propagate to Installed Agents](#propagate-to-installed-agents)
+- [Phases](#phases)
+- [Verification](#verification)
+- [Pitfalls](#pitfalls)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Produce a **verified, ordered fallback chain** across authorized Hermes providers using only models that *actually work* after live probing, then configure Hermes and update installed agents accordingly. The ordering rule is deterministic:
@@ -90,19 +100,19 @@ Use profile `exec-assistant` for orchestration; subagents inherit the default to
 WORKSPACE = {{WORKSPACE_ROOT}}
 HERMES_HOME = {{HERMES_HOME}}
 AUTHORIZED PROVIDERS (from `hermes auth list` at runtime):
-  {{AUTHORIZED_PROVIDERS_LIST}}
+{{AUTHORIZED_PROVIDERS_LIST}}
 ROOT CONFIG (from `hermes config show` at runtime):
-  model.provider = {{CURRENT_PROVIDER}}
-  model.default = {{CURRENT_MODEL}}
-  fallback_providers = {{CURRENT_FALLBACK_CHAIN}}
+model.provider = {{CURRENT_PROVIDER}}
+model.default = {{CURRENT_MODEL}}
+fallback_providers = {{CURRENT_FALLBACK_CHAIN}}
 PROBE METHOD:
-  hermes chat --provider <provider> --model <model> -q "reply with only: vision=<yes|no> reasoning=<yes|no> ctx=<tokens>"
+hermes chat --provider <provider> --model <model> -q "reply with only: vision=<yes|no> reasoning=<yes|no> ctx=<tokens>"
 RETURN FORMAT (one line per model):
-  provider | model | working=<bool> | vision=<bool> | reasoning=<bool> | ctx=<int> | notes=<string>
+provider | model | working=<bool> | vision=<bool> | reasoning=<bool> | ctx=<int> | notes=<string>
 VERIFIED WORKING MODELS (from live probes — re-probe before use):
-  {{VERIFIED_MODELS_LIST}}
+{{VERIFIED_MODELS_LIST}}
 EXCLUDED (from live probes):
-  {{EXCLUDED_MODELS_LIST}}
+{{EXCLUDED_MODELS_LIST}}
 ```
 
 ## Delegation Plan (subagents)
@@ -125,11 +135,11 @@ Each subagent:
 
 ```python
 def sort_key(m):
-    working = 1 if m.working else 0
-    vision = 2 if m.vision else 0
-    reason = 1 if m.reasoning else 0
-    ctx = min(m.ctx, 2_000_000) / 2_000_000
-    return (working, vision, reason, ctx)
+working = 1 if m.working else 0
+vision = 2 if m.vision else 0
+reason = 1 if m.reasoning else 0
+ctx = min(m.ctx, 2_000_000) / 2_000_000
+return (working, vision, reason, ctx)
 
 chain = sorted(working_models, key=sort_key, reverse=True)
 ```

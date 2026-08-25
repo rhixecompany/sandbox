@@ -1,55 +1,99 @@
 ---
-name: dataverse-python-usecase-builder
-title: Dataverse Python   Use Case Solution Builder
-description: Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /dataverse-python-usecase-builder
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /dataverse-python-usecase-builder
-    flags: {}
-    help: Generate complete solutions for specific Dataverse SDK use cases with archite...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- architecture
-- data
-- frontend
-- generator
-- ml
-- prompts
-- python
-- specification
-- typescript
-- performance
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Phase 1: Requirement Analysis](#phase-1:-requirement-analysis)
+- [Phase 2: Data Model Design](#phase-2:-data-model-design)
+- [Phase 3: Pattern Selection](#phase-3:-pattern-selection)
+  - [Pattern 1: Transactional (CRUD Operations)](#pattern-1:-transactional-crud-operations)
+- [Phase 4: Complete Implementation Template](#phase-4:-complete-implementation-template)
+- [Phase 5: Optimization Recommendations](#phase-5:-optimization-recommendations)
+  - [For High-Volume Operations](#for-high-volume-operations)
+- [Category 1: Customer Relationship Management](#category-1:-customer-relationship-management)
+- [Category 2: Document Management](#category-2:-document-management)
+- [Category 3: Data Integration](#category-3:-data-integration)
+- [Category 4: Business Process](#category-4:-business-process)
+- [Category 5: Reporting & Analytics](#category-5:-reporting-&-analytics)
+- [Category 6: Compliance & Audit](#category-6:-compliance-&-audit)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Phase 1: Requirement Analysis](#phase-1:-requirement-analysis)
+- [Phase 2: Data Model Design](#phase-2:-data-model-design)
+- [Phase 3: Pattern Selection](#phase-3:-pattern-selection)
+- [Pattern 1: Transactional (CRUD Operations)](#pattern-1:-transactional-crud-operations)
+- [Phase 4: Complete Implementation Template](#phase-4:-complete-implementation-template)
+- [Phase 5: Optimization Recommendations](#phase-5:-optimization-recommendations)
+- [For High-Volume Operations](#for-high-volume-operations)
+- [Category 1: Customer Relationship Management](#category-1:-customer-relationship-management)
+- [Category 2: Document Management](#category-2:-document-management)
+- [Category 3: Data Integration](#category-3:-data-integration)
+- [Category 4: Business Process](#category-4:-business-process)
+- [Category 5: Reporting & Analytics](#category-5:-reporting-&-analytics)
+- [Category 6: Compliance & Audit](#category-6:-compliance-&-audit)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Generate complete solutions for specific Dataverse SDK use cases with architecture recommendations.
 
-# System InstructionsYou are an expert solution architect for PowerPlatform-Dataverse-Client SDK. When a user describes a business need or use case, you:1. **Analyze requirements** - Identify data model, operations, and constraints2. **Design solution** - Recommend table structure, relationships, and patterns3. **Generate implementation** - Provide production-ready code with all components4. **Include best practices** - Error handling, logging, performance optimization5. **Document architecture** - Explain design decisions and patterns used# Solution Architecture Framework
+## System InstructionsYou are an expert solution architect for PowerPlatform-Dataverse-Client SDK. When a user describes a business need or use case, you:1. **Analyze requirements** - Identify data model, operations, and constraints2. **Design solution** - Recommend table structure, relationships, and patterns3. **Generate implementation** - Provide production-ready code with all components4. **Include best practices** - Error handling, logging, performance optimization5. **Document architecture** - Explain design decisions and patterns used# Solution Architecture Framework
 
 ## Phase 1: Requirement Analysis
 
@@ -59,7 +103,7 @@ When user describes a use case, ask or determine:
 
 ## Phase 2: Data Model Design
 
-Design tables and relationships:```python# Example structure for Customer Document Managementtables = {    "account": {  # Existing        "custom_fields": ["new_documentcount", "new_lastdocumentdate"]    },    "new_document": {        "primary_key": "new_documentid",        "columns": {            "new_name": "string",            "new_documenttype": "enum",            "new_parentaccount": "lookup(account)",            "new_uploadedby": "lookup(user)",            "new_uploadeddate": "datetime",            "new_documentfile": "file"        }    }}```
+Design tables and relationships:```python# Example structure for Customer Document Managementtables = { "account": { # Existing "custom_fields": ["new_documentcount", "new_lastdocumentdate"] }, "new_document": { "primary_key": "new_documentid", "columns": { "new_name": "string", "new_documenttype": "enum", "new_parentaccount": "lookup(account)", "new_uploadedby": "lookup(user)", "new_uploadeddate": "datetime", "new_documentfile": "file" } }}```
 
 ## Phase 3: Pattern Selection
 
@@ -148,7 +192,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -169,7 +213,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -237,7 +281,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -245,7 +288,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

@@ -31,15 +31,15 @@ Transform all GitHub repositories into professional, job-ready portfolio pieces 
 
 ### All 7 Repositories
 
-| Repo | URL | Current Status | Action |
-| ------ | ----- | ---------------- | -------- |
-| **banking** | github.com/rhixecompany/banking | ✅ Excellent (46KB comprehensive) | Keep as-is |
-| **university-libary-jsm** | github.com/rhixecompany/university-libary-jsm | ❌ Basic Next.js template | **UPDATE** |
-| **rhixe_scans** | github.com/rhixecompany/rhixe_scans | ❌ Minimal (63 bytes) | **REWRITE** |
-| **xamehitv** | github.com/rhixecompany/xamehitv | ❌ No description | **CREATE** |
-| **selenium_webdriver** | github.com/rhixecompany/selenium_webdriver | ❌ Basic | **ENHANCE** |
-| **ecom** | github.com/rhixecompany/ecom | ❌ No description | **UPDATE** |
-| **rhixecompany** | github.com/rhixecompany/rhixecompany | ❌ No description | **UPDATE** |
+| Repo                      | URL                                           | Current Status                    | Action      |
+| ------------------------- | --------------------------------------------- | --------------------------------- | ----------- |
+| **banking**               | github.com/rhixecompany/banking               | ✅ Excellent (46KB comprehensive) | Keep as-is  |
+| **university-libary-jsm** | github.com/rhixecompany/university-libary-jsm | ❌ Basic Next.js template         | **UPDATE**  |
+| **rhixe_scans**           | github.com/rhixecompany/rhixe_scans           | ❌ Minimal (63 bytes)             | **REWRITE** |
+| **xamehitv**              | github.com/rhixecompany/xamehitv              | ❌ No description                 | **CREATE**  |
+| **selenium_webdriver**    | github.com/rhixecompany/selenium_webdriver    | ❌ Basic                          | **ENHANCE** |
+| **ecom**                  | github.com/rhixecompany/ecom                  | ❌ No description                 | **UPDATE**  |
+| **rhixecompany**          | github.com/rhixecompany/rhixecompany          | ❌ No description                 | **UPDATE**  |
 
 ---
 
@@ -58,7 +58,7 @@ This file serves as the master prompt for all AI coding agents. Keep it updated 
 
 ### README Structure (Use This Template for ALL Repositories)
 
-```markdown
+````markdown
 <!-- markdownlint-disable MD033 MD036 MD041 MD045 MD059 -->
 <div align="center">
   <br />
@@ -97,9 +97,9 @@ This file serves as the master prompt for all AI coding agents. Keep it updated 
 
 ## ⚙️ Tech Stack
 
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| [Tech] | [Version] | [Use] |
+| Technology | Version   | Purpose |
+| ---------- | --------- | ------- |
+| [Tech]     | [Version] | [Use]   |
 
 ## 🔋 Features
 
@@ -109,8 +109,8 @@ This file serves as the master prompt for all AI coding agents. Keep it updated 
 
 ## 🚀 Live Demo
 
-| Platform | URL | Status |
-|----------|-----|--------|
+| Platform             | URL   | Status    |
+| -------------------- | ----- | --------- |
 | [Vercel/Railway/etc] | [URL] | ✅ Active |
 
 ## 🤸 Quick Start
@@ -126,6 +126,7 @@ bun install  # or bun install / pip install
 # Run
 bun run dev  # or python manage.py runserver
 ```
+````
 
 ## 📊 Business Value
 
@@ -156,7 +157,7 @@ bun run dev  # or python manage.py runserver
 - [Documentation]
 - [Related Blog/Tutorial]
 
-```
+````
 
 ---
 
@@ -380,7 +381,7 @@ bun run dev  # or python manage.py runserver
 ### Education
 
 [Your Degree] — [University Name] — [Graduation Year]
-```
+````
 
 ### Cover Letter Template
 
@@ -481,11 +482,11 @@ Alexander Iseghohi
 
 ## Progress Tracking
 
-| Field | Value |
-| ------- | ------- |
-| Last Updated | May 27, 2026 |
-| Status | In Progress |
-| Next Action | Update repo READMEs (university-libary-jsm, rhixe_scans, xamehitv, selenium_webdriver, ecom, rhixecompany) |
+| Field        | Value                                                                                                      |
+| ------------ | ---------------------------------------------------------------------------------------------------------- |
+| Last Updated | May 27, 2026                                                                                               |
+| Status       | In Progress                                                                                                |
+| Next Action  | Update repo READMEs (university-libary-jsm, rhixe_scans, xamehitv, selenium_webdriver, ecom, rhixecompany) |
 
 ---
 
@@ -498,4 +499,4 @@ Alexander Iseghohi
 
 ---
 
-*This prompt serves as the master guide for building Alexander Iseghohi's job-ready GitHub portfolio.*
+_This prompt serves as the master guide for building Alexander Iseghohi's job-ready GitHub portfolio._

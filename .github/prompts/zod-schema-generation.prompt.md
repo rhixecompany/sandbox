@@ -1,48 +1,64 @@
 ---
-name: zod-schema-generation
-title: Zod Schema Generation
-description: Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples
-  with full type safety.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /zod-schema-generation
-toolsets:
-- file
-- terminal
-skills:
-- prompt-engineering
-dependencies:
-- skill:prompt-engineering
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /zod-schema-generation
-    flags: {}
-    help: Generate Zod validation schemas from TypeScript types, database schemas, or J...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- data
-- database
-- generator
-- prompts
-- security
-- sql
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Phases](#phases)
+  - [Phase 1: Input Analysis](#phase-1:-input-analysis)
+  - [Phase 2: Schema Generation](#phase-2:-schema-generation)
+  - [Phase 3: Verification](#phase-3:-verification)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Phases](#phases)
+- [Phase 1: Input Analysis](#phase-1:-input-analysis)
+- [Phase 2: Schema Generation](#phase-2:-schema-generation)
+- [Phase 3: Verification](#phase-3:-verification)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples.
@@ -103,7 +119,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Best Practices
 
@@ -169,7 +185,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

@@ -1,48 +1,116 @@
 ---
-name: mcp-create-declarative-agent
-title: Create MCP-based Declarative Agent for Microsoft 365 Copilot
-description: mcp-create-declarative-agent.prompt.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /mcp-create-declarative-agent
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /mcp-create-declarative-agent
-    flags: {}
-    help: mcp-create-declarative-agent.prompt.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- generator
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Requirements](#requirements)
+- [MCP Server Integration](#mcp-server-integration)
+  - [Supported MCP Endpoints](#supported-mcp-endpoints)
+- [Response Semantics](#response-semantics)
+  - [Define Data Mapping](#define-data-mapping)
+  - [Add Adaptive Cards (Optional)](#add-adaptive-cards-optional)
+- [Environment Configuration](#environment-configuration)
+- [Test](#test)
+  - [Local Testing](#local-testing)
+  - [Validation](#validation)
+- [Best Practices](#best-practices)
+  - [Tool Design](#tool-design)
+  - [Security](#security)
+  - [Instructions](#instructions)
+  - [Performance](#performance)
+- [Common MCP Server Examples](#common-mcp-server-examples)
+  - [GitHub MCP Server](#github-mcp-server)
+  - [Jira MCP Server](#jira-mcp-server)
+  - [Custom Service](#custom-service)
+- [Workflow](#workflow)
+- [Troubleshooting](#troubleshooting)
+  - [MCP Server Not Responding](#mcp-server-not-responding)
+  - [Authentication Fails](#authentication-fails)
+  - [Tools Not Appearing](#tools-not-appearing)
+  - [Agent Not Understanding Queries](#agent-not-understanding-queries)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Requirements](#requirements)
+- [MCP Server Integration](#mcp-server-integration)
+- [Supported MCP Endpoints](#supported-mcp-endpoints)
+- [Response Semantics](#response-semantics)
+- [Define Data Mapping](#define-data-mapping)
+- [Add Adaptive Cards (Optional)](#add-adaptive-cards-optional)
+- [Environment Configuration](#environment-configuration)
+- [Test](#test)
+- [Local Testing](#local-testing)
+- [Validation](#validation)
+- [Best Practices](#best-practices)
+- [Tool Design](#tool-design)
+- [Security](#security)
+- [Instructions](#instructions)
+- [Performance](#performance)
+- [Common MCP Server Examples](#common-mcp-server-examples)
+- [GitHub MCP Server](#github-mcp-server)
+- [Jira MCP Server](#jira-mcp-server)
+- [Custom Service](#custom-service)
+- [Workflow](#workflow)
+- [Troubleshooting](#troubleshooting)
+- [MCP Server Not Responding](#mcp-server-not-responding)
+- [Authentication Fails](#authentication-fails)
+- [Tools Not Appearing](#tools-not-appearing)
+- [Agent Not Understanding Queries](#agent-not-understanding-queries)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Use this prompt to handle the create mcp based declarative agent for microsoft 365 copilot workflow.
@@ -90,7 +158,7 @@ Use when you need to create mcp based declarative agent for microsoft 365 copilo
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Requirements
@@ -109,7 +177,7 @@ Use when you need to create mcp based declarative agent for microsoft 365 copilo
 
 ### Define Data Mapping
 
-Use `response_semantics` to extract relevant fields from API responses:```json"capabilities": {  "response_semantics": {    "data_path": "$.results",    "properties": {      "title": "$.name",      "subtitle": "$.description",      "url": "$.link"    }  }}```
+Use `response_semantics` to extract relevant fields from API responses:```json"capabilities": { "response_semantics": { "data_path": "$.results", "properties": { "title": "$.name", "subtitle": "$.description", "url": "$.link" } }}```
 
 ### Add Adaptive Cards (Optional)
 
@@ -303,7 +371,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -311,7 +378,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

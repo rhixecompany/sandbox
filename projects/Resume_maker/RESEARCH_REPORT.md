@@ -10,10 +10,10 @@
 
 ## Similar Projects
 
-| Project | Relevance |
-|---------|-----------|
-| Bash | Shared Bun/TypeScript CLI architecture |
-| Python-projects | Shared document-generation patterns |
+| Project         | Relevance                              |
+| --------------- | -------------------------------------- |
+| Bash            | Shared Bun/TypeScript CLI architecture |
+| Python-projects | Shared document-generation patterns    |
 
 ---
 
@@ -35,22 +35,22 @@
 
 ### TypeScript Strict Configuration
 
-| Flag | Purpose |
-|------|---------|
-| `noUncheckedIndexedAccess` | Catch undefined array/object access |
-| `exactOptionalPropertyTypes` | Strict optional property handling |
-| `noUnusedLocals` | Prevent dead code |
-| `noUnusedParameters` | Catch unused parameters |
+| Flag                         | Purpose                             |
+| ---------------------------- | ----------------------------------- |
+| `noUncheckedIndexedAccess`   | Catch undefined array/object access |
+| `exactOptionalPropertyTypes` | Strict optional property handling   |
+| `noUnusedLocals`             | Prevent dead code                   |
+| `noUnusedParameters`         | Catch unused parameters             |
 
 ---
 
 ## Cheatsheets & Quick Reference
 
-| Topic | Resource | Type |
-|-------|----------|------|
-| Bun CLI Guide | <https://bun.sh/docs/bundler/executables> | Docs |
+| Topic              | Resource                                                           | Type  |
+| ------------------ | ------------------------------------------------------------------ | ----- |
+| Bun CLI Guide      | <https://bun.sh/docs/bundler/executables>                          | Docs  |
 | ESLint Flat Config | <https://eslint.org/docs/latest/use/configure/configuration-files> | Guide |
-| markdownlint Rules | <https://github.com/DavidAnson/markdownlint> | Docs |
+| markdownlint Rules | <https://github.com/DavidAnson/markdownlint>                       | Docs  |
 
 ---
 
@@ -66,11 +66,11 @@
 
 ## Common Pitfalls
 
-| Pitfall | Impact | Avoidance |
-|---------|--------|-----------|
-| PhantomJS in markdown-pdf | Security vulns, no updates | Migrate to Puppeteer-based solution |
-| ESLint + Bun mismatch | Linting fails | Use `bun --bun eslint .` or Node directly |
-| Late strict TS config | Hard to add flags later | Enable `noUnusedLocals` + `noUnusedParameters` now |
+| Pitfall                   | Impact                     | Avoidance                                          |
+| ------------------------- | -------------------------- | -------------------------------------------------- |
+| PhantomJS in markdown-pdf | Security vulns, no updates | Migrate to Puppeteer-based solution                |
+| ESLint + Bun mismatch     | Linting fails              | Use `bun --bun eslint .` or Node directly          |
+| Late strict TS config     | Hard to add flags later    | Enable `noUnusedLocals` + `noUnusedParameters` now |
 
 ---
 
@@ -101,11 +101,11 @@
 
 ## Resources
 
-| Resource | URL |
-|----------|-----|
-| Bun Docs | <https://bun.sh/docs> |
-| TypeScript Strict Config | <https://www.typescriptlang.org/tsconfig> |
-| ESLint Docs | <https://eslint.org/docs/latest> |
+| Resource                     | URL                                          |
+| ---------------------------- | -------------------------------------------- |
+| Bun Docs                     | <https://bun.sh/docs>                        |
+| TypeScript Strict Config     | <https://www.typescriptlang.org/tsconfig>    |
+| ESLint Docs                  | <https://eslint.org/docs/latest>             |
 | md-to-pdf (migration target) | <https://github.com/simonhaenisch/md-to-pdf> |
 
 ### Research Methodology

@@ -1,43 +1,100 @@
 ---
-name: azure-resource-health-diagnose
-title: Azure Resource Health & Issue Diagnosis
-description: No description
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /azure-resource-health-diagnose
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: default
-    mcp_servers:
-    - filesystem
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /azure-resource-health-diagnose
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:debug
-- tool:azure
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Prerequisites](#prerequisites)
+- [Workflow Steps](#workflow-steps)
+  - [Step 1: Get Azure Best Practices](#step-1:-get-azure-best-practices)
+- [🔍 Executive Summary](#🔍-executive-summary)
+- [📊 Health Metrics](#📊-health-metrics)
+- [🚨 Issues Identified](#🚨-issues-identified)
+  - [Critical Issues](#critical-issues)
+  - [High Priority Issues](#high-priority-issues)
+- [🛠️ Remediation Plan](#🛠️-remediation-plan)
+  - [Phase 1: Immediate Actions (0-2 hours)](#phase-1:-immediate-actions-0-2-hours)
+  - [Phase 2: Short-term Fixes (2-24 hours)](#phase-2:-short-term-fixes-2-24-hours)
+  - [Phase 3: Long-term Improvements (1-4 weeks)](#phase-3:-long-term-improvements-1-4-weeks)
+- [📈 Monitoring Recommendations](#📈-monitoring-recommendations)
+- [✅ Validation Steps](#✅-validation-steps)
+- [📝 Prevention Measures](#📝-prevention-measures)
+- [Error Handling](#error-handling)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Prerequisites](#prerequisites)
+- [Workflow Steps](#workflow-steps)
+- [Step 1: Get Azure Best Practices](#step-1:-get-azure-best-practices)
+- [🔍 Executive Summary](#🔍-executive-summary)
+- [📊 Health Metrics](#📊-health-metrics)
+- [🚨 Issues Identified](#🚨-issues-identified)
+- [Critical Issues](#critical-issues)
+- [High Priority Issues](#high-priority-issues)
+- [🛠️ Remediation Plan](#🛠️-remediation-plan)
+- [Phase 1: Immediate Actions (0-2 hours)](#phase-1:-immediate-actions-0-2-hours)
+- [Phase 2: Short-term Fixes (2-24 hours)](#phase-2:-short-term-fixes-2-24-hours)
+- [Phase 3: Long-term Improvements (1-4 weeks)](#phase-3:-long-term-improvements-1-4-weeks)
+- [📈 Monitoring Recommendations](#📈-monitoring-recommendations)
+- [✅ Validation Steps](#✅-validation-steps)
+- [📝 Prevention Measures](#📝-prevention-measures)
+- [Error Handling](#error-handling)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Analyze Azure resource health, diagnose issues from logs and telemetry, and create a remediation plan for identified problems.
@@ -85,7 +142,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Prerequisites
@@ -113,11 +170,11 @@ Use when you need to work on the current workspace or task.
 
 ### Critical Issues
 
-- **[Issue 1]**: [Description]  - **Root Cause**: [Analysis]  - **Impact**: [Business impact]  - **Immediate Action**: [Required steps]
+- **[Issue 1]**: [Description] - **Root Cause**: [Analysis] - **Impact**: [Business impact] - **Immediate Action**: [Required steps]
 
 ### High Priority Issues
 
-- **[Issue 2]**: [Description]  - **Root Cause**: [Analysis]  - **Impact**: [Performance/reliability impact]  - **Recommended Fix**: [Solution steps]
+- **[Issue 2]**: [Description] - **Root Cause**: [Analysis] - **Impact**: [Performance/reliability impact] - **Recommended Fix**: [Solution steps]
 
 ## 🛠️ Remediation Plan
 
@@ -164,7 +221,7 @@ Use when you need to work on the current workspace or task.
 
 ## Error Handling
 
-- **Resource Not Found**: Provide guidance on resource name/location specification
+- **Resource Not Found**: guide on resource name/location specification
 - **Authentication Issues**: Guide user through Azure authentication setup
 - **Insufficient Permissions**: List required RBAC roles for resource access
 - **No Logs Available**: Suggest enabling diagnostic settings and waiting for data
@@ -263,7 +320,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -271,5 +327,4 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 

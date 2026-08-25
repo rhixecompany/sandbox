@@ -1,48 +1,69 @@
 ---
-name: ai-prompt-engineering-safety-review
-title: AI Prompt Engineering Safety Review
-description: No description
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /ai-prompt-engineering-safety-review
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers:
-    - filesystem
-    - github
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /ai-prompt-engineering-safety-review
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:code-quality
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Analyze the prompt](#phase-1:-analyze-the-prompt)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Analyze the prompt](#phase-1:-analyze-the-prompt)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
 
-# ai-prompt-engineering-safety-review> Review an input prompt for safety, bias, security, clarity, and effectiveness, then return a stronger version.
+## ai-prompt-engineering-safety-review> Review an input prompt for safety, bias, security, clarity, and effectiveness, then return a stronger version.
 
 ## Context
 
@@ -174,7 +195,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -182,7 +202,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 
@@ -192,5 +211,4 @@ Same-family prompts:
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-
 

@@ -1,52 +1,99 @@
 ---
-name: csharp-mstest
-title: MSTest Best Practices (MSTest 3.x/4.x)
-description: Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven
-  tests.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /csharp-mstest
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /csharp-mstest
-    flags: {}
-    help: Get best practices for MSTest 3.x/4.x unit testing, including modern assertio...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- api
-- csharp
-- data
-- dotnet
-- prompts
-- testing
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Project Setup](#project-setup)
+- [Test Class Structure](#test-class-structure)
+- [Test Lifecycle](#test-lifecycle)
+- [Modern Assertion APIs](#modern-assertion-apis)
+  - [Assert Class](#assert-class)
+- [Data-Driven Tests](#data-driven-tests)
+- [Test](#test)
+  - [Accessing TestContext](#accessing-testcontext)
+- [Advanced Features](#advanced-features)
+  - [Retry for Flaky Tests (MSTest 3.9+)](#retry-for-flaky-tests-mstest-39+)
+- [Common Mistakes to Avoid](#common-mistakes-to-avoid)
+- [Test Organization](#test-organization)
+- [Mocking and Isolation](#mocking-and-isolation)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Project Setup](#project-setup)
+- [Test Class Structure](#test-class-structure)
+- [Test Lifecycle](#test-lifecycle)
+- [Modern Assertion APIs](#modern-assertion-apis)
+- [Assert Class](#assert-class)
+- [Data-Driven Tests](#data-driven-tests)
+- [Test](#test)
+- [Accessing TestContext](#accessing-testcontext)
+- [Advanced Features](#advanced-features)
+- [Retry for Flaky Tests (MSTest 3.9+)](#retry-for-flaky-tests-mstest-39+)
+- [Common Mistakes to Avoid](#common-mistakes-to-avoid)
+- [Test Organization](#test-organization)
+- [Mocking and Isolation](#mocking-and-isolation)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven tests.
 
-# MSTest Best Practices (MSTest 3.x/4.x)Your goal is to help me write effective unit tests with modern MSTest, using current APIs and best practices.
+## MSTest Best Practices (MSTest 3.x/4.x)Your goal is to help me write effective unit tests with modern MSTest, using current APIs and best practices.
 
 ## Project Setup
 
@@ -54,7 +101,7 @@ Get best practices for MSTest 3.x/4.x unit testing, including modern assertion A
 
 ## Test Class Structure
 
-- Use `[TestClass]` attribute for test classes- **Seal test classes by default** for performance and design clarity- Use `[TestMethod]` for test methods (prefer over `[DataTestMethod]`)- Follow Arrange-Act-Assert (AAA) pattern- Name tests using pattern `MethodName_Scenario_ExpectedBehavior````csharp[TestClass]public sealed class CalculatorTests{    [TestMethod]    public void Add_TwoPositiveNumbers_ReturnsSum()    {        // Arrange        var calculator = new Calculator();        // Act        var result = calculator.Add(2, 3);        // Assert        Assert.AreEqual(5, result);    }}```
+- Use `[TestClass]` attribute for test classes- **Seal test classes by default** for performance and design clarity- Use `[TestMethod]` for test methods (prefer over `[DataTestMethod]`)- Follow Arrange-Act-Assert (AAA) pattern- Name tests using pattern `MethodName_Scenario_ExpectedBehavior````csharp[TestClass]public sealed class CalculatorTests{ [TestMethod] public void Add_TwoPositiveNumbers_ReturnsSum() { // Arrange var calculator = new Calculator(); // Act var result = calculator.Add(2, 3); // Assert Assert.AreEqual(5, result); }}```
 
 ## Test Lifecycle
 
@@ -75,7 +122,7 @@ Get best practices for MSTest 3.x/4.x unit testing, including modern assertion A
 ## Data-Driven Tests
 
 > [DataRow(0, 0, 0, DisplayName = "Zeros")]
-> [DataRow(-1, 1, 0, IgnoreMessage = "Known issue #123")]  // MSTest 3.8+
+> [DataRow(-1, 1, 0, IgnoreMessage = "Known issue #123")] // MSTest 3.8+
 > **Full content:**
 
 ## Test
@@ -148,7 +195,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -169,7 +216,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -237,7 +284,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -245,7 +291,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

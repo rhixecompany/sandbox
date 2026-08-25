@@ -1,46 +1,68 @@
 ---
-name: testing
-title: Testing
-description: Comprehensive testing prompt aligned to repository unit and E2E guidance.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /testing
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /testing
-    flags: {}
-    help: Comprehensive testing prompt aligned to repository unit and E2E guidance.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- frontend
-- planning
-- prompts
-- skills
-- testing
-- typescript
-- ml
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Coverage Planning](#phase-1:-coverage-planning)
+  - [Phase 2: Test Authoring](#phase-2:-test-authoring)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Coverage Planning](#phase-1:-coverage-planning)
+- [Phase 2: Test Authoring](#phase-2:-test-authoring)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
@@ -178,7 +200,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

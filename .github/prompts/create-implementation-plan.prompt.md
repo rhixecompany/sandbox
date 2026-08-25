@@ -1,48 +1,105 @@
 ---
-name: create-implementation-plan
-title: Create Implementation Plan
-description: Create a new implementation plan file for new features, refactoring existing code or upgrading
-  packages, design, architecture or infrastructure.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /create-implementation-plan
-toolsets:
-- web
-- browser
-- todo
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /create-implementation-plan
-    flags: {}
-    help: Create a new implementation plan file for new features, refactoring existing ...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- architecture
-- generator
-- ml
-- prompts
-- refactoring
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Primary Directive](#primary-directive)
+- [Execution Context](#execution-context)
+- [Core Requirements](#core-requirements)
+- [Plan Structure Requirements](#plan-structure-requirements)
+- [Phase Architecture](#phase-architecture)
+- [AI-Optimized Implementation Standards](#ai-optimized-implementation-standards)
+- [Output File Specifications](#output-file-specifications)
+- [Mandatory Template Structure](#mandatory-template-structure)
+- [Template Validation Rules](#template-validation-rules)
+- [Status](#status)
+- [1. Requirements & Constraints](#1-requirements-&-constraints)
+- [2. Implementation Steps](#2-implementation-steps)
+  - [Implementation Phase 1](#implementation-phase-1)
+- [3. Alternatives](#3-alternatives)
+- [4. Dependencies](#4-dependencies)
+- [5. Files](#5-files)
+- [6. Testing](#6-testing)
+- [7. Risks & Assumptions](#7-risks-&-assumptions)
+- [8. Related Specifications / Further Reading](#8-related-specifications-/-further-reading)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Primary Directive](#primary-directive)
+- [Execution Context](#execution-context)
+- [Core Requirements](#core-requirements)
+- [Plan Structure Requirements](#plan-structure-requirements)
+- [Phase Architecture](#phase-architecture)
+- [AI-Optimized Implementation Standards](#ai-optimized-implementation-standards)
+- [Output File Specifications](#output-file-specifications)
+- [Mandatory Template Structure](#mandatory-template-structure)
+- [Template Validation Rules](#template-validation-rules)
+- [Status](#status)
+- [1. Requirements & Constraints](#1-requirements-&-constraints)
+- [2. Implementation Steps](#2-implementation-steps)
+- [Implementation Phase 1](#implementation-phase-1)
+- [3. Alternatives](#3-alternatives)
+- [4. Dependencies](#4-dependencies)
+- [5. Files](#5-files)
+- [6. Testing](#6-testing)
+- [7. Risks & Assumptions](#7-risks-&-assumptions)
+- [8. Related Specifications / Further Reading](#8-related-specifications-/-further-reading)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -91,7 +148,7 @@ Use when you need to update or create a plan for the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Primary Directive
@@ -137,7 +194,7 @@ All implementation plans must strictly adhere to the following template. Each se
 
 ## Status
 
-> The status of the implementation plan must be clearly defined in the front matte
+> The status of the implementation plan must be defined in the front matte
 > goal: [Concise Title Describing the Package Implementation Plan's Goal]
 > **Full content:**
 
@@ -167,7 +224,7 @@ All implementation plans must strictly adhere to the following template. Each se
 
 ## 5. Files
 
-[List the files that will be affected by the feature or refactoring task.]
+[List the files that affected the feature or refactoring task.]
 
 - **FILE-001**: Description of file 1- **FILE-002**: Description of file 2
 
@@ -275,7 +332,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -283,7 +339,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

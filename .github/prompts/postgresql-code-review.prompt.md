@@ -1,48 +1,90 @@
 ---
-name: postgresql-code-review
-title: PostgreSQL Code Review Assistant
-description: PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns,
-  and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function
-  optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /postgresql-code-review
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /postgresql-code-review
-    flags: {}
-    help: PostgreSQL-specific code review assistant focusing on PostgreSQL best practic...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- architecture
-- audit
-- database
-- prompts
-- security
-- specification
-- sql
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [🎯 PostgreSQL-Specific Review Areas](#🎯-postgresql-specific-review-areas)
+  - [JSONB Best Practices](#jsonb-best-practices)
+- [🔍 PostgreSQL-Specific Anti-Patterns](#🔍-postgresql-specific-anti-patterns)
+  - [Performance Anti-Patterns](#performance-anti-patterns)
+- [📊 PostgreSQL Extension Usage Review](#📊-postgresql-extension-usage-review)
+  - [Extension Best Practices](#extension-best-practices)
+- [🛡️ PostgreSQL Security Review](#🛡️-postgresql-security-review)
+  - [Row Level Security (RLS)](#row-level-security-rls)
+  - [Privilege Management](#privilege-management)
+- [🎯 PostgreSQL Code Quality Checklist](#🎯-postgresql-code-quality-checklist)
+- [📝 PostgreSQL-Specific Review Guidelines](#📝-postgresql-specific-review-guidelines)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [🎯 PostgreSQL-Specific Review Areas](#🎯-postgresql-specific-review-areas)
+- [JSONB Best Practices](#jsonb-best-practices)
+- [🔍 PostgreSQL-Specific Anti-Patterns](#🔍-postgresql-specific-anti-patterns)
+- [Performance Anti-Patterns](#performance-anti-patterns)
+- [📊 PostgreSQL Extension Usage Review](#📊-postgresql-extension-usage-review)
+- [Extension Best Practices](#extension-best-practices)
+- [🛡️ PostgreSQL Security Review](#🛡️-postgresql-security-review)
+- [Row Level Security (RLS)](#row-level-security-rls)
+- [Privilege Management](#privilege-management)
+- [🎯 PostgreSQL Code Quality Checklist](#🎯-postgresql-code-quality-checklist)
+- [📝 PostgreSQL-Specific Review Guidelines](#📝-postgresql-specific-review-guidelines)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).
@@ -90,7 +132,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## 🎯 PostgreSQL-Specific Review Areas
@@ -118,7 +160,7 @@ sql-- ✅ Check if extension exists before creatingCREATE EXTENSION IF NOT EXIST
 ### Row Level Security (RLS)
 
 ```
-sql-- ✅ GOOD: Implementing RLSALTER TABLE sensitive_data ENABLE ROW LEVEL SECURITY;CREATE POLICY user_data_policy ON sensitive_data    FOR ALL TO application_role    USING (user_id = current_setting('app.current_user_id')::INTEGER);
+sql-- ✅ GOOD: Implementing RLSALTER TABLE sensitive_data ENABLE ROW LEVEL SECURITY;CREATE POLICY user_data_policy ON sensitive_data FOR ALL TO application_role USING (user_id = current_setting('app.current_user_id')::INTEGER);
 ```
 
 ### Privilege Management
@@ -225,7 +267,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -233,7 +274,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

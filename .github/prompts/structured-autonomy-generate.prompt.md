@@ -1,43 +1,76 @@
 ---
-name: structured-autonomy-generate
-title: Sa Generate
-description: Structured Autonomy Implementation Generator Prompt.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /structured-autonomy-generate
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /structured-autonomy-generate
-    flags: {}
-    help: Structured Autonomy Implementation Generator Prompt.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- generator
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Step 1: Parse Plan & Research Codebase1. Read the plan.md file to extract:](#step-1:-parse-plan-&-research-codebase1-read-the-planmd-file-to-extract:)
+- [Step 2: Generate Implementation File](#step-2:-generate-implementation-file)
+- [Prerequisites](#prerequisites)
+  - [Step-by-Step Instructions](#step-by-step-instructions)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Step 1: Parse Plan & Research Codebase1. Read the plan.md file to extract:](#step-1:-parse-plan-&-research-codebase1-read-the-planmd-file-to-extract:)
+- [Step 2: Generate Implementation File](#step-2:-generate-implementation-file)
+- [Prerequisites](#prerequisites)
+- [Step-by-Step Instructions](#step-by-step-instructions)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Structured Autonomy Implementation Generator Prompt.
@@ -85,12 +118,12 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Step 1: Parse Plan & Research Codebase1. Read the plan.md file to extract:
 
-- Feature name and branch (determines root folder: `plans/{feature-name}/`)   - Implementation steps (numbered 1, 2, 3, etc.)   - Files affected by each step2. Run comprehensive research ONE TIME using <research_task
+- Feature name and branch (determines root folder: `plans/{feature-name}/`) - Implementation steps (numbered 1, 2, 3, etc.) - Files affected by each step2. Run comprehensive research ONE TIME using <research_task
 
 > . Use `runSubagent` to execute. Do NOT pause.3. Once research returns, proceed to Step 2 (file generation).
 
@@ -194,7 +227,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -202,7 +234,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

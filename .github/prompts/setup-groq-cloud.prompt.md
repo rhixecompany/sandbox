@@ -1,343 +1,440 @@
 ---
-name: setup-groq-cloud
-title: Groq Cloud Setup — Comprehensive Reference & Prompt
-description: Converted and consolidated Groq Cloud documentation (Quickstart, Supported Models, OpenAI
-  Compatibility, API Reference, Rate Limits) into a structured reference and agent prompt for setting
-  up and using the Groq API.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /setup-groq-cloud
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /setup-groq-cloud
-    flags: {}
-    help: Converted and consolidated Groq Cloud documentation (Quickstart, Supported Mo...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: 'image: https://console.groq.com/og_cloudv5.jpg'
+description: 'Prompt for image: https://console.groq.com/og_cloudv5.jpg'
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- api
-- configuration
-- documentation
-- frontend
-- ml
-- prompts
-- setup
-- specification
-- typescript
-scripts: []
-## Goal
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
 
-Guide an agent (or a developer following this prompt) through setting up and using Groq Cloud: create an API key, configure the environment, make the first chat completion, choose models, use OpenAI-compatible client libraries, call the REST API, and respect rate limits. The full reference is embedded under `## Groq Cloud Reference` below.
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [[Create an API Key](#create-an-api-key)](#create-an-api-keycreate-an-api-key)
+- [[Set up your API Key (recommended)](#set-up-your-api-key-recommended)](#set-up-your-api-key-recommendedset-up-your-api-key-recommended)
+  - [[In your terminal of choice:](#in-your-terminal-of-choice)](#in-your-terminal-of-choice:in-your-terminal-of-choice)
+- [[Requesting your first chat completion](#requesting-your-first-chat-completion)](#requesting-your-first-chat-completionrequesting-your-first-chat-completion)
+  - [[Install the Groq Python library:](#install-the-groq-python-library)](#install-the-groq-python-library:install-the-groq-python-library)
+  - [[Performing a Chat Completion:](#performing-a-chat-completion)](#performing-a-chat-completion:performing-a-chat-completion)
+- [[Using third-party libraries and SDKs](#using-thirdparty-libraries-and-sdks)](#using-third-party-libraries-and-sdksusing-thirdparty-libraries-and-sdks)
+  - [[Using AI SDK:](#using-ai-sdk)](#using-ai-sdk:using-ai-sdk)
+  - [[Next Steps](#next-steps)](#next-stepsnext-steps)
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [Supported Models](#supported-models)
+- [[Featured Models and Systems](#featured-models-and-systems)](#featured-models-and-systemsfeatured-models-and-systems)
+- [[Production Models](#production-models)](#production-modelsproduction-models)
+- [[Production Systems](#production-systems)](#production-systemsproduction-systems)
+- [[Preview Models](#preview-models)](#preview-modelspreview-models)
+- [[Deprecated Models](#deprecated-models)](#deprecated-modelsdeprecated-models)
+- [[Get All Available Models](#get-all-available-models)](#get-all-available-modelsget-all-available-models)
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [[Configuring OpenAI to Use Groq API](#configuring-openai-to-use-groq-api)](#configuring-openai-to-use-groq-apiconfiguring-openai-to-use-groq-api)
+- [[Currently Unsupported OpenAI Features](#currently-unsupported-openai-features)](#currently-unsupported-openai-featurescurrently-unsupported-openai-features)
+  - [[Text Completions](#text-completions)](#text-completionstext-completions)
+  - [[Temperature](#temperature)](#temperaturetemperature)
+  - [[Audio Transcription and Translation](#audio-transcription-and-translation)](#audio-transcription-and-translationaudio-transcription-and-translation)
+- [[Responses API](#responses-api)](#responses-apiresponses-api)
+  - [[Feedback](#feedback)](#feedbackfeedback)
+- [[Next Steps](#next-steps)](#next-stepsnext-steps)
+- [title: API Reference - GroqDocs](#title:-api-reference---groqdocs)
+- [Groq API Reference](#groq-api-reference)
+  - [[Request Body](https://console.groq.com/docs/api-reference#chat-create-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referencechat-create-request-body)
+- [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#chat-create-returns)](#response-objecthttps://consolegroqcom/docs/api-referencechat-create-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+- [This is the default and can be omitted](#this-is-the-default-and-can-be-omitted)
+  - [[Request Body](https://console.groq.com/docs/api-reference#responses-create-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referenceresponses-create-request-body)
+- [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#responses-create-returns)](#response-objecthttps://consolegroqcom/docs/api-referenceresponses-create-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Request Body](https://console.groq.com/docs/api-reference#audio-transcription-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referenceaudio-transcription-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#audio-transcription-returns)](#response-objecthttps://consolegroqcom/docs/api-referenceaudio-transcription-returns)
+  - [[Request Body](https://console.groq.com/docs/api-reference#audio-translation-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referenceaudio-translation-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#audio-translation-returns)](#response-objecthttps://consolegroqcom/docs/api-referenceaudio-translation-returns)
+- [Default](#default)
+  - [[Request Body](https://console.groq.com/docs/api-reference#audio-speech-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referenceaudio-speech-request-body)
+  - [[Returns](https://console.groq.com/docs/api-reference#audio-speech-returns)](#returnshttps://consolegroqcom/docs/api-referenceaudio-speech-returns)
+  - [[Response Object](https://console.groq.com/docs/api-reference#models-list-returns)](#response-objecthttps://consolegroqcom/docs/api-referencemodels-list-returns)
+- [Show properties](#show-properties)
+- [This is the default and can be omitted](#this-is-the-default-and-can-be-omitted)
+  - [[Response Object](https://console.groq.com/docs/api-reference#models-retrieve-returns)](#response-objecthttps://consolegroqcom/docs/api-referencemodels-retrieve-returns)
+- [This is the default and can be omitted](#this-is-the-default-and-can-be-omitted)
+  - [[Request Body](https://console.groq.com/docs/api-reference#batches-create-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referencebatches-create-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-create-returns)](#response-objecthttps://consolegroqcom/docs/api-referencebatches-create-returns)
+- [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-retrieve-returns)](#response-objecthttps://consolegroqcom/docs/api-referencebatches-retrieve-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-list-returns)](#response-objecthttps://consolegroqcom/docs/api-referencebatches-list-returns)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-cancel-returns)](#response-objecthttps://consolegroqcom/docs/api-referencebatches-cancel-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Request Body](https://console.groq.com/docs/api-reference#files-upload-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referencefiles-upload-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-upload-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefiles-upload-returns)
+- [Prepare the file and form data](#prepare-the-file-and-form-data)
+- [Make the POST request](#make-the-post-request)
+- [Usage example](#usage-example)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-list-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefiles-list-returns)
+- [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-delete-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefiles-delete-returns)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-retrieve-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefiles-retrieve-returns)
+  - [[Returns](https://console.groq.com/docs/api-reference#files-download-returns)](#returnshttps://consolegroqcom/docs/api-referencefiles-download-returns)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-list-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefine-tuning-list-returns)
+  - [Show properties](#show-properties)
+- [This is the default and can be omitted](#this-is-the-default-and-can-be-omitted)
+  - [[Request Body](https://console.groq.com/docs/api-reference#fine-tuning-create-request-body)](#request-bodyhttps://consolegroqcom/docs/api-referencefine-tuning-create-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-create-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefine-tuning-create-returns)
+- [Show properties](#show-properties)
+- [This is the default and can be omitted](#this-is-the-default-and-can-be-omitted)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-get-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefine-tuning-get-returns)
+- [Show properties](#show-properties)
+- [This is the default and can be omitted](#this-is-the-default-and-can-be-omitted)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-delete-returns)](#response-objecthttps://consolegroqcom/docs/api-referencefine-tuning-delete-returns)
+- [This is the default and can be omitted](#this-is-the-default-and-can-be-omitted)
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [[Understanding Rate Limits](#understanding-rate-limits)](#understanding-rate-limitsunderstanding-rate-limits)
+  - [[Input and Output Token Rate Limits (ITPM / OTPM)](#input-and-output-token-rate-limits-itpm--otpm)](#input-and-output-token-rate-limits-itpm-/-otpminput-and-output-token-rate-limits-itpm--otpm)
+- [[Rate Limits](#rate-limits)](#rate-limitsrate-limits)
+- [[Rate Limit Headers](#rate-limit-headers)](#rate-limit-headersrate-limit-headers)
+- [[Handling Rate Limits](#handling-rate-limits)](#handling-rate-limitshandling-rate-limits)
 
-## Subgoals
+## Table of Contents
 
-1. **Key** — Create a Groq API key and store it as an environment variable.
-2. **First call** — Send a first chat completion via the Groq Python/JS SDK or raw REST.
-3. **Models** — Select an appropriate model from the Supported Models reference.
-4. **Compatibility** — Wire existing OpenAI client libraries to the Groq base URL.
-5. **API** — Use the REST API reference for chat, files, and fine-tuning endpoints.
-6. **Limits** — Apply rate-limit headers and backoff in production code.
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [[Create an API Key](#create-an-api-key)](#[create-an-api-key]#create-an-api-key)
+- [[Set up your API Key (recommended)](#set-up-your-api-key-recommended)](#[set-up-your-api-key-recommended]#set-up-your-api-key-recommended)
+  - [[In your terminal of choice:](#in-your-terminal-of-choice)](#[in-your-terminal-of-choice:]#in-your-terminal-of-choice)
+- [[Requesting your first chat completion](#requesting-your-first-chat-completion)](#[requesting-your-first-chat-completion]#requesting-your-first-chat-completion)
+  - [[Install the Groq Python library:](#install-the-groq-python-library)](#[install-the-groq-python-library:]#install-the-groq-python-library)
+  - [[Performing a Chat Completion:](#performing-a-chat-completion)](#[performing-a-chat-completion:]#performing-a-chat-completion)
+- [[Using third-party libraries and SDKs](#using-thirdparty-libraries-and-sdks)](#[using-third-party-libraries-and-sdks]#using-thirdparty-libraries-and-sdks)
+  - [[Using AI SDK:](#using-ai-sdk)](#[using-ai-sdk:]#using-ai-sdk)
+  - [[Next Steps](#next-steps)](#[next-steps]#next-steps)
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [[Featured Models and Systems](#featured-models-and-systems)](#[featured-models-and-systems]#featured-models-and-systems)
+- [[Production Models](#production-models)](#[production-models]#production-models)
+- [[Production Systems](#production-systems)](#[production-systems]#production-systems)
+- [[Preview Models](#preview-models)](#[preview-models]#preview-models)
+- [[Deprecated Models](#deprecated-models)](#[deprecated-models]#deprecated-models)
+- [[Get All Available Models](#get-all-available-models)](#[get-all-available-models]#get-all-available-models)
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [[Configuring OpenAI to Use Groq API](#configuring-openai-to-use-groq-api)](#[configuring-openai-to-use-groq-api]#configuring-openai-to-use-groq-api)
+- [[Currently Unsupported OpenAI Features](#currently-unsupported-openai-features)](#[currently-unsupported-openai-features]#currently-unsupported-openai-features)
+  - [[Text Completions](#text-completions)](#[text-completions]#text-completions)
+  - [[Temperature](#temperature)](#[temperature]#temperature)
+  - [[Audio Transcription and Translation](#audio-transcription-and-translation)](#[audio-transcription-and-translation]#audio-transcription-and-translation)
+- [[Responses API](#responses-api)](#[responses-api]#responses-api)
+  - [[Feedback](#feedback)](#[feedback]#feedback)
+- [[Next Steps](#next-steps)](#[next-steps]#next-steps)
+- [title: API Reference - GroqDocs](#title:-api-reference---groqdocs)
+  - [[Request Body](https://console.groq.com/docs/api-reference#chat-create-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#chat-create-request-body)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#chat-create-returns)](#[response-object]https://consolegroqcom/docs/api-reference#chat-create-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Request Body](https://console.groq.com/docs/api-reference#responses-create-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#responses-create-request-body)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#responses-create-returns)](#[response-object]https://consolegroqcom/docs/api-reference#responses-create-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [Show possible types](#show-possible-types)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Request Body](https://console.groq.com/docs/api-reference#audio-transcription-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#audio-transcription-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#audio-transcription-returns)](#[response-object]https://consolegroqcom/docs/api-reference#audio-transcription-returns)
+  - [[Request Body](https://console.groq.com/docs/api-reference#audio-translation-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#audio-translation-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#audio-translation-returns)](#[response-object]https://consolegroqcom/docs/api-reference#audio-translation-returns)
+  - [[Request Body](https://console.groq.com/docs/api-reference#audio-speech-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#audio-speech-request-body)
+  - [[Returns](https://console.groq.com/docs/api-reference#audio-speech-returns)](#[returns]https://consolegroqcom/docs/api-reference#audio-speech-returns)
+  - [[Response Object](https://console.groq.com/docs/api-reference#models-list-returns)](#[response-object]https://consolegroqcom/docs/api-reference#models-list-returns)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#models-retrieve-returns)](#[response-object]https://consolegroqcom/docs/api-reference#models-retrieve-returns)
+  - [[Request Body](https://console.groq.com/docs/api-reference#batches-create-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#batches-create-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-create-returns)](#[response-object]https://consolegroqcom/docs/api-reference#batches-create-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-retrieve-returns)](#[response-object]https://consolegroqcom/docs/api-reference#batches-retrieve-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-list-returns)](#[response-object]https://consolegroqcom/docs/api-reference#batches-list-returns)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#batches-cancel-returns)](#[response-object]https://consolegroqcom/docs/api-reference#batches-cancel-returns)
+  - [Show properties](#show-properties)
+  - [Show properties](#show-properties)
+  - [[Request Body](https://console.groq.com/docs/api-reference#files-upload-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#files-upload-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-upload-returns)](#[response-object]https://consolegroqcom/docs/api-reference#files-upload-returns)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-list-returns)](#[response-object]https://consolegroqcom/docs/api-reference#files-list-returns)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-delete-returns)](#[response-object]https://consolegroqcom/docs/api-reference#files-delete-returns)
+  - [[Response Object](https://console.groq.com/docs/api-reference#files-retrieve-returns)](#[response-object]https://consolegroqcom/docs/api-reference#files-retrieve-returns)
+  - [[Returns](https://console.groq.com/docs/api-reference#files-download-returns)](#[returns]https://consolegroqcom/docs/api-reference#files-download-returns)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-list-returns)](#[response-object]https://consolegroqcom/docs/api-reference#fine-tuning-list-returns)
+  - [Show properties](#show-properties)
+  - [[Request Body](https://console.groq.com/docs/api-reference#fine-tuning-create-request-body)](#[request-body]https://consolegroqcom/docs/api-reference#fine-tuning-create-request-body)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-create-returns)](#[response-object]https://consolegroqcom/docs/api-reference#fine-tuning-create-returns)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-get-returns)](#[response-object]https://consolegroqcom/docs/api-reference#fine-tuning-get-returns)
+  - [Show properties](#show-properties)
+  - [[Response Object](https://console.groq.com/docs/api-reference#fine-tuning-delete-returns)](#[response-object]https://consolegroqcom/docs/api-reference#fine-tuning-delete-returns)
+- [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
+- [[Understanding Rate Limits](#understanding-rate-limits)](#[understanding-rate-limits]#understanding-rate-limits)
+  - [[Input and Output Token Rate Limits (ITPM / OTPM)](#input-and-output-token-rate-limits-itpm--otpm)](#[input-and-output-token-rate-limits-itpm-/-otpm]#input-and-output-token-rate-limits-itpm--otpm)
+- [[Rate Limits](#rate-limits)](#[rate-limits]#rate-limits)
+- [[Rate Limit Headers](#rate-limit-headers)](#[rate-limit-headers]#rate-limit-headers)
+- [[Handling Rate Limits](#handling-rate-limits)](#[handling-rate-limits]#handling-rate-limits)
 
-## Personas
 
-- **Developer** — Implementation, SDK setup, first request.
-- **Reviewer** — Validating integration correctness and quota safety.
-- **User** — General-purpose operations and onboarding.
+---
+description: Get up and running with the Groq API in minutes: create an API key, set up your environment, and make your first request.
+title: Quickstart - GroqDocs
+## image: https://console.groq.com/og_cloudv5.jpg
 
-## Personality
-
-- **Tone**: Direct, practical, actionable.
-- **Style**: Reference-first; cite the embedded docs for exact parameters.
-- **Avoid**: Guessing model IDs or parameters not listed in the reference.
-- **Encourage**: Environment-variable key storage, streaming where useful, rate-limit backoff.
-
-## Context
-
-The reference content was converted from `setup-groq-cloud.prompt.txt` (a concatenated scrape of Groq Cloud documentation pages). It is authoritative for model IDs, endpoints, request fields, and limits. Always prefer the values stated in `## Groq Cloud Reference` over assumptions.
-
-## Rules
-
-
-> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-> Domain-specific additions below.
-
-### Domain Rules
-
-1. **DRY** — Reference the embedded docs; do not restate parameter lists inline when the reference covers them.
-2. **Key safety** — Never print or commit the API key. Use `GROQ_API_KEY` env var.
-3. **Verify before claim** — Confirm model IDs and endpoints against the reference before using them.
-4. **Rate limits** — Honor `x-ratelimit-remaining-*` headers and `retry-after` on `429`.
-
-## Phases
-
-### Phase 1: Provision
-
-- Create an API key at `https://console.groq.com/keys`.
-- Export `GROQ_API_KEY` in the environment (see Reference > Quickstart).
-
-### Phase 2: First Request
-
-- Install the SDK (`pip install groq` or `pnpm add ai @ai-sdk/groq`).
-- Send a first chat completion (see Reference > Quickstart / API Reference).
-
-### Phase 3: Productionize
-
-- Choose a model from Reference > Supported Models.
-- Wire OpenAI-compatible clients via `base_url=https://api.groq.com/openai/v1` (see Reference > OpenAI Compatibility).
-- Implement rate-limit backoff (see Reference > Rate Limits).
-
-## Best Practices
-
-1. **Environment variables** — Keep keys out of source.
-2. **Streaming** — Use `stream: true` for long generations.
-3. **Structured outputs** — Prefer `response_format` JSON schema on supported models.
-4. **Backoff** — Exponential backoff on `429` using `retry-after`.
-
-## Verification Checklist
-
-| # | Gate       | Criterion                                      |
-| - | ---------- | ---------------------------------------------- |
-| 1 | Key        | API key created and exported as `GROQ_API_KEY` |
-| 2 | First call | A chat completion returns content              |
-| 3 | Model      | Model ID matches one in Supported Models       |
-| 4 | Compat     | OpenAI client points at Groq base URL          |
-| 5 | Limits     | Code handles `429` + `retry-after`             |
-
-## Skills Required
-
-| Skill                            | Purpose                       |
-| -------------------------------- | ----------------------------- |
-| `using-superpowers`              | Foundational workflow         |
-| `systematic-debugging`           | Root-cause API/SDK errors     |
-| `verification-before-completion` | Validate before claiming done |
-
-## MCP Servers & Tools
-
-| Tool         | Purpose                                                |
-| ------------ | ------------------------------------------------------ |
-| `fetch`      | Pull live Groq docs if the embedded reference is stale |
-| `filesystem` | Read/write integration files                           |
-| `terminal`   | Install SDKs, run scripts                              |
-
-## Tasks
-
-- [ ] Create and export `GROQ_API_KEY`
-- [ ] Install the Groq SDK
-- [ ] Send a first chat completion
-- [ ] Select a production model
-- [ ] Wire OpenAI-compatible client (if used)
-- [ ] Add rate-limit backoff
-
-## Dependencies
-
-- Python 3.11+ (`groq` SDK) or Node.js (`groq-sdk` / `@ai-sdk/groq`)
-- Network access to `api.groq.com`
-- The embedded reference under `## Groq Cloud Reference`
-
-## Groq Cloud Reference
-
-Converted from `setup-groq-cloud.prompt.txt`. Each subsection is one source document.
-
-### Table of Contents
-
-- Quickstart
-- Supported Models
-- OpenAI Compatibility
-- API Reference
-- Rate Limits
-
-### Quickstart
-
-> Get up and running with the Groq API in minutes: create an API key, set up your environment, and make your first request.
+## Quickstart
 
 Get up and running with the Groq API in a few minutes, with the steps below.
 
 For additional support, catch our [onboarding video](https://console.groq.com/docs/overview).
 
-### Create an API Key
+## [Create an API Key](#create-an-api-key)
 
 Please visit [here](https://console.groq.com/keys) to create an API Key.
 
-### Set up your API Key (recommended)
+## [Set up your API Key (recommended)](#set-up-your-api-key-recommended)
 
 Configure your API key as an environment variable. This approach streamlines your API usage by eliminating the need to include your API key in each request. Moreover, it enhances security by minimizing the risk of inadvertently including your API key in your codebase.
 
-#### In your terminal of choice:
+### [In your terminal of choice:](#in-your-terminal-of-choice)
 
-```javascript
+shell
+
+```
 export GROQ_API_KEY=<your-api-key-here>
 ```
 
-### Requesting your first chat completion
+## [Requesting your first chat completion](#requesting-your-first-chat-completion)
 
-#### Install the Groq Python library:
+curlJavaScriptPythonJSON
 
-```bash
-pip install groq
+### [Install the Groq Python library:](#install-the-groq-python-library)
+
+shell
+
+```
+`pip install` groq
 ```
 
-#### Performing a Chat Completion:
+### [Performing a Chat Completion:](#performing-a-chat-completion)
 
-```python
+Python
+
+```
 import os
 
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            "role": "user",
-            "content": "Explain the importance of fast language models",
-        }
-    ],
-    model="llama-3.3-70b-versatile",
+```text
+messages=[
+{
+"role": "user",
+"content": "Explain the importance of fast language models",
+}
+],
+model="llama-3.3-70b-versatile",
+```
+
 )
 
 print(chat_completion.choices[0].message.content)
 ```
 
-### Using third-party libraries and SDKs
+## [Using third-party libraries and SDKs](#using-thirdparty-libraries-and-sdks)
 
-#### Using AI SDK:
+Vercel AI SDKLiteLLMLangChain
+
+### [Using AI SDK:](#using-ai-sdk)
 
 [AI SDK](https://ai-sdk.dev/) is a Javascript-based open-source library that simplifies building large language model (LLM) applications. Documentation for how to use Groq on the AI SDK [can be found here](https://console.groq.com/docs/ai-sdk/).
 
 First, install the `ai` package and the Groq provider `@ai-sdk/groq`:
 
-```bash
-pnpm add ai @ai-sdk/groq
+shell
+
+```
+`pnpm add` ai @ai-sdk/groq
 ```
 
 Then, you can use the Groq provider to generate text. By default, the provider will look for `GROQ_API_KEY` as the API key.
 
-```javascript
+JavaScript
+
+```
 import { groq } from '@ai-sdk/groq';
 import { generateText } from 'ai';
 
 const { text } = await generateText({
-  model: groq('llama-3.3-70b-versatile'),
-  prompt: 'Write a vegetarian lasagna recipe for 4 people.',
+model: groq('llama-3.3-70b-versatile'),
+prompt: 'Write a vegetarian lasagna recipe for 4 people.',
 });
 ```
 
 Now that you have successfully received a chat completion, you can try out the other endpoints in the API.
 
-#### Next Steps
+### [Next Steps](#next-steps)
 
-* Check out the [Playground](https://console.groq.com/playground) to try out the Groq API in your browser
-* Join our GroqCloud [developer community](https://community.groq.com/)
-* Add a how-to on your project to the [Groq API Cookbook](https://github.com/groq/groq-api-cookbook)
+- Check out the [Playground](https://console.groq.com/playground) to try out the Groq API in your browser
+- Join our GroqCloud [developer community](https://community.groq.com/)
+- Add a how-to on your project to the [Groq API Cookbook](https://github.com/groq/groq-api-cookbook)
 
-### Supported Models
+---
+description: Explore all available models on GroqCloud.
+title: Supported Models - GroqDocs
+## image: https://console.groq.com/og_cloudv5.jpg
 
-> Explore all available models on GroqCloud.
+## Supported Models
 
 Explore all available models on GroqCloud.
 
-### Featured Models and Systems
+## [Featured Models and Systems](#featured-models-and-systems)
 
-[![Groq Compound icon](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=96&q=75)Groq CompoundGroq Compound is an AI system powered by openly available models that intelligently and selectively uses built-in tools to answer user queries, including web search and code execution.Token Speed~450 tpsModalitiesCapabilities](/docs/compound/systems/compound)[![OpenAI GPT-OSS 120B icon](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)OpenAI GPT-OSS 120BGPT-OSS 120B is OpenAI's flagship open-weight language model with 120 billion parameters, built in browser search and code execution, and reasoning capabilities.Token Speed~500 tpsModalitiesCapabilities](/docs/model/openai/gpt-oss-120b)
+[![Groq Compound icon](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=96&q=75)Groq CompoundGroq Compound is an AI system powered by openly available models that intelligently and selectively uses built-in tools to answer user queries, including web search and code execution.Token Speed\~450 tpsModalitiesCapabilities](/docs/compound/systems/compound)[![OpenAI GPT-OSS 120B icon](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)OpenAI GPT-OSS 120BGPT-OSS 120B is OpenAI's flagship open-weight language model with 120 billion parameters, built in browser search and code execution, and reasoning capabilities.Token Speed\~500 tpsModalitiesCapabilities](/docs/model/openai/gpt-oss-120b)
 
-### Production Models
+## [Production Models](#production-models)
 
 **Note:** Production models are intended for use in your production environments. They meet or exceed our high standards for speed, quality, and reliability. Read more [here](https://console.groq.com/docs/deprecations).
 
-| MODEL ID                                                                                                                                                         | SPEED (T/SEC) | PRICE PER 1M TOKENS      | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- |
-| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama 3.1 8B](/docs/model/llama-3.1-8b-instant)llama-3.1-8b-instant                 | 560           | $0.05 input$0.08 output  | 250K TPM1K RPM               | 131,072                 | 131,072               | -             |
-| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama 3.3 70B](/docs/model/llama-3.3-70b-versatile)llama-3.3-70b-versatile          | 280           | $0.59 input$0.79 output  | 300K TPM1K RPM               | 131,072                 | 32,768                | -             |
-| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)GPT OSS 120B](/docs/model/openai/gpt-oss-120b)openai/gpt-oss-120b                 | 500           | $0.15 input$0.60 output  | 250K TPM1K RPM               | 131,072                 | 65,536                | -             |
-| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)GPT OSS 20B](/docs/model/openai/gpt-oss-20b)openai/gpt-oss-20b                    | 1000          | $0.075 input$0.30 output | 250K TPM1K RPM               | 131,072                 | 65,536                | -             |
-| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)Whisper](/docs/model/whisper-large-v3)whisper-large-v3                            | -             | $0.111 per hour          | 200K ASH300 RPM              | -                       | -                     | 100 MB        |
-| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)Whisper Large V3 Turbo](/docs/model/whisper-large-v3-turbo)whisper-large-v3-turbo | -             | $0.04 per hour           | 400K ASH400 RPM              | -                       | -                     | -             |
+| MODEL ID | SPEED (T/SEC) | PRICE PER 1M TOKENS | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- |
+| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama 3.1 8B](/docs/model/llama-3.1-8b-instant)llama-3.1-8b-instant | 560 | $0.05 input$0.08 output | 250K TPM1K RPM | 131,072 | 131,072 | \- |
+| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama 3.3 70B](/docs/model/llama-3.3-70b-versatile)llama-3.3-70b-versatile | 280 | $0.59 input$0.79 output | 300K TPM1K RPM | 131,072 | 32,768 | \- |
+| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)GPT OSS 120B](/docs/model/openai/gpt-oss-120b)openai/gpt-oss-120b | 500 | $0.15 input$0.60 output | 250K TPM1K RPM | 131,072 | 65,536 | \- |
+| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)GPT OSS 20B](/docs/model/openai/gpt-oss-20b)openai/gpt-oss-20b | 1000 | $0.075 input$0.30 output | 250K TPM1K RPM | 131,072 | 65,536 | \- |
+| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)Whisper](/docs/model/whisper-large-v3)whisper-large-v3 | \- | $0.111 per hour | 200K ASH300 RPM | \- | \- | 100 MB |
+| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)Whisper Large V3 Turbo](/docs/model/whisper-large-v3-turbo)whisper-large-v3-turbo | \- | $0.04 per hour | 400K ASH400 RPM | \- | \- | \- |
 
-### Production Systems
+## [Production Systems](#production-systems)
 
 Systems are a collection of models and tools that work together to answer a user query.
 
-| MODEL ID                                                                                                                                              | SPEED (T/SEC) | PRICE PER 1M TOKENS | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- | ---------------------------- | ----------------------- | --------------------- | ------------- |
-| [![Groq](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=48&q=75)Compound](/docs/compound/systems/compound)groq/compound                | 450           | -                   | 200K TPM200 RPM              | 131,072                 | 8,192                 | -             |
-| [![Groq](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=48&q=75)Compound Mini](/docs/compound/systems/compound-mini)groq/compound-mini | 450           | -                   | 200K TPM200 RPM              | 131,072                 | 8,192                 | -             |
+| MODEL ID | SPEED (T/SEC) | PRICE PER 1M TOKENS | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- | ---------------------------- | ----------------------- | --------------------- | ------------- |
+| [![Groq](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=48&q=75)Compound](/docs/compound/systems/compound)groq/compound | 450 | \- | 200K TPM200 RPM | 131,072 | 8,192 | \- |
+| [![Groq](https://console.groq.com/_next/image?url=%2Fgroq-circle.png&w=48&q=75)Compound Mini](/docs/compound/systems/compound-mini)groq/compound-mini | 450 | \- | 200K TPM200 RPM | 131,072 | 8,192 | \- |
 
 [Learn More About Agentic ToolingDiscover how to build powerful applications with real-time web search and code execution](https://console.groq.com/docs/agentic-tooling)
 
-### Preview Models
+## [Preview Models](#preview-models)
 
 **Note:** Preview models are intended for evaluation purposes only and should not be used in production environments as they may be discontinued at short notice. Read more about deprecations [here](https://console.groq.com/docs/deprecations).
 
-| MODEL ID                                                                                                                                                                                           | SPEED (T/SEC) | PRICE PER 1M TOKENS      | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- |
-| [![Canopy Labs](https://console.groq.com/_next/image?url=%2Fcanopylabs.png&w=48&q=75)Canopy Labs Orpheus Arabic Saudi](/docs/model/canopylabs/orpheus-arabic-saudi)canopylabs/orpheus-arabic-saudi | -             | $40.00 per 1M characters | 50K TPM250 RPM               | 4,000                   | 50,000                | -             |
-| [![Canopy Labs](https://console.groq.com/_next/image?url=%2Fcanopylabs.png&w=48&q=75)Canopy Labs Orpheus V1 English](/docs/model/canopylabs/orpheus-v1-english)canopylabs/orpheus-v1-english       | -             | $22.00 per 1M characters | 50K TPM250 RPM               | 4,000                   | 50,000                | -             |
-| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama Prompt Guard 2 22M](/docs/model/meta-llama/llama-prompt-guard-2-22m)meta-llama/llama-prompt-guard-2-22m         | -             | $0.03 input$0.03 output  | 30K TPM100 RPM               | 512                     | 512                   | -             |
-| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Prompt Guard 2 86M](/docs/model/meta-llama/llama-prompt-guard-2-86m)meta-llama/llama-prompt-guard-2-86m               | -             | $0.04 input$0.04 output  | 30K TPM100 RPM               | 512                     | 512                   | -             |
-| [![MiniMaxAI](https://console.groq.com/_next/image?url=%2Fminimax_logo.png&w=48&q=75)MiniMax M2.7](/docs/model/minimaxai/minimax-m2.7)Enterpriseminimaxai/minimax-m2.7                             | 260           | ContactSales             | ContactSales                 | 196,608                 | 131,072               | -             |
-| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)Safety GPT OSS 20B](/docs/model/openai/gpt-oss-safeguard-20b)openai/gpt-oss-safeguard-20b                           | 1000          | $0.075 input$0.30 output | 150K TPM1K RPM               | 131,072                 | 65,536                | -             |
-| [![Alibaba Cloud](https://console.groq.com/_next/image?url=%2Fqwen_logo.png&w=48&q=75)Qwen/Qwen3.6-27B](/docs/model/qwen/qwen3.6-27b)qwen/qwen3.6-27b                                              | 500           | $0.60 input$3.00 output  | 250K TPM1K RPM               | 131,072                 | 16,384                | 20 MB         |
+| MODEL ID | SPEED (T/SEC) | PRICE PER 1M TOKENS | RATE LIMITS (DEVELOPER PLAN) | CONTEXT WINDOW (TOKENS) | MAX COMPLETION TOKENS | MAX FILE SIZE |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------ | ---------------------------- | ----------------------- | --------------------- | ------------- |
+| [![Canopy Labs](https://console.groq.com/_next/image?url=%2Fcanopylabs.png&w=48&q=75)Canopy Labs Orpheus Arabic Saudi](/docs/model/canopylabs/orpheus-arabic-saudi)canopylabs/orpheus-arabic-saudi | \- | $40.00 per 1M characters | 50K TPM250 RPM | 4,000 | 50,000 | \- |
+| [![Canopy Labs](https://console.groq.com/_next/image?url=%2Fcanopylabs.png&w=48&q=75)Canopy Labs Orpheus V1 English](/docs/model/canopylabs/orpheus-v1-english)canopylabs/orpheus-v1-english | \- | $22.00 per 1M characters | 50K TPM250 RPM | 4,000 | 50,000 | \- |
+| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Llama Prompt Guard 2 22M](/docs/model/meta-llama/llama-prompt-guard-2-22m)meta-llama/llama-prompt-guard-2-22m | \- | $0.03 input$0.03 output | 30K TPM100 RPM | 512 | 512 | \- |
+| [![Meta](https://console.groq.com/_next/image?url=%2FMeta_logo.png&w=48&q=75)Prompt Guard 2 86M](/docs/model/meta-llama/llama-prompt-guard-2-86m)meta-llama/llama-prompt-guard-2-86m | \- | $0.04 input$0.04 output | 30K TPM100 RPM | 512 | 512 | \- |
+| [![MiniMaxAI](https://console.groq.com/_next/image?url=%2Fminimax_logo.png&w=48&q=75)MiniMax M2.7](/docs/model/minimaxai/minimax-m2.7)Enterpriseminimaxai/minimax-m2.7 | 260 | ContactSales | ContactSales | 196,608 | 131,072 | \- |
+| [![OpenAI](https://console.groq.com/_next/static/media/openailogo.523c87a0.svg)Safety GPT OSS 20B](/docs/model/openai/gpt-oss-safeguard-20b)openai/gpt-oss-safeguard-20b | 1000 | $0.075 input$0.30 output | 150K TPM1K RPM | 131,072 | 65,536 | \- |
+| [![Alibaba Cloud](https://console.groq.com/_next/image?url=%2Fqwen_logo.png&w=48&q=75)Qwen/Qwen3.6-27B](/docs/model/qwen/qwen3.6-27b)qwen/qwen3.6-27b | 500 | $0.60 input$3.00 output | 250K TPM1K RPM | 131,072 | 16,384 | 20 MB |
 
-### Deprecated Models
+## [Deprecated Models](#deprecated-models)
 
 Deprecated models are models that are no longer supported or will no longer be supported in the future. See our deprecation guidelines and deprecated models [here](https://console.groq.com/docs/deprecations).
 
-### Get All Available Models
+## [Get All Available Models](#get-all-available-models)
 
-Hosted models are directly accessible through the GroqCloud Models API endpoint using the model IDs mentioned above. You can use the `https://api.groq.com/openai/v1/models` endpoint to return a JSON list of all active models:
+Hosted models are directly accessible through the GroqCloud Models API endpoint using the model IDs mentioned above. You can use the `[https://api.groq.com/openai/v1/models`](https://api.groq.com/openai/v1/models`) endpoint to return a JSON list of all active models:
 
-```bash
-curl -X GET "https://api.groq.com/openai/v1/models" \
-     -H "Authorization: Bearer $GROQ_API_KEY" \
-     -H "Content-Type: application/json"
+Python
+
+```
+curl -X GET "[https://api.groq.com/openai/v1/models"](https://api.groq.com/openai/v1/models") \
+```text
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```javascript
+```
+
+```
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const getModels = async () => {
-  return await groq.models.list();
+return await groq.models.list();
 };
 
 getModels().then((models) => {
-  // console.log(models);
+// console.log(models);
 });
 ```
 
-```python
+```
 import requests
 import os
 
 api_key = os.environ.get("GROQ_API_KEY")
-url = "https://api.groq.com/openai/v1/models"
+url = "[https://api.groq.com/openai/v1/models"](https://api.groq.com/openai/v1/models")
 
 headers = {
-    "Authorization": f"Bearer {api_key}",
-    "Content-Type": "application/json"
+```text
+"Authorization": f"Bearer {api_key}",
+"Content-Type": "application/json"
+```
+
 }
 
 response = requests.get(url, headers=headers)
@@ -345,582 +442,659 @@ response = requests.get(url, headers=headers)
 print(response.json())
 ```
 
-```json
+---
+description: Learn how to use OpenAI&#x27;s client libraries with Groq API, including configuration, supported features, and limitations.
+title: OpenAI Compatibility - GroqDocs
+## image: https://console.groq.com/og_cloudv5.jpg
 
-### OpenAI Compatibility
-
-> Learn how to use OpenAI's client libraries with Groq API, including configuration, supported features, and limitations.
+## OpenAI Compatibility
 
 We designed Groq API to be mostly compatible with OpenAI's client libraries, making it easy to configure your existing applications to run on Groq and try our inference speed.
 
 We also have our own [Groq Python and Groq TypeScript libraries](https://console.groq.com/docs/libraries) that we encourage you to use.
 
-### Configuring OpenAI to Use Groq API
+## [Configuring OpenAI to Use Groq API](#configuring-openai-to-use-groq-api)
 
-To start using Groq with OpenAI's client libraries, pass your Groq API key to the `api_key` parameter and change the `base_url` to `https://api.groq.com/openai/v1`:
+To start using Groq with OpenAI's client libraries, pass your Groq API key to the `api_key` parameter and change the `base_url` to `[https://api.groq.com/openai/v1`:](https://api.groq.com/openai/v1`:)
+
+PythonJavaScript
+
+Python
 
 ```
-
-```python
 import os
 import openai
 
 client = openai.OpenAI(
-    base_url="https://api.groq.com/openai/v1",
-    api_key=os.environ.get("GROQ_API_KEY")
+```text
+base_url="https://api.groq.com/openai/v1",
+api_key=os.environ.get("GROQ_API_KEY")
+```
+
 )
 ```
 
 You can find your API key [here](https://console.groq.com/keys).
 
-### Currently Unsupported OpenAI Features
+## [Currently Unsupported OpenAI Features](#currently-unsupported-openai-features)
 
 Note that although Groq API is mostly OpenAI compatible, there are a few features we don't support just yet:
 
-#### Text Completions
+### [Text Completions](#text-completions)
 
 The following fields are currently not supported and will result in a 400 error (yikes) if they are supplied:
 
-* `logprobs`
-* `logit_bias`
-* `top_logprobs`
-* `messages[].name`
-* If `N` is supplied, it must be equal to 1.
+- `logprobs`
+- `logit_bias`
+- `top_logprobs`
+- `messages[].name`
+- If `N` is supplied, it must be equal to 1.
 
-#### Temperature
+### [Temperature](#temperature)
 
 If you set a `temperature` value of 0, it will be converted to `1e-8`. If you run into any issues, please try setting the value to a float32 `> 0` and `<= 2`.
 
-#### Audio Transcription and Translation
+### [Audio Transcription and Translation](#audio-transcription-and-translation)
 
 The following values are not supported:
 
-* `vtt`
-* `srt`
+- `vtt`
+- `srt`
 
-### Responses API
+## [Responses API](#responses-api)
 
 Groq also supports the [Responses API](https://console.groq.com/docs/responses-api), which is a more advanced interface for generating model responses that supports both text and image inputs while producing text outputs. You can build stateful conversations by using previous responses as context, and extend your model's capabilities through function calling to connect with external systems and data sources.
 
-#### Feedback
+### [Feedback](#feedback)
 
 If you'd like to see support for such features as the above on Groq API, please reach out to us and let us know by submitting a "Feature Request" via "Chat with us" in the menu after clicking your organization in the top right. We really value your feedback and would love to hear from you! 🤩
 
-### Next Steps
+## [Next Steps](#next-steps)
 
 Migrate your prompts to open-source models using our [model migration guide](https://console.groq.com/docs/prompting/model-migration), or learn more about prompting in our [prompting guide](https://console.groq.com/docs/prompting).
 
-### API Reference
+---
+description: Comprehensive reference documentation for the Groq API, including endpoints, parameters, and examples.
+## title: API Reference - GroqDocs
 
-> Comprehensive reference documentation for the Groq API, including endpoints, parameters, and examples.
+## Groq API Reference
 
 [Chat](https://console.groq.com/docs/api-reference#chat)
 
 [Create chat completion](https://console.groq.com/docs/api-reference#chat-create)
 
-POSThttps://api.groq.com/openai/v1/chat/completions
+POST[https://api.groq.com/openai/v1/chat/completions](https://api.groq.com/openai/v1/chat/completions)
 
 Creates a model response for the given chat conversation.
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#chat-create-request-body)
 
-* messagesarrayRequired
+- messagesarrayRequired
 A list of messages comprising the conversation so far.
-**Show possible types**
-* modelstringRequired
+## Show possible types
+
+- modelstringRequired
 ID of the model to use. For details on which models are compatible with the Chat API, see available [models](https://console.groq.com/docs/models)
-* citation_optionsstring or nullOptionalDefaults to enabled
+- citation\_optionsstring or nullOptionalDefaults to enabled
 Allowed values: `enabled, disabled`
 Whether to enable citations in the response. When enabled, the model will include citations for information retrieved from provided documents or web searches.
-* compound_customobject or nullOptional
+- compound\_customobject or nullOptional
 Custom configuration of models and tools for Compound.
-**Show properties**
-* disable_tool_validationbooleanOptionalDefaults to false
-If set to true, groq will return called tools without validating that the tool is present in request.tools. tool_choice=required/none will still be enforced, but the request cannot require a specific tool be used.
-* documentsarray or nullOptional
+### Show properties
+
+- disable\_tool\_validationbooleanOptionalDefaults to false
+If set to true, groq will return called tools without validating that the tool is present in request.tools. tool\_choice=required/none will still be enforced, but the request cannot require a specific tool be used.
+- documentsarray or nullOptional
 A list of documents to provide context for the conversation. Each document contains text that can be referenced by the model.
-**Show properties**
-* exclude_domainsDeprecatedarray or nullOptional
-Deprecated: Use search_settings.exclude_domains instead. A list of domains to exclude from the search results when the model uses a web search tool.
-* frequency_penaltynumber or nullOptionalDefaults to 0
-Range: -2 - 2
-This is not yet supported by any of our models. Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-* function_callDeprecatedstring / object or nullOptional
+### Show properties
+
+- exclude\_domainsDeprecatedarray or nullOptional
+Deprecated: Use search\_settings.exclude\_domains instead. A list of domains to exclude from the search results when the model uses a web search tool.
+- frequency\_penaltynumber or nullOptionalDefaults to 0
+Range: \-2 - 2
+This is not yet supported by any of our models. Number between -2.0 and 2.0\. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+- function\_callDeprecatedstring / object or nullOptional
 Deprecated in favor of `tool_choice`.
 Controls which (if any) function is called by the model. `none` means the model will not call a function and instead generates a message. `auto` means the model can pick between generating a message or calling a function. Specifying a particular function via `{"name": "my_function"}` forces the model to call that function.
 `none` is the default when no functions are present. `auto` is the default if functions are present.
-**Show possible types**
-* functionsDeprecatedarray or nullOptional
+### Show possible types
+
+- functionsDeprecatedarray or nullOptional
 Deprecated in favor of `tools`.
 A list of functions the model may generate JSON inputs for.
-**Show properties**
-* include_domainsDeprecatedarray or nullOptional
-Deprecated: Use search_settings.include_domains instead. A list of domains to include in the search results when the model uses a web search tool.
-* include_reasoningboolean or nullOptional
+### Show properties
+
+- include\_domainsDeprecatedarray or nullOptional
+Deprecated: Use search\_settings.include\_domains instead. A list of domains to include in the search results when the model uses a web search tool.
+- include\_reasoningboolean or nullOptional
 Whether to include reasoning in the response. If true, the response will include a `reasoning` field. If false, the model's reasoning will not be included in the response. This field is mutually exclusive with `reasoning_format`.
-* logit_biasobject or nullOptional
+- logit\_biasobject or nullOptional
 This is not yet supported by any of our models. Modify the likelihood of specified tokens appearing in the completion.
-* logprobsboolean or nullOptionalDefaults to false
+- logprobsboolean or nullOptionalDefaults to false
 This is not yet supported by any of our models. Whether to return log probabilities of the output tokens or not. If true, returns the log probabilities of each output token returned in the `content` of `message`.
-* max_completion_tokensinteger or nullOptional
+- max\_completion\_tokensinteger or nullOptional
 The maximum number of tokens that can be generated in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length.
-* max_tokensDeprecatedinteger or nullOptional
+- max\_tokensDeprecatedinteger or nullOptional
 Deprecated in favor of `max_completion_tokens`. The maximum number of tokens that can be generated in the chat completion. The total length of input tokens and generated tokens is limited by the model's context length.
-* metadataobject or nullOptional
+- metadataobject or nullOptional
 This parameter is not currently supported.
-* ninteger or nullOptionalDefaults to 1
+- ninteger or nullOptionalDefaults to 1
 Range: 1 - 1
 How many chat completion choices to generate for each input message. Note that the current moment, only n=1 is supported. Other values will result in a 400 response.
-* parallel_tool_callsboolean or nullOptionalDefaults to true
+- parallel\_tool\_callsboolean or nullOptionalDefaults to true
 Whether to enable parallel function calling during tool use.
-* presence_penaltynumber or nullOptionalDefaults to 0
-Range: -2 - 2
-This is not yet supported by any of our models. Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
-* reasoning_effortstring or nullOptional
+- presence\_penaltynumber or nullOptionalDefaults to 0
+Range: \-2 - 2
+This is not yet supported by any of our models. Number between -2.0 and 2.0\. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+- reasoning\_effortstring or nullOptional
 Allowed values: `none, default, low, medium, high`
 qwen3 models support the following values Set to 'none' to disable reasoning. Set to 'default' or null to let Qwen reason.
 openai/gpt-oss-20b and openai/gpt-oss-120b support 'low', 'medium', or 'high'. 'medium' is the default value.
-* reasoning_formatstring or nullOptional
+- reasoning\_formatstring or nullOptional
 Allowed values: `hidden, raw, parsed`
 Specifies how to output reasoning tokens This field is mutually exclusive with `include_reasoning`.
-* response_formatobject / object / object or nullOptional
+- response\_formatobject / object / object or nullOptional
 An object specifying the format that the model must output. Setting to `{ "type": "json_schema", "json_schema": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema. `json_schema` response format is only available on [supported models](https://console.groq.com/docs/structured-outputs#supported-models). Setting to `{ "type": "json_object" }` enables the older JSON mode, which ensures the message the model generates is valid JSON. Using `json_schema` is preferred for models that support it.
-**Show possible types**
-* search_settingsobject or nullOptional
+### Show possible types
+
+- search\_settingsobject or nullOptional
 Settings for web search functionality when the model uses a web search tool.
-**Show properties**
-* seedinteger or nullOptional
+### Show properties
+
+- seedinteger or nullOptional
 If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same `seed` and parameters should return the same result. Determinism is not guaranteed, and you should refer to the `system_fingerprint` response parameter to monitor changes in the backend.
-* service_tierstring or nullOptional
+- service\_tierstring or nullOptional
 Allowed values: `auto, on_demand, flex, performance, null`
 The service tier to use for the request. Defaults to `on_demand`.
 
-  * `auto` will automatically select the highest tier available within the rate limits of your organization.
-  * `flex` uses the flex tier, which will succeed or fail quickly.
-* stopstring / array or nullOptional
+- `auto` will automatically select the highest tier available within the rate limits of your organization.
+- `flex` uses the flex tier, which will succeed or fail quickly.
+- stopstring / array or nullOptional
 Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence.
-**Show possible types**
-* storeboolean or nullOptional
+### Show possible types
+
+- storeboolean or nullOptional
 This parameter is not currently supported.
-* streamboolean or nullOptionalDefaults to false
+- streamboolean or nullOptionalDefaults to false
 If set, partial message deltas will be sent. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent%5Fevents/Using%5Fserver-sent%5Fevents#Event%5Fstream%5Fformat) as they become available, with the stream terminated by a `data: [DONE]` message. [Example code](https://console.groq.com/docs/text-chat#streaming-a-chat-completion).
-* stream_optionsobject or nullOptional
+- stream\_optionsobject or nullOptional
 Options for streaming response. Only set this when you set `stream: true`.
-**Show properties**
-* temperaturenumber or nullOptionalDefaults to 1
+### Show properties
+
+- temperaturenumber or nullOptionalDefaults to 1
 Range: 0 - 2
-What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.
-* tool_choicestring / object or nullOptional
+What sampling temperature to use, between 0 and 2\. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top\_p but not both.
+- tool\_choicestring / object or nullOptional
 Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.
 `none` is the default when no tools are present. `auto` is the default if tools are present.
-**Show possible types**
-* toolsarray or nullOptional
+### Show possible types
+
+- toolsarray or nullOptional
 A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for. A max of 128 functions are supported.
-**Show properties**
-* top_logprobsinteger or nullOptional
+### Show properties
+
+- top\_logprobsinteger or nullOptional
 Range: 0 - 20
 This is not yet supported by any of our models. An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. `logprobs` must be set to `true` if this parameter is used.
-* top_pnumber or nullOptionalDefaults to 1
+- top\_pnumber or nullOptionalDefaults to 1
 Range: 0 - 1
-An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.
-* userstring or nullOptional
+An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top\_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.
+- userstring or nullOptional
 A unique identifier representing your end-user, which can help us monitor and detect abuse.
+
+###
 
 [Response Object](https://console.groq.com/docs/api-reference#chat-create-returns)
 
-* choicesarray
+- choicesarray
 A list of chat completion choices. Can be more than one if `n` is greater than 1.
-**Show properties**
-* createdinteger
+### Show properties
+
+- createdinteger
 The Unix timestamp (in seconds) of when the chat completion was created.
-* idstring
+- idstring
 A unique identifier for the chat completion.
-* mcp_list_toolsarray or null
+- mcp\_list\_toolsarray or null
 List of discovered MCP tools from connected servers.
-**Show properties**
-* modelstring
+### Show properties
+
+- modelstring
 The model used for the chat completion.
-* objectstring
+- objectstring
 Allowed values: `chat.completion`
 The object type, which is always `chat.completion`.
-* service_tierstring or null
+- service\_tierstring or null
 Allowed values: `auto, on_demand, flex, performance, null`
 The service tier used for the request.
-* system_fingerprintstring
+- system\_fingerprintstring
 This fingerprint represents the backend configuration that the model runs with.
 Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
-* usageobject
+- usageobject
 Usage statistics for the completion request.
-**Show properties**
-* usage_breakdown
-Detailed usage breakdown by model when multiple models are used in the request for compound AI systems.
-* x_groqobject
-Groq-specific metadata for non-streaming chat completion responses.
-**Show properties**
+### Show properties
 
-```bash
-curl https://api.groq.com/openai/v1/chat/completions -s \
+- usage\_breakdown
+Detailed usage breakdown by model when multiple models are used in the request for compound AI systems.
+- x\_groqobject
+Groq-specific metadata for non-streaming chat completion responses.
+### Show properties
+
+curl
+
+```
+curl [https://api.groq.com/openai/v1/chat/completions](https://api.groq.com/openai/v1/chat/completions) -s \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer $GROQ_API_KEY" \
 -d '{
-  "model": "llama-3.3-70b-versatile",
-  "messages": [{
-      "role": "user",
-      "content": "Explain the importance of fast language models"
-  }]
+"model": "llama-3.3-70b-versatile",
+"messages": [{
+```text
+"role": "user",
+"content": "Explain the importance of fast language models"
+```
+
+}]
 }'
 ```
 
-```javascript
+```
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-  const completion = await groq.chat.completions
-    .create({
-      messages: [
-        {
-          role: "user",
-          content: "Explain the importance of fast language models",
-        },
-      ],
-      model: "llama-3.3-70b-versatile",
-    })
-  console.log(completion.choices[0].message.content);
+const completion = await groq.chat.completions
+```sql
+.create({
+messages: [
+{
+role: "user",
+content: "Explain the importance of fast language models",
+},
+],
+model: "llama-3.3-70b-versatile",
+})
+```
+
+console.log(completion.choices[0].message.content);
 }
 
 main();
 ```
 
-```python
+```
 import os
 
 from groq import Groq
 
 client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("GROQ_API_KEY"),
+## This is the default and can be omitted
+
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            "role": "system",
-            "content": "You are a helpful assistant."
-        },
-        {
-            "role": "user",
-            "content": "Explain the importance of fast language models",
-        }
-    ],
-    model="llama-3.3-70b-versatile",
+```text
+messages=[
+{
+"role": "system",
+"content": "You are a helpful assistant."
+},
+{
+"role": "user",
+"content": "Explain the importance of fast language models",
+}
+],
+model="llama-3.3-70b-versatile",
+```
+
 )
 
 print(chat_completion.choices[0].message.content)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-  "id": "chatcmpl-f51b2cd2-bef7-417e-964e-a08f0b513c22",
-  "object": "chat.completion",
-  "created": 1730241104,
-  "model": "openai/gpt-oss-20b",
-  "choices": [
-    {
-      "index": 0,
-      "message": {
-        "role": "assistant",
-        "content": "Fast language models have gained significant attention in recent years due to their ability to process and generate human-like text quickly and efficiently. The importance of fast language models can be understood from their potential applications and benefits:\n\n1. **Real-time Chatbots and Conversational Interfaces**: Fast language models enable the development of chatbots and conversational interfaces that can respond promptly to user queries, making them more engaging and useful.\n2. **Sentiment Analysis and Opinion Mining**: Fast language models can quickly analyze text data to identify sentiments, opinions, and emotions, allowing for improved customer service, market research, and opinion mining.\n3. **Language Translation and Localization**: Fast language models can quickly translate text between languages, facilitating global communication and enabling businesses to reach a broader audience.\n4. **Text Summarization and Generation**: Fast language models can summarize long documents or even generate new text on a given topic, improving information retrieval and processing efficiency.\n5. **Named Entity Recognition and Information Extraction**: Fast language models can rapidly recognize and extract specific entities, such as names, locations, and organizations, from unstructured text data.\n6. **Recommendation Systems**: Fast language models can analyze large amounts of text data to personalize product recommendations, improve customer experience, and increase sales.\n7. **Content Generation for Social Media**: Fast language models can quickly generate engaging content for social media platforms, helping businesses maintain a consistent online presence and increasing their online visibility.\n8. **Sentiment Analysis for Stock Market Analysis**: Fast language models can quickly analyze social media posts, news articles, and other text data to identify sentiment trends, enabling financial analysts to make more informed investment decisions.\n9. **Language Learning and Education**: Fast language models can provide instant feedback and adaptive language learning, making language education more effective and engaging.\n10. **Domain-Specific Knowledge Extraction**: Fast language models can quickly extract relevant information from vast amounts of text data, enabling domain experts to focus on high-level decision-making rather than manual information gathering.\n\nThe benefits of fast language models include:\n\n* **Increased Efficiency**: Fast language models can process large amounts of text data quickly, reducing the time and effort required for tasks such as sentiment analysis, entity recognition, and text summarization.\n* **Improved Accuracy**: Fast language models can analyze and learn from large datasets, leading to more accurate results and more informed decision-making.\n* **Enhanced User Experience**: Fast language models can enable real-time interactions, personalized recommendations, and timely responses, improving the overall user experience.\n* **Cost Savings**: Fast language models can automate many tasks, reducing the need for manual labor and minimizing costs associated with data processing and analysis.\n\nIn summary, fast language models have the potential to transform various industries and applications by providing fast, accurate, and efficient language processing capabilities."
-      },
-      "logprobs": null,
-      "finish_reason": "stop"
-    }
-  ],
-  "usage": {
-    "queue_time": 0.037493756,
-    "prompt_tokens": 18,
-    "prompt_time": 0.000680594,
-    "completion_tokens": 556,
-    "completion_time": 0.463333333,
-    "total_tokens": 574,
-    "total_time": 0.464013927
-  },
-  "system_fingerprint": "fp_179b0f92c9",
-  "x_groq": { "id": "req_01jbd6g2qdfw2adyrt2az8hz4w" }
+"id": "chatcmpl-f51b2cd2-bef7-417e-964e-a08f0b513c22",
+"object": "chat.completion",
+"created": 1730241104,
+"model": "openai/gpt-oss-20b",
+"choices": [
+```python
+{
+"index": 0,
+"message": {
+"role": "assistant",
+"content": "Fast language models have gained significant attention in recent years due to their ability to process and generate human-like text quickly and efficiently. The importance of fast language models can be understood from their potential applications and benefits:\n\n1. **Real-time Chatbots and Conversational Interfaces**: Fast language models enable the development of chatbots and conversational interfaces that can respond promptly to user queries, making them more engaging and useful.\n2. **Sentiment Analysis and Opinion Mining**: Fast language models can quickly analyze text data to identify sentiments, opinions, and emotions, allowing for improved customer service, market research, and opinion mining.\n3. **Language Translation and Localization**: Fast language models can quickly translate text between languages, facilitating global communication and enabling businesses to reach a broader audience.\n4. **Text Summarization and Generation**: Fast language models can summarize long documents or even generate new text on a given topic, improving information retrieval and processing efficiency.\n5. **Named Entity Recognition and Information Extraction**: Fast language models can rapidly recognize and extract specific entities, such as names, locations, and organizations, from unstructured text data.\n6. **Recommendation Systems**: Fast language models can analyze large amounts of text data to personalize product recommendations, improve customer experience, and increase sales.\n7. **Content Generation for Social Media**: Fast language models can quickly generate engaging content for social media platforms, helping businesses maintain a consistent online presence and increasing their online visibility.\n8. **Sentiment Analysis for Stock Market Analysis**: Fast language models can quickly analyze social media posts, news articles, and other text data to identify sentiment trends, enabling financial analysts to make more informed investment decisions.\n9. **Language Learning and Education**: Fast language models can provide instant feedback and adaptive language learning, making language education more effective and engaging.\n10. **Domain-Specific Knowledge Extraction**: Fast language models can quickly extract relevant information from vast amounts of text data, enabling domain experts to focus on high-level decision-making rather than manual information gathering.\n\nThe benefits of fast language models include:\n\n* **Increased Efficiency**: Fast language models can process large amounts of text data quickly, reducing the time and effort required for tasks such as sentiment analysis, entity recognition, and text summarization.\n* **Improved Accuracy**: Fast language models can analyze and learn from large datasets, leading to more accurate results and more informed decision-making.\n* **Enhanced User Experience**: Fast language models can enable real-time interactions, personalized recommendations, and timely responses, improving the overall user experience.\n* **Cost Savings**: Fast language models can automate many tasks, reducing the need for manual labor and minimizing costs associated with data processing and analysis.\n\nIn summary, fast language models have the potential to transform industries and applications by providing fast, accurate, and efficient language processing capabilities."
+},
+"logprobs": null,
+"finish_reason": "stop"
 }
 ```
 
-```json
+],
+"usage": {
+```text
+"queue_time": 0.037493756,
+"prompt_tokens": 18,
+"prompt_time": 0.000680594,
+"completion_tokens": 556,
+"completion_time": 0.463333333,
+"total_tokens": 574,
+"total_time": 0.464013927
+```
+
+},
+"system_fingerprint": "fp_179b0f92c9",
+"x_groq": { "id": "req_01jbd6g2qdfw2adyrt2az8hz4w" }
+}
+```
 
 [Responses (beta)](https://console.groq.com/docs/api-reference#responses)
 
 [Create response](https://console.groq.com/docs/api-reference#responses-create)
 
-POSThttps://api.groq.com/openai/v1/responses
+POST[https://api.groq.com/openai/v1/responses](https://api.groq.com/openai/v1/responses)
 
 Creates a model response for the given input.
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#responses-create-request-body)
 
-* inputstring / arrayRequired
+- inputstring / arrayRequired
 Text input to the model, used to generate a response.
-**Show possible types**
-* modelstringRequired
+## Show possible types
+
+- modelstringRequired
 ID of the model to use. For details on which models are compatible with the Responses API, see available [models](https://console.groq.com/docs/models)
-* instructionsstring or nullOptional
+- instructionsstring or nullOptional
 Inserts a system (or developer) message as the first item in the model's context.
-* max_output_tokensinteger or nullOptional
+- max\_output\_tokensinteger or nullOptional
 An upper bound for the number of tokens that can be generated for a response, including visible output tokens and reasoning tokens.
-* metadataobject or nullOptional
+- metadataobject or nullOptional
 Custom key-value pairs for storing additional information. Maximum of 16 pairs.
-* parallel_tool_callsboolean or nullOptionalDefaults to true
+- parallel\_tool\_callsboolean or nullOptionalDefaults to true
 Enable parallel execution of multiple tool calls.
-* reasoningobject or nullOptional
+- reasoningobject or nullOptional
 Configuration for reasoning capabilities when using [models that support reasoning](https://console.groq.com/docs/reasoning).
-**Show properties**
-* service_tierstring or nullOptionalDefaults to auto
+### Show properties
+
+- service\_tierstring or nullOptionalDefaults to auto
 Allowed values: `auto, default, flex`
 Specifies the latency tier to use for processing the request.
-* storeboolean or nullOptionalDefaults to false
+- storeboolean or nullOptionalDefaults to false
 Response storage flag. Note: Currently only supports false or null values.
-* streamboolean or nullOptionalDefaults to false
+- streamboolean or nullOptionalDefaults to false
 Enable streaming mode to receive response data as server-sent events.
-* temperaturenumber or nullOptionalDefaults to 1
+- temperaturenumber or nullOptionalDefaults to 1
 Range: 0 - 2
-Controls randomness in the response generation. Range: 0 to 2. Lower values produce more deterministic outputs, higher values increase variety and creativity.
-* textobjectOptional
+Controls randomness in the response generation. Range: 0 to 2\. Lower values produce more deterministic outputs, higher values increase variety and creativity.
+- textobjectOptional
 Response format configuration. Supports plain text or structured JSON output.
-**Show properties**
-* tool_choicestring / object or nullOptional
+### Show properties
+
+- tool\_choicestring / object or nullOptional
 Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.
 `none` is the default when no tools are present. `auto` is the default if tools are present.
-**Show possible types**
-* toolsarray or nullOptional
+### Show possible types
+
+- toolsarray or nullOptional
 List of tools available to the model. Currently supports function definitions only. Maximum of 128 functions.
-**Show properties**
-* top_pnumber or nullOptionalDefaults to 1
+### Show properties
+
+- top\_pnumber or nullOptionalDefaults to 1
 Range: 0 - 1
-Nucleus sampling parameter that controls the cumulative probability cutoff. Range: 0 to 1. A value of 0.1 restricts sampling to tokens within the top 10% probability mass.
-* truncationstring or nullOptionalDefaults to disabled
+Nucleus sampling parameter that controls the cumulative probability cutoff. Range: 0 to 1\. A value of 0.1 restricts sampling to tokens within the top 10% probability mass.
+- truncationstring or nullOptionalDefaults to disabled
 Allowed values: `auto, disabled`
 Context truncation strategy. Supported values: `auto` or `disabled`.
-* userstringOptional
+- userstringOptional
 Optional identifier for tracking end-user requests. Useful for usage monitoring and compliance.
+
+###
 
 [Response Object](https://console.groq.com/docs/api-reference#responses-create-returns)
 
-* backgroundboolean
+- backgroundboolean
 Whether the response was generated in the background.
-* created_atinteger
+- created\_atinteger
 The Unix timestamp (in seconds) of when the response was created.
-* errorobject or null
+- errorobject or null
 An error object if the response failed.
-**Show properties**
-* idstring
+### Show properties
+
+- idstring
 A unique identifier for the response.
-* incomplete_detailsobject or null
+- incomplete\_detailsobject or null
 Details about why the response is incomplete.
-**Show properties**
-* instructionsstring or null
+### Show properties
+
+- instructionsstring or null
 The system instructions used for the response.
-* max_output_tokensinteger or null
+- max\_output\_tokensinteger or null
 The maximum number of tokens configured for the response.
-* max_tool_callsinteger or null
+- max\_tool\_callsinteger or null
 The maximum number of tool calls allowed.
-* metadataobject or null
+- metadataobject or null
 Metadata attached to the response.
-* modelstring
+- modelstring
 The model used for the response.
-* objectstring
+- objectstring
 Allowed values: `response`
 The object type, which is always `response`.
-* outputarray
+- outputarray
 An array of content items generated by the model.
-**Show possible types**
-* parallel_tool_callsboolean
+### Show possible types
+
+- parallel\_tool\_callsboolean
 Whether the model can run tool calls in parallel.
-* previous_response_idstring or null
+- previous\_response\_idstring or null
 Not supported. Always null.
-* reasoningobject or null
+- reasoningobject or null
 Configuration options for [models that support reasoning](https://console.groq.com/docs/reasoning).
-**Show properties**
-* service_tierstring
+### Show properties
+
+- service\_tierstring
 Allowed values: `auto, default, flex`
 The service tier used for processing.
-* statusstring
+- statusstring
 Allowed values: `completed, failed, in_progress, incomplete`
 The status of the response generation. One of `completed`, `failed`, `in_progress`, or `incomplete`.
-* storeboolean
+- storeboolean
 Whether the response was stored.
-* temperaturenumber
+- temperaturenumber
 The sampling temperature used.
-* textobject
+- textobject
 Text format configuration used for the response.
-**Show properties**
-* tool_choicestring / object or null
+### Show properties
+
+- tool\_choicestring / object or null
 Controls which (if any) tool is called by the model. `none` means the model will not call any tool and instead generates a message. `auto` means the model can pick between generating a message or calling one or more tools. `required` means the model must call one or more tools. Specifying a particular tool via `{"type": "function", "function": {"name": "my_function"}}` forces the model to call that tool.
 `none` is the default when no tools are present. `auto` is the default if tools are present.
-**Show possible types**
-* toolsarray
+### Show possible types
+
+- toolsarray
 The tools that were available to the model.
-**Show properties**
-* top_logprobsinteger
+### Show properties
+
+- top\_logprobsinteger
 The number of top log probabilities returned.
-* top_pnumber
+- top\_pnumber
 The nucleus sampling parameter used.
-* truncationstring
+- truncationstring
 Allowed values: `auto, disabled`
 The truncation strategy used.
-* usageobject
+- usageobject
 Usage statistics for the response request.
-**Show properties**
-* userstring or null
+### Show properties
+
+- userstring or null
 The user identifier.
 
 Example request
 
 ```
-
-```bash
-curl https://api.groq.com/openai/v1/responses -s \
+curl [https://api.groq.com/openai/v1/responses](https://api.groq.com/openai/v1/responses) -s \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer $GROQ_API_KEY" \
 -d '{
-  "model": "openai/gpt-oss-120b",
-  "input": "Tell me a three sentence bedtime story about a unicorn."
+"model": "openai/gpt-oss-120b",
+"input": "Tell me a three sentence bedtime story about a unicorn."
 }'
 ```
 
-**Example Response**
+Example Response
 
+```
+{
+"id": "resp_01k1x6w9ane6d8rfxm05cb45yk",
+"object": "response",
+"status": "completed",
+"created_at": 1754400695,
+"output": [
 ```json
 {
-  "id": "resp_01k1x6w9ane6d8rfxm05cb45yk",
-  "object": "response",
-  "status": "completed",
-  "created_at": 1754400695,
-  "output": [
-    {
-      "type": "message",
-      "id": "msg_01k1x6w9ane6eb0650crhawwyy",
-      "status": "completed",
-      "role": "assistant",
-      "content": [
-        {
-          "type": "output_text",
-          "text": "When the stars blinked awake, Luna the unicorn curled her mane and whispered wishes to the sleeping pine trees. She galloped through a field of moonlit daisies, gathering dew like tiny silver pearls. With a gentle sigh, she tucked her hooves beneath a silver cloud so the world slept softly, dreaming of her gentle hooves until the morning.",
-          "annotations": []
-        }
-      ]
-    }
-  ],
-  "previous_response_id": null,
-  "model": "llama-3.3-70b-versatile",
-  "reasoning": {
-    "effort": null,
-    "summary": null
-  },
-  "max_output_tokens": null,
-  "instructions": null,
-  "text": {
-    "format": {
-      "type": "text"
-    }
-  },
-  "tools": [],
-  "tool_choice": "auto",
-  "truncation": "disabled",
-  "metadata": {},
-  "temperature": 1,
-  "top_p": 1,
-  "user": null,
-  "service_tier": "default",
-  "error": null,
-  "incomplete_details": null,
-  "usage": {
-    "input_tokens": 82,
-    "input_tokens_details": {
-      "cached_tokens": 0
-    },
-    "output_tokens": 266,
-    "output_tokens_details": {
-      "reasoning_tokens": 0
-    },
-    "total_tokens": 348
-  },
-  "parallel_tool_calls": true,
-  "store": false
+"type": "message",
+"id": "msg_01k1x6w9ane6eb0650crhawwyy",
+"status": "completed",
+"role": "assistant",
+"content": [
+{
+"type": "output_text",
+"text": "When the stars blinked awake, Luna the unicorn curled her mane and whispered wishes to the sleeping pine trees. She galloped through a field of moonlit daisies, gathering dew like tiny silver pearls. With a gentle sigh, she tucked her hooves beneath a silver cloud so the world slept softly, dreaming of her gentle hooves until the morning.",
+"annotations": []
+}
+]
 }
 ```
 
-```json
+],
+"previous_response_id": null,
+"model": "llama-3.3-70b-versatile",
+"reasoning": {
+```text
+"effort": null,
+"summary": null
+```
+
+},
+"max_output_tokens": null,
+"instructions": null,
+"text": {
+```text
+"format": {
+"type": "text"
+}
+```
+
+},
+"tools": [],
+"tool_choice": "auto",
+"truncation": "disabled",
+"metadata": {},
+"temperature": 1,
+"top_p": 1,
+"user": null,
+"service_tier": "default",
+"error": null,
+"incomplete_details": null,
+"usage": {
+```text
+"input_tokens": 82,
+"input_tokens_details": {
+"cached_tokens": 0
+},
+"output_tokens": 266,
+"output_tokens_details": {
+"reasoning_tokens": 0
+},
+"total_tokens": 348
+```
+
+},
+"parallel_tool_calls": true,
+"store": false
+}
+```
 
 [Audio](https://console.groq.com/docs/api-reference#audio)
 
 [Create transcription](https://console.groq.com/docs/api-reference#audio-transcription)
 
-POSThttps://api.groq.com/openai/v1/audio/transcriptions
+POST[https://api.groq.com/openai/v1/audio/transcriptions](https://api.groq.com/openai/v1/audio/transcriptions)
 
 Transcribes audio into the input language.
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#audio-transcription-request-body)
 
-* modelstringRequired
+- modelstringRequired
 ID of the model to use. `whisper-large-v3` and `whisper-large-v3-turbo` are currently available.
-* filestringOptional
+- filestringOptional
 The audio file object (not file name) to transcribe, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm. Either a file or a URL must be provided. Note that the file field is not supported in Batch API requests.
-* languagestringOptional
+- languagestringOptional
 The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List%5Fof%5FISO%5F639-1%5Fcodes) format will improve accuracy and latency.
-* promptstringOptional
+- promptstringOptional
 An optional text to guide the model's style or continue a previous audio segment. The [prompt](https://console.groq.com/docs/speech-text) should match the audio language.
-* response_formatstringOptionalDefaults to json
+- response\_formatstringOptionalDefaults to json
 Allowed values: `json, text, verbose_json`
 The format of the transcript output, in one of these options: `json`, `text`, or `verbose_json`.
-* temperaturenumberOptionalDefaults to 0
-The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log%5Fprobability) to automatically increase the temperature until certain thresholds are hit.
-* timestamp_granularities\[\]arrayOptionalDefaults to segment
+- temperaturenumberOptionalDefaults to 0
+The sampling temperature, between 0 and 1\. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log%5Fprobability) to automatically increase the temperature until certain thresholds are hit.
+- timestamp\_granularities\[\]arrayOptionalDefaults to segment
 The timestamp granularities to populate for this transcription. `response_format` must be set `verbose_json` to use timestamp granularities. Either or both of these options are supported: `word`, or `segment`. Note: There is no additional latency for segment timestamps, but generating word timestamps incurs additional latency.
-* urlstringOptional
+- urlstringOptional
 The audio URL to translate/transcribe (supports Base64URL). Either a file or a URL must be provided. For Batch API requests, the URL field is required since the file field is not supported.
+
+###
 
 [Response Object](https://console.groq.com/docs/api-reference#audio-transcription-returns)
 
-* textstring
+- textstring
 The transcribed text.
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/audio/transcriptions](https://api.groq.com/openai/v1/audio/transcriptions) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: multipart/form-data" \
+-F file="@./sample_audio.m4a" \
+-F model="whisper-large-v3"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/audio/transcriptions \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: multipart/form-data" \
-  -F file="@./sample_audio.m4a" \
-  -F model="whisper-large-v3"
 ```
-
-```javascript
 import fs from "fs";
 import Groq from "groq-sdk";
 
 const groq = new Groq();
 async function main() {
-  const transcription = await groq.audio.transcriptions.create({
-    file: fs.createReadStream("sample_audio.m4a"),
-    model: "whisper-large-v3",
-    prompt: "Specify context or spelling", // Optional
-    response_format: "json", // Optional
-    language: "en", // Optional
-    temperature: 0.0, // Optional
-  });
-  console.log(transcription.text);
+const transcription = await groq.audio.transcriptions.create({
+```yaml
+file: fs.createReadStream("sample_audio.m4a"),
+model: "whisper-large-v3",
+prompt: "Specify context or spelling", // Optional
+response_format: "json", // Optional
+language: "en", // Optional
+temperature: 0.0, // Optional
+```
+
+});
+console.log(transcription.text);
 }
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
@@ -928,86 +1102,99 @@ client = Groq()
 filename = os.path.dirname(__file__) + "/sample_audio.m4a"
 
 with open(filename, "rb") as file:
-    transcription = client.audio.transcriptions.create(
-      file=(filename, file.read()),
-      model="whisper-large-v3",
-      prompt="Specify context or spelling",  # Optional
-      response_format="json",  # Optional
-      language="en",  # Optional
-      temperature=0.0  # Optional
-    )
-    print(transcription.text)
+```python
+transcription = client.audio.transcriptions.create(
+file=(filename, file.read()),
+model="whisper-large-v3",
+prompt="Specify context or spelling", # Optional
+response_format="json", # Optional
+language="en", # Optional
+temperature=0.0 # Optional
+)
+print(transcription.text)
 ```
 
-**Example Response**
+```
 
-```json
+Example Response
+
+```
 {
-  "text": "Your transcribed text appears here...",
-  "x_groq": {
-    "id": "req_unique_id"
-  }
+"text": "Your transcribed text appears here...",
+"x_groq": {
+```text
+"id": "req_unique_id"
+```
+
+}
 }
 ```
 
-```json
-
 [Create translation](https://console.groq.com/docs/api-reference#audio-translation)
 
-POSThttps://api.groq.com/openai/v1/audio/translations
+POST[https://api.groq.com/openai/v1/audio/translations](https://api.groq.com/openai/v1/audio/translations)
 
 Translates audio into English.
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#audio-translation-request-body)
 
-* modelstringRequired
+- modelstringRequired
 ID of the model to use. `whisper-large-v3` and `whisper-large-v3-turbo` are currently available.
-* filestringOptional
+- filestringOptional
 The audio file object (not file name) translate, in one of these formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm.
-* promptstringOptional
+- promptstringOptional
 An optional text to guide the model's style or continue a previous audio segment. The [prompt](https://console.groq.com/docs/guides/speech-to-text/prompting) should be in English.
-* response_formatstringOptionalDefaults to json
+- response\_formatstringOptionalDefaults to json
 Allowed values: `json, text, verbose_json`
 The format of the transcript output, in one of these options: `json`, `text`, or `verbose_json`.
-* temperaturenumberOptionalDefaults to 0
-The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log%5Fprobability) to automatically increase the temperature until certain thresholds are hit.
-* urlstringOptional
+- temperaturenumberOptionalDefaults to 0
+The sampling temperature, between 0 and 1\. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log%5Fprobability) to automatically increase the temperature until certain thresholds are hit.
+- urlstringOptional
 The audio URL to translate/transcribe (supports Base64URL). Either file or url must be provided. When using the Batch API only url is supported.
+
+###
 
 [Response Object](https://console.groq.com/docs/api-reference#audio-translation-returns)
 
-* textstring
+- textstring
+
+curl
 
 ```
-
-```bash
-curl https://api.groq.com/openai/v1/audio/translations \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: multipart/form-data" \
-  -F file="@./sample_audio.m4a" \
-  -F model="whisper-large-v3"
+curl [https://api.groq.com/openai/v1/audio/translations](https://api.groq.com/openai/v1/audio/translations) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: multipart/form-data" \
+-F file="@./sample_audio.m4a" \
+-F model="whisper-large-v3"
 ```
 
-```javascript
+```
 // Default
 import fs from "fs";
 import Groq from "groq-sdk";
 
 const groq = new Groq();
 async function main() {
-  const translation = await groq.audio.translations.create({
-    file: fs.createReadStream("sample_audio.m4a"),
-    model: "whisper-large-v3",
-    prompt: "Specify context or spelling", // Optional
-    response_format: "json", // Optional
-    temperature: 0.0, // Optional
-  });
-  console.log(translation.text);
+const translation = await groq.audio.translations.create({
+```yaml
+file: fs.createReadStream("sample_audio.m4a"),
+model: "whisper-large-v3",
+prompt: "Specify context or spelling", // Optional
+response_format: "json", // Optional
+temperature: 0.0, // Optional
+```
+
+});
+console.log(translation.text);
 }
 main();
 ```
 
-```python
+```
+## Default
+
 import os
 from groq import Groq
 
@@ -1015,78 +1202,89 @@ client = Groq()
 filename = os.path.dirname(__file__) + "/sample_audio.m4a"
 
 with open(filename, "rb") as file:
-    translation = client.audio.translations.create(
-      file=(filename, file.read()),
-      model="whisper-large-v3",
-      prompt="Specify context or spelling",  # Optional
-      response_format="json",  # Optional
-      temperature=0.0  # Optional
-    )
-    print(translation.text)
+```python
+translation = client.audio.translations.create(
+file=(filename, file.read()),
+model="whisper-large-v3",
+prompt="Specify context or spelling", # Optional
+response_format="json", # Optional
+temperature=0.0 # Optional
+)
+print(translation.text)
 ```
 
-**Example Response**
+```
 
-```json
+Example Response
+
+```
 {
-  "text": "Your translated text appears here...",
-  "x_groq": {
-    "id": "req_unique_id"
-  }
+"text": "Your translated text appears here...",
+"x_groq": {
+```text
+"id": "req_unique_id"
+```
+
+}
 }
 ```
 
-```json
-
 [Create speech](https://console.groq.com/docs/api-reference#audio-speech)
 
-POSThttps://api.groq.com/openai/v1/audio/speech
+POST[https://api.groq.com/openai/v1/audio/speech](https://api.groq.com/openai/v1/audio/speech)
 
 Generates audio from the input text.
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#audio-speech-request-body)
 
-* inputstringRequired
+- inputstringRequired
 The text to generate audio for.
-* modelstringRequired
+- modelstringRequired
 One of the [available TTS models](https://console.groq.com/docs/text-to-speech).
-* voicestringRequired
+- voicestringRequired
 The voice to use when generating the audio. List of voices can be found [here](https://console.groq.com/docs/text-to-speech).
-* response_formatstringOptionalDefaults to mp3
+- response\_formatstringOptionalDefaults to mp3
 Allowed values: `flac, mp3, mulaw, ogg, wav`
 The format of the generated audio. Supported formats are `flac, mp3, mulaw, ogg, wav`.
-* sample_rateintegerOptionalDefaults to 48000
+- sample\_rateintegerOptionalDefaults to 48000
 Allowed values: `8000, 16000, 22050, 24000, 32000, 44100, 48000`
 The sample rate for generated audio
-* speednumberOptionalDefaults to 1
+- speednumberOptionalDefaults to 1
 Range: 0.5 - 5
 The speed of the generated audio.
+
+###
 
 [Returns](https://console.groq.com/docs/api-reference#audio-speech-returns)
 
 Returns an audio file in `wav` format.
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/audio/speech](https://api.groq.com/openai/v1/audio/speech) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{
+```text
+"model": "playai-tts",
+"input": "I love building and shipping new features for our users!",
+"voice": "Fritz-PlayAI",
+"response_format": "wav"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/audio/speech \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "playai-tts",
-    "input": "I love building and shipping new features for our users!",
-    "voice": "Fritz-PlayAI",
-    "response_format": "wav"
-  }'
+}'
 ```
 
-```javascript
+```
 import fs from "fs";
 import path from "path";
 import Groq from 'groq-sdk';
 
 const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY
+apiKey: process.env.GROQ_API_KEY
 });
 
 const speechFilePath = "speech.wav";
@@ -1096,21 +1294,24 @@ const text = "I love building and shipping new features for our users!";
 const responseFormat = "wav";
 
 async function main() {
-  const response = await groq.audio.speech.create({
-    model: model,
-    voice: voice,
-    input: text,
-    response_format: responseFormat
-  });
+const response = await groq.audio.speech.create({
+```yaml
+model: model,
+voice: voice,
+input: text,
+response_format: responseFormat
+```
 
-  const buffer = Buffer.from(await response.arrayBuffer());
-  await fs.promises.writeFile(speechFilePath, buffer);
+});
+
+const buffer = Buffer.from(await response.arrayBuffer());
+await fs.promises.writeFile(speechFilePath, buffer);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
@@ -1123,65 +1324,73 @@ text = "I love building and shipping new features for our users!"
 response_format = "wav"
 
 response = client.audio.speech.create(
-    model=model,
-    voice=voice,
-    input=text,
-    response_format=response_format
+```text
+model=model,
+voice=voice,
+input=text,
+response_format=response_format
+```
+
 )
 
 response.write_to_file(speech_file_path)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 "string"
 ```
-
-```json
 
 [Models](https://console.groq.com/docs/api-reference#models)
 
 [List models](https://console.groq.com/docs/api-reference#models-list)
 
-GEThttps://api.groq.com/openai/v1/models
+GET[https://api.groq.com/openai/v1/models](https://api.groq.com/openai/v1/models)
 
 List all available [models](https://console.groq.com/docs/models).
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#models-list-returns)
 
-* dataarray
-**Show properties**
-* objectstring
+- dataarray
+## Show properties
+
+- objectstring
 Allowed values: `list`
 
-```
+curl
 
-```bash
-curl https://api.groq.com/openai/v1/models \
+```
+curl [https://api.groq.com/openai/v1/models](https://api.groq.com/openai/v1/models) \
 -H "Authorization: Bearer $GROQ_API_KEY"
 ```
 
-```javascript
+```
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-  const models = await groq.models.list();
-  console.log(models);
+const models = await groq.models.list();
+console.log(models);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("GROQ_API_KEY"),
+## This is the default and can be omitted
+
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 models = client.models.list()
@@ -1189,135 +1398,142 @@ models = client.models.list()
 print(models)
 ```
 
-**Example Response**
+Example Response
 
+```
+{
+"object": "list",
+"data": [
 ```json
 {
-  "object": "list",
-  "data": [
-    {
-      "id": "gemma2-9b-it",
-      "object": "model",
-      "created": 1693721698,
-      "owned_by": "Google",
-      "active": true,
-      "context_window": 8192,
-      "public_apps": null
-    },
-    {
-      "id": "llama3-8b-8192",
-      "object": "model",
-      "created": 1693721698,
-      "owned_by": "Meta",
-      "active": true,
-      "context_window": 8192,
-      "public_apps": null
-    },
-    {
-      "id": "llama3-70b-8192",
-      "object": "model",
-      "created": 1693721698,
-      "owned_by": "Meta",
-      "active": true,
-      "context_window": 8192,
-      "public_apps": null
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "object": "model",
-      "created": 1728413088,
-      "owned_by": "OpenAI",
-      "active": true,
-      "context_window": 448,
-      "public_apps": null
-    },
-    {
-      "id": "whisper-large-v3",
-      "object": "model",
-      "created": 1693721698,
-      "owned_by": "OpenAI",
-      "active": true,
-      "context_window": 448,
-      "public_apps": null
-    },
-    {
-      "id": "llama-guard-3-8b",
-      "object": "model",
-      "created": 1693721698,
-      "owned_by": "Meta",
-      "active": true,
-      "context_window": 8192,
-      "public_apps": null
-    },
-    {
-      "id": "distil-whisper-large-v3-en",
-      "object": "model",
-      "created": 1693721698,
-      "owned_by": "Hugging Face",
-      "active": true,
-      "context_window": 448,
-      "public_apps": null
-    },
-    {
-      "id": "llama-3.1-8b-instant",
-      "object": "model",
-      "created": 1693721698,
-      "owned_by": "Meta",
-      "active": true,
-      "context_window": 131072,
-      "public_apps": null
-    }
-  ]
+"id": "gemma2-9b-it",
+"object": "model",
+"created": 1693721698,
+"owned_by": "Google",
+"active": true,
+"context_window": 8192,
+"public_apps": null
+},
+{
+"id": "llama3-8b-8192",
+"object": "model",
+"created": 1693721698,
+"owned_by": "Meta",
+"active": true,
+"context_window": 8192,
+"public_apps": null
+},
+{
+"id": "llama3-70b-8192",
+"object": "model",
+"created": 1693721698,
+"owned_by": "Meta",
+"active": true,
+"context_window": 8192,
+"public_apps": null
+},
+{
+"id": "whisper-large-v3-turbo",
+"object": "model",
+"created": 1728413088,
+"owned_by": "OpenAI",
+"active": true,
+"context_window": 448,
+"public_apps": null
+},
+{
+"id": "whisper-large-v3",
+"object": "model",
+"created": 1693721698,
+"owned_by": "OpenAI",
+"active": true,
+"context_window": 448,
+"public_apps": null
+},
+{
+"id": "llama-guard-3-8b",
+"object": "model",
+"created": 1693721698,
+"owned_by": "Meta",
+"active": true,
+"context_window": 8192,
+"public_apps": null
+},
+{
+"id": "distil-whisper-large-v3-en",
+"object": "model",
+"created": 1693721698,
+"owned_by": "Hugging Face",
+"active": true,
+"context_window": 448,
+"public_apps": null
+},
+{
+"id": "llama-3.1-8b-instant",
+"object": "model",
+"created": 1693721698,
+"owned_by": "Meta",
+"active": true,
+"context_window": 131072,
+"public_apps": null
 }
 ```
 
-```json
+]
+}
+```
 
 [Retrieve model](https://console.groq.com/docs/api-reference#models-retrieve)
 
-GEThttps://api.groq.com/openai/v1/models/{model}
+GET[https://api.groq.com/openai/v1/models/{model}](https://api.groq.com/openai/v1/models/{model})
 
 Get detailed information about a [model](https://console.groq.com/docs/models).
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#models-retrieve-returns)
 
-* createdinteger
+- createdinteger
 The Unix timestamp (in seconds) when the model was created.
-* idstring
+- idstring
 The model identifier, which can be referenced in the API endpoints.
-* objectstring
+- objectstring
 Allowed values: `model`
 The object type, which is always "model".
-* owned_bystring
+- owned\_bystring
 The organization that owns the model.
 
-```
+curl
 
-```bash
-curl https://api.groq.com/openai/v1/models/llama-3.3-70b-versatile \
+```
+curl [https://api.groq.com/openai/v1/models/llama-3.3-70b-versatile](https://api.groq.com/openai/v1/models/llama-3.3-70b-versatile) \
 -H "Authorization: Bearer $GROQ_API_KEY"
 ```
 
-```javascript
+```
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-  const model = await groq.models.retrieve("llama-3.3-70b-versatile");
-  console.log(model);
+const model = await groq.models.retrieve("llama-3.3-70b-versatile");
+console.log(model);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("GROQ_API_KEY"),
+## This is the default and can be omitted
+
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 model = client.models.retrieve("llama-3.3-70b-versatile")
@@ -1325,911 +1541,1013 @@ model = client.models.retrieve("llama-3.3-70b-versatile")
 print(model)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-  "id": "llama3-8b-8192",
-  "object": "model",
-  "created": 1693721698,
-  "owned_by": "Meta",
-  "active": true,
-  "context_window": 8192,
-  "public_apps": null,
-  "max_completion_tokens": 8192
+"id": "llama3-8b-8192",
+"object": "model",
+"created": 1693721698,
+"owned_by": "Meta",
+"active": true,
+"context_window": 8192,
+"public_apps": null,
+"max_completion_tokens": 8192
 }
 ```
-
-```json
 
 [Batches](https://console.groq.com/docs/api-reference#batches)
 
 [Create batch](https://console.groq.com/docs/api-reference#batches-create)
 
-POSThttps://api.groq.com/openai/v1/batches
+POST[https://api.groq.com/openai/v1/batches](https://api.groq.com/openai/v1/batches)
 
 Creates and executes a batch from an uploaded file of requests. [Learn more](https://console.groq.com/docs/batch).
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#batches-create-request-body)
 
-* completion_windowstringRequired
+- completion\_windowstringRequired
 The time frame within which the batch should be processed. Durations from `24h` to `7d` are supported.
-* endpointstringRequired
+- endpointstringRequired
 Allowed values: `/v1/chat/completions`
 The endpoint to be used for all requests in the batch. Currently `/v1/chat/completions` is supported.
-* input_file_idstringRequired
+- input\_file\_idstringRequired
 The ID of an uploaded file that contains requests for the new batch.
 See [upload file](https://console.groq.com/docs/api-reference#files-upload) for how to upload a file.
 Your input file must be formatted as a [JSONL file](https://console.groq.com/docs/batch), and must be uploaded with the purpose `batch`. The file can be up to 100 MB in size.
-* metadataobject or nullOptional
+- metadataobject or nullOptional
 Optional custom metadata for the batch.
+
+###
 
 [Response Object](https://console.groq.com/docs/api-reference#batches-create-returns)
 
-* cancelled_atinteger
+- cancelled\_atinteger
 The Unix timestamp (in seconds) for when the batch was cancelled.
-* cancelling_atinteger
+- cancelling\_atinteger
 The Unix timestamp (in seconds) for when the batch started cancelling.
-* completed_atinteger
+- completed\_atinteger
 The Unix timestamp (in seconds) for when the batch was completed.
-* completion_windowstring
+- completion\_windowstring
 The time frame within which the batch should be processed.
-* created_atinteger
+- created\_atinteger
 The Unix timestamp (in seconds) for when the batch was created.
-* endpointstring
+- endpointstring
 The API endpoint used by the batch.
-* error_file_idstring
+- error\_file\_idstring
 The ID of the file containing the outputs of requests with errors.
-* errorsobject
-**Show properties**
-* expired_atinteger
+- errorsobject
+## Show properties
+
+- expired\_atinteger
 The Unix timestamp (in seconds) for when the batch expired.
-* expires_atinteger
+- expires\_atinteger
 The Unix timestamp (in seconds) for when the batch will expire.
-* failed_atinteger
+- failed\_atinteger
 The Unix timestamp (in seconds) for when the batch failed.
-* finalizing_atinteger
+- finalizing\_atinteger
 The Unix timestamp (in seconds) for when the batch started finalizing.
-* idstring
-* in_progress_atinteger
+- idstring
+- in\_progress\_atinteger
 The Unix timestamp (in seconds) for when the batch started processing.
-* input_file_idstring
+- input\_file\_idstring
 The ID of the input file for the batch.
-* metadataobject or null
+- metadataobject or null
 Set of key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format.
-* objectstring
+- objectstring
 Allowed values: `batch`
 The object type, which is always `batch`.
-* output_file_idstring
+- output\_file\_idstring
 The ID of the file containing the outputs of successfully executed requests.
-* request_countsobject
+- request\_countsobject
 The request counts for different statuses within the batch.
-**Show properties**
-* statusstring
+### Show properties
+
+- statusstring
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`
 The current status of the batch.
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/batches](https://api.groq.com/openai/v1/batches) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{
+```text
+"input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"endpoint": "/v1/chat/completions",
+"completion_window": "24h"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/batches \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
-    "endpoint": "/v1/chat/completions",
-    "completion_window": "24h"
-  }'
+}'
 ```
 
-```javascript
+```
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-  const batch = await client.batches.create({
-    completion_window: "24h",
-    endpoint: "/v1/chat/completions",
-    input_file_id: "file_01jh6x76wtemjr74t1fh0faj5t",
-  });
-  console.log(batch.id);
+const batch = await client.batches.create({
+```yaml
+completion_window: "24h",
+endpoint: "/v1/chat/completions",
+input_file_id: "file_01jh6x76wtemjr74t1fh0faj5t",
+```
+
+});
+console.log(batch.id);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 batch = client.batches.create(
-    completion_window="24h",
-    endpoint="/v1/chat/completions",
-    input_file_id="file_01jh6x76wtemjr74t1fh0faj5t",
+```text
+completion_window="24h",
+endpoint="/v1/chat/completions",
+input_file_id="file_01jh6x76wtemjr74t1fh0faj5t",
+```
+
 )
 print(batch.id)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-  "id": "batch_01jh6xa7reempvjyh6n3yst2zw",
-  "object": "batch",
-  "endpoint": "/v1/chat/completions",
-  "errors": null,
-  "input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
-  "completion_window": "24h",
-  "status": "validating",
-  "output_file_id": null,
-  "error_file_id": null,
-  "finalizing_at": null,
-  "failed_at": null,
-  "expired_at": null,
-  "cancelled_at": null,
-  "request_counts": {
-    "total": 0,
-    "completed": 0,
-    "failed": 0
-  },
-  "metadata": null,
-  "created_at": 1736472600,
-  "expires_at": 1736559000,
-  "cancelling_at": null,
-  "completed_at": null,
-  "in_progress_at": null
-}
+"id": "batch_01jh6xa7reempvjyh6n3yst2zw",
+"object": "batch",
+"endpoint": "/v1/chat/completions",
+"errors": null,
+"input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"completion_window": "24h",
+"status": "validating",
+"output_file_id": null,
+"error_file_id": null,
+"finalizing_at": null,
+"failed_at": null,
+"expired_at": null,
+"cancelled_at": null,
+"request_counts": {
+```text
+"total": 0,
+"completed": 0,
+"failed": 0
 ```
 
-```json
+},
+"metadata": null,
+"created_at": 1736472600,
+"expires_at": 1736559000,
+"cancelling_at": null,
+"completed_at": null,
+"in_progress_at": null
+}
+```
 
 [Retrieve batch](https://console.groq.com/docs/api-reference#batches-retrieve)
 
-GEThttps://api.groq.com/openai/v1/batches/{batch_id}
+GET[https://api.groq.com/openai/v1/batches/{batch\_id}](https://api.groq.com/openai/v1/batches/{batch\_id})
 
 Retrieves a batch.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#batches-retrieve-returns)
 
-* cancelled_atinteger
+- cancelled\_atinteger
 The Unix timestamp (in seconds) for when the batch was cancelled.
-* cancelling_atinteger
+- cancelling\_atinteger
 The Unix timestamp (in seconds) for when the batch started cancelling.
-* completed_atinteger
+- completed\_atinteger
 The Unix timestamp (in seconds) for when the batch was completed.
-* completion_windowstring
+- completion\_windowstring
 The time frame within which the batch should be processed.
-* created_atinteger
+- created\_atinteger
 The Unix timestamp (in seconds) for when the batch was created.
-* endpointstring
+- endpointstring
 The API endpoint used by the batch.
-* error_file_idstring
+- error\_file\_idstring
 The ID of the file containing the outputs of requests with errors.
-* errorsobject
-**Show properties**
-* expired_atinteger
+- errorsobject
+### Show properties
+
+- expired\_atinteger
 The Unix timestamp (in seconds) for when the batch expired.
-* expires_atinteger
+- expires\_atinteger
 The Unix timestamp (in seconds) for when the batch will expire.
-* failed_atinteger
+- failed\_atinteger
 The Unix timestamp (in seconds) for when the batch failed.
-* finalizing_atinteger
+- finalizing\_atinteger
 The Unix timestamp (in seconds) for when the batch started finalizing.
-* idstring
-* in_progress_atinteger
+- idstring
+- in\_progress\_atinteger
 The Unix timestamp (in seconds) for when the batch started processing.
-* input_file_idstring
+- input\_file\_idstring
 The ID of the input file for the batch.
-* metadataobject or null
+- metadataobject or null
 Set of key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format.
-* objectstring
+- objectstring
 Allowed values: `batch`
 The object type, which is always `batch`.
-* output_file_idstring
+- output\_file\_idstring
 The ID of the file containing the outputs of successfully executed requests.
-* request_countsobject
+- request\_countsobject
 The request counts for different statuses within the batch.
-**Show properties**
-* statusstring
+### Show properties
+
+- statusstring
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`
 The current status of the batch.
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw](https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-  const batch = await client.batches.retrieve("batch_01jh6xa7reempvjyh6n3yst2zw");
-  console.log(batch.id);
+const batch = await client.batches.retrieve("batch_01jh6xa7reempvjyh6n3yst2zw");
+console.log(batch.id);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 batch = client.batches.retrieve(
-    "batch_01jh6xa7reempvjyh6n3yst2zw",
+```text
+"batch_01jh6xa7reempvjyh6n3yst2zw",
+```
+
 )
 print(batch.id)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-  "id": "batch_01jh6xa7reempvjyh6n3yst2zw",
-  "object": "batch",
-  "endpoint": "/v1/chat/completions",
-  "errors": null,
-  "input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
-  "completion_window": "24h",
-  "status": "validating",
-  "output_file_id": null,
-  "error_file_id": null,
-  "finalizing_at": null,
-  "failed_at": null,
-  "expired_at": null,
-  "cancelled_at": null,
-  "request_counts": {
-    "total": 0,
-    "completed": 0,
-    "failed": 0
-  },
-  "metadata": null,
-  "created_at": 1736472600,
-  "expires_at": 1736559000,
-  "cancelling_at": null,
-  "completed_at": null,
-  "in_progress_at": null
+"id": "batch_01jh6xa7reempvjyh6n3yst2zw",
+"object": "batch",
+"endpoint": "/v1/chat/completions",
+"errors": null,
+"input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"completion_window": "24h",
+"status": "validating",
+"output_file_id": null,
+"error_file_id": null,
+"finalizing_at": null,
+"failed_at": null,
+"expired_at": null,
+"cancelled_at": null,
+"request_counts": {
+```text
+"total": 0,
+"completed": 0,
+"failed": 0
+```
+
+},
+"metadata": null,
+"created_at": 1736472600,
+"expires_at": 1736559000,
+"cancelling_at": null,
+"completed_at": null,
+"in_progress_at": null
 }
 ```
 
-```json
-
 [List batches](https://console.groq.com/docs/api-reference#batches-list)
 
-GEThttps://api.groq.com/openai/v1/batches
+GET[https://api.groq.com/openai/v1/batches](https://api.groq.com/openai/v1/batches)
 
 List your organization's batches.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#batches-list-returns)
 
-* dataarray
-**Show properties**
-* objectstring
+- dataarray
+### Show properties
+
+- objectstring
 Allowed values: `list`
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/batches](https://api.groq.com/openai/v1/batches) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/batches \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-  const batchList = await client.batches.list();
-  console.log(batchList.data);
+const batchList = await client.batches.list();
+console.log(batchList.data);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 batch_list = client.batches.list()
 print(batch_list.data)
 ```
 
-**Example Response**
+Example Response
 
+```
+{
+"object": "list",
+"data": [
 ```json
 {
-  "object": "list",
-  "data": [
-    {
-      "id": "batch_01jh6xa7reempvjyh6n3yst2zw",
-      "object": "batch",
-      "endpoint": "/v1/chat/completions",
-      "errors": null,
-      "input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
-      "completion_window": "24h",
-      "status": "validating",
-      "output_file_id": null,
-      "error_file_id": null,
-      "finalizing_at": null,
-      "failed_at": null,
-      "expired_at": null,
-      "cancelled_at": null,
-      "request_counts": {
-        "total": 0,
-        "completed": 0,
-        "failed": 0
-      },
-      "metadata": null,
-      "created_at": 1736472600,
-      "expires_at": 1736559000,
-      "cancelling_at": null,
-      "completed_at": null,
-      "in_progress_at": null
-    }
-  ]
+"id": "batch_01jh6xa7reempvjyh6n3yst2zw",
+"object": "batch",
+"endpoint": "/v1/chat/completions",
+"errors": null,
+"input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"completion_window": "24h",
+"status": "validating",
+"output_file_id": null,
+"error_file_id": null,
+"finalizing_at": null,
+"failed_at": null,
+"expired_at": null,
+"cancelled_at": null,
+"request_counts": {
+"total": 0,
+"completed": 0,
+"failed": 0
+},
+"metadata": null,
+"created_at": 1736472600,
+"expires_at": 1736559000,
+"cancelling_at": null,
+"completed_at": null,
+"in_progress_at": null
 }
 ```
 
-```json
+]
+}
+```
 
 [Cancel batch](https://console.groq.com/docs/api-reference#batches-cancel)
 
-POSThttps://api.groq.com/openai/v1/batches/{batch_id}/cancel
+POST[https://api.groq.com/openai/v1/batches/{batch\_id}/cancel](https://api.groq.com/openai/v1/batches/{batch\_id}/cancel)
 
 Cancels a batch.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#batches-cancel-returns)
 
-* cancelled_atinteger
+- cancelled\_atinteger
 The Unix timestamp (in seconds) for when the batch was cancelled.
-* cancelling_atinteger
+- cancelling\_atinteger
 The Unix timestamp (in seconds) for when the batch started cancelling.
-* completed_atinteger
+- completed\_atinteger
 The Unix timestamp (in seconds) for when the batch was completed.
-* completion_windowstring
+- completion\_windowstring
 The time frame within which the batch should be processed.
-* created_atinteger
+- created\_atinteger
 The Unix timestamp (in seconds) for when the batch was created.
-* endpointstring
+- endpointstring
 The API endpoint used by the batch.
-* error_file_idstring
+- error\_file\_idstring
 The ID of the file containing the outputs of requests with errors.
-* errorsobject
-**Show properties**
-* expired_atinteger
+- errorsobject
+### Show properties
+
+- expired\_atinteger
 The Unix timestamp (in seconds) for when the batch expired.
-* expires_atinteger
+- expires\_atinteger
 The Unix timestamp (in seconds) for when the batch will expire.
-* failed_atinteger
+- failed\_atinteger
 The Unix timestamp (in seconds) for when the batch failed.
-* finalizing_atinteger
+- finalizing\_atinteger
 The Unix timestamp (in seconds) for when the batch started finalizing.
-* idstring
-* in_progress_atinteger
+- idstring
+- in\_progress\_atinteger
 The Unix timestamp (in seconds) for when the batch started processing.
-* input_file_idstring
+- input\_file\_idstring
 The ID of the input file for the batch.
-* metadataobject or null
+- metadataobject or null
 Set of key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format.
-* objectstring
+- objectstring
 Allowed values: `batch`
 The object type, which is always `batch`.
-* output_file_idstring
+- output\_file\_idstring
 The ID of the file containing the outputs of successfully executed requests.
-* request_countsobject
+- request\_countsobject
 The request counts for different statuses within the batch.
-**Show properties**
-* statusstring
+### Show properties
+
+- statusstring
 Allowed values: `validating, failed, in_progress, finalizing, completed, expired, cancelling, cancelled`
 The current status of the batch.
 
+curl
+
+```
+curl -X POST [https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw/cancel](https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw/cancel) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```bash
-curl -X POST https://api.groq.com/openai/v1/batches/batch_01jh6xa7reempvjyh6n3yst2zw/cancel \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-  const batch = await client.batches.cancel("batch_01jh6xa7reempvjyh6n3yst2zw");
-  console.log(batch.id);
+const batch = await client.batches.cancel("batch_01jh6xa7reempvjyh6n3yst2zw");
+console.log(batch.id);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 batch = client.batches.cancel(
-    "batch_01jh6xa7reempvjyh6n3yst2zw",
+```text
+"batch_01jh6xa7reempvjyh6n3yst2zw",
+```
+
 )
 print(batch.id)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-  "id": "batch_01jh6xa7reempvjyh6n3yst2zw",
-  "object": "batch",
-  "endpoint": "/v1/chat/completions",
-  "errors": null,
-  "input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
-  "completion_window": "24h",
-  "status": "cancelling",
-  "output_file_id": null,
-  "error_file_id": null,
-  "finalizing_at": null,
-  "failed_at": null,
-  "expired_at": null,
-  "cancelled_at": null,
-  "request_counts": {
-    "total": 0,
-    "completed": 0,
-    "failed": 0
-  },
-  "metadata": null,
-  "created_at": 1736472600,
-  "expires_at": 1736559000,
-  "cancelling_at": null,
-  "completed_at": null,
-  "in_progress_at": null
-}
+"id": "batch_01jh6xa7reempvjyh6n3yst2zw",
+"object": "batch",
+"endpoint": "/v1/chat/completions",
+"errors": null,
+"input_file_id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"completion_window": "24h",
+"status": "cancelling",
+"output_file_id": null,
+"error_file_id": null,
+"finalizing_at": null,
+"failed_at": null,
+"expired_at": null,
+"cancelled_at": null,
+"request_counts": {
+```text
+"total": 0,
+"completed": 0,
+"failed": 0
 ```
 
-```json
+},
+"metadata": null,
+"created_at": 1736472600,
+"expires_at": 1736559000,
+"cancelling_at": null,
+"completed_at": null,
+"in_progress_at": null
+}
+```
 
 [Files](https://console.groq.com/docs/api-reference#files)
 
 [Upload file](https://console.groq.com/docs/api-reference#files-upload)
 
-POSThttps://api.groq.com/openai/v1/files
+POST[https://api.groq.com/openai/v1/files](https://api.groq.com/openai/v1/files)
 
-Upload a file that can be used across various endpoints.
+Upload a file that can be used across endpoints.
 
 The Batch API only supports `.jsonl` files up to 100 MB in size. The input also has a specific required [format](https://console.groq.com/docs/batch).
 
 Please contact us if you need to increase these storage limits.
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#files-upload-request-body)
 
-* filestringRequired
+- filestringRequired
 The File object (not file name) to be uploaded.
-* purposestringRequired
+- purposestringRequired
 Allowed values: `batch`
 The intended purpose of the uploaded file. Use "batch" for [Batch API](https://console.groq.com/docs/api-reference#batches).
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#files-upload-returns)
 
-* bytesinteger
+- bytesinteger
 The size of the file, in bytes.
-* created_atinteger
+- created\_atinteger
 The Unix timestamp (in seconds) for when the file was created.
-* filenamestring
+- filenamestring
 The name of the file.
-* idstring
+- idstring
 The file identifier, which can be referenced in the API endpoints.
-* objectstring
+- objectstring
 Allowed values: `file`
 The object type, which is always `file`.
-* purposestring
+- purposestring
 Allowed values: `batch, batch_output`
 The intended purpose of the file. Supported values are `batch`, and `batch_output`.
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/files](https://api.groq.com/openai/v1/files) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-F purpose="batch" \
+-F "file=@batch_file.jsonl"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/files \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -F purpose="batch" \
-  -F "file=@batch_file.jsonl"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 const fileContent = '{"custom_id": "request-1", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "llama-3.1-8b-instant", "messages": [{"role": "user", "content": "Explain the importance of fast language models"}]}}\n';
 
 async function main() {
-  const blob = new Blob([fileContent]);
-  const file = new File([blob], 'batch.jsonl');
+const blob = new Blob([fileContent]);
+const file = new File([blob], 'batch.jsonl');
 
-  const createdFile = await client.files.create({ file: file, purpose: 'batch' });
-  console.log(createdFile.id);
+const createdFile = await client.files.create({ file: file, purpose: 'batch' });
+console.log(createdFile.id);
 }
 
 main();
 ```
 
-```python
+```
 import os
-import requests # pip install requests first!
+import requests # `pip install` requests first!
 
 def upload_file_to_groq(api_key, file_path):
-    url = "https://api.groq.com/openai/v1/files"
+```text
+url = "https://api.groq.com/openai/v1/files"
 
-    headers = {
-        "Authorization": f"Bearer {api_key}"
-    }
+headers = {
+"Authorization": f"Bearer {api_key}"
+}
 
-    # Prepare the file and form data
-    files = {
-        "file": ("batch_file.jsonl", open(file_path, "rb"))
-    }
+## Prepare the file and form data
+files = {
+"file": ("batch_file.jsonl", open(file_path, "rb"))
+}
 
-    data = {
-        "purpose": "batch"
-    }
+data = {
+"purpose": "batch"
+}
 
-    # Make the POST request
-    response = requests.post(url, headers=headers, files=files, data=data)
+## Make the POST request
+response = requests.post(url, headers=headers, files=files, data=data)
 
-    return response.json()
+return response.json()
+
+```
 
 ## Usage example
+
 api_key = os.environ.get("GROQ_API_KEY")
-file_path = "batch_file.jsonl"  # Path to your JSONL file
+file_path = "batch_file.jsonl" # Path to your JSONL file
 
 try:
-    result = upload_file_to_groq(api_key, file_path)
-    print(result)
-except Exception as e:
-    print(f"Error: {e}")
+```python
+result = upload_file_to_groq(api_key, file_path)
+print(result)
 ```
 
-**Example Response**
+except Exception as e:
+```python
+print(f"Error: {e}")
+```
 
-```json
+```
+
+Example Response
+
+```
 {
-  "id": "file_01jh6x76wtemjr74t1fh0faj5t",
-  "object": "file",
-  "bytes": 966,
-  "created_at": 1736472501,
-  "filename": "batch_file.jsonl",
-  "purpose": "batch"
+"id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"object": "file",
+"bytes": 966,
+"created_at": 1736472501,
+"filename": "batch_file.jsonl",
+"purpose": "batch"
 }
 ```
-
-```json
 
 [List files](https://console.groq.com/docs/api-reference#files-list)
 
-GEThttps://api.groq.com/openai/v1/files
+GET[https://api.groq.com/openai/v1/files](https://api.groq.com/openai/v1/files)
 
 Returns a list of files.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#files-list-returns)
 
-* dataarray
-**Show properties**
-* objectstring
+- dataarray
+## Show properties
+
+- objectstring
 Allowed values: `list`
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/files](https://api.groq.com/openai/v1/files) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/files \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-  const fileList = await client.files.list();
-  console.log(fileList.data);
+const fileList = await client.files.list();
+console.log(fileList.data);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 file_list = client.files.list()
 print(file_list.data)
 ```
 
-**Example Response**
+Example Response
 
+```
+{
+"object": "list",
+"data": [
 ```json
 {
-  "object": "list",
-  "data": [
-    {
-      "id": "file_01jh6x76wtemjr74t1fh0faj5t",
-      "object": "file",
-      "bytes": 966,
-      "created_at": 1736472501,
-      "filename": "batch_file.jsonl",
-      "purpose": "batch"
-    }
-  ]
+"id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"object": "file",
+"bytes": 966,
+"created_at": 1736472501,
+"filename": "batch_file.jsonl",
+"purpose": "batch"
 }
 ```
 
-```json
+]
+}
+```
 
 [Delete file](https://console.groq.com/docs/api-reference#files-delete)
 
-DELETEhttps://api.groq.com/openai/v1/files/{file_id}
+DELETE[https://api.groq.com/openai/v1/files/{file\_id}](https://api.groq.com/openai/v1/files/{file\_id})
 
 Delete a file.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#files-delete-returns)
 
-* deletedboolean
-* idstring
-* objectstring
+- deletedboolean
+- idstring
+- objectstring
 Allowed values: `file`
 
+curl
+
+```
+curl -X DELETE [https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t](https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```bash
-curl -X DELETE https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-  const fileDelete = await client.files.delete("file_01jh6x76wtemjr74t1fh0faj5t");
-  console.log(fileDelete);
+const fileDelete = await client.files.delete("file_01jh6x76wtemjr74t1fh0faj5t");
+console.log(fileDelete);
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 file_delete = client.files.delete(
-    "file_01jh6x76wtemjr74t1fh0faj5t",
+```text
+"file_01jh6x76wtemjr74t1fh0faj5t",
+```
+
 )
 print(file_delete)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-  "id": "file_01jh6x76wtemjr74t1fh0faj5t",
-  "object": "file",
-  "deleted": true
+"id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"object": "file",
+"deleted": true
 }
 ```
 
-```json
-
 [Retrieve file](https://console.groq.com/docs/api-reference#files-retrieve)
 
-GEThttps://api.groq.com/openai/v1/files/{file_id}
+GET[https://api.groq.com/openai/v1/files/{file\_id}](https://api.groq.com/openai/v1/files/{file\_id})
 
 Returns information about a file.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#files-retrieve-returns)
 
-* bytesinteger
+- bytesinteger
 The size of the file, in bytes.
-* created_atinteger
+- created\_atinteger
 The Unix timestamp (in seconds) for when the file was created.
-* filenamestring
+- filenamestring
 The name of the file.
-* idstring
+- idstring
 The file identifier, which can be referenced in the API endpoints.
-* objectstring
+- objectstring
 Allowed values: `file`
 The object type, which is always `file`.
-* purposestring
+- purposestring
 Allowed values: `batch, batch_output`
 The intended purpose of the file. Supported values are `batch`, and `batch_output`.
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t](https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-    const file = await client.files.info('file_01jh6x76wtemjr74t1fh0faj5t');
-    console.log(file);
+```python
+const file = await client.files.info('file_01jh6x76wtemjr74t1fh0faj5t');
+console.log(file);
+```
+
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 file = client.files.info(
-    "file_01jh6x76wtemjr74t1fh0faj5t",
+```text
+"file_01jh6x76wtemjr74t1fh0faj5t",
+```
+
 )
 print(file)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-  "id": "file_01jh6x76wtemjr74t1fh0faj5t",
-  "object": "file",
-  "bytes": 966,
-  "created_at": 1736472501,
-  "filename": "batch_file.jsonl",
-  "purpose": "batch"
+"id": "file_01jh6x76wtemjr74t1fh0faj5t",
+"object": "file",
+"bytes": 966,
+"created_at": 1736472501,
+"filename": "batch_file.jsonl",
+"purpose": "batch"
 }
 ```
 
-```json
-
 [Download file](https://console.groq.com/docs/api-reference#files-download)
 
-GEThttps://api.groq.com/openai/v1/files/{file_id}/content
+GET[https://api.groq.com/openai/v1/files/{file\_id}/content](https://api.groq.com/openai/v1/files/{file\_id}/content)
 
 Returns the contents of the specified file.
+
+###
 
 [Returns](https://console.groq.com/docs/api-reference#files-download-returns)
 
 The file content
 
+curl
+
+```
+curl [https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t/content](https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t/content) \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-H "Content-Type: application/json"
 ```
 
-```bash
-curl https://api.groq.com/openai/v1/files/file_01jh6x76wtemjr74t1fh0faj5t/content \
-  -H "Authorization: Bearer $GROQ_API_KEY" \
-  -H "Content-Type: application/json"
 ```
-
-```javascript
 import Groq from 'groq-sdk';
 
 const client = new Groq({
-  apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
+apiKey: process.env['GROQ_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
-    const response = await client.files.content('file_01jh6x76wtemjr74t1fh0faj5t');
-    console.log(response);
+```python
+const response = await client.files.content('file_01jh6x76wtemjr74t1fh0faj5t');
+console.log(response);
+```
+
 }
 
 main();
 ```
 
-```python
+```
 import os
 from groq import Groq
 
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),  # This is the default and can be omitted
+```text
+api_key=os.environ.get("GROQ_API_KEY"), # This is the default and can be omitted
+```
+
 )
 response = client.files.content(
-    "file_01jh6x76wtemjr74t1fh0faj5t",
+```text
+"file_01jh6x76wtemjr74t1fh0faj5t",
+```
+
 )
 print(response)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 "string"
 ```
-
-```json
 
 [Fine Tuning](https://console.groq.com/docs/api-reference#fine-tuning)
 
 [List fine tunings](https://console.groq.com/docs/api-reference#fine-tuning-list)
 
-GEThttps://api.groq.com/v1/fine_tunings
+GET[https://api.groq.com/v1/fine\_tunings](https://api.groq.com/v1/fine\_tunings)
 
 Lists all previously created fine tunings. This endpoint is in closed beta. [Contact us](https://groq.com/contact) for more information.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#fine-tuning-list-returns)
 
-* dataarray
-**Show properties**
-* objectstring
+- dataarray
+### Show properties
+
+- objectstring
+
+curl
+
+```
+curl [https://api.groq.com/v1/fine_tunings](https://api.groq.com/v1/fine_tunings) -s \
+```text
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $GROQ_API_KEY"
+```
 
 ```
 
-```bash
-curl https://api.groq.com/v1/fine_tunings -s \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $GROQ_API_KEY"
 ```
-
-```javascript
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    const fineTunings = await groq.fine_tunings.list();
-    console.log(fineTunings);
+```python
+const fineTunings = await groq.fine_tunings.list();
+console.log(fineTunings);
+```
+
 }
 
 main();
 ```
 
-```python
+```
 import os
 
 from groq import Groq
 
 client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("GROQ_API_KEY"),
+## This is the default and can be omitted
+
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 fine_tunings = client.fine_tunings.list()
@@ -2237,165 +2555,198 @@ fine_tunings = client.fine_tunings.list()
 print(fine_tunings)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-    "object": "list",
-    "data": [
-        {
-            "id": "string",
-            "name": "string",
-            "base_model": "string",
-            "type": "string",
-            "input_file_id": "string",
-            "created_at": 0,
-            "fine_tuned_model": "string"
-        }
-    ]
+```text
+"object": "list",
+"data": [
+{
+"id": "string",
+"name": "string",
+"base_model": "string",
+"type": "string",
+"input_file_id": "string",
+"created_at": 0,
+"fine_tuned_model": "string"
+}
+]
+```
+
 }
 ```
 
-```json
-
 [Create fine tuning](https://console.groq.com/docs/api-reference#fine-tuning-create)
 
-POSThttps://api.groq.com/v1/fine_tunings
+POST[https://api.groq.com/v1/fine\_tunings](https://api.groq.com/v1/fine\_tunings)
 
 Creates a new fine tuning for the already uploaded files This endpoint is in closed beta. [Contact us](https://groq.com/contact) for more information.
 
+###
+
 [Request Body](https://console.groq.com/docs/api-reference#fine-tuning-create-request-body)
 
-* base_modelstringOptional
+- base\_modelstringOptional
 BaseModel is the model that the fine tune was originally trained on.
-* input_file_idstringOptional
+- input\_file\_idstringOptional
 InputFileID is the id of the file that was uploaded via the /files api.
-* namestringOptional
+- namestringOptional
 Name is the given name to a fine tuned model.
-* typestringOptional
+- typestringOptional
 Type is the type of fine tuning format such as "lora".
+
+###
 
 [Response Object](https://console.groq.com/docs/api-reference#fine-tuning-create-returns)
 
-* dataobject
-**Show properties**
-* idstring
-* objectstring
+- dataobject
+## Show properties
+
+- idstring
+- objectstring
+
+curl
+
+```
+curl [https://api.groq.com/v1/fine_tunings](https://api.groq.com/v1/fine_tunings) -s \
+```text
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $GROQ_API_KEY" \
+-d '{
+"input_file_id": "<file-id>",
+"name": "test-1",
+"type": "lora",
+"base_model": "llama-3.1-8b-instant"
+}'
+```
 
 ```
 
-```bash
-curl https://api.groq.com/v1/fine_tunings -s \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $GROQ_API_KEY" \
-    -d '{
-        "input_file_id": "<file-id>",
-        "name": "test-1",
-        "type": "lora",
-        "base_model": "llama-3.1-8b-instant"
-    }'
 ```
-
-```javascript
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    const fineTunings = await groq.fine_tunings.create({
-        input_file_id: "<file-id>",
-        name: "test-1",
-        type: "lora",
-        base_model: "llama-3.1-8b-instant"
-    });
-    console.log(fineTunings);
+```python
+const fineTunings = await groq.fine_tunings.create({
+input_file_id: "<file-id>",
+name: "test-1",
+type: "lora",
+base_model: "llama-3.1-8b-instant"
+});
+console.log(fineTunings);
+```
+
 }
 
 main();
 ```
 
-```python
+```
 import os
 
 from groq import Groq
 
 client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("GROQ_API_KEY"),
+## This is the default and can be omitted
+
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 fine_tunings = client.fine_tunings.create(
-    input_file_id="<file-id>",
-    name="test-1",
-    type="lora",
-    base_model="llama-3.1-8b-instant"
+```text
+input_file_id="<file-id>",
+name="test-1",
+type="lora",
+base_model="llama-3.1-8b-instant"
+```
+
 )
 
 print(fine_tunings)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-    "id": "string",
-    "object": "object",
-    "data": {
-        "id": "string",
-        "name": "string",
-        "base_model": "string",
-        "type": "string",
-        "input_file_id": "string",
-        "created_at": 0,
-        "fine_tuned_model": "string"
-    }
+```text
+"id": "string",
+"object": "object",
+"data": {
+"id": "string",
+"name": "string",
+"base_model": "string",
+"type": "string",
+"input_file_id": "string",
+"created_at": 0,
+"fine_tuned_model": "string"
 }
 ```
 
-```json
+}
+```
 
 [Get fine tuning](https://console.groq.com/docs/api-reference#fine-tuning-get)
 
-GEThttps://api.groq.com/v1/fine_tunings/{id}
+GET[https://api.groq.com/v1/fine\_tunings/{id}](https://api.groq.com/v1/fine\_tunings/{id})
 
 Retrieves an existing fine tuning by id This endpoint is in closed beta. [Contact us](https://groq.com/contact) for more information.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#fine-tuning-get-returns)
 
-* dataobject
-**Show properties**
-* idstring
-* objectstring
+- dataobject
+## Show properties
+
+- idstring
+- objectstring
+
+curl
+
+```
+curl [https://api.groq.com/v1/fine_tunings/:id](https://api.groq.com/v1/fine_tunings/:id) -s \
+```text
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $GROQ_API_KEY"
+```
 
 ```
 
-```bash
-curl https://api.groq.com/v1/fine_tunings/:id -s \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $GROQ_API_KEY"
 ```
-
-```javascript
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    const fineTuning = await groq.fine_tunings.get({id: "<id>"});
-    console.log(fineTuning);
+```python
+const fineTuning = await groq.fine_tunings.get({id: "<id>"});
+console.log(fineTuning);
+```
+
 }
 
 main();
 ```
 
-```python
+```
 import os
 
 from groq import Groq
 
 client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("GROQ_API_KEY"),
+## This is the default and can be omitted
+
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 fine_tuning = client.fine_tunings.get(id="<id>")
@@ -2403,99 +2754,118 @@ fine_tuning = client.fine_tunings.get(id="<id>")
 print(fine_tuning)
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-    "id": "string",
-    "object": "object",
-    "data": {
-        "id": "string",
-        "name": "string",
-        "base_model": "string",
-        "type": "string",
-        "input_file_id": "string",
-        "created_at": 0,
-        "fine_tuned_model": "string"
-    }
+```text
+"id": "string",
+"object": "object",
+"data": {
+"id": "string",
+"name": "string",
+"base_model": "string",
+"type": "string",
+"input_file_id": "string",
+"created_at": 0,
+"fine_tuned_model": "string"
 }
 ```
 
-```json
+}
+```
 
 [Delete fine tuning](https://console.groq.com/docs/api-reference#fine-tuning-delete)
 
-DELETEhttps://api.groq.com/v1/fine_tunings/{id}
+DELETE[https://api.groq.com/v1/fine\_tunings/{id}](https://api.groq.com/v1/fine\_tunings/{id})
 
 Deletes an existing fine tuning by id This endpoint is in closed beta. [Contact us](https://groq.com/contact) for more information.
 
+###
+
 [Response Object](https://console.groq.com/docs/api-reference#fine-tuning-delete-returns)
 
-* deletedboolean
-* idstring
-* objectstring
+- deletedboolean
+- idstring
+- objectstring
+
+curl
+
+```
+curl -X DELETE [https://api.groq.com/v1/fine_tunings/:id](https://api.groq.com/v1/fine_tunings/:id) -s \
+```text
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $GROQ_API_KEY"
+```
 
 ```
 
-```bash
-curl -X DELETE https://api.groq.com/v1/fine_tunings/:id -s \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $GROQ_API_KEY"
 ```
-
-```javascript
 import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 async function main() {
-    await groq.fine_tunings.delete({id: "<id>"});
+```python
+await groq.fine_tunings.delete({id: "<id>"});
+```
+
 }
 
 main();
 ```
 
-```python
+```
 import os
 
 from groq import Groq
 
 client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("GROQ_API_KEY"),
+## This is the default and can be omitted
+
+```text
+api_key=os.environ.get("GROQ_API_KEY"),
+```
+
 )
 
 client.fine_tunings.delete(id="<id>")
 ```
 
-**Example Response**
+Example Response
 
-```json
+```
 {
-    "id": "string",
-    "object": "fine_tuning",
-    "deleted": true
+```text
+"id": "string",
+"object": "fine_tuning",
+"deleted": true
+```
+
 }
 ```
 
-### Rate Limits
+---
+description: Understand Groq API rate limits, headers, and best practices for managing request and token quotas in your applications.
+title: Rate Limits - GroqDocs
+## image: https://console.groq.com/og_cloudv5.jpg
 
-> Understand Groq API rate limits, headers, and best practices for managing request and token quotas in your applications.
+## Rate Limits
 
 Rate limits act as control measures to regulate how frequently users and applications can access our API within specified timeframes. These limits help ensure service stability, fair access, and protection against misuse so that we can serve reliable and fast inference for all.
 
-### Understanding Rate Limits
+## [Understanding Rate Limits](#understanding-rate-limits)
 
 Rate limits are measured in:
 
-* **RPM:** Requests per minute
-* **RPD:** Requests per day
-* **TPM:** Tokens per minute
-* **TPD:** Tokens per day
-* **ASH:** Audio seconds per hour
-* **ASD:** Audio seconds per day
-* **ITPM:** Input tokens per minute
-* **OTPM:** Output tokens per minute
+- **RPM:** Requests per minute
+- **RPD:** Requests per day
+- **TPM:** Tokens per minute
+- **TPD:** Tokens per day
+- **ASH:** Audio seconds per hour
+- **ASD:** Audio seconds per day
+- **ITPM:** Input tokens per minute
+- **OTPM:** Output tokens per minute
 
 [Cached tokens](https://console.groq.com/docs/prompt-caching) do not count towards your rate limits.
 
@@ -2503,79 +2873,56 @@ Rate limits apply at the organization level, not individual users. You can hit a
 
 **Example:** Let's say your RPM = 50 and your TPM = 200K. If you were to send 50 requests with only 100 tokens within a minute, you would reach your limit even though you did not send 200K tokens within those 50 requests.
 
-#### Input and Output Token Rate Limits (ITPM / OTPM)
+### [Input and Output Token Rate Limits (ITPM / OTPM)](#input-and-output-token-rate-limits-itpm--otpm)
 
 In addition to the combined TPM limit, some organizations are also subject to separate per-minute limits on input tokens (ITPM) and output tokens (OTPM). For example, an OTPM limit caps how many completion tokens your organization can generate per minute, regardless of how many input tokens are sent.
 
 If these limits are configured on your account, you'll see your TPM value on the [Limits page](https://console.groq.com/settings/limits) — hover over it to see the **"X in / Y out"** breakdown. If no breakdown appears, your organization has a single combined TPM cap with no separate input/output limits.
 
-### Rate Limits Summary
+## [Rate Limits](#rate-limits)
 
 The following is a high level summary and there may be exceptions to these limits. You can view the current, exact rate limits for your organization on the [limits page](https://console.groq.com/settings/limits) in your account settings.
 
 **Need higher rate limits?** Upgrade to [Developer plan](https://console.groq.com/settings/billing/plans) to access higher limits, [Batch](https://console.groq.com/docs/batch) and [Flex](https://console.groq.com/docs/flex-processing) processing, and more. Note that the limits shown below are the base limits for the Developer plan, and higher limits are available for select workloads and enterprise use cases.
 
+| | | | | | | |
 | -------- | --- | --- | --- | --- | --- | --- |
 | MODEL ID | RPM | RPD | TPM | TPD | ASH | ASD |
 
-| canopylabs/orpheus-arabic-saudi     | 10 | 100   | 1.2K | 3.6K | -    | -     |
+| canopylabs/orpheus-arabic-saudi | 10 | 100 | 1.2K | 3.6K | \- | \- |
 | ----------------------------------- | -- | ----- | ---- | ---- | ---- | ----- |
-| canopylabs/orpheus-v1-english       | 10 | 100   | 1.2K | 3.6K | -    | -     |
-| groq/compound                       | 30 | 250   | 70K  | -    | -    | -     |
-| groq/compound-mini                  | 30 | 250   | 70K  | -    | -    | -     |
-| llama-3.1-8b-instant                | 30 | 14.4K | 6K   | 500K | -    | -     |
-| llama-3.3-70b-versatile             | 30 | 1K    | 12K  | 100K | -    | -     |
-| meta-llama/llama-prompt-guard-2-22m | 30 | 14.4K | 15K  | 500K | -    | -     |
-| meta-llama/llama-prompt-guard-2-86m | 30 | 14.4K | 15K  | 500K | -    | -     |
-| openai/gpt-oss-120b                 | 30 | 1K    | 8K   | 200K | -    | -     |
-| openai/gpt-oss-20b                  | 30 | 1K    | 8K   | 200K | -    | -     |
-| openai/gpt-oss-safeguard-20b        | 30 | 1K    | 8K   | 200K | -    | -     |
-| qwen/qwen3.6-27b                    | 30 | 1K    | 8K   | 200K | -    | -     |
-| whisper-large-v3                    | 20 | 2K    | -    | -    | 7.2K | 28.8K |
-| whisper-large-v3-turbo              | 20 | 2K    | -    | -    | 7.2K | 28.8K |
+| canopylabs/orpheus-v1-english | 10 | 100 | 1.2K | 3.6K | \- | \- |
+| groq/compound | 30 | 250 | 70K | \- | \- | \- |
+| groq/compound-mini | 30 | 250 | 70K | \- | \- | \- |
+| llama-3.1-8b-instant | 30 | 14.4K | 6K | 500K | \- | \- |
+| llama-3.3-70b-versatile | 30 | 1K | 12K | 100K | \- | \- |
+| meta-llama/llama-prompt-guard-2-22m | 30 | 14.4K | 15K | 500K | \- | \- |
+| meta-llama/llama-prompt-guard-2-86m | 30 | 14.4K | 15K | 500K | \- | \- |
+| openai/gpt-oss-120b | 30 | 1K | 8K | 200K | \- | \- |
+| openai/gpt-oss-20b | 30 | 1K | 8K | 200K | \- | \- |
+| openai/gpt-oss-safeguard-20b | 30 | 1K | 8K | 200K | \- | \- |
+| qwen/qwen3.6-27b | 30 | 1K | 8K | 200K | \- | \- |
+| whisper-large-v3 | 20 | 2K | \- | \- | 7.2K | 28.8K |
+| whisper-large-v3-turbo | 20 | 2K | \- | \- | 7.2K | 28.8K |
 
-### Rate Limit Headers
+## [Rate Limit Headers](#rate-limit-headers)
 
 In addition to viewing your limits on your account's [limits](https://console.groq.com/settings/limits) page, you can also view rate limit information such as remaining requests and tokens in HTTP response headers as follows:
 
 The following headers are set (values are illustrative):
 
-| Header                         | Value    | Notes                                    |
+| Header | Value | Notes |
 | ------------------------------ | -------- | ---------------------------------------- |
-| retry-after                    | 2        | In seconds                               |
-| x-ratelimit-limit-requests     | 14400    | Always refers to Requests Per Day (RPD)  |
-| x-ratelimit-limit-tokens       | 18000    | Always refers to Tokens Per Minute (TPM) |
-| x-ratelimit-remaining-requests | 14370    | Always refers to Requests Per Day (RPD)  |
-| x-ratelimit-remaining-tokens   | 17997    | Always refers to Tokens Per Minute (TPM) |
-| x-ratelimit-reset-requests     | 2m59.56s | Always refers to Requests Per Day (RPD)  |
-| x-ratelimit-reset-tokens       | 7.66s    | Always refers to Tokens Per Minute (TPM) |
+| retry-after | 2 | In seconds |
+| x-ratelimit-limit-requests | 14400 | Always refers to Requests Per Day (RPD) |
+| x-ratelimit-limit-tokens | 18000 | Always refers to Tokens Per Minute (TPM) |
+| x-ratelimit-remaining-requests | 14370 | Always refers to Requests Per Day (RPD) |
+| x-ratelimit-remaining-tokens | 17997 | Always refers to Tokens Per Minute (TPM) |
+| x-ratelimit-reset-requests | 2m59.56s | Always refers to Requests Per Day (RPD) |
+| x-ratelimit-reset-tokens | 7.66s | Always refers to Tokens Per Minute (TPM) |
 
-### Handling Rate Limits
+## [Handling Rate Limits](#handling-rate-limits)
 
 When you exceed rate limits, our API returns a `429 Too Many Requests` HTTP status code.
 
 **Note**: `retry-after` is only set if you hit the rate limit and status code 429 is returned. The other headers are always included.
-
-## Hooks
-
-Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
-
-## Scripts
-
-Prompt-library tooling (see `.enhance/`):
-
-- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
-- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
-- `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
-## Related Prompts
-
-Same-family prompts:
-
-- [`setup-bun-bunx.prompt.md`](setup-bun-bunx.prompt.md)
-- [`setup-component.prompt.md`](setup-component.prompt.md)
-- [`setup-enhanced.prompt.md`](setup-enhanced.prompt.md)
-- [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
-- [`setup.prompt.md`](setup.prompt.md)

@@ -1,51 +1,75 @@
 ---
-name: prompt-builder
-title: Prompt Builder
-description: Guide users through creating high-quality .prompt.md files with proper structure, tools,
-  and best practices.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /prompt-builder
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /prompt-builder
-    flags: {}
-    help: Guide users through creating high-quality .prompt.md files with proper struct...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- frontend
-- git
-- prompts
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Modes](#modes)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Discovery](#phase-1:-discovery)
+- [Best Practices Integration](#best-practices-integration)
+- [Reference Patterns](#reference-patterns)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Modes](#modes)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Discovery](#phase-1:-discovery)
+- [Best Practices Integration](#best-practices-integration)
+- [Reference Patterns](#reference-patterns)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
 
-# prompt-builder> Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices.
+## prompt-builder> Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices.
 
 ## Context
 
@@ -70,7 +94,7 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 2. **Pattern-driven** — Follow patterns from the 4 reference prompts listed in the Reference Patterns section
 3. **Context preflight** — Run `/context-map` before generation to map inputs, dependencies, and affected files
 4. **Persona-specific** — Define a clear role with expertise level, domain knowledge, and qualifications
-5. **Tool-aware** — Select appropriate tools based on the task:   - **Code analysis/reading:** `codebase`, `search`   - **File modification:** `editFiles`   - **External APIs:** `fetch`   - **Command execution:** `runCommands`   - **Testing:** `runCommands` (test runner) + `editFiles`   - **Documentation:** `codebase`, `search`, `editFiles`
+5. **Tool-aware** — Select appropriate tools based on the task: - **Code analysis/reading:** `codebase`, `search` - **File modification:** `editFiles` - **External APIs:** `fetch` - **Command execution:** `runCommands` - **Testing:** `runCommands` (test runner) + `editFiles` - **Documentation:** `codebase`, `search`, `editFiles`
 6. **Validation included** — Every generated prompt must include success criteria and validation steps
 7. **Never overwrite** — Do not overwrite existing `.prompt.md` files without user confirmation
 8. **Discovery gap handling** — If a user's answer to any topic is missing, contradictory, or insufficient, ask a single targeted follow-up question before proceeding to Phase 2. Do not proceed to generation with unresolved gaps.
@@ -197,7 +221,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -205,7 +228,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

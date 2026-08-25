@@ -1,7 +1,91 @@
 ---
-description: "Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package."
-agent: agent
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Project Generation](#project-generation)
+- [Package.swift Template](#packageswift-template)
+- [main.swift Template](#mainswift-template)
+- [Server.swift Template](#serverswift-template)
+- [ToolDefinitions.swift Template](#tooldefinitionsswift-template)
+- [ToolHandlers.swift Template](#toolhandlersswift-template)
+- [ResourceDefinitions.swift Template](#resourcedefinitionsswift-template)
+- [ResourceHandlers.swift Template](#resourcehandlersswift-template)
+- [PromptDefinitions.swift Template](#promptdefinitionsswift-template)
+- [PromptHandlers.swift Template](#prompthandlersswift-template)
+- [ServerTests.swift Template](#servertestsswift-template)
+- [README.md Template](#readmemd-template)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Development](#development)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Build and Run](#build-and-run)
+- [Integration with Claude Desktop](#integration-with-claude-desktop)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Project Generation](#project-generation)
+- [Package.swift Template](#packageswift-template)
+- [main.swift Template](#mainswift-template)
+- [Server.swift Template](#serverswift-template)
+- [ToolDefinitions.swift Template](#tooldefinitionsswift-template)
+- [ToolHandlers.swift Template](#toolhandlersswift-template)
+- [ResourceDefinitions.swift Template](#resourcedefinitionsswift-template)
+- [ResourceHandlers.swift Template](#resourcehandlersswift-template)
+- [PromptDefinitions.swift Template](#promptdefinitionsswift-template)
+- [PromptHandlers.swift Template](#prompthandlersswift-template)
+- [ServerTests.swift Template](#servertestsswift-template)
+- [README.md Template](#readmemd-template)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Development](#development)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Build and Run](#build-and-run)
+- [Integration with Claude Desktop](#integration-with-claude-desktop)
+- [Template References](#template-references)
+
+
+
 
 ## Goal
 
@@ -48,12 +132,12 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
 
-# Swift MCP Server Generator
+## Swift MCP Server Generator
 
 Generate a complete, production-ready MCP server in Swift using the official Swift SDK package.
 
@@ -65,21 +149,21 @@ When asked to create a Swift MCP server, generate a complete project with this s
 my-mcp-server/
 ├── Package.swift
 ├── Sources/
-│   └── MyMCPServer/
-│       ├── main.swift
-│       ├── Server.swift
-│       ├── Tools/
-│       │   ├── ToolDefinitions.swift
-│       │   └── ToolHandlers.swift
-│       ├── Resources/
-│       │   ├── ResourceDefinitions.swift
-│       │   └── ResourceHandlers.swift
-│       └── Prompts/
-│           ├── PromptDefinitions.swift
-│           └── PromptHandlers.swift
+│ └── MyMCPServer/
+│ ├── main.swift
+│ ├── Server.swift
+│ ├── Tools/
+│ │ ├── ToolDefinitions.swift
+│ │ └── ToolHandlers.swift
+│ ├── Resources/
+│ │ ├── ResourceDefinitions.swift
+│ │ └── ResourceHandlers.swift
+│ └── Prompts/
+│ ├── PromptDefinitions.swift
+│ └── PromptHandlers.swift
 ├── Tests/
-│   └── MyMCPServerTests/
-│       └── ServerTests.swift
+│ └── MyMCPServerTests/
+│ └── ServerTests.swift
 └── README.md
 ```
 
@@ -104,26 +188,26 @@ import MCP
 import Logging
 
 func createServer() async -> Server {
-    let server = Server(
-        name: "MyMCPServer",
-        version: "1.0.0",
-        capabilities: .init(
-            prompts: .init(listChanged: true),
-            resources: .init(subscribe: true, listChanged: true),
-            tools: .init(listChanged: true)
-        )
-    )
+let server = Server(
+name: "MyMCPServer",
+version: "1.0.0",
+capabilities: .init(
+prompts: .init(listChanged: true),
+resources: .init(subscribe: true, listChanged: true),
+tools: .init(listChanged: true)
+)
+)
 
-    // Register tool handlers
-    await registerToolHandlers(server: server)
+// Register tool handlers
+await registerToolHandlers(server: server)
 
-    // Register resource handlers
-    await registerResourceHandlers(server: server)
+// Register resource handlers
+await registerResourceHandlers(server: server)
 
-    // Register prompt handlers
-    await registerPromptHandlers(server: server)
+// Register prompt handlers
+await registerPromptHandlers(server: server)
 
-    return server
+return server
 }
 ```
 
@@ -147,20 +231,20 @@ func createServer() async -> Server {
 import MCP
 
 func getResourceDefinitions() -> [Resource] {
-    [
-        Resource(
-            name: "Example Data",
-            uri: "resource://data/example",
-            description: "Example resource data",
-            mimeType: "application/json"
-        ),
-        Resource(
-            name: "Configuration",
-            uri: "resource://config",
-            description: "Server configuration",
-            mimeType: "application/json"
-        )
-    ]
+[
+Resource(
+name: "Example Data",
+uri: "resource://data/example",
+description: "Example resource data",
+mimeType: "application/json"
+),
+Resource(
+name: "Configuration",
+uri: "resource://config",
+description: "Server configuration",
+mimeType: "application/json"
+)
+]
 }
 ```
 
@@ -177,16 +261,16 @@ func getResourceDefinitions() -> [Resource] {
 import MCP
 
 func getPromptDefinitions() -> [Prompt] {
-    [
-        Prompt(
-            name: "code-review",
-            description: "Generate a code review prompt",
-            arguments: [
-                .init(name: "language", description: "Programming language", required: true),
-                .init(name: "focus", description: "Review focus area", required: false)
-            ]
-        )
-    ]
+[
+Prompt(
+name: "code-review",
+description: "Generate a code review prompt",
+arguments: [
+.init(name: "language", description: "Programming language", required: true),
+.init(name: "focus", description: "Review focus area", required: false)
+]
+)
+]
 }
 ```
 
@@ -207,7 +291,7 @@ func getPromptDefinitions() -> [Prompt] {
 ## README.md Template
 
 ````markdown
-# MyMCPServer
+## MyMCPServer
 
 A Model Context Protocol server built with Swift.
 
@@ -291,19 +375,19 @@ MIT
 ## Build and Run
 
 ```bash
-# Build
+## Build
 swift build
 
-# Run
+## Run
 swift run
 
-# Test
+## Test
 swift test
 
-# Release build
+## Release build
 swift build -c release
 
-# Install
+## Install
 swift build -c release
 cp .build/release/MyMCPServer /usr/local/bin/
 ````
@@ -314,16 +398,15 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-	"mcpServers": {
-		"my-mcp-server": {
-			"command": "/path/to/MyMCPServer"
-		}
-	}
+"mcpServers": {
+"my-mcp-server": {
+"command": "/path/to/MyMCPServer"
+}
+}
 }
 ```
 
 ```
-
 
 ## Template References
 

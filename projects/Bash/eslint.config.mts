@@ -59,12 +59,17 @@ export default defineConfig([
         },
         ecmaVersion: 2024,
         projectService: {
-          allowDefaultProject: [
-            ".prettierrc.ts",
-            "postcss.config.mjs",
-            ".lintstagedrc.ts",
-          ],
-        },
+                  allowDefaultProject: [
+                    ".prettierrc.ts",
+                    "postcss.config.mjs",
+                    ".lintstagedrc.ts",
+                    "scripts/lib/finding-parser.js",
+                    "scripts/lib/repo-scanner.js",
+                    "scripts/phase-3-consolidation.js",
+                    "scripts/phase-4-batch-executor.js",
+                    "scripts/phase-5-final-summary.js",
+                  ],
+                },
         sourceType: "module",
       },
       sourceType: "module",

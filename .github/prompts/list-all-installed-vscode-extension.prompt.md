@@ -1,52 +1,87 @@
 ---
-name: list-all-installed-vscode-extension
-title: List All Installed Vscode Extension
-description: 'Inventory all installed VS Code extensions, research their documentation, and apply findings
-  to optimize user and workspace settings. Multi-phase: discover → research → synthesize → configure.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /list-all-installed-vscode-extension
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /list-all-installed-vscode-extension
-    flags: {}
-    help: Inventory all installed VS Code extensions, research their documentation, and...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- configuration
-- debugging
-- documentation
-- fix
-- performance
-- prompts
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Input](#input)
+- [Output](#output)
+- [Workflow](#workflow)
+  - [Phase 1: Inventory — List Installed Extensions](#phase-1:-inventory-—-list-installed-extensions)
+  - [Phase 2: Research — Document Each Extension](#phase-2:-research-—-document-each-extension)
+- [Description](#description)
+- [Contributed Settings](#contributed-settings)
+- [Notes](#notes)
+  - [Phase 3: Synthesize — Identify Conflicts, Gaps, and Optimizations](#phase-3:-synthesize-—-identify-conflicts-gaps-and-optimizations)
+  - [Phase 4: Apply — Modify Settings](#phase-4:-apply-—-modify-settings)
+- [Context Injection](#context-injection)
+- [Error Handling](#error-handling)
+- [Success Criteria](#success-criteria)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Input](#input)
+- [Output](#output)
+- [Workflow](#workflow)
+- [Phase 1: Inventory — List Installed Extensions](#phase-1:-inventory-—-list-installed-extensions)
+- [Phase 2: Research — Document Each Extension](#phase-2:-research-—-document-each-extension)
+- [Description](#description)
+- [Contributed Settings](#contributed-settings)
+- [Notes](#notes)
+- [Phase 3: Synthesize — Identify Conflicts, Gaps, and Optimizations](#phase-3:-synthesize-—-identify-conflicts-gaps-and-optimizations)
+- [Phase 4: Apply — Modify Settings](#phase-4:-apply-—-modify-settings)
+- [Context Injection](#context-injection)
+- [Error Handling](#error-handling)
+- [Success Criteria](#success-criteria)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Inventory all installed VS Code extensions, research their documentation, and apply findings to optimize user and workspace settings. Multi-phase: discover → research → synthesize → configure.
 
-# List All Installed VS Code Extensions — Full Lifecycle
+## List All Installed VS Code Extensions — Full Lifecycle
 
 Analyze every installed VS Code extension, research its documentation and purpose, then apply findings to create, update, debug, and fix user and workspace settings.
 
@@ -69,18 +104,18 @@ Use this when onboarding to a new machine, auditing your extension footprint, or
 ### Phase 1: Inventory — List Installed Extensions
 
 1. Run `code --list-extensions --show-versions` to get the full list with versions.
-   - If a profile was provided, add `--profile "<profile>"`.
-   - If VS Code CLI is not in PATH, see **Error Handling** below.
+- If a profile was provided, add `--profile "<profile>"`.
+- If VS Code CLI is not in PATH, see **Error Handling** below.
 2. Capture the output. Each line is `publisher.extension-name` optionally with `@version` when `--show-versions` is used.
 3. Save the raw list to `.vscode/extension-inventory.md` with YAML frontmatter:
 
-   ```yaml
-   ---
-   generated: <ISO date>
-   profile: <profile name or "default">
-   count: <N>
-   ---
-   ```
+```yaml
+---
+generated: <ISO date>
+profile: <profile name or "default">
+count: <N>
+---
+```
 
 4. Enrich the inventory: for each extension, derive a rough category (language support, theme, linter, debugger, snippets, etc.) from the publisher and extension name. Don't web-search at this stage — just note the heuristic.
 5. **Verification gate:** Confirm the count matches what the Extensions panel shows. If `code --list-extensions` returns 0 or errors, escalate.
@@ -93,44 +128,44 @@ For each extension, do NOT fetch docs individually (too many round-trips). Inste
 2. Extract: short description, categories/tags, known settings this extension contributes, and any notable configuration guidance.
 3. Save per-extension dossier to `docs/vscode-extensions/<publisher>.<extension>/README.md`:
 
-   ```markdown
-   # <Display Name>
-   - **ID:** `publisher.extension`  - **Version:** X.Y.Z
-   - **Category:** <theme/linter/language/etc.>
-   - **Marketplace:** [link](https://marketplace.visualstudio.com/...)
+```markdown
+# <Display Name>
+- **ID:** `publisher.extension` - **Version:** X.Y.Z
+- **Category:** <theme/linter/language/etc.>
+- **Marketplace:** [link](https://marketplace.visualstudio.com/...)
 
-   ## Description
-   <from marketplace>
+## Description
+<from marketplace>
 
-   ## Contributed Settings
-   <extension-specific settings prefixes, if discoverable>
+## Contributed Settings
+<extension-specific settings prefixes, if discoverable>
 
-   ## Notes
-   <your analysis: is this active? does it overlap with other installed extensions?>
-   ```
+## Notes
+<your analysis: is this active? does it overlap with other installed extensions?>
+```
 
 4. **Failover:** If `web_extract` fails for a specific extension page (network, 404, rate-limit), log the failure in the dossier with `[FETCH_FAILED]` but continue with the others. Do NOT block Phase 2 on a single extension — the extension name alone carries signal.
 
 ### Phase 3: Synthesize — Identify Conflicts, Gaps, and Optimizations
 
 1. Read the collected dossiers and identify:
-   - **Overlapping extensions** (e.g. two Python linters, two theme packs)
-   - **Inactive/discontinued extensions** (check `--list-extensions` against marketplace status)
-   - **Extensions relevant to the current workspace** (match against project files, `package.json`, `requirements.txt`, etc.)
-   - **Extensions missing but suggested by project files** (e.g. a `pyproject.toml` without Python extension)
+- **Overlapping extensions** (e.g. two Python linters, two theme packs)
+- **Inactive/discontinued extensions** (check `--list-extensions` against marketplace status)
+- **Extensions relevant to the current workspace** (match against project files, `package.json`, `requirements.txt`, etc.)
+- **Extensions missing but suggested by project files** (e.g. a `pyproject.toml` without Python extension)
 2. Cross-reference: Check if the current user `settings.json` references settings from these extensions (search `C:\Users\Alexa\AppData\Roaming\Code\User\settings.json` for extension-prefixed keys).
 3. Produce a **Settings Report** as `.vscode/settings-report.md` with sections:
-   - Extensions to keep
-   - Extensions to review (potential duplicates)
-   - Settings to add/update/remove with reasoning
-   - Settings changes scoped to workspace vs. user
+- Extensions to keep
+- Extensions to review (potential duplicates)
+- Settings to add/update/remove with reasoning
+- Settings changes scoped to workspace vs. user
 
 ### Phase 4: Apply — Modify Settings
 
 1. **Always confirm before writing.** Use `vscode/askQuestions` to present the Settings Report and ask which changes to apply.
 2. Apply changes:
-   - **User settings:** `patch` against `C:\Users\Alexa\AppData\Roaming\Code\User\settings.json`
-   - **Workspace settings:** `patch` against `.vscode/settings.json` (create if absent)
+- **User settings:** `patch` against `C:\Users\Alexa\AppData\Roaming\Code\User\settings.json`
+- **Workspace settings:** `patch` against `.vscode/settings.json` (create if absent)
 3. **One variable at a time** — apply settings in logical groups (theme first, then linter config, then language-specific), verifying after each group.
 4. **Never batch independent fixes** — each settings change group is a separate patch.
 
@@ -201,7 +236,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Best Practices
 
@@ -268,7 +303,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -276,7 +310,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

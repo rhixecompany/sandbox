@@ -1,47 +1,150 @@
 ---
-name: mcp-deploy-manage-agents
-title: Deploy and Manage MCP-Based Agents
-description: mcp-deploy-manage-agents.prompt.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /mcp-deploy-manage-agents
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /mcp-deploy-manage-agents
-    flags: {}
-    help: mcp-deploy-manage-agents.prompt.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- deployment
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Agent Types](#agent-types)
+  - [Published by Organization](#published-by-organization)
+- [Admin Roles and Permissions](#admin-roles-and-permissions)
+  - [Required Roles](#required-roles)
+  - [Best Practices](#best-practices)
+- [Agent Management in Microsoft 365 Admin Center](#agent-management-in-microsoft-365-admin-center)
+  - [Access Agent Management](#access-agent-management)
+  - [Available Actions](#available-actions)
+- [Deployment Workflows](#deployment-workflows)
+  - [Publish to Organization](#publish-to-organization)
+- [User Experience](#user-experience)
+  - [Agent Discovery](#agent-discovery)
+  - [Agent Access Control](#agent-access-control)
+  - [Agent Usage](#agent-usage)
+- [Governance and Compliance](#governance-and-compliance)
+  - [Security Considerations](#security-considerations)
+  - [Compliance Requirements](#compliance-requirements)
+  - [Monitoring and Reporting](#monitoring-and-reporting)
+- [MCP-Specific Management](#mcp-specific-management)
+  - [MCP Agent Characteristics](#mcp-agent-characteristics)
+  - [MCP Agent ValidationVerify:](#mcp-agent-validationverify:)
+  - [MCP Agent Deployment](#mcp-agent-deployment)
+- [Agent Settings and Configuration](#agent-settings-and-configuration)
+  - [Organizational Settings](#organizational-settings)
+  - [Per-Agent Settings](#per-agent-settings)
+  - [Environment Routing](#environment-routing)
+- [Shared Agent Management](#shared-agent-management)
+  - [View Shared Agents](#view-shared-agents)
+  - [Manage Shared Agents](#manage-shared-agents)
+  - [User Access to Shared Agents](#user-access-to-shared-agents)
+- [Best Practices](#best-practices)
+  - [Before Deployment](#before-deployment)
+  - [During Deployment](#during-deployment)
+  - [Post-Deployment](#post-deployment)
+  - [Communication](#communication)
+- [Troubleshooting](#troubleshooting)
+  - [Agent Not Appearing](#agent-not-appearing)
+  - [Authentication Failures](#authentication-failures)
+  - [Performance Issues](#performance-issues)
+  - [Compliance Violations](#compliance-violations)
+- [Resources](#resources)
+- [Workflow](#workflow)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Agent Types](#agent-types)
+- [Published by Organization](#published-by-organization)
+- [Admin Roles and Permissions](#admin-roles-and-permissions)
+- [Required Roles](#required-roles)
+- [Best Practices](#best-practices)
+- [Agent Management in Microsoft 365 Admin Center](#agent-management-in-microsoft-365-admin-center)
+- [Access Agent Management](#access-agent-management)
+- [Available Actions](#available-actions)
+- [Deployment Workflows](#deployment-workflows)
+- [Publish to Organization](#publish-to-organization)
+- [User Experience](#user-experience)
+- [Agent Discovery](#agent-discovery)
+- [Agent Access Control](#agent-access-control)
+- [Agent Usage](#agent-usage)
+- [Governance and Compliance](#governance-and-compliance)
+- [Security Considerations](#security-considerations)
+- [Compliance Requirements](#compliance-requirements)
+- [Monitoring and Reporting](#monitoring-and-reporting)
+- [MCP-Specific Management](#mcp-specific-management)
+- [MCP Agent Characteristics](#mcp-agent-characteristics)
+- [MCP Agent ValidationVerify:](#mcp-agent-validationverify:)
+- [MCP Agent Deployment](#mcp-agent-deployment)
+- [Agent Settings and Configuration](#agent-settings-and-configuration)
+- [Organizational Settings](#organizational-settings)
+- [Per-Agent Settings](#per-agent-settings)
+- [Environment Routing](#environment-routing)
+- [Shared Agent Management](#shared-agent-management)
+- [View Shared Agents](#view-shared-agents)
+- [Manage Shared Agents](#manage-shared-agents)
+- [User Access to Shared Agents](#user-access-to-shared-agents)
+- [Best Practices](#best-practices)
+- [Before Deployment](#before-deployment)
+- [During Deployment](#during-deployment)
+- [Post-Deployment](#post-deployment)
+- [Communication](#communication)
+- [Troubleshooting](#troubleshooting)
+- [Agent Not Appearing](#agent-not-appearing)
+- [Authentication Failures](#authentication-failures)
+- [Performance Issues](#performance-issues)
+- [Compliance Violations](#compliance-violations)
+- [Resources](#resources)
+- [Workflow](#workflow)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Use this prompt to handle the deploy and manage mcp based agents workflow.
@@ -89,7 +192,7 @@ Use when you need to deploy and manage mcp based agents for the current workspac
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Agent Types
@@ -159,7 +262,7 @@ Users can:
 - Agents appear in Copilot sidebar
 - Users select agent for context
 - Queries routed through selected agent
-- Responses leverage agent's capabilities
+- Responses use agent's capabilities
 
 ## Governance and Compliance
 
@@ -234,7 +337,7 @@ Admin actions:
 
 Users access through:
 
-- Microsoft 365 Copilot on various surfaces- Agent-specific tasks and assistance- Creator-defined capabilities
+- Microsoft 365 Copilot on surfaces- Agent-specific tasks and assistance- Creator-defined capabilities
 
 ## Best Practices
 
@@ -388,7 +491,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -396,7 +498,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

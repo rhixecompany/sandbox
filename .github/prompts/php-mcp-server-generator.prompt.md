@@ -1,4 +1,16 @@
 ---
+title: PHP MCP Server Generator
+description: Prompt for php mcp server generator
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+
+
+
+---
 description: "Generate a complete PHP Model Context Protocol server project with tools, resources, prompts, and tests using the official PHP SDK"
 agent: agent
 ---
@@ -27,16 +39,16 @@ Ask the user for:
 ├── README.md
 ├── server.php
 ├── src/
-│   ├── Tools/
-│   │   └── {ToolClass}.php
-│   ├── Resources/
-│   │   └── {ResourceClass}.php
-│   ├── Prompts/
-│   │   └── {PromptClass}.php
-│   └── Providers/
-│       └── {CompletionProvider}.php
+│ ├── Tools/
+│ │ └── {ToolClass}.php
+│ ├── Resources/
+│ │ └── {ResourceClass}.php
+│ ├── Prompts/
+│ │ └── {PromptClass}.php
+│ └── Providers/
+│ └── {CompletionProvider}.php
 └── tests/
-    └── ToolsTest.php
+└── ToolsTest.php
 ```
 
 ## File Templates
@@ -71,12 +83,12 @@ php server.php
 
 ```json
 {
-  "mcpServers": {
-    "{project-name}": {
-      "command": "php",
-      "args": ["/absolute/path/to/server.php"]
-    }
-  }
+"mcpServers": {
+"{project-name}": {
+"command": "php",
+"args": ["/absolute/path/to/server.php"]
+}
+}
 }
 ```
 
@@ -99,7 +111,7 @@ vendor/bin/phpunit
 
 ## Implementation Guidelines
 
-1. **Use PHP Attributes**: Leverage `#[McpTool]`, `#[McpResource]`, `#[McpPrompt]` for clean code
+1. **Use PHP Attributes**: use `#[McpTool]`, `#[McpResource]`, `#[McpPrompt]` for clean code
 2. **Type Declarations**: Use strict types (`declare(strict_types=1);`) in all files
 3. **PSR-12 Coding Standard**: Follow PHP-FIG standards
 4. **Schema Validation**: Use `#[Schema]` attributes for parameter validation
@@ -123,7 +135,7 @@ vendor/bin/phpunit
 #[McpResource(uri: 'config://settings', mimeType: 'application/json')]
 public function getSettings(): array
 {
-    return ['key' => 'value'];
+return ['key' => 'value'];
 }
 ```
 
@@ -133,23 +145,23 @@ public function getSettings(): array
 #[McpResourceTemplate(uriTemplate: 'user://{id}')]
 public function getUser(string $id): array
 {
-    return $this->users[$id] ?? throw new \RuntimeException('User not found');
+return $this->users[$id] ?? throw new \RuntimeException('User not found');
 }
 ```
 
 ## Running the Server
 
 ```bash
-# Install dependencies
+## Install dependencies
 composer install
 
-# Run tests
+## Run tests
 vendor/bin/phpunit
 
-# Start server
+## Start server
 php server.php
 
-# Test with inspector
+## Test with inspector
 npx @modelcontextprotocol/inspector php server.php
 ```
 
@@ -157,17 +169,16 @@ npx @modelcontextprotocol/inspector php server.php
 
 ```json
 {
-  "mcpServers": {
-    "{project-name}": {
-      "command": "php",
-      "args": ["/absolute/path/to/server.php"]
-    }
-  }
+"mcpServers": {
+"{project-name}": {
+"command": "php",
+"args": ["/absolute/path/to/server.php"]
+}
+}
 }
 ```
 
 Now generate the complete project based on user requirements!
-
 
 ## Template References
 

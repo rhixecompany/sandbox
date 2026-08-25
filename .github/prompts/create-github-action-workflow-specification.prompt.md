@@ -1,48 +1,141 @@
 ---
-name: create-github-action-workflow-specification
-title: Create GitHub Actions Workflow Specification
-description: Create a formal specification for an existing GitHub Actions CI/CD workflow, optimized for
-  AI consumption and workflow maintenance.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /create-github-action-workflow-specification
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /create-github-action-workflow-specification
-    flags: {}
-    help: Create a formal specification for an existing GitHub Actions CI/CD workflow, ...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- ci-cd
-- generator
-- git
-- ml
-- performance
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Workflow Overview](#workflow-overview)
+- [Execution Flow Diagram](#execution-flow-diagram)
+- [Jobs & Dependencies](#jobs-&-dependencies)
+- [Requirements Matrix>](#requirements-matrix>)
+  - [Functional Requirements>](#functional-requirements>)
+  - [Security Requirements](#security-requirements)
+- [Input](#input)
+  - [Input](#input)
+- [Outputs](#outputs)
+- [Secrets & Variables](#secrets-&-variables)
+- [Execution Constraints](#execution-constraints)
+  - [Runtime Constraints](#runtime-constraints)
+  - [Environmental Constraints](#environmental-constraints)
+- [Error Handling Strategy](#error-handling-strategy)
+- [Quality Gates](#quality-gates)
+  - [Gate Definitions](#gate-definitions)
+- [Monitoring & Observability](#monitoring-&-observability)
+  - [Key Metrics](#key-metrics)
+  - [Alerting](#alerting)
+- [Integration Points](#integration-points)
+  - [External Systems](#external-systems)
+  - [Dependent Workflows](#dependent-workflows)
+- [Compliance & Governance](#compliance-&-governance)
+  - [Audit Requirements](#audit-requirements)
+  - [Security Controls](#security-controls)
+- [Edge Cases & Exceptions](#edge-cases-&-exceptions)
+  - [Scenario Matrix](#scenario-matrix)
+- [Validation Criteria](#validation-criteria)
+  - [Workflow Validation](#workflow-validation)
+  - [Performance Benchmarks](#performance-benchmarks)
+- [Change Management](#change-management)
+  - [Update Process](#update-process)
+  - [Version History](#version-history)
+- [Related Specifications](#related-specifications)
+- [Analysis Instructions](#analysis-instructions)
+- [Mermaid Diagram Guidelines](#mermaid-diagram-guidelines)
+- [Token Optimization Strategies](#token-optimization-strategies)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Workflow Overview](#workflow-overview)
+- [Execution Flow Diagram](#execution-flow-diagram)
+- [Jobs & Dependencies](#jobs-&-dependencies)
+- [Requirements Matrix>](#requirements-matrix>)
+- [Functional Requirements>](#functional-requirements>)
+- [Security Requirements](#security-requirements)
+- [Input](#input)
+- [Input](#input)
+- [Outputs](#outputs)
+- [Secrets & Variables](#secrets-&-variables)
+- [Execution Constraints](#execution-constraints)
+- [Runtime Constraints](#runtime-constraints)
+- [Environmental Constraints](#environmental-constraints)
+- [Error Handling Strategy](#error-handling-strategy)
+- [Quality Gates](#quality-gates)
+- [Gate Definitions](#gate-definitions)
+- [Monitoring & Observability](#monitoring-&-observability)
+- [Key Metrics](#key-metrics)
+- [Alerting](#alerting)
+- [Integration Points](#integration-points)
+- [External Systems](#external-systems)
+- [Dependent Workflows](#dependent-workflows)
+- [Compliance & Governance](#compliance-&-governance)
+- [Audit Requirements](#audit-requirements)
+- [Security Controls](#security-controls)
+- [Edge Cases & Exceptions](#edge-cases-&-exceptions)
+- [Scenario Matrix](#scenario-matrix)
+- [Validation Criteria](#validation-criteria)
+- [Workflow Validation](#workflow-validation)
+- [Performance Benchmarks](#performance-benchmarks)
+- [Change Management](#change-management)
+- [Update Process](#update-process)
+- [Version History](#version-history)
+- [Related Specifications](#related-specifications)
+- [Analysis Instructions](#analysis-instructions)
+- [Mermaid Diagram Guidelines](#mermaid-diagram-guidelines)
+- [Token Optimization Strategies](#token-optimization-strategies)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -55,19 +148,19 @@ Create a formal specification for an existing GitHub Actions CI/CD workflow, opt
 ## Execution Flow Diagram
 
 ```mermaid
-graph TD    A[Trigger Event] --
+graph TD A[Trigger Event] --
 
-> B[Job 1]    B --
-> C[Job 2]    C --
-> D[Job 3]    D --
-> E[End]    B --
-> F[Parallel Job]    F --
-> D    style A fill:#e1f5fe    style E fill:#e8f5e8```````
+> B[Job 1] B --
+> C[Job 2] C --
+> D[Job 3] D --
+> E[End] B --
+> F[Parallel Job] F --
+> D style A fill:#e1f5fe style E fill:#e8f5e8```````
 
 ## Jobs & Dependencies
-| Job Name | Purpose   | Dependencies    | Execution Context    || -------
+| Job Name | Purpose | Dependencies | Execution Context || -------
 
-- | --------- | --------------- | -------------------- || job-1    | [Purpose] | [Prerequisites] | [Runner/Environment] || job-2    | [Purpose] | job-1           | [Runner/Environment] |
+- | --------- | --------------- | -------------------- || job-1 | [Purpose] | [Prerequisites] | [Runner/Environment] || job-2 | [Purpose] | job-1 | [Runner/Environment] |
 
 ## Requirements Matrix>
 
@@ -98,9 +191,9 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 ```
 
 ## Secrets & Variables
-| Type     | Name     | Purpose   | Scope      || -------
+| Type | Name | Purpose | Scope || -------
 
-- | -------- | --------- | ---------- || Secret   | SECRET_1 | [Purpose] | Workflow   || Variable | VAR_1    | [Purpose] | Repository |
+- | -------- | --------- | ---------- || Secret | SECRET_1 | [Purpose] | Workflow || Variable | VAR_1 | [Purpose] | Repository |
 
 ## Execution Constraints
 
@@ -117,16 +210,16 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 - **Permissions**: [Required access levels]
 
 ## Error Handling Strategy
-| Error Type         | Response   | Recovery Action  || -----------------
+| Error Type | Response | Recovery Action || -----------------
 
-- | ---------- | ---------------- || Build Failure      | [Response] | [Recovery steps] || Test Failure       | [Response] | [Recovery steps] || Deployment Failure | [Response] | [Recovery steps] |
+- | ---------- | ---------------- || Build Failure | [Response] | [Recovery steps] || Test Failure | [Response] | [Recovery steps] || Deployment Failure | [Response] | [Recovery steps] |
 
 ## Quality Gates
 
 ### Gate Definitions
-| Gate          | Criteria     | Bypass Conditions || ------------
+| Gate | Criteria | Bypass Conditions || ------------
 
-- | ------------ | ----------------- || Code Quality  | [Standards]  | [When allowed]    || Security Scan | [Thresholds] | [When allowed]    || Test Coverage | [Percentage] | [When allowed]    |
+- | ------------ | ----------------- || Code Quality | [Standards] | [When allowed] || Security Scan | [Thresholds] | [When allowed] || Test Coverage | [Percentage] | [When allowed] |
 
 ## Monitoring & Observability
 
@@ -137,21 +230,21 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 - **Resource Usage**: [Monitoring approach]
 
 ### Alerting
-| Condition   | Severity | Notification Target || ----------
+| Condition | Severity | Notification Target || ----------
 
-- | -------- | ------------------- || [Condition] | [Level]  | [Who/Where]         |
+- | -------- | ------------------- || [Condition] | [Level] | [Who/Where] |
 
 ## Integration Points
 
 ### External Systems
-| System   | Integration Type | Data Exchange | SLA Requirements || -------
+| System | Integration Type | Data Exchange | SLA Requirements || -------
 
-- | ---------------- | ------------- | ---------------- || [System] | [Type]           | [Data format] | [Requirements]   |
+- | ---------------- | ------------- | ---------------- || [System] | [Type] | [Data format] | [Requirements] |
 
 ### Dependent Workflows
-| Workflow   | Relationship | Trigger Mechanism || ---------
+| Workflow | Relationship | Trigger Mechanism || ---------
 
-- | ------------ | ----------------- || [Workflow] | [Type]       | [How triggered]   |
+- | ------------ | ----------------- || [Workflow] | [Type] | [How triggered] |
 
 ## Compliance & Governance
 
@@ -170,9 +263,9 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 ## Edge Cases & Exceptions
 
 ### Scenario Matrix
-| Scenario    | Expected Behavior | Validation Method || ----------
+| Scenario | Expected Behavior | Validation Method || ----------
 
-- | ----------------- | ----------------- || [Edge case] | [Behavior]        | [How to verify]   |
+- | ----------------- | ----------------- || [Edge case] | [Behavior] | [How to verify] |
 
 ## Validation Criteria
 
@@ -197,9 +290,9 @@ yaml# Job Outputsjob_1_output: string # Description: [purpose]build_artifact: fi
 5. **Deployment**: [Release process]
 
 ### Version History
-| Version | Date   | Changes               | Author   || ------
+| Version | Date | Changes | Author || ------
 
-- | ------ | --------------------- | -------- || 1.0     | [Date] | Initial specification | [Author] |
+- | ------ | --------------------- | -------- || 1.0 | [Date] | Initial specification | [Author] |
 
 ## Related Specifications
 
@@ -268,7 +361,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -289,7 +382,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -357,7 +450,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -365,7 +457,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

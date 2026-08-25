@@ -1,55 +1,87 @@
 ---
-name: parallel-mcp-install
-title: Install and Validate Parallel MCP Servers in Hermes
-description: Register Parallel Search and Parallel Task Streamable HTTP MCP servers in the active Hermes
-  Agent harness, preserve credential boundaries, validate discovered tools, and begin implementation only
-  after all gates pass.
-version: 1.0.0
-license: MIT
-author: Alexa
-trigger: /parallel-mcp-install
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:using-superpowers
-- skill:user-communication-preferences
-- skill:hermes-mcp
-- skill:smithery-ai-cli
-- skill:verification-before-completion
-formatter: default
-metadata:
-  hermes:
-    profile: exec-assistant
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /parallel-mcp-install
-    flags: {}
-    help: Register Parallel Search and Parallel Task Streamable HTTP MCP servers in the...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Parallel MCP Installation and Validation Workflow
+description: Prompt for parallel mcp installation and validation workflow
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- api
-- backend
-- frontend
-- mcp
-- ml
-- prompts
-- workflow
-scripts: []
-# Parallel MCP Installation and Validation Workflow
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Source References](#source-references)
+- [Non-Negotiable Security Rules](#non-negotiable-security-rules)
+- [Phase 1 — Identify the Active Harness](#phase-1-—-identify-the-active-harness)
+- [Phase 2 — Register Parallel Search](#phase-2-—-register-parallel-search)
+- [Phase 3 — Register Parallel Task](#phase-3-—-register-parallel-task)
+- [Phase 4 — Validate Configuration and Connectivity](#phase-4-—-validate-configuration-and-connectivity)
+- [Phase 5 — Runtime Reload Gate](#phase-5-—-runtime-reload-gate)
+- [Phase 6 — Begin Implementation](#phase-6-—-begin-implementation)
+- [Failure Handling](#failure-handling)
+- [Completion Checklist](#completion-checklist)
+- [Completion Report](#completion-report)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Source References](#source-references)
+- [Non-Negotiable Security Rules](#non-negotiable-security-rules)
+- [Phase 1 — Identify the Active Harness](#phase-1-—-identify-the-active-harness)
+- [Phase 2 — Register Parallel Search](#phase-2-—-register-parallel-search)
+- [Phase 3 — Register Parallel Task](#phase-3-—-register-parallel-task)
+- [Phase 4 — Validate Configuration and Connectivity](#phase-4-—-validate-configuration-and-connectivity)
+- [Phase 5 — Runtime Reload Gate](#phase-5-—-runtime-reload-gate)
+- [Phase 6 — Begin Implementation](#phase-6-—-begin-implementation)
+- [Failure Handling](#failure-handling)
+- [Completion Checklist](#completion-checklist)
+- [Completion Report](#completion-report)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -115,8 +147,8 @@ Use the Hermes CLI, not direct YAML editing:
 
 ```bash
 hermes mcp add parallel-search \
-  --url https://search.parallel.ai/mcp \
-  --connect-timeout 45
+--url https://search.parallel.ai/mcp \
+--connect-timeout 45
 ```
 
 When prompted whether auth is required, select no auth. Enable every discovered Search tool. If the endpoint returns a connection error, capture the status and stop before changing auth settings.
@@ -133,9 +165,9 @@ Prefer the Hermes OAuth path:
 
 ```bash
 hermes mcp add parallel-task \
-  --url https://task-mcp.parallel.ai/mcp \
-  --auth oauth \
-  --connect-timeout 45
+--url https://task-mcp.parallel.ai/mcp \
+--auth oauth \
+--connect-timeout 45
 ```
 
 If Hermes prints an authorization URL:
@@ -165,7 +197,7 @@ hermes config check
 Verify without displaying credentials:
 
 ```bash
-grep -n -A 12 -E '^  parallel-(search|task):' "$(hermes config path)"
+grep -n -A 12 -E '^ parallel-(search|task):' "$(hermes config path)"
 ```
 
 Required assertions:
@@ -281,7 +313,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -302,7 +334,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -370,7 +402,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -378,7 +409,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

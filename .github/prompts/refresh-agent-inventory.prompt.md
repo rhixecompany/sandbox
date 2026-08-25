@@ -1,44 +1,72 @@
 ---
-name: refresh-agent-inventory
-title: Refresh Agent Inventory
-description: Refresh workspace customization inventory and patch stale AGENTS or copilot instruction references.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /refresh-agent-inventory
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /refresh-agent-inventory
-    flags: {}
-    help: Refresh workspace customization inventory and patch stale AGENTS or copilot i...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- ml
-- prompts
-- skills
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Description to accomplish the associated tasks and objectives.](#description-to-accomplish-the-associated-tasks-and-objectives)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Discover and compare](#phase-1:-discover-and-compare)
+  - [Phase 2: Propose and apply scoped updates](#phase-2:-propose-and-apply-scoped-updates)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Description to accomplish the associated tasks and objectives.](#description-to-accomplish-the-associated-tasks-and-objectives)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Discover and compare](#phase-1:-discover-and-compare)
+- [Phase 2: Propose and apply scoped updates](#phase-2:-propose-and-apply-scoped-updates)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Use when
@@ -52,8 +80,8 @@ Refresh the workspace customization inventory by reconciling discovered assetsag
 ## Context
 
 - Workspace is monorepo-style with root and subproject overrides.
-- Canonical report path:  - reports/copilot-skills-agents-hooks-plugins-prompts-instructions-report.md
-- Primary customization files:  - AGENTS.md  - .github/copilot-instructions.md
+- Canonical report path: - reports/copilot-skills-agents-hooks-plugins-prompts-instructions-report.md
+- Primary customization files: - AGENTS.md - .github/copilot-instructions.md
 
 ## Skills Required
 
@@ -62,7 +90,7 @@ Refresh the workspace customization inventory by reconciling discovered assetsag
 
 ## Subagents
 
-- Explore (optional): read-only discovery of inventory, duplicates, and stale  references.
+- Explore (optional): read-only discovery of inventory, duplicates, and stale references.
 
 ## Personas
 
@@ -82,28 +110,28 @@ Refresh the workspace customization inventory by reconciling discovered assetsag
 
 ### Phase 1: Discover and compare
 
-| Field      | Details                                                                    || ---------
+| Field | Details || ---------
 
-- | -------------------------------------------------------------------------- || Goal       | Build a current inventory snapshot and compare it to the canonical report. || Inputs     | Workspace files, report file, AGENTS.md, .github/copilot-instructions.md.  || Outputs    | Drift list with concrete path-level evidence.                              || Validation | Every drift item cites at least one path and one mismatch type.            |
+- | -------------------------------------------------------------------------- || Goal | Build a current inventory snapshot and compare it to the canonical report. || Inputs | Workspace files, report file, AGENTS.md, .github/copilot-instructions.md. || Outputs | Drift list with concrete path-level evidence. || Validation | Every drift item cites at least one path and one mismatch type. |
 
 ### Phase 2: Propose and apply scoped updates
 
-| Field      | Details                                                                  || ---------
+| Field | Details || ---------
 
-- | ------------------------------------------------------------------------ || Goal       | Produce minimal customization-file updates that remove drift.            || Inputs     | Phase 1 drift list and current customization file contents.              || Outputs    | Patch-ready update plan and optional applied edits.                      || Validation | Updated references are path-valid and do not introduce duplicate assets. |
+- | ------------------------------------------------------------------------ || Goal | Produce minimal customization-file updates that remove drift. || Inputs | Phase 1 drift list and current customization file contents. || Outputs | Patch-ready update plan and optional applied edits. || Validation | Updated references are path-valid and do not introduce duplicate assets. |
 
 ## Steps
 
 1. Discover AGENTS.md files and customization assets under .github.
 2. Read the canonical inventory report and compare counts and references.
 3. Identify stale lists, missing paths, and duplicate-purpose customizations.
-4. Prepare minimal edits for AGENTS.md and .github/copilot-instructions.md if   needed.
+4. Prepare minimal edits for AGENTS.md and .github/copilot-instructions.md if needed.
 5. Summarize outcomes as a remediation report.
 
 ## Tasks
 
 - Task 1.1 — Discover AGENTS and customization asset files.
-- Task 1.2 — Compare discovered inventory with report-backed counts and  references.
+- Task 1.2 — Compare discovered inventory with report-backed counts and references.
 - Task 2.1 — Draft minimal updates for stale customization references.
 - Task 2.2 — Validate paths and precedence logic after updates.
 - Task 2.3 — Publish remediation summary with risk notes.
@@ -181,7 +209,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -189,7 +216,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

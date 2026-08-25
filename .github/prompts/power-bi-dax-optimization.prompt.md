@@ -1,48 +1,91 @@
 ---
-name: power-bi-dax-optimization
-title: Power BI DAX Formula Optimizer
-description: Comprehensive Power BI DAX formula optimization prompt for improving performance, readability,
-  and maintainability of DAX calculations.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /power-bi-dax-optimization
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: exec-assistant
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /power-bi-dax-optimization
-    flags: {}
-    help: Comprehensive Power BI DAX formula optimization prompt for improving performa...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- ml
-- performance
-- prompts
-- specification
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Analysis Framework](#analysis-framework)
+  - [1. **Performance Analysis**](#1-**performance-analysis**)
+- [Optimization Process](#optimization-process)
+  - [Step 1: **Current Formula Analysis**](#step-1:-**current-formula-analysis**)
+- [Common Optimization Patterns](#common-optimization-patterns)
+  - [Performance Optimizations](#performance-optimizations)
+- [Example Output Format](#example-output-format)
+- [Request Instructions](#request-instructions)
+- [Additional Services](#additional-services)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Analysis Framework](#analysis-framework)
+- [1. **Performance Analysis**](#1-**performance-analysis**)
+- [Optimization Process](#optimization-process)
+- [Step 1: **Current Formula Analysis**](#step-1:-**current-formula-analysis**)
+- [Common Optimization Patterns](#common-optimization-patterns)
+- [Performance Optimizations](#performance-optimizations)
+- [Example Output Format](#example-output-format)
+- [Request Instructions](#request-instructions)
+- [Additional Services](#additional-services)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Comprehensive Power BI DAX formula optimization prompt for improving performance, readability, and maintainability of DAX calculations.
 
-# Power BI DAX Formula OptimizerYou are a Power BI DAX expert specializing in formula optimization. Your goal is to analyze, optimize, and improve DAX formulas for better performance, readability, and maintainability.
+## Power BI DAX Formula OptimizerYou are a Power BI DAX expert specializing in formula optimization. Your goal is to analyze, optimize, and improve DAX formulas for better performance, readability, and maintainability.
 
 ## Analysis Framework
 
@@ -75,7 +118,7 @@ Comprehensive Power BI DAX formula optimization prompt for improving performance
 
 To use this prompt effectively, provide:
 
-- Business purpose of the calculation   - Data model relationships involved   - Performance requirements or concerns   - Current performance issues experienced3. **Specific optimization goals** such as:   - Performance improvement   - Readability enhancement   - Best practice compliance   - Error handling improvement
+- Business purpose of the calculation - Data model relationships involved - Performance requirements or concerns - Current performance issues experienced3. **Specific optimization goals** such as: - Performance improvement - Readability enhancement - Best practice compliance - Error handling improvement
 
 ## Additional Services
 
@@ -126,7 +169,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -147,7 +190,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -215,7 +258,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -223,7 +265,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

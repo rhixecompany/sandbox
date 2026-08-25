@@ -1,51 +1,77 @@
 ---
-name: generator-orchestrator
-title: Generator Orchestrator
-description: Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict
-  stage gates and consistency validation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /generator-orchestrator
-toolsets:
-- file
-- terminal
-skills:
-- subagent-driven-development
-dependencies:
-- skill:subagent-driven-development
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /generator-orchestrator
-    flags: {}
-    help: Dependency-aware orchestrator prompt for root blueprint and MCP generator pro...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- architecture
-- backend
-- generator
-- mcp
-- prompts
-- typescript
-- workflow
-- documentation
-- git
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+  - [Goal](#goal)
+- [Context](#context)
+  - [Scope](#scope)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Discovery](#phase-1:-discovery)
+  - [Phase 2: Contract Design](#phase-2:-contract-design)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+  - [Invocation Order and Branching](#invocation-order-and-branching)
+  - [Failure Handling Policy](#failure-handling-policy)
+  - [Verification Checklist](#verification-checklist)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Goal](#goal)
+- [Context](#context)
+- [Scope](#scope)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Discovery](#phase-1:-discovery)
+- [Phase 2: Contract Design](#phase-2:-contract-design)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Invocation Order and Branching](#invocation-order-and-branching)
+- [Failure Handling Policy](#failure-handling-policy)
+- [Verification Checklist](#verification-checklist)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
@@ -80,12 +106,12 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 ## Subagents
 
 - No external subagents are required.
-- Invoke only the following root generator prompts as sub-prompts:  - `technology-stack-blueprint-generator.prompt.md`  - `folder-structure-blueprint-generator.prompt.md`  - `architecture-blueprint-generator.prompt.md`  - `project-workflow-analysis-blueprint-generator.prompt.md`  - `code-exemplars-blueprint-generator.prompt.md`  - `copilot-instructions-blueprint-generator.prompt.md`  - `readme-blueprint-generator.prompt.md`  - `typescript-mcp-server-generator.prompt.md`  - `python-mcp-server-generator.prompt.md`  - `swift-mcp-server-generator.prompt.md`  - `mcp-copilot-studio-server-generator.prompt.md`
+- Invoke only the following root generator prompts as sub-prompts: - `technology-stack-blueprint-generator.prompt.md` - `folder-structure-blueprint-generator.prompt.md` - `architecture-blueprint-generator.prompt.md` - `project-workflow-analysis-blueprint-generator.prompt.md` - `code-exemplars-blueprint-generator.prompt.md` - `copilot-instructions-blueprint-generator.prompt.md` - `readme-blueprint-generator.prompt.md` - `typescript-mcp-server-generator.prompt.md` - `python-mcp-server-generator.prompt.md` - `swift-mcp-server-generator.prompt.md` - `mcp-copilot-studio-server-generator.prompt.md`
 
 ## Personas
 
 - Primary persona: Blueprint Orchestrator.
-- Behavioral expectations:  - deterministic and stage-gated  - strict on dependencies  - explicit about degraded modes and failures
+- Behavioral expectations: - deterministic and stage-gated - strict on dependencies - explicit about degraded modes and failures
 
 ## Rules
 
@@ -227,7 +253,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

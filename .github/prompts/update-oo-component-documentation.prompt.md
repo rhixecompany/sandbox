@@ -1,45 +1,90 @@
 ---
-name: update-oo-component-documentation
-title: Update Oo Component Documentation
-description: Update existing object-oriented component documentation following industry best practices
-  and architectural documentation standards.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /update-oo-component-documentation
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /update-oo-component-documentation
-    flags: {}
-    help: Update existing object-oriented component documentation following industry be...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- architecture
-- documentation
-- maintenance
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [1. Component Overview](#1-component-overview)
+  - [Purpose](#purpose)
+- [2. Architecture Section](#2-architecture-section)
+  - [Component Structure and Dependencies Diagram](#component-structure-and-dependencies-diagram)
+- [3. Interface Documentation](#3-interface-documentation)
+- [4. Implementation Details](#4-implementation-details)
+- [5. Usage Examples](#5-usage-examples)
+  - [Basic Usage](#basic-usage)
+  - [Advanced Usage](#advanced-usage)
+- [6. Quality Attributes](#6-quality-attributes)
+- [7. Reference Information](#7-reference-information)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [1. Component Overview](#1-component-overview)
+- [Purpose](#purpose)
+- [2. Architecture Section](#2-architecture-section)
+- [Component Structure and Dependencies Diagram](#component-structure-and-dependencies-diagram)
+- [3. Interface Documentation](#3-interface-documentation)
+- [4. Implementation Details](#4-implementation-details)
+- [5. Usage Examples](#5-usage-examples)
+- [Basic Usage](#basic-usage)
+- [Advanced Usage](#advanced-usage)
+- [6. Quality Attributes](#6-quality-attributes)
+- [7. Reference Information](#7-reference-information)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Update existing object-oriented component documentation following industry best practices and architectural documentation standards.
@@ -87,7 +132,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## 1. Component Overview
@@ -116,7 +161,7 @@ Update the mermaid diagram to show current:
 
 ## 3. Interface Documentation
 
-- INT-001: Update all public interfaces and current usage patterns- INT-002: Refresh method/property reference table with current API- INT-003: Update events/callbacks/notification mechanisms| Method/Property | Purpose | Parameters | Return Type | Usage Notes || --- | --- | --- | --- | --- || [Update table with current API] |  |  |  |  |
+- INT-001: Update all public interfaces and current usage patterns- INT-002: Refresh method/property reference table with current API- INT-003: Update events/callbacks/notification mechanisms| Method/Property | Purpose | Parameters | Return Type | Usage Notes || --- | --- | --- | --- | --- || [Update table with current API] | | | | |
 
 ## 4. Implementation Details
 
@@ -233,7 +278,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -241,7 +285,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

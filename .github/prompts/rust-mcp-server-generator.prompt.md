@@ -1,53 +1,103 @@
 ---
-name: rust-mcp-server-generator
-title: Rust Mcp Server Generator
-description: Generate a complete Rust Model Context Protocol server project with tools, prompts, resources,
-  and tests using the official rmcp SDK.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /rust-mcp-server-generator
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /rust-mcp-server-generator
-    flags: {}
-    help: Generate a complete Rust Model Context Protocol server project with tools, pr...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- backend
-- data
-- frontend
-- generator
-- mcp
-- prompts
-- rust
-- testing
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Project Requirements](#project-requirements)
+- [Project Structure](#project-structure)
+- [File Templates](#file-templates)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Stdio Transport](#stdio-transport)
+  - [SSE Transport](#sse-transport)
+  - [HTTP Transport](#http-transport)
+- [Configuration](#configuration)
+- [Tools](#tools)
+- [Development](#development)
+- [Implementation Guidelines](#implementation-guidelines)
+- [Example Tool Patterns>](#example-tool-patterns>)
+  - [Simple Read-Only Tool](#simple-read-only-tool)
+- [Running the Generated Server](#running-the-generated-server)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Project Requirements](#project-requirements)
+- [Project Structure](#project-structure)
+- [File Templates](#file-templates)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Stdio Transport](#stdio-transport)
+- [SSE Transport](#sse-transport)
+- [HTTP Transport](#http-transport)
+- [Configuration](#configuration)
+- [Tools](#tools)
+- [Development](#development)
+- [Implementation Guidelines](#implementation-guidelines)
+- [Example Tool Patterns>](#example-tool-patterns>)
+- [Simple Read-Only Tool](#simple-read-only-tool)
+- [Running the Generated Server](#running-the-generated-server)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Generate a complete Rust Model Context Protocol server project with tools, prompts, resources, and tests using the official rmcp SDK.
 
-# Rust MCP Server GeneratorYou are a Rust MCP server generator. Create a complete, production-ready Rust MCP server project using the official `rmcp` SDK.
+## Rust MCP Server GeneratorYou are a Rust MCP server generator. Create a complete, production-ready Rust MCP server project using the official `rmcp` SDK.
 
 ## Project Requirements
 
@@ -57,7 +107,7 @@ Ask the user for:1. **Project name** (e.g., "my-mcp-server")2. **Server descript
 
 Generate this structure:```
 
-project-name}/├── Cargo.toml├── .gitignore├── README.md├── src/│   ├── main.rs│   ├── handler.rs│   ├── tools/│   │   ├── mod.rs│   │   └── {tool_name}.rs│   ├── prompts/│   │   ├── mod.rs│   │   └── {prompt_name}.rs│   ├── resources/│   │   ├── mod.rs│   │   └── {resource_name}.rs│   └── state.rs└── tests/    └── integration_test.rs```
+project-name}/├── Cargo.toml├── .gitignore├── README.md├── src/│ ├── main.rs│ ├── handler.rs│ ├── tools/│ │ ├── mod.rs│ │ └── {tool_name}.rs│ ├── prompts/│ │ ├── mod.rs│ │ └── {prompt_name}.rs│ ├── resources/│ │ ├── mod.rs│ │ └── {resource_name}.rs│ └── state.rs└── tests/ └── integration_test.rs```
 
 ## File Templates
 
@@ -98,9 +148,9 @@ bashcargo run --features http -- --transport http
 
 ## Configuration
 
-Configure in your MCP client (e.g., Claude Desktop):```json{  "mcpServers": {    "
+Configure in your MCP client (e.g., Claude Desktop):```json{ "mcpServers": { "
 
-project-name}": {      "command": "path/to/target/release/{project-name}",      "args": []    }  }}
+project-name}": { "command": "path/to/target/release/{project-name}", "args": [] } }}
 ```
 
 ## Tools
@@ -115,7 +165,7 @@ project-name}": {      "command": "path/to/target/release/{project-name}",      
 
 ## Implementation Guidelines
 
-1. **Use rmcp-macros**: Leverage `#[tool]`, `#[tool_router]`, and `#[tool_handler]` macros for cleaner code
+1. **Use rmcp-macros**: use `#[tool]`, `#[tool_router]`, and `#[tool_handler]` macros for cleaner code
 2. **Type Safety**: Use `schemars::JsonSchema` for all parameter types
 3. **Error Handling**: Return `Result` types with proper error messages
 4. **Async/Await**: All handlers must be async
@@ -144,18 +194,18 @@ For Claude Desktop integration:
 
 ```json
 {
-  "mcpServers": {
-    "{project-name}": {
-      "command": "path/to/{project-name}/target/release/{project-name}",
-      "args": []
-    }
-  }
+"mcpServers": {
+"{project-name}": {
+"command": "path/to/{project-name}/target/release/{project-name}",
+"args": []
+}
+}
 }
 ```
 
 Now generate the complete project based on the user's requirements!
 
-project-name}cargo buildcargo testcargo run```For Claude Desktop integration:```json{  "mcpServers": {    "{project-name}": {      "command": "path/to/{project-name}/target/release/{project-name}",      "args": []    }  }}```Now generate the complete project based on the user's requirements!
+project-name}cargo buildcargo testcargo run```For Claude Desktop integration:```json{ "mcpServers": { "{project-name}": { "command": "path/to/{project-name}/target/release/{project-name}", "args": [] } }}```Now generate the complete project based on the user's requirements!
 
 ## Template References
 
@@ -199,7 +249,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -220,7 +270,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -303,7 +353,6 @@ Other language variants of this MCP server generator:
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

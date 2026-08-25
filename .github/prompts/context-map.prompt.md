@@ -1,54 +1,67 @@
 ---
-name: context-map
-title: Context Map
-description: Build a dependency and reference map before making changes so implementation starts from
-  the right files.
-version: 2.0.0
-license: MIT
-author: Hermes Agent
-trigger: /context-map
-toolsets:
-- file
-- terminal
-skills:
-- codemap
-dependencies:
-- skill:codemap
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /context-map
-    flags: {}
-    help: Build a dependency and reference map before making changes so implementation ...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- frontend
-- prompts
-- specification
-- testing
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Discover the scope](#phase-1:-discover-the-scope)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Discover the scope](#phase-1:-discover-the-scope)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
 Build a dependency and reference map before making changes so implementation starts from the right files.
 
-# context-map> Build a dependency-aware context map before implementation begins.
+## context-map> Build a dependency-aware context map before implementation begins.
 
 ## Context
 
@@ -80,7 +93,7 @@ Build a dependency and reference map before making changes so implementation sta
 4. Identify the likely test files
 5. If no related test files are found, explicitly state "No related tests identified" in the map and flag it as a risk item
 6. Find 2-3 existing code examples in the codebase that demonstrate the same pattern (for example, same hook usage, same module export style) that the new change should follow
-7. Call out breaking-change risks clearly
+7. Call out breaking-change risks
 8. Stop after mapping; do not implement yet
 
 ## Skills Required
@@ -178,7 +191,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

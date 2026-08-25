@@ -1,54 +1,68 @@
 ---
-name: repo-tooling-implementation
-title: Repo Tooling Implementation
-description: Fully implement the repo-tooling master plan with verification, fixes, and artifact delivery
-  across the SandBox workspace.
-version: 1.1.0
-license: MIT
-author: Hermes Agent
-trigger: /repo-tooling-implementation
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- prompt:repo
-- skill:executing-plans
-- skill:systematic-debugging
-- skill:verification-before-completion
-- skill:using-superpowers
-- tool:mcp-filesystem
-- tool:mcp-github
-- tool:mcp-sequential-thinking
-- tool:mcp-tavily
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /repo-tooling-implementation
-    flags: {}
-    help: Fully implement the repo-tooling master plan with verification, fixes, and ar...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- documentation
-- fix
-- ml
-- prompts
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Template Reference](#template-reference)
+- [Execution](#execution)
+- [Steps](#steps)
+- [Rules](#rules)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Tasks](#tasks)
+- [Dependencies](#dependencies)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Template Reference](#template-reference)
+- [Execution](#execution)
+- [Steps](#steps)
+- [Rules](#rules)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Tasks](#tasks)
+- [Dependencies](#dependencies)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Execute the `repo-tooling-implementation` workflow. Full details: `templates/repo-tooling-implementation/README.md`.
@@ -80,17 +94,15 @@ See `templates/repo-tooling-implementation/README.md` for phases/steps/workflow.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
-
 ## Personas
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona       | When to Use                            |
+| Persona | When to Use |
 | ------------- | -------------------------------------- |
 | **Developer** | Implementation, debugging, refactoring |
-| **Reviewer**  | Code review, quality assurance         |
-| **User**      | General purpose, operations            |
-
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
 
 ## Personality
 
@@ -101,11 +113,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-
 ## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
-
 
 ## Phases
 
@@ -126,9 +136,8 @@ Use when fixing, repairing, or synchronizing files or configs. Diagnose first, a
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
-
 
 ## Best Practices
 
@@ -139,56 +148,53 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
 
-
 ## Verification Checklist
 
-| # | Gate       | Criterion                           |
+| # | Gate | Criterion |
 | - | ---------- | ----------------------------------- |
-| 1 | Scope      | Change matches the original request |
-| 2 | Quality    | Meets project standards             |
-| 3 | Tests      | Tests pass (if applicable)          |
-| 4 | Regression | No unintended side effects          |
-| 5 | Docs       | Changes documented if needed        |
-
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
 
 ## Skills Required
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill                            | Purpose                       |
+| Skill | Purpose |
 | -------------------------------- | ----------------------------- |
-| `using-superpowers`              | Foundational skill workflow   |
-| `systematic-debugging`           | Root cause analysis and fix   |
-| `git-patch-management`           | Patch creation and management |
-| `executing-plans`                | Execute plans step by step    |
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
-
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server                | Purpose                                   |
+| Server | Purpose |
 | --------------------- | ----------------------------------------- |
-| `filesystem`          | File read/write operations                |
-| `github`              | GitHub API operations                     |
+| `filesystem` | File read/write operations |
+| `github` | GitHub API operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
-| `ast-grep`            | AST-based code search and replace         |
-| `fetch`               | Web page content extraction               |
-| `playwright`          | Browser automation for interactive pages  |
-| `tavily`              | Web search + URL extraction               |
+| `ast-grep` | AST-based code search and replace |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `tavily` | Web search + URL extraction |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook                     | When              | Behavior                     |
+| Hook | When | Behavior |
 | ------------------------ | ----------------- | ---------------------------- |
-| `session-logger`         | session start/end | Logs session metadata        |
-| `governance-audit`       | session events    | Audits governance compliance |
-| `session-auto-commit`    | session end       | Auto-commits session state   |
-| `pre-exec-validate.sh`   | before commands   | Validates command execution  |
-| `post-exec-state-log.py` | after commands    | Appends state log            |
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
 
 ## Scripts
 
@@ -202,8 +208,6 @@ The following workspace hooks run around this prompt's execution (see `.github/h
 - [ ] Execute work incrementally
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
-
-
 
 ## Dependencies
 

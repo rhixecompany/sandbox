@@ -1,36 +1,57 @@
 ---
-title: Skills Audit and Remediation
-trigger: /skills-fix
-description: >
-  Audit, debug, deduplicate, and enhance Hermes skills in the adminbot profile.
-  Runs hermes skills list → reorganizes misplaced skills → deduplicates →
-  batch-audits all SKILL.md files in groups of 7 → generates per-skill reports
-  and a master index → creates a remediation plan and execution prompt →
-  applies fixes in priority order (F → C → B → A-).
-tags: [hermes, skills, debugging, audit, dedup, remediation]
-dependencies:
-  - prompt:.github/prompts/context-map.prompt.md
-  - prompt:.github/prompts/update-implementation-plan.prompt.md
-  - prompt:.github/prompts/skills-debug-prompt.prompt.md
-  - skill:using-superpowers
-  - skill:brainstorming
-  - skill:plans-and-specs
-  - skill:dispatching-parallel-agents
-  - skill:subagent-driven-development
-  - skill:systematic-debugging
-  - skill:simplify
-  - skill:skill-judge
-  - skill:skill-creator
-  - tool:terminal
-  - tool:patch
-  - tool:write_file
-  - tool:execute_code
-skills:
-  - introspection-only-general
-  - no-git-delete
-  - no-net-fetch
-  - skills-tools-preflight-check
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Known Issue Patterns (from 2026-06-04 audit)](#known-issue-patterns-from-2026-06-04-audit)
+- [Reorganization Map (from 2026-06-04 session)](#reorganization-map-from-2026-06-04-session)
+- [Phases](#phases)
+  - [Phase 1: Setup and Inventory](#phase-1:-setup-and-inventory)
+  - [Phase 2: Reorganize and Deduplicate](#phase-2:-reorganize-and-deduplicate)
+  - [Phase 3: Batch Audit](#phase-3:-batch-audit)
+  - [Phase 4: Generate Plan and Execution Prompt](#phase-4:-generate-plan-and-execution-prompt)
+  - [Phase 5: Execute Fixes (Priority Order)](#phase-5:-execute-fixes-priority-order)
+- [Phase 6: Verify](#phase-6:-verify)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Subagents](#subagents)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Known Issue Patterns (from 2026-06-04 audit)](#known-issue-patterns-from-2026-06-04-audit)
+- [Reorganization Map (from 2026-06-04 session)](#reorganization-map-from-2026-06-04-session)
+- [Phases](#phases)
+- [Phase 1: Setup and Inventory](#phase-1:-setup-and-inventory)
+- [Phase 2: Reorganize and Deduplicate](#phase-2:-reorganize-and-deduplicate)
+- [Phase 3: Batch Audit](#phase-3:-batch-audit)
+- [Phase 4: Generate Plan and Execution Prompt](#phase-4:-generate-plan-and-execution-prompt)
+- [Phase 5: Execute Fixes (Priority Order)](#phase-5:-execute-fixes-priority-order)
+- [Phase 6: Verify](#phase-6:-verify)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Subagents](#subagents)
+
+
+
 
 ## Goal
 
@@ -80,17 +101,17 @@ reports, plans fixes, and applies them in priority order.
 
 ## Known Issue Patterns (from 2026-06-04 audit)
 
-| Code | Pattern                                                    | Fix                                          |
+| Code | Pattern | Fix |
 | ---- | ---------------------------------------------------------- | -------------------------------------------- |
-| F1   | Missing YAML frontmatter `---` block                       | Add frontmatter with `name:`, `description:` |
-| F2   | Missing required frontmatter key (`name`/`description`)    | Add the key with a value                     |
-| F3   | Boilerplate: `## Goal\nUse when Use when <desc>`           | Replace with clean one-line description      |
-| F3b  | Boilerplate: `## Goal\nUse when "<desc>" to accomplish...` | Replace with clean description               |
-| C2   | Unclosed code fence (odd ``` count)                        | Append closing ` ``` ` at end of file        |
-| S1   | Missing `## When to Use` or `## Workflow` (exact heading)  | Add section or accept semantic variant       |
-| S2   | Heading level jump (H2 → H4 with no H3)                    | Insert intermediate heading                  |
-| C1   | Stale patterns (`pip install`, `npm install -g`)           | Note as supply_chain warning                 |
-| R1   | Duplicate section heading                                  | Remove second occurrence, merge content      |
+| F1 | Missing YAML frontmatter `---` block | Add frontmatter with `name:`, `description:` |
+| F2 | Missing required frontmatter key (`name`/`description`) | Add the key with a value |
+| F3 | Boilerplate: `## Goal\nUse when Use when <desc>` | Replace with clean one-line description |
+| F3b | Boilerplate: `## Goal\nUse when "<desc>" to accomplish...` | Replace with clean description |
+| C2 | Unclosed code fence (odd ``` count) | Append closing ``` at end of file |
+| S1 | Missing `## When to Use` or `## Workflow` (exact heading) | Add section or accept semantic variant |
+| S2 | Heading level jump (H2 → H4 with no H3) | Insert intermediate heading |
+| C1 | Stale patterns (`pip install`, `npm install -g`) | Note as supply_chain warning |
+| R1 | Duplicate section heading | Remove second occurrence, merge content |
 
 ## Reorganization Map (from 2026-06-04 session)
 
@@ -153,25 +174,25 @@ implement equivalent logic in `execute_code`. For each skill in batches of 7:
 **F-grade first** — Fix critical issues (unclosed fences, missing frontmatter):
 
 ````python
-# For unclosed code fences: append closing fence
+## For unclosed code fences: append closing fence
 with open(skill_path, 'a', encoding='utf-8') as f:
-    f.write("\n```\n")
+f.write("\n```\n")
 ````
 
 **C-grade next** — Fix major issues (boilerplate `## Goal`, missing `## When to Use`):
 
 ```python
-# F3 fix pattern:
+## F3 fix pattern:
 content = content.replace(
-    "## Goal\nUse when Use when <desc>",
-    "## Goal\n<desc>"
+"## Goal\nUse when Use when <desc>",
+"## Goal\n<desc>"
 )
 ```
 
 **B-grade last** — Fix moderate issues in batches of 7 (S1 section stubs, R1 dedup,
 S2 heading gaps, C1 stale comments).
 
-### Phase 6: Verify
+## Phase 6: Verify
 
 1. Re-run audit script — confirm F=0, C=0, total issues reduced
 2. Update master index with re-run results
@@ -232,9 +253,9 @@ When processing B-grade batch remediations, dispatch in parallel using:
 
 ```python
 delegate_task(tasks=[
-    {"goal": "Fix B-grade issues in batch: skill-a, skill-b, skill-c, skill-d, skill-e, skill-f, skill-g",
-     "context": "Skills root: C:\\...\\skills\\ Per-skill reports in docs/. Fix issues listed in each report.",
-     "toolsets": ["file", "terminal"]},
-    # up to 3 concurrent batches
+{"goal": "Fix B-grade issues in batch: skill-a, skill-b, skill-c, skill-d, skill-e, skill-f, skill-g",
+"context": "Skills root: C:\\...\\skills\\ Per-skill reports in docs/. Fix issues listed in each report.",
+"toolsets": ["file", "terminal"]},
+## up to 3 concurrent batches
 ])
 ```

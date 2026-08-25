@@ -1,9 +1,77 @@
 ---
-description: "Generate a complete Model Context Protocol server project in Java using the official MCP Java SDK with reactive streams and optional Spring Boot integration."
-agent: agent
+title: Java MCP Server Generator
+description: Prompt for java mcp server generator
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
 
-# Java MCP Server Generator
+- [Project Generation](#project-generation)
+- [Maven pom.xml Template](#maven-pomxml-template)
+- [Gradle build.gradle.kts Template](#gradle-buildgradlekts-template)
+- [McpServerApplication.java Template](#mcpserverapplicationjava-template)
+- [ToolDefinitions.java Template](#tooldefinitionsjava-template)
+- [ToolHandlers.java Template](#toolhandlersjava-template)
+- [ResourceDefinitions.java Template](#resourcedefinitionsjava-template)
+- [ResourceHandlers.java Template](#resourcehandlersjava-template)
+- [PromptDefinitions.java Template](#promptdefinitionsjava-template)
+- [PromptHandlers.java Template](#prompthandlersjava-template)
+- [McpServerTest.java Template](#mcpservertestjava-template)
+- [README.md Template](#readmemd-template)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Build](#build)
+  - [Maven](#maven)
+  - [Gradle](#gradle)
+- [Run](#run)
+  - [Maven](#maven)
+  - [Gradle](#gradle)
+- [Testing](#testing)
+  - [Maven](#maven)
+  - [Gradle](#gradle)
+- [Integration with Claude Desktop](#integration-with-claude-desktop)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Project Generation](#project-generation)
+- [Maven pom.xml Template](#maven-pomxml-template)
+- [Gradle build.gradle.kts Template](#gradle-buildgradlekts-template)
+- [McpServerApplication.java Template](#mcpserverapplicationjava-template)
+- [ToolDefinitions.java Template](#tooldefinitionsjava-template)
+- [ToolHandlers.java Template](#toolhandlersjava-template)
+- [ResourceDefinitions.java Template](#resourcedefinitionsjava-template)
+- [ResourceHandlers.java Template](#resourcehandlersjava-template)
+- [PromptDefinitions.java Template](#promptdefinitionsjava-template)
+- [PromptHandlers.java Template](#prompthandlersjava-template)
+- [McpServerTest.java Template](#mcpservertestjava-template)
+- [README.md Template](#readmemd-template)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Build](#build)
+- [Maven](#maven)
+- [Gradle](#gradle)
+- [Run](#run)
+- [Maven](#maven)
+- [Gradle](#gradle)
+- [Testing](#testing)
+- [Maven](#maven)
+- [Gradle](#gradle)
+- [Integration with Claude Desktop](#integration-with-claude-desktop)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Template References](#template-references)
+
+
+
+
+## Java MCP Server Generator
 
 Generate a complete, production-ready MCP server in Java using the official Java SDK with Maven or Gradle.
 
@@ -61,22 +129,22 @@ import java.util.List;
 
 public class ResourceDefinitions {
 
-    public static List<Resource> getResources() {
-        return List.of(
-            Resource.builder()
-                .name("Example Data")
-                .uri("resource://data/example")
-                .description("Example resource data")
-                .mimeType("application/json")
-                .build(),
-            Resource.builder()
-                .name("Configuration")
-                .uri("resource://config")
-                .description("Server configuration")
-                .mimeType("application/json")
-                .build()
-        );
-    }
+public static List<Resource> getResources() {
+return List.of(
+Resource.builder()
+.name("Example Data")
+.uri("resource://data/example")
+.description("Example resource data")
+.mimeType("application/json")
+.build(),
+Resource.builder()
+.name("Configuration")
+.uri("resource://config")
+.description("Server configuration")
+.mimeType("application/json")
+.build()
+);
+}
 }
 ```
 
@@ -111,7 +179,7 @@ public class ResourceDefinitions {
 ## README.md Template
 
 ````markdown
-# My MCP Server
+## My MCP Server
 
 A Model Context Protocol server built with Java and the official MCP Java SDK.
 
@@ -178,12 +246,12 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-	"mcpServers": {
-		"my-mcp-server": {
-			"command": "java",
-			"args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]
-		}
-	}
+"mcpServers": {
+"my-mcp-server": {
+"command": "java",
+"args": ["-jar", "/path/to/my-mcp-server-1.0.0.jar"]
+}
+}
 }
 ```
 

@@ -1,26 +1,79 @@
 ---
-agent: "agent"
-description: "Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards."
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "extensions",
-    "web/fetch",
-    "githubRepo",
-    "openSimpleBrowser",
-    "problems",
-    "runTasks",
-    "search",
-    "search/searchResults",
-    "runCommands/terminalLastCommand",
-    "runCommands/terminalSelection",
-    "testFailure",
-    "usages",
-    "vscodeAPI",
-  ]
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Documentation Standards](#documentation-standards)
+- [Analysis Instructions](#analysis-instructions)
+- [Language-Specific Optimizations](#language-specific-optimizations)
+- [Error Handling](#error-handling)
+- [Output Format](#output-format)
+- [File Location](#file-location)
+- [Required Documentation Structure](#required-documentation-structure)
+- [1. Component Overview](#1-component-overview)
+  - [Purpose/Responsibility](#purpose/responsibility)
+- [2. Architecture Section](#2-architecture-section)
+- [3. Interface Documentation](#3-interface-documentation)
+- [4. Implementation Details](#4-implementation-details)
+- [5. Usage Examples](#5-usage-examples)
+  - [Basic Usage](#basic-usage)
+  - [Advanced Usage](#advanced-usage)
+- [6. Quality Attributes](#6-quality-attributes)
+- [7. Reference Information](#7-reference-information)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Documentation Standards](#documentation-standards)
+- [Analysis Instructions](#analysis-instructions)
+- [Language-Specific Optimizations](#language-specific-optimizations)
+- [Error Handling](#error-handling)
+- [Output Format](#output-format)
+- [File Location](#file-location)
+- [Required Documentation Structure](#required-documentation-structure)
+- [1. Component Overview](#1-component-overview)
+- [Purpose/Responsibility](#purpose/responsibility)
+- [2. Architecture Section](#2-architecture-section)
+- [3. Interface Documentation](#3-interface-documentation)
+- [4. Implementation Details](#4-implementation-details)
+- [5. Usage Examples](#5-usage-examples)
+- [Basic Usage](#basic-usage)
+- [Advanced Usage](#advanced-usage)
+- [6. Quality Attributes](#6-quality-attributes)
+- [7. Reference Information](#7-reference-information)
+- [Template References](#template-references)
+
+
+
 
 ## Goal
 
@@ -67,12 +120,12 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
 
-# Generate Standard OO Component Documentation
+## Generate Standard OO Component Documentation
 
 Create comprehensive documentation for the object-oriented component(s) at: `${input:ComponentPath}`.
 
@@ -135,7 +188,7 @@ owner: [Optional: Team/Individual responsible for this component]
 tags: [Optional: List of relevant tags or categories, e.g., `component`,`service`,`tool`,`infrastructure`,`documentation`,`architecture` etc]
 ---
 
-# [Component Name] Documentation
+## [Component Name] Documentation
 
 [A short concise introduction to the component and its purpose within the system.]
 
@@ -160,9 +213,9 @@ tags: [Optional: List of relevant tags or categories, e.g., `component`,`service
 - INT-002: Create method/property reference table
 - INT-003: Document events/callbacks/notification mechanisms
 
-| Method/Property | Purpose   | Parameters   | Return Type | Usage Notes |
+| Method/Property | Purpose | Parameters | Return Type | Usage Notes |
 | --------------- | --------- | ------------ | ----------- | ----------- |
-| [Name]          | [Purpose] | [Parameters] | [Type]      | [Notes]     |
+| [Name] | [Purpose] | [Parameters] | [Type] | [Notes] |
 
 ## 4. Implementation Details
 

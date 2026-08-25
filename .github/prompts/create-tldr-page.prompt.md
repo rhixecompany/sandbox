@@ -1,47 +1,89 @@
 ---
-name: create-tldr-page
-title: Create TLDR Page
-description: Create a tldr page from documentation URLs and command examples, requiring both URL and command
-  name.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /create-tldr-page
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /create-tldr-page
-    flags: {}
-    help: Create a tldr page from documentation URLs and command examples, requiring bo...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- documentation
-- frontend
-- generator
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Prompt Parameters](#prompt-parameters)
+  - [Required](#required)
+  - [Optional](#optional)
+- [Usage](#usage)
+- [TemplateUse this template structure when creating tldr pages:](#templateuse-this-template-structure-when-creating-tldr-pages:)
+- [Template Guidelines](#template-guidelines)
+- [Examples](#examples)
+  - [Reference Examples](#reference-examples)
+- [Output Format](#output-format)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Prompt Parameters](#prompt-parameters)
+- [Required](#required)
+- [Optional](#optional)
+- [Usage](#usage)
+- [TemplateUse this template structure when creating tldr pages:](#templateuse-this-template-structure-when-creating-tldr-pages:)
+- [Template Guidelines](#template-guidelines)
+- [Examples](#examples)
+- [Reference Examples](#reference-examples)
+- [Output Format](#output-format)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -90,7 +132,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Overview
@@ -109,7 +151,7 @@ You are an expert technical documentation specialist who creates concise, action
 ### Required
 
 - **Command** - The name of the command or tool (e.g., `git`, `nmcli`, `distrobox-create`)
-- **URL** - Link to authoritative upstream documentation  - If one or more URLs are passed without a preceding `#fetch`, apply #tool:fetch to the first URL  - If ${file} is provided in lieu of a URL, and ${file} has a relevant URL to **command**, then use the data from the file as if fetched from the URL; use the URL extracted from the file when creating the `tldr` page    - If more than one URL is in the file, prompt for which URL should be used for the `tldr` page
+- **URL** - Link to authoritative upstream documentation - If one or more URLs are passed without a preceding `#fetch`, apply #tool:fetch to the first URL - If ${file} is provided in lieu of a URL, and ${file} has a relevant URL to **command**, then use the data from the file as if fetched from the URL; use the URL extracted from the file when creating the `tldr` page - If more than one URL is in the file, prompt for which URL should be used for the `tldr` page
 
 ### Optional
 
@@ -128,7 +170,7 @@ You are an expert technical documentation specialist who creates concise, action
 ## TemplateUse this template structure when creating tldr pages:
 
 ```markdown
-# command
+## command
 
 > Short, snappy description. Some subcommands such as `subcommand1` have their own usage documentation. More information: <https://url-to-upstream.tld>.
 
@@ -243,7 +285,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -251,7 +292,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

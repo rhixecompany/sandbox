@@ -1,51 +1,54 @@
 ---
-name: sync-hermes-opencode
-title: Sync Hermes OpenCode Codex
-description: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes,
-  OpenAI Codex, and OpenCode environments with verification.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /sync-hermes-opencode
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:multi-agent-sync
-- skill:hermes-profiles
-- skill:opencode
-- skill:verification-before-completion
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /sync-hermes-opencode
-    flags: {}
-    help: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructio...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- data
-- ml
-- prompts
-- skills
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Verification Checklist](#verification-checklist)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Workflow](#workflow)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Verification Checklist](#verification-checklist)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Workflow](#workflow)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments with verification.
@@ -57,9 +60,9 @@ Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions 
 - **Progress artifact:** `docs/orchestrator-progress.md`
 - **Verification artifact:** `docs/orchestrator-verification.md`
 - **Agent roots:**
-  - Hermes → `~/AppData/Local/hermes/` (skills/, plugins/, hooks/, profiles/)
-  - OpenAI Codex → `~/.codex/` (agents/*.toml, skills/)
-  - OpenCode → `~/.opencode/` (config) and workspace `opencode.json`
+- Hermes → `~/AppData/Local/hermes/` (skills/, plugins/, hooks/, profiles/)
+- OpenAI Codex → `~/.codex/` (agents/*.toml, skills/)
+- OpenCode → `~/.opencode/` (config) and workspace `opencode.json`
 
 ## Rules
 
@@ -178,7 +181,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

@@ -1,43 +1,84 @@
 ---
-name: mkdocs-translations
-title: MkDocs AI Translator
-description: Generate a language translation for a mkdocs documentation stack.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /mkdocs-translations
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /mkdocs-translations
-    flags: {}
-    help: Generate a language translation for a mkdocs documentation stack.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- documentation
-- generator
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Role](#role)
+- [Required Input](#required-input)
+- [Objective](#objective)
+- [File Listing and Translation Order](#file-listing-and-translation-order)
+- [Folder Structure and Output](#folder-structure-and-output)
+- [Include Path Updates](#include-path-updates)
+- [MkDocs Configuration Update](#mkdocs-configuration-update)
+- [Translation Rules](#translation-rules)
+- [Translating Includes (`docs/docs/includes/en`)](#translating-includes-`docs/docs/includes/en`)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Role](#role)
+- [Required Input](#required-input)
+- [Objective](#objective)
+- [File Listing and Translation Order](#file-listing-and-translation-order)
+- [Folder Structure and Output](#folder-structure-and-output)
+- [Include Path Updates](#include-path-updates)
+- [MkDocs Configuration Update](#mkdocs-configuration-update)
+- [Translation Rules](#translation-rules)
+- [Translating Includes (`docs/docs/includes/en`)](#translating-includes-`docs/docs/includes/en`)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Generate a language translation for a mkdocs documentation stack.
@@ -85,7 +126,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Role
@@ -94,7 +135,7 @@ You are a professional technical writer and translator.
 
 ## Required Input
 
-**Before proceeding, ask the user to specify the target translation language and locale code.**  Examples:
+**Before proceeding, ask the user to specify the target translation language and locale code.** Examples:
 
 - Spanish (`es`)- French (`fr`)- Brazilian Portuguese (`pt-BR`)- Korean (`ko`)Use this value consistently in folder names, translated content paths, and MkDocs configuration updates. Once confirmed, proceed with the instructions below.---
 
@@ -115,17 +156,17 @@ The following is the task list you must complete. Check each item off as it is d
 
 Before starting to create **any** new files, create a new git branch using the terminal command `git checkout -b docs-translation-<language
 
-> `.- Create a new folder under`docs/docs/` named using the ISO 639-1 or locale code provided by the user.    Examples:  - `es` for Spanish  - `fr` for French  - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.
+> `.- Create a new folder under`docs/docs/` named using the ISO 639-1 or locale code provided by the user. Examples: - `es` for Spanish - `fr` for French - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.
 
-- For each translated file:  - Preserve all Markdown formatting, including headings, code blocks, metadata, and links.  - Maintain the original filename.  - Do **not** wrap the translated content in Markdown code blocks.  - Append this line at the end of the file:      _Translated using GitHub Copilot and GPT-4o._  - Save the translated file into the corresponding target language folder.---
+- For each translated file: - Preserve all Markdown formatting, including headings, code blocks, metadata, and links. - Maintain the original filename. - Do **not** wrap the translated content in Markdown code blocks. - Append this line at the end of the file: _Translated using GitHub Copilot and GPT-4o._ - Save the translated file into the corresponding target language folder.---
 
 ## Include Path Updates
 
-- Update include references in files to reflect the new locale.    Example:     `includes/en/introduction-event.md` → `includes/es/introduction-event.md`    Replace `es` with the actual locale code provided by the user.---
+- Update include references in files to reflect the new locale. Example: `includes/en/introduction-event.md` → `includes/es/introduction-event.md` Replace `es` with the actual locale code provided by the user.---
 
 ## MkDocs Configuration Update
 
-- [ ] Modify the `mkdocs.yml` configuration:  - [ ] Add a new `locale` entry under the `i18n` plugin using the target language code.  - [ ] Provide appropriate translations for:    - [ ] `nav_translations`    - [ ] `admonition_translations`---
+- [ ] Modify the `mkdocs.yml` configuration: - [ ] Add a new `locale` entry under the `i18n` plugin using the target language code. - [ ] Provide appropriate translations for: - [ ] `nav_translations` - [ ] `admonition_translations`---
 
 ## Translation Rules
 
@@ -227,7 +268,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

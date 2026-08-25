@@ -1,54 +1,83 @@
 ---
-name: csharp-docs
-title: C# Documentation Best Practices
-description: Ensure that C# types are documented with XML comments and follow best practices for documentation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /csharp-docs
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /csharp-docs
-    flags: {}
-    help: Ensure that C# types are documented with XML comments and follow best practic...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- api
-- csharp
-- documentation
-- dotnet
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Guidance for all APIs](#guidance-for-all-apis)
+- [Method](#method)
+- [Constructors](#constructors)
+- [Properties](#properties)
+- [Exceptions](#exceptions)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Guidance for all APIs](#guidance-for-all-apis)
+- [Method](#method)
+- [Constructors](#constructors)
+- [Properties](#properties)
+- [Exceptions](#exceptions)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Ensure that C# types are documented with XML comments and follow best practices for documentation.
 
-# C# Documentation Best Practices- Public members should be documented with XML comments.
+## C# Documentation Best Practices- Public members should be documented with XML comments.
 
 - It is encouraged to document internal members as well, especially if they are complex or not self-explanatory.
 
@@ -61,16 +90,16 @@ Ensure that C# types are documented with XML comments and follow best practices 
 - Use `<remarks>` for additional information, which can include implementation details, usage notes, or any other relevant context.
 - Use `<see langword>` for language-specific keywords like `null`,`true`,`false`,`int`,`bool`, etc.
 - Use`<c>` for inline code snippets.
-- Use `<example>` for usage examples on how to use the member.  - Use `<code>` for code blocks. `<code>` tags should be placed within an `<example>` tag. Add the language of the code example using the `language` attribute, for example, `<code language="csharp">`.- Use`<see cref>` to reference other types or members inline (in a sentence).- Use `<seealso>` for standalone (not in a sentence) references to other types or members in the "See also" section of the online docs.
-- Use `<inheritdoc/>` to inherit documentation from base classes or interfaces.  - Unless there is major behavior change, in which case you should document the differences.
+- Use `<example>` for usage examples on how to use the member. - Use `<code>` for code blocks. `<code>` tags should be placed within an `<example>` tag. Add the language of the code example using the `language` attribute, for example, `<code language="csharp">`.- Use`<see cref>` to reference other types or members inline (in a sentence).- Use `<seealso>` for standalone (not in a sentence) references to other types or members in the "See also" section of the online docs.
+- Use `<inheritdoc/>` to inherit documentation from base classes or interfaces. - Unless there is major behavior change, in which case you should document the differences.
 
 ## Method
 
-s- Use `<param>` to describe method parameters.  - The description should be a noun phrase that doesn't specify the data type.  - Begin with an introductory article.  - If the parameter is a flag enum, start the description with "A bitwise combination of the enumeration values that specifies...".  - If the parameter is a non-flag enum, start the description with "One of the enumeration values that specifies...".  - If the parameter is a Boolean, the wording should be of the form "`<see langword="true" />` to ...; otherwise, `<see langword="false" />`.".  - If the parameter is an "out" parameter, the wording should be of the form "When this method returns, contains .... This parameter is treated as uninitialized.".- Use `<paramref>` to reference parameter names in documentation.
+s- Use `<param>` to describe method parameters. - The description should be a noun phrase that doesn't specify the data type. - Begin with an introductory article. - If the parameter is a flag enum, start the description with "A bitwise combination of the enumeration values that specifies...". - If the parameter is a non-flag enum, start the description with "One of the enumeration values that specifies...". - If the parameter is a Boolean, the wording should be of the form "`<see langword="true" />` to ...; otherwise, `<see langword="false" />`.". - If the parameter is an "out" parameter, the wording should be of the form "When this method returns, contains .... This parameter is treated as uninitialized.".- Use `<paramref>` to reference parameter names in documentation.
 
 - Use `<typeparam>` to describe type parameters in generic types or methods.
 - Use `<typeparamref>` to reference type parameters in documentation.
-- Use `<returns>` to describe what the method returns.  - The description should be a noun phrase that doesn't specify the data type.  - Begin with an introductory article.  - If the return type is Boolean, the wording should be of the form "`<see langword="true" />` if ...; otherwise, `<see langword="false" />`.".
+- Use `<returns>` to describe what the method returns. - The description should be a noun phrase that doesn't specify the data type. - Begin with an introductory article. - If the return type is Boolean, the wording should be of the form "`<see langword="true" />` if ...; otherwise, `<see langword="false" />`.".
 
 ## Constructors
 
@@ -82,9 +111,9 @@ s- Use `<param>` to describe method parameters.  - The description should be a n
 
 - The `<summary
 
-> ` should start with:  - "Gets or sets..." for a read-write property.  - "Gets..." for a read-only property.  - "Gets [or sets] a value that indicates whether..." for properties that return a Boolean value.
+> ` should start with: - "Gets or sets..." for a read-write property. - "Gets..." for a read-only property. - "Gets [or sets] a value that indicates whether..." for properties that return a Boolean value.
 
-- Use `<value>` to describe the value of the property.  - The description should be a noun phrase that doesn't specify the data type.  - If the property has a default value, add it in a separate sentence, for example, "The default is `<see langword="false" />`".  - If the value type is Boolean, the wording should be of the form "`<see langword="true" />` if ...; otherwise, `<see langword="false" />`. The default is ...".
+- Use `<value>` to describe the value of the property. - The description should be a noun phrase that doesn't specify the data type. - If the property has a default value, add it in a separate sentence, for example, "The default is `<see langword="false" />`". - If the value type is Boolean, the wording should be of the form "`<see langword="true" />` if ...; otherwise, `<see langword="false" />`. The default is ...".
 
 ## Exceptions
 
@@ -94,7 +123,7 @@ s- Use `<param>` to describe method parameters.  - The description should be a n
 
 - Document all exceptions thrown directly by the member.
 - For exceptions thrown by nested members, document only the exceptions users are most likely to encounter.
-- The description of the exception describes the condition under which it's thrown.  - Omit "Thrown if ..." or "If ..." at the beginning of the sentence. Just state the condition directly, for example "An error occurred when accessing a Message Queuing API."
+- The description of the exception describes the condition under which it's thrown. - Omit "Thrown if ..." or "If ..." at the beginning of the sentence. Just state the condition directly, for example "An error occurred when accessing a Message Queuing API."
 
 ## Template References
 
@@ -138,7 +167,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -159,7 +188,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -227,7 +256,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -235,7 +263,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

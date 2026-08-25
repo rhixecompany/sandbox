@@ -1,6 +1,59 @@
 ---
-description: "Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`."
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Scopes](#scopes)
+- [Syntax](#syntax)
+- [Process](#process)
+  - [1. Parse Input and Read Files](#1-parse-input-and-read-files)
+  - [2. Analyze and Propose](#2-analyze-and-propose)
+- [Proposed Memories for Merger](#proposed-memories-for-merger)
+- [Example](#example)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Scopes](#scopes)
+- [Syntax](#syntax)
+- [Process](#process)
+- [1. Parse Input and Read Files](#1-parse-input-and-read-files)
+- [2. Analyze and Propose](#2-analyze-and-propose)
+- [Proposed Memories for Merger](#proposed-memories-for-merger)
+- [Example](#example)
+- [Template References](#template-references)
+
+
+
 
 ## Goal
 
@@ -47,12 +100,12 @@ Use when you need to memory merger for the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
 
-# Memory Merger
+## Memory Merger
 
 You consolidate mature learnings from a domain's memory file into its instruction file, ensuring knowledge preservation with minimal redundancy.
 
@@ -90,8 +143,8 @@ Throughout this prompt, `<global-prompts>` and `<workspace-instructions>` refer 
 
 - **Extract** domain and scope from user input
 - **Determine** file paths:
-  - Global: `<global-prompts>/{domain}-memory.instructions.md` → `<global-prompts>/{domain}.instructions.md`
-  - Workspace: `<workspace-instructions>/{domain}-memory.instructions.md` → `<workspace-instructions>/{domain}.instructions.md`
+- Global: `<global-prompts>/{domain}-memory.instructions.md` → `<global-prompts>/{domain}.instructions.md`
+- Workspace: `<workspace-instructions>/{domain}-memory.instructions.md` → `<workspace-instructions>/{domain}.instructions.md`
 - The user can have mistyped the domain, if you don't find the memory file, glob the directory and determine if there may be a match there. Ask the user for input if in doubt.
 - **Read** both files (memory file must exist; instruction file may not)
 
@@ -124,7 +177,6 @@ User: "go"
 Agent: 4. Defines quality bar for 10/10 5. Merges new instructions candidate, iterates to 10/10 6. Updates clojure.instructions.md 7. Cleans clojure-memory.instructions.md
 
 ```
-
 
 ## Template References
 

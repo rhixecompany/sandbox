@@ -1,47 +1,69 @@
 ---
-name: dev
-title: Task1
-description: The purpose of the prompt is to get my codebase optimized and refactored.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /dev
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /dev
-    flags: {}
-    help: The purpose of the prompt is to get my codebase optimized and refactored.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- configuration
-- debugging
-- performance
-- playwright
-- prompts
-- refactoring
-- testing
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Phase 1](#phase-1)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Phase 1](#phase-1)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -49,7 +71,7 @@ The purpose of the prompt is to get my codebase optimized and refactored.
 
 ## Phase 1
 
-# Task1- list all test in src/backuptests and src/tests then triage- if test already exists, merge intelligently - preserve valuable content while updating outdated sections- Delete src/backuptests and modify playwright.config.mts and vitest.config.mts for this project- modify src/actions/auth.actions.ts to include a custom signOut function- modify src/components/layout/navbar.tsx,src/components/layout/navbar-client.tsx,src/components/layout/nav-user.tsx,src/components/layout/nav-secondary.tsx,src/components/layout/nav-main.tsx,src/components/layout/nav-documents.tsx,src/components/layout/app-sidebar.tsx,src/components/layout/site-header.tsx to handle both authenticated and unauthenticated users with next-auth- list all pages in src/apps and triage- for each page in the list of pages in src/apps modify all of them to use actions in src/actions not dal in src/actions, create a corresponding vitest for all actions and a corresponding playwright test for all pages all test must be basic with valid page navigation and displaying information skip all pages that need authentication in this phase ensure all vitest and playwright test run successfully if a test fails debug by executing the individual failing test# Task2- for each page in the list of pages in src/apps that need authentication create a corresponding playwright test, test must be basic with valid page navigation and displaying information ensure all vitest and playwright test run successfully if a test fails debug by executing the individual failing test
+## Task1- list all test in src/backuptests and src/tests then triage- if test already exists, merge intelligently - preserve valuable content while updating outdated sections- Delete src/backuptests and modify playwright.config.mts and vitest.config.mts for this project- modify src/actions/auth.actions.ts to include a custom signOut function- modify src/components/layout/navbar.tsx,src/components/layout/navbar-client.tsx,src/components/layout/nav-user.tsx,src/components/layout/nav-secondary.tsx,src/components/layout/nav-main.tsx,src/components/layout/nav-documents.tsx,src/components/layout/app-sidebar.tsx,src/components/layout/site-header.tsx to handle both authenticated and unauthenticated users with next-auth- list all pages in src/apps and triage- for each page in the list of pages in src/apps modify all of them to use actions in src/actions not dal in src/actions, create a corresponding vitest for all actions and a corresponding playwright test for all pages all test must be basic with valid page navigation and displaying information skip all pages that need authentication in this phase ensure all vitest and playwright test run successfully if a test fails debug by executing the individual failing test# Task2- for each page in the list of pages in src/apps that need authentication create a corresponding playwright test, test must be basic with valid page navigation and displaying information ensure all vitest and playwright test run successfully if a test fails debug by executing the individual failing test
 
 ## Template References
 
@@ -93,7 +115,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -114,7 +136,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -182,7 +204,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -190,7 +211,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

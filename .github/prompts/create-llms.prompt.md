@@ -1,26 +1,75 @@
 ---
-agent: "agent"
-description: "Create an llms.txt file from scratch based on repository structure following the llms.txt specification at https://llmstxt.org/"
-tools:
-  [
-    "changes",
-    "search/codebase",
-    "edit/editFiles",
-    "extensions",
-    "web/fetch",
-    "githubRepo",
-    "openSimpleBrowser",
-    "problems",
-    "runTasks",
-    "search",
-    "search/searchResults",
-    "runCommands/terminalLastCommand",
-    "runCommands/terminalSelection",
-    "testFailure",
-    "usages",
-    "vscodeAPI",
-  ]
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Primary Directive](#primary-directive)
+- [Analysis and Planning Phase](#analysis-and-planning-phase)
+- [Implementation Requirements](#implementation-requirements)
+- [Execution Steps](#execution-steps)
+- [Quality Assurance](#quality-assurance)
+  - [Format Validation](#format-validation)
+  - [Content Validation](#content-validation)
+  - [Specification Compliance](#specification-compliance)
+- [Example Structure Template](#example-structure-template)
+- [Documentation](#documentation)
+- [Specifications](#specifications)
+- [Examples](#examples)
+- [Configuration](#configuration)
+- [Optional](#optional)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Primary Directive](#primary-directive)
+- [Analysis and Planning Phase](#analysis-and-planning-phase)
+- [Implementation Requirements](#implementation-requirements)
+- [Execution Steps](#execution-steps)
+- [Quality Assurance](#quality-assurance)
+- [Format Validation](#format-validation)
+- [Content Validation](#content-validation)
+- [Specification Compliance](#specification-compliance)
+- [Example Structure Template](#example-structure-template)
+- [Documentation](#documentation)
+- [Specifications](#specifications)
+- [Examples](#examples)
+- [Configuration](#configuration)
+- [Optional](#optional)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+
+
+
 
 ## Goal
 
@@ -67,12 +116,12 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
 
-# Create LLMs.txt File from Repository Structure
+## Create LLMs.txt File from Repository Structure
 
 Create a new `llms.txt` file from scratch in the root of the repository following the official llms.txt specification at https://llmstxt.org/. This file provides high-level guidance to large language models (LLMs) on where to find relevant content for understanding the repository's purpose and specifications.
 
@@ -133,7 +182,7 @@ Create a comprehensive `llms.txt` file that serves as an entry point for LLMs to
 ## Example Structure Template
 
 ```txt
-# [Repository Name]
+## [Repository Name]
 
 > [Concise description of the repository's purpose and scope]
 

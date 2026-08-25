@@ -1,82 +1,67 @@
 ---
-name: general
-title: General Development Workflow
-description: General development workflow for analysis, planning, implementation, and verification with
-  context mapping and AI-assisted execution.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /general
-toolsets:
-- file
-- terminal
-skills:
-- introspection-only-general
-- no-git-delete
-- no-net-fetch
-- skills-tools-preflight-check
-- context-map
-- brainstorming
-- plans-and-specs
-- dispatching-parallel-agents
-- subagent-driven-development
-- systematic-debugging
-- simplify
-- context7
-- plan
-- writing-skills
-- acpx-executor
-dependencies:
-- prompt:context-map.prompt.md
-- prompt:update-implementation-plan.prompt.md
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:dispatching-parallel-agents
-- skill:subagent-driven-development
-- skill:systematic-debugging
-- skill:simplify
-- skill:context7
-- skill:plan
-- skill:writing-skills
-- skill:acpx-executor
-- tool:terminal
-- tool:search_files
-- tool:web_search
-- tool:delegate_task
-- skill:introspection-only-general
-- skill:no-git-delete
-- skill:no-net-fetch
-- skill:skills-tools-preflight-check
-- skill:context-map
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /general
-    flags: {}
-    help: General development workflow for analysis, planning, implementation, and veri...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- ml
-- planning
-- prompts
-- typescript
-- workflow
-- documentation
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Analyze](#phase-1:-analyze)
+  - [Phase 2: Plan](#phase-2:-plan)
+  - [Phase 3: Execute](#phase-3:-execute)
+  - [Phase 4: Verify](#phase-4:-verify)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Analyze](#phase-1:-analyze)
+- [Phase 2: Plan](#phase-2:-plan)
+- [Phase 3: Execute](#phase-3:-execute)
+- [Phase 4: Verify](#phase-4:-verify)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
@@ -220,7 +205,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

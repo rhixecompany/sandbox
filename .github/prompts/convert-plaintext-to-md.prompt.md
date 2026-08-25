@@ -1,57 +1,69 @@
 ---
-name: convert-plaintext-to-md
-title: Convert Plaintext to Markdown
-description: Convert plaintext documentation to properly formatted markdown using explicit instructions,
-  documented options, or reference files.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /convert-plaintext-to-md
-toolsets:
-- file
-- terminal
-- web
-skills:
-- enhance-markdown
-- context-map
-dependencies:
-- skill:enhance-markdown
-- skill:context-map
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /convert-plaintext-to-md
-    flags: {}
-    help: Convert plaintext documentation to properly formatted markdown using explicit...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- conversion
-- documentation
-- markdown
-- ml
-- prompts
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Parameters](#parameters)
+- [Predefined Instructions](#predefined-instructions)
+- [Reference](#reference)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Parameters](#parameters)
+- [Predefined Instructions](#predefined-instructions)
+- [Reference](#reference)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
 Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.
 
-# convert-plaintext-to-md> Convert a text-based document to markdown following explicit instructions, documented options, or a reference file as a template.
+## convert-plaintext-to-md> Convert a text-based document to markdown following explicit instructions, documented options, or a reference file as a template.
 
 ## Context
 
@@ -74,7 +86,7 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Run `/context-map` before conversion to map source, destination, and dependency impact.
-- Preserve all technical content accurately - do not modify data unless instructions clearly specify
+- Preserve all technical content accurately - do not modify data unless instructions specify
 - Use markdown best practices: proper headers, lists, code blocks, and other elements
 - Follow the prompt literally and prefer evidence from the current workspace
 - Keep the response structured, deterministic, and easy to act on
@@ -191,7 +203,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

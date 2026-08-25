@@ -1,46 +1,93 @@
 ---
-name: gen-specs-as-issues
-title: 'Product Manager Assistant: Feature Identification and Specification'
-description: This workflow guides you through a systematic approach to identify missing features, prioritize
-  them, and create detailed specifications for implementation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /gen-specs-as-issues
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /gen-specs-as-issues
-    flags: {}
-    help: This workflow guides you through a systematic approach to identify missing fe...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [1. Project Understanding Phase](#1-project-understanding-phase)
+- [2. Gap Analysis Phase](#2-gap-analysis-phase)
+- [3. Prioritization Phase](#3-prioritization-phase)
+- [4. Specification Development Phase](#4-specification-development-phase)
+- [5. GitHub Issue Creation Phase](#5-github-issue-creation-phase)
+- [Overview](#overview)
+- [Scope](#scope)
+- [Technical Requirements](#technical-requirements)
+- [Implementation Plan](#implementation-plan)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Priority](#priority)
+- [Dependencies](#dependencies)
+- [Implementation Size](#implementation-size)
+- [5.5 Work Distribution Optimization](#55-work-distribution-optimization)
+- [6. Final Review Phase](#6-final-review-phase)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [1. Project Understanding Phase](#1-project-understanding-phase)
+- [2. Gap Analysis Phase](#2-gap-analysis-phase)
+- [3. Prioritization Phase](#3-prioritization-phase)
+- [4. Specification Development Phase](#4-specification-development-phase)
+- [5. GitHub Issue Creation Phase](#5-github-issue-creation-phase)
+- [Overview](#overview)
+- [Scope](#scope)
+- [Technical Requirements](#technical-requirements)
+- [Implementation Plan](#implementation-plan)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Priority](#priority)
+- [Dependencies](#dependencies)
+- [Implementation Size](#implementation-size)
+- [5.5 Work Distribution Optimization](#55-work-distribution-optimization)
+- [6. Final Review Phase](#6-final-review-phase)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
@@ -89,16 +136,16 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## 1. Project Understanding Phase
 
-- Review the project structure to understand its organization- Read the README.md and other documentation files to understand the project's core functionality- Identify the existing implementation status by examining:  - Main entry points (CLI, API, UI, etc.)  - Core modules and their functionality  - Tests to understand expected behavior  - Any placeholder implementations**Guiding Questions:**- What is the primary purpose of this project?- What user problems does it solve?- What patterns exist in the current implementation?- Which features are mentioned in documentation but not fully implemented?
+- Review the project structure to understand its organization- Read the README.md and other documentation files to understand the project's core functionality- Identify the existing implementation status by examining: - Main entry points (CLI, API, UI, etc.) - Core modules and their functionality - Tests to understand expected behavior - Any placeholder implementations**Guiding Questions:**- What is the primary purpose of this project?- What user problems does it solve?- What patterns exist in the current implementation?- Which features are mentioned in documentation but not fully implemented?
 
 ## 2. Gap Analysis Phase
 
-- Compare the documented capabilities ONLY against the actual implementation- Identify "placeholder" code that lacks real functionality- Look for features mentioned in documentation but missing robust implementation- Consider the user journey and identify broken or missing steps- Focus on core functionality first (not nice-to-have features)**Output Creation:**- Create a list of potential missing features (5-7 items)- For each feature, note:  - Current implementation status  - References in documentation  - Impact on user experience if missing
+- Compare the documented capabilities ONLY against the actual implementation- Identify "placeholder" code that lacks real functionality- Look for features mentioned in documentation but missing strong implementation- Consider the user journey and identify broken or missing steps- Focus on core functionality first (not nice-to-have features)**Output Creation:**- Create a list of potential missing features (5-7 items)- For each feature, note: - Current implementation status - References in documentation - Impact on user experience if missing
 
 ## 3. Prioritization Phase
 
@@ -114,7 +161,7 @@ Use when you need to work on the current workspace or task.
 
 ## 5. GitHub Issue Creation Phase
 
-- For each specification, create a GitHub issue:  - Clear, descriptive title  - Comprehensive specification in the body  - Appropriate labels (enhancement, high-priority, etc.)  - Explicitly mention MVP philosophy where relevant**Issue Template Structure:**# [Feature Name]
+- For each specification, create a GitHub issue: - Clear, descriptive title - Comprehensive specification in the body - Appropriate labels (enhancement, high-priority, etc.) - Explicitly mention MVP philosophy where relevant**Issue Template Structure:**# [Feature Name]
 
 ## Overview
 
@@ -242,7 +289,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

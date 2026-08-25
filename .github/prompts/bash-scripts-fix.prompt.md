@@ -1,44 +1,70 @@
 ---
-name: bash-scripts-fix
-title: Bash Scripts Modernization and Consolidation
-description: No description
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /bash-scripts-fix
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: default
-    mcp_servers:
-    - filesystem
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /bash-scripts-fix
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:debug
-- language:bash
-- language:typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Catalog all scripts](#phase-1:-catalog-all-scripts)
+  - [Phase 2: Create the implementation plan](#phase-2:-create-the-implementation-plan)
+  - [Phase 3: Review and fix](#phase-3:-review-and-fix)
+  - [Phase 4: Verify and clean up](#phase-4:-verify-and-clean-up)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Implementation Plan Reference](#implementation-plan-reference)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Catalog all scripts](#phase-1:-catalog-all-scripts)
+- [Phase 2: Create the implementation plan](#phase-2:-create-the-implementation-plan)
+- [Phase 3: Review and fix](#phase-3:-review-and-fix)
+- [Phase 4: Verify and clean up](#phase-4:-verify-and-clean-up)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Implementation Plan Reference](#implementation-plan-reference)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.
@@ -67,7 +93,7 @@ Use this prompt when the workspace has mixed bash, PowerShell, BAT, andTypeScrip
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
-1. All operational scripts should end up under `projects/Bash/**` unless a framework seed   script is exempt.
+1. All operational scripts should end up under `projects/Bash/**` unless a framework seed script is exempt.
 2. Request user confirmation before deleting migrated originals after parity validation passes.
 3. Keep dry-run behavior aligned with real execution.
 4. Require peer review for AST-sensitive TypeScript changes.
@@ -130,7 +156,7 @@ Confirm parity, remove migrated originals, and validate the final commandsurface
 
 ## Implementation Plan Reference
 
-> Full plan: `_archive/bash-scripts-fix.prompts.txt` (lines 156–310)If `_archive/bash-scripts-fix.prompts.txt` is missing, use the inline7-phase plan below and continue without halting.The 7-phase remediation plan:| Phase | Purpose                                                 | Depends On || ----- | ------------------------------------------------------- | ---------- || 1     | Rebuild inventory (`docs/bash-scripts-list-context.md`) | —          || 2     | Triage: orchestrators / logic / utilities / dead code   | Phase 1    || 3     | Define canonical orchestration contract                 | Phases 1–2 || 4     | TypeScript consolidation + AST-safe refactors           | Phase 3    || 5     | Package/command surface updates                         | Phase 4    || 6     | Verification design + acceptance criteria               | Phases 3–5 || 7:    | Execution sequencing: Bash → Banking → Comicwise        | Phase 6    |**Recommended approach**: Hybrid staged migration — normalize wrappers first, then migrate duplicated logic to TypeScript in controlled batches.**Key risks**:- Inventory file absent → rebuild first- Wrapper shell semantics differ per platform → test parity- Undocumented workflows → inventory before deleting**Core script baselines**: `projects/projects/Bash/upgrade.sh`, `projects/projects/Bash/Banking/scripts/orchestrator.sh/.bat/.ps1`, `projects/projects/Bash/comicwise/dev.sh/.ps1`
+> Full plan: `_archive/bash-scripts-fix.prompts.txt` (lines 156–310)If `_archive/bash-scripts-fix.prompts.txt` is missing, use the inline7-phase plan below and continue without halting.The 7-phase remediation plan:| Phase | Purpose | Depends On || ----- | ------------------------------------------------------- | ---------- || 1 | Rebuild inventory (`docs/bash-scripts-list-context.md`) | — || 2 | Triage: orchestrators / logic / utilities / dead code | Phase 1 || 3 | Define canonical orchestration contract | Phases 1–2 || 4 | TypeScript consolidation + AST-safe refactors | Phase 3 || 5 | Package/command surface updates | Phase 4 || 6 | Verification design + acceptance criteria | Phases 3–5 || 7: | Execution sequencing: Bash → Banking → Comicwise | Phase 6 |**Recommended approach**: Hybrid staged migration — normalize wrappers first, then migrate duplicated logic to TypeScript in controlled batches.**Key risks**:- Inventory file absent → rebuild first- Wrapper shell semantics differ per platform → test parity- Undocumented workflows → inventory before deleting**Core script baselines**: `projects/projects/Bash/upgrade.sh`, `projects/projects/Bash/Banking/scripts/orchestrator.sh/.bat/.ps1`, `projects/projects/Bash/comicwise/dev.sh/.ps1`
 
 ## Personas
 
@@ -196,7 +222,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -204,5 +229,4 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 

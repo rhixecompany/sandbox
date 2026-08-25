@@ -1,44 +1,70 @@
 ---
-name: code-review
-title: Code Review
-description: No description
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /code-review
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers:
-    - ast-grep
-    - filesystem
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /code-review
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:code-quality
-- domain:dev
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Scope and Risk Mapping](#phase-1:-scope-and-risk-mapping)
+  - [Phase 2: Deep Review](#phase-2:-deep-review)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Scope and Risk Mapping](#phase-1:-scope-and-risk-mapping)
+- [Phase 2: Deep Review](#phase-2:-deep-review)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
@@ -70,7 +96,7 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 
 - Reviewer: Treats correctness and regressions as first priority, style as secondary.
 - Security Checker: Looks for unsafe trust boundaries, privilege mistakes, and missing validation.
-- Test Checker: Ensures new and changed behavior is covered by deterministic tests.
+- Test Checker: Ensures new and changed behavior covered deterministic tests.
 
 ## Rules
 
@@ -177,7 +203,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -186,11 +211,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
-
 ## Related Prompts
 
 Same-family prompts:
 
 - [`code-exemplars-blueprint-generator.prompt.md`](code-exemplars-blueprint-generator.prompt.md)
-
 

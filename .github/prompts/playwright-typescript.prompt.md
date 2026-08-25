@@ -1,44 +1,70 @@
 ---
-name: playwright-typescript
-title: Playwright Typescript
-description: Comprehensive Playwright TypeScript prompt aligned to repository testing standards.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /playwright-typescript
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /playwright-typescript
-    flags: {}
-    help: Comprehensive Playwright TypeScript prompt aligned to repository testing stan...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- playwright
-- prompts
-- skills
-- testing
-- typescript
-- frontend
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Scenario and Test Design](#phase-1:-scenario-and-test-design)
+  - [Phase 2: Test Implementation](#phase-2:-test-implementation)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Scenario and Test Design](#phase-1:-scenario-and-test-design)
+- [Phase 2: Test Implementation](#phase-2:-test-implementation)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.
@@ -64,7 +90,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 
 | Subagent | Role | When to Use || --
 
-- | --- | --- || Test Author | Writes structured Playwright tests | Always || Locator Auditor | Ensures robust user-facing locator choices | Locator-heavy tests || Stability Checker | Identifies flake and timing anti-patterns | Failing or intermittent tests |
+- | --- | --- || Test Author | Writes structured Playwright tests | Always || Locator Auditor | Ensures strong user-facing locator choices | Locator-heavy tests || Stability Checker | Identifies flake and timing anti-patterns | Failing or intermittent tests |
 
 ## Personas
 
@@ -91,7 +117,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 ## Steps
 
 1. Define scenario and expected outcomes.
-2. Choose robust, accessible locators.
+2. Choose strong, accessible locators.
 3. Implement tests with explicit action/assertion steps.
 4. Run tests and inspect failures.
 5. Iterate to stable green execution.
@@ -115,7 +141,7 @@ Use this prompt when creating or updating Playwright tests in the tests director
 ## Actions Summary
 
 1. Design behavior-driven scenarios.
-2. Implement robust Playwright tests.
+2. Implement strong Playwright tests.
 3. Run and stabilize.
 4. Deliver passing tests with clear intent.
 
@@ -177,7 +203,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -185,7 +210,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

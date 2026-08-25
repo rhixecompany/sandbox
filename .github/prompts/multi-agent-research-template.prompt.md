@@ -1,49 +1,94 @@
 ---
-name: multi-agent-research-template
-title: Multi-Agent Research and Implementation Template
-description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets
-  while factoring out the shared workflow.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /multi-agent-research-template
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /multi-agent-research-template
-    flags: {}
-    help: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current rese...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- frontend
-- ml
-- planning
-- prompts
-- skills
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Skills Required](#skills-required)
+- [Template Variables](#template-variables)
+- [Agent Mapping](#agent-mapping)
+- [Shared Rules](#shared-rules)
+- [Core Workflow](#core-workflow)
+- [Default Research Targets](#default-research-targets)
+- [Phase 1: Skills Discovery and Audit](#phase-1:-skills-discovery-and-audit)
+- [Phase 2: MCP Server and Tool Research](#phase-2:-mcp-server-and-tool-research)
+- [Phase 3: Hermes Docs and Ecosystem](#phase-3:-hermes-docs-and-ecosystem)
+- [Phase 4: Profiles and Workspace Markdown](#phase-4:-profiles-and-workspace-markdown)
+- [Phase 5: Docs Inventory](#phase-5:-docs-inventory)
+- [Phase 6: Configuration Hierarchy Audit](#phase-6:-configuration-hierarchy-audit)
+- [Output Requirements](#output-requirements)
+- [Verification Gates](#verification-gates)
+- [Verification Checklist](#verification-checklist)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Skills Required](#skills-required)
+- [Template Variables](#template-variables)
+- [Agent Mapping](#agent-mapping)
+- [Shared Rules](#shared-rules)
+- [Core Workflow](#core-workflow)
+- [Default Research Targets](#default-research-targets)
+- [Phase 1: Skills Discovery and Audit](#phase-1:-skills-discovery-and-audit)
+- [Phase 2: MCP Server and Tool Research](#phase-2:-mcp-server-and-tool-research)
+- [Phase 3: Hermes Docs and Ecosystem](#phase-3:-hermes-docs-and-ecosystem)
+- [Phase 4: Profiles and Workspace Markdown](#phase-4:-profiles-and-workspace-markdown)
+- [Phase 5: Docs Inventory](#phase-5:-docs-inventory)
+- [Phase 6: Configuration Hierarchy Audit](#phase-6:-configuration-hierarchy-audit)
+- [Output Requirements](#output-requirements)
+- [Verification Gates](#verification-gates)
+- [Verification Checklist](#verification-checklist)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets while factoring out the shared workflow.
@@ -64,7 +109,7 @@ Reusable prompt for Codex, Copilot, and Hermes. It preserves the current researc
 
 <!-- Template variables use Jinja2-style {{var}} syntax --
 
-> | Variable | Value || ---------- | ------- || `{{workspace_root}}` | `` `$HOME/Desktop/SandBox` `` (resolves to `C:\Users\Alexa\Desktop\SandBox`) || `{{docs_root}}` | `` `docs/` `` || `{{agent_name}}` | `Codex` \| `Copilot` \| `Hermes` || `{{native_plan}}` | the active agent's planning or update command || `{{native_search}}` | the active agent's search command || `{{native_extract}}` | the active agent's content extraction command || `{{native_files}}` | the active agent's file read/write command |
+> | Variable | Value || ---------- | ------- || `{{workspace_root}}` | ``$HOME/Desktop/SandBox`` (resolves to `C:\Users\Alexa\Desktop\SandBox`) || `{{docs_root}}` | ``docs/`` || `{{agent_name}}` | `Codex` \| `Copilot` \| `Hermes` || `{{native_plan}}` | the active agent's planning or update command || `{{native_search}}` | the active agent's search command || `{{native_extract}}` | the active agent's content extraction command || `{{native_files}}` | the active agent's file read/write command |
 
 ## Agent Mapping
 
@@ -140,7 +185,7 @@ Research these sources and extract each page into Markdown:
 - [ ] List all plugin hooks, tools, and skills.
 - [ ] Create missing items when needed.
 - [ ] Verify and enhance existing items when they are already present.
-- [ ] Validate the configuration hierarchy in this order:  `.hermes.md` -
+- [ ] Validate the configuration hierarchy in this order: `.hermes.md` -
 
 > `AGENTS.md` -
 > `CLAUDE.md` -
@@ -150,7 +195,7 @@ Research these sources and extract each page into Markdown:
 
 | # | Requirement | Description || --
 
-- | ------------- | ------------- || 1 | Preserve targets | Preserve the current research targets. || 2 | Reusable workflow | Keep the workflow reusable by changing only the template variables. || 3 | Markdown output | Use Markdown for extracted docs, indexes, and notes. || 4 | Strict sequence | Keep the sequence strict: plan → research → extract → plan update → implement → verify. || 5 | Report blockers | Report blockers clearly if any native capability is unavailable. |
+- | ------------- | ------------- || 1 | Preserve targets | Preserve the current research targets. || 2 | Reusable workflow | Keep the workflow reusable by changing only the template variables. || 3 | Markdown output | Use Markdown for extracted docs, indexes, and notes. || 4 | Strict sequence | Keep the sequence strict: plan → research → extract → plan update → implement → verify. || 5 | Report blockers | Report blockers if any native capability is unavailable. |
 
 ## Verification Gates
 
@@ -208,7 +253,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -229,7 +274,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -275,7 +320,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -283,7 +327,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

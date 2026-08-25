@@ -1,46 +1,91 @@
 ---
-name: kotlin-springboot
-title: Spring Boot with Kotlin Best Practices
-description: Get best practices for developing applications with Spring Boot and Kotlin.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /kotlin-springboot
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: exec-assistant
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /kotlin-springboot
-    flags: {}
-    help: Get best practices for developing applications with Spring Boot and Kotlin.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- frontend
-- ml
-- prompts
-- spring
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Project Setup & Structure](#project-setup-&-structure)
+- [Dependency Injection & Components](#dependency-injection-&-components)
+- [Configuration](#configuration)
+- [Web Layer (Controllers)](#web-layer-controllers)
+- [Service Layer](#service-layer)
+- [Data Layer (Repositories)](#data-layer-repositories)
+- [Logging](#logging)
+- [Test](#test)
+- [Coroutines & Asynchronous Programming](#coroutines-&-asynchronous-programming)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Project Setup & Structure](#project-setup-&-structure)
+- [Dependency Injection & Components](#dependency-injection-&-components)
+- [Configuration](#configuration)
+- [Web Layer (Controllers)](#web-layer-controllers)
+- [Service Layer](#service-layer)
+- [Data Layer (Repositories)](#data-layer-repositories)
+- [Logging](#logging)
+- [Test](#test)
+- [Coroutines & Asynchronous Programming](#coroutines-&-asynchronous-programming)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Get best practices for developing applications with Spring Boot and Kotlin.
 
-# Spring Boot with Kotlin Best PracticesYour goal is to help me write high-quality, idiomatic Spring Boot applications using Kotlin.
+## Spring Boot with Kotlin Best PracticesYour goal is to help me write high-quality, idiomatic Spring Boot applications using Kotlin.
 
 ## Project Setup & Structure
 
@@ -77,12 +122,12 @@ Get best practices for developing applications with Spring Boot and Kotlin.
 ## Data Layer (Repositories)
 
 - **JPA Entities:** Define entities as classes. Remember they must be `open`. It's highly recommended to use the `kotlin-jpa` compiler plugin to handle this automatically.
-- **Null Safety:** Leverage Kotlin's null-safety (`?`) to clearly define which entity fields are optional or required at the type level.
-- **Spring Data JPA:** Use Spring Data JPA repositories by extending `JpaRepository` or `CrudRepository`.- **Coroutines:** For reactive applications, leverage Spring Boot's support for Kotlin Coroutines in the data layer.
+- **Null Safety:** use Kotlin's null-safety (`?`) to define which entity fields are optional or required at the type level.
+- **Spring Data JPA:** Use Spring Data JPA repositories by extending `JpaRepository` or `CrudRepository`.- **Coroutines:** For reactive applications, use Spring Boot's support for Kotlin Coroutines in the data layer.
 
 ## Logging
 
-- **Companion Object Logger:** The idiomatic way to declare a logger is in a companion object.  ```kotlin  companion object {      private val logger = LoggerFactory.getLogger(MyClass::class.java)  }```- **Parameterized Logging:** Use parameterized messages (`logger.info("Processing user {}...", userId)`) for performance and clarity.
+- **Companion Object Logger:** The idiomatic way to declare a logger is in a companion object. ```kotlin companion object { private val logger = LoggerFactory.getLogger(MyClass::class.java) }```- **Parameterized Logging:** Use parameterized messages (`logger.info("Processing user {}...", userId)`) for performance and clarity.
 
 ## Test
 
@@ -140,7 +185,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -161,7 +206,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -229,7 +274,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -237,7 +281,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

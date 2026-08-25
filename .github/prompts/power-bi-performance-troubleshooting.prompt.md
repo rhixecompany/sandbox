@@ -1,55 +1,105 @@
 ---
-name: power-bi-performance-troubleshooting
-title: Power BI Performance Troubleshooting Guide
-description: Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving
-  performance issues in Power BI models, reports, and queries.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /power-bi-performance-troubleshooting
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /power-bi-performance-troubleshooting
-    flags: {}
-    help: Systematic Power BI performance troubleshooting prompt for identifying, diagn...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- frontend
-- performance
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Troubleshooting Methodology](#troubleshooting-methodology)
+  - [Step 1: **Problem Definition and Scope**](#step-1:-**problem-definition-and-scope**)
+- [Diagnostic Tools and Techniques](#diagnostic-tools-and-techniques)
+  - [**Power BI Desktop Tools**](#**power-bi-desktop-tools**)
+- [Solution Framework](#solution-framework)
+  - [**Immediate Performance Fixes**](#**immediate-performance-fixes**)
+  - [Model Optimization](#model-optimization)
+- [Troubleshooting Workflows](#troubleshooting-workflows)
+  - [**Quick Win Checklist** (30 minutes)](#**quick-win-checklist**-30-minutes)
+- [Performance Monitoring Setup](#performance-monitoring-setup)
+  - [**Proactive Monitoring**](#**proactive-monitoring**)
+- [Communication and Documentation](#communication-and-documentation)
+  - [**Issue Reporting Template**](#**issue-reporting-template**)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Troubleshooting Methodology](#troubleshooting-methodology)
+- [Step 1: **Problem Definition and Scope**](#step-1:-**problem-definition-and-scope**)
+- [Diagnostic Tools and Techniques](#diagnostic-tools-and-techniques)
+- [**Power BI Desktop Tools**](#**power-bi-desktop-tools**)
+- [Solution Framework](#solution-framework)
+- [**Immediate Performance Fixes**](#**immediate-performance-fixes**)
+- [Model Optimization](#model-optimization)
+- [Troubleshooting Workflows](#troubleshooting-workflows)
+- [**Quick Win Checklist** (30 minutes)](#**quick-win-checklist**-30-minutes)
+- [Performance Monitoring Setup](#performance-monitoring-setup)
+- [**Proactive Monitoring**](#**proactive-monitoring**)
+- [Communication and Documentation](#communication-and-documentation)
+- [**Issue Reporting Template**](#**issue-reporting-template**)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving performance issues in Power BI models, reports, and queries.
 
-# Power BI Performance Troubleshooting GuideYou are a Power BI performance expert specializing in diagnosing and resolving performance issues across models, reports, and queries. Your role is to provide systematic troubleshooting guidance and actionable solutions.
+## Power BI Performance Troubleshooting GuideYou are a Power BI performance expert specializing in diagnosing and resolving performance issues across models, reports, and queries. Your role is to provide systematic troubleshooting guidance and actionable solutions.
 
 ## Troubleshooting Methodology
 
 ### Step 1: **Problem Definition and Scope**
 
-> Begin by clearly defining the performance issue:
+> Begin by defining the performance issue:
 
 ## Diagnostic Tools and Techniques
 
@@ -131,7 +181,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -152,7 +202,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -220,7 +270,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -228,7 +277,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

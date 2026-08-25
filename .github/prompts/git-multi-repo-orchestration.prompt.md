@@ -1,61 +1,73 @@
 ---
-name: git-multi-repo-orchestration
-title: Git Multi-Repo Orchestration
-description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close
-  PRs (gh pr create, review-then-merge), merge directly into development, and sync to production across
-  all repos in ./projects.
-version: 1.0.0
-license: MIT
-author: Alexa
-trigger: /git-multi-repo-orchestration
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:gh-cli
-- skill:git-commit
-- skill:git-helper
-- skill:git-submodule-workflow
-- skill:github-pr-workflow
-- skill:github-repo-management
-- skill:github-code-review
-- skill:finishing-a-development-branch
-- skill:git-history-preserving-migration
-- skill:workspace-audit
-- skill:repo-management
-- tool:mcp-github
-formatter: default
-plan: plans/git-multi-repo-orchestration.md
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /git-multi-repo-orchestration
-    flags: {}
-    help: Load and use all git skills to run add/commit/push, submodule sync, create/up...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- frontend
-- git
-- prompts
-- skills
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Skill Bundle](#skill-bundle)
+- [Workflow](#workflow)
+  - [Phase 0: Inventory](#phase-0:-inventory)
+  - [Phase 1: Commit & Push to Development](#phase-1:-commit-&-push-to-development)
+  - [Phase 2: Submodule Sync](#phase-2:-submodule-sync)
+- [Phase 3: PR Lifecycle — Review-Then-Merge](#phase-3:-pr-lifecycle-—-review-then-merge)
+- [Test Plan](#test-plan)
+  - [Phase 4: Development → Production Sync](#phase-4:-development-→-production-sync)
+  - [Phase 5: Verification](#phase-5:-verification)
+- [Rules](#rules)
+- [Verification](#verification)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Skills Required](#skills-required)
+- [Dependencies](#dependencies)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Skill Bundle](#skill-bundle)
+- [Workflow](#workflow)
+- [Phase 0: Inventory](#phase-0:-inventory)
+- [Phase 1: Commit & Push to Development](#phase-1:-commit-&-push-to-development)
+- [Phase 2: Submodule Sync](#phase-2:-submodule-sync)
+- [Phase 3: PR Lifecycle — Review-Then-Merge](#phase-3:-pr-lifecycle-—-review-then-merge)
+- [Test Plan](#test-plan)
+- [Phase 4: Development → Production Sync](#phase-4:-development-→-production-sync)
+- [Phase 5: Verification](#phase-5:-verification)
+- [Rules](#rules)
+- [Verification](#verification)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Skills Required](#skills-required)
+- [Dependencies](#dependencies)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -114,28 +126,28 @@ git push origin development
 git submodule foreach 'git status --short && git fetch origin'
 git submodule update --remote development
 git submodule sync
-# From SandBox root, AFTER child pushes:
+## From SandBox root, AFTER child pushes:
 git add projects/* && git commit -m "chore(submodules): bump project pointers"
 git push origin development
 ```
 
-### Phase 3: PR Lifecycle — Review-Then-Merge
+## Phase 3: PR Lifecycle — Review-Then-Merge
 
 ```bash
 git checkout -b feat/<description> development
-# make changes, commit, push
+## make changes, commit, push
 git push -u origin HEAD
 
 gh pr create \
-  --title "feat: <description>" \
-  --body "## Summary
+--title "feat: <description>" \
+--body "## Summary
 - <change 1>
 - <change 2>
 
 ## Test Plan
 - [ ] CI green
 - [ ] Reviewed" \
-  --base development
+--base development
 ```
 
 - **Update:** `gh pr edit <N> --title ... --body ...`
@@ -161,9 +173,9 @@ git checkout development
 
 ```bash
 for d in projects/*/; do
-  [ -d "$d/.git" ] || continue
-  cd "$d" && echo "== ${d#projects/}: $(git branch --show-current) | $(git status --short | wc -l) dirty"
-  cd ~/Desktop/SandBox
+[ -d "$d/.git" ] || continue
+cd "$d" && echo "== ${d#projects/}: $(git branch --show-current) | $(git status --short | wc -l) dirty"
+cd ~/Desktop/SandBox
 done
 git submodule status | grep -v '^ ' && echo "SUBMODULES DIRTY" || echo "SUBMODULES CLEAN"
 gh pr list --state open --limit 50
@@ -271,7 +283,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -279,7 +290,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

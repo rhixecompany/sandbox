@@ -43,13 +43,13 @@
 
 ### Bun vs Node.js for CLI Tools
 
-| Factor | Bun | Node.js |
-| -------- | ----- | --------- |
-| Cold start | ~1.2 ms | ~45 ms |
-| TypeScript execution | Native, full syntax | Type stripping (no enums/namespaces by default) |
-| Single-binary compilation | `bun build --compile` (stable) | SEA (experimental) |
-| Package install speed | ~5× faster | Baseline |
-| Ecosystem maturity | Good (90%+ compatibility) | Excellent (decade of hardening) |
+| Factor                    | Bun                            | Node.js                                         |
+| ------------------------- | ------------------------------ | ----------------------------------------------- |
+| Cold start                | ~1.2 ms                        | ~45 ms                                          |
+| TypeScript execution      | Native, full syntax            | Type stripping (no enums/namespaces by default) |
+| Single-binary compilation | `bun build --compile` (stable) | SEA (experimental)                              |
+| Package install speed     | ~5× faster                     | Baseline                                        |
+| Ecosystem maturity        | Good (90%+ compatibility)      | Excellent (decade of hardening)                 |
 
 **Verdict for Resume_maker:** Bun is an excellent choice for a CLI tool — fast cold start, native TypeScript, and single-binary distribution.
 
@@ -121,15 +121,15 @@ const args = Bun.argv.slice(2); // Remove 'bun' and script path
 import { parseArgs } from "util";
 
 const { values, positionals } = parseArgs({
-  args: Bun.argv.slice(2),
-  options: {
-    input:  { type: "string", short: "i" },
-    output: { type: "string", short: "o", default: "./output" },
-    format: { type: "string", short: "f", default: "both" },
-    help:   { type: "boolean", short: "h" },
-  },
-  strict: true,
-  allowPositionals: true,
+	args: Bun.argv.slice(2),
+	options: {
+		input: { type: "string", short: "i" },
+		output: { type: "string", short: "o", default: "./output" },
+		format: { type: "string", short: "f", default: "both" },
+		help: { type: "boolean", short: "h" },
+	},
+	strict: true,
+	allowPositionals: true,
 });
 ```
 
@@ -139,20 +139,20 @@ const { values, positionals } = parseArgs({
 type CommandHandler = (args: string[]) => Promise<void> | void;
 
 interface Command {
-  name: string;
-  description: string;
-  handler: CommandHandler;
+	name: string;
+	description: string;
+	handler: CommandHandler;
 }
 
 const commands: Command[] = [
-  { name: "resume", description: "Generate resume document", handler: handleResume },
-  { name: "cover-letter", description: "Generate cover letter", handler: handleCoverLetter },
+	{ name: "resume", description: "Generate resume document", handler: handleResume },
+	{ name: "cover-letter", description: "Generate cover letter", handler: handleCoverLetter },
 ];
 
 async function main() {
-  const args = Bun.argv.slice(2);
-  const commandName = args[0];
-  // ... dispatch to command handler ...
+	const args = Bun.argv.slice(2);
+	const commandName = args[0];
+	// ... dispatch to command handler ...
 }
 ```
 
@@ -162,11 +162,11 @@ async function main() {
 const isColorSupported = process.stdout.isTTY;
 
 export const colors = {
-  red:    (text: string) => isColorSupported ? `\x1b[31m${text}\x1b[0m` : text,
-  green:  (text: string) => isColorSupported ? `\x1b[32m${text}\x1b[0m` : text,
-  yellow: (text: string) => isColorSupported ? `\x1b[33m${text}\x1b[0m` : text,
-  cyan:   (text: string) => isColorSupported ? `\x1b[36m${text}\x1b[0m` : text,
-  bold:   (text: string) => isColorSupported ? `\x1b[1m${text}\x1b[0m` : text,
+	red: (text: string) => (isColorSupported ? `\x1b[31m${text}\x1b[0m` : text),
+	green: (text: string) => (isColorSupported ? `\x1b[32m${text}\x1b[0m` : text),
+	yellow: (text: string) => (isColorSupported ? `\x1b[33m${text}\x1b[0m` : text),
+	cyan: (text: string) => (isColorSupported ? `\x1b[36m${text}\x1b[0m` : text),
+	bold: (text: string) => (isColorSupported ? `\x1b[1m${text}\x1b[0m` : text),
 };
 ```
 
@@ -197,16 +197,16 @@ bun build --compile --target=bun-windows-x64 ./index.ts --outfile resume-maker
 
 ```json
 {
-  "compilerOptions": {
-    "strict": true,
-    "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+	"compilerOptions": {
+		"strict": true,
+		"skipLibCheck": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noPropertyAccessFromIndexSignature": false
+	}
 }
 ```
 
@@ -214,12 +214,12 @@ bun build --compile --target=bun-windows-x64 ./index.ts --outfile resume-maker
 
 Consider enabling these additional flags for maximum safety:
 
-| Flag | Effect | Recommendation |
-| ------ | -------- | --------------- |
-| `noUnusedLocals: true` | Error on unused variables | ✅ Enable (catches dead code) |
-| `noUnusedParameters: true` | Error on unused params | ✅ Enable (prefix unused with `_`) |
-| `noPropertyAccessFromIndexSignature: true` | Force `obj["key"]` for index signatures | Optional |
-| `exactOptionalPropertyTypes: true` | Stricter optional property handling | ✅ Enable for data processing |
+| Flag                                       | Effect                                  | Recommendation                     |
+| ------------------------------------------ | --------------------------------------- | ---------------------------------- |
+| `noUnusedLocals: true`                     | Error on unused variables               | ✅ Enable (catches dead code)      |
+| `noUnusedParameters: true`                 | Error on unused params                  | ✅ Enable (prefix unused with `_`) |
+| `noPropertyAccessFromIndexSignature: true` | Force `obj["key"]` for index signatures | Optional                           |
+| `exactOptionalPropertyTypes: true`         | Stricter optional property handling     | ✅ Enable for data processing      |
 
 ### Strict Mode Family (`strict: true` enables all)
 
@@ -292,22 +292,26 @@ Zod is the industry-standard TypeScript-first validation library. Resume_maker r
 import { z } from "zod";
 
 const ResumeSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email"),
-  phone: z.string().optional(),
-  experience: z.array(z.object({
-    company: z.string().min(1),
-    title: z.string().min(1),
-    startDate: z.string(),
-    endDate: z.string().optional(),
-    highlights: z.array(z.string()),
-  })),
-  education: z.array(z.object({
-    institution: z.string().min(1),
-    degree: z.string(),
-    year: z.string(),
-  })),
-  skills: z.array(z.string()),
+	name: z.string().min(1, "Name is required"),
+	email: z.string().email("Invalid email"),
+	phone: z.string().optional(),
+	experience: z.array(
+		z.object({
+			company: z.string().min(1),
+			title: z.string().min(1),
+			startDate: z.string(),
+			endDate: z.string().optional(),
+			highlights: z.array(z.string()),
+		}),
+	),
+	education: z.array(
+		z.object({
+			institution: z.string().min(1),
+			degree: z.string(),
+			year: z.string(),
+		}),
+	),
+	skills: z.array(z.string()),
 });
 
 type ResumeData = z.infer<typeof ResumeSchema>;
@@ -315,8 +319,8 @@ type ResumeData = z.infer<typeof ResumeSchema>;
 // Validate input
 const result = ResumeSchema.safeParse(inputData);
 if (!result.success) {
-  console.error("Validation errors:", result.error.issues);
-  process.exit(1);
+	console.error("Validation errors:", result.error.issues);
+	process.exit(1);
 }
 // result.data is fully typed as ResumeData
 ```
@@ -345,13 +349,13 @@ The project already uses `markdown-pdf` (v11). This package:
 
 ### Alternatives & Considerations
 
-| Library | Method | Pros | Cons |
-| --------- | -------- | ------ | ------ |
-| **markdown-pdf** (current) | marked + Puppeteer | Proven, customizable CSS | Requires Chromium binary (~300 MB) |
-| **md-to-pdf** | marked + Puppeteer | Similar, actively maintained | Same Chromium dependency |
-| **Pandoc** | LaTeX/HTML engine | Best output quality | Heavy system dependency |
-| **Typst** | Native typesetting | Modern, fast, beautiful output | Newer ecosystem |
-| **Bun-native** | Custom HTML → PDF via BC | No extra dep | Not yet built in |
+| Library                    | Method                   | Pros                           | Cons                               |
+| -------------------------- | ------------------------ | ------------------------------ | ---------------------------------- |
+| **markdown-pdf** (current) | marked + Puppeteer       | Proven, customizable CSS       | Requires Chromium binary (~300 MB) |
+| **md-to-pdf**              | marked + Puppeteer       | Similar, actively maintained   | Same Chromium dependency           |
+| **Pandoc**                 | LaTeX/HTML engine        | Best output quality            | Heavy system dependency            |
+| **Typst**                  | Native typesetting       | Modern, fast, beautiful output | Newer ecosystem                    |
+| **Bun-native**             | Custom HTML → PDF via BC | No extra dep                   | Not yet built in                   |
 
 ### Performance Note
 
@@ -365,14 +369,23 @@ Puppeteer-based conversion (markdown-pdf) has a ~300 MB Chromium installation ov
 ```css
 /* PDF styles for markdown-pdf */
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 11pt;
-  line-height: 1.5;
-  color: #333;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11pt;
+	line-height: 1.5;
+	color: #333;
 }
-h1 { font-size: 18pt; color: #1a1a1a; border-bottom: 2px solid #333; }
-h2 { font-size: 14pt; color: #444; }
-@page { margin: 0.75in; }
+h1 {
+	font-size: 18pt;
+	color: #1a1a1a;
+	border-bottom: 2px solid #333;
+}
+h2 {
+	font-size: 14pt;
+	color: #444;
+}
+@page {
+	margin: 0.75in;
+}
 ```
 
 ---
@@ -437,9 +450,9 @@ Since Resume_maker is a local CLI tool processing user-provided JSON files, the 
 import { resolve, relative } from "path";
 
 function isWithinProjectDirectory(userPath: string): boolean {
-  const resolved = resolve(userPath);
-  const projectRoot = resolve(".");
-  return relative(projectRoot, resolved).startsWith("..") === false;
+	const resolved = resolve(userPath);
+	const projectRoot = resolve(".");
+	return relative(projectRoot, resolved).startsWith("..") === false;
 }
 ```
 
@@ -478,13 +491,13 @@ function isWithinProjectDirectory(userPath: string): boolean {
 
 ### Resume Builders & Generators
 
-| Project | Stack | Approach |
-| --------- | ------- | ---------- |
-| **OpenResume** | React, Next.js, TypeScript | Web-based resume builder + parser. Most popular open-source option. |
-| **Reactive Resume** | Vue.js, Node | Open-source builder with clean PDF exports. |
-| **JSON Resume** | JSON Schema + CLI + themes | Schema-driven — define resume as JSON, render with themes. Similar approach to Resume_maker. |
-| **RenderCV** | Python (Typst) | YAML → PDF. High-quality output but Python-based. |
-| **MarkdownResume** | Markdown → PDF | Write in Markdown, export ATS-friendly PDF. Conceptually closest. |
+| Project             | Stack                      | Approach                                                                                     |
+| ------------------- | -------------------------- | -------------------------------------------------------------------------------------------- |
+| **OpenResume**      | React, Next.js, TypeScript | Web-based resume builder + parser. Most popular open-source option.                          |
+| **Reactive Resume** | Vue.js, Node               | Open-source builder with clean PDF exports.                                                  |
+| **JSON Resume**     | JSON Schema + CLI + themes | Schema-driven — define resume as JSON, render with themes. Similar approach to Resume_maker. |
+| **RenderCV**        | Python (Typst)             | YAML → PDF. High-quality output but Python-based.                                            |
+| **MarkdownResume**  | Markdown → PDF             | Write in Markdown, export ATS-friendly PDF. Conceptually closest.                            |
 
 ### Key Differences for Resume_maker
 
@@ -542,4 +555,4 @@ JSON Resume's community-driven schema (`https://jsonresume.org/schema/`) is well
 
 ---
 
-*Research compiled from multiple sources including bun.sh, oneuptime.com, strapi.io, dev.to, tech-insider.org, angelo-lima.fr, and GitHub topic pages. All information reflects runtime/library versions as of mid-2026.*
+_Research compiled from multiple sources including bun.sh, oneuptime.com, strapi.io, dev.to, tech-insider.org, angelo-lima.fr, and GitHub topic pages. All information reflects runtime/library versions as of mid-2026._

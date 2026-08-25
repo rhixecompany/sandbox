@@ -1,53 +1,70 @@
 ---
-name: uk-earnings-research-pipeline
-title: UK Earnings Research Pipeline — Better Than Outlier & Attapoll
-description: Comprehensive research pipeline using stacked skills to identify superior UK earning platforms,
-  leveraging all prior session data and MCP tools.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /uk-earnings-research-pipeline
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:using-superpowers
-- skill:user-communication-preferences
-- skill:brainstorming
-- skill:subagent-driven-development
-- skill:plan
-- skill:plans-and-specs
-- skill:web-research-pipeline
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /uk-earnings-research-pipeline
-    flags: {}
-    help: Comprehensive research pipeline using stacked skills to identify superior UK ...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- data
-- frontend
-- mcp
-- prompts
-- skills
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 0: Context Recovery & Inventory (MANDATORY FIRST)](#phase-0:-context-recovery-&-inventory-mandatory-first)
+  - [Phase 1: Systematic Platform Discovery](#phase-1:-systematic-platform-discovery)
+  - [Phase 2: Rigorous Filtering & Scoring](#phase-2:-rigorous-filtering-&-scoring)
+  - [Phase 3: Deep Validation (Top 20 Platforms)](#phase-3:-deep-validation-top-20-platforms)
+  - [Phase 4: Output Generation — Complete Execution Kit](#phase-4:-output-generation-—-complete-execution-kit)
+  - [Phase 5: Verification & Handoff](#phase-5:-verification-&-handoff)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Subgoals](#subgoals)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 0: Context Recovery & Inventory (MANDATORY FIRST)](#phase-0:-context-recovery-&-inventory-mandatory-first)
+- [Phase 1: Systematic Platform Discovery](#phase-1:-systematic-platform-discovery)
+- [Phase 2: Rigorous Filtering & Scoring](#phase-2:-rigorous-filtering-&-scoring)
+- [Phase 3: Deep Validation (Top 20 Platforms)](#phase-3:-deep-validation-top-20-platforms)
+- [Phase 4: Output Generation — Complete Execution Kit](#phase-4:-output-generation-—-complete-execution-kit)
+- [Phase 5: Verification & Handoff](#phase-5:-verification-&-handoff)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Subgoals](#subgoals)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 **Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, UK-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.
@@ -96,7 +113,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 2. **Parallel first** — Dispatch subagents for independent categories simultaneously
 3. **Smallest safe change** — Update files incrementally, verify each write
 4. **Verify before claim** — Test trackers open in Excel, validate links resolve
-5. **Report blockers** — State clearly when a platform lacks verifiable data
+5. **Report blockers** — State when a platform lacks verifiable data
 
 ## Phases
 
@@ -245,7 +262,6 @@ The following MCP servers and tools are available. Use them in preference to nat
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -253,7 +269,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

@@ -10,11 +10,11 @@
 
 ## Architecture
 
-| Property | Value |
-|----------|-------|
-| **Type** | CLI document generator (JSON → Markdown + PDF) |
-| **Pattern** | Pipeline Processing — parse → validate → normalize → generate → convert |
-| **Entry Point** | `index.ts` |
+| Property        | Value                                                                   |
+| --------------- | ----------------------------------------------------------------------- |
+| **Type**        | CLI document generator (JSON → Markdown + PDF)                          |
+| **Pattern**     | Pipeline Processing — parse → validate → normalize → generate → convert |
+| **Entry Point** | `index.ts`                                                              |
 
 Generates job-hunting documents (resume, cover letter, LinkedIn guide, interview prep) from structured JSON input. Bun-first, zero framework dependencies.
 
@@ -22,14 +22,14 @@ Generates job-hunting documents (resume, cover letter, LinkedIn guide, interview
 
 ## Technology Stack
 
-| Layer | Technology |
-|-------|------------|
-| **Runtime** | Bun 1.3.14+ |
-| **Language** | TypeScript (strict) |
-| **Output** | Markdown + PDF (via `markdown-pdf`) |
-| **Validation** | Zod schemas in `validateResumeData()` |
-| **Linting** | ESLint + Prettier + markdownlint + cspell |
-| **Testing** | Smoke test script + snapshot tests |
+| Layer          | Technology                                |
+| -------------- | ----------------------------------------- |
+| **Runtime**    | Bun 1.3.14+                               |
+| **Language**   | TypeScript (strict)                       |
+| **Output**     | Markdown + PDF (via `markdown-pdf`)       |
+| **Validation** | Zod schemas in `validateResumeData()`     |
+| **Linting**    | ESLint + Prettier + markdownlint + cspell |
+| **Testing**    | Smoke test script + snapshot tests        |
 
 ---
 
@@ -89,52 +89,52 @@ bun run test                    # Smoke test
 ```typescript
 // types.ts
 interface ResumeData {
-  personal: {
-    name: string
-    email: string
-    phone: string
-    location: string
-    linkedin: string
-    github: string
-    website?: string
-    summary: string
-  }
-  experience: Array<{
-    company: string
-    role: string
-    startDate: string
-    endDate?: string
-    description: string[]
-    technologies: string[]
-  }>
-  education: Array<{
-    institution: string
-    degree: string
-    field: string
-    graduationDate: string
-    honors?: string[]
-  }>
-  skills: {
-    languages: string[]
-    frameworks: string[]
-    tools: string[]
-    databases: string[]
-    cloud: string[]
-    other: string[]
-  }
-  projects: Array<{
-    name: string
-    description: string
-    technologies: string[]
-    url?: string
-    github?: string
-  }>
-  certifications?: Array<{
-    name: string
-    issuer: string
-    date: string
-    url?: string
-  }>
+	personal: {
+		name: string;
+		email: string;
+		phone: string;
+		location: string;
+		linkedin: string;
+		github: string;
+		website?: string;
+		summary: string;
+	};
+	experience: Array<{
+		company: string;
+		role: string;
+		startDate: string;
+		endDate?: string;
+		description: string[];
+		technologies: string[];
+	}>;
+	education: Array<{
+		institution: string;
+		degree: string;
+		field: string;
+		graduationDate: string;
+		honors?: string[];
+	}>;
+	skills: {
+		languages: string[];
+		frameworks: string[];
+		tools: string[];
+		databases: string[];
+		cloud: string[];
+		other: string[];
+	};
+	projects: Array<{
+		name: string;
+		description: string;
+		technologies: string[];
+		url?: string;
+		github?: string;
+	}>;
+	certifications?: Array<{
+		name: string;
+		issuer: string;
+		date: string;
+		url?: string;
+	}>;
 }
 ```
 
@@ -142,12 +142,12 @@ interface ResumeData {
 
 ## Output Documents
 
-| Document | Description |
-|----------|-------------|
-| **Resume** | Professional resume with all sections |
-| **Cover Letter** | Tailored per job (template-based) |
-| **LinkedIn Guide** | Profile optimization checklist |
-| **Interview Prep** | STAR method questions + answers |
+| Document           | Description                           |
+| ------------------ | ------------------------------------- |
+| **Resume**         | Professional resume with all sections |
+| **Cover Letter**   | Tailored per job (template-based)     |
+| **LinkedIn Guide** | Profile optimization checklist        |
+| **Interview Prep** | STAR method questions + answers       |
 
 ---
 
@@ -160,12 +160,12 @@ interface ResumeData {
 
 ## Vulnerabilities (July 2025)
 
-| Package | Severity | Issue |
-|---------|----------|-------|
-| `markdown-pdf` | HIGH | XSS → local file read (GHSA-qghr-877h-f9jh) |
-| `qs` | MODERATE | DoS via arrayLimit bypass (GHSA-6rw7-vpxm-498p) |
-| `tough-cookie` | MODERATE | Prototype pollution (GHSA-72xf-g2v4-qvf3) |
-| `brace-expansion` | HIGH | DoS exponential expansion (GHSA-3jxr-9vmj-r5cp) |
+| Package           | Severity | Issue                                           |
+| ----------------- | -------- | ----------------------------------------------- |
+| `markdown-pdf`    | HIGH     | XSS → local file read (GHSA-qghr-877h-f9jh)     |
+| `qs`              | MODERATE | DoS via arrayLimit bypass (GHSA-6rw7-vpxm-498p) |
+| `tough-cookie`    | MODERATE | Prototype pollution (GHSA-72xf-g2v4-qvf3)       |
+| `brace-expansion` | HIGH     | DoS exponential expansion (GHSA-3jxr-9vmj-r5cp) |
 
 **Action Required:** Replace `markdown-pdf` or upgrade when fixed.
 

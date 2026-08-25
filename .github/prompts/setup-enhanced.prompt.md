@@ -1,88 +1,113 @@
 ---
-name: setup-enhanced.prompt
-title: Setup Enhanced.Prompt
-description: Auto-generated prompt for /setup-enhanced.prompt
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /setup-enhanced.prompt
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: exec-assistant
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /setup-enhanced.prompt
-    flags: {}
-    help: Auto-generated prompt for /setup-enhanced.prompt
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
-name: setup-enhanced
-title: ComicWise — AI Agent Setup & Implementation Guide
-description: Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY practices.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /setup-enhanced
-toolsets:
-- file
-- terminal
-skills:
-- subagent-driven-development
-dependencies:
-- skill:subagent-driven-development
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /setup-enhanced
-    flags: {}
-    help: Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DR...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
-tags:
-- agent-type:hermes
-- agents
-- backend
-- configuration
-- data
-- database
-- frontend
-- ml
-- prompts
-- setup
-- sql
-- typescript
-- workflow
-- linting
-scripts: []
+# Table of Contents
+
+- [Goal](#goal)
+- [1. 🚀 Quick Start](#1-🚀-quick-start)
+- [2. ✅ Quality Gate (Before Every PR)](#2-✅-quality-gate-before-every-pr)
+- [3. 📚 Reference Resolution Hierarchy](#3-📚-reference-resolution-hierarchy)
+  - [Tier 1 — Latest Standards (Primary)](#tier-1-—-latest-standards-primary)
+- [4. 🔧 DRY Implementation Practices](#4-🔧-dry-implementation-practices)
+  - [Strategy 1: DAL Classes — Parameterized Query Methods](#strategy-1:-dal-classes-—-parameterized-query-methods)
+- [5. 📋 Implementation Workflow (10 Steps)](#5-📋-implementation-workflow-10-steps)
+  - [Step 1: Search & Document](#step-1:-search-&-document)
+- [6. 🏗️ Feature Implementation Phases](#6-🏗️-feature-implementation-phases)
+  - [Phase 1: Foundation](#phase-1:-foundation)
+- [7. 🔗 Content Integration Rules (DRY Enforcement)](#7-🔗-content-integration-rules-dry-enforcement)
+  - [When Adding Documentation](#when-adding-documentation)
+- [8. 🧭 How to Use This Guide](#8-🧭-how-to-use-this-guide)
+  - [For New Features](#for-new-features)
+  - [For Bug Fixes](#for-bug-fixes)
+  - [For Questions](#for-questions)
+- [9. 🎭 AI Personas for Copilot CLI](#9-🎭-ai-personas-for-copilot-cli)
+  - [Architect Persona](#architect-persona)
+- [10. 🔄 Anti-Rate-Limiting Strategy](#10-🔄-anti-rate-limiting-strategy)
+  - [Chunked Execution](#chunked-execution)
+- [11. 📋 Phase Execution Checklists](#11-📋-phase-execution-checklists)
+  - [Phase 1: Foundation](#phase-1:-foundation)
+- [12. 📖 Full Reference Files](#12-📖-full-reference-files)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [1. 🚀 Quick Start](#1-🚀-quick-start)
+- [2. ✅ Quality Gate (Before Every PR)](#2-✅-quality-gate-before-every-pr)
+- [3. 📚 Reference Resolution Hierarchy](#3-📚-reference-resolution-hierarchy)
+- [Tier 1 — Latest Standards (Primary)](#tier-1-—-latest-standards-primary)
+- [4. 🔧 DRY Implementation Practices](#4-🔧-dry-implementation-practices)
+- [Strategy 1: DAL Classes — Parameterized Query Methods](#strategy-1:-dal-classes-—-parameterized-query-methods)
+- [5. 📋 Implementation Workflow (10 Steps)](#5-📋-implementation-workflow-10-steps)
+- [Step 1: Search & Document](#step-1:-search-&-document)
+- [6. 🏗️ Feature Implementation Phases](#6-🏗️-feature-implementation-phases)
+- [Phase 1: Foundation](#phase-1:-foundation)
+- [7. 🔗 Content Integration Rules (DRY Enforcement)](#7-🔗-content-integration-rules-dry-enforcement)
+- [When Adding Documentation](#when-adding-documentation)
+- [8. 🧭 How to Use This Guide](#8-🧭-how-to-use-this-guide)
+- [For New Features](#for-new-features)
+- [For Bug Fixes](#for-bug-fixes)
+- [For Questions](#for-questions)
+- [9. 🎭 AI Personas for Copilot CLI](#9-🎭-ai-personas-for-copilot-cli)
+- [Architect Persona](#architect-persona)
+- [10. 🔄 Anti-Rate-Limiting Strategy](#10-🔄-anti-rate-limiting-strategy)
+- [Chunked Execution](#chunked-execution)
+- [11. 📋 Phase Execution Checklists](#11-📋-phase-execution-checklists)
+- [Phase 1: Foundation](#phase-1:-foundation)
+- [12. 📖 Full Reference Files](#12-📖-full-reference-files)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -91,17 +116,17 @@ Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY
 ## 1. 🚀 Quick Start
 
 ```bash
-pnpm install                              # Install dependenciescp .env.local.example .env.local          # Configure DATABASE_URL, AUTH_SECRETpnpm db:push                              # Apply schema to databasepnpm type-check                           # Verify zero TypeScript errorspnpm dev                                  # Start dev server (port 3000)```---
+pnpm install # Install dependenciescp .env.local.example .env.local # Configure DATABASE_URL, AUTH_SECRETpnpm db:push # Apply schema to databasepnpm type-check # Verify zero TypeScript errorspnpm dev # Start dev server (port 3000)```---
 
 ```
 
 ## 2. ✅ Quality Gate (Before Every PR)
 
 ```bash
-pnpm type-check          # 0 TypeScript errors required
-pnpm lint:fix            # ESLint + Prettier auto-fix
-pnpm test                # Vitest unit tests (jsdom)
-pnpm build               # Production build validation
+pnpm type-check # 0 TypeScript errors required
+pnpm lint:fix # ESLint + Prettier auto-fix
+pnpm test # Vitest unit tests (jsdom)
+pnpm build # Production build validation
 ```
 
 All four commands must pass before merging any code.
@@ -226,7 +251,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -247,7 +272,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -315,7 +340,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -323,7 +347,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

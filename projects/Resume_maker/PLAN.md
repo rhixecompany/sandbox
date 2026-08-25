@@ -7,6 +7,7 @@ status: in_progress
 created: 2026-08-01
 tags: [plan, repo]
 ---
+
 # Resume_maker — Plan
 
 ## Overview

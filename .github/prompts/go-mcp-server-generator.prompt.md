@@ -1,54 +1,109 @@
 ---
-name: go-mcp-server-generator
-title: Go MCP Server Project Generator
-description: Generate a complete Go MCP server project with proper structure, dependencies, and implementation
-  using the official github.com/modelcontextprotocol/go-sdk.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /go-mcp-server-generator
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /go-mcp-server-generator
-    flags: {}
-    help: Generate a complete Go MCP server project with proper structure, dependencies...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- backend
-- configuration
-- frontend
-- generator
-- git
-- go
-- mcp
-- prompts
-- typescript
-- documentation
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Project Requirements](#project-requirements)
+- [Template Structure](#template-structure)
+- [go.mod Template](#gomod-template)
+- [main.go Template](#maingo-template)
+- [tools/tool1.go Template](#tools/tool1go-template)
+- [tools/registry.go Template](#tools/registrygo-template)
+- [config/config.go Template](#config/configgo-template)
+- [main_test.go Template](#main_testgo-template)
+- [README.md Template](#readmemd-template)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Available Tools](#available-tools)
+  - [tool1](#tool1)
+- [Development](#development)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Best Practices](#best-practices)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Project Requirements](#project-requirements)
+- [Template Structure](#template-structure)
+- [go.mod Template](#gomod-template)
+- [main.go Template](#maingo-template)
+- [tools/tool1.go Template](#tools/tool1go-template)
+- [tools/registry.go Template](#tools/registrygo-template)
+- [config/config.go Template](#config/configgo-template)
+- [main_test.go Template](#main_testgo-template)
+- [README.md Template](#readmemd-template)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Available Tools](#available-tools)
+- [tool1](#tool1)
+- [Development](#development)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Best Practices](#best-practices)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Generate a complete Go MCP server project with proper structure, dependencies, and implementation using the official github.com/modelcontextprotocol/go-sdk.
 
-# Go MCP Server Project GeneratorGenerate a complete, production-ready Model Context Protocol (MCP) server project in Go.
+## Go MCP Server Project GeneratorGenerate a complete, production-ready Model Context Protocol (MCP) server project in Go.
 
 ## Project Requirements
 
@@ -57,7 +112,7 @@ You will create a Go MCP server with:1. **Project Structure**: Proper Go module 
 ## Template Structure
 
 ```
-myserver/├── go.mod├── go.sum├── main.go├── tools/│   ├── tool1.go│   └── tool2.go├── resources/│   └── resource1.go├── config/│   └── config.go├── README.md└── main_test.go
+myserver/├── go.mod├── go.sum├── main.go├── tools/│ ├── tool1.go│ └── tool2.go├── resources/│ └── resource1.go├── config/│ └── config.go├── README.md└── main_test.go
 ```
 
 ## go.mod Template
@@ -65,7 +120,7 @@ myserver/├── go.mod├── go.sum├── main.go├── tools/│   
 ```go
 module github.com/yourusername/
 
-{PROJECT_NAME}}go 1.23require (    github.com/modelcontextprotocol/go-sdk v1.0.0)
+{PROJECT_NAME}}go 1.23require ( github.com/modelcontextprotocol/go-sdk v1.0.0)
 ```
 
 ## main.go Template
@@ -83,15 +138,15 @@ module github.com/yourusername/
 ## tools/registry.go Template
 
 ```go
-package toolsimport "github.com/modelcontextprotocol/go-sdk/mcp"func RegisterTools(server *mcp.Server) {    RegisterTool1(server)    RegisterTool2(server)    // Register additional tools here}
+package toolsimport "github.com/modelcontextprotocol/go-sdk/mcp"func RegisterTools(server *mcp.Server) { RegisterTool1(server) RegisterTool2(server) // Register additional tools here}
 ```
 
 ## config/config.go Template
 
 ```go
-package configimport "os"type Config struct {    ServerName string    Version    string    LogLevel   string}func Load() *Config {    return &Config{        ServerName: getEnv("SERVER_NAME", "
+package configimport "os"type Config struct { ServerName string Version string LogLevel string}func Load() *Config { return &Config{ ServerName: getEnv("SERVER_NAME", "
 
-{PROJECT_NAME}}"),        Version:    getEnv("VERSION", "v1.0.0"),        LogLevel:   getEnv("LOG_LEVEL", "info"),    }}func getEnv(key, defaultValue string) string {    if value := os.Getenv(key); value != "" {        return value    }    return defaultValue}
+{PROJECT_NAME}}"), Version: getEnv("VERSION", "v1.0.0"), LogLevel: getEnv("LOG_LEVEL", "info"), }}func getEnv(key, defaultValue string) string { if value := os.Getenv(key); value != "" { return value } return defaultValue}
 ```
 
 ## main_test.go Template
@@ -203,7 +258,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -224,7 +279,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Verification Checklist
@@ -298,7 +353,6 @@ Other language variants of this MCP server generator:
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

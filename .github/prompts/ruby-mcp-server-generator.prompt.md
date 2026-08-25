@@ -1,56 +1,123 @@
 ---
-name: ruby-mcp-server-generator
-title: Ruby MCP Server Generator
-description: Generate a complete Model Context Protocol server project in Ruby using the official MCP
-  Ruby SDK gem.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /ruby-mcp-server-generator
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /ruby-mcp-server-generator
-    flags: {}
-    help: Generate a complete Model Context Protocol server project in Ruby using the o...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- backend
-- generator
-- mcp
-- prompts
-- ruby
-- audit
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Project Generation](#project-generation)
+- [Gemfile Template](#gemfile-template)
+- [Rakefile Template](#rakefile-template)
+- [lib/my_mcp_server.rb Template](#lib/my_mcp_serverrb-template)
+- [lib/my_mcp_server/server.rb Template](#lib/my_mcp_server/serverrb-template)
+- [lib/my_mcp_server/tools/greet_tool.rb Template](#lib/my_mcp_server/tools/greet_toolrb-template)
+- [lib/my_mcp_server/tools/calculate_tool.rb Template](#lib/my_mcp_server/tools/calculate_toolrb-template)
+- [lib/my_mcp_server/prompts/code_review_prompt.rb Template](#lib/my_mcp_server/prompts/code_review_promptrb-template)
+- [lib/my_mcp_server/resources/example_resource.rb Template](#lib/my_mcp_server/resources/example_resourcerb-template)
+- [bin/mcp-server Template](#bin/mcp-server-template)
+- [test/test_helper.rb Template](#test/test_helperrb-template)
+- [test/tools/greet_tool_test.rb Template](#test/tools/greet_tool_testrb-template)
+- [test/tools/calculate_tool_test.rb Template](#test/tools/calculate_tool_testrb-template)
+- [README.md Template](#readmemd-template)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Test](#test)
+- [Integration with Claude Desktop](#integration-with-claude-desktop)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Project Generation](#project-generation)
+- [Gemfile Template](#gemfile-template)
+- [Rakefile Template](#rakefile-template)
+- [lib/my_mcp_server.rb Template](#lib/my_mcp_serverrb-template)
+- [lib/my_mcp_server/server.rb Template](#lib/my_mcp_server/serverrb-template)
+- [lib/my_mcp_server/tools/greet_tool.rb Template](#lib/my_mcp_server/tools/greet_toolrb-template)
+- [lib/my_mcp_server/tools/calculate_tool.rb Template](#lib/my_mcp_server/tools/calculate_toolrb-template)
+- [lib/my_mcp_server/prompts/code_review_prompt.rb Template](#lib/my_mcp_server/prompts/code_review_promptrb-template)
+- [lib/my_mcp_server/resources/example_resource.rb Template](#lib/my_mcp_server/resources/example_resourcerb-template)
+- [bin/mcp-server Template](#bin/mcp-server-template)
+- [test/test_helper.rb Template](#test/test_helperrb-template)
+- [test/tools/greet_tool_test.rb Template](#test/tools/greet_tool_testrb-template)
+- [test/tools/calculate_tool_test.rb Template](#test/tools/calculate_tool_testrb-template)
+- [README.md Template](#readmemd-template)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Test](#test)
+- [Integration with Claude Desktop](#integration-with-claude-desktop)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Generate a complete Model Context Protocol server project in Ruby using the official MCP Ruby SDK gem.
 
-# Ruby MCP Server GeneratorGenerate a complete, production-ready MCP server in Ruby using the official Ruby SDK.
+## Ruby MCP Server GeneratorGenerate a complete, production-ready MCP server in Ruby using the official Ruby SDK.
 
 ## Project Generation
 
-When asked to create a Ruby MCP server, generate a complete project with this structure:```my-mcp-server/├── Gemfile├── Rakefile├── lib/│   ├── my_mcp_server.rb│   ├── my_mcp_server/│   │   ├── server.rb│   │   ├── tools/│   │   │   ├── greet_tool.rb│   │   │   └── calculate_tool.rb│   │   ├── prompts/│   │   │   └── code_review_prompt.rb│   │   └── resources/│   │       └── example_resource.rb├── bin/│   └── mcp-server├── test/│   ├── test_helper.rb│   └── tools/│       ├── greet_tool_test.rb│       └── calculate_tool_test.rb└── README.md```
+When asked to create a Ruby MCP server, generate a complete project with this structure:```my-mcp-server/├── Gemfile├── Rakefile├── lib/│ ├── my_mcp_server.rb│ ├── my_mcp_server/│ │ ├── server.rb│ │ ├── tools/│ │ │ ├── greet_tool.rb│ │ │ └── calculate_tool.rb│ │ ├── prompts/│ │ │ └── code_review_prompt.rb│ │ └── resources/│ │ └── example_resource.rb├── bin/│ └── mcp-server├── test/│ ├── test_helper.rb│ └── tools/│ ├── greet_tool_test.rb│ └── calculate_tool_test.rb└── README.md```
 
 ## Gemfile Template
 
@@ -60,9 +127,9 @@ source 'https://rubygems.org'
 gem 'mcp', '~> 0.4.0'
 
 group :development, :test do
-  gem 'minitest', '~> 5.0'
-  gem 'rake', '~> 13.0'
-  gem 'rubocop', '~> 1.50'
+gem 'minitest', '~> 5.0'
+gem 'rake', '~> 13.0'
+gem 'rubocop', '~> 1.50'
 end
 ```
 
@@ -73,9 +140,9 @@ require 'rake/testtask'
 require 'rubocop/rake_task'
 
 Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.libs << 'lib'
-  t.test_files = FileList['test/**/*_test.rb']
+t.libs << 'test'
+t.libs << 'lib'
+t.test_files = FileList['test/**/*_test.rb']
 end
 
 RuboCop::RakeTask.new
@@ -96,7 +163,7 @@ require_relative 'my_mcp_server/prompts/code_review_prompt'
 require_relative 'my_mcp_server/resources/example_resource'
 
 module MyMcpServer
-  VERSION = '1.0.0'
+VERSION = '1.0.0'
 end
 ```
 
@@ -139,15 +206,15 @@ end
 require_relative '../lib/my_mcp_server'
 
 begin
-  server = MyMcpServer::Server.new
-  server.start_stdio
+server = MyMcpServer::Server.new
+server.start_stdio
 rescue Interrupt
-  warn "\nShutting down server..."
-  exit 0
+warn "\nShutting down server..."
+exit 0
 rescue StandardError => e
-  warn "Error: #{e.message}"
-  warn e.backtrace.join("\n")
-  exit 1
+warn "Error: #{e.message}"
+warn e.backtrace.join("\n")
+exit 1
 end
 ```
 
@@ -221,27 +288,27 @@ Run tests:```bashbundle exec rake test```Run linter:```bashbundle exec rake rubo
 
 ## Integration with Claude Desktop
 
-Add to `claude_desktop_config.json`:```json{  "mcpServers": {    "my-mcp-server": {      "command": "bundle",      "args": ["exec", "bin/mcp-server"],      "cwd": "/path/to/my-mcp-server"    }  }}```
+Add to `claude_desktop_config.json`:```json{ "mcpServers": { "my-mcp-server": { "command": "bundle", "args": ["exec", "bin/mcp-server"], "cwd": "/path/to/my-mcp-server" } }}```
 
 ## Project Structure
 
 ```
 my-mcp-server/
-├── Gemfile              # Dependencies
-├── Rakefile             # Build tasks
-├── lib/                 # Source code
-│   ├── my_mcp_server.rb # Main entry point
-│   └── my_mcp_server/   # Module namespace
-│       ├── server.rb    # Server setup
-│       ├── tools/       # Tool implementations
-│       ├── prompts/     # Prompt templates
-│       └── resources/   # Resource handlers
-├── bin/                 # Executables
-│   └── mcp-server       # Stdio server
-├── test/                # Test suite
-│   ├── test_helper.rb   # Test configuration
-│   └── tools/           # Tool tests
-└── README.md            # This file
+├── Gemfile # Dependencies
+├── Rakefile # Build tasks
+├── lib/ # Source code
+│ ├── my_mcp_server.rb # Main entry point
+│ └── my_mcp_server/ # Module namespace
+│ ├── server.rb # Server setup
+│ ├── tools/ # Tool implementations
+│ ├── prompts/ # Prompt templates
+│ └── resources/ # Resource handlers
+├── bin/ # Executables
+│ └── mcp-server # Stdio server
+├── test/ # Test suite
+│ ├── test_helper.rb # Test configuration
+│ └── tools/ # Tool tests
+└── README.md # This file
 ```
 
 ## License
@@ -306,7 +373,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -327,7 +394,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -410,7 +477,6 @@ Other language variants of this MCP server generator:
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

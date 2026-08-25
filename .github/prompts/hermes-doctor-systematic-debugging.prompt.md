@@ -1,52 +1,83 @@
 ---
-name: hermes-doctor-systematic-debugging
-title: Hermes Doctor, Logs, and Systematic Remediation
-description: Run the complete Hermes health and log diagnostic sequence, investigate root causes with
-  systematic-debugging, apply minimal fixes, and verify zero actionable issues remain.
-version: 1.0.0
-license: MIT
-author: Alexa
-trigger: /hermes-doctor-systematic-debugging
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:systematic-debugging
-- skill:hermes-agent
-- skill:hermes-mcp
-- skill:verification-before-completion
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /hermes-doctor-systematic-debugging
-    flags: {}
-    help: Run the complete Hermes health and log diagnostic sequence, investigate root ...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Hermes Doctor and Systematic Remediation
+description: Prompt for hermes doctor and systematic remediation
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- ai-assistant
-- debugging
-- fix
-- frontend
-- ml
-- prompts
-- typescript
-scripts: []
-# Hermes Doctor and Systematic Remediation
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Scope](#scope)
+- [Non-Negotiable Rules](#non-negotiable-rules)
+- [Phase 1 — Establish Runtime Context](#phase-1-—-establish-runtime-context)
+- [Phase 2 — Required Diagnostic Sequence](#phase-2-—-required-diagnostic-sequence)
+- [Phase 3 — Systematic Root-Cause Investigation](#phase-3-—-systematic-root-cause-investigation)
+- [Phase 4 — Remediation](#phase-4-—-remediation)
+- [Phase 5 — Full Verification](#phase-5-—-full-verification)
+- [Failure Handling](#failure-handling)
+- [Completion Report](#completion-report)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Scope](#scope)
+- [Non-Negotiable Rules](#non-negotiable-rules)
+- [Phase 1 — Establish Runtime Context](#phase-1-—-establish-runtime-context)
+- [Phase 2 — Required Diagnostic Sequence](#phase-2-—-required-diagnostic-sequence)
+- [Phase 3 — Systematic Root-Cause Investigation](#phase-3-—-systematic-root-cause-investigation)
+- [Phase 4 — Remediation](#phase-4-—-remediation)
+- [Phase 5 — Full Verification](#phase-5-—-full-verification)
+- [Failure Handling](#failure-handling)
+- [Completion Report](#completion-report)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -67,7 +98,7 @@ The sequence must run in this order. Each command is a gate: do not continue aft
 1. Follow systematic-debugging: root-cause investigation before remediation.
 2. Capture complete command output to a temporary, non-repository diagnostic file; do not dump unbounded logs into the conversation.
 3. Never print or commit secrets, tokens, OAuth values, cookies, or personal message contents. Redact before reporting.
-4. `hermes doctor --fix` is authorized by this prompt, but review the preceding `hermes doctor` findings first.
+4. `hermes doctor --fix` authorized this prompt, but review the preceding `hermes doctor` findings first.
 5. Make one logically independent fix at a time. Re-run the smallest relevant check after each fix.
 6. Do not edit `config.yaml` directly. Use Hermes CLI commands for Hermes configuration changes.
 7. Do not delete logs or session history. Archive only if explicitly required and reversible.
@@ -108,14 +139,14 @@ hermes logs agent
 
 For each command record:
 
-| Field              | Required      |
+| Field | Required |
 | ------------------ | ------------- |
-| Exit code          | Yes           |
-| Errors             | Yes, redacted |
-| Warnings           | Yes, redacted |
-| Auto-fixes         | Yes           |
-| Affected component | Yes           |
-| Evidence path/line | Yes           |
+| Exit code | Yes |
+| Errors | Yes, redacted |
+| Warnings | Yes, redacted |
+| Auto-fixes | Yes |
+| Affected component | Yes |
+| Evidence path/line | Yes |
 
 Use bounded output where supported (`-n`, `--since`) for follow-up inspection. Never use `-f`/follow mode in an automated workflow.
 
@@ -178,7 +209,7 @@ Completion requires:
 - No new non-zero exit codes.
 - No unresolved actionable doctor findings.
 - No recurring active warnings/errors introduced by the fixes.
-- Status reports healthy or clearly explains non-actionable external services.
+- Status reports healthy or explains non-actionable external services.
 - Insights completes without traceback.
 - All expected log targets are readable or their absence is documented as non-actionable.
 - MCP servers remain connected and enabled.
@@ -186,28 +217,28 @@ Completion requires:
 
 ## Failure Handling
 
-| Failure                                            | Response                                                                                |
+| Failure | Response |
 | -------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `doctor` fails                                     | Stop before `--fix`; investigate the exact failure                                      |
-| `doctor --fix` changes state but remains unhealthy | Re-run doctor, isolate the remaining finding, then fix one issue                        |
-| Log target missing                                 | Verify with `hermes logs list`; classify as absent/non-applicable versus broken logging |
-| Permission or file-lock error on Windows           | Identify the locking process and rotation path; do not delete the locked file           |
-| OAuth/API failure                                  | Re-authenticate through the supported Hermes flow; never request a pasted key           |
-| Existing unrelated workspace changes               | Preserve them; do not reset or overwrite                                                |
-| Tool/runtime unavailable                           | Report the exact command, path, exit code, and blocker                                  |
+| `doctor` fails | Stop before `--fix`; investigate the exact failure |
+| `doctor --fix` changes state but remains unhealthy | Re-run doctor, isolate the remaining finding, then fix one issue |
+| Log target missing | Verify with `hermes logs list`; classify as absent/non-applicable versus broken logging |
+| Permission or file-lock error on Windows | Identify the locking process and rotation path; do not delete the locked file |
+| OAuth/API failure | Re-authenticate through the supported Hermes flow; never request a pasted key |
+| Existing unrelated workspace changes | Preserve them; do not reset or overwrite |
+| Tool/runtime unavailable | Report the exact command, path, exit code, and blocker |
 
 ## Completion Report
 
 Return a compact evidence table:
 
-| Component       | Initial state | Root cause | Fix | Final verification |
+| Component | Initial state | Root cause | Fix | Final verification |
 | --------------- | ------------- | ---------- | --- | ------------------ |
-| Doctor          |               |            |     |                    |
-| Status          |               |            |     |                    |
-| Insights        |               |            |     |                    |
-| Logs            |               |            |     |                    |
-| MCP             |               |            |     |                    |
-| Profiles/config |               |            |     |                    |
+| Doctor | | | | |
+| Status | | | | |
+| Insights | | | | |
+| Logs | | | | |
+| MCP | | | | |
+| Profiles/config | | | | |
 
 Also report:
 
@@ -222,11 +253,11 @@ Also report:
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona       | When to Use                            |
+| Persona | When to Use |
 | ------------- | -------------------------------------- |
 | **Developer** | Implementation, debugging, refactoring |
-| **Reviewer**  | Code review, quality assurance         |
-| **User**      | General purpose, operations            |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
 
 ## Personality
 
@@ -256,7 +287,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -277,7 +308,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -291,13 +322,13 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 ## Verification Checklist
 
-| # | Gate       | Criterion                           |
+| # | Gate | Criterion |
 | - | ---------- | ----------------------------------- |
-| 1 | Scope      | Change matches the original request |
-| 2 | Quality    | Meets project standards             |
-| 3 | Tests      | Tests pass (if applicable)          |
-| 4 | Regression | No unintended side effects          |
-| 5 | Docs       | Changes documented if needed        |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 
@@ -314,24 +345,24 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill                            | Purpose                       |
+| Skill | Purpose |
 | -------------------------------- | ----------------------------- |
-| `using-superpowers`              | Foundational skill workflow   |
-| `systematic-debugging`           | Root cause analysis and fix   |
-| `git-patch-management`           | Patch creation and management |
-| `executing-plans`                | Execute plans step by step    |
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| `ast-grep`            | AST-based code search and replace         |
-| `filesystem`          | File read/write operations                |
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
-| `fetch`               | Web page content extraction               |
-| `playwright`          | Browser automation for interactive pages  |
-| `github`              | GitHub API operations                     |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
 
 ## Tasks
 
@@ -345,7 +376,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -353,7 +383,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

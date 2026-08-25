@@ -1,48 +1,87 @@
 ---
-name: java-refactoring-remove-parameter
-title: Refactoring Java Methods With Remove Parameter
-description: Refactoring using Remove Parameter in Java Language.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /java-refactoring-remove-parameter
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /java-refactoring-remove-parameter
-    flags: {}
-    help: Refactoring using Remove Parameter in Java Language.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- backend
-- java
-- prompts
-- refactoring
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Role](#role)
+- [Code Before Refactoring 1](#code-before-refactoring-1)
+- [Code After Refactoring 1](#code-after-refactoring-1)
+- [Code Before Refactoring 2](#code-before-refactoring-2)
+- [Code After Refactoring 2](#code-after-refactoring-2)
+- [Task](#task)
+- [Code to be Refactored](#code-to-be-refactored)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Role](#role)
+- [Code Before Refactoring 1](#code-before-refactoring-1)
+- [Code After Refactoring 1](#code-after-refactoring-1)
+- [Code Before Refactoring 2](#code-before-refactoring-2)
+- [Code After Refactoring 2](#code-after-refactoring-2)
+- [Task](#task)
+- [Code to be Refactored](#code-to-be-refactored)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Refactoring using Remove Parameter in Java Language.
 
-# Refactoring Java Methods with Remove Parameter
+## Refactoring Java Methods with Remove Parameter
 
 ## Role
 
@@ -52,28 +91,28 @@ You are an expert in refactoring Java methods.Below are **2 examples** (with tit
 
 ```java
 
-public Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster(), isCloud);            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster(), isCloud));    }}
+public Backend selectBackendForGroupCommit(long tableId, ConnectContext context, boolean isCloud) throws LoadException, DdlException { if (!Env.getCurrentEnv().isMaster()) { try { long backendId = new MasterOpExecutor(context) .getGroupCommitLoadBeId(tableId, context.getCloudCluster(), isCloud); return Env.getCurrentSystemInfo().getBackend(backendId); } catch (Exception e) { throw new LoadException(e.getMessage()); } } else { return Env.getCurrentSystemInfo() .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster(), isCloud)); }}
 ```
 
 ## Code After Refactoring 1
 
 ```java
 
-public Backend selectBackendForGroupCommit(long tableId, ConnectContext context)        throws LoadException, DdlException {    if (!Env.getCurrentEnv().isMaster()) {        try {            long backendId = new MasterOpExecutor(context)                    .getGroupCommitLoadBeId(tableId, context.getCloudCluster());            return Env.getCurrentSystemInfo().getBackend(backendId);        } catch (Exception e) {            throw new LoadException(e.getMessage());        }    } else {        return Env.getCurrentSystemInfo()                .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster()));    }}
+public Backend selectBackendForGroupCommit(long tableId, ConnectContext context) throws LoadException, DdlException { if (!Env.getCurrentEnv().isMaster()) { try { long backendId = new MasterOpExecutor(context) .getGroupCommitLoadBeId(tableId, context.getCloudCluster()); return Env.getCurrentSystemInfo().getBackend(backendId); } catch (Exception e) { throw new LoadException(e.getMessage()); } } else { return Env.getCurrentSystemInfo() .getBackend(selectBackendForGroupCommitInternal(tableId, context.getCloudCluster())); }}
 ```
 
 ## Code Before Refactoring 2
 
 ```java
 
-NodeImpl( long id, long firstRel, long firstProp ){     this( id, false );}
+NodeImpl( long id, long firstRel, long firstProp ){ this( id, false );}
 ```
 
 ## Code After Refactoring 2
 
 ```java
 
-NodeImpl( long id){     this( id, false );}
+NodeImpl( long id){ this( id, false );}
 ```
 
 ## Task
@@ -132,7 +171,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -153,7 +192,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -221,7 +260,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -229,7 +267,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

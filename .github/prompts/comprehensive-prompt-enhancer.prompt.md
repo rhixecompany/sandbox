@@ -1,56 +1,73 @@
 ---
-name: comprehensive-prompt-enhancer
-title: Comprehensive Prompt Library Enhancer
-description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY principle, best
-  practices, and all appropriate structural sections: personas, profiles, personalities, steps, rules,
-  goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans,
-  prompts, toolsets. Ensures each prompt and all its files are verified, validated.'
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /comprehensive-prompt-enhancer
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:using-superpowers
-- skill:subagent-driven-development
-- skill:brainstorming
-- skill:prompt-engineering-patterns
-- skill:prompt-management
-- skill:skill-judge
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /comprehensive-prompt-enhancer
-    flags: {}
-    help: Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY p...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- backend
-- git
-- mcp
-- ml
-- prompts
-- skills
-- typescript - prompts - enhancement - library
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Setup and Discovery](#phase-1:-setup-and-discovery)
+  - [Phase 2: Enhancement](#phase-2:-enhancement)
+  - [Phase 3: YAML Repair (if needed)](#phase-3:-yaml-repair-if-needed)
+  - [Phase 4: Verification](#phase-4:-verification)
+  - [Phase 5: Documentation and Handoff](#phase-5:-documentation-and-handoff)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Tasks](#tasks)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Dependencies](#dependencies)
+- [Workflow](#workflow)
+  - [Invocation](#invocation)
+  - [Phase Sequence](#phase-sequence)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Setup and Discovery](#phase-1:-setup-and-discovery)
+- [Phase 2: Enhancement](#phase-2:-enhancement)
+- [Phase 3: YAML Repair (if needed)](#phase-3:-yaml-repair-if-needed)
+- [Phase 4: Verification](#phase-4:-verification)
+- [Phase 5: Documentation and Handoff](#phase-5:-documentation-and-handoff)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Tasks](#tasks)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Dependencies](#dependencies)
+- [Workflow](#workflow)
+- [Invocation](#invocation)
+- [Phase Sequence](#phase-sequence)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -115,7 +132,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand the current prompt state before making changes. Run analyzer first.
 2. **Smallest safe change** — Minimal change that achieves the goal. Don't restructure what already works.
 3. **Verify before claim** — Test before reporting complete. Run full analysis and dry-run.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -136,9 +153,9 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 ### Phase 3: YAML Repair (if needed)
 
 1. Identify parse failures and categorize root cause:
-   - Unquoted `:` in values → `repair_yaml_v2.py` or manual single-quote fix
-   - Unescaped internal `"` → switch to single-quote wrapping
-   - Copilot-style frontmatter not migrated → add `trigger:`, `mode: agent`, proper `description:`
+- Unquoted `:` in values → `repair_yaml_v2.py` or manual single-quote fix
+- Unescaped internal `"` → switch to single-quote wrapping
+- Copilot-style frontmatter not migrated → add `trigger:`, `mode: agent`, proper `description:`
 2. Fix each category with targeted patches. Never batch-fix blindly.
 3. Re-run `comprehensive_enhance.py --apply` after YAML repair to recalculate pending changes.
 4. If files are corrupt beyond repair: `git checkout -- .github/prompts/` and re-apply with fixed script.
@@ -148,21 +165,21 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. Run `analyze_prompts.py --all` — confirm **0 critical issues**, **0 files with no frontmatter**, **100% valid YAML**.
 2. Run `comprehensive_enhance.py --dry-run` — confirm **0 pending changes** (idempotent).
 3. Manual checks:
-   - Every prompt has `## Goal` section
-   - All descriptions end with exactly one period
-   - Skills table uses `templates/_shared/skills-table-core.md` reference
-   - No duplicate section headings
-   - No `promptmetadata` artifacts from corruption
+- Every prompt has `## Goal` section
+- All descriptions end with exactly one period
+- Skills table uses `templates/_shared/skills-table-core.md` reference
+- No duplicate section headings
+- No `promptmetadata` artifacts from corruption
 4. Count total prompts vs modifications: `git diff --stat .github/prompts/`
 
 ### Phase 5: Documentation and Handoff
 
 1. Generate `ENHANCEMENT_REPORT.md` with:
-   - Phase-by-phase stats
-   - Total files modified, lines added/removed
-   - YAML parse status
-   - Any remaining open items
-   - Key decisions and lessons learned
+- Phase-by-phase stats
+- Total files modified, lines added/removed
+- YAML parse status
+- Any remaining open items
+- Key decisions and lessons learned
 2. Record findings in session memory and Honcho conclusions.
 
 ## Best Practices
@@ -265,7 +282,6 @@ Execute strictly in order: **Discovery → Enhancement → YAML Repair → Verif
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -273,7 +289,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

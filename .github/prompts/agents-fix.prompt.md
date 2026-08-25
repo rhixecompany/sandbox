@@ -1,43 +1,70 @@
 ---
-name: agents-fix
-title: Agents Sync and Deduplication
-description: No description
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /agents-fix
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: default
-    mcp_servers:
-    - filesystem
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /agents-fix
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:debug
-- language:typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Discovery](#phase-1:-discovery)
+  - [Phase 2: Cross-reference mapping](#phase-2:-cross-reference-mapping)
+  - [Phase 3: Sync and deduplicate](#phase-3:-sync-and-deduplicate)
+  - [Phase 4: Verification](#phase-4:-verification)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Discovery](#phase-1:-discovery)
+- [Phase 2: Cross-reference mapping](#phase-2:-cross-reference-mapping)
+- [Phase 3: Sync and deduplicate](#phase-3:-sync-and-deduplicate)
+- [Phase 4: Verification](#phase-4:-verification)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.
@@ -65,7 +92,7 @@ Use this prompt when agent definitions, agent-style prompts, or platformregistra
 > Domain-specific additions below.
 
 1. Detect the file format before modifying anything.
-2. Preserve registrations unless the user explicitly requests a rename or   removal.
+2. Preserve registrations unless the user explicitly requests a rename or removal.
 
 ## Skills Required
 
@@ -177,7 +204,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -186,12 +212,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
-
 ## Related Prompts
 
 Same-family prompts:
 
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
 - [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
-
 

@@ -1,44 +1,80 @@
 ---
-name: refactor-method-complexity-reduce
-title: Refactor Method Complexity Reduce
-description: Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}`
-  or below, by extracting helper methods.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /refactor-method-complexity-reduce
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /refactor-method-complexity-reduce
-    flags: {}
-    help: Refactor given method `${input:methodName}` to reduce its cognitive complexit...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- ml
-- prompts
-- refactoring
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Objective](#objective)
+- [Instructions](#instructions)
+- [Implementation Approach](#implementation-approach)
+- [Result](#result)
+- [Test](#test)
+- [Confirmation Checklist](#confirmation-checklist)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Objective](#objective)
+- [Instructions](#instructions)
+- [Implementation Approach](#implementation-approach)
+- [Result](#result)
+- [Test](#test)
+- [Confirmation Checklist](#confirmation-checklist)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.
@@ -86,7 +122,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Objective
@@ -113,7 +149,7 @@ The refactored method should:
 
 ## Test
 
-ing and Validation**CRITICAL: After completing the refactoring, you MUST:**1. **Run all existing tests** related to the refactored method and its surrounding functionality2. **MANDATORY: Explicitly verify test results show "failed=0"**   - **NEVER assume tests passed** - always examine the actual test output   - Search for the summary line containing pass/fail counts (e.g., "passed=X failed=Y")   - **If the summary shows any number other than "failed=0", tests have FAILED**   - If test output is in a file, read the entire file to locate and verify the failure count   - Running tests is NOT the same as verifying tests passed   - **Do not proceed** until you have explicitly confirmed zero failures3. **If any tests fail (failed > 0):**   - State clearly how many tests failed   - Analyze each failure to understand what functionality was broken   - Common causes: null handling, empty collection checks, condition logic errors   - Identify the root cause in the refactored code   - Correct the refactored code to restore the original behavior   - Re-run tests and verify "failed=0" in the output   - Repeat until all tests pass (failed=0)4. **Verify compilation** - Ensure there are no compilation errors5. **Check cognitive complexity** - Confirm the metric is at or below the target threshold of `${input:complexityThreshold}`
+ing and Validation**CRITICAL: After completing the refactoring, you MUST:**1. **Run all existing tests** related to the refactored method and its surrounding functionality2. **MANDATORY: Explicitly verify test results show "failed=0"** - **NEVER assume tests passed** - always examine the actual test output - Search for the summary line containing pass/fail counts (e.g., "passed=X failed=Y") - **If the summary shows any number other than "failed=0", tests have FAILED** - If test output is in a file, read the entire file to locate and verify the failure count - Running tests is NOT the same as verifying tests passed - **Do not proceed** until you have explicitly confirmed zero failures3. **If any tests fail (failed > 0):** - State how many tests failed - Analyze each failure to understand what functionality was broken - Common causes: null handling, empty collection checks, condition logic errors - Identify the root cause in the refactored code - Correct the refactored code to restore the original behavior - Re-run tests and verify "failed=0" in the output - Repeat until all tests pass (failed=0)4. **Verify compilation** - Ensure there are no compilation errors5. **Check cognitive complexity** - Confirm the metric is at or below the target threshold of `${input:complexityThreshold}`
 
 ## Confirmation Checklist
 
@@ -207,7 +243,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -215,7 +250,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

@@ -1,48 +1,80 @@
 ---
-name: python-mcp-server-generator
-title: Generate Python MCP Server
-description: Generate a complete MCP server project in Python with tools, resources, and proper configuration.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /python-mcp-server-generator
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /python-mcp-server-generator
-    flags: {}
-    help: Generate a complete MCP server project in Python with tools, resources, and p...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- backend
-- configuration
-- generator
-- mcp
-- ml
-- prompts
-- python
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Requirements](#requirements)
+- [Implementation Details](#implementation-details)
+- [Example Tool Types to Consider](#example-tool-types-to-consider)
+- [Configuration Options](#configuration-options)
+- [Test](#test)
+- [Additional Features to Consider](#additional-features-to-consider)
+- [Best Practices](#best-practices)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Requirements](#requirements)
+- [Implementation Details](#implementation-details)
+- [Example Tool Types to Consider](#example-tool-types-to-consider)
+- [Configuration Options](#configuration-options)
+- [Test](#test)
+- [Additional Features to Consider](#additional-features-to-consider)
+- [Best Practices](#best-practices)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Generate a complete MCP server project in Python with tools, resources, and proper configuration.
@@ -90,7 +122,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Requirements
@@ -112,11 +144,11 @@ Use when you need to work on the current workspace or task.
 
 ## Configuration Options
 
-- **For stdio Servers**:  - Simple direct execution  - Test with `uv run mcp dev server.py`  - Install to Claude: `uv run mcp install server.py`- **For HTTP Servers**:  - Port configuration via environment variables  - Stateless mode for scalability: `stateless_http=True`  - JSON response mode: `json_response=True`  - CORS configuration for browser clients  - Mounting to existing ASGI servers (Starlette/FastAPI)
+- **For stdio Servers**: - Simple direct execution - Test with `uv run mcp dev server.py` - Install to Claude: `uv run mcp install server.py`- **For HTTP Servers**: - Port configuration via environment variables - Stateless mode for scalability: `stateless_http=True` - JSON response mode: `json_response=True` - CORS configuration for browser clients - Mounting to existing ASGI servers (Starlette/FastAPI)
 
 ## Test
 
-ing Guidance- Explain how to run the server:  - stdio: `python server.py` or `uv run server.py`  - HTTP: `python server.py` then connect to `http://localhost:PORT/mcp`- Test with MCP Inspector: `uv run mcp dev server.py`- Install to Claude Desktop: `uv run mcp install server.py`- Include example tool invocations- Add troubleshooting tips
+ing Guidance- Explain how to run the server: - stdio: `python server.py` or `uv run server.py` - HTTP: `python server.py` then connect to `http://localhost:PORT/mcp`- Test with MCP Inspector: `uv run mcp dev server.py`- Install to Claude Desktop: `uv run mcp install server.py`- Include example tool invocations- Add troubleshooting tips
 
 ## Additional Features to Consider
 
@@ -226,7 +258,6 @@ Other language variants of this MCP server generator:
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

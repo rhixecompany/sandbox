@@ -1,45 +1,148 @@
 ---
-name: model-recommendation
-title: AI Model Recommendation for Copilot Chat Modes and Prompts
-description: Analyze chatmode or prompt files and recommend optimal AI models based on task complexity,
-  required capabilities, and cost-efficiency.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /model-recommendation
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /model-recommendation
-    flags: {}
-    help: Analyze chatmode or prompt files and recommend optimal AI models based on tas...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- ai-assistant
-- frontend
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Mission](#mission)
+- [Scope & Preconditions](#scope-&-preconditions)
+- [Prompt Variables](#prompt-variables)
+- [Workflow](#workflow)
+  - [1. File Analysis Phase](#1-file-analysis-phase)
+- [Recommendation: Add Model Specification](#recommendation:-add-model-specification)
+- [Current Model Assessment](#current-model-assessment)
+- [Output Expectations](#output-expectations)
+  - [Report Structure](#report-structure)
+- [File Summary**Description**: [from frontmatter] **Mode**: [ask](#file-summary**description**:-[from-frontmatter]-**mode**:-[ask)
+- [Task Analysis](#task-analysis)
+  - [Task Complexity](#task-complexity)
+  - [Task Category](#task-category)
+  - [Key Characteristics](#key-characteristics)
+- [Model Recommendation>](#model-recommendation>)
+  - [🏆 Primary Recommendation: [Model Name]](#🏆-primary-recommendation:-[model-name])
+- [Auto Model Selection Assessment](#auto-model-selection-assessment)
+- [Implementation Guidance](#implementation-guidance)
+  - [Frontmatter Update](#frontmatter-update)
+  - [Model Selection in VS Code**To Use Recommended Model**:](#model-selection-in-vs-code**to-use-recommended-model**:)
+  - [Tool Alignment Verification](#tool-alignment-verification)
+- [Deprecation Notices](#deprecation-notices)
+- [Additional Considerations](#additional-considerations)
+  - [Subscription Tier Recommendations](#subscription-tier-recommendations)
+  - [Priority Factor Adjustments](#priority-factor-adjustments)
+  - [Long-Term Model Strategy](#long-term-model-strategy)
+- [Quick Reference](#quick-reference)
+  - [Output Quality Standards](#output-quality-standards)
+- [Quality Assurance](#quality-assurance)
+- [Advanced Use Cases](#advanced-use-cases)
+  - [Analyzing Multiple Files](#analyzing-multiple-files)
+  - [Comparative Analysis](#comparative-analysis)
+  - [Migration Planning](#migration-planning)
+- [Examples](#examples)
+  - [Example 1: Simple Formatting Task](#example-1:-simple-formatting-task)
+  - [Example 2: Complex Architecture Review](#example-2:-complex-architecture-review)
+  - [Example 3: Django Expert Mode](#example-3:-django-expert-mode)
+  - [Example 4: Free Tier User with Planning Mode](#example-4:-free-tier-user-with-planning-mode)
+- [Knowledge Base](#knowledge-base)
+  - [Model Multiplier Cost Reference](#model-multiplier-cost-reference)
+  - [Model Changelog & Deprecations (October 2025)](#model-changelog-&-deprecations-october-2025)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Mission](#mission)
+- [Scope & Preconditions](#scope-&-preconditions)
+- [Prompt Variables](#prompt-variables)
+- [Workflow](#workflow)
+- [1. File Analysis Phase](#1-file-analysis-phase)
+- [Recommendation: Add Model Specification](#recommendation:-add-model-specification)
+- [Current Model Assessment](#current-model-assessment)
+- [Output Expectations](#output-expectations)
+- [Report Structure](#report-structure)
+- [File Summary**Description**: [from frontmatter] **Mode**: [ask](#file-summary**description**:-[from-frontmatter]-**mode**:-[ask)
+- [Task Analysis](#task-analysis)
+- [Task Complexity](#task-complexity)
+- [Task Category](#task-category)
+- [Key Characteristics](#key-characteristics)
+- [Model Recommendation>](#model-recommendation>)
+- [🏆 Primary Recommendation: [Model Name]](#🏆-primary-recommendation:-[model-name])
+- [Auto Model Selection Assessment](#auto-model-selection-assessment)
+- [Implementation Guidance](#implementation-guidance)
+- [Frontmatter Update](#frontmatter-update)
+- [Model Selection in VS Code**To Use Recommended Model**:](#model-selection-in-vs-code**to-use-recommended-model**:)
+- [Tool Alignment Verification](#tool-alignment-verification)
+- [Deprecation Notices](#deprecation-notices)
+- [Additional Considerations](#additional-considerations)
+- [Subscription Tier Recommendations](#subscription-tier-recommendations)
+- [Priority Factor Adjustments](#priority-factor-adjustments)
+- [Long-Term Model Strategy](#long-term-model-strategy)
+- [Quick Reference](#quick-reference)
+- [Output Quality Standards](#output-quality-standards)
+- [Quality Assurance](#quality-assurance)
+- [Advanced Use Cases](#advanced-use-cases)
+- [Analyzing Multiple Files](#analyzing-multiple-files)
+- [Comparative Analysis](#comparative-analysis)
+- [Migration Planning](#migration-planning)
+- [Examples](#examples)
+- [Example 1: Simple Formatting Task](#example-1:-simple-formatting-task)
+- [Example 2: Complex Architecture Review](#example-2:-complex-architecture-review)
+- [Example 3: Django Expert Mode](#example-3:-django-expert-mode)
+- [Example 4: Free Tier User with Planning Mode](#example-4:-free-tier-user-with-planning-mode)
+- [Knowledge Base](#knowledge-base)
+- [Model Multiplier Cost Reference](#model-multiplier-cost-reference)
+- [Model Changelog & Deprecations (October 2025)](#model-changelog-&-deprecations-october-2025)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Analyze chatmode or prompt files and recommend optimal AI models based on task complexity, required capabilities, and cost-efficiency.
@@ -87,7 +190,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Mission
@@ -355,7 +458,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

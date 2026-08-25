@@ -1,47 +1,71 @@
 ---
-name: technology-stack-blueprint-generator
 title: Technology Stack Blueprint Generator
-description: Generates comprehensive technology stack documentation for all projects in the workspace.
-  Each project gets its own TECHNOLOGY_STACK.md in its root directory, plus a master Technology_Stack_Blueprint.md
-  at the workspace root.
-version: 2.0.0
-license: MIT
-author: Hermes Agent
-trigger: /technology-stack-blueprint-generator
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /technology-stack-blueprint-generator
-    flags: {}
-    help: Generates comprehensive technology stack documentation for all projects in th...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+description: Prompt for technology stack blueprint generator
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- architecture
-- documentation
-- frontend
-- generator
-- prompts
-- typescript
-scripts: []
-# Technology Stack Blueprint Generator
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Core Requirements](#core-requirements)
+  - [Output Locations](#output-locations)
+  - [Documentation Depth](#documentation-depth)
+  - [Master Blueprint Must Include](#master-blueprint-must-include)
+- [Workflow](#workflow)
+  - [Phase 1: Discovery](#phase-1:-discovery)
+  - [Phase 2: Analysis (Per Project)](#phase-2:-analysis-per-project)
+  - [Phase 3: Generation (Per Project)](#phase-3:-generation-per-project)
+  - [Phase 4: Master Blueprint Generation](#phase-4:-master-blueprint-generation)
+- [Rules (from shared-rules-core)](#rules-from-shared-rules-core)
+- [Anti-Patterns to Avoid](#anti-patterns-to-avoid)
+- [Success Criteria](#success-criteria)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Dependencies](#dependencies)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Core Requirements](#core-requirements)
+- [Output Locations](#output-locations)
+- [Documentation Depth](#documentation-depth)
+- [Master Blueprint Must Include](#master-blueprint-must-include)
+- [Workflow](#workflow)
+- [Phase 1: Discovery](#phase-1:-discovery)
+- [Phase 2: Analysis (Per Project)](#phase-2:-analysis-per-project)
+- [Phase 3: Generation (Per Project)](#phase-3:-generation-per-project)
+- [Phase 4: Master Blueprint Generation](#phase-4:-master-blueprint-generation)
+- [Rules (from shared-rules-core)](#rules-from-shared-rules-core)
+- [Anti-Patterns to Avoid](#anti-patterns-to-avoid)
+- [Success Criteria](#success-criteria)
+- [Subgoals](#subgoals)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Dependencies](#dependencies)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
 
 ## Goal
 
@@ -81,16 +105,16 @@ Each TECHNOLOGY_STACK.md must include:
 
 1. Scan workspace for all project directories containing build manifests
 2. Identify project types by manifest files:
-   - `package.json` → Node.js/TypeScript/Bun
-   - `requirements.txt` / `pyproject.toml` / `Pipfile` → Python
-   - `Cargo.toml` → Rust
-   - `go.mod` → Go
-   - `pom.xml` → Java/Maven
-   - `build.gradle.kts` / `settings.gradle.kts` → Kotlin/Gradle
-   - `composer.json` → PHP
-   - `Package.swift` → Swift
-   - `*.csproj` → C#/.NET
-   - `Gemfile` → Ruby
+- `package.json` → Node.js/TypeScript/Bun
+- `requirements.txt` / `pyproject.toml` / `Pipfile` → Python
+- `Cargo.toml` → Rust
+- `go.mod` → Go
+- `pom.xml` → Java/Maven
+- `build.gradle.kts` / `settings.gradle.kts` → Kotlin/Gradle
+- `composer.json` → PHP
+- `Package.swift` → Swift
+- `*.csproj` → C#/.NET
+- `Gemfile` → Ruby
 3. Build project inventory with paths
 
 ### Phase 2: Analysis (Per Project)
@@ -242,7 +266,6 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

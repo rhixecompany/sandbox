@@ -1,9 +1,69 @@
 ---
-agent: "agent"
-description: "Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries."
-tools: ["web/fetch", "search/readFile", "search", "search/textSearch"]
-model: "claude-sonnet-4"
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Prompt Parameters](#prompt-parameters)
+  - [Required](#required)
+- [URL Resolver](#url-resolver)
+- [Usage](#usage)
+  - [Syntax](#syntax)
+- [Error Handling](#error-handling)
+- [Workflow](#workflow)
+- [Template](#template)
+- [Template Guidelines](#template-guidelines)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Prompt Parameters](#prompt-parameters)
+- [Required](#required)
+- [URL Resolver](#url-resolver)
+- [Usage](#usage)
+- [Syntax](#syntax)
+- [Error Handling](#error-handling)
+- [Workflow](#workflow)
+- [Template](#template)
+- [Template Guidelines](#template-guidelines)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+
+
+
 
 ## Goal
 
@@ -50,12 +110,12 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
 
-# TLDR Prompt
+## TLDR Prompt
 
 ## Overview
 
@@ -81,20 +141,20 @@ You MUST accomplish the following:
 You MUST receive at least one of the following. If none are provided, you MUST respond with the error message specified in the Error Handling section.
 
 - **GitHub Copilot customization files** - Files with extensions: .prompt.md, .agent.md, .instructions.md, .collections.md
-  - If one or more files are passed without `#file`, you MUST apply the file reading tool to all files
-  - If more than one file (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining files
-  - Recognize file type by extension and use appropriate invocation syntax in examples
+- If one or more files are passed without `#file`, you MUST apply the file reading tool to all files
+- If more than one file (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining files
+- Recognize file type by extension and use appropriate invocation syntax in examples
 - **URL** - Link to Copilot file, MCP server documentation, or Copilot documentation
-  - If one or more URLs are passed without `#fetch`, you MUST apply the fetch tool to all URLs
-  - If more than one URL (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining URLs
+- If one or more URLs are passed without `#fetch`, you MUST apply the fetch tool to all URLs
+- If more than one URL (up to 5), you MUST create a `tldr` for each. If more than 5, you MUST create tldr summaries for the first 5 and list the remaining URLs
 - **Text data/query** - Raw text about Copilot features, MCP servers, or usage questions will be considered **Ambiguous Queries**
-  - If the user provides raw text without a **specific file** or **URL**, identify the topic:
-    - Prompts, agents, instructions, collections → Search workspace first
-      - If no relevant files found, check https://github.com/github/awesome-copilot and resolve to https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/{{folder}}/{{filename}} (e.g., https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md)
-    - MCP servers → Prioritize https://modelcontextprotocol.io/ and https://code.visualstudio.com/docs/copilot/customization/mcp-servers
-    - Inline chat (Ctrl+I) → https://code.visualstudio.com/docs/copilot/inline-chat
-    - Chat view/general → https://code.visualstudio.com/docs/copilot/ and https://docs.github.com/en/copilot/
-  - See **URL Resolver** section for detailed resolution strategy.
+- If the user provides raw text without a **specific file** or **URL**, identify the topic:
+- Prompts, agents, instructions, collections → Search workspace first
+- If no relevant files found, check https://github.com/github/awesome-copilot and resolve to https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/{{folder}}/{{filename}} (e.g., https://raw.githubusercontent.com/github/awesome-copilot/refs/heads/main/prompts/java-junit.prompt.md)
+- MCP servers → Prioritize https://modelcontextprotocol.io/ and https://code.visualstudio.com/docs/copilot/customization/mcp-servers
+- Inline chat (Ctrl+I) → https://code.visualstudio.com/docs/copilot/inline-chat
+- Chat view/general → https://code.visualstudio.com/docs/copilot/ and https://docs.github.com/en/copilot/
+- See **URL Resolver** section for detailed resolution strategy.
 
 ## URL Resolver
 
@@ -109,17 +169,17 @@ You MUST receive at least one of the following. If none are provided, you MUST r
 ### Syntax
 
 ```bash
-# UNAMBIGUOUS QUERIES
-# With specific files (any type)
+## UNAMBIGUOUS QUERIES
+## With specific files (any type)
 /tldr-prompt #file:{{name.prompt.md}}
 /tldr-prompt #file:{{name.agent.md}}
 /tldr-prompt #file:{{name.instructions.md}}
 /tldr-prompt #file:{{name.collections.md}}
 
-# With URLs
+## With URLs
 /tldr-prompt #fetch {{https://example.com/docs}}
 
-# AMBIGUOUS QUERIES
+## AMBIGUOUS QUERIES
 /tldr-prompt "{{topic or question}}"
 /tldr-prompt "MCP servers"
 /tldr-prompt "inline chat shortcuts"
@@ -139,26 +199,26 @@ You MUST follow these steps in order:
 
 1. **Validate Input**: Confirm at least one required parameter is provided. If not, output the error message from Error Handling section
 2. **Identify Context**:
-   - Determine file type (.prompt.md, .agent.md, .instructions.md, .collections.md)
-   - Recognize if query is about MCP servers, inline chat, chat view, or general Copilot features
-   - Note if you're in inline chat (Ctrl+I) or chat view context
+- Determine file type (.prompt.md, .agent.md, .instructions.md, .collections.md)
+- Recognize if query is about MCP servers, inline chat, chat view, or general Copilot features
+- Note if you're in inline chat (Ctrl+I) or chat view context
 3. **Fetch Content**:
-   - For files: Read the file(s) using available file tools
-   - For URLs: Fetch content using `#tool:fetch`
-   - For queries: Apply URL Resolver strategy to find and fetch relevant content
+- For files: Read the file(s) using available file tools
+- For URLs: Fetch content using `#tool:fetch`
+- For queries: Apply URL Resolver strategy to find and fetch relevant content
 4. **Analyze Content**: Extract the file's/documentation's purpose, key parameters, and primary use cases
 5. **Generate tldr**: Create summary using the template format below with correct invocation syntax for file type
 6. **Format Output**:
-   - Ensure markdown formatting is correct with proper code blocks and placeholders
-   - Use appropriate invocation prefix: `/` for prompts, `@` for agents, context-specific for instructions/collections
-   - Adapt verbosity: inline chat = concise, chat view = detailed
+- Ensure markdown formatting is correct with proper code blocks and placeholders
+- Use appropriate invocation prefix: `/` for prompts, `@` for agents, context-specific for instructions/collections
+- Adapt verbosity: inline chat = concise, chat view = detailed
 
 ## Template
 
 Use this template structure when creating tldr pages:
 
 ```markdown
-# command
+## command
 
 > Short, snappy description. One to two sentences summarizing the prompt or prompt documentation. More information: <name.prompt.md> | <URL/prompt>.
 
@@ -180,16 +240,16 @@ You MUST follow these formatting rules:
 - **Subcommands note**: You MUST include this line only if the file supports sub-commands or modes
 - **More information**: You MUST link to the local file (e.g., `<name.prompt.md>`, `<name.agent.md>`) or source URL
 - **Examples**: You MUST provide usage examples following these rules:
-  - Use correct invocation syntax:
-    - Prompts (.prompt.md): `/prompt-name {{parameters}}`
-    - Agents (.agent.md): `@agent-name {{request}}`
-    - Instructions (.instructions.md): Context-based (document how they apply)
-    - Collections (.collections.md): Document included files and usage
-  - For single file/URL: You MUST include 5-8 examples covering the most common use cases, ordered by frequency
-  - For 2-3 files/URLs: You MUST include 3-5 examples per file
-  - For 4-5 files/URLs: You MUST include 2-3 essential examples per file
-  - For 6+ files: You MUST create summaries for the first 5 with 2-3 examples each, then list remaining files
-  - For inline chat context: Limit to 3-5 most essential examples
+- Use correct invocation syntax:
+- Prompts (.prompt.md): `/prompt-name {{parameters}}`
+- Agents (.agent.md): `@agent-name {{request}}`
+- Instructions (.instructions.md): Context-based (document how they apply)
+- Collections (.collections.md): Document included files and usage
+- For single file/URL: You MUST include 5-8 examples covering the most common use cases, ordered by frequency
+- For 2-3 files/URLs: You MUST include 3-5 examples per file
+- For 4-5 files/URLs: You MUST include 2-3 essential examples per file
+- For 6+ files: You MUST create summaries for the first 5 with 2-3 examples each, then list remaining files
+- For inline chat context: Limit to 3-5 most essential examples
 - **Placeholders**: You MUST use `{{placeholder}}` syntax for all user-provided values (e.g., `{{filename}}`, `{{url}}`, `{{parameter}}`)
 
 ## Success Criteria

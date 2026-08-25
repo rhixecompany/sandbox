@@ -33,7 +33,7 @@ File exists (396 bytes). Bun/TS-oriented:
 ## Dependency Audit
 
 - **Manifest:** `package.json` (present) + **`bun.lock` (present)** → reproducible. `bun pm ls` succeeded (381 installed packages).
-- **Runtime deps:** `markdown-pdf@^11.0.0` (single). **Dev deps:** @types/bun, @typescript-eslint/*, cspell, eslint@10.3.0, eslint-config-prettier, eslint-plugin-prettier, markdownlint-cli2, prettier@3.8.3.
+- **Runtime deps:** `markdown-pdf@^11.0.0` (single). **Dev deps:** @types/bun, @typescript-eslint/\*, cspell, eslint@10.3.0, eslint-config-prettier, eslint-plugin-prettier, markdownlint-cli2, prettier@3.8.3.
 - **bun audit availability:** `bun` v1.3.14 installed; `bun audit` not run (read-only). Lockfile present → viable.
 - **Flags / known-bad:**
   - ℹ️ `markdown-pdf@^11` — wraps an old `pdfkit`/`electron`-era stack; known to be finicky on newer Node/Bun and occasionally pulls transitive native deps. Works but monitor for breakage. Single point of failure for PDF output.

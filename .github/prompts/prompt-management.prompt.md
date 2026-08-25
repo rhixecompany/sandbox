@@ -1,76 +1,128 @@
 ---
-name: prompt-management
-title: Prompt Management
-description: List, triage, catalog, consolidate, dedupe, template, validate, and verify all .prompt.md
-  artifacts in the prompts/ tree. Extract repeated reusable context into shared markdown, update prompts
-  to use shared templates, create missing skills/scripts if they do not exist, and then declare the pipeline
-  clean or continue remediation.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /prompt-management
-toolsets:
-- file
-- terminal
-skills:
-- brainstorming
-- plans-and-specs
-- writing-plans
-- simplify
-- systematic-debugging
-- dispatching-parallel-agents
-- subagent-driven-development
-- test-driven-development
-- skill-creator
-- writing-skills
-- verification-before-completion
-- test-skill
-dependencies:
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:writing-plans
-- skill:simplify
-- skill:systematic-debugging
-- skill:dispatching-parallel-agents
-- skill:subagent-driven-development
-- skill:test-driven-development
-- skill:skill-creator
-- skill:writing-skills
-- skill:test-skill
-- skill:verification-before-completion
-- prompt:context-map.prompt.md
-- prompt:update-implementation-plan.prompt.md
-- prompt:agents-fix.prompt.md
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /prompt-management
-    flags: {}
-    help: List, triage, catalog, consolidate, dedupe, template, validate, and verify al...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- debugging
-- fix
-- git
-- markdown
-- ml
-- prompts
-- skills
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Copy-write frontmatter template strict validator](#copy-write-frontmatter-template-strict-validator)
+- [Contract](#contract)
+  - [Hard Requirements](#hard-requirements)
+- [Library Verification Checklist](#library-verification-checklist)
+- [Phases](#phases)
+- [Phase 1: Inventory](#phase-1:-inventory)
+  - [1.1 Discover files](#11-discover-files)
+  - [1.2 Parse metadata](#12-parse-metadata)
+  - [1.3 Triage markers](#13-triage-markers)
+  - [1.4 Write tentative registry](#14-write-tentative-registry)
+- [Phase 2: Deduplicate](#phase-2:-deduplicate)
+  - [2.1 Define duplicateA duplicate is any prompt that:](#21-define-duplicatea-duplicate-is-any-prompt-that:)
+  - [2.2 Duplicate resolution](#22-duplicate-resolution)
+  - [2.3 Update references](#23-update-references)
+  - [2.4 Update registry](#24-update-registry)
+- [Phase 3: Template extraction](#phase-3:-template-extraction)
+  - [3.1 Identify shared patterns](#31-identify-shared-patterns)
+  - [3.2 Create shared templates](#32-create-shared-templates)
+  - [3.3 Extract prompt-specific variants](#33-extract-prompt-specific-variants)
+  - [<prompt-name](#<prompt-name)
+  - [3.4 Register templates](#34-register-templates)
+- [Phase 4: Prompt updates](#phase-4:-prompt-updates)
+  - [4.1 Update references](#41-update-references)
+  - [4.2 Canonical format](#42-canonical-format)
+  - [4.3 Keep templates drivable](#43-keep-templates-drivable)
+  - [4.4 Apply atomic changes](#44-apply-atomic-changes)
+- [Phase 5: Create missing skills and scripts](#phase-5:-create-missing-skills-and-scripts)
+  - [5.1 Inventory references](#51-inventory-references)
+  - [5.2 Create missing skills](#52-create-missing-skills)
+  - [5.3 Create missing scripts](#53-create-missing-scripts)
+  - [5.4 Verify scripts](#54-verify-scripts)
+- [Phase 6: Strict validation](#phase-6:-strict-validation)
+  - [6.1 Strict checks](#61-strict-checks)
+  - [6.2 Write validation report](#62-write-validation-report)
+  - [6.3 Stop conditions](#63-stop-conditions)
+- [Deliver](#deliver)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Copy-write frontmatter template strict validator](#copy-write-frontmatter-template-strict-validator)
+- [Contract](#contract)
+- [Hard Requirements](#hard-requirements)
+- [Library Verification Checklist](#library-verification-checklist)
+- [Phases](#phases)
+- [Phase 1: Inventory](#phase-1:-inventory)
+- [1.1 Discover files](#11-discover-files)
+- [1.2 Parse metadata](#12-parse-metadata)
+- [1.3 Triage markers](#13-triage-markers)
+- [1.4 Write tentative registry](#14-write-tentative-registry)
+- [Phase 2: Deduplicate](#phase-2:-deduplicate)
+- [2.1 Define duplicateA duplicate is any prompt that:](#21-define-duplicatea-duplicate-is-any-prompt-that:)
+- [2.2 Duplicate resolution](#22-duplicate-resolution)
+- [2.3 Update references](#23-update-references)
+- [2.4 Update registry](#24-update-registry)
+- [Phase 3: Template extraction](#phase-3:-template-extraction)
+- [3.1 Identify shared patterns](#31-identify-shared-patterns)
+- [3.2 Create shared templates](#32-create-shared-templates)
+- [3.3 Extract prompt-specific variants](#33-extract-prompt-specific-variants)
+- [<prompt-name](#<prompt-name)
+- [3.4 Register templates](#34-register-templates)
+- [Phase 4: Prompt updates](#phase-4:-prompt-updates)
+- [4.1 Update references](#41-update-references)
+- [4.2 Canonical format](#42-canonical-format)
+- [4.3 Keep templates drivable](#43-keep-templates-drivable)
+- [4.4 Apply atomic changes](#44-apply-atomic-changes)
+- [Phase 5: Create missing skills and scripts](#phase-5:-create-missing-skills-and-scripts)
+- [5.1 Inventory references](#51-inventory-references)
+- [5.2 Create missing skills](#52-create-missing-skills)
+- [5.3 Create missing scripts](#53-create-missing-scripts)
+- [5.4 Verify scripts](#54-verify-scripts)
+- [Phase 6: Strict validation](#phase-6:-strict-validation)
+- [6.1 Strict checks](#61-strict-checks)
+- [6.2 Write validation report](#62-write-validation-report)
+- [6.3 Stop conditions](#63-stop-conditions)
+- [Deliver](#deliver)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Manage the whole `.github/prompts/` prompt lifecycle end to end: catalog, dedupe, consolidate reusable context into crisp shared markdown templates, update every affected prompt to use those templates, ensure all prompt references resolve, create any missing skills or scripts referenced by prompts, and validate the prompt inventory is clean.
@@ -140,7 +192,7 @@ Remove intentional duplicates and clean up after them.
 
 For each duplicate pair:
 
-- Keep the prompt with valid frontmatter and valid references- If both are valid, keep the one closer to `.github/prompts/*.prompt.md`- For each deleted duplicate, record:  - deleted path  - kept path  - reason
+- Keep the prompt with valid frontmatter and valid references- If both are valid, keep the one closer to `.github/prompts/*.prompt.md`- For each deleted duplicate, record: - deleted path - kept path - reason
 
 ### 2.3 Update references
 
@@ -196,7 +248,7 @@ For each prompt:
 
 Prompt format:- File: `.github/prompts/<name
 
-> .prompt.md`- Frontmatter uses keys from`templates/_shared/frontmatter.md`- Outputs include:  - docs or shared templates  - scripts under`~/AppData/Local/hermes/scripts/` - skills under `~/AppData/Local/hermes/skills/...`
+> .prompt.md`- Frontmatter uses keys from`templates/_shared/frontmatter.md`- Outputs include: - docs or shared templates - scripts under`~/AppData/Local/hermes/scripts/` - skills under `~/AppData/Local/hermes/skills/...`
 
 ### 4.3 Keep templates drivable
 
@@ -222,10 +274,10 @@ For each missing skill:
 
 - create `~/AppData/Local/hermes/skills/<name>/SKILL.md`
 - include minimal viable content:
-  - frontmatter
-  - when to use
-  - workflow
-  - verification checklist
+- frontmatter
+- when to use
+- workflow
+- verification checklist
 - if the skill already exists elsewhere in repo, import/reference it instead
 
 ### 5.3 Create missing scripts
@@ -306,7 +358,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Best Practices
 
@@ -373,7 +425,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -381,7 +432,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

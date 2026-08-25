@@ -1,45 +1,107 @@
 ---
-name: create-agentsmd
-title: Create high‑quality AGENTS.md file
-description: Prompt for generating an AGENTS.md file for a repository.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /create-agentsmd
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /create-agentsmd
-    flags: {}
-    help: Prompt for generating an AGENTS.md file for a repository.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- generator
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [What is AGENTS.md?AGENTS.md is a Markdown file that serves as a "README for agents"](#what-is-agentsmd?agentsmd-is-a-markdown-file-that-serves-as-a-"readme-for-agents")
+- [Key Principles](#key-principles)
+- [File Structure and Content Guidelines](#file-structure-and-content-guidelines)
+  - [1. Required Setup](#1-required-setup)
+- [Example Template](#example-template)
+- [Project Overview](#project-overview)
+- [Setup Commands](#setup-commands)
+- [Development Workflow](#development-workflow)
+- [Test](#test)
+- [Code Style](#code-style)
+- [Build and Deployment](#build-and-deployment)
+- [Pull Request Guidelines](#pull-request-guidelines)
+- [Additional Notes](#additional-notes)
+- [Working Example from agents.md](#working-example-from-agentsmd)
+- [Dev environment tips](#dev-environment-tips)
+- [Test](#test)
+- [PR instructions](#pr-instructions)
+- [Implementation Steps](#implementation-steps)
+- [Best Practices](#best-practices)
+- [Monorepo Considerations](#monorepo-considerations)
+- [Final Notes](#final-notes)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [What is AGENTS.md?AGENTS.md is a Markdown file that serves as a "README for agents"](#what-is-agentsmd?agentsmd-is-a-markdown-file-that-serves-as-a-"readme-for-agents")
+- [Key Principles](#key-principles)
+- [File Structure and Content Guidelines](#file-structure-and-content-guidelines)
+- [1. Required Setup](#1-required-setup)
+- [Example Template](#example-template)
+- [Project Overview](#project-overview)
+- [Setup Commands](#setup-commands)
+- [Development Workflow](#development-workflow)
+- [Test](#test)
+- [Code Style](#code-style)
+- [Build and Deployment](#build-and-deployment)
+- [Pull Request Guidelines](#pull-request-guidelines)
+- [Additional Notes](#additional-notes)
+- [Working Example from agents.md](#working-example-from-agentsmd)
+- [Dev environment tips](#dev-environment-tips)
+- [Test](#test)
+- [PR instructions](#pr-instructions)
+- [Implementation Steps](#implementation-steps)
+- [Best Practices](#best-practices)
+- [Monorepo Considerations](#monorepo-considerations)
+- [Final Notes](#final-notes)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -88,7 +150,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## What is AGENTS.md?AGENTS.md is a Markdown file that serves as a "README for agents"
@@ -112,7 +174,7 @@ Use when you need to work on the current workspace or task.
 Use this as a starting template and customize based on the specific project:
 
 ```markdown
-# AGENTS.md
+## AGENTS.md
 
 ## Project Overview
 [Brief description of the project, its purpose, and key technologies]
@@ -153,7 +215,7 @@ ing Instructions- Run all tests: `[command]`- Run unit tests: `[command]`- Run i
 Here's a real example from the agents.md website:
 
 ```markdown
-# Sample AGENTS.md file
+## Sample AGENTS.md file
 
 ## Dev environment tips
 
@@ -188,7 +250,7 @@ ing instructions- Find the CI plan in the .github/workflows folder.
 
 1. **Analyze the project structure** to understand:
 
-- Programming languages and frameworks used   - Package managers and build tools   - Testing frameworks   - Project architecture (monorepo, single package, etc.)2. **Identify key workflows** by examining:   - package.json scripts   - Makefile or other build files   - CI/CD configuration files   - Documentation files3. **Create comprehensive sections** covering:   - All essential setup and development commands   - Testing strategies and commands   - Code style and conventions   - Build and deployment processes4. **Include specific, actionable commands** that agents can execute directly5. **Test the instructions** by ensuring all commands work as documented6. **Keep it focused** on what agents need to know, not general project information
+- Programming languages and frameworks used - Package managers and build tools - Testing frameworks - Project architecture (monorepo, single package, etc.)2. **Identify key workflows** by examining: - package.json scripts - Makefile or other build files - CI/CD configuration files - Documentation files3. **Create comprehensive sections** covering: - All essential setup and development commands - Testing strategies and commands - Code style and conventions - Build and deployment processes4. **Include specific, actionable commands** that agents can execute directly5. **Test the instructions** by ensuring all commands work as documented6. **Keep it focused** on what agents need to know, not general project information
 
 ## Best Practices
 
@@ -288,7 +350,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -296,7 +357,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

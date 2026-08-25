@@ -14,4 +14,4 @@ Add any conventions that differ from the workspace root here.
 
 ---
 
-*For all shared rules, toolchain, routing, and conventions, see `../../AGENTS.md`.*
+_For all shared rules, toolchain, routing, and conventions, see `../../AGENTS.md`._

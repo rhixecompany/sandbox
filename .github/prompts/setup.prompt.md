@@ -1,85 +1,143 @@
 ---
-name: setup.prompt
-title: Setup.Prompt
-description: Auto-generated prompt for /setup.prompt
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /setup.prompt
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: exec-assistant
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /setup.prompt
-    flags: {}
-    help: Auto-generated prompt for /setup.prompt
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
-name: setup
-title: ComicWise — AI Agent Setup & Onboarding
-description: Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflows, real code
-  patterns, and conventions.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /setup
-toolsets:
-- file
-- terminal
-- web
-skills:
-- subagent-driven-development
-dependencies:
-- skill:subagent-driven-development
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /setup
-    flags: {}
-    help: Comprehensive AI agent onboarding prompt for ComicWise — architecture, workfl...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
-tags:
-- agent-type:hermes
-- agents
-- architecture
-- backend
-- ml
-- nextjs
-- prompts
-- typescript
-- workflow
-scripts: []
+# Table of Contents
+
+- [Goal](#goal)
+- [1. Project Architecture](#1-project-architecture)
+- [2. Essential Commands](#2-essential-commands)
+- [3. Environment Variables](#3-environment-variables)
+- [4. Database Schema — Critical Facts](#4-database-schema-—-critical-facts)
+- [5. Authentication System](#5-authentication-system)
+  - [Architecture (4 modular files)](#architecture-4-modular-files)
+- [6. Data Access Layer (DAL)](#6-data-access-layer-dal)
+  - [Base Class (`src/dal/base-dal.ts`)](#base-class-`src/dal/base-dalts`)
+- [7. Server Actions — Primary Mutation Pattern](#7-server-actions-—-primary-mutation-pattern)
+  - [ActionResult Type (`src/actions/types.ts`)](#actionresult-type-`src/actions/typests`)
+- [8. Seeding System (CLI + REST API)](#8-seeding-system-cli-+-rest-api)
+  - [Seeder Template (`BaseSeed<T](#seeder-template-`baseseed<t)
+- [9. Next.js Configuration (`next.config.ts`)](#9-nextjs-configuration-`nextconfigts`)
+- [10. Provider Stack & Root Layout](#10-provider-stack-&-root-layout)
+  - [Root Layout (`src/app/layout.tsx`)](#root-layout-`src/app/layouttsx`)
+  - [Provider Order (`src/components/layout/layout-provider.tsx`)](#provider-order-`src/components/layout/layout-providertsx`)
+- [11. React Query Keys (`src/lib/query-client.ts`)](#11-react-query-keys-`src/lib/query-clientts`)
+- [12. Middleware (`src/proxy.ts`)](#12-middleware-`src/proxyts`)
+- [13. TypeScript & Tooling Conventions](#13-typescript-&-tooling-conventions)
+  - [tsconfig.json](#tsconfigjson)
+  - [ESLint (Flat Config — `eslint.config.mts`)](#eslint-flat-config-—-`eslintconfigmts`)
+  - [Vitest (`vitest.config.mts`)](#vitest-`vitestconfigmts`)
+- [14. Unique Project Conventions](#14-unique-project-conventions)
+  - [React Compiler is ON](#react-compiler-is-on)
+- [15. VSCode Configuration>](#15-vscode-configuration>)
+  - [Settings (`.vscode/settings.json`)](#settings-`vscode/settingsjson`)
+- [16. Common Tasks — Step-by-Step](#16-common-tasks-—-step-by-step)
+  - [Feature Discovery Checklist](#feature-discovery-checklist)
+- [17. Testing](#17-testing)
+  - [Unit Tests (Vitest)](#unit-tests-vitest)
+- [18. Key Files Quick Reference](#18-key-files-quick-reference)
+- [19. External Dependencies Map](#19-external-dependencies-map)
+- [20. Coding Standards Summary](#20-coding-standards-summary)
+- [21. Known Technical Debt](#21-known-technical-debt)
+- [22. Feature Implementation Workflow](#22-feature-implementation-workflow)
+- [23. Instruction Files Reference](#23-instruction-files-reference)
+- [24. Quality Gate Debugger](#24-quality-gate-debugger)
+  - [Phase 1: Run Validation Scripts](#phase-1:-run-validation-scripts)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [1. Project Architecture](#1-project-architecture)
+- [2. Essential Commands](#2-essential-commands)
+- [3. Environment Variables](#3-environment-variables)
+- [4. Database Schema — Critical Facts](#4-database-schema-—-critical-facts)
+- [5. Authentication System](#5-authentication-system)
+- [Architecture (4 modular files)](#architecture-4-modular-files)
+- [6. Data Access Layer (DAL)](#6-data-access-layer-dal)
+- [Base Class (`src/dal/base-dal.ts`)](#base-class-`src/dal/base-dalts`)
+- [7. Server Actions — Primary Mutation Pattern](#7-server-actions-—-primary-mutation-pattern)
+- [ActionResult Type (`src/actions/types.ts`)](#actionresult-type-`src/actions/typests`)
+- [8. Seeding System (CLI + REST API)](#8-seeding-system-cli-+-rest-api)
+- [Seeder Template (`BaseSeed<T](#seeder-template-`baseseed<t)
+- [9. Next.js Configuration (`next.config.ts`)](#9-nextjs-configuration-`nextconfigts`)
+- [10. Provider Stack & Root Layout](#10-provider-stack-&-root-layout)
+- [Root Layout (`src/app/layout.tsx`)](#root-layout-`src/app/layouttsx`)
+- [Provider Order (`src/components/layout/layout-provider.tsx`)](#provider-order-`src/components/layout/layout-providertsx`)
+- [11. React Query Keys (`src/lib/query-client.ts`)](#11-react-query-keys-`src/lib/query-clientts`)
+- [12. Middleware (`src/proxy.ts`)](#12-middleware-`src/proxyts`)
+- [13. TypeScript & Tooling Conventions](#13-typescript-&-tooling-conventions)
+- [tsconfig.json](#tsconfigjson)
+- [ESLint (Flat Config — `eslint.config.mts`)](#eslint-flat-config-—-`eslintconfigmts`)
+- [Vitest (`vitest.config.mts`)](#vitest-`vitestconfigmts`)
+- [14. Unique Project Conventions](#14-unique-project-conventions)
+- [React Compiler is ON](#react-compiler-is-on)
+- [15. VSCode Configuration>](#15-vscode-configuration>)
+- [Settings (`.vscode/settings.json`)](#settings-`vscode/settingsjson`)
+- [16. Common Tasks — Step-by-Step](#16-common-tasks-—-step-by-step)
+- [Feature Discovery Checklist](#feature-discovery-checklist)
+- [17. Testing](#17-testing)
+- [Unit Tests (Vitest)](#unit-tests-vitest)
+- [18. Key Files Quick Reference](#18-key-files-quick-reference)
+- [19. External Dependencies Map](#19-external-dependencies-map)
+- [20. Coding Standards Summary](#20-coding-standards-summary)
+- [21. Known Technical Debt](#21-known-technical-debt)
+- [22. Feature Implementation Workflow](#22-feature-implementation-workflow)
+- [23. Instruction Files Reference](#23-instruction-files-reference)
+- [24. Quality Gate Debugger](#24-quality-gate-debugger)
+- [Phase 1: Run Validation Scripts](#phase-1:-run-validation-scripts)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -87,14 +145,14 @@ Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflo
 
 ## 1. Project Architecture
 
-> ├── app/                    # Next.js App Router pages
-> │   ├── (auth)/             # Auth route group (signin, signup, etc.)
+> ├── app/ # Next.js App Router pages
+> │ ├── (auth)/ # Auth route group (signin, signup, etc.)
 > **Full content:**
 
 ## 2. Essential Commands
 
-> pnpm dev                         # Start dev server (Turbopack, port 3000)
-> pnpm type-check                  # tsc --noEmit — must be 0 errors before PR
+> pnpm dev # Start dev server (Turbopack, port 3000)
+> pnpm type-check # tsc --noEmit — must be 0 errors before PR
 > **Full content:**
 
 ## 3. Environment Variables
@@ -113,7 +171,7 @@ Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflo
 
 ### Architecture (4 modular files)
 
-> src/auth.ts             → NextAuth({ ...authConfig })  → exports { handlers, aut
+> src/auth.ts → NextAuth({ ...authConfig }) → exports { handlers, aut
 
 ## 6. Data Access Layer (DAL)
 
@@ -143,7 +201,7 @@ Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflo
 
 ## 9. Next.js Configuration (`next.config.ts`)
 
-Key settings active in this project:```typescript{  reactCompiler: true,          // React Compiler is ON — do NOT use useMemo/useCallback/memo  typedEnv: true,               // Typed process.env  typedRoutes: true,            // Typed Link href  cacheComponents: true,        // "use cache" directive enabled  staleTimes: { dynamic: 30, static: 180 },  serverExternalPackages: ["postgres", "bcryptjs", "sharp", "nodemailer"],  serverActions: { bodySizeLimit: "10mb" },  images: {    formats: ["image/avif", "image/webp"],    minimumCacheTTL: 31536000,  // 1 year    remotePatterns: [/* mangadex, imgur, imagekit, etc. */],  },  // Security headers: HSTS, X-Frame-Options DENY, X-Content-Type-Options, Referrer-Policy}```---
+Key settings active in this project:```typescript{ reactCompiler: true, // React Compiler is ON — do NOT use useMemo/useCallback/memo typedEnv: true, // Typed process.env typedRoutes: true, // Typed Link href cacheComponents: true, // "use cache" directive enabled staleTimes: { dynamic: 30, static: 180 }, serverExternalPackages: ["postgres", "bcryptjs", "sharp", "nodemailer"], serverActions: { bodySizeLimit: "10mb" }, images: { formats: ["image/avif", "image/webp"], minimumCacheTTL: 31536000, // 1 year remotePatterns: [/* mangadex, imgur, imagekit, etc. */], }, // Security headers: HSTS, X-Frame-Options DENY, X-Content-Type-Options, Referrer-Policy}```---
 
 ## 10. Provider Stack & Root Layout
 
@@ -175,7 +233,7 @@ SessionProvider → QueryClientProvider → ThemeProvider → TooltipProvider �
 ## 12. Middleware (`src/proxy.ts`)
 
 ```typescript
-export function proxy(request: NextRequest) {  const token = request.cookies.get("auth-token");  if (request.nextUrl.pathname.startsWith("/dashboard")) {    if (!token)      return NextResponse.redirect(new URL("/login", request.url));  }  return NextResponse.next();}export const config = {  matcher: ["/dashboard/:path*", "/admin/:path*"]};
+export function proxy(request: NextRequest) { const token = request.cookies.get("auth-token"); if (request.nextUrl.pathname.startsWith("/dashboard")) { if (!token) return NextResponse.redirect(new URL("/login", request.url)); } return NextResponse.next();}export const config = { matcher: ["/dashboard/:path*", "/admin/:path*"]};
 ```
 
 > **⚠ Incomplete middleware:** Only `/dashboard` is actually protected. Despite `/admin/:path*` being in the matcher, the function has no `admin` check — it falls through to `NextResponse.next()`. Additionally, it checks for a cookie named `"auth-token"`, not a NextAuth session — this may not integrate with the actual auth system. See §21 (Technical Debt).---
@@ -219,7 +277,7 @@ export function proxy(request: NextRequest) {  const token = request.cookies.get
 
 ### Unit Tests (Vitest)
 
-> pnpm test                        # Run all
+> pnpm test # Run all
 
 ## 18. Key Files Quick Reference
 
@@ -303,7 +361,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -324,7 +382,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -392,7 +450,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -400,7 +457,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

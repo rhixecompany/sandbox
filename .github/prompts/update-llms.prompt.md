@@ -1,44 +1,104 @@
 ---
-name: update-llms
-title: Update LLMs.txt File
-description: Update the llms.txt file in the root folder to reflect changes in documentation or specifications
-  following the llms.txt specification at https://llmstxt.org/.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /update-llms
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /update-llms
-    flags: {}
-    help: Update the llms.txt file in the root folder to reflect changes in documentati...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- documentation
-- maintenance
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Primary Directive](#primary-directive)
+- [Analysis and Planning Phase](#analysis-and-planning-phase)
+  - [Step 1: Review Current File and Specification](#step-1:-review-current-file-and-specification)
+- [Implementation Requirements](#implementation-requirements)
+  - [Format Compliance](#format-compliance)
+- [Execution Steps](#execution-steps)
+  - [Step 1: Current State Analysis](#step-1:-current-state-analysis)
+- [Quality Assurance](#quality-assurance)
+  - [Format Validation](#format-validation)
+  - [Content Validation](#content-validation)
+  - [Specification Compliance](#specification-compliance)
+- [Update Strategy](#update-strategy)
+- [Documentation](#documentation)
+- [Specifications](#specifications)
+- [Examples](#examples)
+- [Configuration](#configuration)
+- [Optional](#optional)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Primary Directive](#primary-directive)
+- [Analysis and Planning Phase](#analysis-and-planning-phase)
+- [Step 1: Review Current File and Specification](#step-1:-review-current-file-and-specification)
+- [Implementation Requirements](#implementation-requirements)
+- [Format Compliance](#format-compliance)
+- [Execution Steps](#execution-steps)
+- [Step 1: Current State Analysis](#step-1:-current-state-analysis)
+- [Quality Assurance](#quality-assurance)
+- [Format Validation](#format-validation)
+- [Content Validation](#content-validation)
+- [Specification Compliance](#specification-compliance)
+- [Update Strategy](#update-strategy)
+- [Documentation](#documentation)
+- [Specifications](#specifications)
+- [Examples](#examples)
+- [Configuration](#configuration)
+- [Optional](#optional)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Update the llms.txt file in the root folder to reflect changes in documentation or specifications following the llms.txt specification at <https://llmstxt.org/>.
@@ -86,7 +146,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Primary Directive
@@ -245,7 +305,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -253,7 +312,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

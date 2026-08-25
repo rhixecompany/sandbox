@@ -10,4 +10,4 @@ cd C:/Users/Alexa/Desktop/SandBox/projects/Resume_maker
 # See project's package.json or README.md for specific commands
 ```
 
-*All conventions, workflows, and rules are in `../../AGENTS.md`.*
+_All conventions, workflows, and rules are in `../../AGENTS.md`._

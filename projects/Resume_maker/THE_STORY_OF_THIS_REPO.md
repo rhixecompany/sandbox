@@ -1,6 +1,6 @@
 # The Story of Resume_maker
 
-*The CLI that wrote fifty cover letters in one afternoon*
+_The CLI that wrote fifty cover letters in one afternoon_
 
 ---
 
@@ -27,12 +27,12 @@ Each stage isolated. Each stage testable. Failure at any stage saves partial out
 ```typescript
 // The pipeline (simplified)
 async function generate(inputPath: string) {
-  const raw = await readJson(inputPath)
-  const data = validateResumeData(raw)      // Zod - throws on invalid
-  const normalized = normalize(data)        // Dates, strings, arrays
-  const markdown = renderTemplate(normalized) // Handlebars-like templates
-  await writeFile(`${output}/resume.md`, markdown)
-  await markdownToPdf(markdown, `${output}/resume.pdf`)
+	const raw = await readJson(inputPath);
+	const data = validateResumeData(raw); // Zod - throws on invalid
+	const normalized = normalize(data); // Dates, strings, arrays
+	const markdown = renderTemplate(normalized); // Handlebars-like templates
+	await writeFile(`${output}/resume.md`, markdown);
+	await markdownToPdf(markdown, `${output}/resume.pdf`);
 }
 ```
 
@@ -42,7 +42,7 @@ async function generate(inputPath: string) {
 
 **Bun:** `bun install` in 0.3s. `bun index.ts` runs directly. No `tsc` compilation step for development. Native `fetch`, `WebSocket`, `sqlite`.
 
-**TypeScript strict:** The Zod schemas *are* the types. `infer<typeof schema>` gives you perfect inference. No `any`. No runtime surprises.
+**TypeScript strict:** The Zod schemas _are_ the types. `infer<typeof schema>` gives you perfect inference. No `any`. No runtime surprises.
 
 **Zero dependencies:** No Commander.js, no Inquirer, no Chalk. `process.argv` parsing is 30 lines. Colors are ANSI codes. Prompts are `readline`.
 
@@ -54,14 +54,18 @@ Templates are TypeScript template literals with helper functions:
 
 ```typescript
 function renderExperience(exp: Experience[]): string {
-  return exp.map(e => `
+	return exp
+		.map(
+			(e) => `
 ## ${e.role} at ${e.company}
-*${formatDate(e.startDate)} – ${e.endDate ? formatDate(e.endDate) : 'Present'}*
+*${formatDate(e.startDate)} – ${e.endDate ? formatDate(e.endDate) : "Present"}*
 
-${e.description.map(d => `- ${d}`).join('\n')}
+${e.description.map((d) => `- ${d}`).join("\n")}
 
-**Technologies:** ${e.technologies.join(', ')}
-`).join('\n')
+**Technologies:** ${e.technologies.join(", ")}
+`,
+		)
+		.join("\n");
 }
 ```
 
@@ -73,12 +77,12 @@ Output is clean Markdown. Pandoc-compatible. `markdown-pdf` (via PhantomJS) conv
 
 July 2025. `bun audit` on the output:
 
-| Package | Severity | CVE |
-|---------|----------|-----|
-| `markdown-pdf` | **HIGH** | GHSA-qghr-877h-f9jh — XSS → local file read |
-| `qs` | MODERATE | DoS via arrayLimit |
-| `tough-cookie` | MODERATE | Prototype pollution |
-| `brace-expansion` | HIGH | DoS exponential |
+| Package           | Severity | CVE                                         |
+| ----------------- | -------- | ------------------------------------------- |
+| `markdown-pdf`    | **HIGH** | GHSA-qghr-877h-f9jh — XSS → local file read |
+| `qs`              | MODERATE | DoS via arrayLimit                          |
+| `tough-cookie`    | MODERATE | Prototype pollution                         |
+| `brace-expansion` | HIGH     | DoS exponential                             |
 
 **The problem:** `markdown-pdf` hasn't been updated since 2020. It bundles PhantomJS (abandoned 2018). The XSS is in the HTML rendering pipeline.
 
@@ -97,18 +101,18 @@ July 2025. `bun audit` on the output:
 
 ```typescript
 // scripts/smoke-resume.ts
-import { generate } from '../index'
+import { generate } from "../index";
 
-const sample = await readJson('sample-input.json')
-await generate(sample, { output: 'test-output', format: 'both' })
+const sample = await readJson("sample-input.json");
+await generate(sample, { output: "test-output", format: "both" });
 
 // Verify
-const md = await readFile('test-output/resume.md')
-const pdf = await readFile('test-output/resume.pdf')
+const md = await readFile("test-output/resume.md");
+const pdf = await readFile("test-output/resume.pdf");
 
-assert(md.includes('Alexander Iseghohi'))
-assert(pdf.length > 10000) // PDF has content
-console.log('✅ Smoke test passed')
+assert(md.includes("Alexander Iseghohi"));
+assert(pdf.length > 10000); // PDF has content
+console.log("✅ Smoke test passed");
 ```
 
 Runs in CI. Catches template breakage, validation regressions, PDF generation failures.
@@ -121,10 +125,10 @@ Markdown output is snapshotted:
 
 ```typescript
 // tests/snapshot/resume.test.ts
-test('resume markdown matches snapshot', () => {
-  const output = renderTemplate(normalizedSampleData)
-  expect(output).toMatchSnapshot()
-})
+test("resume markdown matches snapshot", () => {
+	const output = renderTemplate(normalizedSampleData);
+	expect(output).toMatchSnapshot();
+});
 ```
 
 When the template changes, the snapshot fails. **Intentional changes** update the snapshot. **Accidental changes** are caught.
@@ -166,9 +170,9 @@ The next version will:
 - Support YAML input (some people prefer it)
 - Add a `--dry-run` that shows the generated Markdown without writing
 
-But v1 works. It got the job done. It got *a* job done.
+But v1 works. It got the job done. It got _a_ job done.
 
 ---
 
-*Written by the workspace chronicler, July 25, 2025.  
-Filed at `projects/Resume_maker/THE_STORY_OF_THIS_REPO.md`.*
+_Written by the workspace chronicler, July 25, 2025.  
+Filed at `projects/Resume_maker/THE_STORY_OF_THIS_REPO.md`._

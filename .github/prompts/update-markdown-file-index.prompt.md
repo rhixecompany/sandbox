@@ -1,43 +1,88 @@
 ---
-name: update-markdown-file-index
-title: Update Markdown File Index
-description: Update a markdown file section with an index/table of files from a specified folder.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /update-markdown-file-index
-toolsets:
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /update-markdown-file-index
-    flags: {}
-    help: Update a markdown file section with an index/table of files from a specified ...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- maintenance
-- markdown
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Process](#process)
+- [File Analysis](#file-analysis)
+- [Table Structure Options](#table-structure-options)
+  - [Option 1: Simple List](#option-1:-simple-list)
+- [Files in $](#files-in-$)
+  - [Option 2: Detailed Table](#option-2:-detailed-table)
+  - [Option 3: Categorized Sections](#option-3:-categorized-sections)
+- [Update Strategy](#update-strategy)
+- [Section Identification](#section-identification)
+- [Requirements](#requirements)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Process](#process)
+- [File Analysis](#file-analysis)
+- [Table Structure Options](#table-structure-options)
+- [Option 1: Simple List](#option-1:-simple-list)
+- [Files in $](#files-in-$)
+- [Option 2: Detailed Table](#option-2:-detailed-table)
+- [Option 3: Categorized Sections](#option-3:-categorized-sections)
+- [Update Strategy](#update-strategy)
+- [Section Identification](#section-identification)
+- [Requirements](#requirements)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Update a markdown file section with an index/table of files from a specified folder.
@@ -85,7 +130,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Process
@@ -120,9 +165,9 @@ folder
 
 ### Option 2: Detailed Table
 
-| File                                   | Type      | Description || -------------------------------------
+| File | Type | Description || -------------------------------------
 
-- | --------- | ----------- || [filename.ext](path/to/filename.ext)   | Extension | Description || [filename2.ext](path/to/filename2.ext) | Extension | Description |
+- | --------- | ----------- || [filename.ext](path/to/filename.ext) | Extension | Description || [filename2.ext](path/to/filename2.ext) | Extension | Description |
 
 ### Option 3: Categorized Sections
 
@@ -235,7 +280,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -243,7 +287,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

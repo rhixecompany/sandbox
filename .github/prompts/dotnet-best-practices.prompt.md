@@ -1,53 +1,95 @@
 ---
-name: dotnet-best-practices
-title: .NET/C# Best Practices
-description: Ensure .NET/C# code meets best practices for the solution/project.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /dotnet-best-practices
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /dotnet-best-practices
-    flags: {}
-    help: Ensure .NET/C# code meets best practices for the solution/project.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- csharp
-- documentation
-- dotnet
-- ml
-- prompts
-- specification
-- typescript
-- architecture
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Documentation & Structure](#documentation-&-structure)
+- [Design Patterns & Architecture](#design-patterns-&-architecture)
+- [Dependency Injection & Services](#dependency-injection-&-services)
+- [Resource Management & Localization](#resource-management-&-localization)
+- [Async/Await Patterns](#async/await-patterns)
+- [Test](#test)
+- [Configuration & Settings](#configuration-&-settings)
+- [Semantic Kernel & AI Integration](#semantic-kernel-&-ai-integration)
+- [Error Handling & Logging](#error-handling-&-logging)
+- [Performance & Security](#performance-&-security)
+- [Code Quality](#code-quality)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Documentation & Structure](#documentation-&-structure)
+- [Design Patterns & Architecture](#design-patterns-&-architecture)
+- [Dependency Injection & Services](#dependency-injection-&-services)
+- [Resource Management & Localization](#resource-management-&-localization)
+- [Async/Await Patterns](#async/await-patterns)
+- [Test](#test)
+- [Configuration & Settings](#configuration-&-settings)
+- [Semantic Kernel & AI Integration](#semantic-kernel-&-ai-integration)
+- [Error Handling & Logging](#error-handling-&-logging)
+- [Performance & Security](#performance-&-security)
+- [Code Quality](#code-quality)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
 Ensure .NET/C# code meets best practices for the solution/project.
 
-# .NET/C# Best PracticesYour task is to ensure .NET/C# code in ${selection} meets the best practices specific to this solution/project. This includes:
+## .NET/C# Best PracticesYour task is to ensure .NET/C# code in ${selection} meets the best practices specific to this solution/project. This includes:
 
 ## Documentation & Structure
 
@@ -139,7 +181,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -160,7 +202,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -228,7 +270,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -236,7 +277,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

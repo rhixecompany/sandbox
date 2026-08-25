@@ -1,62 +1,76 @@
 ---
-name: plan-generate
-title: Generate Implementation Plan
-description: Generate a detailed, structured implementation plan from a goal or specification. Produces
-  a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts
-  (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.
-version: 1.0.0
-license: MIT
-author: Hermes Agent (consolidated)
-trigger: /plan-generate
-toolsets:
-- file
-- terminal
-skills:
-- plans-and-specs
-- writing-plans
-- simplify
-- brainstorming
-- systematic-debugging
-- verification-before-completion
-dependencies:
-- skill:plans-and-specs
-- skill:writing-plans
-- skill:simplify
-- skill:brainstorming
-- skill:systematic-debugging
-- skill:verification-before-completion
-- prompt:context-map.prompt.md
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /plan-generate
-    flags: {}
-    help: Generate a detailed, structured implementation plan from a goal or specificat...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- agents
-- debugging
-- generator
-- ml
-- planning
-- prompts
-- specification
-- typescript
-- ai-assistant
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Core Rules](#core-rules)
+- [Workflow](#workflow)
+  - [Phase 1: Context gathering](#phase-1:-context-gathering)
+  - [Phase 2: Plan structure](#phase-2:-plan-structure)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Phases](#phases)
+  - [Phase N: <Name](#phase-n:-<name)
+- [Verification Checklist](#verification-checklist)
+  - [Phase 3: Write](#phase-3:-write)
+  - [Phase 4: Verify](#phase-4:-verify)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Core Rules](#core-rules)
+- [Workflow](#workflow)
+- [Phase 1: Context gathering](#phase-1:-context-gathering)
+- [Phase 2: Plan structure](#phase-2:-plan-structure)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Phases](#phases)
+- [Phase N: <Name](#phase-n:-<name)
+- [Verification Checklist](#verification-checklist)
+- [Phase 3: Write](#phase-3:-write)
+- [Phase 4: Verify](#phase-4:-verify)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Best Practices](#best-practices)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Generate a detailed, structured implementation plan from a goal or specification. Produces a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.
@@ -151,7 +165,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Best Practices
 
@@ -208,7 +222,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -216,7 +229,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

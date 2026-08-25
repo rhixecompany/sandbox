@@ -1,55 +1,60 @@
 ---
-name: repo-story-time
-title: 'Repository Analysis: Story from Git History'
-description: Generate a comprehensive repository summary and narrative story from commit history. Produces
-  REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
-version: 2.2.0
-license: MIT
-author: Hermes Agent
-trigger: /repo-story-time
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- prompt:repo
-- skill:code-wiki
-- skill:gh-cli
-- skill:git-commit
-- skill:writing-clearly-and-concisely
-- tool:mcp-tavily
-- tool:mcp-github
-- tool:mcp-sequential-thinking
-- skill:subagent-driven-development
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /repo-story-time
-    flags: {}
-    help: Generate a comprehensive repository summary and narrative story from commit h...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- architecture
-- frontend
-- generator
-- git
-- go
-- prompts
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Workflow](#workflow)
+  - [Phase 1: Repository Exploration](#phase-1:-repository-exploration)
+  - [Phase 2: Analysis](#phase-2:-analysis)
+  - [Phase 3: Write Files](#phase-3:-write-files)
+- [Rules](#rules)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Workflow](#workflow)
+- [Phase 1: Repository Exploration](#phase-1:-repository-exploration)
+- [Phase 2: Analysis](#phase-2:-analysis)
+- [Phase 3: Write Files](#phase-3:-write-files)
+- [Rules](#rules)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Transform any repository's git history into two deliverables:
@@ -65,10 +70,10 @@ For a lighter 5-bullet summary instead of a full story, use the
 ### Phase 1: Repository Exploration
 
 ```bash
-git log --oneline --since="1 year ago" | wc -l        # commit count
-git shortlog -sn                                       # contributor stats
-git diff --stat origin/main..HEAD | tail -3            # recent changes
-ls -la projects/<name>/src                             # structure overview
+git log --oneline --since="1 year ago" | wc -l # commit count
+git shortlog -sn # contributor stats
+git diff --stat origin/main..HEAD | tail -3 # recent changes
+ls -la projects/<name>/src # structure overview
 ```
 
 ### Phase 2: Analysis
@@ -81,9 +86,9 @@ ls -la projects/<name>/src                             # structure overview
 
 Create both markdown files at the repo root using `write_file`:
 
-| File                        | Content                                                                                |
+| File | Content |
 | --------------------------- | -------------------------------------------------------------------------------------- |
-| `REPOSITORY_SUMMARY.md`     | Overview, Architecture, Key Components, Technologies, Data Flow, Team                  |
+| `REPOSITORY_SUMMARY.md` | Overview, Architecture, Key Components, Technologies, Data Flow, Team |
 | `THE_STORY_OF_THIS_REPO.md` | Year-in-numbers, Contributors, Seasonal Patterns, Themes, Plot Twists, Current Chapter |
 
 ## Rules
@@ -99,11 +104,11 @@ Create both markdown files at the repo root using `write_file`:
 
 See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona       | When to Use                            |
+| Persona | When to Use |
 | ------------- | -------------------------------------- |
 | **Developer** | Implementation, debugging, refactoring |
-| **Reviewer**  | Code review, quality assurance         |
-| **User**      | General purpose, operations            |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
 
 ## Personality
 
@@ -129,13 +134,13 @@ See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md)
 
 ## Verification Checklist
 
-| # | Gate       | Criterion                           |
+| # | Gate | Criterion |
 | - | ---------- | ----------------------------------- |
-| 1 | Scope      | Change matches the original request |
-| 2 | Quality    | Meets project standards             |
-| 3 | Tests      | Tests pass (if applicable)          |
-| 4 | Regression | No unintended side effects          |
-| 5 | Docs       | Changes documented if needed        |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
 
 ## Dependencies
 
@@ -152,39 +157,39 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill                            | Purpose                       |
+| Skill | Purpose |
 | -------------------------------- | ----------------------------- |
-| `using-superpowers`              | Foundational skill workflow   |
-| `systematic-debugging`           | Root cause analysis and fix   |
-| `git-patch-management`           | Patch creation and management |
-| `executing-plans`                | Execute plans step by step    |
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server                | Purpose                                    |
+| Server | Purpose |
 | --------------------- | ------------------------------------------ |
-| `tavily`              | Web search + URL extraction (repo context) |
-| `github`              | GitHub API operations (commit history)     |
-| `filesystem`          | File read/write operations                 |
-| `sequential-thinking` | Structured reasoning for complex problems  |
-| `ast-grep`            | AST-based code search and replace          |
-| `fetch`               | Web page content extraction                |
-| `playwright`          | Browser automation for interactive pages   |
+| `tavily` | Web search + URL extraction (repo context) |
+| `github` | GitHub API operations (commit history) |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `ast-grep` | AST-based code search and replace |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook                     | When              | Behavior                     |
+| Hook | When | Behavior |
 | ------------------------ | ----------------- | ---------------------------- |
-| `session-logger`         | session start/end | Logs session metadata        |
-| `governance-audit`       | session events    | Audits governance compliance |
-| `session-auto-commit`    | session end       | Auto-commits session state   |
-| `pre-exec-validate.sh`   | before commands   | Validates command execution  |
-| `post-exec-state-log.py` | after commands    | Appends state log            |
+| `session-logger` | session start/end | Logs session metadata |
+| `governance-audit` | session events | Audits governance compliance |
+| `session-auto-commit` | session end | Auto-commits session state |
+| `pre-exec-validate.sh` | before commands | Validates command execution |
+| `post-exec-state-log.py` | after commands | Appends state log |
 
 ## Scripts
 

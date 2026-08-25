@@ -1,46 +1,104 @@
 ---
-name: mcp-create-adaptive-cards
-title: Create Adaptive Cards for MCP Plugins
-description: mcp-create-adaptive-cards.prompt.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /mcp-create-adaptive-cards
-toolsets:
-- file
-- terminal
-- web
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /mcp-create-adaptive-cards
-    flags: {}
-    help: mcp-create-adaptive-cards.prompt.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- generator
-- mcp
-- ml
-- prompts
-- specification
-- typescript
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Adaptive Card Types](#adaptive-card-types)
+  - [Static Response Templates](#static-response-templates)
+- [Response Semantics Properties](#response-semantics-properties)
+  - [data_pathJSONPath query indicating where data resides in API response:](#data_pathjsonpath-query-indicating-where-data-resides-in-api-response:)
+  - [propertiesMap response fields for Copilot citations:](#propertiesmap-response-fields-for-copilot-citations:)
+  - [template_selectorProperty on each item indicating which template to use:](#template_selectorproperty-on-each-item-indicating-which-template-to-use:)
+- [Adaptive Card Template Language](#adaptive-card-template-language)
+  - [Conditional Rendering](#conditional-rendering)
+- [Card Elements](#card-elements)
+- [Responsive Design Best Practices](#responsive-design-best-practices)
+  - [Single-Column Layouts](#single-column-layouts)
+  - [Flexible Widths](#flexible-widths)
+  - [Text and Images](#text-and-images)
+  - [Test Across Hubs](#test-across-hubs)
+- [Complete Example](#complete-example)
+- [Workflow](#workflow)
+- [Resources](#resources)
+- [Common Patterns](#common-patterns)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Adaptive Card Types](#adaptive-card-types)
+- [Static Response Templates](#static-response-templates)
+- [Response Semantics Properties](#response-semantics-properties)
+- [data_pathJSONPath query indicating where data resides in API response:](#data_pathjsonpath-query-indicating-where-data-resides-in-api-response:)
+- [propertiesMap response fields for Copilot citations:](#propertiesmap-response-fields-for-copilot-citations:)
+- [template_selectorProperty on each item indicating which template to use:](#template_selectorproperty-on-each-item-indicating-which-template-to-use:)
+- [Adaptive Card Template Language](#adaptive-card-template-language)
+- [Conditional Rendering](#conditional-rendering)
+- [Card Elements](#card-elements)
+- [Responsive Design Best Practices](#responsive-design-best-practices)
+- [Single-Column Layouts](#single-column-layouts)
+- [Flexible Widths](#flexible-widths)
+- [Text and Images](#text-and-images)
+- [Test Across Hubs](#test-across-hubs)
+- [Complete Example](#complete-example)
+- [Workflow](#workflow)
+- [Resources](#resources)
+- [Common Patterns](#common-patterns)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Use this prompt to handle the create adaptive cards for mcp plugins workflow.
@@ -88,7 +146,7 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Adaptive Card Types
@@ -102,8 +160,8 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 ### data_pathJSONPath query indicating where data resides in API response:
 
 ```json
-"data_path": "$"           // Root of response
-"data_path": "$.results"   // In results property
+"data_path": "$" // Root of response
+"data_path": "$.results" // In results property
 "data_path": "$.data.items"// Nested path
 ```
 
@@ -111,9 +169,9 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 
 ```json
 "properties": {
-  "title": "$.name",            // Citation title
-  "subtitle": "$.description",  // Citation subtitle
-  "url": "$.link"               // Citation link
+"title": "$.name", // Citation title
+"subtitle": "$.description", // Citation subtitle
+"url": "$.link" // Citation link
 }
 ```
 
@@ -127,12 +185,12 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 
 ### Conditional Rendering
 
-> "text": "${if(field, field, 'N/A')}"  // Show field or 'N/A'
+> "text": "${if(field, field, 'N/A')}" // Show field or 'N/A'
 
 ## Card Elements
 
 > "text": "Text content",
-> "size": "medium",      // small, default, medium, large, extraLarge
+> "size": "medium", // small, default, medium, large, extraLarge
 > **Full content:**
 
 ## Responsive Design Best Practices
@@ -155,13 +213,13 @@ Use when you need to create adaptive cards for mcp plugins for the current works
 - Avoid placing text and images in same row
 - Exception: Small icons or avatars
 - Use "wrap": true for text content
-- Test at various viewport widths
+- Test at viewport widths
 
 ### Test Across Hubs
 
 Validate cards in:
 
-- Teams (desktop and mobile)- Word- PowerPoint- Various viewport widths (contract/expand UI)
+- Teams (desktop and mobile)- Word- PowerPoint- viewport widths (contract/expand UI)
 
 ## Complete Example
 
@@ -270,7 +328,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -278,7 +335,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

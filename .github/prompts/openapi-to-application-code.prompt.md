@@ -1,44 +1,82 @@
 ---
-name: openapi-to-application-code
-title: Generate Application from OpenAPI Spec
-description: Generate a complete, production-ready application from an OpenAPI specification.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /openapi-to-application-code
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /openapi-to-application-code
-    flags: {}
-    help: Generate a complete, production-ready application from an OpenAPI specification.
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- api
-- generator
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Input Requirements](#input-requirements)
+- [Generation Process](#generation-process)
+  - [Step 1: Analyze the OpenAPI Specification](#step-1:-analyze-the-openapi-specification)
+- [Output Structure](#output-structure)
+- [Best Practices Applied](#best-practices-applied)
+- [Next Steps](#next-steps)
+- [Questions to Ask if Needed](#questions-to-ask-if-needed)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Input Requirements](#input-requirements)
+- [Generation Process](#generation-process)
+- [Step 1: Analyze the OpenAPI Specification](#step-1:-analyze-the-openapi-specification)
+- [Output Structure](#output-structure)
+- [Best Practices Applied](#best-practices-applied)
+- [Next Steps](#next-steps)
+- [Questions to Ask if Needed](#questions-to-ask-if-needed)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Generate a complete, production-ready application from an OpenAPI specification.
@@ -86,14 +124,14 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Input Requirements
 
 1. **OpenAPI Specification**: Provide either:
 
-- A URL to the OpenAPI spec (e.g., `https://api.example.com/openapi.json`)   - A local file path to the OpenAPI spec   - The full OpenAPI specification content pasted directly2. **Project Details** (if not in spec):   - Project name and description   - Target framework and version   - Package/namespace naming conventions   - Authentication method (if not specified in OpenAPI)
+- A URL to the OpenAPI spec (e.g., `https://api.example.com/openapi.json`) - A local file path to the OpenAPI spec - The full OpenAPI specification content pasted directly2. **Project Details** (if not in spec): - Project name and description - Target framework and version - Package/namespace naming conventions - Authentication method (if not specified in OpenAPI)
 
 ## Generation Process
 
@@ -105,7 +143,7 @@ Use when you need to work on the current workspace or task.
 
 ## Output Structure
 
-The generated application will include:```project-name/├── README.md                      # Setup and usage instructions├── [build-config]                 # Framework-specific build files (pom.xml, build.gradle, package.json, etc.)├── src/│   ├── main/│   │   ├── [language]/│   │   │   ├── controllers/       # HTTP endpoint handlers│   │   │   ├── services/          # Business logic│   │   │   ├── models/            # Data models and DTOs│   │   │   ├── repositories/      # Data access (if applicable)│   │   │   └── config/            # Application configuration│   │   └── resources/             # Configuration files│   └── test/│       ├── [language]/│       │   ├── controllers/       # Controller tests│       │   └── services/          # Service tests│       └── resources/             # Test configuration├── .gitignore├── .env.example                   # Environment variables template└── docker-compose.yml             # Optional: Docker setup (if applicable)```
+The generated application will include:```project-name/├── README.md # Setup and usage instructions├── [build-config] # Framework-specific build files (pom.xml, build.gradle, package.json, etc.)├── src/│ ├── main/│ │ ├── [language]/│ │ │ ├── controllers/ # HTTP endpoint handlers│ │ │ ├── services/ # Business logic│ │ │ ├── models/ # Data models and DTOs│ │ │ ├── repositories/ # Data access (if applicable)│ │ │ └── config/ # Application configuration│ │ └── resources/ # Configuration files│ └── test/│ ├── [language]/│ │ ├── controllers/ # Controller tests│ │ └── services/ # Service tests│ └── resources/ # Test configuration├── .gitignore├── .env.example # Environment variables template└── docker-compose.yml # Optional: Docker setup (if applicable)```
 
 ## Best Practices Applied
 
@@ -207,7 +245,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -215,7 +252,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

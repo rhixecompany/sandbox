@@ -1,156 +1,93 @@
 ---
-name: ngn-earnings-research.prompt
-title: Ngn Earnings Research.Prompt
-description: Auto-generated prompt for /ngn-earnings-research.prompt
+name: ngn-earnings-research-pipeline
+title: "ngn Earnings Research Pipeline \u2014 Better Than Outlier & Attapoll"
+description: Comprehensive research pipeline using stacked skills to identify superior
+  ngn earning platforms, leveraging all prior session data and MCP tools
 version: 1.0.0
-license: MIT
 author: Hermes Agent
-trigger: /ngn-earnings-research.prompt
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: research-analyst
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /ngn-earnings-research.prompt
-    flags: {}
-    help: Auto-generated prompt for /ngn-earnings-research.prompt
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+license: MIT
 tags:
-- agent-type:hermes
-scripts: []
+- research
+- ngn-earnings
+- income-generation
+- web-research
+- skills-pipeline
+date: '2026-08-25'
 ---
-name: ngn-earnings-research
-title: NGN Earnings Research Pipeline — Better Than Outlier & Attapoll
-description: Comprehensive research pipeline using stacked skills to identify superior NGN earning platforms,
-  leveraging all prior session data and MCP tools.
-version: 2.0.0
-license: MIT
-author: Hermes Agent
-trigger: /ngn-earnings-research
-toolsets:
-- file
-- terminal
-skills: []
-dependencies:
-- skill:using-superpowers
-- skill:user-communication-preferences
-- skill:brainstorming
-- skill:subagent-driven-development
-- skill:web-research-pipeline
-- skill:enhance-markdown
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /ngn-earnings-research
-    flags: {}
-    help: Comprehensive research pipeline using stacked skills to identify superior NGN...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
-tags:
-- agent-type:hermes
-- data
-- frontend
-- mcp
-- prompts
-- skills
-- specification
-- typescript
-scripts: []
+# Table of Contents
 
-# NGN Earnings Research Pipeline
+- [ngn Earnings Research Pipeline](#ngn-earnings-research-pipeline)
+- [Goal](#goal)
+- [Context](#context)
+- [Skill Stack (Load in Order)](#skill-stack-load-in-order)
+- [Phase 0: Context Recovery & Inventory (MANDATORY FIRST)](#phase-0:-context-recovery-&-inventory-mandatory-first)
+  - [0.1 Load Prior Session Data](#01-load-prior-session-data)
+  - [0.2 Read All Existing Files](#02-read-all-existing-files)
+  - [0.3 Honcho Memory Recall](#03-honcho-memory-recall)
+- [Phase 1: Systematic Platform Discovery](#phase-1:-systematic-platform-discovery)
+  - [1.1 Category Mapping (Brainstorming)](#11-category-mapping-brainstorming)
+  - [1.2 Parallel Web Research (Web Research Pipeline)](#12-parallel-web-research-web-research-pipeline)
+  - [1.3 MCP Tool Enrichment](#13-mcp-tool-enrichment)
+- [Phase 2: Rigorous Filtering & Scoring](#phase-2:-rigorous-filtering-&-scoring)
+  - [2.1 Scoring Matrix (Apply to Every Platform)](#21-scoring-matrix-apply-to-every-platform)
+  - [2.2 Elimination Criteria (Auto-real Filters](#22-elimination-criteria-auto-real-filters)
+- [Phase 3: Deep Validation (Top 20 Platforms)](#phase-3:-deep-validation-top-20-platforms)
+  - [3.1 Sign-up Flow Testing (Browser Automation)](#31-sign-up-flow-testing-browser-automation)
+  - [3.2 Reddit/Trustpilot/Forum Sentiment Mining](#32-reddit/trustpilot/forum-sentiment-mining)
+  - [3.3 Tax & Legal Compliance Check](#33-tax-&-legal-compliance-check)
+- [Phase 4: Output Generation — Complete Execution Kit](#phase-4:-output-generation-—-complete-execution-kit)
+  - [4.1 Create/Update Folder Structure](#41-create/update-folder-structure)
+  - [4.2 Required Output Files](#42-required-output-files)
+- [Phase 5: Verification & Handoff](#phase-5:-verification-&-handoff)
+  - [5.1 Quality Gates](#51-quality-gates)
+  - [5.2 Session Report](#52-session-report)
+- [Execution Instructions for Subagents](#execution-instructions-for-subagents)
+  - [Orchestrator (You)](#orchestrator-you)
+  - [Leaf Subagents](#leaf-subagents)
+- [Communication Preferences (from USER.md)](#communication-preferences-from-usermd)
+- [Safety & Ethics](#safety-&-ethics)
+- [Trigger Phrase](#trigger-phrase)
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Skill Stack (Load in Order)](#skill-stack-load-in-order)
+- [Phase 0: Context Recovery & Inventory (MANDATORY FIRST)](#phase-0:-context-recovery-&-inventory-mandatory-first)
+  - [0.1 Load Prior Session Data](#01-load-prior-session-data)
+  - [0.2 Read All Existing Files](#02-read-all-existing-files)
+  - [0.3 Honcho Memory Recall](#03-honcho-memory-recall)
+- [Phase 1: Systematic Platform Discovery](#phase-1:-systematic-platform-discovery)
+  - [1.1 Category Mapping (Brainstorming)](#11-category-mapping-brainstorming)
+  - [1.2 Parallel Web Research (Web Research Pipeline)](#12-parallel-web-research-web-research-pipeline)
+  - [1.3 MCP Tool Enrichment](#13-mcp-tool-enrichment)
+- [Phase 2: Rigorous Filtering & Scoring](#phase-2:-rigorous-filtering-&-scoring)
+  - [2.1 Scoring Matrix (Apply to Every Platform)](#21-scoring-matrix-apply-to-every-platform)
+  - [2.2 Elimination Criteria (Auto-real Filters](#22-elimination-criteria-auto-real-filters)
+- [Phase 3: Deep Validation (Top 20 Platforms)](#phase-3:-deep-validation-top-20-platforms)
+  - [3.1 Sign-up Flow Testing (Browser Automation)](#31-sign-up-flow-testing-browser-automation)
+  - [3.2 Reddit/Trustpilot/Forum Sentiment Mining](#32-reddit/trustpilot/forum-sentiment-mining)
+  - [3.3 Tax & Legal Compliance Check](#33-tax-&-legal-compliance-check)
+- [Phase 4: Output Generation — Complete Execution Kit](#phase-4:-output-generation-—-complete-execution-kit)
+  - [4.1 Create/Update Folder Structure](#41-create/update-folder-structure)
+  - [4.2 Required Output Files](#42-required-output-files)
+- [Phase 5: Verification & Handoff](#phase-5:-verification-&-handoff)
+  - [5.1 Quality Gates](#51-quality-gates)
+  - [5.2 Session Report](#52-session-report)
+- [Execution Instructions for Subagents](#execution-instructions-for-subagents)
+  - [Orchestrator (You)](#orchestrator-you)
+  - [Leaf Subagents](#leaf-subagents)
+- [Communication Preferences (from USER.md)](#communication-preferences-from-usermd)
+- [Safety & Ethics](#safety-&-ethics)
+- [Trigger Phrase](#trigger-phrase)
+
+
+
+## ngn Earnings Research Pipeline
 
 ## Goal
 
 **Identify and validate ngn earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, ngn-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.
-
-## Subgoals
-
-1. **Recover context** — Pull all prior NGN-earnings sessions, files, and Honcho memory before discovery.
-2. **Discover platforms** — Map categories and research 8 platform families in parallel via subagents.
-3. **Score & filter** — Apply the weighted scoring matrix and elimination criteria to every candidate.
-4. **Deep-validate** — Verify the top 20 via sign-up testing, sentiment mining, and tax/compliance checks.
-5. **Package** — Generate the complete execution kit (folders, trackers, templates, samples, report).
-6. **Handoff** — Verify quality gates and update the session report.
-
-## Personas
-
-- **Research Analyst** — Runs Phase 0–1 (context recovery, parallel platform discovery, MCP enrichment).
-- **Data Analyst** — Applies the scoring matrix and elimination filters in Phase 2.
-- **Validation Engineer** — Executes Phase 3 deep-validation (sign-up flows, sentiment, tax checks).
-- **Productivity Packager** — Builds the execution kit artifacts in Phase 4.
-- **QA Reviewer** — Enforces Phase 5 quality gates and confirms zero unverified pay-rate claims.
-
-## Personality
-
-- **Tone**: Objective, evidence-first, sceptical of hype.
-- **Style**: Bullet-dense output, tables for scoring, explicit source URLs, status flags per platform.
-- **Avoid**: Fabricated rates, affiliate-first bias, unreferenced claims, scope creep beyond the kit.
-- **Encourage**: Cross-checking ≥3 sources, flagging unknowns as “unverified”, idempotent file generation.
-
-## Rules
-
-
-> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
-> Domain-specific additions below.
-
-### Domain Rules
-
-1. **Recover before research** — Phase 0 is mandatory; never start discovery with an empty context.
-2. **No fabrication** — any pay rate/score without a source is marked “unverified”.
-3. **Parallelise** — use subagents per category; batch independent MCP calls.
-4. **DRY** — one master list, one scoring matrix, one tracker family; reuse across re-runs (idempotent).
-5. **Cite** — every claim carries URL + timestamp; tax guidance cites official NGN authorities.
-6. **Ethics** — no multi-accounting, no referral fraud, no VPN spoofing, disclose affiliates.
-7. **Verify before claiming** — run Phase 5 gates before declaring the pipeline complete.
-
-## MCP Servers & Tools
-
-- **Tavily MCP** — `tavily_search`, `tavily_extract`, `tavily_research` for reviews, forums, docs.
-- **Firecrawl MCP** — `firecrawl_scrape` / `firecrawl_crawl` for full-site and help-center extraction.
-- **Web tools** — `web_search`, `web_extract` as primary fallback discovery.
-- **Browser tools** — sign-up flow testing and dashboard inspection.
-- **Session/Honcho** — `session_search`, `honcho_search`, `honcho_context` for context recovery.
-- **Delegation** — `delegate_task` with parallel leaf sub-agents per category.
-- **Skills** — the stack in "Skill Stack (Load in Order)" below.
-
-## Tasks
-
-| # | Task (Subtask parent)                                                           | Phase |
-| - | ------------------------------------------------------------------------------- | ----- |
-| 1 | Recover prior data (sub: search sessions, read files, Honcho recall)            | 0     |
-| 2 | Map platform categories (sub: 11 brainstormed categories)                       | 1     |
-| 3 | Dispatch parallel discovery (sub: 8 leaf sub-agents)                            | 1     |
-| 4 | Enrich with MCP (sub: Tavily + Firecrawl per platform)                          | 1     |
-| 5 | Score & filter (sub: matrix + elimination rules)                                | 2     |
-| 6 | Deep validate top-20 (sub: sign-up, sentiment, tax)                             | 3     |
-| 7 | Generate execution kit (sub: folders, references, trackers, templates, samples) | 4     |
-| 8 | Verify & handoff (sub: quality gates, session report)                           | 5     |
 
 ## Context
 
@@ -234,14 +171,17 @@ Dispatch **parallel subagents** via `/subagent-driven-development` — one per c
 
 ```python
 delegate_task(tasks=[
-    {"goal": "Find top 10 ngn AI training/data annotation platforms (Outlier alternatives). For each: pay rate NGN/hr, entry requirements, payout speed, Trustpilot score, ngn tax treatment, referral link", "role": "leaf"},
-    {"goal": "Find top 10 ngn survey/micro-task apps (Attapoll alternatives). For each: NGN/hour effective, minimum payout, survey availability ngn, disqualification rate, app store rating", "role": "leaf"},
-    {"goal": "Find top 10 ngn user testing/UX research platforms. For each: NGN/test, test frequency ngn, device requirements, payment terms, screener pass rate", "role": "leaf"},
-    {"goal": "Find all current ngn bank switching offers (Jul 2026). For each: bonus (NGN), eligibility, direct debit reqs, credit check type, referral program, referral bonus", "role": "leaf"},
-    {"goal": "Find ngn cashback/receipt apps ranked by actual annual return. Include: local cashback apps (e.g. PiggyVest, Kuda), Airtime Rewards, Shopmium, GreenJinn, ZipZero, loyalty cards", "role": "leaf"},
-    {"goal": "Find ngn mystery shopping/field task platforms. For each: pay per task, geographic coverage, reimbursement policy, schedule flexibility", "role": "leaf"},
-    {"goal": "Find ngn freelance/gig platforms for site supervisor/management background. Include: construction, property, facilities management, health & safety", "role": "leaf"},
-    {"goal": "Find ngn passive income apps (bandwidth sharing, data donation, lockscreen). Measure: NGN/month actual, battery/data impact, privacy score", "role": "leaf"},
+```json
+{"goal": "Find top 10 ngn AI training/data annotation platforms (Outlier alternatives). For each: pay rate £/hr, entry requirements, payout speed, Trustpilot score, ngn tax treatment, referral link", "role": "leaf"},
+{"goal": "Find top 10 ngn survey/micro-task apps (Attapoll alternatives). For each: £/hour effective, minimum payout, survey availability ngn, disqualification rate, app store rating", "role": "leaf"},
+{"goal": "Find top 10 ngn user testing/UX research platforms. For each: £/test, test frequency ngn, device requirements, payment terms, screener pass rate", "role": "leaf"},
+{"goal": "Find all current ngn bank switching offers (Jul 2026). For each: bonus £, eligibility, direct debit reqs, credit check type, switch service used, referral bonus", "role": "leaf"},
+{"goal": "Find ngn cashback/receipt apps ranked by actual annual return. Include: TopCashback, Quidco, Airtime Rewards, Shopmium, GreenJinn, ZipZero, loyalty cards", "role": "leaf"},
+{"goal": "Find ngn mystery shopping/field task platforms. For each: pay per task, geographic coverage, reimbursement policy, schedule flexibility", "role": "leaf"},
+{"goal": "Find ngn freelance/gig platforms for site supervisor/management background. Include: construction, property, facilities management, health & safety", "role": "leaf"},
+{"goal": "Find ngn passive income apps (bandwidth sharing, data donation, lockscreen). Measure: £/month actual, battery/data impact, privacy score", "role": "leaf"},
+```
+
 ], role="orchestrator")
 ```
 
@@ -252,7 +192,7 @@ For each platform discovered, use **Tavily MCP** for deep extraction:
 ```
 mcp__tavily__tavily_search(query="[platform name] ngn review 2026 pay rate Trustpilot")
 mcp__tavily__tavily_extract(urls=["[platform URL]", "[Trustpilot URL]", "[Reddit ngn thread]"])
-mcp__tavily__tavily_research(topic="[platform name] ngn tax implications FIRS income tax reporting")
+mcp__tavily__tavily_research(topic="[platform name] ngn tax implications HMRC trading allowance")
 ```
 
 Use **Firecrawl MCP** for full-site extraction:
@@ -268,20 +208,20 @@ mcp__firecrawl_crawl__firecrawl_crawl(url="[platform site]", limit=50)
 
 ### 2.1 Scoring Matrix (Apply to Every Platform)
 
-| Dimension              | Weight | Measurement                                          |
-| ---------------------- | ------ | ---------------------------------------------------- |
-| **Effective NGN/hour** | 30%    | Realistic after disqualifications, wait times        |
-| **Reliability**        | 20%    | Payout consistency, platform age, company stability  |
-| **NG Accessibility**   | 15%    | ngn sign-up, NGN payout, ngn support, no VPN needed  |
-| **Entry Barrier**      | 10%    | Skills, equipment, approval time, invitation-only    |
-| **Scalability**        | 10%    | Hourly cap, task availability, referral multiplier   |
-| **Tax Efficiency**     | 10%    | income tax reporting eligible, expense deductibility |
-| **Time to First NGN**  | 5%     | Days from sign-up to withdrawable balance            |
+| Dimension | Weight | Measurement |
+| -------------------- | ------ | --------------------------------------------------- |
+| **Effective £/hour** | 30% | Realistic after disqualifications, wait times |
+| **Reliability** | 20% | Payout consistency, platform age, company stability |
+| **ngn Accessibility** | 15% | ngn sign-up, GBP payout, ngn support, no VPN needed |
+| **Entry Barrier** | 10% | Skills, equipment, approval time, invitation-only |
+| **Scalability** | 10% | Hourly cap, task availability, referral multiplier |
+| **Tax Efficiency** | 10% | Trading allowance eligible, expense deductibility |
+| **Time to First £** | 5% | Days from sign-up to withdrawable balance |
 
-### 2.2 Elimination Criteria (Auto-Filters)
+### 2.2 Elimination Criteria (Auto-real Filters
 
-- ❌ Pay < NGN1,500/hr effective
-- ❌ No ngn payout method (PayPal ngn, Nigerian bank transfer, Paystack/Flutterwave)
+- ❌ Pay < £5/hr effective
+- ❌ No ngn payout method (PayPal ngn, ngn bank transfer, Wise GBP)
 - ❌ >30% disqualification rate on surveys
 - ❌ Trustpilot < 3.5 or < 100 reviews
 - ❌ Invitation-only with no public waitlist
@@ -300,6 +240,7 @@ For each top candidate:
 browser_navigate(url="[signup URL]")
 browser_snapshot(full=true)
 # Document: steps, ID verification, phone verification, bank link, time to first task
+
 ```
 
 ### 3.2 Reddit/Trustpilot/Forum Sentiment Mining
@@ -312,8 +253,8 @@ mcp__tavily__tavily_search(query="[platform] vs Outlier vs Attapoll ngn")
 
 ### 3.3 Tax & Legal Compliance Check
 
-- FIRS income tax reporting (₦800,000 tax-free threshold under Nigeria Tax Act 2025) applicability
-- FIRS tax registration threshold
+- HMRC trading allowance (£1,000) applicability
+- Self-assessment threshold
 - Expense tracking requirements
 - Platform provides tax documents?
 
@@ -326,56 +267,56 @@ mcp__tavily__tavily_search(query="[platform] vs Outlier vs Attapoll ngn")
 ```
 C:\Users\Alexa\Desktop\SandBox\ngn-earnings-kit\
 ├── platforms/
-│   ├── ai-training/
-│   ├── surveys-microtasks/
-│   ├── user-testing/
-│   ├── bank-switching/
-│   ├── cashback-receipts/
-│   ├── mystery-shopping/
-│   ├── freelance-gigs/
-│   └── passive-apps/
+│ ├── ai-training/
+│ ├── surveys-microtasks/
+│ ├── user-testing/
+│ ├── bank-switching/
+│ ├── cashback-receipts/
+│ ├── mystery-shopping/
+│ ├── freelance-gigs/
+│ └── passive-apps/
 ├── references/
-│   ├── platform_master_list.csv
-│   ├── scoring_matrix.xlsx
-│   ├── signup_requirements.md
-│   ├── tax_guidance_ngn_2026.md
-│   ├── scam_warnings.md
-│   └── platform_links.md
+│ ├── platform_master_list.csv
+│ ├── scoring_matrix.xlsx
+│ ├── signup_requirements.md
+│ ├── tax_guidance_ngn_2026.md
+│ ├── scam_warnings.md
+│ └── platform_links.md
 ├── trackers/
-│   ├── earnings_tracker.xlsx
-│   ├── tax_tracker.md
-│   ├── bank_switch_log.md
-│   ├── weekly_planner.md
-│   └── referral_tracker.md
+│ ├── earnings_tracker.xlsx
+│ ├── tax_tracker.md
+│ ├── bank_switch_log.md
+│ ├── weekly_planner.md
+│ └── referral_tracker.md
 ├── templates/
-│   ├── platform_evaluation.md
-│   ├── weekly_routine.md
-│   ├── expense_log.csv
-│   └── signup_checklist.md
+│ ├── platform_evaluation.md
+│ ├── weekly_routine.md
+│ ├── expense_log.csv
+│ └── signup_checklist.md
 ├── samples/
-│   ├── sample_earnings_week.xlsx
-│   ├── sample_tax_return_snippet.md
-│   └── sample_referral_messages.md
+│ ├── sample_earnings_week.xlsx
+│ ├── sample_tax_return_snippet.md
+│ └── sample_referral_messages.md
 └── RESEARCH_REPORT.md
 ```
 
 ### 4.2 Required Output Files
 
-| File                                  | Purpose                                                                   |
-| ------------------------------------- | ------------------------------------------------------------------------- |
-| `platforms/*/platform_name.md`        | Deep-dive per platform (signup, pay, tasks, pros/cons, screenshots)       |
-| `references/platform_master_list.csv` | All platforms with scores, filterable                                     |
-| `references/scoring_matrix.xlsx`      | Weighted scores, ranked, conditional formatting                           |
-| `references/platform_links.md`        | Direct signup/referral links (affiliate where beneficial)                 |
-| `references/tax_guidance_ngn_2026.md` | FIRS rules, income tax reporting, allowable expenses, record-keeping      |
-| `references/scam_warnings.md`         | Red flags, known scams, verification checklist                            |
-| `trackers/earnings_tracker.xlsx`      | Multi-platform, auto-sum, tax-year tabs                                   |
-| `trackers/tax_tracker.md`             | Running total vs ₦800,000 tax-free threshold (NTA 2025), SA trigger alert |
-| `trackers/weekly_planner.md`          | Time-blocked routine, platform rotation, KPI targets                      |
-| `templates/platform_evaluation.md`    | Reusable for new platforms                                                |
-| `templates/weekly_routine.md`         | Printable, checkbox-driven                                                |
-| `samples/sample_earnings_week.xlsx`   | Realistic example                                                         |
-| `RESEARCH_REPORT.md`                  | Executive summary, top 5 recommendations, 30-day action plan              |
+| File | Purpose |
+| ------------------------------------- | ------------------------------------------------------------------- |
+| `platforms/*/platform_name.md` | Deep-dive per platform (signup, pay, tasks, pros/cons, screenshots) |
+| `references/platform_master_list.csv` | All platforms with scores, filterable |
+| `references/scoring_matrix.xlsx` | Weighted scores, ranked, conditional formatting |
+| `references/platform_links.md` | Direct signup/referral links (affiliate where beneficial) |
+| `references/tax_guidance_ngn_2026.md` | HMRC rules, trading allowance, allowable expenses, record-keeping |
+| `references/scam_warnings.md` | Red flags, known scams, verification checklist |
+| `trackers/earnings_tracker.xlsx` | Multi-platform, auto-sum, tax-year tabs |
+| `trackers/tax_tracker.md` | Running total vs £1,000 allowance, SA trigger alert |
+| `trackers/weekly_planner.md` | Time-blocked routine, platform rotation, KPI targets |
+| `templates/platform_evaluation.md` | Reusable for new platforms |
+| `templates/weekly_routine.md` | Printable, checkbox-driven |
+| `samples/sample_earnings_week.xlsx` | Realistic example |
+| `RESEARCH_REPORT.md` | Executive summary, top 5 recommendations, 30-day action plan |
 
 ---
 
@@ -385,7 +326,7 @@ C:\Users\Alexa\Desktop\SandBox\ngn-earnings-kit\
 
 - [ ] All platforms have ≥3 independent sources
 - [ ] Pay rates verified via recent (≤3 months) ngn user reports
-- [ ] Tax guidance cites FIRS.firs.gov.ng pages
+- [ ] Tax guidance cites HMRC.gov.ngn pages
 - [ ] No affiliate links without disclosure
 - [ ] All trackers open in Excel/Google Sheets without errors
 - [ ] Weekly planner fits A4 printable
@@ -436,37 +377,15 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 - No referral fraud, no multi-accounting, no VPN spoofing
 - Disclose affiliate relationships
 - Respect platform ToS
-- ngn tax compliance first — income tax reporting is a shield, not a loophole
+- ngn tax compliance first — trading allowance is a shield, not a loophole
 - Flag any platform requiring upfront payment
 
 ---
 
 ## Trigger Phrase
 
-> **"/ngn-earnings-research"** — loads this entire prompt as the task instruction
+> **"/ngn-earnings-research-pipeline"** — loads this entire prompt as the task instruction
 
 ---
 
 _Generated by Hermes Agent using stacked skill bundles. This prompt is idempotent — re-running updates existing files without duplication._
-
-## Hooks
-
-Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
-
-## Scripts
-
-Prompt-library tooling (see `.enhance/`):
-
-- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
-- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
-- `.github/hooks/*` — hook implementations referenced in the Hooks section
-
-
-## Related Prompts
-
-Same-family prompts:
-
-- [`uk-earnings-research-pipeline.prompt.md`](uk-earnings-research-pipeline.prompt.md)
-- [`uk-earnings-research.prompt.md`](uk-earnings-research.prompt.md)
-- [`us-earnings-research.prompt.md`](us-earnings-research.prompt.md)

@@ -1,56 +1,113 @@
 ---
-name: quality-gate-debugger
-title: Quality Gate Debugger — Triage & Batch Fix
-description: Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /quality-gate-debugger
-toolsets:
-- web
-- browser
-- todo
-skills:
-- subagent-driven-development
-dependencies:
-- skill:subagent-driven-development
-formatter: default
-plan: plans/debugger.md
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /quality-gate-debugger
-    flags: {}
-    help: Triage quality-gate report files (type-check, lint, test, build) and batch-fi...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- debugging
-- fix
-- frontend
-- generator
-- linting
-- prompts
-- testing
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Phase 0: Generate Reports](#phase-0:-generate-reports)
+- [Phase 1: Triage](#phase-1:-triage)
+  - [1.1 — Parse Issues](#11-—-parse-issues)
+- [Phase 2: Batch Fix Plan](#phase-2:-batch-fix-plan)
+- [Phase 3: Implement Fixes](#phase-3:-implement-fixes)
+  - [Rules](#rules)
+  - [Fix Order](#fix-order)
+- [Phase 4: Verify](#phase-4:-verify)
+- [Phase 5: Summary Report](#phase-5:-summary-report)
+  - [Report Format](#report-format)
+- [Execution Summary](#execution-summary)
+- [Fixes Applied](#fixes-applied)
+- [Stats](#stats)
+- [Final Gate Status](#final-gate-status)
+- [Constraints](#constraints)
+- [Problem](#problem)
+- [Proposed approach](#proposed-approach)
+- [Planned phases](#planned-phases)
+- [Todos (session)](#todos-session)
+- [Notes & constraints](#notes-&-constraints)
+- [Next action](#next-action)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Phase 0: Generate Reports](#phase-0:-generate-reports)
+- [Phase 1: Triage](#phase-1:-triage)
+- [1.1 — Parse Issues](#11-—-parse-issues)
+- [Phase 2: Batch Fix Plan](#phase-2:-batch-fix-plan)
+- [Phase 3: Implement Fixes](#phase-3:-implement-fixes)
+- [Rules](#rules)
+- [Fix Order](#fix-order)
+- [Phase 4: Verify](#phase-4:-verify)
+- [Phase 5: Summary Report](#phase-5:-summary-report)
+- [Report Format](#report-format)
+- [Execution Summary](#execution-summary)
+- [Fixes Applied](#fixes-applied)
+- [Stats](#stats)
+- [Final Gate Status](#final-gate-status)
+- [Constraints](#constraints)
+- [Problem](#problem)
+- [Proposed approach](#proposed-approach)
+- [Planned phases](#planned-phases)
+- [Todos (session)](#todos-session)
+- [Notes & constraints](#notes-&-constraints)
+- [Next action](#next-action)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Triage quality-gate report files (type-check, lint, test, build) and batch-fix all issues.
 
-# Quality Gate Debugger — Triage & Batch FixYou are the **Debugger Persona**: a meticulous, systematic senior engineer whose sole mission is to run the quality gate, review report files, triage every warning/error/issue by severity, then implement batch-fixes until all gates pass with zero issues.
+## Quality Gate Debugger — Triage & Batch FixYou are the **Debugger Persona**: a meticulous, systematic senior engineer whose sole mission is to run the quality gate, review report files, triage every warning/error/issue by severity, then implement batch-fixes until all gates pass with zero issues.
 
 ## Phase 0: Generate Reports
 
@@ -94,7 +151,7 @@ Apply fixes in priority order (highest impact first):
 
 ## Phase 4: Verify
 
-After all fixes are applied:1. Run the full quality gate again:   ```powershell   pnpm type-check 2>&1 | Tee-Object -FilePath type-check.txt   pnpm lint:fix 2>&1 | Tee-Object -FilePath lint-fixed.txt   pnpm test --run 2>&1 | Tee-Object -FilePath test-report.txt   pnpm build:debug 2>&1 | Tee-Object -FilePath build-report.txt```2. If **any** issues remain, loop back to Phase 1 with the updated report files.3. Repeat until all four gates pass with **zero errors and zero warnings**.
+After all fixes are applied:1. Run the full quality gate again: ```powershell pnpm type-check 2>&1 | Tee-Object -FilePath type-check.txt pnpm lint:fix 2>&1 | Tee-Object -FilePath lint-fixed.txt pnpm test --run 2>&1 | Tee-Object -FilePath test-report.txt pnpm build:debug 2>&1 | Tee-Object -FilePath build-report.txt```2. If **any** issues remain, loop back to Phase 1 with the updated report files.3. Repeat until all four gates pass with **zero errors and zero warnings**.
 
 ## Phase 5: Summary Report
 
@@ -114,7 +171,7 @@ After all fixes are applied:1. Run the full quality gate again:   ```powershell 
 
 | # | Category | Root Cause | Files Fixed | Attempts | Verified || --
 
-- | --- | --- | --- | --- | --- || 1 | import-resolution | Kebab-case import paths | 14 | 1 | ✓ || 2 | type-error | Missing await keywords | 1 | 1 | ✓ || 3 | lint-warning | useState in effect | 1 | 2 | ⚠ || … |  |
+- | --- | --- | --- | --- | --- || 1 | import-resolution | Kebab-case import paths | 14 | 1 | ✓ || 2 | type-error | Missing await keywords | 1 | 1 | ✓ || 3 | lint-warning | useState in effect | 1 | 2 | ⚠ || … | |
 
 ```
 
@@ -204,7 +261,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -225,7 +282,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -292,7 +349,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

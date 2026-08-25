@@ -1,50 +1,96 @@
 ---
-name: sql-optimization
-title: SQL Performance Optimization Assistant
-description: Universal SQL performance optimization assistant for comprehensive query tuning, indexing
-  strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server,
-  Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance
-  monitoring guidance.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /sql-optimization
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /sql-optimization
-    flags: {}
-    help: Universal SQL performance optimization assistant for comprehensive query tuni...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- backend
-- data
-- database
-- frontend
-- performance
-- prompts
-- specification
-- sql
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [🎯 Core Optimization Areas](#🎯-core-optimization-areas)
+  - [Query Performance Analysis](#query-performance-analysis)
+- [📊 Performance Tuning Techniques](#📊-performance-tuning-techniques)
+  - [JOIN Optimization](#join-optimization)
+- [🔍 Query Anti-Patterns](#🔍-query-anti-patterns)
+  - [SELECT Performance Issues](#select-performance-issues)
+- [📈 Database-Agnostic Optimization](#📈-database-agnostic-optimization)
+- [🛠️ Index Management](#🛠️-index-management)
+  - [Index Design Principles](#index-design-principles)
+  - [Partial Index Strategy](#partial-index-strategy)
+- [📊 Performance Monitoring Queries](#📊-performance-monitoring-queries)
+  - [Query Performance Analysis](#query-performance-analysis)
+- [🎯 Universal Optimization Checklist](#🎯-universal-optimization-checklist)
+- [📝 Optimization Methodology](#📝-optimization-methodology)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [🎯 Core Optimization Areas](#🎯-core-optimization-areas)
+- [Query Performance Analysis](#query-performance-analysis)
+- [📊 Performance Tuning Techniques](#📊-performance-tuning-techniques)
+- [JOIN Optimization](#join-optimization)
+- [🔍 Query Anti-Patterns](#🔍-query-anti-patterns)
+- [SELECT Performance Issues](#select-performance-issues)
+- [📈 Database-Agnostic Optimization](#📈-database-agnostic-optimization)
+- [🛠️ Index Management](#🛠️-index-management)
+- [Index Design Principles](#index-design-principles)
+- [Partial Index Strategy](#partial-index-strategy)
+- [📊 Performance Monitoring Queries](#📊-performance-monitoring-queries)
+- [Query Performance Analysis](#query-performance-analysis)
+- [🎯 Universal Optimization Checklist](#🎯-universal-optimization-checklist)
+- [📝 Optimization Methodology](#📝-optimization-methodology)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Universal SQL performance optimization assistant for comprehensive query tuning, indexing strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance monitoring guidance.
@@ -92,7 +138,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## 🎯 Core Optimization Areas
@@ -124,7 +170,7 @@ Use when you need to work on the current workspace or task.
 ### Index Design Principles
 
 ```
-sql-- ✅ GOOD: Covering index designCREATE INDEX idx_orders_coveringON orders(customer_id, created_at)INCLUDE (total_amount, status);  -- SQL Server syntax-- Or: CREATE INDEX idx_orders_covering ON orders(customer_id, created_at, total_amount, status); -- Other databases
+sql-- ✅ GOOD: Covering index designCREATE INDEX idx_orders_coveringON orders(customer_id, created_at)INCLUDE (total_amount, status); -- SQL Server syntax-- Or: CREATE INDEX idx_orders_covering ON orders(customer_id, created_at, total_amount, status); -- Other databases
 ```
 
 ### Partial Index Strategy
@@ -138,7 +184,7 @@ sql-- ✅ GOOD: Partial indexes for specific conditionsCREATE INDEX idx_orders_a
 ### Query Performance Analysis
 
 ```
-sql-- Generic approach to identify slow queries-- (Specific syntax varies by database)-- For MySQL:SELECT query_time, lock_time, rows_sent, rows_examined, sql_textFROM mysql.slow_logORDER BY query_time DESC;-- For PostgreSQL:SELECT query, calls, total_time, mean_timeFROM pg_stat_statementsORDER BY total_time DESC;-- For SQL Server:SELECT    qs.total_elapsed_time/qs.execution_count as avg_elapsed_time,    qs.execution_count,    SUBSTRING(qt.text, (qs.statement_start_offset/2)+1,        ((CASE qs.statement_end_offset WHEN -1 THEN DATALENGTH(qt.text)        ELSE qs.statement_end_offset END - qs.statement_start_offset)/2)+1) as query_textFROM sys.dm_exec_query_stats qsCROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) qtORDER BY avg_elapsed_time DESC;
+sql-- Generic approach to identify slow queries-- (Specific syntax varies by database)-- For MySQL:SELECT query_time, lock_time, rows_sent, rows_examined, sql_textFROM mysql.slow_logORDER BY query_time DESC;-- For PostgreSQL:SELECT query, calls, total_time, mean_timeFROM pg_stat_statementsORDER BY total_time DESC;-- For SQL Server:SELECT qs.total_elapsed_time/qs.execution_count as avg_elapsed_time, qs.execution_count, SUBSTRING(qt.text, (qs.statement_start_offset/2)+1, ((CASE qs.statement_end_offset WHEN -1 THEN DATALENGTH(qt.text) ELSE qs.statement_end_offset END - qs.statement_start_offset)/2)+1) as query_textFROM sys.dm_exec_query_stats qsCROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) qtORDER BY avg_elapsed_time DESC;
 ```
 
 ## 🎯 Universal Optimization Checklist
@@ -239,7 +285,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -247,7 +292,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

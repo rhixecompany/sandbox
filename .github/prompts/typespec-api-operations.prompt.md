@@ -1,44 +1,102 @@
 ---
-name: typespec-api-operations
-title: Add TypeSpec API Operations
-description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing,
-  parameters, and adaptive cards.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /typespec-api-operations
-toolsets:
-- terminal
-- file
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /typespec-api-operations
-    flags: {}
-    help: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with pro...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- api
-- ml
-- prompts
-- specification
-- typescript
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Adding GET Operations](#adding-get-operations)
+  - [Simple GET](#simple-get)
+- [Adding POST Operations](#adding-post-operations)
+  - [Simple POST](#simple-post)
+- [Adding PATCH Operations](#adding-patch-operations)
+  - [Simple PATCH](#simple-patch)
+- [Adding DELETE Operations](#adding-delete-operations)
+- [Complete CRUD Example](#complete-crud-example)
+  - [Define the Service and Models](#define-the-service-and-models)
+- [Advanced Features](#advanced-features)
+  - [Multiple Query Parameters](#multiple-query-parameters)
+- [Test](#test)
+- [Best Practices](#best-practices)
+- [Common Issues](#common-issues)
+  - [Issue: Parameter not showing in Copilot](#issue:-parameter-not-showing-in-copilot)
+  - [Issue: Adaptive card not rendering](#issue:-adaptive-card-not-rendering)
+  - [Issue: Confirmation not appearing](#issue:-confirmation-not-appearing)
+  - [Issue: Model property not appearing in response](#issue:-model-property-not-appearing-in-response)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Adding GET Operations](#adding-get-operations)
+- [Simple GET](#simple-get)
+- [Adding POST Operations](#adding-post-operations)
+- [Simple POST](#simple-post)
+- [Adding PATCH Operations](#adding-patch-operations)
+- [Simple PATCH](#simple-patch)
+- [Adding DELETE Operations](#adding-delete-operations)
+- [Complete CRUD Example](#complete-crud-example)
+- [Define the Service and Models](#define-the-service-and-models)
+- [Advanced Features](#advanced-features)
+- [Multiple Query Parameters](#multiple-query-parameters)
+- [Test](#test)
+- [Best Practices](#best-practices)
+- [Common Issues](#common-issues)
+- [Issue: Parameter not showing in Copilot](#issue:-parameter-not-showing-in-copilot)
+- [Issue: Adaptive card not rendering](#issue:-adaptive-card-not-rendering)
+- [Issue: Confirmation not appearing](#issue:-confirmation-not-appearing)
+- [Issue: Model property not appearing in response](#issue:-model-property-not-appearing-in-response)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
 ## Goal
 
 Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.
@@ -86,7 +144,7 @@ Use when you need to typespec api operations for the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Adding GET Operations
@@ -243,7 +301,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -251,7 +308,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

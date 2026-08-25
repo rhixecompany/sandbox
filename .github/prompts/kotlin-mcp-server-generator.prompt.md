@@ -1,51 +1,125 @@
 ---
-name: kotlin-mcp-server-generator
-title: Kotlin MCP Server Project Generator
-description: Generate a complete Kotlin MCP server project with proper structure, dependencies, and implementation
-  using the official io.modelcontextprotocol:kotlin-sdk library.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /kotlin-mcp-server-generator
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /kotlin-mcp-server-generator
-    flags: {}
-    help: Generate a complete Kotlin MCP server project with proper structure, dependen...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- backend
-- frontend
-- generator
-- mcp
-- prompts
-- typescript
-- configuration
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Project Requirements](#project-requirements)
+- [Template Structure](#template-structure)
+- [build.gradle.kts Template](#buildgradlekts-template)
+- [settings.gradle.kts Template](#settingsgradlekts-template)
+- [Main.kt Template](#mainkt-template)
+- [Server.kt Template](#serverkt-template)
+- [Config.kt Template](#configkt-template)
+- [Tool1.kt Template](#tool1kt-template)
+- [tools/ToolRegistry.kt Template](#tools/toolregistrykt-template)
+- [ServerTest.kt Template](#servertestkt-template)
+- [README.md Template](#readmemd-template)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Available Tools](#available-tools)
+  - [tool1](#tool1)
+- [Development](#development)
+- [Multiplatform](#multiplatform)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Best Practices](#best-practices)
+- [Transport Options](#transport-options)
+  - [Stdio Transport](#stdio-transport)
+  - [SSE Transport (Ktor)](#sse-transport-ktor)
+- [Multiplatform Configuration](#multiplatform-configuration)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Project Requirements](#project-requirements)
+- [Template Structure](#template-structure)
+- [build.gradle.kts Template](#buildgradlekts-template)
+- [settings.gradle.kts Template](#settingsgradlekts-template)
+- [Main.kt Template](#mainkt-template)
+- [Server.kt Template](#serverkt-template)
+- [Config.kt Template](#configkt-template)
+- [Tool1.kt Template](#tool1kt-template)
+- [tools/ToolRegistry.kt Template](#tools/toolregistrykt-template)
+- [ServerTest.kt Template](#servertestkt-template)
+- [README.md Template](#readmemd-template)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Available Tools](#available-tools)
+- [tool1](#tool1)
+- [Development](#development)
+- [Multiplatform](#multiplatform)
+- [License](#license)
+- [Generation Instructions](#generation-instructions)
+- [Best Practices](#best-practices)
+- [Transport Options](#transport-options)
+- [Stdio Transport](#stdio-transport)
+- [SSE Transport (Ktor)](#sse-transport-ktor)
+- [Multiplatform Configuration](#multiplatform-configuration)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Generate a complete Kotlin MCP server project with proper structure, dependencies, and implementation using the official io.modelcontextprotocol:kotlin-sdk library.
 
-# Kotlin MCP Server Project GeneratorGenerate a complete, production-ready Model Context Protocol (MCP) server project in Kotlin.
+## Kotlin MCP Server Project GeneratorGenerate a complete, production-ready Model Context Protocol (MCP) server project in Kotlin.
 
 ## Project Requirements
 
@@ -55,7 +129,7 @@ You will create a Kotlin MCP server with:1. **Project Structure**: Gradle-based 
 
 ```
 
-myserver/├── build.gradle.kts├── settings.gradle.kts├── gradle.properties├── src/│   ├── main/│   │   └── kotlin/│   │       └── com/example/myserver/│   │           ├── Main.kt│   │           ├── Server.kt│   │           ├── config/│   │           │   └── Config.kt│   │           └── tools/│   │               ├── Tool1.kt│   │               └── Tool2.kt│   └── test/│       └── kotlin/│           └── com/example/myserver/│               └── ServerTest.kt└── README.md
+myserver/├── build.gradle.kts├── settings.gradle.kts├── gradle.properties├── src/│ ├── main/│ │ └── kotlin/│ │ └── com/example/myserver/│ │ ├── Main.kt│ │ ├── Server.kt│ │ ├── config/│ │ │ └── Config.kt│ │ └── tools/│ │ ├── Tool1.kt│ │ └── Tool2.kt│ └── test/│ └── kotlin/│ └── com/example/myserver/│ └── ServerTest.kt└── README.md
 ```
 
 ## build.gradle.kts Template
@@ -79,7 +153,7 @@ rootProject.name = "
 
 package com.example.myserverimport io.modelcontextprotocol.kotlin.sdk.server.StdioServerTransportimport kotlinx.coroutines.runBlockingimport io.github.oshai.kotlinlogging.KotlinLoggingprivate val logger = KotlinLogging.logger
 
-}fun main() = runBlocking {    logger.info { "Starting MCP server..." }    val config = loadConfig()    val server = createServer(config)    // Use stdio transport    val transport = StdioServerTransport()    logger.info { "Server '${config.name}' v${config.version} ready" }    server.connect(transport)}
+}fun main() = runBlocking { logger.info { "Starting MCP server..." } val config = loadConfig() val server = createServer(config) // Use stdio transport val transport = StdioServerTransport() logger.info { "Server '${config.name}' v${config.version} ready" } server.connect(transport)}
 ```
 
 ## Server.kt Template
@@ -92,9 +166,9 @@ package com.example.myserverimport io.modelcontextprotocol.kotlin.sdk.server.Std
 
 ```kotlin
 
-package com.example.myserver.configimport kotlinx.serialization.Serializable@Serializabledata class Config(    val name: String = "
+package com.example.myserver.configimport kotlinx.serialization.Serializable@Serializabledata class Config( val name: String = "
 
-{PROJECT_NAME}}",    val version: String = "1.0.0",    val description: String = "{{PROJECT_DESCRIPTION}}")fun loadConfig(): Config {    return Config(        name = System.getenv("SERVER_NAME") ?: "{{PROJECT_NAME}}",        version = System.getenv("VERSION") ?: "1.0.0",        description = System.getenv("DESCRIPTION") ?: "{{PROJECT_DESCRIPTION}}"    )}
+{PROJECT_NAME}}", val version: String = "1.0.0", val description: String = "{{PROJECT_DESCRIPTION}}")fun loadConfig(): Config { return Config( name = System.getenv("SERVER_NAME") ?: "{{PROJECT_NAME}}", version = System.getenv("VERSION") ?: "1.0.0", description = System.getenv("DESCRIPTION") ?: "{{PROJECT_DESCRIPTION}}" )}
 ```
 
 ## Tool1.kt Template
@@ -111,9 +185,9 @@ package com.example.myserver.tools
 import io.modelcontextprotocol.kotlin.sdk.server.Server
 
 fun Server.registerTools() {
-    registerTool1()
-    registerTool2()
-    // Register additional tools here
+registerTool1()
+registerTool2()
+// Register additional tools here
 }
 ```
 
@@ -182,7 +256,7 @@ When generating a Kotlin MCP server:1. **Gradle Setup**: Create proper `build.gr
 ## Best Practices
 
 - Use suspending functions for all async operations
-- Leverage Kotlin's null safety and type system
+- use Kotlin's null safety and type system
 - Use data classes for structured data
 - Apply kotlinx.serialization for JSON handling
 - Use sealed classes for result types
@@ -206,13 +280,13 @@ kotlinval transport = StdioServerTransport()server.connect(transport)
 
 ```
 
-kotlinembeddedServer(Netty, port = 8080) {    mcp {        Server(/*...*/) { "Description" }    }}.start(wait = true)
+kotlinembeddedServer(Netty, port = 8080) { mcp { Server(/*...*/) { "Description" } }}.start(wait = true)
 
 ```
 
 ## Multiplatform Configuration
 
-For multiplatform projects, add to `build.gradle.kts`:```kotlinkotlin {    jvm()    js(IR) { nodejs() }    wasmJs()    sourceSets {        commonMain.dependencies {            implementation("io.modelcontextprotocol:kotlin-sdk:0.7.2")        }    }}```
+For multiplatform projects, add to `build.gradle.kts`:```kotlinkotlin { jvm() js(IR) { nodejs() } wasmJs() sourceSets { commonMain.dependencies { implementation("io.modelcontextprotocol:kotlin-sdk:0.7.2") } }}```
 
 ## Template References
 
@@ -256,7 +330,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -277,7 +351,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Verification Checklist
@@ -351,7 +425,6 @@ Other language variants of this MCP server generator:
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 

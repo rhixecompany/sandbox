@@ -1,91 +1,139 @@
 ---
-name: dev-init
-title: Dev Init - Prompt Conversion and Enhancement Planning
-description: Create a comprehensive plan for converting plaintext prompts to markdown, enhancing prompt
-  quality, and updating related implementation plans.
-version: 1.0.0
-license: MIT
-author: Hermes Agent
-trigger: /dev-init
-toolsets:
-- file
-- terminal
-skills:
-- introspection-only-general
-- no-git-delete
-- no-net-fetch
-- skills-tools-preflight-check
-- context-map
-- convert-plaintext-to-md
-- boost-prompt
-- ai-prompt-engineering-safety-review
-- update-implementation-plan
-- prompt-builder
-- brainstorming
-- plans-and-specs
-- writing-skills
-- writing-plans
-- acpx-executor
-- executing-plans
-- simplify
-- subagent-driven-development
-dependencies:
-- prompt:context-map.prompt.md
-- prompt:convert-plaintext-to-md.prompt.md
-- prompt:boost-prompt.prompt.md
-- prompt:ai-prompt-engineering-safety-review.prompt.md
-- prompt:update-implementation-plan.prompt.md
-- prompt:prompt-builder.prompt.md
-- skill:brainstorming
-- skill:plans-and-specs
-- skill:writing-skills
-- skill:writing-plans
-- skill:acpx-executor
-- skill:executing-plans
-- skill:simplify
-- skill:subagent-driven-development
-- skill:introspection-only-general
-- skill:no-git-delete
-- skill:no-net-fetch
-- skill:skills-tools-preflight-check
-- skill:context-map
-- skill:convert-plaintext-to-md
-- skill:boost-prompt
-- skill:ai-prompt-engineering-safety-review
-- skill:update-implementation-plan
-- skill:prompt-builder
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /dev-init
-    flags: {}
-    help: Create a comprehensive plan for converting plaintext prompts to markdown, enh...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- audit
-- markdown
-- ml
-- planning
-- prompts
-- security
-- typescript
-- workflow
-- git
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Discover and verify](#phase-1:-discover-and-verify)
+  - [Phase 2: Plan conversion](#phase-2:-plan-conversion)
+  - [Phase 3: Plan audits and fixes](#phase-3:-plan-audits-and-fixes)
+  - [Phase 4: Review and hand off](#phase-4:-review-and-hand-off)
+  - [Phase 5: Execute Implementation Plan](#phase-5:-execute-implementation-plan)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions](#actions)
+- [Reference: `/enhance-markdown` Prompt](#reference:-`/enhance-markdown`-prompt)
+- [Phase 5: Execute Implementation Plan](#phase-5:-execute-implementation-plan)
+  - [Entry Check](#entry-check)
+  - [Step 5.1 — Load Plan Artifacts](#step-51-—-load-plan-artifacts)
+  - [Step 5.2 — Run `context-map`](#step-52-—-run-`context-map`)
+  - [Step 5.3 — Run `convert-plaintext-to-md`](#step-53-—-run-`convert-plaintext-to-md`)
+  - [Step 5.4 — Run `boost-prompt`](#step-54-—-run-`boost-prompt`)
+  - [Step 5.5 — Run `ai-prompt-engineering-safety-review`](#step-55-—-run-`ai-prompt-engineering-safety-review`)
+  - [Step 5.6 — Run `prompt-builder`](#step-56-—-run-`prompt-builder`)
+  - [Step 5.7 — Run `update-implementation-plan`](#step-57-—-run-`update-implementation-plan`)
+  - [Tasks](#tasks)
+- [Phase 6: Verify All Prompts Optimal](#phase-6:-verify-all-prompts-optimal)
+  - [Step 6.1 — Structural Audit](#step-61-—-structural-audit)
+- [Steps](#steps)
+- [Tasks" Prompts/<name](#tasks"-prompts/<name)
+- [Actions](#actions)
+  - [Step 6.2 — Cross-Reference Validation](#step-62-—-cross-reference-validation)
+- [Step 6.3 — Conflict Detection](#step-63-—-conflict-detection)
+- [Step 6.4 — Quality Scoring](#step-64-—-quality-scoring)
+  - [Step 6.5 — Write Verification Report](#step-65-—-write-verification-report)
+- [Summary](#summary)
+- [Per-File Scores](#per-file-scores)
+- [Conflicts Found](#conflicts-found)
+- [Broken References](#broken-references)
+  - [Tasks](#tasks)
+- [Phase 7: Cross-Reference Registry](#phase-7:-cross-reference-registry)
+  - [Step 7.1 — Build Registry](#step-71-—-build-registry)
+- [Prompts/\*.md (Conversion Targets)](#prompts/\*md-conversion-targets)
+- [prompts/\*.prompt.md (Workflow Prompts)](#prompts/\*promptmd-workflow-prompts)
+- [Conflict Log](#conflict-log)
+  - [Step 7.2 — Final Verification](#step-72-—-final-verification)
+  - [Tasks](#tasks)
+- [Execution Summary](#execution-summary)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Discover and verify](#phase-1:-discover-and-verify)
+- [Phase 2: Plan conversion](#phase-2:-plan-conversion)
+- [Phase 3: Plan audits and fixes](#phase-3:-plan-audits-and-fixes)
+- [Phase 4: Review and hand off](#phase-4:-review-and-hand-off)
+- [Phase 5: Execute Implementation Plan](#phase-5:-execute-implementation-plan)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions](#actions)
+- [Reference: `/enhance-markdown` Prompt](#reference:-`/enhance-markdown`-prompt)
+- [Phase 5: Execute Implementation Plan](#phase-5:-execute-implementation-plan)
+- [Entry Check](#entry-check)
+- [Step 5.1 — Load Plan Artifacts](#step-51-—-load-plan-artifacts)
+- [Step 5.2 — Run `context-map`](#step-52-—-run-`context-map`)
+- [Step 5.3 — Run `convert-plaintext-to-md`](#step-53-—-run-`convert-plaintext-to-md`)
+- [Step 5.4 — Run `boost-prompt`](#step-54-—-run-`boost-prompt`)
+- [Step 5.5 — Run `ai-prompt-engineering-safety-review`](#step-55-—-run-`ai-prompt-engineering-safety-review`)
+- [Step 5.6 — Run `prompt-builder`](#step-56-—-run-`prompt-builder`)
+- [Step 5.7 — Run `update-implementation-plan`](#step-57-—-run-`update-implementation-plan`)
+- [Tasks](#tasks)
+- [Phase 6: Verify All Prompts Optimal](#phase-6:-verify-all-prompts-optimal)
+- [Step 6.1 — Structural Audit](#step-61-—-structural-audit)
+- [Steps](#steps)
+- [Tasks" Prompts/<name](#tasks"-prompts/<name)
+- [Actions](#actions)
+- [Step 6.2 — Cross-Reference Validation](#step-62-—-cross-reference-validation)
+- [Step 6.3 — Conflict Detection](#step-63-—-conflict-detection)
+- [Step 6.4 — Quality Scoring](#step-64-—-quality-scoring)
+- [Step 6.5 — Write Verification Report](#step-65-—-write-verification-report)
+- [Summary](#summary)
+- [Per-File Scores](#per-file-scores)
+- [Conflicts Found](#conflicts-found)
+- [Broken References](#broken-references)
+- [Tasks](#tasks)
+- [Phase 7: Cross-Reference Registry](#phase-7:-cross-reference-registry)
+- [Step 7.1 — Build Registry](#step-71-—-build-registry)
+- [Prompts/\*.md (Conversion Targets)](#prompts/\*md-conversion-targets)
+- [prompts/\*.prompt.md (Workflow Prompts)](#prompts/\*promptmd-workflow-prompts)
+- [Conflict Log](#conflict-log)
+- [Step 7.2 — Final Verification](#step-72-—-final-verification)
+- [Tasks](#tasks)
+- [Execution Summary](#execution-summary)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
 
 ## Goal
 
@@ -126,21 +174,21 @@ Use this prompt when a prompt-library refresh needs planning beforeimplementatio
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill                                 | Purpose                                                          |
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
 | ------------------------------------- | ---------------------------------------------------------------- |
-| `context-map` (prompt)                | Map source, destination, and dependency impact before conversion |
-| `convert-plaintext-to-md`             | Convert plaintext prompts to markdown                            |
-| `boost-prompt`                        | Improve prompt quality and structure                             |
-| `ai-prompt-engineering-safety-review` | Review prompts for safety and clarity                            |
-| `update-implementation-plan`          | Keep the implementation plan current                             |
-| `prompt-builder`                      | Scaffold new prompt files                                        |
-| `brainstorming`                       | Explore conversion and enhancement approaches                    |
-| `plans-and-specs`                     | Create detailed specs with file references                       |
-| `writing-skills`                      | Craft and optimize prompts and instructions                      |
-| `writing-plans`                       | Structure the plan and its sections                              |
-| `acpx-executor`                       | Execute a prompt via any ACPX provider                           |
-| `executing-plans`                     | Execute implementation steps in order                            |
-| `simplify`                            | Keep the output concise and non-redundant                        |
+| `context-map` (prompt) | Map source, destination, and dependency impact before conversion |
+| `convert-plaintext-to-md` | Convert plaintext prompts to markdown |
+| `boost-prompt` | Improve prompt quality and structure |
+| `ai-prompt-engineering-safety-review` | Review prompts for safety and clarity |
+| `update-implementation-plan` | Keep the implementation plan current |
+| `prompt-builder` | Scaffold new prompt files |
+| `brainstorming` | Explore conversion and enhancement approaches |
+| `plans-and-specs` | Create detailed specs with file references |
+| `writing-skills` | Craft and optimize prompts and instructions |
+| `writing-plans` | Structure the plan and its sections |
+| `acpx-executor` | Execute a prompt via any ACPX provider |
+| `executing-plans` | Execute implementation steps in order |
+| `simplify` | Keep the output concise and non-redundant |
 
 ## Phases
 
@@ -184,17 +232,17 @@ Run the conversion and enhancement pipeline end-to-end. Idempotent — safe to r
 
 ## Actions
 
-- `read_file("prompts/context-map.prompt.md")` — Load the dependency map  before planning
+- `read_file("prompts/context-map.prompt.md")` — Load the dependency map before planning
 - `skill_view(name="brainstorming")` — Expand workflow options and tradeoffs
 - `skill_view(name="plans-and-specs")` — Produce the detailed plan artifact
 - `skill_view(name="acpx-executor")` — Dispatch tasks to ACPX providers
 - `search_files(pattern, target)` — Locate related prompt files and templates
-- `delegate_task(goal, toolsets)` — Split audit work when multiple files are  involved---
+- `delegate_task(goal, toolsets)` — Split audit work when multiple files are involved---
 
 ## Reference: `/enhance-markdown` Prompt
 
 > Full definition: `_archive/dev-init.prompts.txt` (lines 99–836)The `/enhance-markdown` prompt is the four-phase markdown auditor and enhancerused by the TXT→MD conversion pipeline. Key properties:```bash/enhance-markdown <file
-> [slug]       # audit + enhance mode/enhance-markdown --txt-to-md [file]  # TXT→MD conversion mode (batch or single)```- **9-section template**: Skills → Subagents → Personas → Rules → Phases → Steps  → Tasks → Subtasks → Actions- **Batch size**: exactly 7 files per batch- **Resumable**: each phase checks for existing artifacts before re-running- **Plugin planning**: uses `createPlan`/`createSpec`/`appendSpec` with  companion markdown fallback---
+> [slug] # audit + enhance mode/enhance-markdown --txt-to-md [file] # TXT→MD conversion mode (batch or single)```- **9-section template**: Skills → Subagents → Personas → Rules → Phases → Steps → Tasks → Subtasks → Actions- **Batch size**: exactly 7 files per batch- **Resumable**: each phase checks for existing artifacts before re-running- **Plugin planning**: uses `createPlan`/`createSpec`/`appendSpec` with companion markdown fallback---
 
 ## Phase 5: Execute Implementation Plan
 
@@ -220,17 +268,17 @@ bashread_file("docs/dev-init-comprehensive-plan.md")read_file("docs/dev-init-spe
 
 ### Step 5.3 — Run `convert-plaintext-to-md`
 
-For each `.github/prompts/*.txt` file:1. Read raw `.txt` content2. Apply enhancement (Stanford/Anthropic patterns):    - Critical rules in first 15%    - Nesting depth ≤ 4    - Instruction ratio 40–50%    - Single source of truth (no rule repeated
+For each `.github/prompts/*.txt` file:1. Read raw `.txt` content2. Apply enhancement (Stanford/Anthropic patterns): - Critical rules in first 15% - Nesting depth ≤ 4 - Instruction ratio 40–50% - Single source of truth (no rule repeated
 
-> 2×)    - 3-tier prioritization: Safety → Core Workflow → Optimization3. Apply 9-section template:   `Skills → Subagents → Personas → Rules → Phases → Steps → Tasks → Subtasks → Actions`4. Write to `.github/prompts/<same-stem>.md` (overwrite if exists)
+> 2×) - 3-tier prioritization: Safety → Core Workflow → Optimization3. Apply 9-section template: `Skills → Subagents → Personas → Rules → Phases → Steps → Tasks → Subtasks → Actions`4. Write to `.github/prompts/<same-stem>.md` (overwrite if exists)
 
 ### Step 5.4 — Run `boost-prompt`
 
-For each `.github/prompts/*.md` file:1. Load `prompts/boost-prompt.prompt.md`2. Apply quality enhancements:    - Strengthen rule language (imperative, specific)    - Add missing frontmatter (title, description, tags, trigger)    - Ensure consistent heading hierarchy    - Remove redundant sections3. **Constraint Preservation Audit**: log any rule removals with justification4. Write enhanced file back
+For each `.github/prompts/*.md` file:1. Load `prompts/boost-prompt.prompt.md`2. Apply quality enhancements: - Strengthen rule language (imperative, specific) - Add missing frontmatter (title, description, tags, trigger) - Ensure consistent heading hierarchy - Remove redundant sections3. **Constraint Preservation Audit**: log any rule removals with justification4. Write enhanced file back
 
 ### Step 5.5 — Run `ai-prompt-engineering-safety-review`
 
-For each `.github/prompts/*.md` and `.github/prompts/*.prompt.md`:1. Load `prompts/ai-prompt-engineering-safety-review.prompt.md`2. Check for:    - Credential handling safety    - Backup/rollback instructions present    - Approval workflows for destructive ops    - No fabricated verification claims3. Add safety notes where missing4. **Fail if critical safety constraints removed** — halt and report
+For each `.github/prompts/*.md` and `.github/prompts/*.prompt.md`:1. Load `prompts/ai-prompt-engineering-safety-review.prompt.md`2. Check for: - Credential handling safety - Backup/rollback instructions present - Approval workflows for destructive ops - No fabricated verification claims3. Add safety notes where missing4. **Fail if critical safety constraints removed** — halt and report
 
 ### Step 5.6 — Run `prompt-builder`
 
@@ -238,7 +286,7 @@ For any missing prompts:1. Load `prompts/prompt-builder.prompt.md`2. Scaffold ne
 
 ### Step 5.7 — Run `update-implementation-plan`
 
-1. Load `prompts/update-implementation-plan.prompt.md`2. Update `docs/dev-init-comprehensive-plan.md` with:    - Actual files processed    - Issues found and resolved    - Remaining items3. Mark completed phases
+1. Load `prompts/update-implementation-plan.prompt.md`2. Update `docs/dev-init-comprehensive-plan.md` with: - Actual files processed - Issues found and resolved - Remaining items3. Mark completed phases
 
 ### Tasks
 
@@ -254,7 +302,7 @@ For each `.github/prompts/*.md`:
 
 ```bash
 
-# Check frontmatterhead -10 Prompts/<name
+## Check frontmatterhead -10 Prompts/<name
 
 > .prompts.md | grep "^title:"head -10 Prompts/<name>.prompts.md | grep "^description:"head -10 Prompts/<name>.prompts.md | grep "^trigger:"head -10 Prompts/<name>.prompts.md | grep "^tags:"# Check required sections existgrep -c "^
 
@@ -275,29 +323,29 @@ For each `.github/prompts/*.md`:
 
 ```bash
 
-# Verify all internal references resolvegrep -o '\[.*\](\./[^)]*)' Prompts/<name>.prompts.md | while read ref; do  path=$(echo "$ref" | sed 's/.*(\(.*\))/\1/')  test -f "$path" || echo "BROKEN REF: $ref in Prompts/<name>.prompts.md"done
+## Verify all internal references resolvegrep -o '\[.*\](\./[^)]*)' Prompts/<name>.prompts.md | while read ref; do path=$(echo "$ref" | sed 's/.*(\(.*\))/\1/') test -f "$path" || echo "BROKEN REF: $ref in Prompts/<name>.prompts.md"done
 
 ```
 
-### Step 6.3 — Conflict Detection
+## Step 6.3 — Conflict Detection
 
 ```bash
 
-# Check for duplicate triggers across Prompts/grep -h "^trigger:" Prompts/*.prompts.md | sort | uniq -d# Check for duplicate titlesgrep -h "^title:" Prompts/*.prompts.md | sort | uniq -d
+## Check for duplicate triggers across Prompts/grep -h "^trigger:" Prompts/*.prompts.md | sort | uniq -d# Check for duplicate titlesgrep -h "^title:" Prompts/*.prompts.md | sort | uniq -d
 
 ```
 
-### Step 6.4 — Quality Scoring
+## Step 6.4 — Quality Scoring
 
-Score each `.github/prompts/*.md`:| Criterion                             | Points | Detection                                        || ------------------------------------
+Score each `.github/prompts/*.md`:| Criterion | Points | Detection || ------------------------------------
 
-- | ------ | ------------------------------------------------ || YAML frontmatter complete             | +20    | title + description + trigger + tags present     || Summary paragraph present             | +15    | First paragraph after frontmatter is a summary   || All required sections                 | +20    | Goal, Phases, Steps, Tasks, Actions present      || Skills section references real skills | +10    | Each skill listed exists in `hermes skills list` || Actions use real tools                | +10    | Each action maps to an available tool            || No broken internal refs               | +15    | All relative paths resolve                       || Consistent heading hierarchy          | +10    | H1→H2→H3, no skipped levels                      |**Threshold**: ≥80 = optimal, 60–79 = needs work, <60 = rewrite required.
+- | ------ | ------------------------------------------------ || YAML frontmatter complete | +20 | title + description + trigger + tags present || Summary paragraph present | +15 | First paragraph after frontmatter is a summary || All required sections | +20 | Goal, Phases, Steps, Tasks, Actions present || Skills section references real skills | +10 | Each skill listed exists in `hermes skills list` || Actions use real tools | +10 | Each action maps to an available tool || No broken internal refs | +15 | All relative paths resolve || Consistent heading hierarchy | +10 | H1→H2→H3, no skipped levels |**Threshold**: ≥80 = optimal, 60–79 = needs work, <60 = rewrite required.
 
 ### Step 6.5 — Write Verification Report
 
 ```markdown
 
-# docs/dev-init-verification-report.md
+## docs/dev-init-verification-report.md
 
 ## Summary
 
@@ -305,19 +353,19 @@ Score each `.github/prompts/*.md`:| Criterion                             | Poin
 
 ## Per-File Scores
 
-| File | Score | Issues || ---- | ----- | ------ || ...  | ...   | ...    |
+| File | Score | Issues || ---- | ----- | ------ || ... | ... | ... |
 
 ## Conflicts Found
 
-| Type              | Files | Resolution || ----------------
+| Type | Files | Resolution || ----------------
 
-- | ----- | ---------- || Duplicate trigger | ...   | ...        |
+- | ----- | ---------- || Duplicate trigger | ... | ... |
 
 ## Broken References
 
 | File | Reference | Status || ---
 
-- | --------- | ------ || ...  | ...       | ...    |
+- | --------- | ------ || ... | ... | ... |
 ```
 
 ### Tasks
@@ -334,21 +382,21 @@ Write `docs/prompts-cross-reference-registry.md`:```markdown# Prompts Cross-Refe
 
 ## Prompts/\*.md (Conversion Targets)
 
-| File                  | Trigger     | Status | Score | Depends On                           || --------------------
+| File | Trigger | Status | Score | Depends On || --------------------
 
-- | ----------- | ------ | ----- | ------------------------------------ || skills-fix.prompts.md | /skills-fix | ✅     | 85    | context-map, skill-judge             || dev-init.prompts.md   | /dev-init   | ✅     | 90    | context-map, convert-plaintext-to-md || ...                   | ...         | ...    | ...   | ...                                  |
+- | ----------- | ------ | ----- | ------------------------------------ || skills-fix.prompts.md | /skills-fix | ✅ | 85 | context-map, skill-judge || dev-init.prompts.md | /dev-init | ✅ | 90 | context-map, convert-plaintext-to-md || ... | ... | ... | ... | ... |
 
 ## prompts/\*.prompt.md (Workflow Prompts)
 
-| File                              | Purpose             | Used By             || --------------------------------
+| File | Purpose | Used By || --------------------------------
 
-- | ------------------- | ------------------- || context-map.prompt.md             | Dependency mapping  | All dev-init phases || convert-plaintext-to-md.prompt.md | TXT→MD conversion   | Phase 5.3           || boost-prompt.prompt.md            | Quality enhancement | Phase 5.4           || ...                               | ...                 | ...                 |
+- | ------------------- | ------------------- || context-map.prompt.md | Dependency mapping | All dev-init phases || convert-plaintext-to-md.prompt.md | TXT→MD conversion | Phase 5.3 || boost-prompt.prompt.md | Quality enhancement | Phase 5.4 || ... | ... | ... |
 
 ## Conflict Log
 
 | Conflict | Files | Resolution || -------
 
-- | ----- | ---------- || ...      | ...   | ...        |```
+- | ----- | ---------- || ... | ... | ... |```
 
 ### Step 7.2 — Final Verification
 
@@ -364,7 +412,7 @@ bash# Count total promptsls Prompts/*.prompts.md | wc -lls prompts/*.prompt.md |
 
 ## Execution Summary
 
-When all 7 phases are complete, output:```========================================DEV INIT — PROMPT LIBRARY REFRESH COMPLETE========================================Phases executed:    7/7Prompts converted:  N/N (.txt → .md)Prompts boosted:    N/NSafety reviews:     N passed, N failedQuality score ≥80:  N/NConflicts resolved: NBroken refs fixed:  NRegistry:           docs/prompts-cross-reference-registry.mdVerification:       docs/dev-init-verification-report.md========================================```
+When all 7 phases are complete, output:```========================================DEV INIT — PROMPT LIBRARY REFRESH COMPLETE========================================Phases executed: 7/7Prompts converted: N/N (.txt → .md)Prompts boosted: N/NSafety reviews: N passed, N failedQuality score ≥80: N/NConflicts resolved: NBroken refs fixed: NRegistry: docs/prompts-cross-reference-registry.mdVerification: docs/dev-init-verification-report.md========================================```
 
 ## Personas
 
@@ -430,7 +478,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -438,7 +485,6 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
 
 ## Related Prompts
 

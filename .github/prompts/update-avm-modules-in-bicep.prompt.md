@@ -1,21 +1,59 @@
 ---
-agent: "agent"
-description: "Update Azure Verified Modules (AVM) to latest versions in Bicep files."
-tools:
-  [
-    "search/codebase",
-    "think",
-    "changes",
-    "web/fetch",
-    "search/searchResults",
-    "todos",
-    "edit/editFiles",
-    "search",
-    "runCommands",
-    "bicepschema",
-    "azure_get_schema_for_Bicep",
-  ]
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
+tags:
+- prompt
+version: 1.0.0
+author: Hermes Agent
 ---
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Process](#process)
+- [Tool Usage](#tool-usage)
+- [Breaking Change Policy](#breaking-change-policy)
+- [Output Format](#output-format)
+  - [Summary of Updates](#summary-of-updates)
+- [Icons](#icons)
+- [Requirements](#requirements)
+- [Template References](#template-references)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [Legacy Prompt Details](#legacy-prompt-details)
+- [Process](#process)
+- [Tool Usage](#tool-usage)
+- [Breaking Change Policy](#breaking-change-policy)
+- [Output Format](#output-format)
+- [Summary of Updates](#summary-of-updates)
+- [Icons](#icons)
+- [Requirements](#requirements)
+- [Template References](#template-references)
+
+
+
 
 ## Goal
 
@@ -62,12 +100,12 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings clearly.
+- Return the final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Legacy Prompt Details
 
-# Update Azure Verified Modules in Bicep Files
+## Update Azure Verified Modules in Bicep Files
 
 Update Bicep file `${file}` to use latest Azure Verified Module (AVM) versions. Limit progress updates to non-breaking changes. Don't output information other than the final output table and summary.
 
@@ -99,10 +137,10 @@ Always use tools `#search`, `#searchResults`,`#fetch`, `#editFiles`, `#runComman
 Only display results in table with icons:
 
 ```markdown
-| Module                  | Current | Latest | Status | Action  | Docs       |
+| Module | Current | Latest | Status | Action | Docs |
 | ----------------------- | ------- | ------ | ------ | ------- | ---------- |
-| avm/res/compute/vm      | 0.1.0   | 0.2.0  | 🔄     | Updated | [📖](link) |
-| avm/res/storage/account | 0.3.0   | 0.3.0  | ✅     | Current | [📖](link) |
+| avm/res/compute/vm | 0.1.0 | 0.2.0 | 🔄 | Updated | [📖](link) |
+| avm/res/storage/account | 0.3.0 | 0.3.0 | ✅ | Current | [📖](link) |
 
 ### Summary of Updates
 

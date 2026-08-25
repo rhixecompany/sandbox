@@ -1,53 +1,69 @@
 ---
-name: Initial
-title: ComicWise Project Setup - Complete Guide
-description: Complete project setup guide for ComicWise — Next.js 16 application with pnpm, covering installation,
-  configuration, and development workflow.
-version: 2.0.0
-license: MIT
-author: Hermes Agent
-trigger: /Initial
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: code-architect
-    mcp_servers: []
-    context_size: large
-  copilot:
-    context_size: large
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /Initial
-    flags: {}
-    help: Complete project setup guide for ComicWise — Next.js 16 application with pnpm...
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
+title: Goal
+description: Prompt for goal
+date: '2026-08-25'
 tags:
-- agent-type:hermes
-- configuration
-- docker
-- frontend
-- ml
-- nextjs
-- prompts
-- typescript
-- windows
-- workflow
-scripts: []
+- prompt
+version: 1.0.0
+author: Hermes Agent
+---
+# Table of Contents
+
+- [Goal](#goal)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+## Table of Contents
+
+- [Goal](#goal)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
 ## Goal
 
 Complete project setup guide for ComicWise — Next.js 16 application with pnpm, covering installation, configuration, and development workflow.
 
-Read And understand @/**/*.ts, @/**/*.tsx, @/**/*.mjs, @/**/*.json , @/**/*.mts, @/**/*.json @/**/*.md, @/**/*.txt,   @/**/*.yml,   @/**/*.ps1, @/**/*.sh, @/**/*/Dockerfile, @/src, @scripts and the overall structure of the project.After fully understanding the project the package manager is pnpm  and the system is windows, Request all permissions needed to complete all tasks.Confirm if I have the necessary permissions to complete all tasks.Complete all  tasks the bests way.Tasks:1 - Create, Optimize and Validate all comprehensive configurations listed below if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of the following files:- @.vscode/mcp.json- @.vscode/extensions.json- @.vscode/launch.json- @.vscode/tasks.json- @.vscode/settings.json2 - Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of  @.env.local and @appConfig.ts file to ensure all environment variables are properly set and configured for development and production environments update all usage of this file across the project.3 - Create, Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of @src/database/seed/**/*.ts to be dynamic allowing the creation of data from  @users.json @chapters*.json @comics*.json, create and use all needed helpers at @src/database/seed/**/*.ts  to ensure the inserted data is being created or updated if it exists and  ensure all images are not being redownloaded by checking if they are already saved and  downloaded with @src/services/imageService.ts and saved at @public/uploads use best practices if not saved  download the images  use do not repeat yourself practices and  zod validation with all fields  from  @users.json @chapters*.json @comics*.json  update all usages across the project reference @src/database/seed/seeders/universalSeeder.ts as example.After completing all the tasks above, perform the following additional tasks to further enhance the project:1 - Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of  all scripts at @/scripts to ensure they are efficient, well-documented, and follow best practices for maintainability and scalability update all usages across the project.2 - Create and Run once created and validated a script to Analyze the project for performance bottlenecks, security vulnerabilities, and code quality issues generate a report with findings and suggestions for improvements.3 - Create and Run once created and validated a script to Generate comprehensive documentation for the project including setup instructions, usage guidelines, and API references ensure the documentation is clear, concise, and easy to navigate.4 - Create and Run once created and validated a script to Set up automated testing for the project including unit tests, integration tests, and end-to-end tests ensure tests are well-structured and provide adequate coverage for critical components.5 - Create and Run once created and validated  a scripts to Perform a cleanup of the project which  prevent duplicates, deleting unused or duplecate files, functions, Delete all files that ends with .backup, Delete all unused Components,Scripts that are not being used.6 - Uninstall all unused packages from @package.json.7 - Create, Optimize and Validate a comprehensive @.github/workflows/*.yml files for ci, automating the testing, building, and deployment of the project.8 - Create, Optimize and Validate a comprehensive @prompts/Setup.prompt.md if exists update the file  with all the content,tasks, todos, recommendations from @.md, @.txt, @.ts, @.tsx, @.mjs, @.json , @.mts, @.json @.yml   @.ps1 @.sh @Dockerfile files  as Github copilot cli Prompts for a complete setup of this project and scaffolding all necessary files, components, pages and codes   setup handler for long running functions.9 - Create, Optimize and Validate a comprehensive README.md for the project that includes setup instructions, usage guidelines, contribution instructions, and any other relevant information.10 - Fix all linting errors
+Read And understand @/**/*.ts, @/**/*.tsx, @/**/*.mjs, @/**/*.json , @/**/*.mts, @/**/*.json @/**/*.md, @/**/*.txt, @/**/*.yml, @/**/*.ps1, @/**/*.sh, @/**/*/Dockerfile, @/src, @scripts and the overall structure of the project.After fully understanding the project the package manager is pnpm and the system is windows, Request all permissions needed to complete all tasks.Confirm if I have the necessary permissions to complete all tasks.Complete all tasks the bests way.Tasks:1 - Create, Optimize and Validate all comprehensive configurations listed below if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of the following files:- @.vscode/mcp.json- @.vscode/extensions.json- @.vscode/launch.json- @.vscode/tasks.json- @.vscode/settings.json2 - Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of @.env.local and @appConfig.ts file to ensure all environment variables are properly set and configured for development and production environments update all usage of this file across the project.3 - Create, Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of @src/database/seed/**/*.ts to be dynamic allowing the creation of data from @users.json @chapters*.json @comics*.json, create and use all needed helpers at @src/database/seed/**/*.ts to ensure the inserted data is being created or updated if it exists and ensure all images are not redownloaded checking if they are already saved and downloaded with @src/services/imageService.ts and saved at @public/uploads use best practices if not saved download the images use do not repeat yourself practices and zod validation with all fields from @users.json @chapters*.json @comics*.json update all usages across the project reference @src/database/seed/seeders/universalSeeder.ts as example.After completing all the tasks above, perform the following additional tasks to further enhance the project:1 - Create, Optimize and Validate if exists copy file to end with .backup and Create, Optimize and Validate an enhanced version of all scripts at @/scripts to ensure they are efficient, well-documented, and follow best practices for maintainability and scalability update all usages across the project.2 - Create and Run once created and validated a script to Analyze the project for performance bottlenecks, security vulnerabilities, and code quality issues generate a report with findings and suggestions for improvements.3 - Create and Run once created and validated a script to Generate comprehensive documentation for the project including setup instructions, usage guidelines, and API references ensure the documentation is clear, concise, and easy to navigate.4 - Create and Run once created and validated a script to Set up automated testing for the project including unit tests, integration tests, and end-to-end tests ensure tests are well-structured and provide adequate coverage for critical components.5 - Create and Run once created and validated a scripts to Perform a cleanup of the project which prevent duplicates, deleting unused or duplecate files, functions, Delete all files that ends with .backup, Delete all unused Components,Scripts that are not being used.6 - Uninstall all unused packages from @package.json.7 - Create, Optimize and Validate a comprehensive @.github/workflows/*.yml files for ci, automating the testing, building, and deployment of the project.8 - Create, Optimize and Validate a comprehensive @prompts/Setup.prompt.md if exists update the file with all the content,tasks, todos, recommendations from @.md, @.txt, @.ts, @.tsx, @.mjs, @.json , @.mts, @.json @.yml @.ps1 @.sh @Dockerfile files as Github copilot cli Prompts for a complete setup of this project and scaffolding all necessary files, components, pages and codes setup handler for long running functions.9 - Create, Optimize and Validate a comprehensive README.md for the project that includes setup instructions, usage guidelines, contribution instructions, and any other relevant information.10 - Fix all linting errors
 
 ## Personas
 
@@ -87,7 +103,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State clearly when something fails.
+4. **Report blockers** — State when something fails.
 
 ## Phases
 
@@ -108,7 +124,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings clearly.
+- Return final artifact or findings .
 - Stop once the requested result is delivered.
 
 ## Best Practices
@@ -175,7 +191,6 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
-
 
 ## Scripts
 
