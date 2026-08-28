@@ -131,12 +131,12 @@ Server endpoints don't exist or wrong URL:
 
 | Variable | Status | Value | Usage |
 |----------|--------|-------|-------|
-| `TAVILY_API_KEY` | ✅ Loaded | `tvly-dev-3qid56-...` | Tavily research MCP |
-| `OPENCODE_ZEN_API_KEY` | ✅ Loaded | `sk-HpBeCoY7syJu...` | OpenCode model provider |
-| `GROQ_API_KEY` | ✅ Loaded | `GROQ_API_KEY_PREFIX=[REDACTED]KdFCczhFSt...` | Groq LLM provider |
-| `HONCHO_API_KEY` | ✅ Loaded | `hch-v3-q6vt7l65...` | Honcho memory MCP |
-| `SENTRY_AUTH_TOKEN` | ✅ Loaded | `sntrys_eyJpYXQiOi...` | Sentry error tracking MCP |
-| `NEON_API_KEY` | ✅ Loaded | `napi_w9avpa7o8...` | Neon PostgreSQL MCP |
+| `TAVILY_API_KEY` | ✅ Loaded | `[REDACTED]` | Tavily research MCP |
+| `OPENCODE_ZEN_API_KEY` | ✅ Loaded | `[REDACTED]` | OpenCode model provider |
+| `GROQ_API_KEY` | ✅ Loaded | `[REDACTED]` | Groq LLM provider |
+| `HONCHO_API_KEY` | ✅ Loaded | `[REDACTED]` | Honcho memory MCP |
+| `SENTRY_AUTH_TOKEN` | ✅ Loaded | `[REDACTED]` | Sentry error tracking MCP |
+| `NEON_API_KEY` | ✅ Loaded | `[REDACTED]` | Neon PostgreSQL MCP |
 
 ### Missing Environment Variables ❌
 

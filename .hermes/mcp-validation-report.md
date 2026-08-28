@@ -66,9 +66,9 @@
 | Variable | Status | Value Preview |
 |----------|--------|----------------|
 | `GITHUB_TOKEN` | ❌ | NOT SET |
-| `TAVILY_API_KEY` | ✅ | tvly-dev-3qid56-RU7i... |
+| `TAVILY_API_KEY` | ✅ | [REDACTED] |
 | `DATABASE_URL` | ❌ | NOT SET |
-| `OPENCODE_ZEN_API_KEY` | ✅ | sk-HpBeCoY7syJu2eyM5... |
+| `OPENCODE_ZEN_API_KEY` | ✅ | [REDACTED] |
 
 ## Configuration Files Status
 
