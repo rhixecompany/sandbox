@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-08-28T18:36:36.156474+00:00",
+  "dry_run": true,
+  "cache_cleanup": [
+    {
+      "label": "npm cache",
+      "path": "C:\\Users\\Alexa\\.npm",
+      "existed": true,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "dry_run"
+    },
+    {
+      "label": "npm roaming cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Roaming\\npm-cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "pnpm store",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm",
+      "existed": true,
+      "before_mb": 2890.7,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "dry_run"
+    },
+    {
+      "label": "bun cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\bun",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "VS Code cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Roaming\\Code\\Cache",
+      "existed": true,
+      "before_mb": 10.6,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "dry_run"
+    },
+    {
+      "label": "VS Code globalStorage cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Roaming\\Code\\User\\globalStorage\\cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "pip cache",
+      "path": "C:\\Users\\Alexa\\.cache\\pip",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "uv cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\uv\\cache",
+      "existed": true,
+      "before_mb": 2239.1,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "dry_run"
+    },
+    {
+      "label": "Chrome cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache",
+      "existed": true,
+      "before_mb": 29.4,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "dry_run"
+    },
+    {
+      "label": "Edge cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\Edge\\User\\Default\\Cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "user temp (files >7d only)",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Temp",
+      "existed": true,
+      "before_mb": 1921.7,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "dry_run"
+    },
+    {
+      "label": "winget cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Packages\\Microsoft.DesktopAppInstaller_8wek3aa_ccef4xse\\LocalState\\Cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    }
+  ],
+  "large_files": [],
+  "total_freed_mb": 0.0
+}

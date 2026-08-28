@@ -1,0 +1,868 @@
+{
+  "audit_timestamp": "2026-08-28T19:41:08.349495+00:00",
+  "repo_root": "C:\\Users\\Alexa\\Desktop\\SandBox",
+  "profiles_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles",
+  "profiles": [
+    {
+      "name": "alexa",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\SOUL.md",
+          "exists": true,
+          "size_bytes": 2407,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\USER.md",
+          "exists": true,
+          "size_bytes": 459,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 473,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.hermes.md",
+          "exists": true,
+          "size_bytes": 471,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 437,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 399,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.cursorrules",
+          "exists": true,
+          "size_bytes": 400,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "code-architect",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\SOUL.md",
+          "exists": true,
+          "size_bytes": 2304,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\USER.md",
+          "exists": true,
+          "size_bytes": 468,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 482,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.hermes.md",
+          "exists": true,
+          "size_bytes": 480,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 446,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 408,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.cursorrules",
+          "exists": true,
+          "size_bytes": 409,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "creative-director",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\SOUL.md",
+          "exists": true,
+          "size_bytes": 2419,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\USER.md",
+          "exists": true,
+          "size_bytes": 1674,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 6062,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.hermes.md",
+          "exists": true,
+          "size_bytes": 483,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 449,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 411,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.cursorrules",
+          "exists": true,
+          "size_bytes": 412,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "cto",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\SOUL.md",
+          "exists": true,
+          "size_bytes": 879,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\USER.md",
+          "exists": true,
+          "size_bytes": 457,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 471,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.hermes.md",
+          "exists": true,
+          "size_bytes": 469,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 435,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 397,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.cursorrules",
+          "exists": true,
+          "size_bytes": 398,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "default",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\SOUL.md",
+          "exists": true,
+          "size_bytes": 513,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\USER.md",
+          "exists": true,
+          "size_bytes": 461,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 475,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.hermes.md",
+          "exists": true,
+          "size_bytes": 473,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 439,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 401,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.cursorrules",
+          "exists": true,
+          "size_bytes": 402,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "designer",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\SOUL.md",
+          "exists": true,
+          "size_bytes": 859,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\USER.md",
+          "exists": true,
+          "size_bytes": 462,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 476,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.hermes.md",
+          "exists": true,
+          "size_bytes": 474,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 440,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 402,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.cursorrules",
+          "exists": true,
+          "size_bytes": 403,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "dev",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\SOUL.md",
+          "exists": true,
+          "size_bytes": 842,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\USER.md",
+          "exists": true,
+          "size_bytes": 457,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 471,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.hermes.md",
+          "exists": true,
+          "size_bytes": 469,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 435,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 397,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.cursorrules",
+          "exists": true,
+          "size_bytes": 398,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "exec-assistant",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\SOUL.md",
+          "exists": true,
+          "size_bytes": 2547,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\USER.md",
+          "exists": true,
+          "size_bytes": 1671,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 6062,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.hermes.md",
+          "exists": true,
+          "size_bytes": 480,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 446,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 408,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.cursorrules",
+          "exists": true,
+          "size_bytes": 409,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "ops",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\SOUL.md",
+          "exists": true,
+          "size_bytes": 851,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\USER.md",
+          "exists": true,
+          "size_bytes": 457,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 471,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.hermes.md",
+          "exists": true,
+          "size_bytes": 469,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 435,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 397,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.cursorrules",
+          "exists": true,
+          "size_bytes": 398,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "patient-tutor",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\SOUL.md",
+          "exists": true,
+          "size_bytes": 2537,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\USER.md",
+          "exists": true,
+          "size_bytes": 1670,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 6062,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.hermes.md",
+          "exists": true,
+          "size_bytes": 479,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 445,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 407,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.cursorrules",
+          "exists": true,
+          "size_bytes": 408,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "pm",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\SOUL.md",
+          "exists": true,
+          "size_bytes": 848,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\USER.md",
+          "exists": true,
+          "size_bytes": 456,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 470,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.hermes.md",
+          "exists": true,
+          "size_bytes": 468,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 434,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 396,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.cursorrules",
+          "exists": true,
+          "size_bytes": 397,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "qa",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\SOUL.md",
+          "exists": true,
+          "size_bytes": 851,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\USER.md",
+          "exists": true,
+          "size_bytes": 456,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 470,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.hermes.md",
+          "exists": true,
+          "size_bytes": 468,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 434,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 396,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.cursorrules",
+          "exists": true,
+          "size_bytes": 397,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "research-analyst",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\SOUL.md",
+          "exists": true,
+          "size_bytes": 2491,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\USER.md",
+          "exists": true,
+          "size_bytes": 1673,
+          "issues": [],
+          "frontmatter_present": true
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 6062,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.hermes.md",
+          "exists": true,
+          "size_bytes": 482,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 448,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 410,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.cursorrules",
+          "exists": true,
+          "size_bytes": 411,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    },
+    {
+      "name": "security",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security",
+      "identity_files": {
+        "SOUL.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\SOUL.md",
+          "exists": true,
+          "size_bytes": 851,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "USER.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\USER.md",
+          "exists": true,
+          "size_bytes": 462,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "MEMORY.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\MEMORY.md",
+          "exists": true,
+          "size_bytes": 476,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "context_files": {
+        ".hermes.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.hermes.md",
+          "exists": true,
+          "size_bytes": 474,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "AGENTS.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\AGENTS.md",
+          "exists": true,
+          "size_bytes": 440,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        "CLAUDE.md": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\CLAUDE.md",
+          "exists": true,
+          "size_bytes": 402,
+          "issues": [],
+          "frontmatter_present": false
+        },
+        ".cursorrules": {
+          "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.cursorrules",
+          "exists": true,
+          "size_bytes": 403,
+          "issues": [],
+          "frontmatter_present": false
+        }
+      },
+      "issues": []
+    }
+  ],
+  "repo_root_audit": {
+    "name": "repo-root",
+    "path": "C:\\Users\\Alexa\\Desktop\\SandBox",
+    "context_files": {
+      ".hermes.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md",
+        "exists": true,
+        "size_bytes": 2675,
+        "issues": [],
+        "frontmatter_present": false
+      },
+      "AGENTS.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md",
+        "exists": true,
+        "size_bytes": 16324,
+        "issues": [
+          "duplicate_keys_in_frontmatter"
+        ],
+        "frontmatter_present": true
+      },
+      "CLAUDE.md": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md",
+        "exists": true,
+        "size_bytes": 314,
+        "issues": [],
+        "frontmatter_present": false
+      },
+      ".cursorrules": {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules",
+        "exists": true,
+        "size_bytes": 331,
+        "issues": [],
+        "frontmatter_present": false
+      }
+    },
+    "identity_files": {},
+    "issues": [
+      "AGENTS.md: duplicate_keys_in_frontmatter"
+    ]
+  },
+  "cross_profile_drift": [
+    "Routing info present in ['creative-director', 'exec-assistant', 'patient-tutor', 'research-analyst'] but missing in ['alexa', 'code-architect', 'cto', 'default', 'designer', 'dev', 'ops', 'pm', 'qa', 'security']"
+  ],
+  "summary": {
+    "total_profiles": 14,
+    "files_missing": 1,
+    "frontmatter_issues": 0,
+    "total_issues": 1
+  }
+}

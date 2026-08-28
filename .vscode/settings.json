@@ -57,6 +57,7 @@
 	"python-envs.autoActivate": true,
 	"python.analysis.autoImportCompletions": true,
 	"python.defaultInterpreterPath": "C:\\Users\\Alexa\\myvenv\\Scripts\\python.exe",
+	"python.terminal.useEnvFile": true,
 	"ruff.lineLength": 120,
 	"ruff.lint.select": [
 		"E",

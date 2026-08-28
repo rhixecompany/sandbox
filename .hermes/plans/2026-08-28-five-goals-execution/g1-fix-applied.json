@@ -1,0 +1,1217 @@
+{
+  "plan": {
+    "timestamp": "2026-08-28T19:40:51.350188+00:00",
+    "repo_root": "C:\\Users\\Alexa\\Desktop\\SandBox",
+    "hermes_home": "C:\\Users\\Alexa\\AppData\\Local\\hermes",
+    "actions": [
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:alexa",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:alexa",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:alexa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:alexa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:alexa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:alexa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:code-architect",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:code-architect",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:code-architect",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:code-architect",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:code-architect",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:code-architect",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:creative-director",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:creative-director",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:creative-director",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:creative-director",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:cto",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:cto",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:cto",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:cto",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:cto",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:cto",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:default",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:default",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:default",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:default",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:default",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:default",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:designer",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:designer",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:designer",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:designer",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:designer",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:designer",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:dev",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:dev",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:dev",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:dev",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:dev",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:dev",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:exec-assistant",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:exec-assistant",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:exec-assistant",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:exec-assistant",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:ops",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:ops",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:ops",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:ops",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:ops",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:ops",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:patient-tutor",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:patient-tutor",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:patient-tutor",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:patient-tutor",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:pm",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:pm",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:pm",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:pm",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:pm",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:pm",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:qa",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:qa",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:qa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:qa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:qa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:qa",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:research-analyst",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:research-analyst",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:research-analyst",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:research-analyst",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:security",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:security",
+        "canonical": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:security",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:security",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:security",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md"
+      },
+      {
+        "action": "create",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:security",
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules"
+      }
+    ],
+    "skipped": [
+      {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md",
+        "fname": ".hermes.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules",
+        "fname": ".cursorrules",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\USER.md",
+        "fname": "USER.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\USER.md",
+        "fname": "USER.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\USER.md",
+        "fname": "USER.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\USER.md",
+        "fname": "USER.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "reason": "exists_non_pointer"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\SOUL.md",
+        "fname": "SOUL.md",
+        "reason": "exists_non_pointer"
+      }
+    ],
+    "summary": {
+      "would_create": 76,
+      "skipped": 0,
+      "already_exists": 26
+    }
+  },
+  "report": {
+    "timestamp": "2026-08-28T19:40:51.369754+00:00",
+    "dry_run": false,
+    "created": [
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:alexa",
+        "bytes": 446,
+        "sha256_first16": "df18b483e70314d0"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:alexa",
+        "bytes": 460,
+        "sha256_first16": "33c3a53ce2efe8bf"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:alexa",
+        "bytes": 458,
+        "sha256_first16": "c074813dbe2dadcb"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:alexa",
+        "bytes": 424,
+        "sha256_first16": "63d99f5b1991e699"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:alexa",
+        "bytes": 387,
+        "sha256_first16": "e10cc17824ae7624"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:alexa",
+        "bytes": 388,
+        "sha256_first16": "4cc57a03759820b4"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:code-architect",
+        "bytes": 455,
+        "sha256_first16": "e8f6b92964361249"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:code-architect",
+        "bytes": 469,
+        "sha256_first16": "8e74c15dc149a256"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:code-architect",
+        "bytes": 467,
+        "sha256_first16": "099541332bec628a"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:code-architect",
+        "bytes": 433,
+        "sha256_first16": "f8b5f4ba2b166d2a"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:code-architect",
+        "bytes": 396,
+        "sha256_first16": "3609015ef24d744a"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:code-architect",
+        "bytes": 397,
+        "sha256_first16": "20453bd62d08e3f0"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:creative-director",
+        "bytes": 470,
+        "sha256_first16": "69835258b1c62416"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:creative-director",
+        "bytes": 436,
+        "sha256_first16": "af68846cd178db9c"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:creative-director",
+        "bytes": 399,
+        "sha256_first16": "2984f4a92884c11d"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:creative-director",
+        "bytes": 400,
+        "sha256_first16": "8ba6576ca0dc665e"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:cto",
+        "bytes": 444,
+        "sha256_first16": "ceec410d82138d01"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:cto",
+        "bytes": 458,
+        "sha256_first16": "df0c87d88ad29901"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:cto",
+        "bytes": 456,
+        "sha256_first16": "c3dd2868f4bf35f6"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:cto",
+        "bytes": 422,
+        "sha256_first16": "b938ea74ab41c7fb"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:cto",
+        "bytes": 385,
+        "sha256_first16": "5183d4c22c231701"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:cto",
+        "bytes": 386,
+        "sha256_first16": "2a39d9ccf171f390"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:default",
+        "bytes": 448,
+        "sha256_first16": "06961cbecf4b1fcd"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:default",
+        "bytes": 462,
+        "sha256_first16": "263cf2b85d26181d"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:default",
+        "bytes": 460,
+        "sha256_first16": "fa77ec1fa06add01"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:default",
+        "bytes": 426,
+        "sha256_first16": "849f69c3ae540d0e"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:default",
+        "bytes": 389,
+        "sha256_first16": "65fee8a8896b7d57"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:default",
+        "bytes": 390,
+        "sha256_first16": "29a6ab90fb0af451"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:designer",
+        "bytes": 449,
+        "sha256_first16": "2cc8db27fe043897"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:designer",
+        "bytes": 463,
+        "sha256_first16": "66695697ada8a8f9"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:designer",
+        "bytes": 461,
+        "sha256_first16": "59aa207e82824763"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:designer",
+        "bytes": 427,
+        "sha256_first16": "fe09f0b722db79dc"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:designer",
+        "bytes": 390,
+        "sha256_first16": "897549305fcdaed0"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:designer",
+        "bytes": 391,
+        "sha256_first16": "7a4b87a667954247"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:dev",
+        "bytes": 444,
+        "sha256_first16": "82390662781b34f2"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:dev",
+        "bytes": 458,
+        "sha256_first16": "3339d6415abd871b"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:dev",
+        "bytes": 456,
+        "sha256_first16": "3cf82ab436430548"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:dev",
+        "bytes": 422,
+        "sha256_first16": "6c0ec93813992f15"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:dev",
+        "bytes": 385,
+        "sha256_first16": "587247428217256c"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:dev",
+        "bytes": 386,
+        "sha256_first16": "fee4ce2f395c8cdf"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:exec-assistant",
+        "bytes": 467,
+        "sha256_first16": "d38d3e0fb7366170"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:exec-assistant",
+        "bytes": 433,
+        "sha256_first16": "1ee4156481edd086"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:exec-assistant",
+        "bytes": 396,
+        "sha256_first16": "f93fc49a8009e940"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:exec-assistant",
+        "bytes": 397,
+        "sha256_first16": "7a49c7e92086a033"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:ops",
+        "bytes": 444,
+        "sha256_first16": "c1b3e6529be133b7"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:ops",
+        "bytes": 458,
+        "sha256_first16": "c199f603ff31628a"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:ops",
+        "bytes": 456,
+        "sha256_first16": "2f7dab1e2561b6ad"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:ops",
+        "bytes": 422,
+        "sha256_first16": "c33cac1c4b5c6a04"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:ops",
+        "bytes": 385,
+        "sha256_first16": "7537e3bb4ed68628"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:ops",
+        "bytes": 386,
+        "sha256_first16": "38a73380f22f30d7"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:patient-tutor",
+        "bytes": 466,
+        "sha256_first16": "5eff0b570c854d73"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:patient-tutor",
+        "bytes": 432,
+        "sha256_first16": "134616ec9775dda9"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:patient-tutor",
+        "bytes": 395,
+        "sha256_first16": "c8523ca00c4b8437"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:patient-tutor",
+        "bytes": 396,
+        "sha256_first16": "781975bc720275e6"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:pm",
+        "bytes": 443,
+        "sha256_first16": "b802b61dd36565e5"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:pm",
+        "bytes": 457,
+        "sha256_first16": "19c047cea7bf4d65"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:pm",
+        "bytes": 455,
+        "sha256_first16": "68ef822627c91772"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:pm",
+        "bytes": 421,
+        "sha256_first16": "5413760f54f91c0f"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:pm",
+        "bytes": 384,
+        "sha256_first16": "0e0ad82beeedd866"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:pm",
+        "bytes": 385,
+        "sha256_first16": "0c95e67ab079f590"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:qa",
+        "bytes": 443,
+        "sha256_first16": "2b5bc5822406542e"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:qa",
+        "bytes": 457,
+        "sha256_first16": "4bb3508f003386bc"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:qa",
+        "bytes": 455,
+        "sha256_first16": "99cd6d8dc751b27e"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:qa",
+        "bytes": 421,
+        "sha256_first16": "9f83faae2738d374"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:qa",
+        "bytes": 384,
+        "sha256_first16": "4474b98f83ce2b23"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:qa",
+        "bytes": 385,
+        "sha256_first16": "27cb645f65b147a1"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:research-analyst",
+        "bytes": 469,
+        "sha256_first16": "9fa8a070cdd9dac0"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:research-analyst",
+        "bytes": 435,
+        "sha256_first16": "22e0f1d87ad293e7"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:research-analyst",
+        "bytes": 398,
+        "sha256_first16": "a44283949215e451"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:research-analyst",
+        "bytes": 399,
+        "sha256_first16": "49ccca9c5299a732"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\USER.md",
+        "fname": "USER.md",
+        "scope": "profile:security",
+        "bytes": 449,
+        "sha256_first16": "7911fa27f4bd6972"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\MEMORY.md",
+        "fname": "MEMORY.md",
+        "scope": "profile:security",
+        "bytes": 463,
+        "sha256_first16": "1875b3480b28d309"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.hermes.md",
+        "fname": ".hermes.md",
+        "scope": "profile:security",
+        "bytes": 461,
+        "sha256_first16": "577fe08fe99c779e"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\AGENTS.md",
+        "fname": "AGENTS.md",
+        "scope": "profile:security",
+        "bytes": 427,
+        "sha256_first16": "727b6d9d1c2fbddb"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\CLAUDE.md",
+        "fname": "CLAUDE.md",
+        "scope": "profile:security",
+        "bytes": 390,
+        "sha256_first16": "e90e8ca318edabb3"
+      },
+      {
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.cursorrules",
+        "fname": ".cursorrules",
+        "scope": "profile:security",
+        "bytes": 391,
+        "sha256_first16": "67b9585d898a99b0"
+      }
+    ],
+    "errors": []
+  }
+}
