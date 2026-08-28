@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -56,7 +64,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -90,7 +97,6 @@ metadata:
 
 
 
-## Goal
 
 Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict stage gates and consistency validation.
 
@@ -100,7 +106,6 @@ Dependency-aware orchestrator prompt for root blueprint and MCP generator prompt
 
 Create one orchestrator prompt that coordinates only the 11 root generator prompts in `prompts` with dependency-aware ordering, conditional MCP/server branching, deterministic execution modes, and strict validation gates.
 
-## Context
 
 Use this prompt when you need one runbook to generate aligned architecture, workflow, documentation, and optional MCP/server outputs.
 
@@ -138,7 +143,6 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 > - `mode`: `full | quick | custom`
 > **Full content:** `templates/generator-orchestrator/rules.md`
 
-## Phases
 
 ### Phase 1: Discovery
 

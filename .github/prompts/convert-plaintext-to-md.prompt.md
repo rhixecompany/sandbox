@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -47,7 +55,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -74,13 +81,11 @@ metadata:
 
 
 
-## Goal
 
 Convert plaintext documentation to properly formatted markdown using explicit instructions, documented options, or reference files.
 
 ## convert-plaintext-to-md> Convert a text-based document to markdown following explicit instructions, documented options, or a reference file as a template.
 
-## Context
 
 Use when you need to convert a plaintext documentation file to markdown format, with optional parameters for fine-tuning the conversion.
 
@@ -121,7 +126,6 @@ Use when you need to convert a plaintext documentation file to markdown format, 
 | `writing-plans` | Structured conversion plan for complex documents |
 | `simplify` | Ensure output is concise and non-redundant |
 
-## Phases
 
 > **Goal:** Read the request and identify the exact scope.>
 >

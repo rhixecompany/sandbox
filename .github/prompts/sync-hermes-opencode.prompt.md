@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -43,7 +51,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -65,11 +72,9 @@ metadata:
 
 
 
-## Goal
 
 Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments with verification.
 
-## Context
 
 - **Hermes root:** `C:\Users\Alexa\AppData\Local\hermes`
 - **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
@@ -90,7 +95,6 @@ Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions 
 4. **One platform at a time** — sync Hermes, Codex, and OpenCode sequentially, verifying each before the next.
 5. **No backup files** — use git history for rollback; never create `.bak`, `.old`, or timestamped copies.
 
-## Phases
 
 Full phase instructions live in `templates/sync-hermes-opencode/phases.md`.
 

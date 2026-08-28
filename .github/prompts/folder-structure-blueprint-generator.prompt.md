@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -53,7 +61,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -84,11 +91,9 @@ metadata:
 
 
 
-## Goal
 
 Comprehensive technology-agnostic prompt for analyzing and documenting project folder structures. Auto-detects project types (.NET, Java, React, Angular, Python, Node.js, Flutter), generates detailed blueprints with visualization options, naming conventions, file placement patterns, and extension templates for maintaining consistent code organization across diverse technology stacks.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -112,7 +117,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

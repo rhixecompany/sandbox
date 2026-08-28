@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -51,7 +59,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -80,7 +87,6 @@ metadata:
 
 
 
-## Goal
 
 Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, and test-providers-models. Each prompt runs to completion before the next begins.
 
@@ -88,7 +94,6 @@ Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-
 
 > Strict sequential execution. Phase N+1 begins only after Phase N is fully verified complete.
 
-## Context
 
 - **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
 - **Hermes prompts root:** `C:\Users\Alexa\AppData\Local\hermes\prompts`
@@ -150,7 +155,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Phases
 
 ### Phase 1: Intake
 

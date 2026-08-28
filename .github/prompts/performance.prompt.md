@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -49,7 +57,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -78,7 +85,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive performance prompt focused on measurable improvements and safe optimizations." to accomplish the associated tasks and objectives.
 
@@ -86,7 +92,6 @@ Use when "Comprehensive performance prompt focused on measurable improvements an
 
 Improve application performance through measured, high-impact optimizations across data access, rendering, and caching paths.
 
-## Context
 
 Use this prompt when performance issues are suspected or when implementing features that can affect latency, throughput, bundle size, or query cost.
 
@@ -121,7 +126,6 @@ Use this prompt when performance issues are suspected or when implementing featu
 - Prefer server-side execution where possible to reduce client bundle size.
 - Avoid speculative micro-optimizations without evidence.
 
-## Phases
 
 ### Phase 1: Baseline and Bottleneck Discovery
 

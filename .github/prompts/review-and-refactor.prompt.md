@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -46,7 +54,6 @@ date: '2026-08-25'
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,11 +83,9 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Review and refactor code in your project according to defined instructions.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -104,7 +109,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

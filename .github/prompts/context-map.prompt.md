@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -46,7 +54,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -72,13 +79,11 @@ metadata:
 
 
 
-## Goal
 
 Build a dependency and reference map before making changes so implementation starts from the right files.
 
 ## context-map> Build a dependency-aware context map before implementation begins.
 
-## Context
 
 - Use when the task needs a safe pre-change inventory
 - Focus on direct dependencies, related tests, and nearby patterns
@@ -118,7 +123,6 @@ Build a dependency and reference map before making changes so implementation sta
 | --- | --- |
 | `codemap` | Codebase discovery and dependency mapping (loads symbol tables, dependency trees, and cross-file references) |
 
-## Phases
 
 ### Phase 1: Discover the scope
 

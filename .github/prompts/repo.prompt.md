@@ -73,6 +73,14 @@ Research each of the 17 projects under `projects/`. For every project:
 **Output:** one `RESEARCH_REPORT.md` per project root. Updated `projects/RESEARCH_INDEX.md`.
 
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 **Workspace:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`)

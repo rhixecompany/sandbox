@@ -24,6 +24,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -49,7 +57,6 @@ metadata:
 - [Template References](#template-references)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -74,11 +81,9 @@ metadata:
 
 
 
-## Goal
 
 Merges mature lessons from a domain memory file into its instruction file. Syntax: `/memory-merger >domain [scope]` where scope is `global` (default), `user`, `workspace`, or `ws`.
 
-## Context
 
 Use when you need to memory merger for the current workspace or task.
 
@@ -100,7 +105,6 @@ Use when you need to memory merger for the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

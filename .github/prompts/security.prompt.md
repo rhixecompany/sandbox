@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -50,7 +58,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -79,7 +86,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive security prompt aligned to repository secure development requirements." to accomplish the associated tasks and objectives.
 
@@ -87,7 +93,6 @@ Use when "Comprehensive security prompt aligned to repository secure development
 
 Apply secure-by-default engineering practices to code and documentation updates, with explicit handling for secrets, input validation, and least-privilege design.
 
-## Context
 
 Use this prompt for any change that handles external input, authentication, authorization, secrets, APIs, or data persistence.
 
@@ -122,7 +127,6 @@ Use this prompt for any change that handles external input, authentication, auth
 - Add logging and monitoring guidance for suspicious or failed auth events.
 - Keep dependencies current and note known CVE implications.
 
-## Phases
 
 ### Phase 1: Threat Surface Identification
 

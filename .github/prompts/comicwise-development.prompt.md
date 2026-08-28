@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -46,7 +54,6 @@ metadata:
 - [Template References](#template-references)
 
 
-## Table of Contents
 
 - [Project State Summary](#project-state-summary)
 - [Tech Stack](#tech-stack)

@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -48,7 +56,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -75,11 +82,9 @@ metadata:
 
 
 
-## Goal
 
 Generate a project plan that turns feature and epic inputs into an execution-ready planning package.
 
-## Context
 
 - Use when the user needs a Project Plan plus issue-creation support.
 - Prefer concise, actionable language.
@@ -110,7 +115,6 @@ Generate a project plan that turns feature and epic inputs into an execution-rea
 5. Create backup copies before overwriting existing outputs.
 6. Split large outputs into companion files if a single file would exceed the size limit.
 
-## Phases
 
 ### Phase 1: Parse the source artifacts
 

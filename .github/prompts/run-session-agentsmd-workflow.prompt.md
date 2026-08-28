@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -50,7 +58,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -79,7 +86,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.
 
@@ -89,7 +95,6 @@ Execute the full AGENTS.md workflow using one argument.Supported argument values
 
 - projects-all, meaning process every direct child directory under projects/.
 
-## Context
 
 Use this prompt when the user wants the workflow executed, not just designed.This prompt executes the implementation pattern defined in:- prompts/session-agentsmd-full-workflow.prompt.mdArgument contract:- If no argument is provided, default to projects-all.
 
@@ -131,7 +136,6 @@ Use this prompt when the user wants the workflow executed, not just designed.Thi
 - Always output a compact final table with: - repo | branch | commit SHA | status.
 - Include explicit blocker notes for any failed repo.
 
-## Phases
 
 ### Phase 1: Resolve Scope
 

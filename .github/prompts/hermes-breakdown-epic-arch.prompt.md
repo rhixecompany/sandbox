@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -49,7 +57,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,11 +83,9 @@ metadata:
 
 
 
-## Goal
 
 Turn an Epic PRD into a high-level architecture specification with layers, enablers, and technology guidance.
 
-## Context
 
 - Use when an epic already exists and needs architecture direction.
 - Keep the plan high-level and architecture-focused.
@@ -107,7 +112,6 @@ Turn an Epic PRD into a high-level architecture specification with layers, enabl
 5. Include a value assessment and t-shirt estimate.
 6. Prefer labeled Mermaid subgraphs for clarity.
 
-## Phases
 
 ### Phase 1: Analyze the epic
 

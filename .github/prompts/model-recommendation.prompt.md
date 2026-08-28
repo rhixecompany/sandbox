@@ -25,6 +25,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -94,7 +102,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -163,11 +170,9 @@ metadata:
 
 
 
-## Goal
 
 Analyze chatmode or prompt files and recommend optimal AI models based on task complexity, required capabilities, and cost-efficiency.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -191,7 +196,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

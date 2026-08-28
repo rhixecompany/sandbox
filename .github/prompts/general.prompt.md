@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -50,7 +58,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -79,13 +86,11 @@ metadata:
 
 
 
-## Goal
 
 General development workflow for analysis, planning, implementation, and verification with context mapping and AI-assisted execution.
 
 > General development workflow with planning, automation, and verification.
 
-## Context
 
 Use this prompt when a task spans more than one step or needs explicit fileimpact analysis before coding. It combines file mapping, planning, direct CLIexecution, and validation.
 
@@ -119,7 +124,6 @@ Use this prompt when a task spans more than one step or needs explicit fileimpac
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-## Phases
 
 ### Phase 1: Analyze
 

@@ -25,6 +25,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [ngn Earnings Research Pipeline](#ngn-earnings-research-pipeline)
@@ -59,7 +67,6 @@ metadata:
 - [Safety & Ethics](#safety-&-ethics)
 - [Trigger Phrase](#trigger-phrase)
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -96,11 +103,9 @@ metadata:
 
 ## ngn Earnings Research Pipeline
 
-## Goal
 
 **Identify and validate ngn earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, ngn-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.
 
-## Context
 
 - **User**: Alexa (ngn-based, Site Supervisor/Manager background, Rexos Properties May 2025–June 2026)
 - **Workspace**: `C:\Users\Alexa\Desktop\SandBox\`

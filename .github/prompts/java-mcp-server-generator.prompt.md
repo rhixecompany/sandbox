@@ -25,6 +25,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -58,7 +66,6 @@ metadata:
 - [Template References](#template-references)
 
 
-## Table of Contents
 
 - [Project Generation](#project-generation)
 - [Maven pom.xml Template](#maven-pomxml-template)

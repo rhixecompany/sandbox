@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -51,7 +59,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -81,7 +88,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.
 
@@ -89,7 +95,6 @@ Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to re
 
 Produce strict, maintainable TypeScript and Next.js code using server-first patterns, safe configuration access, and validated external input handling.
 
-## Context
 
 Use this prompt for .ts and .tsx updates where code quality, correctness, and architectural consistency are required.
 
@@ -124,7 +129,6 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 - Validate external inputs with Zod and consistent error handling.
 - Avoid direct process.env access in app logic; use centralized app config.
 
-## Phases
 
 ### Phase 1: Type and Boundary Design
 

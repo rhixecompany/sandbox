@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -49,7 +57,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,11 +83,9 @@ metadata:
 
 
 
-## Goal
 
 Produce a QA package that turns feature artifacts into a clear test strategy and issue checklist.
 
-## Context
 
 - Use when feature planning needs QA structure and test coverage guidance.
 - Prefer concrete, implementation-aware but not implementation-bound test planning.
@@ -110,7 +115,6 @@ Produce a QA package that turns feature artifacts into a clear test strategy and
 5. Provide concrete issue templates for unit, integration, e2e, performance, and security coverage.
 6. Include labeling and prioritization guidance.
 
-## Phases
 
 ### Phase 1: Read the feature artifacts
 

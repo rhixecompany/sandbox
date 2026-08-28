@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -87,7 +95,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -152,13 +159,11 @@ metadata:
 
 
 
-## Goal
 
 Create a complete plan for converting plaintext prompts to markdown, enhancing prompt quality, and updating related implementation plans.
 
 >> Create a detailed prompt-library plan> and verification criteria.
 
-## Context
 
 Use this prompt when a prompt-library refresh needs planning beforeimplementation. The primary workflow is:1. `prompts/context-map`2. `prompts/convert-plaintext-to-md`3. `prompts/boost-prompt`4. `prompts/ai-prompt-engineering-safety-review`5. `prompts/update-implementation-plan`6. `prompts/prompt-builder`7. `.github/prompts/*.md`Reference artifacts:- `docs/dev-init-comprehensive-plan.md`- `docs/dev-init-spec.md`- `docs/prompts-cross-reference-registry.md`- `docs/prompt-conversion-enhancement-plan.md`- `projects/Bash/archive/artifacts/context-maps/dev-init.context.json`
 
@@ -207,7 +212,6 @@ Use this prompt when a prompt-library refresh needs planning beforeimplementatio
 | `executing-plans` | Execute implementation steps in order |
 | `simplify` | Keep the output concise and non-redundant |
 
-## Phases
 
 ### Phase 1: Discover and verify
 

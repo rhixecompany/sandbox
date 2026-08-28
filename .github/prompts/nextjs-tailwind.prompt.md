@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -49,7 +57,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -78,7 +85,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to project standards." to accomplish the associated tasks and objectives.
 
@@ -86,7 +92,6 @@ Use when "Comprehensive Next.js and Tailwind implementation prompt aligned to pr
 
 Implement or review Next.js App Router and Tailwind code with emphasis on server-first architecture, strict typing, security, and performance.
 
-## Context
 
 Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailwind projects where architecture, data fetching, and UI behavior must align to standards.
 
@@ -121,7 +126,6 @@ Use this prompt for TypeScript, TSX, JSX, JS, and CSS changes in Next.js + Tailw
 - Include loading and error states for async boundaries.
 - Use Next.js optimization features for images, fonts, and code splitting.
 
-## Phases
 
 ### Phase 1: Architecture and Type Planning
 

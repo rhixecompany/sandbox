@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -50,7 +58,6 @@ metadata:
 - [Template References](#template-references)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -80,11 +87,9 @@ metadata:
 
 
 
-## Goal
 
 Create tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation from URLs and queries.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -106,7 +111,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

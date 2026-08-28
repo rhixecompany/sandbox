@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -51,7 +59,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -81,7 +88,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
 
@@ -89,7 +95,6 @@ Use when "Comprehensive documentation prompt aligned to repository documentation
 
 Create and maintain documentation that is accurate, complete, and updated in the same change set as code updates.
 
-## Context
 
 Use this prompt when writing or updating markdown docs, TSDoc comments, API docs, README sections, architecture notes, or doc examples.
 
@@ -124,7 +129,6 @@ Use this prompt when writing or updating markdown docs, TSDoc comments, API docs
 - Keep examples current and aligned with current APIs and config.
 - Validate internal links and remove obsolete references.
 
-## Phases
 
 ### Phase 1: Documentation Impact Analysis
 

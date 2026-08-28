@@ -24,6 +24,13 @@ metadata:
 ---
 ## Table of Contents
 
+## Goal
+
+## Context
+
+## Phases
+
+
 - [Goal](#goal)
 - [Core Rules](#core-rules)
 - [Workflow](#workflow)
@@ -55,7 +62,6 @@ metadata:
 
 
 
-## Goal
 
 Generate a structured implementation plan from a goal or specification. The plan includes phased execution, dependencies, and verification gates.
 
@@ -86,7 +92,6 @@ Generate a plan with these sections:```markdown
 
 - Files, reports, artifacts the plan produces
 
-## Phases
 
 ### Phase N: <Name
 
@@ -130,7 +135,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when creating an implementation plan from a goal, specification, or feature request.
 

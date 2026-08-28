@@ -25,6 +25,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -61,7 +69,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Input](#input)
@@ -97,7 +104,6 @@ metadata:
 
 
 
-## Goal
 
 Inventory all installed VS Code extensions, research their documentation, and apply findings to improve user and workspace settings. Multi-phase: discover → research → synthesize → configure.
 
@@ -237,7 +243,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 

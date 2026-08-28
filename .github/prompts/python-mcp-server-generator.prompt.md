@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -51,7 +59,6 @@ date: '2026-08-25'
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -86,11 +93,9 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Generate a complete MCP server project in Python with tools, resources, and proper configuration.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -114,7 +119,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

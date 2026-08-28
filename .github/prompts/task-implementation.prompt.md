@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -51,7 +59,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -81,7 +88,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.
 
@@ -89,7 +95,6 @@ Use when "Comprehensive prompt for implementing tracked task plans with progress
 
 Implement plan-driven tasks in order, update execution tracking continuously, and produce complete working outcomes with explicit divergence and blocker recording.
 
-## Context
 
 Use this prompt for execution workflows based on tracked plan/detail files and paired change logs, especially under .copilot-tracking conventions.
 
@@ -124,7 +129,6 @@ Use this prompt for execution workflows based on tracked plan/detail files and p
 - Update plan checklist status and changes file after each completed task.
 - Record blockers and divergences explicitly when required.
 
-## Phases
 
 ### Phase 1: Plan Intake and Context Preparation
 

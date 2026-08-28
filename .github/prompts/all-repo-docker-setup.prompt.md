@@ -16,12 +16,19 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Bulk Docker Setup Across Repositories
 
 > Iterate over every rhixecompany repository, generate or repair Dockerfiles, build images, security-scan them, and clean up unused Docker resources.
 
-## Goal
 
 Systematically process all repositories under `rhixecompany` to ensure each has a valid Dockerfile or `docker-compose.yml`, builds successfully, passes security scanning, and has a documented cleanup plan. Unused Docker resources are reclaimed with a tracked report.
 

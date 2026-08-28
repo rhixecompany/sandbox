@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -48,7 +56,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,13 +83,11 @@ metadata:
 
 
 
-## Goal
 
 Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
 
 ## boost-prompt> Interactive prompt refinement workflow: interrogates scope, deliverables, constraints; copies final markdown to clipboard; never writes code.
 
-## Context
 
 Use when you need to improve a draft prompt before submitting it to an AI system. Requires the Joyride VS Code extension for clipboard operations. This prompt does NOT write code - it only refines prompts.**Critical rules (must appear within the first 15% of execution):**- DO NOT WRITE ANY CODE - this is a prompt refinement workflow only- Always ask clarifying questions before finalizing the prompt- Copy the final markdown to clipboard using Joyride after each revision
 
@@ -126,7 +131,6 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 > - Install from VS Code Extensions marketplace: search "Joyride"
 > **Full content:**
 
-## Phases
 
 ### Phase 1: Interrogate
 

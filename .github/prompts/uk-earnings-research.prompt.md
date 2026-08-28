@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -57,7 +65,6 @@ metadata:
 - [Safety & Ethics](#safety-&-ethics)
 - [Trigger Phrase](#trigger-phrase)
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -94,11 +101,9 @@ metadata:
 
 ## UK Earnings Research Pipeline
 
-## Goal
 
 **Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, UK-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.
 
-## Context
 
 - **User**: Alexa (UK-based, Site Supervisor/Manager background, Rexos Properties May 2025–June 2026)
 - **Workspace**: `C:\Users\Alexa\Desktop\SandBox\`

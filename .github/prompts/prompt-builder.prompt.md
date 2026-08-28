@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -46,7 +54,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,13 +83,11 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
 
 ## prompt-builder> Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices.
 
-## Context
 
 Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask` and `agent` modes, the workflow asks exactly one focused question for each of the 9 topic areas (9 questions total) across identity, persona, task, context, instructions, output, tools, configuration, and validation. In `edit` mode, use the existing draft as the primary source and ask only targeted gap questions where needed.**Critical rules (must appear within the first 15% of execution):**- Never overwrite existing `.prompt.md` files without user confirmation- Always follow patterns from the 4 reference prompts listed in the Reference Patterns section of this prompt- Generate prompts optimized for AI consumption (token-efficient, structured)
 
@@ -126,7 +131,6 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 | `writing-skills` | Crafting and optimizing prompts and instructions |
 | `prompt-engineering` | Research-backed prompt optimization before handoff |
 
-## Phases
 
 ### Phase 1: Discovery
 

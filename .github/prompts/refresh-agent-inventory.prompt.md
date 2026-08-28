@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -47,7 +55,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description to accomplish the associated tasks and objectives.](#description-to-accomplish-the-associated-tasks-and-objectives)
@@ -78,7 +85,6 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Use when
 
@@ -88,7 +94,6 @@ Use when
 
 Refresh the workspace customization inventory by reconciling discovered assetsagainst the canonical report, then propose precise edits for stale AGENTS andcopilot instruction references.
 
-## Context
 
 - Workspace is monorepo-style with root and subproject overrides.
 - Canonical report path: - reports/copilot-skills-agents-hooks-plugins-prompts-instructions-report.md
@@ -117,7 +122,6 @@ Refresh the workspace customization inventory by reconciling discovered assetsag
 - Keep edits minimal and scoped to customization files.
 - If no changes are needed, output a no-op report with evidence.
 
-## Phases
 
 ### Phase 1: Discover and compare
 

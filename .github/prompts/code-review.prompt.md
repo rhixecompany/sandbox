@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -50,7 +58,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -80,7 +87,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
 
@@ -88,7 +94,6 @@ Use when "Comprehensive code review prompt for correctness, security, and testin
 
 Perform high-signal code reviews that prioritize correctness, security, and high-risk logic such as authentication, payments, and data operations.
 
-## Context
 
 Use this prompt when reviewing diffs, pull requests, or selected files and when the user asks for a review. Focus on actionable findings with evidence.
 
@@ -123,7 +128,6 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 - Request clarification instead of guessing when intent is ambiguous.
 - Keep summary concise after findings.
 
-## Phases
 
 ### Phase 1: Scope and Risk Mapping
 

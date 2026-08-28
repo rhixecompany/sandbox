@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -53,7 +61,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -86,11 +93,9 @@ metadata:
 
 
 
-## Goal
 
 Prompt for creating the high-level technical architecture for an Epic, based on a Product Requirements Document.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -114,7 +119,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

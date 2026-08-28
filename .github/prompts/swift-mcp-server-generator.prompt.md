@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -62,7 +70,6 @@ metadata:
 - [Template References](#template-references)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -103,11 +110,9 @@ metadata:
 
 
 
-## Goal
 
 Generate a complete Model Context Protocol server project in Swift using the official MCP Swift SDK package.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -129,7 +134,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

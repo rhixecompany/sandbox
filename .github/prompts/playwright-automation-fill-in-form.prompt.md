@@ -24,6 +24,13 @@ metadata:
 ---
 ## Table of Contents
 
+## Goal
+
+## Context
+
+## Phases
+
+
 - [Goal](#goal)
 - [Context](#context)
 - [Inputs](#inputs)
@@ -58,11 +65,9 @@ metadata:
 
 
 
-## Goal
 
 Fill a form with Playwright MCP, stop before submission, and ask for a human review.
 
-## Context
 
 Use when filling web forms field by field with Playwright, stopping before submission for human review.
 
@@ -86,7 +91,6 @@ Use when filling web forms field by field with Playwright, stopping before submi
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

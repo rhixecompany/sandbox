@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -75,7 +83,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Copy-write frontmatter template strict validator](#copy-write-frontmatter-template-strict-validator)
@@ -134,7 +141,6 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Manage the whole `.github/prompts/` prompt lifecycle end to end: catalog, dedupe, consolidate reusable context into crisp shared markdown templates, update every affected prompt to use those templates, ensure all prompt references resolve, create any missing skills or scripts referenced by prompts, and validate the prompt inventory is clean.
 
@@ -160,7 +166,6 @@ Run the strict validator on all prompt front matter. Compare each `frontmatter` 
 - No duplicate prompt by content or function remains.
 - The shared templates at `templates/_shared/...` are linked from prompts and loadable.
 
-## Phases
 
 ## Phase 1: Inventory
 
@@ -350,7 +355,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 

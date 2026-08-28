@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -50,7 +58,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -80,7 +87,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.
 
@@ -88,7 +94,6 @@ Use when "Comprehensive prompt for synchronizing documentation whenever code cha
 
 Detect when code changes require documentation updates and ensure README, API docs, config docs, changelogs, and examples remain synchronized.
 
-## Context
 
 Use this prompt whenever application code, scripts, APIs, configuration, or public interfaces are changed.
 
@@ -123,7 +128,6 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 - Update examples and migration guidance for breaking or deprecated behavior.
 - Keep changelog entries structured and user-focused.
 
-## Phases
 
 ### Phase 1: Trigger and Scope Detection
 

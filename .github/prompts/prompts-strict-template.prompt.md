@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -46,7 +54,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -76,7 +83,6 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Use when "Comprehensive prompt for enforcing strict .prompt.md template structure and formatting rules." to accomplish the associated tasks and objectives.
 
@@ -84,7 +90,6 @@ Use when "Comprehensive prompt for enforcing strict .prompt.md template structur
 
 Normalize and validate prompt markdown files so they follow the repository's strict required structure, section order, phase table format, and task numbering conventions.
 
-## Context
 
 Use this prompt when creating, editing, reviewing, or repairing files that match .prompt.md naming conventions.
 
@@ -119,7 +124,6 @@ Use this prompt when creating, editing, reviewing, or repairing files that match
 - Enforce Task N.x and Subtask N.x.y numbering patterns.
 - Preserve source intent and wording as much as possible.
 
-## Phases
 
 ### Phase 1: Structural Intake
 

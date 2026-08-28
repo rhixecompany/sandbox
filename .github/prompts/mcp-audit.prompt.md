@@ -9,6 +9,14 @@ metadata:
   hermes:
     tags: [mcp, audit, sync, devops]
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # /mcp-audit — Run MCP Server Audit + Sync
 

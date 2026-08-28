@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -51,7 +59,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -82,11 +89,9 @@ metadata:
 
 
 
-## Goal
 
 Use this prompt to handle the improve agentsmd workflow.
 
-## Context
 
 Use when you need to improve agentsmd for the current workspace or task.
 
@@ -110,7 +115,6 @@ Use when you need to improve agentsmd for the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear and non-blocking, state the assumption explicitly; if it blocks correctness, ask for clarification or mark it as "not present".
 
-## Phases
 
 The outer phases map to the source prompt as follows: Phase 1 Intake = Phase 1, Phase 2 Execute = Phases 2-3, Phase 3 Verify = Phase 4, Phase 4 Hand off = final presentation.
 

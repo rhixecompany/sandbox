@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -43,7 +51,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -65,13 +72,11 @@ metadata:
 
 
 
-## Goal
 
 Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediation, consolidation, and final verification.
 
 ## Audit Skills Judge Fix
 
-## Context
 
 - **Skills root:** `C:\Users\Alexa\AppData\Local\hermes\skills`
 - **Progress artifact:** `docs/orchestrator-progress.md`
@@ -85,7 +90,6 @@ Audit, judge, and fix skills in the Hermes library: inventory, dedupe, remediati
 2. Each phase must pass its gate before advancing.
 3. If a referenced script/path is missing, report the exact missing path instead of fabricating work.
 
-## Phases
 
 Full phase instructions live in `templates/audit-skills-judge-fix/phases.md`.
 

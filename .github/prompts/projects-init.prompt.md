@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -44,7 +52,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -72,7 +79,6 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Three-phase workspace initialization: triage MD documentation files, migrate prompt files to prompts/, then create skills/scripts and update prompts. Eliminates duplicates and consolidates documentation.
 
@@ -85,7 +91,6 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 - **Delete only after verification** — Before deleting any file, confirm the canonical copy exists in the target location.
 - **Count before and after** — Record file counts at each phase start and end; report deltas.
 
-## Context
 
 - **Source reference:** `projects-init.prompt.txt` (raw specification)
 - **Target scope:** `pwd` (workspace root), `docs/`, `.github/prompts/`
@@ -112,7 +117,6 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 3. **Count and report** — Log file counts before and after each phase. Report deltas in the phase summary.
 4. **No destructive operations without confirmation** — For `rm` operations over 3+ files, show the list and ask before executing.
 
-## Phases
 
 ## Phase 1: Triage Documentation
 

@@ -24,6 +24,13 @@ metadata:
 ---
 ## Table of Contents
 
+## Goal
+
+## Context
+
+## Phases
+
+
 - [Goal](#goal)
 - [Context](#context)
 - [Inputs](#inputs)
@@ -59,11 +66,9 @@ metadata:
 
 
 
-## Goal
 
 Generate a Playwright test from a scenario, validate it against the app, and iterate until it passes.
 
-## Context
 
 Use when generating Playwright tests from scenarios for the current workspace.
 
@@ -87,7 +92,6 @@ Use when generating Playwright tests from scenarios for the current workspace.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

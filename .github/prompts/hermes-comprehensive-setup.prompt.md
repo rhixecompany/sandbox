@@ -25,6 +25,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -54,7 +62,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Template Reference](#template-reference)
@@ -83,7 +90,6 @@ metadata:
 
 
 
-## Goal
 
 Execute the `hermes-comprehensive-setup` workflow. Full details: `templates/hermes-comprehensive-setup/README.md`.
 
@@ -133,11 +139,9 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
-## Phases
 
 ### Phase 1: Intake
 

@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -51,7 +59,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -81,7 +88,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive session workflow for generating AGENTS.md files, committing per project repo, reconciling PR branches, and reporting repo-branch-SHA output" to accomplish the associated tasks and objectives.
 
@@ -93,7 +99,6 @@ Run a full AGENTS.md generation and git reconciliation workflow across explicitl
 - Reconcile to consistent PR-ready branch names.
 - Output a compact final table with repo, branch, and commit SHA.
 
-## Context
 
 Use this prompt when the user asks for AGENTS.md generation and git automation for one or more subprojects.Expected workspace shape:- projects/ contains multiple project repositories.
 
@@ -138,7 +143,6 @@ Use this prompt when the user asks for AGENTS.md generation and git automation f
 - Always end with a compact table: - repo | branch | commit SHA.
 - Report blockers and provide the safest fallback.
 
-## Phases
 
 ### Phase 2: Generate AGENTS
 

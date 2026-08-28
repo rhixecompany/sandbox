@@ -24,6 +24,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 
 # Table of Contents
@@ -77,7 +85,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -130,11 +137,9 @@ metadata:
 
 
 
-## Goal
 
 Use this prompt to handle the create mcp based declarative agent for microsoft 365 copilot workflow.
 
-## Context
 
 Use when you need to create mcp based declarative agent for microsoft 365 copilot for the current workspace or task.
 
@@ -158,7 +163,6 @@ Use when you need to create mcp based declarative agent for microsoft 365 copilo
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

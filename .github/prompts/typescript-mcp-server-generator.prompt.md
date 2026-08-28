@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -56,7 +64,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -91,11 +98,9 @@ metadata:
 
 
 
-## Goal
 
 Generate a complete MCP server project in TypeScript with tools, resources, and proper configuration.
 
-## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -119,7 +124,6 @@ Use when you need to work on the current workspace or task.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -49,7 +57,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,11 +83,9 @@ metadata:
 
 
 
-## Goal
 
 Produce a feature PRD that is ready to hand off for implementation planning.
 
-## Context
 
 - Use when the user needs a structured `prd.md` for a single feature.
 - Base the PRD on a parent epic or a stated feature idea.
@@ -106,7 +111,6 @@ Produce a feature PRD that is ready to hand off for implementation planning.
 5. Include acceptance criteria using checklist items or Given/When/Then.
 6. List out-of-scope items and dependencies.
 
-## Phases
 
 ### Phase 1: Understand the feature
 

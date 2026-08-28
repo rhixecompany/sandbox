@@ -26,8 +26,15 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
 
 ## Goal
+
+## Context
+
+## Phases
+
+
 
 Migrate the current repository and every sub-repository from `npm` to `bun` and from `npx` / `npx.cmd` to `bunx`. After migration, `bun` becomes the default package manager for the whole workspace (including the Hermes root), unused dependencies are removed, and every affected repository has the new state committed and pushed.
 

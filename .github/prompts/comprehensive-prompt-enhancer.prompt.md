@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -52,7 +60,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Subgoals](#subgoals)
@@ -84,7 +91,6 @@ metadata:
 
 
 
-## Goal
 
 Enhance and update all prompts at `./.github/prompts/*.prompt.md` using the DRY principle, prompt engineering best practices, and all appropriate structural sections — personas, profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensure each prompt and all its files are verified, validated, and have zero issues remaining.
 
@@ -115,7 +121,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep, incomplete passes
 - **Encourage**: Idempotent scripts, DRY references, evidence-based decisions, minimal changes
 
-## Context
 
 The prompt library at `./.github/prompts/` contains `.prompt.md` files that may be partially enhanced. Target state: every prompt has all 13 structural sections (Goal, Subgoals, Personas, Personality, Context, Rules, Phases, Best Practices, Verification Checklist, Skills Required, MCP Servers & Tools, Tasks, Dependencies) with shared templates referenced via DRY, not inlined.
 
@@ -149,7 +154,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete. Run full analysis and dry-run.
 4. **Report blockers** — State when something fails.
 
-## Phases
 
 ### Phase 1: Setup and Discovery
 

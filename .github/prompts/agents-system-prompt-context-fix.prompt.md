@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -44,7 +52,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -67,13 +74,11 @@ metadata:
 
 
 
-## Goal
 
 Fix and verify Hermes/Copilot/Codex agent system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion.
 
 ## Agents System Prompt Context Fix
 
-## Context
 
 - **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
 - **Progress artifact:** `docs/orchestrator-progress.md`
@@ -87,7 +92,6 @@ Fix and verify Hermes/Copilot/Codex agent system prompt context by generating pr
 2. Each phase must pass its gate before advancing.
 3. If a referenced path is missing, pause and report the exact missing path instead of fabricating work.
 
-## Phases
 
 Full phase instructions live in `templates/agents-system-prompt-context-fix/phases.md`.
 

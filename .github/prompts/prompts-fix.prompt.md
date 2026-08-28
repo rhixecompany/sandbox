@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -46,7 +54,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,11 +83,9 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Sync prompt files across Hermes and Copilot without losing trigger names or platform-specific behavior.
 
-## Context
 
 Use this prompt when prompt definitions, prompt-style prompts, or platform registrations drift across the three ecosystems. The workflow is discovery first, then mapping, then sync, then verification.
 
@@ -111,7 +116,6 @@ Use this prompt when prompt definitions, prompt-style prompts, or platform regis
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-## Phases
 
 ### Phase 1: Discovery
 

@@ -21,6 +21,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -47,7 +55,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -74,13 +81,11 @@ metadata:
 
 
 
-## Goal
 
 Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure.
 
 ## update-implementation-plan> Create or update an implementation plan file with new or updated requirements for features, refactoring, package upgrades, design, architecture, or infrastructure.
 
-## Context
 
 Use when you need to create or update an implementation plan for the current workspace or task. The output implementation plan follows a standard section template with status badges.
 
@@ -119,7 +124,6 @@ Template variables used in this prompt follow this convention:| Variable | Scope
 | `writing-plans` | Author structured implementation plans |
 | `plans-and-specs` | Plan and spec namespace management |
 
-## Phases
 
 > **Goal:** Read the current workspace state and determine whether to create or up
 >

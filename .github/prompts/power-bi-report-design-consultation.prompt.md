@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -57,7 +65,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Design Consultation Framework](#design-consultation-framework)
@@ -94,7 +101,6 @@ metadata:
 
 
 
-## Goal
 
 Power BI report visualization design prompt for creating effective, user-friendly, and accessible reports with optimal chart selection and layout design.
 
@@ -156,7 +162,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when designing Power BI reports with optimal visualization and layout.
 
@@ -177,7 +182,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State when something fails.
 
-## Phases
 
 ### Phase 1: Intake
 

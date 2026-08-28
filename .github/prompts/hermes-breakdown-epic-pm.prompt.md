@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -49,7 +57,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,11 +83,9 @@ metadata:
 
 
 
-## Goal
 
 Produce a complete Epic PRD that is ready for downstream feature planning.
 
-## Context
 
 - Use when the user provides an epic idea, short brief, or high-level request.
 - Keep the output measurable, concise, and aligned to business value.
@@ -107,7 +112,6 @@ Produce a complete Epic PRD that is ready for downstream feature planning.
 5. Estimate business value in a clear, comparable way.
 6. Ask for clarification when the epic is underspecified.
 
-## Phases
 
 ### Phase 1: Understand the epic
 

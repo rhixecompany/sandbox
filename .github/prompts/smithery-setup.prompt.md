@@ -25,6 +25,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Connect to MCPs](#connect-to-mcps)
@@ -119,7 +127,6 @@ metadata:
 - [Multiple MCP Servers](#multiple-mcp-servers)
 - [Learn More](#learn-more)
 
-## Table of Contents
 
 - [Why Smithery?](#why-smithery?)
 - [Quick Start](#quick-start)

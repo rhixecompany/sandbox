@@ -24,6 +24,13 @@ metadata:
 ---
 ## Table of Contents
 
+## Goal
+
+## Context
+
+## Phases
+
+
 - [Goal](#goal)
 - [Description](#description)
 - [Context](#context)
@@ -52,7 +59,6 @@ metadata:
 
 
 
-## Goal
 
 Author and refine Playwright TypeScript tests with role/label-based locators and web-first assertions.
 
@@ -60,7 +66,6 @@ Author and refine Playwright TypeScript tests with role/label-based locators and
 
 Author and refine Playwright TypeScript tests that are resilient, readable, and aligned with accessibility-first locator and assertion practices.
 
-## Context
 
 Use when creating or updating Playwright TypeScript tests with accessibility-first locators and web-first assertions.
 
@@ -95,7 +100,6 @@ Use when creating or updating Playwright TypeScript tests with accessibility-fir
 - Keep tests feature-focused and stored under tests/ with clear names.
 - Verify navigation with URL assertions and structure with accessibility snapshots when applicable.
 
-## Phases
 
 ### Phase 1: Scenario and Test Design
 

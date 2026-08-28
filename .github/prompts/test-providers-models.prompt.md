@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -45,7 +53,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Rules](#rules)
@@ -69,7 +76,6 @@ metadata:
 
 
 
-## Goal
 
 Produce a **verified, ordered fallback chain** across authorized Hermes providers using only models that *actually work* after live probing, then configure Hermes and update installed agents accordingly. The ordering rule is deterministic:
 
@@ -190,7 +196,6 @@ Propagation targets:
 - Workspace context files: `.hermes.md`, `AGENTS.md`, `.github/copilot-instructions.md`
 - Agent configs: `opencode.json`, `~/.opencode/*`, Codex/Copilot instruction files if present
 
-## Phases
 
 1. **Phase 1 — Inventory** — `hermes auth list`; collect installed agent configs.
 2. **Phase 2 — Probe** — Delegate live capability probes; return structured capability JSON.

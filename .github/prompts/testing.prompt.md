@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -50,7 +58,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -79,7 +86,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive testing prompt aligned to repository unit and E2E guidance." to accomplish the associated tasks and objectives.
 
@@ -87,7 +93,6 @@ Use when "Comprehensive testing prompt aligned to repository unit and E2E guidan
 
 Create, update, and validate tests that provide deterministic coverage for public behavior and critical flows such as authentication, payments, and reconciliation.
 
-## Context
 
 Use this prompt for tests under tests/ and for planning or reviewing validation strategy for changed behavior.
 
@@ -122,7 +127,6 @@ Use this prompt for tests under tests/ and for planning or reviewing validation 
 - Keep test files focused and readable.
 - Ensure CI-relevant commands and prerequisites are respected.
 
-## Phases
 
 ### Phase 1: Coverage Planning
 

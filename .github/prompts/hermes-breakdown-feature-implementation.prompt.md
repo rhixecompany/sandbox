@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -49,7 +57,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -76,11 +83,9 @@ metadata:
 
 
 
-## Goal
 
 Turn a feature PRD into an implementation plan that an engineering team can execute.
 
-## Context
 
 - Use when the feature PRD is already available.
 - Focus on architecture, data flow, API shape, and delivery considerations.
@@ -107,7 +112,6 @@ Turn a feature PRD into an implementation plan that an engineering team can exec
 5. Surface migration strategy and CI/CD considerations explicitly.
 6. Keep the document easy to hand to an engineer.
 
-## Phases
 
 ### Phase 1: Analyze the PRD
 

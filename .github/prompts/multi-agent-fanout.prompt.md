@@ -9,6 +9,14 @@ metadata:
   hermes:
     tags: [multi-agent, providers, fanout, devops]
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # /multi-agent-fanout — Run Multi-Provider / Multi-Agent Fanout
 

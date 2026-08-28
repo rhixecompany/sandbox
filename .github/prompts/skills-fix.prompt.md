@@ -24,6 +24,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -46,7 +54,6 @@ metadata:
 - [Subagents](#subagents)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -70,14 +77,12 @@ metadata:
 
 
 
-## Goal
 
 Full lifecycle audit and remediation of the Hermes adminbot skill library.
 Discovers all SKILL.md files, reorganizes misplaced skills, deduplicates
 cross-category copies, audits every skill for quality issues, generates
 reports, plans fixes, and applies them in priority order.
 
-## Context
 
 - **Skills root:** `C:\Users\Alexa\AppData\Local\hermes\profiles\adminbot\skills\`
 - **Audit output:** `docs/skills-debug-context.md` (master index)
@@ -150,7 +155,6 @@ Duplicates removed:
 - `(root)/dogfood` (canonical: `qa/dogfood`)
 - `(root)/yuanbao` (canonical: `productivity/yuanbao`)
 
-## Phases
 
 ### Phase 1: Setup and Inventory
 

@@ -26,6 +26,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
@@ -143,7 +151,6 @@ metadata:
 - [[Rate Limit Headers](#rate-limit-headers)](#rate-limit-headersrate-limit-headers)
 - [[Handling Rate Limits](#handling-rate-limits)](#handling-rate-limitshandling-rate-limits)
 
-## Table of Contents
 
 - [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
 - [[Create an API Key](#create-an-api-key)](#[create-an-api-key]#create-an-api-key)

@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -53,7 +61,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -85,11 +92,9 @@ metadata:
 
 
 
-## Goal
 
 Apply fixes to all F-grade and C-grade skills identified in the audit.Target: F=0, C≤5 after completion.
 
-## Context
 
 - **Skills root:** `$HOME/AppData/Local/hermes/skills/` (resolves to `C:\Users\Alexa\AppData\Local\hermes\skills\`)
 - **Audit results:** `docs/skills-audit-results.json`
@@ -146,7 +151,6 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State when something fails.
 
-## Phases
 
 ### Phase 1: Intake
 

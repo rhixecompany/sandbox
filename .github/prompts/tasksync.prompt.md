@@ -23,6 +23,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -50,7 +58,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -79,7 +86,6 @@ metadata:
 
 
 
-## Goal
 
 Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execution and terminal-based intake." to accomplish the associated tasks and objectives.
 
@@ -87,7 +93,6 @@ Use when "Comprehensive TaskSync workflow prompt for persistent task-cycle execu
 
 Execute tasks continuously without auto-termination, follow TaskSync state rules, and request new tasks after completion using terminal-first intake behavior.
 
-## Context
 
 Use this prompt for sessions requiring ongoing task execution, strict continuation behavior, urgent override handling, and explicit manual termination semantics.
 
@@ -122,7 +127,6 @@ Use this prompt for sessions requiring ongoing task execution, strict continuati
 - After task completion, announce approved completion phrase and request next task.
 - Retry terminal intake failures up to allowed count before chat fallback.
 
-## Phases
 
 ### Phase 1: Initialization and Intake
 

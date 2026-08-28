@@ -24,6 +24,13 @@ metadata:
 ---
 ## Table of Contents
 
+## Goal
+
+## Context
+
+## Phases
+
+
 - [Goal](#goal)
 - [Context](#context)
 - [Inputs](#inputs)
@@ -59,11 +66,9 @@ metadata:
 
 
 
-## Goal
 
 Explore a website with Playwright MCP, document core flows, and propose tests from the findings.
 
-## Context
 
 Use when exploring a website with Playwright to document core flows, locators, and outcomes.
 
@@ -87,7 +92,6 @@ Use when exploring a website with Playwright to document core flows, locators, a
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
-## Phases
 
 ### Phase 1: Intake
 

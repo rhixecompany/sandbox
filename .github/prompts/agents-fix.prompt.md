@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -51,7 +59,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -81,11 +88,9 @@ metadata:
 
 
 
-## Goal
 
 Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.
 
-## Context
 
 Use this prompt when agent definitions, agent-style prompts, or platformregistrations drift across the three ecosystems. The workflow is discoveryfirst, then mapping, then sync, then verification.
 
@@ -115,7 +120,6 @@ Use this prompt when agent definitions, agent-style prompts, or platformregistra
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-## Phases
 
 ### Phase 1: Discovery
 

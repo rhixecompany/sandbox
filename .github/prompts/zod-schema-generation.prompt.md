@@ -25,6 +25,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -50,7 +58,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Description](#description)
@@ -77,7 +84,6 @@ metadata:
 
 
 
-## Goal
 
 Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples.
 
@@ -85,7 +91,6 @@ Generate Zod validation schemas from TypeScript types, database schemas, or JSON
 
 This prompt produces Zod v3+ schemas with proper type inference, custom error messages, and best practices for schema composition.
 
-## Phases
 
 ### Phase 1: Input Analysis
 
@@ -118,7 +123,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 

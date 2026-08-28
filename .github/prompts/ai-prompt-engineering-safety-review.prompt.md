@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -48,7 +56,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -75,13 +82,11 @@ metadata:
 
 
 
-## Goal
 
 Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
 
 ## ai-prompt-engineering-safety-review> Review an input prompt for safety, bias, security, clarity, and effectiveness, then return a stronger version.
 
-## Context
 
 - Use when the user wants a prompt reviewed or improved before reuse
 - Prefer concrete recommendations over theory
@@ -122,7 +127,6 @@ Review a prompt for safety, bias, security, clarity, and effectiveness, then pro
 | `prompt-engineering` | Research-backed prompt optimization patterns (scope analysis, clarity assessment) |
 | `systematic-debugging` | Systematic detection of prompt safety and quality issues (risk detection, bias, clarity checks) |
 
-## Phases
 
 ### Phase 1: Analyze the prompt
 

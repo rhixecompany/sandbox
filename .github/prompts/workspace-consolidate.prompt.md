@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -67,7 +75,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Skills Required](#skills-required)
@@ -113,7 +120,6 @@ metadata:
 
 
 
-## Goal
 
 Consolidate scripts, patches, and documentation across the workspace with bash migration and audit workflows.
 
@@ -122,7 +128,6 @@ Consolidate scripts, patches, and documentation across the workspace with bash m
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)---
 
-## Phases
 
 ### Phase 1: Verify Canonical Script Layout (LIGHT)
 
@@ -384,7 +389,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 

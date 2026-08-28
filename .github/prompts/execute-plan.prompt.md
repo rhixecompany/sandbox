@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -49,7 +57,6 @@ metadata:
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -77,11 +84,9 @@ metadata:
 
 
 
-## Goal
 
 Execute the specified plan from `.hermes/plans/`.**Parameter** — set `plan` to the plan filename (e.g., `acpx-agents-feature-specs.md`).
 
-## Context
 
 Loads a target plan document and follows its phases, steps, and requirementssequentially. Use when a written plan already exists and needs driven to completion.
 
@@ -104,7 +109,6 @@ Loads a target plan document and follows its phases, steps, and requirementssequ
 - If a phase references a file that does not exist, stop and report the gap.
 - Keep the response structured, deterministic, and easy to act on.
 
-## Phases
 
 ### Phase 1: Load Plan
 

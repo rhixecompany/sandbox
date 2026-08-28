@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -52,7 +60,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Core Requirements](#core-requirements)
@@ -83,7 +90,6 @@ metadata:
 
 
 
-## Goal
 
 Generate comprehensive technology stack documentation for every project in the workspace, placing each project's documentation directly inside its own directory (not in a centralized docs/ folder), plus a master workspace-level blueprint.
 
@@ -219,7 +225,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 

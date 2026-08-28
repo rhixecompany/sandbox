@@ -22,6 +22,14 @@ metadata:
   codex:
     enabled: true
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -51,7 +59,6 @@ metadata:
 - [Scripts](#scripts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -81,13 +88,11 @@ metadata:
 
 
 
-## Goal
 
 Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.
 
 > Search, identify, catalog, and modernize scripts across the workspace.
 
-## Context
 
 Use this prompt when the workspace has mixed bash, PowerShell, BAT, andTypeScript scripts that need inventory, modernization, or consolidation. Theworkflow is inventory first, then plan, then review, then migrate, then verify.
 
@@ -120,7 +125,6 @@ Use this prompt when the workspace has mixed bash, PowerShell, BAT, andTypeScrip
 > See full table with per-domain purposes:
 > [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
-## Phases
 
 ### Phase 1: Catalog all scripts
 
