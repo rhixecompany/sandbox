@@ -1,4 +1,4 @@
-# Fanout Report — 2026-08-28T18:21:57
+# Fanout Report — 2026-08-28T22:11:32
 
 **Prompt:** `Reply with only the word OK and your model identifier.`
 
@@ -6,4 +6,4 @@
 
 | # | Provider | Model | Agent | Status | Latency | Output tokens |
 |---|----------|-------|-------|--------|---------|---------------|
-| 1 | `openrouter` | `minimax/minimax-m3:free` | `openai-compat (matches openrouter-client-py protocol)` | ok | 1950ms | 1 |
+| 1 | `openrouter` | `minimax/minimax-m3:free` | `openai-compat (matches openrouter-client-py protocol)` | ok | 2038ms | 1 |
