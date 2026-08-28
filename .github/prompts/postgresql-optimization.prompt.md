@@ -255,7 +255,14 @@ CREATE INDEX idx_table_column ON table(column);
 
 > -- Running totals and rankings
 > SUM(amount) OVER (PARTITION BY product_id ORDER BY order_date) as running_total,
-> **Full content:**
+> -- Window functions for analytics
+> ROW_NUMBER() OVER (PARTITION BY category ORDER BY score DESC) as rank_by_category,
+> -- CTEs for readable complex queries
+> WITH RECURSIVE org_tree AS (
+>   SELECT id, name, manager_id FROM employees WHERE manager_id IS NULL
+>   UNION ALL
+>   SELECT e.id, e.name, e.manager_id FROM employees e JOIN org_tree ot ON e.manager_id = ot.id
+> )
 
 ## Template References
 
