@@ -1,25 +1,28 @@
 # SESSION_REPORT.md
 
-> Generated: 2026-08-15T17:41+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
+> Generated: 2026-08-28T13:45+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Last Session Summary
 
-| Field      | Value                        |
-| ---------- | ---------------------------- |
-| Session ID | 20260815_180924_57fcee       |
-| Title      | /wezterm-terminal-config… #2 |
-| When       | 2026-08-15 17:10:24          |
-| Model      | nemotron-3-ultra-free        |
-| Source     | state.db:cli                 |
+| Field      | Value                                       |
+| ---------- | ------------------------------------------- |
+| Session ID | 20260828_130000_minimax                     |
+| Title      | .github/prompts/ Phase A corpus normalization |
+| When       | 2026-08-28 13:00:00                         |
+| Model      | minimax/minimax-m3:free (openrouter)        |
+| Source     | state.db:tui                                |
 
 ## Tools Used
 
 | Tool         | Calls | Purpose |
 | ------------ | ----- | ------- |
-| terminal     | 25    |         |
-| read_file    | 14    |         |
-| execute_code | 3     |         |
-| patch        | 2     |         |
+| terminal     | 35+   | audits, file listings, verification |
+| read_file    | 10+   | sample prompt bodies |
+| patch        | 4     | zod-schema-generation, ngn-earnings-research, BATCH_2 fix |
+| write_file   | 2     | scripts/verify_prompt_corpus.py, .hermes/plans/2026-08-28... |
+| skill_view   | 14    | 14-skill protocol + content-conversion skills |
+| delegate_task | 11  | 9 Phase A batches + 1 fix-batch + list/inspect |
+| todo         | 8     | phase tracking |
 
 ## Skills Loaded
 
@@ -101,3 +104,49 @@
 | .github/prompts/csharp-nunit.prompt.md                                              | committed                             |
 | .github/prompts/csharp-tunit.prompt.md                                              | committed                             |
 | [+260 more files]                                                                   | Full list in <session_id>.end.json    |
+
+## 2026-08-28 Session: .github/prompts/ Phase A Corpus Normalization
+
+**Commit:** `76f79021` on `clean-development`
+**Profile:** default | **Model:** minimax/minimax-m3:free (openrouter)
+
+### Goal
+Normalize frontmatter across all 226 `.prompt.md` files in `.github/prompts/`.
+
+### Audit (pre-work)
+| Metric | Value |
+| ------ | ----- |
+| Total `.prompt.md` | 226 |
+| Missing `name` field | 223 |
+| Double frontmatter fence | 1 (`php-mcp-server-generator.prompt.md`) |
+| Thin body (<20 lines) | 2 (`repo-init` 4, `setup-bun-bunx` 7) |
+| Prior `BATCH_2_STANDARDIZATION_REPORT.md` | 67 files (C-G range) with different schema |
+
+### Execution
+- Loaded 14-skill protocol (using-superpowers, brainstorming, user-communication-preferences, mcp-sequential-thinking, mcp-filesystem, mcp-ast-grep, mcp-memory, plan, plans-and-specs, create-implementation-plan, implementation-plan, executing-plans, writing-clearly-and-concisely, subagent-driven-development)
+- Loaded 3 content-conversion skills (convert-plaintext-to-md, enhance-markdown, enhance-prompt)
+- Wrote `.hermes/plans/2026-08-28_prompt-corpus-enhance.md`
+- Dispatched 9 parallel subagent batches (~25 files each) + 1 direct (Batch 10 = zod-schema-generation)
+- Batch 8 hit `max_iterations` budget; dispatched follow-up fix subagent for 22 remaining files
+- Fixed 1 MED (name/filename mismatch in `ngn-earnings-research.prompt.md`)
+
+### Result
+| Metric | Before | After |
+| ------ | ------ | ----- |
+| Clean files | 3 | 226 |
+| HIGH severity | 223 | 0 |
+| MED severity | 0 | 0 |
+| Committed | — | 228 files (+5161/-1161) |
+
+### New files
+- `scripts/verify_prompt_corpus.py` — structural auditor (yaml.safe_load + heuristic checks). Exit 0 on pass, exit 1 on HIGH.
+- `.hermes/plans/2026-08-28_prompt-corpus-enhance.md` — plan + audit snapshot
+
+### Out of scope (Phase B not done)
+- Body-content enhancement via `enhance-prompt` (clarity, structure, intent)
+- Body-content normalization via `enhance-markdown` (heading hierarchy, code blocks)
+
+### Pre-existing issues (not caused by this work)
+- `bun run lint` rot: `eslint-config-next@15.4.2` + `eslint@10.8.0` + `@rushstack/eslint-patch` incompatibility in `projects/university-libary-jsm/`
+- `bun run format:check`: 48 pre-existing prettier issues in unrelated files (none in this commit)
+- 13 pre-existing dirty files under `projects/*` (excluded from commit)
