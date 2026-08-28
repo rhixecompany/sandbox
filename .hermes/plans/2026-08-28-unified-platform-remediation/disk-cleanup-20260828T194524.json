@@ -1,0 +1,117 @@
+{
+  "timestamp": "2026-08-28T19:45:23.629697+00:00",
+  "dry_run": false,
+  "cache_cleanup": [
+    {
+      "label": "npm cache",
+      "path": "C:\\Users\\Alexa\\.npm",
+      "existed": true,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "empty"
+    },
+    {
+      "label": "npm roaming cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Roaming\\npm-cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "pnpm store",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\pnpm",
+      "existed": true,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "empty"
+    },
+    {
+      "label": "bun cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\bun",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "VS Code cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Roaming\\Code\\Cache",
+      "existed": true,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "empty"
+    },
+    {
+      "label": "VS Code globalStorage cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Roaming\\Code\\User\\globalStorage\\cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "pip cache",
+      "path": "C:\\Users\\Alexa\\.cache\\pip",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "uv cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\uv\\cache",
+      "existed": true,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "empty"
+    },
+    {
+      "label": "Chrome cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache",
+      "existed": true,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "empty"
+    },
+    {
+      "label": "Edge cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\Edge\\User\\Default\\Cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    },
+    {
+      "label": "user temp (files >7d only)",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Temp",
+      "existed": true,
+      "before_mb": 3036.2,
+      "after_mb": 36.1,
+      "freed_mb": 3000.1,
+      "action": "cleaned",
+      "error": "[WinError 32] The process cannot access the file because it is being used by another process: 'C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\Temp\\\\PowerToysMSIInstaller_2026-08-28'"
+    },
+    {
+      "label": "winget cache",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\Packages\\Microsoft.DesktopAppInstaller_8wek3aa_ccef4xse\\LocalState\\Cache",
+      "existed": false,
+      "before_mb": 0.0,
+      "after_mb": 0.0,
+      "freed_mb": 0.0,
+      "action": "none"
+    }
+  ],
+  "large_files": [],
+  "total_freed_mb": 3000.1
+}

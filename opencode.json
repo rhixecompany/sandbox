@@ -189,5 +189,19 @@
 	},
 	"model": "opencode/nemotron-3-ultra-free",
 	"plugin": ["oh-my-openagent@latest"],
-	"small_model": "opencode/nemotron-3-ultra-free"
+	"small_model": "opencode/nemotron-3-ultra-free",
+	"provider": {
+		"ollama": {
+			"npm": "@ai-sdk/openai-compatible",
+			"name": "Ollama (local)",
+			"options": {
+				"baseURL": "http://localhost:11434/v1"
+			},
+			"models": {
+				"gemma3:4b": {
+					"name": "Gemma 3 4B (local)"
+				}
+			}
+		}
+	}
 }
