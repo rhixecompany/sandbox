@@ -25,6 +25,8 @@ metadata:
 # Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Pitfalls](#pitfalls)
 - [Summary](#summary)
 - [Research Question(s)](#research-questions)
 - [Investigation Plan](#investigation-plan)
@@ -76,6 +78,8 @@ metadata:
 ## Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Pitfalls](#pitfalls)
 - [Summary](#summary)
 - [Research Question(s)](#research-questions)
 - [Investigation Plan](#investigation-plan)
@@ -129,6 +133,12 @@ metadata:
 ## Goal
 
 Write time-boxed technical spike documents that research a single design question and produce a recommendation with evidence.
+
+## Prerequisites
+
+- A codebase or system context to investigate
+- Access to relevant documentation, APIs, and dependencies
+- A clear timebox and decision deadline
 
 title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴 Not Started"priority: "${input:Priority|High}"timebox: "${input:Timebox|1 week}"created: [YYYY-MM-DD]updated: [YYYY-MM-DD]owner: "${input:Owner}"---
 # ${input:SpikeTitle}

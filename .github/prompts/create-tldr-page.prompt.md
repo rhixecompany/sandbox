@@ -25,6 +25,7 @@ metadata:
 # Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
 - [Context](#context)
 - [Inputs](#inputs)
 - [Outputs](#outputs)
@@ -63,6 +64,7 @@ metadata:
 ## Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
 - [Context](#context)
 - [Inputs](#inputs)
 - [Outputs](#outputs)
@@ -103,6 +105,11 @@ metadata:
 ## Goal
 
 Write a tldr page for a command or tool from authoritative documentation and usage examples.
+
+## Prerequisites
+
+- A command name (e.g., `git`, `nmcli`)
+- A URL to authoritative documentation or a file with docs content
 
 ## Context
 

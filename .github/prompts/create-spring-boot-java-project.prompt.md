@@ -25,6 +25,7 @@ metadata:
 # Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
 - [Check Java version](#check-java-version)
 - [Download Spring Boot project template](#download-spring-boot-project-template)
 - [Unzip the downloaded file](#unzip-the-downloaded-file)
@@ -64,6 +65,7 @@ metadata:
 ## Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
 - [Check Java version](#check-java-version)
 - [Download Spring Boot project template](#download-spring-boot-project-template)
 - [Unzip the downloaded file](#unzip-the-downloaded-file)

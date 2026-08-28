@@ -22,34 +22,6 @@ metadata:
   codex:
     enabled: true
 ---
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Scenario and Test Design](#phase-1:-scenario-and-test-design)
-  - [Phase 2: Test Implementation](#phase-2:-test-implementation)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
 ## Table of Contents
 
 - [Goal](#goal)
@@ -82,7 +54,7 @@ metadata:
 
 ## Goal
 
-Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.
+Author and refine Playwright TypeScript tests with role/label-based locators and web-first assertions.
 
 ## Description
 
@@ -90,7 +62,7 @@ Author and refine Playwright TypeScript tests that are resilient, readable, and 
 
 ## Context
 
-Use this prompt when creating or updating Playwright tests in the tests directory for user flows, regression scenarios, and end-to-end behavior validation.
+Use when creating or updating Playwright TypeScript tests with accessibility-first locators and web-first assertions.
 
 ## Skills Required
 

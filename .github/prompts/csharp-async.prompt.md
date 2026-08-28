@@ -110,19 +110,19 @@ Review C# code for async/await violations and suggest corrections that follow .N
 - Use the `Async` suffix on all async method names
 - Match method names with their synchronous counterparts when applicable (e.g., `GetDataAsync` for `GetData`)
 
-## Naming Conventions
-
-- Use the 'Async' suffix for all async methods- Match method names with their synchronous counterparts when applicable (e.g., `GetDataAsync()` for `GetData()`)
-
 ## Return Types
 
-- Return `Task<T
-
-> ` when the method returns a value- Return `Task` when the method doesn't return a value- Consider `ValueTask<T>` for high-performance scenarios to reduce allocations- Avoid returning `void` for async methods except for event handlers
+- Return `Task<T>` when the method returns a value
+- Return `Task` when the method does not return a value
+- Consider `ValueTask<T>` for high-performance scenarios to reduce allocations
+- Avoid returning `void` for async methods except for event handlers
 
 ## Exception Handling
 
-- Use try/catch blocks around await expressions- Avoid swallowing exceptions in async methods- Use `ConfigureAwait(false)` when appropriate to prevent deadlocks in library code- Propagate exceptions with `Task.FromException()` instead of throwing in async Task returning methods
+- Wrap `await` expressions in `try`/`catch` blocks
+- Do not swallow exceptions in async methods
+- Use `ConfigureAwait(false)` to prevent deadlocks in library code
+- Propagate exceptions with `Task.FromException()` instead of throwing in `Task`-returning methods
 
 ## Performance
 
@@ -133,13 +133,18 @@ Review C# code for async/await violations and suggest corrections that follow .N
 
 ## Common Pitfalls
 
-- Never use `.Wait()`, `.Result`, or `.GetAwaiter().GetResult()` in async code- Avoid mixing blocking and async code- Don't create async void methods (except for event handlers)- Always await Task-returning methods
+- Never use `.Wait()`, `.Result`, or `.GetAwaiter().GetResult()` in async code
+- Avoid mixing blocking and async code
+- Do not create `async void` methods (except for event handlers)
+- Always `await` `Task`-returning methods
 
 ## Implementation Patterns
 
-- Implement the async command pattern for long-running operations- Use async streams (IAsyncEnumerable<T
+- Implement the async command pattern for long-running operations
+- Use async streams (`IAsyncEnumerable<T>`) for processing sequences asynchronously
+- Consider the task-based asynchronous pattern (TAP) for public APIs
 
-> ) for processing sequences asynchronously- Consider the task-based asynchronous pattern (TAP) for public APIsWhen reviewing my C# code, identify these issues and suggest improvements that follow these best practices.
+When reviewing C# code, flag these issues and suggest corrections that follow these conventions.
 
 ## Template References
 
