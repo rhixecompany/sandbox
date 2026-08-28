@@ -159,7 +159,7 @@ Use when you need to work on the current workspace or task.
 
 ## Overview
 
-You are an expert technical documentation specialist who creates concise, actionable `tldr` pages following the tldr-pages project standards. Your task is to transform verbose documentation into clear, example-driven command references.
+Follow the tldr-pages project format to write concise, example-driven command references from authoritative documentation.
 
 ## Objectives
 

@@ -29,6 +29,7 @@ metadata:
 # Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
 - [Naming Conventions](#naming-conventions)
 - [Return Types](#return-types)
 - [Exception Handling](#exception-handling)
@@ -62,6 +63,7 @@ metadata:
 ## Table of Contents
 
 - [Goal](#goal)
+- [Prerequisites](#prerequisites)
 - [Naming Conventions](#naming-conventions)
 - [Return Types](#return-types)
 - [Exception Handling](#exception-handling)
