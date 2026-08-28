@@ -104,7 +104,7 @@ Power Apps Code Apps (preview) allow developers to build custom web applications
 
 ### 1. Project Initialization
 
-> **Full content:**
+
 
 ## Implementation Guidelines
 
@@ -119,7 +119,7 @@ Power Apps Code Apps (preview) allow developers to build custom web applications
 3. Comprehensive documentation and setup instructions
 4. Development and deployment scripts
 5. TypeScript configuration optimized for Power Apps Code Apps
-6. Best practices implementation examplesEnsure the generated project follows Microsoft's official Power Apps Code Apps documentation and samples from <https://github.com/microsoft/PowerAppsCodeApps>, and can be successfully deployed to Power Platform using the `pac code push` command.
+6. Best practices implementation examplesEnsure the project follows Microsoft's official Power Apps Code Apps documentation and samples from <https://github.com/microsoft/PowerAppsCodeApps>, deployable with `pac code push`.
 
 ## Template References
 

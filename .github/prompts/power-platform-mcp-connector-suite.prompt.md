@@ -108,7 +108,9 @@ date: '2026-08-25'
 
 Generate complete Power Platform custom connector with MCP integration for Copilot Studio - includes schema generation, troubleshooting, and validation.
 
-## Power Platform MCP Connector SuiteGenerate comprehensive Power Platform custom connector implementations with Model Context Protocol integration for Microsoft Copilot Studio.
+## Power Platform MCP Connector Suite
+
+Generate Power Platform custom connector implementations with MCP integration for Microsoft Copilot Studio.
 
 ## MCP Capabilities in Copilot Studio
 
@@ -204,7 +206,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 
 ## Context
 
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
+Use when generating Power Platform custom connectors with MCP integration for Copilot Studio.
 
 ## Rules
 

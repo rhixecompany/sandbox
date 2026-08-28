@@ -108,7 +108,7 @@ Comprehensive Power BI DAX formula optimization prompt for improving performance
 
 ### 1. **Performance Analysis**
 
-> **Full content:**
+
 
 ## Optimization Process
 
@@ -127,7 +127,7 @@ Comprehensive Power BI DAX formula optimization prompt for improving performance
 > ORIGINAL FORMULA ANALYSIS:>
 >
 > - Performance Issues: [List identified issues]
-> **Full content:**
+
 
 ## Request Instructions
 
@@ -139,8 +139,9 @@ To use this prompt effectively, provide:
 
 > I can also help with:>
 >
-> - **DAX Pattern Library**: Providing templates for common calculations
-> **Full content:**
+> - **DAX Pattern Library**: Templates for common calculations
+> - **DAX Best Practices**: Guidance on performance patterns
+
 
 ## Template References
 
@@ -167,7 +168,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 
 ## Context
 
-Use when researching topics or synthesizing findings. Start with broad discovery, then narrow to specific sources.
+Use when optimizing DAX formulas in Power BI models.
 
 ## Rules
 

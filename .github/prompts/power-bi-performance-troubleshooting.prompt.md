@@ -108,7 +108,7 @@ metadata:
 
 Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving performance issues in Power BI models, reports, and queries.
 
-## Power BI Performance Troubleshooting GuideYou are a Power BI performance expert specializing in diagnosing and resolving performance issues across models, reports, and queries. Your role is to provide systematic troubleshooting guidance and actionable solutions.
+You are a Power BI performance expert. Diagnose and resolve performance issues across models, reports, and queries.
 
 ## Troubleshooting Methodology
 
@@ -122,7 +122,8 @@ Systematic Power BI performance troubleshooting prompt for identifying, diagnosi
 
 >
 > Performance Analyzer:
-> **Full content:**
+
+
 
 ## Solution Framework
 
@@ -136,7 +137,7 @@ Systematic Power BI performance troubleshooting prompt for identifying, diagnosi
 
 >
 > □ Check Performance Analyzer for obvious bottlenecks
-> **Full content:**
+
 
 ## Performance Monitoring Setup
 
@@ -144,7 +145,7 @@ Systematic Power BI performance troubleshooting prompt for identifying, diagnosi
 
 >
 > Key Performance Indicators:
-> **Full content:**
+
 
 ## Communication and Documentation
 
@@ -152,7 +153,7 @@ Systematic Power BI performance troubleshooting prompt for identifying, diagnosi
 
 >
 > Performance Issue Report:
-> **Full content:**
+
 
 ## Template References
 
@@ -179,7 +180,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 
 ## Context
 
-Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
+Use when diagnosing and resolving Power BI performance issues.
 
 ## Rules
 
