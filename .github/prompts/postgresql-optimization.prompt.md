@@ -39,7 +39,7 @@ metadata:
   - [Query Optimization](#query-optimization)
 - [�️ PostgreSQL Advanced Data Types>](#�️-postgresql-advanced-data-types>)
   - [Custom Types & Domains](#custom-types-&-domains)
-- [📊 PostgreSQL Extensions & Tools>](#📊-postgresql-extensions-&-tools>)
+- [📊 PostgreSQL Extensions & Tools](#📊-postgresql-extensions-&-tools)
   - [Useful Extensions](#useful-extensions)
 - [📊 Monitoring and Maintenance](#📊-monitoring-and-maintenance)
   - [Query Performance Monitoring](#query-performance-monitoring)
@@ -78,11 +78,13 @@ metadata:
 - [Phase 3: Verify](#phase-3:-verify)
 - [Phase 4: Hand off](#phase-4:-hand-off)
 - [PostgreSQL-Specific Features](#postgresql-specific-features)
+- [� PostgreSQL Performance Tuning)](#�-postgresql-performance-tuning)
 - [� PostgreSQL Performance Tuning>](#�-postgresql-performance-tuning>)
 - [Query Optimization](#query-optimization)
+- [�️ PostgreSQL Advanced Data Types)](#�️-postgresql-advanced-data-types)
 - [�️ PostgreSQL Advanced Data Types>](#�️-postgresql-advanced-data-types>)
 - [Custom Types & Domains](#custom-types-&-domains)
-- [📊 PostgreSQL Extensions & Tools>](#📊-postgresql-extensions-&-tools>)
+- [📊 PostgreSQL Extensions & Tools](#📊-postgresql-extensions-&-tools)
 - [Useful Extensions](#useful-extensions)
 - [📊 Monitoring and Maintenance](#📊-monitoring-and-maintenance)
 - [Query Performance Monitoring](#query-performance-monitoring)
@@ -164,9 +166,12 @@ Use when optimizing PostgreSQL queries, data types, and database performance.
 
 > -- Advanced JSONB queries
 > CREATE TABLE events (
-> **Full content:**
+>   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+>   event_data JSONB NOT NULL,
+>   created_at TIMESTAMP DEFAULT NOW()
+> );
 
-## � PostgreSQL Performance Tuning>
+## � PostgreSQL Performance Tuning
 
 ### Query Optimization
 
@@ -174,7 +179,7 @@ Use when optimizing PostgreSQL queries, data types, and database performance.
 >
 - EXPLAIN ANALYZE for performance analysis
 
-## �️ PostgreSQL Advanced Data Types>
+## �️ PostgreSQL Advanced Data Types
 
 ### Custom Types & Domains
 
@@ -182,7 +187,7 @@ Use when optimizing PostgreSQL queries, data types, and database performance.
 >
 - Create custom types
 
-## 📊 PostgreSQL Extensions & Tools>
+## 📊 PostgreSQL Extensions & Tools
 
 ### Useful Extensions
 
