@@ -24,7 +24,8 @@ metadata:
 
 # Table of Contents
 
-- [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Pitfalls](#pitfalls)
 - [Check Java version](#check-java-version)
 - [Download Spring Boot project template](#download-spring-boot-project-template)
 - [Unzip the downloaded file](#unzip-the-downloaded-file)
@@ -56,7 +57,8 @@ metadata:
 
 ## Table of Contents
 
-- [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Pitfalls](#pitfalls)
 - [Check Java version](#check-java-version)
 - [Download Spring Boot project template](#download-spring-boot-project-template)
 - [Unzip the downloaded file](#unzip-the-downloaded-file)
@@ -146,6 +148,13 @@ rm -f starter.zip
 > - Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency
 > implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.8.6")
 > **Full content:**
+
+## Pitfalls
+
+- Downloading with an unsupported Java version causes a build failure — verify `java -version` outputs Java 21 before starting.
+- Omitting `archunit-junit5` skips architecture enforcement — add it to the test scope in `build.gradle.kts`.
+- Forgetting `redis_data`, `postgres_data`, and `mongo_data` in `.gitignore` commits container state to the repository.
+- Running `./gradlew bootRun` without `docker-compose up -d` first causes startup failures.
 
 ## Template References
 

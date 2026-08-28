@@ -36,7 +36,7 @@ metadata:
 - [Add `.gitignore` file](#add-`gitignore`-file)
 - [Run Maven test command](#run-maven-test-command)
 - [Run Maven run command (Optional)](#run-maven-run-command-optional)
-- [Let's do this step by step](#let's-do-this-step-by-step)
+- [Pitfalls](#pitfalls)
 - [Template References](#template-references)
 - [Personas](#personas)
 - [Personality](#personality)
@@ -75,7 +75,7 @@ metadata:
 - [Add `.gitignore` file](#add-`gitignore`-file)
 - [Run Maven test command](#run-maven-test-command)
 - [Run Maven run command (Optional)](#run-maven-run-command-optional)
-- [Let's do this step by step](#let's-do-this-step-by-step)
+- [Pitfalls](#pitfalls)
 - [Template References](#template-references)
 - [Personas](#personas)
 - [Personality](#personality)
@@ -202,7 +202,12 @@ cd ${input:projectName:demo-java}
 
 - (Optional) `docker-compose up -d` to start the services, `./mvnw spring-boot:run` to run the Spring Boot project, `docker-compose rm -sf` to stop the services.
 
-## Let's do this step by step
+## Pitfalls
+
+- Downloading with an unsupported Java version causes a build failure — verify `java -version` outputs Java 21 before starting.
+- Omitting `archunit-junit5` skips architecture enforcement — add it to the test scope in `pom.xml`.
+- Forgetting `redis_data`, `postgres_data`, and `mongo_data` in `.gitignore` commits container state to the repository.
+- Running `./mvnw spring-boot:run` without `docker-compose up -d` first causes startup failures.
 
 ## Template References
 
