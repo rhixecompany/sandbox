@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: session-agentsmd-full-workflow
+title: Session AGENTS.md Full Workflow
+description: Runs the comprehensive AGENTS.md generation and git reconciliation workflow across explicitly requested target projects, commits per repo, and reports repo-branch-SHA output.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- documentation
+- devops
+- git
+- agents-md
+- workflow
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

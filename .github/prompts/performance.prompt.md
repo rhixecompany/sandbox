@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: performance
+title: Performance Baseline and Optimization
+description: Establishes measurable performance baselines, identifies high-impact bottlenecks, and applies targeted optimizations with before/after verification.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - performance
+  - optimization
+  - measurement
+  - refactor
+  - backend
+  - frontend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

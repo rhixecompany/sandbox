@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: documentation-writer
+title: Documentation Writer
+description: Write the four canonical documentation types — guides, references, explanations, and tutorials — with guiding principles and contextual awareness.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- documentation
+- writing
+- guides
+- tutorials
+- references
+- communication
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

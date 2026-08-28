@@ -1,19 +1,28 @@
 ---
-name: us-earnings-research-pipeline
-title: "us Earnings Research Pipeline \u2014 Better Than Outlier & Attapoll"
-description: Comprehensive research pipeline using stacked skills to identify superior
-  us earning platforms, leveraging all prior session data and MCP tools
+name: us-earnings-research
+title: US Earnings Research
+description: Identify and validate US earning platforms that are genuinely better than Outlier and Attapoll across pay, reliability, barrier to entry, and payout speed.
 version: 1.0.0
 author: Hermes Agent
-license: MIT
 tags:
-- research
-- us-earnings
-- income-generation
-- web-research
-- skills-pipeline
-date: '2026-08-25'
+  - research
+  - us
+  - earnings
+  - income-generation
+  - platforms
+  - web-research
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [us Earnings Research Pipeline](#us-earnings-research-pipeline)

@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: playwright-automation-fill-in-form
+title: Playwright Form Fill Automation
+description: Fills a form field by field using Playwright MCP, uploads an image if requested, then stops before submit and asks for human review.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - playwright
+  - browser-automation
+  - testing
+  - webapp
+  - forms
+  - qa
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

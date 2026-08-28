@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: refactor-mardown-files
+title: Refactor Markdown Files
+description: Refactor and update repository documentation files (AGENTS.md, .cursorrules, .github/copilot-instructions.md) to maximize clarity, actionability, and AI agent productivity using Diátaxis principles.
 version: 1.0.0
 author: Hermes Agent
+tags: [refactor, markdown, documentation, diataxis, agents-md, copilot-instructions]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

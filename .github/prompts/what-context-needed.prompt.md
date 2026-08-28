@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: what-context-needed
+title: What Context Is Needed
+description: Ask Copilot which files it needs to see before answering a question, helping the user identify required context for accurate AI responses.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - context
+  - ai-assistant
+  - documentation
+  - discovery
+  - workflow
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

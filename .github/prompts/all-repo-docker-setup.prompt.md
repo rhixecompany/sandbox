@@ -1,12 +1,28 @@
 ---
-title: All Repo Docker Setup
-description: Prompt for all repo docker setup
-date: '2026-08-25'
-tags:
-- prompt
+name: all-repo-docker-setup
+title: Bulk Docker Setup Across Repositories
+description: Iterate over a list of repositories, generate or repair Dockerfiles, run builds and security scans, and clean up unused Docker resources with a tracked plan.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - docker
+  - devops
+  - automation
+  - infrastructure
+  - security
+  - tooling
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 
 for each repo	in the list of repositories by rhixecompany, perform the following steps:
 1. Clone the repository to your local machine at <./projects> using the command:

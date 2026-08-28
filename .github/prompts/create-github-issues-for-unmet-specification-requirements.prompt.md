@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: create-github-issues-for-unmet-specification-requirements
+title: Create GitHub Issues For Unmet Specification Requirements
+description: Identify gaps between a specification and an implementation, then file GitHub issues that close each gap.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- github
+- issues
+- gap-analysis
+- specification
+- qa
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

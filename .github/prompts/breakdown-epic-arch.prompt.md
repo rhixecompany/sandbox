@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: breakdown-epic-arch
+title: Break Down Epic Architecture
+description: Generate the high-level technical architecture for an Epic from a Product Requirements Document, with full specification structure and context templates.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - planning
+  - architecture
+  - epic
+  - documentation
+  - specification
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

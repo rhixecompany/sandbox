@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: az-cost-optimize
+title: Azure Cost Optimization
+description: Analyze Azure IaC and live resources, identify savings opportunities, and create prioritized GitHub issues for each optimization recommendation.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - azure
+  - finops
+  - cost-optimization
+  - devops
+  - iac
+  - cloud
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

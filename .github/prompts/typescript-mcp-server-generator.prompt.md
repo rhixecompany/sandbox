@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: typescript-mcp-server-generator
+title: TypeScript MCP Server Generator
+description: Generate a complete TypeScript MCP server project including tools, resources, configuration, and tests for a specified domain.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - typescript
+  - mcp
+  - server
+  - generator
+  - automation
+  - tooling
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

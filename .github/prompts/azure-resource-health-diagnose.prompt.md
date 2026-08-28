@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: azure-resource-health-diagnose
+title: Azure Resource Health Diagnosis
+description: Diagnose Azure resource health from logs and telemetry, then deliver a phased remediation plan with monitoring and prevention measures.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - azure
+  - devops
+  - troubleshooting
+  - monitoring
+  - reliability
+  - cloud
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

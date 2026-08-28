@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dataverse-python-usecase-builder
+title: Dataverse Python Use-Case Builder
+description: Design and implement end-to-end Dataverse use cases in Python — requirement analysis, data model, pattern selection, and optimization.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- dataverse
+- python
+- dynamics-365
+- usecase
+- design
+- architecture
+- backend
+- advanced
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

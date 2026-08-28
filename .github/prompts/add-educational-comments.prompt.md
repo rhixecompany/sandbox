@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: add-educational-comments
+title: Add Educational Code Comments
+description: Annotate a source file with teaching-oriented comments that explain intent, edge cases, and reasoning — or prompt the user for a target file when one is not supplied.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - documentation
+  - code-comments
+  - refactor
+  - tool
+  - developer-experience
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

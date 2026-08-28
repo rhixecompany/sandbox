@@ -1,11 +1,29 @@
 ---
-title: Connect to MCPs
-description: Prompt for connect to mcps
-date: '2026-08-25'
-tags:
-- prompt
+name: smithery-setup
+title: Smithery MCP Setup
+description: Connect to MCP servers through Smithery — log in, discover servers, list available tools, call tools, and configure servers that require API keys or project IDs. Use when integrating Smithery-hosted MCP servers into an agent workflow.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - prompt
+  - setup
+  - mcp
+  - smithery
+  - integration
+  - tools
+  - api
+  - authentication
+  - discovery
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

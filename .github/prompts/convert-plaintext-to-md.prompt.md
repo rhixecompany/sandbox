@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: convert-plaintext-to-md
+title: Convert Plaintext To Markdown
+description: Convert unstructured plain-text notes into clean, well-formatted Markdown with headings, lists, and links.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- documentation
+- markdown
+- conversion
+- formatting
+- migration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

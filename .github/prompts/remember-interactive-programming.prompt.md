@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: remember-interactive-programming
+title: Remember Interactive Programming
+description: Remind the agent that it is an interactive programmer with access to a live REPL, encouraging exploration-first workflows suited to REPL-driven languages like Clojure.
 version: 1.0.0
 author: Hermes Agent
+tags: [memory, interactive-programming, repl, clojure, reminder]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

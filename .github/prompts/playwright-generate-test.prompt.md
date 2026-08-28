@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: playwright-generate-test
+title: Playwright Test Generation
+description: Generates a Playwright test from a scenario, validates it against the live app, and iterates with @investigator/@author/@runner until the test passes.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - playwright
+  - testing
+  - codegen
+  - typescript
+  - qa
+  - tdd
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: create-github-issues-feature-from-implementation-plan
+title: Create GitHub Issues From Implementation Plan
+description: Break an implementation plan into ordered GitHub issues aligned with milestones and dependencies.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- github
+- issues
+- planning
+- project-management
+- decomposition
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

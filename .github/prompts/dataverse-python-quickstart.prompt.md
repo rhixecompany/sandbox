@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dataverse-python-quickstart
+title: Dataverse Python Quickstart
+description: Get a first Dataverse SDK for Python script running — connect to the environment, perform CRUD, and verify operations quickly.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- dataverse
+- python
+- dynamics-365
+- quickstart
+- beginner
+- backend
+- tutorial
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

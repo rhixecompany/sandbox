@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: csharp-mcp-server-generator
+title: C# MCP Server Generator
+description: "Scaffold a Model Context Protocol (MCP) server in C# with tool definitions, basic project setup, and example tool types to integrate with AI agents."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- csharp
+- dotnet
+- mcp
+- server
+- ai
+- tooling
+- scaffolding
+- backend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

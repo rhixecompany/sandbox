@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: code-exemplars-blueprint-generator
+title: Code Exemplars Blueprint Generator
+description: Generate a customizable AI prompt that scans a codebase for high-quality code exemplars across .NET, Java, JS/TS, React, Angular, and Python to establish team coding standards.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - code-quality
+  - blueprint
+  - codebase-analysis
+  - documentation
+  - standards
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

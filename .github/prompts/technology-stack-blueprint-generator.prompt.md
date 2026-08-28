@@ -1,12 +1,28 @@
 ---
+name: technology-stack-blueprint-generator
 title: Technology Stack Blueprint Generator
-description: Prompt for technology stack blueprint generator
-date: '2026-08-25'
-tags:
-- prompt
+description: Generate per-project technology stack documentation plus a workspace-level master blueprint covering languages, frameworks, runtimes, dependencies, conventions, and CI/CD.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - documentation
+  - architecture
+  - blueprint
+  - analysis
+  - tooling
+  - workspace
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

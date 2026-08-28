@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: sql-code-review
+title: SQL Code Review
+description: Universal SQL code review assistant for security, performance, maintainability, and code quality across MySQL, PostgreSQL, SQL Server, and Oracle — covering injection prevention, access control, and anti-pattern detection.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- backend
+- sql
+- testing
+- documentation
+- qa
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

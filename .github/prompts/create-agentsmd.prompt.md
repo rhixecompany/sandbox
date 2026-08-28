@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: create-agentsmd
+title: Create AGENTS.md
+description: Generate a project-specific AGENTS.md that codifies architecture, conventions, and operating rules for AI coding agents.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- documentation
+- agents
+- guidance
+- project-bootstrap
+- tooling
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

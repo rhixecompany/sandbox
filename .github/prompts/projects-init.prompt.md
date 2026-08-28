@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: projects-init
+title: Projects Init
+description: Run a three-phase workspace initialization that triages markdown documentation, migrates prompt files into .github/prompts/, and creates needed skills/scripts while deduplicating.
 version: 1.0.0
 author: Hermes Agent
+tags: [workspace, initialization, documentation, prompts, skills, migration, dedupe]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

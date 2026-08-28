@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: git-flow-branch-creator
+title: Git Flow Branch Creator
+description: Analyzes git status/diff and creates branches following the nvie Git Flow branching model.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - git
+  - git-flow
+  - branching
+  - workflow
+  - automation
+  - devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: low
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

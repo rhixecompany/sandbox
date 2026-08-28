@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: mcp-create-adaptive-cards
+title: MCP Create Adaptive Cards
+description: Creates Microsoft Adaptive Cards for MCP-based plugins, defining inputs, layouts, and actions for interactive Copilot experiences.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - mcp
+  - adaptive-cards
+  - microsoft-365
+  - copilot
+  - frontend
+  - scaffolding
+  - tooling
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

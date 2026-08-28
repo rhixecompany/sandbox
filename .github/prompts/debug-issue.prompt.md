@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: debug-issue
+title: Debug Issue
+description: "Debug a reported issue end-to-end: capture inputs, follow diagnostic steps, and produce a structured fix-oriented output."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- debugging
+- troubleshooting
+- devops
+- diagnostics
+- automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

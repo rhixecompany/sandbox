@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: nextjs-tailwind
+title: Next.js + Tailwind Component Build
+description: Plans and implements typed, accessible Next.js components with Tailwind CSS, covering server/client boundaries, validation, and responsive styling.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - nextjs
+  - tailwind
+  - typescript
+  - frontend
+  - ui
+  - design-system
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

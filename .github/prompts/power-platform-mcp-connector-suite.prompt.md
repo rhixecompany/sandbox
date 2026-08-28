@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: power-platform-mcp-connector-suite
+title: Power Platform MCP Connector Suite
+description: Generate complete Power Platform custom connectors with Model Context Protocol (MCP) integration for Microsoft Copilot Studio, including schema generation, validation, and troubleshooting across six generation modes.
 version: 1.0.0
 author: Hermes Agent
+tags: [power-platform, mcp, connector, copilot-studio, swagger, integration, automation]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

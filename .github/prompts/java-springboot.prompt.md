@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: java-springboot
+title: Java Spring Boot Best Practices
+description: Provides best practices for developing production-grade applications with Spring Boot, including DI, web, data, and security layers.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - java
+  - spring-boot
+  - backend
+  - best-practices
+  - web
+  - testing
+  - security
+  - configuration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

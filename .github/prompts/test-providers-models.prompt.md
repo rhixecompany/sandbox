@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: test-providers-models
+title: Test Providers and Models
+description: Probe authorized Hermes providers live, build a verified ordered fallback chain of working models, then configure Hermes and propagate to installed agents.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - testing
+  - providers
+  - models
+  - configuration
+  - diagnostics
+  - automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

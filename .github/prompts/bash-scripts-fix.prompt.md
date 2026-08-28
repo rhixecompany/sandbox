@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: bash-scripts-fix
+title: Bash and Shell Script Modernization
+description: Inventory, audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace with a tracked plan.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - bash
+  - shell
+  - scripts
+  - refactor
+  - automation
+  - devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

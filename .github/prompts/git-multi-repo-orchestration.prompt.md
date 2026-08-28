@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: git-multi-repo-orchestration
+title: Git Multi-Repo Orchestration
+description: Runs the full git lifecycle across all repos under `./projects` (commit, push, submodule sync, PR create/merge, dev→prod sync) using GitHub CLI and conventional commits.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - git
+  - multi-repo
+  - orchestration
+  - github
+  - submodules
+  - devops
+  - automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: high
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

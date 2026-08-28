@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: list-all-installed-vscode-extension
+title: List Installed VS Code Extensions
+description: Inventories all installed VS Code extensions, researches their documentation, and applies findings to optimize user and workspace settings.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - vscode
+  - extensions
+  - inventory
+  - research
+  - configuration
+  - devops
+  - tooling
+  - audit
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

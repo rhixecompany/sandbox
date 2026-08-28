@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: create-spring-boot-kotlin-project
+title: Create Spring Boot Kotlin Project
+description: Bootstrap a Spring Boot Kotlin project with the correct template, dependencies, and initial structure.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- kotlin
+- spring-boot
+- project-bootstrap
+- backend
+- devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

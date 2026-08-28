@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: testing
+title: Comprehensive Testing Prompt
+description: Create, update, and validate unit and E2E tests that provide deterministic coverage for public behavior and critical flows such as authentication, payments, and reconciliation.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - testing
+  - unit-tests
+  - e2e
+  - coverage
+  - quality
+  - automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

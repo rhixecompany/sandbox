@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: declarative-agents
+title: Declarative Agents
+description: Build declarative Microsoft 365 / Copilot agents with workflows for basic creation, advanced enterprise design, and validation & optimization.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- declarative-agents
+- microsoft-365
+- copilot
+- ai
+- design
+- architecture
+- advanced
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

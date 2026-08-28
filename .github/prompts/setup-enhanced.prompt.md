@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: setup-enhanced
+title: Enhanced Setup
+description: Defines the enhanced AI agent setup workflow for the workspace — quick start, quality gate, reference resolution hierarchy, DRY implementation practices, and 10-step implementation flow.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- documentation
+- automation
+- planning
+- devops
+- backend
+- frontend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

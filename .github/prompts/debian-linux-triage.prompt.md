@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: debian-linux-triage
+title: Debian Linux Triage
+description: "Triage a Debian-based system: collect inputs, run diagnostic commands, and produce a structured incident report with remediation steps."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- linux
+- debian
+- triage
+- devops
+- operations
+- diagnostics
+- troubleshooting
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

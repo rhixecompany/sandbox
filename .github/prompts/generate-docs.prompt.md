@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: generate-docs
+title: Generate Documentation
+description: Generates documentation for code, APIs, or libraries following project conventions.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - documentation
+  - generation
+  - tooling
+  - automation
+  - api
+  - markdown
+metadata:
+  hermes:
+    profile: code-architect
+    priority: low
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

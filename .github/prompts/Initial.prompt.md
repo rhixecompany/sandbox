@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: Initial
+title: ComicWise Project Initialization
+description: Complete project setup guide for ComicWise — Next.js 16 application with pnpm, covering installation, configuration, and development workflow.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - setup
+  - nextjs
+  - comicwise
+  - pnpm
+  - onboarding
+  - documentation
+  - frontend
+  - configuration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

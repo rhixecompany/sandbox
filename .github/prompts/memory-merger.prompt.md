@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: memory-merger
+title: Memory Merger
+description: Merges mature lessons from a domain memory file into its instruction file across global, user, workspace, or ws scopes.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - memory
+  - merge
+  - hermes
+  - instruction
+  - automation
+  - knowledge-management
+  - agent
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

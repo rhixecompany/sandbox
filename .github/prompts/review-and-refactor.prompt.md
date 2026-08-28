@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: review-and-refactor
+title: Review and Refactor
+description: Act as a senior engineer to review coding guidelines, audit all code, and apply clean refactorings that follow project standards while keeping tests passing.
 version: 1.0.0
 author: Hermes Agent
+tags: [review, refactor, code-quality, coding-standards, maintainability]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

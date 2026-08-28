@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dev-init
+title: Development Initialization
+description: "Initialize a project for prompt-driven development: discover, plan conversion, audit/fix prompts, execute an implementation plan, and verify."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- development
+- initialization
+- planning
+- automation
+- devops
+- orchestration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

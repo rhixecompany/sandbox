@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: generator-orchestrator
+title: Generator Orchestrator
+description: Dependency-aware orchestrator for root blueprint and MCP generator prompts, enforcing strict stage gates and consistency validation across the generation pipeline.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - orchestration
+  - generation
+  - blueprint
+  - mcp
+  - automation
+  - validation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: high
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

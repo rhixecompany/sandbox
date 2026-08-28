@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: javascript-typescript-jest
+title: JavaScript/TypeScript Jest Testing
+description: Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies, test structure, and common patterns.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - javascript
+  - typescript
+  - jest
+  - testing
+  - tdd
+  - mocking
+  - frontend
+  - backend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: breakdown-plan
+title: Project Plan Breakdown
+description: Generate a comprehensive project plan with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - planning
+  - project-management
+  - epic
+  - feature
+  - automation
+  - github
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

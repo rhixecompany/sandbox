@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: update-implementation-plan
+title: Update Implementation Plan
+description: Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure work.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - planning
+  - implementation
+  - specification
+  - documentation
+  - refactor
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

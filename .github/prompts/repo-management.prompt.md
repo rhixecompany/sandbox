@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: repo-management
+title: Repo Management
+description: "Bring every repository to a clean standard state: development+production branches, complete .gitignore, audited dependencies, and GitHub Actions CI workflows."
 version: 1.0.0
 author: Hermes Agent
+tags: [repo, git, branching, gitignore, dependencies, ci, devops]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

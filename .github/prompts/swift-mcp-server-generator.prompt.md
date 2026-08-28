@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: swift-mcp-server-generator
+title: Swift MCP Server Generator
+description: Scaffolds a complete Model Context Protocol server project in Swift using the official MCP Swift SDK, with tools, prompts, resources, and project templates.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- backend
+- swift
+- mcp
+- scaffolding
+- documentation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

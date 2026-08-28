@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: refactor-method-complexity-reduce
+title: Refactor Method Complexity Reduce
+description: Refactor a given method to reduce its cognitive complexity to a target threshold or below by extracting focused helper methods, with mandatory test verification.
 version: 1.0.0
 author: Hermes Agent
+tags: [refactor, code-quality, complexity, testing, javascript, typescript]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

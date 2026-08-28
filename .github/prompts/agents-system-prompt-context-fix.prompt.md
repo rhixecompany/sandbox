@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: agents-system-prompt-context-fix
+title: Fix Agent System Prompt Context
+description: Diagnose and repair Hermes/Copilot/Codex system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion across surfaces.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - agents
+  - vscode
+  - tooling
+  - devops
+  - automation
+  - configuration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

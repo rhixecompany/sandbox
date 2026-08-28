@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: arch-linux-triage
+title: Arch Linux System Triage
+description: Diagnose and resolve Arch Linux issues using pacman, systemd, and rolling-release best practices, with a structured triage report.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - linux
+  - arch
+  - sysadmin
+  - triage
+  - devops
+  - troubleshooting
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

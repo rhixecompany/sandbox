@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: execute-all-prompts
+title: Execute All Workspace Prompts
+description: Orchestrates sequential execution of four workspace prompt workflows (audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, test-providers-models) to completion before the next begins.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - orchestration
+  - automation
+  - prompts
+  - workspace
+  - hermes
+  - devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: high
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

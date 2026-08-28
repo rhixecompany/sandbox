@@ -1,12 +1,28 @@
 ---
+name: comicwise-development
 title: ComicWise Development Prompt
-description: Prompt for comicwise development prompt
-date: '2026-08-25'
-tags:
-- prompt
+description: Standardize development practices, project structure, coding rules, and essential commands for ComicWise projects.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- documentation
+- devops
+- typescript
+- nextjs
+- fullstack
+- project-bootstrap
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Project State Summary](#project-state-summary)

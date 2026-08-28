@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: execute-plan
+title: Execute Plan
+description: Executes a specified implementation plan from `.hermes/plans/`, taking the plan filename as a parameter.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - planning
+  - execution
+  - hermes
+  - automation
+  - implementation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: high
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

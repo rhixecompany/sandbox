@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dotnet-best-practices
+title: .NET Best Practices
+description: "Apply .NET / C# best practices across documentation, design patterns, dependency injection, async/await, configuration, error handling, and security."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- dotnet
+- csharp
+- best-practices
+- architecture
+- patterns
+- backend
+- advanced
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

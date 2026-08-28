@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: prompts-strict-template
+title: Prompts Strict Template
+description: Normalize and validate .prompt.md files against the strict required structure, enforcing section order, phase table format, and Task/Subtask numbering without losing intent.
 version: 1.0.0
 author: Hermes Agent
+tags: [prompts, template, normalization, validation, lint, refactor]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

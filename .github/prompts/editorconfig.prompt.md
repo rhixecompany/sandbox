@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: editorconfig
+title: EditorConfig Generator
+description: Generates a comprehensive, best-practice .editorconfig file based on project analysis and language/runtime preferences.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - editorconfig
+  - tooling
+  - lint
+  - format
+  - configuration
+  - automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: low
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

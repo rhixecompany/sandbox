@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: write-tests
+title: Write Tests
+description: Generate unit or end-to-end tests for a component or module following the shared testing templates and verification checklist.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - testing
+  - unit-tests
+  - e2e
+  - generator
+  - automation
+  - quality
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

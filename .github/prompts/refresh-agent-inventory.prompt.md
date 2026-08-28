@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: refresh-agent-inventory
+title: Refresh Agent Inventory
+description: Refresh the workspace customization inventory by reconciling discovered assets against the canonical report and proposing precise edits for stale AGENTS and instruction references.
 version: 1.0.0
 author: Hermes Agent
+tags: [inventory, agents, copilot, audit, remediation, workspace]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

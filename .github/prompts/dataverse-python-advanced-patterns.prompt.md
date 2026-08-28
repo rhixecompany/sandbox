@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dataverse-python-advanced-patterns
+title: Dataverse Python Advanced Patterns
+description: Apply advanced Dataverse SDK for Python patterns — error handling, client management, logging, OData optimization, and code structure.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- dataverse
+- python
+- dynamics-365
+- advanced
+- patterns
+- odata
+- backend
+- integration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

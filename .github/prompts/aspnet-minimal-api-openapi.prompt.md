@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: aspnet-minimal-api-openapi
+title: ASP.NET Minimal API With OpenAPI
+description: Scaffold ASP.NET minimal API endpoints with consistent request/response types, type handling, and full OpenAPI documentation.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - csharp
+  - dotnet
+  - aspnet
+  - backend
+  - openapi
+  - api
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: create-architectural-decision-record
+title: Create Architectural Decision Record
+description: Author an MADR-formatted Architectural Decision Record capturing context, decision, and consequences.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- documentation
+- architecture
+- adr
+- decisions
+- governance
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -163,7 +178,9 @@ If any of the required inputs are not provided or cannot be determined from the 
 
 ## Required Documentation Structure
 
-The documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:```md---title: "ADR-NNNN: [Decision Title]"status: "Proposed"date: "YYYY-MM-DD"authors: "[Stakeholder Names/Roles]"supersedes: ""superseded_by: ""---# ADR-NNNN: [Decision Title]
+The documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:```md---
+title: "ADR-NNNN: [Decision Title]"status: "Proposed"date: "YYYY-MM-DD"authors: "[Stakeholder Names/Roles]"supersedes: ""superseded_by: ""---
+# ADR-NNNN: [Decision Title]
 
 ## Status
 

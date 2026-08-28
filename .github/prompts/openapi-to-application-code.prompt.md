@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: openapi-to-application-code
+title: OpenAPI Spec to Application Code
+description: Generates a complete, idiomatic application scaffold (controllers, services, models, tests) from an OpenAPI specification in the target framework.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - openapi
+  - api
+  - codegen
+  - backend
+  - scaffolding
+  - documentation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

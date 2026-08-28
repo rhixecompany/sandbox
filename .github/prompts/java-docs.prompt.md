@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: java-docs
+title: Java Javadoc Documentation
+description: Ensures Java types are documented with Javadoc comments following documentation best practices and project conventions.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - java
+  - documentation
+  - javadoc
+  - best-practices
+  - backend
+  - comments
+  - tooling
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

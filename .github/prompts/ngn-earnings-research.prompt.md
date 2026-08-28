@@ -1,18 +1,29 @@
 ---
-name: ngn-earnings-research-pipeline
-title: "ngn Earnings Research Pipeline \u2014 Better Than Outlier & Attapoll"
-description: Comprehensive research pipeline using stacked skills to identify superior
-  ngn earning platforms, leveraging all prior session data and MCP tools
+name: ngn-earnings-research
+title: "Nigerian Earnings Research Pipeline — Better Than Outlier & Attapoll"
+description: Comprehensive research pipeline using stacked skills to identify superior Nigerian earning platforms, leveraging prior session data, MCP tools (Tavily, Firecrawl), and parallel subagents for systematic discovery, scoring, and validation.
 version: 1.0.0
 author: Hermes Agent
 license: MIT
 tags:
-- research
-- ngn-earnings
-- income-generation
-- web-research
-- skills-pipeline
-date: '2026-08-25'
+  - research
+  - earnings
+  - nigeria
+  - income-generation
+  - web-research
+  - skills-pipeline
+  - mcp
+  - planning
+metadata:
+  hermes:
+    profile: research-analyst
+    priority: high
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

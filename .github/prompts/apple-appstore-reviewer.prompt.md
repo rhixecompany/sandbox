@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: apple-appstore-reviewer
+title: Apple App Store Reviewer
+description: Audit a codebase against Apple App Store guidelines and produce a prioritized rejection-risk report covering privacy, metadata, performance, and policy hotspots.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - mobile
+  - ios
+  - review
+  - compliance
+  - app-store
+  - security
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

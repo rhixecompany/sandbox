@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: power-bi-dax-optimization
+title: Power BI DAX Optimization
+description: Analyzes DAX formulas for performance, readability, and best-practice compliance, then delivers optimized rewrites with measurable impact.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - power-bi
+  - dax
+  - performance
+  - analytics
+  - optimization
+  - microsoft
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

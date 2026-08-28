@@ -1,11 +1,26 @@
 ---
-title: Parallel MCP Installation and Validation Workflow
-description: Prompt for parallel mcp installation and validation workflow
-date: '2026-08-25'
-tags:
-- prompt
+name: parallel-mcp-install
+title: Parallel MCP Installation and Validation
+description: Registers Parallel Search and Parallel Task MCP servers in the active Hermes harness using the official CLI, with security gates, runtime-reload validation, and credential-safety checks.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - mcp
+  - hermes
+  - setup
+  - parallel
+  - devops
+  - security
+metadata:
+  hermes:
+    profile: code-architect
+    priority: high
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

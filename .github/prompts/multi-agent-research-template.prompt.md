@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: multi-agent-research-template
+title: Multi-Agent Research Template
+description: Reusable prompt template for Codex, Copilot, and Hermes that orchestrates parallel research agents with shared rules and outputs.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - multi-agent
+  - research
+  - template
+  - orchestration
+  - planning
+  - automation
+  - ai
+  - workflow
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

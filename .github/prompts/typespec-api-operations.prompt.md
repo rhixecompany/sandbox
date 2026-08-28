@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: typespec-api-operations
+title: TypeSpec API Operations
+description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards for Microsoft 365 Copilot.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - typespec
+  - api
+  - rest
+  - m365-copilot
+  - crud
+  - generator
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: power-bi-report-design-consultation
+title: Power BI Report Design Consultation
+description: Guides Power BI report design — gathers requirements, plans information architecture, recommends visualizations, and validates design quality.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - power-bi
+  - visualization
+  - design
+  - analytics
+  - reporting
+  - microsoft
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

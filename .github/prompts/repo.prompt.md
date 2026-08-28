@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: repo
+title: Repo
+description: Universal repository inspection and onboarding prompt that summarizes a repo, identifies entrypoints, explains PR workflow, and reports disk usage.
 version: 1.0.0
 author: Hermes Agent
+tags: [repo, onboarding, summary, inspection, entrypoint, disk-usage]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

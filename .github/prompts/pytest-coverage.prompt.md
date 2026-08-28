@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: pytest-coverage
+title: Pytest Coverage
+description: Run pytest with coverage, discover lines missing coverage, and increase coverage to 100% on the current workspace.
 version: 1.0.0
 author: Hermes Agent
+tags: [python, testing, pytest, coverage, quality]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

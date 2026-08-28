@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: setup
+title: ComicWise Setup Onboarding
+description: Comprehensive AI agent onboarding prompt for ComicWise — architecture overview, essential commands, environment variables, database schema facts, authentication, DAL, and server action patterns.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- documentation
+- onboarding
+- devops
+- backend
+- frontend
+- planning
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: create-technical-spike
+title: Create Technical Spike
+description: Define a time-boxed technical spike with research questions, investigation plan, and deliverables.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- planning
+- research
+- spike
+- documentation
+- decision-making
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)
@@ -115,7 +130,8 @@ author: Hermes Agent
 
 Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.
 
-title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴 Not Started"priority: "${input:Priority|High}"timebox: "${input:Timebox|1 week}"created: [YYYY-MM-DD]updated: [YYYY-MM-DD]owner: "${input:Owner}"---# ${input:SpikeTitle}
+title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴 Not Started"priority: "${input:Priority|High}"timebox: "${input:Timebox|1 week}"created: [YYYY-MM-DD]updated: [YYYY-MM-DD]owner: "${input:Owner}"---
+# ${input:SpikeTitle}
 
 ## Summary
 

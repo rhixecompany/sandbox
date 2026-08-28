@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: project-workflow-analysis-blueprint-generator
+title: Project Workflow Analysis Blueprint Generator
+description: Generate end-to-end application workflow blueprints from a codebase, auto-detecting project type, persistence, and architecture patterns, then emitting implementation-ready documentation.
 version: 1.0.0
 author: Hermes Agent
+tags: [blueprint, workflow, documentation, architecture, analysis, automation]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

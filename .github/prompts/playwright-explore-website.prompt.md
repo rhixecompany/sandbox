@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: playwright-explore-website
+title: Playwright Website Exploration
+description: Explores a website with Playwright MCP, documents core flows, locators, and outcomes, then proposes test cases from the findings.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - playwright
+  - browser-automation
+  - testing
+  - webapp
+  - exploration
+  - qa
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

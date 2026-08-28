@@ -1,11 +1,30 @@
 ---
-title: 'image: https://console.groq.com/og_cloudv5.jpg'
-description: 'Prompt for image: https://console.groq.com/og_cloudv5.jpg'
-date: '2026-08-25'
-tags:
-- prompt
+name: setup-groq-cloud
+title: Setup Groq Cloud
+description: Configure Groq Cloud API keys, install the Groq Python SDK, run a first chat completion, and integrate Groq models into Python, AI SDK, and third-party clients. Use when onboarding to Groq Cloud or wiring Groq LLM inference into a project.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - prompt
+  - setup
+  - groq
+  - cloud
+  - api
+  - llm
+  - python
+  - ai-sdk
+  - authentication
+  - sdk
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

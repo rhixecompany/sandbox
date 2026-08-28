@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: remember
+title: Remember
+description: Transform debugging sessions and hard-won lessons into domain-organized memory instructions at global or workspace scope, with intelligent categorization and reuse.
 version: 1.0.0
 author: Hermes Agent
+tags: [memory, knowledge-management, instructions, reminder, workspace]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

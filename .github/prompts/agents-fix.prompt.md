@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: agents-fix
+title: Sync Agent Definitions Across Surfaces
+description: Reconcile Hermes, Copilot, Codex, and OpenCode agent definitions so registration, schema, and metadata stay in lockstep without losing fidelity.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - agents
+  - synchronization
+  - devops
+  - tooling
+  - automation
+  - metadata
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

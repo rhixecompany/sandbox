@@ -1,11 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: zod-schema-generation
+title: Zod Schema Generation
+description: Generate Zod v3+ validation schemas from TypeScript types, database schemas, or JSON samples with proper type inference, custom error messages, and best practices for schema composition.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- zod
+- typescript
+- validation
+- schema
+- generation
+- frontend
+- backend
+- code-generation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

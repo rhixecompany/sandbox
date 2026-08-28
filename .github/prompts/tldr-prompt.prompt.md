@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: tldr-prompt
+title: TLDR Summary Generator
+description: Create concise tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation sourced from URLs and queries.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - documentation
+  - summary
+  - tldr
+  - github-copilot
+  - mcp
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

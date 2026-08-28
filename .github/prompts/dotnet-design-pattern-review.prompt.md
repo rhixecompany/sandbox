@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dotnet-design-pattern-review
+title: .NET Design Pattern Review
+description: Reviews C#/.NET code for design pattern implementation and recommends improvements aligned with idiomatic .NET practices.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - csharp
+  - dotnet
+  - design-patterns
+  - code-review
+  - refactor
+  - backend
+  - architecture
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

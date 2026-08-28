@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: devops-rollout-plan
+title: DevOps Rollout Plan
+description: "Generate a DevOps rollout plan from a change description: intake context, define inputs/outputs, and produce an executive-summary-style plan."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- devops
+- rollout
+- planning
+- release
+- operations
+- automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

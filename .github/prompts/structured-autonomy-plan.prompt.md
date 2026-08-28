@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: structured-autonomy-plan
+title: Structured Autonomy Plan
+description: Generates a structured-autonomy plan by researching the codebase, determining commit boundaries, and emitting a draft plan using the output template.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- planning
+- documentation
+- workflow
+- backend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dataverse-python-production-code
+title: Dataverse Python Production Code
+description: Write production-grade Dataverse SDK for Python code with error handling, client lifecycle, structured logging, and OData performance tuning.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- dataverse
+- python
+- dynamics-365
+- production
+- best-practices
+- backend
+- odata
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: create-github-pull-request-from-specification
+title: Create GitHub Pull Request From Specification
+description: Generate a pull request body, checklist, and review guidance directly from a feature specification.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- github
+- pull-request
+- specification
+- code-review
+- collaboration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

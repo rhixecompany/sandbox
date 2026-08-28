@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: general
+title: General Development Workflow
+description: General-purpose development workflow covering analysis, planning, implementation, and verification with context mapping and AI-assisted execution.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - workflow
+  - planning
+  - implementation
+  - verification
+  - general
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: hermes-breakdown-plan
+title: Hermes Breakdown — Project Plan
+description: Generates an execution-ready project plan that consolidates feature and epic inputs into a planning package.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - hermes
+  - breakdown
+  - planning
+  - project-plan
+  - execution
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

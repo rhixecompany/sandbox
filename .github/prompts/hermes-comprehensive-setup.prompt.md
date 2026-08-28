@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: hermes-comprehensive-setup
+title: Hermes Comprehensive Setup
+description: Executes the hermes-comprehensive-setup workflow to install, configure, and verify all Hermes Agent components end-to-end.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - setup
+  - hermes
+  - automation
+  - configuration
+  - planning
+  - devops
+  - onboarding
+  - agent
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

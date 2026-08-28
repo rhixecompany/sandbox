@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: gen-specs-as-issues
+title: Generate Specs as Issues
+description: Identifies missing features, prioritizes them, and creates detailed implementation specifications as GitHub issues.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - specification
+  - github
+  - issues
+  - planning
+  - documentation
+  - backlog
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

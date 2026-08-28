@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: plan-execute
+title: Plan Execute
+description: Loads an existing plan, runs each phase in strict order with verification gates and git checkpoints, then summarizes with phase SHAs and outputs.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - planning
+  - execution
+  - git
+  - automation
+  - devops
+  - workflow
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

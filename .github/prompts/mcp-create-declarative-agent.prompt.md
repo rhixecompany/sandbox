@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: mcp-create-declarative-agent
+title: MCP Create Declarative Agent
+description: Creates an MCP-based declarative agent for Microsoft 365 Copilot, defining capabilities, instructions, and conversation starters.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - mcp
+  - declarative-agent
+  - microsoft-365
+  - copilot
+  - scaffolding
+  - tooling
+  - agent
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

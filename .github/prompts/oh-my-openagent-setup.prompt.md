@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: oh-my-openagent-setup
+title: Oh My OpenAgent Setup
+description: Configures the Oh My OpenAgent orchestration stack over OpenCode CLI, including hooks, profiles, and verification of multi-agent workflows.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - setup
+  - opencode
+  - multi-agent
+  - orchestration
+  - automation
+  - devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

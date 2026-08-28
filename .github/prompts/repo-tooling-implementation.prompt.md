@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: repo-tooling-implementation
+title: Repo Tooling Implementation
+description: Execute the repo-tooling-implementation workflow, which scaffolds AI-agent context files (AGENTS.md, copilot-instructions, hooks, etc.) and verifies per-repo tooling.
 version: 1.0.0
 author: Hermes Agent
+tags: [repo, tooling, agent-context, scaffolding, setup]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

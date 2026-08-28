@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: bigquery-pipeline-audit
+title: BigQuery Pipeline Audit
+description: Audit Python + BigQuery pipelines for cost exposure, dry-run safety, idempotency, backfill design, and observability — and report exact patch locations.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - bigquery
+  - data-pipeline
+  - audit
+  - cost-optimization
+  - python
+  - gcp
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

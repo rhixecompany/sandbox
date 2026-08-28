@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dev
+title: Development Workflow
+description: Drive a development workflow with intake, execution, and verification phases using plans-and-specs artifacts and Hermes tooling.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- development
+- workflow
+- automation
+- planning
+- coding
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: database
+title: Database Design and Operations
+description: General-purpose prompt for designing, querying, and operating relational and NoSQL databases — schema modeling, query optimization, and data integrity.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- database
+- sql
+- schema
+- backend
+- data-modeling
+- best-practices
+- design
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

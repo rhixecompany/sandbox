@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: typescript
+title: TypeScript and Next.js Code Quality
+description: Produce strict, maintainable TypeScript and Next.js code using server-first patterns, safe configuration access, and validated external input handling.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - typescript
+  - nextjs
+  - code-quality
+  - frontend
+  - validation
+  - standards
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

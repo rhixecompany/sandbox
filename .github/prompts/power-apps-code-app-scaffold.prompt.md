@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: power-apps-code-app-scaffold
+title: Power Apps Code App Scaffold
+description: Scaffolds a Microsoft Power Apps Code App project (TypeScript + pac code push) following the official PowerAppsCodeApps samples and best practices.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - power-platform
+  - power-apps
+  - typescript
+  - scaffolding
+  - codegen
+  - microsoft
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

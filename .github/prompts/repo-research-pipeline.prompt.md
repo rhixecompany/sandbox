@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: repo-research-pipeline
+title: Repo Research Pipeline
+description: Run research across all project repos and produce RESEARCH_REPORT.md files with verified sources using the Tavily-first research pipeline and symmetric cross-references.
 version: 1.0.0
 author: Hermes Agent
+tags: [research, web-search, tavily, report, pipeline, automation]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: prompts-fix
+title: Prompts Fix
+description: Sync .prompt.md files across Hermes and Copilot platforms by discovering drift, mapping equivalents, applying minimal sync corrections, and verifying schema integrity.
 version: 1.0.0
 author: Hermes Agent
+tags: [prompts, sync, platform-integration, drift, validation, dedupe]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

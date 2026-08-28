@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: prompt-management
+title: Prompt Management
+description: "Manage the .github/prompts/ lifecycle end to end: inventory, dedupe, extract shared templates, update every prompt to use them, create missing skills/scripts, and run strict validation."
 version: 1.0.0
 author: Hermes Agent
+tags: [prompts, lifecycle, dedupe, templates, validation, refactor, automation]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

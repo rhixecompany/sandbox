@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: context-map
+title: Context Map
+description: Document the boundaries, contracts, and dependencies between bounded contexts in a system architecture.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- architecture
+- documentation
+- ddd
+- bounded-contexts
+- design
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

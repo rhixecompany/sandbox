@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: seed-review-and-create
+title: Seed System Review and Create
+description: Reviews existing TypeScript seed scripts, fixes issues with image linking and fallback handling, updates documentation, and creates new seeders for the codebase.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- backend
+- typescript
+- seeding
+- documentation
+- refactor
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

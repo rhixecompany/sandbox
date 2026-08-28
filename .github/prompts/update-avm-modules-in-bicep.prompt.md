@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: update-avm-modules-in-bicep
+title: Update AVM Modules in Bicep
+description: Update Azure Verified Modules (AVM) to their latest versions in Bicep template files while preserving breaking-change policy and producing a summary of updates.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - azure
+  - bicep
+  - infrastructure-as-code
+  - avm
+  - devops
+  - automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: folder-structure-blueprint-generator
+title: Folder Structure Blueprint Generator
+description: Analyzes and documents project folder structures across diverse technology stacks (.NET, Java, React, Angular, Python, Node.js, Flutter) and produces consistent blueprints with naming and placement conventions.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - architecture
+  - blueprint
+  - documentation
+  - tooling
+  - analysis
+  - refactor
+metadata:
+  hermes:
+    profile: code-architect
+    priority: low
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

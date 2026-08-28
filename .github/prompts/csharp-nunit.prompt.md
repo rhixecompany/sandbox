@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: csharp-nunit
+title: C# NUnit Framework
+description: Author NUnit unit tests with standard patterns, data-driven tests, assertions, mocking, and clean test organization for .NET projects.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- csharp
+- dotnet
+- testing
+- nunit
+- unit-test
+- automation
+- backend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

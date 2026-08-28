@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: model-recommendation
+title: Model Recommendation
+description: Analyzes chatmode or prompt files and recommends optimal AI models based on task complexity, capabilities, and cost-efficiency.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - model
+  - recommendation
+  - analysis
+  - routing
+  - ai
+  - cost
+  - capabilities
+  - planning
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

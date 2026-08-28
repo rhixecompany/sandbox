@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: csharp-mstest
+title: C# MSTest Framework
+description: Author robust unit tests using MSTest with modern assertion APIs, data-driven tests, lifecycle hooks, and TestContext access for .NET projects.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- csharp
+- dotnet
+- testing
+- mstest
+- unit-test
+- automation
+- backend
+- best-practices
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

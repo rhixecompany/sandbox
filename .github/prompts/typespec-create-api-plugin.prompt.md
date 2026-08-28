@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: typespec-create-api-plugin
+title: TypeSpec Create API Plugin
+description: Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - typespec
+  - api
+  - plugin
+  - m365-copilot
+  - generator
+  - adaptive-cards
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

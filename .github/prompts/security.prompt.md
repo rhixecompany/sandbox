@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: security
+title: Security Hardening Prompt
+description: Applies secure-by-default engineering practices to code and documentation updates with explicit handling for secrets, input validation, threat surface, and least-privilege design.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- documentation
+- security
+- backend
+- devops
+- planning
+- automation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

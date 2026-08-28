@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: playwright-typescript
+title: Playwright TypeScript Test Authoring
+description: Designs scenarios, implements stable @playwright/test suites with role/label-based locators and web-first assertions, then runs and stabilizes them.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - playwright
+  - typescript
+  - testing
+  - tdd
+  - qa
+  - frontend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

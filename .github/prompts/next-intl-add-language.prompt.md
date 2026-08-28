@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: next-intl-add-language
+title: Add Language with next-intl
+description: Walks through adding a new locale to a Next.js app using next-intl, including message catalog setup, routing, and type-safe translations.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - nextjs
+  - i18n
+  - localization
+  - typescript
+  - frontend
+  - refactor
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

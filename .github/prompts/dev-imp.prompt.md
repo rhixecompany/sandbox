@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: dev-imp
+title: Development Implementation
+description: "Execute a software implementation plan: select generators, implement, verify, code review, debug, and produce a structured completion report."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- development
+- implementation
+- automation
+- devops
+- planning
+- coding
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

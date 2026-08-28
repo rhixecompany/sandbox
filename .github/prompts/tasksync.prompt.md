@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: tasksync
+title: TaskSync Continuous Execution
+description: Executes tasks continuously without auto-termination following TaskSync state rules, requests new tasks after completion, and uses terminal-first intake behaviour for persistent task-cycle execution.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- planning
+- documentation
+- workflow
+- backend
+- devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

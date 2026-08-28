@@ -1,12 +1,30 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: csharp-docs
+title: C# API Documentation
+description: "Generate comprehensive XML documentation comments and API docs for C# classes, methods, properties, and exceptions following .NET documentation conventions."
 version: 1.0.0
 author: Hermes Agent
+tags:
+- csharp
+- dotnet
+- documentation
+- api
+- xml-docs
+- coding
+- tooling
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

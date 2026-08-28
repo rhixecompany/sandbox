@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: containerize-aspnet-framework
+title: Containerize ASP.NET Framework
+description: Containerize a legacy ASP.NET Framework application with multi-stage Dockerfiles and production-ready settings.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- docker
+- containerization
+- aspnet
+- dotnet
+- legacy
+- devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

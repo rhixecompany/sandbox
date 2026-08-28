@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: postgresql-optimization
+title: PostgreSQL Optimization
+description: PostgreSQL-specific development assistant covering JSONB operations, array types, custom types, range/geometric types, full-text search, window functions, and the extensions ecosystem.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - postgresql
+  - performance
+  - optimization
+  - database
+  - sql
+  - tuning
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

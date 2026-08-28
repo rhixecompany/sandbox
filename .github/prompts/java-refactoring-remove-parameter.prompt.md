@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: java-refactoring-remove-parameter
+title: "Java Refactoring: Remove Parameter"
+description: Performs the Remove Parameter refactoring on Java code, simplifying method signatures while preserving behavior.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - java
+  - refactoring
+  - remove-parameter
+  - code-quality
+  - backend
+  - automation
+  - best-practices
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

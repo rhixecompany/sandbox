@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: debugger-prompt
+title: Debugger Prompt for AI Agents
+description: Use when an AI agent needs to debug code with a debugger — set breakpoints, step through, inspect state, and reason about runtime behavior.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- debugging
+- ai-agents
+- tooling
+- automation
+- diagnostics
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

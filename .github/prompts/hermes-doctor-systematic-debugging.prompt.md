@@ -1,12 +1,32 @@
 ---
+name: hermes-doctor-systematic-debugging
 title: Hermes Doctor and Systematic Remediation
-description: Prompt for hermes doctor and systematic remediation
-date: '2026-08-25'
-tags:
-- prompt
+description: Diagnoses, fixes, and verifies all actionable Hermes Agent issues, warnings, and errors using the live installation.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - hermes
+  - debugging
+  - doctor
+  - remediation
+  - diagnostics
+  - automation
+  - agent
+  - platform
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

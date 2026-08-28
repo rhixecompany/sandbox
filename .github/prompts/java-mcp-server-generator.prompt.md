@@ -1,12 +1,32 @@
 ---
+name: java-mcp-server-generator
 title: Java MCP Server Generator
-description: Prompt for java mcp server generator
-date: '2026-08-25'
-tags:
-- prompt
+description: Generates a complete Java Model Context Protocol (MCP) server project with proper structure, dependencies, and tool implementations.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - java
+  - mcp
+  - server
+  - generator
+  - scaffolding
+  - backend
+  - tooling
+  - model-context-protocol
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Project Generation](#project-generation)

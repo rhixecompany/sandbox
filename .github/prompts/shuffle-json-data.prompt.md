@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: shuffle-json-data
+title: Shuffle JSON Data
+description: Shuffles repetitive JSON objects safely by validating schema consistency across entries before randomising order, with explicit acceptable/unacceptable JSON examples.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- data
+- json
+- validation
+- scripting
+- documentation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

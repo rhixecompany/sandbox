@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: hermes-breakdown-test
+title: Hermes Breakdown — Test Strategy
+description: Produces a QA package that turns feature artifacts into a clear test strategy and issue checklist.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - hermes
+  - breakdown
+  - testing
+  - qa
+  - test-strategy
+  - checklist
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

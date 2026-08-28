@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: uk-earnings-research-pipeline
+title: UK Earnings Research Pipeline
+description: Comprehensive stacked-skills pipeline to discover, filter, validate, and rank superior UK earning platforms, leveraging prior session data and MCP tools.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - research
+  - uk
+  - earnings
+  - pipeline
+  - skills
+  - income-generation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

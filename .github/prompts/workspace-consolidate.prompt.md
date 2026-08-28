@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: workspace-consolidate
+title: Workspace Consolidate
+description: Consolidate scripts, patches, and documentation across the workspace with bash migration, audit workflows, and canonical layout enforcement.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - workspace
+  - consolidation
+  - bash
+  - scripts
+  - documentation
+  - refactor
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

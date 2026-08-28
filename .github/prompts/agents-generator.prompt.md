@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: agents-generator
+title: Generate Project AGENTS.md Blueprint
+description: Analyze a codebase and produce a comprehensive AGENTS.md that captures architecture, conventions, and exact technology versions so AI coding agents are immediately productive.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - agents
+  - documentation
+  - blueprint
+  - automation
+  - codebase-analysis
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,11 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: setup-nextjs-frontend-stack
+title: Setup Next.js Frontend Stack
+description: Scaffolds a production-ready Next.js (App Router) frontend stack for an entity — page, DAL, DTO, server actions, and Zod schemas — using TypeScript, Tailwind, and shadcn-style UI primitives.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- frontend
+- nextjs
+- typescript
+- scaffolding
+- documentation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

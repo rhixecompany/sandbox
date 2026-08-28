@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: update-markdown-file-index
+title: Update Markdown File Index
+description: Update a markdown section with an index or table of files from a specified folder using simple list, detailed table, or categorized section formats.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - documentation
+  - markdown
+  - index
+  - automation
+  - maintenance
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: generate-custom-instructions-from-codebase
+title: Generate Copilot Instructions From Codebase
+description: Analyzes differences between two project versions (branches, commits, or releases) and produces migration/refactor instructions for GitHub Copilot to maintain consistency during upgrades.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - github
+  - copilot
+  - migration
+  - refactor
+  - tooling
+  - documentation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: postgresql-code-review
+title: PostgreSQL Code Review
+description: PostgreSQL-specific code review focused on JSONB operations, array usage, custom types, function optimization, and Row Level Security best practices.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - postgresql
+  - code-review
+  - database
+  - sql
+  - jsonb
+  - security
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

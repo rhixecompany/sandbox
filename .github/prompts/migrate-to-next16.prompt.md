@@ -1,12 +1,31 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: migrate-to-next16
+title: Migrate to Next.js 16
+description: Automates Next.js 16 migration tasks, updating dependencies, codemods, route handlers, and config for the upgrade.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - nextjs
+  - migration
+  - upgrade
+  - automation
+  - frontend
+  - codemod
+  - configuration
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

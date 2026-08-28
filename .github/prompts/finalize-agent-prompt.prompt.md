@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: finalize-agent-prompt
+title: Finalize Agent Prompt
+description: Acts as an AI agent to polish and finalize a prompt file for the end user, tightening instructions and structure.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - prompts
+  - refactor
+  - documentation
+  - agent
+  - polish
+metadata:
+  hermes:
+    profile: code-architect
+    priority: low
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

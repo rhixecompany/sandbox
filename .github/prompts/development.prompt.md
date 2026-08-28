@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: development
+title: Comprehensive Setup Guide
+description: Comprehensive development setup guide — prerequisites and end-to-end project bootstrap (e.g. ComicWise-style full-stack projects).
 version: 1.0.0
 author: Hermes Agent
+tags:
+- development
+- setup
+- bootstrap
+- tutorial
+- beginner
+- full-stack
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

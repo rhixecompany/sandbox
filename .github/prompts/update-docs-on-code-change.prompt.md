@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: update-docs-on-code-change
+title: Update Documentation on Code Change
+description: Synchronize documentation whenever code changes modify behavior, APIs, or workflows, with trigger detection and alignment to repository standards.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - documentation
+  - synchronization
+  - automation
+  - devops
+  - maintenance
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

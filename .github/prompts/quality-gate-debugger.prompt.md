@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: quality-gate-debugger
+title: Quality Gate Debugger
+description: Triage quality-gate report files (type-check, lint, test, build), batch-fix all surfaced issues by priority, and re-run the gate until zero errors and zero warnings remain.
 version: 1.0.0
 author: Hermes Agent
+tags: [quality, lint, type-check, testing, build, debugging, refactor]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

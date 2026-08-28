@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: code-review
+title: Comprehensive Code Review
+description: Run a structured code review for correctness, security, and testing risk — mapping scope, deep-reviewing changes, and producing an actionable report.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - code-review
+  - security
+  - testing
+  - quality
+  - review
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,11 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: skills-fix
+title: Skills Fix
+description: Full lifecycle audit and remediation of the Hermes skill library — discovers SKILL.md files, reorganises misplaced skills, deduplicates cross-category copies, audits for quality, plans fixes, and applies them in priority order.
 version: 1.0.0
 author: Hermes Agent
+tags:
+- tool
+- automation
+- documentation
+- skills
+- qa
+- devops
+- workflow
+- planning
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

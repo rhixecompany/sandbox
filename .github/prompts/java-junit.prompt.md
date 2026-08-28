@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: java-junit
+title: Java JUnit 5 Testing
+description: Provides best practices for JUnit 5 unit testing in Java, including data-driven tests, lifecycle hooks, and assertion patterns.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - java
+  - junit
+  - testing
+  - tdd
+  - backend
+  - automation
+  - data-driven
+  - best-practices
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

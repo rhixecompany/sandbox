@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: python-mcp-server-generator
+title: Python MCP Server Generator
+description: Generate a complete Python MCP server project with tools, resources, type-safe configuration, and proper stdio or HTTP transport setup.
 version: 1.0.0
 author: Hermes Agent
+tags: [python, mcp, server, generator, tooling, automation]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

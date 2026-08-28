@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: update-oo-component-documentation
+title: Update Object-Oriented Component Documentation
+description: Update existing object-oriented component documentation following industry best practices and architectural documentation standards, including component overview, architecture, and interfaces.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - documentation
+  - object-oriented
+  - architecture
+  - components
+  - api
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

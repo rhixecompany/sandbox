@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: breakdown-epic-pm
+title: Break Down Epic PRD
+description: Create an Epic-level Product Requirements Document that captures scope, value, and acceptance criteria to feed downstream architecture work.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - planning
+  - prd
+  - epic
+  - documentation
+  - product
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

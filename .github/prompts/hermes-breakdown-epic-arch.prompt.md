@@ -1,12 +1,29 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: hermes-breakdown-epic-arch
+title: Hermes Breakdown — Epic Architecture
+description: Turns an Epic PRD into a high-level architecture specification with layers, enablers, and technology guidance.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - hermes
+  - breakdown
+  - architecture
+  - epic
+  - planning
+  - documentation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

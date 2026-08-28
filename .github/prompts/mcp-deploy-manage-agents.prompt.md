@@ -1,12 +1,32 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: mcp-deploy-manage-agents
+title: MCP Deploy and Manage Agents
+description: Deploys and manages MCP-based agents, covering packaging, registration, lifecycle, and admin role requirements.
 version: 1.0.0
 author: Hermes Agent
+date: '2026-08-25'
+tags:
+  - mcp
+  - deploy
+  - agents
+  - lifecycle
+  - microsoft-365
+  - devops
+  - administration
+  - tooling
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
+
 # Table of Contents
 
 - [Goal](#goal)

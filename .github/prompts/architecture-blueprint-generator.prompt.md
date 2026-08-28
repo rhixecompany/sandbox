@@ -1,12 +1,27 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: architecture-blueprint-generator
+title: Architecture Blueprint Generator
+description: Analyze a codebase and produce a detailed architecture blueprint with detected stacks, patterns, diagrams, and implementation guidance for new development.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - architecture
+  - documentation
+  - blueprint
+  - codebase-analysis
+  - design
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

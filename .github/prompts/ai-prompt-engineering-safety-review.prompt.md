@@ -1,12 +1,28 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: ai-prompt-engineering-safety-review
+title: AI Prompt Safety and Quality Review
+description: Audit a prompt for safety, bias, security, clarity, and effectiveness, then deliver a hardened, improved version with rationale.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - prompt-engineering
+  - safety
+  - review
+  - security
+  - ai-quality
+  - tool
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,12 +1,23 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: readme-blueprint-generator
+title: README Blueprint Generator
+description: Generate comprehensive README.md by analyzing the project's documentation structure, technology stack, architecture, and coding standards, then producing developer-focused markdown.
 version: 1.0.0
 author: Hermes Agent
+tags: [readme, documentation, blueprint, generator, analysis]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
 ---
+
 # Table of Contents
 
 - [Goal](#goal)

@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: plan-batch-fix
+title: Plan Batch Fix
+description: Performs a full scan, batches fixes by priority, verifies per batch with git commits, then re-scans and writes docs/batch-fix-report.md with before/after counts.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - batch
+  - fix
+  - lint
+  - refactor
+  - planning
+  - devops
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

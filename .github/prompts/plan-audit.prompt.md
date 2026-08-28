@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: plan-audit
+title: Agent Stack Audit
+description: Audits Hermes skills, plugins, MCP config, and Copilot custom agents, then cross-references for duplicates, broken references, and orphan files; reports to docs/agent-stack-audit-report.md.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - audit
+  - planning
+  - hermes
+  - copilot
+  - inventory
+  - documentation
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

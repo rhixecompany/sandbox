@@ -1,11 +1,26 @@
 ---
-title: Goal
-description: Prompt for goal
-date: '2026-08-25'
-tags:
-- prompt
+name: optimize-agentsMd
+title: Optimize AGENTS.md
+description: Audits and rewrites a repository's AGENTS.md for agentic coding workflows, aligning with project conventions, banking-domain patterns, and the source prompt's full coverage plan.
 version: 1.0.0
 author: Hermes Agent
+tags:
+  - documentation
+  - agents
+  - banking
+  - refactor
+  - planning
+  - meta
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 # Table of Contents
 

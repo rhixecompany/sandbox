@@ -1,18 +1,26 @@
 ---
+name: php-mcp-server-generator
 title: PHP MCP Server Generator
-description: Prompt for php mcp server generator
-date: '2026-08-25'
-tags:
-- prompt
+description: Generates a complete, production-ready PHP Model Context Protocol server project with tools, resources, prompts, and PHPUnit tests using the official PHP SDK.
 version: 1.0.0
 author: Hermes Agent
----
-
-
-
----
-description: "Generate a complete PHP Model Context Protocol server project with tools, resources, prompts, and tests using the official PHP SDK"
-agent: agent
+tags:
+  - php
+  - mcp
+  - server-generator
+  - scaffolding
+  - sdk
+  - backend
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
 ---
 
 # PHP MCP Server Generator
