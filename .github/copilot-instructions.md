@@ -1,47 +1,74 @@
 # Copilot Instructions — SandBox Monorepo
 
-**Canonical reference:** See `AGENTS.md` (general agent guidance), `.hermes.md` (Hermes-specific), `CLAUDE.md` (Claude-specific).
+**Canonical reference:** See `../../AGENTS.md` (general agent guidance), `../../.hermes.md` (Hermes-specific), `../../CLAUDE.md` (Claude-specific).
 
-## Quick Start
+For full documentation, see [`copilot-instructions.md`](../../copilot-instructions.md) at the repository root.
 
+## Quick Reference
+
+### Root Workspace Setup
 ```bash
-
-# Root workspace setup
-
 cd C:/Users/Alexa/Desktop/SandBox
 bun install
 python -m venv venv && source venv/Scripts/activate && pip install -r requirements.txt
-
-# Root workspace validation (workspace-level code only)
-
-bun run lint && bun run format:check && bun run typecheck
-
-# For subproject work, see the project's own AGENTS.md and package.json scripts
-
+bun run check  # Validate all: lint + format + typecheck + markdown + spellcheck
 ```
 
-## Architecture: Hermes-Centric Polyglot Monorepo
+### Subproject Work
+Each subproject (`projects/Banking`, `projects/comicwise`, `projects/Bash`, etc.) is autonomous.
 
-**SandBox** is a 17+ subproject monorepo with independent build systems, each under `projects/`. Every subproject is autonomous — it has its own `AGENTS.md`, `package.json`/`pyproject.toml`, `tsconfig.json`, and CI workflows.
+```bash
+cd projects/<PROJECT>
+bun install                # Install dependencies
+bun run dev               # Start (Next.js/Node projects)
+bun run test              # Run tests
+bun run lint              # Lint code
+bun run type-check        # TypeScript check
+```
 
-### Key Pattern: Subproject Autonomy
+## Architecture at a Glance
 
-- **Root workspace** lints only root-level code (config, scripts, top-level TypeScript/Python)
+- **Root workspace:** TypeScript/Python linting for workspace-level code only
+- **Subprojects:** Autonomous — each has its own `AGENTS.md`, `package.json`, CI, and build system
+- **Shared:** `.github/workflows/` (CI), `.github/prompts/` (190+ prompts), tool configs
 
-- **Subprojects** are excluded from root `tsconfig.json` and linting (`projects/` is in ignore lists)
+**Key Pattern:** Subprojects are excluded from root linting. Always work within each project's own context.
 
-- **Each subproject has its own**: AGENTS.md, build commands, test suite, CI workflow
+## Conventions
 
-- **Shared:** `.github/workflows/` (shared CI), `.github/prompts/` (canonical prompt library), tool configs (Prettier, ESLint flat config, Ruff, etc.)
+| Aspect | Rule |
+|--------|------|
+| **Branch naming** | `<type>/<project>/<kebab-case>` (e.g., `feat/banking/add-webhook`) |
+| **PR target** | `development` branch |
+| **TS naming** | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) |
+| **Python naming** | `snake_case.py` |
+| **TS style** | 2-space indent, single-quotes, `strict` mode, no `any` |
+| **Python style** | 4-space indent, double-quotes, PEP 8 |
+| **Line endings** | CRLF (Windows host) |
 
-When working on a subproject:
+## Root-Level Commands
 
-1. Read **that project's AGENTS.md** first (e.g., `projects/Bash/AGENTS.md`)
+```bash
+bun run lint              # ESLint
+bun run lint:fix          # Auto-fix ESLint
+bun run format            # Prettier
+bun run format:check      # Check Prettier
+bun run typecheck         # TypeScript
+bun run markdownlint      # Markdown
+bun run spellcheck        # cspell
+bun run check             # All checks (recommended)
+```
 
-2. Use **that project's build/test commands** from `package.json` or `README.md`
+## Major Subprojects
 
-3. Root-level workspace commands apply only to root-level changes
+| Project | Stack | Key Command |
+|---------|-------|-------------|
+| **Banking** | Next.js 16, Drizzle, Plaid | `bun run dev` |
+| **comicwise** | Next.js 15, Prisma, Stripe | `bun run dev` |
+| **Bash** | Bun/TypeScript automation | `bun run lint` |
+| **ecom** | Django, React, Redux | `python manage.py runserver` |
+| **mcp-servers** | Multi-language MCP | See project README |
 
 ---
 
-*This file is a thin wrapper. All conventions, workflows, and rules are in `AGENTS.md`.*
+See [`copilot-instructions.md`](../../copilot-instructions.md) for the complete guide.
