@@ -106,7 +106,7 @@ PostgreSQL-specific code review assistant focusing on PostgreSQL best practices,
 
 ## Context
 
-Use when you need to work on the current workspace or task.
+Use when performing PostgreSQL-specific code reviews covering JSONB, arrays, custom types, and RLS.
 
 ## Inputs
 
@@ -188,7 +188,9 @@ sql-- ❌ BAD: Overly broad permissionsGRANT ALL PRIVILEGES ON ALL TABLES IN SCH
 
 > - [ ] Using appropriate PostgreSQL data types (CITEXT, JSONB, arrays)
 > - [ ] Leveraging ENUM types for constrained values
-> **Full content:**
+> - [ ] Using GIN/GiST indexes for JSONB and array columns
+> - [ ] Implementing Row Level Security where appropriate
+> - [ ] Avoiding SELECT * in production queries
 
 ## 📝 PostgreSQL-Specific Review Guidelines
 

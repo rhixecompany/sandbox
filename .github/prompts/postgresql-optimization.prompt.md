@@ -116,7 +116,7 @@ PostgreSQL-specific development assistant focusing on unique PostgreSQL features
 
 ## Context
 
-Use when you need to work on the current workspace or task.
+Use when optimizing PostgreSQL queries, data types, and database performance.
 
 ## Inputs
 
@@ -209,13 +209,21 @@ sql-- Identify slow queriesSELECT query, calls, total_time, mean_time, rowsFROM 
 
 > -- ❌ BAD: OFFSET for large datasets
 > SELECT * FROM products ORDER BY id OFFSET 10000 LIMIT 20;
-> **Full content:**
+>
+> -- ✅ GOOD: Keyset pagination
+> SELECT * FROM products WHERE id > 10000 ORDER BY id LIMIT 20;
+>
+> -- ❌ BAD: SELECT in loop
+> -- ✅ GOOD: Bulk operations with arrays/CTEs
+> SELECT * FROM products WHERE id = ANY(ARRAY[1,2,3]);
 
 ## 📋 Optimization Checklist
 
 > - [ ] Run EXPLAIN ANALYZE for expensive queries
 > - [ ] Check for sequential scans on large tables
-> **Full content:**
+> - [ ] Review index usage with pg_stat_all_indexes
+> - [ ] Monitor query performance with pg_stat_statements
+> - [ ] Verify VACUUM and ANALYZE run on schedule
 
 ## 🎯 Optimization Output Format
 
