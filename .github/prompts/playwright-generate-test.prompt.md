@@ -65,7 +65,7 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 
 ## Context
 
-Using when you need to generate Playwright test from a scenario for the current workspace or task.
+Use when generating Playwright tests from scenarios for the current workspace.
 
 ## Inputs
 
@@ -155,7 +155,8 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 
 - Ask for missing scenario details.
 - Collect selectors and outcomes.
-- Save the test in tests/.- Repeat until the test passes.
+- Save the test in tests/.
+- Repeat until the test passes.
 
 ## Actions Summary
 
