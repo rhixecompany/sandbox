@@ -1,19 +1,13 @@
 ---
 name: all-repo-docker-setup
 title: Bulk Docker Setup Across Repositories
-description: Iterate over a list of repositories, generate or repair Dockerfiles, run builds and security scans, and clean up unused Docker resources with a tracked plan.
+description: Iterate over a list of rhixecompany repositories, generate or repair Dockerfiles, build images, run security scans, and clean up unused Docker resources with a tracked plan.
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - docker
-  - devops
-  - automation
-  - infrastructure
-  - security
-  - tooling
+tags: [docker, devops, automation, infrastructure, security, tooling]
 metadata:
   hermes:
-    profile: code-architect
+    profile: devops
     priority: medium
   copilot:
     model_required: sonnet
@@ -23,48 +17,110 @@ metadata:
     enabled: true
 ---
 
+# Bulk Docker Setup Across Repositories
 
-for each repo	in the list of repositories by rhixecompany, perform the following steps:
-1. Clone the repository to your local machine at <./projects> using the command:
-```
+> Iterate over every rhixecompany repository, generate or repair Dockerfiles, build images, security-scan them, and clean up unused Docker resources.
+
+## Goal
+
+Systematically process all repositories under `rhixecompany` to ensure each has a valid Dockerfile or `docker-compose.yml`, builds successfully, passes security scanning, and has a documented cleanup plan. Unused Docker resources are reclaimed with a tracked report.
+
+## Prerequisites
+
+- `gh` CLI authenticated and able to list `rhixecompany` repos
+- Docker daemon running and accessible
+- `trivy` installed for security scanning
+- `docker` CLI with `docker compose` plugin
+- Write access to `~/Desktop/SandBox/projects/`
+
+## Inputs
+
+- The list of repositories from `gh repo list rhixecompany --limit 100 --json name,url`
+- Existing Docker artifacts in each repo (Dockerfile, docker-compose.yml)
+- Docker images built during the process
+
+## Outputs
+
+- A valid Dockerfile or `docker-compose.yml` in each repository (created or repaired)
+- All images built successfully
+- Security scan report per repository (Trivy output)
+- A cleanup report listing freed disk space
+
+## Steps
+
+### 1. List repositories
+
+1. List all rhixecompany repositories:
+   ```bash
+   gh repo list rhixecompany --limit 100 --json name,url
+   ```
+2. Clone each repository to `~/Desktop/SandBox/projects/`:
+   ```bash
+   git clone <repository_url> ./projects/<repository_name>
+   ```
+
+### 2. Generate or repair Docker configuration
+
+For each repository:
+1. Check for existing `Dockerfile` or `docker-compose.yml`
+2. If no Docker configuration exists, generate one based on the project's language (Node.js, Python, Go, Rust, etc.)
+3. If a Dockerfile exists but is broken, debug, fix, and update it to a smaller base image
+4. Build the image to verify it works:
+   ```bash
+   docker build -t <image_name> .
+   ```
+5. If only `docker-compose.yml` exists, build with:
+   ```bash
+   docker-compose build
+   ```
+
+### 3. Security scan
+
+Run Trivy scan on each built image:
 ```bash
-git clone <repository_url>
-```
-```
-
-2. Navigate into the cloned repository directory:
-```
-```bash
-cd <repository_name>
-```
+trivy image --severity HIGH,CRITICAL <image_name>
 ```
 
-3. Check if a Dockerfile exists in the repository. If it doesn`t create it, If it does, debug,fix update to a smaller image and build the Docker image, security scan, suggest,create,implement a cleanup plan, fix all container errors using the command:
-```bash
-```
-docker build -t <image_name> .
-```
-```
+Record findings and fix critical vulnerabilities by updating base images or dependencies.
 
-4. If the Dockerfile does not exist, check if a docker-compose.yml file exists. If it does, build the Docker image using the command:
-```bash
-```
-docker-compose build
-```
-```
+### 4. Cleanup
 
-5. If neither a Dockerfile nor a docker-compose.yml file exists, log a message indicating that no Docker configuration was found for the repository and create a log file named `docker_setup.log` in the root directory of the repository with the message:
-```
-No Docker configuration found for this repository.
-```text
-```
+1. Remove unused containers:
+   ```bash
+   docker container prune -f
+   ```
+2. Remove unused images:
+   ```bash
+   docker image prune -a -f
+   ```
+3. Remove unused volumes:
+   ```bash
+   docker volume prune -f
+   ```
+4. Remove build caches:
+   ```bash
+   docker buildx builder prune -f
+   ```
+5. Report freed space:
+   ```bash
+   docker system df
+   ```
 
-```
+## Rules
 
-6. You will clean up all unused Docker resources with a specific plan:
+- **Scope discipline** — Only operate on rhixecompany repositories
+- **Minimal changes** — Fix the smallest issue needed to build successfully
+- **Track everything** — Log results to `docker_setup.log` in each repo root
+- **No Docker config found** — Log "No Docker configuration found for this repository" to `docker_setup.log` if neither file exists
 
-Remove unused containers
-Remove unused images
-Remove unused volumes
-Remove unused build caches
-Report what was freed
+## Verification
+
+- Each repository has either a `Dockerfile` or `docker-compose.yml`
+- All images build without errors
+- No HIGH/CRITICAL vulnerabilities remain (or documented rationale for exceptions)
+- Cleanup report is saved
+
+## Out of Scope
+
+- Modifying application code beyond Docker-related config
+- Production deployment orchestration

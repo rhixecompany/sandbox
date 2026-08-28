@@ -216,7 +216,6 @@ smithery tool list exa
 ## 4. Call a tool
 smithery tool call exa search '{"query": "latest news about MCP"}'
 ```
-```
 
 </Tab>
 
@@ -247,7 +246,6 @@ prompt: 'Search for the latest news about MCP.',
 
 await mcpClient.close();
 ```
-```
 
 </Tab>
 
@@ -275,7 +273,6 @@ const result = await mcpClient.callTool({
 name: 'search',
 arguments: { query: 'latest news about MCP' }
 });
-```
 ```
 
 </Tab>
@@ -313,7 +310,6 @@ SDKs are served from `pkg.smithery.ai` paths shaped like `namespace/slug`. The c
 // Use callTool when a tool was added after your SDK was generated.
 const result = await exa.callTool('search', { query: 'latest news about MCP' });
 ```
-```
 
 </Tab>
 </Tabs>
@@ -333,7 +329,6 @@ smithery mcp add \
 '@browserbasehq/mcp-browserbase?browserbaseProjectId=your-project-id' \
 --id my-browserbase \
 --headers '{"browserbaseApiKey": "your-browserbase-api-key"}'
-```
 ```
 
 </Tab>
@@ -365,7 +360,6 @@ namespace: 'my-app',
 connectionId: conn.connectionId,
 });
 ```
-```
 
 </Tab>
 
@@ -381,7 +375,6 @@ curl -X POST "https://smithery.run/my-app" \
 "browserbaseApiKey": "your-browserbase-api-key"
 }
 }'
-```
 ```
 
 </Tab>
@@ -415,7 +408,6 @@ smithery mcp add github \
 ## → https://auth.smithery.ai/...
 ## Visit the URL to authorize
 ```
-```
 
 </Tab>
 
@@ -434,7 +426,6 @@ if (conn.status.state === 'auth_required') {
 redirect(conn.status.setupUrl);
 }
 ```
-```
 
 </Tab>
 </Tabs>
@@ -448,7 +439,6 @@ When your agent needs to know what tools are available for a user, list their co
 ```text
 ```bash theme={null}
 smithery mcp list --metadata '{"userId": "user-123"}'
-```
 ```
 
 </Tab>
@@ -464,7 +454,6 @@ metadata: { userId: 'user-123' }
 for (const conn of result.connections) {
 console.log(`${conn.name}: ${conn.status.state}`);
 }
-```
 ```
 
 </Tab>
@@ -484,7 +473,6 @@ smithery tool list user-123-github
 ## Call a tool
 smithery tool call user-123-github search_repositories \
 '{"query": "mcp"}'
-```
 ```
 
 </Tab>
@@ -511,7 +499,6 @@ model: anthropic('claude-sonnet-4-20250514'),
 tools: allTools,
 prompt: userMessage,
 });
-```
 ```
 
 </Tab>
@@ -613,7 +600,6 @@ smithery mcp add github
 ## → connection_id: abc-123-github
 ## Visit the URL to authorize, then retry
 ```
-```
 
 </Tab>
 
@@ -631,7 +617,6 @@ redirect(conn.status.setupUrl);
 
 // Save conn.connectionId and retry with it after the user returns
 ```
-```
 
 </Tab>
 </Tabs>
@@ -645,7 +630,6 @@ After the user completes authorization and returns to your app, retry with the s
 ## After authorization, the connection is ready
 smithery tool list abc-123-github
 ```
-```
 
 </Tab>
 
@@ -658,7 +642,6 @@ connectionId: savedConnectionId,
 
 const mcpClient = await createMCPClient({ transport });
 const tools = await mcpClient.tools();
-```
 ```
 
 </Tab>
@@ -687,7 +670,6 @@ smithery mcp add \
 --id my-browserbase \
 --headers '{"browserbaseApiKey": "your-api-key"}'
 ```
-```
 
 </Tab>
 
@@ -710,7 +692,6 @@ headers: { browserbaseApiKey: 'your-api-key' },
 });
 }
 ```
-```
 
 </Tab>
 
@@ -731,7 +712,6 @@ curl -X PUT "https://smithery.run/my-app/my-browserbase" \
 "mcpUrl": "https://mcp.browserbase.com/mcp?browserbaseProjectId=your-project-id",
 "headers": { "browserbaseApiKey": "your-api-key" }
 }'
-```
 ```
 
 </Tab>
@@ -757,7 +737,6 @@ smithery auth token --policy '[{
 "ttl": "1h"
 }]'
 ```
-```
 
 </Tab>
 
@@ -778,7 +757,6 @@ ttl: '1h',
 })
 
 // Send `token` to your client — safe for browser use
-```
 ```
 
 </Tab>
@@ -801,7 +779,6 @@ curl -X POST https://api.smithery.ai/tokens \
 ]
 }'
 ```
-```
 
 </Tab>
 </Tabs>
@@ -814,7 +791,6 @@ This token can only access connections in `my-app` where `metadata.userId` match
 ```bash theme={null}
 ## Use the scoped token to call tools
 SMITHERY_API_KEY=$TOKEN smithery tool list user-123-github
-```
 ```
 
 </Tab>
@@ -829,7 +805,6 @@ client: smithery,
 namespace: 'my-app',
 connectionId: 'user-123-github',
 })
-```
 ```
 
 </Tab>
@@ -858,7 +833,6 @@ smithery tool list user-123-github
 smithery tool call user-123-github search_repositories \
 '{"query": "mcp"}'
 ```
-```
 
 </Tab>
 
@@ -878,7 +852,6 @@ name: 'search_repositories',
 arguments: { query: 'mcp' },
 })
 await mcpClient.close()
-```
 ```
 
 </Tab>
@@ -923,7 +896,6 @@ smithery mcp add smithery/mouseless
 ## Point at an MCP server already running locally
 smithery mcp add http://localhost:9090/mcp --id chrome
 ```
-```
 
 </Tab>
 
@@ -932,7 +904,6 @@ smithery mcp add http://localhost:9090/mcp --id chrome
 ```bash theme={null}
 ## Let the CLI spawn and manage a stdio MCP server
 smithery mcp add --id chrome -- npx -y @chromedevtools/chrome-devtools-mcp
-```
 ```
 
 </Tab>
@@ -957,7 +928,6 @@ Reach the uplinked server through the standard Smithery surface — no special t
 smithery tool list chrome
 smithery tool call chrome navigate '{"url": "https://smithery.ai"}'
 ```
-```
 
 </Tab>
 
@@ -978,7 +948,6 @@ connectionId: 'chrome',
 
 const mcpClient = await createMCPClient({ transport });
 const tools = await mcpClient.tools();
-```
 ```
 
 </Tab>
@@ -1082,7 +1051,6 @@ smithery auth token --policy '[{
 "ttl": "1h"
 }]'
 ```
-```
 
 </Tab>
 
@@ -1102,7 +1070,6 @@ ttl: '1h',
 })
 
 // Send `token` to your client — safe for browser use
-```
 ```
 
 </Tab>
@@ -1125,7 +1092,6 @@ curl -X POST https://api.smithery.ai/tokens \
 ]
 }'
 ```
-```
 
 </Tab>
 </Tabs>
@@ -1146,7 +1112,6 @@ smithery auth token --policy '[{
 "ttl": "1h"
 }]'
 ```
-```
 
 </Tab>
 
@@ -1164,7 +1129,6 @@ ttl: '1h',
 },
 ],
 })
-```
 ```
 
 </Tab>
@@ -1186,7 +1150,6 @@ curl -X POST https://api.smithery.ai/tokens \
 }
 ]
 }'
-```
 ```
 
 </Tab>
@@ -1230,7 +1193,6 @@ smithery auth token --policy '[
 }
 ]'
 ```
-```
 
 </Tab>
 
@@ -1265,7 +1227,6 @@ ttl: '1h',
 },
 ],
 })
-```
 ```
 
 </Tab>
@@ -1302,7 +1263,6 @@ curl -X POST https://api.smithery.ai/tokens \
 ]
 }'
 ```
-```
 
 </Tab>
 </Tabs>
@@ -1336,7 +1296,6 @@ SMITHERY_API_KEY=$BROAD_SERVICE_TOKEN smithery auth token \
 "ttl": "20m"
 }]'
 ```
-```
 
 </Tab>
 
@@ -1361,7 +1320,6 @@ ttl: '20m',
 // userToken can only read user-123's connections —
 // the workspace and global grants from the parent are excluded
 ```
-```
 
 </Tab>
 
@@ -1382,7 +1340,6 @@ curl -X POST https://api.smithery.ai/tokens \
 }
 ]
 }'
-```
 ```
 
 </Tab>
@@ -1415,7 +1372,6 @@ smithery auth token --policy '[{
 "ttl": "1h"
 }]'
 ```
-```
 
 </Tab>
 
@@ -1432,7 +1388,6 @@ ttl: '1h',
 },
 ],
 })
-```
 ```
 
 </Tab>
@@ -1454,7 +1409,6 @@ curl -X POST https://api.smithery.ai/tokens \
 ]
 }'
 ```
-```
 
 </Tab>
 </Tabs>
@@ -1473,7 +1427,6 @@ smithery auth token --policy '[{
 "ttl": "30m"
 }]'
 ```
-```
 
 </Tab>
 
@@ -1491,7 +1444,6 @@ ttl: '30m',
 },
 ],
 })
-```
 ```
 
 </Tab>
@@ -1513,7 +1465,6 @@ curl -X POST https://api.smithery.ai/tokens \
 }
 ]
 }'
-```
 ```
 
 </Tab>
@@ -1543,7 +1494,6 @@ smithery auth token --policy '[
 }
 ]'
 ```
-```
 
 </Tab>
 
@@ -1567,7 +1517,6 @@ ttl: '1h',
 },
 ],
 })
-```
 ```
 
 </Tab>
@@ -1595,7 +1544,6 @@ curl -X POST https://api.smithery.ai/tokens \
 }
 ]
 }'
-```
 ```
 
 </Tab>
@@ -1670,7 +1618,6 @@ smithery auth token --policy '[
 }
 ]'
 ```
-```
 
 </Tab>
 
@@ -1691,7 +1638,6 @@ operations: ['read', 'write'],
 },
 ],
 })
-```
 ```
 
 </Tab>
@@ -1716,7 +1662,6 @@ curl -X POST https://api.smithery.ai/tokens \
 }
 ]
 }'
-```
 ```
 
 </Tab>

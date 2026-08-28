@@ -170,7 +170,7 @@ Context> The `TestContext` class provides test run information, cancellation sup
 
 ## Mocking and Isolation
 
-- Use Moq or NSubstitute for mocking dependencies- Use interfaces to facilitate mocking- Mock dependencies to isolate units under test
+- Use Moq or NSubstitute for mocking dependencies- Use interfaces to helps mocking- Mock dependencies to isolate units under test
 
 ## Template References
 

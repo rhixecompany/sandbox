@@ -134,7 +134,7 @@ Systematically eliminate all errors, warnings, and deprecations in this codebase
 - For each significant fix, document before/after code, rationale, and references in both Markdown and JSON.
 - Add inline comments for non-obvious changes.
 7. **Commit & Final Check**
-- Commit all changes with a comprehensive summary.
+- Commit all changes with a complete summary.
 - Ensure all scripts pass with zero errors/warnings.
 
 ## Example JSON Entry (`docs/proposedFixes.json`)

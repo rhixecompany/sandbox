@@ -84,11 +84,11 @@ metadata:
 
 ## Goal
 
-Use this prompt to handle the optimize agentsmd workflow.
+Use this prompt to handle the improve agentsmd workflow.
 
 ## Context
 
-Use when you need to optimize agentsmd for the current workspace or task.
+Use when you need to improve agentsmd for the current workspace or task.
 
 ## Inputs
 
@@ -148,7 +148,7 @@ The outer phases map to the source prompt as follows: Phase 1 Intake = Phase 1, 
 
 ## Template References
 
-Detailed templates in `templates/optimize-agentsMd/`:- `plan_comprehensive_agentsmd_fo.md`
+Detailed templates in `templates/improve-agentsMd/`:- `plan_comprehensive_agentsmd_fo.md`
 
 ## Personas
 

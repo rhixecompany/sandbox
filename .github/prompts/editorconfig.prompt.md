@@ -92,7 +92,7 @@ metadata:
 
 ## Goal
 
-Generates a comprehensive and best-practice-oriented .editorconfig file based on project analysis and user preferences.
+Generates a complete and best-practice-oriented .editorconfig file based on project analysis and user preferences.
 
 ## Context
 

@@ -99,7 +99,7 @@ metadata:
 
 ## Goal
 
-Inventory all installed VS Code extensions, research their documentation, and apply findings to optimize user and workspace settings. Multi-phase: discover → research → synthesize → configure.
+Inventory all installed VS Code extensions, research their documentation, and apply findings to improve user and workspace settings. Multi-phase: discover → research → synthesize → configure.
 
 ## List All Installed VS Code Extensions — Full Lifecycle
 

@@ -330,7 +330,6 @@ A Model Context Protocol server built with Swift.
 ```bash
 swift build -c release
 ```
-````
 
 ## Usage
 

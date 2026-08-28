@@ -45,7 +45,7 @@ metadata:
   - [Required Frontmatter (YAML)](#required-frontmatter-yaml)
   - [Content Standards](#content-standards)
   - [Optimization Checklist per Document](#optimization-checklist-per-document)
-  - [Files to Optimize](#files-to-optimize)
+  - [Files to Optimize](#files-to-improve)
   - [AI-Readiness Scoring Script](#ai-readiness-scoring-script)
   - [Doc Symmetry Validator](#doc-symmetry-validator)
   - [Phase 6: Final Verification](#phase-6:-final-verification)
@@ -89,7 +89,7 @@ metadata:
 - [Required Frontmatter (YAML)](#required-frontmatter-yaml)
 - [Content Standards](#content-standards)
 - [Optimization Checklist per Document](#optimization-checklist-per-document)
-- [Files to Optimize](#files-to-optimize)
+- [Files to Optimize](#files-to-improve)
 - [AI-Readiness Scoring Script](#ai-readiness-scoring-script)
 - [Doc Symmetry Validator](#doc-symmetry-validator)
 - [Phase 6: Final Verification](#phase-6:-final-verification)
@@ -347,7 +347,7 @@ For each project under `docs/project-docs/<name>`:
 2. **Phase 2**: Debug all patches — `git apply --check` each, diagnose failures, reclassify obsolete
 3. **Phase 3**: Enhance all patches — enrich commit messages, add metadata, normalize line endings, build dependency graph
 4. **Phase 4**: Create missing patches — gap analysis, create docs/config/consistency/bugfix patches
-5. **Phase 5**: Document organization — move all reports to `docs/`, add YAML frontmatter, optimize for AI-readiness
+5. **Phase 5**: Document organization — move all reports to `docs/`, add YAML frontmatter, improve for AI-readiness
 6. **Phase 6**: Final verification — all scripts under Bash/, all patches enhanced, all docs scored
 
 ## Tasks

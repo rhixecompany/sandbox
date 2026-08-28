@@ -289,7 +289,6 @@ A Model Context Protocol server built with Ruby and the official MCP Ruby SDK.
 ```bash
 bundle install
 ```
-````
 
 ## Usage
 

@@ -189,7 +189,7 @@ Before starting to create **any** new files, create a new git branch using the t
 ## Translation Rules
 
 > - Use accurate, clear, and technically appropriate translations.
-> - Always use computer industry-standard terminology.
+> - Always use computer standard terminology.
 > **Full content:**
 
 ## Translating Includes (`docs/docs/includes/en`)

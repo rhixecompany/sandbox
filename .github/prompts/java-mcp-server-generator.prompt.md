@@ -224,7 +224,6 @@ A Model Context Protocol server built with Java and the official MCP Java SDK.
 ```bash
 mvn clean package
 ```
-````
 
 ### Gradle
 

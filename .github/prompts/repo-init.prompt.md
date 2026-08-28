@@ -24,7 +24,22 @@ date: '2026-08-25'
 
 ## Goal
 
-Create a comprehensive implementation plan that outlines the steps needed to achieve the desired outcomes, including timelines, milestones, and resource allocation. The end state leaves both the target repository and the Hermes root free of duplicate files, with a single canonical source of truth for prompts, skills, agents, hooks, and instructions.
+Initialize a Hermes-managed repository and its accompanying Hermes root (`~/AppData/Local/hermes`) to a consistent, deduplicated state. The end state has exactly one canonical copy of every artifact (prompts, skills, agents, hooks, instructions, plans) — no duplicates, no broken references, no stale wrappers.
+
+## Prerequisites
+
+- Operating from `pwd` inside the target repo and having read/write access to the Hermes root
+- 14-skill protocol loaded: `/using-superpowers`, `/brainstorming`, `/user-communication-preferences`, `/mcp-sequential-thinking`, `/mcp-filesystem`, `/mcp-ast-grep`, `/mcp-memory`, `/plan`, `/plans-and-specs`, `/create-implementation-plan`, `/implementation-plan`, `/executing-plans`, `/writing-clearly-and-concisely`, `/subagent-driven-development`
+- `repo-management.prompt.md` for rename operations (out of scope here)
+- `prompt-builder.prompt.md` for authoring new content (out of scope here)
+- `prompts-fix.prompt.md` for cross-platform migration (out of scope here)
+- `repo.prompt.md` for workspace-level onboarding (out of scope here)
+
+## Inputs
+
+- The current workspace (`pwd`) and the Hermes root (`~/AppData/Local/hermes`)
+- The list of files already known to the user (for context) plus an authoritative fresh scan
+- Any user constraints on what counts as a duplicate, what to keep, and what to delete
 
 ## Skills Required
 
@@ -46,12 +61,6 @@ Load these skills in order before any triage, dedupe, or delete step. Each skill
 - `/subagent-driven-development`
 
 > The full skill list is the contract. Do not skip a skill; later phases assume the earlier ones have already shaped context.
-
-## Inputs
-
-- The current workspace (`pwd`) and the Hermes root (`~/AppData/Local/hermes`).
-- The list of files already known to the user (for context) plus an authoritative fresh scan.
-- Any user constraints on what counts as a duplicate, what to keep, and what to delete.
 
 ## Outputs
 

@@ -154,7 +154,7 @@ metadata:
 
 ## Goal
 
-Create a comprehensive plan for converting plaintext prompts to markdown, enhancing prompt quality, and updating related implementation plans.
+Create a complete plan for converting plaintext prompts to markdown, enhancing prompt quality, and updating related implementation plans.
 
 >> Create a detailed prompt-library plan> and verification criteria.
 
@@ -201,7 +201,7 @@ Use this prompt when a prompt-library refresh needs planning beforeimplementatio
 | `prompt-builder` | Scaffold new prompt files |
 | `brainstorming` | Explore conversion and enhancement approaches |
 | `plans-and-specs` | Create detailed specs with file references |
-| `writing-skills` | Craft and optimize prompts and instructions |
+| `writing-skills` | Craft and improve prompts and instructions |
 | `writing-plans` | Structure the plan and its sections |
 | `acpx-executor` | Execute a prompt via any ACPX provider |
 | `executing-plans` | Execute implementation steps in order |

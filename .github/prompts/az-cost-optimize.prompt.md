@@ -109,7 +109,7 @@ metadata:
 
 ## Goal
 
-Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations.
+Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and improve costs - creating GitHub issues for identified optimizations.
 
 ## Azure Cost OptimizeThis workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to generate cost optimization recommendations. It creates individual GitHub issues for each optimization opportunity plus one EPIC issue to coordinate implementation, enabling efficient tracking and execution of cost savings initiatives.
 
@@ -186,7 +186,7 @@ graph TB subgraph "Resource Group: [name]" [Generated architecture diagram showi
 
 ## Template References
 
-Detailed templates in `templates/az-cost-optimize/`:- `cost_optimization_brief_title.md`- `workflow_steps.md`
+Detailed templates in `templates/az-cost-improve/`:- `cost_optimization_brief_title.md`- `workflow_steps.md`
 
 ## Personas
 

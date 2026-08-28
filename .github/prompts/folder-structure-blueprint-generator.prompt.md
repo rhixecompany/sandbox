@@ -143,7 +143,7 @@ Use when you need to work on the current workspace or task.
 
 ## Generated Prompt
 
-> "Analyze the project's folder structure and create a comprehensive 'Project_Fold>>
+> "Analyze the project's folder structure and create a complete 'Project_Fold>>
 
 ### Initial Auto-detection Phase
 

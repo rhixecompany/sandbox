@@ -62,7 +62,7 @@ Ask the user for:
 ## File Templates
 
 > "Tests\\\\": "tests/"
-> "optimize-autoloader": true,
+> "improve-autoloader": true,
 
 > **Full content:** `templates/php-mcp-server-generator/file_templates.md`
 

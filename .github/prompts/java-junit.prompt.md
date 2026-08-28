@@ -141,7 +141,7 @@ Get best practices for JUnit 5 unit testing, including data-driven tests.
 
 - Use a mocking framework like Mockito to create mock objects for dependencies.
 - Use `@Mock` and `@InjectMocks` annotations from Mockito to simplify mock creation and injection.
-- Use interfaces to facilitate mocking.
+- Use interfaces to helps mocking.
 
 ## Test Organization
 

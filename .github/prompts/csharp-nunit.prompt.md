@@ -136,7 +136,7 @@ Get best practices for NUnit unit testing, including data-driven tests.
 
 ## Mocking and Isolation
 
-- Consider using Moq or NSubstitute alongside NUnit- Mock dependencies to isolate units under test- Use interfaces to facilitate mocking- Consider using a DI container for complex test setups
+- Consider using Moq or NSubstitute alongside NUnit- Mock dependencies to isolate units under test- Use interfaces to helps mocking- Consider using a DI container for complex test setups
 
 ## Test Organization
 

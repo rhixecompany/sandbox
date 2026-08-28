@@ -161,7 +161,7 @@ Use when you need to work on the current workspace or task.
 
 ## Performance Considerations
 
-- Use build arguments for configuration that might change between environments- use build cache efficiently by ordering layers from least to most frequently changing- Consider parallelization in build steps when possible- Set appropriate environment variables like NODE_ENV=production to optimize runtime behavior- Use appropriate healthchecks for the application type with the HEALTHCHECK instruction
+- Use build arguments for configuration that might change between environments- use build cache efficiently by ordering layers from least to most frequently changing- Consider parallelization in build steps when possible- Set appropriate environment variables like NODE_ENV=production to improve runtime behavior- Use appropriate healthchecks for the application type with the HEALTHCHECK instruction
 
 ## Template References
 

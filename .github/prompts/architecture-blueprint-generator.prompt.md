@@ -140,7 +140,7 @@ ${PROJECT_TYPE="Auto-detect|.NET|Java|React|Angular|Python|Node.js|Flutter|Other
 
 ## Generated Prompt
 
-> "Create a comprehensive 'Project_Architecture_Blueprint.md' document that thorou>>
+> "Create a complete 'Project_Architecture_Blueprint.md' document that thorou>>
 
 ### 1. Architecture Detection and Analysis
 
