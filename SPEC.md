@@ -43,6 +43,7 @@ Make all 23 Hermes MCP servers fully operational with global bunx dependencies, 
 ### MCP Servers (23 total)
 
 **npm/bunx-based (12):**
+
 1. ast-grep — @notprolands/ast-grep-mcp ✅
 2. code-sandbox — node-code-sandbox-mcp ⚠ (fails npx too — needs investigation)
 3. fetch — mcp-server-fetch-typescript ✅
@@ -56,48 +57,46 @@ Make all 23 Hermes MCP servers fully operational with global bunx dependencies, 
 11. postgres — @yawlabs/postgres-mcp@0.10.0 (correct name)
 12. pytest — pytest-mcp-server@1.1.6 (correct name)
 
-**HTTP-based (8 — no npm install needed):**
-13. honcho — https://mcp.honcho.dev/
-14. neon — https://mcp.neon.tech/mcp
-15. context7 — https://mcp.context7.com/mcp
-16. sentry — https://mcp.sentry.dev/mcp
-17. tavily — https://mcp.tavily.com/mcp/
-18. parallel-search — https://search.parallel.ai/mcp
-19. parallel-task — https://task-mcp.parallel.ai/mcp
-20. smithery — https://mcp.smithery.ai/alexanderrhixe30
+**HTTP-based (8 — no npm install needed):** 13. honcho — https://mcp.honcho.dev/ 14. neon — https://mcp.neon.tech/mcp 15. context7 — https://mcp.context7.com/mcp 16. sentry — https://mcp.sentry.dev/mcp 17. tavily — https://mcp.tavily.com/mcp/ 18. parallel-search — https://search.parallel.ai/mcp 19. parallel-task — https://task-mcp.parallel.ai/mcp 20. smithery — https://mcp.smithery.ai/alexanderrhixe30
 
-**Binary/executable (3 — no npm install needed):**
-21. mcp-docker — docker mcp gateway
-22. mindstudio — .mindstudio/bin/mindstudio.exe mcp
-23. python-quality/tooling-lint/tooling-config — Python scripts
+**Binary/executable (3 — no npm install needed):** 21. mcp-docker — docker mcp gateway 22. mindstudio — .mindstudio/bin/mindstudio.exe mcp 23. python-quality/tooling-lint/tooling-config — Python scripts
 
 ### Reference Files
+
 - ~/Desktop/instructions/: 189 *.instructions.md
 - ~/Desktop/docs/: documentation dir
 - ~/Desktop/SandBox/**/*.instructions.md: 407 files
 
 ### Profiles (7)
+
 default, alexa, code-architect, creative-director, exec-assistant, patient-tutor, research-analyst
 
 ## Requirements
 
 ### R1: Global bunx installation
+
 Install all npm packages globally. For packages not on npm under expected names, use correct names found via npm search.
 
 ### R2: MCP Skills
+
 Each MCP server gets SKILL.md with agent-skills.instructions.md format.
 
 ### R3: Best Practice Integration
+
 Skills incorporate agent-skills, agent-safety, context7, context-engineering, code-review guidance.
 
 ### R4: Profile Sync
+
 All 7 profiles have complete SOUL.md/USER.md/MEMORY.md.
 
 ### R5: Tools/Hooks/Quick Commands
+
 MCP management tool, health check hook, quick commands in config.yaml.
 
 ### R6: Reference Triage
+
 Categorize all instruction files by domain.
 
 ## Acceptance Criteria
+
 - AC1-10 as listed in frontmatter

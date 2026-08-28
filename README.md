@@ -12,7 +12,7 @@
 ## Table of Contents
 
 - [AI Assistant & Copilot Instructions](#-ai-assistant--copilot-instructions)
-- [Technology Stack](#-technology-stack)
+- [Technology Stack](#technology-stack)
 - [Project Architecture](#-project-architecture)
 - [Project Index](#-project-index)
 - [Getting Started](#-getting-started)
@@ -43,9 +43,7 @@ This guide provides:
 
 ---
 
-## Table of Contents
-
-- [Technology Stack](#-technology-stack)
+## Technology Stack
 
 ### Runtimes & Package Managers
 

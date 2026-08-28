@@ -214,12 +214,12 @@ transcripts. Procedures and workflows belong in skills, not memory.
 
 ## 4 Mandatory Rules (Non-Negotiable)
 
-| Rule | Key Requirement | Audit Signal |
-|------|-----------------|--------------|
-| 1. Session Start | Read SESSION_REPORT.md, explain back before any work | `grep -q "SESSION_REPORT.md" SOUL.md` |
-| 2. MCP Server Tools | Prefer MCP tools over native for token efficiency | `grep -q "MCP server tools" SOUL.md` |
-| 3. Profile Selection | Switch to correct profile for task type | `grep -q "Profile Selection" SOUL.md` |
-| 4. Python Scripts | No inline scripts; use `scripts/` dir, debug/fix/rerun | `grep -q "Python Scripts" SOUL.md` |
+| Rule                 | Key Requirement                                        | Audit Signal                          |
+| -------------------- | ------------------------------------------------------ | ------------------------------------- |
+| 1. Session Start     | Read SESSION_REPORT.md, explain back before any work   | `grep -q "SESSION_REPORT.md" SOUL.md` |
+| 2. MCP Server Tools  | Prefer MCP tools over native for token efficiency      | `grep -q "MCP server tools" SOUL.md`  |
+| 3. Profile Selection | Switch to correct profile for task type                | `grep -q "Profile Selection" SOUL.md` |
+| 4. Python Scripts    | No inline scripts; use `scripts/` dir, debug/fix/rerun | `grep -q "Python Scripts" SOUL.md`    |
 
 These 4 rules are always present and current. Cross-profile sync applies these to ALL profiles (`code-architect`, `research-analyst`, `creative-director`, `exec-assistant`, `patient-tutor`, `adminbot`, `default`). Each profile keeps unique personality + shared strict rules.
 
@@ -230,6 +230,7 @@ These 4 rules are always present and current. Cross-profile sync applies these t
 When a user request will modify **more than 4 files**, you MUST invoke the following skill stack before proceeding:
 
 **Required Skills:**
+
 - `/using-superpowers` — Foundational workflow
 - `/brainstorming` — Structured idea generation
 - `/user-communication-preferences` — Alexa's execution style
@@ -246,6 +247,7 @@ When a user request will modify **more than 4 files**, you MUST invoke the follo
 - `/subagent-driven-development` — Parallel subagent delegation
 
 **Protocol:**
+
 1. Load all 14 skills above
 2. Create implementation plan via `/create-implementation-plan`
 3. Verify plan with user

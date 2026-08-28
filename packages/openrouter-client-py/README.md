@@ -69,14 +69,14 @@ response = await client.chat_send(
 
 ## Types
 
-| Type | Description |
-|------|-------------|
-| `OpenRouterClientConfig` | Client configuration (api_key, http_referer, app_title) |
-| `Message` | Chat message with role, content, optional tool calls |
-| `ToolCall` | Function tool call with id, type, and function details |
-| `ModelChoice` | A single completion choice with message and finish reason |
-| `Usage` | Token usage statistics (prompt, completion, total) |
-| `ChatCompletion` | Full API response with id, model, choices, and usage |
+| Type                     | Description                                               |
+| ------------------------ | --------------------------------------------------------- |
+| `OpenRouterClientConfig` | Client configuration (api_key, http_referer, app_title)   |
+| `Message`                | Chat message with role, content, optional tool calls      |
+| `ToolCall`               | Function tool call with id, type, and function details    |
+| `ModelChoice`            | A single completion choice with message and finish reason |
+| `Usage`                  | Token usage statistics (prompt, completion, total)        |
+| `ChatCompletion`         | Full API response with id, model, choices, and usage      |
 
 ## Available Models
 

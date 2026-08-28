@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 /**
  * Sync MCP Configuration
- * 
+ *
  * Keeps opencode.json MCP section in sync with .vscode/mcp.json (canonical source)
  * Run this after any changes to .vscode/mcp.json
  */

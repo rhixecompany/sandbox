@@ -1,10 +1,10 @@
 {
-  "sessionID": "ses_fcb6058cbffeJKfAfB3SUocRAS",
-  "updatedAt": "2026-08-24T16:34:33.648Z",
-  "sources": {
-    "background-task": {
-      "state": "idle",
-      "updatedAt": "2026-08-24T16:34:33.648Z"
-    }
-  }
+	"sessionID": "ses_fcb6058cbffeJKfAfB3SUocRAS",
+	"updatedAt": "2026-08-24T16:34:33.648Z",
+	"sources": {
+		"background-task": {
+			"state": "idle",
+			"updatedAt": "2026-08-24T16:34:33.648Z"
+		}
+	}
 }

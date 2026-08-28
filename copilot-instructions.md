@@ -47,6 +47,7 @@ bun run spellcheck            # cspell
 Each subproject is autonomous. See its `package.json` and `README.md` for project-specific commands.
 
 **Examples:**
+
 - **Banking** (Next.js 16 + Drizzle): `cd projects/Banking && bun run dev`
 - **comicwise** (Next.js + Prisma): `cd projects/comicwise && bun run dev`
 - **Bash** (TS automation): `cd projects/Bash && bun run lint`
@@ -55,14 +56,14 @@ Each subproject is autonomous. See its `package.json` and `README.md` for projec
 
 ## Major Subprojects at a Glance
 
-| Project | Stack | Key Command | Purpose |
-|---------|-------|-------------|---------|
-| **Banking** | Next.js 16, Drizzle, Plaid, Dwolla | `bun run dev` | Fintech app (bank simulation) |
-| **comicwise** | Next.js 15, Prisma, Stripe | `bun run dev` | Comic streaming platform |
-| **Bash** | Bun/TypeScript | `bun run lint` | Automation toolkit & scripts |
-| **ecom** | Django REST, React/Redux | `python manage.py runserver` | E-commerce application |
-| **mcp-servers** | Multi-language | `bun run <lang>-server` | MCP server implementations |
-| **Python-projects** | Python 3.11/3.13 | `python scripts/...` | 18+ standalone scripts |
+| Project             | Stack                              | Key Command                  | Purpose                       |
+| ------------------- | ---------------------------------- | ---------------------------- | ----------------------------- |
+| **Banking**         | Next.js 16, Drizzle, Plaid, Dwolla | `bun run dev`                | Fintech app (bank simulation) |
+| **comicwise**       | Next.js 15, Prisma, Stripe         | `bun run dev`                | Comic streaming platform      |
+| **Bash**            | Bun/TypeScript                     | `bun run lint`               | Automation toolkit & scripts  |
+| **ecom**            | Django REST, React/Redux           | `python manage.py runserver` | E-commerce application        |
+| **mcp-servers**     | Multi-language                     | `bun run <lang>-server`      | MCP server implementations    |
+| **Python-projects** | Python 3.11/3.13                   | `python scripts/...`         | 18+ standalone scripts        |
 
 ---
 
@@ -131,12 +132,12 @@ bun run test              # Vitest
 
 ### File Naming
 
-| Language | Convention | Examples |
-|----------|-----------|----------|
-| **TypeScript** | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx` |
-| **Python** | `snake_case.py` (PEP 8) | `health_check.py`, `audit_prompts.py` |
-| **PowerShell** | `PascalCase.ps1` | `Orchestrator-Unified.ps1` |
-| **Bash** | `kebab-case.sh` | `test-all.sh`, `cache-clean.sh` |
+| Language       | Convention                                               | Examples                              |
+| -------------- | -------------------------------------------------------- | ------------------------------------- |
+| **TypeScript** | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx`   |
+| **Python**     | `snake_case.py` (PEP 8)                                  | `health_check.py`, `audit_prompts.py` |
+| **PowerShell** | `PascalCase.ps1`                                         | `Orchestrator-Unified.ps1`            |
+| **Bash**       | `kebab-case.sh`                                          | `test-all.sh`, `cache-clean.sh`       |
 
 ### Code Style
 
@@ -149,6 +150,7 @@ bun run test              # Vitest
 ### Git Conventions
 
 #### Branch Naming
+
 ```
 <type>/<project>/<kebab-case-description>
 ```
@@ -156,15 +158,18 @@ bun run test              # Vitest
 **Types:** `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`  
 **Project:** One of the 17+ subprojects under `projects/`, or `root` for workspace-level changes  
 **Examples:**
+
 - `feat/banking/add-plaid-webhook`
 - `fix/comicwise/stripe-charge-retry`
 - `docs/root/update-readme`
 - `refactor/bash/cleanup-cache-module`
 
 #### PR Target Branch
+
 All PRs target `development` branch (protected), not `main`. Releases flow from `main` → `production`.
 
 #### Commit Messages
+
 ```
 <type>: <description>
 
@@ -222,6 +227,7 @@ Root `tsconfig.json` **excludes** `projects/` to prevent type-checking subprojec
 ### Root Workspace Scope
 
 The root workspace handles **only**:
+
 - Workspace-level TypeScript/JavaScript (configuration, utilities)
 - Python scripts at workspace root
 - Shared tooling configuration
@@ -237,6 +243,7 @@ The root workspace handles **only**:
 ### TypeScript Strict Mode
 
 All TypeScript files:
+
 ```typescript
 // Enabled in tsconfig.json:
 {
@@ -271,6 +278,7 @@ Ruff is configured at root (`.ruff.toml`). Use `bun run spellcheck` for all Pyth
 ### Multi-Wrapper Scripts
 
 Any cross-platform automation script **must** have three wrappers:
+
 ```bash
 # Canonical location: C:/Users/Alexa/AppData/Local/hermes/scripts/
 operation.sh       # Bash (Linux/WSL/Git Bash)
@@ -371,4 +379,4 @@ Check the project's `test:ui` (Playwright) or `test:browser` (Vitest) output for
 - **CLAUDE.md** — Claude-specific behavior notes
 - **.hermes.md** — Hermes-specific project overrides
 - **CONTRIBUTING.md** — Branching model and workflow details
-- **projects/*/AGENTS.md** — Subproject-specific guidance
+- **projects/\*/AGENTS.md** — Subproject-specific guidance

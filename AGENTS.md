@@ -1,5 +1,4 @@
 ---
-
 # AGENTS.md Template — Canonical Agent Guidance
 #
 
@@ -17,7 +16,6 @@
 #   C:/Users/Alexa/AppData/Local/hermes          - Hermes home path
 
 #   2026-08-24        - Last verified date
-
 ---
 
 # SandBox — AGENTS.md
@@ -62,23 +60,23 @@ SandBox/
 
 ## 2. Technology Stack
 
-| Layer | Technology | Notes |
-|-------|------------|-------|
-| **Runtime (TS)** | Bun 1.3.14+ | Runtime + package manager + test runner. DO NOT use npm/pnpm unless project says otherwise |
-| **Runtime (Python)** | Python 3.11 / 3.13 | Dual install: python3=3.13.14, python=3.11.15 (venv). PEP 668 enforced |
-| **Python Package Mgr** | pip + uv | Requirements in `requirements.txt`. Prefer uv for speed |
-| **TypeScript** | ESNext target, strict mode | `tsconfig.json` — `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, `Preserve` modules |
-| **Python Quality** | Ruff + Pyright | Ruff for lint/format (select E,F,I,N,W,UP,B), Pyright for typecheck |
-| **JS Linting** | ESLint 10 flat config | `eslint.config.mts` — zero-warning gate (`--max-warnings=0`) |
-| **Formatter** | Prettier 3 | `.prettierrc.json` / `.prettierrc.ts` |
-| **Markdown** | markdownlint-cli2 | `.markdownlintrc.json` — MD013 line_length=500, fenced backtick style |
-| **Spell Check** | cspell 10 | `cspell.json` |
-| **Testing (TS)** | Vitest | `bun run test` or `vitest run` |
-| **Testing (Python)** | pytest 9 | `pytest` with `pytest-asyncio` |
-| **Browser Testing** | Playwright | `.github/prompts/playwright-*.prompt.md` patterns |
-| **Pre-commit** | pre-commit 4.6 | `.pre-commit-config.yaml` |
-| **Changelog** | git-cliff 2.13 | `cliff.toml` |
-| **EditorConfig** | `.editorconfig` | indent_style=tab, indent_size=2, end_of_line=crlf, charset=utf-8 |
+| Layer                  | Technology                 | Notes                                                                                      |
+| ---------------------- | -------------------------- | ------------------------------------------------------------------------------------------ |
+| **Runtime (TS)**       | Bun 1.3.14+                | Runtime + package manager + test runner. DO NOT use npm/pnpm unless project says otherwise |
+| **Runtime (Python)**   | Python 3.11 / 3.13         | Dual install: python3=3.13.14, python=3.11.15 (venv). PEP 668 enforced                     |
+| **Python Package Mgr** | pip + uv                   | Requirements in `requirements.txt`. Prefer uv for speed                                    |
+| **TypeScript**         | ESNext target, strict mode | `tsconfig.json` — `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, `Preserve` modules   |
+| **Python Quality**     | Ruff + Pyright             | Ruff for lint/format (select E,F,I,N,W,UP,B), Pyright for typecheck                        |
+| **JS Linting**         | ESLint 10 flat config      | `eslint.config.mts` — zero-warning gate (`--max-warnings=0`)                               |
+| **Formatter**          | Prettier 3                 | `.prettierrc.json` / `.prettierrc.ts`                                                      |
+| **Markdown**           | markdownlint-cli2          | `.markdownlintrc.json` — MD013 line_length=500, fenced backtick style                      |
+| **Spell Check**        | cspell 10                  | `cspell.json`                                                                              |
+| **Testing (TS)**       | Vitest                     | `bun run test` or `vitest run`                                                             |
+| **Testing (Python)**   | pytest 9                   | `pytest` with `pytest-asyncio`                                                             |
+| **Browser Testing**    | Playwright                 | `.github/prompts/playwright-*.prompt.md` patterns                                          |
+| **Pre-commit**         | pre-commit 4.6             | `.pre-commit-config.yaml`                                                                  |
+| **Changelog**          | git-cliff 2.13             | `cliff.toml`                                                                               |
+| **EditorConfig**       | `.editorconfig`            | indent_style=tab, indent_size=2, end_of_line=crlf, charset=utf-8                           |
 
 ---
 
@@ -135,13 +133,13 @@ Each subproject has its own AGENTS.md with specific commands. See subproject AGE
 
 ### File Naming
 
-| Language | Convention | Example |
-|----------|------------|---------|
-| TypeScript | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx` |
-| Python | `snake_case.py` (PEP 8) | `health_check.py`, `audit_prompts.py` |
-| PowerShell | `PascalCase.ps1` | `Orchestrator-Unified.ps1` |
-| Shell (Bash) | `kebab-case.sh` | `test-all.sh`, `cache-clean.sh` |
-| Markdown | `kebab-case.md` | `health-check.md` |
+| Language     | Convention                                               | Example                               |
+| ------------ | -------------------------------------------------------- | ------------------------------------- |
+| TypeScript   | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx`   |
+| Python       | `snake_case.py` (PEP 8)                                  | `health_check.py`, `audit_prompts.py` |
+| PowerShell   | `PascalCase.ps1`                                         | `Orchestrator-Unified.ps1`            |
+| Shell (Bash) | `kebab-case.sh`                                          | `test-all.sh`, `cache-clean.sh`       |
+| Markdown     | `kebab-case.md`                                          | `health-check.md`                     |
 
 ### Code Style
 
@@ -207,20 +205,20 @@ Examples:
 
 Before using native tools (terminal commands, direct file access), check MCP servers. The workspace has **16 active MCP servers** configured.
 
-| Priority | MCP Server | Equivalent Native | Purpose |
-|----------|------------|-------------------|---------|
-| 1 | `filesystem` | `read_file`, `write_file`, `search_files`, `patch` | File read/write/stat/search ops |
-| 2 | `github` | `gh` CLI | PR, issues, file contents, repos |
-| 3 | `ast-grep` | `grep`/`rg` | AST-based code search and replace |
-| 4 | `playwright` | `browser_*` tools | Browser automation for interactive pages |
-| 5 | `fetch` | `curl` | HTTP web page content extraction |
-| 6 | `sequential-thinking` | N/A | Structured multi-step reasoning |
-| 7 | `code-sandbox` | `terminal` | Isolated Node.js sandbox for running code |
-| 8 | `mcp-docker` | `docker` CLI | Container management + GitHub ops |
-| 9 | `memory` | N/A | Persistent cross-session memory |
-| 10 | `python-quality` | Manual | Ruff lint + Pyright typecheck on Python files |
-| 11 | `tooling-lint` | Manual | ESLint, Prettier, markdownlint, cspell |
-| 12 | `tooling-config` | Manual | pre-commit, git-cliff, .gitignore validation |
+| Priority | MCP Server            | Equivalent Native                                  | Purpose                                       |
+| -------- | --------------------- | -------------------------------------------------- | --------------------------------------------- |
+| 1        | `filesystem`          | `read_file`, `write_file`, `search_files`, `patch` | File read/write/stat/search ops               |
+| 2        | `github`              | `gh` CLI                                           | PR, issues, file contents, repos              |
+| 3        | `ast-grep`            | `grep`/`rg`                                        | AST-based code search and replace             |
+| 4        | `playwright`          | `browser_*` tools                                  | Browser automation for interactive pages      |
+| 5        | `fetch`               | `curl`                                             | HTTP web page content extraction              |
+| 6        | `sequential-thinking` | N/A                                                | Structured multi-step reasoning               |
+| 7        | `code-sandbox`        | `terminal`                                         | Isolated Node.js sandbox for running code     |
+| 8        | `mcp-docker`          | `docker` CLI                                       | Container management + GitHub ops             |
+| 9        | `memory`              | N/A                                                | Persistent cross-session memory               |
+| 10       | `python-quality`      | Manual                                             | Ruff lint + Pyright typecheck on Python files |
+| 11       | `tooling-lint`        | Manual                                             | ESLint, Prettier, markdownlint, cspell        |
+| 12       | `tooling-config`      | Manual                                             | pre-commit, git-cliff, .gitignore validation  |
 
 ---
 
@@ -243,15 +241,15 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### Key Prompt Categories
 
-| Category | Example Files | Purpose |
-|----------|---------------|---------|
+| Category     | Example Files                                                                                                                                    | Purpose                    |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
 | Architecture | `architecture-blueprint-generator.prompt.md`, `folder-structure-blueprint-generator.prompt.md`, `technology-stack-blueprint-generator.prompt.md` | Generate architecture docs |
-| Generator | `agents-generator.prompt.md`, `create-agentsmd.prompt.md`, `readme-blueprint-generator.prompt.md` | Generate agent guidance |
-| Dev | `debug-issue.prompt.md`, `refactor-code.prompt.md`, `code-review.prompt.md` | Development workflows |
-| Testing | `write-tests.prompt.md`, `playwright-generate-test.prompt.md`, `pytest-coverage.prompt.md` | Test generation |
-| DevOps | `containerize-aspnetcore.prompt.md`, `multi-stage-dockerfile.prompt.md`, `terraform-azurerm-set-diff-analyzer.prompt.md` | Infrastructure |
-| Planning | `create-implementation-plan.prompt.md`, `breakdown-plan.prompt.md`, `executing-plans.prompt.md` | Project planning |
-| Content | `comprehensive-prompt-enhancer.prompt.md`, `convert-plaintext-to-md.prompt.md` | Content creation |
+| Generator    | `agents-generator.prompt.md`, `create-agentsmd.prompt.md`, `readme-blueprint-generator.prompt.md`                                                | Generate agent guidance    |
+| Dev          | `debug-issue.prompt.md`, `refactor-code.prompt.md`, `code-review.prompt.md`                                                                      | Development workflows      |
+| Testing      | `write-tests.prompt.md`, `playwright-generate-test.prompt.md`, `pytest-coverage.prompt.md`                                                       | Test generation            |
+| DevOps       | `containerize-aspnetcore.prompt.md`, `multi-stage-dockerfile.prompt.md`, `terraform-azurerm-set-diff-analyzer.prompt.md`                         | Infrastructure             |
+| Planning     | `create-implementation-plan.prompt.md`, `breakdown-plan.prompt.md`, `executing-plans.prompt.md`                                                  | Project planning           |
+| Content      | `comprehensive-prompt-enhancer.prompt.md`, `convert-plaintext-to-md.prompt.md`                                                                   | Content creation           |
 
 ---
 
@@ -259,15 +257,15 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### Profile Configuration
 
-| Profile | Model / Guidance |
-|---------|------------------|
-| **default** ⬤ | Verify with `hermes profile list` / `hermes config show` |
-| alexa | Verify with `hermes profile list` / `hermes config show` |
-| code-architect | Verify with `hermes profile list` / `hermes config show` |
+| Profile           | Model / Guidance                                         |
+| ----------------- | -------------------------------------------------------- |
+| **default** ⬤     | Verify with `hermes profile list` / `hermes config show` |
+| alexa             | Verify with `hermes profile list` / `hermes config show` |
+| code-architect    | Verify with `hermes profile list` / `hermes config show` |
 | creative-director | Verify with `hermes profile list` / `hermes config show` |
-| exec-assistant | Verify with `hermes profile list` / `hermes config show` |
-| patient-tutor | Verify with `hermes profile list` / `hermes config show` |
-| research-analyst | Verify with `hermes profile list` / `hermes config show` |
+| exec-assistant    | Verify with `hermes profile list` / `hermes config show` |
+| patient-tutor     | Verify with `hermes profile list` / `hermes config show` |
+| research-analyst  | Verify with `hermes profile list` / `hermes config show` |
 
 ### Session Startup Sequence
 
@@ -290,14 +288,14 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### File Hierarchy (Precedence Order)
 
-| # | File | Purpose | Authority |
-|---|------|---------|-----------|
-| 1 | `.hermes.md` | Hermes-specific overrides | Highest — overrides all below |
-| 2 | `AGENTS.md` | General agent guidance | This file |
-| 3 | `PROJECT_RULES.md` | Workspace-level rules | Rules |
-| 4 | `MASTER_RULES.md` | Universal agent rules | Cross-project rules |
-| 5 | `CLAUDE.md` | Claude-specific behavior | Copilot/Claude only |
-| 6 | `.cursorrules` | Cursor IDE rules | Cursor IDE only |
+| #   | File               | Purpose                   | Authority                     |
+| --- | ------------------ | ------------------------- | ----------------------------- |
+| 1   | `.hermes.md`       | Hermes-specific overrides | Highest — overrides all below |
+| 2   | `AGENTS.md`        | General agent guidance    | This file                     |
+| 3   | `PROJECT_RULES.md` | Workspace-level rules     | Rules                         |
+| 4   | `MASTER_RULES.md`  | Universal agent rules     | Cross-project rules           |
+| 5   | `CLAUDE.md`        | Claude-specific behavior  | Copilot/Claude only           |
+| 6   | `.cursorrules`     | Cursor IDE rules          | Cursor IDE only               |
 
 ### Available Hermes Toolsets (16)
 

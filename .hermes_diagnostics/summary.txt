@@ -1,0 +1,12 @@
+hermes doctor -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_doctor.log
+hermes doctor --fix -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_doctor_--fix.log
+hermes security audit -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_security_audit.log
+hermes status -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_status.log
+hermes insights -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_insights.log
+hermes logs list -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_logs_list.log
+hermes logs errors -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_logs_errors.log
+hermes logs desktop -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_logs_desktop.log
+hermes logs gateway -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_logs_gateway.log
+hermes logs gui -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_logs_gui.log
+hermes logs agent -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/hermes_logs_agent.log
+bun run check -> see /c/Users/Alexa/Desktop/SandBox/.hermes_diagnostics/bun_run_check.log

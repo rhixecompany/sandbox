@@ -1,253 +1,189 @@
 ﻿{
-    "$schema":  "https://opencode.ai/config.json",
-    "mcp":  {
-                "ast-grep":  {
-                                 "command":  [
-                                                 "bunx",
-                                                 "-y",
-                                                 "@notprolands/ast-grep-mcp"
-                                             ],
-                                 "enabled":  true,
-                                 "type":  "local"
-                             },
-                "code-sandbox":  {
-                                     "command":  [
-                                                     "bunx",
-                                                     "-y",
-                                                     "node-code-sandbox-mcp"
-                                                 ],
-                                     "enabled":  true,
-                                     "type":  "local"
-                                 },
-                "context7":  {
-                                 "enabled":  true,
-                                 "type":  "remote",
-                                 "url":  "https://mcp.context7.com/mcp"
-                             },
-                "django":  {
-                               "command":  [
-                                               "bunx",
-                                               "-y",
-                                               "django-mcp"
-                                           ],
-                               "enabled":  true,
-                               "type":  "local",
-                               "env":  {
-                                           "DJANGO_SETTINGS_MODULE":  "projects.ecom.backend.config.settings"
-                                       }
-                           },
-                "docs":  {
-                             "command":  [
-                                             "bunx",
-                                             "-y",
-                                             "docs-mcp",
-                                             "docs/"
-                                         ],
-                             "enabled":  true,
-                             "type":  "local"
-                         },
-                "fetch":  {
-                              "command":  [
-                                              "bunx",
-                                              "-y",
-                                              "mcp-server-fetch-typescript"
-                                          ],
-                              "enabled":  true,
-                              "type":  "local"
-                          },
-                "filesystem":  {
-                                   "command":  [
-                                                   "bunx",
-                                                   "-y",
-                                                   "@modelcontextprotocol/server-filesystem",
-                                                   "C:/Users/Alexa",
-                                                   "C:/Users/Alexa/AppData/Local/hermes",
-                                                   "${workspaceFolder}"
-                                               ],
-                                   "enabled":  true,
-                                   "type":  "local"
-                               },
-                "github":  {
-                               "command":  [
-                                               "bunx",
-                                               "-y",
-                                               "@modelcontextprotocol/server-github"
-                                           ],
-                               "enabled":  true,
-                               "type":  "local",
-                               "env":  {
-                                           "GITHUB_PERSONAL_ACCESS_TOKEN":  "${env:GITHUB_TOKEN}"
-                                       }
-                           },
-                "honcho":  {
-                               "enabled":  true,
-                               "type":  "remote",
-                               "url":  "https://mcp.honcho.dev/"
-                           },
-                "mindstudio":  {
-                                   "command":  "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
-                                   "args":  [
-                                                "mcp"
-                                            ],
-                                   "enabled":  true,
-                                   "type":  "local"
-                               },
-                "mcp-docker":  {
-                                   "command":  [
-                                                   "docker",
-                                                   "mcp",
-                                                   "gateway",
-                                                   "run",
-                                                   "--profile",
-                                                   "adminbot"
-                                               ],
-                                   "enabled":  true,
-                                   "type":  "local"
-                               },
-                "memory":  {
-                               "command":  [
-                                               "bunx",
-                                               "-y",
-                                               "@modelcontextprotocol/server-memory"
-                                           ],
-                               "enabled":  true,
-                               "type":  "local"
-                           },
-                "neon":  {
-                             "enabled":  true,
-                             "type":  "remote",
-                             "url":  "https://mcp.neon.tech/mcp"
-                         },
-                "parallel-search":  {
-                                        "enabled":  true,
-                                        "type":  "remote",
-                                        "url":  "https://search.parallel.ai/mcp"
-                                    },
-                "parallel-task":  {
-                                      "enabled":  true,
-                                      "type":  "remote",
-                                      "url":  "https://task-mcp.parallel.ai/mcp"
-                                  },
-                "playwright":  {
-                                   "command":  [
-                                                   "bunx",
-                                                   "-y",
-                                                   "@playwright/mcp@0.0.78"
-                                               ],
-                                   "enabled":  true,
-                                   "type":  "local"
-                               },
-                "postgres":  {
-                                 "command":  [
-                                                 "bunx",
-                                                 "-y",
-                                                 "postgres-mcp"
-                                             ],
-                                 "enabled":  true,
-                                 "type":  "local",
-                                 "env":  {
-                                             "DATABASE_URL":  "${env:DATABASE_URL}"
-                                         }
-                             },
-                "pytest":  {
-                               "command":  [
-                                               "bunx",
-                                               "-y",
-                                               "pytest-mcp"
-                                           ],
-                               "enabled":  true,
-                               "type":  "local"
-                           },
-                "python-quality":  {
-                                       "command":  [
-                                                       "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-                                                       "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_server.py"
-                                                   ],
-                                       "enabled":  true,
-                                       "type":  "local"
-                                   },
-                "sentry":  {
-                               "enabled":  true,
-                               "type":  "remote",
-                               "url":  "https://mcp.sentry.dev/mcp"
-                           },
-                "sequential-thinking":  {
-                                            "command":  [
-                                                            "bunx",
-                                                            "-y",
-                                                            "@modelcontextprotocol/server-sequential-thinking"
-                                                        ],
-                                            "enabled":  true,
-                                            "type":  "local"
-                                        },
-                "smithery":  {
-                                 "enabled":  true,
-                                 "type":  "remote",
-                                 "url":  "https://mcp.smithery.ai/alexanderrhixe30"
-                             },
-                "tavily":  {
-                               "enabled":  true,
-                               "type":  "remote",
-                               "url":  "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
-                           },
-                "tooling-config":  {
-                                       "command":  [
-                                                       "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-                                                       "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_server.py"
-                                                   ],
-                                       "enabled":  true,
-                                       "type":  "local"
-                                   },
-                "tooling-lint":  {
-                                     "command":  [
-                                                     "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-                                                     "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_server.py"
-                                                 ],
-                                     "enabled":  true,
-                                     "type":  "local"
-                                 },
-                "anthropic-resources":  {
-                                            "url":  "https://resources.anthropic.com/mcp",
-                                            "type":  "remote",
-                                            "enabled":  true
-                                        },
-                "time":  {
-                             "command":  [
-                                             "bunx",
-                                             "-y",
-                                             "@modelcontextprotocol/server-time"
-                                         ],
-                             "type":  "local",
-                             "enabled":  true
-                         },
-                "plaid":  {
-                              "url":  "https://mcp.plaid.com/mcp",
-                              "type":  "remote",
-                              "enabled":  true
-                          },
-                "everart":  {
-                                "url":  "https://mcp.everart.ai/mcp",
-                                "type":  "remote",
-                                "enabled":  true
-                            },
-                "evals":  {
-                              "command":  [
-                                              "bunx",
-                                              "-y",
-                                              "@modelcontextprotocol/server-evals"
-                                          ],
-                              "type":  "local",
-                              "enabled":  true
-                          },
-                "stripe":  {
-                               "url":  "https://mcp.stripe.com/mcp",
-                               "type":  "remote",
-                               "enabled":  true
-                           }
-            },
-    "model":  "opencode/nemotron-3-ultra-free",
-    "plugin":  [
-                   "oh-my-openagent@latest"
-               ],
-    "small_model":  "opencode/nemotron-3-ultra-free"
+	"$schema": "https://opencode.ai/config.json",
+	"mcp": {
+		"ast-grep": {
+			"command": ["bunx", "-y", "@notprolands/ast-grep-mcp"],
+			"enabled": true,
+			"type": "local"
+		},
+		"code-sandbox": {
+			"command": ["bunx", "-y", "node-code-sandbox-mcp"],
+			"enabled": true,
+			"type": "local"
+		},
+		"context7": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://mcp.context7.com/mcp"
+		},
+		"django": {
+			"command": ["bunx", "-y", "django-mcp"],
+			"enabled": true,
+			"type": "local",
+			"env": {
+				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
+			}
+		},
+		"docs": {
+			"command": ["bunx", "-y", "docs-mcp", "docs/"],
+			"enabled": true,
+			"type": "local"
+		},
+		"fetch": {
+			"command": ["bunx", "-y", "mcp-server-fetch-typescript"],
+			"enabled": true,
+			"type": "local"
+		},
+		"filesystem": {
+			"command": [
+				"bunx",
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"C:/Users/Alexa",
+				"C:/Users/Alexa/AppData/Local/hermes",
+				"${workspaceFolder}"
+			],
+			"enabled": true,
+			"type": "local"
+		},
+		"github": {
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-github"],
+			"enabled": true,
+			"type": "local",
+			"env": {
+				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+			}
+		},
+		"honcho": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://mcp.honcho.dev/"
+		},
+		"mindstudio": {
+			"command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
+			"args": ["mcp"],
+			"enabled": true,
+			"type": "local"
+		},
+		"mcp-docker": {
+			"command": ["docker", "mcp", "gateway", "run", "--profile", "adminbot"],
+			"enabled": true,
+			"type": "local"
+		},
+		"memory": {
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-memory"],
+			"enabled": true,
+			"type": "local"
+		},
+		"neon": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://mcp.neon.tech/mcp"
+		},
+		"parallel-search": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://search.parallel.ai/mcp"
+		},
+		"parallel-task": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://task-mcp.parallel.ai/mcp"
+		},
+		"playwright": {
+			"command": ["bunx", "-y", "@playwright/mcp@0.0.78"],
+			"enabled": true,
+			"type": "local"
+		},
+		"postgres": {
+			"command": ["bunx", "-y", "postgres-mcp"],
+			"enabled": true,
+			"type": "local",
+			"env": {
+				"DATABASE_URL": "${env:DATABASE_URL}"
+			}
+		},
+		"pytest": {
+			"command": ["bunx", "-y", "pytest-mcp"],
+			"enabled": true,
+			"type": "local"
+		},
+		"python-quality": {
+			"command": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_server.py"
+			],
+			"enabled": true,
+			"type": "local"
+		},
+		"sentry": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://mcp.sentry.dev/mcp"
+		},
+		"sequential-thinking": {
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+			"enabled": true,
+			"type": "local"
+		},
+		"smithery": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://mcp.smithery.ai/alexanderrhixe30"
+		},
+		"tavily": {
+			"enabled": true,
+			"type": "remote",
+			"url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
+		},
+		"tooling-config": {
+			"command": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_server.py"
+			],
+			"enabled": true,
+			"type": "local"
+		},
+		"tooling-lint": {
+			"command": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_server.py"
+			],
+			"enabled": true,
+			"type": "local"
+		},
+		"anthropic-resources": {
+			"url": "https://resources.anthropic.com/mcp",
+			"type": "remote",
+			"enabled": true
+		},
+		"time": {
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-time"],
+			"type": "local",
+			"enabled": true
+		},
+		"plaid": {
+			"url": "https://mcp.plaid.com/mcp",
+			"type": "remote",
+			"enabled": true
+		},
+		"everart": {
+			"url": "https://mcp.everart.ai/mcp",
+			"type": "remote",
+			"enabled": true
+		},
+		"evals": {
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-evals"],
+			"type": "local",
+			"enabled": true
+		},
+		"stripe": {
+			"url": "https://mcp.stripe.com/mcp",
+			"type": "remote",
+			"enabled": true
+		}
+	},
+	"model": "opencode/nemotron-3-ultra-free",
+	"plugin": ["oh-my-openagent@latest"],
+	"small_model": "opencode/nemotron-3-ultra-free"
 }

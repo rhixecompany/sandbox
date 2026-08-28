@@ -8,13 +8,13 @@
 		"MD004": false,
 		"MD005": false,
 		"MD007": {
-			"indent": 2
+			"indent": 2,
 		},
 		// Line length/spacing
 		"MD009": false,
 		// Code/fences
 		"MD010": {
-			"code_blocks": false
+			"code_blocks": false,
 		},
 		// Links/images
 		"MD011": false,
@@ -25,7 +25,7 @@
 		"MD022": true,
 		"MD023": true,
 		"MD024": {
-			"siblings_only": true
+			"siblings_only": true,
 		},
 		"MD025": false,
 		"MD026": false,
@@ -48,7 +48,7 @@
 		"MD048": true,
 		"MD059": false,
 		// Tables
-		"MD060": false // prettier owns table formatting; its aligned style conflicts with MD060 "aligned"
+		"MD060": false, // prettier owns table formatting; its aligned style conflicts with MD060 "aligned"
 	},
 	"ignores": [
 		"**/node_modules/**",
@@ -58,6 +58,12 @@
 		"myvenv/**",
 		"docs/reports/**",
 		".hermes/archived-prompt-templates/**",
+		".github/**",
+		".hermes/**",
+		"plans/**",
+		"research/**",
+		"ngn-earnings-kit/**",
+		"hermes-memory-safety/**",
 		".vscode/**",
 		"**/__pycache__/**",
 		"**/dist/**",
@@ -65,5 +71,5 @@
 		"**/.next/**",
 		"**/.git/**",
 		".markdownlint.jsonc",
-	]
+	],
 }
