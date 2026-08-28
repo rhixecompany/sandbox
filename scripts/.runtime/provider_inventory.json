@@ -1,0 +1,368 @@
+{
+  "generated": "2026-08-28T18:21:54",
+  "source": "hermes auth list",
+  "hermes_version": "Hermes Agent v0.20.6 (2026.8.27) · upstream a9e72f1b",
+  "provider_count": 11,
+  "providers": [
+    {
+      "name": "copilot",
+      "credential_count": 3,
+      "primary": {
+        "label": "COPILOT_GITHUB_TOKEN",
+        "auth_type": "api_key",
+        "source": "env:COPILOT_GITHUB_TOKEN"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "GITHUB_TOKEN",
+          "auth_type": "api_key",
+          "source": "env:GITHUB_TOKEN",
+          "is_active": false
+        },
+        {
+          "index": 2,
+          "label": "COPILOT_GITHUB_TOKEN",
+          "auth_type": "api_key",
+          "source": "env:COPILOT_GITHUB_TOKEN",
+          "is_active": true
+        },
+        {
+          "index": 3,
+          "label": "api-key-3",
+          "auth_type": "api_key",
+          "source": "manual",
+          "is_active": false
+        }
+      ],
+      "capabilities_static": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 128000,
+        "max_output_default": 8192,
+        "api_style": "github_copilot",
+        "default_model": "gpt-4o"
+      }
+    },
+    {
+      "name": "deepseek",
+      "credential_count": 1,
+      "primary": {
+        "label": "DEEPSEEK_API_KEY",
+        "auth_type": "api_key",
+        "source": "env:DEEPSEEK_API_KEY"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "DEEPSEEK_API_KEY",
+          "auth_type": "api_key",
+          "source": "env:DEEPSEEK_API_KEY",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 64000,
+        "max_output_default": 8192,
+        "api_style": "openai_compat",
+        "base_url": "https://api.deepseek.com/v1",
+        "default_model": "deepseek-chat"
+      }
+    },
+    {
+      "name": "gemini",
+      "credential_count": 1,
+      "primary": {
+        "label": "GOOGLE_API_KEY",
+        "auth_type": "api_key",
+        "source": "env:GOOGLE_API_KEY"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "GOOGLE_API_KEY",
+          "auth_type": "api_key",
+          "source": "env:GOOGLE_API_KEY",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 1000000,
+        "max_output_default": 8192,
+        "api_style": "openai_compat",
+        "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+        "default_model": "gemini-2.0-flash"
+      }
+    },
+    {
+      "name": "huggingface",
+      "credential_count": 1,
+      "primary": {
+        "label": "HF_TOKEN",
+        "auth_type": "api_key",
+        "source": "env:HF_TOKEN"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "HF_TOKEN",
+          "auth_type": "api_key",
+          "source": "env:HF_TOKEN",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": false,
+        "tools": false,
+        "json_mode": false,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 8192,
+        "max_output_default": 1024,
+        "api_style": "openai_compat",
+        "base_url": "https://api-inference.huggingface.co/v1",
+        "default_model": "meta-llama/Meta-Llama-3-8B-Instruct"
+      }
+    },
+    {
+      "name": "nous",
+      "credential_count": 1,
+      "primary": {
+        "label": "device_code",
+        "auth_type": "oauth",
+        "source": "device_code"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "device_code",
+          "auth_type": "oauth",
+          "source": "device_code",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 32768,
+        "max_output_default": 4096,
+        "api_style": "openai_compat",
+        "base_url": "https://inference-api.nousresearch.com/v1",
+        "auth": "oauth",
+        "default_model": "solar-pro4"
+      }
+    },
+    {
+      "name": "ollama-cloud",
+      "credential_count": 1,
+      "primary": {
+        "label": "OLLAMA_API_KEY",
+        "auth_type": "api_key",
+        "source": "env:OLLAMA_API_KEY"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "OLLAMA_API_KEY",
+          "auth_type": "api_key",
+          "source": "env:OLLAMA_API_KEY",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 32768,
+        "max_output_default": 4096,
+        "api_style": "openai_compat",
+        "base_url": "https://api.ollama.com/v1",
+        "default_model": "llama3.3"
+      }
+    },
+    {
+      "name": "openai-codex",
+      "credential_count": 1,
+      "primary": {
+        "label": "device_code",
+        "auth_type": "oauth",
+        "source": "device_code"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "device_code",
+          "auth_type": "oauth",
+          "source": "device_code",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 200000,
+        "max_output_default": 16384,
+        "api_style": "openai_compat",
+        "base_url": "https://api.openai.com/v1",
+        "auth": "oauth",
+        "default_model": "gpt-4o"
+      }
+    },
+    {
+      "name": "opencode-zen",
+      "credential_count": 2,
+      "primary": {
+        "label": "OPENCODE_ZEN_API_KEY",
+        "auth_type": "api_key",
+        "source": "env:OPENCODE_ZEN_API_KEY"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "OPENCODE_ZEN_API_KEY",
+          "auth_type": "api_key",
+          "source": "env:OPENCODE_ZEN_API_KEY",
+          "is_active": true
+        },
+        {
+          "index": 2,
+          "label": "zen-backup",
+          "auth_type": "api_key",
+          "source": "manual",
+          "is_active": false
+        }
+      ],
+      "capabilities_static": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 32768,
+        "max_output_default": 4096,
+        "api_style": "openai_compat",
+        "base_url": "https://opencode.ai/zen/v1",
+        "default_model": "big-pickle"
+      }
+    },
+    {
+      "name": "openrouter",
+      "credential_count": 1,
+      "primary": {
+        "label": "OPENROUTER_API_KEY",
+        "auth_type": "api_key",
+        "source": "env:OPENROUTER_API_KEY"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "OPENROUTER_API_KEY",
+          "auth_type": "api_key",
+          "source": "env:OPENROUTER_API_KEY",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 32768,
+        "max_output_default": 4096,
+        "api_style": "openai_compat",
+        "base_url": "https://openrouter.ai/api/v1",
+        "default_model": "openrouter/auto"
+      }
+    },
+    {
+      "name": "xai",
+      "credential_count": 2,
+      "primary": {
+        "label": "api-key-1",
+        "auth_type": "api_key",
+        "source": "manual"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "api-key-1",
+          "auth_type": "api_key",
+          "source": "manual",
+          "is_active": true
+        },
+        {
+          "index": 2,
+          "label": "XAI_API_KEY",
+          "auth_type": "api_key",
+          "source": "env:XAI_API_KEY",
+          "is_active": false
+        }
+      ],
+      "capabilities_static": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 131072,
+        "max_output_default": 8192,
+        "api_style": "openai_compat",
+        "base_url": "https://api.x.ai/v1",
+        "default_model": "grok-2"
+      }
+    },
+    {
+      "name": "xai-oauth",
+      "credential_count": 1,
+      "primary": {
+        "label": "xai-oauth-oauth-1",
+        "auth_type": "oauth",
+        "source": "device_code"
+      },
+      "credentials": [
+        {
+          "index": 1,
+          "label": "xai-oauth-oauth-1",
+          "auth_type": "oauth",
+          "source": "device_code",
+          "is_active": true
+        }
+      ],
+      "capabilities_static": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true,
+        "context_window_default": 131072,
+        "max_output_default": 8192,
+        "api_style": "openai_compat",
+        "base_url": "https://api.x.ai/v1",
+        "auth": "oauth",
+        "default_model": "grok-2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "generated": "2026-08-28T18:21:55",
+  "packages_dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\packages",
+  "package_count": 2,
+  "packages": [
+    {
+      "name": "openrouter-client",
+      "type": "typescript",
+      "version": "1.0.0",
+      "description": "TypeScript client wrapper for OpenRouter's chat completions API using @openrouter/sdk",
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "package_manager": "bun@1.3.14",
+      "type_module": true,
+      "entrypoints": [
+        "src\\chat.ts",
+        "src\\client.ts",
+        "src\\types.ts"
+      ],
+      "source_files": [
+        "chat.ts",
+        "client.ts",
+        "types.ts"
+      ],
+      "exports_public": [
+        "ChatCompletion",
+        "Message",
+        "ModelChoice",
+        "OpenRouterClient",
+        "OpenRouterClientConfig",
+        "SendChatOptions",
+        "ToolCall",
+        "Usage",
+        "sendChat"
+      ],
+      "dependencies": [
+        "@openrouter/sdk"
+      ],
+      "dev_dependencies": [
+        "@types/bun",
+        "typescript"
+      ],
+      "scripts": {
+        "test": "bun test",
+        "typecheck": "tsc --noEmit"
+      },
+      "tests": [
+        "test\\chat.test.ts"
+      ],
+      "spec": "SPEC.md",
+      "plan": "PLAN.md",
+      "readme": "README.md",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\packages\\openrouter-client"
+    },
+    {
+      "name": "openrouter-client-py",
+      "type": "python",
+      "version": "1.0.0",
+      "description": "Python client wrapper for OpenRouter's chat completions API using the openrouter Python SDK",
+      "requires_python": ">=3.11",
+      "source_files": [
+        "chat.py",
+        "client.py",
+        "types.py"
+      ],
+      "exports_public": [
+        "ChatCompletion",
+        "Message",
+        "ModelChoice",
+        "OpenRouterClient",
+        "OpenRouterClientConfig",
+        "ToolCall",
+        "Usage",
+        "send_chat"
+      ],
+      "dependencies": [
+        "openrouter>=1.0.0"
+      ],
+      "dev_dependencies": [],
+      "tests": [
+        "tests\\test_client.py"
+      ],
+      "spec": "SPEC.md",
+      "plan": "PLAN.md",
+      "readme": "README.md",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\packages\\openrouter-client-py"
+    }
+  ]
+}

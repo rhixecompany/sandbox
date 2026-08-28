@@ -4,6 +4,8 @@
 .omo/**
 .hermes/plans/**/*.json
 .hermes/plans/**/*.jsonl
+# Runtime-generated artifacts (auth_inventory, package_inspector, fanout reports)
+scripts/.runtime/
 # Root workspace files we want to check
 !packages/openrouter-client/**
 !packages/openrouter-client/**

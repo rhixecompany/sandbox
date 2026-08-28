@@ -1,0 +1,30 @@
+{
+  "generated": "2026-08-28T18:21:57",
+  "prompt": "Reply with only the word OK and your model identifier.",
+  "total": 1,
+  "counts": {
+    "ok": 1
+  },
+  "results": [
+    {
+      "provider": "openrouter",
+      "model": "minimax/minimax-m3:free",
+      "agent": "openai-compat (matches openrouter-client-py protocol)",
+      "context_window": 32768,
+      "max_output_tokens": 4096,
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "ok",
+      "latency_ms": 1950,
+      "output_text": "OK",
+      "output_tokens": 1,
+      "prompt_tokens": 174,
+      "error": null
+    }
+  ]
+}

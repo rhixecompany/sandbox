@@ -1,0 +1,232 @@
+{
+  "generated": "2026-08-28T18:12:17",
+  "prompt": "Reply with the word OK.",
+  "total": 11,
+  "counts": {
+    "fail": 7,
+    "auth_failed": 3,
+    "ok": 1
+  },
+  "results": [
+    {
+      "provider": "copilot",
+      "model": "gpt-4o",
+      "agent": "copilot-cli",
+      "context_window": 128000,
+      "max_output_tokens": 8192,
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "fail",
+      "latency_ms": 27955,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "Error: Model \"gpt-4o\" from --model flag is not available."
+    },
+    {
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+      "agent": "openai-compat",
+      "context_window": 64000,
+      "max_output_tokens": 8192,
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "fail",
+      "latency_ms": 936,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "HTTP 402: Insufficient Balance"
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-2.0-flash",
+      "agent": "openai-compat",
+      "context_window": 1000000,
+      "max_output_tokens": 8192,
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "fail",
+      "latency_ms": 409,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "HTTP 404: This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API"
+    },
+    {
+      "provider": "huggingface",
+      "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "agent": "openai-compat",
+      "context_window": 8192,
+      "max_output_tokens": 1024,
+      "capabilities": {
+        "vision": false,
+        "tools": false,
+        "json_mode": false,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "fail",
+      "latency_ms": 4546,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "URLError: <urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "provider": "nous",
+      "model": "solar-pro4",
+      "agent": "openai-compat",
+      "context_window": 32768,
+      "max_output_tokens": 4096,
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "auth_failed",
+      "latency_ms": 0,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "env var None not set"
+    },
+    {
+      "provider": "ollama-cloud",
+      "model": "llama3.3",
+      "agent": "openai-compat",
+      "context_window": 32768,
+      "max_output_tokens": 4096,
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "fail",
+      "latency_ms": 983,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "HTTP 405: Method Not Allowed"
+    },
+    {
+      "provider": "openai-codex",
+      "model": "gpt-4o",
+      "agent": "codex-cli",
+      "context_window": 200000,
+      "max_output_tokens": 16384,
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "fail",
+      "latency_ms": 26941,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "Reading additional input from stdin...\n2026-08-28T17:11:49.075602Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 89 column 5\nOpenAI Codex v0.146.1\n--------\nworkdir: C:\\Users\\Alexa\\Desktop\\SandBox\nmodel: gpt-4o\nprovider: openai\napproval: never\nsandbox: workspace-write [workdir, /tmp, $TMPDIR]\nreasoning effort: xhigh\nreasoning summaries: none\nsession id: 01a0495b-37ea-7933-b824-5a965cd25fe0\n--------\nuser\nReply with the word OK.\nwarning: Model metadata for `gpt-4o` not found. Defaulting to fallback metadata; this can degrade performance and cause issues.\nwarning: Exceeded skills context budget of 2%. All skill descriptions were removed and 410 additional skills were not included in the model-visible skills list.\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-4o' model is not supported when using Codex with a ChatGPT account.\"}}\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-4o' model is not supported when using Codex with a ChatGPT account.\"}}"
+    },
+    {
+      "provider": "opencode-zen",
+      "model": "big-pickle",
+      "agent": "openai-compat",
+      "context_window": 32768,
+      "max_output_tokens": 4096,
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "auth_failed",
+      "latency_ms": 644,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "HTTP 403: error code: 1010\n"
+    },
+    {
+      "provider": "openrouter",
+      "model": "openrouter/auto",
+      "agent": "openai-compat (matches in-tree openrouter-client-py protocol)",
+      "context_window": 32768,
+      "max_output_tokens": 4096,
+      "capabilities": {
+        "vision": true,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "ok",
+      "latency_ms": 3347,
+      "output_text": "OK",
+      "output_tokens": 29,
+      "prompt_tokens": 89,
+      "error": null
+    },
+    {
+      "provider": "xai",
+      "model": "grok-2",
+      "agent": "openai-compat",
+      "context_window": 131072,
+      "max_output_tokens": 8192,
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "fail",
+      "latency_ms": 675,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "HTTP 400: Model not found: grok-2"
+    },
+    {
+      "provider": "xai-oauth",
+      "model": "grok-2",
+      "agent": "openai-compat",
+      "context_window": 131072,
+      "max_output_tokens": 8192,
+      "capabilities": {
+        "vision": false,
+        "tools": true,
+        "json_mode": true,
+        "streaming": true,
+        "system_prompt": true
+      },
+      "status": "auth_failed",
+      "latency_ms": 0,
+      "output_text": "",
+      "output_tokens": null,
+      "prompt_tokens": null,
+      "error": "env var None not set"
+    }
+  ]
+}
