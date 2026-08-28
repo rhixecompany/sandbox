@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -41,7 +49,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Workflow](#workflow)
@@ -66,7 +73,6 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Transform any repository's git history into two deliverables:
 
@@ -130,7 +136,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use for the task described in the Goal section. Follow structured workflow and verify results.
 

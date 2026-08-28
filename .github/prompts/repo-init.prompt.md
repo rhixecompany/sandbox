@@ -17,12 +17,19 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Repo Init
 
 > Comprehensive implementation prompt, plan, scripts, and skill that outlines the steps needed to initialize a repository, including timelines, milestones, and resource allocation.
 
-## Goal
 
 Initialize a Hermes-managed repository and its accompanying Hermes root (`~/AppData/Local/hermes`) to a consistent, deduplicated state. The end state has exactly one canonical copy of every artifact (prompts, skills, agents, hooks, instructions, plans) — no duplicates, no broken references, no stale wrappers.
 

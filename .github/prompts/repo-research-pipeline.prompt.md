@@ -17,6 +17,14 @@ metadata:
     enabled: true
 date: '2026-08-25'
 ---
+## Table of Contents
+
+## Goal
+
+## Context
+
+## Phases
+
 
 # Table of Contents
 
@@ -38,7 +46,6 @@ date: '2026-08-25'
 - [Related Prompts](#related-prompts)
 
 
-## Table of Contents
 
 - [Goal](#goal)
 - [Workflow](#workflow)
@@ -60,7 +67,6 @@ date: '2026-08-25'
 
 
 
-## Goal
 
 Run research across all project repos and produce RESEARCH_REPORT.md files
 with verified sources. **Tavily-first:** use `mcp__tavily__tavily_search` → `mcp__tavily__tavily_extract` before other backends.
@@ -109,7 +115,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
-## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 

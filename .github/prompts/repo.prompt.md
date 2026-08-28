@@ -1,24 +1,4 @@
----
-name: repo
-title: Repo
-description: Universal repository inspection and onboarding prompt that summarizes a repo, identifies entrypoints, explains PR workflow, and reports disk usage.
-version: 1.0.0
-author: Hermes Agent
-tags: [repo, onboarding, summary, inspection, entrypoint, disk-usage]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
----
-
-# Table of Contents
+## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
@@ -69,60 +49,16 @@ date: '2026-08-25'
 - [Scripts](#scripts)
 
 
-## Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Repo Inventory (17 projects)](#repo-inventory-17-projects)
-- [Constraints](#constraints)
-- [Phases](#phases)
-- [Phase 0: Prerequisites](#phase-0:-prerequisites)
-- [Phase 1: Web Research (delegated)](#phase-1:-web-research-delegated)
-- [Phase 2: Report Writing](#phase-2:-report-writing)
-- [Phase 3: Index & Cross-Reference](#phase-3:-index-&-cross-reference)
-- [Phase 4: Verification](#phase-4:-verification)
-- [Quick Repo Onboarding](#quick-repo-onboarding)
-- [Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."](#q1:-"summarize-this-repo-in-5-bullets-and-tell-me-what-the-main-entrypoint-is")
-- [Q2: "Check my current directory and tell me what looks like the main project file."](#q2:-"check-my-current-directory-and-tell-me-what-looks-like-the-main-project-file")
-- [Q3: "Help me set up a clean GitHub PR workflow for this codebase."](#q3:-"help-me-set-up-a-clean-github-pr-workflow-for-this-codebase")
-- [Q4: "What's my disk usage? Show the top 5 largest directories."](#q4:-"what's-my-disk-usage?-show-the-top-5-largest-directories")
-- [Report Template](#report-template)
-- [Project: <name>](#project:-<name>)
-- [Similar Projects](#similar-projects)
-- [Key Findings](#key-findings)
-- [<Technology/Topic>](#<technology/topic>)
-- [<Technology/Topic>](#<technology/topic>)
-- [Cheatsheets & Quick Reference](#cheatsheets-&-quick-reference)
-- [Best Practices](#best-practices)
-- [Common Pitfalls](#common-pitfalls)
-- [Performance](#performance)
-- [Security](#security)
-- [Related Projects (in workspace)](#related-projects-in-workspace)
-- [Resources](#resources)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Skills Required](#skills-required)
-- [Actions](#actions)
-- [Secondary Goals](#secondary-goals)
-- [Related Prompts](#related-prompts)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Workflow](#workflow)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Tasks](#tasks)
-- [Scripts](#scripts)
 
 
 
 
 ## Goal
+
+## Context
+
+## Phases
+
 
 Research each of the 17 projects under `projects/`. For every project:
 
@@ -138,7 +74,6 @@ Research each of the 17 projects under `projects/`. For every project:
 
 ---
 
-## Context
 
 **Workspace:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`)
 
@@ -177,7 +112,6 @@ Default action is **UPDATE** (refresh findings, verify links). Only fall back to
 - Symmetric cross-references: if A references B, B must reference A.
 - Do not advance to secondary goals until Phase 4 verification passes for all 17 reports.
 
-## Phases
 
 ### Phase 0: Prerequisites
 
@@ -671,4 +605,23 @@ Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
-- `.github/hooks/*` — hook implementations referenced in the Hooks section
+- `.github/hooks/*` — hook implementations referenced in the Hooks section---
+name: repo
+title: Repo
+description: Universal repository inspection and onboarding prompt that summarizes a repo, identifies entrypoints, explains PR workflow, and reports disk usage.
+version: 1.0.0
+author: Hermes Agent
+tags: [repo, onboarding, summary, inspection, entrypoint, disk-usage]
+metadata:
+  hermes:
+    profile: code-architect
+    priority: medium
+  copilot:
+    model_required: sonnet
+  opencode:
+    enabled: true
+  codex:
+    enabled: true
+date: '2026-08-25'
+---
+
