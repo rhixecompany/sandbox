@@ -1,4 +1,9 @@
 # Prettier ignore — only format project code, not the entire workspace
+# Runtime/agent artifacts that prettier should never touch
+.omo/
+.omo/**
+.hermes/plans/**/*.json
+.hermes/plans/**/*.jsonl
 # Root workspace files we want to check
 !packages/openrouter-client/**
 !packages/openrouter-client/**
