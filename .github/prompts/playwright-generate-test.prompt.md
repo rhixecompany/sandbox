@@ -22,41 +22,6 @@ metadata:
   codex:
     enabled: true
 ---
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Description](#description)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-  - [@investigatorA scenario investigator who gathers the facts needed to write a correct test.](#@investigatora-scenario-investigator-who-gathers-the-facts-needed-to-write-a-correct-test)
-  - [@authorA test author who writes clean Playwright TypeScript.](#@authora-test-author-who-writes-clean-playwright-typescript)
-  - [@runnerA test runner who fixes issues until the test passes.](#@runnera-test-runner-who-fixes-issues-until-the-test-passes)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
 ## Table of Contents
 
 - [Goal](#goal)
@@ -100,7 +65,7 @@ Generate a Playwright test from a scenario, validate it against the app, and ite
 
 ## Context
 
-Use when you need to playwright test generation for the current workspace or task.
+Using when you need to generate Playwright test from a scenario for the current workspace or task.
 
 ## Inputs
 

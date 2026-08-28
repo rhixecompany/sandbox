@@ -22,41 +22,6 @@ metadata:
   codex:
     enabled: true
 ---
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Description](#description)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-  - [@explorer](#@explorer)
-  - [@scribeA recorder who writes down locators, outcomes, and noteworthy UI behavior.](#@scribea-recorder-who-writes-down-locators-outcomes-and-noteworthy-ui-behavior)
-  - [@tester](#@tester)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
 ## Table of Contents
 
 - [Goal](#goal)
@@ -100,7 +65,7 @@ Explore a website with Playwright MCP, document core flows, and propose tests fr
 
 ## Context
 
-Use when you need to playwright website exploration for the current workspace or task.
+Use when exploring a website with Playwright to document core flows, locators, and outcomes.
 
 ## Inputs
 

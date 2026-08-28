@@ -22,40 +22,6 @@ metadata:
   codex:
     enabled: true
 ---
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Description](#description)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-  - [@browserA careful browser operator who fills the form field by field.](#@browsera-careful-browser-operator-who-fills-the-form-field-by-field)
-  - [@checkerA reviewer who verifies the form is ready but not submitted.](#@checkera-reviewer-who-verifies-the-form-is-ready-but-not-submitted)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
 ## Table of Contents
 
 - [Goal](#goal)
@@ -98,7 +64,7 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 
 ## Context
 
-Use when you need to playwright form fill automation for the current workspace or task.
+Use when filling web forms field by field with Playwright, stopping before submission for human review.
 
 ## Inputs
 

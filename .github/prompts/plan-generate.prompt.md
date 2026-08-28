@@ -22,37 +22,6 @@ metadata:
   codex:
     enabled: true
 ---
-# Table of Contents
-
-- [Goal](#goal)
-- [Core Rules](#core-rules)
-- [Workflow](#workflow)
-  - [Phase 1: Context gathering](#phase-1:-context-gathering)
-  - [Phase 2: Plan structure](#phase-2:-plan-structure)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Phases](#phases)
-  - [Phase N: <Name](#phase-n:-<name)
-- [Verification Checklist](#verification-checklist)
-  - [Phase 3: Write](#phase-3:-write)
-  - [Phase 4: Verify](#phase-4:-verify)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
 ## Table of Contents
 
 - [Goal](#goal)
@@ -88,7 +57,7 @@ metadata:
 
 ## Goal
 
-Generate a detailed, structured implementation plan from a goal or specification. Produces a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.
+Generate a structured implementation plan from a goal or specification. The plan includes phased execution, dependencies, and verification gates.
 
 > **Shared template references:**>> - [Frontmatter patterns](templates/_shared/frontmatter.md)> - [Core rules](templates/_shared/rules-core.md)> - [Section skeleton](templates/_shared/section-skeleton.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
@@ -163,7 +132,7 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 
 ## Context
 
-Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
+Use when creating an implementation plan from a goal, specification, or feature request.
 
 ## Rules
 
