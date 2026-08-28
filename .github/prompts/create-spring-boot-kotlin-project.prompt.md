@@ -90,9 +90,15 @@ metadata:
 
 ## Goal
 
-Create Spring Boot Kotlin Project Skeleton.
+Bootstrap a Spring Boot Kotlin project with Gradle, Java 21, and Docker Compose.
 
-## Create Spring Boot Kotlin project prompt- Please make sure you have the following software installed on your system: - Java 21 - Docker - Docker Compose- If you need to custom the project name, please change the `artifactId` and the `packageName` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md)- If you need to update the Spring Boot version, please change the `bootVersion` in [download-spring-boot-project-template](./create-spring-boot-kotlin-project.prompt.md#download-spring-boot-project-template)
+## Prerequisites
+
+- Java 21 JDK
+- Docker and Docker Compose
+- A project name (defaults to `demo-kotlin`)
+
+If you need to change the project name, update `artifactId` and `packageName` in the [download-spring-boot-project-template](#download-spring-boot-project-template) section. To update the Spring Boot version, change `bootVersion` there.
 
 ## Check Java version
 

@@ -96,9 +96,19 @@ metadata:
 
 ## Goal
 
-Get best practices for C# async programming.
+Review C# code for async/await violations and suggest corrections that follow .NET conventions.
 
-## C# Async Programming Best PracticesYour goal is to help me follow best practices for asynchronous programming in C#.
+## Prerequisites
+
+- A C# project using .NET 8 or later
+- The code to review
+
+## C# Async Programming — Review Checklist
+
+## Naming Conventions
+
+- Use the `Async` suffix on all async method names
+- Match method names with their synchronous counterparts when applicable (e.g., `GetDataAsync` for `GetData`)
 
 ## Naming Conventions
 

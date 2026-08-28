@@ -104,9 +104,15 @@ metadata:
 
 ## Goal
 
-Create Spring Boot Java Project Skeleton.
+Bootstrap a Spring Boot Java project with Maven, Java 21, and Docker Compose.
 
-## Create Spring Boot Java project prompt- Please make sure you have the following software installed on your system: - Java 21 - Docker - Docker Compose- If you need to custom the project name, please change the `artifactId` and the `packageName` in [download-spring-boot-project-template](./create-spring-boot-java-project.prompt.md)- If you need to update the Spring Boot version, please change the `bootVersion` in [download-spring-boot-project-template](./create-spring-boot-java-project.prompt.md#download-spring-boot-project-template)
+## Prerequisites
+
+- Java 21 JDK
+- Docker and Docker Compose
+- A project name (defaults to `demo-java`)
+
+If you need to change the project name, update `artifactId` and `packageName` in the [download-spring-boot-project-template](#download-spring-boot-project-template) section. To update the Spring Boot version, change `bootVersion` there.
 
 ## Check Java version
 

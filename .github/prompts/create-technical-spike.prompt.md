@@ -128,7 +128,7 @@ metadata:
 
 ## Goal
 
-Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.
+Write time-boxed technical spike documents that research a single design question and produce a recommendation with evidence.
 
 title: "${input:SpikeTitle}"category: "${input:Category|Technical}"status: "🔴 Not Started"priority: "${input:Priority|High}"timebox: "${input:Timebox|1 week}"created: [YYYY-MM-DD]updated: [YYYY-MM-DD]owner: "${input:Owner}"---
 # ${input:SpikeTitle}

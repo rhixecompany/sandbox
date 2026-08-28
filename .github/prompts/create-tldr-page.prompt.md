@@ -102,7 +102,7 @@ metadata:
 
 ## Goal
 
-Create a tldr page from documentation URLs and command examples, requiring both URL and command name.
+Write a tldr page for a command or tool from authoritative documentation and usage examples.
 
 ## Context
 
