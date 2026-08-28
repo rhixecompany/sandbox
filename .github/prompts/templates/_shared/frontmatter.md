@@ -1,55 +1,80 @@
 ---
 name: shared-frontmatter
-title: Shared Template — Frontmatter
-description: Standard YAML frontmatter block for prompt files
+title: Shared Frontmatter Template
+description: Canonical YAML frontmatter schema for all .github/prompts/*.prompt.md files. Use this as the single source of truth — every prompt must match this schema.
 version: 1.0.0
-tags: [template, shared, frontmatter]
----
-
-# Shared Template — Frontmatter
-
-Reusable YAML frontmatter blocks for `.prompt.md` files.
-
-## Minimal Hermes Prompt Frontmatter
-
-```yaml
----
-trigger: /<prompt-name>
-name: <prompt-name>
-title: "<Human-Readable Title>"
-description: >-
-  One-paragraph description of what this prompt does.
-version: 1.0.0
-tags: [hermes, <category>]
-dependencies:
-  - skill:<skill-name>
-skills:
-  - <skill-name>
----
-```
-
-## Full Frontmatter with All Fields
-
-```yaml
----
-trigger: /<prompt-name>
-name: <prompt-name>
-title: "<Human-Readable Title>"
-description: >-
-  One-paragraph description of what this prompt does.
-version: 1.0.0
-author: "<Author>"
+author: Hermes Agent
 license: MIT
-tags: [hermes, copilot, opencode, <category>]
-dependencies:
-  - skill:<skill-name-1>
-  - skill:<skill-name-2>
-skills:
-  - <skill-name-1> — Description of purpose
-  - <skill-name-2> — Description of purpose
+tags: [shared, frontmatter, schema, prompts]
+---
+
+# Shared Frontmatter Template
+
+## Schema (required keys)
+
+```yaml
+---
+name: <kebab-case-prompt-name>      # e.g. "hermes-diagnostic"
+title: "<Human-Readable Title>"      # e.g. "Hermes Diagnostic + Log Analysis"
+description: "<1-2 sentence purpose statement, ≤200 chars>"
+version: <semver>                    # e.g. "1.0.0"
+author: "<author or org>"            # e.g. "Hermes Agent"
+license: <MIT|Apache-2.0|...>        # default: MIT
+tags: [<category>, <feature>, ...]   # 2-5 tags from controlled vocabulary
 metadata:
   hermes:
-    tags: [<category>]
-    related_skills: [<skill-name-1>, <skill-name-2>]
+    tags: [<hermes-internal-tags>]   # optional, for hermes routing
 ---
 ```
+
+## Controlled tag vocabulary
+
+| Category | Allowed values |
+|---|---|
+| Domain | `hermes`, `github`, `code`, `data`, `devops`, `docs`, `design`, `test`, `security` |
+| Operation | `create`, `update`, `fix`, `verify`, `audit`, `triage`, `remediate` |
+| Skill | `mcp`, `skill`, `hook`, `plugin`, `prompt` |
+| Layer | `meta`, `system`, `user`, `agent` |
+
+## Validation rules
+
+- `name` MUST be kebab-case and match the filename stem (without `.prompt.md`)
+- `title` MUST be ≤80 chars
+- `description` MUST be ≤200 chars and end with a period
+- `version` MUST be semver (X.Y.Z)
+- `tags` MUST contain 2-5 items from the controlled vocabulary
+- `metadata.hermes.tags` is optional; if present, all values must also appear in top-level `tags`
+
+## Bad example
+
+```yaml
+---
+name: My Prompt
+title: This Is A Very Long Title That Exceeds Eighty Characters And Should Be Shortened
+description: no period at end
+Version: 1.0
+tags: [stuff, things, foo, bar, baz, qux]
+---
+```
+
+## Good example
+
+```yaml
+---
+name: hermes-diagnostic
+title: "Hermes Diagnostic + Log Analysis"
+description: "Run the full Hermes platform diagnostic battery plus log analysis. Emits report.md, report.json, and triage recommendations."
+version: 1.0.0
+author: Hermes Agent
+license: MIT
+tags: [hermes, devops, diagnostic, repair]
+metadata:
+  hermes:
+    tags: [hermes, devops]
+---
+```
+
+## References
+
+- `references/frontmatter-validation.md` — automated validator script (planned)
+- `../_index.md` — templates index

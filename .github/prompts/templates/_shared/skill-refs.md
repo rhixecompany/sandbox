@@ -1,42 +1,74 @@
 ---
 name: shared-skill-refs
-title: Shared Template — Skill References
-description: Standard skill references table for prompt files
+title: Shared Skill References
+description: Standard table of Hermes skills referenced across prompts. Copy this table into any prompt that needs to invoke a known skill bundle.
 version: 1.0.0
-tags: [template, shared, skills, references]
+author: Hermes Agent
+license: MIT
+tags: [shared, skills, references, prompts]
 ---
 
-# Shared Template — Skill References
+# Shared Skill References
 
-Common Hermes skills referenced across prompts.
+## When to use
 
-## Core Workflow Skills
+Include this table when your prompt needs to invoke one or more Hermes skills by name. The user can use these names directly in their invocation.
 
-| Skill | Purpose |
-|| ------- | --------- ||
-| `using-superpowers` | Establishes skill workflow, profile routing, MCP-first tool precedence |
-| `user-communication-preferences` | Embeds response style, execution preferences |
-| `plans-and-specs` | Creates implementation plans with phases, tasks, verification |
+## Tier 1: Always-on (load by default for any task)
 
-## Research & Architecture Skills
+| Skill | When to load |
+|---|---|
+| `using-superpowers` | Foundational workflow — load first, every conversation |
+| `user-communication-preferences` | Concise, action-first, DRY responses |
+| `hermes-agent` | Configuring, extending, or troubleshooting Hermes itself |
 
-| Skill | Purpose |
-|| ------- | --------- ||
-| `architecture-blueprint-generator` | Generates architecture context from codebase analysis |
-| `folder-structure-blueprint-generator` | Documents folder structure |
-| `technology-stack-blueprint-generator` | Documents technology stack |
-| `codemap` | Onboarding to new codebases |
+## Tier 2: Domain-specific (load per task type)
 
-## Development Skills
+| Skill | Task type |
+|---|---|
+| `code-architect` / `code-architect` profile | Implementation, refactoring, debugging |
+| `research-analyst` / `research-analyst` profile | Research, literature review, synthesis |
+| `creative-director` / `creative-director` profile | Design, content, brainstorming |
+| `exec-assistant` / `exec-assistant` profile | Planning, coordination, admin |
+| `patient-tutor` / `patient-tutor` profile | Teaching, explanations |
+| `adminbot` / `adminbot` profile | DevOps, infra, system ops |
 
-| Skill | Purpose |
-|| ------- | --------- ||
-| `enhance-markdown` | Audit, enhance, convert markdown files |
-| `skill-creator` | Scaffold new skills with validated frontmatter |
-| `skill-judge` | Evaluate skills against quality criteria |
-| `writing-skills` | Author clear skill prose and structure |
-| `writing-plans` | Document implementation plans |
-| `hermes-skills` | Discover, create, install, manage skills |
-| `vscode-workspace-configurator` | Audit, debug, enhance VS Code config |
-| `systematic-debugging` | Four-phase root cause debugging |
-| `prompt-engineering` | Design, test, iterate on prompts |
+## Tier 3: Multi-file change protocol (load 14 skills for ≥5 file changes)
+
+| # | Skill | Purpose |
+|---|---|---|
+| 1 | `using-superpowers` | Workflow foundation |
+| 2 | `brainstorming` | Structured ideation |
+| 3 | `user-communication-preferences` | Communication style |
+| 4 | `mcp-sequential-thinking` | Chain-of-thought |
+| 5 | `mcp-filesystem` | MCP fs ops |
+| 6 | `mcp-ast-grep` | MCP AST search |
+| 7 | `mcp-memory` | MCP knowledge graph |
+| 8 | `plan` | Plan mode |
+| 9 | `plans-and-specs` | Spec + plan docs |
+| 10 | `create-implementation-plan` | Create plans |
+| 11 | `implementation-plan` | Modify plans |
+| 12 | `executing-plans` | Execute plans |
+| 13 | `writing-clearly-and-concisely` | Editing workflow |
+| 14 | `subagent-driven-development` | Parallel subagent exec |
+
+## Usage in prompts
+
+Reference like this in the prompt body:
+
+```markdown
+Skills loaded: using-superpowers, brainstorming, code-architect
+```
+
+Or for the full multi-file protocol:
+
+```markdown
+/mcp-filesystem /mcp-ast-grep /mcp-memory /plan /plans-and-specs
+/create-implementation-plan /implementation-plan /executing-plans
+/writing-clearly-and-concisely /subagent-driven-development
+```
+
+## References
+
+- `../_index.md` — templates index
+- Hermes docs: https://hermes-agent.nousresearch.com/docs
