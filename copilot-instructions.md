@@ -155,8 +155,8 @@ bun run test              # Vitest
 <type>/<project>/<kebab-case-description>
 ```
 
-**Types:** `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`  
-**Project:** One of the 17+ subprojects under `projects/`, or `root` for workspace-level changes  
+**Types:** `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`
+**Project:** One of the 17+ subprojects under `projects/`, or `root` for workspace-level changes
 **Examples:**
 
 - `feat/banking/add-plaid-webhook`
@@ -201,7 +201,7 @@ SandBox/
 ├── projects/              # 17+ autonomous subprojects
 │   ├── Banking/           # Next.js 16 fintech
 │   ├── comicwise/         # Next.js 15 streaming
-│   ├── Bash/              # TypeScript automation
+│   ├── projects/Bash/              # TypeScript automation
 │   ├── ecom/              # Django + React
 │   ├── mcp-servers/       # MCP implementations
 │   ├── Python-projects/   # Standalone scripts

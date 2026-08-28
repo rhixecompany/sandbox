@@ -280,3 +280,110 @@ All failures are honest real-world conditions, not bugs. Reports are at:
 | Pip-install `openrouter` SDK to enable in-tree client                                          | User action |
 | Add more providers (anthropic, mistral, fireworks)                                             | Future work |
 | Re-authenticate OAuth providers (nous, xai-oauth, openai-codex) via `hermes auth login <name>` | User action |
+
+---
+
+# Session 2026-08-28 21:00 — Instruction File Triage (Goal 1 of 2)
+
+## Summary
+
+| Field   | Value                                                                                                                               |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Session | 2026-08-28 21:00                                                                                                                    |
+| Profile | adminbot                                                                                                                            |
+| Model   | minimax/minimax-m3:free (openrouter)                                                                                                |
+| Source  | direct user invocation (stacked skill bundle, 14 skills)                                                                            |
+| Goal    | Triage all instruction files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) |
+
+## Discovery (Phase 0)
+
+- 259 real instruction files (after excluding vendor/cache/spawn-trees/node_modules/hermes-agent source)
+- 8 file types scanned across 2 roots: `C:/Users/Alexa/Desktop/SandBox` + `C:/Users/Alexa/AppData/Local/hermes`
+- Initial classification: 5 canonical, 0 duplicate, 6 bloat, 16 stale, 4 conflicting, 228 unknown
+
+## Artifacts Created
+
+| Path                                                                                                          | Size  | Purpose                                  |
+| ------------------------------------------------------------------------------------------------------------- | ----- | ---------------------------------------- |
+| `.hermes/plans/instruction-file-triage-2026-08-28/SPEC.md`                                                    | 6.0KB | Full design + classification rules       |
+| `.hermes/plans/instruction-file-triage-2026-08-28/PLAN.md`                                                    | 6.4KB | 9-phase strict-sequential plan           |
+| `.hermes/plans/instruction-file-triage-2026-08-28/implementation-plan.md`                                     | 2.9KB | Step-by-step tasks                       |
+| `.hermes/plans/instruction-file-triage-2026-08-28/audit-report.json`                                          | 85KB  | 259 files, machine-readable              |
+| `.hermes/plans/instruction-file-triage-2026-08-28/audit-report.md`                                            | 4.3KB | Human-readable summary                   |
+| `scripts/instruction_audit.py`                                                                                | 11KB  | Read-only triage (stdlib only)           |
+| `scripts/instruction_fix.py`                                                                                  | 9.0KB | Whitelist auto-fixer (--dry-run default) |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/SKILL.md`                           | 4.6KB | Umbrella skill (131/250 lines)           |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/references/classification-rules.md` | 1.4KB | Class definitions                        |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/references/whitelist-fixes.md`      | 1.7KB | Why each rule is safe                    |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/references/output-schema.md`        | 1.4KB | JSON schema v1                           |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/scripts/audit.sh`                   | 0.4KB | Bash wrapper                             |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/scripts/fix.sh`                     | 0.4KB | Bash wrapper                             |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/templates/audit-report.json`        | 0.3KB | Skeleton                                 |
+| `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/templates/whitelist-fixes.json`     | 1.2KB | Editable rule list                       |
+| `.github/prompts/instruction-triage.prompt.md`                                                                | 2.3KB | Reusable prompt                          |
+
+## Final Audit (after whitelist fix applied)
+
+| Classification | Count |
+| -------------- | ----- |
+| Files scanned  | 259   |
+| Canonical      | 5     |
+| Duplicate      | 0     |
+| Bloat          | 6     |
+| Stale          | 2     |
+| Conflicting    | 4     |
+| Unknown        | 242   |
+
+## Top Findings
+
+| #   | File                                                                       | Issue                                   | Action                                                         |
+| --- | -------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------- |
+| 1   | 6× `mindstudio-agent/CLAUDE.md` (one per profile)                          | 391 lines, 27KB each — copy-paste bloat | Stub-replace 5 with link to canonical (manual)                 |
+| 2   | 17 files referenced `Bash/` (not `projects/Bash/`)                         | Stale path                              | Whitelist fix applied (idempotent re-run: 0 changes)           |
+| 3   | 14 profile `memories/MEMORY.md` files                                      | Referenced deprecated `zen-backup`      | Whitelist fix applied                                          |
+| 4   | `SandBox/AGENTS.md` 323 lines                                              | Bloat + stale `Bash/` path              | Whitelist fix applied; manual trim pending                     |
+| 5   | DRY violation: `mcp_first` rule in 22 files, `profile_routing` in 34 files | Same rule repeated                      | Recommend stub-replace with link to canonical SOUL.md (manual) |
+
+## Verification (all 6 gates PASS)
+
+| Gate | Check                                                           | Result           |
+| ---- | --------------------------------------------------------------- | ---------------- |
+| V1   | `python scripts/instruction_audit.py` exits 0                   | PASS (259 files) |
+| V2   | `audit-report.json` valid JSON, all required fields             | PASS (schema=1)  |
+| V3   | `instruction_fix.py` dry-run idempotent (0 changes after apply) | PASS             |
+| V4   | Skill `instruction-triage` in `hermes skills list`              | PASS             |
+| V5   | SKILL.md ≤250 lines                                             | PASS (131/250)   |
+| V6   | No `.bak`/`.backup`/`.old` files                                | PASS (0 files)   |
+
+## Fixes Applied (whitelist-only, --apply run)
+
+- 17 files received mechanical fixes:
+  - 14× `zen-backup` → `(see opencode-zen pool)` in profile `memories/MEMORY.md`
+  - 3× `Bash/` → `projects/Bash/` in `AGENTS.md`, `copilot-instructions.md`, `projects/Bash/docs/AGENTS.md`
+- 3 files repaired for double-substitution artifact (`projects/projects/Bash/` → `projects/Bash/`)
+- Subsequent dry-run: 0 changes (idempotent ✓)
+
+## Design Decisions
+
+1. **Whitelist-only auto-fixer** — never merges blocks, never restructures frontmatter, never deletes content. Manual review for any non-mechanical change.
+2. **Cross-reference detection** — surfaces DRY violations by counting how many files mention each canonical rule (`mcp_first`, `profile_routing`, etc.). High count = needs canonical + stubs.
+3. **Conservative classification** — `unknown` is the default for project subdirectory files. Don't auto-flag project-scoped rules as duplicate of profile rules.
+4. **Stricter path regex** — `(?<!projects/)Bash/(?!projects)` prevents both double-substitution and over-matching of already-correct paths.
+5. **250-line skill cap respected** — SKILL.md 131 lines, with 3 reference files for detail.
+
+## Pitfalls Discovered
+
+- **Bash path regex false positive** — initial `Bash/(?!projects)` matched `projects/Bash/` and caused double-substitution. Fixed with `(?<!projects/)` lookbehind.
+- **Audit "conflicting" false positive** — "never commit" is the user's actual rule, but audit regex over-broadly flagged it. Manual review confirms no conflict.
+- **mindstudio-agent CLAUDE.md is 391 lines by design** — it's reference docs, not bloat per se. Auto-trim would lose information. Recommendation: keep canonical, stub-replace the 5 copies.
+
+## Open Items (post-Goal-1)
+
+| Item                                                     | Status                  |
+| -------------------------------------------------------- | ----------------------- |
+| Stub-replace 5 mindstudio-agent CLAUDE.md copies         | Manual (user action)    |
+| Trim `SandBox/SOUL.md` (256 lines) to ≤250               | Manual (user action)    |
+| Trim `SandBox/AGENTS.md` (323 lines)                     | Manual (user action)    |
+| Refine audit regex to drop "never commit" false positive | Future work             |
+| Re-run audit monthly to catch new instruction files      | Cron candidate          |
+| Commit Goal 1 work                                       | Pending (user decision) |

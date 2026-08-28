@@ -7,7 +7,7 @@ tags: [agents, routing, mindmodel, bash, ai-development]
 
 ## Scope
 
-Local guidance for `Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/copilot-instructions.md` for toolkit-wide rules. Root Hermes assets: `../../../.github/agents/hermes.agent.md`, `../../../.github/prompts/`.
+Local guidance for `projects/Bash/docs/`. Follow `../AGENTS.md` and `../../../.github/copilot-instructions.md` for toolkit-wide rules. Root Hermes assets: `../../../.github/agents/hermes.agent.md`, `../../../.github/prompts/`.
 
 # Agent Configurations
 

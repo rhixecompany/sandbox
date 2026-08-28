@@ -36,7 +36,7 @@ SandBox/
 ├── CLAUDE.md / .cursorrules # Thin stubs deferring here
 ├── .github/prompts/         # Canonical prompt library (190+ prompts)
 ├── projects/                # 16+ subprojects (monorepo)
-│   ├── Bash/                # Primary automation toolkit (Bun/TypeScript)
+│   ├── projects/Bash/                # Primary automation toolkit (Bun/TypeScript)
 │   ├── Banking/             # Next.js fintech (Drizzle, Plaid, Dwolla)
 │   ├── comicwise/           # Next.js comic streaming (Prisma, Stripe)
 │   ├── ecom/                # Django REST + React/Redux ecommerce

@@ -1,0 +1,2480 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-28T21:05:56.085818+00:00",
+  "scope": "C:\\Users\\Alexa\\Desktop\\SandBox + C:\\Users\\Alexa\\AppData\\Local\\hermes",
+  "totals": {
+    "files": 259,
+    "canonical": 5,
+    "duplicate": 0,
+    "bloat": 6,
+    "stale": 2,
+    "conflicting": 4,
+    "unknown": 242
+  },
+  "files": [
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 331,
+      "line_count": 9,
+      "classification": "canonical",
+      "issues": [],
+      "last_modified": "2026-08-24T22:42:24.080305+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 2675,
+      "line_count": 62,
+      "classification": "canonical",
+      "issues": [],
+      "last_modified": "2026-08-28T14:59:29.276410+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 16333,
+      "line_count": 323,
+      "classification": "conflicting",
+      "issues": [
+        "exceeds_250_line_cap (323 lines)",
+        "exceeds_10KB (16.0KB)",
+        "too_many_H1 (15)",
+        "stale: Bash/ migrated to projects/Bash/",
+        "conflicting: user-communication-prefs: commit only with explicit ask"
+      ],
+      "last_modified": "2026-08-28T20:57:56.840204+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 314,
+      "line_count": 8,
+      "classification": "canonical",
+      "issues": [],
+      "last_modified": "2026-08-24T22:42:24.087749+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 12328,
+      "line_count": 383,
+      "classification": "stale",
+      "issues": [
+        "exceeds_250_line_cap (383 lines)",
+        "exceeds_10KB (12.0KB)",
+        "too_many_H1 (14)",
+        "stale: Bash/ migrated to projects/Bash/"
+      ],
+      "last_modified": "2026-08-28T20:57:04.026435+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 551,
+      "line_count": 14,
+      "classification": "canonical",
+      "issues": [],
+      "last_modified": "2026-08-28T14:59:30.325810+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 12335,
+      "line_count": 256,
+      "classification": "conflicting",
+      "issues": [
+        "exceeds_250_line_cap (256 lines)",
+        "exceeds_10KB (12.0KB)",
+        "conflicting: user-communication-prefs: commit only with explicit ask"
+      ],
+      "last_modified": "2026-08-28T14:59:33.227949+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 523,
+      "line_count": 14,
+      "classification": "canonical",
+      "issues": [],
+      "last_modified": "2026-08-28T14:59:34.246925+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 2774,
+      "line_count": 75,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T13:58:43.420144+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 361,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.141334+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 516,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.139321+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 427,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.139321+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 358,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.141334+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 510,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.141334+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 421,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.141334+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 221,
+      "line_count": 13,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-06-12T02:12:47.374711+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 520,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.147169+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 431,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.147169+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 382,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.154562+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 558,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.149183+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 469,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.149183+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 260,
+      "line_count": 15,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-06-29T13:06:31.581794+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 546,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.154562+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 457,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.154562+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 358,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.162911+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 510,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.157906+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 421,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.157906+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 358,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.167441+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 510,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.162911+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 421,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.162911+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 365,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.170113+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 524,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.167441+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 435,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.170113+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 361,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.176744+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 516,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.170113+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 427,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.170113+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 369,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.178757+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 532,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.178757+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 443,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.178757+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 366,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.184593+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 526,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-25T00:11:29.654258+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 437,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-25T00:11:29.694724+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 373,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.194682+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 540,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.190460+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 451,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.190460+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 365,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.201734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 524,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.196693+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 435,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.196693+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 372,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.201734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 538,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.201734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 449,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.201734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 375,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.210573+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 544,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.201734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 455,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.208833+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 360,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.215132+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 514,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.210573+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 425,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.213289+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 363,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.219341+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 520,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.215132+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 431,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.217330+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 372,
+      "line_count": 9,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.219341+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 538,
+      "line_count": 18,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.219341+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 449,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.219341+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\youtube-downloader\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 449,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.219341+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi.tv\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 431,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.217330+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\xamehi\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 425,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.213289+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\university-libary-jsm\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 455,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.210573+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\selenium_webdriver\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 449,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.201734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixe_scans\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 435,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.199721+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\rhixecompany-comics\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 451,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.194682+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Resume_maker\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 437,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.184593+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Python-projects\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 443,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.178757+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\profile\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 427,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.176744+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\mcp-servers\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 435,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.170113+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\ecom\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 421,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.167441+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\docs\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 421,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.157906+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Django-Scrapy-Selenium\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 457,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.154562+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\cookiecutter-django-tailwind\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 469,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.152552+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 431,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.149183+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\comicwise\\.github\\copilot\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 7145,
+      "line_count": 181,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-01T02:36:17.707133+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 421,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.141334+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Bash\\docs\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 3685,
+      "line_count": 145,
+      "classification": "stale",
+      "issues": [
+        "stale: Bash/ migrated to projects/Bash/"
+      ],
+      "last_modified": "2026-08-28T20:57:04.026435+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\projects\\Banking\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 427,
+      "line_count": 14,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:37:09.139321+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 12272,
+      "line_count": 320,
+      "classification": "conflicting",
+      "issues": [
+        "exceeds_250_line_cap (320 lines)",
+        "exceeds_10KB (12.0KB)",
+        "conflicting: user-communication-prefs: commit only with explicit ask"
+      ],
+      "last_modified": "2026-08-24T22:54:30.232719+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 95906,
+      "line_count": 1785,
+      "classification": "conflicting",
+      "issues": [
+        "exceeds_250_line_cap (1785 lines)",
+        "exceeds_10KB (93.7KB)",
+        "too_many_H1 (9)",
+        "conflicting: user-communication-prefs: commit only with explicit ask"
+      ],
+      "last_modified": "2026-08-24T14:43:37.178431+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.028445+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1820,
+      "line_count": 39,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:28:09.641792+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\development\\litprog-skill\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 3163,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-06-29T16:46:28.201344+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 400,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.391591+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 471,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.386734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 437,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.386734+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 399,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.389580+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 473,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.384724+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 2407,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.726947+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 459,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.357683+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 409,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.399634+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 480,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.393603+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 446,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.395614+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 408,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.397624+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 482,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.393603+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 2304,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.726947+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 468,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.391591+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 412,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.401655+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 483,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.399634+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 449,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.401655+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 411,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.401655+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 6062,
+      "line_count": 38,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 2419,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.726947+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1674,
+      "line_count": 47,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 398,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 469,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 435,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 397,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 471,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 879,
+      "line_count": 10,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.144160+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 457,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 402,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 473,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 439,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 401,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 475,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 513,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T15:31:41.218817+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 461,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.405268+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 403,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.426784+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 474,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.421133+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 440,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.424772+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 402,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.424772+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 476,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.421133+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 859,
+      "line_count": 10,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.157611+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 462,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.421133+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 398,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.433849+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 469,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.429808+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 435,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.431838+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 397,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.433849+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 471,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.429808+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 842,
+      "line_count": 10,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.173736+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 457,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.428797+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 409,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.438888+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 480,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.435861+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 446,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.436872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 408,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.438888+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 6062,
+      "line_count": 38,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 2547,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.742841+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1671,
+      "line_count": 47,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 398,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.447456+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 469,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.442912+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 435,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.442912+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 397,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.444942+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 471,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.440901+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 851,
+      "line_count": 10,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.206008+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 457,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.440901+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 408,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.452994+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 479,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.447456+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 445,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.449469+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 407,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.451483+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 6062,
+      "line_count": 38,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 2537,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.742841+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1670,
+      "line_count": 47,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 397,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.459904+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 468,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.452994+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 434,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.457891+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 396,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.457891+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 470,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.452994+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 848,
+      "line_count": 10,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.222151+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 456,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.452994+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 397,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.466857+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 468,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.464843+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 434,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.464843+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 396,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.466857+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 470,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.459904+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 851,
+      "line_count": 10,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.238310+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 456,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.459904+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 411,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 482,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 448,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 410,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 6062,
+      "line_count": 38,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 2491,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.758969+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1673,
+      "line_count": 47,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-11T21:56:31.261647+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.cursorrules",
+      "type": ".cursorrules",
+      "size_bytes": 403,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.hermes.md",
+      "type": ".hermes.md",
+      "size_bytes": 474,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 440,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 402,
+      "line_count": 11,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 476,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\SOUL.md",
+      "type": "SOUL.md",
+      "size_bytes": 851,
+      "line_count": 10,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.254146+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 462,
+      "line_count": 12,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T19:40:51.468872+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.030453+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1268,
+      "line_count": 33,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.238310+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 5208,
+      "line_count": 39,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.032475+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1492,
+      "line_count": 31,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.758969+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\skills\\development\\litprog-skill\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 3163,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-06-29T16:46:28.201344+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\plugins\\mindstudio-agent\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 27607,
+      "line_count": 391,
+      "classification": "bloat",
+      "issues": [
+        "exceeds_250_line_cap (391 lines)",
+        "exceeds_10KB (27.0KB)"
+      ],
+      "last_modified": "2026-06-13T17:17:58.362826+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.034487+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1256,
+      "line_count": 33,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.222773+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.034487+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1257,
+      "line_count": 33,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.206008+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 5225,
+      "line_count": 39,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.036495+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1486,
+      "line_count": 31,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.742841+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\skills\\development\\litprog-skill\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 3163,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-06-29T16:46:28.201344+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\plugins\\mindstudio-agent\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 27607,
+      "line_count": 391,
+      "classification": "bloat",
+      "issues": [
+        "exceeds_250_line_cap (391 lines)",
+        "exceeds_10KB (27.0KB)"
+      ],
+      "last_modified": "2026-06-13T17:17:58.362826+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.038504+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1256,
+      "line_count": 33,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.189847+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 5247,
+      "line_count": 39,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.040511+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1488,
+      "line_count": 31,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.742841+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\skills\\development\\litprog-skill\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 3163,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-06-29T16:46:28.201344+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\plugins\\mindstudio-agent\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 27607,
+      "line_count": 391,
+      "classification": "bloat",
+      "issues": [
+        "exceeds_250_line_cap (391 lines)",
+        "exceeds_10KB (27.0KB)"
+      ],
+      "last_modified": "2026-06-13T17:17:58.362826+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.042521+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1246,
+      "line_count": 33,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.157611+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.044530+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1267,
+      "line_count": 33,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.144160+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 4287,
+      "line_count": 36,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.046280+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1277,
+      "line_count": 33,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T14:21:48.125569+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 5173,
+      "line_count": 39,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.048289+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1494,
+      "line_count": 31,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.726947+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\skills\\development\\litprog-skill\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 3163,
+      "line_count": 58,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-06-29T16:46:28.201344+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\plugins\\mindstudio-agent\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 27607,
+      "line_count": 391,
+      "classification": "bloat",
+      "issues": [
+        "exceeds_250_line_cap (391 lines)",
+        "exceeds_10KB (27.0KB)"
+      ],
+      "last_modified": "2026-06-13T17:17:58.362826+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 5177,
+      "line_count": 39,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.048289+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1488,
+      "line_count": 31,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.726947+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\memories\\MEMORY.md",
+      "type": "MEMORY.md",
+      "size_bytes": 5123,
+      "line_count": 39,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-28T20:57:04.050298+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\memories\\USER.md",
+      "type": "USER.md",
+      "size_bytes": 1470,
+      "line_count": 31,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-24T22:34:26.726947+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\mindstudio-agent\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 27607,
+      "line_count": 391,
+      "classification": "bloat",
+      "issues": [
+        "exceeds_250_line_cap (391 lines)",
+        "exceeds_10KB (27.0KB)"
+      ],
+      "last_modified": "2026-06-13T17:17:58.362826+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\oh-my-hermes\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 2721,
+      "line_count": 83,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-08-04T19:46:57.869334+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers\\AGENTS.md",
+      "type": "AGENTS.md",
+      "size_bytes": 9,
+      "line_count": 1,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 8873,
+      "line_count": 116,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:18:51.728900+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\gh-skills-builder\\.github\\copilot-instructions.md",
+      "type": "copilot-instructions.md",
+      "size_bytes": 1407,
+      "line_count": 20,
+      "classification": "unknown",
+      "issues": [],
+      "last_modified": "2026-07-27T22:19:15.730097+00:00"
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\desktop-plugins\\mindstudio-agent\\CLAUDE.md",
+      "type": "CLAUDE.md",
+      "size_bytes": 27607,
+      "line_count": 391,
+      "classification": "bloat",
+      "issues": [
+        "exceeds_250_line_cap (391 lines)",
+        "exceeds_10KB (27.0KB)"
+      ],
+      "last_modified": "2026-06-13T17:17:58.362826+00:00"
+    }
+  ],
+  "cross_refs": {
+    "mcp_first": [
+      "AGENTS.md",
+      "SOUL.md",
+      "SOUL.md",
+      "USER.md",
+      "SOUL.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md"
+    ],
+    "profile_routing": [
+      ".hermes.md",
+      "AGENTS.md",
+      "MEMORY.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md"
+    ],
+    "dry_principle": [
+      "AGENTS.md",
+      "copilot-instructions.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "MEMORY.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md",
+      "USER.md"
+    ],
+    "session_startup": []
+  },
+  "notes": [
+    "Found 259 instruction files across 2 roots",
+    "Counts: {\"canonical\": 5, \"duplicate\": 0, \"bloat\": 6, \"stale\": 2, \"conflicting\": 4, \"unknown\": 242}",
+    "Cross-ref rule distribution: {'mcp_first': 3, 'profile_routing': 4, 'dry_principle': 4, 'session_startup': 0}",
+    "Classification order: conflicting > stale > bloat > duplicate > canonical > unknown"
+  ]
+}
