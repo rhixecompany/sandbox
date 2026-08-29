@@ -9,6 +9,16 @@ tools: [terminal, read_file, write_file, patch, search_files, skill_view]
 metadata:
   hermes:
     tags: [mcp, audit, sync, devops]
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
+version: 1.0.0
+author: Hermes Agent
 ---
 ## Table of Contents
 

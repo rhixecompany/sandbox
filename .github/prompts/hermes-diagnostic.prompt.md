@@ -1,6 +1,7 @@
 ---
 name: hermes-diagnostic
 description: Run a full Hermes Agent diagnostic sweep — doctor, security, status, insights, logs (list/errors/desktop/gateway/gui/agent), and bun run check. Produces a single report.
+trigger: /hermes-diagnostic
 version: 1.0.0
 author: Hermes Agent
 license: MIT
@@ -12,6 +13,14 @@ metadata:
     tags:
     - diagnostic
     - health-check
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+title: Hermes Diagnostic Sweep
 ---
 
 # Hermes Diagnostic Sweep

@@ -1,36 +1,52 @@
+---
+name: repo
+title: Repository Operations
+description: |
+  Generic repository operations — clone, init, commit, push, branch, submodule management.
+  Used as the default repo-utility prompt.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /repo
+toolsets:
+  - file
+  - terminal
+  - web
+skills:
+  - skill:using-superpowers
+  - skill:executing-plans
+dependencies: []
+formatter: markdown
+metadata:
+  hermes:
+    profile: code-architect
+    context_size: large
+  copilot:
+    context_size: large
+  opencode:
+    command: "opencode /repo"
+  codex:
+    model_override: null
+---
 ## Table of Contents
 
 - [Goal](#goal)
 - [Context](#context)
   - [Repo Inventory (17 projects)](#repo-inventory-17-projects)
 - [Constraints](#constraints)
-- [Phases](#phases)
-  - [Phase 0: Prerequisites](#phase-0:-prerequisites)
-  - [Phase 1: Web Research (delegated)](#phase-1:-web-research-delegated)
-  - [Phase 2: Report Writing](#phase-2:-report-writing)
-- [Phase 3: Index & Cross-Reference](#phase-3:-index-&-cross-reference)
-  - [Phase 4: Verification](#phase-4:-verification)
+- [Workflow](#workflow)
+  - [Phase 0: Prerequisites](#phase-0-prerequisites)
+  - [Phase 1: Web Research (delegated)](#phase-1-web-research-delegated)
+  - [Phase 2: Report Writing](#phase-2-report-writing)
+  - [Phase 3: Index & Cross-Reference](#phase-3-index--cross-reference)
+  - [Phase 4: Verification](#phase-4-verification)
 - [Quick Repo Onboarding](#quick-repo-onboarding)
-  - [Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."](#q1:-"summarize-this-repo-in-5-bullets-and-tell-me-what-the-main-entrypoint-is")
-  - [Q2: "Check my current directory and tell me what looks like the main project file."](#q2:-"check-my-current-directory-and-tell-me-what-looks-like-the-main-project-file")
-  - [Q3: "Help me set up a clean GitHub PR workflow for this codebase."](#q3:-"help-me-set-up-a-clean-github-pr-workflow-for-this-codebase")
-  - [Q4: "What's my disk usage? Show the top 5 largest directories."](#q4:-"what's-my-disk-usage?-show-the-top-5-largest-directories")
+  - [Q1: Summarize repo + main entrypoint](#q1-summarize-repo--main-entrypoint)
+  - [Q2: Identify main project file in cwd](#q2-identify-main-project-file-in-cwd)
+  - [Q3: Set up clean GitHub PR workflow](#q3-set-up-clean-github-pr-workflow)
+  - [Q4: Disk usage — top 5 directories](#q4-disk-usage--top-5-directories)
 - [Report Template](#report-template)
-- [Project: <name>](#project:-<name>)
-- [Similar Projects](#similar-projects)
-- [Key Findings](#key-findings)
-  - [<Technology/Topic>](#<technology/topic>)
-  - [<Technology/Topic>](#<technology/topic>)
-- [Cheatsheets & Quick Reference](#cheatsheets-&-quick-reference)
-- [Best Practices](#best-practices)
-- [Common Pitfalls](#common-pitfalls)
-- [Performance](#performance)
-- [Security](#security)
-- [Related Projects (in workspace)](#related-projects-in-workspace)
-- [Resources](#resources)
 - [Acceptance Criteria](#acceptance-criteria)
-- [Skills Required](#skills-required)
-- [Actions](#actions)
 - [Secondary Goals](#secondary-goals)
 - [Related Prompts](#related-prompts)
 - [Template References](#template-references)
@@ -39,54 +55,34 @@
 - [Rules](#rules)
   - [Domain Rules](#domain-rules)
   - [Standing Rules](#standing-rules)
-- [Workflow](#workflow)
+- [Workflow (diagnostic pattern)](#workflow-diagnostic-pattern)
 - [Verification Checklist](#verification-checklist)
 - [Dependencies](#dependencies)
 - [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [MCP Servers & Tools](#mcp-servers--tools)
 - [Hooks](#hooks)
 - [Tasks](#tasks)
 - [Scripts](#scripts)
 
-
-
-
-
-
 ## Goal
-
-## Context
-
-## Phases
-
 
 Research each of the 17 projects under `projects/`. For every project:
 
 1. **Web-search** for similar projects, guides, cheatsheets, best practices.
-
 2. **Extract** useful content: architecture patterns, tool recommendations, common pitfalls, performance tips, security hardening.
-
 3. **Update** `RESEARCH_REPORT.md` if it exists — refresh findings, verify links, add new discoveries.
-
 4. **Create** `RESEARCH_REPORT.md` if missing — new report from the template in the Report Template section.
 
 **Output:** one `RESEARCH_REPORT.md` per project root. Updated `projects/RESEARCH_INDEX.md`.
 
----
-## Table of Contents
-
-## Goal
-
 ## Context
-
-## Phases
-
-
 
 **Workspace:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`)
 
 All 16 reports currently exist on disk; 1 project (`mcp-servers`) needs its report created.
 Default action is **UPDATE** (refresh findings, verify links). Only fall back to **CREATE** if a report was deleted or for `mcp-servers`.
+
+This prompt is the umbrella for repo-level work: it covers both the 17-project research pipeline and the lightweight single-repo onboarding questions (Q1–Q4) that users ask directly. The two modes share tooling (Tavily, filesystem, GitHub) but differ in scope — research pipeline is batched and report-driven, onboarding is ad-hoc and conversational.
 
 ### Repo Inventory (17 projects)
 
@@ -120,6 +116,7 @@ Default action is **UPDATE** (refresh findings, verify links). Only fall back to
 - Symmetric cross-references: if A references B, B must reference A.
 - Do not advance to secondary goals until Phase 4 verification passes for all 17 reports.
 
+## Workflow
 
 ### Phase 0: Prerequisites
 
@@ -262,7 +259,7 @@ terminal("for f in projects/*/RESEARCH_REPORT.md; do echo \"=== $f ===\"; grep -
 
 Run these lightweight intros when the user asks simple questions about the repo itself (not the 17 project research pipeline).
 
-### Q1: "Summarize this repo in 5 bullets and tell me what the main entrypoint is."
+### Q1: Summarize repo + main entrypoint
 
 **Phase: Onboarding — Single Repo**
 
@@ -281,7 +278,7 @@ ls -la && find . -maxdepth 3 -not -path '*/\.*' -not -path '*/node_modules/*' -n
 grep -E '"main"|"start"|main\.py|def main|if __name__|fn main' package.json pyproject.toml src/*.py src/*.ts 2>/dev/null | head -10
 ```
 
-### Q2: "Check my current directory and tell me what looks like the main project file."
+### Q2: Identify main project file in cwd
 
 **Phase: Onboarding — Current Directory**
 
@@ -298,7 +295,7 @@ ls -la | head -30
 file * 2>/dev/null | head -20
 ```
 
-### Q3: "Help me set up a clean GitHub PR workflow for this codebase."
+### Q3: Set up clean GitHub PR workflow
 
 **Phase: Onboarding — CI/GitHub**
 
@@ -321,7 +318,7 @@ read_file("AGENTS.md") # for existing CI patterns
 ls .github/workflows/ 2>/dev/null || echo 'no workflows yet'
 ```
 
-### Q4: "What's my disk usage? Show the top 5 largest directories."
+### Q4: Disk usage — top 5 directories
 
 **Phase: Onboarding — Disk Analysis**
 
@@ -414,17 +411,17 @@ List project name + shared technology. Must be symmetric.>
 
 ## Acceptance Criteria
 
-| Gate | Condition | Verification Command | |
-| ------------------------- | -------------------------------------- | -------------------------------------------------------- | |
-| All 17 reports exist | count = 17 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \ | wc -l` |
-| Each report ≥ 9 sections | `grep -c '^## '` ≥ 9 | per-report loop | |
-| No report under 1KB | `wc -c` ≥ 1024 | per-report loop | |
-| No report over 5KB | `wc -c` ≤ 5120 | per-report loop | |
-| 34 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 | |
-| RESEARCH_INDEX.md current | 17 rows, size + date correct | read + verify | |
-| No fabricated findings | every fact traces to `web_search` | manual review | |
-| Scope respected | no branch/migration work started | agent self-check | |
-| Sub-prompts accessible | `.github/prompts/*.prompt.md` resolves | file check | |
+| Gate | Condition | Verification Command |
+| ------------------------- | -------------------------------------- | -------------------------------------------------------- |
+| All 17 reports exist | count = 17 | `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' \| wc -l` |
+| Each report ≥ 9 sections | `grep -c '^## '` ≥ 9 | per-report loop |
+| No report under 1KB | `wc -c` ≥ 1024 | per-report loop |
+| No report over 5KB | `wc -c` ≤ 5120 | per-report loop |
+| 34 URL spot-checks pass | `web_extract` non-404 | Phase 4 step 3 |
+| RESEARCH_INDEX.md current | 17 rows, size + date correct | read + verify |
+| No fabricated findings | every fact traces to `web_search` | manual review |
+| Scope respected | no branch/migration work started | agent self-check |
+| Sub-prompts accessible | `.github/prompts/*.prompt.md` resolves | file check |
 
 ---
 
@@ -448,7 +445,7 @@ List project name + shared technology. Must be symmetric.>
 | `repo-research-pipeline` | 1 | Multi-project research orchestrator |
 | `github-repo-management` | — | GitHub repo operations for post-research |
 | `code-wiki` | — | Repo analysis for repo-story-time |
-| `writing--and-concisely` | — | Clean writing for repo-story-time |
+| `writing-clearly-and-concisely` | — | Clean writing for repo-story-time |
 
 ---
 
@@ -540,7 +537,7 @@ See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core
 3. **Verify before claim** — Test before reporting complete.
 4. **Report blockers** — State when something fails.
 
-## Workflow
+## Workflow (diagnostic pattern)
 
 See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton.md) for workflow structure.
 
@@ -613,23 +610,4 @@ Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
-- `.github/hooks/*` — hook implementations referenced in the Hooks section---
-name: repo
-title: Repo
-description: Universal repository inspection and onboarding prompt that summarizes a repo, identifies entrypoints, explains PR workflow, and reports disk usage.
-version: 1.0.0
-author: Hermes Agent
-tags: [repo, onboarding, summary, inspection, entrypoint, disk-usage]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
----
-
+- `.github/hooks/*` — hook implementations referenced in the Hooks section

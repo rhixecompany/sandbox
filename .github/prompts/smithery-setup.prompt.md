@@ -25,6 +25,14 @@ metadata:
     enabled: true
   codex:
     enabled: true
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
 ---
 ## Table of Contents
 
@@ -1968,7 +1976,6 @@ return createMCPClient({ transport });
 
 // Aggregate tools from all servers
 const allTools = Object.assign({}, ...(await Promise.all(clients.map(c => c.tools()))));
-```
 
 ## Learn More
 

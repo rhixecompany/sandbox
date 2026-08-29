@@ -17,64 +17,41 @@ metadata:
   codex:
     enabled: true
 date: '2026-08-25'
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
 ---
 ## Table of Contents
 
+- [Goal](#goal)
+- [Context](#context)
+- [Workflow](#workflow)
+- [Rules](#rules)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers--tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+
 ## Goal
+
+Run research across all project repos and produce `RESEARCH_REPORT.md` files with verified sources. Use the Tavily-first research pipeline and maintain symmetric cross-references between reports that share technology.
 
 ## Context
 
-## Phases
-
-
-
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Workflow](#workflow)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Workflow](#workflow)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-
-
-
-
-
-Run research across all project repos and produce RESEARCH_REPORT.md files
-with verified sources. **Tavily-first:** use `mcp__tavily__tavily_search` → `mcp__tavily__tavily_extract` before other backends.
+A multi-project workspace needs per-project research artifacts so engineers can find best practices, similar projects, common pitfalls, and security considerations for each stack. This prompt is the orchestrator that drives the per-project work — it does not perform web search inline. Instead, it delegates each project's research to the `web-research-pipeline` sub-prompt and aggregates the results into `RESEARCH_REPORT.md` files and a top-level `RESEARCH_INDEX.md`.
 
 ## Workflow
 
@@ -119,7 +96,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 

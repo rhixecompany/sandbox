@@ -25,6 +25,14 @@ metadata:
     enabled: true
   codex:
     enabled: true
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
 ---
 ## Table of Contents
 
@@ -316,3 +324,4 @@ Detailed section templates in `templates/java-mcp-server-generator/`:
 - `resourcehandlersjava_template.md`
 - `tooldefinitionsjava_template.md`
 - `toolhandlersjava_template.md`
+````

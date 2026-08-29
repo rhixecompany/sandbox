@@ -15,6 +15,14 @@ metadata:
     - audit
     - plugins
     - hooks
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+title: Plugins + Hooks Audit
 ---
 
 # Plugin + Hook Audit

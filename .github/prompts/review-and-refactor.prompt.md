@@ -17,6 +17,14 @@ metadata:
   codex:
     enabled: true
 date: '2026-08-25'
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
 ---
 ## Table of Contents
 

@@ -17,73 +17,51 @@ metadata:
   codex:
     enabled: true
 date: '2026-08-25'
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
 ---
 ## Table of Contents
 
+- [Goal](#goal)
+- [Context](#context)
+- [Workflow](#workflow)
+  - [Phase 0: Repo Overview (Onboarding)](#phase-0-repo-overview-onboarding)
+  - [Phase 1: Branch Normalization](#phase-1-branch-normalization)
+  - [Phase 2: Ignore File Audit](#phase-2-ignore-file-audit)
+  - [Phase 3: Dependency Audit](#phase-3-dependency-audit)
+  - [Phase 4: CI Workflow Setup](#phase-4-ci-workflow-setup)
+- [Prerequisites](#prerequisites)
+- [Rules](#rules)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers--tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+
 ## Goal
+
+Bring every repository to a clean standard state. The desired end state is a repo with `development` + `production` branches only, a complete `.gitignore`, audited dependency manifests, and a working GitHub Actions CI workflow.
 
 ## Context
 
-## Phases
+This prompt runs after `repo-research-pipeline` has produced `RESEARCH_REPORT.md` for the project. It is the operational follow-up to research: where research answers "what should this repo do?", `repo-management` enforces "what shape must this repo be in?". All destructive operations (branch deletion) require explicit per-branch user approval and record pre-state for rollback.
 
+## Workflow
 
-
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Workflow](#workflow)
-  - [Phase 0: Repo Overview (Onboarding)](#phase-0:-repo-overview-onboarding)
-  - [Phase 1: Branch Normalization](#phase-1:-branch-normalization)
-  - [Phase 2: Ignore File Audit](#phase-2:-ignore-file-audit)
-  - [Phase 3: Dependency Audit](#phase-3:-dependency-audit)
-  - [Phase 4: CI Workflow Setup](#phase-4:-ci-workflow-setup)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Workflow](#workflow)
-- [Phase 0: Repo Overview (Onboarding)](#phase-0:-repo-overview-onboarding)
-- [Phase 1: Branch Normalization](#phase-1:-branch-normalization)
-- [Phase 2: Ignore File Audit](#phase-2:-ignore-file-audit)
-- [Phase 3: Dependency Audit](#phase-3:-dependency-audit)
-- [Phase 4: CI Workflow Setup](#phase-4:-ci-workflow-setup)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-
-
-
-
+The workflow is a five-phase pipeline: Phase 0 (onboarding summary) → Phase 1 (branch normalization) → Phase 2 (ignore file audit) → Phase 3 (dependency audit) → Phase 4 (CI workflow setup). Each phase is idempotent and verifies its result before the next phase runs.
 
 Leave every repo with:
 
@@ -190,7 +168,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 

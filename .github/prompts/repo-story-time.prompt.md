@@ -17,67 +17,38 @@ metadata:
   codex:
     enabled: true
 date: '2026-08-25'
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
 ---
 ## Table of Contents
 
+- [Goal](#goal)
+- [Context](#context)
+- [Workflow](#workflow)
+  - [Phase 1: Repository Exploration](#phase-1-repository-exploration)
+  - [Phase 2: Analysis](#phase-2-analysis)
+  - [Phase 3: Write Files](#phase-3-write-files)
+- [Rules](#rules)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers--tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Tasks](#tasks)
+- [Related Prompts](#related-prompts)
+
 ## Goal
-
-## Context
-
-## Phases
-
-
-
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Workflow](#workflow)
-  - [Phase 1: Repository Exploration](#phase-1:-repository-exploration)
-  - [Phase 2: Analysis](#phase-2:-analysis)
-  - [Phase 3: Write Files](#phase-3:-write-files)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Workflow](#workflow)
-- [Phase 1: Repository Exploration](#phase-1:-repository-exploration)
-- [Phase 2: Analysis](#phase-2:-analysis)
-- [Phase 3: Write Files](#phase-3:-write-files)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Transform any repository's git history into two deliverables:
 
@@ -87,7 +58,13 @@ Transform any repository's git history into two deliverables:
 For a lighter 5-bullet summary instead of a full story, use the
 **Quick Repo Onboarding** section in `repo.prompt.md` (Q1: summarize + entrypoint).
 
+## Context
+
+Repositories accumulate a commit history that is rarely read as a story. This prompt turns that history into two complementary documents: a dry technical summary (for engineers onboarding) and a narrative story (for anyone who wants to understand *how* the project got here). Both are evidence-based — every claim traces to a real commit, contributor, or file.
+
 ## Workflow
+
+The workflow is a three-phase pipeline: Phase 1 (git-based repository exploration) → Phase 2 (analysis of structure and themes) → Phase 3 (write the two markdown files at the repo root). Use `write_file` to actually create the files; do not just print the content.
 
 ### Phase 1: Repository Exploration
 
@@ -140,7 +117,6 @@ See [`templates/_shared/personality.md`](templates/_shared/personality.md) for s
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
 
 Use for the task described in the Goal section. Follow structured workflow and verify results.
 

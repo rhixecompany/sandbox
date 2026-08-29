@@ -10,6 +10,13 @@ tags: [instruction-files, audit, triage, prompt]
 metadata:
   hermes:
     tags: [instruction-files, audit, prompt]
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
 ---
 
 # Instruction File Triage

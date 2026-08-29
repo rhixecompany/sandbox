@@ -14,6 +14,14 @@ metadata:
     tags:
     - ollama
     - local-model
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+title: Ollama Wire (4-Agent)
 ---
 
 # Ollama Wire (4-Agent)

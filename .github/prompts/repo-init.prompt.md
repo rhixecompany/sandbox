@@ -17,24 +17,47 @@ metadata:
   codex:
     enabled: true
 date: '2026-08-25'
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
 ---
 ## Table of Contents
 
+- [Goal](#goal)
+- [Context](#context)
+- [Workflow](#workflow)
+- [Prerequisites](#prerequisites)
+- [Inputs](#inputs)
+- [Skills Required](#skills-required)
+- [Outputs](#outputs)
+- [Steps](#steps)
+  - [1. List and Triage](#1-list-and-triage)
+  - [2. Dedupe and Consolidate](#2-dedupe-and-consolidate)
+  - [3. Delete Duplicates](#3-delete-duplicates)
+- [Rules](#rules)
+- [Verification](#verification)
+- [Out of Scope](#out-of-scope)
+
 ## Goal
+
+Initialize a repository and its accompanying Hermes root to a consistent, deduplicated state. The end state has exactly one canonical copy of every artifact (prompts, skills, agents, hooks, instructions, plans) — no duplicates, no broken references, no stale wrappers.
 
 ## Context
 
-## Phases
+Hermes-managed projects maintain two parallel inventories: the repository under `pwd` and the Hermes root at `~/AppData/Local/hermes`. The same artifact often lives in both, and within each location two files can serve the same role. This prompt exists to surface those duplicates, choose a single canonical path per role, and delete the rest safely.
 
+## Workflow
 
-
-
-
+The workflow runs as three sequential phases — triage, dedupe, then delete — each gated by a verification step. See [Steps](#steps) for the per-phase commands and the [Rules](#rules) section for the safety contract that applies across all three.
 
 # Repo Init
 
 > Comprehensive implementation prompt, plan, scripts, and skill that outlines the steps needed to initialize a repository, including timelines, milestones, and resource allocation.
-
 
 Initialize a Hermes-managed repository and its accompanying Hermes root (`~/AppData/Local/hermes`) to a consistent, deduplicated state. The end state has exactly one canonical copy of every artifact (prompts, skills, agents, hooks, instructions, plans) — no duplicates, no broken references, no stale wrappers.
 

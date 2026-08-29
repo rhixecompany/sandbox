@@ -25,6 +25,13 @@ metadata:
     enabled: true
   codex:
     enabled: true
+toolsets:
+  - file
+  - terminal
+skills:
+  - skill:using-superpowers
+dependencies: []
+formatter: markdown
 ---
 ## Table of Contents
 
