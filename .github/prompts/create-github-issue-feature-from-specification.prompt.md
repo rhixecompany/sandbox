@@ -2,6 +2,7 @@
 name: create-github-issue-feature-from-specification
 title: Create GitHub Issue From Specification
 description: Turn a feature specification into one or more well-scoped GitHub issues with acceptance criteria.
+trigger: /create-github-issue-feature-from-specification
 version: 1.0.0
 author: Hermes Agent
 tags:

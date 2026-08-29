@@ -2,6 +2,7 @@
 name: plan-audit
 title: Agent Stack Audit
 description: Audits Hermes skills, plugins, MCP config, and Copilot custom agents, then cross-references for duplicates, broken references, and orphan files; reports to docs/agent-stack-audit-report.md.
+trigger: /plan-audit
 version: 1.0.0
 author: Hermes Agent
 tags:

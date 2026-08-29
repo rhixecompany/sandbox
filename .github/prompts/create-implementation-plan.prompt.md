@@ -2,6 +2,7 @@
 name: create-implementation-plan
 title: Create Implementation Plan
 description: Produce a phased, bite-sized implementation plan from a specification with clear tasks, paths, and verification steps.
+trigger: /create-implementation-plan
 version: 1.0.0
 author: Hermes Agent
 tags:

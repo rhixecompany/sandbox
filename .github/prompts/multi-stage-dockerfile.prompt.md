@@ -2,6 +2,7 @@
 name: multi-stage-dockerfile
 title: Multi-Stage Dockerfile
 description: Creates optimized multi-stage Dockerfiles for any language or framework, focusing on layer caching, image size, and security.
+trigger: /multi-stage-dockerfile
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

@@ -2,6 +2,7 @@
 name: tasksync
 title: TaskSync Continuous Execution
 description: Executes tasks continuously without auto-termination following TaskSync state rules, requests new tasks after completion, and uses terminal-first intake behaviour for persistent task-cycle execution.
+trigger: /tasksync
 version: 1.0.0
 author: Hermes Agent
 tags:

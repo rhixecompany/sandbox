@@ -2,6 +2,7 @@
 name: features
 title: Feature Implementation
 description: Completes feature implementation tasks for profiles, comics, chapters, and bookmarks end-to-end.
+trigger: /features
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

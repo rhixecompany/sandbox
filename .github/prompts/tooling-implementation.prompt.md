@@ -2,6 +2,7 @@
 name: tooling-implementation
 title: Tooling Implementation Workflow
 description: Execute the tooling-implementation workflow to prepare, execute, verify, and document tooling setup following the shared templates and rules.
+trigger: /tooling-implementation
 version: 1.0.0
 author: Hermes Agent
 tags:

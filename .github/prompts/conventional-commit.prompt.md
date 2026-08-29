@@ -2,6 +2,7 @@
 name: conventional-commit
 title: Conventional Commit
 description: Generate a Conventional Commits message from a staged diff or summary of changes, following the standard types and scopes.
+trigger: /conventional-commit
 version: 1.0.0
 author: Hermes Agent
 tags:

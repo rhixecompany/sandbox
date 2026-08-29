@@ -2,6 +2,7 @@
 name: repo-tooling-implementation
 title: Repo Tooling Implementation
 description: Execute the repo-tooling-implementation workflow, which scaffolds AI-agent context files (AGENTS.md, copilot-instructions, hooks, etc.) and verifies per-repo tooling.
+trigger: /repo-tooling-implementation
 version: 1.0.0
 author: Hermes Agent
 tags: [repo, tooling, agent-context, scaffolding, setup]

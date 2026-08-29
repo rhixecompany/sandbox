@@ -2,6 +2,7 @@
 name: update-implementation-plan
 title: Update Implementation Plan
 description: Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure work.
+trigger: /update-implementation-plan
 version: 1.0.0
 author: Hermes Agent
 tags:

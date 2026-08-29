@@ -2,6 +2,7 @@
 name: my-pull-requests
 title: My Pull Requests
 description: Lists pull requests authored by or involving the current user in the active repository, with filters for state and review status.
+trigger: /my-pull-requests
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

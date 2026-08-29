@@ -2,6 +2,7 @@
 name: performance
 title: Performance Baseline and Optimization
 description: Establishes measurable performance baselines, identifies high-impact bottlenecks, and applies targeted optimizations with before/after verification.
+trigger: /performance
 version: 1.0.0
 author: Hermes Agent
 tags:

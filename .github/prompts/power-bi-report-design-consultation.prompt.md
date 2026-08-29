@@ -2,6 +2,7 @@
 name: power-bi-report-design-consultation
 title: Power BI Report Design Consultation
 description: Guides Power BI report design — gathers requirements, plans information architecture, recommends visualizations, and validates design quality.
+trigger: /power-bi-report-design-consultation
 version: 1.0.0
 author: Hermes Agent
 tags:

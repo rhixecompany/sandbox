@@ -2,6 +2,7 @@
 name: shuffle-json-data
 title: Shuffle JSON Data
 description: Shuffles repetitive JSON objects safely by validating schema consistency across entries before randomising order, with explicit acceptable/unacceptable JSON examples.
+trigger: /shuffle-json-data
 version: 1.0.0
 author: Hermes Agent
 tags:

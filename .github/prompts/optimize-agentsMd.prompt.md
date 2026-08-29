@@ -2,6 +2,7 @@
 name: optimize-agentsMd
 title: Optimize AGENTS.md
 description: Audits and rewrites a repository's AGENTS.md for agentic coding workflows, aligning with project conventions, banking-domain patterns, and the source prompt's full coverage plan.
+trigger: /optimize-agentsmd
 version: 1.0.0
 author: Hermes Agent
 tags:

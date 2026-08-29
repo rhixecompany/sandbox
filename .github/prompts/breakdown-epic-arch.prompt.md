@@ -2,6 +2,7 @@
 name: breakdown-epic-arch
 title: Break Down Epic Architecture
 description: Generate the high-level technical architecture for an Epic from a Product Requirements Document, with full specification structure and context templates.
+trigger: /breakdown-epic-arch
 version: 1.0.0
 author: Hermes Agent
 tags:

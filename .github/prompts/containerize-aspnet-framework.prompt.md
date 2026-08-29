@@ -2,6 +2,7 @@
 name: containerize-aspnet-framework
 title: Containerize ASP.NET Framework
 description: Containerize a legacy ASP.NET Framework application with multi-stage Dockerfiles and production-ready settings.
+trigger: /containerize-aspnet-framework
 version: 1.0.0
 author: Hermes Agent
 tags:

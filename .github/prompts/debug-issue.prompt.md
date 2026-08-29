@@ -2,6 +2,7 @@
 name: debug-issue
 title: Debug Issue
 description: "Debug a reported issue end-to-end: capture inputs, follow diagnostic steps, and produce a structured fix-oriented output."
+trigger: /debug-issue
 version: 1.0.0
 author: Hermes Agent
 tags:

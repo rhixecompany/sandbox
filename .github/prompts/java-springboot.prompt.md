@@ -2,6 +2,7 @@
 name: java-springboot
 title: Java Spring Boot Best Practices
 description: Provides best practices for developing production-grade applications with Spring Boot, including DI, web, data, and security layers.
+trigger: /java-springboot
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

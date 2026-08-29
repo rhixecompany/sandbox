@@ -2,6 +2,7 @@
 name: agents-fix
 title: Sync Agent Definitions Across Surfaces
 description: Reconcile Hermes, Copilot, Codex, and OpenCode agent definitions so registration, schema, and metadata stay in lockstep without losing fidelity.
+trigger: /agents-fix
 version: 1.0.0
 author: Hermes Agent
 tags:

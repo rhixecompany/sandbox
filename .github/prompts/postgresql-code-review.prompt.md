@@ -2,6 +2,7 @@
 name: postgresql-code-review
 title: PostgreSQL Code Review
 description: PostgreSQL-specific code review focused on JSONB operations, array usage, custom types, function optimization, and Row Level Security best practices.
+trigger: /postgresql-code-review
 version: 1.0.0
 author: Hermes Agent
 tags:

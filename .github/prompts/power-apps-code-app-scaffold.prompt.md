@@ -2,6 +2,7 @@
 name: power-apps-code-app-scaffold
 title: Power Apps Code App Scaffold
 description: Scaffolds a Microsoft Power Apps Code App project (TypeScript + pac code push) following the official PowerAppsCodeApps samples and best practices.
+trigger: /power-apps-code-app-scaffold
 version: 1.0.0
 author: Hermes Agent
 tags:

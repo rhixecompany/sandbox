@@ -2,6 +2,7 @@
 name: create-oo-component-documentation
 title: Create OO Component Documentation
 description: Document an object-oriented component with class diagrams, responsibilities, and usage examples.
+trigger: /create-oo-component-documentation
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: session-agentsmd-full-workflow
 title: Session AGENTS.md Full Workflow
 description: Runs the comprehensive AGENTS.md generation and git reconciliation workflow across explicitly requested target projects, commits per repo, and reports repo-branch-SHA output.
+trigger: /session-agentsmd-full-workflow
 version: 1.0.0
 author: Hermes Agent
 tags:

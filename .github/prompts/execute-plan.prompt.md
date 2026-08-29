@@ -2,6 +2,7 @@
 name: execute-plan
 title: Execute Plan
 description: Executes a specified implementation plan from `.hermes/plans/`, taking the plan filename as a parameter.
+trigger: /execute-plan
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

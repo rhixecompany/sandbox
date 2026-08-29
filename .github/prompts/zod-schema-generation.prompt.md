@@ -2,6 +2,7 @@
 name: zod-schema-generation
 title: Zod Schema Generation
 description: Generate Zod v3+ validation schemas from TypeScript types, database schemas, or JSON samples with proper type inference, custom error messages, and best practices for schema composition.
+trigger: /zod-schema-generation
 version: 1.0.0
 author: Hermes Agent
 tags:

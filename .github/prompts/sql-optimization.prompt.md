@@ -2,6 +2,7 @@
 name: sql-optimization
 title: SQL Optimization
 description: Universal SQL performance optimization assistant for query tuning, indexing strategies, execution plan analysis, pagination optimization, batch operations, and monitoring across MySQL, PostgreSQL, SQL Server, and Oracle.
+trigger: /sql-optimization
 version: 1.0.0
 author: Hermes Agent
 tags:

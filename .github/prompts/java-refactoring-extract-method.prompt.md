@@ -2,6 +2,7 @@
 name: java-refactoring-extract-method
 title: "Java Refactoring: Extract Method"
 description: Performs the Extract Method refactoring on Java code, identifying duplication and improving readability with safe transformations.
+trigger: /java-refactoring-extract-method
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

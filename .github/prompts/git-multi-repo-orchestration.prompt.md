@@ -2,6 +2,7 @@
 name: git-multi-repo-orchestration
 title: Git Multi-Repo Orchestration
 description: Runs the full git lifecycle across all repos under `./projects` (commit, push, submodule sync, PR create/merge, dev→prod sync) using GitHub CLI and conventional commits.
+trigger: /git-multi-repo-orchestration
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

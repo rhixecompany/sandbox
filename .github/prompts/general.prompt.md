@@ -2,6 +2,7 @@
 name: general
 title: General Development Workflow
 description: General-purpose development workflow covering analysis, planning, implementation, and verification with context mapping and AI-assisted execution.
+trigger: /general
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

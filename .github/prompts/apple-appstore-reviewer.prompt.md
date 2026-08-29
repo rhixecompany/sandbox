@@ -2,6 +2,7 @@
 name: apple-appstore-reviewer
 title: Apple App Store Reviewer
 description: Audit a codebase against Apple App Store guidelines and produce a prioritized rejection-risk report covering privacy, metadata, performance, and policy hotspots.
+trigger: /apple-appstore-reviewer
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: create-github-issues-for-unmet-specification-requirements
 title: Create GitHub Issues For Unmet Specification Requirements
 description: Identify gaps between a specification and an implementation, then file GitHub issues that close each gap.
+trigger: /create-github-issues-for-unmet-specification-requirements
 version: 1.0.0
 author: Hermes Agent
 tags:

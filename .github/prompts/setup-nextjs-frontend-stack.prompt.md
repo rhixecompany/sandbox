@@ -2,6 +2,7 @@
 name: setup-nextjs-frontend-stack
 title: Setup Next.js Frontend Stack
 description: Scaffolds a production-ready Next.js (App Router) frontend stack for an entity — page, DAL, DTO, server actions, and Zod schemas — using TypeScript, Tailwind, and shadcn-style UI primitives.
+trigger: /setup-nextjs-frontend-stack
 version: 1.0.0
 author: Hermes Agent
 tags:

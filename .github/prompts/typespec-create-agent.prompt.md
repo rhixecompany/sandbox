@@ -2,6 +2,7 @@
 name: typespec-create-agent
 title: TypeSpec Create Agent
 description: Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation starters for Microsoft 365 Copilot.
+trigger: /typespec-create-agent
 version: 1.0.0
 author: Hermes Agent
 tags:

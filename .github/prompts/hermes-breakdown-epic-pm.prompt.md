@@ -2,6 +2,7 @@
 name: hermes-breakdown-epic-pm
 title: Hermes Breakdown — Epic PRD (PM)
 description: Produces a complete Epic PRD ready for downstream feature planning, written from a product manager perspective.
+trigger: /hermes-breakdown-epic-pm
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

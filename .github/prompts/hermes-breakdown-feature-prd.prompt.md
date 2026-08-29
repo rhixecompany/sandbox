@@ -2,6 +2,7 @@
 name: hermes-breakdown-feature-prd
 title: Hermes Breakdown — Feature PRD
 description: Produces a feature PRD ready to hand off for implementation planning.
+trigger: /hermes-breakdown-feature-prd
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

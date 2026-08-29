@@ -2,6 +2,7 @@
 name: debian-linux-triage
 title: Debian Linux Triage
 description: "Triage a Debian-based system: collect inputs, run diagnostic commands, and produce a structured incident report with remediation steps."
+trigger: /debian-linux-triage
 version: 1.0.0
 author: Hermes Agent
 tags:

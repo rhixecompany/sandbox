@@ -2,6 +2,7 @@
 name: prompts-strict-template
 title: Prompts Strict Template
 description: Normalize and validate .prompt.md files against the strict required structure, enforcing section order, phase table format, and Task/Subtask numbering without losing intent.
+trigger: /prompts-strict-template
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, template, normalization, validation, lint, refactor]

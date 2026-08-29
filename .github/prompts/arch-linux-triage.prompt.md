@@ -2,6 +2,7 @@
 name: arch-linux-triage
 title: Arch Linux System Triage
 description: Diagnose and resolve Arch Linux issues using pacman, systemd, and rolling-release best practices, with a structured triage report.
+trigger: /arch-linux-triage
 version: 1.0.0
 author: Hermes Agent
 tags:

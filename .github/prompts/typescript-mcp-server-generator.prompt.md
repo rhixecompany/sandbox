@@ -2,6 +2,7 @@
 name: typescript-mcp-server-generator
 title: TypeScript MCP Server Generator
 description: Generate a complete TypeScript MCP server project including tools, resources, configuration, and tests for a specified domain.
+trigger: /typescript-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
 tags:

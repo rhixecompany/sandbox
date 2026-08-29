@@ -2,6 +2,7 @@
 name: multi-agent-fanout
 title: "Multi-Agent Fanout"
 description: "Use when you need to enumerate authorized LLM providers, inspect installed SDK packages, and run a prompt non-interactively across the (provider × agent) matrix. Returns structured per-cell results with provider, model, context, max_output, capabilities, status, latency, output."
+trigger: /multi-agent-fanout
 agent: adminbot
 model: minimax/minimax-m3:free
 tools: [terminal, read_file, write_file, patch, search_files, skill_view]

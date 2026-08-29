@@ -2,6 +2,7 @@
 name: bash-scripts-fix
 title: Bash and Shell Script Modernization
 description: Inventory, audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace with a tracked plan.
+trigger: /bash-scripts-fix
 version: 1.0.0
 author: Hermes Agent
 tags:

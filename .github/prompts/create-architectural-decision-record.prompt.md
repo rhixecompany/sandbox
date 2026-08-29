@@ -2,6 +2,7 @@
 name: create-architectural-decision-record
 title: Create Architectural Decision Record
 description: Author an MADR-formatted Architectural Decision Record capturing context, decision, and consequences.
+trigger: /create-architectural-decision-record
 version: 1.0.0
 author: Hermes Agent
 tags:

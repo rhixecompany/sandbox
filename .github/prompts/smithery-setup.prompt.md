@@ -2,6 +2,7 @@
 name: smithery-setup
 title: Smithery MCP Setup
 description: Connect to MCP servers through Smithery — log in, discover servers, list available tools, call tools, and configure servers that require API keys or project IDs. Use when integrating Smithery-hosted MCP servers into an agent workflow.
+trigger: /smithery-setup
 version: 1.0.0
 author: Hermes Agent
 tags:

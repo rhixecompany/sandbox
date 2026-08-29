@@ -2,6 +2,7 @@
 name: comicwise-development
 title: ComicWise Development Prompt
 description: Standardize development practices, project structure, coding rules, and essential commands for ComicWise projects.
+trigger: /comicwise-development
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: editorconfig
 title: EditorConfig Generator
 description: Generates a comprehensive, best-practice .editorconfig file based on project analysis and language/runtime preferences.
+trigger: /editorconfig
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

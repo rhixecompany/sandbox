@@ -2,6 +2,7 @@
 name: create-technical-spike
 title: Create Technical Spike
 description: Define a time-boxed technical spike with research questions, investigation plan, and deliverables.
+trigger: /create-technical-spike
 version: 1.0.0
 author: Hermes Agent
 tags:

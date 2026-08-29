@@ -2,6 +2,7 @@
 name: postgresql-optimization
 title: PostgreSQL Optimization
 description: PostgreSQL-specific development assistant covering JSONB operations, array types, custom types, range/geometric types, full-text search, window functions, and the extensions ecosystem.
+trigger: /postgresql-optimization
 version: 1.0.0
 author: Hermes Agent
 tags:

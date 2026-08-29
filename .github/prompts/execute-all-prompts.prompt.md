@@ -2,6 +2,7 @@
 name: execute-all-prompts
 title: Execute All Workspace Prompts
 description: Orchestrates sequential execution of four workspace prompt workflows (audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, test-providers-models) to completion before the next begins.
+trigger: /execute-all-prompts
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

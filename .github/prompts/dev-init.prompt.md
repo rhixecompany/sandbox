@@ -2,6 +2,7 @@
 name: dev-init
 title: Development Initialization
 description: "Initialize a project for prompt-driven development: discover, plan conversion, audit/fix prompts, execute an implementation plan, and verify."
+trigger: /dev-init
 version: 1.0.0
 author: Hermes Agent
 tags:

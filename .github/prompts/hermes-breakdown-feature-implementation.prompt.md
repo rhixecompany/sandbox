@@ -2,6 +2,7 @@
 name: hermes-breakdown-feature-implementation
 title: Hermes Breakdown — Feature Implementation
 description: Turns a feature PRD into an implementation plan that an engineering team can execute.
+trigger: /hermes-breakdown-feature-implementation
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

@@ -2,6 +2,7 @@
 name: multi-agent-research-template
 title: Multi-Agent Research Template
 description: Reusable prompt template for Codex, Copilot, and Hermes that orchestrates parallel research agents with shared rules and outputs.
+trigger: /multi-agent-research-template
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

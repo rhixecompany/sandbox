@@ -2,6 +2,7 @@
 name: repo-story-time
 title: Repo Story Time
 description: Transform any repository's git history into REPOSITORY_SUMMARY.md (technical overview) and THE_STORY_OF_THIS_REPO.md (narrative from commit history) using evidence-based analysis.
+trigger: /repo-story-time
 version: 1.0.0
 author: Hermes Agent
 tags: [repo, git, narrative, summary, history, documentation]

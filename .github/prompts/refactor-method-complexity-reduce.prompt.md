@@ -2,6 +2,7 @@
 name: refactor-method-complexity-reduce
 title: Refactor Method Complexity Reduce
 description: Refactor a given method to reduce its cognitive complexity to a target threshold or below by extracting focused helper methods, with mandatory test verification.
+trigger: /refactor-method-complexity-reduce
 version: 1.0.0
 author: Hermes Agent
 tags: [refactor, code-quality, complexity, testing, javascript, typescript]

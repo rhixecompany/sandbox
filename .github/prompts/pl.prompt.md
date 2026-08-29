@@ -2,6 +2,7 @@
 name: pl
 title: Systematic Error/Warning/Deprecation Elimination
 description: Runs pnpm test:ui, lint, and build; documents every surfaced issue in docs/proposedFixes.MD and JSON; applies minimal fixes only for what the scripts find.
+trigger: /pl
 version: 1.0.0
 author: Hermes Agent
 tags:

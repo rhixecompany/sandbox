@@ -2,6 +2,7 @@
 name: setup
 title: ComicWise Setup Onboarding
 description: Comprehensive AI agent onboarding prompt for ComicWise — architecture overview, essential commands, environment variables, database schema facts, authentication, DAL, and server action patterns.
+trigger: /setup
 version: 1.0.0
 author: Hermes Agent
 tags:

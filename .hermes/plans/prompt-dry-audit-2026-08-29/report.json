@@ -1,0 +1,7747 @@
+{
+  "ts": "2026-08-29T00:42:52.290756+00:00",
+  "total": 233,
+  "fm_missing_counts": {
+    "name": 2,
+    "title": 3,
+    "description": 1,
+    "version": 4,
+    "author": 4,
+    "license": 228,
+    "trigger": 1,
+    "toolsets": 233,
+    "skills": 233,
+    "dependencies": 233,
+    "tags": 2,
+    "metadata": 3
+  },
+  "section_missing_counts": {
+    "## Goal": 5,
+    "## Verification": 16
+  },
+  "broken_fences": [
+    "java-mcp-server-generator.prompt.md",
+    "ruby-mcp-server-generator.prompt.md",
+    "smithery-setup.prompt.md"
+  ],
+  "missing_shared_refs": [],
+  "per_file": [
+    {
+      "file": "add-educational-comments.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "agents-fix.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "agents-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "agents-system-prompt-context-fix.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "ai-prompt-engineering-safety-review.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "all-repo-docker-setup.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "apple-appstore-reviewer.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "arch-linux-triage.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "architecture-blueprint-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "aspnet-minimal-api-openapi.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "audit-skills-judge-fix.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "az-cost-optimize.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "azure-resource-health-diagnose.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "bash-scripts-fix.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "bigquery-pipeline-audit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "boost-prompt.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "breakdown-epic-arch.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "breakdown-epic-pm.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "breakdown-feature-implementation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "breakdown-feature-prd.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "breakdown-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "breakdown-test.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "centos-linux-triage.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "code-exemplars-blueprint-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "code-review.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "comicwise-development.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "comment-code-generate-a-tutorial.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "comprehensive-prompt-enhancer.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "containerize-aspnet-framework.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "containerize-aspnetcore.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "context-map.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "conventional-commit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "convert-plaintext-to-md.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "cosmosdb-datamodeling.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-agentsmd.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-architectural-decision-record.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-github-action-workflow-specification.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-github-issue-feature-from-specification.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-github-issues-feature-from-implementation-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-github-issues-for-unmet-specification-requirements.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-github-pull-request-from-specification.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-implementation-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-llms.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-oo-component-documentation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-readme.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-specification.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-spring-boot-java-project.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-spring-boot-kotlin-project.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-technical-spike.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "create-tldr-page.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "csharp-async.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "csharp-docs.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "csharp-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "csharp-mstest.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "csharp-nunit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "csharp-tunit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "csharp-xunit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "database.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dataverse-python-advanced-patterns.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dataverse-python-production-code.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dataverse-python-quickstart.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dataverse-python-usecase-builder.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "debian-linux-triage.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "debug-issue.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "debugger-prompt.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "declarative-agents.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dev-imp.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dev-init.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dev.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "development.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "devops-rollout-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "disk-space-cleanup.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "documentation-writer.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "documentation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dotnet-best-practices.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dotnet-design-pattern-review.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "dotnet-upgrade.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "editorconfig.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "ef-core.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "execute-all-prompts.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "execute-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "features.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "fedora-linux-triage.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "finalize-agent-prompt.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "first-ask.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "folder-structure-blueprint-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "gen-specs-as-issues.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "general.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "generate-custom-instructions-from-codebase.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "generate-docs.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "generator-orchestrator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "git-flow-branch-creator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "git-multi-repo-orchestration.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "go-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-breakdown-epic-arch.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-breakdown-epic-pm.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-breakdown-feature-implementation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-breakdown-feature-prd.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-breakdown-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-breakdown-test.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-comprehensive-setup.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-diagnostic.prompt.md",
+      "frontmatter_keys": [
+        "description",
+        "mode",
+        "title",
+        "trigger"
+      ],
+      "missing_required_fm": [
+        "name",
+        "version",
+        "author",
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies",
+        "tags",
+        "metadata"
+      ],
+      "missing_required_sections": [
+        "## Goal"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-doctor-systematic-debugging.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "hermes-doctor.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies",
+        "metadata"
+      ],
+      "missing_required_sections": [
+        "## Goal"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "Initial.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "instruction-triage.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "description",
+        "hermes",
+        "license",
+        "metadata",
+        "name",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Goal",
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "java-add-graalvm-native-image-support.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "java-docs.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "java-junit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "java-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 1,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "java-refactoring-extract-method.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "java-refactoring-remove-parameter.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "java-springboot.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "javascript-typescript-jest.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "kotlin-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "kotlin-springboot.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "list-all-installed-vscode-extension.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "mcp-audit.prompt.md",
+      "frontmatter_keys": [
+        "agent",
+        "description",
+        "hermes",
+        "metadata",
+        "model",
+        "name",
+        "tags",
+        "title",
+        "tools",
+        "trigger"
+      ],
+      "missing_required_fm": [
+        "version",
+        "author",
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "mcp-create-adaptive-cards.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "mcp-create-declarative-agent.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "mcp-deploy-manage-agents.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "memory-merger.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "migrate-to-next16.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "mkdocs-translations.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "model-recommendation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "multi-agent-fanout.prompt.md",
+      "frontmatter_keys": [
+        "agent",
+        "description",
+        "hermes",
+        "metadata",
+        "model",
+        "name",
+        "tags",
+        "title",
+        "tools",
+        "trigger"
+      ],
+      "missing_required_fm": [
+        "version",
+        "author",
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "multi-agent-research-template.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "multi-stage-dockerfile.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "my-issues.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "my-pull-requests.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "next-intl-add-language.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "nextjs-tailwind.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "ngn-earnings-research.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "license",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "oh-my-openagent-setup.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "ollama-wire.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "description",
+        "hermes",
+        "license",
+        "metadata",
+        "name",
+        "tags",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "title"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Goal"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "openapi-to-application-code.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "optimize-agentsMd.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "parallel-mcp-install.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "performance.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "php-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "pl.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "plan-audit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "plan-batch-fix.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "plan-execute.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "plan-generate.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "playwright-automation-fill-in-form.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "playwright-explore-website.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "playwright-generate-test.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "playwright-typescript.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "plugins-hooks-audit.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "description",
+        "hermes",
+        "license",
+        "metadata",
+        "name",
+        "tags",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "title"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Goal"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "postgresql-code-review.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "postgresql-optimization.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "power-apps-code-app-scaffold.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "power-bi-dax-optimization.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "power-bi-model-design-review.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "power-bi-performance-troubleshooting.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "power-bi-report-design-consultation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "power-platform-mcp-connector-suite.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "project-workflow-analysis-blueprint-generator.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "projects-init.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "prompt-builder.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "prompt-management.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "prompts-fix.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "prompts-strict-template.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "pytest-coverage.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "python-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "quality-gate-debugger.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "readme-blueprint-generator.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "refactor-code.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "refactor-mardown-files.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "refactor-method-complexity-reduce.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "refactor-plan.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "refresh-agent-inventory.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "remember-interactive-programming.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "remember.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "repo-init.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "repo-management.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "repo-research-pipeline.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "repo-story-time.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "repo-tooling-implementation.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "repo.prompt.md",
+      "frontmatter_keys": [],
+      "missing_required_fm": [
+        "name",
+        "title",
+        "description",
+        "version",
+        "author",
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "trigger",
+        "toolsets",
+        "skills",
+        "dependencies",
+        "tags",
+        "metadata"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "review-and-refactor.prompt.md",
+      "frontmatter_keys": [
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "ruby-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 1,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "run-session-agentsmd-workflow.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "rust-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "security.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "seed-review-and-create.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "session-agentsmd-full-workflow.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "setup-bun-bunx.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "setup-component.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "setup-enhanced.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "setup-groq-cloud.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "setup-nextjs-frontend-stack.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "setup.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "shuffle-json-data.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "skills-debug-prompt.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "skills-fix.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "smithery-setup.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 1,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "sql-code-review.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "sql-optimization.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "structured-autonomy-generate.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "structured-autonomy-implement.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "structured-autonomy-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "swift-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "sync-hermes-opencode.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "task-implementation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "tasksync.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "technology-stack-blueprint-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "test-providers-models.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "testing.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "tldr-prompt.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "tooling-implementation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "typescript-mcp-server-generator.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "typescript.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "typespec-api-operations.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "typespec-create-agent.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "typespec-create-api-plugin.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "uk-earnings-research-pipeline.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "uk-earnings-research.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "update-avm-modules-in-bicep.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "update-docs-on-code-change.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "update-implementation-plan.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "update-llms.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "update-markdown-file-index.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "update-oo-component-documentation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "update-specification.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "us-earnings-research.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [
+        "## Verification"
+      ],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "web-research-pipeline.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "what-context-needed.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "workspace-consolidate.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "write-coding-standards-from-file.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "write-tests.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    },
+    {
+      "file": "zod-schema-generation.prompt.md",
+      "frontmatter_keys": [
+        "_list_tags",
+        "author",
+        "codex",
+        "copilot",
+        "description",
+        "enabled",
+        "hermes",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "tags",
+        "title",
+        "trigger",
+        "version"
+      ],
+      "missing_required_fm": [
+        "license"
+      ],
+      "missing_recommended_fm": [
+        "toolsets",
+        "skills",
+        "dependencies"
+      ],
+      "missing_required_sections": [],
+      "broken_fences": 0,
+      "missing_shared_refs": []
+    }
+  ]
+}

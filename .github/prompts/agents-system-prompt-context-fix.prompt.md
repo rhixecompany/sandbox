@@ -2,6 +2,7 @@
 name: agents-system-prompt-context-fix
 title: Fix Agent System Prompt Context
 description: Diagnose and repair Hermes/Copilot/Codex system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion across surfaces.
+trigger: /agents-system-prompt-context-fix
 version: 1.0.0
 author: Hermes Agent
 tags:

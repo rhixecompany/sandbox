@@ -2,6 +2,7 @@
 name: dev
 title: Development Workflow
 description: Drive a development workflow with intake, execution, and verification phases using plans-and-specs artifacts and Hermes tooling.
+trigger: /dev
 version: 1.0.0
 author: Hermes Agent
 tags:

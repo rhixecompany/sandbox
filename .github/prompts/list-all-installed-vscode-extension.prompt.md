@@ -2,6 +2,7 @@
 name: list-all-installed-vscode-extension
 title: List Installed VS Code Extensions
 description: Inventories all installed VS Code extensions, researches their documentation, and applies findings to optimize user and workspace settings.
+trigger: /list-all-installed-vscode-extension
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

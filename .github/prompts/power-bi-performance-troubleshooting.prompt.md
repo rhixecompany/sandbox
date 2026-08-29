@@ -2,6 +2,7 @@
 name: power-bi-performance-troubleshooting
 title: Power BI Performance Troubleshooting
 description: Systematic Power BI performance troubleshooting — identifies, diagnoses, and resolves performance issues in models, reports, and queries with actionable solutions.
+trigger: /power-bi-performance-troubleshooting
 version: 1.0.0
 author: Hermes Agent
 tags:

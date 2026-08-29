@@ -2,6 +2,7 @@
 name: power-bi-model-design-review
 title: Power BI Model Design Review
 description: Comprehensive Power BI data model design review covering model architecture, relationships, and optimization opportunities for scalable, maintainable models.
+trigger: /power-bi-model-design-review
 version: 1.0.0
 author: Hermes Agent
 tags:

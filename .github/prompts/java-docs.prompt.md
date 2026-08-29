@@ -2,6 +2,7 @@
 name: java-docs
 title: Java Javadoc Documentation
 description: Ensures Java types are documented with Javadoc comments following documentation best practices and project conventions.
+trigger: /java-docs
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

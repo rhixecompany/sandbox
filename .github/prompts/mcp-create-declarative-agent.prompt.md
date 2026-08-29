@@ -2,6 +2,7 @@
 name: mcp-create-declarative-agent
 title: MCP Create Declarative Agent
 description: Creates an MCP-based declarative agent for Microsoft 365 Copilot, defining capabilities, instructions, and conversation starters.
+trigger: /mcp-create-declarative-agent
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

@@ -2,6 +2,7 @@
 name: run-session-agentsmd-workflow
 title: Run Session AGENTS.md Workflow
 description: Executes the AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting workflow for a single target directory or all projects.
+trigger: /run-session-agentsmd-workflow
 version: 1.0.0
 author: Hermes Agent
 tags:

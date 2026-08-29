@@ -2,6 +2,7 @@
 name: technology-stack-blueprint-generator
 title: Technology Stack Blueprint Generator
 description: Generate per-project technology stack documentation plus a workspace-level master blueprint covering languages, frameworks, runtimes, dependencies, conventions, and CI/CD.
+trigger: /technology-stack-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 tags:

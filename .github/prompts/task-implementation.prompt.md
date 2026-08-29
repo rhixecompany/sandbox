@@ -2,6 +2,7 @@
 name: task-implementation
 title: Task Implementation
 description: Implements plan-driven tasks in order with progressive change logging, continuous execution tracking, explicit divergence and blocker recording, and complete working outcomes.
+trigger: /task-implementation
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: parallel-mcp-install
 title: Parallel MCP Installation and Validation
 description: Registers Parallel Search and Parallel Task MCP servers in the active Hermes harness using the official CLI, with security gates, runtime-reload validation, and credential-safety checks.
+trigger: /parallel-mcp-install
 version: 1.0.0
 author: Hermes Agent
 tags:

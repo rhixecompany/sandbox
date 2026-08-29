@@ -2,6 +2,7 @@
 name: convert-plaintext-to-md
 title: Convert Plaintext To Markdown
 description: Convert unstructured plain-text notes into clean, well-formatted Markdown with headings, lists, and links.
+trigger: /convert-plaintext-to-md
 version: 1.0.0
 author: Hermes Agent
 tags:

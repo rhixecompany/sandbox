@@ -2,6 +2,7 @@
 name: dataverse-python-quickstart
 title: Dataverse Python Quickstart
 description: Get a first Dataverse SDK for Python script running — connect to the environment, perform CRUD, and verify operations quickly.
+trigger: /dataverse-python-quickstart
 version: 1.0.0
 author: Hermes Agent
 tags:

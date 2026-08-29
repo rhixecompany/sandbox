@@ -2,6 +2,7 @@
 name: mcp-create-adaptive-cards
 title: MCP Create Adaptive Cards
 description: Creates Microsoft Adaptive Cards for MCP-based plugins, defining inputs, layouts, and actions for interactive Copilot experiences.
+trigger: /mcp-create-adaptive-cards
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

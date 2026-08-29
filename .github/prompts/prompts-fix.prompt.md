@@ -2,6 +2,7 @@
 name: prompts-fix
 title: Prompts Fix
 description: Sync .prompt.md files across Hermes and Copilot platforms by discovering drift, mapping equivalents, applying minimal sync corrections, and verifying schema integrity.
+trigger: /prompts-fix
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, sync, platform-integration, drift, validation, dedupe]

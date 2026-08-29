@@ -2,6 +2,7 @@
 name: all-repo-docker-setup
 title: Bulk Docker Setup Across Repositories
 description: Iterate over a list of rhixecompany repositories, generate or repair Dockerfiles, build images, run security scans, and clean up unused Docker resources with a tracked plan.
+trigger: /all-repo-docker-setup
 version: 1.0.0
 author: Hermes Agent
 tags: [docker, devops, automation, infrastructure, security, tooling]

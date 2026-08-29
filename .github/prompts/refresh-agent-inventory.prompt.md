@@ -2,6 +2,7 @@
 name: refresh-agent-inventory
 title: Refresh Agent Inventory
 description: Refresh the workspace customization inventory by reconciling discovered assets against the canonical report and proposing precise edits for stale AGENTS and instruction references.
+trigger: /refresh-agent-inventory
 version: 1.0.0
 author: Hermes Agent
 tags: [inventory, agents, copilot, audit, remediation, workspace]

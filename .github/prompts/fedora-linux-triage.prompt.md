@@ -2,6 +2,7 @@
 name: fedora-linux-triage
 title: Fedora Linux Triage
 description: Triages and resolves Fedora issues using dnf, systemd, and SELinux-aware guidance.
+trigger: /fedora-linux-triage
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

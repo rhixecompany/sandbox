@@ -2,6 +2,7 @@
 name: readme-blueprint-generator
 title: README Blueprint Generator
 description: Generate comprehensive README.md by analyzing the project's documentation structure, technology stack, architecture, and coding standards, then producing developer-focused markdown.
+trigger: /readme-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 tags: [readme, documentation, blueprint, generator, analysis]

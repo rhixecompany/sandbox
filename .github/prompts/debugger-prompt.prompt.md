@@ -2,6 +2,7 @@
 name: debugger-prompt
 title: Debugger Prompt for AI Agents
 description: Use when an AI agent needs to debug code with a debugger — set breakpoints, step through, inspect state, and reason about runtime behavior.
+trigger: /debugger-prompt
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: uk-earnings-research-pipeline
 title: UK Earnings Research Pipeline
 description: Comprehensive stacked-skills pipeline to discover, filter, validate, and rank superior UK earning platforms, leveraging prior session data and MCP tools.
+trigger: /uk-earnings-research-pipeline
 version: 1.0.0
 author: Hermes Agent
 tags:

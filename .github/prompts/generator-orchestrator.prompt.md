@@ -2,6 +2,7 @@
 name: generator-orchestrator
 title: Generator Orchestrator
 description: Dependency-aware orchestrator for root blueprint and MCP generator prompts, enforcing strict stage gates and consistency validation across the generation pipeline.
+trigger: /generator-orchestrator
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

@@ -2,6 +2,7 @@
 name: create-spring-boot-kotlin-project
 title: Create Spring Boot Kotlin Project
 description: Bootstrap a Spring Boot Kotlin project with the correct template, dependencies, and initial structure.
+trigger: /create-spring-boot-kotlin-project
 version: 1.0.0
 author: Hermes Agent
 tags:

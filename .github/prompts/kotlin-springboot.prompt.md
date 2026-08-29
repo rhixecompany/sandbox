@@ -2,6 +2,7 @@
 name: kotlin-springboot
 title: Kotlin Spring Boot Best Practices
 description: Provides best practices for developing applications with Spring Boot and Kotlin, including idiomatic patterns and configuration.
+trigger: /kotlin-springboot
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

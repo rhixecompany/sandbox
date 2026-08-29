@@ -2,6 +2,7 @@
 name: tldr-prompt
 title: TLDR Summary Generator
 description: Create concise tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation sourced from URLs and queries.
+trigger: /tldr-prompt
 version: 1.0.0
 author: Hermes Agent
 tags:

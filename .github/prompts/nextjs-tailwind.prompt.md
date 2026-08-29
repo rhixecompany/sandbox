@@ -2,6 +2,7 @@
 name: nextjs-tailwind
 title: Next.js + Tailwind Component Build
 description: Plans and implements typed, accessible Next.js components with Tailwind CSS, covering server/client boundaries, validation, and responsive styling.
+trigger: /nextjs-tailwind
 version: 1.0.0
 author: Hermes Agent
 tags:

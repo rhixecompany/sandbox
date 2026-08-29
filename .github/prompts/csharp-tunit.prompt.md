@@ -2,6 +2,7 @@
 name: csharp-tunit
 title: C# TUnit Framework
 description: Author modern unit tests using TUnit with data-driven patterns, advanced features, parallel execution, and migration paths from xUnit.
+trigger: /csharp-tunit
 version: 1.0.0
 author: Hermes Agent
 tags:

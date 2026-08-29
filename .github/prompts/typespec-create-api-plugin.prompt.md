@@ -2,6 +2,7 @@
 name: typespec-create-api-plugin
 title: TypeSpec Create API Plugin
 description: Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot.
+trigger: /typespec-create-api-plugin
 version: 1.0.0
 author: Hermes Agent
 tags:

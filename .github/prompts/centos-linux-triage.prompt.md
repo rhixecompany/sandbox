@@ -2,6 +2,7 @@
 name: centos-linux-triage
 title: CentOS / RHEL System Triage
 description: Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld, with a structured report.
+trigger: /centos-linux-triage
 version: 1.0.0
 author: Hermes Agent
 tags:

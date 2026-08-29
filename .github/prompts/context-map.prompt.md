@@ -2,6 +2,7 @@
 name: context-map
 title: Context Map
 description: Document the boundaries, contracts, and dependencies between bounded contexts in a system architecture.
+trigger: /context-map
 version: 1.0.0
 author: Hermes Agent
 tags:

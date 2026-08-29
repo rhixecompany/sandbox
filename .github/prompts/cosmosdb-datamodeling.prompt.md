@@ -2,6 +2,7 @@
 name: cosmosdb-datamodeling
 title: Cosmos DB Data Modeling
 description: Design Cosmos DB partition keys, containers, and consistency settings for an application's access patterns.
+trigger: /cosmosdb-datamodeling
 version: 1.0.0
 author: Hermes Agent
 tags:

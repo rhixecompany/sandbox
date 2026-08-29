@@ -2,6 +2,7 @@
 name: update-markdown-file-index
 title: Update Markdown File Index
 description: Update a markdown section with an index or table of files from a specified folder using simple list, detailed table, or categorized section formats.
+trigger: /update-markdown-file-index
 version: 1.0.0
 author: Hermes Agent
 tags:

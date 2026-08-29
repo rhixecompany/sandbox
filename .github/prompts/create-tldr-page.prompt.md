@@ -2,6 +2,7 @@
 name: create-tldr-page
 title: Create TLDR Page
 description: Generate a concise TLDR summary page that distills a longer document into key takeaways.
+trigger: /create-tldr-page
 version: 1.0.0
 author: Hermes Agent
 tags:

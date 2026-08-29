@@ -2,6 +2,7 @@
 name: typescript
 title: TypeScript and Next.js Code Quality
 description: Produce strict, maintainable TypeScript and Next.js code using server-first patterns, safe configuration access, and validated external input handling.
+trigger: /typescript
 version: 1.0.0
 author: Hermes Agent
 tags:

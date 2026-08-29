@@ -2,6 +2,7 @@
 name: breakdown-feature-prd
 title: Break Down Feature PRD
 description: Generate a Product Requirements Document for a new feature based on an Epic, ready to drive technical breakdown and implementation planning.
+trigger: /breakdown-feature-prd
 version: 1.0.0
 author: Hermes Agent
 tags:

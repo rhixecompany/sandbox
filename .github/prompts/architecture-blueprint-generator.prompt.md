@@ -2,6 +2,7 @@
 name: architecture-blueprint-generator
 title: Architecture Blueprint Generator
 description: Analyze a codebase and produce a detailed architecture blueprint with detected stacks, patterns, diagrams, and implementation guidance for new development.
+trigger: /architecture-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 tags:

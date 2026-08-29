@@ -2,6 +2,7 @@
 name: power-bi-dax-optimization
 title: Power BI DAX Optimization
 description: Analyzes DAX formulas for performance, readability, and best-practice compliance, then delivers optimized rewrites with measurable impact.
+trigger: /power-bi-dax-optimization
 version: 1.0.0
 author: Hermes Agent
 tags:

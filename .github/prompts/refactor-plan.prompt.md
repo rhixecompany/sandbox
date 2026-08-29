@@ -2,6 +2,7 @@
 name: refactor-plan
 title: Refactor Plan
 description: Plan a multi-file refactor with proper sequencing, dependency analysis, and rollback steps before any code changes are made.
+trigger: /refactor-plan
 version: 1.0.0
 author: Hermes Agent
 tags: [refactor, planning, architecture, migration, code-quality]

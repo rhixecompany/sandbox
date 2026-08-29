@@ -2,6 +2,7 @@
 name: refactor-code
 title: Refactor Code
 description: Refactor code for maintainability and standards, including migrations such as legacy auth/ORM replacements, using a phased minimal-change approach with verification.
+trigger: /refactor-code
 version: 1.0.0
 author: Hermes Agent
 tags: [refactor, code, maintainability, migration, drizzle, nextjs]

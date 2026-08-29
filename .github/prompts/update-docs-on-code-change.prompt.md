@@ -2,6 +2,7 @@
 name: update-docs-on-code-change
 title: Update Documentation on Code Change
 description: Synchronize documentation whenever code changes modify behavior, APIs, or workflows, with trigger detection and alignment to repository standards.
+trigger: /update-docs-on-code-change
 version: 1.0.0
 author: Hermes Agent
 tags:

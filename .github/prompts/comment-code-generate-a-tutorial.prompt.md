@@ -2,6 +2,7 @@
 name: comment-code-generate-a-tutorial
 title: Comment Code Generate A Tutorial
 description: Turn source code into a step-by-step tutorial by commenting functions, expanding explanations, and adding narrative sections.
+trigger: /comment-code-generate-a-tutorial
 version: 1.0.0
 author: Hermes Agent
 tags:

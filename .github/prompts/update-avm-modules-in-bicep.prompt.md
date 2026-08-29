@@ -2,6 +2,7 @@
 name: update-avm-modules-in-bicep
 title: Update AVM Modules in Bicep
 description: Update Azure Verified Modules (AVM) to their latest versions in Bicep template files while preserving breaking-change policy and producing a summary of updates.
+trigger: /update-avm-modules-in-bicep
 version: 1.0.0
 author: Hermes Agent
 tags:

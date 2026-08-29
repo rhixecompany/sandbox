@@ -2,6 +2,7 @@
 name: create-spring-boot-java-project
 title: Create Spring Boot Java Project
 description: Bootstrap a Spring Boot Java project with the correct template, dependencies, and initial structure.
+trigger: /create-spring-boot-java-project
 version: 1.0.0
 author: Hermes Agent
 tags:

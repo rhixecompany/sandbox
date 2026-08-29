@@ -2,6 +2,7 @@
 name: csharp-mstest
 title: C# MSTest Framework
 description: Author robust unit tests using MSTest with modern assertion APIs, data-driven tests, lifecycle hooks, and TestContext access for .NET projects.
+trigger: /csharp-mstest
 version: 1.0.0
 author: Hermes Agent
 tags:

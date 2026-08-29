@@ -2,6 +2,7 @@
 name: review-and-refactor
 title: Review and Refactor
 description: Act as a senior engineer to review coding guidelines, audit all code, and apply clean refactorings that follow project standards while keeping tests passing.
+trigger: /review-and-refactor
 version: 1.0.0
 author: Hermes Agent
 tags: [review, refactor, code-quality, coding-standards, maintainability]

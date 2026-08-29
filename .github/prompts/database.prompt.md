@@ -2,6 +2,7 @@
 name: database
 title: Database Design and Operations
 description: General-purpose prompt for designing, querying, and operating relational and NoSQL databases — schema modeling, query optimization, and data integrity.
+trigger: /database
 version: 1.0.0
 author: Hermes Agent
 tags:

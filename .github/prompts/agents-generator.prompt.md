@@ -2,6 +2,7 @@
 name: agents-generator
 title: Generate Project AGENTS.md Blueprint
 description: Analyze a codebase and produce a comprehensive AGENTS.md that captures architecture, conventions, and exact technology versions so AI coding agents are immediately productive.
+trigger: /agents-generator
 version: 1.0.0
 author: Hermes Agent
 tags:

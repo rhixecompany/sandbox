@@ -2,6 +2,7 @@
 name: documentation-writer
 title: Documentation Writer
 description: Write the four canonical documentation types — guides, references, explanations, and tutorials — with guiding principles and contextual awareness.
+trigger: /documentation-writer
 version: 1.0.0
 author: Hermes Agent
 tags:

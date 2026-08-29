@@ -2,6 +2,7 @@
 name: model-recommendation
 title: Model Recommendation
 description: Analyzes chatmode or prompt files and recommends optimal AI models based on task complexity, capabilities, and cost-efficiency.
+trigger: /model-recommendation
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

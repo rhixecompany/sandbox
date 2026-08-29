@@ -2,6 +2,7 @@
 name: devops-rollout-plan
 title: DevOps Rollout Plan
 description: "Generate a DevOps rollout plan from a change description: intake context, define inputs/outputs, and produce an executive-summary-style plan."
+trigger: /devops-rollout-plan
 version: 1.0.0
 author: Hermes Agent
 tags:

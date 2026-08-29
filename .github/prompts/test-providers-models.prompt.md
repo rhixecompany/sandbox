@@ -2,6 +2,7 @@
 name: test-providers-models
 title: Test Providers and Models
 description: Probe authorized Hermes providers live, build a verified ordered fallback chain of working models, then configure Hermes and propagate to installed agents.
+trigger: /test-providers-models
 version: 1.0.0
 author: Hermes Agent
 tags:

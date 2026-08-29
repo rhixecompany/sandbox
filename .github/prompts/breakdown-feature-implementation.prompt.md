@@ -2,6 +2,7 @@
 name: breakdown-feature-implementation
 title: Break Down Feature Implementation Plan
 description: Produce detailed feature implementation plans following the Epoch monorepo structure with tasks, acceptance criteria, and dependencies.
+trigger: /breakdown-feature-implementation
 version: 1.0.0
 author: Hermes Agent
 tags:

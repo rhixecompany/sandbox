@@ -2,6 +2,7 @@
 name: mkdocs-translations
 title: MkDocs Translations
 description: Generates a language translation for an MkDocs documentation stack, preserving structure and Markdown semantics.
+trigger: /mkdocs-translations
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

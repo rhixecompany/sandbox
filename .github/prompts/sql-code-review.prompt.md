@@ -2,6 +2,7 @@
 name: sql-code-review
 title: SQL Code Review
 description: Universal SQL code review assistant for security, performance, maintainability, and code quality across MySQL, PostgreSQL, SQL Server, and Oracle — covering injection prevention, access control, and anti-pattern detection.
+trigger: /sql-code-review
 version: 1.0.0
 author: Hermes Agent
 tags:

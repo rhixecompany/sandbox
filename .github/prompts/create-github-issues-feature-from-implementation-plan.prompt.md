@@ -2,6 +2,7 @@
 name: create-github-issues-feature-from-implementation-plan
 title: Create GitHub Issues From Implementation Plan
 description: Break an implementation plan into ordered GitHub issues aligned with milestones and dependencies.
+trigger: /create-github-issues-feature-from-implementation-plan
 version: 1.0.0
 author: Hermes Agent
 tags:

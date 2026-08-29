@@ -2,6 +2,7 @@
 name: projects-init
 title: Projects Init
 description: Run a three-phase workspace initialization that triages markdown documentation, migrates prompt files into .github/prompts/, and creates needed skills/scripts while deduplicating.
+trigger: /projects-init
 version: 1.0.0
 author: Hermes Agent
 tags: [workspace, initialization, documentation, prompts, skills, migration, dedupe]

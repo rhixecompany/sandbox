@@ -2,6 +2,7 @@
 name: javascript-typescript-jest
 title: JavaScript/TypeScript Jest Testing
 description: Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies, test structure, and common patterns.
+trigger: /javascript-typescript-jest
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

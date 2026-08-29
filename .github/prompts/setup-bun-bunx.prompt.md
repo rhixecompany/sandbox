@@ -2,6 +2,7 @@
 name: setup-bun-bunx
 title: Setup Bun and Bunx
 description: Migrate a repository (and all sub-repos) from npm to bun and from npx to bunx, prune unused dependencies, validate package manifests, and commit and push the changes. Use when consolidating package-manager tooling on bun across a monorepo.
+trigger: /setup-bun-bunx
 version: 1.0.0
 author: Hermes Agent
 tags:

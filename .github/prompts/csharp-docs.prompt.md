@@ -2,6 +2,7 @@
 name: csharp-docs
 title: C# API Documentation
 description: "Generate comprehensive XML documentation comments and API docs for C# classes, methods, properties, and exceptions following .NET documentation conventions."
+trigger: /csharp-docs
 version: 1.0.0
 author: Hermes Agent
 tags:

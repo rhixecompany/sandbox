@@ -2,6 +2,7 @@
 name: testing
 title: Comprehensive Testing Prompt
 description: Create, update, and validate unit and E2E tests that provide deterministic coverage for public behavior and critical flows such as authentication, payments, and reconciliation.
+trigger: /testing
 version: 1.0.0
 author: Hermes Agent
 tags:

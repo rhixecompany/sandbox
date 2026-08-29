@@ -2,6 +2,7 @@
 name: pytest-coverage
 title: Pytest Coverage
 description: Run pytest with coverage, discover lines missing coverage, and increase coverage to 100% on the current workspace.
+trigger: /pytest-coverage
 version: 1.0.0
 author: Hermes Agent
 tags: [python, testing, pytest, coverage, quality]

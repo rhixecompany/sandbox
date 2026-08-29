@@ -2,6 +2,7 @@
 name: dataverse-python-advanced-patterns
 title: Dataverse Python Advanced Patterns
 description: Apply advanced Dataverse SDK for Python patterns — error handling, client management, logging, OData optimization, and code structure.
+trigger: /dataverse-python-advanced-patterns
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: boost-prompt
 title: Prompt Refinement Interrogation
 description: Interactively interrogate a prompt's scope, deliverables, and constraints, then copy the refined markdown to the clipboard via Joyride.
+trigger: /boost-prompt
 version: 1.0.0
 author: Hermes Agent
 tags:

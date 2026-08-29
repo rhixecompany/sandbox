@@ -2,6 +2,7 @@
 name: hermes-doctor-systematic-debugging
 title: Hermes Doctor and Systematic Remediation
 description: Diagnoses, fixes, and verifies all actionable Hermes Agent issues, warnings, and errors using the live installation.
+trigger: /hermes-doctor-systematic-debugging
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

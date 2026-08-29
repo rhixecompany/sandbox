@@ -2,6 +2,7 @@
 name: dotnet-upgrade
 title: .NET Upgrade Assistant
 description: Drives a comprehensive .NET framework upgrade analysis and execution across projects, dependencies, and runtime targets.
+trigger: /dotnet-upgrade
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

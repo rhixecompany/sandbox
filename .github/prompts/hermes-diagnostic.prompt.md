@@ -1,6 +1,7 @@
 ---
 title: "Hermes Diagnostic + Log Analysis"
 description: "Run the full Hermes platform diagnostic battery plus log analysis. Emits report.md, report.json, and triage recommendations. Use for post-config-change verification, weekly health checks, or pre-deployment pre-flight."
+trigger: /hermes-diagnostic
 mode: single
 ---
 

@@ -2,6 +2,7 @@
 name: structured-autonomy-plan
 title: Structured Autonomy Plan
 description: Generates a structured-autonomy plan by researching the codebase, determining commit boundaries, and emitting a draft plan using the output template.
+trigger: /structured-autonomy-plan
 version: 1.0.0
 author: Hermes Agent
 tags:

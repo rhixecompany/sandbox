@@ -2,6 +2,7 @@
 name: sync-hermes-opencode
 title: Sync Hermes OpenCode Codex
 description: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments, with verification of parity after each sync.
+trigger: /sync-hermes-opencode
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: workspace-consolidate
 title: Workspace Consolidate
 description: Consolidate scripts, patches, and documentation across the workspace with bash migration, audit workflows, and canonical layout enforcement.
+trigger: /workspace-consolidate
 version: 1.0.0
 author: Hermes Agent
 tags:

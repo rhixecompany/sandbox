@@ -2,6 +2,7 @@
 name: dotnet-best-practices
 title: .NET Best Practices
 description: "Apply .NET / C# best practices across documentation, design patterns, dependency injection, async/await, configuration, error handling, and security."
+trigger: /dotnet-best-practices
 version: 1.0.0
 author: Hermes Agent
 tags:

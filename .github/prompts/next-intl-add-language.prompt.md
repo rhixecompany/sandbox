@@ -2,6 +2,7 @@
 name: next-intl-add-language
 title: Add Language with next-intl
 description: Walks through adding a new locale to a Next.js app using next-intl, including message catalog setup, routing, and type-safe translations.
+trigger: /next-intl-add-language
 version: 1.0.0
 author: Hermes Agent
 tags:

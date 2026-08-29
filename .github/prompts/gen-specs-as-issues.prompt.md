@@ -2,6 +2,7 @@
 name: gen-specs-as-issues
 title: Generate Specs as Issues
 description: Identifies missing features, prioritizes them, and creates detailed implementation specifications as GitHub issues.
+trigger: /gen-specs-as-issues
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

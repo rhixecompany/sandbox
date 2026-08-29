@@ -2,6 +2,7 @@
 name: disk-space-cleanup
 title: Disk Space Cleanup
 description: Free disk space by cleaning caches, temporary files, unused dependencies, and old logs — with safe execution and clear verification steps.
+trigger: /disk-space-cleanup
 version: 1.0.0
 author: Hermes Agent
 tags:

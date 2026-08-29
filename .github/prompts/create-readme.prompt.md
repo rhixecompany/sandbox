@@ -2,6 +2,7 @@
 name: create-readme
 title: Create README
 description: Generate a project README with overview, quick start, usage, and contribution guidelines.
+trigger: /create-readme
 version: 1.0.0
 author: Hermes Agent
 tags:

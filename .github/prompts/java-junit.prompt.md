@@ -2,6 +2,7 @@
 name: java-junit
 title: Java JUnit 5 Testing
 description: Provides best practices for JUnit 5 unit testing in Java, including data-driven tests, lifecycle hooks, and assertion patterns.
+trigger: /java-junit
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

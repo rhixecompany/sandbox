@@ -2,6 +2,7 @@
 name: structured-autonomy-implement
 title: Structured Autonomy Implement
 description: Executes the structured-autonomy implementation plan with intake, execute, verify, and hand-off phases, applying conventions, skills, and templates for end-to-end task delivery.
+trigger: /structured-autonomy-implement
 version: 1.0.0
 author: Hermes Agent
 tags:

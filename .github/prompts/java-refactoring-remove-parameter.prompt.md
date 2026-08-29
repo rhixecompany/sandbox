@@ -2,6 +2,7 @@
 name: java-refactoring-remove-parameter
 title: "Java Refactoring: Remove Parameter"
 description: Performs the Remove Parameter refactoring on Java code, simplifying method signatures while preserving behavior.
+trigger: /java-refactoring-remove-parameter
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

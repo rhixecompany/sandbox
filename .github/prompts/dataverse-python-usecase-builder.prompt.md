@@ -2,6 +2,7 @@
 name: dataverse-python-usecase-builder
 title: Dataverse Python Use-Case Builder
 description: Design and implement end-to-end Dataverse use cases in Python — requirement analysis, data model, pattern selection, and optimization.
+trigger: /dataverse-python-usecase-builder
 version: 1.0.0
 author: Hermes Agent
 tags:

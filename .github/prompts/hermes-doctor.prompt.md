@@ -2,6 +2,7 @@
 name: hermes-doctor
 title: Hermes Doctor Diagnostic
 description: Run a full Hermes platform diagnostic battery (doctor/--fix/security/status/insights + log triage + bun run check) and produce a classified report. Use for "find all hermes bugs", pre-deploy checks, or post-upgrade audits.
+trigger: /hermes-doctor
 version: 1.0.0
 author: Hermes Agent
 license: MIT

@@ -2,6 +2,7 @@
 name: breakdown-plan
 title: Project Plan Breakdown
 description: Generate a comprehensive project plan with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
+trigger: /breakdown-plan
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: generate-docs
 title: Generate Documentation
 description: Generates documentation for code, APIs, or libraries following project conventions.
+trigger: /generate-docs
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

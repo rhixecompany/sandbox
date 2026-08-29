@@ -2,6 +2,7 @@
 name: create-agentsmd
 title: Create AGENTS.md
 description: Generate a project-specific AGENTS.md that codifies architecture, conventions, and operating rules for AI coding agents.
+trigger: /create-agentsmd
 version: 1.0.0
 author: Hermes Agent
 tags:

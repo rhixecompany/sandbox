@@ -2,6 +2,7 @@
 name: documentation
 title: Documentation Authoring
 description: "Author and synchronize project documentation: impact analysis, content authoring, and cross-reference with skills and subagents."
+trigger: /documentation
 version: 1.0.0
 author: Hermes Agent
 tags:

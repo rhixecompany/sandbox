@@ -2,6 +2,7 @@
 name: seed-review-and-create
 title: Seed System Review and Create
 description: Reviews existing TypeScript seed scripts, fixes issues with image linking and fallback handling, updates documentation, and creates new seeders for the codebase.
+trigger: /seed-review-and-create
 version: 1.0.0
 author: Hermes Agent
 tags:

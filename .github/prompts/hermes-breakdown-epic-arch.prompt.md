@@ -2,6 +2,7 @@
 name: hermes-breakdown-epic-arch
 title: Hermes Breakdown — Epic Architecture
 description: Turns an Epic PRD into a high-level architecture specification with layers, enablers, and technology guidance.
+trigger: /hermes-breakdown-epic-arch
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

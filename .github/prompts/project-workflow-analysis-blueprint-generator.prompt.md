@@ -2,6 +2,7 @@
 name: project-workflow-analysis-blueprint-generator
 title: Project Workflow Analysis Blueprint Generator
 description: Generate end-to-end application workflow blueprints from a codebase, auto-detecting project type, persistence, and architecture patterns, then emitting implementation-ready documentation.
+trigger: /project-workflow-analysis-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 tags: [blueprint, workflow, documentation, architecture, analysis, automation]

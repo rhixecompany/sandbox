@@ -2,6 +2,7 @@
 name: dotnet-design-pattern-review
 title: .NET Design Pattern Review
 description: Reviews C#/.NET code for design pattern implementation and recommends improvements aligned with idiomatic .NET practices.
+trigger: /dotnet-design-pattern-review
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

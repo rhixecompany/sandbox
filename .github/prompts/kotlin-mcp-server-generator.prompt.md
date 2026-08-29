@@ -2,6 +2,7 @@
 name: kotlin-mcp-server-generator
 title: Kotlin MCP Server Generator
 description: Generates a complete Kotlin Model Context Protocol (MCP) server using the official io.modelcontextprotocol:kotlin-sdk library.
+trigger: /kotlin-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

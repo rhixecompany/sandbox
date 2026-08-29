@@ -2,6 +2,7 @@
 name: php-mcp-server-generator
 title: PHP MCP Server Generator
 description: Generates a complete, production-ready PHP Model Context Protocol server project with tools, resources, prompts, and PHPUnit tests using the official PHP SDK.
+trigger: /php-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
 tags:

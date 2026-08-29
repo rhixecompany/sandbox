@@ -2,6 +2,7 @@
 name: csharp-nunit
 title: C# NUnit Framework
 description: Author NUnit unit tests with standard patterns, data-driven tests, assertions, mocking, and clean test organization for .NET projects.
+trigger: /csharp-nunit
 version: 1.0.0
 author: Hermes Agent
 tags:

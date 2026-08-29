@@ -2,6 +2,7 @@
 name: playwright-explore-website
 title: Playwright Website Exploration
 description: Explores a website with Playwright MCP, documents core flows, locators, and outcomes, then proposes test cases from the findings.
+trigger: /playwright-explore-website
 version: 1.0.0
 author: Hermes Agent
 tags:

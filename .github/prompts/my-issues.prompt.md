@@ -2,6 +2,7 @@
 name: my-issues
 title: My Issues
 description: Lists issues assigned to the current user in the active repository, with filters for state, labels, and recency.
+trigger: /my-issues
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

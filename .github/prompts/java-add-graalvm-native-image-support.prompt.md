@@ -2,6 +2,7 @@
 name: java-add-graalvm-native-image-support
 title: Java GraalVM Native Image Support
 description: Adds GraalVM Native Image support to a Java project, builds it, analyzes errors, applies fixes, and iterates until compilation succeeds.
+trigger: /java-add-graalvm-native-image-support
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

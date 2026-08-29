@@ -2,6 +2,7 @@
 name: create-specification
 title: Create Specification
 description: Author an AI-ready software specification covering purpose, scope, requirements, and acceptance criteria.
+trigger: /create-specification
 version: 1.0.0
 author: Hermes Agent
 tags:

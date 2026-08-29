@@ -2,6 +2,7 @@
 name: breakdown-epic-pm
 title: Break Down Epic PRD
 description: Create an Epic-level Product Requirements Document that captures scope, value, and acceptance criteria to feed downstream architecture work.
+trigger: /breakdown-epic-pm
 version: 1.0.0
 author: Hermes Agent
 tags:

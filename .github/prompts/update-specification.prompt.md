@@ -2,6 +2,7 @@
 name: update-specification
 title: Update Specification
 description: Update an existing solution specification optimized for Generative AI consumption based on new requirements or updates to existing code.
+trigger: /update-specification
 version: 1.0.0
 author: Hermes Agent
 tags:

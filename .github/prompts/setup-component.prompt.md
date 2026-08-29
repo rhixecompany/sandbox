@@ -2,6 +2,7 @@
 name: setup-component
 title: Setup Component
 description: Generates a new React/Next.js component following the workspace component conventions, with intake-execute-verify-handoff phases and template references.
+trigger: /setup-component
 version: 1.0.0
 author: Hermes Agent
 tags:

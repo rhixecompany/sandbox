@@ -2,6 +2,7 @@
 name: typespec-api-operations
 title: TypeSpec API Operations
 description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards for Microsoft 365 Copilot.
+trigger: /typespec-api-operations
 version: 1.0.0
 author: Hermes Agent
 tags:

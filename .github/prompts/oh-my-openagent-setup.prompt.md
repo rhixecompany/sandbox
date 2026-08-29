@@ -2,6 +2,7 @@
 name: oh-my-openagent-setup
 title: Oh My OpenAgent Setup
 description: Configures the Oh My OpenAgent orchestration stack over OpenCode CLI, including hooks, profiles, and verification of multi-agent workflows.
+trigger: /oh-my-openagent-setup
 version: 1.0.0
 author: Hermes Agent
 tags:

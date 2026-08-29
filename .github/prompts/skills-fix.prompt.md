@@ -2,6 +2,7 @@
 name: skills-fix
 title: Skills Fix
 description: Full lifecycle audit and remediation of the Hermes skill library — discovers SKILL.md files, reorganises misplaced skills, deduplicates cross-category copies, audits for quality, plans fixes, and applies them in priority order.
+trigger: /skills-fix
 version: 1.0.0
 author: Hermes Agent
 tags:

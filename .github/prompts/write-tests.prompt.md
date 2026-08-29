@@ -2,6 +2,7 @@
 name: write-tests
 title: Write Tests
 description: Generate unit or end-to-end tests for a component or module following the shared testing templates and verification checklist.
+trigger: /write-tests
 version: 1.0.0
 author: Hermes Agent
 tags:

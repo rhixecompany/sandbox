@@ -2,6 +2,7 @@
 name: us-earnings-research
 title: US Earnings Research
 description: Identify and validate US earning platforms that are genuinely better than Outlier and Attapoll across pay, reliability, barrier to entry, and payout speed.
+trigger: /us-earnings-research
 version: 1.0.0
 author: Hermes Agent
 tags:

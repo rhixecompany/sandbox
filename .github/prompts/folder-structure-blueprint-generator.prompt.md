@@ -2,6 +2,7 @@
 name: folder-structure-blueprint-generator
 title: Folder Structure Blueprint Generator
 description: Analyzes and documents project folder structures across diverse technology stacks (.NET, Java, React, Angular, Python, Node.js, Flutter) and produces consistent blueprints with naming and placement conventions.
+trigger: /folder-structure-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

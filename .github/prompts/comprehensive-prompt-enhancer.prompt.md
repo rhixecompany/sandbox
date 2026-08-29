@@ -2,6 +2,7 @@
 name: comprehensive-prompt-enhancer
 title: Comprehensive Prompt Enhancer
 description: Audit and enhance a prompt's structure, clarity, personality, and tool usage to produce a polished, AI-ready specification.
+trigger: /comprehensive-prompt-enhancer
 version: 1.0.0
 author: Hermes Agent
 tags:

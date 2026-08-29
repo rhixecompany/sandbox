@@ -2,6 +2,7 @@
 name: playwright-automation-fill-in-form
 title: Playwright Form Fill Automation
 description: Fills a form field by field using Playwright MCP, uploads an image if requested, then stops before submit and asks for human review.
+trigger: /playwright-automation-fill-in-form
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: web-research-pipeline
 title: Web Research Pipeline
 description: Run a web search → extract full content → save as formatted markdown pipeline using a Tavily-first approach with fetch MCP fallback for robust research capture.
+trigger: /web-research-pipeline
 version: 1.0.0
 author: Hermes Agent
 tags:

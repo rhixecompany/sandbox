@@ -2,6 +2,7 @@
 name: dataverse-python-production-code
 title: Dataverse Python Production Code
 description: Write production-grade Dataverse SDK for Python code with error handling, client lifecycle, structured logging, and OData performance tuning.
+trigger: /dataverse-python-production-code
 version: 1.0.0
 author: Hermes Agent
 tags:

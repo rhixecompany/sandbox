@@ -2,6 +2,7 @@
 name: playwright-generate-test
 title: Playwright Test Generation
 description: Generates a Playwright test from a scenario, validates it against the live app, and iterates with @investigator/@author/@runner until the test passes.
+trigger: /playwright-generate-test
 version: 1.0.0
 author: Hermes Agent
 tags:

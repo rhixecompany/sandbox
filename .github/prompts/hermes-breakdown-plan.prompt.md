@@ -2,6 +2,7 @@
 name: hermes-breakdown-plan
 title: Hermes Breakdown — Project Plan
 description: Generates an execution-ready project plan that consolidates feature and epic inputs into a planning package.
+trigger: /hermes-breakdown-plan
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

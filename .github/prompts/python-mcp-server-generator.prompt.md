@@ -2,6 +2,7 @@
 name: python-mcp-server-generator
 title: Python MCP Server Generator
 description: Generate a complete Python MCP server project with tools, resources, type-safe configuration, and proper stdio or HTTP transport setup.
+trigger: /python-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
 tags: [python, mcp, server, generator, tooling, automation]

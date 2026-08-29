@@ -2,6 +2,7 @@
 name: openapi-to-application-code
 title: OpenAPI Spec to Application Code
 description: Generates a complete, idiomatic application scaffold (controllers, services, models, tests) from an OpenAPI specification in the target framework.
+trigger: /openapi-to-application-code
 version: 1.0.0
 author: Hermes Agent
 tags:

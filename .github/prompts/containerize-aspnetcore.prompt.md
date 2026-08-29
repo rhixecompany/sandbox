@@ -2,6 +2,7 @@
 name: containerize-aspnetcore
 title: Containerize ASP.NET Core
 description: Build optimized Docker images for an ASP.NET Core application following .NET containerization best practices.
+trigger: /containerize-aspnetcore
 version: 1.0.0
 author: Hermes Agent
 tags:

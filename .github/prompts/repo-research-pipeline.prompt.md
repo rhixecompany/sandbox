@@ -2,6 +2,7 @@
 name: repo-research-pipeline
 title: Repo Research Pipeline
 description: Run research across all project repos and produce RESEARCH_REPORT.md files with verified sources using the Tavily-first research pipeline and symmetric cross-references.
+trigger: /repo-research-pipeline
 version: 1.0.0
 author: Hermes Agent
 tags: [research, web-search, tavily, report, pipeline, automation]

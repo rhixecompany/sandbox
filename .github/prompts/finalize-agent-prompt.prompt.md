@@ -2,6 +2,7 @@
 name: finalize-agent-prompt
 title: Finalize Agent Prompt
 description: Acts as an AI agent to polish and finalize a prompt file for the end user, tightening instructions and structure.
+trigger: /finalize-agent-prompt
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

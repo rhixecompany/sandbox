@@ -1,6 +1,7 @@
 ---
 name: plugins-hooks-audit
 description: Audit Hermes plugin + hook event coverage. Run when checking which plugins are enabled, which hook events have shell scripts wired, and which events exist in code but have no hook.
+trigger: /plugins-hooks-audit
 version: 1.0.0
 author: Hermes Agent
 license: MIT

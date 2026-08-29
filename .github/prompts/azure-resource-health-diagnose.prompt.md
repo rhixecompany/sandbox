@@ -2,6 +2,7 @@
 name: azure-resource-health-diagnose
 title: Azure Resource Health Diagnosis
 description: Diagnose Azure resource health from logs and telemetry, then deliver a phased remediation plan with monitoring and prevention measures.
+trigger: /azure-resource-health-diagnose
 version: 1.0.0
 author: Hermes Agent
 tags:

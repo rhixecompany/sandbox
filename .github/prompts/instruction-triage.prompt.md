@@ -2,6 +2,7 @@
 name: instruction-triage
 title: "Instruction File Triage"
 description: "Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill."
+trigger: /instruction-triage
 version: 1.0.0
 author: OWL
 license: MIT

@@ -2,6 +2,7 @@
 name: plan-batch-fix
 title: Plan Batch Fix
 description: Performs a full scan, batches fixes by priority, verifies per batch with git commits, then re-scans and writes docs/batch-fix-report.md with before/after counts.
+trigger: /plan-batch-fix
 version: 1.0.0
 author: Hermes Agent
 tags:

@@ -2,6 +2,7 @@
 name: memory-merger
 title: Memory Merger
 description: Merges mature lessons from a domain memory file into its instruction file across global, user, workspace, or ws scopes.
+trigger: /memory-merger
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

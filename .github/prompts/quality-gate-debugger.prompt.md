@@ -2,6 +2,7 @@
 name: quality-gate-debugger
 title: Quality Gate Debugger
 description: Triage quality-gate report files (type-check, lint, test, build), batch-fix all surfaced issues by priority, and re-run the gate until zero errors and zero warnings remain.
+trigger: /quality-gate-debugger
 version: 1.0.0
 author: Hermes Agent
 tags: [quality, lint, type-check, testing, build, debugging, refactor]

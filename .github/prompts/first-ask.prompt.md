@@ -2,6 +2,7 @@
 name: first-ask
 title: First Ask — Task Refinement
 description: Interactive, input-tool powered task refinement workflow that interrogates scope, deliverables, and constraints before executing (requires the Joyride extension).
+trigger: /first-ask
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

@@ -2,6 +2,7 @@
 name: hermes-comprehensive-setup
 title: Hermes Comprehensive Setup
 description: Executes the hermes-comprehensive-setup workflow to install, configure, and verify all Hermes Agent components end-to-end.
+trigger: /hermes-comprehensive-setup
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

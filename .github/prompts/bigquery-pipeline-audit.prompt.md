@@ -2,6 +2,7 @@
 name: bigquery-pipeline-audit
 title: BigQuery Pipeline Audit
 description: Audit Python + BigQuery pipelines for cost exposure, dry-run safety, idempotency, backfill design, and observability — and report exact patch locations.
+trigger: /bigquery-pipeline-audit
 version: 1.0.0
 author: Hermes Agent
 tags:

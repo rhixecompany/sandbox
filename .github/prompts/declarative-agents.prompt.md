@@ -2,6 +2,7 @@
 name: declarative-agents
 title: Declarative Agents
 description: Build declarative Microsoft 365 / Copilot agents with workflows for basic creation, advanced enterprise design, and validation & optimization.
+trigger: /declarative-agents
 version: 1.0.0
 author: Hermes Agent
 tags:

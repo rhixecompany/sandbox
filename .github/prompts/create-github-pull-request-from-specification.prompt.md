@@ -2,6 +2,7 @@
 name: create-github-pull-request-from-specification
 title: Create GitHub Pull Request From Specification
 description: Generate a pull request body, checklist, and review guidance directly from a feature specification.
+trigger: /create-github-pull-request-from-specification
 version: 1.0.0
 author: Hermes Agent
 tags:

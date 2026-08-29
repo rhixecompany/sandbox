@@ -2,6 +2,7 @@
 name: write-coding-standards-from-file
 title: Write Coding Standards from File
 description: Generate a coding standards document for a project derived from the styles found in the supplied source files and folders, with variable/parameter configuration support.
+trigger: /write-coding-standards-from-file
 version: 1.0.0
 author: Hermes Agent
 tags:

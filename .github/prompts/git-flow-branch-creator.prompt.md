@@ -2,6 +2,7 @@
 name: git-flow-branch-creator
 title: Git Flow Branch Creator
 description: Analyzes git status/diff and creates branches following the nvie Git Flow branching model.
+trigger: /git-flow-branch-creator
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

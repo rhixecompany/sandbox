@@ -2,6 +2,7 @@
 name: generate-custom-instructions-from-codebase
 title: Generate Copilot Instructions From Codebase
 description: Analyzes differences between two project versions (branches, commits, or releases) and produces migration/refactor instructions for GitHub Copilot to maintain consistency during upgrades.
+trigger: /generate-custom-instructions-from-codebase
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

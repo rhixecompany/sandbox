@@ -2,6 +2,7 @@
 name: structured-autonomy-generate
 title: Structured Autonomy Generate
 description: Generates the structured-autonomy implementation file from a plan.md by parsing the plan, researching the codebase, and emitting the implementation artifact.
+trigger: /structured-autonomy-generate
 version: 1.0.0
 author: Hermes Agent
 tags:

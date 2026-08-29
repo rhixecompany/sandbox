@@ -2,6 +2,7 @@
 name: code-exemplars-blueprint-generator
 title: Code Exemplars Blueprint Generator
 description: Generate a customizable AI prompt that scans a codebase for high-quality code exemplars across .NET, Java, JS/TS, React, Angular, and Python to establish team coding standards.
+trigger: /code-exemplars-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 tags:

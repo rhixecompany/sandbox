@@ -2,6 +2,7 @@
 name: create-llms
 title: Create LLMs.txt
 description: Generate an llms.txt file that summarizes a project for AI agents and LLM-powered tooling.
+trigger: /create-llms
 version: 1.0.0
 author: Hermes Agent
 tags:

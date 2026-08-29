@@ -2,6 +2,7 @@
 name: prompt-management
 title: Prompt Management
 description: "Manage the .github/prompts/ lifecycle end to end: inventory, dedupe, extract shared templates, update every prompt to use them, create missing skills/scripts, and run strict validation."
+trigger: /prompt-management
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, lifecycle, dedupe, templates, validation, refactor, automation]

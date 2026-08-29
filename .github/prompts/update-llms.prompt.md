@@ -2,6 +2,7 @@
 name: update-llms
 title: Update llms.txt
 description: Update the llms.txt file in the repository root to reflect changes in documentation or specifications following the llms.txt specification.
+trigger: /update-llms
 version: 1.0.0
 author: Hermes Agent
 tags:

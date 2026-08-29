@@ -2,6 +2,7 @@
 name: remember-interactive-programming
 title: Remember Interactive Programming
 description: Remind the agent that it is an interactive programmer with access to a live REPL, encouraging exploration-first workflows suited to REPL-driven languages like Clojure.
+trigger: /remember-interactive-programming
 version: 1.0.0
 author: Hermes Agent
 tags: [memory, interactive-programming, repl, clojure, reminder]

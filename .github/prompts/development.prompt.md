@@ -2,6 +2,7 @@
 name: development
 title: Comprehensive Setup Guide
 description: Comprehensive development setup guide — prerequisites and end-to-end project bootstrap (e.g. ComicWise-style full-stack projects).
+trigger: /development
 version: 1.0.0
 author: Hermes Agent
 tags:

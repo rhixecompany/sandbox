@@ -2,6 +2,7 @@
 name: repo-init
 title: Repo Init
 description: Initialize a repository by listing/triaging files across the repo and Hermes root, then dedupe, consolidate, and delete duplicates for consistent state across both locations.
+trigger: /repo-init
 version: 1.0.0
 author: Hermes Agent
 tags: [repo, initialization, triage, dedupe, consolidation, cleanup]

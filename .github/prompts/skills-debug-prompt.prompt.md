@@ -2,6 +2,7 @@
 name: skills-debug-prompt
 title: Skills Debug Prompt
 description: Applies fixes to all F-grade and C-grade skills identified in the audit, targeting F=0 and C≤5 after completion, with a 4-phase intake-execute-verify-handoff flow.
+trigger: /skills-debug-prompt
 version: 1.0.0
 author: Hermes Agent
 tags:

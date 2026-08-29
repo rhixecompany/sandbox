@@ -2,6 +2,7 @@
 name: uk-earnings-research
 title: UK Earnings Research
 description: Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll across pay, reliability, barrier to entry, and payout speed.
+trigger: /uk-earnings-research
 version: 1.0.0
 author: Hermes Agent
 tags:

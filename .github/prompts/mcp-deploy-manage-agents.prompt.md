@@ -2,6 +2,7 @@
 name: mcp-deploy-manage-agents
 title: MCP Deploy and Manage Agents
 description: Deploys and manages MCP-based agents, covering packaging, registration, lifecycle, and admin role requirements.
+trigger: /mcp-deploy-manage-agents
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

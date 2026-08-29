@@ -2,6 +2,7 @@
 name: ai-prompt-engineering-safety-review
 title: AI Prompt Safety and Quality Review
 description: Audit a prompt for safety, bias, security, clarity, and effectiveness, then deliver a hardened, improved version with rationale.
+trigger: /ai-prompt-engineering-safety-review
 version: 1.0.0
 author: Hermes Agent
 tags:

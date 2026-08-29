@@ -2,6 +2,7 @@
 name: update-oo-component-documentation
 title: Update Object-Oriented Component Documentation
 description: Update existing object-oriented component documentation following industry best practices and architectural documentation standards, including component overview, architecture, and interfaces.
+trigger: /update-oo-component-documentation
 version: 1.0.0
 author: Hermes Agent
 tags:

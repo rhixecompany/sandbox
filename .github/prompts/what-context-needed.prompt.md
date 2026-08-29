@@ -2,6 +2,7 @@
 name: what-context-needed
 title: What Context Is Needed
 description: Ask Copilot which files it needs to see before answering a question, helping the user identify required context for accurate AI responses.
+trigger: /what-context-needed
 version: 1.0.0
 author: Hermes Agent
 tags:

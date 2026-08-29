@@ -2,6 +2,7 @@
 name: az-cost-optimize
 title: Azure Cost Optimization
 description: Analyze Azure IaC and live resources, identify savings opportunities, and create prioritized GitHub issues for each optimization recommendation.
+trigger: /az-cost-optimize
 version: 1.0.0
 author: Hermes Agent
 tags:

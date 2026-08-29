@@ -2,6 +2,7 @@
 name: setup-enhanced
 title: Enhanced Setup
 description: Defines the enhanced AI agent setup workflow for the workspace — quick start, quality gate, reference resolution hierarchy, DRY implementation practices, and 10-step implementation flow.
+trigger: /setup-enhanced
 version: 1.0.0
 author: Hermes Agent
 tags:

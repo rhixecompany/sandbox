@@ -2,6 +2,7 @@
 name: setup-groq-cloud
 title: Setup Groq Cloud
 description: Configure Groq Cloud API keys, install the Groq Python SDK, run a first chat completion, and integrate Groq models into Python, AI SDK, and third-party clients. Use when onboarding to Groq Cloud or wiring Groq LLM inference into a project.
+trigger: /setup-groq-cloud
 version: 1.0.0
 author: Hermes Agent
 tags:

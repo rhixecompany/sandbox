@@ -2,6 +2,7 @@
 name: hermes-breakdown-test
 title: Hermes Breakdown — Test Strategy
 description: Produces a QA package that turns feature artifacts into a clear test strategy and issue checklist.
+trigger: /hermes-breakdown-test
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

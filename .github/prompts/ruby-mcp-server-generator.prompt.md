@@ -2,6 +2,7 @@
 name: ruby-mcp-server-generator
 title: Ruby MCP Server Generator
 description: Scaffolds a complete, production-ready Model Context Protocol server in Ruby using the official MCP Ruby SDK, with tools, prompts, resources, and tests.
+trigger: /ruby-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
 tags:

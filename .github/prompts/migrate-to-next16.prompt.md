@@ -2,6 +2,7 @@
 name: migrate-to-next16
 title: Migrate to Next.js 16
 description: Automates Next.js 16 migration tasks, updating dependencies, codemods, route handlers, and config for the upgrade.
+trigger: /migrate-to-next16
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

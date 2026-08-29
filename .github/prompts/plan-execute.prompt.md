@@ -2,6 +2,7 @@
 name: plan-execute
 title: Plan Execute
 description: Loads an existing plan, runs each phase in strict order with verification gates and git checkpoints, then summarizes with phase SHAs and outputs.
+trigger: /plan-execute
 version: 1.0.0
 author: Hermes Agent
 tags:

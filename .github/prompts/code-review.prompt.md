@@ -2,6 +2,7 @@
 name: code-review
 title: Comprehensive Code Review
 description: Run a structured code review for correctness, security, and testing risk — mapping scope, deep-reviewing changes, and producing an actionable report.
+trigger: /code-review
 version: 1.0.0
 author: Hermes Agent
 tags:

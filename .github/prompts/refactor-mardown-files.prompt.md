@@ -2,6 +2,7 @@
 name: refactor-mardown-files
 title: Refactor Markdown Files
 description: Refactor and update repository documentation files (AGENTS.md, .cursorrules, .github/copilot-instructions.md) to maximize clarity, actionability, and AI agent productivity using Diátaxis principles.
+trigger: /refactor-mardown-files
 version: 1.0.0
 author: Hermes Agent
 tags: [refactor, markdown, documentation, diataxis, agents-md, copilot-instructions]

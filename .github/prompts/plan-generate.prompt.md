@@ -2,6 +2,7 @@
 name: plan-generate
 title: Plan Generate
 description: Generates a structured implementation plan (inputs, outputs, phases with verification gates) at .github/prompts/<name>.prompt.md or .hermes/plans/<name>.md.
+trigger: /plan-generate
 version: 1.0.0
 author: Hermes Agent
 tags:

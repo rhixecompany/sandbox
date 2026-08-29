@@ -2,6 +2,7 @@
 name: create-github-action-workflow-specification
 title: Create GitHub Action Workflow Specification
 description: Specify a GitHub Actions workflow including jobs, dependencies, triggers, and required secrets.
+trigger: /create-github-action-workflow-specification
 version: 1.0.0
 author: Hermes Agent
 tags:

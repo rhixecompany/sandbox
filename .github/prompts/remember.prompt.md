@@ -2,6 +2,7 @@
 name: remember
 title: Remember
 description: Transform debugging sessions and hard-won lessons into domain-organized memory instructions at global or workspace scope, with intelligent categorization and reuse.
+trigger: /remember
 version: 1.0.0
 author: Hermes Agent
 tags: [memory, knowledge-management, instructions, reminder, workspace]

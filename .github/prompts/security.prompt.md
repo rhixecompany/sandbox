@@ -2,6 +2,7 @@
 name: security
 title: Security Hardening Prompt
 description: Applies secure-by-default engineering practices to code and documentation updates with explicit handling for secrets, input validation, threat surface, and least-privilege design.
+trigger: /security
 version: 1.0.0
 author: Hermes Agent
 tags:

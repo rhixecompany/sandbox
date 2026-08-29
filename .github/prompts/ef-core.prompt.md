@@ -2,6 +2,7 @@
 name: ef-core
 title: EF Core Best Practices
 description: Surfaces Entity Framework Core best practices for modeling, querying, migrations, and performance.
+trigger: /ef-core
 version: 1.0.0
 author: Hermes Agent
 date: '2026-08-25'

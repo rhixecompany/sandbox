@@ -2,6 +2,7 @@
 name: playwright-typescript
 title: Playwright TypeScript Test Authoring
 description: Designs scenarios, implements stable @playwright/test suites with role/label-based locators and web-first assertions, then runs and stabilizes them.
+trigger: /playwright-typescript
 version: 1.0.0
 author: Hermes Agent
 tags:

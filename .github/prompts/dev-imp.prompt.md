@@ -2,6 +2,7 @@
 name: dev-imp
 title: Development Implementation
 description: "Execute a software implementation plan: select generators, implement, verify, code review, debug, and produce a structured completion report."
+trigger: /dev-imp
 version: 1.0.0
 author: Hermes Agent
 tags:

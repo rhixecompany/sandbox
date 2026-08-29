@@ -2,6 +2,7 @@
 name: prompt-builder
 title: Prompt Builder
 description: Guide users through creating high-quality .prompt.md files via a nine-area discovery questionnaire and pattern-driven assembly aligned with the repository's reference prompts.
+trigger: /prompt-builder
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, authoring, discovery, template, documentation, automation]

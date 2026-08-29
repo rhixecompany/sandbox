@@ -2,6 +2,7 @@
 name: audit-skills-judge-fix
 title: Audit, Judge, and Fix Skill Library
 description: Run a multi-phase audit, scoring, remediation, consolidation, and verification cycle across the Hermes skill library.
+trigger: /audit-skills-judge-fix
 version: 1.0.0
 author: Hermes Agent
 tags:
