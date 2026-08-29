@@ -1,0 +1,22 @@
+{
+  "ts": "2026-08-29T00:23:18.751335+00:00",
+  "prompt": "Reply with exactly one word: OK",
+  "timeout_s": 150,
+  "tested": 1,
+  "skipped": [],
+  "ok_count": 0,
+  "fail_count": 1,
+  "results": [
+    {
+      "exit_code": 1,
+      "stdout": "HTTP 400: gemma4:12b is not a valid model ID\n",
+      "stderr": "\nsession_id: 20260829_012152_6f78c5\n",
+      "elapsed_s": 105.59,
+      "ok": false,
+      "provider": "ollama-launch",
+      "model": "gemma4:12b",
+      "prompt": "Reply with exactly one word: OK",
+      "ts": "2026-08-29T00:23:18.749451+00:00"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "ts": "2026-08-29T00:20:21.297132+00:00",
+  "prompt": "Reply with exactly one word: OK",
+  "timeout_s": 150,
+  "tested": 1,
+  "skipped": [],
+  "ok_count": 0,
+  "fail_count": 1,
+  "results": [
+    {
+      "exit_code": 1,
+      "stdout": "Warning: Unknown toolsets: opencode\nBilling or credits exhausted: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 15981. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account\n\nOpenRouter reported that billing, credits, or account entitlement is exhausted for gemini-2.5-flash.\nAdd credits or update billing with that provider, then retry.\nOpenRouter billing: https://openrouter.ai/settings/credits\nYou can switch providers temporarily with /model <model> --provider <provider>.\n",
+      "stderr": "\nsession_id: 20260829_011808_abae9e\n",
+      "elapsed_s": 142.37,
+      "ok": false,
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "prompt": "Reply with exactly one word: OK",
+      "ts": "2026-08-29T00:20:21.274599+00:00"
+    }
+  ]
+}

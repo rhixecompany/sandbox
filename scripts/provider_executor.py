@@ -72,6 +72,8 @@ def run_oneshot(model: str, prompt: str, timeout: int) -> dict:
         "-m", model,
         "-q", prompt,
         "--oneshot",
+        "--ignore-rules",
+        "--ignore-user-config",
         "-Q",  # quiet
     ]
     start = time.monotonic()
@@ -121,7 +123,7 @@ def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--prompt", default="Reply with the single word: OK. Nothing else.")
     p.add_argument("--out", default=None)
-    p.add_argument("--timeout", type=int, default=45)
+    p.add_argument("--timeout", type=int, default=120)
     p.add_argument("--providers", default=None, help="comma-separated whitelist")
     args = p.parse_args()
 

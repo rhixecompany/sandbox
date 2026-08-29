@@ -1,0 +1,22 @@
+{
+  "ts": "2026-08-29T00:22:54.153048+00:00",
+  "prompt": "Reply with exactly one word: OK",
+  "timeout_s": 150,
+  "tested": 1,
+  "skipped": [],
+  "ok_count": 0,
+  "fail_count": 1,
+  "results": [
+    {
+      "exit_code": 1,
+      "stdout": "HTTP 400: deepseek-v4-flash-free is not a valid model ID\n",
+      "stderr": "\nsession_id: 20260829_012123_825cad\n",
+      "elapsed_s": 100.82,
+      "ok": false,
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash-free",
+      "prompt": "Reply with exactly one word: OK",
+      "ts": "2026-08-29T00:22:54.152430+00:00"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "ts": "2026-08-29T00:24:05.703080+00:00",
+  "prompt": "Reply with exactly one word: OK",
+  "timeout_s": 150,
+  "tested": 1,
+  "skipped": [],
+  "ok_count": 0,
+  "fail_count": 1,
+  "results": [
+    {
+      "exit_code": 1,
+      "stdout": "Warning: Unknown toolsets: opencode\nHTTP 400: nemotron-3-ultra-free is not a valid model ID\n",
+      "stderr": "\nsession_id: 20260829_012212_54252b\n",
+      "elapsed_s": 127.59,
+      "ok": false,
+      "provider": "opencode-zen",
+      "model": "nemotron-3-ultra-free",
+      "prompt": "Reply with exactly one word: OK",
+      "ts": "2026-08-29T00:24:05.699584+00:00"
+    }
+  ]
+}

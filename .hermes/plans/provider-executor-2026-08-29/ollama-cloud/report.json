@@ -1,0 +1,22 @@
+{
+  "ts": "2026-08-29T00:20:24.017338+00:00",
+  "prompt": "Reply with exactly one word: OK",
+  "timeout_s": 150,
+  "tested": 1,
+  "skipped": [],
+  "ok_count": 0,
+  "fail_count": 1,
+  "results": [
+    {
+      "exit_code": 1,
+      "stdout": "HTTP 400: nemotron-3-ultra is not a valid model ID\n",
+      "stderr": "\nsession_id: 20260829_011817_4cfe32\n",
+      "elapsed_s": 139.0,
+      "ok": false,
+      "provider": "ollama-cloud",
+      "model": "nemotron-3-ultra",
+      "prompt": "Reply with exactly one word: OK",
+      "ts": "2026-08-29T00:20:24.016323+00:00"
+    }
+  ]
+}
