@@ -4,52 +4,52 @@
 
 ## Last Session Summary
 
-| Field      | Value                                                    |
-| ---------- | -------------------------------------------------------- |
-| Session ID | 20260829_010000_10subgoal + close-open-items             |
-| Title      | Open Items Closed + 5 Repo Prompts Implemented           |
-| When       | 2026-08-29 01:00 – 02:42 WCAST                           |
-| Profile    | default                                                  |
-| Model      | minimax/minimax-m3:free (openrouter)                     |
-| Source     | direct user invocation                                   |
+| Field      | Value                                          |
+| ---------- | ---------------------------------------------- |
+| Session ID | 20260829_010000_10subgoal + close-open-items   |
+| Title      | Open Items Closed + 5 Repo Prompts Implemented |
+| When       | 2026-08-29 01:00 – 02:42 WCAST                 |
+| Profile    | default                                        |
+| Model      | minimax/minimax-m3:free (openrouter)           |
+| Source     | direct user invocation                         |
 
 ## Open Items Closed (this turn)
 
-| # | Open Item | Resolution | Verified |
-|---|---|---|---|
-| 1 | HONCHO key blocks push | `git filter-repo` rewrote commits 9cbdc509 + 55174cb7 to replace real `hch-v3-...` key with `[REDACTED]`. Force-pushed to `origin/clean-development`. **PR #12** created. | ✓ `git push --force` succeeded; PR #12 at https://github.com/rhixecompany/sandbox/pull/12 |
-| 2 | 6 provider model IDs in config.yaml | `scripts/fix_provider_models.py` queries each provider's `/v1/models` and patches config.yaml. Applied: `deepseek` `deepseek-v4-flash-free → deepseek-chat`. Other providers either OK (gemini, ollama-cloud, openrouter) or 401/403 (auth issue, out of scope). | ✓ Verified via API checks |
-| 3 | 3 broken code fences in prompts | java/ruby mcp-server-generator: added trailing `\`\`\`\`` to close orphan 4-fence. smithery-setup: removed orphan 3-fence at line 1971. | ✓ `python scripts/prompt_dry_audit.py` reports 0 broken fences |
-| 4 | 233 prompts missing frontmatter fields | `scripts/prompt_dry_bulk_fields.py` added safe defaults (toolsets, skills, dependencies, formatter, license) to 153 prompts. 5 specific prompts got manual fixes. | ✓ 0 prompts missing required FM; 232/233 have `trigger:` (only `repo.prompt.md` skipped per the bulk script's rules) |
+| #   | Open Item                              | Resolution                                                                                                                                                                                                                                                       | Verified                                                                                                             |
+| --- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 1   | HONCHO key blocks push                 | `git filter-repo` rewrote commits 9cbdc509 + 55174cb7 to replace real `hch-v3-...` key with `[REDACTED]`. Force-pushed to `origin/clean-development`. **PR #12** created.                                                                                        | ✓ `git push --force` succeeded; PR #12 at https://github.com/rhixecompany/sandbox/pull/12                            |
+| 2   | 6 provider model IDs in config.yaml    | `scripts/fix_provider_models.py` queries each provider's `/v1/models` and patches config.yaml. Applied: `deepseek` `deepseek-v4-flash-free → deepseek-chat`. Other providers either OK (gemini, ollama-cloud, openrouter) or 401/403 (auth issue, out of scope). | ✓ Verified via API checks                                                                                            |
+| 3   | 3 broken code fences in prompts        | java/ruby mcp-server-generator: added trailing `\`\`\`\`` to close orphan 4-fence. smithery-setup: removed orphan 3-fence at line 1971.                                                                                                                          | ✓ `python scripts/prompt_dry_audit.py` reports 0 broken fences                                                       |
+| 4   | 233 prompts missing frontmatter fields | `scripts/prompt_dry_bulk_fields.py` added safe defaults (toolsets, skills, dependencies, formatter, license) to 153 prompts. 5 specific prompts got manual fixes.                                                                                                | ✓ 0 prompts missing required FM; 232/233 have `trigger:` (only `repo.prompt.md` skipped per the bulk script's rules) |
 
 ## 5 Repo Prompts Implemented
 
 All 5 prompts found at `.github/prompts/`. Each had placeholder `## Goal`, `## Context`, `## Phases` stubs at the top. Implementation:
 
-| Prompt | Size | Sections | Notes |
-|---|---|---|---|
-| `repo-init.prompt.md` | 8010 B | 12 | Triage + dedupe + delete workflow; canonical precedence rules; 14-skill protocol |
-| `repo.prompt.md` | 24042 B | 37 | 17-project research + report generation; quick repo onboarding (4 Q&A) |
-| `repo-management.prompt.md` | 10515 B | 19 | Branch normalization + ignore audit + deps + CI; 5-phase pipeline |
-| `repo-story-time.prompt.md` | 7974 B | 17 | Git history → REPOSITORY_SUMMARY.md + THE_STORY_OF_THIS_REPO.md |
-| `repo-research-pipeline.prompt.md` | 7691 B | 17 | Tavily-first research pipeline; symmetric cross-references |
+| Prompt                             | Size    | Sections | Notes                                                                            |
+| ---------------------------------- | ------- | -------- | -------------------------------------------------------------------------------- |
+| `repo-init.prompt.md`              | 8010 B  | 12       | Triage + dedupe + delete workflow; canonical precedence rules; 14-skill protocol |
+| `repo.prompt.md`                   | 24042 B | 37       | 17-project research + report generation; quick repo onboarding (4 Q&A)           |
+| `repo-management.prompt.md`        | 10515 B | 19       | Branch normalization + ignore audit + deps + CI; 5-phase pipeline                |
+| `repo-story-time.prompt.md`        | 7974 B  | 17       | Git history → REPOSITORY_SUMMARY.md + THE_STORY_OF_THIS_REPO.md                  |
+| `repo-research-pipeline.prompt.md` | 7691 B  | 17       | Tavily-first research pipeline; symmetric cross-references                       |
 
 Each now has: `## Goal` (content), `## Context` (content), `## Workflow` (content), `## Verification`/`## Verification Checklist` (content).
 
 ## Verification (final state)
 
-| Check | Result |
-|---|---|
-| `hermes doctor` | ✓ (already passing) |
-| `bun run check` (lint + format + markdownlint + spellcheck) | ✓ 0 errors |
-| `python scripts/prompt_dry_audit.py` | ✓ 0 broken fences, 0 missing required FM |
-| `python scripts/plugins_hooks_audit.py` | ✓ 15 plugins, 13 possible events |
-| `python scripts/log_analysis.py` | ✓ 79 log files, 363K lines, 16360 errors |
-| `python scripts/provider_executor.py` | ✓ 6/6 providers tested (all FAIL with config drift documented) |
-| Ollama `qwen3-vl:2b` | ✓ Installed, 256K context, vision+reasoning |
-| 4 agents wired (Hermes/OpenCode/Codex/Copilot) | ✓ Verified via config dump |
-| `git push --force origin clean-development` | ✓ Succeeded after 2 filter-repo passes |
-| PR #12 (clean-development → development) | ✓ Created (cannot auto-merge into protected branch) |
+| Check                                                       | Result                                                         |
+| ----------------------------------------------------------- | -------------------------------------------------------------- |
+| `hermes doctor`                                             | ✓ (already passing)                                            |
+| `bun run check` (lint + format + markdownlint + spellcheck) | ✓ 0 errors                                                     |
+| `python scripts/prompt_dry_audit.py`                        | ✓ 0 broken fences, 0 missing required FM                       |
+| `python scripts/plugins_hooks_audit.py`                     | ✓ 15 plugins, 13 possible events                               |
+| `python scripts/log_analysis.py`                            | ✓ 79 log files, 363K lines, 16360 errors                       |
+| `python scripts/provider_executor.py`                       | ✓ 6/6 providers tested (all FAIL with config drift documented) |
+| Ollama `qwen3-vl:2b`                                        | ✓ Installed, 256K context, vision+reasoning                    |
+| 4 agents wired (Hermes/OpenCode/Codex/Copilot)              | ✓ Verified via config dump                                     |
+| `git push --force origin clean-development`                 | ✓ Succeeded after 2 filter-repo passes                         |
+| PR #12 (clean-development → development)                    | ✓ Created (cannot auto-merge into protected branch)            |
 
 ## Artifacts (this turn)
 
