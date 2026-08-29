@@ -1,0 +1,160 @@
+{
+  "ts": "2026-08-29T01:09:12.473964+00:00",
+  "timeout_s": 60,
+  "total": 11,
+  "ok_count": 11,
+  "fail_count": 0,
+  "results": [
+    {
+      "cmd": [
+        "hermes",
+        "doctor"
+      ],
+      "exit": 0,
+      "elapsed_s": 23.44,
+      "stdout_tail": "loaded only for dispatcher-spawned workers)\n  \u2713 web search (tavily)\n  \u2713 web extract (tavily)\n  \u26a0 browser (system dependency not met)\n  \u26a0 browser-cdp (system dependency not met)\n  \u26a0 discord (missing DISCORD_BOT_TOKEN)\n  \u26a0 discord_admin (missing DISCORD_BOT_TOKEN)\n  \u26a0 feishu_doc (system dependency not met)\n  \u26a0 feishu_drive (system dependency not met)\n  \u26a0 hermes-yuanbao (system dependency not met)\n  \u26a0 homeassistant (system dependency not met)\n  \u26a0 image_gen (system dependency not met)\n\n\u25c6 Skills Hub\n  \u2713 Skills Hub directory exists\n  \u2713 Lock file OK (24 hub-installed skill(s))\n  \u2713 GitHub token configured (authenticated API access)\n\n\u25c6 Memory Provider\n  \u2713 Honcho connected workspace=hermes mode=hybrid freq=async\n\n\u25c6 Profiles\n  \u2713 13 profile(s) found\n  \u2713   alexa: deepseek-v4-flash-free, no alias\n  \u2713   code-architect: gateway running, nvidia/nemotron-3-nano-omni-30, no alias\n  \u2713   creative-director: deepseek-v4-flash-free, no alias\n  \u2713   cto: deepseek-v4-flash-free, no alias\n  \u2713   designer: deepseek-v4-flash-free, no alias\n  \u2713   dev: deepseek-v4-flash-free, no alias\n  \u2713   exec-assistant: deepseek-v4-flash-free, no alias\n  \u2713   ops: deepseek-v4-flash-free, no alias\n  \u2713   patient-tutor: deepseek-v4-flash-free, no alias\n  \u2713   pm: deepseek-v4-flash-free, no alias\n  \u2713   qa: deepseek-v4-flash-free, no alias\n  \u2713   research-analyst: deepseek-v4-flash-free, no alias\n  \u2713   security: deepseek-v4-flash-free, no alias\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  All checks passed! \ud83c\udf89\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "doctor",
+      "ts": "2026-08-29T01:08:32.406617+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "security",
+        "audit"
+      ],
+      "exit": 0,
+      "elapsed_s": 2.91,
+      "stdout_tail": "No known vulnerabilities found across 207 component(s).\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "security",
+      "ts": "2026-08-29T01:08:35.319208+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "status"
+      ],
+      "exit": 0,
+      "elapsed_s": 6.04,
+      "stdout_tail": ")\n  Discord       \u2717 not configured\n  WhatsApp      \u2717 not configured\n  Signal        \u2717 not configured\n  Slack         \u2717 not configured\n  Email         \u2717 not configured\n  SMS           \u2717 not configured\n  DingTalk      \u2717 not configured\n  Feishu        \u2717 not configured\n  WeCom         \u2717 not configured\n  WeCom Callback  \u2717 not configured\n  Weixin        \u2717 not configured\n  BlueBubbles   \u2717 not configured\n  QQBot         \u2717 not configured\n  Yuanbao       \u2717 not configured\n  A2A           \u2713 configured (plugin)\n  Buzz          \u2717 not configured (plugin)\n  DingTalk      \u2717 not configured (plugin)\n  Email         \u2717 not configured (plugin)\n  Feishu / Lark  \u2717 not configured (plugin)\n  Matrix        \u2717 not configured (plugin)\n  ntfy          \u2717 not configured (plugin)\n  Raft          \u2717 not configured (plugin)\n  Slack         \u2713 configured (plugin)\n  SMS (Twilio)  \u2717 not configured (plugin)\n  Telegram      \u2713 configured (plugin)\n  WeCom (Enterprise WeChat)  \u2713 configured (plugin)\n  WeCom Callback (self-built apps)  \u2713 configured (plugin)\n  WhatsApp      \u2713 configured (plugin)\n\n\u25c6 Gateway Service\n  Status:       \u2717 stopped\n  Manager:      manual process\n\n\u25c6 Scheduled Jobs\n  Jobs:         0 active, 2 total\n\n\u25c6 Sessions\n  Active:       1 session(s)\n  Last activity:       4d ago\n  Slots:        1/10 in use\n                cli               20260829_004155_8cfa1d   1h26m\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Run 'hermes doctor' for detailed diagnostics\n  Run 'hermes setup' to configure\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "status",
+      "ts": "2026-08-29T01:08:41.359383+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "insights"
+      ],
+      "exit": 0,
+      "elapsed_s": 4.47,
+      "stdout_tail": " \ud83e\udde0 Top Skills\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Skill                          Loads   Edits   Last used\n  plans-and-specs                   19       0      Aug 29\n  create-implementation-plan        18       0      Aug 29\n  using-superpowers                 18       0      Aug 28\n  user-communication-preferenc      17       0      Aug 28\n  subagent-driven-development       16       0      Aug 29\n  mcp-filesystem                    15       0      Aug 29\n  writing-clearly-and-concisel      15       0      Aug 29\n  executing-plans                   15       0      Aug 29\n  mcp-ast-grep                      14       0      Aug 29\n  plan                              14       0      Aug 29\n  Distinct skills: 64  Loads: 311  Edits: 3\n\n  \ud83d\udcc5 Activity Patterns\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Mon  \u2588\u2588\u2588\u2588            16\n  Tue  \u2588\u2588\u2588\u2588            15\n  Wed  \u2588               1\n  Thu                  0\n  Fri  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 49\n  Sat  \u2588\u2588\u2588\u2588\u2588           18\n  Sun                  0\n\n  Peak hours: 12AM (19), 2PM (15), 1AM (14), 1PM (14), 6PM (7)\n  Active days: 5\n  Best streak: 2 consecutive days\n\n  \ud83c\udfc6 Notable Sessions\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Longest session      3.6d               (Aug 24, 20260824_230814_)\n  Most messages        455 msgs           (Aug 29, 20260829_004155_)\n  Most tokens          8,768,971 tokens   (Aug 28, 20260828_211004_)\n  Most tool calls      251 calls          (Aug 28, 20260828_172207_)\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "insights",
+      "ts": "2026-08-29T01:08:45.824547+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "list"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.31,
+      "stdout_tail": "ll-react-game-loop-a621caf2.log     222B   2026-08-11\n  action-skills-install-realtime-react-hooks-3ca811ed.log     241B   2026-08-11\n  action-skills-install-senpub-124ab220.log     181B   2026-08-11\n  action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log    1.8KB   2026-08-11\n  action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log     967B   2026-08-11\n  action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log    1.4KB   2026-08-11\n  action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log    1.6KB   2026-08-11\n  action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log    1.5KB   2026-08-11\n  action-skills-install-solo-plan-14e77242.log     181B   2026-08-11\n  action-skills-install-trpg-data-context-hooks-24858dd4.log     259B   2026-08-11\n  action-skills-update.log   159.9KB   2026-08-11\n  agent.log                    1.4MB   22m ago\n  bootstrap-installer.log    337.9KB   2026-08-19\n  desktop.log                280.2KB   2026-08-25\n  errors.log                   1.1MB   just now\n  gateway-exit-diag.log       21.6KB   9h ago\n  gateway-restart.log           137B   2026-08-11\n  gateway-stdio.log          522.4KB   9h ago\n  gateway.log                  2.8MB   9h ago\n  gui.log                      2.7KB   2026-08-25\n  mcp-stderr.log              15.5MB   32m ago\n  tui_gateway_crash.log       18.6KB   2h ago\n  update.log                 201.9KB   2026-08-24\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-list",
+      "ts": "2026-08-29T01:08:47.136611+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "errors"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.32,
+      "stdout_tail": "ING agent.shell_hooks: shell hook exited 1 (event=pre_tool_call command=\"C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh\"); stderr=\u001b[0;34m[BLUE]\u001b[0m session-logger event='pre_tool_call' normalized=pre_tool_call session_id=20260829_004155_8cfa1d\n\n\u001b[0;31m[RED]\u001b[0m Unknown event: pre_tool_call\n\n2026-08-29 02:08:45,349 WARNING agent.shell_hooks: shell hook exited 1 (event=pre_tool_call command=\"C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh\"); stderr=\u001b[0;34m[BLUE]\u001b[0m governance-audit event='pre_tool_call' normalized=pre_tool_call session_id=20260829_004155_8cfa1d\n\n\u001b[0;31m[RED]\u001b[0m Unknown event: pre_tool_call\n\n2026-08-29 02:08:45,702 WARNING agent.shell_hooks: shell hook exited 1 (event=post_tool_call command=\"C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh\"); stderr=\u001b[0;34m[BLUE]\u001b[0m session-logger event='post_tool_call' normalized=post_tool_call session_id=20260829_004155_8cfa1d\n\n\u001b[0;31m[RED]\u001b[0m Unknown event: post_tool_call\n\n2026-08-29 02:08:46,076 WARNING agent.shell_hooks: shell hook exited 1 (event=post_tool_call command=\"C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh\"); stderr=\u001b[0;34m[BLUE]\u001b[0m governance-audit event='post_tool_call' normalized=post_tool_call session_id=20260829_004155_8cfa1d\n\n\u001b[0;31m[RED]\u001b[0m Unknown event: post_tool_call\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-errors",
+      "ts": "2026-08-29T01:08:48.458804+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "desktop"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.22,
+      "stdout_tail": "mpt 1/3)...\n[2026-08-25T00:17:09.243Z] [hermes] \u26a0\ufe0f  API call failed (attempt 2/3): APIError\n[2026-08-25T00:17:09.243Z] [hermes]    \ud83d\udd0c Provider: opencode-zen  Model: nemotron-3-ultra-free\n[2026-08-25T00:17:09.243Z] [hermes]    \ud83c\udf10 Endpoint: https://opencode.ai/zen/v1\n[2026-08-25T00:17:09.243Z] [hermes]    \ud83d\udcdd Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded\n[2026-08-25T00:17:09.243Z] [hermes]    \u23f1\ufe0f  Elapsed: 9.65s  Context: 102 msgs, ~98,829 tokens\n[2026-08-25T00:17:09.243Z] [hermes] \u23f3 Retrying in 5.5s (attempt 2/3)...\n[2026-08-25T00:17:09.246Z] [hermes] \u26a0\ufe0f  API call failed (attempt 3/3): APIError\n[2026-08-25T00:17:09.246Z] [hermes]    \ud83d\udd0c Provider: opencode-zen  Model: nemotron-3-ultra-free\n[2026-08-25T00:17:09.246Z] [hermes]    \ud83c\udf10 Endpoint: https://opencode.ai/zen/v1\n[2026-08-25T00:17:09.246Z] [hermes]    \ud83d\udcdd Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded\n[2026-08-25T00:17:09.246Z] [hermes]    \u23f1\ufe0f  Elapsed: 19.48s  Context: 102 msgs, ~98,829 tokens\n[2026-08-25T00:17:09.246Z] [hermes] \u274c API failed after 3 retries \u2014 Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded\n[2026-08-25T00:17:09.248Z] [hermes] \ud83d\udc80 Final error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded\n[2026-08-25T00:19:19.538Z] [hermes] [tool] ( \u2022_\u2022)>\u2310\u25a0-\u25a0 computing...\n[2026-08-25T00:19:41.286Z] [hermes] Ignoring stale Hermes backend exit (1)\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-desktop",
+      "ts": "2026-08-29T01:08:49.674236+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "gateway"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.33,
+      "stdout_tail": "post through\n\n2026-08-28 14:07:37,229 WARNING gateway.run: Synthetic event source unresolvable: session_key='202608...71c9' platform='' chat_type='' chat_id='' evt_type=async_delegation\n\n2026-08-28 14:07:37,230 WARNING gateway.run: Dropping watch notification for raw session 20260828_131934_aa71c9: no api_server adapter to self-post through\n\n2026-08-28 14:07:39,573 WARNING gateway.run: Synthetic event source unresolvable: session_key='202608...71c9' platform='' chat_type='' chat_id='' evt_type=async_delegation\n\n2026-08-28 14:07:39,574 WARNING gateway.run: Dropping watch notification for raw session 20260828_131934_aa71c9: no api_server adapter to self-post through\n\n2026-08-28 14:07:41,802 WARNING gateway.run: Synthetic event source unresolvable: session_key='202608...71c9' platform='' chat_type='' chat_id='' evt_type=async_delegation\n\n2026-08-28 14:07:41,804 WARNING gateway.run: Dropping watch notification for raw session 20260828_131934_aa71c9: no api_server adapter to self-post through\n\n2026-08-28 14:07:44,010 WARNING gateway.run: Synthetic event source unresolvable: session_key='202608...71c9' platform='' chat_type='' chat_id='' evt_type=async_delegation\n\n2026-08-28 14:07:44,011 WARNING gateway.run: Dropping watch notification for raw session 20260828_131934_aa71c9: no api_server adapter to self-post through\n\n2026-08-28 16:14:39,903 WARNING gateway.run: Shutdown context: signal=UNKNOWN under_systemd=no parent_pid=4976 parent_name=? loadavg_1m=? parent_cmdline='(unknown)'\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-gateway",
+      "ts": "2026-08-29T01:08:51.001180+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "gui"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.44,
+      "stdout_tail": "d 17.2s (GIL pressure suspected)\n2026-08-19 19:44:17,832 WARNING hermes_cli.web_server: event loop stalled 10.9s (GIL pressure suspected)\n2026-08-19 19:44:40,729 WARNING hermes_cli.web_server: event loop stalled 8.8s (GIL pressure suspected)\n2026-08-19 19:45:25,989 WARNING hermes_cli.web_server: event loop stalled 31.2s (GIL pressure suspected)\n2026-08-19 19:45:47,571 WARNING hermes_cli.web_server: event loop stalled 9.6s (GIL pressure suspected)\n2026-08-19 19:46:26,385 WARNING hermes_cli.web_server: event loop stalled 15.5s (GIL pressure suspected)\n2026-08-19 19:46:48,864 WARNING hermes_cli.web_server: event loop stalled 6.5s (GIL pressure suspected)\n2026-08-19 19:47:04,163 WARNING hermes_cli.web_server: event loop stalled 5.3s (GIL pressure suspected)\n2026-08-19 19:47:39,900 WARNING hermes_cli.web_server: event loop stalled 25.7s (GIL pressure suspected)\n2026-08-19 19:47:57,563 WARNING hermes_cli.web_server: event loop stalled 7.7s (GIL pressure suspected)\n2026-08-25 00:40:42,482 WARNING tui_gateway.server: prompt.submit: truncating session aeeaf886 history 31 -> 0 messages (ordinal=0)\n2026-08-25 00:41:03,973 WARNING tui_gateway.server: prompt.submit: truncating session aeeaf886 history 3 -> 0 messages (ordinal=0)\n2026-08-25 00:42:05,657 WARNING tui_gateway.server: prompt.submit: truncating session aeeaf886 history 5 -> 0 messages (ordinal=0)\n2026-08-25 01:00:13,714 WARNING tui_gateway.server: prompt.submit: truncating session b71e7f5a history 101 -> 0 messages (ordinal=0)\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-gui",
+      "ts": "2026-08-29T01:08:52.445322+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "agent"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.32,
+      "stdout_tail": "\"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Lib\\site-packages\\openai\\resources\\chat\\completions\\completions.py\", line 1204, in create\n\n    return self._post(\n\n           ~~~~~~~~~~^\n\n        \"/chat/completions\",\n\n        ^^^^^^^^^^^^^^^^^^^^\n\n    ...<47 lines>...\n\n        stream_cls=Stream[ChatCompletionChunk],\n\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n    )\n\n    ^\n\n  File \"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Lib\\site-packages\\openai\\_base_client.py\", line 1297, in post\n\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n\n                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n  File \"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Lib\\site-packages\\openai\\_base_client.py\", line 1070, in request\n\n    raise self._make_status_error_from_response(err.response) from None\n\nopenai.APIStatusError: Error code: 402 - {'error': {'message': 'Provider returned error', 'code': 402, 'metadata': {'raw': '{\"error\":\"Insufficient balance\"}', 'provider_name': 'GMICloud', 'is_byok': False}}, 'user_id': 'user_3IYFe5gL3BBw9aOY7xL0rfZQFlo'}\n\n2026-08-29 01:46:13,872 ERROR [20260829_004155_8cfa1d] agent.conversation_loop: Non-retryable client error: Error code: 402 - {'error': {'message': 'Provider returned error', 'code': 402, 'metadata': {'raw': '{\"error\":\"Insufficient balance\"}', 'provider_name': 'GMICloud', 'is_byok': False}}, 'user_id': 'user_3IYFe5gL3BBw9aOY7xL0rfZQFlo'}\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-agent",
+      "ts": "2026-08-29T01:08:53.762870+00:00"
+    },
+    {
+      "cmd": [
+        "bun",
+        "run",
+        "check"
+      ],
+      "exit": 0,
+      "elapsed_s": 18.71,
+      "stdout_tail": "Checking formatting...\nAll matched files use Prettier code style!\nmarkdownlint-cli2 v0.19.1 (markdownlint v0.39.0)\nFinding: **/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !.hermes/archived-prompt-templates/** !.github/** !.hermes/** !plans/** !research/** !ngn-earnings-kit/** !hermes-memory-safety/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc\nLinting: 486 file(s)\nSummary: 0 error(s)\n",
+      "stderr_tail": "$ bun run lint && bun run format:check && bun run markdownlint && bun run spellcheck\n$ eslint . --no-error-on-unmatched-pattern\n$ prettier --check --ignore-unknown .\n$ markdownlint-cli2 --config .markdownlint.jsonc \"**/*.md\"\n$ cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress\nCSpell: Files checked: 91, Issues found: 0 in 0 files.\n",
+      "ok": true,
+      "label": "bun-run-check",
+      "ts": "2026-08-29T01:09:12.473904+00:00"
+    }
+  ]
+}
