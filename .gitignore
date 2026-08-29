@@ -84,3 +84,6 @@ hermes-profiles/
 
 # Skill directories with embedded git repos (do not commit)
 .hermes/skills/
+
+# Local git-filter-repo replacement patterns (do not commit - contains redacted API key values)
+filter-replacements.txt

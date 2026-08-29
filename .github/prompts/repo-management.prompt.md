@@ -59,7 +59,7 @@ Bring every repository to a clean standard state. The desired end state is a rep
 
 This prompt runs after `repo-research-pipeline` has produced `RESEARCH_REPORT.md` for the project. It is the operational follow-up to research: where research answers "what should this repo do?", `repo-management` enforces "what shape must this repo be in?". All destructive operations (branch deletion) require explicit per-branch user approval and record pre-state for rollback.
 
-## Workflow
+## Workflow Summary
 
 The workflow is a five-phase pipeline: Phase 0 (onboarding summary) → Phase 1 (branch normalization) → Phase 2 (ignore file audit) → Phase 3 (dependency audit) → Phase 4 (CI workflow setup). Each phase is idempotent and verifies its result before the next phase runs.
 
