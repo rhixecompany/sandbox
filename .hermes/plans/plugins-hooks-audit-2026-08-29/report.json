@@ -1,0 +1,180 @@
+{
+  "ts": "2026-08-29T00:09:41.163304+00:00",
+  "possible_events": [
+    "on_session_end",
+    "on_session_start",
+    "on_stream_delta",
+    "on_stream_end",
+    "on_stream_start",
+    "on_turn_complete",
+    "post_api_request",
+    "post_llm_call",
+    "post_tool_call",
+    "pre_api_request",
+    "pre_llm_call",
+    "pre_tool_call",
+    "pre_transform_response"
+  ],
+  "registered_events": [
+    "on_session_end",
+    "on_session_start",
+    "post_tool_call",
+    "pre_llm_call",
+    "pre_tool_call",
+    "subagent_stop"
+  ],
+  "covered": [
+    "on_session_end",
+    "on_session_start",
+    "post_tool_call",
+    "pre_llm_call",
+    "pre_tool_call"
+  ],
+  "missing": [
+    "on_stream_delta",
+    "on_stream_end",
+    "on_stream_start",
+    "on_turn_complete",
+    "post_api_request",
+    "post_llm_call",
+    "pre_api_request",
+    "pre_transform_response"
+  ],
+  "registered_hooks": {
+    "on_session_end": [
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-auto-commit/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+    ],
+    "on_session_start": [
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+    ],
+    "pre_llm_call": [
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" -c \"python C:/Users/Alexa/AppData/Local/hermes/skills/devops/mcp-server-health/scripts/mcp_preflight_check.py"
+    ],
+    "pre_tool_call": [
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+    ],
+    "post_tool_call": [
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+    ],
+    "subagent_stop": [
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh",
+      "C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+    ]
+  },
+  "plugins": [
+    {
+      "name": "cli-enhancements",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\cli-enhancements",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "context-engineering",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\context-engineering",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "gh-skills-builder",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\gh-skills-builder",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "hermes-achievements",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\hermes-achievements",
+      "has_plugin_yaml": false,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "mindstudio-agent",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\mindstudio-agent",
+      "has_plugin_yaml": false,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "oh-my-hermes",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\oh-my-hermes",
+      "has_plugin_yaml": false,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "opencode",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\opencode",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "project-planning",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\project-planning",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "superpowers",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "superpowers-developing-for-claude-code",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers-developing-for-claude-code",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "superpowers-marketplace",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers-marketplace",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "telegram-bot",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\telegram-bot",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "the-elements-of-style",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\the-elements-of-style",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "tui-enhancements",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\tui-enhancements",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    },
+    {
+      "name": "where-was-i",
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\where-was-i",
+      "has_plugin_yaml": true,
+      "hooks": [],
+      "tools": []
+    }
+  ],
+  "plugin_count": 15,
+  "with_plugin_yaml": 12
+}
