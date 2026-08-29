@@ -413,7 +413,12 @@
 		"xunit",
 		"xurl",
 		"yaml",
-		"yuanbao"
+		"yuanbao",
+		"klass",
+		"throttl",
+		"oneshot",
+		"subagent",
+		"subgoal"
 	],
 	"ignoreWords": [],
 	"flagWords": [],

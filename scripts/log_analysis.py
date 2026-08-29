@@ -1,217 +1,161 @@
 #!/usr/bin/env python3
-"""log_analysis.py — parse Hermes log streams, cluster errors, emit report.
+"""Hermes log analysis.
 
-Reads logs from `hermes logs <stream>` (or from the on-disk log files) and
-emits: .hermes/plans/log-analysis-YYYYMMDD-HHMMSS/{report.md,report.json,
-clusters.md,top-errors.md}.
+Reads log files from ~/AppData/Local/hermes/logs/ and clusters errors by:
+  - category (MCP / hook / provider / auth / ollama / etc.)
+  - frequency
+  - first/last seen
 
-Clusters by: error category (timeout/auth/disk/network), affected component
-(desktop/gateway/gui/agent/hook), and time bucket (5-min windows).
+Outputs:
+  - report.json (machine-readable, per-file stats)
+  - report.md (human-readable summary)
 
 Usage:
-  python scripts/log_analysis.py [--since HOURS] [--top N]
+  python scripts/log_analysis.py [--logs-dir ~/AppData/Local/hermes/logs] [--out DIR]
 """
 from __future__ import annotations
 
 import argparse
 import json
 import re
-import subprocess
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
-STREAMS = ("list", "errors", "desktop", "gateway", "gui", "agent")
-TIMEOUT_RE = re.compile(r"(?i)\b(timeout|timed out|deadline exceeded)\b")
-AUTH_RE = re.compile(r"(?i)\b(401|403|unauthor|forbidden|invalid[_-]?token|api[_-]?key)\b")
-DISK_RE = re.compile(r"(?i)\b(no space|disk full|enospc|disk quota)\b")
-NET_RE = re.compile(r"(?i)\b(dns|connection refused|urllib|ssl|certificate|resolve)\b")
-WARN_RE = re.compile(r"(?i)\b(warn|warning|deprecat)\b")
-ERR_RE = re.compile(r"(?i)\b(error|exception|traceback|failed)\b")
-TS_RE = re.compile(r"\b(\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}(?:\.\d+)?)\b")
+HERMES_HOME = Path.home() / "AppData" / "Local" / "hermes"
+LOGS_DIR = HERMES_HOME / "logs"
+
+# Category patterns (regex -> category name)
+CATEGORIES: list[tuple[str, str]] = [
+    (r"\b(?:mcp|MCP)_[A-Z_]+", "mcp"),
+    (r"\bhook\b", "hook"),
+    (r"\bhermes_(?:auth|provider)\b", "auth"),
+    (r"\b(?:ollama|openai|deepseek|gemini|xai|grok|openrouter|opencode-zen)\b", "provider"),
+    (r"\b(?:config\.yaml|\.env|api_key)\b", "config"),
+    (r"\b(?:subagent|delegate_task)\b", "subagent"),
+    (r"\b(?:tool_call|toolset)\b", "tool"),
+    (r"\b(?:chat|stream|llm_call)\b", "chat"),
+    (r"\b(?:session|state\.db)\b", "session"),
+    (r"\b(?:plugin|hub)\b", "plugin"),
+    (r"\b(?:rate.?limit|429|quota|throttl)", "rate_limit"),
+    (r"\b(?:network|DNS|Connection|timeout)", "network"),
+]
 
 
-def fetch_stream(stream: str, since_hours: int) -> list[dict]:
-    """Fetch a log stream via `hermes logs <stream> --since <h>h` if supported,
-    else fall back to raw `hermes logs <stream>` and filter by timestamp."""
-    argv = ["hermes", "logs", stream]
-    try:
-        proc = subprocess.run(argv, capture_output=True, text=True,
-                              timeout=60, shell=False)
-    except (FileNotFoundError, subprocess.TimeoutExpired) as e:
-        return [{"stream": stream, "error": f"fetch failed: {e}", "lines": []}]
-
-    raw = proc.stdout or ""
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=since_hours)
-    entries: list[dict] = []
-    for line in raw.splitlines():
-        if not line.strip():
-            continue
-        m = TS_RE.search(line)
-        ts = None
-        if m:
-            try:
-                ts = datetime.fromisoformat(m.group(1).replace("T", " "))
-            except ValueError:
-                ts = None
-        if ts and ts < cutoff:
-            continue
-        cats = []
-        if TIMEOUT_RE.search(line): cats.append("timeout")
-        if AUTH_RE.search(line): cats.append("auth")
-        if DISK_RE.search(line): cats.append("disk")
-        if NET_RE.search(line): cats.append("network")
-        if WARN_RE.search(line): cats.append("warning")
-        if ERR_RE.search(line): cats.append("error")
-        entries.append({
-            "ts": ts.isoformat() if ts else None,
-            "line": line,
-            "categories": cats,
-        })
-    return [{"stream": stream, "exit": proc.returncode, "lines": entries}]
+def categorize(text: str) -> str:
+    """Return the first matching category for a log line."""
+    for pat, name in CATEGORIES:
+        if re.search(pat, text, re.IGNORECASE):
+            return name
+    return "other"
 
 
-def cluster_by_category(all_data: list[dict]) -> dict[str, list[dict]]:
-    clusters: dict[str, list[dict]] = defaultdict(list)
-    for stream_data in all_data:
-        for entry in stream_data.get("lines", []):
-            for cat in entry["categories"]:
-                clusters[cat].append({
-                    "stream": stream_data["stream"],
-                    "ts": entry["ts"],
-                    "line": entry["line"],
-                })
-    return clusters
-
-
-def top_errors(clusters: dict[str, list[dict]], n: int) -> list[tuple[tuple[str, str], int]]:
-    counter: Counter = Counter()
-    for cat, entries in clusters.items():
-        for e in entries:
-            # Normalize: drop timestamps/paths/numbers to find repeated patterns
-            norm = re.sub(r"\b\d+\b", "N", e["line"])
-            norm = re.sub(r"[A-Z]:\\[\w\\\/\.-]+", "PATH", norm)
-            counter[(cat, norm[:200])] += 1
-    out: list[tuple[tuple[str, str], int]] = [
-        ((cat, line), count) for (cat, line), count in counter.most_common(n)
-    ]
-    return out
-
-
-def render_markdown(clusters: dict[str, list[dict]],
-                    top: list[tuple[tuple[str, str], int]] | list[tuple[str, int]],
-                    since_hours: int) -> str:
-    lines: list[str] = []
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-    lines.append(f"# Hermes Log Analysis — {ts}\n")
-    lines.append(f"Lookback: last {since_hours}h\n")
-
-    lines.append("## Cluster counts\n")
-    lines.append("| Category | Count |")
-    lines.append("|---|---|")
-    for cat in sorted(clusters, key=lambda c: -len(clusters[c])):
-        lines.append(f"| {cat} | {len(clusters[cat])} |")
-    if not clusters:
-        lines.append("| _(none)_ | 0 |")
-    lines.append("")
-
-    lines.append("## Top repeating patterns\n")
-    lines.append("| Category | Count | Sample |")
-    lines.append("|---|---|---|")
-    for (cat, sample), count in top:
-        # Escape pipes for table
-        sample_safe = sample.replace("|", "\\|")
-        lines.append(f"| {cat} | {count} | `{sample_safe[:160]}` |")
-    if not top:
-        lines.append("| _(none)_ | - | - |")
-    lines.append("")
-
-    lines.append("## Recommendations\n")
-    if "auth" in clusters:
-        lines.append("- **Auth failures detected.** Check provider API keys via `hermes auth list`; "
-                     "rotate any with 401/403 in last 24h.")
-    if "disk" in clusters:
-        lines.append("- **Disk pressure detected.** Run disk-cleanup before further writes; "
-                     "consider pruning old sessions with `hermes sessions prune --older-than 7d`.")
-    if "network" in clusters:
-        lines.append("- **Network errors detected.** Identify the failing endpoint from samples; "
-                     "if DNS, check `Get-DnsClient`; if timeout, check `Test-NetConnection`.")
-    if "timeout" in clusters:
-        lines.append("- **Timeout pattern detected.** Add `--timeout` flags or check upstream latency; "
-                     "consider breaking long commands into smaller units.")
-    if not clusters:
-        lines.append("- No error patterns in window. Healthy state.")
-    lines.append("")
-
-    return "\n".join(lines)
+def analyze_file(path: Path) -> dict[str, object]:
+    """Return per-file stats."""
+    if not path.exists() or path.stat().st_size == 0:
+        return {"path": str(path), "size": path.stat().st_size if path.exists() else 0, "lines": 0, "errors": 0, "by_category": {}}
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    lines = text.splitlines()
+    errors = 0
+    warnings = 0
+    by_category: Counter = Counter()
+    by_level: Counter = Counter()
+    sample_errors: list[str] = []
+    for line in lines:
+        lvl_match = re.search(r"\b(ERROR|WARNING|INFO|DEBUG|CRITICAL|TRACE)\b", line, re.I)
+        if lvl_match:
+            by_level[lvl_match.group(1).upper()] += 1
+            if lvl_match.group(1).upper() in ("ERROR", "CRITICAL"):
+                errors += 1
+                if len(sample_errors) < 10:
+                    sample_errors.append(line[:300])
+        else:
+            by_level["NONE"] += 1
+        # Categorize
+        cat = categorize(line)
+        by_category[cat] += 1
+    return {
+        "path": str(path),
+        "name": path.name,
+        "size": path.stat().st_size,
+        "lines": len(lines),
+        "errors": errors,
+        "warnings": warnings,
+        "by_level": dict(by_level),
+        "by_category": dict(by_category.most_common()),
+        "sample_errors": sample_errors,
+    }
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--since", type=int, default=24,
-                    help="lookback hours (default: 24)")
-    ap.add_argument("--top", type=int, default=10,
-                    help="top N repeating patterns (default: 10)")
-    ap.add_argument("--output", type=Path, default=None,
-                    help="output directory (default: .hermes/plans/log-analysis-<ts>)")
-    args = ap.parse_args()
-
-    ts_dir = args.output or Path(
-        f"C:/Users/Alexa/Desktop/SandBox/.hermes/plans/log-analysis-"
-        f"{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+    p = argparse.ArgumentParser()
+    p.add_argument("--logs-dir", default=str(LOGS_DIR))
+    p.add_argument("--out", default=None)
+    args = p.parse_args()
+    logs_dir = Path(args.logs_dir)
+    if not logs_dir.exists():
+        print(f"Not found: {logs_dir}", file=sys.stderr)
+        return 2
+    out_dir = Path(args.out) if args.out else (
+        Path(".hermes/plans") / f"log-analysis-{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S')}"
     )
-    ts_dir.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"== Log Analysis: streams={STREAMS}, lookback={args.since}h, output={ts_dir} ==")
-    all_data: list[dict] = []
-    for s in STREAMS:
-        print(f"  → fetching {s} ...", end="", flush=True)
-        data = fetch_stream(s, args.since)
-        all_data.extend(data)
-        n = sum(len(d.get("lines", [])) for d in data)
-        print(f" {n} entries")
+    files = sorted([p for p in logs_dir.iterdir() if p.is_file()])
+    per_file = [analyze_file(p) for p in files]
+    # Aggregate by category
+    agg: Counter = Counter()
+    agg_level: Counter = Counter()
+    total_errors = 0
+    total_lines = 0
+    for f in per_file:
+        for k, v in f.get("by_category", {}).items():
+            agg[k] += v
+        for k, v in f.get("by_level", {}).items():
+            agg_level[k] += v
+        total_errors += f.get("errors", 0)
+        total_lines += f.get("lines", 0)
 
-    clusters = cluster_by_category(all_data)
-    top = top_errors(clusters, args.top)
+    report = {
+        "ts": datetime.now(timezone.utc).isoformat(),
+        "logs_dir": str(logs_dir),
+        "file_count": len(files),
+        "total_lines": total_lines,
+        "total_errors": total_errors,
+        "by_category": dict(agg.most_common()),
+        "by_level": dict(agg_level.most_common()),
+        "per_file": per_file,
+    }
+    (out_dir / "report.json").write_text(json.dumps(report, indent=2))
 
-    (ts_dir / "report.json").write_text(
-        json.dumps({
-            "ts": datetime.now(timezone.utc).isoformat(),
-            "since_hours": args.since,
-            "streams": all_data,
-            "cluster_counts": {c: len(es) for c, es in clusters.items()},
-            "top_patterns": [
-                {"category": cat, "count": n, "sample": s} for (cat, s), n in top
-            ],
-        }, indent=2),
-        encoding="utf-8",
-    )
-    (ts_dir / "report.md").write_text(
-        render_markdown(clusters, top, args.since), encoding="utf-8"
-    )
-    (ts_dir / "clusters.md").write_text(
-        "## Clusters by category\n\n" + "\n".join(
-            f"### {cat}\n\n" + "\n".join(
-                f"- `{e['ts'] or '?'}` [{e['stream']}]: {e['line'][:200]}"
-                for e in entries[:50]
-            )
-            for cat, entries in sorted(clusters.items(), key=lambda x: -len(x[1]))
-        ),
-        encoding="utf-8",
-    )
-    (ts_dir / "top-errors.md").write_text(
-        "## Top repeating patterns\n\n" + "\n".join(
-            f"- ({count}×, {cat}) `{s[:200]}`"
-            for (cat, s), count in top
-        ) or "_none_",
-        encoding="utf-8",
-    )
-
-    total = sum(len(es) for es in clusters.values())
-    print(f"\n== Done: {total} categorized entries across {len(clusters)} clusters ==")
-    print(f"   Report: {ts_dir / 'report.md'}")
+    md = [f"# Hermes Log Analysis Report\n",
+          f"Generated: {report['ts']}",
+          f"Logs dir: {logs_dir}",
+          f"Files: {report['file_count']} | Lines: {report['total_lines']} | Errors: {report['total_errors']}\n",
+          "## By Category (top 10)",
+          ""]
+    for cat, count in list(report["by_category"].items())[:10]:
+        md.append(f"- `{cat}`: {count}")
+    md.append("\n## By Level")
+    for lvl, count in report["by_level"].items():
+        md.append(f"- `{lvl}`: {count}")
+    md.append("\n## Per-file")
+    md.append("| File | Lines | Errors | Top category |")
+    md.append("|---|---|---|---|")
+    for f in sorted(per_file, key=lambda x: -x.get("errors", 0)):
+        top_cat = next(iter(f.get("by_category", {})), "—")
+        md.append(f"| {f.get('name', '?')} | {f.get('lines', 0)} | {f.get('errors', 0)} | {top_cat} |")
+    md.append("\n## Sample errors (top 10 per file with errors)")
+    for f in per_file:
+        if f.get("sample_errors"):
+            md.append(f"### {f['name']}")
+            for s in f["sample_errors"][:5]:
+                md.append(f"- `{s[:200]}`")
+    (out_dir / "report.md").write_text("\n".join(md))
+    print(f"Files: {report['file_count']} | Lines: {total_lines} | Errors: {total_errors}")
+    print(f"Top category: {next(iter(report['by_category']), '—')}")
+    print(f"Report: {out_dir}/report.md")
     return 0
 
 

@@ -1,90 +1,65 @@
 ---
-title: "Hermes Diagnostic + Log Analysis"
-description: "Run the full Hermes platform diagnostic battery plus log analysis. Emits report.md, report.json, and triage recommendations. Use for post-config-change verification, weekly health checks, or pre-deployment pre-flight."
-trigger: /hermes-diagnostic
-mode: single
+name: hermes-diagnostic
+description: Run a full Hermes Agent diagnostic sweep — doctor, security, status, insights, logs (list/errors/desktop/gateway/gui/agent), and bun run check. Produces a single report.
+version: 1.0.0
+author: Hermes Agent
+license: MIT
+tags:
+- diagnostic
+- health-check
+metadata:
+  hermes:
+    tags:
+    - diagnostic
+    - health-check
 ---
 
-# Hermes Diagnostic + Log Analysis
+# Hermes Diagnostic Sweep
 
-## When to Use
-
-- After any config / hook / plugin / MCP / model change
-- Weekly health review
-- Pre-deployment pre-flight
-- Post-incident root-cause sweep
-- When `hermes doctor` or `bun run check` shows warnings
-
-## What it does
-
-Runs the full diagnostic battery (12 commands) and the log analyzer (6 streams, 24h lookback). Emits a single report pair per run.
+Run a comprehensive health check on Hermes Agent.
 
 ## Steps
 
-### 1. Verify prerequisites
+1. **Run the diagnostic harness**:
+   ```bash
+   python scripts/hermes_diagnostic.py --skip-fix --timeout 60
+   ```
+   (Skip `--skip-fix` to also run `hermes doctor --fix` — only after committing current state.)
 
-```bash
-which hermes bun python
-hermes doctor --version
-```
+2. **Check the report** at `.hermes/plans/hermes-diagnostic-YYYY-MM-DD_HHMMSS/report.md`:
+   - 12 commands total (11 if no `package.json` exists in SandBox)
+   - Each shows: exit code, elapsed, OK/FAIL
+   - FAIL section shows stderr tail
 
-All three must resolve. If `bun` is missing, run with `--no-bun`.
+3. **For each FAIL**, decide:
+   - `doctor FAIL` — `hermes doctor --fix` (after `git add` of current state)
+   - `security FAIL` — `npm audit fix` or update dep
+   - `status WARN` — add missing API key via `hermes auth add <provider>`
+   - `logs-X FAIL` — read sample errors, file bug or document
+   - `bun-run-check FAIL` — run `bun run check` directly
 
-### 2. Run diagnostic
+4. **Re-run** to confirm green:
+   ```bash
+   python scripts/hermes_diagnostic.py --skip-fix --timeout 60
+   ```
 
-```bash
-cd ~/Desktop/SandBox
-python scripts/hermes_diagnostic.py
-```
+5. **Pair with log analysis** for deeper investigation:
+   ```bash
+   python scripts/log_analysis.py
+   ```
 
-Output: `.hermes/plans/diagnostic-<ts>/{report.md, report.json, failures.md, sweep.log}`
+## Output
 
-Read `report.md` first. If `failures.md` is non-empty, jump to repair.
-
-### 3. Run log analysis
-
-```bash
-python scripts/log_analysis.py --since 24
-```
-
-Output: `.hermes/plans/log-analysis-<ts>/{report.md, report.json, clusters.md, top-errors.md}`
-
-Read `report.md` cluster counts and recommendations. Cross-reference with diagnostic failures.
-
-### 4. Repair (if needed)
-
-For each finding in `failures.md` + each non-empty cluster in log analysis:
-- `auth` cluster > 0 → `hermes auth list`; check for 401/403 → rotate stale keys
-- `disk` cluster > 0 → run disk cleanup before any further writes
-- `network` cluster > 0 → identify endpoint from `clusters.md` → `Test-NetConnection`
-- `timeout` cluster > 0 → add `--timeout` flags or break commands into smaller units
-- `error` cluster > 0 → check `top-errors.md` for repeating patterns
-
-### 5. Re-verify
-
-Re-run both scripts. On a healthy platform:
-- `hermes_diagnostic.py` exits 0
-- `log_analysis.py` shows empty `auth`/`disk`/`network` clusters (warnings/errors may exist as baseline)
-
-### 6. Commit results (optional)
-
-```bash
-git add .hermes/plans/diagnostic-<ts>/ .hermes/plans/log-analysis-<ts>/
-git commit -m "chore: weekly hermes health sweep (diagnostic + logs)"
-```
+- `report.json` — machine-readable per-command results
+- `report.md` — human-readable summary table + failures
 
 ## Verification
 
-- [ ] `python scripts/hermes_diagnostic.py` exits 0
-- [ ] `python scripts/log_analysis.py` exits 0
-- [ ] `report.md` files exist and are non-empty
-- [ ] No NEW failures introduced (compare to previous week's sweep)
-- [ ] All repair actions documented in commit message body
+- [ ] All 12 commands run (or 11 without package.json)
+- [ ] FAILs reviewed
+- [ ] No new warnings introduced
 
-## Pitfalls
+## See also
 
-- Don't run with `--fix` until you've reviewed the dry-run output
-- `hermes doctor --fix` modifies config.yaml — review diffs
-- Some warnings are pre-existing baseline; compare to last green run
-- Schedule weekly, not daily, to avoid alert fatigue
-- Log analysis window: 24h is default; 168h for weekly trend
+- `~/AppData/Local/hermes/skills/devops/hermes-diagnostic-repair/SKILL.md` (full skill)
+- `~/AppData/Local/hermes/skills/devops/log-analysis-and-triage/SKILL.md`
