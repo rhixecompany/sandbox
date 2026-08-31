@@ -1,7 +1,7 @@
-# Plans Audit — 2026-08-31 14:42 UTC
+# Plans Audit — 2026-08-31 19:48 UTC
 
 Dir: `.hermes\plans` | Threshold: 70
-Count: 63 | Avg: 42.4 | Passed: 3
+Count: 68 | Avg: 41.4 | Passed: 3
 
 | File | Score | Rating | FM | Struct | Content | Status | DRY | Phases | Gates |
 |---|---|---|---|---|---|---|---|---|---|
@@ -45,6 +45,9 @@ Count: 63 | Avg: 42.4 | Passed: 3
 | `2026-08-29-master-consolidated-plan.md` | 52 | WARN | 20 | 0 | 0 | 12 | 20 | 0 | 0 |
 | `2026-08-29_full-audit-remediation.md` | 52 | WARN | 20 | 0 | 0 | 12 | 20 | 0 | 4 |
 | `2026-08-31_152242-comprehensive-reimplementation-master.md` | 67 | WARN | 20 | 0 | 7 | 20 | 20 | 0 | 0 |
+| `2026-08-31_180000-comprehensive-reimplementation-master.md` | 58 | WARN | 20 | 0 | 6 | 12 | 20 | 0 | 0 |
+| `2026-08-31_goal1-identity-triage.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
+| `2026-08-31_goal2-plugins-hooks.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
 | `2026-08-31_six-judge-skills.md` | 72 | PASS | 20 | 0 | 20 | 12 | 20 | 0 | 0 |
 | `agent-provider-matrix.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
 | `audit-report.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
@@ -57,12 +60,14 @@ Count: 63 | Avg: 42.4 | Passed: 3
 | `honcho-hermes-integration-implementation.md` | 49 | FAIL | 9 | 14 | 6 | 8 | 12 | 7 | 0 |
 | `honcho-hermes-integration-spec.md` | 37 | FAIL | 9 | 0 | 0 | 8 | 20 | 0 | 0 |
 | `huggingface-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `judge-qa-rerun.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
 | `next-steps-implementation-plan.md` | 48 | FAIL | 0 | 14 | 6 | 8 | 20 | 3 | 0 |
 | `next-steps-specs.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
 | `nous-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
 | `ollama-cloud-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
 | `opencode-zen-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
 | `openrouter-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `phase-10-ollama-docker-blocked.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
 | `provider-workflow-master-plan.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
 | `provider-workflow-strategy.md` | 26 | FAIL | 0 | 0 | 6 | 0 | 20 | 0 | 0 |
 | `release-notes-profile-sync-2026-08-24.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |

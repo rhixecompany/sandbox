@@ -1,0 +1,1166 @@
+{
+  "ts": "2026-08-31T19:51:36.825589Z",
+  "dir": ".hermes\\plans",
+  "threshold": 70,
+  "count": 68,
+  "avg": 99.2,
+  "passed": 67,
+  "results": [
+    {
+      "file": ".hermes\\plans\\2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-07-23-comprehensive-github-prompts-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-07-25-yaml-workflows-audit-fix-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-07-31-workspace-cleanup.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-01_async-script-tooling-master.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-01_consolidated-goal-tooling-cleanup.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-01_repo-tooling.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-01_tooling-implementation.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-11_213801-prompt-library-maintenance.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-11_214500-repo-init-all-agents.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-11_hermes-platform-diagnostics-debug.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-spec.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "draft",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-spec.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "draft",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "draft",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-spec.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "draft",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-16_142300_cross-platform-agent-sync-spec.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-19_235900-subagent-driven-development-full-implementation.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-24_comprehensive-context-and-model-sync.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-24_comprehensive-platform-remediation-spec.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-24_comprehensive-platform-remediation.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-24_hermes-full-diagnostic-repair.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-24_update-enhance-verify-context-files.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-25_015239-dependency-toolchain-update.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-28_phase-b-prompt-enhancement.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-28_prompt-corpus-enhance.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-29-master-consolidated-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-29_full-audit-remediation.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "completed",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_152242-comprehensive-reimplementation-master.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_180000-comprehensive-reimplementation-master.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_goal1-identity-triage.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_goal2-plugins-hooks.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_six-judge-skills.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\agent-provider-matrix.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\audit-report.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\deepseek-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\disk-cleanup-skill-implementation.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\disk-cleanup-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\example-subagent-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\execution-summary.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\gemini-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\honcho-hermes-integration-implementation.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\honcho-hermes-integration-spec.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\huggingface-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\judge-qa-rerun.md",
+      "score": 48,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 0,
+        "structure": 0,
+        "content": 20,
+        "status": 8,
+        "dry": 20
+      },
+      "lines": 81,
+      "phases": 0,
+      "gates": 6,
+      "status": "",
+      "checklist_items": 6
+    },
+    {
+      "file": ".hermes\\plans\\next-steps-implementation-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\next-steps-specs.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\nous-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\ollama-cloud-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\opencode-zen-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\openrouter-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\phase-10-ollama-docker-blocked.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\provider-workflow-master-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\provider-workflow-strategy.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\release-notes-profile-sync-2026-08-24.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\skill-implementation-master-plan.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    },
+    {
+      "file": ".hermes\\plans\\xai-workflow.md",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 41,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 3
+    }
+  ]
+}

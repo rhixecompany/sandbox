@@ -1,33 +1,58 @@
-============================================================
-SKILL JUDGE REPORT
-============================================================
-Total: 24 | Passed: 24 | Failed: 0 | Threshold: 95
+---
+title: Judge QA Rerun
+description: Re-run skill judge on QA skills to verify quality
+date: 2026-08-31
+author: Hermes Agent
+status: in_progress
+profile: qa
+model: default
+---
 
---- PASSED ---
-  [100] audit-skills-judge-fix (0.00s)
-  [100] batch-skills-remediation (0.00s)
-  [100] boilerplate-stripper (0.00s)
-  [100] complete-issue-inventory (0.00s)
-  [100] hooks-judge (0.00s)
-  [100] plans-judge (0.00s)
-  [100] playwright-automation-fill-in-form (0.00s)
-  [100] playwright-generate-e2e-test (0.00s)
-  [100] playwright-generate-test (0.00s)
-  [100] plugins-judge (0.00s)
-  [100] polyglot-test-agent (0.01s)
-  [100] postgresql-code-review (0.00s)
-  [100] prompts-judge (0.00s)
-  [100] scoutqa-test (0.00s)
-  [100] scripts-judge (0.00s)
-  [100] session-audit (0.00s)
-  [100] skill-judge (0.00s)
-  [100] skill-library-audit (0.01s)
-  [100] skills-tools-preflight-check (0.00s)
-  [100] specs-judge (0.00s)
-  [100] test-skill (0.00s)
-  [100] verification-before-completion (0.00s)
-  [100] web-design-reviewer (0.00s)
-  [100] webapp-testing (0.00s)
+# Judge QA Rerun
 
-Average score: 100.0
-Total time: 0.06s
+## Goal
+
+Re-run skill judge on QA skills to verify quality scores remain high after changes.
+
+## Context
+
+This plan re-executes the skill judge on all QA skills to confirm they still pass the quality threshold (≥95).
+
+## Risks
+
+- Scores may drift if skills were modified
+- Threshold changes may invalidate prior results
+
+## Files to Create
+
+- None
+
+## Files to Modify
+
+- judge_results/* (output reports)
+
+## Phases
+
+## Phase 1 — Inventory
+
+Enumerate all QA skills to judge.
+
+**Gate**: All QA skills enumerated
+
+## Phase 2 — Execute
+
+Run skill judge on each QA skill.
+
+**Gate**: All skills judged
+
+## Phase 3 — Verify
+
+Confirm all scores ≥ threshold.
+
+**Gate**: All pass
+
+## Verification
+
+- [ ] All QA skills judged
+- [ ] All scores ≥ 95
+- [ ] No regressions

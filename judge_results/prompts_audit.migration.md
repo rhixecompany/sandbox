@@ -1,20 +1,19 @@
 # Template Migration Plan
 
-Generated: 2026-08-31 19:47 UTC
+Generated: 2026-08-31 19:54 UTC
 Prompts dir: `.github\prompts`
 
-**Summary:** 0 prompts missing template dirs, 1 orphan template files, 235/235 passing
+**Summary:** 1 prompts missing template dirs, 0 orphan template files, 234/235 passing
 
-## 2. Migrate Orphan Template Files
+## 1. Create Missing Template Directories
 
-These files live outside any prompt's `templates/{trigger}/` directory.
+### `optimize-agentsmd` (from `optimize-agentsMd.prompt.md`)
 
-### Category: `orphan-dir:optimize-agentsMd` (1 files)
+Missing: `templates/optimize-agentsmd/`
 
-- **Source:** `.github\prompts\templates\optimize-agentsMd\README.md`
-  **Parent dir:** `templates/optimize-agentsMd/`
-  **Action:** Move to correct `templates/{trigger}/` directory
-  **Suggested target:** `templates/MANUAL/`
+Steps:
+1. `mkdir -p templates/optimize-agentsmd`
+2. Create `templates/optimize-agentsmd/README.md` with prompt template content
 
 ## 3. Update Cross-References in Prompts
 

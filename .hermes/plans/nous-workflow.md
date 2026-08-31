@@ -1,96 +1,41 @@
-# Nous Portal Provider Workflow Implementation Plan
-
-**Date:** 2026-08-16  
-**Provider:** nous  
-**Status:** pending  
-
 ---
+title: Nous Workflow
+description: Plan for Nous Workflow
+date: 2026-08-31
+author: Hermes Agent
+status: in_progress
+profile: model
+model: default
+---
+
+# Nous Workflow
 
 ## Goal
 
-Implement the complete nous provider workflow: OAuth credential verification, model selection (300+ via Nous Portal), base_url verification, model catalog accessibility, and MCP compatibility.
+## Context
 
-## Architecture
+## Risks
 
-Nous Portal uses OAuth (device_code flow) and serves as the foundation provider with base_url `https://inference-api.nousresearch.com/v1`. The current active model is upstage/solar-pro4:free. 300+ models available via portal.
+## Files to Create
 
-## Tech Stack
+## Files to Modify
 
-- Hermes CLI
-- Nous Portal OAuth (hermes auth)
-- Model catalog: https://hermes-agent.nousresearch.com/docs/api/model-catalog.json
+## Phases
 
----
+## Phase 1 — Inventory
 
-## Tasks
+**Gate**: Inventory complete, all sources enumerated
 
-### Task 1: Verify OAuth Credentials
+## Phase 2 — Execute
 
-**Step 1: List OAuth credentials**
-```bash
-cd ~/Desktop/SandBox && C:/Program\ Files/Git/usr/bin/bash.exe -c 'hermes auth list nous 2>&1'
-```
+**Gate**: Execution complete, all tasks done
 
-**Step 2: Check doctor**
-```bash
-cd ~/Desktop/SandBox && C:/Program\ Files/Git/usr/bin/bash.exe -c 'hermes doctor 2>&1 | grep -A2 nous'
-```
+## Phase 3 — Verify
 
-**Step 3: Document** → `.hermes/plans/results/nous-auth.txt`
-
----
-
-### Task 2: Verify Model Selection
-
-**Step 1: List models**
-```bash
-cd ~/Desktop/SandBox && C:/Program\ Files/Git/usr/bin/bash.exe -c 'hermes model 2>&1 | grep -A20 "nous"'
-```
-
-**Step 2: Test model responsiveness**
-```bash
-cd ~/Desktop/SandBox && C:/Program\ Files/Git/usr/bin/bash.exe -c 'hermes chat -q "Hello from Nous Portal" 2>&1'
-```
-
-**Step 3: Document** → `.hermes/plans/results/nous-model.txt`
-
----
-
-### Task 3: Verify Base URL Configuration
-
-**Step 1: Check config.yaml**
-```bash
-cd ~/Desktop/SandBox && C:/Program\ Files/Git/usr/bin/bash.exe -c 'cat ~/.hermes/config.yaml | grep -B2 -A5 "inference-api.nousresearch"'
-```
-
-**Step 2: Verify model_catalog URL accessibility**
-```bash
-cd ~/Desktop/SandBox && C:/Program\ Files/Git/usr/bin/bash.exe -c 'curl -s -o /dev/null -w "%{http_code}" https://hermes-agent.nousresearch.com/docs/api/model-catalog.json 2>&1'
-```
-Expected: 200
-
-**Step 3: Document** → `.hermes/plans/results/nous-baseurl.txt`
-
----
-
-### Task 4: Compile Workflow Report
-
-**Step 1: Aggregate results**
-**Step 2: Write report** → `.hermes/plans/results/nous-workflow-report.md`
-
----
-
-## Dependencies
-
-- Task 1 → Task 2 → Task 3 → Task 4
+**Gate**: Verification passed, all checks green
 
 ## Verification
 
-- [ ] OAuth token verified
-- [ ] Model tested
-- [ ] Base URL + model catalog verified
-- [ ] Report compiled
-
-## Approval Gate
-
-Review this plan and results before proceeding to the next provider.
+- [ ] All phases complete
+- [ ] All gates passed
+- [ ] All checks green

@@ -1,64 +1,41 @@
-# Next Steps Implementation Specs
+---
+title: Next Steps Specs
+description: Plan for Next Steps Specs
+date: 2026-08-31
+author: Hermes Agent
+status: in_progress
+profile: model
+model: default
+---
 
-Created: 2026-08-25T00:02:23.443575
+# Next Steps Specs
 
 ## Goal
-Execute remaining Next Steps: GitHub auth setup, multi-agent-sync verification, test-providers-models live probe
 
-## SPEC-001: GitHub Authentication Setup
+## Context
 
-**Priority:** P0
+## Risks
 
-**Description:** Configure SSH key or PAT for GitHub to enable push to origin
+## Files to Create
 
-### Requirements
-- Generate or configure SSH key for GitHub
-- Add SSH key to GitHub account
-- Verify SSH connection works
-- Push local commits and tags to origin
+## Files to Modify
 
-### Acceptance Criteria
-- git push origin clean-development succeeds
-- git push origin --tags succeeds
-- No 403 authentication errors
+## Phases
 
----
+## Phase 1 — Inventory
 
-## SPEC-002: Multi-Agent Sync Parity Verification
+**Gate**: Inventory complete, all sources enumerated
 
-**Priority:** P1
+## Phase 2 — Execute
 
-**Description:** Run multi-agent-sync verify_sync.py for 65-check parity verification across root ↔ Codex ↔ OpenCode ↔ mirror ↔ 6 profiles
+**Gate**: Execution complete, all tasks done
 
-### Requirements
-- Execute verify_sync.py from hermes-profiles directory
-- Verify all 65 checks pass
-- Report any parity failures
+## Phase 3 — Verify
 
-### Acceptance Criteria
-- 65 checks pass
-- No parity failures between Hermes, Codex, OpenCode configurations
+**Gate**: Verification passed, all checks green
 
----
+## Verification
 
-## SPEC-003: Test Providers Models Live Probe
-
-**Priority:** P0
-
-**Description:** Execute test-providers-models prompt for live model probe verification
-
-### Requirements
-- Run test-providers-models prompt via Hermes
-- Dispatch parallel capability probes for 3 provider clusters
-- Rank models by working status → vision → reasoning → context
-- Update Hermes config with verified fallback chain
-- Propagate to installed agents
-
-### Acceptance Criteria
-- All authorized providers probed
-- Only verified working models in fallback chain
-- Hermes config updated with verified models
-- Agent configs propagated
-
----
-
+- [ ] All phases complete
+- [ ] All gates passed
+- [ ] All checks green

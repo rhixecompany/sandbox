@@ -1,9 +1,9 @@
 {
-  "ts": "2026-08-31T14:42:15.152035Z",
+  "ts": "2026-08-31T19:48:55.976860Z",
   "dir": ".hermes\\plans",
   "threshold": 70,
-  "count": 63,
-  "avg": 42.4,
+  "count": 68,
+  "avg": 41.4,
   "passed": 3,
   "results": [
     {
@@ -687,6 +687,57 @@
       "checklist_items": 9
     },
     {
+      "file": ".hermes\\plans\\2026-08-31_180000-comprehensive-reimplementation-master.md",
+      "score": 58,
+      "rating": "WARN",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 0,
+        "content": 6,
+        "status": 12,
+        "dry": 20
+      },
+      "lines": 144,
+      "phases": 0,
+      "gates": 0,
+      "status": "in_progress",
+      "checklist_items": 0
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_goal1-identity-triage.md",
+      "score": 20,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 0,
+        "structure": 0,
+        "content": 0,
+        "status": 0,
+        "dry": 20
+      },
+      "lines": 28,
+      "phases": 0,
+      "gates": 0,
+      "status": "",
+      "checklist_items": 0
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_goal2-plugins-hooks.md",
+      "score": 20,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 0,
+        "structure": 0,
+        "content": 0,
+        "status": 0,
+        "dry": 20
+      },
+      "lines": 24,
+      "phases": 0,
+      "gates": 0,
+      "status": "",
+      "checklist_items": 0
+    },
+    {
       "file": ".hermes\\plans\\2026-08-31_six-judge-skills.md",
       "score": 72,
       "rating": "PASS",
@@ -891,6 +942,23 @@
       "checklist_items": 4
     },
     {
+      "file": ".hermes\\plans\\judge-qa-rerun.md",
+      "score": 20,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 0,
+        "structure": 0,
+        "content": 0,
+        "status": 0,
+        "dry": 20
+      },
+      "lines": 33,
+      "phases": 0,
+      "gates": 0,
+      "status": "",
+      "checklist_items": 0
+    },
+    {
       "file": ".hermes\\plans\\next-steps-implementation-plan.md",
       "score": 48,
       "rating": "FAIL",
@@ -987,6 +1055,23 @@
         "dry": 20
       },
       "lines": 177,
+      "phases": 0,
+      "gates": 0,
+      "status": "",
+      "checklist_items": 4
+    },
+    {
+      "file": ".hermes\\plans\\phase-10-ollama-docker-blocked.md",
+      "score": 28,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 0,
+        "structure": 0,
+        "content": 0,
+        "status": 8,
+        "dry": 20
+      },
+      "lines": 44,
       "phases": 0,
       "gates": 0,
       "status": "",
