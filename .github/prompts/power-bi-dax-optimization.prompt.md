@@ -5,35 +5,28 @@ description: Analyzes DAX formulas for performance, readability, and best-practi
 trigger: /power-bi-dax-optimization
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - power-bi
-  - dax
-  - performance
-  - analytics
-  - optimization
-  - microsoft
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Analyzes DAX formulas for performance, readability, and best-practice compliance, then delivers optimized rewrites with measurable impact.
 
 ## Context
 
@@ -297,6 +290,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`power-apps-code-app-scaffold.prompt.md`](power-apps-code-app-scaffold.prompt.md)
@@ -304,3 +301,7 @@ Same-family prompts:
 - [`power-bi-performance-troubleshooting.prompt.md`](power-bi-performance-troubleshooting.prompt.md)
 - [`power-bi-report-design-consultation.prompt.md`](power-bi-report-design-consultation.prompt.md)
 - [`power-platform-mcp-connector-suite.prompt.md`](power-platform-mcp-connector-suite.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

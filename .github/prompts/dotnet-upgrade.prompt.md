@@ -5,37 +5,29 @@ description: Drives a comprehensive .NET framework upgrade analysis and executio
 trigger: /dotnet-upgrade
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - csharp
-  - dotnet
-  - upgrade
-  - migration
-  - tooling
-  - backend
-  - refactor
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Drives a comprehensive .NET framework upgrade analysis and execution across projects, dependencies, and runtime targets.
 
 ## Context
 
@@ -241,7 +233,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`dotnet-best-practices.prompt.md`](dotnet-best-practices.prompt.md)
 - [`dotnet-design-pattern-review.prompt.md`](dotnet-design-pattern-review.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

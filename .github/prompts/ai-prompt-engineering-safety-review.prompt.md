@@ -5,35 +5,28 @@ description: Audit a prompt for safety, bias, security, clarity, and effectivene
 trigger: /ai-prompt-engineering-safety-review
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - prompt-engineering
-  - safety
-  - review
-  - security
-  - ai-quality
-  - tool
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Audit a prompt for safety, bias, security, clarity, and effectiveness, then deliver a hardened, improved version with rationale.
 
 ## Context
 
@@ -234,10 +227,17 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`boost-prompt.prompt.md`](boost-prompt.prompt.md)
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

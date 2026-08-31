@@ -5,35 +5,28 @@ description: Build optimized Docker images for an ASP.NET Core application follo
 trigger: /containerize-aspnetcore
 version: 1.0.0
 author: Hermes Agent
-tags:
-- docker
-- containerization
-- aspnet-core
-- dotnet
-- devops
-- backend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Build optimized Docker images for an ASP.NET Core application following .NET containerization best practices.
 
 ## Context
 
@@ -338,6 +331,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`containerize-aspnet-framework.prompt.md`](containerize-aspnet-framework.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

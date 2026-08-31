@@ -1,38 +1,32 @@
 ---
 name: debug-issue
 title: Debug Issue
-description: "Debug a reported issue end-to-end: capture inputs, follow diagnostic steps, and produce a structured fix-oriented output."
+description: Debug a reported issue end-to-end: capture inputs, follow diagnostic steps, and produce a structured fix-oriented output.
 trigger: /debug-issue
 version: 1.0.0
 author: Hermes Agent
-tags:
-- debugging
-- troubleshooting
-- devops
-- diagnostics
-- automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Debug a reported issue end-to-end: capture inputs, follow diagnostic steps, and produce a structured fix-oriented output.
 
 ## Context
 
@@ -255,8 +249,16 @@ Shared workspace hooks run around this prompt's execution — see [`.github/hook
 
 ## Scripts
 
+## Workflow
+
+<content>
+
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

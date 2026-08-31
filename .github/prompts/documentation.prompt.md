@@ -1,38 +1,32 @@
 ---
 name: documentation
 title: Documentation Authoring
-description: "Author and synchronize project documentation: impact analysis, content authoring, and cross-reference with skills and subagents."
+description: Author and synchronize project documentation: impact analysis, content authoring, and cross-reference with skills and subagents.
 trigger: /documentation
 version: 1.0.0
 author: Hermes Agent
-tags:
-- documentation
-- authoring
-- synchronization
-- communication
-- automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Author and synchronize project documentation: impact analysis, content authoring, and cross-reference with skills and subagents.
 
 ## Context
 
@@ -242,6 +236,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`documentation-writer.prompt.md`](documentation-writer.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

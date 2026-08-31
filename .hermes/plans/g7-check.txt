@@ -1,0 +1,13 @@
+$ bun run lint && bun run format:check && bun run markdownlint && bun run spellcheck
+$ eslint . --no-error-on-unmatched-pattern
+$ prettier --check --ignore-unknown .
+Checking formatting...
+All matched files use Prettier code style!
+$ markdownlint-cli2 --config .markdownlint.jsonc "**/*.md"
+markdownlint-cli2 v0.19.1 (markdownlint v0.39.0)
+Finding: **/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !.hermes/archived-prompt-templates/** !.github/** !.hermes/** !judge_results/** !plans/** !research/** !ngn-earnings-kit/** !hermes-memory-safety/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc
+Linting: 486 file(s)
+Summary: 1 error(s)
+SESSION_REPORT.md:166 error MD024/no-duplicate-heading Multiple headings with the same content [Context: "Open Items (carry-over)"]
+error: script "markdownlint" exited with code 1
+error: script "check" exited with code 1

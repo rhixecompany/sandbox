@@ -5,35 +5,28 @@ description: Generates a Playwright test from a scenario, validates it against t
 trigger: /playwright-generate-test
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - playwright
-  - testing
-  - codegen
-  - typescript
-  - qa
-  - tdd
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a Playwright test from a scenario, validates it against the live app, and iterates with @investigator/@author/@runner until the test passes.
 
 ## Context
 
@@ -246,8 +239,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`playwright-automation-fill-in-form.prompt.md`](playwright-automation-fill-in-form.prompt.md)
 - [`playwright-explore-website.prompt.md`](playwright-explore-website.prompt.md)
 - [`playwright-typescript.prompt.md`](playwright-typescript.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

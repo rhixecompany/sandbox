@@ -1,0 +1,33 @@
+{
+  "ts": "2026-08-31T19:19:56.772341+00:00",
+  "mode": "smoke",
+  "request": "Reply with OK",
+  "timeout_s": 15,
+  "tested": 1,
+  "skipped": [],
+  "ok_count": 0,
+  "fail_count": 1,
+  "results": [
+    {
+      "exit_code": -1,
+      "stdout": "",
+      "stderr": "TIMEOUT after 15s",
+      "elapsed_s": 15.12,
+      "ok": false,
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+      "prompt": "Reply with OK",
+      "mode": "smoke",
+      "context": 131072,
+      "max_output": 8192,
+      "capabilities": {
+        "context": 131072,
+        "max_output": 8192,
+        "vision": false,
+        "reasoning": true,
+        "tools": true
+      },
+      "ts": "2026-08-31T19:19:56.772242+00:00"
+    }
+  ]
+}

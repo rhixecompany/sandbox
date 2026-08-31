@@ -5,36 +5,28 @@ description: Reviews existing TypeScript seed scripts, fixes issues with image l
 trigger: /seed-review-and-create
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- backend
-- typescript
-- seeding
-- documentation
-- refactor
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Reviews existing TypeScript seed scripts, fixes issues with image linking and fallback handling, updates documentation, and creates new seeders for the codebase.
 
 ## Context
 
@@ -275,6 +267,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

@@ -1,14 +1,14 @@
-# Hooks Audit — 2026-08-31 15:31 UTC
+# Hooks Audit — 2026-08-31 19:36 UTC
 
 Dir: `C:\Users\Alexa\AppData\Local\hermes\hooks` | Threshold: 70
-Count: 7 | Avg: 86.6 | Passed: 5
+Count: 7 | Avg: 97.1 | Passed: 7
 
 | File | Score | Rating | Events | Syntax | Idem | ErrH | Log |
 |---|---|---|---|---|---|---|---|
-| `_pathutil.py` | 94 | PASS | 7 | 20 | 18 | 20 | 16 |
-| `lib.py` | 94 | PASS | 7 | 20 | 18 | 20 | 16 |
-| `lib.sh` | 68 | WARN | 6 | 4 | 9 | 15 | 20 |
-| `post-exec-state-log.py` | 94 | PASS | 5 | 20 | 18 | 20 | 16 |
-| `pre-exec-validate.sh` | 68 | WARN | 5 | 4 | 9 | 15 | 20 |
-| `session_end_capture.py` | 94 | PASS | 5 | 20 | 18 | 20 | 16 |
-| `session_start_capture.py` | 94 | PASS | 7 | 20 | 18 | 20 | 16 |
+| `_pathutil.py` | 98 | PASS | 7 | 20 | 18 | 20 | 20 |
+| `lib.py` | 98 | PASS | 7 | 20 | 18 | 20 | 20 |
+| `lib.sh` | 95 | PASS | 6 | 20 | 15 | 20 | 20 |
+| `post-exec-state-log.py` | 98 | PASS | 5 | 20 | 18 | 20 | 20 |
+| `pre-exec-validate.sh` | 95 | PASS | 5 | 20 | 15 | 20 | 20 |
+| `session_end_capture.py` | 98 | PASS | 5 | 20 | 18 | 20 | 20 |
+| `session_start_capture.py` | 98 | PASS | 7 | 20 | 18 | 20 | 20 |

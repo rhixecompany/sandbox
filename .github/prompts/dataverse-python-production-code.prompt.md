@@ -5,36 +5,28 @@ description: Write production-grade Dataverse SDK for Python code with error han
 trigger: /dataverse-python-production-code
 version: 1.0.0
 author: Hermes Agent
-tags:
-- dataverse
-- python
-- dynamics-365
-- production
-- best-practices
-- backend
-- odata
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Write production-grade Dataverse SDK for Python code with error handling, client lifecycle, structured logging, and OData performance tuning.
 
 ## Context
 
@@ -280,6 +272,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

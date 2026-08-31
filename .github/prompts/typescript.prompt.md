@@ -5,35 +5,28 @@ description: Produce strict, maintainable TypeScript and Next.js code using serv
 trigger: /typescript
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - typescript
-  - nextjs
-  - code-quality
-  - frontend
-  - validation
-  - standards
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Produce strict, maintainable TypeScript and Next.js code using server-first patterns, safe configuration access, and validated external input handling.
 
 ## Context
 
@@ -242,6 +235,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

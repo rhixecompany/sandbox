@@ -5,35 +5,28 @@ description: Designs scenarios, implements stable @playwright/test suites with r
 trigger: /playwright-typescript
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - playwright
-  - typescript
-  - testing
-  - tdd
-  - qa
-  - frontend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Designs scenarios, implements stable @playwright/test suites with role/label-based locators and web-first assertions, then runs and stabilizes them.
 
 ## Context
 
@@ -213,8 +206,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`playwright-automation-fill-in-form.prompt.md`](playwright-automation-fill-in-form.prompt.md)
 - [`playwright-explore-website.prompt.md`](playwright-explore-website.prompt.md)
 - [`playwright-generate-test.prompt.md`](playwright-generate-test.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

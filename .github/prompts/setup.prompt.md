@@ -5,36 +5,28 @@ description: Comprehensive AI agent onboarding prompt for ComicWise — architec
 trigger: /setup
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- documentation
-- onboarding
-- devops
-- backend
-- frontend
-- planning
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Comprehensive AI agent onboarding prompt for ComicWise — architecture overview, essential commands, environment variables, database schema facts, authentication, DAL, and server action patterns.
 
 ## Context
 
@@ -488,6 +480,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

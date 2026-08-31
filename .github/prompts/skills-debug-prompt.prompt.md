@@ -5,36 +5,28 @@ description: Applies fixes to all F-grade and C-grade skills identified in the a
 trigger: /skills-debug-prompt
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- documentation
-- skills
-- qa
-- devops
-- workflow
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Applies fixes to all F-grade and C-grade skills identified in the audit, targeting F=0 and C≤5 after completion, with a 4-phase intake-execute-verify-handoff flow.
 
 ## Context
 
@@ -256,6 +248,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`skills-fix.prompt.md`](skills-fix.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

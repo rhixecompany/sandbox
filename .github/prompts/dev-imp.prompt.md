@@ -1,39 +1,32 @@
 ---
 name: dev-imp
 title: Development Implementation
-description: "Execute a software implementation plan: select generators, implement, verify, code review, debug, and produce a structured completion report."
+description: Execute a software implementation plan: select generators, implement, verify, code review, debug, and produce a structured completion report.
 trigger: /dev-imp
 version: 1.0.0
 author: Hermes Agent
-tags:
-- development
-- implementation
-- automation
-- devops
-- planning
-- coding
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Execute a software implementation plan: select generators, implement, verify, code review, debug, and produce a structured completion report.
 
 ## Context
 
@@ -408,6 +401,10 @@ The following MCP servers and tools are available for this task. Use them in pre
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

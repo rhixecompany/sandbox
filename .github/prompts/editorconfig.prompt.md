@@ -5,36 +5,29 @@ description: Generates a comprehensive, best-practice .editorconfig file based o
 trigger: /editorconfig
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - editorconfig
-  - tooling
-  - lint
-  - format
-  - configuration
-  - automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: low
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: low
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a comprehensive, best-practice .editorconfig file based on project analysis and language/runtime preferences.
 
 ## Context
 
@@ -275,8 +268,16 @@ Shared workspace hooks run around this prompt's execution — see [`.github/hook
 
 ## Scripts
 
+## Workflow
+
+<content>
+
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

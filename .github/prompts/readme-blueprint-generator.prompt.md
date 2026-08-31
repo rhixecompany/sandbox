@@ -6,29 +6,28 @@ trigger: /readme-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 tags: [readme, documentation, blueprint, generator, analysis]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate comprehensive README.md by analyzing the project's documentation structure, technology stack, architecture, and coding standards, then producing developer-focused markdown.
 
 ## Context
 
@@ -309,6 +308,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`architecture-blueprint-generator.prompt.md`](architecture-blueprint-generator.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

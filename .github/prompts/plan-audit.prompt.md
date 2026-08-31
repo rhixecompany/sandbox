@@ -5,35 +5,28 @@ description: Audits Hermes skills, plugins, MCP config, and Copilot custom agent
 trigger: /plan-audit
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - audit
-  - planning
-  - hermes
-  - copilot
-  - inventory
-  - documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Audits Hermes skills, plugins, MCP config, and Copilot custom agents, then cross-references for duplicates, broken references, and orphan files; reports to docs/agent-stack-audit-report.md.
 
 ## Context
 
@@ -288,3 +281,7 @@ Same-family prompts:
 - [`plan-batch-fix.prompt.md`](plan-batch-fix.prompt.md)
 - [`plan-execute.prompt.md`](plan-execute.prompt.md)
 - [`plan-generate.prompt.md`](plan-generate.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

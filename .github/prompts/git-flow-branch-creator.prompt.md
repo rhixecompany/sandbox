@@ -5,36 +5,29 @@ description: Analyzes git status/diff and creates branches following the nvie Gi
 trigger: /git-flow-branch-creator
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - git
-  - git-flow
-  - branching
-  - workflow
-  - automation
-  - devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: low
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: low
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Analyzes git status/diff and creates branches following the nvie Git Flow branching model.
 
 ## Context
 
@@ -241,6 +234,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`git-multi-repo-orchestration.prompt.md`](git-multi-repo-orchestration.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

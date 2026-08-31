@@ -5,35 +5,28 @@ description: Probe authorized Hermes providers live, build a verified ordered fa
 trigger: /test-providers-models
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - testing
-  - providers
-  - models
-  - configuration
-  - diagnostics
-  - automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Probe authorized Hermes providers live, build a verified ordered fallback chain of working models, then configure Hermes and propagate to installed agents.
 
 ## Context
 
@@ -250,6 +243,10 @@ hermes profile list
 Shared workspace hooks run around this prompt's execution — see `.github/hooks/README.md`: `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
+
+## Workflow
+
+<content>
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer
 - `.enhance/verify_phase3.py` — repair/verify tooling

@@ -5,36 +5,28 @@ description: Scaffolds a complete, production-ready Model Context Protocol serve
 trigger: /ruby-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- backend
-- ruby
-- mcp
-- scaffolding
-- documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Scaffolds a complete, production-ready Model Context Protocol server in Ruby using the official MCP Ruby SDK, with tools, prompts, resources, and tests.
 
 ## Context
 
@@ -507,6 +499,10 @@ Other language variants of this MCP server generator:
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
+
+## Workflow
+
+<content>
 
 Prompt-library tooling (see `.enhance/`):
 

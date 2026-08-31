@@ -5,38 +5,29 @@ description: Complete project setup guide for ComicWise — Next.js 16 applicati
 trigger: /initial
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - setup
-  - nextjs
-  - comicwise
-  - pnpm
-  - onboarding
-  - documentation
-  - frontend
-  - configuration
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Complete project setup guide for ComicWise — Next.js 16 application with pnpm, covering installation, configuration, and development workflow.
 
 ## Context
 
@@ -227,8 +218,16 @@ Shared workspace hooks run around this prompt's execution — see [`.github/hook
 
 ## Scripts
 
+## Workflow
+
+<content>
+
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

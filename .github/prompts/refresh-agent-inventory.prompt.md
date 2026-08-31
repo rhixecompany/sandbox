@@ -6,29 +6,28 @@ trigger: /refresh-agent-inventory
 version: 1.0.0
 author: Hermes Agent
 tags: [inventory, agents, copilot, audit, remediation, workspace]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Refresh the workspace customization inventory by reconciling discovered assets against the canonical report and proposing precise edits for stale AGENTS and instruction references.
 
 ## Context
 
@@ -243,7 +242,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`finalize-agent-prompt.prompt.md`](finalize-agent-prompt.prompt.md)
 - [`multi-agent-research-template.prompt.md`](multi-agent-research-template.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -5,37 +5,29 @@ description: Creates Microsoft Adaptive Cards for MCP-based plugins, defining in
 trigger: /mcp-create-adaptive-cards
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - mcp
-  - adaptive-cards
-  - microsoft-365
-  - copilot
-  - frontend
-  - scaffolding
-  - tooling
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Creates Microsoft Adaptive Cards for MCP-based plugins, defining inputs, layouts, and actions for interactive Copilot experiences.
 
 ## Context
 

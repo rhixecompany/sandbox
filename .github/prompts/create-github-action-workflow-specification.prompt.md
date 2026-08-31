@@ -5,35 +5,28 @@ description: Specify a GitHub Actions workflow including jobs, dependencies, tri
 trigger: /create-github-action-workflow-specification
 version: 1.0.0
 author: Hermes Agent
-tags:
-- github-actions
-- ci-cd
-- specification
-- devops
-- automation
-- yaml
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Specify a GitHub Actions workflow including jobs, dependencies, triggers, and required secrets.
 
 ## Context
 

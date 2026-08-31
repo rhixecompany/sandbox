@@ -6,29 +6,28 @@ trigger: /power-platform-mcp-connector-suite
 version: 1.0.0
 author: Hermes Agent
 tags: [power-platform, mcp, connector, copilot-studio, swagger, integration, automation]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate complete Power Platform custom connectors with Model Context Protocol (MCP) integration for Microsoft Copilot Studio, including schema generation, validation, and troubleshooting across six generation modes.
 
 ## Context
 
@@ -334,6 +333,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

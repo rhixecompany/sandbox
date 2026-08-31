@@ -5,34 +5,28 @@ description: Turn source code into a step-by-step tutorial by commenting functio
 trigger: /comment-code-generate-a-tutorial
 version: 1.0.0
 author: Hermes Agent
-tags:
-- documentation
-- tutorial
-- code-walkthrough
-- education
-- markdown
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Turn source code into a step-by-step tutorial by commenting functions, expanding explanations, and adding narrative sections.
 
 ## Context
 
@@ -239,8 +233,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`postgresql-code-review.prompt.md`](postgresql-code-review.prompt.md)
 - [`refactor-code.prompt.md`](refactor-code.prompt.md)
 - [`sql-code-review.prompt.md`](sql-code-review.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

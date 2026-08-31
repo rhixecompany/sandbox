@@ -5,35 +5,28 @@ description: Explores a website with Playwright MCP, documents core flows, locat
 trigger: /playwright-explore-website
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - playwright
-  - browser-automation
-  - testing
-  - webapp
-  - exploration
-  - qa
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Explores a website with Playwright MCP, documents core flows, locators, and outcomes, then proposes test cases from the findings.
 
 ## Context
 
@@ -249,8 +242,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`playwright-automation-fill-in-form.prompt.md`](playwright-automation-fill-in-form.prompt.md)
 - [`playwright-generate-test.prompt.md`](playwright-generate-test.prompt.md)
 - [`playwright-typescript.prompt.md`](playwright-typescript.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

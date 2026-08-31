@@ -1,34 +1,33 @@
 ---
 name: prompt-management
 title: Prompt Management
-description: "Manage the .github/prompts/ lifecycle end to end: inventory, dedupe, extract shared templates, update every prompt to use them, create missing skills/scripts, and run strict validation."
+description: Manage the .github/prompts/ lifecycle end to end: inventory, dedupe, extract shared templates, update every prompt to use them, create missing skills/scripts, and run strict validation.
 trigger: /prompt-management
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, lifecycle, dedupe, templates, validation, refactor, automation]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Manage the .github/prompts/ lifecycle end to end: inventory, dedupe, extract shared templates, update every prompt to use them, create missing skills/scripts, and run strict validation.
 
 ## Context
 
@@ -459,6 +458,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`prompt-builder.prompt.md`](prompt-builder.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

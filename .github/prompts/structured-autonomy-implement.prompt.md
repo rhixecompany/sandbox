@@ -5,35 +5,28 @@ description: Executes the structured-autonomy implementation plan with intake, e
 trigger: /structured-autonomy-implement
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- planning
-- documentation
-- workflow
-- backend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Executes the structured-autonomy implementation plan with intake, execute, verify, and hand-off phases, applying conventions, skills, and templates for end-to-end task delivery.
 
 ## Context
 
@@ -239,7 +232,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`structured-autonomy-generate.prompt.md`](structured-autonomy-generate.prompt.md)
 - [`structured-autonomy-plan.prompt.md`](structured-autonomy-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

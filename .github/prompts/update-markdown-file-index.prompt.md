@@ -5,34 +5,28 @@ description: Update a markdown section with an index or table of files from a sp
 trigger: /update-markdown-file-index
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - documentation
-  - markdown
-  - index
-  - automation
-  - maintenance
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Update a markdown section with an index or table of files from a specified folder using simple list, detailed table, or categorized section formats.
 
 ## Context
 
@@ -317,6 +311,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

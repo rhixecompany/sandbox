@@ -1,40 +1,32 @@
 ---
 name: dotnet-best-practices
 title: .NET Best Practices
-description: "Apply .NET / C# best practices across documentation, design patterns, dependency injection, async/await, configuration, error handling, and security."
+description: Apply .NET / C# best practices across documentation, design patterns, dependency injection, async/await, configuration, error handling, and security.
 trigger: /dotnet-best-practices
 version: 1.0.0
 author: Hermes Agent
-tags:
-- dotnet
-- csharp
-- best-practices
-- architecture
-- patterns
-- backend
-- advanced
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Apply .NET / C# best practices across documentation, design patterns, dependency injection, async/await, configuration, error handling, and security.
 
 ## Context
 
@@ -311,7 +303,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`dotnet-design-pattern-review.prompt.md`](dotnet-design-pattern-review.prompt.md)
 - [`dotnet-upgrade.prompt.md`](dotnet-upgrade.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

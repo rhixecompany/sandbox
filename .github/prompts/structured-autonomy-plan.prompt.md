@@ -5,35 +5,28 @@ description: Generates a structured-autonomy plan by researching the codebase, d
 trigger: /structured-autonomy-plan
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- planning
-- documentation
-- workflow
-- backend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a structured-autonomy plan by researching the codebase, determining commit boundaries, and emitting a draft plan using the output template.
 
 ## Context
 
@@ -276,7 +269,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`structured-autonomy-generate.prompt.md`](structured-autonomy-generate.prompt.md)
 - [`structured-autonomy-implement.prompt.md`](structured-autonomy-implement.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

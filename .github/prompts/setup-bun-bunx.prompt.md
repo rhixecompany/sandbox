@@ -5,39 +5,28 @@ description: Migrate a repository (and all sub-repos) from npm to bun and from n
 trigger: /setup-bun-bunx
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - prompt
-  - setup
-  - bun
-  - bunx
-  - package-manager
-  - migration
-  - monorepo
-  - dependencies
-  - automation
-  - git
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Migrate a repository (and all sub-repos) from npm to bun and from npx to bunx, prune unused dependencies, validate package manifests, and commit and push the changes. Use when consolidating package-manager tooling on bun across a monorepo.
 
 ## Context
 
@@ -157,6 +146,10 @@ Before declaring the migration complete, confirm all of the following:
 
 ## Related Skills
 
+## Workflow
+
+<content>
+
 - `using-superpowers` — Foundational skill workflow.
 - `brainstorming` — Clarify unknowns before changing the toolchain.
 - `user-communication-preferences` — Keep the user informed during long migrations.
@@ -170,3 +163,7 @@ Before declaring the migration complete, confirm all of the following:
 - `writing-clearly-and-concisely` — Keep commit messages human-readable.
 - `subagent-driven-development` — Parallelise work across sub-repos.
 - `systematic-debugging` — Diagnose and fix every issue that surfaces.
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

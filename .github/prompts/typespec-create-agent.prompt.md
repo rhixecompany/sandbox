@@ -5,34 +5,28 @@ description: Generate a complete TypeSpec declarative agent with instructions, c
 trigger: /typespec-create-agent
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - typespec
-  - agent
-  - m365-copilot
-  - declarative
-  - generator
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate a complete TypeSpec declarative agent with instructions, capabilities, and conversation starters for Microsoft 365 Copilot.
 
 ## Context
 
@@ -261,7 +255,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`typespec-api-operations.prompt.md`](typespec-api-operations.prompt.md)
 - [`typespec-create-api-plugin.prompt.md`](typespec-create-api-plugin.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

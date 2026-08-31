@@ -5,34 +5,28 @@ description: Audit and enhance a prompt's structure, clarity, personality, and t
 trigger: /comprehensive-prompt-enhancer
 version: 1.0.0
 author: Hermes Agent
-tags:
-- prompt-engineering
-- enhancement
-- audit
-- optimization
-- tooling
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Audit and enhance a prompt's structure, clarity, personality, and tool usage to produce a polished, AI-ready specification.
 
 ## Context
 

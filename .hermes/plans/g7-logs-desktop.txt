@@ -1,0 +1,51 @@
+--- ~/AppData/Local/hermes/logs/desktop.log (last 50) ---
+[2026-08-24T23:59:21.524Z] [hermes]    📝 Error: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-24T23:59:21.524Z] [hermes]    ⏱️  Elapsed: 17.16s  Context: 102 msgs, ~114,696 tokens
+[2026-08-24T23:59:21.524Z] [hermes] ⏳ Retrying in 5.2s (attempt 2/3)...
+[2026-08-24T23:59:21.525Z] [hermes] ⚠️  API call failed (attempt 3/3): APIConnectionError
+[2026-08-24T23:59:21.525Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-24T23:59:21.525Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-24T23:59:21.525Z] [hermes]    📝 Error: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-24T23:59:21.525Z] [hermes]    ⏱️  Elapsed: 22.59s  Context: 102 msgs, ~114,696 tokens
+[2026-08-24T23:59:21.525Z] [hermes] ❌ API failed after 3 retries — Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-24T23:59:21.525Z] [hermes] 💀 Final error: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-25T00:03:07.133Z] [hermes] ⚡ Interrupted during API call.
+[2026-08-25T00:17:09.223Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.223Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.223Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.224Z] [hermes] 📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.224Z] [hermes]    ⏱️  Elapsed: 3.49s  Context: 26 msgs, ~54,686 tokens
+[2026-08-25T00:17:09.225Z] [hermes] ⏳ Retrying in 2.4s (attempt 1/3)...
+[2026-08-25T00:17:09.234Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.234Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.234Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.234Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.235Z] [hermes] ⏱️  Elapsed: 4.04s  Context: 66 msgs, ~76,020 tokens
+[2026-08-25T00:17:09.235Z] [hermes] ⏳ Retrying in 2.3s (attempt 1/3)...
+[2026-08-25T00:17:09.238Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.238Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.238Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.239Z] [hermes] 📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.239Z] [hermes]    ⏱️  Elapsed: 4.05s  Context: 88 msgs, ~95,395 tokens
+[2026-08-25T00:17:09.239Z] [hermes] ⏳ Retrying in 2.2s (attempt 1/3)...
+[2026-08-25T00:17:09.241Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.241Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.241Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.241Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.241Z] [hermes]    ⏱️  Elapsed: 3.07s  Context: 102 msgs, ~98,829 tokens
+[2026-08-25T00:17:09.241Z] [hermes] ⏳ Retrying in 2.7s (attempt 1/3)...
+[2026-08-25T00:17:09.243Z] [hermes] ⚠️  API call failed (attempt 2/3): APIError
+[2026-08-25T00:17:09.243Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.243Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.243Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.243Z] [hermes]    ⏱️  Elapsed: 9.65s  Context: 102 msgs, ~98,829 tokens
+[2026-08-25T00:17:09.243Z] [hermes] ⏳ Retrying in 5.5s (attempt 2/3)...
+[2026-08-25T00:17:09.246Z] [hermes] ⚠️  API call failed (attempt 3/3): APIError
+[2026-08-25T00:17:09.246Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.246Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.246Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.246Z] [hermes]    ⏱️  Elapsed: 19.48s  Context: 102 msgs, ~98,829 tokens
+[2026-08-25T00:17:09.246Z] [hermes] ❌ API failed after 3 retries — Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.248Z] [hermes] 💀 Final error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:19:19.538Z] [hermes] [tool] ( •_•)>⌐■-■ computing...
+[2026-08-25T00:19:41.286Z] [hermes] Ignoring stale Hermes backend exit (1)

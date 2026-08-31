@@ -5,34 +5,28 @@ description: Create an Epic-level Product Requirements Document that captures sc
 trigger: /breakdown-epic-pm
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - planning
-  - prd
-  - epic
-  - documentation
-  - product
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Create an Epic-level Product Requirements Document that captures scope, value, and acceptance criteria to feed downstream architecture work.
 
 ## Context
 
@@ -254,6 +248,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`breakdown-epic-arch.prompt.md`](breakdown-epic-arch.prompt.md)
@@ -261,4 +259,7 @@ Same-family prompts:
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

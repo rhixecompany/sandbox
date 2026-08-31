@@ -5,36 +5,28 @@ description: Author NUnit unit tests with standard patterns, data-driven tests, 
 trigger: /csharp-nunit
 version: 1.0.0
 author: Hermes Agent
-tags:
-- csharp
-- dotnet
-- testing
-- nunit
-- unit-test
-- automation
-- backend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Author NUnit unit tests with standard patterns, data-driven tests, assertions, mocking, and clean test organization for .NET projects.
 
 ## Context
 
@@ -296,6 +288,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`csharp-async.prompt.md`](csharp-async.prompt.md)
@@ -304,3 +300,7 @@ Same-family prompts:
 - [`csharp-mstest.prompt.md`](csharp-mstest.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

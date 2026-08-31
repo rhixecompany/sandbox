@@ -5,37 +5,29 @@ description: Runs the full git lifecycle across all repos under `./projects` (co
 trigger: /git-multi-repo-orchestration
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - git
-  - multi-repo
-  - orchestration
-  - github
-  - submodules
-  - devops
-  - automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: high
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: high
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Runs the full git lifecycle across all repos under `./projects` (commit, push, submodule sync, PR create/merge, dev→prod sync) using GitHub CLI and conventional commits.
 
 ## Context
 

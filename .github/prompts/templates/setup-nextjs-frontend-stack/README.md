@@ -1,0 +1,1 @@
+# setup-nextjs-frontend-stack

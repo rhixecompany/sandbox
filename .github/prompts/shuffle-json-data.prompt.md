@@ -5,36 +5,28 @@ description: Shuffles repetitive JSON objects safely by validating schema consis
 trigger: /shuffle-json-data
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- data
-- json
-- validation
-- scripting
-- documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Shuffles repetitive JSON objects safely by validating schema consistency across entries before randomising order, with explicit acceptable/unacceptable JSON examples.
 
 ## Context
 

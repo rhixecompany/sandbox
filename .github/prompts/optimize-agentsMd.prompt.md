@@ -5,35 +5,28 @@ description: Audits and rewrites a repository's AGENTS.md for agentic coding wor
 trigger: /optimize-agentsmd
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - documentation
-  - agents
-  - banking
-  - refactor
-  - planning
-  - meta
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Audits and rewrites a repository's AGENTS.md for agentic coding workflows, aligning with project conventions, banking-domain patterns, and the source prompt's full coverage plan.
 
 ## Context
 
@@ -248,6 +241,10 @@ The following MCP servers and tools are available for this task. Use them in pre
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
+
+## Workflow
+
+<content>
 
 Prompt-library tooling (see `.enhance/`):
 

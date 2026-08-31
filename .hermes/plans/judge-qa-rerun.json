@@ -1,0 +1,170 @@
+[
+  {
+    "name": "audit-skills-judge-fix",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0008292999991681427
+  },
+  {
+    "name": "batch-skills-remediation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014481999987765448
+  },
+  {
+    "name": "boilerplate-stripper",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00247020000097109
+  },
+  {
+    "name": "complete-issue-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012195999988762196
+  },
+  {
+    "name": "hooks-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015725000012025703
+  },
+  {
+    "name": "plans-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020714999991469085
+  },
+  {
+    "name": "playwright-automation-fill-in-form",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020272999990993412
+  },
+  {
+    "name": "playwright-generate-e2e-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001961699999810662
+  },
+  {
+    "name": "playwright-generate-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021464000001287786
+  },
+  {
+    "name": "plugins-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004034499999761465
+  },
+  {
+    "name": "polyglot-test-agent",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0054299000003084075
+  },
+  {
+    "name": "postgresql-code-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003013699999428354
+  },
+  {
+    "name": "prompts-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031151999992289348
+  },
+  {
+    "name": "scoutqa-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025829999995039543
+  },
+  {
+    "name": "scripts-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035836999995808583
+  },
+  {
+    "name": "session-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001832599999033846
+  },
+  {
+    "name": "skill-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00297839999984717
+  },
+  {
+    "name": "skill-library-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005266400001346483
+  },
+  {
+    "name": "skills-tools-preflight-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001268500000151107
+  },
+  {
+    "name": "specs-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002770700000837678
+  },
+  {
+    "name": "test-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020320999992691213
+  },
+  {
+    "name": "verification-before-completion",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027046999985032016
+  },
+  {
+    "name": "web-design-reviewer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021640000013576355
+  },
+  {
+    "name": "webapp-testing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022780999988754047
+  }
+]

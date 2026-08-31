@@ -1,41 +1,33 @@
 ---
 name: java-refactoring-extract-method
-title: "Java Refactoring: Extract Method"
+title: Java Refactoring: Extract Method
 description: Performs the Extract Method refactoring on Java code, identifying duplication and improving readability with safe transformations.
 trigger: /java-refactoring-extract-method
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - java
-  - refactoring
-  - extract-method
-  - code-quality
-  - backend
-  - automation
-  - best-practices
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Performs the Extract Method refactoring on Java code, identifying duplication and improving readability with safe transformations.
 
 ## Context
 
@@ -306,6 +298,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

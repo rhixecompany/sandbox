@@ -5,35 +5,28 @@ description: Generates the structured-autonomy implementation file from a plan.m
 trigger: /structured-autonomy-generate
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- planning
-- documentation
-- workflow
-- backend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates the structured-autonomy implementation file from a plan.md by parsing the plan, researching the codebase, and emitting the implementation artifact.
 
 ## Context
 
@@ -265,7 +258,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`structured-autonomy-implement.prompt.md`](structured-autonomy-implement.prompt.md)
 - [`structured-autonomy-plan.prompt.md`](structured-autonomy-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

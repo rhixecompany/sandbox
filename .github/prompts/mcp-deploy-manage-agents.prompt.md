@@ -5,38 +5,29 @@ description: Deploys and manages MCP-based agents, covering packaging, registrat
 trigger: /mcp-deploy-manage-agents
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - mcp
-  - deploy
-  - agents
-  - lifecycle
-  - microsoft-365
-  - devops
-  - administration
-  - tooling
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Deploys and manages MCP-based agents, covering packaging, registration, lifecycle, and admin role requirements.
 
 ## Context
 
@@ -538,3 +529,7 @@ Same-family prompts:
 
 - [`mcp-create-adaptive-cards.prompt.md`](mcp-create-adaptive-cards.prompt.md)
 - [`mcp-create-declarative-agent.prompt.md`](mcp-create-declarative-agent.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

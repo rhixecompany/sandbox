@@ -1,41 +1,33 @@
 ---
 name: java-refactoring-remove-parameter
-title: "Java Refactoring: Remove Parameter"
+title: Java Refactoring: Remove Parameter
 description: Performs the Remove Parameter refactoring on Java code, simplifying method signatures while preserving behavior.
 trigger: /java-refactoring-remove-parameter
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - java
-  - refactoring
-  - remove-parameter
-  - code-quality
-  - backend
-  - automation
-  - best-practices
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Performs the Remove Parameter refactoring on Java code, simplifying method signatures while preserving behavior.
 
 ## Context
 
@@ -301,6 +293,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

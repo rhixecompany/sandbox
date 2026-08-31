@@ -5,38 +5,29 @@ description: Reusable prompt template for Codex, Copilot, and Hermes that orches
 trigger: /multi-agent-research-template
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - multi-agent
-  - research
-  - template
-  - orchestration
-  - planning
-  - automation
-  - ai
-  - workflow
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Reusable prompt template for Codex, Copilot, and Hermes that orchestrates parallel research agents with shared rules and outputs.
 
 ## Context
 
@@ -363,6 +354,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`multi-stage-dockerfile.prompt.md`](multi-stage-dockerfile.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

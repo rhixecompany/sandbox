@@ -5,34 +5,28 @@ description: Turn a feature specification into one or more well-scoped GitHub is
 trigger: /create-github-issue-feature-from-specification
 version: 1.0.0
 author: Hermes Agent
-tags:
-- github
-- issues
-- specification
-- planning
-- project-management
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Turn a feature specification into one or more well-scoped GitHub issues with acceptance criteria.
 
 ## Context
 
@@ -263,6 +257,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`create-agentsmd.prompt.md`](create-agentsmd.prompt.md)
@@ -280,3 +278,7 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

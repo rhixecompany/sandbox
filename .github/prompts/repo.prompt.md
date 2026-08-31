@@ -2,32 +2,26 @@
 name: repo
 title: Repository Operations
 description: |
-  Generic repository operations — clone, init, commit, push, branch, submodule management.
-  Used as the default repo-utility prompt.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /repo
-toolsets:
-  - file
-  - terminal
-  - web
-skills:
-  - skill:using-superpowers
-  - skill:executing-plans
+toolsets: 
+skills: 
+- skill: executing-plans
 dependencies: []
 formatter: markdown
-metadata:
-  hermes:
-    profile: code-architect
-    context_size: large
-  copilot:
-    context_size: large
-  opencode:
-    command: "opencode /repo"
-  codex:
-    model_override: null
+metadata: 
+hermes: 
+profile: code-architect
+context_size: large
+copilot: 
+opencode: 
+command: opencode /repo
+codex: 
+model_override: null
 ---
+
 ## Table of Contents
 
 - [Goal](#goal)

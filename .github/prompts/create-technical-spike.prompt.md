@@ -5,34 +5,28 @@ description: Define a time-boxed technical spike with research questions, invest
 trigger: /create-technical-spike
 version: 1.0.0
 author: Hermes Agent
-tags:
-- planning
-- research
-- spike
-- documentation
-- decision-making
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Define a time-boxed technical spike with research questions, investigation plan, and deliverables.
 
 ## Context
 
@@ -412,6 +406,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`create-agentsmd.prompt.md`](create-agentsmd.prompt.md)
@@ -429,3 +427,7 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

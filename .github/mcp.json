@@ -1,0 +1,107 @@
+{
+  "mcpServers": {
+    "ast-grep": {
+      "command": "npx.cmd",
+      "args": ["-y", "@notprolands/ast-grep-mcp"],
+      "enabled": true
+    },
+    "code-sandbox": {
+      "command": "npx.cmd",
+      "args": ["-y", "node-code-sandbox-mcp"],
+      "enabled": true
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "fetch": {
+      "command": "npx.cmd",
+      "args": ["-y", "mcp-server-fetch-tools"],
+      "enabled": true
+    },
+    "filesystem": {
+      "command": "npx.cmd",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/Users/Alexa"],
+      "enabled": true
+    },
+    "github": {
+      "command": "npx.cmd",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "enabled": true
+    },
+    "honcho": {
+      "url": "https://mcp.honcho.dev/",
+      "enabled": true
+    },
+    "memory": {
+      "command": "npx.cmd",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "enabled": true
+    },
+    "neon": {
+      "url": "https://mcp.neon.tech/mcp",
+      "enabled": true
+    },
+    "parallel-search": {
+      "url": "https://search.parallel.ai/mcp",
+      "enabled": true
+    },
+    "parallel-task": {
+      "url": "https://task-mcp.parallel.ai/mcp",
+      "enabled": true
+    },
+    "playwright": {
+      "command": "npx.cmd",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "enabled": true
+    },
+    "python-quality": {
+      "command": "python",
+      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_server.py"],
+      "enabled": true
+    },
+    "sequential-thinking": {
+      "command": "npx.cmd",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true
+    },
+    "smithery": {
+      "url": "https://mcp.smithery.ai/",
+      "enabled": true
+    },
+    "tavily": {
+      "url": "https://mcp.tavily.com/mcp",
+      "enabled": true
+    },
+    "tooling-config": {
+      "command": "python",
+      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_config_server.py"],
+      "enabled": true
+    },
+    "tooling-lint": {
+      "command": "python",
+      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_server.py"],
+      "enabled": true
+    },
+    "mcp-docker": {
+      "command": "docker",
+      "args": ["mcp", "gateway", "run"],
+      "enabled": true
+    },
+    "sentry": {
+      "url": "https://mcp.sentry.dev/mcp",
+      "enabled": true
+    },
+    "mindstudio": {
+      "command": "mindstudio",
+      "args": ["mcp"],
+      "enabled": true
+    }
+  },
+  "disabledServers": [
+    "atlassian",
+    "docs",
+    "postgres"
+  ],
+  "notes": "Canonical repo-level MCP mapping derived from live `hermes mcp list` on 2026-08-31. Copilot/Codex/OpenCode should reference this file for parity."
+}

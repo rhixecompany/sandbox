@@ -5,34 +5,28 @@ description: Annotate a source file with teaching-oriented comments that explain
 trigger: /add-educational-comments
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - documentation
-  - code-comments
-  - refactor
-  - tool
-  - developer-experience
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Annotate a source file with teaching-oriented comments that explain intent, edge cases, and reasoning — or prompt the user for a target file when one is not supplied.
 
 ## Context
 

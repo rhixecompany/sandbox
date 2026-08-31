@@ -5,36 +5,28 @@ description: Generates a new React/Next.js component following the workspace com
 trigger: /setup-component
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- frontend
-- react
-- nextjs
-- scaffolding
-- documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a new React/Next.js component following the workspace component conventions, with intake-execute-verify-handoff phases and template references.
 
 ## Context
 
@@ -240,6 +232,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`setup-bun-bunx.prompt.md`](setup-bun-bunx.prompt.md)
@@ -247,3 +243,7 @@ Same-family prompts:
 - [`setup-groq-cloud.prompt.md`](setup-groq-cloud.prompt.md)
 - [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
 - [`setup.prompt.md`](setup.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -5,35 +5,28 @@ description: Triage and resolve CentOS issues using RHEL-compatible tooling, SEL
 trigger: /centos-linux-triage
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - linux
-  - centos
-  - rhel
-  - sysadmin
-  - triage
-  - selinux
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Triage and resolve CentOS issues using RHEL-compatible tooling, SELinux-aware practices, and firewalld, with a structured report.
 
 ## Context
 
@@ -268,9 +261,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`arch-linux-triage.prompt.md`](arch-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
 - [`fedora-linux-triage.prompt.md`](fedora-linux-triage.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

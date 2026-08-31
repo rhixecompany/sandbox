@@ -5,34 +5,28 @@ description: Produce detailed feature implementation plans following the Epoch m
 trigger: /breakdown-feature-implementation
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - planning
-  - implementation
-  - feature
-  - documentation
-  - monorepo
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Produce detailed feature implementation plans following the Epoch monorepo structure with tasks, acceptance criteria, and dependencies.
 
 ## Context
 
@@ -253,6 +247,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`breakdown-epic-arch.prompt.md`](breakdown-epic-arch.prompt.md)
@@ -260,4 +258,7 @@ Same-family prompts:
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-plan.prompt.md`](breakdown-plan.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

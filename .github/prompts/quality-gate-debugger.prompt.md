@@ -6,29 +6,28 @@ trigger: /quality-gate-debugger
 version: 1.0.0
 author: Hermes Agent
 tags: [quality, lint, type-check, testing, build, debugging, refactor]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Triage quality-gate report files (type-check, lint, test, build), batch-fix all surfaced issues by priority, and re-run the gate until zero errors and zero warnings remain.
 
 ## Context
 
@@ -375,6 +374,10 @@ The following MCP servers and tools are available for this task. Use them in pre
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
+
+## Workflow
+
+<content>
 
 Prompt-library tooling (see `.enhance/`):
 

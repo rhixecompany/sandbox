@@ -5,35 +5,28 @@ description: Registers Parallel Search and Parallel Task MCP servers in the acti
 trigger: /parallel-mcp-install
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - mcp
-  - hermes
-  - setup
-  - parallel
-  - devops
-  - security
-metadata:
-  hermes:
-    profile: code-architect
-    priority: high
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: high
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Registers Parallel Search and Parallel Task MCP servers in the active Hermes harness using the official CLI, with security gates, runtime-reload validation, and credential-safety checks.
 
 ## Context
 
@@ -439,6 +432,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

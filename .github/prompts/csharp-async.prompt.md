@@ -1,41 +1,32 @@
 ---
 name: csharp-async
 title: C# Async Programming
-description: "Apply C# asynchronous programming best practices for async/await, Task, ValueTask, cancellation tokens, and ConfigureAwait usage in modern .NET applications."
+description: Apply C# asynchronous programming best practices for async/await, Task, ValueTask, cancellation tokens, and ConfigureAwait usage in modern .NET applications.
 trigger: /csharp-async
 version: 1.0.0
 author: Hermes Agent
-tags:
-- csharp
-- dotnet
-- async
-- concurrency
-- backend
-- best-practices
-- coding
-- patterns
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Apply C# asynchronous programming best practices for async/await, Task, ValueTask, cancellation tokens, and ConfigureAwait usage in modern .NET applications.
 
 ## Context
 
@@ -302,6 +293,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`csharp-docs.prompt.md`](csharp-docs.prompt.md)
@@ -310,3 +305,7 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -5,34 +5,28 @@ description: Analyze a codebase and produce a comprehensive AGENTS.md that captu
 trigger: /agents-generator
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - agents
-  - documentation
-  - blueprint
-  - automation
-  - codebase-analysis
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Analyze a codebase and produce a comprehensive AGENTS.md that captures architecture, conventions, and exact technology versions so AI coding agents are immediately productive.
 
 ## Context
 
@@ -236,8 +230,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`agents-fix.prompt.md`](agents-fix.prompt.md)
 - [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

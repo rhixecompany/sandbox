@@ -1,0 +1,530 @@
+
+┌─────────────────────────────────────────────────────────┐
+│                 🩺 Hermes Doctor                        │
+└─────────────────────────────────────────────────────────┘
+
+◆ Security Advisories
+  ✓ No active security advisories
+
+◆ MCP Server Security
+  ✓ No suspicious MCP stdio commands
+
+◆ Python Environment
+  ✓ Python 3.13.14
+  ✓ SQLite 3.53.1
+    → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
+    → state.db: WAL journal mode (409.8 MB)
+    → cron/executions.db: WAL journal mode (20.0 KB)
+    → projects.db: WAL journal mode (44.0 KB)
+    → verification_evidence.db: WAL journal mode (552.0 KB)
+    → kanban.db: WAL journal mode (112.0 KB)
+  ✓ Virtual environment active
+  ✓ Version files consistent (0.20.6)
+
+◆ SSL / CA Certificates
+  ✓ SSL CA certificate bundle is valid
+
+◆ Required Packages
+  ✓ OpenAI SDK
+  ✓ Rich (terminal UI)
+  ✓ python-dotenv
+  ✓ PyYAML
+  ✓ HTTPX
+  ✓ Croniter (cron expressions) (optional)
+  ✓ python-telegram-bot (optional)
+  ✓ discord.py (optional)
+
+◆ Configuration Files
+  ✓ ~/AppData/Local/hermes/.env file exists
+  ✓ API key or custom endpoint configured
+  ✓ ~/AppData/Local/hermes/config.yaml exists
+  ✓ Config version up to date (v39)
+  ✓ No deprecated config keys or env vars
+
+◆ xAI Model Retirement (May 15, 2026)
+  ✓ No retired xAI models in config
+
+◆ Auth Providers
+  ✓ Nous Portal auth (logged in)
+  ✓ OpenAI Codex auth (logged in)
+  ✓ MiniMax OAuth (logged in, region=global)
+  ✓ xAI OAuth (logged in)
+
+◆ Directory Structure
+  ✓ ~/AppData/Local/hermes directory exists
+  ✓ ~/AppData/Local/hermes/cron/ exists
+  ✓ ~/AppData/Local/hermes/sessions/ exists
+  ✓ ~/AppData/Local/hermes/logs/ exists
+  ✓ ~/AppData/Local/hermes/skills/ exists
+  ✓ ~/AppData/Local/hermes/memories/ exists
+  ✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
+  ✓ ~/AppData/Local/hermes/memories/ directory exists
+  ✓ MEMORY.md exists (4161 chars)
+  ✓ USER.md exists (1754 chars)
+  ✓ ~/AppData/Local/hermes/state.db exists (129 sessions)
+    → state.db logical size 409.8 MB, 104,909 pages, 27,895 free, WAL 11.4 MB
+    → 8,279 messages, 129 sessions, journal_mode=wal
+    → FTS tables: messages_fts, messages_fts_trigram
+    → WAL file is 11 MB (normal for active sessions)
+
+◆ External Tools
+  ✓ git
+  ✓ ripgrep (rg) (faster file search)
+  ✓ docker (optional)
+  ✓ Node.js
+  ✓ agent-browser (browser automation)
+  ✓ Playwright Chromium (browser engine)
+  ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
+  ✓ web workspace deps (no known vulnerabilities)
+  ✓ ui-tui workspace deps (no known vulnerabilities)
+
+◆ API Connectivity
+  Running 40 connectivity checks in parallel…                                                                        ✓ OpenRouter API
+  ✓ DeepSeek            
+  ✓ Hugging Face        
+  ✓ gemini              
+  ✓ ollama-cloud        
+  ⚠ xai                  (HTTP 403)
+
+◆ Tool Availability
+  ✓ browser-use
+  ✓ clarify
+  ✓ code_execution
+  ✓ computer_use
+  ✓ cronjob
+  ✓ delegation
+  ✓ desktop_ui
+  ✓ file
+  ✓ memory
+  ✓ opencode
+  ✓ project
+  ✓ session_search
+  ✓ skills
+  ✓ terminal
+  ✓ todo
+  ✓ tts
+  ✓ video
+  ✓ video_gen
+  ✓ vision
+  ✓ x_search
+  ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
+  ✓ web search (xai)
+  ✓ web extract (keenable)
+  ⚠ a2a (system dependency not met)
+  ⚠ browser (system dependency not met)
+  ⚠ browser-cdp (system dependency not met)
+  ⚠ discord (missing DISCORD_BOT_TOKEN)
+  ⚠ discord_admin (missing DISCORD_BOT_TOKEN)
+  ⚠ feishu_doc (system dependency not met)
+  ⚠ feishu_drive (system dependency not met)
+  ⚠ hermes-yuanbao (system dependency not met)
+  ⚠ homeassistant (system dependency not met)
+  ⚠ image_gen (system dependency not met)
+
+◆ Skills Hub
+  ✓ Skills Hub directory exists
+  ✓ Lock file OK (24 hub-installed skill(s))
+  ✓ GitHub token configured (authenticated API access)
+
+◆ Memory Provider
+  ✓ Honcho connected workspace=hermes mode=hybrid freq=async
+
+◆ Profiles
+  ✓ 13 profile(s) found
+  ✓   alexa: gateway running, deepseek-v4-flash-free, no alias
+  ✓   code-architect: nvidia/nemotron-3-nano-omni-30, no alias
+  ✓   creative-director: gateway running, deepseek-v4-flash-free, no alias
+  ✓   cto: gateway running, deepseek-v4-flash-free, no alias
+  ✓   designer: gateway running, deepseek-v4-flash-free, no alias
+  ✓   dev: gateway running, deepseek-v4-flash-free, no alias
+  ✓   exec-assistant: gateway running, deepseek-v4-flash-free, no alias
+  ✓   ops: gateway running, deepseek-v4-flash-free, no alias
+  ✓   patient-tutor: gateway running, deepseek-v4-flash-free, no alias
+  ✓   pm: gateway running, deepseek-v4-flash-free, no alias
+  ✓   qa: gateway running, deepseek-v4-flash-free, no alias
+  ✓   research-analyst: gateway running, deepseek-v4-flash-free, no alias
+  ✓   security: gateway running, deepseek-v4-flash-free, no alias
+
+────────────────────────────────────────────────────────────
+  All checks passed! 🎉
+
+
+┌─────────────────────────────────────────────────────────┐
+│                 🩺 Hermes Doctor                        │
+└─────────────────────────────────────────────────────────┘
+
+◆ Security Advisories
+  ✓ No active security advisories
+
+◆ MCP Server Security
+  ✓ No suspicious MCP stdio commands
+
+◆ Python Environment
+  ✓ Python 3.13.14
+  ✓ SQLite 3.53.1
+    → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
+    → state.db: WAL journal mode (409.8 MB)
+    → cron/executions.db: WAL journal mode (20.0 KB)
+    → projects.db: WAL journal mode (44.0 KB)
+    → verification_evidence.db: WAL journal mode (552.0 KB)
+    → kanban.db: WAL journal mode (112.0 KB)
+  ✓ Virtual environment active
+  ✓ Version files consistent (0.20.6)
+
+◆ SSL / CA Certificates
+  ✓ SSL CA certificate bundle is valid
+
+◆ Required Packages
+  ✓ OpenAI SDK
+  ✓ Rich (terminal UI)
+  ✓ python-dotenv
+  ✓ PyYAML
+  ✓ HTTPX
+  ✓ Croniter (cron expressions) (optional)
+  ✓ python-telegram-bot (optional)
+  ✓ discord.py (optional)
+
+◆ Configuration Files
+  ✓ ~/AppData/Local/hermes/.env file exists
+  ✓ API key or custom endpoint configured
+  ✓ ~/AppData/Local/hermes/config.yaml exists
+  ✓ Config version up to date (v39)
+  ✓ No deprecated config keys or env vars
+
+◆ xAI Model Retirement (May 15, 2026)
+  ✓ No retired xAI models in config
+
+◆ Auth Providers
+  ✓ Nous Portal auth (logged in)
+  ✓ OpenAI Codex auth (logged in)
+  ✓ MiniMax OAuth (logged in, region=global)
+  ✓ xAI OAuth (logged in)
+
+◆ Directory Structure
+  ✓ ~/AppData/Local/hermes directory exists
+  ✓ ~/AppData/Local/hermes/cron/ exists
+  ✓ ~/AppData/Local/hermes/sessions/ exists
+  ✓ ~/AppData/Local/hermes/logs/ exists
+  ✓ ~/AppData/Local/hermes/skills/ exists
+  ✓ ~/AppData/Local/hermes/memories/ exists
+  ✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
+  ✓ ~/AppData/Local/hermes/memories/ directory exists
+  ✓ MEMORY.md exists (4161 chars)
+  ✓ USER.md exists (1754 chars)
+  ✓ ~/AppData/Local/hermes/state.db exists (129 sessions)
+    → state.db logical size 409.8 MB, 104,909 pages, 27,841 free, WAL 11.4 MB
+    → 8,315 messages, 129 sessions, journal_mode=wal
+    → FTS tables: messages_fts, messages_fts_trigram
+    → WAL file is 11 MB (normal for active sessions)
+
+◆ External Tools
+  ✓ git
+  ✓ ripgrep (rg) (faster file search)
+  ✓ docker (optional)
+  ✓ Node.js
+  ✓ agent-browser (browser automation)
+  ✓ Playwright Chromium (browser engine)
+  ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
+  ✓ web workspace deps (no known vulnerabilities)
+  ✓ ui-tui workspace deps (no known vulnerabilities)
+
+◆ API Connectivity
+  Running 40 connectivity checks in parallel…                                                                        ✓ OpenRouter API
+  ✓ DeepSeek            
+  ✓ Hugging Face        
+  ✓ gemini              
+  ✓ ollama-cloud        
+  ⚠ xai                  (HTTP 403)
+
+◆ Tool Availability
+  ✓ browser-use
+  ✓ clarify
+  ✓ code_execution
+  ✓ computer_use
+  ✓ cronjob
+  ✓ delegation
+  ✓ desktop_ui
+  ✓ file
+  ✓ memory
+  ✓ opencode
+  ✓ project
+  ✓ session_search
+  ✓ skills
+  ✓ terminal
+  ✓ todo
+  ✓ tts
+  ✓ video
+  ✓ video_gen
+  ✓ vision
+  ✓ x_search
+  ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
+  ✓ web search (xai)
+  ✓ web extract (keenable)
+  ⚠ a2a (system dependency not met)
+  ⚠ browser (system dependency not met)
+  ⚠ browser-cdp (system dependency not met)
+  ⚠ discord (missing DISCORD_BOT_TOKEN)
+  ⚠ discord_admin (missing DISCORD_BOT_TOKEN)
+  ⚠ feishu_doc (system dependency not met)
+  ⚠ feishu_drive (system dependency not met)
+  ⚠ hermes-yuanbao (system dependency not met)
+  ⚠ homeassistant (system dependency not met)
+  ⚠ image_gen (system dependency not met)
+
+◆ Skills Hub
+  ✓ Skills Hub directory exists
+  ✓ Lock file OK (24 hub-installed skill(s))
+  ✓ GitHub token configured (authenticated API access)
+
+◆ Memory Provider
+  ✓ Honcho connected workspace=hermes mode=hybrid freq=async
+
+◆ Profiles
+  ✓ 13 profile(s) found
+  ✓   alexa: gateway running, deepseek-v4-flash-free, no alias
+  ✓   code-architect: nvidia/nemotron-3-nano-omni-30, no alias
+  ✓   creative-director: gateway running, deepseek-v4-flash-free, no alias
+  ✓   cto: gateway running, deepseek-v4-flash-free, no alias
+  ✓   designer: gateway running, deepseek-v4-flash-free, no alias
+  ✓   dev: gateway running, deepseek-v4-flash-free, no alias
+  ✓   exec-assistant: gateway running, deepseek-v4-flash-free, no alias
+  ✓   ops: gateway running, deepseek-v4-flash-free, no alias
+  ✓   patient-tutor: gateway running, deepseek-v4-flash-free, no alias
+  ✓   pm: gateway running, deepseek-v4-flash-free, no alias
+  ✓   qa: gateway running, deepseek-v4-flash-free, no alias
+  ✓   research-analyst: gateway running, deepseek-v4-flash-free, no alias
+  ✓   security: gateway running, deepseek-v4-flash-free, no alias
+
+────────────────────────────────────────────────────────────
+  All checks passed! 🎉
+
+No known vulnerabilities found across 209 component(s).
+
+┌─────────────────────────────────────────────────────────┐
+│                 ⚕ Hermes Agent Status                  │
+└─────────────────────────────────────────────────────────┘
+
+◆ Environment
+  Project:      C:\Users\Alexa\AppData\Local\hermes\hermes-agent
+  Python:       3.13.14
+  .env file:    ✓ exists
+  Model:        stepfun/step-3.7-flash:free
+  Provider:     Nous Portal
+
+◆ API Keys
+  OpenRouter    ✓ sk-o...0554
+  OpenAI        ✗ (not set)
+  Google / Gemini  ✓ AIza...9EfU
+  DeepSeek      ✓ sk-a...9f84
+  xAI / Grok    ✓ xai-...l0iu
+  NVIDIA NIM    ✗ (not set)
+  Z.AI / GLM    ✗ (not set)
+  Kimi          ✗ (not set)
+  StepFun Step Plan  ✗ (not set)
+  MiniMax       ✗ (not set)
+  MiniMax-CN    ✗ (not set)
+  DeepInfra     ✗ (not set)
+  Firecrawl     ✗ (not set)
+  Keenable      ✗ (not set)
+  Browser Use   ✗ (not set)
+  Browserbase   ✗ (not set)
+  FAL           ✗ (not set)
+  ElevenLabs    ✗ (not set)
+  GitHub        ✓ gho_...5pZk
+  Anthropic     ✗ (not set)
+
+◆ Auth Providers
+  Nous Portal   ✓ logged in
+    Portal URL: https://portal.nousresearch.com
+    Inference:  https://inference-api.nousresearch.com/v1
+    Access exp: 2026-08-31 19:01:16 W. Central Africa Standard Time
+    Key exp:    2026-08-31 19:01:16 W. Central Africa Standard Time
+    Refresh:    yes
+  OpenAI Codex  ✓ logged in
+    Auth file:  C:\Users\Alexa\AppData\Local\hermes\auth.json
+    Refreshed:  2026-08-28 17:50:05 W. Central Africa Standard Time
+  Qwen OAuth    ✗ not logged in (run: qwen auth qwen-oauth)
+    Auth file:  C:\Users\Alexa\.qwen\oauth_creds.json
+    Error:      Qwen CLI credentials not found. Run 'qwen auth qwen-oauth' first.
+  MiniMax OAuth  ✓ logged in
+    Region:     global
+    Access exp: 2027-08-31T16:20:05.475000+00:00
+  xAI OAuth     ✓ logged in
+    Auth file:  C:\Users\Alexa\AppData\Local\hermes\auth.json
+    Refreshed:  2026-08-31 14:01:00 W. Central Africa Standard Time
+
+◆ Nous Tool Gateway
+  Your Nous Portal account has no usable paid credits, so managed web, image, TTS, STT, browser, and Modal tools is unavailable. Add credits or update billing at https://portal.nousresearch.com/billing. If you recently bought credits, run `hermes model` to refresh Hermes.
+
+◆ API-Key Providers
+  Z.AI / GLM       ✗ not configured (run: hermes model)
+  Kimi / Moonshot  ✗ not configured (run: hermes model)
+  StepFun Step Plan ✗ not configured (run: hermes model)
+  MiniMax          ✗ not configured (run: hermes model)
+  MiniMax (China)  ✗ not configured (run: hermes model)
+  DeepInfra        ✗ not configured (run: hermes model)
+
+◆ Terminal Backend
+  Backend:      local
+  Sudo:         ✓ enabled
+
+◆ Messaging Platforms
+  Telegram      ✓ configured (home: 7043401427)
+  Discord       ✗ not configured
+  WhatsApp      ✗ not configured
+  Signal        ✗ not configured
+  Slack         ✗ not configured
+  Email         ✗ not configured
+  SMS           ✗ not configured
+  DingTalk      ✗ not configured
+  Feishu        ✗ not configured
+  WeCom         ✗ not configured
+  WeCom Callback  ✗ not configured
+  Weixin        ✗ not configured
+  BlueBubbles   ✗ not configured
+  QQBot         ✗ not configured
+  Yuanbao       ✗ not configured
+  A2A           ✓ configured (plugin)
+  Buzz          ✗ not configured (plugin)
+  DingTalk      ✗ not configured (plugin)
+  Email         ✗ not configured (plugin)
+  Feishu / Lark  ✗ not configured (plugin)
+  Matrix        ✗ not configured (plugin)
+  ntfy          ✗ not configured (plugin)
+  Raft          ✗ not configured (plugin)
+  Slack         ✓ configured (plugin)
+  SMS (Twilio)  ✗ not configured (plugin)
+  Telegram      ✓ configured (plugin)
+  WeCom (Enterprise WeChat)  ✓ configured (plugin)
+  WeCom Callback (self-built apps)  ✓ configured (plugin)
+  WhatsApp      ✓ configured (plugin)
+
+◆ Gateway Service
+  Status:       ✓ running
+  Manager:      manual process
+  PID(s):       8608
+
+◆ Scheduled Jobs
+  Jobs:         0 active, 2 total
+
+◆ Sessions
+  Active:       1 session(s)
+  Last activity:       6d ago
+  Slots:        1/10 in use
+                tui               20260831_180256_13a3ab   10m
+
+────────────────────────────────────────────────────────────
+  Run 'hermes doctor' for detailed diagnostics
+  Run 'hermes setup' to configure
+
+
+  ╔══════════════════════════════════════════════════════════╗
+  ║                    📊 Hermes Insights                    ║
+  ║                       Last 30 days                       ║
+  ╚══════════════════════════════════════════════════════════╝
+
+  Period: Aug 19, 2026 — Aug 31, 2026
+
+  📋 Overview
+  ────────────────────────────────────────────────────────
+  Sessions:          129           Messages:        7,401
+  Tool calls:        4,331         User messages:   288
+  Input tokens:      42,317,462    Output tokens:   1,636,397
+  Total tokens:      410,094,410
+  Active time:       ~29.0d        Avg session:     ~6h 6m
+  Avg msgs/session:  57.4
+
+  💰 Cost
+  ────────────────────────────────────────────────────────
+  Estimated:          ~$0.01
+  Included:           2 session(s) (subscription — no provider invoice)
+  Unknown:            100 session(s) (no pricing data)
+
+  🤖 Models Used
+  ────────────────────────────────────────────────────────
+  Model                          Sessions       Tokens
+  minimax-m3:free                      36  166,563,021
+  nemotron-3-ultra-free                20  138,317,991
+  laguna-s-2.1:free                    13   31,118,433
+  gpt-5.4-mini                          4   27,487,995
+  step-3.7-flash:free                  13   15,202,459
+  nemotron-3.5-lightning-free           1   13,673,941
+  nemotron-3-super:cloud                2    9,053,409
+  solar-pro4:free                       1    6,064,489
+  minimax-m3                            1    1,593,528
+  mimo-v2.5-free                        2      339,596
+  MiniMax-M3                            1      308,152
+  big-pickle                            1      221,033
+  gemini-2.5-flash                      2       88,599
+  nemotron-3-ultra-550b-a55b:f          7       59,560
+  nemotron-3-super                      2        1,925
+  gemini-3.6-flash                      1          279
+  gpt-5-mini                            0            0
+  deepseek-v4-flash-free                0            0
+
+  📱 Platforms
+  ────────────────────────────────────────────────────────
+  Platform       Sessions   Messages         Tokens
+  cli                  51      3,496    245,020,451
+  tui                  47      3,144    131,690,114
+  subagent             17        697     15,176,920
+  desktop              11         49     13,423,155
+  telegram              2         13        203,613
+  agent-provider-matrix        1          2         44,754
+
+  🔧 Top Tools
+  ────────────────────────────────────────────────────────
+  Tool                            Calls        %
+  terminal                        1,886    38.1%
+  read_file                       1,024    20.7%
+  skill_view                        404     8.2%
+  execute_code                      400     8.1%
+  write_file                        246     5.0%
+  search_files                      235     4.7%
+  patch                             234     4.7%
+  todo                              151     3.1%
+  tool_call                          68     1.4%
+  delegate_task                      59     1.2%
+  process                            52     1.1%
+  session_search                     47     0.9%
+  mcp__filesystem__list_directory       37     0.7%
+  web_search                         24     0.5%
+  mcp__sequential_thinking__sequentialthinking       13     0.3%
+  ... and 14 more tools
+
+  🧠 Top Skills
+  ────────────────────────────────────────────────────────
+  Skill                          Loads   Edits   Last used
+  using-superpowers                 26       0      Aug 31
+  user-communication-preferenc      25       0      Aug 31
+  plans-and-specs                   24       0      Aug 31
+  subagent-driven-development       22       0      Aug 31
+  create-implementation-plan        22       0      Aug 31
+  writing-clearly-and-concisel      19       0      Aug 31
+  plan                              19       0      Aug 31
+  executing-plans                   19       0      Aug 31
+  mcp-filesystem                    18       0      Aug 31
+  implementation-plan               18       0      Aug 31
+  Distinct skills: 74  Loads: 404  Edits: 3
+
+  📅 Activity Patterns
+  ────────────────────────────────────────────────────────
+  Mon  █████████████   45
+  Tue  ████            15
+  Wed  █               1
+  Thu                  0
+  Fri  ███████████████ 49
+  Sat  █████           19
+  Sun                  0
+
+  Peak hours: 2PM (20), 12AM (19), 1AM (14), 1PM (14), 5PM (14)
+  Active days: 6
+  Best streak: 2 consecutive days
+
+  🏆 Notable Sessions
+  ────────────────────────────────────────────────────────
+  Longest session      3.6d               (Aug 24, 20260824_230814_)
+  Most messages        759 msgs           (Aug 29, 20260829_004155_)
+  Most tokens          8,768,971 tokens   (Aug 28, 20260828_211004_)
+  Most tool calls      381 calls          (Aug 29, 20260829_004155_)
+

@@ -5,34 +5,28 @@ description: Generate an llms.txt file that summarizes a project for AI agents a
 trigger: /create-llms
 version: 1.0.0
 author: Hermes Agent
-tags:
-- documentation
-- llm
-- agents
-- project-bootstrap
-- markdown
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate an llms.txt file that summarizes a project for AI agents and LLM-powered tooling.
 
 ## Context
 
@@ -257,6 +251,14 @@ The created `llms.txt` file should:
 8. Organize content logically for easy consumption
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Detailed templates in `templates/create-llms/`:
 

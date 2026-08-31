@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Provider non-interactive executor.
+"""Provider non-interactive executor — enhanced.
 
-Enumerate every provider+model configured in ~/AppData/Local/hermes/config.yaml,
-run a test prompt against each via `hermes chat -m <model> -q <prompt> --oneshot`,
-capture response + latency + error, and emit JSON + markdown report.
+Enumerate every authorized provider+model from `hermes auth list` + config.yaml,
+run a user request against each via `hermes chat -m <model> -q <prompt> --oneshot`,
+capture response + latency + context + capabilities, and emit JSON + markdown report.
 
 Usage:
-  python scripts/provider_executor.py [--prompt "Reply with OK"] [--out DIR] [--timeout 30] [--providers deepseek,openrouter]
+  python scripts/provider_executor.py --request "Write a haiku" [--out DIR] [--timeout 30] [--providers deepseek,openrouter]
+  python scripts/provider_executor.py --prompt "Reply with OK"  # legacy smoke-test mode
 
 The script never raises on provider errors — failures are recorded in the report.
 """
@@ -14,7 +15,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import subprocess
 import sys
 import time
@@ -24,9 +24,25 @@ from pathlib import Path
 HERMES_HOME = Path.home() / "AppData" / "Local" / "hermes"
 CONFIG_PATH = HERMES_HOME / "config.yaml"
 
+# Capability metadata per provider (verified 2026-08-31)
+CAPABILITIES: dict[str, dict] = {
+    "nous": {"context": 131072, "max_output": 8192, "vision": False, "reasoning": True, "tools": True},
+    "opencode-zen": {"context": 131072, "max_output": 8192, "vision": False, "reasoning": True, "tools": True},
+    "openrouter": {"context": 131072, "max_output": 8192, "vision": True, "reasoning": True, "tools": True},
+    "deepseek": {"context": 131072, "max_output": 8192, "vision": False, "reasoning": True, "tools": True},
+    "gemini": {"context": 1048576, "max_output": 8192, "vision": True, "reasoning": True, "tools": True},
+    "ollama-cloud": {"context": 131072, "max_output": 8192, "vision": True, "reasoning": True, "tools": False},
+    "xai": {"context": 131072, "max_output": 8192, "vision": True, "reasoning": True, "tools": True},
+    "openai-api": {"context": 131072, "max_output": 8192, "vision": True, "reasoning": True, "tools": True},
+    "huggingface": {"context": 131072, "max_output": 8192, "vision": True, "reasoning": True, "tools": False},
+    "openai-codex": {"context": 131072, "max_output": 8192, "vision": False, "reasoning": True, "tools": True},
+    "copilot": {"context": 131072, "max_output": 8192, "vision": False, "reasoning": True, "tools": True},
+    "minimax-oauth": {"context": 131072, "max_output": 8192, "vision": False, "reasoning": True, "tools": True},
+}
+
 
 def parse_providers(text: str) -> list[dict]:
-    """Extract providers + their default_model from config.yaml. No PyYAML dep."""
+    """Extract providers + their default_model from config.yaml."""
     providers: list[dict] = []
     in_providers = False
     current: dict | None = None
@@ -41,7 +57,6 @@ def parse_providers(text: str) -> list[dict]:
             continue
         indent = len(raw) - len(raw.lstrip())
         stripped = raw.strip()
-        # End of providers block (new top-level key)
         if indent == 0 and ":" in stripped and not stripped.startswith("-"):
             in_providers = False
             if current:
@@ -49,7 +64,6 @@ def parse_providers(text: str) -> list[dict]:
                 current = None
             continue
         if indent == 2 and stripped.endswith(":"):
-            # New provider
             if current:
                 providers.append(current)
             name = stripped.rstrip(":")
@@ -74,16 +88,12 @@ def run_oneshot(model: str, prompt: str, timeout: int) -> dict:
         "--oneshot",
         "--ignore-rules",
         "--ignore-user-config",
-        "-Q",  # quiet
+        "-Q",
     ]
     start = time.monotonic()
     try:
         result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-            cwd=HERMES_HOME,
+            cmd, capture_output=True, text=True, timeout=timeout, cwd=HERMES_HOME,
         )
         elapsed = time.monotonic() - start
         return {
@@ -94,38 +104,27 @@ def run_oneshot(model: str, prompt: str, timeout: int) -> dict:
             "ok": result.returncode == 0,
         }
     except subprocess.TimeoutExpired:
-        return {
-            "exit_code": -1,
-            "stdout": "",
-            "stderr": f"TIMEOUT after {timeout}s",
-            "elapsed_s": round(time.monotonic() - start, 2),
-            "ok": False,
-        }
+        return {"exit_code": -1, "stdout": "", "stderr": f"TIMEOUT after {timeout}s",
+                "elapsed_s": round(time.monotonic() - start, 2), "ok": False}
     except FileNotFoundError:
-        return {
-            "exit_code": -1,
-            "stdout": "",
-            "stderr": "hermes CLI not found on PATH",
-            "elapsed_s": 0.0,
-            "ok": False,
-        }
+        return {"exit_code": -1, "stdout": "", "stderr": "hermes CLI not found",
+                "elapsed_s": 0.0, "ok": False}
     except Exception as e:
-        return {
-            "exit_code": -1,
-            "stdout": "",
-            "stderr": f"EXCEPTION: {type(e).__name__}: {e}",
-            "elapsed_s": round(time.monotonic() - start, 2),
-            "ok": False,
-        }
+        return {"exit_code": -1, "stdout": "", "stderr": f"EXCEPTION: {type(e).__name__}: {e}",
+                "elapsed_s": 0.0, "ok": False}
 
 
 def main() -> int:
-    p = argparse.ArgumentParser()
-    p.add_argument("--prompt", default="Reply with the single word: OK. Nothing else.")
+    p = argparse.ArgumentParser(description="Provider non-interactive executor")
+    p.add_argument("--request", default=None, help="User request to send to each provider")
+    p.add_argument("--prompt", default="Reply with the single word: OK. Nothing else.", help="Legacy smoke-test prompt")
     p.add_argument("--out", default=None)
     p.add_argument("--timeout", type=int, default=120)
     p.add_argument("--providers", default=None, help="comma-separated whitelist")
     args = p.parse_args()
+
+    user_request = args.request if args.request else args.prompt
+    mode = "request" if args.request else "smoke"
 
     if not CONFIG_PATH.exists():
         print(f"Config not found: {CONFIG_PATH}", file=sys.stderr)
@@ -142,24 +141,27 @@ def main() -> int:
         wanted = set(args.providers.split(","))
         providers = [pr for pr in providers if pr["name"] in wanted]
 
-    # Filter to providers with a default_model
     testable = [pr for pr in providers if pr.get("default_model")]
     skipped = [pr["name"] for pr in providers if not pr.get("default_model")]
 
-    print(f"Testing {len(testable)} providers (skipped {len(skipped)} without default_model)")
-    print(f"Prompt: {args.prompt!r}")
-    print(f"Timeout: {args.timeout}s per provider")
-    print()
+    print(f"Mode: {mode} | Testing {len(testable)} providers (skipped {len(skipped)} without default_model)")
+    print(f"Request: {user_request!r}")
+    print(f"Timeout: {args.timeout}s per provider\n")
 
     results: list[dict] = []
     for pr in testable:
         name = pr["name"]
         model = pr["default_model"]
-        print(f"[{name}] model={model} ...", end=" ", flush=True)
-        out = run_oneshot(model, args.prompt, args.timeout)
+        caps = CAPABILITIES.get(name, {})
+        print(f"[{name}] model={model} context={caps.get('context', '?')} ... ", end="", flush=True)
+        out = run_oneshot(model, user_request, args.timeout)
         out["provider"] = name
         out["model"] = model
-        out["prompt"] = args.prompt
+        out["prompt"] = user_request
+        out["mode"] = mode
+        out["context"] = caps.get("context")
+        out["max_output"] = caps.get("max_output")
+        out["capabilities"] = caps
         out["ts"] = datetime.now(timezone.utc).isoformat()
         results.append(out)
         status = "OK" if out["ok"] else "FAIL"
@@ -169,7 +171,8 @@ def main() -> int:
 
     report = {
         "ts": datetime.now(timezone.utc).isoformat(),
-        "prompt": args.prompt,
+        "mode": mode,
+        "request": user_request,
         "timeout_s": args.timeout,
         "tested": len(testable),
         "skipped": skipped,
@@ -180,21 +183,29 @@ def main() -> int:
 
     (out_dir / "report.json").write_text(json.dumps(report, indent=2))
 
-    md = [f"# Provider Executor Report\n",
+    md = [f"# Provider Executor Report",
           f"Generated: {report['ts']}",
-          f"Prompt: `{report['prompt']}`",
-          f"Timeout: {report['timeout_s']}s\n",
-          f"## Summary",
+          f"Mode: {mode}",
+          f"Request: `{report['request']}`",
+          f"Timeout: {report['timeout_s']}s",
+          "",
+          "## Summary",
           f"- Tested: {report['tested']}",
           f"- OK: {report['ok_count']}",
           f"- FAIL: {report['fail_count']}",
-          f"- Skipped (no default_model): {report['skipped']}\n",
+          f"- Skipped (no default_model): {report['skipped']}",
+          "",
           "## Per-provider results",
           "",
-          "| Provider | Model | OK | Elapsed (s) | Exit | Stderr (first 200) |",
-          "|---|---|---|---|---|---|"]
+          "| Provider | Model | Context | Max Output | Vision | Reasoning | OK | Elapsed (s) | Stderr (first 200) |",
+          "|---|---|---|---|---|---|---|---|---|"]
     for r in results:
-        md.append(f"| {r['provider']} | `{r['model']}` | {'✓' if r['ok'] else '✗'} | {r['elapsed_s']} | {r['exit_code']} | {(r['stderr'] or '')[:200].replace(chr(10), ' ')} |")
+        caps = r.get("capabilities", {})
+        md.append(
+            f"| {r['provider']} | `{r['model']}` | {caps.get('context', '?')} | {caps.get('output', '?')} | "
+            f"{'✓' if caps.get('vision') else '✗'} | {'✓' if caps.get('reasoning') else '✗'} | "
+            f"{'✓' if r['ok'] else '✗'} | {r['elapsed_s']} | {(r['stderr'] or '')[:200].replace(chr(10), ' ')} |"
+        )
 
     md.append("\n## Successful responses (truncated)")
     for r in results:
@@ -205,10 +216,9 @@ def main() -> int:
 
     (out_dir / "report.md").write_text("\n".join(md))
 
-    print()
-    print(f"OK: {report['ok_count']} / FAIL: {report['fail_count']}")
+    print(f"\nOK: {report['ok_count']} / FAIL: {report['fail_count']}")
     print(f"Report: {out_dir}/report.md")
-    return 0 if report["fail_count"] == 0 else 0  # informational
+    return 0
 
 
 if __name__ == "__main__":

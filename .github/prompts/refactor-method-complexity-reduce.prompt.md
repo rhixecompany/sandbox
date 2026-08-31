@@ -6,29 +6,28 @@ trigger: /refactor-method-complexity-reduce
 version: 1.0.0
 author: Hermes Agent
 tags: [refactor, code-quality, complexity, testing, javascript, typescript]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Refactor a given method to reduce its cognitive complexity to a target threshold or below by extracting focused helper methods, with mandatory test verification.
 
 ## Context
 
@@ -277,8 +276,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`refactor-code.prompt.md`](refactor-code.prompt.md)
 - [`refactor-mardown-files.prompt.md`](refactor-mardown-files.prompt.md)
 - [`refactor-plan.prompt.md`](refactor-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

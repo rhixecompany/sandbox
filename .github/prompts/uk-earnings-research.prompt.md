@@ -5,35 +5,28 @@ description: Identify and validate UK earning platforms that are genuinely bette
 trigger: /uk-earnings-research
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - research
-  - uk
-  - earnings
-  - income-generation
-  - platforms
-  - web-research
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll across pay, reliability, barrier to entry, and payout speed.
 
 ## Context
 
@@ -406,6 +399,14 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 ---
 
 ## Trigger Phrase
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 > **"/uk-earnings-research-pipeline"** — loads this entire prompt as the task instruction
 

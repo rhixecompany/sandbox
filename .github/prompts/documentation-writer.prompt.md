@@ -5,35 +5,28 @@ description: Write the four canonical documentation types — guides, references
 trigger: /documentation-writer
 version: 1.0.0
 author: Hermes Agent
-tags:
-- documentation
-- writing
-- guides
-- tutorials
-- references
-- communication
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Write the four canonical documentation types — guides, references, explanations, and tutorials — with guiding principles and contextual awareness.
 
 ## Context
 
@@ -274,6 +267,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`documentation.prompt.md`](documentation.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -1,39 +1,32 @@
 ---
 name: devops-rollout-plan
 title: DevOps Rollout Plan
-description: "Generate a DevOps rollout plan from a change description: intake context, define inputs/outputs, and produce an executive-summary-style plan."
+description: Generate a DevOps rollout plan from a change description: intake context, define inputs/outputs, and produce an executive-summary-style plan.
 trigger: /devops-rollout-plan
 version: 1.0.0
 author: Hermes Agent
-tags:
-- devops
-- rollout
-- planning
-- release
-- operations
-- automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate a DevOps rollout plan from a change description: intake context, define inputs/outputs, and produce an executive-summary-style plan.
 
 ## Context
 
@@ -267,8 +260,16 @@ Shared workspace hooks run around this prompt's execution — see [`.github/hook
 
 ## Scripts
 
+## Workflow
+
+<content>
+
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

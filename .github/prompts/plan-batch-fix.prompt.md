@@ -5,35 +5,28 @@ description: Performs a full scan, batches fixes by priority, verifies per batch
 trigger: /plan-batch-fix
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - batch
-  - fix
-  - lint
-  - refactor
-  - planning
-  - devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Performs a full scan, batches fixes by priority, verifies per batch with git commits, then re-scans and writes docs/batch-fix-report.md with before/after counts.
 
 ## Context
 
@@ -289,3 +282,7 @@ Same-family prompts:
 - [`plan-audit.prompt.md`](plan-audit.prompt.md)
 - [`plan-execute.prompt.md`](plan-execute.prompt.md)
 - [`plan-generate.prompt.md`](plan-generate.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

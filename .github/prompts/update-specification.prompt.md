@@ -5,34 +5,28 @@ description: Update an existing solution specification optimized for Generative 
 trigger: /update-specification
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - specification
-  - documentation
-  - ai-ready
-  - planning
-  - maintenance
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Update an existing solution specification optimized for Generative AI consumption based on new requirements or updates to existing code.
 
 ## Context
 
@@ -323,6 +317,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

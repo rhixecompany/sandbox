@@ -5,35 +5,28 @@ description: Generates a complete, idiomatic application scaffold (controllers, 
 trigger: /openapi-to-application-code
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - openapi
-  - api
-  - codegen
-  - backend
-  - scaffolding
-  - documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a complete, idiomatic application scaffold (controllers, services, models, tests) from an OpenAPI specification in the target framework.
 
 ## Context
 
@@ -283,6 +276,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`migrate-to-next16.prompt.md`](migrate-to-next16.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

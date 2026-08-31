@@ -5,35 +5,28 @@ description: Run a web search → extract full content → save as formatted mar
 trigger: /web-research-pipeline
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - research
-  - web
-  - tavily
-  - pipeline
-  - automation
-  - search
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Run a web search → extract full content → save as formatted markdown pipeline using a Tavily-first approach with fetch MCP fallback for robust research capture.
 
 ## Context
 
@@ -205,3 +198,7 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`repo-research-pipeline.prompt.md`](repo-research-pipeline.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

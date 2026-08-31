@@ -1,40 +1,32 @@
 ---
 name: csharp-docs
 title: C# API Documentation
-description: "Generate comprehensive XML documentation comments and API docs for C# classes, methods, properties, and exceptions following .NET documentation conventions."
+description: Generate comprehensive XML documentation comments and API docs for C# classes, methods, properties, and exceptions following .NET documentation conventions.
 trigger: /csharp-docs
 version: 1.0.0
 author: Hermes Agent
-tags:
-- csharp
-- dotnet
-- documentation
-- api
-- xml-docs
-- coding
-- tooling
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate comprehensive XML documentation comments and API docs for C# classes, methods, properties, and exceptions following .NET documentation conventions.
 
 ## Context
 
@@ -297,6 +289,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`csharp-async.prompt.md`](csharp-async.prompt.md)
@@ -305,3 +301,7 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

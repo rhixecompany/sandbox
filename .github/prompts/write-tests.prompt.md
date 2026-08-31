@@ -5,35 +5,28 @@ description: Generate unit or end-to-end tests for a component or module followi
 trigger: /write-tests
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - testing
-  - unit-tests
-  - e2e
-  - generator
-  - automation
-  - quality
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate unit or end-to-end tests for a component or module following the shared testing templates and verification checklist.
 
 ## Context
 
@@ -240,6 +233,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`write-coding-standards-from-file.prompt.md`](write-coding-standards-from-file.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

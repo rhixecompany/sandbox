@@ -5,36 +5,29 @@ description: Analyzes differences between two project versions (branches, commit
 trigger: /generate-custom-instructions-from-codebase
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - github
-  - copilot
-  - migration
-  - refactor
-  - tooling
-  - documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Analyzes differences between two project versions (branches, commits, or releases) and produces migration/refactor instructions for GitHub Copilot to maintain consistency during upgrades.
 
 ## Context
 
@@ -386,6 +379,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

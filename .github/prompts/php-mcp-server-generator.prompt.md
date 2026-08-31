@@ -5,35 +5,28 @@ description: Generates a complete, production-ready PHP Model Context Protocol s
 trigger: /php-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - php
-  - mcp
-  - server-generator
-  - scaffolding
-  - sdk
-  - backend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a complete, production-ready PHP Model Context Protocol server project with tools, resources, prompts, and PHPUnit tests using the official PHP SDK.
 
 ## Context
 
@@ -206,6 +199,14 @@ npx @modelcontextprotocol/inspector php server.php
 Now generate the complete project based on user requirements!
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Detailed templates in `templates/php-mcp-server-generator/`:
 - `development.md`

@@ -5,38 +5,29 @@ description: Inventories all installed VS Code extensions, researches their docu
 trigger: /list-all-installed-vscode-extension
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - vscode
-  - extensions
-  - inventory
-  - research
-  - configuration
-  - devops
-  - tooling
-  - audit
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Inventories all installed VS Code extensions, researches their documentation, and applies findings to optimize user and workspace settings.
 
 ## Context
 

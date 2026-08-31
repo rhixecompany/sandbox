@@ -7,25 +7,22 @@ version: 1.0.0
 author: Hermes Agent
 license: MIT
 tags: [hermes, diagnostic, doctor, log-triage, verification]
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
-metadata:
-  hermes:
-    profile: default
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-  opencode:
-    command: "opencode //hermes-doctor"
-    flags: {{}}
-  codex:
-    model_override: null
+metadata: 
+hermes: 
+profile: default
+context_size: medium
+copilot: 
+extensions: []
+opencode: 
+command: opencode //hermes-doctor
+flags: {{}}
+codex: 
+model_override: null
 ---
 
 # Hermes Doctor Diagnostic
@@ -100,7 +97,20 @@ Full-platform health pass with classified findings.
 
 ## See Also
 
+## Goal
+Run a full Hermes platform diagnostic battery (doctor/--fix/security/status/insights + log triage + bun run check) and produce a classified report. Use for "find all hermes bugs", pre-deploy checks, or post-upgrade audits.
+
+## Context
+
+<content>
+
+<content>
+
 - `hermes-diagnostic-repair` (skill) — deep repair workflow with code-patching
 - `log-analysis-and-triage` (skill) — Hermes log classification reference
 - `systematic-debugging` (skill) — for each real_bug finding
 - `scripts/hermes_doctor.py` — the implementation
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

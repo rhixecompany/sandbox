@@ -1,0 +1,51 @@
+--- ~/AppData/Local/hermes/logs/gateway.log (last 50) ---
+2026-08-29 05:08:22,747 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:22,873 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Sticky Telegram path 149.154.166.110 failed; re-walking IPv4 literals before the hostname
+2026-08-29 05:08:22,874 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:08:22,912 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:22,941 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:22,942 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:33,031 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:08:33,075 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:33,101 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:33,102 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:53,230 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:08:53,254 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:53,278 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:53,278 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 4/10), reconnecting in 40s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:09:17,810 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:09:17,841 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:09:33,319 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:09:33,355 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:09:33,388 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:09:33,388 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 5/10), reconnecting in 60s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-31 14:28:51,721 WARNING gateway.lifecycle_ledger: Previous gateway life (pid=7556, started_at=2026-08-29T03:08:54.442638+00:00) exited UNCLEANLY (no exit path ran — SIGKILL / OOM / VM death). last_heartbeat_at=2026-08-29T04:58:51.691571+00:00 last_mem=None suspected_oom=False
+2026-08-31 14:30:05,667 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-08-31 14:30:06,830 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-08-31 14:30:31,488 WARNING gateway.shutdown_watchdog: Loop tick socket unavailable — liveness probes will have no loop-scheduling witness and will not escalate on a stale heartbeat
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\gateway\shutdown_watchdog.py", line 572, in loop_heartbeat_forever
+    tick_server = await asyncio.start_unix_server(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'asyncio' has no attribute 'start_unix_server'. Did you mean: 'start_server'?
+2026-08-31 15:15:28,336 WARNING gateway.lifecycle_ledger: Previous gateway life (pid=8340, started_at=2026-08-31T13:28:52.989053+00:00) exited UNCLEANLY (no exit path ran — SIGKILL / OOM / VM death). last_heartbeat_at=2026-08-31T14:11:03.876415+00:00 last_mem=None suspected_oom=False
+2026-08-31 15:15:54,723 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:15:54,752 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:15:54,752 WARNING gateway.run: ✗ telegram failed to connect
+2026-08-31 15:15:54,776 WARNING gateway.run: ✗ webhook failed to connect
+2026-08-31 15:15:54,812 WARNING gateway.run: Gateway started with no connected platforms — 2 platform(s) queued for retry: telegram: Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).; webhook: failed to connect
+2026-08-31 15:15:54,833 WARNING gateway.run: No adapter could be created for any of the 2 configured platform(s). Check that required dependencies are installed and credentials are set. Gateway will continue for cron job execution.
+2026-08-31 15:15:55,070 WARNING gateway.shutdown_watchdog: Loop tick socket unavailable — liveness probes will have no loop-scheduling witness and will not escalate on a stale heartbeat
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\gateway\shutdown_watchdog.py", line 572, in loop_heartbeat_forever
+    tick_server = await asyncio.start_unix_server(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'asyncio' has no attribute 'start_unix_server'. Did you mean: 'start_server'?
+2026-08-31 15:16:25,736 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:16:25,773 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:17:36,558 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:17:38,823 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:19:45,733 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-08-31 15:19:46,365 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-08-31 17:25:07,896 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling degraded (heartbeat probe); gateway stays alive and will retry. Error: 
+2026-08-31 17:25:08,250 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: 

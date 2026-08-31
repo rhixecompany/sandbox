@@ -5,36 +5,28 @@ description: Universal SQL performance optimization assistant for query tuning, 
 trigger: /sql-optimization
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- backend
-- sql
-- performance
-- documentation
-- qa
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Universal SQL performance optimization assistant for query tuning, indexing strategies, execution plan analysis, pagination optimization, batch operations, and monitoring across MySQL, PostgreSQL, SQL Server, and Oracle.
 
 ## Context
 
@@ -323,6 +315,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

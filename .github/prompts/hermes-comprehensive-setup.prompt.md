@@ -5,38 +5,29 @@ description: Executes the hermes-comprehensive-setup workflow to install, config
 trigger: /hermes-comprehensive-setup
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - setup
-  - hermes
-  - automation
-  - configuration
-  - planning
-  - devops
-  - onboarding
-  - agent
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Executes the hermes-comprehensive-setup workflow to install, configure, and verify all Hermes Agent components end-to-end.
 
 ## Context
 
@@ -242,6 +233,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`hermes-breakdown-epic-arch.prompt.md`](hermes-breakdown-epic-arch.prompt.md)
@@ -251,3 +246,7 @@ Same-family prompts:
 - [`hermes-breakdown-plan.prompt.md`](hermes-breakdown-plan.prompt.md)
 - [`hermes-breakdown-test.prompt.md`](hermes-breakdown-test.prompt.md)
 - [`hermes-doctor-systematic-debugging.prompt.md`](hermes-doctor-systematic-debugging.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -6,29 +6,28 @@ trigger: /refactor-mardown-files
 version: 1.0.0
 author: Hermes Agent
 tags: [refactor, markdown, documentation, diataxis, agents-md, copilot-instructions]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Refactor and update repository documentation files (AGENTS.md, .cursorrules, .github/copilot-instructions.md) to maximize clarity, actionability, and AI agent productivity using Diátaxis principles.
 
 ## Context
 
@@ -304,8 +303,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`refactor-code.prompt.md`](refactor-code.prompt.md)
 - [`refactor-method-complexity-reduce.prompt.md`](refactor-method-complexity-reduce.prompt.md)
 - [`refactor-plan.prompt.md`](refactor-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

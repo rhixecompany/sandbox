@@ -1,28 +1,28 @@
 ---
 name: multi-agent-fanout
-title: "Multi-Agent Fanout"
-description: "Use when you need to enumerate authorized LLM providers, inspect installed SDK packages, and run a prompt non-interactively across the (provider × agent) matrix. Returns structured per-cell results with provider, model, context, max_output, capabilities, status, latency, output."
+title: Multi-Agent Fanout
+description: Use when you need to enumerate authorized LLM providers, inspect installed SDK packages, and run a prompt non-interactively across the (provider × agent) matrix. Returns structured per-cell results with provider, model, context, max_output, capabilities, status, latency, output.
 trigger: /multi-agent-fanout
 agent: adminbot
 model: minimax/minimax-m3:free
 tools: [terminal, read_file, write_file, patch, search_files, skill_view]
-metadata:
-  hermes:
-    tags: [multi-agent, providers, fanout, devops]
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+tags: [multi-agent, providers, fanout, devops]
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 version: 1.0.0
 author: Hermes Agent
 ---
+
 ## Table of Contents
 
 ## Goal
+Use when you need to enumerate authorized LLM providers, inspect installed SDK packages, and run a prompt non-interactively across the (provider × agent) matrix. Returns structured per-cell results with provider, model, context, max_output, capabilities, status, latency, output.
 
 ## Context
 

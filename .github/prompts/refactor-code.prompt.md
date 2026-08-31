@@ -6,29 +6,28 @@ trigger: /refactor-code
 version: 1.0.0
 author: Hermes Agent
 tags: [refactor, code, maintainability, migration, drizzle, nextjs]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Refactor code for maintainability and standards, including migrations such as legacy auth/ORM replacements, using a phased minimal-change approach with verification.
 
 ## Context
 
@@ -269,8 +268,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`refactor-mardown-files.prompt.md`](refactor-mardown-files.prompt.md)
 - [`refactor-method-complexity-reduce.prompt.md`](refactor-method-complexity-reduce.prompt.md)
 - [`refactor-plan.prompt.md`](refactor-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

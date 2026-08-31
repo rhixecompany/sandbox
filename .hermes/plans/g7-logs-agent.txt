@@ -1,0 +1,51 @@
+--- ~/AppData/Local/hermes/logs/agent.log (last 50) ---
+openai.RateLimitError: Error code: 429 - {'status': 429, 'message': "Hold up for a bit, you've exceeded the rate limit on your API key."}
+2026-08-31 18:10:14,650 ERROR [20260831_180914_636634] agent.conversation_loop: [subagent-1] API call failed after 3 retries. HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key. | provider=nous model=stepfun/step-3.7-flash:free msgs=12 tokens=~27,235
+2026-08-31 18:10:18,882 ERROR [20260831_180913_46f845] agent.conversation_loop: [subagent-0] API call failed after 3 retries. HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key. | provider=nous model=stepfun/step-3.7-flash:free msgs=18 tokens=~29,034
+2026-08-31 18:10:23,355 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': "Hold up for a bit, you've exceeded the rate limit on your API key."}
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 4851, in _call
+    result["response"] = _call_chat_completions(stream_attempt_id)
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 4120, in _call_chat_completions
+    relay_llm.stream(
+    ~~~~~~~~~~~~~~~~^
+        api_kwargs,
+        ^^^^^^^^^^^
+    ...<19 lines>...
+        defer_logical_completion=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 395, in stream
+    return ManagedLlmStream(
+        request,
+    ...<11 lines>...
+        defer_logical_completion=defer_logical_completion,
+    )
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 478, in __init__
+    raw_stream = stream_factory(request)
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 4057, in _open_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'message': "Hold up for a bit, you've exceeded the rate limit on your API key."}
+2026-08-31 18:10:23,516 ERROR [20260831_180256_13a3ab] agent.conversation_loop: API call failed after 3 retries. HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key. | provider=nous model=stepfun/step-3.7-flash:free msgs=72 tokens=~122,364
+2026-08-31 18:10:24,855 ERROR [20260831_180914_b1af67] agent.conversation_loop: [subagent-0] API call failed after 3 retries. HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key. | provider=nous model=stepfun/step-3.7-flash:free msgs=15 tokens=~39,710
+2026-08-31 18:10:27,871 ERROR [20260831_180913_c0b453] agent.conversation_loop: [subagent-1] API call failed after 3 retries. HTTP 429: Hold up for a bit, you've exceeded the rate limit on your API key. | provider=nous model=stepfun/step-3.7-flash:free msgs=19 tokens=~42,891

@@ -6,29 +6,28 @@ trigger: /remember-interactive-programming
 version: 1.0.0
 author: Hermes Agent
 tags: [memory, interactive-programming, repl, clojure, reminder]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Remind the agent that it is an interactive programmer with access to a live REPL, encouraging exploration-first workflows suited to REPL-driven languages like Clojure.
 
 ## Context
 
@@ -235,6 +234,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`remember.prompt.md`](remember.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

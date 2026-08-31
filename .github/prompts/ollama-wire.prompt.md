@@ -5,20 +5,12 @@ trigger: /ollama-wire
 version: 1.0.0
 author: Hermes Agent
 license: MIT
-tags:
-- ollama
-- local-model
-- hermes-core
-metadata:
-  hermes:
-    tags:
-    - ollama
-    - local-model
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 title: Ollama Wire (4-Agent)
@@ -81,9 +73,26 @@ Wire a local ollama model into the four AI agents used in the workspace.
 
 ## Verification
 
+## Goal
+Wire a local ollama model into Hermes, OpenCode (oh-my-opencode), Codex, and Copilot. Detects models on disk, patches all 4 configs, verifies the wiring.
+
+## Context
+
+## Workflow
+
+<content>
+
+<content>
+
+<content>
+
 - [ ] All 4 configs reference the same model
 - [ ] `ollama list` shows the model
 - [ ] `hermes chat` returns a response
 - [ ] No regression in other providers
 
 See `~/AppData/Local/hermes/skills/devops/ollama-wire/SKILL.md` for the full skill.
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -6,26 +6,24 @@ trigger: /repo-init
 version: 1.0.0
 author: Hermes Agent
 tags: [repo, initialization, triage, dedupe, consolidation, cleanup]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 - [Goal](#goal)
@@ -160,3 +158,7 @@ Load these skills in order before any triage, dedupe, or delete step. Each skill
 - Authoring new content (covered by `prompt-builder.prompt.md`).
 - Cross-platform migration of prompts (covered by `prompts-fix.prompt.md`).
 - Workspace-level onboarding (covered by `repo.prompt.md`).
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

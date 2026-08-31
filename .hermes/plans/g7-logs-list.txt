@@ -1,0 +1,44 @@
+Log files in ~/AppData/Local/hermes/logs/:
+
+  action-curator-run.log        807B   2026-08-11
+  action-doctor.log           12.5KB   2026-08-19
+  action-security-audit.log    3.8KB   2026-08-19
+  action-skills-install-agent-hooks-21d3eec4.log    8.4KB   2026-08-11
+  action-skills-install-agentmemory-hooks-1da657c2.log    1.4KB   2026-08-11
+  action-skills-install-automation-scripts-87f17be5.log     394B   2026-08-11
+  action-skills-install-browse-sh-agent-email-get-email-inbox-5e963107.log     233B   2026-08-11
+  action-skills-install-browse-sh-agentpowers-ai-search-skills-plugins-s-422cdd19.log    1.1KB   2026-08-11
+  action-skills-install-bun-scripts-0188e601.log     196B   2026-08-11
+  action-skills-install-devops-scripts-224aaa27.log     211B   2026-08-11
+  action-skills-install-git-hooks-generator-d3ed007b.log     236B   2026-08-11
+  action-skills-install-git-hooks-manager-1acaec54.log     226B   2026-08-11
+  action-skills-install-git-hooks-toolkit-d1a18d38.log     226B   2026-08-11
+  action-skills-install-init-hooks-33601839.log     191B   2026-08-11
+  action-skills-install-live-qa-scripts-bef61c17.log     217B   2026-08-11
+  action-skills-install-milaex-crypto-api-61c38fe7.log     308B   2026-08-11
+  action-skills-install-official-autonomous-ai-agents-antigravity-cli-c50527af.log     286B   2026-08-11
+  action-skills-install-prompt-9c7e05e5.log     184B   2026-08-11
+  action-skills-install-react-game-loop-a621caf2.log     222B   2026-08-11
+  action-skills-install-realtime-react-hooks-3ca811ed.log     241B   2026-08-11
+  action-skills-install-senpub-124ab220.log     181B   2026-08-11
+  action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log    1.8KB   2026-08-11
+  action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log     967B   2026-08-11
+  action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log    1.4KB   2026-08-11
+  action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log    1.6KB   2026-08-11
+  action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log    1.5KB   2026-08-11
+  action-skills-install-solo-plan-14e77242.log     181B   2026-08-11
+  action-skills-install-trpg-data-context-hooks-24858dd4.log     259B   2026-08-11
+  action-skills-update.log   159.9KB   2026-08-11
+  agent.log                    1.7MB   just now
+  bootstrap-installer.log    337.9KB   2026-08-19
+  desktop.log                280.2KB   2026-08-25
+  errors.log                  26.0KB   just now
+  gateway-exit-diag.log       23.2KB   2h ago
+  gateway-restart.log           137B   2026-08-11
+  gateway-stdio.log          531.2KB   3h ago
+  gateway.log                  2.8MB   46m ago
+  gui.log                      3.1KB   49m ago
+  hooks.log                    5.2KB   47m ago
+  mcp-stderr.log              16.1MB   9m ago
+  tui_gateway_crash.log       22.7KB   9m ago
+  update.log                 254.8KB   3h ago

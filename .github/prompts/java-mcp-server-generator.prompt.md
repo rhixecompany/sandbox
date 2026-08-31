@@ -5,38 +5,29 @@ description: Generates a complete Java Model Context Protocol (MCP) server proje
 trigger: /java-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - java
-  - mcp
-  - server
-  - generator
-  - scaffolding
-  - backend
-  - tooling
-  - model-context-protocol
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a complete Java Model Context Protocol (MCP) server project with proper structure, dependencies, and tool implementations.
 
 ## Context
 
@@ -311,6 +302,14 @@ MIT
 ```
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Detailed section templates in `templates/java-mcp-server-generator/`:
 

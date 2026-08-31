@@ -5,38 +5,29 @@ description: Diagnoses, fixes, and verifies all actionable Hermes Agent issues, 
 trigger: /hermes-doctor-systematic-debugging
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - hermes
-  - debugging
-  - doctor
-  - remediation
-  - diagnostics
-  - automation
-  - agent
-  - platform
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Diagnoses, fixes, and verifies all actionable Hermes Agent issues, warnings, and errors using the live installation.
 
 ## Context
 
@@ -418,6 +409,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

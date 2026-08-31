@@ -5,35 +5,29 @@ description: Acts as an AI agent to polish and finalize a prompt file for the en
 trigger: /finalize-agent-prompt
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - prompts
-  - refactor
-  - documentation
-  - agent
-  - polish
-metadata:
-  hermes:
-    profile: code-architect
-    priority: low
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: low
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Acts as an AI agent to polish and finalize a prompt file for the end user, tightening instructions and structure.
 
 ## Context
 
@@ -253,7 +247,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`multi-agent-research-template.prompt.md`](multi-agent-research-template.prompt.md)
 - [`refresh-agent-inventory.prompt.md`](refresh-agent-inventory.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

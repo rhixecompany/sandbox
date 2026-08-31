@@ -5,36 +5,29 @@ description: Turns an Epic PRD into a high-level architecture specification with
 trigger: /hermes-breakdown-epic-arch
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - hermes
-  - breakdown
-  - architecture
-  - epic
-  - planning
-  - documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Turns an Epic PRD into a high-level architecture specification with layers, enablers, and technology guidance.
 
 ## Context
 
@@ -231,6 +224,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`hermes-breakdown-epic-pm.prompt.md`](hermes-breakdown-epic-pm.prompt.md)
@@ -240,3 +237,7 @@ Same-family prompts:
 - [`hermes-breakdown-test.prompt.md`](hermes-breakdown-test.prompt.md)
 - [`hermes-comprehensive-setup.prompt.md`](hermes-comprehensive-setup.prompt.md)
 - [`hermes-doctor-systematic-debugging.prompt.md`](hermes-doctor-systematic-debugging.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

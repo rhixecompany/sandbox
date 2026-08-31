@@ -6,29 +6,28 @@ trigger: /prompts-fix
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, sync, platform-integration, drift, validation, dedupe]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Sync .prompt.md files across Hermes and Copilot platforms by discovering drift, mapping equivalents, applying minimal sync corrections, and verifying schema integrity.
 
 ## Context
 
@@ -240,6 +239,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`prompts-strict-template.prompt.md`](prompts-strict-template.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

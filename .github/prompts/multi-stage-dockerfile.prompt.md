@@ -5,38 +5,29 @@ description: Creates optimized multi-stage Dockerfiles for any language or frame
 trigger: /multi-stage-dockerfile
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - docker
-  - dockerfile
-  - multi-stage
-  - container
-  - devops
-  - optimization
-  - security
-  - tooling
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Creates optimized multi-stage Dockerfiles for any language or framework, focusing on layer caching, image size, and security.
 
 ## Context
 
@@ -274,6 +265,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`multi-agent-research-template.prompt.md`](multi-agent-research-template.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

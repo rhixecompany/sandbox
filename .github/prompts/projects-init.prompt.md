@@ -6,29 +6,28 @@ trigger: /projects-init
 version: 1.0.0
 author: Hermes Agent
 tags: [workspace, initialization, documentation, prompts, skills, migration, dedupe]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Run a three-phase workspace initialization that triages markdown documentation, migrates prompt files into .github/prompts/, and creates needed skills/scripts while deduplicating.
 
 ## Context
 
@@ -237,7 +236,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`dev-init.prompt.md`](dev-init.prompt.md)
 - [`repo-init.prompt.md`](repo-init.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

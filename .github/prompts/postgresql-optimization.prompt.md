@@ -5,35 +5,28 @@ description: PostgreSQL-specific development assistant covering JSONB operations
 trigger: /postgresql-optimization
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - postgresql
-  - performance
-  - optimization
-  - database
-  - sql
-  - tuning
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+PostgreSQL-specific development assistant covering JSONB operations, array types, custom types, range/geometric types, full-text search, window functions, and the extensions ecosystem.
 
 ## Context
 
@@ -380,6 +373,11 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`postgresql-code-review.prompt.md`](postgresql-code-review.prompt.md)
+```

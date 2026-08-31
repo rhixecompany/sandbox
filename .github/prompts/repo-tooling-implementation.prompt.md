@@ -6,29 +6,28 @@ trigger: /repo-tooling-implementation
 version: 1.0.0
 author: Hermes Agent
 tags: [repo, tooling, agent-context, scaffolding, setup]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Execute the repo-tooling-implementation workflow, which scaffolds AI-agent context files (AGENTS.md, copilot-instructions, hooks, etc.) and verifies per-repo tooling.
 
 ## Context
 
@@ -243,6 +242,10 @@ See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for share
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`repo-init.prompt.md`](repo-init.prompt.md)
@@ -250,3 +253,7 @@ Same-family prompts:
 - [`repo-research-pipeline.prompt.md`](repo-research-pipeline.prompt.md)
 - [`repo-story-time.prompt.md`](repo-story-time.prompt.md)
 - [`repo.prompt.md`](repo.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

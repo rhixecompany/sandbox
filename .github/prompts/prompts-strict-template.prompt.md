@@ -6,29 +6,28 @@ trigger: /prompts-strict-template
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, template, normalization, validation, lint, refactor]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Normalize and validate .prompt.md files against the strict required structure, enforcing section order, phase table format, and Task/Subtask numbering without losing intent.
 
 ## Context
 
@@ -243,6 +242,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`prompts-fix.prompt.md`](prompts-fix.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

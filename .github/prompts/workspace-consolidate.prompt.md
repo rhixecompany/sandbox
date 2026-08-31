@@ -5,35 +5,28 @@ description: Consolidate scripts, patches, and documentation across the workspac
 trigger: /workspace-consolidate
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - workspace
-  - consolidation
-  - bash
-  - scripts
-  - documentation
-  - refactor
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Consolidate scripts, patches, and documentation across the workspace with bash migration, audit workflows, and canonical layout enforcement.
 
 ## Context
 
@@ -464,6 +457,10 @@ The following MCP servers and tools are available for this task. Use them in pre
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
+
+## Workflow
+
+<content>
 
 Prompt-library tooling (see `.enhance/`):
 

@@ -5,35 +5,28 @@ description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugi
 trigger: /typespec-api-operations
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - typespec
-  - api
-  - rest
-  - m365-copilot
-  - crud
-  - generator
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards for Microsoft 365 Copilot.
 
 ## Context
 
@@ -340,7 +333,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`typespec-create-agent.prompt.md`](typespec-create-agent.prompt.md)
 - [`typespec-create-api-plugin.prompt.md`](typespec-create-api-plugin.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

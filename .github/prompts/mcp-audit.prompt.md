@@ -1,28 +1,28 @@
 ---
 name: mcp-audit
-title: "MCP Server Audit & Sync"
-description: "Use when configuring, debugging, fixing, or syncing MCP servers across opencode/codex/copilot/vscode/hermes. Runs audit + sync + report loop against a single-source-of-truth registry."
+title: MCP Server Audit & Sync
+description: Use when configuring, debugging, fixing, or syncing MCP servers across opencode/codex/copilot/vscode/hermes. Runs audit + sync + report loop against a single-source-of-truth registry.
 trigger: /mcp-audit
 agent: adminbot
 model: minimax/minimax-m3:free
 tools: [terminal, read_file, write_file, patch, search_files, skill_view]
-metadata:
-  hermes:
-    tags: [mcp, audit, sync, devops]
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+tags: [mcp, audit, sync, devops]
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 version: 1.0.0
 author: Hermes Agent
 ---
+
 ## Table of Contents
 
 ## Goal
+Use when configuring, debugging, fixing, or syncing MCP servers across opencode/codex/copilot/vscode/hermes. Runs audit + sync + report loop against a single-source-of-truth registry.
 
 ## Context
 

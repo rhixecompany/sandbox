@@ -1,31 +1,29 @@
 ---
 name: repo-management
 title: Repo Management
-description: "Bring every repository to a clean standard state: development+production branches, complete .gitignore, audited dependencies, and GitHub Actions CI workflows."
+description: Bring every repository to a clean standard state: development+production branches, complete .gitignore, audited dependencies, and GitHub Actions CI workflows.
 trigger: /repo-management
 version: 1.0.0
 author: Hermes Agent
 tags: [repo, git, branching, gitignore, dependencies, ci, devops]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 - [Goal](#goal)

@@ -5,34 +5,28 @@ description: Update the llms.txt file in the repository root to reflect changes 
 trigger: /update-llms
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - documentation
-  - llms
-  - discovery
-  - ai-ready
-  - maintenance
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Update the llms.txt file in the repository root to reflect changes in documentation or specifications following the llms.txt specification.
 
 ## Context
 
@@ -343,6 +337,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`update-avm-modules-in-bicep.prompt.md`](update-avm-modules-in-bicep.prompt.md)
@@ -351,3 +349,7 @@ Same-family prompts:
 - [`update-markdown-file-index.prompt.md`](update-markdown-file-index.prompt.md)
 - [`update-oo-component-documentation.prompt.md`](update-oo-component-documentation.prompt.md)
 - [`update-specification.prompt.md`](update-specification.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

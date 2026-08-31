@@ -5,35 +5,28 @@ description: Update Azure Verified Modules (AVM) to their latest versions in Bic
 trigger: /update-avm-modules-in-bicep
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - azure
-  - bicep
-  - infrastructure-as-code
-  - avm
-  - devops
-  - automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Update Azure Verified Modules (AVM) to their latest versions in Bicep template files while preserving breaking-change policy and producing a summary of updates.
 
 ## Context
 
@@ -191,6 +184,14 @@ Describe updates made, any manual reviews needed or issues encountered.
 - Maintain Bicep file validity and linting compliance
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Templates in `templates/update-avm-modules-in-bicep/`:
 

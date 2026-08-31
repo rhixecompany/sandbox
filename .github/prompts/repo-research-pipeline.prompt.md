@@ -6,26 +6,24 @@ trigger: /repo-research-pipeline
 version: 1.0.0
 author: Hermes Agent
 tags: [research, web-search, tavily, report, pipeline, automation]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 - [Goal](#goal)
@@ -190,3 +188,7 @@ Same-family prompts:
 - [`repo-story-time.prompt.md`](repo-story-time.prompt.md)
 - [`repo-tooling-implementation.prompt.md`](repo-tooling-implementation.prompt.md)
 - [`repo.prompt.md`](repo.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

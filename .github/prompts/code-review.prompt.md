@@ -5,34 +5,28 @@ description: Run a structured code review for correctness, security, and testing
 trigger: /code-review
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - code-review
-  - security
-  - testing
-  - quality
-  - review
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Run a structured code review for correctness, security, and testing risk — mapping scope, deep-reviewing changes, and producing an actionable report.
 
 ## Context
 
@@ -241,7 +235,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`code-exemplars-blueprint-generator.prompt.md`](code-exemplars-blueprint-generator.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

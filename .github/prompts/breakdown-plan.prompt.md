@@ -5,35 +5,28 @@ description: Generate a comprehensive project plan with Epic > Feature > Story/E
 trigger: /breakdown-plan
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - planning
-  - project-management
-  - epic
-  - feature
-  - automation
-  - github
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate a comprehensive project plan with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
 
 ## Context
 
@@ -586,6 +579,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

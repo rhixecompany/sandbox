@@ -5,38 +5,29 @@ description: Analyzes chatmode or prompt files and recommends optimal AI models 
 trigger: /model-recommendation
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - model
-  - recommendation
-  - analysis
-  - routing
-  - ai
-  - cost
-  - capabilities
-  - planning
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Analyzes chatmode or prompt files and recommends optimal AI models based on task complexity, capabilities, and cost-efficiency.
 
 ## Context
 
@@ -499,3 +490,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

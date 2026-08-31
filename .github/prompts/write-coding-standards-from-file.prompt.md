@@ -5,34 +5,28 @@ description: Generate a coding standards document for a project derived from the
 trigger: /write-coding-standards-from-file
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - documentation
-  - coding-standards
-  - style-guide
-  - generator
-  - automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate a coding standards document for a project derived from the styles found in the supplied source files and folders, with variable/parameter configuration support.
 
 ## Context
 
@@ -425,6 +419,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

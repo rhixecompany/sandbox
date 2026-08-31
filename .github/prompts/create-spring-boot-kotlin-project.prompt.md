@@ -5,34 +5,28 @@ description: Bootstrap a Spring Boot Kotlin project with the correct template, d
 trigger: /create-spring-boot-kotlin-project
 version: 1.0.0
 author: Hermes Agent
-tags:
-- kotlin
-- spring-boot
-- project-bootstrap
-- backend
-- devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Bootstrap a Spring Boot Kotlin project with the correct template, dependencies, and initial structure.
 
 ## Context
 
@@ -47,7 +41,7 @@ license: MIT
 - [Download Spring Boot project template](#download-spring-boot-project-template)
 - [Unzip the downloaded file](#unzip-the-downloaded-file)
 - [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
-- [Add additional dependencies](#add-additional-dependencies)
+- [TODO: additional dependencies](#add-additional-dependencies)
 - [Template References](#template-references)
 - [Personas](#personas)
 - [Personality](#personality)
@@ -79,7 +73,7 @@ license: MIT
 - [Download Spring Boot project template](#download-spring-boot-project-template)
 - [Unzip the downloaded file](#unzip-the-downloaded-file)
 - [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
-- [Add additional dependencies](#add-additional-dependencies)
+- [TODO: additional dependencies](#add-additional-dependencies)
 - [Template References](#template-references)
 - [Personas](#personas)
 - [Personality](#personality)
@@ -309,6 +303,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

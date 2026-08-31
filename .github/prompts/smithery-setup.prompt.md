@@ -5,38 +5,28 @@ description: Connect to MCP servers through Smithery — log in, discover server
 trigger: /smithery-setup
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - prompt
-  - setup
-  - mcp
-  - smithery
-  - integration
-  - tools
-  - api
-  - authentication
-  - discovery
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Connect to MCP servers through Smithery — log in, discover servers, list available tools, call tools, and configure servers that require API keys or project IDs. Use when integrating Smithery-hosted MCP servers into an agent workflow.
 
 ## Context
 
@@ -52,7 +42,7 @@ license: MIT
 - [3. List available tools](#3-list-available-tools)
 - [4. Call a tool](#4-call-a-tool)
 - [Servers with Configuration](#servers-with-configuration)
-- [Add a server with config (API key as header, project ID as query param)](#add-a-server-with-config-api-key-as-header-project-id-as-query-param)
+- [TODO: a server with config (API key as header, project ID as query param)](#add-a-server-with-config-api-key-as-header-project-id-as-query-param)
 - [Multi-User Setup](#multi-user-setup)
   - [1. Create a Connection for a User](#1-create-a-connection-for-a-user)
 - [If OAuth is required, the CLI outputs the auth URL:](#if-oauth-is-required-the-cli-outputs-the-auth-url:)
@@ -1978,6 +1968,14 @@ return createMCPClient({ transport });
 const allTools = Object.assign({}, ...(await Promise.all(clients.map(c => c.tools()))));
 
 ## Learn More
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 - [Connect to MCPs](/docs/use/connect) — Full guide including OAuth handling, multi-user setups, and service tokens
 - [Token Scoping](/docs/use/token-scoping) — Secure browser and mobile access

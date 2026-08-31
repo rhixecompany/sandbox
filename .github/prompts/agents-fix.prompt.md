@@ -5,35 +5,28 @@ description: Reconcile Hermes, Copilot, Codex, and OpenCode agent definitions so
 trigger: /agents-fix
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - agents
-  - synchronization
-  - devops
-  - tooling
-  - automation
-  - metadata
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Reconcile Hermes, Copilot, Codex, and OpenCode agent definitions so registration, schema, and metadata stay in lockstep without losing fidelity.
 
 ## Context
 
@@ -243,8 +236,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
 - [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

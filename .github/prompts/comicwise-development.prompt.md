@@ -5,35 +5,28 @@ description: Standardize development practices, project structure, coding rules,
 trigger: /comicwise-development
 version: 1.0.0
 author: Hermes Agent
-tags:
-- documentation
-- devops
-- typescript
-- nextjs
-- fullstack
-- project-bootstrap
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Standardize development practices, project structure, coding rules, and essential commands for ComicWise projects.
 
 ## Context
 
@@ -321,6 +314,14 @@ All validated via `src/lib/env.ts` at startup using Zod.
 **Last Updated**: March 13, 2026 **Quality Score**: 98/100 **Production Status**: ✅ Ready **Support**: See docs/ and .github/instructions/ for detailed guides
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Detailed templates in `templates/comicwise-development/`:
 

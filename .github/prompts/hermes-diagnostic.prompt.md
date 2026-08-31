@@ -5,19 +5,12 @@ trigger: /hermes-diagnostic
 version: 1.0.0
 author: Hermes Agent
 license: MIT
-tags:
-- diagnostic
-- health-check
-metadata:
-  hermes:
-    tags:
-    - diagnostic
-    - health-check
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 title: Hermes Diagnostic Sweep
@@ -70,5 +63,22 @@ Run a comprehensive health check on Hermes Agent.
 
 ## See also
 
+## Goal
+Run a full Hermes Agent diagnostic sweep — doctor, security, status, insights, logs (list/errors/desktop/gateway/gui/agent), and bun run check. Produces a single report.
+
+## Context
+
+## Workflow
+
+<content>
+
+<content>
+
+<content>
+
 - `~/AppData/Local/hermes/skills/devops/hermes-diagnostic-repair/SKILL.md` (full skill)
 - `~/AppData/Local/hermes/skills/devops/log-analysis-and-triage/SKILL.md`
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

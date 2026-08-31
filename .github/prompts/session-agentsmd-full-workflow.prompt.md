@@ -5,36 +5,28 @@ description: Runs the comprehensive AGENTS.md generation and git reconciliation 
 trigger: /session-agentsmd-full-workflow
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- documentation
-- devops
-- git
-- agents-md
-- workflow
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Runs the comprehensive AGENTS.md generation and git reconciliation workflow across explicitly requested target projects, commits per repo, and reports repo-branch-SHA output.
 
 ## Context
 
@@ -277,6 +269,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`create-agentsmd.prompt.md`](create-agentsmd.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

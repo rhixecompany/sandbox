@@ -5,38 +5,29 @@ description: Provides best practices for JUnit 5 unit testing in Java, including
 trigger: /java-junit
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - java
-  - junit
-  - testing
-  - tdd
-  - backend
-  - automation
-  - data-driven
-  - best-practices
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Provides best practices for JUnit 5 unit testing in Java, including data-driven tests, lifecycle hooks, and assertion patterns.
 
 ## Context
 
@@ -304,6 +295,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`java-add-graalvm-native-image-support.prompt.md`](java-add-graalvm-native-image-support.prompt.md)
@@ -312,3 +307,7 @@ Same-family prompts:
 - [`java-refactoring-extract-method.prompt.md`](java-refactoring-extract-method.prompt.md)
 - [`java-refactoring-remove-parameter.prompt.md`](java-refactoring-remove-parameter.prompt.md)
 - [`java-springboot.prompt.md`](java-springboot.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

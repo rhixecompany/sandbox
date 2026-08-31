@@ -5,36 +5,28 @@ description: Scaffolds a production-ready Next.js (App Router) frontend stack fo
 trigger: /setup-nextjs-frontend-stack
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- frontend
-- nextjs
-- typescript
-- scaffolding
-- documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Scaffolds a production-ready Next.js (App Router) frontend stack for an entity — page, DAL, DTO, server actions, and Zod schemas — using TypeScript, Tailwind, and shadcn-style UI primitives.
 
 ## Context
 
@@ -268,6 +260,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`setup-bun-bunx.prompt.md`](setup-bun-bunx.prompt.md)
@@ -275,3 +271,7 @@ Same-family prompts:
 - [`setup-enhanced.prompt.md`](setup-enhanced.prompt.md)
 - [`setup-groq-cloud.prompt.md`](setup-groq-cloud.prompt.md)
 - [`setup.prompt.md`](setup.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

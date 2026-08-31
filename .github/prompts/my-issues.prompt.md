@@ -5,36 +5,29 @@ description: Lists issues assigned to the current user in the active repository,
 trigger: /my-issues
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - github
-  - issues
-  - productivity
-  - reporting
-  - git
-  - automation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Lists issues assigned to the current user in the active repository, with filters for state, labels, and recency.
 
 ## Context
 
@@ -242,6 +235,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`my-pull-requests.prompt.md`](my-pull-requests.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

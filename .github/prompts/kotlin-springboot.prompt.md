@@ -5,37 +5,29 @@ description: Provides best practices for developing applications with Spring Boo
 trigger: /kotlin-springboot
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - kotlin
-  - spring-boot
-  - backend
-  - best-practices
-  - web
-  - configuration
-  - idiomatic
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Provides best practices for developing applications with Spring Boot and Kotlin, including idiomatic patterns and configuration.
 
 ## Context
 
@@ -316,6 +308,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`kotlin-mcp-server-generator.prompt.md`](kotlin-mcp-server-generator.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -5,34 +5,28 @@ description: Use when an AI agent needs to debug code with a debugger — set br
 trigger: /debugger-prompt
 version: 1.0.0
 author: Hermes Agent
-tags:
-- debugging
-- ai-agents
-- tooling
-- automation
-- diagnostics
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Use when an AI agent needs to debug code with a debugger — set breakpoints, step through, inspect state, and reason about runtime behavior.
 
 ## Context
 
@@ -250,9 +244,17 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`ai-prompt-engineering-safety-review.prompt.md`](ai-prompt-engineering-safety-review.prompt.md)
 - [`boost-prompt.prompt.md`](boost-prompt.prompt.md)
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

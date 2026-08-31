@@ -5,36 +5,28 @@ description: Defines the enhanced AI agent setup workflow for the workspace — 
 trigger: /setup-enhanced
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- documentation
-- automation
-- planning
-- devops
-- backend
-- frontend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Defines the enhanced AI agent setup workflow for the workspace — quick start, quality gate, reference resolution hierarchy, DRY implementation practices, and 10-step implementation flow.
 
 ## Context
 
@@ -378,6 +370,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

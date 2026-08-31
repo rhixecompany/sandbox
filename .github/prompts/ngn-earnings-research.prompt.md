@@ -1,41 +1,32 @@
 ---
 name: ngn-earnings-research
-title: "Nigerian Earnings Research Pipeline — Better Than Outlier & Attapoll"
+title: Nigerian Earnings Research Pipeline — Better Than Outlier & Attapoll
 description: Comprehensive research pipeline using stacked skills to identify superior Nigerian earning platforms, leveraging prior session data, MCP tools (Tavily, Firecrawl), and parallel subagents for systematic discovery, scoring, and validation.
 trigger: /ngn-earnings-research
 version: 1.0.0
 author: Hermes Agent
 license: MIT
-tags:
-  - research
-  - earnings
-  - nigeria
-  - income-generation
-  - web-research
-  - skills-pipeline
-  - mcp
-  - planning
-metadata:
-  hermes:
-    profile: research-analyst
-    priority: high
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: research-analyst
+priority: high
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 ---
+
 ## Table of Contents
 
 ## Goal
+Comprehensive research pipeline using stacked skills to identify superior Nigerian earning platforms, leveraging prior session data, MCP tools (Tavily, Firecrawl), and parallel subagents for systematic discovery, scoring, and validation.
 
 ## Context
 
@@ -407,6 +398,14 @@ Update SESSION_REPORT.md with: platforms found, files created, gaps, next action
 ---
 
 ## Trigger Phrase
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 > **"/ngn-earnings-research-pipeline"** — loads this entire prompt as the task instruction
 

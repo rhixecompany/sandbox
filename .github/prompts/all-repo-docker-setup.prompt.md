@@ -6,28 +6,27 @@ trigger: /all-repo-docker-setup
 version: 1.0.0
 author: Hermes Agent
 tags: [docker, devops, automation, infrastructure, security, tooling]
-metadata:
-  hermes:
-    profile: devops
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: devops
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Iterate over a list of rhixecompany repositories, generate or repair Dockerfiles, build images, run security scans, and clean up unused Docker resources with a tracked plan.
 
 ## Context
 
@@ -137,6 +136,10 @@ Record findings and fix critical vulnerabilities by updating base images or depe
 - Cleanup report is saved
 
 ## Out of Scope
+
+## Workflow
+
+<content>
 
 - Modifying application code beyond Docker-related config
 - Production deployment orchestration

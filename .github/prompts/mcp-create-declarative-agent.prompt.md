@@ -5,37 +5,29 @@ description: Creates an MCP-based declarative agent for Microsoft 365 Copilot, d
 trigger: /mcp-create-declarative-agent
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - mcp
-  - declarative-agent
-  - microsoft-365
-  - copilot
-  - scaffolding
-  - tooling
-  - agent
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Creates an MCP-based declarative agent for Microsoft 365 Copilot, defining capabilities, instructions, and conversation starters.
 
 ## Context
 
@@ -60,7 +52,7 @@ license: MIT
   - [Supported MCP Endpoints](#supported-mcp-endpoints)
 - [Response Semantics](#response-semantics)
   - [Define Data Mapping](#define-data-mapping)
-  - [Add Adaptive Cards (Optional)](#add-adaptive-cards-optional)
+  - [TODO: Adaptive Cards (Optional)](#add-adaptive-cards-optional)
 - [Environment Configuration](#environment-configuration)
 - [Test](#test)
   - [Local Testing](#local-testing)
@@ -110,7 +102,7 @@ license: MIT
 - [Supported MCP Endpoints](#supported-mcp-endpoints)
 - [Response Semantics](#response-semantics)
 - [Define Data Mapping](#define-data-mapping)
-- [Add Adaptive Cards (Optional)](#add-adaptive-cards-optional)
+- [TODO: Adaptive Cards (Optional)](#add-adaptive-cards-optional)
 - [Environment Configuration](#environment-configuration)
 - [Test](#test)
 - [Local Testing](#local-testing)

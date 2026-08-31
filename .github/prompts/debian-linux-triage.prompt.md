@@ -1,40 +1,32 @@
 ---
 name: debian-linux-triage
 title: Debian Linux Triage
-description: "Triage a Debian-based system: collect inputs, run diagnostic commands, and produce a structured incident report with remediation steps."
+description: Triage a Debian-based system: collect inputs, run diagnostic commands, and produce a structured incident report with remediation steps.
 trigger: /debian-linux-triage
 version: 1.0.0
 author: Hermes Agent
-tags:
-- linux
-- debian
-- triage
-- devops
-- operations
-- diagnostics
-- troubleshooting
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Triage a Debian-based system: collect inputs, run diagnostic commands, and produce a structured incident report with remediation steps.
 
 ## Context
 
@@ -270,8 +262,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`arch-linux-triage.prompt.md`](arch-linux-triage.prompt.md)
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`fedora-linux-triage.prompt.md`](fedora-linux-triage.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

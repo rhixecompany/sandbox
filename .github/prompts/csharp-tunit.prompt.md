@@ -5,37 +5,28 @@ description: Author modern unit tests using TUnit with data-driven patterns, adv
 trigger: /csharp-tunit
 version: 1.0.0
 author: Hermes Agent
-tags:
-- csharp
-- dotnet
-- testing
-- tunit
-- unit-test
-- automation
-- backend
-- advanced
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Author modern unit tests using TUnit with data-driven patterns, advanced features, parallel execution, and migration paths from xUnit.
 
 ## Context
 
@@ -316,6 +307,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`csharp-async.prompt.md`](csharp-async.prompt.md)
@@ -324,3 +319,7 @@ Same-family prompts:
 - [`csharp-mstest.prompt.md`](csharp-mstest.prompt.md)
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -5,36 +5,28 @@ description: Generates a complete Rust Model Context Protocol server project wit
 trigger: /rust-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- backend
-- rust
-- mcp
-- scaffolding
-- documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generates a complete Rust Model Context Protocol server project with tools, prompts, resources, transports (stdio/SSE/HTTP), and tests using the official rmcp SDK.
 
 ## Context
 
@@ -384,6 +376,10 @@ Other language variants of this MCP server generator:
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
+
+## Workflow
+
+<content>
 
 Prompt-library tooling (see `.enhance/`):
 

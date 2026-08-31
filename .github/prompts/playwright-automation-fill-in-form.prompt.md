@@ -5,35 +5,28 @@ description: Fills a form field by field using Playwright MCP, uploads an image 
 trigger: /playwright-automation-fill-in-form
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - playwright
-  - browser-automation
-  - testing
-  - webapp
-  - forms
-  - qa
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Fills a form field by field using Playwright MCP, uploads an image if requested, then stops before submit and asks for human review.
 
 ## Context
 
@@ -242,8 +235,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`playwright-explore-website.prompt.md`](playwright-explore-website.prompt.md)
 - [`playwright-generate-test.prompt.md`](playwright-generate-test.prompt.md)
 - [`playwright-typescript.prompt.md`](playwright-typescript.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

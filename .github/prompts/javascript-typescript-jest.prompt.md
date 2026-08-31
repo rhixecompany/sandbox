@@ -5,38 +5,29 @@ description: Best practices for writing JavaScript/TypeScript tests using Jest, 
 trigger: /javascript-typescript-jest
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - javascript
-  - typescript
-  - jest
-  - testing
-  - tdd
-  - mocking
-  - frontend
-  - backend
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Best practices for writing JavaScript/TypeScript tests using Jest, including mocking strategies, test structure, and common patterns.
 
 ## Context
 
@@ -250,6 +241,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`playwright-typescript.prompt.md`](playwright-typescript.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

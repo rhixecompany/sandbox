@@ -5,37 +5,29 @@ description: Automates Next.js 16 migration tasks, updating dependencies, codemo
 trigger: /migrate-to-next16
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - nextjs
-  - migration
-  - upgrade
-  - automation
-  - frontend
-  - codemod
-  - configuration
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Automates Next.js 16 migration tasks, updating dependencies, codemods, route handlers, and config for the upgrade.
 
 ## Context
 
@@ -236,6 +228,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`openapi-to-application-code.prompt.md`](openapi-to-application-code.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

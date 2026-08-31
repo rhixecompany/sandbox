@@ -5,35 +5,29 @@ description: Executes a specified implementation plan from `.hermes/plans/`, tak
 trigger: /execute-plan
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - planning
-  - execution
-  - hermes
-  - automation
-  - implementation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: high
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: high
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Executes a specified implementation plan from `.hermes/plans/`, taking the plan filename as a parameter.
 
 ## Context
 
@@ -232,6 +226,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`execute-all-prompts.prompt.md`](execute-all-prompts.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

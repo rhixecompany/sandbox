@@ -5,34 +5,28 @@ description: Execute the tooling-implementation workflow to prepare, execute, ve
 trigger: /tooling-implementation
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - tooling
-  - workflow
-  - implementation
-  - automation
-  - devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Execute the tooling-implementation workflow to prepare, execute, verify, and document tooling setup following the shared templates and rules.
 
 ## Context
 
@@ -235,8 +229,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`create-implementation-plan.prompt.md`](create-implementation-plan.prompt.md)
 - [`task-implementation.prompt.md`](task-implementation.prompt.md)
 - [`update-implementation-plan.prompt.md`](update-implementation-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

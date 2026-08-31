@@ -5,36 +5,29 @@ description: Turns a feature PRD into an implementation plan that an engineering
 trigger: /hermes-breakdown-feature-implementation
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - hermes
-  - breakdown
-  - implementation
-  - feature
-  - planning
-  - engineering
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Turns a feature PRD into an implementation plan that an engineering team can execute.
 
 ## Context
 
@@ -231,6 +224,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`hermes-breakdown-epic-arch.prompt.md`](hermes-breakdown-epic-arch.prompt.md)
@@ -240,3 +237,7 @@ Same-family prompts:
 - [`hermes-breakdown-test.prompt.md`](hermes-breakdown-test.prompt.md)
 - [`hermes-comprehensive-setup.prompt.md`](hermes-comprehensive-setup.prompt.md)
 - [`hermes-doctor-systematic-debugging.prompt.md`](hermes-doctor-systematic-debugging.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -5,35 +5,28 @@ description: Comprehensive stacked-skills pipeline to discover, filter, validate
 trigger: /uk-earnings-research-pipeline
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - research
-  - uk
-  - earnings
-  - pipeline
-  - skills
-  - income-generation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Comprehensive stacked-skills pipeline to discover, filter, validate, and rank superior UK earning platforms, leveraging prior session data and MCP tools.
 
 ## Context
 
@@ -301,6 +294,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`uk-earnings-research.prompt.md`](uk-earnings-research.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

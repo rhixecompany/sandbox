@@ -5,34 +5,28 @@ description: Document an object-oriented component with class diagrams, responsi
 trigger: /create-oo-component-documentation
 version: 1.0.0
 author: Hermes Agent
-tags:
-- documentation
-- object-oriented
-- design
-- architecture
-- uml
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Document an object-oriented component with class diagrams, responsibilities, and usage examples.
 
 ## Context
 
@@ -297,6 +291,14 @@ await component.ProcessAsync(data);
 ```
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Detailed templates in `templates/create-oo-component-documentation/`:
 

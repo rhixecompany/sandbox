@@ -5,37 +5,29 @@ description: Merges mature lessons from a domain memory file into its instructio
 trigger: /memory-merger
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - memory
-  - merge
-  - hermes
-  - instruction
-  - automation
-  - knowledge-management
-  - agent
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Merges mature lessons from a domain memory file into its instruction file across global, user, workspace, or ws scopes.
 
 ## Context
 
@@ -211,6 +203,14 @@ Agent: 4. Defines quality bar for 10/10 5. Merges new instructions candidate, it
 ```
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Templates in `templates/memory-merger/`:
 - `example.md`

@@ -1,20 +1,17 @@
 ---
 name: instruction-triage
-title: "Instruction File Triage"
-description: "Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill."
+title: Instruction File Triage
+description: Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill.
 trigger: /instruction-triage
 version: 1.0.0
 author: OWL
 license: MIT
-tags: [instruction-files, audit, triage, prompt]
-metadata:
-  hermes:
-    tags: [instruction-files, audit, prompt]
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: [instruction-files, audit, prompt]
+metadata: 
+hermes: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 ---
@@ -84,5 +81,18 @@ For bloat duplicates (e.g. mindstudio-agent CLAUDE.md × 6):
 - Mindstudio-agent CLAUDE.md is 391 lines by design (reference docs) — NOT auto-trim
 
 ## Reference
+
+## Goal
+Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill.
+
+## Context
+
+## Verification
+
+<content>
+
+<content>
+
+<content>
 
 Skill: `instruction-triage` (auto-loaded)

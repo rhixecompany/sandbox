@@ -1,0 +1,11 @@
+{
+  "ts": "2026-08-31T19:19:17.457333+00:00",
+  "mode": "smoke",
+  "request": "Reply with OK",
+  "timeout_s": 15,
+  "tested": 0,
+  "skipped": [],
+  "ok_count": 0,
+  "fail_count": 0,
+  "results": []
+}

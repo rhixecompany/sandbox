@@ -5,34 +5,28 @@ description: Interactively interrogate a prompt's scope, deliverables, and const
 trigger: /boost-prompt
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - prompt-engineering
-  - interactive
-  - tool
-  - refinement
-  - developer-experience
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Interactively interrogate a prompt's scope, deliverables, and constraints, then copy the refined markdown to the clipboard via Joyride.
 
 ## Context
 
@@ -240,10 +234,17 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`ai-prompt-engineering-safety-review.prompt.md`](ai-prompt-engineering-safety-review.prompt.md)
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

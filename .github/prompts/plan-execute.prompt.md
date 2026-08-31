@@ -5,35 +5,28 @@ description: Loads an existing plan, runs each phase in strict order with verifi
 trigger: /plan-execute
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - planning
-  - execution
-  - git
-  - automation
-  - devops
-  - workflow
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Loads an existing plan, runs each phase in strict order with verification gates and git checkpoints, then summarizes with phase SHAs and outputs.
 
 ## Context
 
@@ -288,3 +281,7 @@ Same-family prompts:
 - [`plan-audit.prompt.md`](plan-audit.prompt.md)
 - [`plan-batch-fix.prompt.md`](plan-batch-fix.prompt.md)
 - [`plan-generate.prompt.md`](plan-generate.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

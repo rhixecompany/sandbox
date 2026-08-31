@@ -6,29 +6,28 @@ trigger: /project-workflow-analysis-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
 tags: [blueprint, workflow, documentation, architecture, analysis, automation]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Generate end-to-end application workflow blueprints from a codebase, auto-detecting project type, persistence, and architecture patterns, then emitting implementation-ready documentation.
 
 ## Context
 
@@ -239,6 +238,10 @@ The following MCP servers and tools are available for this task. Use them in pre
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
 ## Scripts
+
+## Workflow
+
+<content>
 
 Prompt-library tooling (see `.enhance/`):
 

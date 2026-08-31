@@ -44,7 +44,7 @@
 | hooks-judge   | 100   | 7 hooks, avg 29.6, 0/7 pass         | ≥95 ✓     |
 | plugins-judge | 100   | 12 plugins, avg 80.0, 12/12 pass    | ≥95 ✓     |
 
-## Artifacts (this turn)
+## Artifacts (2026-08-31 morning)
 
 ```
 .hermes/plans/
@@ -61,6 +61,22 @@ judge_results/
   {judge}_audit.{json,md}           (6 × 2 files: real-target CLI runs)
   six_judges_run.json
   six_judges_scores.md
+```
+
+## Artifacts (2026-08-31 evening)
+
+```
+.hermes/plans/
+  2026-08-31_180000-comprehensive-reimplementation-master.md
+  g7-doctor.txt
+  g7-lint.txt
+  g7-typecheck.txt
+  g7-check.txt
+  g7-format.txt
+  g7-logs-{list,errors,desktop,gateway,gui,agent}.txt
+
+.github/mcp.json
+scripts/provider_executor_noninteractive.sh
 ```
 
 ## Config Changes Applied
@@ -163,7 +179,7 @@ edd4d5e7 feat: comprehensive 10-subgoal remediation (PHASES A-E)
 
 (After 2 filter-repo passes, SHAs of pre-187a3e9f commits changed; the 10-subgoal master plan and 13 submodule commits are preserved in the rewritten history.)
 
-## Open Items (carry-over)
+## Open Items (carry-over, 2026-08-31)
 
 1. **PR #12 merge** — `development` branch is protected. User must merge the PR via GitHub UI.
 2. **Provider auth failures** (out of agent scope):

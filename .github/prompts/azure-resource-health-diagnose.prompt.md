@@ -5,35 +5,28 @@ description: Diagnose Azure resource health from logs and telemetry, then delive
 trigger: /azure-resource-health-diagnose
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - azure
-  - devops
-  - troubleshooting
-  - monitoring
-  - reliability
-  - cloud
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Diagnose Azure resource health from logs and telemetry, then deliver a phased remediation plan with monitoring and prevention measures.
 
 ## Context
 

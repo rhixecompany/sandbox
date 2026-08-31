@@ -5,35 +5,28 @@ description: Diagnose and resolve Arch Linux issues using pacman, systemd, and r
 trigger: /arch-linux-triage
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - linux
-  - arch
-  - sysadmin
-  - triage
-  - devops
-  - troubleshooting
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Diagnose and resolve Arch Linux issues using pacman, systemd, and rolling-release best practices, with a structured triage report.
 
 ## Context
 
@@ -268,9 +261,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
 - [`fedora-linux-triage.prompt.md`](fedora-linux-triage.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

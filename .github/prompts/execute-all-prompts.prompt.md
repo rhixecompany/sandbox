@@ -5,36 +5,29 @@ description: Orchestrates sequential execution of four workspace prompt workflow
 trigger: /execute-all-prompts
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - orchestration
-  - automation
-  - prompts
-  - workspace
-  - hermes
-  - devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: high
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: high
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Orchestrates sequential execution of four workspace prompt workflows (audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, test-providers-models) to completion before the next begins.
 
 ## Context
 
@@ -260,6 +253,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`execute-plan.prompt.md`](execute-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

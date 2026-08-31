@@ -5,34 +5,28 @@ description: Create concise tldr summaries for GitHub Copilot files (prompts, ag
 trigger: /tldr-prompt
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - documentation
-  - summary
-  - tldr
-  - github-copilot
-  - mcp
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Create concise tldr summaries for GitHub Copilot files (prompts, agents, instructions, collections), MCP servers, or documentation sourced from URLs and queries.
 
 ## Context
 
@@ -294,6 +288,10 @@ Your output is complete when:
 - ✓ MCP server content includes setup and tool usage examples when applicable
 
 ## Template References
+
+## Verification
+
+<content>
 
 Detailed templates in `templates/tldr-prompt/`:
 

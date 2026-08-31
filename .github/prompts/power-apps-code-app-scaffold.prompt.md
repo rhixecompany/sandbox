@@ -5,35 +5,28 @@ description: Scaffolds a Microsoft Power Apps Code App project (TypeScript + pac
 trigger: /power-apps-code-app-scaffold
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - power-platform
-  - power-apps
-  - typescript
-  - scaffolding
-  - codegen
-  - microsoft
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Scaffolds a Microsoft Power Apps Code App project (TypeScript + pac code push) following the official PowerAppsCodeApps samples and best practices.
 
 ## Context
 
@@ -271,6 +264,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`power-bi-dax-optimization.prompt.md`](power-bi-dax-optimization.prompt.md)
@@ -278,3 +275,7 @@ Same-family prompts:
 - [`power-bi-performance-troubleshooting.prompt.md`](power-bi-performance-troubleshooting.prompt.md)
 - [`power-bi-report-design-consultation.prompt.md`](power-bi-report-design-consultation.prompt.md)
 - [`power-platform-mcp-connector-suite.prompt.md`](power-platform-mcp-connector-suite.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

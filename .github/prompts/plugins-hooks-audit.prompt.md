@@ -5,21 +5,12 @@ trigger: /plugins-hooks-audit
 version: 1.0.0
 author: Hermes Agent
 license: MIT
-tags:
-- audit
-- plugins
-- hooks
-metadata:
-  hermes:
-    tags:
-    - audit
-    - plugins
-    - hooks
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 title: Plugins + Hooks Audit
@@ -74,9 +65,26 @@ The audit reports both. Missing plugin-internal events are informational, not bu
 
 ## Verification
 
+## Goal
+Audit Hermes plugin + hook event coverage. Run when checking which plugins are enabled, which hook events have shell scripts wired, and which events exist in code but have no hook.
+
+## Context
+
+## Workflow
+
+<content>
+
+<content>
+
+<content>
+
 - [ ] Script exits 0
 - [ ] Report files exist
 - [ ] Counts match `hermes plugins list` and `hermes hooks list`
 - [ ] No unexpected missing events
 
 See `~/AppData/Local/hermes/skills/devops/plugins-hooks-audit/SKILL.md` for the full skill.
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

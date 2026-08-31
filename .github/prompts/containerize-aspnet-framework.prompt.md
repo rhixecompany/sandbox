@@ -5,35 +5,28 @@ description: Containerize a legacy ASP.NET Framework application with multi-stag
 trigger: /containerize-aspnet-framework
 version: 1.0.0
 author: Hermes Agent
-tags:
-- docker
-- containerization
-- aspnet
-- dotnet
-- legacy
-- devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Containerize a legacy ASP.NET Framework application with multi-stage Dockerfiles and production-ready settings.
 
 ## Context
 
@@ -322,6 +315,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`containerize-aspnetcore.prompt.md`](containerize-aspnetcore.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

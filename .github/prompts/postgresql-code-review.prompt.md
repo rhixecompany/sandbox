@@ -5,35 +5,28 @@ description: PostgreSQL-specific code review focused on JSONB operations, array 
 trigger: /postgresql-code-review
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - postgresql
-  - code-review
-  - database
-  - sql
-  - jsonb
-  - security
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+PostgreSQL-specific code review focused on JSONB operations, array usage, custom types, function optimization, and Row Level Security best practices.
 
 ## Context
 
@@ -306,6 +299,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

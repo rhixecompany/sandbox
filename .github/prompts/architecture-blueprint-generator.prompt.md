@@ -5,34 +5,28 @@ description: Analyze a codebase and produce a detailed architecture blueprint wi
 trigger: /architecture-blueprint-generator
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - architecture
-  - documentation
-  - blueprint
-  - codebase-analysis
-  - design
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Analyze a codebase and produce a detailed architecture blueprint with detected stacks, patterns, diagrams, and implementation guidance for new development.
 
 ## Context
 
@@ -257,7 +251,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`readme-blueprint-generator.prompt.md`](readme-blueprint-generator.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

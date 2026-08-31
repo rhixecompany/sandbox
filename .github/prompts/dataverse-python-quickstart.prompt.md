@@ -5,36 +5,28 @@ description: Get a first Dataverse SDK for Python script running — connect to 
 trigger: /dataverse-python-quickstart
 version: 1.0.0
 author: Hermes Agent
-tags:
-- dataverse
-- python
-- dynamics-365
-- quickstart
-- beginner
-- backend
-- tutorial
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Get a first Dataverse SDK for Python script running — connect to the environment, perform CRUD, and verify operations quickly.
 
 ## Context
 
@@ -235,8 +227,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`dataverse-python-advanced-patterns.prompt.md`](dataverse-python-advanced-patterns.prompt.md)
 - [`dataverse-python-production-code.prompt.md`](dataverse-python-production-code.prompt.md)
 - [`dataverse-python-usecase-builder.prompt.md`](dataverse-python-usecase-builder.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

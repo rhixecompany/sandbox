@@ -5,39 +5,28 @@ description: Configure Groq Cloud API keys, install the Groq Python SDK, run a f
 trigger: /setup-groq-cloud
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - prompt
-  - setup
-  - groq
-  - cloud
-  - api
-  - llm
-  - python
-  - ai-sdk
-  - authentication
-  - sdk
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Configure Groq Cloud API keys, install the Groq Python SDK, run a first chat completion, and integrate Groq models into Python, AI SDK, and third-party clients. Use when onboarding to Groq Cloud or wiring Groq LLM inference into a project.
 
 ## Context
 
@@ -160,7 +149,6 @@ license: MIT
 - [[Rate Limit Headers](#rate-limit-headers)](#rate-limit-headersrate-limit-headers)
 - [[Handling Rate Limits](#handling-rate-limits)](#handling-rate-limitshandling-rate-limits)
 
-
 - [image: https://console.groq.com/og_cloudv5.jpg](#image:-https://consolegroqcom/og_cloudv5jpg)
 - [[Create an API Key](#create-an-api-key)](#[create-an-api-key]#create-an-api-key)
 - [[Set up your API Key (recommended)](#set-up-your-api-key-recommended)](#[set-up-your-api-key-recommended]#set-up-your-api-key-recommended)
@@ -262,7 +250,6 @@ license: MIT
 - [[Rate Limits](#rate-limits)](#[rate-limits]#rate-limits)
 - [[Rate Limit Headers](#rate-limit-headers)](#[rate-limit-headers]#rate-limit-headers)
 - [[Handling Rate Limits](#handling-rate-limits)](#[handling-rate-limits]#handling-rate-limits)
-
 
 ---
 description: Get up and running with the Groq API in minutes: create an API key, set up your environment, and make your first request.
@@ -2957,6 +2944,14 @@ The following headers are set (values are illustrative):
 | x-ratelimit-reset-tokens | 7.66s | Always refers to Tokens Per Minute (TPM) |
 
 ## [Handling Rate Limits](#handling-rate-limits)
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 When you exceed rate limits, our API returns a `429 Too Many Requests` HTTP status code.
 

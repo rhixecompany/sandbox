@@ -5,36 +5,28 @@ description: Scaffolds a complete Model Context Protocol server project in Swift
 trigger: /swift-mcp-server-generator
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- backend
-- swift
-- mcp
-- scaffolding
-- documentation
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Scaffolds a complete Model Context Protocol server project in Swift using the official MCP Swift SDK, with tools, prompts, resources, and project templates.
 
 ## Context
 
@@ -437,6 +429,14 @@ Add to `claude_desktop_config.json`:
 ```
 
 ## Template References
+
+## Workflow
+
+## Verification
+
+<content>
+
+<content>
 
 Detailed templates in `templates/swift-mcp-server-generator/`:
 - `mainswift_template.md`

@@ -5,34 +5,28 @@ description: Create or update an implementation plan with new or updated require
 trigger: /update-implementation-plan
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - planning
-  - implementation
-  - specification
-  - documentation
-  - refactor
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure work.
 
 ## Context
 
@@ -232,6 +226,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`update-avm-modules-in-bicep.prompt.md`](update-avm-modules-in-bicep.prompt.md)
@@ -240,3 +238,7 @@ Same-family prompts:
 - [`update-markdown-file-index.prompt.md`](update-markdown-file-index.prompt.md)
 - [`update-oo-component-documentation.prompt.md`](update-oo-component-documentation.prompt.md)
 - [`update-specification.prompt.md`](update-specification.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

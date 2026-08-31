@@ -5,36 +5,28 @@ description: Implements plan-driven tasks in order with progressive change loggi
 trigger: /task-implementation
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- planning
-- documentation
-- workflow
-- backend
-- devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Implements plan-driven tasks in order with progressive change logging, continuous execution tracking, explicit divergence and blocker recording, and complete working outcomes.
 
 ## Context
 
@@ -242,8 +234,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`create-implementation-plan.prompt.md`](create-implementation-plan.prompt.md)
 - [`tooling-implementation.prompt.md`](tooling-implementation.prompt.md)
 - [`update-implementation-plan.prompt.md`](update-implementation-plan.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

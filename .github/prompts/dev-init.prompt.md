@@ -1,39 +1,32 @@
 ---
 name: dev-init
 title: Development Initialization
-description: "Initialize a project for prompt-driven development: discover, plan conversion, audit/fix prompts, execute an implementation plan, and verify."
+description: Initialize a project for prompt-driven development: discover, plan conversion, audit/fix prompts, execute an implementation plan, and verify.
 trigger: /dev-init
 version: 1.0.0
 author: Hermes Agent
-tags:
-- development
-- initialization
-- planning
-- automation
-- devops
-- orchestration
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Initialize a project for prompt-driven development: discover, plan conversion, audit/fix prompts, execute an implementation plan, and verify.
 
 ## Context
 
@@ -517,6 +510,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

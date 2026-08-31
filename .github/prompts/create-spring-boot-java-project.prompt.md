@@ -5,34 +5,28 @@ description: Bootstrap a Spring Boot Java project with the correct template, dep
 trigger: /create-spring-boot-java-project
 version: 1.0.0
 author: Hermes Agent
-tags:
-- java
-- spring-boot
-- project-bootstrap
-- backend
-- devops
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Bootstrap a Spring Boot Java project with the correct template, dependencies, and initial structure.
 
 ## Context
 
@@ -48,10 +42,10 @@ license: MIT
 - [Unzip the downloaded file](#unzip-the-downloaded-file)
 - [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
 - [Change directory to the project root](#change-directory-to-the-project-root)
-- [Add additional dependencies](#add-additional-dependencies)
-- [Add SpringDoc, Redis, JPA and MongoDB configurations](#add-springdoc-redis-jpa-and-mongodb-configurations)
-- [Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services](#add-`docker-composeyaml`-with-redis-postgresql-and-mongodb-services)
-- [Add `.gitignore` file](#add-`gitignore`-file)
+- [TODO: additional dependencies](#add-additional-dependencies)
+- [TODO: SpringDoc, Redis, JPA and MongoDB configurations](#add-springdoc-redis-jpa-and-mongodb-configurations)
+- [TODO: `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services](#add-`docker-composeyaml`-with-redis-postgresql-and-mongodb-services)
+- [TODO: `.gitignore` file](#add-`gitignore`-file)
 - [Run Maven test command](#run-maven-test-command)
 - [Run Maven run command (Optional)](#run-maven-run-command-optional)
 - [Pitfalls](#pitfalls)
@@ -87,10 +81,10 @@ license: MIT
 - [Unzip the downloaded file](#unzip-the-downloaded-file)
 - [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
 - [Change directory to the project root](#change-directory-to-the-project-root)
-- [Add additional dependencies](#add-additional-dependencies)
-- [Add SpringDoc, Redis, JPA and MongoDB configurations](#add-springdoc-redis-jpa-and-mongodb-configurations)
-- [Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services](#add-`docker-composeyaml`-with-redis-postgresql-and-mongodb-services)
-- [Add `.gitignore` file](#add-`gitignore`-file)
+- [TODO: additional dependencies](#add-additional-dependencies)
+- [TODO: SpringDoc, Redis, JPA and MongoDB configurations](#add-springdoc-redis-jpa-and-mongodb-configurations)
+- [TODO: `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services](#add-`docker-composeyaml`-with-redis-postgresql-and-mongodb-services)
+- [TODO: `.gitignore` file](#add-`gitignore`-file)
 - [Run Maven test command](#run-maven-test-command)
 - [Run Maven run command (Optional)](#run-maven-run-command-optional)
 - [Pitfalls](#pitfalls)
@@ -364,6 +358,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

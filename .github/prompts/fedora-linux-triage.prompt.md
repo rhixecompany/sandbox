@@ -5,37 +5,29 @@ description: Triages and resolves Fedora issues using dnf, systemd, and SELinux-
 trigger: /fedora-linux-triage
 version: 1.0.0
 author: Hermes Agent
-date: '2026-08-25'
-tags:
-  - linux
-  - fedora
-  - triage
-  - devops
-  - systemd
-  - selinux
-  - dnf
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+date: 2026-08-25
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Triages and resolves Fedora issues using dnf, systemd, and SELinux-aware guidance.
 
 ## Context
 
@@ -270,8 +262,16 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`arch-linux-triage.prompt.md`](arch-linux-triage.prompt.md)
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

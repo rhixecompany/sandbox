@@ -5,35 +5,28 @@ description: Run a multi-phase audit, scoring, remediation, consolidation, and v
 trigger: /audit-skills-judge-fix
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - skills
-  - audit
-  - quality
-  - tooling
-  - automation
-  - maintenance
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Run a multi-phase audit, scoring, remediation, consolidation, and verification cycle across the Hermes skill library.
 
 ## Context
 
@@ -215,4 +208,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

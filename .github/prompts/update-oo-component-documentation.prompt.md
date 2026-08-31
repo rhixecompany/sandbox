@@ -5,34 +5,28 @@ description: Update existing object-oriented component documentation following i
 trigger: /update-oo-component-documentation
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - documentation
-  - object-oriented
-  - architecture
-  - components
-  - api
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Update existing object-oriented component documentation following industry best practices and architectural documentation standards, including component overview, architecture, and interfaces.
 
 ## Context
 
@@ -315,6 +309,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 ## Related Prompts
+
+## Workflow
+
+<content>
 
 Same-family prompts:
 

@@ -5,37 +5,28 @@ description: Full lifecycle audit and remediation of the Hermes skill library â€
 trigger: /skills-fix
 version: 1.0.0
 author: Hermes Agent
-tags:
-- tool
-- automation
-- documentation
-- skills
-- qa
-- devops
-- workflow
-- planning
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Full lifecycle audit and remediation of the Hermes skill library â€” discovers SKILL.md files, reorganises misplaced skills, deduplicates cross-category copies, audits for quality, plans fixes, and applies them in priority order.
 
 ## Context
 
@@ -287,5 +278,11 @@ delegate_task(tasks=[
 "context": "Skills root: C:\\...\\skills\\ Per-skill reports in docs/. Fix issues listed in each report.",
 "toolsets": ["file", "terminal"]},
 ## up to 3 concurrent batches
+
+## Verification
+
+<content>
+
+
 ])
 ```

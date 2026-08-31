@@ -1,0 +1,1 @@
+# ngn-earnings-research

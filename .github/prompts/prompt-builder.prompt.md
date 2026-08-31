@@ -6,29 +6,28 @@ trigger: /prompt-builder
 version: 1.0.0
 author: Hermes Agent
 tags: [prompts, authoring, discovery, template, documentation, automation]
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-date: '2026-08-25'
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+date: 2026-08-25
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Guide users through creating high-quality .prompt.md files via a nine-area discovery questionnaire and pattern-driven assembly aligned with the repository's reference prompts.
 
 ## Context
 
@@ -255,6 +254,14 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`prompt-management.prompt.md`](prompt-management.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

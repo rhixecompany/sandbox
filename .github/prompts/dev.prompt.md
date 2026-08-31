@@ -5,34 +5,28 @@ description: Drive a development workflow with intake, execution, and verificati
 trigger: /dev
 version: 1.0.0
 author: Hermes Agent
-tags:
-- development
-- workflow
-- automation
-- planning
-- coding
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Drive a development workflow with intake, execution, and verification phases using plans-and-specs artifacts and Hermes tooling.
 
 ## Context
 
@@ -243,7 +237,15 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`dev-imp.prompt.md`](dev-imp.prompt.md)
 - [`dev-init.prompt.md`](dev-init.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

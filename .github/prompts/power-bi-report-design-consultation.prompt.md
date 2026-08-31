@@ -5,35 +5,28 @@ description: Guides Power BI report design — gathers requirements, plans infor
 trigger: /power-bi-report-design-consultation
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - power-bi
-  - visualization
-  - design
-  - analytics
-  - reporting
-  - microsoft
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Guides Power BI report design — gathers requirements, plans information architecture, recommends visualizations, and validates design quality.
 
 ## Context
 
@@ -287,6 +280,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`power-apps-code-app-scaffold.prompt.md`](power-apps-code-app-scaffold.prompt.md)
@@ -294,3 +291,7 @@ Same-family prompts:
 - [`power-bi-model-design-review.prompt.md`](power-bi-model-design-review.prompt.md)
 - [`power-bi-performance-troubleshooting.prompt.md`](power-bi-performance-troubleshooting.prompt.md)
 - [`power-platform-mcp-connector-suite.prompt.md`](power-platform-mcp-connector-suite.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

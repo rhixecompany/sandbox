@@ -5,35 +5,28 @@ description: Systematic Power BI performance troubleshooting — identifies, dia
 trigger: /power-bi-performance-troubleshooting
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - power-bi
-  - performance
-  - troubleshooting
-  - analytics
-  - optimization
-  - microsoft
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Systematic Power BI performance troubleshooting — identifies, diagnoses, and resolves performance issues in models, reports, and queries with actionable solutions.
 
 ## Context
 
@@ -309,6 +302,10 @@ Prompt-library tooling (see `.enhance/`):
 
 ## Related Prompts
 
+## Workflow
+
+<content>
+
 Same-family prompts:
 
 - [`power-apps-code-app-scaffold.prompt.md`](power-apps-code-app-scaffold.prompt.md)
@@ -316,3 +313,7 @@ Same-family prompts:
 - [`power-bi-model-design-review.prompt.md`](power-bi-model-design-review.prompt.md)
 - [`power-bi-report-design-consultation.prompt.md`](power-bi-report-design-consultation.prompt.md)
 - [`power-platform-mcp-connector-suite.prompt.md`](power-platform-mcp-connector-suite.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

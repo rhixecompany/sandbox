@@ -5,35 +5,28 @@ description: Diagnose and repair Hermes/Copilot/Codex system prompt context by g
 trigger: /agents-system-prompt-context-fix
 version: 1.0.0
 author: Hermes Agent
-tags:
-  - agents
-  - vscode
-  - tooling
-  - devops
-  - automation
-  - configuration
-metadata:
-  hermes:
-    profile: code-architect
-    priority: medium
-  copilot:
-    model_required: sonnet
-  opencode:
-    enabled: true
-  codex:
-    enabled: true
-toolsets:
-  - file
-  - terminal
-skills:
-  - skill:using-superpowers
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
 dependencies: []
 formatter: markdown
 license: MIT
 ---
+
 ## Table of Contents
 
 ## Goal
+Diagnose and repair Hermes/Copilot/Codex system prompt context by generating project context artifacts, auditing VS Code configs, and verifying completion across surfaces.
 
 ## Context
 
@@ -216,4 +209,7 @@ Same-family prompts:
 
 - [`agents-fix.prompt.md`](agents-fix.prompt.md)
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
-
+```
+# Prompt template
+Execute the workflow defined in this file.
+```
