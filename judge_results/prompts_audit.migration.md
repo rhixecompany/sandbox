@@ -1,20 +1,13 @@
 # Template Migration Plan
 
-Generated: 2026-08-31 19:14 UTC
+Generated: 2026-08-31 19:47 UTC
 Prompts dir: `.github\prompts`
 
-**Summary:** 0 prompts missing template dirs, 2 orphan template files, 235/235 passing
+**Summary:** 0 prompts missing template dirs, 1 orphan template files, 235/235 passing
 
 ## 2. Migrate Orphan Template Files
 
 These files live outside any prompt's `templates/{trigger}/` directory.
-
-### Category: `orphan-dir:Initial` (1 files)
-
-- **Source:** `.github\prompts\templates\Initial\README.md`
-  **Parent dir:** `templates/Initial/`
-  **Action:** Move to correct `templates/{trigger}/` directory
-  **Suggested target:** `templates/MANUAL/`
 
 ### Category: `orphan-dir:optimize-agentsMd` (1 files)
 
