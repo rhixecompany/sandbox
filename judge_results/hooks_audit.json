@@ -1,113 +1,113 @@
 {
-  "ts": "2026-08-31T14:42:27.379323Z",
+  "ts": "2026-08-31T15:31:54.948414Z",
   "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks",
   "threshold": 70,
   "count": 7,
-  "avg": 29.6,
-  "passed": 0,
+  "avg": 86.6,
+  "passed": 5,
   "results": [
     {
       "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\_pathutil.py",
-      "score": 20,
-      "rating": "FAIL",
+      "score": 94,
+      "rating": "PASS",
       "dims": {
-        "event_coverage": 0,
+        "event_coverage": 20,
         "syntax": 20,
-        "idempotency": 0,
-        "error_handling": 0,
-        "logging": 0
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 16
       },
-      "events_referenced": 0,
+      "events_referenced": 7,
       "syntax_ok": true,
       "syntax_error": ""
     },
     {
       "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\lib.py",
-      "score": 33,
-      "rating": "FAIL",
+      "score": 94,
+      "rating": "PASS",
       "dims": {
-        "event_coverage": 4,
+        "event_coverage": 20,
         "syntax": 20,
-        "idempotency": 0,
-        "error_handling": 5,
-        "logging": 4
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 16
       },
-      "events_referenced": 1,
+      "events_referenced": 7,
       "syntax_ok": true,
       "syntax_error": ""
     },
     {
       "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\lib.sh",
-      "score": 15,
-      "rating": "FAIL",
+      "score": 68,
+      "rating": "WARN",
       "dims": {
-        "event_coverage": 0,
+        "event_coverage": 20,
         "syntax": 4,
-        "idempotency": 3,
-        "error_handling": 0,
-        "logging": 8
+        "idempotency": 9,
+        "error_handling": 15,
+        "logging": 20
       },
-      "events_referenced": 0,
+      "events_referenced": 6,
       "syntax_ok": false,
-      "syntax_error": "<3>WSL (21 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
+      "syntax_error": "<3>WSL (9 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
     },
     {
       "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\post-exec-state-log.py",
-      "score": 29,
-      "rating": "FAIL",
+      "score": 94,
+      "rating": "PASS",
       "dims": {
-        "event_coverage": 0,
+        "event_coverage": 20,
         "syntax": 20,
-        "idempotency": 0,
-        "error_handling": 5,
-        "logging": 4
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 16
       },
-      "events_referenced": 0,
+      "events_referenced": 5,
       "syntax_ok": true,
       "syntax_error": ""
     },
     {
       "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\pre-exec-validate.sh",
-      "score": 30,
-      "rating": "FAIL",
+      "score": 68,
+      "rating": "WARN",
       "dims": {
-        "event_coverage": 0,
+        "event_coverage": 20,
         "syntax": 4,
-        "idempotency": 3,
+        "idempotency": 9,
         "error_handling": 15,
-        "logging": 8
+        "logging": 20
       },
-      "events_referenced": 0,
+      "events_referenced": 5,
       "syntax_ok": false,
-      "syntax_error": "<3>WSL (24 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
+      "syntax_error": "<3>WSL (12 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
     },
     {
       "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session_end_capture.py",
-      "score": 40,
-      "rating": "FAIL",
+      "score": 94,
+      "rating": "PASS",
       "dims": {
-        "event_coverage": 4,
+        "event_coverage": 20,
         "syntax": 20,
-        "idempotency": 0,
-        "error_handling": 0,
+        "idempotency": 18,
+        "error_handling": 20,
         "logging": 16
       },
-      "events_referenced": 1,
+      "events_referenced": 5,
       "syntax_ok": true,
       "syntax_error": ""
     },
     {
       "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session_start_capture.py",
-      "score": 40,
-      "rating": "FAIL",
+      "score": 94,
+      "rating": "PASS",
       "dims": {
-        "event_coverage": 4,
+        "event_coverage": 20,
         "syntax": 20,
-        "idempotency": 0,
-        "error_handling": 0,
+        "idempotency": 18,
+        "error_handling": 20,
         "logging": 16
       },
-      "events_referenced": 1,
+      "events_referenced": 7,
       "syntax_ok": true,
       "syntax_error": ""
     }
