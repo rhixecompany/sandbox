@@ -1,7 +1,7 @@
-# Plans Audit — 2026-08-31 13:46 UTC
+# Plans Audit — 2026-08-31 14:42 UTC
 
-Dir: `C:\Users\Alexa\Desktop\SandBox\.hermes\plans` | Threshold: 70
-Count: 62 | Avg: 42.0 | Passed: 3
+Dir: `.hermes\plans` | Threshold: 70
+Count: 63 | Avg: 42.4 | Passed: 3
 
 | File | Score | Rating | FM | Struct | Content | Status | DRY | Phases | Gates |
 |---|---|---|---|---|---|---|---|---|---|
@@ -44,6 +44,7 @@ Count: 62 | Avg: 42.0 | Passed: 3
 | `2026-08-28_prompt-corpus-enhance.md` | 52 | WARN | 14 | 0 | 6 | 12 | 20 | 0 | 0 |
 | `2026-08-29-master-consolidated-plan.md` | 52 | WARN | 20 | 0 | 0 | 12 | 20 | 0 | 0 |
 | `2026-08-29_full-audit-remediation.md` | 52 | WARN | 20 | 0 | 0 | 12 | 20 | 0 | 4 |
+| `2026-08-31_152242-comprehensive-reimplementation-master.md` | 67 | WARN | 20 | 0 | 7 | 20 | 20 | 0 | 0 |
 | `2026-08-31_six-judge-skills.md` | 72 | PASS | 20 | 0 | 20 | 12 | 20 | 0 | 0 |
 | `agent-provider-matrix.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
 | `audit-report.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |

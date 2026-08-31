@@ -60,6 +60,7 @@
 		".hermes/archived-prompt-templates/**",
 		".github/**",
 		".hermes/**",
+		"judge_results/**",
 		"plans/**",
 		"research/**",
 		"ngn-earnings-kit/**",

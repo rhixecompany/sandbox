@@ -1,0 +1,35 @@
+{
+  "session_id": "20260831_152012_0f2cf7",
+  "timestamp": "2026-08-31_152354",
+  "cwd": "C:\\Users\\Alexa\\Desktop\\SandBox",
+  "profile": "default",
+  "model": "minimax/minimax-m3:free",
+  "commands_run": [
+    "hermes doctor",
+    "hermes doctor --fix",
+    "hermes security audit",
+    "hermes status",
+    "hermes insights",
+    "hermes logs list",
+    "hermes logs errors",
+    "hermes logs desktop",
+    "hermes logs gateway",
+    "hermes logs gui",
+    "hermes logs agent",
+    "bun run check (lint+format+markdownlint+spellcheck)"
+  ],
+  "bun_run_check": "PASS (0 errors)",
+  "status": "PASS",
+  "fixes_applied": [
+    "Added judge_results/ to .prettierignore",
+    "Added judge_results/ to .markdownlint-cli2.jsonc ignores",
+    "Added judge_results/ to cspell.json ignorePaths",
+    "Prettier-formatted cspell.json, .markdownlint-cli2.jsonc, SESSION_REPORT.md",
+    "Renamed duplicate ## Artifacts (this turn) \u2192 ## Artifacts (2026-08-29) in SESSION_REPORT.md"
+  ],
+  "known_warnings": [
+    "Honcho dialectic: Insufficient credits (user-owned)",
+    "title_generator 429: model at capacity (transient)",
+    "Multiple browser/messaging tools unavailable (cosmetic, gated by check_fn)"
+  ]
+}

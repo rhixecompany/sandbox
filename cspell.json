@@ -441,6 +441,7 @@
 		"prompts/**",
 		"docs/reports/**",
 		"results/**",
+		"judge_results/**",
 		"**/*.prompt.md",
 		"uk-earnings-kit/**",
 		".hermes/plans/**/skill_judge_results_*.json",

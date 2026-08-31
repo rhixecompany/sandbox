@@ -1,13 +1,13 @@
 {
-  "ts": "2026-08-31T13:46:18.692641Z",
-  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans",
+  "ts": "2026-08-31T14:42:15.152035Z",
+  "dir": ".hermes\\plans",
   "threshold": 70,
-  "count": 62,
-  "avg": 42.0,
+  "count": 63,
+  "avg": 42.4,
   "passed": 3,
   "results": [
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+      "file": ".hermes\\plans\\2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
       "score": 49,
       "rating": "FAIL",
       "dims": {
@@ -24,7 +24,7 @@
       "checklist_items": 11
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-23-comprehensive-github-prompts-plan.md",
+      "file": ".hermes\\plans\\2026-07-23-comprehensive-github-prompts-plan.md",
       "score": 48,
       "rating": "FAIL",
       "dims": {
@@ -41,7 +41,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+      "file": ".hermes\\plans\\2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
       "score": 43,
       "rating": "FAIL",
       "dims": {
@@ -58,7 +58,7 @@
       "checklist_items": 6
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-25-yaml-workflows-audit-fix-plan.md",
+      "file": ".hermes\\plans\\2026-07-25-yaml-workflows-audit-fix-plan.md",
       "score": 63,
       "rating": "WARN",
       "dims": {
@@ -75,7 +75,7 @@
       "checklist_items": 7
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-31-workspace-cleanup.md",
+      "file": ".hermes\\plans\\2026-07-31-workspace-cleanup.md",
       "score": 41,
       "rating": "FAIL",
       "dims": {
@@ -92,7 +92,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_async-script-tooling-master.md",
+      "file": ".hermes\\plans\\2026-08-01_async-script-tooling-master.md",
       "score": 64,
       "rating": "WARN",
       "dims": {
@@ -109,7 +109,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_consolidated-goal-tooling-cleanup.md",
+      "file": ".hermes\\plans\\2026-08-01_consolidated-goal-tooling-cleanup.md",
       "score": 63,
       "rating": "WARN",
       "dims": {
@@ -126,7 +126,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_repo-tooling.md",
+      "file": ".hermes\\plans\\2026-08-01_repo-tooling.md",
       "score": 50,
       "rating": "WARN",
       "dims": {
@@ -143,7 +143,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_tooling-implementation.md",
+      "file": ".hermes\\plans\\2026-08-01_tooling-implementation.md",
       "score": 64,
       "rating": "WARN",
       "dims": {
@@ -160,7 +160,7 @@
       "checklist_items": 20
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_213801-prompt-library-maintenance.md",
+      "file": ".hermes\\plans\\2026-08-11_213801-prompt-library-maintenance.md",
       "score": 47,
       "rating": "FAIL",
       "dims": {
@@ -177,7 +177,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_214500-repo-init-all-agents.md",
+      "file": ".hermes\\plans\\2026-08-11_214500-repo-init-all-agents.md",
       "score": 57,
       "rating": "WARN",
       "dims": {
@@ -194,7 +194,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_hermes-platform-diagnostics-debug.md",
+      "file": ".hermes\\plans\\2026-08-11_hermes-platform-diagnostics-debug.md",
       "score": 68,
       "rating": "WARN",
       "dims": {
@@ -211,7 +211,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+      "file": ".hermes\\plans\\2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
       "score": 50,
       "rating": "WARN",
       "dims": {
@@ -228,7 +228,7 @@
       "checklist_items": 33
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+      "file": ".hermes\\plans\\2026-08-12_012441-prompts-library-debug-fix-enhance.md",
       "score": 50,
       "rating": "WARN",
       "dims": {
@@ -245,7 +245,7 @@
       "checklist_items": 31
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+      "file": ".hermes\\plans\\2026-08-12_043000-terminal-agent-ecosystem-sync.md",
       "score": 33,
       "rating": "FAIL",
       "dims": {
@@ -262,7 +262,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-plan.md",
+      "file": ".hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-plan.md",
       "score": 61,
       "rating": "WARN",
       "dims": {
@@ -279,7 +279,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-spec.md",
+      "file": ".hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-spec.md",
       "score": 34,
       "rating": "FAIL",
       "dims": {
@@ -296,7 +296,7 @@
       "checklist_items": 9
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-plan.md",
+      "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-plan.md",
       "score": 70,
       "rating": "PASS",
       "dims": {
@@ -313,7 +313,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-spec.md",
+      "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-spec.md",
       "score": 35,
       "rating": "FAIL",
       "dims": {
@@ -330,7 +330,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration.md",
+      "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration.md",
       "score": 58,
       "rating": "WARN",
       "dims": {
@@ -347,7 +347,7 @@
       "checklist_items": 13
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-plan.md",
+      "file": ".hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-plan.md",
       "score": 70,
       "rating": "PASS",
       "dims": {
@@ -364,7 +364,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-spec.md",
+      "file": ".hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-spec.md",
       "score": 36,
       "rating": "FAIL",
       "dims": {
@@ -381,7 +381,7 @@
       "checklist_items": 19
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-16_142300_cross-platform-agent-sync-spec.md",
+      "file": ".hermes\\plans\\2026-08-16_142300_cross-platform-agent-sync-spec.md",
       "score": 19,
       "rating": "FAIL",
       "dims": {
@@ -398,7 +398,7 @@
       "checklist_items": 72
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+      "file": ".hermes\\plans\\2026-08-16_142300_mcp-sync-all-agents-implementation.md",
       "score": 26,
       "rating": "FAIL",
       "dims": {
@@ -415,7 +415,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+      "file": ".hermes\\plans\\2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
       "score": 55,
       "rating": "WARN",
       "dims": {
@@ -432,7 +432,7 @@
       "checklist_items": 6
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+      "file": ".hermes\\plans\\2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -449,7 +449,7 @@
       "checklist_items": 24
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_235900-subagent-driven-development-full-implementation.md",
+      "file": ".hermes\\plans\\2026-08-19_235900-subagent-driven-development-full-implementation.md",
       "score": 47,
       "rating": "FAIL",
       "dims": {
@@ -466,7 +466,7 @@
       "checklist_items": 16
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+      "file": ".hermes\\plans\\2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
       "score": 34,
       "rating": "FAIL",
       "dims": {
@@ -483,7 +483,7 @@
       "checklist_items": 9
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+      "file": ".hermes\\plans\\2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
       "score": 33,
       "rating": "FAIL",
       "dims": {
@@ -500,7 +500,7 @@
       "checklist_items": 20
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-context-and-model-sync.md",
+      "file": ".hermes\\plans\\2026-08-24_comprehensive-context-and-model-sync.md",
       "score": 55,
       "rating": "WARN",
       "dims": {
@@ -517,7 +517,7 @@
       "checklist_items": 11
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-platform-remediation-spec.md",
+      "file": ".hermes\\plans\\2026-08-24_comprehensive-platform-remediation-spec.md",
       "score": 33,
       "rating": "FAIL",
       "dims": {
@@ -534,7 +534,7 @@
       "checklist_items": 56
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-platform-remediation.md",
+      "file": ".hermes\\plans\\2026-08-24_comprehensive-platform-remediation.md",
       "score": 40,
       "rating": "FAIL",
       "dims": {
@@ -551,7 +551,7 @@
       "checklist_items": 13
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_hermes-full-diagnostic-repair.md",
+      "file": ".hermes\\plans\\2026-08-24_hermes-full-diagnostic-repair.md",
       "score": 33,
       "rating": "FAIL",
       "dims": {
@@ -568,7 +568,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_update-enhance-verify-context-files.md",
+      "file": ".hermes\\plans\\2026-08-24_update-enhance-verify-context-files.md",
       "score": 41,
       "rating": "FAIL",
       "dims": {
@@ -585,7 +585,7 @@
       "checklist_items": 5
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-25_015239-dependency-toolchain-update.md",
+      "file": ".hermes\\plans\\2026-08-25_015239-dependency-toolchain-update.md",
       "score": 66,
       "rating": "WARN",
       "dims": {
@@ -602,7 +602,7 @@
       "checklist_items": 79
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-28_phase-b-prompt-enhancement.md",
+      "file": ".hermes\\plans\\2026-08-28_phase-b-prompt-enhancement.md",
       "score": 52,
       "rating": "WARN",
       "dims": {
@@ -619,7 +619,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-28_prompt-corpus-enhance.md",
+      "file": ".hermes\\plans\\2026-08-28_prompt-corpus-enhance.md",
       "score": 52,
       "rating": "WARN",
       "dims": {
@@ -636,7 +636,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-29-master-consolidated-plan.md",
+      "file": ".hermes\\plans\\2026-08-29-master-consolidated-plan.md",
       "score": 52,
       "rating": "WARN",
       "dims": {
@@ -653,7 +653,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-29_full-audit-remediation.md",
+      "file": ".hermes\\plans\\2026-08-29_full-audit-remediation.md",
       "score": 52,
       "rating": "WARN",
       "dims": {
@@ -670,7 +670,24 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_six-judge-skills.md",
+      "file": ".hermes\\plans\\2026-08-31_152242-comprehensive-reimplementation-master.md",
+      "score": 67,
+      "rating": "WARN",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 0,
+        "content": 7,
+        "status": 20,
+        "dry": 20
+      },
+      "lines": 199,
+      "phases": 0,
+      "gates": 0,
+      "status": "in_progress",
+      "checklist_items": 9
+    },
+    {
+      "file": ".hermes\\plans\\2026-08-31_six-judge-skills.md",
       "score": 72,
       "rating": "PASS",
       "dims": {
@@ -687,7 +704,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\agent-provider-matrix.md",
+      "file": ".hermes\\plans\\agent-provider-matrix.md",
       "score": 34,
       "rating": "FAIL",
       "dims": {
@@ -704,7 +721,7 @@
       "checklist_items": 28
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\audit-report.md",
+      "file": ".hermes\\plans\\audit-report.md",
       "score": 20,
       "rating": "FAIL",
       "dims": {
@@ -721,7 +738,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\deepseek-workflow.md",
+      "file": ".hermes\\plans\\deepseek-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -738,7 +755,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\disk-cleanup-skill-implementation.md",
+      "file": ".hermes\\plans\\disk-cleanup-skill-implementation.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -755,7 +772,7 @@
       "checklist_items": 9
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\disk-cleanup-workflow.md",
+      "file": ".hermes\\plans\\disk-cleanup-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -772,7 +789,7 @@
       "checklist_items": 6
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\example-subagent-plan.md",
+      "file": ".hermes\\plans\\example-subagent-plan.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -789,7 +806,7 @@
       "checklist_items": 6
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\execution-summary.md",
+      "file": ".hermes\\plans\\execution-summary.md",
       "score": 34,
       "rating": "FAIL",
       "dims": {
@@ -806,7 +823,7 @@
       "checklist_items": 12
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\gemini-workflow.md",
+      "file": ".hermes\\plans\\gemini-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -823,7 +840,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\honcho-hermes-integration-implementation.md",
+      "file": ".hermes\\plans\\honcho-hermes-integration-implementation.md",
       "score": 49,
       "rating": "FAIL",
       "dims": {
@@ -840,7 +857,7 @@
       "checklist_items": 120
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\honcho-hermes-integration-spec.md",
+      "file": ".hermes\\plans\\honcho-hermes-integration-spec.md",
       "score": 37,
       "rating": "FAIL",
       "dims": {
@@ -857,7 +874,7 @@
       "checklist_items": 16
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\huggingface-workflow.md",
+      "file": ".hermes\\plans\\huggingface-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -874,7 +891,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\next-steps-implementation-plan.md",
+      "file": ".hermes\\plans\\next-steps-implementation-plan.md",
       "score": 48,
       "rating": "FAIL",
       "dims": {
@@ -891,7 +908,7 @@
       "checklist_items": 14
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\next-steps-specs.md",
+      "file": ".hermes\\plans\\next-steps-specs.md",
       "score": 20,
       "rating": "FAIL",
       "dims": {
@@ -908,7 +925,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\nous-workflow.md",
+      "file": ".hermes\\plans\\nous-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -925,7 +942,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\ollama-cloud-workflow.md",
+      "file": ".hermes\\plans\\ollama-cloud-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -942,7 +959,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\opencode-zen-workflow.md",
+      "file": ".hermes\\plans\\opencode-zen-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -959,7 +976,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\openrouter-workflow.md",
+      "file": ".hermes\\plans\\openrouter-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -976,7 +993,7 @@
       "checklist_items": 4
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\provider-workflow-master-plan.md",
+      "file": ".hermes\\plans\\provider-workflow-master-plan.md",
       "score": 34,
       "rating": "FAIL",
       "dims": {
@@ -993,7 +1010,7 @@
       "checklist_items": 10
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\provider-workflow-strategy.md",
+      "file": ".hermes\\plans\\provider-workflow-strategy.md",
       "score": 26,
       "rating": "FAIL",
       "dims": {
@@ -1010,7 +1027,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\release-notes-profile-sync-2026-08-24.md",
+      "file": ".hermes\\plans\\release-notes-profile-sync-2026-08-24.md",
       "score": 20,
       "rating": "FAIL",
       "dims": {
@@ -1027,7 +1044,7 @@
       "checklist_items": 0
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\skill-implementation-master-plan.md",
+      "file": ".hermes\\plans\\skill-implementation-master-plan.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {
@@ -1044,7 +1061,7 @@
       "checklist_items": 5
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\xai-workflow.md",
+      "file": ".hermes\\plans\\xai-workflow.md",
       "score": 28,
       "rating": "FAIL",
       "dims": {

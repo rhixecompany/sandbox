@@ -6,6 +6,8 @@
 .hermes/plans/**/*.jsonl
 # Runtime-generated artifacts (auth_inventory, package_inspector, fanout reports)
 scripts/.runtime/
+# Judge-skill CLI output (regenerated each session)
+judge_results/
 # Root workspace files we want to check
 !packages/openrouter-client/**
 !packages/openrouter-client/**

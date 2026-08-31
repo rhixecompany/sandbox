@@ -1,0 +1,279 @@
+=== hermes logs list ===
+Log files in ~/AppData/Local/hermes/logs/:
+
+  action-curator-run.log        807B   2026-08-11
+  action-doctor.log           12.5KB   2026-08-19
+  action-security-audit.log    3.8KB   2026-08-19
+  action-skills-install-agent-hooks-21d3eec4.log    8.4KB   2026-08-11
+  action-skills-install-agentmemory-hooks-1da657c2.log    1.4KB   2026-08-11
+  action-skills-install-automation-scripts-87f17be5.log     394B   2026-08-11
+  action-skills-install-browse-sh-agent-email-get-email-inbox-5e963107.log     233B   2026-08-11
+  action-skills-install-browse-sh-agentpowers-ai-search-skills-plugins-s-422cdd19.log    1.1KB   2026-08-11
+  action-skills-install-bun-scripts-0188e601.log     196B   2026-08-11
+  action-skills-install-devops-scripts-224aaa27.log     211B   2026-08-11
+  action-skills-install-git-hooks-generator-d3ed007b.log     236B   2026-08-11
+  action-skills-install-git-hooks-manager-1acaec54.log     226B   2026-08-11
+  action-skills-install-git-hooks-toolkit-d1a18d38.log     226B   2026-08-11
+  action-skills-install-init-hooks-33601839.log     191B   2026-08-11
+  action-skills-install-live-qa-scripts-bef61c17.log     217B   2026-08-11
+  action-skills-install-milaex-crypto-api-61c38fe7.log     308B   2026-08-11
+  action-skills-install-official-autonomous-ai-agents-antigravity-cli-c50527af.log     286B   2026-08-11
+  action-skills-install-prompt-9c7e05e5.log     184B   2026-08-11
+  action-skills-install-react-game-loop-a621caf2.log     222B   2026-08-11
+  action-skills-install-realtime-react-hooks-3ca811ed.log     241B   2026-08-11
+  action-skills-install-senpub-124ab220.log     181B   2026-08-11
+  action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log    1.8KB   2026-08-11
+  action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log     967B   2026-08-11
+  action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log    1.4KB   2026-08-11
+  action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log    1.6KB   2026-08-11
+  action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log    1.5KB   2026-08-11
+  action-skills-install-solo-plan-14e77242.log     181B   2026-08-11
+  action-skills-install-trpg-data-context-hooks-24858dd4.log     259B   2026-08-11
+  action-skills-update.log   159.9KB   2026-08-11
+  agent.log                    1.6MB   7m ago
+  bootstrap-installer.log    337.9KB   2026-08-19
+  desktop.log                280.2KB   2026-08-25
+  errors.log                   1.8MB   just now
+  gateway-exit-diag.log       23.2KB   11m ago
+  gateway-restart.log           137B   2026-08-11
+  gateway-stdio.log          531.2KB   16m ago
+  gateway.log                  2.8MB   7m ago
+  gui.log                      2.7KB   2026-08-25
+  mcp-stderr.log              16.0MB   5m ago
+  tui_gateway_crash.log       19.3KB   10m ago
+  update.log                 254.8KB   59m ago
+=== hermes logs errors ===
+--- ~/AppData/Local/hermes/logs/errors.log (last 50) ---
+2026-08-31 15:21:03,984 WARNING agent.title_generator: Title generation failed: Error code: 429 - {'status': 429, 'message': "The requested model is temporarily at capacity upstream. This is not your API key's rate limit — please retry shortly."}
+2026-08-31 15:21:17,088 WARNING plugins.memory.honcho.session: Honcho dialectic query failed: Payment required: Insufficient credits. Please add credits at https://app.honcho.dev/billing or enable auto top-up.
+2026-08-31 15:21:17,642 WARNING plugins.memory.honcho.session: Honcho dialectic query failed: Payment required: Insufficient credits. Please add credits at https://app.honcho.dev/billing or enable auto top-up.
+2026-08-31 15:21:34,792 WARNING agent.skill_commands: Skill 'audit-prompts' maps to slash command /audit-prompts already claimed by '-audit-prompts'; keeping the first and skipping this one.
+2026-08-31 15:21:35,024 WARNING agent.skill_commands: Skill 'status' generates slash command '/status' which collides with a core Hermes command; skipping auto-registration. Use '/skill status' instead.
+2026-08-31 15:21:35,357 WARNING agent.skill_commands: Skill 'rollback' generates slash command '/rollback' which collides with a core Hermes command; skipping auto-registration. Use '/skill rollback' instead.
+2026-08-31 15:21:35,508 WARNING agent.skill_commands: Skill 'plan' generates slash command '/plan' which collides with a core Hermes command; skipping auto-registration. Use '/skill plan' instead.
+2026-08-31 15:23:48,299 WARNING plugins.memory.honcho.session: Honcho dialectic query failed: Payment required: Insufficient credits. Please add credits at https://app.honcho.dev/billing or enable auto top-up.
+2026-08-31 15:23:48,616 WARNING plugins.memory.honcho.session: Honcho dialectic query failed: Payment required: Insufficient credits. Please add credits at https://app.honcho.dev/billing or enable auto top-up.
+2026-08-31 15:24:02,785 WARNING tools.mcp_tool: MCP server 'mcp-docker': revived — session healthy again after parking (state: parked → connected)
+2026-08-31 15:25:31,983 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:31,997 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,002 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,007 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,011 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,015 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,021 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,025 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,030 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,035 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,039 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,044 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,064 WARNING tools.registry: check_fn check_discord_tool_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,065 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,066 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,080 WARNING tools.registry: check_fn _check_yuanbao returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,080 WARNING tools.registry: check_fn _check_ha_available returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,084 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,086 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-31 15:25:32,088 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,640 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,654 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,659 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,664 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,669 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,675 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,680 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,684 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,689 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,694 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,698 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,702 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,721 WARNING tools.registry: check_fn check_discord_tool_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,723 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,724 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,738 WARNING tools.registry: check_fn _check_yuanbao returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,738 WARNING tools.registry: check_fn _check_ha_available returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,741 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,743 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-31 15:26:06,745 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+=== hermes logs desktop ===
+--- ~/AppData/Local/hermes/logs/desktop.log (last 50) ---
+[2026-08-24T23:59:21.524Z] [hermes]    📝 Error: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-24T23:59:21.524Z] [hermes]    ⏱️  Elapsed: 17.16s  Context: 102 msgs, ~114,696 tokens
+[2026-08-24T23:59:21.524Z] [hermes] ⏳ Retrying in 5.2s (attempt 2/3)...
+[2026-08-24T23:59:21.525Z] [hermes] ⚠️  API call failed (attempt 3/3): APIConnectionError
+[2026-08-24T23:59:21.525Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-24T23:59:21.525Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-24T23:59:21.525Z] [hermes]    📝 Error: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-24T23:59:21.525Z] [hermes]    ⏱️  Elapsed: 22.59s  Context: 102 msgs, ~114,696 tokens
+[2026-08-24T23:59:21.525Z] [hermes] ❌ API failed after 3 retries — Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-24T23:59:21.525Z] [hermes] 💀 Final error: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.
+[2026-08-25T00:03:07.133Z] [hermes] ⚡ Interrupted during API call.
+[2026-08-25T00:17:09.223Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.223Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.223Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.224Z] [hermes] 📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.224Z] [hermes]    ⏱️  Elapsed: 3.49s  Context: 26 msgs, ~54,686 tokens
+[2026-08-25T00:17:09.225Z] [hermes] ⏳ Retrying in 2.4s (attempt 1/3)...
+[2026-08-25T00:17:09.234Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.234Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.234Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.234Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.235Z] [hermes] ⏱️  Elapsed: 4.04s  Context: 66 msgs, ~76,020 tokens
+[2026-08-25T00:17:09.235Z] [hermes] ⏳ Retrying in 2.3s (attempt 1/3)...
+[2026-08-25T00:17:09.238Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.238Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.238Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.239Z] [hermes] 📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.239Z] [hermes]    ⏱️  Elapsed: 4.05s  Context: 88 msgs, ~95,395 tokens
+[2026-08-25T00:17:09.239Z] [hermes] ⏳ Retrying in 2.2s (attempt 1/3)...
+[2026-08-25T00:17:09.241Z] [hermes] ⚠️  API call failed (attempt 1/3): APIError
+[2026-08-25T00:17:09.241Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.241Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.241Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.241Z] [hermes]    ⏱️  Elapsed: 3.07s  Context: 102 msgs, ~98,829 tokens
+[2026-08-25T00:17:09.241Z] [hermes] ⏳ Retrying in 2.7s (attempt 1/3)...
+[2026-08-25T00:17:09.243Z] [hermes] ⚠️  API call failed (attempt 2/3): APIError
+[2026-08-25T00:17:09.243Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.243Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.243Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.243Z] [hermes]    ⏱️  Elapsed: 9.65s  Context: 102 msgs, ~98,829 tokens
+[2026-08-25T00:17:09.243Z] [hermes] ⏳ Retrying in 5.5s (attempt 2/3)...
+[2026-08-25T00:17:09.246Z] [hermes] ⚠️  API call failed (attempt 3/3): APIError
+[2026-08-25T00:17:09.246Z] [hermes]    🔌 Provider: opencode-zen  Model: nemotron-3-ultra-free
+[2026-08-25T00:17:09.246Z] [hermes]    🌐 Endpoint: https://opencode.ai/zen/v1
+[2026-08-25T00:17:09.246Z] [hermes]    📝 Error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.246Z] [hermes]    ⏱️  Elapsed: 19.48s  Context: 102 msgs, ~98,829 tokens
+[2026-08-25T00:17:09.246Z] [hermes] ❌ API failed after 3 retries — Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:17:09.248Z] [hermes] 💀 Final error: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded
+[2026-08-25T00:19:19.538Z] [hermes] [tool] ( •_•)>⌐■-■ computing...
+[2026-08-25T00:19:41.286Z] [hermes] Ignoring stale Hermes backend exit (1)
+=== hermes logs gateway ===
+--- ~/AppData/Local/hermes/logs/gateway.log (last 50) ---
+2026-08-29 05:08:19,240 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:22,744 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:08:22,747 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:22,873 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Sticky Telegram path 149.154.166.110 failed; re-walking IPv4 literals before the hostname
+2026-08-29 05:08:22,874 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:08:22,912 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:22,941 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:22,942 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:33,031 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:08:33,075 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:33,101 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:33,102 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:53,230 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:08:53,254 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:08:53,278 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:08:53,278 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 4/10), reconnecting in 40s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:09:17,810 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:09:17,841 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:09:33,319 WARNING plugins.platforms.telegram.telegram_network: [Telegram] IPv4 Telegram API IP 149.154.166.110 failed: All connection attempts failed
+2026-08-29 05:09:33,355 WARNING plugins.platforms.telegram.telegram_network: [Telegram] Dual-stack api.telegram.org path failed ([Errno 11001] getaddrinfo failed)
+2026-08-29 05:09:33,388 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling reconnect failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-29 05:09:33,388 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram network error (attempt 5/10), reconnecting in 60s. Error: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-08-31 14:28:51,721 WARNING gateway.lifecycle_ledger: Previous gateway life (pid=7556, started_at=2026-08-29T03:08:54.442638+00:00) exited UNCLEANLY (no exit path ran — SIGKILL / OOM / VM death). last_heartbeat_at=2026-08-29T04:58:51.691571+00:00 last_mem=None suspected_oom=False
+2026-08-31 14:30:05,667 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-08-31 14:30:06,830 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-08-31 14:30:31,488 WARNING gateway.shutdown_watchdog: Loop tick socket unavailable — liveness probes will have no loop-scheduling witness and will not escalate on a stale heartbeat
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\gateway\shutdown_watchdog.py", line 572, in loop_heartbeat_forever
+    tick_server = await asyncio.start_unix_server(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'asyncio' has no attribute 'start_unix_server'. Did you mean: 'start_server'?
+2026-08-31 15:15:28,336 WARNING gateway.lifecycle_ledger: Previous gateway life (pid=8340, started_at=2026-08-31T13:28:52.989053+00:00) exited UNCLEANLY (no exit path ran — SIGKILL / OOM / VM death). last_heartbeat_at=2026-08-31T14:11:03.876415+00:00 last_mem=None suspected_oom=False
+2026-08-31 15:15:54,723 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:15:54,752 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:15:54,752 WARNING gateway.run: ✗ telegram failed to connect
+2026-08-31 15:15:54,776 WARNING gateway.run: ✗ webhook failed to connect
+2026-08-31 15:15:54,812 WARNING gateway.run: Gateway started with no connected platforms — 2 platform(s) queued for retry: telegram: Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).; webhook: failed to connect
+2026-08-31 15:15:54,833 WARNING gateway.run: No adapter could be created for any of the 2 configured platform(s). Check that required dependencies are installed and credentials are set. Gateway will continue for cron job execution.
+2026-08-31 15:15:55,070 WARNING gateway.shutdown_watchdog: Loop tick socket unavailable — liveness probes will have no loop-scheduling witness and will not escalate on a stale heartbeat
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\gateway\shutdown_watchdog.py", line 572, in loop_heartbeat_forever
+    tick_server = await asyncio.start_unix_server(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'asyncio' has no attribute 'start_unix_server'. Did you mean: 'start_server'?
+2026-08-31 15:16:25,736 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:16:25,773 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:17:36,558 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:17:38,823 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:19:45,733 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-08-31 15:19:46,365 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+=== hermes logs gui ===
+--- ~/AppData/Local/hermes/logs/gui.log (last 50) ---
+2026-08-11 19:54:36,413 WARNING hermes_cli.web_server: event loop stalled 12.2s (GIL pressure suspected)
+2026-08-11 20:07:28,456 WARNING hermes_cli.web_server: event loop stalled 5.9s (GIL pressure suspected)
+2026-08-11 20:17:43,767 WARNING hermes_cli.web_server: event loop stalled 22.2s (GIL pressure suspected)
+2026-08-11 20:18:15,666 WARNING hermes_cli.web_server: event loop stalled 5.9s (GIL pressure suspected)
+2026-08-11 20:18:59,851 WARNING hermes_cli.web_server: event loop stalled 6.3s (GIL pressure suspected)
+2026-08-11 20:19:30,489 WARNING hermes_cli.web_server: event loop stalled 6.2s (GIL pressure suspected)
+2026-08-11 20:20:04,613 WARNING hermes_cli.web_server: event loop stalled 5.1s (GIL pressure suspected)
+2026-08-11 20:20:37,180 WARNING hermes_cli.web_server: event loop stalled 5.8s (GIL pressure suspected)
+2026-08-11 20:20:59,566 WARNING hermes_cli.web_server: event loop stalled 8.3s (GIL pressure suspected)
+2026-08-11 20:21:30,195 WARNING hermes_cli.web_server: event loop stalled 10.4s (GIL pressure suspected)
+2026-08-16 00:44:12,477 WARNING hermes_cli.web_server: event loop stalled 12.0s (GIL pressure suspected)
+2026-08-19 19:43:38,820 WARNING hermes_cli.web_server: event loop stalled 17.2s (GIL pressure suspected)
+2026-08-19 19:44:17,832 WARNING hermes_cli.web_server: event loop stalled 10.9s (GIL pressure suspected)
+2026-08-19 19:44:40,729 WARNING hermes_cli.web_server: event loop stalled 8.8s (GIL pressure suspected)
+2026-08-19 19:45:25,989 WARNING hermes_cli.web_server: event loop stalled 31.2s (GIL pressure suspected)
+2026-08-19 19:45:47,571 WARNING hermes_cli.web_server: event loop stalled 9.6s (GIL pressure suspected)
+2026-08-19 19:46:26,385 WARNING hermes_cli.web_server: event loop stalled 15.5s (GIL pressure suspected)
+2026-08-19 19:46:48,864 WARNING hermes_cli.web_server: event loop stalled 6.5s (GIL pressure suspected)
+2026-08-19 19:47:04,163 WARNING hermes_cli.web_server: event loop stalled 5.3s (GIL pressure suspected)
+2026-08-19 19:47:39,900 WARNING hermes_cli.web_server: event loop stalled 25.7s (GIL pressure suspected)
+2026-08-19 19:47:57,563 WARNING hermes_cli.web_server: event loop stalled 7.7s (GIL pressure suspected)
+2026-08-25 00:40:42,482 WARNING tui_gateway.server: prompt.submit: truncating session aeeaf886 history 31 -> 0 messages (ordinal=0)
+2026-08-25 00:41:03,973 WARNING tui_gateway.server: prompt.submit: truncating session aeeaf886 history 3 -> 0 messages (ordinal=0)
+2026-08-25 00:42:05,657 WARNING tui_gateway.server: prompt.submit: truncating session aeeaf886 history 5 -> 0 messages (ordinal=0)
+2026-08-25 01:00:13,714 WARNING tui_gateway.server: prompt.submit: truncating session b71e7f5a history 101 -> 0 messages (ordinal=0)
+=== hermes logs agent ===
+--- ~/AppData/Local/hermes/logs/agent.log (last 50) ---
+2026-08-31 15:15:54,752 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:16:25,736 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:16:25,773 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:17:36,558 ERROR gateway.platforms.base: [Telegram] Telegram bot token already in use by the 'code-architect' profile gateway (PID 3588). Stop that gateway first (hermes --profile code-architect gateway stop).
+2026-08-31 15:17:38,823 ERROR gateway.platforms.webhook: [webhook] Could not bind all IPv4+IPv6 interfaces:8644: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8644): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted. Set a different host or port in config.yaml under platforms.webhook.extra.
+2026-08-31 15:19:05,290 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 400 - {'error': {'message': 'qwen3-vl:2b is not a valid model ID', 'code': 400}, 'user_id': 'user_3IYFe5gL3BBw9aOY7xL0rfZQFlo'}
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 4851, in _call
+    result["response"] = _call_chat_completions(stream_attempt_id)
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 4120, in _call_chat_completions
+    relay_llm.stream(
+    ~~~~~~~~~~~~~~~~^
+        api_kwargs,
+        ^^^^^^^^^^^
+    ...<19 lines>...
+        defer_logical_completion=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 395, in stream
+    return ManagedLlmStream(
+        request,
+    ...<11 lines>...
+        defer_logical_completion=defer_logical_completion,
+    )
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 478, in __init__
+    raw_stream = stream_factory(request)
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 4057, in _open_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'qwen3-vl:2b is not a valid model ID', 'code': 400}, 'user_id': 'user_3IYFe5gL3BBw9aOY7xL0rfZQFlo'}
+2026-08-31 15:19:05,552 ERROR [20260831_150922_8b1406] agent.conversation_loop: Non-retryable client error: Error code: 400 - {'error': {'message': 'qwen3-vl:2b is not a valid model ID', 'code': 400}, 'user_id': 'user_3IYFe5gL3BBw9aOY7xL0rfZQFlo'}

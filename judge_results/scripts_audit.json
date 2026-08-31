@@ -1,6 +1,6 @@
 {
-  "ts": "2026-08-31T13:46:26.807689Z",
-  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts",
+  "ts": "2026-08-31T14:42:25.358006Z",
+  "dir": "scripts",
   "threshold": 70,
   "count": 34,
   "avg": 81.1,
@@ -8,7 +8,7 @@
   "syntax_failed": 4,
   "results": [
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\agent-provider-matrix-smokecheck.sh",
+      "file": "scripts\\agent-provider-matrix-smokecheck.sh",
       "score": 46,
       "rating": "FAIL",
       "dims": {
@@ -24,7 +24,7 @@
       "syntax_error": "<3>WSL (9 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\agent_provider_matrix.py",
+      "file": "scripts\\agent_provider_matrix.py",
       "score": 85,
       "rating": "PASS",
       "dims": {
@@ -40,7 +40,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\auth_inventory.py",
+      "file": "scripts\\auth_inventory.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -56,7 +56,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\disk_cleanup.py",
+      "file": "scripts\\disk_cleanup.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -72,7 +72,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\fanout.py",
+      "file": "scripts\\fanout.py",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -88,7 +88,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\fix_provider_models.py",
+      "file": "scripts\\fix_provider_models.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -104,7 +104,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\generate-mcp-skills.py",
+      "file": "scripts\\generate-mcp-skills.py",
       "score": 62,
       "rating": "WARN",
       "dims": {
@@ -120,7 +120,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\git_sync.sh",
+      "file": "scripts\\git_sync.sh",
       "score": 68,
       "rating": "WARN",
       "dims": {
@@ -136,7 +136,7 @@
       "syntax_error": "<3>WSL (12 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\hermes-mcp-manager.py",
+      "file": "scripts\\hermes-mcp-manager.py",
       "score": 70,
       "rating": "PASS",
       "dims": {
@@ -152,7 +152,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\hermes_diagnostic.py",
+      "file": "scripts\\hermes_diagnostic.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -168,7 +168,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\hermes_doctor.py",
+      "file": "scripts\\hermes_doctor.py",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -184,7 +184,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\instruction_audit.py",
+      "file": "scripts\\instruction_audit.py",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -200,7 +200,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\instruction_fix.py",
+      "file": "scripts\\instruction_fix.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -216,7 +216,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\log_analysis.py",
+      "file": "scripts\\log_analysis.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
@@ -232,7 +232,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\mcp_audit.py",
+      "file": "scripts\\mcp_audit.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -248,7 +248,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\mcp_sync.py",
+      "file": "scripts\\mcp_sync.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -264,7 +264,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\ollama_wire.py",
+      "file": "scripts\\ollama_wire.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -280,7 +280,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\package_inspector.py",
+      "file": "scripts\\package_inspector.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -296,7 +296,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\plugins_hooks_audit.py",
+      "file": "scripts\\plugins_hooks_audit.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -312,7 +312,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\profile_config_audit.py",
+      "file": "scripts\\profile_config_audit.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
@@ -328,7 +328,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\profile_config_fix.py",
+      "file": "scripts\\profile_config_fix.py",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -344,7 +344,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\prompt_dry_audit.py",
+      "file": "scripts\\prompt_dry_audit.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -360,7 +360,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\prompt_dry_bulk_fields.py",
+      "file": "scripts\\prompt_dry_bulk_fields.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
@@ -376,7 +376,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\prompt_dry_fix.py",
+      "file": "scripts\\prompt_dry_fix.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
@@ -392,7 +392,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\provider_executor.py",
+      "file": "scripts\\provider_executor.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -408,7 +408,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\stage_missing_lsps.sh",
+      "file": "scripts\\stage_missing_lsps.sh",
       "score": 46,
       "rating": "FAIL",
       "dims": {
@@ -424,7 +424,7 @@
       "syntax_error": "<3>WSL (15 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\subagent_dispatcher.py",
+      "file": "scripts\\subagent_dispatcher.py",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -440,7 +440,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\submodule_commit.sh",
+      "file": "scripts\\submodule_commit.sh",
       "score": 50,
       "rating": "WARN",
       "dims": {
@@ -456,7 +456,7 @@
       "syntax_error": "<3>WSL (18 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\sync-mcp-config.ts",
+      "file": "scripts\\sync-mcp-config.ts",
       "score": 48,
       "rating": "FAIL",
       "dims": {
@@ -472,7 +472,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\sync-mcp-configs.ps1",
+      "file": "scripts\\sync-mcp-configs.ps1",
       "score": 50,
       "rating": "WARN",
       "dims": {
@@ -488,7 +488,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\validate-mcp-consistency.ts",
+      "file": "scripts\\validate-mcp-consistency.ts",
       "score": 44,
       "rating": "FAIL",
       "dims": {
@@ -504,7 +504,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\validate-mcp-servers.py",
+      "file": "scripts\\validate-mcp-servers.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
@@ -520,7 +520,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\verify-full-implementation.py",
+      "file": "scripts\\verify-full-implementation.py",
       "score": 76,
       "rating": "PASS",
       "dims": {
@@ -536,7 +536,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\verify_prompt_corpus.py",
+      "file": "scripts\\verify_prompt_corpus.py",
       "score": 88,
       "rating": "PASS",
       "dims": {

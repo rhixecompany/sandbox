@@ -1,6 +1,6 @@
-# Scripts Audit — 2026-08-31 13:46 UTC
+# Scripts Audit — 2026-08-31 14:42 UTC
 
-Dir: `C:\Users\Alexa\Desktop\SandBox\scripts` | Threshold: 70
+Dir: `scripts` | Threshold: 70
 Count: 34 | Avg: 81.1 | Passed: 26
 Syntax failures: 4
 

@@ -1,6 +1,6 @@
-# Prompts Audit — 2026-08-31 13:46 UTC
+# Prompts Audit — 2026-08-31 14:42 UTC
 
-Dir: `C:\Users\Alexa\Desktop\SandBox\.github\prompts` | Threshold: 70
+Dir: `.github\prompts` | Threshold: 70
 Count: 233 | Avg: 80.4 | Passed: 233
 Unbalanced-fence files: 1
 

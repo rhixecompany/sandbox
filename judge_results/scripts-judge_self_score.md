@@ -4,7 +4,7 @@ SKILL JUDGE REPORT
 Total: 1 | Passed: 1 | Failed: 0 | Threshold: 95
 
 --- PASSED ---
-  [100] scripts-judge (0.00s)
+  [100] scripts-judge (0.02s)
 
 Average score: 100.0
-Total time: 0.00s
+Total time: 0.02s

@@ -1,6 +1,6 @@
 {
-  "ts": "2026-08-31T13:46:19.279371Z",
-  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts",
+  "ts": "2026-08-31T14:42:16.007018Z",
+  "dir": ".github\\prompts",
   "threshold": 70,
   "count": 233,
   "avg": 80.4,
@@ -8,7 +8,7 @@
   "unbalanced_fences": 1,
   "results": [
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\add-educational-comments.prompt.md",
+      "file": ".github\\prompts\\add-educational-comments.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -48,7 +48,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\agents-fix.prompt.md",
+      "file": ".github\\prompts\\agents-fix.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -88,7 +88,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\agents-generator.prompt.md",
+      "file": ".github\\prompts\\agents-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -128,7 +128,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\agents-system-prompt-context-fix.prompt.md",
+      "file": ".github\\prompts\\agents-system-prompt-context-fix.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -168,7 +168,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\ai-prompt-engineering-safety-review.prompt.md",
+      "file": ".github\\prompts\\ai-prompt-engineering-safety-review.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -208,7 +208,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\all-repo-docker-setup.prompt.md",
+      "file": ".github\\prompts\\all-repo-docker-setup.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -248,7 +248,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\apple-appstore-reviewer.prompt.md",
+      "file": ".github\\prompts\\apple-appstore-reviewer.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -288,7 +288,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\arch-linux-triage.prompt.md",
+      "file": ".github\\prompts\\arch-linux-triage.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -328,7 +328,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\architecture-blueprint-generator.prompt.md",
+      "file": ".github\\prompts\\architecture-blueprint-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -368,7 +368,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\aspnet-minimal-api-openapi.prompt.md",
+      "file": ".github\\prompts\\aspnet-minimal-api-openapi.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -408,7 +408,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\audit-skills-judge-fix.prompt.md",
+      "file": ".github\\prompts\\audit-skills-judge-fix.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -448,7 +448,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\az-cost-optimize.prompt.md",
+      "file": ".github\\prompts\\az-cost-optimize.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -488,7 +488,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\azure-resource-health-diagnose.prompt.md",
+      "file": ".github\\prompts\\azure-resource-health-diagnose.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -528,7 +528,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\bash-scripts-fix.prompt.md",
+      "file": ".github\\prompts\\bash-scripts-fix.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -568,7 +568,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\bigquery-pipeline-audit.prompt.md",
+      "file": ".github\\prompts\\bigquery-pipeline-audit.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -608,7 +608,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\boost-prompt.prompt.md",
+      "file": ".github\\prompts\\boost-prompt.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -648,7 +648,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\breakdown-epic-arch.prompt.md",
+      "file": ".github\\prompts\\breakdown-epic-arch.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -688,7 +688,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\breakdown-epic-pm.prompt.md",
+      "file": ".github\\prompts\\breakdown-epic-pm.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -728,7 +728,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\breakdown-feature-implementation.prompt.md",
+      "file": ".github\\prompts\\breakdown-feature-implementation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -768,7 +768,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\breakdown-feature-prd.prompt.md",
+      "file": ".github\\prompts\\breakdown-feature-prd.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -808,7 +808,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\breakdown-plan.prompt.md",
+      "file": ".github\\prompts\\breakdown-plan.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -848,7 +848,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\breakdown-test.prompt.md",
+      "file": ".github\\prompts\\breakdown-test.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -888,7 +888,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\centos-linux-triage.prompt.md",
+      "file": ".github\\prompts\\centos-linux-triage.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -928,7 +928,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\code-exemplars-blueprint-generator.prompt.md",
+      "file": ".github\\prompts\\code-exemplars-blueprint-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -968,7 +968,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\code-review.prompt.md",
+      "file": ".github\\prompts\\code-review.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1008,7 +1008,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\comicwise-development.prompt.md",
+      "file": ".github\\prompts\\comicwise-development.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -1048,7 +1048,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\comment-code-generate-a-tutorial.prompt.md",
+      "file": ".github\\prompts\\comment-code-generate-a-tutorial.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1088,7 +1088,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\comprehensive-prompt-enhancer.prompt.md",
+      "file": ".github\\prompts\\comprehensive-prompt-enhancer.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -1128,7 +1128,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\containerize-aspnet-framework.prompt.md",
+      "file": ".github\\prompts\\containerize-aspnet-framework.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1168,7 +1168,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\containerize-aspnetcore.prompt.md",
+      "file": ".github\\prompts\\containerize-aspnetcore.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1208,7 +1208,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\context-map.prompt.md",
+      "file": ".github\\prompts\\context-map.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1248,7 +1248,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\conventional-commit.prompt.md",
+      "file": ".github\\prompts\\conventional-commit.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1288,7 +1288,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\convert-plaintext-to-md.prompt.md",
+      "file": ".github\\prompts\\convert-plaintext-to-md.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1328,7 +1328,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\cosmosdb-datamodeling.prompt.md",
+      "file": ".github\\prompts\\cosmosdb-datamodeling.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1368,7 +1368,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-agentsmd.prompt.md",
+      "file": ".github\\prompts\\create-agentsmd.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -1408,7 +1408,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-architectural-decision-record.prompt.md",
+      "file": ".github\\prompts\\create-architectural-decision-record.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1448,7 +1448,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-github-action-workflow-specification.prompt.md",
+      "file": ".github\\prompts\\create-github-action-workflow-specification.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -1488,7 +1488,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-github-issue-feature-from-specification.prompt.md",
+      "file": ".github\\prompts\\create-github-issue-feature-from-specification.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1528,7 +1528,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-github-issues-feature-from-implementation-plan.prompt.md",
+      "file": ".github\\prompts\\create-github-issues-feature-from-implementation-plan.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1568,7 +1568,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-github-issues-for-unmet-specification-requirements.prompt.md",
+      "file": ".github\\prompts\\create-github-issues-for-unmet-specification-requirements.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1608,7 +1608,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-github-pull-request-from-specification.prompt.md",
+      "file": ".github\\prompts\\create-github-pull-request-from-specification.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1648,7 +1648,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-implementation-plan.prompt.md",
+      "file": ".github\\prompts\\create-implementation-plan.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1688,7 +1688,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-llms.prompt.md",
+      "file": ".github\\prompts\\create-llms.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -1728,7 +1728,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-oo-component-documentation.prompt.md",
+      "file": ".github\\prompts\\create-oo-component-documentation.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -1768,7 +1768,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-readme.prompt.md",
+      "file": ".github\\prompts\\create-readme.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1808,7 +1808,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-specification.prompt.md",
+      "file": ".github\\prompts\\create-specification.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -1848,7 +1848,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-spring-boot-java-project.prompt.md",
+      "file": ".github\\prompts\\create-spring-boot-java-project.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1888,7 +1888,7 @@
       "has_placeholder": true
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-spring-boot-kotlin-project.prompt.md",
+      "file": ".github\\prompts\\create-spring-boot-kotlin-project.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1928,7 +1928,7 @@
       "has_placeholder": true
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-technical-spike.prompt.md",
+      "file": ".github\\prompts\\create-technical-spike.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -1968,7 +1968,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\create-tldr-page.prompt.md",
+      "file": ".github\\prompts\\create-tldr-page.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -2008,7 +2008,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\csharp-async.prompt.md",
+      "file": ".github\\prompts\\csharp-async.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2048,7 +2048,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\csharp-docs.prompt.md",
+      "file": ".github\\prompts\\csharp-docs.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2088,7 +2088,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\csharp-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\csharp-mcp-server-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2128,7 +2128,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\csharp-mstest.prompt.md",
+      "file": ".github\\prompts\\csharp-mstest.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2168,7 +2168,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\csharp-nunit.prompt.md",
+      "file": ".github\\prompts\\csharp-nunit.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2208,7 +2208,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\csharp-tunit.prompt.md",
+      "file": ".github\\prompts\\csharp-tunit.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2248,7 +2248,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\csharp-xunit.prompt.md",
+      "file": ".github\\prompts\\csharp-xunit.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2288,7 +2288,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\database.prompt.md",
+      "file": ".github\\prompts\\database.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2328,7 +2328,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dataverse-python-advanced-patterns.prompt.md",
+      "file": ".github\\prompts\\dataverse-python-advanced-patterns.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2368,7 +2368,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dataverse-python-production-code.prompt.md",
+      "file": ".github\\prompts\\dataverse-python-production-code.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -2408,7 +2408,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dataverse-python-quickstart.prompt.md",
+      "file": ".github\\prompts\\dataverse-python-quickstart.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2448,7 +2448,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dataverse-python-usecase-builder.prompt.md",
+      "file": ".github\\prompts\\dataverse-python-usecase-builder.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2488,7 +2488,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\debian-linux-triage.prompt.md",
+      "file": ".github\\prompts\\debian-linux-triage.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2528,7 +2528,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\debug-issue.prompt.md",
+      "file": ".github\\prompts\\debug-issue.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2568,7 +2568,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\debugger-prompt.prompt.md",
+      "file": ".github\\prompts\\debugger-prompt.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2608,7 +2608,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\declarative-agents.prompt.md",
+      "file": ".github\\prompts\\declarative-agents.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -2648,7 +2648,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dev-imp.prompt.md",
+      "file": ".github\\prompts\\dev-imp.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -2688,7 +2688,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dev-init.prompt.md",
+      "file": ".github\\prompts\\dev-init.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -2728,7 +2728,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dev.prompt.md",
+      "file": ".github\\prompts\\dev.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2768,7 +2768,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\development.prompt.md",
+      "file": ".github\\prompts\\development.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2808,7 +2808,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\devops-rollout-plan.prompt.md",
+      "file": ".github\\prompts\\devops-rollout-plan.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2848,7 +2848,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\disk-space-cleanup.prompt.md",
+      "file": ".github\\prompts\\disk-space-cleanup.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2888,7 +2888,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\documentation-writer.prompt.md",
+      "file": ".github\\prompts\\documentation-writer.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2928,7 +2928,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\documentation.prompt.md",
+      "file": ".github\\prompts\\documentation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -2968,7 +2968,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dotnet-best-practices.prompt.md",
+      "file": ".github\\prompts\\dotnet-best-practices.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3008,48 +3008,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dotnet-design-pattern-review.prompt.md",
-      "score": 77,
-      "rating": "PASS",
-      "dims": {
-        "frontmatter": 20,
-        "structure": 15,
-        "content": 12,
-        "code_quality": 10,
-        "dry": 20
-      },
-      "fm_fields": [
-        "- skill",
-        "author",
-        "codex",
-        "copilot",
-        "date",
-        "dependencies",
-        "description",
-        "enabled",
-        "formatter",
-        "hermes",
-        "license",
-        "metadata",
-        "model_required",
-        "name",
-        "opencode",
-        "priority",
-        "profile",
-        "skills",
-        "tags",
-        "title",
-        "toolsets",
-        "trigger",
-        "version"
-      ],
-      "fences": 0,
-      "fences_balanced": true,
-      "phases": 0,
-      "has_placeholder": false
-    },
-    {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\dotnet-upgrade.prompt.md",
+      "file": ".github\\prompts\\dotnet-design-pattern-review.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3090,7 +3049,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\editorconfig.prompt.md",
+      "file": ".github\\prompts\\dotnet-upgrade.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3131,7 +3090,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\ef-core.prompt.md",
+      "file": ".github\\prompts\\editorconfig.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3172,7 +3131,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\execute-all-prompts.prompt.md",
+      "file": ".github\\prompts\\ef-core.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3213,7 +3172,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\execute-plan.prompt.md",
+      "file": ".github\\prompts\\execute-all-prompts.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3254,7 +3213,48 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\features.prompt.md",
+      "file": ".github\\prompts\\execute-plan.prompt.md",
+      "score": 77,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 15,
+        "content": 12,
+        "code_quality": 10,
+        "dry": 20
+      },
+      "fm_fields": [
+        "- skill",
+        "author",
+        "codex",
+        "copilot",
+        "date",
+        "dependencies",
+        "description",
+        "enabled",
+        "formatter",
+        "hermes",
+        "license",
+        "metadata",
+        "model_required",
+        "name",
+        "opencode",
+        "priority",
+        "profile",
+        "skills",
+        "tags",
+        "title",
+        "toolsets",
+        "trigger",
+        "version"
+      ],
+      "fences": 0,
+      "fences_balanced": true,
+      "phases": 0,
+      "has_placeholder": false
+    },
+    {
+      "file": ".github\\prompts\\features.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -3295,7 +3295,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\fedora-linux-triage.prompt.md",
+      "file": ".github\\prompts\\fedora-linux-triage.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3336,7 +3336,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\finalize-agent-prompt.prompt.md",
+      "file": ".github\\prompts\\finalize-agent-prompt.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3377,7 +3377,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\first-ask.prompt.md",
+      "file": ".github\\prompts\\first-ask.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3418,7 +3418,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\folder-structure-blueprint-generator.prompt.md",
+      "file": ".github\\prompts\\folder-structure-blueprint-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3459,7 +3459,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\gen-specs-as-issues.prompt.md",
+      "file": ".github\\prompts\\gen-specs-as-issues.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3500,7 +3500,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general.prompt.md",
+      "file": ".github\\prompts\\general.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3541,7 +3541,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\generate-custom-instructions-from-codebase.prompt.md",
+      "file": ".github\\prompts\\generate-custom-instructions-from-codebase.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -3582,7 +3582,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\generate-docs.prompt.md",
+      "file": ".github\\prompts\\generate-docs.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3623,7 +3623,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\generator-orchestrator.prompt.md",
+      "file": ".github\\prompts\\generator-orchestrator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3664,7 +3664,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\git-flow-branch-creator.prompt.md",
+      "file": ".github\\prompts\\git-flow-branch-creator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3705,7 +3705,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\git-multi-repo-orchestration.prompt.md",
+      "file": ".github\\prompts\\git-multi-repo-orchestration.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -3746,7 +3746,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\go-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\go-mcp-server-generator.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -3787,7 +3787,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-breakdown-epic-arch.prompt.md",
+      "file": ".github\\prompts\\hermes-breakdown-epic-arch.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3828,7 +3828,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-breakdown-epic-pm.prompt.md",
+      "file": ".github\\prompts\\hermes-breakdown-epic-pm.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3869,7 +3869,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-breakdown-feature-implementation.prompt.md",
+      "file": ".github\\prompts\\hermes-breakdown-feature-implementation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3910,7 +3910,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-breakdown-feature-prd.prompt.md",
+      "file": ".github\\prompts\\hermes-breakdown-feature-prd.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3951,7 +3951,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-breakdown-plan.prompt.md",
+      "file": ".github\\prompts\\hermes-breakdown-plan.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -3992,7 +3992,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-breakdown-test.prompt.md",
+      "file": ".github\\prompts\\hermes-breakdown-test.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4033,7 +4033,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-comprehensive-setup.prompt.md",
+      "file": ".github\\prompts\\hermes-comprehensive-setup.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4074,7 +4074,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-diagnostic.prompt.md",
+      "file": ".github\\prompts\\hermes-diagnostic.prompt.md",
       "score": 75,
       "rating": "PASS",
       "dims": {
@@ -4107,7 +4107,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-doctor-systematic-debugging.prompt.md",
+      "file": ".github\\prompts\\hermes-doctor-systematic-debugging.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -4148,7 +4148,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\hermes-doctor.prompt.md",
+      "file": ".github\\prompts\\hermes-doctor.prompt.md",
       "score": 80,
       "rating": "PASS",
       "dims": {
@@ -4190,7 +4190,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\Initial.prompt.md",
+      "file": ".github\\prompts\\Initial.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4231,7 +4231,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\instruction-triage.prompt.md",
+      "file": ".github\\prompts\\instruction-triage.prompt.md",
       "score": 85,
       "rating": "PASS",
       "dims": {
@@ -4264,7 +4264,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\java-add-graalvm-native-image-support.prompt.md",
+      "file": ".github\\prompts\\java-add-graalvm-native-image-support.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4305,7 +4305,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\java-docs.prompt.md",
+      "file": ".github\\prompts\\java-docs.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4346,7 +4346,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\java-junit.prompt.md",
+      "file": ".github\\prompts\\java-junit.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4387,7 +4387,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\java-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\java-mcp-server-generator.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -4428,7 +4428,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\java-refactoring-extract-method.prompt.md",
+      "file": ".github\\prompts\\java-refactoring-extract-method.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -4469,7 +4469,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\java-refactoring-remove-parameter.prompt.md",
+      "file": ".github\\prompts\\java-refactoring-remove-parameter.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -4510,7 +4510,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\java-springboot.prompt.md",
+      "file": ".github\\prompts\\java-springboot.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4551,7 +4551,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\javascript-typescript-jest.prompt.md",
+      "file": ".github\\prompts\\javascript-typescript-jest.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4592,7 +4592,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\kotlin-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\kotlin-mcp-server-generator.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -4633,7 +4633,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\kotlin-springboot.prompt.md",
+      "file": ".github\\prompts\\kotlin-springboot.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4674,7 +4674,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\list-all-installed-vscode-extension.prompt.md",
+      "file": ".github\\prompts\\list-all-installed-vscode-extension.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -4715,7 +4715,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\mcp-audit.prompt.md",
+      "file": ".github\\prompts\\mcp-audit.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -4751,7 +4751,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\mcp-create-adaptive-cards.prompt.md",
+      "file": ".github\\prompts\\mcp-create-adaptive-cards.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -4792,7 +4792,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\mcp-create-declarative-agent.prompt.md",
+      "file": ".github\\prompts\\mcp-create-declarative-agent.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -4833,7 +4833,7 @@
       "has_placeholder": true
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\mcp-deploy-manage-agents.prompt.md",
+      "file": ".github\\prompts\\mcp-deploy-manage-agents.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -4874,7 +4874,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\memory-merger.prompt.md",
+      "file": ".github\\prompts\\memory-merger.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -4915,7 +4915,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\migrate-to-next16.prompt.md",
+      "file": ".github\\prompts\\migrate-to-next16.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4956,7 +4956,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\mkdocs-translations.prompt.md",
+      "file": ".github\\prompts\\mkdocs-translations.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -4997,7 +4997,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\model-recommendation.prompt.md",
+      "file": ".github\\prompts\\model-recommendation.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -5038,7 +5038,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\multi-agent-fanout.prompt.md",
+      "file": ".github\\prompts\\multi-agent-fanout.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -5074,7 +5074,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\multi-agent-research-template.prompt.md",
+      "file": ".github\\prompts\\multi-agent-research-template.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5115,7 +5115,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\multi-stage-dockerfile.prompt.md",
+      "file": ".github\\prompts\\multi-stage-dockerfile.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5156,7 +5156,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\my-issues.prompt.md",
+      "file": ".github\\prompts\\my-issues.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5197,7 +5197,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\my-pull-requests.prompt.md",
+      "file": ".github\\prompts\\my-pull-requests.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5238,7 +5238,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\next-intl-add-language.prompt.md",
+      "file": ".github\\prompts\\next-intl-add-language.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5278,7 +5278,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\nextjs-tailwind.prompt.md",
+      "file": ".github\\prompts\\nextjs-tailwind.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5318,7 +5318,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\ngn-earnings-research.prompt.md",
+      "file": ".github\\prompts\\ngn-earnings-research.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -5358,7 +5358,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\oh-my-openagent-setup.prompt.md",
+      "file": ".github\\prompts\\oh-my-openagent-setup.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5398,7 +5398,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\ollama-wire.prompt.md",
+      "file": ".github\\prompts\\ollama-wire.prompt.md",
       "score": 75,
       "rating": "PASS",
       "dims": {
@@ -5431,7 +5431,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\openapi-to-application-code.prompt.md",
+      "file": ".github\\prompts\\openapi-to-application-code.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5471,7 +5471,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\optimize-agentsMd.prompt.md",
+      "file": ".github\\prompts\\optimize-agentsMd.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -5511,7 +5511,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\parallel-mcp-install.prompt.md",
+      "file": ".github\\prompts\\parallel-mcp-install.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -5551,7 +5551,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\performance.prompt.md",
+      "file": ".github\\prompts\\performance.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5591,7 +5591,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\php-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\php-mcp-server-generator.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -5631,7 +5631,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\pl.prompt.md",
+      "file": ".github\\prompts\\pl.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -5671,7 +5671,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\plan-audit.prompt.md",
+      "file": ".github\\prompts\\plan-audit.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -5711,7 +5711,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\plan-batch-fix.prompt.md",
+      "file": ".github\\prompts\\plan-batch-fix.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -5751,7 +5751,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\plan-execute.prompt.md",
+      "file": ".github\\prompts\\plan-execute.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -5791,7 +5791,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\plan-generate.prompt.md",
+      "file": ".github\\prompts\\plan-generate.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -5831,7 +5831,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\playwright-automation-fill-in-form.prompt.md",
+      "file": ".github\\prompts\\playwright-automation-fill-in-form.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5871,7 +5871,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\playwright-explore-website.prompt.md",
+      "file": ".github\\prompts\\playwright-explore-website.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5911,7 +5911,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\playwright-generate-test.prompt.md",
+      "file": ".github\\prompts\\playwright-generate-test.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5951,7 +5951,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\playwright-typescript.prompt.md",
+      "file": ".github\\prompts\\playwright-typescript.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -5991,7 +5991,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\plugins-hooks-audit.prompt.md",
+      "file": ".github\\prompts\\plugins-hooks-audit.prompt.md",
       "score": 75,
       "rating": "PASS",
       "dims": {
@@ -6024,7 +6024,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\postgresql-code-review.prompt.md",
+      "file": ".github\\prompts\\postgresql-code-review.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -6064,7 +6064,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\postgresql-optimization.prompt.md",
+      "file": ".github\\prompts\\postgresql-optimization.prompt.md",
       "score": 71,
       "rating": "PASS",
       "dims": {
@@ -6104,7 +6104,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\power-apps-code-app-scaffold.prompt.md",
+      "file": ".github\\prompts\\power-apps-code-app-scaffold.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6144,7 +6144,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\power-bi-dax-optimization.prompt.md",
+      "file": ".github\\prompts\\power-bi-dax-optimization.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6184,7 +6184,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\power-bi-model-design-review.prompt.md",
+      "file": ".github\\prompts\\power-bi-model-design-review.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6224,7 +6224,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\power-bi-performance-troubleshooting.prompt.md",
+      "file": ".github\\prompts\\power-bi-performance-troubleshooting.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6264,7 +6264,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\power-bi-report-design-consultation.prompt.md",
+      "file": ".github\\prompts\\power-bi-report-design-consultation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6304,7 +6304,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\power-platform-mcp-connector-suite.prompt.md",
+      "file": ".github\\prompts\\power-platform-mcp-connector-suite.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -6345,7 +6345,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\project-workflow-analysis-blueprint-generator.prompt.md",
+      "file": ".github\\prompts\\project-workflow-analysis-blueprint-generator.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -6386,7 +6386,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\projects-init.prompt.md",
+      "file": ".github\\prompts\\projects-init.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6427,7 +6427,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\prompt-builder.prompt.md",
+      "file": ".github\\prompts\\prompt-builder.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6468,7 +6468,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\prompt-management.prompt.md",
+      "file": ".github\\prompts\\prompt-management.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6509,7 +6509,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\prompts-fix.prompt.md",
+      "file": ".github\\prompts\\prompts-fix.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6550,7 +6550,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\prompts-strict-template.prompt.md",
+      "file": ".github\\prompts\\prompts-strict-template.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6591,7 +6591,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\pytest-coverage.prompt.md",
+      "file": ".github\\prompts\\pytest-coverage.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6632,7 +6632,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\python-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\python-mcp-server-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6673,7 +6673,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\quality-gate-debugger.prompt.md",
+      "file": ".github\\prompts\\quality-gate-debugger.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -6714,7 +6714,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\readme-blueprint-generator.prompt.md",
+      "file": ".github\\prompts\\readme-blueprint-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6755,7 +6755,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\refactor-code.prompt.md",
+      "file": ".github\\prompts\\refactor-code.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6796,7 +6796,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\refactor-mardown-files.prompt.md",
+      "file": ".github\\prompts\\refactor-mardown-files.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6837,7 +6837,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\refactor-method-complexity-reduce.prompt.md",
+      "file": ".github\\prompts\\refactor-method-complexity-reduce.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6878,7 +6878,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\refactor-plan.prompt.md",
+      "file": ".github\\prompts\\refactor-plan.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -6919,7 +6919,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\refresh-agent-inventory.prompt.md",
+      "file": ".github\\prompts\\refresh-agent-inventory.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -6960,7 +6960,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\remember-interactive-programming.prompt.md",
+      "file": ".github\\prompts\\remember-interactive-programming.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7001,7 +7001,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\remember.prompt.md",
+      "file": ".github\\prompts\\remember.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -7042,7 +7042,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\repo-init.prompt.md",
+      "file": ".github\\prompts\\repo-init.prompt.md",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -7083,7 +7083,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\repo-management.prompt.md",
+      "file": ".github\\prompts\\repo-management.prompt.md",
       "score": 100,
       "rating": "PASS",
       "dims": {
@@ -7124,7 +7124,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\repo-research-pipeline.prompt.md",
+      "file": ".github\\prompts\\repo-research-pipeline.prompt.md",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -7165,7 +7165,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\repo-story-time.prompt.md",
+      "file": ".github\\prompts\\repo-story-time.prompt.md",
       "score": 100,
       "rating": "PASS",
       "dims": {
@@ -7206,7 +7206,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\repo-tooling-implementation.prompt.md",
+      "file": ".github\\prompts\\repo-tooling-implementation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7247,7 +7247,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\repo.prompt.md",
+      "file": ".github\\prompts\\repo.prompt.md",
       "score": 100,
       "rating": "PASS",
       "dims": {
@@ -7286,7 +7286,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\review-and-refactor.prompt.md",
+      "file": ".github\\prompts\\review-and-refactor.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7327,7 +7327,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\ruby-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\ruby-mcp-server-generator.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -7367,7 +7367,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\run-session-agentsmd-workflow.prompt.md",
+      "file": ".github\\prompts\\run-session-agentsmd-workflow.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7407,7 +7407,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\rust-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\rust-mcp-server-generator.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -7447,7 +7447,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\security.prompt.md",
+      "file": ".github\\prompts\\security.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7487,7 +7487,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\seed-review-and-create.prompt.md",
+      "file": ".github\\prompts\\seed-review-and-create.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -7527,7 +7527,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\session-agentsmd-full-workflow.prompt.md",
+      "file": ".github\\prompts\\session-agentsmd-full-workflow.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7567,7 +7567,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\setup-bun-bunx.prompt.md",
+      "file": ".github\\prompts\\setup-bun-bunx.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7607,7 +7607,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\setup-component.prompt.md",
+      "file": ".github\\prompts\\setup-component.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7647,7 +7647,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\setup-enhanced.prompt.md",
+      "file": ".github\\prompts\\setup-enhanced.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -7687,7 +7687,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\setup-groq-cloud.prompt.md",
+      "file": ".github\\prompts\\setup-groq-cloud.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -7727,7 +7727,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\setup-nextjs-frontend-stack.prompt.md",
+      "file": ".github\\prompts\\setup-nextjs-frontend-stack.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7767,7 +7767,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\setup.prompt.md",
+      "file": ".github\\prompts\\setup.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -7807,7 +7807,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\shuffle-json-data.prompt.md",
+      "file": ".github\\prompts\\shuffle-json-data.prompt.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -7847,7 +7847,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\skills-debug-prompt.prompt.md",
+      "file": ".github\\prompts\\skills-debug-prompt.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -7887,7 +7887,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\skills-fix.prompt.md",
+      "file": ".github\\prompts\\skills-fix.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -7927,7 +7927,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\smithery-setup.prompt.md",
+      "file": ".github\\prompts\\smithery-setup.prompt.md",
       "score": 72,
       "rating": "PASS",
       "dims": {
@@ -7967,7 +7967,7 @@
       "has_placeholder": true
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\sql-code-review.prompt.md",
+      "file": ".github\\prompts\\sql-code-review.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -8007,7 +8007,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\sql-optimization.prompt.md",
+      "file": ".github\\prompts\\sql-optimization.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -8047,7 +8047,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\structured-autonomy-generate.prompt.md",
+      "file": ".github\\prompts\\structured-autonomy-generate.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8087,7 +8087,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\structured-autonomy-implement.prompt.md",
+      "file": ".github\\prompts\\structured-autonomy-implement.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8127,7 +8127,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\structured-autonomy-plan.prompt.md",
+      "file": ".github\\prompts\\structured-autonomy-plan.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8167,7 +8167,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\swift-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\swift-mcp-server-generator.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -8207,7 +8207,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\sync-hermes-opencode.prompt.md",
+      "file": ".github\\prompts\\sync-hermes-opencode.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -8247,7 +8247,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\task-implementation.prompt.md",
+      "file": ".github\\prompts\\task-implementation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8287,7 +8287,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\tasksync.prompt.md",
+      "file": ".github\\prompts\\tasksync.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8327,7 +8327,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\technology-stack-blueprint-generator.prompt.md",
+      "file": ".github\\prompts\\technology-stack-blueprint-generator.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -8367,7 +8367,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\test-providers-models.prompt.md",
+      "file": ".github\\prompts\\test-providers-models.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -8407,7 +8407,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\testing.prompt.md",
+      "file": ".github\\prompts\\testing.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8447,7 +8447,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\tldr-prompt.prompt.md",
+      "file": ".github\\prompts\\tldr-prompt.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -8487,7 +8487,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\tooling-implementation.prompt.md",
+      "file": ".github\\prompts\\tooling-implementation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8527,7 +8527,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\typescript-mcp-server-generator.prompt.md",
+      "file": ".github\\prompts\\typescript-mcp-server-generator.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8567,7 +8567,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\typescript.prompt.md",
+      "file": ".github\\prompts\\typescript.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8607,7 +8607,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\typespec-api-operations.prompt.md",
+      "file": ".github\\prompts\\typespec-api-operations.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8647,7 +8647,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\typespec-create-agent.prompt.md",
+      "file": ".github\\prompts\\typespec-create-agent.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8687,7 +8687,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\typespec-create-api-plugin.prompt.md",
+      "file": ".github\\prompts\\typespec-create-api-plugin.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -8727,7 +8727,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\uk-earnings-research-pipeline.prompt.md",
+      "file": ".github\\prompts\\uk-earnings-research-pipeline.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8767,7 +8767,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\uk-earnings-research.prompt.md",
+      "file": ".github\\prompts\\uk-earnings-research.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -8807,7 +8807,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\update-avm-modules-in-bicep.prompt.md",
+      "file": ".github\\prompts\\update-avm-modules-in-bicep.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -8847,7 +8847,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\update-docs-on-code-change.prompt.md",
+      "file": ".github\\prompts\\update-docs-on-code-change.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8887,7 +8887,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\update-implementation-plan.prompt.md",
+      "file": ".github\\prompts\\update-implementation-plan.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8927,7 +8927,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\update-llms.prompt.md",
+      "file": ".github\\prompts\\update-llms.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -8967,7 +8967,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\update-markdown-file-index.prompt.md",
+      "file": ".github\\prompts\\update-markdown-file-index.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -9007,7 +9007,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\update-oo-component-documentation.prompt.md",
+      "file": ".github\\prompts\\update-oo-component-documentation.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -9047,7 +9047,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\update-specification.prompt.md",
+      "file": ".github\\prompts\\update-specification.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -9087,7 +9087,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\us-earnings-research.prompt.md",
+      "file": ".github\\prompts\\us-earnings-research.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -9127,7 +9127,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\web-research-pipeline.prompt.md",
+      "file": ".github\\prompts\\web-research-pipeline.prompt.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -9167,7 +9167,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\what-context-needed.prompt.md",
+      "file": ".github\\prompts\\what-context-needed.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -9207,7 +9207,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\workspace-consolidate.prompt.md",
+      "file": ".github\\prompts\\workspace-consolidate.prompt.md",
       "score": 87,
       "rating": "PASS",
       "dims": {
@@ -9247,7 +9247,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\write-coding-standards-from-file.prompt.md",
+      "file": ".github\\prompts\\write-coding-standards-from-file.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -9287,7 +9287,7 @@
       "has_placeholder": true
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\write-tests.prompt.md",
+      "file": ".github\\prompts\\write-tests.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -9327,7 +9327,7 @@
       "has_placeholder": false
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\zod-schema-generation.prompt.md",
+      "file": ".github\\prompts\\zod-schema-generation.prompt.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
