@@ -1,0 +1,69 @@
+# Plans Audit — 2026-08-31 13:46 UTC
+
+Dir: `C:\Users\Alexa\Desktop\SandBox\.hermes\plans` | Threshold: 70
+Count: 62 | Avg: 42.0 | Passed: 3
+
+| File | Score | Rating | FM | Struct | Content | Status | DRY | Phases | Gates |
+|---|---|---|---|---|---|---|---|---|---|
+| `2026-06-30-execution-plan-for-prompt-and-plan-normalization.md` | 49 | FAIL | 3 | 0 | 6 | 20 | 20 | 0 | 0 |
+| `2026-07-23-comprehensive-github-prompts-plan.md` | 48 | FAIL | 3 | 0 | 13 | 12 | 20 | 0 | 0 |
+| `2026-07-23-migrate-hermes-prompts-to-github-prompts.md` | 43 | FAIL | 3 | 0 | 0 | 20 | 20 | 0 | 0 |
+| `2026-07-25-yaml-workflows-audit-fix-plan.md` | 63 | WARN | 3 | 14 | 6 | 20 | 20 | 6 | 0 |
+| `2026-07-31-workspace-cleanup.md` | 41 | FAIL | 3 | 0 | 6 | 12 | 20 | 0 | 0 |
+| `2026-08-01_async-script-tooling-master.md` | 64 | WARN | 11 | 8 | 13 | 12 | 20 | 2 | 0 |
+| `2026-08-01_consolidated-goal-tooling-cleanup.md` | 63 | WARN | 11 | 14 | 6 | 12 | 20 | 6 | 0 |
+| `2026-08-01_repo-tooling.md` | 50 | WARN | 11 | 0 | 7 | 12 | 20 | 0 | 0 |
+| `2026-08-01_tooling-implementation.md` | 64 | WARN | 11 | 0 | 13 | 20 | 20 | 0 | 0 |
+| `2026-08-11_213801-prompt-library-maintenance.md` | 47 | FAIL | 0 | 14 | 13 | 0 | 20 | 5 | 0 |
+| `2026-08-11_214500-repo-init-all-agents.md` | 57 | WARN | 11 | 0 | 14 | 12 | 20 | 0 | 0 |
+| `2026-08-11_hermes-platform-diagnostics-debug.md` | 68 | WARN | 9 | 14 | 13 | 12 | 20 | 4 | 0 |
+| `2026-08-12_010844-repo-prompts-debug-fix-enhance.md` | 50 | WARN | 9 | 0 | 13 | 8 | 20 | 0 | 0 |
+| `2026-08-12_012441-prompts-library-debug-fix-enhance.md` | 50 | WARN | 9 | 0 | 13 | 8 | 20 | 0 | 0 |
+| `2026-08-12_043000-terminal-agent-ecosystem-sync.md` | 33 | FAIL | 0 | 0 | 13 | 0 | 20 | 0 | 0 |
+| `2026-08-15_202608_four-agent-prompt-audit-plan.md` | 61 | WARN | 0 | 20 | 13 | 8 | 20 | 10 | 27 |
+| `2026-08-15_202608_four-agent-prompt-audit-spec.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
+| `2026-08-15_202608_openrouter-sdk-integration-plan.md` | 70 | PASS | 11 | 14 | 13 | 12 | 20 | 4 | 0 |
+| `2026-08-15_202608_openrouter-sdk-integration-spec.md` | 35 | FAIL | 11 | 0 | 0 | 12 | 12 | 0 | 0 |
+| `2026-08-15_202608_openrouter-sdk-integration.md` | 58 | WARN | 11 | 0 | 7 | 20 | 20 | 0 | 0 |
+| `2026-08-15_hermes-profile-skills-enhancement-plan.md` | 70 | PASS | 11 | 14 | 13 | 12 | 20 | 5 | 0 |
+| `2026-08-15_hermes-profile-skills-enhancement-spec.md` | 36 | FAIL | 11 | 0 | 0 | 20 | 5 | 0 | 0 |
+| `2026-08-16_142300_cross-platform-agent-sync-spec.md` | 19 | FAIL | 0 | 0 | 6 | 8 | 5 | 0 | 0 |
+| `2026-08-16_142300_mcp-sync-all-agents-implementation.md` | 26 | FAIL | 0 | 0 | 6 | 0 | 20 | 0 | 0 |
+| `2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md` | 55 | WARN | 0 | 14 | 13 | 8 | 20 | 5 | 1 |
+| `2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `2026-08-19_235900-subagent-driven-development-full-implementation.md` | 47 | FAIL | 0 | 14 | 13 | 8 | 12 | 6 | 0 |
+| `2026-08-24_072315-comprehensive-hermes-debugging-fix.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
+| `2026-08-24_235959-update-hermes-profiles-and-agent-configs.md` | 33 | FAIL | 0 | 0 | 13 | 8 | 12 | 0 | 0 |
+| `2026-08-24_comprehensive-context-and-model-sync.md` | 55 | WARN | 0 | 14 | 13 | 8 | 20 | 5 | 0 |
+| `2026-08-24_comprehensive-platform-remediation-spec.md` | 33 | FAIL | 0 | 14 | 6 | 8 | 5 | 8 | 0 |
+| `2026-08-24_comprehensive-platform-remediation.md` | 40 | FAIL | 0 | 14 | 6 | 8 | 12 | 8 | 0 |
+| `2026-08-24_hermes-full-diagnostic-repair.md` | 33 | FAIL | 0 | 0 | 13 | 0 | 20 | 0 | 0 |
+| `2026-08-24_update-enhance-verify-context-files.md` | 41 | FAIL | 0 | 0 | 13 | 8 | 20 | 0 | 0 |
+| `2026-08-25_015239-dependency-toolchain-update.md` | 66 | WARN | 11 | 14 | 13 | 8 | 20 | 6 | 0 |
+| `2026-08-28_phase-b-prompt-enhancement.md` | 52 | WARN | 14 | 0 | 6 | 12 | 20 | 0 | 0 |
+| `2026-08-28_prompt-corpus-enhance.md` | 52 | WARN | 14 | 0 | 6 | 12 | 20 | 0 | 0 |
+| `2026-08-29-master-consolidated-plan.md` | 52 | WARN | 20 | 0 | 0 | 12 | 20 | 0 | 0 |
+| `2026-08-29_full-audit-remediation.md` | 52 | WARN | 20 | 0 | 0 | 12 | 20 | 0 | 4 |
+| `2026-08-31_six-judge-skills.md` | 72 | PASS | 20 | 0 | 20 | 12 | 20 | 0 | 0 |
+| `agent-provider-matrix.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
+| `audit-report.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
+| `deepseek-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `disk-cleanup-skill-implementation.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `disk-cleanup-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `example-subagent-plan.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `execution-summary.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
+| `gemini-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `honcho-hermes-integration-implementation.md` | 49 | FAIL | 9 | 14 | 6 | 8 | 12 | 7 | 0 |
+| `honcho-hermes-integration-spec.md` | 37 | FAIL | 9 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `huggingface-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `next-steps-implementation-plan.md` | 48 | FAIL | 0 | 14 | 6 | 8 | 20 | 3 | 0 |
+| `next-steps-specs.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
+| `nous-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `ollama-cloud-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `opencode-zen-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `openrouter-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `provider-workflow-master-plan.md` | 34 | FAIL | 0 | 0 | 6 | 8 | 20 | 0 | 0 |
+| `provider-workflow-strategy.md` | 26 | FAIL | 0 | 0 | 6 | 0 | 20 | 0 | 0 |
+| `release-notes-profile-sync-2026-08-24.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 20 | 0 | 0 |
+| `skill-implementation-master-plan.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |
+| `xai-workflow.md` | 28 | FAIL | 0 | 0 | 0 | 8 | 20 | 0 | 0 |

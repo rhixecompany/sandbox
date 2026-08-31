@@ -1,0 +1,22 @@
+# Hermes Diagnostic Report
+
+Generated: 2026-08-31T13:36:52.116205+00:00
+Total: 11 | OK: 11 | FAIL: 0
+
+## Per-command
+
+| # | Label | Exit | Elapsed (s) | OK |
+|---|---|---|---|---|
+| 1 | doctor | 0 | 33.03 | ✓ |
+| 2 | security | 0 | 6.95 | ✓ |
+| 3 | status | 0 | 7.75 | ✓ |
+| 4 | insights | 0 | 5.55 | ✓ |
+| 5 | logs-list | 0 | 1.4 | ✓ |
+| 6 | logs-errors | 0 | 1.31 | ✓ |
+| 7 | logs-desktop | 0 | 1.26 | ✓ |
+| 8 | logs-gateway | 0 | 1.23 | ✓ |
+| 9 | logs-gui | 0 | 1.35 | ✓ |
+| 10 | logs-agent | 0 | 1.35 | ✓ |
+| 11 | bun-run-check | 0 | 22.88 | ✓ |
+
+## Failures (stderr tail)

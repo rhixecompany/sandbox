@@ -1,8 +1,72 @@
 # SESSION_REPORT.md
 
-> Generated: 2026-08-29T02:42+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
+> Generated: 2026-08-31T13:45+01:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Last Session Summary
+
+| Field | Value |
+| --- | --- |
+| Session | 2026-08-31 — Six Judge Skills Build + Diagnostic Sweep |
+| Title | Diagnostic + Hub Check + 6 Judge Skills @ 100/100 |
+| Profile | default |
+| Model | minimax/minimax-m3:free (openrouter) |
+| Source | direct user invocation |
+
+## Goals Closed (this turn)
+
+| # | Subgoal | Result | Verification |
+| --- | --- | --- | --- |
+| 1 | Diagnostic sweep (`hermes doctor && --fix && security audit && status && insights && logs ×5 && bun run check`) | ✓ 11/11 OK (33s) | `.hermes/plans/hermes-diagnostic-2026-08-31_133528/report.md` |
+| 2 | `hermes skills check` (hub upstream scan) | 24 checked, 2 updates available | `agentmemory-hooks`, `data-migration-scripts` (user runs `hermes skills update`) |
+| 3 | `/skill-judge` on skill-judge itself | ✓ 100/100 PASS ≥95 | `judge_results/skill_judge_self.json` |
+| 4a | Create 6 judge skills (specs/plans/prompts/scripts/hooks/plugins) | ✓ 6/6 created | `~/AppData/Local/hermes/skills/qa/<name>-judge/` |
+| 4b | `/skill-judge` each new judge skill, raise to ≥95 | ✓ 6/6 at 100/100 | `judge_results/<name>-judge_self_score.json` |
+
+## Six Judge Skills — All PASS ≥95
+
+| Skill | Score | CLI Run (real target) | Threshold |
+| --- | --- | --- | --- |
+| specs-judge | 100 | n/a (no .hermes/specs dir) | ≥95 ✓ |
+| plans-judge | 100 | 62 plans, avg 42.0, 3/62 pass | ≥95 ✓ |
+| prompts-judge | 100 | 233 prompts, avg 80.4, 233/233 pass | ≥95 ✓ |
+| scripts-judge | 100 | 34 scripts, avg 81.1, 26/34 pass | ≥95 ✓ |
+| hooks-judge | 100 | 7 hooks, avg 29.6, 0/7 pass | ≥95 ✓ |
+| plugins-judge | 100 | 12 plugins, avg 80.0, 12/12 pass | ≥95 ✓ |
+
+## Artifacts (this turn)
+
+```
+~/AppData/Local/hermes/skills/qa/{specs,plans,prompts,scripts,hooks,plugins}-judge/
+  SKILL.md              # 6 skills (frontmatter + workflow + pitfalls + checklist)
+  scripts/judge.py      # 6 CLI runners (argparse, JSON+MD output)
+  references/rubric.md  # 6 dimension rubrics
+
+~/Desktop/SandBox/judge_results/
+  skill_judge_self.{json,md}
+  {judge}_self_score.{json,md}      # 6 × 2 files
+  {judge}_audit.{json,md}           # 6 × 2 files (CLI runs)
+  six_judges_run.json
+  six_judges_scores.md
+
+~/Desktop/SandBox/.hermes/plans/
+  2026-08-31_six-judge-skills.md    # master plan
+  hermes-diagnostic-2026-08-31_133528/report.{json,md}  # diagnostic
+```
+
+## Patches applied during build
+
+- All 6 judge SKILL.md files patched to add `## Overview` section (raised score 90→100)
+
+## Open Items (carry-over from 2026-08-29)
+
+1. PR #12 merge — user-owned
+2. Provider auth failures (deepseek 401, opencode-zen 401, gemini 402) — user-owned
+3. 2 hub skill updates available (`agentmemory-hooks`, `data-migration-scripts`) — run `hermes skills update`
+4. Submodule `node_modules` (~2.4 GB) — user-owned
+
+---
+
+## Last Session Summary (2026-08-29 — superseded)
 
 | Field      | Value                                          |
 | ---------- | ---------------------------------------------- |
