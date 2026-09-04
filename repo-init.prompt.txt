@@ -1,12 +1,9 @@
-create a comprehensive implementation prompt,plan,scripts,skill that outlines the steps needed to achieve the desired outcomes, including timelines, milestones, and resource allocation create a comprehensive implementation plan that outlines the steps needed to achieve the desired outcomes, including timelines, milestones, and resource allocation.
-/using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking  /mcp-filesytem , /mcp-ast-grep /mcp-memory /plan /plans-and-specs  /create-implementation-plan /implementation-plan /executing-plans /writing-clearly-and-concisely /subagent-driven-development list,triage files both in the repo and in hermes root, and provide a summary of their purpose and any relevant details.
+/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking  /mcp-filesytem , /mcp-ast-grep /mcp-memory /plan /plans-and-specs  /create-implementation-plan /implementation-plan /executing-plans /writing-clearly-and-concisely /subagent-driven-development create,update,execute,implement a comprehensive implementation prompt,spec,plan,scripts,skill that outlines the steps needed to achieve the desired outcomes, including timelines, milestones, and resource allocation create a comprehensive implementation plan that outlines the steps needed to achieve the desired outcomes, including timelines, milestones, and resource allocation git add -A ; git commit -m "updates" ; git push -u origin clean-development development production /systematic-debugging  debug,fix all issues,warnings,errors and retry until git push -u origin clean-development development production succeeds. list,triage files both in the repo and in hermes root, and provide a summary of their purpose and any relevant details.
 dedupe,consolidate,delete files to remove duplicates and ensure consistency across the repository and Hermes root.
 **Implementation Prompt: Comprehensive Repository and Hermes Root Management**
 suggest a cleanup plan for cleanup docker unused images,builds,containers,volumes,models,mcp toolkit
 ## Docker Cleanup Plan
-
 Your system has **913.8MB of unused images** and minimal other overhead. Here's the cleanup sequence:
-
 ### 1. **Unused Images** (Reclaim 913.7MB)
 ```powershell
 # Remove all unused images
@@ -15,50 +12,41 @@ docker image prune -a --force
 - Removes dangling images (orphaned layers)
 - `-a` flag removes ALL unused images, not just dangling ones
 - `-f` skips confirmation
-
 ### 2. **Unused Containers** (Your system: 0 unused)
 ```powershell
 docker container prune --force
 ```
 - Removes all stopped containers
 - Safe if no container state needs preservation
-
 ### 3. **Unused Volumes** (Your system: 0 unused)
 ```powershell
 docker volume prune --force
 ```
 - Removes local volumes not mounted to any container
 - ⚠️ Data loss risk — verify no important volumes first
-
 ### 4. **Build Cache** (Your system: 0 unused)
 ```powershell
 docker builder prune --all --force
 ```
 - Clears build cache, forcing full rebuilds on next `docker build`
 - Reclaims space but slows subsequent builds
-
 ### 5. **Models** (Docker Model Runner)
 ```powershell
 # List loaded models
 docker model ls
-
 # Remove specific model
 docker model rm <model-name>
-
 # Or prune all unused models
 docker model prune
 ```
 - Only applicable if you use Docker Model Runner
 - Check `docker model ls` first; if empty, skip this
-
 ### 6. **MCP Toolkit**
 MCP Toolkit is a **configuration feature in Docker Desktop**, not a storage artifact:
 - Managed in **Docker Desktop settings** → MCP section
 - Disable unused MCP servers in settings (no disk cleanup needed)
 - Cached MCP data lives in `%LOCALAPPDATA%\Docker\mcp\` — safe to delete if you've disabled all MCP servers
-
 ---
-
 ## Quick Nuclear Option
 ```powershell
 # Remove everything unused in one command
@@ -66,9 +54,7 @@ docker system prune -a --volumes --force
 ```
 - Removes all unused images, containers, volumes, and networks
 - ⚠️ Does NOT affect build cache or models
-
 ---
-
 **Recommended sequence for your system:**
 ```powershell
 docker image prune -a --force           # Reclaim 913.7MB
@@ -77,5 +63,4 @@ docker volume prune --force             # Safe (0 volumes)
 docker builder prune --all --force      # Optional if disk-critical
 docker model prune                      # If using Model Runner
 ```
-
 Feel free to ask if you need anything else!
