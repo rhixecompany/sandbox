@@ -149,6 +149,15 @@ cspell.json                        +1 line (judge_results/** ignorePaths)
 - Both paths remain load-bearing: `scripts/validate-mcp-consistency.ts:22` whitelists both files
 - Conclusion: structural redundancy, not a duplicate; cannot collapse without validator change
 
+### Docker MCP image re-pull observation (important caveat)
+
+- `docker image prune -a --force` reclaimed 401.5MB (✓ commit `978ce322`)
+- After ~15 min of session activity, the 2 images re-appeared (same SHAs) — Docker MCP toolkit or MCP gateway auto-pulls on first use
+- Re-pruned at session end: 0 images, 0 containers, 0 volumes, 0 build cache (✓ commit `d99de8af`)
+- Root cause: `ghcr.io/github/github-mcp-server` and `mcp/time` are referenced as `type: docker` somewhere in the MCP stack; they get re-pulled on demand
+- `.mcp/registry.json` lists both as `type: stdio` — the Docker images are orphans from a prior Docker-MCP setup, but the gateway still has them cached as a pull target
+- Action: pruning is correct, but expect periodic re-pulls. Permanent fix would require purging the gateway's image cache or migrating to fully-stdio MCP servers
+
 ### Open Item Closed
 
 - ~~**Ollama cleanup + Docker model runner** — user-authorized, not started~~ → **Done** (this session: 401.5MB reclaimed, 0 unused images remaining)
