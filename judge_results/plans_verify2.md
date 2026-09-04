@@ -1,0 +1,75 @@
+# Plans Audit — 2026-08-31 19:56 UTC
+
+Dir: `.hermes\plans` | Threshold: 70
+Count: 68 | Avg: 100.0 | Passed: 68
+
+| File | Score | Rating | FM | Struct | Content | Status | DRY | Phases | Gates |
+|---|---|---|---|---|---|---|---|---|---|
+| `2026-06-30-execution-plan-for-prompt-and-plan-normalization.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-07-23-comprehensive-github-prompts-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-07-23-migrate-hermes-prompts-to-github-prompts.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-07-25-yaml-workflows-audit-fix-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-07-31-workspace-cleanup.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-01_async-script-tooling-master.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-01_consolidated-goal-tooling-cleanup.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-01_repo-tooling.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-01_tooling-implementation.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-11_213801-prompt-library-maintenance.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-11_214500-repo-init-all-agents.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-11_hermes-platform-diagnostics-debug.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-12_010844-repo-prompts-debug-fix-enhance.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-12_012441-prompts-library-debug-fix-enhance.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-12_043000-terminal-agent-ecosystem-sync.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-15_202608_four-agent-prompt-audit-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-15_202608_four-agent-prompt-audit-spec.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-15_202608_openrouter-sdk-integration-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-15_202608_openrouter-sdk-integration-spec.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-15_202608_openrouter-sdk-integration.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-15_hermes-profile-skills-enhancement-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-15_hermes-profile-skills-enhancement-spec.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-16_142300_cross-platform-agent-sync-spec.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-16_142300_mcp-sync-all-agents-implementation.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-19_235900-subagent-driven-development-full-implementation.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-24_072315-comprehensive-hermes-debugging-fix.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-24_235959-update-hermes-profiles-and-agent-configs.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-24_comprehensive-context-and-model-sync.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-24_comprehensive-platform-remediation-spec.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-24_comprehensive-platform-remediation.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-24_hermes-full-diagnostic-repair.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-24_update-enhance-verify-context-files.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-25_015239-dependency-toolchain-update.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-28_phase-b-prompt-enhancement.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-28_prompt-corpus-enhance.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-29-master-consolidated-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-29_full-audit-remediation.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-31_152242-comprehensive-reimplementation-master.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-31_180000-comprehensive-reimplementation-master.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-31_goal1-identity-triage.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-31_goal2-plugins-hooks.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `2026-08-31_six-judge-skills.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `agent-provider-matrix.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `audit-report.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `deepseek-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `disk-cleanup-skill-implementation.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `disk-cleanup-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `example-subagent-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `execution-summary.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `gemini-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `honcho-hermes-integration-implementation.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `honcho-hermes-integration-spec.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `huggingface-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `judge-qa-rerun.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `next-steps-implementation-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `next-steps-specs.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `nous-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `ollama-cloud-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `opencode-zen-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `openrouter-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `phase-10-ollama-docker-blocked.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `provider-workflow-master-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `provider-workflow-strategy.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `release-notes-profile-sync-2026-08-24.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `skill-implementation-master-plan.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
+| `xai-workflow.md` | 100 | PASS | 20 | 20 | 20 | 20 | 20 | 3 | 3 |
