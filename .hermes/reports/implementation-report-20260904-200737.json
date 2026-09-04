@@ -1,0 +1,40 @@
+{
+  "generated": "2026-09-04T20:06:36.579764",
+  "workspace": "C:\\Users\\Alexa\\Desktop\\SandBox",
+  "plans_count": 69,
+  "specs_count": 1,
+  "workspace_state": {
+    "clean": false,
+    "issues": [
+      "Uncommitted changes present",
+      "Backup files found: 2"
+    ],
+    "timestamp": "2026-09-04T20:06:51.177281"
+  },
+  "pipeline": {
+    "timestamp": "2026-09-04T20:07:37.922454",
+    "checks": [
+      {
+        "name": "lint",
+        "passed": true,
+        "output": "$ eslint . --no-error-on-unmatched-pattern"
+      },
+      {
+        "name": "typecheck",
+        "passed": true,
+        "output": "$ tsc --noEmit"
+      },
+      {
+        "name": "format",
+        "passed": true,
+        "output": "\u001b[90muk-earnings-kit/trackers/referral_tracker.md\u001b[39m 6ms (unchanged)\n\u001b[90muk-earnings-kit/trackers/tax_tracker.md\u001b[39m 24ms (unchanged)\n\u001b[90muk-earnings-kit/UK_EARNING_SITES_MASTER.md\u001b[39m 66ms (unchanged)\n\u001b[90mUSER.md\u001b[39m 3ms (unchanged)\n\u001b[90mverify-setup-groq-cloud.json\u001b[39m 2ms (unchanged)"
+      },
+      {
+        "name": "full_check",
+        "passed": true,
+        "output": "ojects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !.hermes/archived-prompt-templates/** !.github/** !.hermes/** !judge_results/** !plans/** !research/** !ngn-earnings-kit/** !hermes-memory-safety/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc\nLinting: 486 file(s)\nSummary: 0 error(s)\n$ cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress\nCSpell: Files checked: 98, Issues found: 0 in 0 files."
+      }
+    ],
+    "all_passed": true
+  }
+}
