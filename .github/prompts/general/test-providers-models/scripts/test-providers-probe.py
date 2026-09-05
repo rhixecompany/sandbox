@@ -3,7 +3,7 @@
 Uses verified live state (hermes auth list / config show / status / doctor / doctor --fix / insights / fallback list / model).
 Run: python scripts/test-providers-probe.py
 """
-import subprocess, json, os, sys
+import subprocess, json
 from pathlib import Path
 
 REPORT_DIR = Path(".hermes/reports")

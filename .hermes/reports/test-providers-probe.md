@@ -235,7 +235,7 @@ exit=0
 ◆ Sessions
   Active:       0
   Slots:        1/10 in use
-                desktop           20260905_115455_ac280c   14m
+                desktop           20260905_115455_ac280c   15m
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
@@ -312,8 +312,8 @@ exit=0
   ✓ MEMORY.md exists (4161 chars)
   ✓ USER.md exists (1237 chars)
   ✓ ~/AppData/Local/hermes/profiles/ops/state.db exists (1 sessions)
-    → state.db logical size 1.3 MB, 328 pages, 71 free, WAL 2.7 MB
-    → 148 messages, 1 sessions, journal_mode=wal
+    → state.db logical size 1.3 MB, 328 pages, 46 free, WAL 2.7 MB
+    → 165 messages, 1 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ External Tools
@@ -476,8 +476,8 @@ exit=0
   ✓ MEMORY.md exists (4161 chars)
   ✓ USER.md exists (1237 chars)
   ✓ ~/AppData/Local/hermes/profiles/ops/state.db exists (1 sessions)
-    → state.db logical size 1.3 MB, 328 pages, 71 free, WAL 2.7 MB
-    → 148 messages, 1 sessions, journal_mode=wal
+    → state.db logical size 1.3 MB, 328 pages, 46 free, WAL 2.7 MB
+    → 165 messages, 1 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
 
 ◆ External Tools
@@ -583,11 +583,11 @@ exit=0
 
   📋 Overview
   ────────────────────────────────────────────────────────
-  Sessions:          1             Messages:        148
-  Tool calls:        71            User messages:   4
-  Input tokens:      199,414       Output tokens:   20,424
-  Total tokens:      5,968,958
-  Avg msgs/session:  148.0
+  Sessions:          1             Messages:        165
+  Tool calls:        79            User messages:   4
+  Input tokens:      202,785       Output tokens:   22,142
+  Total tokens:      6,899,359
+  Avg msgs/session:  165.0
 
   💰 Cost
   ────────────────────────────────────────────────────────
@@ -596,27 +596,27 @@ exit=0
   🤖 Models Used
   ────────────────────────────────────────────────────────
   Model                          Sessions       Tokens
-  inkling:free                          1    5,968,958
+  inkling:free                          1    6,899,359
 
   📱 Platforms
   ────────────────────────────────────────────────────────
   Platform       Sessions   Messages         Tokens
-  desktop               1        148      5,035,952
+  desktop               1        165      5,966,353
 
   🔧 Top Tools
   ────────────────────────────────────────────────────────
   Tool                            Calls        %
-  terminal                           24    33.8%
-  read_file                          14    19.7%
-  write_file                          8    11.3%
-  execute_code                        7     9.9%
-  search_files                        7     9.9%
-  skill_view                          4     5.6%
-  memory                              2     2.8%
-  clarify                             2     2.8%
-  grep                                1     1.4%
-  patch                               1     1.4%
-  skills_list                         1     1.4%
+  terminal                           29    36.7%
+  read_file                          15    19.0%
+  write_file                          9    11.4%
+  search_files                        7     8.9%
+  execute_code                        7     8.9%
+  skill_view                          4     5.1%
+  patch                               2     2.5%
+  memory                              2     2.5%
+  clarify                             2     2.5%
+  grep                                1     1.3%
+  skills_list                         1     1.3%
 
   🧠 Top Skills
   ────────────────────────────────────────────────────────
@@ -642,9 +642,9 @@ exit=0
 
   🏆 Notable Sessions
   ────────────────────────────────────────────────────────
-  Most messages        148 msgs           (Sep 05, 20260905_115455_)
-  Most tokens          200,624 tokens     (Sep 05, 20260905_115455_)
-  Most tool calls      71 calls           (Sep 05, 20260905_115455_)
+  Most messages        165 msgs           (Sep 05, 20260905_115455_)
+  Most tokens          205,713 tokens     (Sep 05, 20260905_115455_)
+  Most tool calls      79 calls           (Sep 05, 20260905_115455_)
 
 
 ```
