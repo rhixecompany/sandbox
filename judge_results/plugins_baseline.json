@@ -1,0 +1,262 @@
+{
+  "ts": "2026-09-05T02:21:41.055912Z",
+  "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins",
+  "threshold": 99,
+  "count": 12,
+  "avg": 95.3,
+  "passed": 0,
+  "results": [
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\cli-enhancements",
+      "name": "cli-enhancements",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\context-engineering",
+      "name": "context-engineering",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\gh-skills-builder",
+      "name": "gh-skills-builder",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\opencode",
+      "name": "opencode",
+      "version": "1.0.0",
+      "score": 92,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 16,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\project-planning",
+      "name": "project-planning",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers",
+      "name": "superpowers",
+      "version": "1.0.0",
+      "score": 92,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 16,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers-developing-for-claude-code",
+      "name": "superpowers-developing-for-claude-code",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\superpowers-marketplace",
+      "name": "superpowers-marketplace",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\telegram-bot",
+      "name": "telegram-bot",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\the-elements-of-style",
+      "name": "the-elements-of-style",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\tui-enhancements",
+      "name": "tui-enhancements",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    },
+    {
+      "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plugins\\where-was-i",
+      "name": "where-was-i",
+      "version": "1.0.0",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "manifest": 20,
+        "hooks": 20,
+        "tools": 16,
+        "platforms": 20,
+        "code": 20
+      },
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "hooks_count": 0,
+      "tools_count": 0
+    }
+  ]
+}

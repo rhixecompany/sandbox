@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-04T23:59:09",
+  "generated": "2026-09-05T03:24:54",
   "registry": ".mcp\\registry.json",
   "total": 32,
   "counts": {
-    "PASS": 26,
-    "WARN": 3,
+    "PASS": 28,
+    "WARN": 4,
     "FAIL": 0,
-    "SKIP": 3
+    "SKIP": 0
   },
   "results": [
     {
@@ -30,9 +30,9 @@
     {
       "name": "atlassian",
       "type": "sse",
-      "status": "SKIP",
+      "status": "PASS",
       "checks": [
-        "⊘ disabled in registry"
+        "✓ https://mcp.atlassian.com/v1/sse: HTTP 401 (reachable)"
       ]
     },
     {
@@ -66,9 +66,12 @@
     {
       "name": "docs",
       "type": "stdio",
-      "status": "SKIP",
+      "status": "PASS",
       "checks": [
-        "⊘ disabled in registry"
+        "✓ command: bunx (resolved at runtime)",
+        "· args[0]: -y",
+        "· args[1]: docs-mcp",
+        "· args[2]: docs/"
       ]
     },
     {
@@ -208,9 +211,12 @@
     {
       "name": "postgres",
       "type": "stdio",
-      "status": "SKIP",
+      "status": "WARN",
       "checks": [
-        "⊘ disabled in registry"
+        "✓ command: bunx (resolved at runtime)",
+        "· args[0]: -y",
+        "· args[1]: postgres-mcp",
+        "⚠ env.DATABASE_URL: unresolved placeholder ${env:DATABASE_URL}"
       ]
     },
     {

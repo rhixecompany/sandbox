@@ -1,4 +1,4 @@
-# MCP Audit Report — 2026-09-04T23:58:52
+# MCP Audit Report — 2026-09-05T03:24:54
 
 **Registry:** `.mcp\registry.json`
 
@@ -6,10 +6,10 @@
 
 | Status | Count |
 |--------|-------|
-| ✓ PASS | 26 |
-| ⚠ WARN | 3 |
+| ✓ PASS | 28 |
+| ⚠ WARN | 4 |
 | ✗ FAIL | 0 |
-| ⊘ SKIP | 3 |
+| ⊘ SKIP | 0 |
 | **Total** | **32** |
 
 ## Server Status
@@ -18,11 +18,11 @@
 |---|--------|------|--------|---------|
 | 1 | `anthropic-resources` | http | PASS | ✓ https://resources.anthropic.com/mcp: HTTP 404 (reachable) |
 | 2 | `ast-grep` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: @notprolands/ast-grep-mcp |
-| 3 | `atlassian` | sse | SKIP | ⊘ disabled in registry |
+| 3 | `atlassian` | sse | PASS | ✓ https://mcp.atlassian.com/v1/sse: HTTP 401 (reachable) |
 | 4 | `code-sandbox` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: node-code-sandbox-mcp |
 | 5 | `context7` | http | PASS | ✓ https://mcp.context7.com/mcp: HTTP 405 (reachable) |
 | 6 | `django` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: django-mcp |
-| 7 | `docs` | stdio | SKIP | ⊘ disabled in registry |
+| 7 | `docs` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: docs-mcp<br>· args[2]: docs/ |
 | 8 | `evals` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: @modelcontextprotocol/server-evals |
 | 9 | `everart` | http | WARN | ⚠ https://mcp.everart.ai/mcp: unreachable (URLError) |
 | 10 | `fetch` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: mcp-server-fetch-typescript |
@@ -37,7 +37,7 @@
 | 19 | `parallel-task` | http | PASS | ✓ https://task-mcp.parallel.ai/mcp: HTTP 405 (reachable) |
 | 20 | `plaid` | http | WARN | ⚠ https://mcp.plaid.com/mcp: unreachable (URLError) |
 | 21 | `playwright` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: @playwright/mcp@0.0.78 |
-| 22 | `postgres` | stdio | SKIP | ⊘ disabled in registry |
+| 22 | `postgres` | stdio | WARN | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: postgres-mcp<br>⚠ env.DATABASE_URL: unresolved placeholder ${env:DATABASE_URL} |
 | 23 | `pytest` | stdio | PASS | ✓ command: bunx (resolved at runtime)<br>· args[0]: -y<br>· args[1]: pytest-mcp |
 | 24 | `python-quality` | stdio | PASS | ✓ command path exists: C:\Users\Alexa\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe<br>✓ args[0]: C:\Users\Alexa\AppData\Local\hermes\scripts\python_quality_mcp_server.py |
 | 25 | `sentry` | http | PASS | ✓ https://mcp.sentry.dev/mcp: HTTP 401 (reachable) |

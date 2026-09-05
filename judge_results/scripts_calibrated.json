@@ -1,0 +1,748 @@
+{
+  "ts": "2026-09-05T02:35:30.710290Z",
+  "dir": "scripts",
+  "threshold": 80,
+  "count": 46,
+  "avg": 83.6,
+  "passed": 34,
+  "syntax_failed": 0,
+  "quick_commands": null,
+  "results": [
+    {
+      "file": "scripts\\agent-provider-matrix-smokecheck.sh",
+      "score": 62,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 8,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 12,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\agent_provider_matrix.py",
+      "score": 85,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 5
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 779,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\apply_quick_commands.py",
+      "score": 92,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 20
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 96,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\auth_inventory.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 288,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\bulk_fix_plans.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 183,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\bulk_fix_prompts.py",
+      "score": 80,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 208,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\comprehensive-implementation.py",
+      "score": 74,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 341,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\disk_cleanup.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 182,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\docker_cleanup.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 115,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\fanout.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 337,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\fix_provider_models.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 208,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\generate-mcp-skills.py",
+      "score": 62,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 6,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 174,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\git_sync.sh",
+      "score": 84,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 14,
+        "error_handling": 20,
+        "documentation": 14,
+        "dry": 16
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 134,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes-mcp-manager.py",
+      "score": 70,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 421,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes_config_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 254,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes_diagnostic.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 157,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes_doctor.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 346,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes_maintenance.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 229,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes_quick_commands.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 399,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hq.py",
+      "score": 60,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 0,
+        "documentation": 20,
+        "dry": 20
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 8,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\instruction_audit.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 335,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\instruction_fix.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 245,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\log_analysis.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 163,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\mcp_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 243,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\mcp_sync.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 225,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\ollama_wire.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 161,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\package_inspector.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 219,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\plugins_hooks_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 249,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\profile_config_audit.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 256,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\profile_config_fix.py",
+      "score": 82,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 308,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\prompt_dry_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 221,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\prompt_dry_bulk_fields.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 105,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\prompt_dry_fix.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 101,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\provider_executor.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 225,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\provider_executor_noninteractive.sh",
+      "score": 74,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 20,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 46,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\remediate_hooks_score.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 208,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\stage_missing_lsps.sh",
+      "score": 62,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 8,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 59,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\subagent_dispatcher.py",
+      "score": 82,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 352,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\submodule_commit.sh",
+      "score": 66,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 12,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 49,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\sync-mcp-config.ts",
+      "score": 48,
+      "rating": "FAIL",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 0,
+        "documentation": 8,
+        "dry": 20
+      },
+      "lang": "ts",
+      "syntax_ok": true,
+      "lines": 60,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\sync-mcp-configs.ps1",
+      "score": 50,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 0,
+        "documentation": 14,
+        "dry": 16
+      },
+      "lang": "ps1",
+      "syntax_ok": true,
+      "lines": 181,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\validate-mcp-consistency.ts",
+      "score": 44,
+      "rating": "FAIL",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 0,
+        "documentation": 8,
+        "dry": 16
+      },
+      "lang": "ts",
+      "syntax_ok": true,
+      "lines": 124,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\validate-mcp-servers.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 274,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\validate_maintenance_artifacts.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 113,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\verify-full-implementation.py",
+      "score": 76,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 236,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\verify_prompt_corpus.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 130,
+      "syntax_error": ""
+    }
+  ]
+}

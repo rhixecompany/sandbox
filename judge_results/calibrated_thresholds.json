@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    d = json.load(open(f'judge_results/{{"specs":"specs_after","plans":"plans_after","prompts":"prompts_after_template_fix","scripts":"scripts_after","hooks":"hooks_after","plugins":"plugins_after"}}[kind].json'))
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'judge_results/{"specs":"specs_after","plans":"plans_after","prompts":"prompts_after_template_fix","scripts":"scripts_after","hooks":"hooks_after","plugins":"plugins_after"}[kind].json'

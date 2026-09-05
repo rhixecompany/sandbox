@@ -1,11 +1,11 @@
 # MCP Server Validation Report — SandBox
 
-**Generated:** 2026-09-05 00:37:06
+**Generated:** 2026-09-05 03:24:46
 
 ## Summary
 
-- **Working**: 16 servers ✅
-- **Broken**: 13 servers ❌
+- **Working**: 17 servers ✅
+- **Broken**: 12 servers ❌
 - **Disabled**: 3 servers ⊘
 - **Total**: 32 servers
 
@@ -26,7 +26,7 @@
 | 11 | `filesystem` | local | ✅ working | Command available | |
 | 12 | `github` | local | ✅ working | Command available | |
 | 13 | `honcho` | remote | ❌ broken | HTTP Error 401 | |
-| 14 | `mcp-docker` | local | ❌ broken | Command timeout | |
+| 14 | `mcp-docker` | local | ✅ working | Command available | |
 | 15 | `memory` | local | ✅ working | Command available | |
 | 16 | `mindstudio` | local | ✅ working | Command available | |
 | 17 | `neon` | remote | ❌ broken | HTTP Error 401 | |
@@ -48,12 +48,11 @@
 
 ## Issues Found
 
-**13 broken servers:**
+**12 broken servers:**
 - `anthropic-resources`: HTTP Error 404
 - `context7`: HTTP Error 405
 - `everart`: Connection error: [Errno 11001] getaddrinfo failed
 - `honcho`: HTTP Error 401
-- `mcp-docker`: Command timeout
 - `neon`: HTTP Error 401
 - `parallel-search`: HTTP Error 405
 - `parallel-task`: HTTP Error 404
@@ -91,7 +90,6 @@
    - Review configuration for `context7`
    - Review configuration for `everart`
    - Review configuration for `honcho`
-   - Review configuration for `mcp-docker`
    - Review configuration for `neon`
    - Review configuration for `parallel-search`
    - Review configuration for `parallel-task`

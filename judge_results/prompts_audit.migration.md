@@ -1,19 +1,19 @@
 # Template Migration Plan
 
-Generated: 2026-08-31 19:54 UTC
+Generated: 2026-09-05 02:21 UTC
 Prompts dir: `.github\prompts`
 
-**Summary:** 1 prompts missing template dirs, 0 orphan template files, 234/235 passing
+**Summary:** 1 prompts missing template dirs, 0 orphan template files, 235/236 passing
 
 ## 1. Create Missing Template Directories
 
-### `optimize-agentsmd` (from `optimize-agentsMd.prompt.md`)
+### `comprehensive-hermes-maintenance` (from `comprehensive-hermes-maintenance.prompt.md`)
 
-Missing: `templates/optimize-agentsmd/`
+Missing: `templates/comprehensive-hermes-maintenance/`
 
 Steps:
-1. `mkdir -p templates/optimize-agentsmd`
-2. Create `templates/optimize-agentsmd/README.md` with prompt template content
+1. `mkdir -p templates/comprehensive-hermes-maintenance`
+2. Create `templates/comprehensive-hermes-maintenance/README.md` with prompt template content
 
 ## 3. Update Cross-References in Prompts
 

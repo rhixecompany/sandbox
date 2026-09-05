@@ -1,138 +1,78 @@
 # SESSION_REPORT.md
 
-> Generated: 2026-09-05 (W. Central Africa Standard Time, UTC+01:00) | cwd: `C:/Users/Alexa/Desktop/SandBox` | branch: `clean-development`
+> Generated: 2026-09-05T01:57+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
 ## Last Session Summary
 
-| Field      | Value                                                                                  |
-| ---------- | -------------------------------------------------------------------------------------- |
-| Session ID | (this turn — see end-of-session capture once the session closes)                       |
-| Title      | Comprehensive Hermes maintenance (quick-commands, dedupe, Docker dry-run, repo gates)  |
-| When       | 2026-09-04 → 2026-09-05                                                                |
-| Model      | minimax/minimax-m3:free (openrouter) — switched mid-session from nemotron-3-ultra-free |
-| Source     | TUI / sandbox                                                                          |
+| Field | Value |
+| --- | --- |
+| Session ID | 20260905_024841_426e7f |
+| Title | Create comprehensive implementation plan #3 |
+| When | 2026-09-05 01:53 |
+| Model | gpt-5.6-luna |
+| Source | state.db:tui |
 
 ## Tools Used
 
-| Tool                          | Calls          | Purpose                                                                                                                                                                               |
-| ----------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `terminal`                    | many           | Hermes CLI (`hooks doctor`, `plugins list`, `verify`, `config get/set`, `desktop --help`); prettier/ruff/pyright/bun pipelines; inventory helpers; Docker dry-run; subagent dispatch. |
-| `mcp__filesystem__*`          | several        | Read-only inventories of SandBox and Hermes home, plus targeted file inspection.                                                                                                      |
-| `mcp__ast_grep__*`            | 1              | Sanity probe.                                                                                                                                                                         |
-| `delegate_task`               | 1 (batch of 3) | Initial fan-out for parallel inventory/audit — all 3 subagents failed with HTTP 429; the controller then performed the same work directly.                                            |
-| `write_file` / `patch`        | many           | Spec/plan/skill/prompt/script authoring, plus cspell.json patch.                                                                                                                      |
-| `execute_code`                | several        | Read-only helper invocations.                                                                                                                                                         |
-| `skill_view`                  | many           | Mandatory 14-skill load and skill-discovery checks.                                                                                                                                   |
-| `mcp__sequential_thinking__*` | 1              | Scoping note.                                                                                                                                                                         |
-| `todo`                        | 1              | Phased task list.                                                                                                                                                                     |
+| Tool | Calls | Purpose |
+| --- | --- | --- |
+| skill_view | 20 |  |
+| terminal | 9 |  |
+| read_file | 2 |  |
+| clarify | 1 |  |
+| tool_describe | 1 |  |
+| session_search | 1 |  |
+| mcp__filesystem__list_allowed_directories | 1 |  |
 
 ## Skills Loaded
 
-| Skill                                                                                                 | Trigger                                                          |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `using-superpowers`                                                                                   | Standing rule on session start.                                  |
-| `user-communication-preferences`                                                                      | Standing rule.                                                   |
-| `session-audit-report`                                                                                | Standing rule (this file).                                       |
-| `hermes-profiles`                                                                                     | Standing rule.                                                   |
-| `validate-memories`                                                                                   | Standing rule.                                                   |
-| `brainstorming`                                                                                       | Requested by user.                                               |
-| `mcp-sequential-thinking`                                                                             | Requested by user.                                               |
-| `mcp-filesystem`                                                                                      | Requested by user.                                               |
-| `mcp-ast-grep`                                                                                        | Requested by user.                                               |
-| `mcp-memory`                                                                                          | Requested by user.                                               |
-| `plan` / `plans-and-specs` / `create-implementation-plan` / `implementation-plan` / `executing-plans` | Requested by user.                                               |
-| `writing-clearly-and-concisely`                                                                       | Requested by user.                                               |
-| `subagent-driven-development`                                                                         | Requested by user.                                               |
-| `systematic-debugging`                                                                                | Requested by user.                                               |
-| `git-commit` / `humanizer` / `finnish-humanizer`                                                      | Requested by user.                                               |
-| `scripts-judge`                                                                                       | Required to verify the live Hermes quick-command gate.           |
-| `hermes-agent` / `hermes-hooks` / `hermes-desktop-plugins` / `devops/docker-management`               | Used to interpret Hermes diagnostics.                            |
-| `skill-creator`                                                                                       | Used to author the new `hermes-comprehensive-maintenance` skill. |
-
-## Live Hermes State (verified 2026-09-05)
-
-- Hermes root scripts: **220** supported files directly under `C:/Users/Alexa/AppData/Local/hermes/scripts`.
-- Live `quick_commands` readback: **227** entries. `verify-registry` reports **0 issues**; wrapper smoke tested **220/220** generated targets with zero failures.
-- `scripts-judge` (canonical, installed) against the same readback: **220/220 covered**, **0 issues**, **qc_passed=true**, average score **80.7** across 220 files.
-- `hermes hooks doctor`: **8 configured hooks**, all flagged as **not allowlisted** (live command form does not match the just-refreshed allowlist rows; security gate is doing its job — no auto-allowlist was applied).
-- `hermes plugins list`: 15 bundled + user/git entries; **8 plugins** declare `tools.override: granted (not declared in manifest)` (intentional capability grant).
-- `hermes verify`: FAIL — the cause is the workspace's `bun run check` pipeline, not a Hermes defect (prettier + cspell).
-- `hermes desktop --help`: prints normally; the desktop launch is a separate, user-driven action.
-- Docker: **3 images**, **0 containers**, **0 volumes**, **0 build cache bytes**; all 3 images classify as MCP/toolkit resources and remain preserved by `docker_cleanup.py classify`.
-
-## Repository / Branch Readback
-
-| Path                                               | Branch              | HEAD         | Dirty                        |
-| -------------------------------------------------- | ------------------- | ------------ | ---------------------------- |
-| `C:/Users/Alexa/Desktop/SandBox`                   | `clean-development` | `41a50d90`   | many (working tree modified) |
-| `…/projects/Banking`                               | `development`       | `f69c259e`   | 0                            |
-| `…/projects/comicwise`                             | `development`       | `eeddb0b`    | 0                            |
-| `…/projects/cookiecutter-django-tailwind`          | `development`       | `10e7cab`    | 0                            |
-| `…/projects/Django-Scrapy-Selenium`                | `development`       | `81811a4`    | 0                            |
-| `…/projects/ecom`                                  | `development`       | `be8ea22`    | 0                            |
-| `…/projects/profile`                               | `development`       | `20ae360`    | 0                            |
-| `…/projects/Python-projects`                       | `development`       | `0248dd6`    | 0                            |
-| `…/projects/rhixecompany-comics`                   | `development`       | `37ab0a5`    | 8                            |
-| `…/projects/rhixe_scans`                           | `development`       | `6c6c676`    | 0                            |
-| `…/projects/selenium_webdriver`                    | `development`       | `0508f98`    | 0                            |
-| `…/projects/university-libary-jsm`                 | `development`       | `aa833aa`    | 0                            |
-| `…/projects/xamehi`                                | `development`       | `ab0fea1`    | 0                            |
-| `…/projects/xamehi.tv`                             | `development`       | `fbe1be5`    | 0                            |
-| `…/projects/youtube-downloader`                    | `development`       | `e06750a`    | 0                            |
-| `C:/Users/Alexa/AppData/Local/hermes/hermes-agent` | `main`              | `9eb832aad7` | 2                            |
-
-A local `production` branch does **not exist** in any of the discovered repositories. The user's `git push … production` request is therefore an external blocker, not a force-push — it would require a branch creation step that was not authorized.
+| Skill | Trigger |
+| --- | --- |
+| subgoal | Loaded |
+| systematic-debugging | Loaded |
+| using-superpowers | Loaded |
+| user-communication-preferences | Loaded |
+| goal | Loaded |
+| brainstorming | Loaded |
+| mcp-sequential-thinking | Loaded |
+| mcp-filesytem | Loaded |
+| mcp-ast-grep | Loaded |
+| mcp-memory | Loaded |
+| plan | Loaded |
+| plan-mode | Loaded |
+| plans-and-specs | Loaded |
+| create-implementation-plan | Loaded |
+| implementation-plan | Loaded |
+| executing-plans | Loaded |
+| writing-clearly-and-concisely | Loaded |
+| subagent-driven-development | Loaded |
+| git-commit | Loaded |
+| humanizer | Loaded |
+| finnish-humanizer | Loaded |
 
 ## Key Insights & Corrections
 
-1. **scripts-judge already enforces the Hermes quick-command gate.** The user-asked "update scripts-judge to always require it" is already implemented in the installed `qa/scripts-judge/scripts/judge.py::quick_command_check` and the corresponding `SKILL.md`. Live run against the actual Hermes registry returns `passed=true`. No source patch was necessary.
-2. **The 40-file `bun run check` failure was prettier, not Hermes.** The fix was `bun run format` (Prettier autoformat respecting `.prettierrc`) plus three cspell dictionary additions (`buildx`, `oneline`, `readback`). All four sub-checks now pass.
-3. **Docker cleanup is currently a 0% gain operation.** 0 containers, 0 volumes, 0 build cache, all 3 images are MCP/toolkit-tagged. The `apply` subcommand is gated behind an explicit owner allowlist so it cannot run by accident; the safe path is to leave the dry-run and only delete if the owner approves MCP/model resource removal with `--include-toolkit`.
-4. **Hooks allowlist is intentionally unsynced.** The just-refreshed `shell-hooks-allowlist.json` rows don't match the live hook command form. Re-allowlisting is a security-sensitive step that needs an explicit approval; the doctor correctly reports the gap and the runtime does not fire the hooks.
-5. **Dedupe result was 0 duplicates.** Across the 45 source files (Hermes scripts + workspace `scripts/`), only one extra pair of byte-identical files would be expected. None found in this run; the helper is wired and re-runnable.
-6. **Branch push policy blocked the literal `git push -u origin … production` command.** No local `production` branch exists, and the Git safety protocol disallows creating branches or force-pushing without explicit instruction. Owner must approve branch creation as a separate step.
+1. MCP path unavailable; used local session sources.
+2. MCP session_search oldest fallback failed: 'NoneType' object is not callable
+3. State-db source: 43 messages, 45 tool calls, profile=default
+4. Session audit performed; roll forward only verified items.
 
-## Open Items / Blockers
+## Open Items
 
-| Item                                                                                                       | Status                                                                                     |
-| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Destructive changes (config sync, hook allowlist update, Docker deletion, force-push, new branch creation) | **Blocked** — awaiting owner approval file at `.hermes/approvals/<timestamp>-<title>.md`   |
-| `bun run check` reruns include the 40 pre-existing prettier failures outside the touched set               | **Resolved** this session by `bun run format` + cspell words.                              |
-| Hooks doctor allowlist mismatch                                                                            | **Recorded** as a security gap; remediation is gated.                                      |
-| Hermes `hermes verify` failure                                                                             | **Root cause** is the workspace repo gate (fixed). No further Hermes-side change required. |
+| Item | Status |
+| --- | --- |
+| Session replay | Pending |
 
 ## Errors Resolved
 
-| Error                                                                                       | Fix                                                                                                                                             |
-| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `scripts/docker_cleanup.py` LSP type errors (Pyright) on return type / mixed list types     | Tightened return type to `int`, typed deletions list as `list[dict[str, str]]`, JSON-encoded outputs.                                           |
-| `python -m ruff format` listed the new Python files as needing reformat                     | Ran `bunx --bun ruff format`; subsequent `--check` returned "already formatted".                                                                |
-| `bun run check` failed with 40 file-format warnings                                         | `bun run format` (Prettier) brought the tree to clean; cspell got 3 dictionary additions.                                                       |
-| `delegate_task` fan-out returned HTTP 429 from openrouter for all 3 subagents               | Worked the inventory directly with the controller; left a note that the canonical route is via `scripts/hermes_maintenance.py` for future runs. |
-| `hermes skills audit scripts-judge` reported `'scripts-judge' is not a hub-installed skill` | The skill is bundled, not hub-installed. The canonical install at `qa/scripts-judge` is functional and gate-enforced.                           |
+| Error | Fix |
+| --- | --- |
+| Placeholder generator | Delegated to full generator |
 
-## Session Changelog (touched files this session)
+## Session Changelog
 
-| File                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Action                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `.github/prompts/comprehensive-hermes-maintenance.prompt.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Cross-linked to new spec/plan.                                                             |
-| `.hermes/specs/comprehensive-hermes-maintenance-spec.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | **Created** — full spec covering scope, security, gates.                                   |
-| `.hermes/plans/comprehensive-hermes-maintenance-plan.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | **Created** — phase-by-phase plan with milestones + resource allocation.                   |
-| `.hermes/specs/hermes-root-scripts-quick-commands-spec.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | unchanged reference (already approved).                                                    |
-| `.hermes/plans/hermes-root-scripts-quick-commands-plan.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | unchanged reference (already approved).                                                    |
-| `scripts/hermes_maintenance.py`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | **Created** — inventory / dedupe / git-status / docker-aware stubs (read-only by default). |
-| `scripts/docker_cleanup.py`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | **Created** — inventory, classify (separates MCP/model resources), allowlist-driven apply. |
-| `scripts/comprehensive-implementation.py`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Pre-existing — extended via earlier maintenance; re-verified this session.                 |
-| `scripts/hermes_quick_commands.py`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Pre-existing helper; smoke + verify-registry reused, no edits.                             |
-| `scripts/apply_quick_commands.py`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Pre-existing helper; not modified.                                                         |
-| `cspell.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Added 3 words: `buildx`, `oneline`, `readback`.                                            |
-| `AGENTS.md` `CLAUDE.md` `MEMORY.md` `SOUL.md` `USER.md` `README.md` `PLAN.md` `SPEC.md` `CONSOLIDATION_SUMMARY.md` `copilot-instructions.md` `exemplars.md` `package.json` `opencode.json` `.codex/mcp.json` `.mcp/registry.json` `.hermes.md` `.hermes/mcp-validation-report.md` `.hermes/plans/mcp-audit-2026-08-28/*` `.prettierrc.json` `.vscode/mcp.json` `eslint.config.js` `skill_judge_results_95.json` `packages/openrouter-client/*` `packages/openrouter-client-py/*` `prompts/agent-provider-matrix.prompt.md` `scripts/sync-mcp-config.ts` `scripts/sync-mcp-configs.ps1` `scripts/validate-mcp-consistency.ts` `uk-earnings-kit/references/*` `SESSION_REPORT.md` | Autoformatted by `bun run format` (Prettier auto-format, no semantic change).              |
-| `C:/Users/Alexa/AppData/Local/hermes/skills/devops/hermes-comprehensive-maintenance/SKILL.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **Created** — operational skill backing the prompt.                                        |
-| `C:/Users/Alexa/AppData/Local/hermes/skills/devops/hermes-comprehensive-maintenance/references/quick-commands.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | **Created** — helper subcommand reference.                                                 |
-| `.hermes/reports/hermes-maintenance-inventory.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | **Created** — first-party inventory snapshot.                                              |
-| `.hermes/reports/hermes-maintenance-dedupe.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | **Created** — dedupe manifest (0 duplicates).                                              |
-| `.hermes/reports/hermes-maintenance-git.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **Created** — nested repo branch/SHA/dirty readback.                                       |
-| `.hermes/reports/docker-classify.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | **Created** — Docker image classification (3 MCP/model, 0 unused).                         |
-| `.hermes/reports/live-quick-commands.json`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | **Created** — `hermes config get quick_commands --json` snapshot.                          |
-| `.hermes/reports/scripts-judge-final.json` and `.md`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | **Created** — judge output, qc_passed=true.                                                |
-| `.hermes/reports/scripts-judge-final.stdout`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | **Created** — judge stdout for evidence.                                                   |
+| File | Action |
+| --- | --- |
+| 20260905_024841_426e7f | Selected as latest MCP session source |
+| C:\Users\Alexa\Desktop\SandBox | Session working directory |
+

@@ -111,7 +111,7 @@ msal==1.37.0
 multidict==6.7.1
 mypy==2.3.0
 mypy-extensions==1.1.0
-nemo-relay==0.7.3
+nemo-relay==0.8.4
 nodeenv==1.10.0
 numpy==2.4.3
 oauthlib==3.3.1

@@ -1,0 +1,115 @@
+{
+  "ts": "2026-09-05T02:35:31.712966Z",
+  "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks",
+  "threshold": 95,
+  "count": 7,
+  "avg": 97.1,
+  "passed": 7,
+  "results": [
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\_pathutil.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 7,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\lib.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 7,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\lib.sh",
+      "score": 95,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 15,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 6,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\post-exec-state-log.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 5,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\pre-exec-validate.sh",
+      "score": 95,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 15,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 5,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session_end_capture.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 5,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session_start_capture.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 7,
+      "syntax_ok": true,
+      "syntax_error": ""
+    }
+  ]
+}

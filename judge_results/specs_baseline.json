@@ -1,0 +1,95 @@
+{
+  "ts": "2026-09-05T02:21:35.671286Z",
+  "dir": ".hermes\\specs",
+  "threshold": 99,
+  "count": 3,
+  "avg": 48.0,
+  "passed": 0,
+  "results": [
+    {
+      "file": ".hermes\\specs\\comprehensive-hermes-maintenance-spec.md",
+      "score": 54,
+      "rating": "WARN",
+      "dims": {
+        "frontmatter": 16,
+        "structure": 8,
+        "content": 0,
+        "cross_refs": 10,
+        "dry": 20
+      },
+      "lines": 164,
+      "fm_fields": [
+        "approval",
+        "author",
+        "description",
+        "license",
+        "name",
+        "plan",
+        "prompt",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Verification"
+      ]
+    },
+    {
+      "file": ".hermes\\specs\\comprehensive-implementation-spec.md",
+      "score": 46,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 16,
+        "structure": 8,
+        "content": 0,
+        "cross_refs": 10,
+        "dry": 12
+      },
+      "lines": 262,
+      "fm_fields": [
+        "author",
+        "created",
+        "description",
+        "license",
+        "name",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Requirements",
+        "## Non-Functional Requirements"
+      ]
+    },
+    {
+      "file": ".hermes\\specs\\hermes-root-scripts-quick-commands-spec.md",
+      "score": 44,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 16,
+        "structure": 8,
+        "content": 0,
+        "cross_refs": 0,
+        "dry": 20
+      },
+      "lines": 99,
+      "fm_fields": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Requirements",
+        "## Verification"
+      ]
+    }
+  ]
+}
