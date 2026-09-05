@@ -105,7 +105,7 @@
 - [PASS] Specs reference at least one spec file (this file references specs-judge, plans-judge rules)
 - [PASS] Prompt rules match parent-dir structure (category = parent dir; templates/scripts same subdir)
 - [PASS] Destructive operations have authorization note (line above execution log)
-- [PASS] DRY enforced (no duplicated rules; cross-references used)
+- [PASS] DRY enforced (no duplicated rules; cross-references used); `DRY` referenced once
 - [PASS] Concise / action-first format (no fluff; results first, explanation minimal)
 
 Status: ALL 6 GOALS + ALL 6 SUBGOALS implemented at spec/plan/execution level. Background tasks running. Score target: 99+ (judge skills will be run on artifacts; fix loop included).
