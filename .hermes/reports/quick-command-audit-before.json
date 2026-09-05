@@ -1,0 +1,7 @@
+{
+  "script": "_agents_fix_discover.py",
+  "exists": true,
+  "suffix": ".py",
+  "syntax_ok": true,
+  "detail": ""
+}

@@ -1,0 +1,295 @@
+ROOT_REPOSITORY
+## clean-development...origin/clean-development
+?? .hermes/reports/baseline/
+  backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
+  chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
+  chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
+* clean-development                          f67b6bfb [origin/clean-development] updates
+  development                                39ea65f6 [origin/development] docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT
+  production                                 afb5635e [origin/production] updates
+  rhixecompany-session-capabilities-overview 9cae1327 docs(root): [B] add AI-ready AGENTS metadata
+  temp-clean                                 e34d4f91 fix: replace placeholder credentials to pass push protection
+  writing-clearly-enhancement                ed763f66 feat: enhance writing-clearly-and-concisely skill with Strunk principles and AI pattern detection
+origin	https://github.com/rhixecompany/sandbox.git (fetch)
+origin	https://github.com/rhixecompany/sandbox.git (push)
+f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd|2026-09-05 01:32:14 +0100|rhixecompany|updates
+41a50d90000d648bb40278702412925eae986dfe|2026-09-04 22:03:28 +0100|Alexa|docs: final scripts remediation report + SESSION_REPORT updates
+06ee0312432144bbfe6d022c47032bfcc0655217|2026-09-04 21:49:07 +0100|Alexa|docs: 2026-09-04 comprehensive Hermes health sweep session record
+0a2ab7ae7068efcbf0219ae7ebb1a966e7ecd9f5|2026-09-04 21:46:08 +0100|rhixecompany|updates
+97b4300fe2459d800053cf92ba56f7e1ec50ec9d|2026-09-04 20:34:12 +0100|rhixecompany|docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT
+ROOT_SUBMODULES
+ f69c259ede58d884ea930639ca19b815be4e1a70 projects/Banking (heads/development)
+ 81811a4761c905a46e61993aa83014102f1ce31b projects/Django-Scrapy-Selenium (heads/development)
+ 0248dd601bbb2c8e8777f232a406f388cdbfd267 projects/Python-projects (heads/development)
+ eeddb0b2c58c63f61c0622039574431319423fa8 projects/comicwise (heads/development)
+ 10e7cabe74fcab658e53ea73ed4321d94f05c47f projects/cookiecutter-django-tailwind (heads/development)
+ be8ea223327c680700ffed667e178bbc21309f3b projects/ecom (heads/development)
+ 20ae360f9f0898cf68117a65168ab7dfaba84aed projects/profile (heads/development)
+ 6c6c676bef657363066028e62b84766cdbfc834a projects/rhixe_scans (heads/development)
+ 0508f986f344abf68080117c12285c88993d49e7 projects/selenium_webdriver (heads/development)
+ aa833aa07b4866064fa85fa9442ea25b3431b29e projects/university-libary-jsm (heads/development)
+ ab0fea1275d3a8f4d6e7287262a37c8c2ba69140 projects/xamehi (heads/development)
+ fbe1be56c95a0554fc29404afc83b4b9f8cbdc63 projects/xamehi.tv (heads/development)
+ e06750ae0c535bd543b7bebcbef90689562c64ce projects/youtube-downloader (heads/development)
+PROJECT_REPOSITORIES
+=== projects/Banking ===
+branch=development
+* development f69c259e [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  b4e0b047 chore: initial local project setup for Banking
+origin	https://github.com/rhixecompany/banking.git (fetch)
+origin	https://github.com/rhixecompany/banking.git (push)
+last=f69c259ede58d884ea930639ca19b815be4e1a70|2026-08-29 01:47:41 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/Bash ===
+branch=clean-development
+?? ../../.hermes/reports/baseline/docker-df.txt
+?? ../../.hermes/reports/baseline/docker-images.txt
+?? ../../.hermes/reports/baseline/docker-info.txt
+?? ../../.hermes/reports/baseline/docker-ps.txt
+?? ../../.hermes/reports/baseline/docker-volumes.txt
+?? ../../.hermes/reports/baseline/hermes-doctor.txt
+?? ../../.hermes/reports/baseline/hermes-help.txt
+?? ../../.hermes/reports/baseline/hooks-doctor.txt
+?? ../../.hermes/reports/baseline/hooks-list.txt
+?? ../../.hermes/reports/baseline/mcp-list.txt
+?? ../../.hermes/reports/baseline/plugins-list.txt
+?? ../../.hermes/reports/baseline/process-list.csv
+?? ../../.hermes/reports/baseline/profile-list.txt
+?? ../../.hermes/reports/baseline/profile-use.txt
+?? ../../.hermes/reports/baseline/repositories.txt
+?? ../../.hermes/reports/baseline/root-log.txt
+?? ../../.hermes/reports/baseline/root-status.txt
+  backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
+  chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
+  chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
+* clean-development                          f67b6bfb [origin/clean-development] updates
+  development                                39ea65f6 [origin/development] docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT
+  production                                 afb5635e [origin/production] updates
+  rhixecompany-session-capabilities-overview 9cae1327 docs(root): [B] add AI-ready AGENTS metadata
+  temp-clean                                 e34d4f91 fix: replace placeholder credentials to pass push protection
+  writing-clearly-enhancement                ed763f66 feat: enhance writing-clearly-and-concisely skill with Strunk principles and AI pattern detection
+origin	https://github.com/rhixecompany/sandbox.git (fetch)
+origin	https://github.com/rhixecompany/sandbox.git (push)
+last=f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd|2026-09-05 01:32:14 +0100|rhixecompany|updates
+=== projects/comicwise ===
+branch=development
+* development eeddb0b [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  7b7d7b5 [origin/production: behind 9] chore: initial local project setup for comicwise
+origin	https://github.com/rhixecompany/comicwise.git (fetch)
+origin	https://github.com/rhixecompany/comicwise.git (push)
+last=eeddb0b2c58c63f61c0622039574431319423fa8|2026-08-29 01:47:43 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/cookiecutter-django-tailwind ===
+branch=development
+* development 10e7cab [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  95c5d18 chore: initial local project setup for cookiecutter-django-tailwind
+origin	https://github.com/rhixecompany/cookiecutter-django-tailwind.git (fetch)
+origin	https://github.com/rhixecompany/cookiecutter-django-tailwind.git (push)
+last=10e7cabe74fcab658e53ea73ed4321d94f05c47f|2026-08-29 01:47:45 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/Django-Scrapy-Selenium ===
+branch=development
+* development 81811a4 [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  50eadb6 chore: initial local project setup for Django-Scrapy-Selenium
+origin	https://github.com/rhixecompany/Django-Scrapy-Selenium.git (fetch)
+origin	https://github.com/rhixecompany/Django-Scrapy-Selenium.git (push)
+last=81811a4761c905a46e61993aa83014102f1ce31b|2026-08-29 01:47:45 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/docs ===
+branch=clean-development
+?? ../../.hermes/reports/baseline/docker-df.txt
+?? ../../.hermes/reports/baseline/docker-images.txt
+?? ../../.hermes/reports/baseline/docker-info.txt
+?? ../../.hermes/reports/baseline/docker-ps.txt
+?? ../../.hermes/reports/baseline/docker-volumes.txt
+?? ../../.hermes/reports/baseline/hermes-doctor.txt
+?? ../../.hermes/reports/baseline/hermes-help.txt
+?? ../../.hermes/reports/baseline/hooks-doctor.txt
+?? ../../.hermes/reports/baseline/hooks-list.txt
+?? ../../.hermes/reports/baseline/mcp-list.txt
+?? ../../.hermes/reports/baseline/plugins-list.txt
+?? ../../.hermes/reports/baseline/process-list.csv
+?? ../../.hermes/reports/baseline/profile-list.txt
+?? ../../.hermes/reports/baseline/profile-use.txt
+?? ../../.hermes/reports/baseline/repositories.txt
+?? ../../.hermes/reports/baseline/root-log.txt
+?? ../../.hermes/reports/baseline/root-status.txt
+  backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
+  chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
+  chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
+* clean-development                          f67b6bfb [origin/clean-development] updates
+  development                                39ea65f6 [origin/development] docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT
+  production                                 afb5635e [origin/production] updates
+  rhixecompany-session-capabilities-overview 9cae1327 docs(root): [B] add AI-ready AGENTS metadata
+  temp-clean                                 e34d4f91 fix: replace placeholder credentials to pass push protection
+  writing-clearly-enhancement                ed763f66 feat: enhance writing-clearly-and-concisely skill with Strunk principles and AI pattern detection
+origin	https://github.com/rhixecompany/sandbox.git (fetch)
+origin	https://github.com/rhixecompany/sandbox.git (push)
+last=f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd|2026-09-05 01:32:14 +0100|rhixecompany|updates
+=== projects/ecom ===
+branch=development
+* development be8ea22 [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  d330f24 chore: initial local project setup for ecom
+origin	https://github.com/rhixecompany/ecom.git (fetch)
+origin	https://github.com/rhixecompany/ecom.git (push)
+last=be8ea223327c680700ffed667e178bbc21309f3b|2026-08-29 01:47:46 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/mcp-servers ===
+branch=clean-development
+?? ../../.hermes/reports/baseline/docker-df.txt
+?? ../../.hermes/reports/baseline/docker-images.txt
+?? ../../.hermes/reports/baseline/docker-info.txt
+?? ../../.hermes/reports/baseline/docker-ps.txt
+?? ../../.hermes/reports/baseline/docker-volumes.txt
+?? ../../.hermes/reports/baseline/hermes-doctor.txt
+?? ../../.hermes/reports/baseline/hermes-help.txt
+?? ../../.hermes/reports/baseline/hooks-doctor.txt
+?? ../../.hermes/reports/baseline/hooks-list.txt
+?? ../../.hermes/reports/baseline/mcp-list.txt
+?? ../../.hermes/reports/baseline/plugins-list.txt
+?? ../../.hermes/reports/baseline/process-list.csv
+?? ../../.hermes/reports/baseline/profile-list.txt
+?? ../../.hermes/reports/baseline/profile-use.txt
+?? ../../.hermes/reports/baseline/repositories.txt
+?? ../../.hermes/reports/baseline/root-log.txt
+?? ../../.hermes/reports/baseline/root-status.txt
+  backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
+  chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
+  chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
+* clean-development                          f67b6bfb [origin/clean-development] updates
+  development                                39ea65f6 [origin/development] docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT
+  production                                 afb5635e [origin/production] updates
+  rhixecompany-session-capabilities-overview 9cae1327 docs(root): [B] add AI-ready AGENTS metadata
+  temp-clean                                 e34d4f91 fix: replace placeholder credentials to pass push protection
+  writing-clearly-enhancement                ed763f66 feat: enhance writing-clearly-and-concisely skill with Strunk principles and AI pattern detection
+origin	https://github.com/rhixecompany/sandbox.git (fetch)
+origin	https://github.com/rhixecompany/sandbox.git (push)
+last=f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd|2026-09-05 01:32:14 +0100|rhixecompany|updates
+=== projects/mcp-server-typescript ===
+branch=clean-development
+?? ../../.hermes/reports/baseline/docker-df.txt
+?? ../../.hermes/reports/baseline/docker-images.txt
+?? ../../.hermes/reports/baseline/docker-info.txt
+?? ../../.hermes/reports/baseline/docker-ps.txt
+?? ../../.hermes/reports/baseline/docker-volumes.txt
+?? ../../.hermes/reports/baseline/hermes-doctor.txt
+?? ../../.hermes/reports/baseline/hermes-help.txt
+?? ../../.hermes/reports/baseline/hooks-doctor.txt
+?? ../../.hermes/reports/baseline/hooks-list.txt
+?? ../../.hermes/reports/baseline/mcp-list.txt
+?? ../../.hermes/reports/baseline/plugins-list.txt
+?? ../../.hermes/reports/baseline/process-list.csv
+?? ../../.hermes/reports/baseline/profile-list.txt
+?? ../../.hermes/reports/baseline/profile-use.txt
+?? ../../.hermes/reports/baseline/repositories.txt
+?? ../../.hermes/reports/baseline/root-log.txt
+?? ../../.hermes/reports/baseline/root-status.txt
+  backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
+  chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
+  chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
+* clean-development                          f67b6bfb [origin/clean-development] updates
+  development                                39ea65f6 [origin/development] docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT
+  production                                 afb5635e [origin/production] updates
+  rhixecompany-session-capabilities-overview 9cae1327 docs(root): [B] add AI-ready AGENTS metadata
+  temp-clean                                 e34d4f91 fix: replace placeholder credentials to pass push protection
+  writing-clearly-enhancement                ed763f66 feat: enhance writing-clearly-and-concisely skill with Strunk principles and AI pattern detection
+origin	https://github.com/rhixecompany/sandbox.git (fetch)
+origin	https://github.com/rhixecompany/sandbox.git (push)
+last=f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd|2026-09-05 01:32:14 +0100|rhixecompany|updates
+=== projects/profile ===
+branch=development
+* development 20ae360 [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  4ae124d chore: initial local project setup for profile
+origin	https://github.com/rhixecompany/rhixecompany.git (fetch)
+origin	https://github.com/rhixecompany/rhixecompany.git (push)
+last=20ae360f9f0898cf68117a65168ab7dfaba84aed|2026-08-29 01:47:47 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/Python-projects ===
+branch=development
+* development 0248dd6 [origin/development] chore: quality check script, MCP config, pre-commit hook, skill, fix email_sender/currency_converter/rock_paper_scissors
+  production  0433dab chore: initial local project setup for Python-projects
+origin	https://github.com/rhixecompany/Python-projects.git (fetch)
+origin	https://github.com/rhixecompany/Python-projects.git (push)
+last=0248dd601bbb2c8e8777f232a406f388cdbfd267|2026-08-31 20:39:54 +0100|rhixecompany|chore: quality check script, MCP config, pre-commit hook, skill, fix email_sender/currency_converter/rock_paper_scissors
+=== projects/Resume_maker ===
+branch=clean-development
+?? ../../.hermes/reports/baseline/docker-df.txt
+?? ../../.hermes/reports/baseline/docker-images.txt
+?? ../../.hermes/reports/baseline/docker-info.txt
+?? ../../.hermes/reports/baseline/docker-ps.txt
+?? ../../.hermes/reports/baseline/docker-volumes.txt
+?? ../../.hermes/reports/baseline/hermes-doctor.txt
+?? ../../.hermes/reports/baseline/hermes-help.txt
+?? ../../.hermes/reports/baseline/hooks-doctor.txt
+?? ../../.hermes/reports/baseline/hooks-list.txt
+?? ../../.hermes/reports/baseline/mcp-list.txt
+?? ../../.hermes/reports/baseline/plugins-list.txt
+?? ../../.hermes/reports/baseline/process-list.csv
+?? ../../.hermes/reports/baseline/profile-list.txt
+?? ../../.hermes/reports/baseline/profile-use.txt
+?? ../../.hermes/reports/baseline/repositories.txt
+?? ../../.hermes/reports/baseline/root-log.txt
+?? ../../.hermes/reports/baseline/root-status.txt
+  backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
+  chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
+  chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
+* clean-development                          f67b6bfb [origin/clean-development] updates
+  development                                39ea65f6 [origin/development] docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT
+  production                                 afb5635e [origin/production] updates
+  rhixecompany-session-capabilities-overview 9cae1327 docs(root): [B] add AI-ready AGENTS metadata
+  temp-clean                                 e34d4f91 fix: replace placeholder credentials to pass push protection
+  writing-clearly-enhancement                ed763f66 feat: enhance writing-clearly-and-concisely skill with Strunk principles and AI pattern detection
+origin	https://github.com/rhixecompany/sandbox.git (fetch)
+origin	https://github.com/rhixecompany/sandbox.git (push)
+last=f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd|2026-09-05 01:32:14 +0100|rhixecompany|updates
+=== projects/rhixe_scans ===
+branch=development
+* development 6c6c676 [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  71568c2 chore: initial local project setup for rhixe_scans
+origin	https://github.com/rhixecompany/rhixe_scans.git (fetch)
+origin	https://github.com/rhixecompany/rhixe_scans.git (push)
+last=6c6c676bef657363066028e62b84766cdbfc834a|2026-08-29 01:47:48 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/rhixecompany-comics ===
+branch=development
+ M .github/copilot-instructions.md
+ M AGENTS.md
+ M backend/apps/api/static/ckeditor/ckeditor/plugins/html5video/plugin.js
+ M bunfig.toml
+ M copilot-instructions.md
+ M docs/Project_Architecture/Project_Folder_Structure.md
+ M frontend/src/scripts/master-setup.ts
+?? .cursorrules
+* development 37ab0a5 [origin/development] chore: add bunfig.toml — [install], [test], [build] sections
+  production  2b74dcc updates
+origin	https://github.com/rhixecompany/rhixecompany-comics.git (fetch)
+origin	https://github.com/rhixecompany/rhixecompany-comics.git (push)
+last=37ab0a5754918d75a168346b95eb171afb8d4781|2026-08-16 05:47:23 +0100|rhixecompany|chore: add bunfig.toml — [install], [test], [build] sections
+=== projects/selenium_webdriver ===
+branch=development
+* development 0508f98 [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  23f95c5 chore: initial local project setup for selenium_webdriver
+origin	https://github.com/rhixecompany/selenium_webdriver.git (fetch)
+origin	https://github.com/rhixecompany/selenium_webdriver.git (push)
+last=0508f986f344abf68080117c12285c88993d49e7|2026-08-29 01:47:49 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/university-libary-jsm ===
+branch=development
+* development aa833aa [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  770ece9 chore: initial local project setup for university-libary-jsm
+origin	https://github.com/rhixecompany/university-libary-jsm.git (fetch)
+origin	https://github.com/rhixecompany/university-libary-jsm.git (push)
+last=aa833aa07b4866064fa85fa9442ea25b3431b29e|2026-08-29 01:47:50 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/xamehi ===
+branch=development
+* development ab0fea1 [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  ef7c89f chore: initial local project setup for xamehi
+origin	https://github.com/rhixecompany/xamehi.git (fetch)
+origin	https://github.com/rhixecompany/xamehi.git (push)
+last=ab0fea1275d3a8f4d6e7287262a37c8c2ba69140|2026-08-29 01:47:51 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/xamehi.tv ===
+branch=development
+* development fbe1be5 [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  6031d8f chore: initial local project setup for xamehi.tv
+origin	https://github.com/rhixecompany/xamehi.tv.git (fetch)
+origin	https://github.com/rhixecompany/xamehi.tv.git (push)
+last=fbe1be56c95a0554fc29404afc83b4b9f8cbdc63|2026-08-29 01:47:51 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
+=== projects/youtube-downloader ===
+branch=development
+* development e06750a [origin/development: ahead 1] chore: sync agent instruction files from parent (auto-commit hook)
+  production  09f48cd chore: initial local project setup for youtube-downloader
+origin	https://github.com/rhixecompany/youtube-downloader.git (fetch)
+origin	https://github.com/rhixecompany/youtube-downloader.git (push)
+last=e06750ae0c535bd543b7bebcbef90689562c64ce|2026-08-29 01:47:52 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)

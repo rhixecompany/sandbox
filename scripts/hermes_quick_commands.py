@@ -12,6 +12,7 @@ import ast
 import json
 import os
 import re
+import shlex
 import shutil
 import subprocess
 import sys
@@ -91,7 +92,7 @@ def load_existing(path: Path | None) -> dict[str, dict[str, str]]:
 
 def wrapper_command(script_index: int, wrapper: Path) -> dict[str, str]:
     """Build one non-destructive exec command for a target script."""
-    command = f'py "{wrapper.as_posix()}" a -i {script_index}'
+    command = f'python "{wrapper.as_posix()}" audit -i {script_index}'
     return {"type": "exec", "command": command}
 
 
@@ -114,7 +115,19 @@ def build_registry(
     scripts: list[Path], existing: dict[str, dict[str, str]], wrapper: Path
 ) -> dict[str, dict[str, str]]:
     """Merge generated audit commands with existing user commands."""
-    registry = {key: value.copy() for key, value in existing.items()}
+    wrapper_text = wrapper.as_posix().replace("\\\\", "/").casefold()
+    registry: dict[str, dict[str, str]] = {}
+    for key, value in existing.items():
+        command = value.get("command", "") if isinstance(value, dict) else ""
+        normalized = command.replace("\\\\", "/").casefold()
+        stale_generated = (
+            isinstance(value, dict)
+            and value.get("type") == "exec"
+            and (wrapper_text in normalized or "hermes_quick_commands.py" in normalized)
+            and re.search(r"(?:^|\s)(?:audit|a)(?:\s|$)", command, re.IGNORECASE)
+        )
+        if not stale_generated:
+            registry[key] = value.copy() if isinstance(value, dict) else value
     used = set(registry)
     for script_index, script in enumerate(scripts, start=1):
         base = command_key(script.stem)
@@ -167,6 +180,49 @@ def audit_script(name: str, root: Path) -> dict[str, Any]:
     return result
 
 
+def generated_command_items(
+    registry: dict[str, Any], wrapper: Path
+) -> list[tuple[str, str]]:
+    """Return generated wrapper commands without returning arbitrary exec entries."""
+    wrapper_text = wrapper.as_posix().replace("\\\\", "/").casefold()
+    items: list[tuple[str, str]] = []
+    for key, value in registry.items():
+        if not isinstance(value, dict) or value.get("type") != "exec":
+            continue
+        command = value.get("command")
+        if not isinstance(command, str):
+            continue
+        if wrapper_text in command.replace("\\\\", "/").casefold():
+            items.append((key, command))
+    return items
+
+
+def smoke_command(key: str, command: str) -> dict[str, Any]:
+    """Execute one generated wrapper command, never the target script itself."""
+    try:
+        tokens = shlex.split(command, posix=True)
+        if not tokens:
+            return {"key": key, "passed": False, "detail": "empty command"}
+        executable = shutil.which(tokens[0])
+        if executable is None:
+            return {"key": key, "passed": False, "detail": f"executable not found: {tokens[0]}"}
+        result = subprocess.run(
+            [executable, *tokens[1:]],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            check=False,
+        )
+        return {
+            "key": key,
+            "passed": result.returncode == 0,
+            "returncode": result.returncode,
+            "detail": (result.stderr or result.stdout).strip()[-400:],
+        }
+    except (OSError, ValueError, subprocess.SubprocessError) as exc:
+        return {"key": key, "passed": False, "detail": str(exc)[:400]}
+
+
 def validate_registry(registry: dict[str, Any], scripts: list[Path], wrapper: Path) -> list[str]:
     """Return actionable registry coverage and shape errors."""
     issues: list[str] = []
@@ -191,29 +247,35 @@ def validate_registry(registry: dict[str, Any], scripts: list[Path], wrapper: Pa
             if not isinstance(command, str) or not command.strip():
                 issues.append(f"{key}: exec command is missing")
                 continue
-            if key.startswith("script-") or key not in PRESERVED_COMMANDS:
-                match = re.search(r'(?:--script|-s)\s+"?([A-Za-z0-9._-]+)"?', command)
-                index_match = re.search(r'(?:--index|-i)\s+(\d+)', command)
-                if not match:
-                    if not index_match:
-                        issues.append(f"{key}: generated command lacks a script target")
-                        continue
-                    index = int(index_match.group(1))
-                    target = script_by_index.get(index)
-                    if target is None:
-                        issues.append(f"{key}: script index {index} is not inventoried")
-                        continue
-                else:
-                    target = match.group(1)
-                    if target not in script_names:
-                        issues.append(f"{key}: target {target!r} is not inventoried")
-                        continue
-                if target in seen_targets:
-                    issues.append(f"duplicate generated target: {target}")
-                else:
-                    seen_targets.add(target)
-                if wrapper.as_posix() not in command:
-                    issues.append(f"{key}: command does not invoke the wrapper")
+            wrapper_text = wrapper.as_posix().replace("\\\\", "/").casefold()
+            command_text = command.replace("\\\\", "/").casefold()
+            is_generated = key.startswith("script-") or wrapper_text in command_text
+            if not is_generated:
+                continue
+            match = re.search(r'(?:--script|-s)\s+"?([A-Za-z0-9._-]+)"?', command)
+            index_match = re.search(r'(?:--index|-i)\s+(\d+)', command)
+            if not match:
+                if not index_match:
+                    issues.append(f"{key}: generated command lacks a script target")
+                    continue
+                index = int(index_match.group(1))
+                target = script_by_index.get(index)
+                if target is None:
+                    issues.append(f"{key}: script index {index} is not inventoried")
+                    continue
+            else:
+                target = match.group(1)
+                if target not in script_names:
+                    issues.append(f"{key}: target {target!r} is not inventoried")
+                    continue
+            if target in seen_targets:
+                issues.append(f"duplicate generated target: {target}")
+            else:
+                seen_targets.add(target)
+            if wrapper_text not in command_text:
+                issues.append(f"{key}: command does not invoke the wrapper")
+            if not re.search(r"(?:^|\s)audit(?:\s|$)", command, re.IGNORECASE):
+                issues.append(f"{key}: command does not use audit mode")
     missing = script_names - seen_targets
     issues.extend(f"missing quick command for {name}" for name in sorted(missing))
     return issues
@@ -313,27 +375,20 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if not issues else 1
     if args.command == "smoke":
         registry = json.loads(args.registry.read_text(encoding="utf-8"))
-        results = []
-        for key, value in registry.items():
-            if not isinstance(value, dict) or value.get("type") != "exec":
-                continue
-            command = value.get("command", "")
-            match = re.search(r'(?:--script|-s)\s+"?([A-Za-z0-9._-]+)"?', command)
-            index_match = re.search(r'(?:--index|-i)\s+(\d+)', command)
-            if not match and not index_match:
-                continue
-            if match:
-                script_name = match.group(1)
-            else:
-                index = int(index_match.group(1))
-                if index < 1 or index > len(scripts):
-                    results.append({"script": f"index:{index}", "syntax_ok": False})
-                    continue
-                script_name = scripts[index - 1].name
-            results.append(audit_script(script_name, root))
-        failed = [item for item in results if not item["syntax_ok"]]
-        print(json.dumps({"tested": len(results), "failed": failed}, indent=2))
-        return 0 if not failed else 1
+        generated = generated_command_items(registry, wrapper)
+        results = [smoke_command(key, command) for key, command in generated]
+        failed = [item for item in results if not item["passed"]]
+        print(
+            json.dumps(
+                {
+                    "tested": len(results),
+                    "commands_executed": True,
+                    "failed": failed,
+                },
+                indent=2,
+            )
+        )
+        return 0 if results and not failed else 1
     if args.command == "env-inventory":
         print(json.dumps(env_inventory(args.repo.resolve(), hermes_home().resolve()), indent=2))
         return 0

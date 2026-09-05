@@ -1,0 +1,30 @@
+COMMANDS
+hermes=/c/Users/Alexa/AppData/Local/hermes/hermes-agent/venv/Scripts/hermes
+opencode=/c/nvm4w/nodejs/opencode
+codex=/c/Users/Alexa/AppData/Local/Microsoft/WinGet/Links/codex
+copilot=/c/Users/Alexa/AppData/Local/Microsoft/WinGet/Links/copilot
+code=/c/Users/Alexa/AppData/Local/Programs/Microsoft VS Code/bin/code
+docker=/c/Program Files/Docker/Docker/resources/bin/docker
+bun=/c/Users/Alexa/.bun/bin/bun
+node=/c/nvm4w/nodejs/node
+python=/c/Users/Alexa/AppData/Local/hermes/hermes-agent/venv/Scripts/python
+uv=/c/Users/Alexa/AppData/Local/Microsoft/WinGet/Links/uv
+gh=/c/Program Files/GitHub CLI/gh
+npm=/c/nvm4w/nodejs/npm
+git=/mingw64/bin/git
+VERSIONS
+Hermes Agent v0.20.6 (2026.8.27) · upstream f159e581
+Install directory: C:\Users\Alexa\AppData\Local\hermes\hermes-agent
+Install method: git
+Python: 3.13.14
+OpenAI SDK: 2.24.0
+Update available: 5483 commits behind — run 'hermes update'
+1.18.13
+codex-cli 0.146.1
+Docker version 29.7.2, build a7dcaa6
+1.3.14
+v26.5.0
+Python 3.13.14
+uv 0.12.7 (61291a8ca 2026-08-27 x86_64-pc-windows-msvc)
+gh version 2.100.0 (2026-09-03)
+https://github.com/cli/cli/releases/tag/v2.100.0

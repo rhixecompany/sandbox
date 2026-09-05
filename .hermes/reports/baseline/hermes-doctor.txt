@@ -1,0 +1,154 @@
+
+┌─────────────────────────────────────────────────────────┐
+│                 🩺 Hermes Doctor                        │
+└─────────────────────────────────────────────────────────┘
+
+◆ Security Advisories
+  ✓ No active security advisories
+
+◆ MCP Server Security
+  ✓ No suspicious MCP stdio commands
+
+◆ Python Environment
+  ✓ Python 3.13.14
+  ✓ SQLite 3.53.1
+    → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
+    → state.db: WAL journal mode (1.3 MB)
+    → cron/executions.db: WAL journal mode (20.0 KB)
+    → projects.db: WAL journal mode (44.0 KB)
+    → verification_evidence.db: WAL journal mode (44.0 KB)
+  ✓ Virtual environment active
+  ✓ Version files consistent (0.20.6)
+
+◆ SSL / CA Certificates
+  ✓ SSL CA certificate bundle is valid
+
+◆ Required Packages
+  ✓ OpenAI SDK
+  ✓ Rich (terminal UI)
+  ✓ python-dotenv
+  ✓ PyYAML
+  ✓ HTTPX
+  ✓ Croniter (cron expressions) (optional)
+  ✓ python-telegram-bot (optional)
+  ✓ discord.py (optional)
+
+◆ Configuration Files
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/.env file exists
+  ✓ API key or custom endpoint configured
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/config.yaml exists
+  ✓ Config version up to date (v39)
+  ✓ No deprecated config keys or env vars
+
+◆ xAI Model Retirement (May 15, 2026)
+  ✓ No retired xAI models in config
+
+◆ Auth Providers
+  ✓ Nous Portal auth (logged in)
+  ✓ OpenAI Codex auth (logged in)
+  ✓ MiniMax OAuth (logged in, region=global)
+  ✓ xAI OAuth (logged in)
+
+◆ Directory Structure
+  ✓ ~/AppData/Local/hermes/profiles/code-architect directory exists
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/cron/ exists
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/sessions/ exists
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/logs/ exists
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/skills/ exists
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/memories/ exists
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/SOUL.md exists (persona configured)
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/memories/ directory exists
+  ✓ MEMORY.md exists (5032 chars)
+  ✓ USER.md exists (1428 chars)
+  ✓ ~/AppData/Local/hermes/profiles/code-architect/state.db exists (2 sessions)
+    → state.db logical size 1.3 MB, 345 pages, 4 free, WAL 0 B
+    → 128 messages, 2 sessions, journal_mode=wal
+    → FTS tables: messages_fts, messages_fts_trigram
+
+◆ External Tools
+  ✓ git
+  ✓ ripgrep (rg) (faster file search)
+  ✓ docker (optional)
+  ✓ Node.js
+  ✓ agent-browser (browser automation)
+  ✓ Playwright Chromium (browser engine)
+  ⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 0 moderate — run: cd C:\Users\Alexa\AppData\Local\hermes\hermes-agent && npm audit fix --workspaces=false)
+  ⚠ web workspace deps (0 critical, 1 high, 1 moderate — build-tool advisory; clears via lockfile bump)
+    →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
+  ✓ ui-tui workspace deps (no known vulnerabilities)
+
+◆ API Connectivity
+  Running 40 connectivity checks in parallel…                                                                        ✓ OpenRouter API
+  ✓ DeepSeek            
+  ✓ Hugging Face        
+  ✓ OpenCode Zen        
+  ✓ gemini              
+  ✓ ollama-cloud        
+  ⚠ xai                  (HTTP 403)
+
+◆ Tool Availability
+  ✓ browser-use
+  ✓ clarify
+  ✓ code_execution
+  ✓ computer_use
+  ✓ cronjob
+  ✓ delegation
+  ✓ desktop_ui
+  ✓ file
+  ✓ memory
+  ✓ project
+  ✓ session_search
+  ✓ skills
+  ✓ terminal
+  ✓ todo
+  ✓ tts
+  ✓ video
+  ✓ video_gen
+  ✓ vision
+  ✓ x_search
+  ✓ kanban (runtime-gated; loaded only for dispatcher-spawned workers)
+  ✓ web search (xai)
+  ✓ web extract (keenable)
+  ⚠ a2a (system dependency not met)
+  ⚠ browser (system dependency not met)
+  ⚠ browser-cdp (system dependency not met)
+  ⚠ discord (missing DISCORD_BOT_TOKEN)
+  ⚠ discord_admin (missing DISCORD_BOT_TOKEN)
+  ⚠ feishu_doc (system dependency not met)
+  ⚠ feishu_drive (system dependency not met)
+  ⚠ hermes-yuanbao (system dependency not met)
+  ⚠ homeassistant (system dependency not met)
+  ⚠ image_gen (system dependency not met)
+
+◆ Skills Hub
+  ✓ Skills Hub directory exists
+  ✓ Lock file OK (12 hub-installed skill(s))
+  ✓ GitHub token configured (authenticated API access)
+
+◆ Memory Provider
+  ✓ Honcho connected workspace=hermes mode=hybrid freq=async
+
+◆ Profiles
+  ✓ 13 profile(s) found
+  ✓   alexa: deepseek-v4-flash-free, no alias
+  ✓   code-architect: nvidia/nemotron-3-nano-omni-30, no alias
+  ✓   creative-director: deepseek-v4-flash-free, no alias
+  ✓   cto: deepseek-v4-flash-free, no alias
+  ✓   designer: deepseek-v4-flash-free, no alias
+  ✓   dev: deepseek-v4-flash-free, no alias
+  ✓   exec-assistant: deepseek-v4-flash-free, no alias
+  ✓   ops: deepseek-v4-flash-free, no alias
+  ✓   patient-tutor: deepseek-v4-flash-free, no alias
+  ✓   pm: deepseek-v4-flash-free, no alias
+  ✓   qa: deepseek-v4-flash-free, no alias
+  ✓   research-analyst: deepseek-v4-flash-free, no alias
+  ✓   security: deepseek-v4-flash-free, no alias
+
+────────────────────────────────────────────────────────────
+  Found 2 issue(s) to address:
+
+  1. Browser tools (agent-browser) has 1 npm vulnerability
+  2. web workspace has 2 npm vulnerabilities
+
+  Tip: run 'hermes doctor --fix' to auto-fix what's possible.
+

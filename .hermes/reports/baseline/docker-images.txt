@@ -1,0 +1,3 @@
+ghcr.io/microsoft/mcp-dotnet-samples/awesome-copilot:latest|ae27cc336381|44 hours ago|181MB
+ghcr.io/github/github-mcp-server:<none>|e3816a476a97|3 months ago|60.7MB
+mcp/time:<none>|9c46a918633f|14 months ago|341MB

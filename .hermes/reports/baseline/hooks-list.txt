@@ -1,0 +1,28 @@
+Configured shell hooks (8 total):
+
+  [on_session_end]
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:03.127229Z
+      ⚠ script modified since approval (was 2026-08-01T01:41:56.729226Z, now 2026-08-31T18:59:16.929351Z) — run `hermes hooks doctor` to re-validate
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-auto-commit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:03.941745Z
+      ⚠ script modified since approval (was 2026-08-01T01:42:07.609892Z, now 2026-08-31T18:59:17.040101Z) — run `hermes hooks doctor` to re-validate
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:04.598718Z
+
+  [on_session_start]
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:05.260579Z
+      ⚠ script modified since approval (was 2026-08-01T01:41:56.729226Z, now 2026-08-31T18:59:16.929351Z) — run `hermes hooks doctor` to re-validate
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:05.911666Z
+
+  [pre_llm_call]
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:06.951612Z
+      ⚠ script modified since approval (was 2026-08-01T01:41:56.729226Z, now 2026-08-31T18:59:16.929351Z) — run `hermes hooks doctor` to re-validate
+    - "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh" (timeout=60s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:07.600700Z
+    - "C:/Program Files/Git/usr/bin/bash.exe" -c "python C:/Users/Alexa/AppData/Local/hermes/skills/devops/mcp-server-health/scripts/mcp_preflight_check.py --hook --critical ast-grep,github,fetch,sequential-thinking" (timeout=30s, ✓ allowed)
+      approved_at: 2026-08-28T14:45:08.310598Z
+

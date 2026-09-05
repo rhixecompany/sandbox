@@ -1,0 +1,32 @@
+
+  MCP Servers:
+
+  Name             Transport                      Tools        Status    
+  ──────────────── ────────────────────────────── ──────────── ──────────
+  honcho           https://mcp.honcho.dev/        all          ✓ enabled
+  ast-grep         npx -y @notprolands/ast-g...   all          ✓ enabled
+  code-sandbox     npx -y node-code-sandbox-mcp   all          ✓ enabled
+  fetch            npx -y mcp-server-fetch-t...   all          ✓ enabled
+  filesystem       npx -y @modelcontextproto...   all          ✓ enabled
+  github           npx -y @modelcontextproto...   all          ✓ enabled
+  mcp-docker       docker mcp gateway             all          ✓ enabled
+  memory           npx -y @modelcontextproto...   all          ✓ enabled
+  mindstudio       mindstudio mcp                 all          ✓ enabled
+  neon             https://mcp.neon.tech/mcp      all          ✓ enabled
+  playwright       npx -y @playwright/mcp@0....   all          ✓ enabled
+  sequential-thinking npx -y @modelcontextproto...   all          ✓ enabled
+  python-quality   C:\Users\Alexa\AppData\Lo...   all          ✓ enabled
+  tooling-lint     C:\Users\Alexa\AppData\Lo...   all          ✓ enabled
+  tooling-config   C:\Users\Alexa\AppData\Lo...   all          ✓ enabled
+  context7         https://mcp.context7.com/mcp   all          ✓ enabled
+  sentry           https://mcp.sentry.dev/mcp     all          ✓ enabled
+  tavily           https://mcp.tavily.com/mc...   all          ✓ enabled
+  parallel-search  https://search.parallel.a...   all          ✓ enabled
+  parallel-task    https://task-mcp.parallel...   all          ✓ enabled
+  smithery         https://mcp.smithery.ai/a...   all          ✓ enabled
+  atlassian        https://mcp.atlassian.com...   all          ✗ disabled
+  docs             npx -y --args                  all          ✗ disabled
+  postgres         npx -y --args                  all          ✗ disabled
+  pytest           npx -y pytest-mcp              all          ✓ enabled
+  django           npx -y django-mcp              all          ✓ enabled
+

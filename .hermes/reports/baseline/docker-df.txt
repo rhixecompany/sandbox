@@ -1,0 +1,18 @@
+Images space usage:
+
+REPOSITORY                                             TAG       IMAGE ID       CREATED         SIZE      SHARED SIZE   UNIQUE SIZE   CONTAINERS
+ghcr.io/microsoft/mcp-dotnet-samples/awesome-copilot   latest    ae27cc336381   44 hours ago    181MB     0B            181.2MB       0
+<none>                                                 <none>    e3816a476a97   3 months ago    60.7MB    0B            60.71MB       0
+<none>                                                 <none>    9c46a918633f   14 months ago   341MB     0B            340.8MB       0
+
+Containers space usage:
+
+CONTAINER ID   IMAGE     COMMAND   LOCAL VOLUMES   SIZE      CREATED   STATUS    NAMES
+
+Local Volumes space usage:
+
+VOLUME NAME   LINKS     SIZE
+
+Build cache usage: 0B
+
+CACHE ID   CACHE TYPE   SIZE      CREATED   LAST USED   USAGE     SHARED

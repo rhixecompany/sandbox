@@ -1,0 +1,18 @@
+
+ Profile          Model                        Gateway      Alias        Distribution
+ ───────────────    ───────────────────────────    ───────────    ───────────    ────────────────────
+  default         gpt-5.6-luna                 running      —            —
+  alexa           deepseek-v4-flash-free       stopped      alexa        —
+ ◆code-architect  nvidia/nemotron-3-nano-omn   stopped      code-architect —
+  creative-director deepseek-v4-flash-free       stopped      creative-director —
+  cto             deepseek-v4-flash-free       stopped      cto          —
+  designer        deepseek-v4-flash-free       stopped      designer     —
+  dev             deepseek-v4-flash-free       stopped      dev          —
+  exec-assistant  deepseek-v4-flash-free       stopped      exec-assistant —
+  ops             deepseek-v4-flash-free       stopped      ops          —
+  patient-tutor   deepseek-v4-flash-free       stopped      patient-tutor —
+  pm              deepseek-v4-flash-free       stopped      pm           —
+  qa              deepseek-v4-flash-free       stopped      qa           —
+  research-analyst deepseek-v4-flash-free       stopped      research-analyst —
+  security        deepseek-v4-flash-free       stopped      security     —
+
