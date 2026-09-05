@@ -1,0 +1,7 @@
+usage: hermes_quick_commands.py verify-registry [-h] --registry REGISTRY
+                                                [--wrapper WRAPPER]
+
+options:
+  -h, --help           show this help message and exit
+  --registry REGISTRY
+  --wrapper WRAPPER

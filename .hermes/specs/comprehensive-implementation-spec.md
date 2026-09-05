@@ -2,12 +2,14 @@
 name: comprehensive-implementation-spec
 title: "Comprehensive Implementation Spec — Detailed Requirements & Acceptance Criteria"
 description: "Detailed specifications for the comprehensive implementation plan. Defines requirements, acceptance criteria, interfaces, and constraints."
-version: 1.0.0
+version: 1.1.0
 author: Alexa
 license: MIT
 tags: [spec, requirements, acceptance-criteria, interfaces]
-status: active
+status: approved
+owner: Alexa
 created: 2026-09-04
+plan: .hermes/plans/comprehensive-implementation-plan.md
 ---
 
 # Comprehensive Implementation Spec
@@ -260,3 +262,68 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 | Verification gate | Pass/fail checkpoint before phase transition |
 | Rollback | Revert to last known good state |
 | DRY | Don't Repeat Yourself — single source of truth |
+
+## Acceptance Criteria
+
+### AC-001: Workspace Inventory
+- [ ] Inventory covers 100% of workspace directories
+- [ ] Each artifact classified by type
+- [ ] Dependencies mapped with version constraints
+- [ ] Cross-references validated
+- [ ] Output as machine-readable JSON
+- [ ] Report generated within 2h
+
+### AC-002: Specification Documents
+- [ ] All specs have YAML frontmatter (name, title, description, version, author, license, tags, status, owner, plan)
+- [ ] Each requirement has unique FR-XXX ID
+- [ ] Acceptance criteria are testable with Given/When/Then or specific numbers
+- [ ] Priority assigned (P0-P3)
+- [ ] Phase linkage explicit
+- [ ] Traceability to plan milestones
+
+### AC-003: Implementation Plans
+- [ ] Plans have ≥3 phases with ## Phase X headings
+- [ ] Each phase ends with **Gate**: <verifiable condition>
+- [ ] Tasks have dependencies and estimates
+- [ ] Status field set (draft|in_progress|completed|blocked)
+- [ ] Risk register with mitigations
+
+### AC-004: Subagent Execution
+- [ ] Each subagent receives complete context (no plan file reading)
+- [ ] Two-stage review: spec compliance → code quality (strict order)
+- [ ] No shared mutable config between parallel subagents
+- [ ] Review reports generated per task
+
+### AC-005: Verification Pipeline
+- [ ] Unit tests pass (≥80% coverage)
+- [ ] Integration tests pass
+- [ ] Linting clean (zero errors)
+- [ ] Type-checking clean (zero errors)
+- [ ] Security scan clean (zero critical)
+- [ ] Performance within SLA
+
+### AC-006: Deployment
+- [ ] Release notes generated from changes
+- [ ] Deployment executed with zero downtime
+- [ ] Health checks pass post-deploy
+- [ ] Rollback procedure documented and tested
+- [ ] Monitoring active within 1h
+
+### AC-007: Documentation
+- [ ] Every phase has documented decisions with rationale
+- [ ] Lessons learned captured post-phase
+- [ ] No duplicate documentation (DRY enforced)
+- [ ] Cross-references valid
+
+## Verification
+- Run specs-judge with threshold 98 on all specs in .hermes/specs/
+- Run plans-judge with threshold 98 on all plans in .hermes/plans/
+- Run prompts-judge with threshold 98 on all prompts in .github/prompts/
+- All judge skills must score ≥ 98
+- Run hermes doctor and confirm 0 issues
+- Run hermes security audit and confirm clean
+- Verify all MCP servers pass hermes mcp test
+- Confirm git push succeeds on all three branches
+
+## Linked Plan
+../plans/comprehensive-implementation-plan.md

@@ -1,0 +1,1 @@
+No allowlist entry found for command: "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"

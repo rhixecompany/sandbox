@@ -1,13 +1,12 @@
 {
 	"mcpServers": {
-		"anthropic-resources": {
-			"type": "http",
-			"url": "https://resources.anthropic.com/mcp"
-		},
 		"ast-grep": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "@notprolands/ast-grep-mcp"]
+			"args": [
+				"-y",
+				"@notprolands/ast-grep-mcp"
+			]
 		},
 		"atlassian": {
 			"type": "sse",
@@ -16,38 +15,22 @@
 		"code-sandbox": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "node-code-sandbox-mcp"]
+			"args": [
+				"-y",
+				"node-code-sandbox-mcp"
+			]
 		},
 		"context7": {
 			"type": "http",
 			"url": "https://mcp.context7.com/mcp"
 		},
-		"django": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": ["-y", "django-mcp"],
-			"env": {
-				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
-			}
-		},
-		"docs": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": ["-y", "docs-mcp", "docs/"]
-		},
-		"evals": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-evals"]
-		},
-		"everart": {
-			"type": "http",
-			"url": "https://mcp.everart.ai/mcp"
-		},
 		"fetch": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "mcp-server-fetch-typescript"]
+			"args": [
+				"-y",
+				"mcp-server-fetch-typescript"
+			]
 		},
 		"filesystem": {
 			"type": "stdio",
@@ -63,7 +46,10 @@
 		"github": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-github"],
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-github"
+			],
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
 			}
@@ -75,17 +61,28 @@
 		"mcp-docker": {
 			"type": "stdio",
 			"command": "docker",
-			"args": ["mcp", "gateway", "run", "--profile", "adminbot"]
+			"args": [
+				"mcp",
+				"gateway",
+				"run",
+				"--profile",
+				"adminbot"
+			]
 		},
 		"memory": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-memory"]
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-memory"
+			]
 		},
 		"mindstudio": {
 			"type": "stdio",
 			"command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
-			"args": ["mcp"]
+			"args": [
+				"mcp"
+			]
 		},
 		"neon": {
 			"type": "http",
@@ -99,32 +96,20 @@
 			"type": "http",
 			"url": "https://task-mcp.parallel.ai/mcp"
 		},
-		"plaid": {
-			"type": "http",
-			"url": "https://mcp.plaid.com/mcp"
-		},
 		"playwright": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "@playwright/mcp@0.0.78"]
-		},
-		"postgres": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": ["-y", "postgres-mcp"],
-			"env": {
-				"DATABASE_URL": "${env:DATABASE_URL}"
-			}
-		},
-		"pytest": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": ["-y", "pytest-mcp"]
+			"args": [
+				"-y",
+				"@playwright/mcp@0.0.78"
+			]
 		},
 		"python-quality": {
 			"type": "stdio",
 			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"]
+			"args": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"
+			]
 		},
 		"sentry": {
 			"type": "http",
@@ -133,34 +118,52 @@
 		"sequential-thinking": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking"
+			]
 		},
 		"smithery": {
 			"type": "http",
 			"url": "https://mcp.smithery.ai/alexanderrhixe30"
 		},
-		"stripe": {
-			"type": "http",
-			"url": "https://mcp.stripe.com/mcp"
-		},
 		"tavily": {
 			"type": "http",
 			"url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
 		},
-		"time": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-time"]
-		},
 		"tooling-config": {
 			"type": "stdio",
 			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"]
+			"args": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"
+			]
 		},
 		"tooling-lint": {
 			"type": "stdio",
 			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"]
+			"args": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
+			]
+		},
+		"cloudinary": {
+			"type": "http",
+			"url": "https://asset-management.mcp.cloudinary.com/mcp"
+		},
+		"paypal": {
+			"type": "http",
+			"url": "https://mcp.paypal.com/sse"
+		},
+		"supabase": {
+			"type": "http",
+			"url": "https://mcp.supabase.com/mcp"
+		},
+		"twilio-docs": {
+			"type": "http",
+			"url": "https://mcp.twilio.com/docs"
+		},
+		"vercel": {
+			"type": "http",
+			"url": "https://mcp.vercel.com"
 		}
 	}
 }

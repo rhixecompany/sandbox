@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -157,27 +158,49 @@ def sync(root: Path, registry: dict[str, Any], dry: bool) -> list[dict[str, Any]
     return results
 
 
+def resolve_hermes_config(explicit: str | None = None) -> Path:
+    """Resolve the active profile config without reading credentials."""
+    if explicit:
+        return Path(explicit).expanduser()
+    default_home = Path.home() / "AppData" / "Local" / "hermes"
+    configured_home = Path(os.environ.get("HERMES_HOME", str(default_home))).expanduser()
+    if (configured_home / "config.yaml").exists() and configured_home.name != "hermes":
+        return configured_home / "config.yaml"
+    profile = os.environ.get("HERMES_PROFILE", "").strip()
+    active_file = configured_home / "active_profile"
+    if not profile and active_file.exists():
+        profile = active_file.read_text(encoding="utf-8").strip()
+    if profile and profile != "default":
+        candidate = configured_home / "profiles" / profile / "config.yaml"
+        if candidate.exists():
+            return candidate
+    profile_default = configured_home / "profiles" / "default" / "config.yaml"
+    return profile_default if profile_default.exists() else configured_home / "config.yaml"
+
+
+def enabled_hermes_servers(path: Path) -> set[str]:
+    """Read only enabled MCP server names from a Hermes YAML config."""
+    try:
+        import yaml
+
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        block = data.get("mcp_servers", {})
+        if isinstance(block, dict):
+            return {
+                name for name, spec in block.items()
+                if isinstance(spec, dict) and spec.get("enabled", True)
+            }
+    except (OSError, ValueError, TypeError):
+        pass
+    return set()
+
+
 def hermes_diff(registry: dict[str, Any], hermes_cfg: Path) -> str:
     """Print a diff of what would need to change in hermes config.yaml."""
-    import re
-
     if not hermes_cfg.exists():
         return "ERROR: hermes config not found"
-    text = hermes_cfg.read_text(encoding="utf-8")
-
-    # Extract mcp_servers block
-    m = re.search(r"^mcp_servers:\s*\n((?:^  \w.*\n|^    .*\n)*)", text, re.MULTILINE)
-    if not m:
-        return "WARN: mcp_servers block not found in hermes config.yaml"
-
     lines = ["# Hermes mcp_servers diff (manual — use `hermes mcp add/remove` to apply):", ""]
-    in_block = m.group(0).splitlines()
-    current_servers: set[str] = set()
-    for ln in in_block:
-        mm = re.match(r"^  (\w[\w-]*):\s*$", ln)
-        if mm:
-            current_servers.add(mm.group(1))
-
+    current_servers = enabled_hermes_servers(hermes_cfg)
     wanted = {n for n, s in registry.get("servers", {}).items() if s.get("enabled", True)}
     only_in_hermes = current_servers - wanted
     only_in_registry = wanted - current_servers
@@ -194,8 +217,9 @@ def main() -> int:
     p = argparse.ArgumentParser(description="Sync MCP registry to disk configs")
     p.add_argument("--registry", default=".mcp/registry.json")
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--check", action="store_true", help="exit 1 when any projection or Hermes MCP set differs")
     p.add_argument("--hermes-diff", action="store_true", help="Print hermes config diff")
-    p.add_argument("--hermes-cfg", default=r"C:\Users\Alexa\AppData\Local\hermes\config.yaml")
+    p.add_argument("--hermes-cfg", default=None, help="override active Hermes profile config path")
     args = p.parse_args()
 
     registry_path = Path(args.registry)
@@ -206,6 +230,7 @@ def main() -> int:
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     root = registry_path.resolve().parent  # .mcp dir
     workspace_root = root.parent
+    hermes_cfg = resolve_hermes_config(args.hermes_cfg)
 
     results = sync(workspace_root, registry, dry=args.dry_run)
     print(f"\n{'DRY-RUN' if args.dry_run else 'APPLIED'} sync results:")
@@ -213,11 +238,17 @@ def main() -> int:
         flag = "✓" if r["changed"] else "·"
         print(f"  {flag} {r['target']:25s} {r['action']:20s} ({r['path']})")
 
-    if args.hermes_diff:
+    hermes_report = ""
+    if args.hermes_diff or args.check:
         print()
-        print(hermes_diff(registry, Path(args.hermes_cfg)))
+        hermes_report = hermes_diff(registry, hermes_cfg)
+        print(f"# Hermes config: {hermes_cfg}")
+        print(hermes_report)
 
-    # Exit non-zero if any file was changed and not in dry-run (caller can ignore)
+    if args.check:
+        projections_match = not any(result["changed"] for result in results)
+        hermes_match = "matches registry (enabled set)" in hermes_report
+        return 0 if projections_match and hermes_match else 1
     return 0
 
 

@@ -1,0 +1,11 @@
+
+APPLIED sync results:
+  · opencode.json             no change            (C:\Users\Alexa\Desktop\SandBox\opencode.json)
+  · .codex/mcp.json           no change            (C:\Users\Alexa\Desktop\SandBox\.codex\mcp.json)
+  · .copilot/mcp.json         no change            (C:\Users\Alexa\Desktop\SandBox\.copilot\mcp.json)
+  · .vscode/mcp.json          no change            (C:\Users\Alexa\Desktop\SandBox\.vscode\mcp.json)
+
+# Hermes config: C:\Users\Alexa\AppData\Local\hermes\profiles\ops\config.yaml
+# Hermes mcp_servers diff (manual — use `hermes mcp add/remove` to apply):
+
+# hermes mcp_servers matches registry (enabled set)

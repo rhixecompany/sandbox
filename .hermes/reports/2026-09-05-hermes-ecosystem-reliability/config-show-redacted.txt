@@ -1,0 +1,16 @@
+# Sanitized config-show evidence
+
+The live CLI resolved:
+
+- Config path: `C:/Users/Alexa/AppData/Local/hermes/profiles/ops/config.yaml`
+- Secrets path: `C:/Users/Alexa/AppData/Local/hermes/profiles/ops/.env`
+- Install path: `C:/Users/Alexa/AppData/Local/hermes/hermes-agent`
+- Model provider: `opencode-zen`
+- Default model: `nemotron-3-ultra-free`
+- Max turns: `150`
+- Terminal backend: `local`
+- Terminal timeout: `360s`
+- Context compression: enabled
+- Telegram: configured
+
+Credential values and even partial credential previews are intentionally omitted.

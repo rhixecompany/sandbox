@@ -1,0 +1,332 @@
+---
+name: az-cost-optimize
+title: Azure Cost Optimization
+description: Analyze Azure IaC and live resources, identify savings opportunities, and create prioritized GitHub issues for each optimization recommendation.
+trigger: /az-cost-optimize
+category: finance
+version: 1.0.0
+author: Hermes Agent
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
+---
+
+## Table of Contents
+
+## Goal
+Analyze Azure IaC and live resources, identify savings opportunities, and create prioritized GitHub issues for each optimization recommendation.
+
+## Context
+
+## Phases
+
+
+# Table of Contents
+
+- [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Workflow Steps](#workflow-steps)
+  - [Step 1: Get Azure Best Practices](#step-1:-get-azure-best-practices)
+- [💰 Cost Optimization: [Brief Title]](#💰-cost-optimization:-[brief-title])
+- [📊 Executive Summary](#📊-executive-summary)
+- [🏗️ Current Architecture Overview](#🏗️-current-architecture-overview)
+- [📋 Implementation Tracking](#📋-implementation-tracking)
+  - [🚀 High Priority (Implement First)](#🚀-high-priority-implement-first)
+  - [⚡ Medium Priority](#⚡-medium-priority)
+  - [🔄 Low Priority (Nice to Have)](#🔄-low-priority-nice-to-have)
+- [📈 Progress Tracking](#📈-progress-tracking)
+- [🎯 Success Criteria](#🎯-success-criteria)
+- [📝 Notes](#📝-notes)
+- [Error Handling](#error-handling)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+  - [Domain Rules](#domain-rules)
+  - [Standing Rules](#standing-rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+- [Goal](#goal)
+- [Prerequisites](#prerequisites)
+- [Workflow Steps](#workflow-steps)
+- [Step 1: Get Azure Best Practices](#step-1:-get-azure-best-practices)
+- [💰 Cost Optimization: [Brief Title]](#💰-cost-optimization:-[brief-title])
+- [📊 Executive Summary](#📊-executive-summary)
+- [🏗️ Current Architecture Overview](#🏗️-current-architecture-overview)
+- [📋 Implementation Tracking](#📋-implementation-tracking)
+- [🚀 High Priority (Implement First)](#🚀-high-priority-implement-first)
+- [⚡ Medium Priority](#⚡-medium-priority)
+- [🔄 Low Priority (Nice to Have)](#🔄-low-priority-nice-to-have)
+- [📈 Progress Tracking](#📈-progress-tracking)
+- [🎯 Success Criteria](#🎯-success-criteria)
+- [📝 Notes](#📝-notes)
+- [Error Handling](#error-handling)
+- [Success Criteria](#success-criteria)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Context](#context)
+- [Rules](#rules)
+- [Domain Rules](#domain-rules)
+- [Standing Rules](#standing-rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand Off](#phase-4:-hand-off)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
+
+Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and improve costs - creating GitHub issues for identified optimizations.
+
+## Azure Cost OptimizeThis workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to generate cost optimization recommendations. It creates individual GitHub issues for each optimization opportunity plus one EPIC issue to coordinate implementation, enabling efficient tracking and execution of cost savings initiatives.
+
+## Prerequisites
+
+- Azure MCP server configured and authenticated
+- GitHub MCP server configured and authenticated
+- Target GitHub repository identified
+- Azure resources deployed (IaC files optional but helpful)
+- Prefer Azure MCP tools (`azmcp-*`) over direct Azure CLI when available
+
+## Workflow Steps
+
+### Step 1: Get Azure Best Practices
+
+> **Action**: Retrieve cost optimization best practices before analysis **Tools**:
+
+## 💰 Cost Optimization: [Brief Title]
+
+> **Monthly Savings**: $X | **Risk Level**: [Low/Medium/High] | **Implementation E
+> [Clear explanation of the optimization and why it's needed]
+> **Full content:**
+
+## 📊 Executive Summary
+
+- **Resources Analyzed**: X- **Optimization Opportunities**: Y- **Total Monthly Savings Potential**: $X- **High Priority Items**: N
+
+## 🏗️ Current Architecture Overview
+
+```mermaid
+graph TB subgraph "Resource Group: [name]" [Generated architecture diagram showing current resources and costs] end``````
+
+```
+
+## 📋 Implementation Tracking
+
+### 🚀 High Priority (Implement First)
+
+- [ ] # [issue-number]: [Title] - $X/month savings - [ ] # [issue-number]: [Title] - $X/month savings
+
+### ⚡ Medium Priority
+
+- [ ] # [issue-number]: [Title] - $X/month savings - [ ] # [issue-number]: [Title] - $X/month savings
+
+### 🔄 Low Priority (Nice to Have)
+
+- [ ] # [issue-number]: [Title] - $X/month savings
+
+## 📈 Progress Tracking
+
+- **Completed**: 0 of Y optimizations - **Savings Realized**: $0 of $X/month - **Implementation Status**: Not Started
+
+## 🎯 Success Criteria
+
+- [ ] All high-priority optimizations implemented - [ ]
+
+> 80% of estimated savings realized - [ ] No performance degradation observed - [ ] Cost monitoring dashboard updated
+
+## 📝 Notes
+
+- Review and update this EPIC as issues are completed - Monitor actual vs. estimated savings - Consider scheduling regular cost optimization reviews `````
+
+## Error Handling
+
+- **Cost Validation**: If savings estimates lack supporting evidence or seem inconsistent with Azure pricing, re-verify configurations and pricing sources before proceeding
+- **Azure Authentication Failure**: Provide manual Azure CLI setup steps
+- **No Resources Found**: Create informational issue about Azure resource deployment
+- **GitHub Creation Failure**: Output formatted recommendations to console
+- **Insufficient Usage Data**: Note limitations and provide configuration-based recommendations only
+
+## Success Criteria
+
+- ✅ All cost estimates verified against actual resource configurations and Azure pricing- ✅ Individual issues created for each optimization (trackable and assignable)- ✅ EPIC issue provides comprehensive coordination and tracking- ✅ All recommendations include specific, executable Azure CLI commands- ✅ Priority scoring enables ROI-focused implementation- ✅ Architecture diagram accurately represents current state- ✅ User confirmation prevents unwanted issue creation
+
+## Template References
+
+Detailed templates in `templates/`:- `cost_optimization_brief_title.md`- `workflow_steps.md`
+
+## Personas
+
+See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+## Personality
+
+See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+
+Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
+
+## Rules
+
+See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+
+### Domain Rules
+
+- Read existing code before writing new code.
+- Match project conventions and style.
+- Add tests for new functionality.
+
+### Standing Rules
+
+1. **Map before touch** — Understand before making changes.
+2. **Smallest safe change** — Minimal change that achieves the goal.
+3. **Verify before claim** — Test before reporting complete.
+4. **Report blockers** — State when something fails.
+
+
+### Phase 1: Intake
+
+- Read the request and identify scope.
+- Locate relevant files, diffs, references.
+
+### Phase 2: Execute
+
+- Perform work with smallest safe change set.
+- Keep steps explicit and reproducible.
+
+### Phase 3: Verify
+
+- Check result against goal, rules, inputs.
+- Confirm output is usable and complete.
+
+### Phase 4: Hand Off
+
+- Return final artifact or findings .
+- Stop once the requested result is delivered.
+
+## Best Practices
+
+See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+| --- | ------ | ----------- |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+## Dependencies
+
+See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+## Skills Required
+
+See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+
+| Skill | Purpose |
+| ------- | --------- |
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
+| `verification-before-completion` | Validate before claiming done |
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+## Tasks
+
+- [ ] Understand requirements and scope
+- [ ] Plan approach and identify resources
+- [ ] Execute work incrementally
+- [ ] Verify against acceptance criteria
+- [ ] Document results and decisions
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+

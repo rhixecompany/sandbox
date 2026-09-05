@@ -1,0 +1,184 @@
+[
+  {
+    "server": "ast-grep",
+    "status": "PASS",
+    "server_info": "ast-grep-mcp v1.0.0",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "tools"
+    ]
+  },
+  {
+    "server": "atlassian",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "code-sandbox",
+    "status": "FAIL",
+    "reason": "timed out"
+  },
+  {
+    "server": "context7",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "fetch",
+    "status": "PASS",
+    "server_info": "mcp-server-fetch-typescript v0.1.0",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "resources",
+      "tools",
+      "prompts"
+    ]
+  },
+  {
+    "server": "filesystem",
+    "status": "PASS",
+    "server_info": "secure-filesystem-server v0.2.0",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "tools"
+    ]
+  },
+  {
+    "server": "github",
+    "status": "PASS",
+    "server_info": "github-mcp-server v0.6.2",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "tools"
+    ]
+  },
+  {
+    "server": "honcho",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "mcp-docker",
+    "status": "SKIP",
+    "reason": "in skip list"
+  },
+  {
+    "server": "memory",
+    "status": "PASS",
+    "server_info": "memory-server v0.6.3",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "tools",
+      "resources"
+    ]
+  },
+  {
+    "server": "mindstudio",
+    "status": "PASS",
+    "server_info": "mindstudio-agent v0.0.0",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "tools"
+    ]
+  },
+  {
+    "server": "neon",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "parallel-search",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "parallel-task",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "playwright",
+    "status": "PASS",
+    "server_info": "Playwright v1.62.0-alpha-1783623505000",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "tools"
+    ]
+  },
+  {
+    "server": "postgres",
+    "status": "SKIP",
+    "reason": "disabled in config"
+  },
+  {
+    "server": "python-quality",
+    "status": "PASS",
+    "server_info": "python-quality v3.4.7",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "experimental",
+      "logging",
+      "prompts",
+      "resources",
+      "tools",
+      "extensions"
+    ]
+  },
+  {
+    "server": "sentry",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "sequential-thinking",
+    "status": "PASS",
+    "server_info": "sequential-thinking-server v2026.8.31",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "tools"
+    ]
+  },
+  {
+    "server": "smithery",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "tavily",
+    "status": "SKIP",
+    "reason": "no command"
+  },
+  {
+    "server": "tooling-config",
+    "status": "PASS",
+    "server_info": "tooling-config v3.4.7",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "experimental",
+      "logging",
+      "prompts",
+      "resources",
+      "tools",
+      "extensions"
+    ]
+  },
+  {
+    "server": "tooling-lint",
+    "status": "PASS",
+    "server_info": "tooling-lint v3.4.7",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "experimental",
+      "logging",
+      "prompts",
+      "resources",
+      "tools",
+      "extensions"
+    ]
+  },
+  {
+    "server": "vercel",
+    "status": "SKIP",
+    "reason": "no command"
+  }
+]

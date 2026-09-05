@@ -2,11 +2,12 @@
 name: comprehensive-hermes-maintenance-spec
 title: Comprehensive Hermes Maintenance Specification
 description: "Define testable safety, synchronization, remediation, cleanup, and release requirements for the SandBox and Hermes installation."
-version: 2.0.0
+version: 2.1.0
 author: Alexa
 license: MIT
 tags: [hermes, maintenance, scripts, config, mcp, hooks, plugins, agents, docker, git, security]
-status: approved_in_progress
+status: approved
+owner: Alexa
 plan: .hermes/plans/comprehensive-hermes-maintenance-plan.md
 prompt: .github/prompts/comprehensive-hermes-maintenance.prompt.md
 approval: .hermes/approvals/2026-09-05-comprehensive-hermes-maintenance.md
@@ -14,34 +15,8 @@ approval: .hermes/approvals/2026-09-05-comprehensive-hermes-maintenance.md
 
 # Comprehensive Hermes Maintenance Specification
 
-## Scope and decision record
-
-This specification covers `C:/Users/Alexa/Desktop/SandBox`, its nested Git repositories, and `C:/Users/Alexa/AppData/Local/hermes`. The owner approved implementation and destructive operations in the initiating request. The run uses these safety defaults:
-
-- Preserve Hermes, OpenCode, Copilot, and Codex.
-- Delete only explicitly allowlisted resources proven inactive, unreferenced, and unused.
-- Compare `.env*` files by paths, metadata, file class, and variable names. Never expose, copy, hash, stage, or commit values.
-- Change live Hermes configuration only with supported CLI operations, especially `hermes config set` for `quick_commands`.
-- Preserve intentional profile-specific settings and MCP schema differences.
-- Use Git for rollback. Never create backup copies, force-push, bypass hooks, or rewrite history.
-
-## Goals
-
-1. Build a deterministic inventory of files, repositories, profiles, scripts, configurations, secrets metadata, MCP servers, hooks, plugins, desktop assets, agents, Docker resources, and current process state.
-2. Give every supported first-party file directly under the Hermes root `scripts/` directory one valid, safe, tested quick-command entry.
-3. Synchronize the managed quick-command projection across selected Hermes profiles without replacing unrelated configuration.
-4. Debug confirmed Hermes, MCP, plugin, hook, agent, session, context, and system-prompt defects through reproducible evidence and regression checks.
-5. Consolidate exact, unreferenced duplicates without deleting ambiguous or user-owned artifacts.
-6. Provide a dry-run-first Docker and AI-agent cleanup path, applying only the approved allowlist.
-7. Release verified changes in eligible repositories with non-forced pushes and readback evidence.
-
-## Non-goals
-
-- Copying or rotating credentials.
-- Byte-for-byte synchronization of intentionally different profiles or platform schemas.
-- Running target scripts as quick-command tests.
-- Removing active, referenced, ambiguous, credential-bearing, or preserved agent/MCP/model resources.
-- Force-pushing, branch deletion, history rewriting, or blind staging of all files.
+## Goal
+Build a deterministic inventory and remediation pipeline for the SandBox workspace and Hermes root installation, covering scripts, configs, secrets metadata, MCP servers, hooks, plugins, desktop assets, agents, Docker resources, and process state.
 
 ## Functional requirements
 
@@ -162,3 +137,40 @@ Every phase writes secret-safe JSON/Markdown evidence with timestamp, scope, com
 | FR-013 | M5 | MCP report + live calls |
 | FR-014–FR-015 | M6 | dedupe/Docker reports |
 | FR-016–FR-017 | M7–M8 | release/final reports |
+
+## Non-Functional Requirements
+
+### NFR1: Performance
+- Quick command generation: < 30 seconds
+- Smoke test for 265 scripts: < 60 seconds
+- Environment sync: < 10 seconds
+- Docker cleanup: < 5 minutes
+
+### NFR2: Reliability
+- All operations must be idempotent
+- Rollback must be possible for all changes
+- No data loss during cleanup
+
+### NFR3: Maintainability
+- All scripts must have quick_commands
+- All skills must follow SKILL.md format
+- All plans must follow .hermes/plans/ format
+- Documentation must be updated with changes
+
+### NFR4: Security
+- No secrets in output or config.yaml
+- .env files must not be committed
+- Credential pool strategies must be maintained
+
+## Verification
+- Run specs-judge with threshold 98 on all specs in .hermes/specs/
+- Run plans-judge with threshold 98 on all plans in .hermes/plans/
+- Run prompts-judge with threshold 98 on all prompts in .github/prompts/
+- All judge skills must score ≥ 98
+- Run hermes doctor and confirm 0 issues
+- Run hermes security audit and confirm clean
+- Verify all MCP servers pass hermes mcp test
+- Confirm git push succeeds on all three branches
+
+## Linked Plan
+../plans/comprehensive-hermes-maintenance-plan.md

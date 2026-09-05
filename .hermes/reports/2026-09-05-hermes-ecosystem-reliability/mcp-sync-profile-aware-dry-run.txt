@@ -1,0 +1,12 @@
+
+DRY-RUN sync results:
+  ✓ opencode.json             would write          (C:\Users\Alexa\Desktop\SandBox\opencode.json)
+  · .codex/mcp.json           no change            (C:\Users\Alexa\Desktop\SandBox\.codex\mcp.json)
+  · .copilot/mcp.json         no change            (C:\Users\Alexa\Desktop\SandBox\.copilot\mcp.json)
+  ✓ .vscode/mcp.json          would write          (C:\Users\Alexa\Desktop\SandBox\.vscode\mcp.json)
+
+# Hermes config: C:\Users\Alexa\AppData\Local\hermes\profiles\ops\config.yaml
+# Hermes mcp_servers diff (manual — use `hermes mcp add/remove` to apply):
+
+# In hermes but NOT in registry: ['cloudinary', 'paypal', 'supabase', 'twilio-docs', 'vercel']
+# In registry but NOT in hermes: ['anthropic-resources', 'django', 'docs', 'evals', 'everart', 'plaid', 'postgres', 'pytest', 'stripe', 'time']

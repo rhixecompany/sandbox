@@ -1,0 +1,262 @@
+---
+name: bash-scripts-fix
+title: Bash and Shell Script Modernization
+description: Inventory, audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace with a tracked plan.
+trigger: /bash-scripts-fix
+category: development
+version: 1.0.0
+author: Hermes Agent
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
+---
+
+## Table of Contents
+
+## Goal
+Inventory, audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace with a tracked plan.
+
+## Context
+
+## Phases
+
+
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+  - [Phase 1: Catalog all scripts](#phase-1:-catalog-all-scripts)
+  - [Phase 2: Create the implementation plan](#phase-2:-create-the-implementation-plan)
+  - [Phase 3: Review and fix](#phase-3:-review-and-fix)
+  - [Phase 4: Verify and clean up](#phase-4:-verify-and-clean-up)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Implementation Plan Reference](#implementation-plan-reference)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Skills Required](#skills-required)
+- [Phases](#phases)
+- [Phase 1: Catalog all scripts](#phase-1:-catalog-all-scripts)
+- [Phase 2: Create the implementation plan](#phase-2:-create-the-implementation-plan)
+- [Phase 3: Review and fix](#phase-3:-review-and-fix)
+- [Phase 4: Verify and clean up](#phase-4:-verify-and-clean-up)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Actions](#actions)
+- [Implementation Plan Reference](#implementation-plan-reference)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+
+
+
+
+
+Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.
+
+> Search, identify, catalog, and modernize scripts across the workspace.
+
+
+Use this prompt when the workspace has mixed bash, PowerShell, BAT, andTypeScript scripts that need inventory, modernization, or consolidation. Theworkflow is inventory first, then plan, then review, then migrate, then verify.
+
+## Inputs
+
+- Target directories under `projects/projects/Bash/**` and selected project script roots
+- Workspace context and current command mappings
+- Optional constraints, compatibility notes, and known script issues
+
+## Outputs
+
+- A script inventory and triage report
+- A modernization and migration plan
+- Updated scripts, wrappers, or command mappings
+- Verification notes for parity and cleanup
+
+## Rules
+
+> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Domain-specific additions below.
+
+1. All operational scripts should end up under `projects/Bash/**` unless a framework seed script is exempt.
+2. Request user confirmation before deleting migrated originals after parity validation passes.
+3. Keep dry-run behavior aligned with real execution.
+4. Require peer review for AST-sensitive TypeScript changes.
+5. Prefer small, verifiable changes over broad rewrites.
+
+## Skills Required
+
+> See full table with per-domain purposes:
+> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+
+
+### Phase 1: Catalog all scripts
+
+Identify and document scripts across the target directories, then save thesummary report.
+
+### Phase 2: Create the implementation plan
+
+Design the modernization strategy, including wrapper behavior, TypeScriptownership, dry-run semantics, and deletion rules.
+
+### Phase 3: Review and fix
+
+Review scripts for formatting, content, and structural issues, then apply thefixes and validate the results.
+
+- Status: complete for this run- Outcome: review findings recorded in `docs/bash-scripts-fix-review-findings.md`- Constraint: no destructive rewrites applied; user confirmation is still required before any code migration, wrapper replacement, or deletion
+
+### Phase 4: Verify and clean up
+
+Confirm parity, remove migrated originals, and validate the final commandsurface.
+
+- Status: complete for this run- Outcome: verification recorded in `docs/prompt-verify-context.md` if present for the active prompt scope, or `docs/bash-scripts-fix-review-findings.md` for the Bash modernization run- Result: no source scripts were migrated or deleted in this pass; command surface unchanged
+
+## Steps
+
+1. Inventory all scripts across the target roots.
+2. Classify each script as migrate, keep, or delete.
+3. Create the implementation plan and update the related plan file.
+4. Review scripts for formatting, content, and structural issues.
+5. Migrate wrappers and move logic into TypeScript where appropriate.
+6. Validate dry-run behavior and parity with the original scripts.
+7. Delete migrated originals after validation.
+8. Update package command mappings if needed.
+9. Run the final syntax and behavior checks.
+
+## Tasks
+
+- [ ] Search target directories for `.sh`, `.ps1`, `.bat`, and `.ts` files- [ ] Categorize each script as migrate, keep, or delete- [ ] Save the inventory report- [ ] Create the modernization plan- [ ] Review all scripts for issues- [ ] Fix formatting inconsistencies- [ ] Fix content issues and contradictions- [ ] Fix structural problems and redundancy- [ ] Migrate scripts to canonical locations- [ ] Delete migrated originals after parity validation- [ ] Run dry-run verification on new scripts- [ ] Update command mappings- [ ] Run final validation on all scripts
+
+## Actions
+
+- `search_files(pattern="*.sh", target="files")` — Find bash scripts
+- `search_files(pattern="*.ps1", target="files")` — Find PowerShell scripts
+- `search_files(pattern="*.bat", target="files")` — Find BAT scripts
+- `terminal("bash -n <script>")` — Syntax-check bash scripts
+- `terminal("pwsh -NoProfile -Command ...")` — Validate PowerShell scripts
+- `write_file(path, content)` — Write catalog reports
+- `patch(path, old_string, new_string)` — Apply targeted script fixes
+- `delegate_task(goal, toolsets)` — Parallel per-project migration
+- `skill_view(name="acpx-executor")` — Dispatch tasks to ACPX providers---
+
+## Implementation Plan Reference
+
+> Full plan: `_archive/bash-scripts-fix.prompts.txt` (lines 156–310)If `_archive/bash-scripts-fix.prompts.txt` is missing, use the inline7-phase plan below and continue without halting.The 7-phase remediation plan:| Phase | Purpose | Depends On || ----- | ------------------------------------------------------- | ---------- || 1 | Rebuild inventory (`docs/bash-scripts-list-context.md`) | — || 2 | Triage: orchestrators / logic / utilities / dead code | Phase 1 || 3 | Define canonical orchestration contract | Phases 1–2 || 4 | TypeScript consolidation + AST-safe refactors | Phase 3 || 5 | Package/command surface updates | Phase 4 || 6 | Verification design + acceptance criteria | Phases 3–5 || 7: | Execution sequencing: Bash → Banking → Comicwise | Phase 6 |**Recommended approach**: Hybrid staged migration — normalize wrappers first, then migrate duplicated logic to TypeScript in controlled batches.**Key risks**:- Inventory file absent → rebuild first- Wrapper shell semantics differ per platform → test parity- Undocumented workflows → inventory before deleting**Core script baselines**: `projects/projects/Bash/upgrade.sh`, `projects/projects/Bash/Banking/scripts/orchestrator.sh/.bat/.ps1`, `projects/projects/Bash/comicwise/dev.sh/.ps1`
+
+## Personas
+
+See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+## Personality
+
+See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+## Best Practices
+
+See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+| --- | ------ | ----------- |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+## Dependencies
+
+See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+## Scripts
+
+## Workflow
+
+<content>
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+```
+# Prompt template
+Execute the workflow defined in this file.
+```

@@ -1,0 +1,326 @@
+---
+name: sql-optimization
+title: SQL Optimization
+description: Universal SQL performance optimization assistant for query tuning, indexing strategies, execution plan analysis, pagination optimization, batch operations, and monitoring across MySQL, PostgreSQL, SQL Server, and Oracle.
+trigger: /sql-optimization
+category: security
+version: 1.0.0
+author: Hermes Agent
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
+---
+
+## Table of Contents
+
+## Goal
+Universal SQL performance optimization assistant for query tuning, indexing strategies, execution plan analysis, pagination optimization, batch operations, and monitoring across MySQL, PostgreSQL, SQL Server, and Oracle.
+
+## Context
+
+## Phases
+
+# Table of Contents
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Intake](#phase-1:-intake)
+  - [Phase 2: Execute](#phase-2:-execute)
+  - [Phase 3: Verify](#phase-3:-verify)
+  - [Phase 4: Hand off](#phase-4:-hand-off)
+- [🎯 Core Optimization Areas](#🎯-core-optimization-areas)
+  - [Query Performance Analysis](#query-performance-analysis)
+- [📊 Performance Tuning Techniques](#📊-performance-tuning-techniques)
+  - [JOIN Optimization](#join-optimization)
+- [🔍 Query Anti-Patterns](#🔍-query-anti-patterns)
+  - [SELECT Performance Issues](#select-performance-issues)
+- [📈 Database-Agnostic Optimization](#📈-database-agnostic-optimization)
+- [🛠️ Index Management](#🛠️-index-management)
+  - [Index Design Principles](#index-design-principles)
+  - [Partial Index Strategy](#partial-index-strategy)
+- [📊 Performance Monitoring Queries](#📊-performance-monitoring-queries)
+  - [Query Performance Analysis](#query-performance-analysis)
+- [🎯 Universal Optimization Checklist](#🎯-universal-optimization-checklist)
+- [📝 Optimization Methodology](#📝-optimization-methodology)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+- [Goal](#goal)
+- [Context](#context)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Intake](#phase-1:-intake)
+- [Phase 2: Execute](#phase-2:-execute)
+- [Phase 3: Verify](#phase-3:-verify)
+- [Phase 4: Hand off](#phase-4:-hand-off)
+- [🎯 Core Optimization Areas](#🎯-core-optimization-areas)
+- [Query Performance Analysis](#query-performance-analysis)
+- [📊 Performance Tuning Techniques](#📊-performance-tuning-techniques)
+- [JOIN Optimization](#join-optimization)
+- [🔍 Query Anti-Patterns](#🔍-query-anti-patterns)
+- [SELECT Performance Issues](#select-performance-issues)
+- [📈 Database-Agnostic Optimization](#📈-database-agnostic-optimization)
+- [🛠️ Index Management](#🛠️-index-management)
+- [Index Design Principles](#index-design-principles)
+- [Partial Index Strategy](#partial-index-strategy)
+- [📊 Performance Monitoring Queries](#📊-performance-monitoring-queries)
+- [Query Performance Analysis](#query-performance-analysis)
+- [🎯 Universal Optimization Checklist](#🎯-universal-optimization-checklist)
+- [📝 Optimization Methodology](#📝-optimization-methodology)
+- [Template References](#template-references)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
+
+Universal SQL performance optimization assistant for comprehensive query tuning, indexing strategies, and database performance analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Provides execution plan analysis, pagination optimization, batch operations, and performance monitoring guidance.
+
+
+Use when you need to work on the current workspace or task.
+
+## Inputs
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Outputs
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
+
+
+### Phase 1: Intake
+
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
+
+### Phase 2: Execute
+
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
+
+### Phase 3: Verify
+
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+
+- Return the final artifact or findings .
+- Stop once the requested result is delivered.
+
+## 🎯 Core Optimization Areas
+
+### Query Performance Analysis
+
+> -- ❌ BAD: Inefficient query patterns
+
+## 📊 Performance Tuning Techniques
+
+### JOIN Optimization
+
+> -- ❌ BAD: Inefficient JOIN order and conditions
+
+## 🔍 Query Anti-Patterns
+
+### SELECT Performance Issues
+
+> -- ❌ BAD: SELECT * anti-pattern
+
+## 📈 Database-Agnostic Optimization
+
+> -- ❌ BAD: Row-by-row operations
+> INSERT INTO products (name, price) VALUES ('Product 1', 10.00);
+> **Full content:**
+
+## 🛠️ Index Management
+
+### Index Design Principles
+
+```
+sql-- ✅ GOOD: Covering index designCREATE INDEX idx_orders_coveringON orders(customer_id, created_at)INCLUDE (total_amount, status); -- SQL Server syntax-- Or: CREATE INDEX idx_orders_covering ON orders(customer_id, created_at, total_amount, status); -- Other databases
+```
+
+### Partial Index Strategy
+
+```
+sql-- ✅ GOOD: Partial indexes for specific conditionsCREATE INDEX idx_orders_activeON orders(created_at)WHERE status IN ('pending', 'processing');
+```
+
+## 📊 Performance Monitoring Queries
+
+### Query Performance Analysis
+
+```
+sql-- Generic approach to identify slow queries-- (Specific syntax varies by database)-- For MySQL:SELECT query_time, lock_time, rows_sent, rows_examined, sql_textFROM mysql.slow_logORDER BY query_time DESC;-- For PostgreSQL:SELECT query, calls, total_time, mean_timeFROM pg_stat_statementsORDER BY total_time DESC;-- For SQL Server:SELECT qs.total_elapsed_time/qs.execution_count as avg_elapsed_time, qs.execution_count, SUBSTRING(qt.text, (qs.statement_start_offset/2)+1, ((CASE qs.statement_end_offset WHEN -1 THEN DATALENGTH(qt.text) ELSE qs.statement_end_offset END - qs.statement_start_offset)/2)+1) as query_textFROM sys.dm_exec_query_stats qsCROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) qtORDER BY avg_elapsed_time DESC;
+```
+
+## 🎯 Universal Optimization Checklist
+
+> - [ ] Avoiding SELECT \* in production queries
+> - [ ] Using appropriate JOIN types (INNER vs LEFT/RIGHT)
+> **Full content:**
+
+## 📝 Optimization Methodology
+
+1. **Identify**: Use database-specific tools to find slow queries2. **Analyze**: Examine execution plans and identify bottlenecks3. **Optimize**: Apply appropriate optimization techniques4. **Test**: Verify performance improvements5. **Monitor**: Continuously track performance metrics6. **Iterate**: Regular performance review and optimizationFocus on measurable performance improvements and always test optimizations with realistic data volumes and query patterns.
+
+## Template References
+
+Detailed templates in `templates/`:- `core_optimization_areas.md`- `database-agnostic_optimization.md`- `performance_tuning_techniques.md`- `query_anti-patterns.md`- `universal_optimization_checkli.md`
+
+## Personas
+
+See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+## Personality
+
+See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+## Best Practices
+
+See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+| --- | ------ | ----------- |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+## Dependencies
+
+See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+## Skills Required
+
+See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+
+| Skill | Purpose |
+| ------- | --------- |
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
+| `verification-before-completion` | Validate before claiming done |
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+## Tasks
+
+- [ ] Understand requirements and scope
+- [ ] Plan approach and identify resources
+- [ ] Execute work incrementally
+- [ ] Verify against acceptance criteria
+- [ ] Document results and decisions
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+## Related Prompts
+
+## Workflow
+
+<content>
+
+Same-family prompts:
+
+- [`sql-code-review.prompt.md`](sql-code-review.prompt.md)

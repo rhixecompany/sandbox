@@ -1,0 +1,2 @@
+Plugins: 15 | Events: 13 possible / 6 registered / 8 missing
+Report: .hermes\reports\2026-09-05-hermes-ecosystem-reliability\plugins-hooks/report.md

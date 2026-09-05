@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\skills\devops\mcp-server-health\scripts\test_all_mcp_servers.py", line 234, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Alexa\AppData\Local\hermes\skills\devops\mcp-server-health\scripts\test_all_mcp_servers.py", line 197, in main
+    result = test_server(name, cmd, verbose=args.verbose, timeout=args.timeout)
+                                            ^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'verbose'

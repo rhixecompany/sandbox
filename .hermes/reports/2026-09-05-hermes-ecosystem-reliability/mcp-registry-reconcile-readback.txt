@@ -1,0 +1,51 @@
+DRY-RUN registry reconciliation
+registry=.mcp\registry.json
+hermes_config=C:\Users\Alexa\AppData\Local\hermes\profiles\ops\config.yaml
+changed=False
+{
+  "added": [],
+  "disabled": [
+    "anthropic-resources",
+    "django",
+    "docs",
+    "evals",
+    "everart",
+    "plaid",
+    "postgres",
+    "pytest",
+    "stripe",
+    "time"
+  ],
+  "enabled_existing": [
+    "ast-grep",
+    "atlassian",
+    "cloudinary",
+    "code-sandbox",
+    "context7",
+    "fetch",
+    "filesystem",
+    "github",
+    "honcho",
+    "mcp-docker",
+    "memory",
+    "mindstudio",
+    "neon",
+    "parallel-search",
+    "parallel-task",
+    "paypal",
+    "playwright",
+    "python-quality",
+    "sentry",
+    "sequential-thinking",
+    "smithery",
+    "supabase",
+    "tavily",
+    "tooling-config",
+    "tooling-lint",
+    "twilio-docs",
+    "vercel"
+  ],
+  "hermes_enabled": 27,
+  "registry_enabled_after": 27,
+  "registry_enabled_before": 27
+}

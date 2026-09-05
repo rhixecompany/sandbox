@@ -1,0 +1,50 @@
+{
+  "sync": {
+    "synced": [
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\config.yaml"
+      },
+      {
+        "target": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\config.yaml"
+      }
+    ],
+    "failed": [],
+    "skipped": []
+  }
+}

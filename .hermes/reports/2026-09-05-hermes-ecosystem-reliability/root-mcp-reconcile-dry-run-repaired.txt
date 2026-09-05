@@ -1,0 +1,10 @@
+DRY-RUN root Hermes MCP reconciliation
+root_config=C:\Users\Alexa\AppData\Local\hermes\config.yaml
+profile_config=C:\Users\Alexa\AppData\Local\hermes\profiles\ops\config.yaml
+missing_before:
+- cloudinary
+- paypal
+- supabase
+- twilio-docs
+root_servers_after: 28
+changed: true

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\scripts\vault_key_validate.py", line 218, in <module>
+    bearer_post("https://api.tavily.com/search",
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                {"query": "test", "max_results": 1})),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: bearer_post() missing 1 required positional argument: 'payload'

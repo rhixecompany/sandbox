@@ -1,147 +1,134 @@
----
-name: SandBox-root
-title: "SandBox-root — Plan: MCP Server Install & Skills Creation"
-description: "Plan for installing all 23 MCP servers globally via bunx, creating SKILL.md for each, syncing profiles, and integrating references"
-version: 1.0.0
-status: in_progress
-created: 2026-08-16
-tags: [plan, mcp, skills, bunx, profiles, instructions, tools, git]
----
-
-# MCP Server Install + Skills — Plan
+# Implementation Plan: Comprehensive Provider & Model Configuration
 
 ## Overview
+This plan implements the comprehensive test-providers-models workflow to:
+1. Inventory all authorized providers and current configuration
+2. Probe working models with :free suffix across all providers
+3. Rank verified working models by capability
+4. Configure Hermes with optimal primary model + fallback chain
+5. Propagate verified configuration to all installed agents
+6. Verify the complete setup
 
-Install all 23 MCP server npm dependencies globally, create SKILL.md for each server, sync all 7 profile identity files, triage references, and create management tools/hooks/quick commands.
+## Phase 1: Inventory (Complete ✅)
 
-## Phase 1: Install Global Bunx Dependencies
+### Completed Actions
+- **hermes auth list** — Retrieved authorized providers:
+  - nous (oauth, device_code)
+  - opencode-zen (api_key + oauth)
+  - openrouter (api_key)
 
-### 1.1 Already-installed packages (skip)
+- **hermes config show** — Current configuration:
+  - Model: default='nemotron-3-ultra-free', provider='opencode-zen'
+  - OpenRouter API key configured
+  - API keys for multiple providers present
 
-- [x] @notprolands/ast-grep-mcp (installed, works via npx)
-- [x] mcp-server-fetch-typescript
-- [x] @modelcontextprotocol/server-github
-- [x] @playwright/mcp@0.0.78
+- **hermes profile list** — Available profiles confirmed
 
-### 1.2 Install remaining npm packages
+### Current State
+- Primary model: nemotron-3-ultra-free (opencode-zen) ✅
+- OpenRouter configured with API key
+- No fallback providers configured
 
-- [ ] @modelcontextprotocol/server-memory (installed, works via npx)
-- [ ] @modelcontextprotocol/server-sequential-thinking (installed, works via npx)
-- [ ] @modelcontextprotocol/server-filesystem (fails — investigate)
-- [ ] node-code-sandbox-mcp (fails — investigate)
-- [ ] @mamounalzyoud/django-mcp-server@2.0.0 (correct name for django-mcp)
-- [ ] @speakeasy-api/docs-mcp-core@0.17.1 (correct name for docs-mcp)
-- [ ] pytest-mcp-server@1.1.6 (correct name for pytest-mcp)
-- [ ] @yawlabs/postgres-mcp@0.10.0 (correct name for postgres-mcp)
+## Phase 2: Probe Models (In Progress)
 
-### 1.3 Verify all installations
+### Working Free Models Identified
+From live capability probes:
 
-- [ ] Run `bunx -y <pkg>` for each, verify no errors
-- [ ] For servers that fail, document as REPORT items
+| Provider | Model | Vision | Reasoning | Context |
+|---|---|---|---|---|
+| **openrouter** | nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | yes | yes | 2000 |
+| **nous** | meituan/longcat-2.0:free | yes | yes | 2000 |
+| **nous** | upstage/solar-pro4:free | yes | yes | 2000 |
+| **opencode-zen** | nemotron-3-ultra-free | yes | yes | 2000 |
+| **opencode-zen** | deepseek-v4-flash-free | pending | pending | pending |
 
-## Phase 2: Create MCP Skills (23 SKILL.md files)
+### Models Excluded (failed probes)
+- meta-llama/llama-3.1-8b-instruct:free — 404 Not Found
+- anthropic/claude-3-haiku:free — 404 Not Found
+- google/gemma-2-9b-it:free — Initialization failed
 
-### 2.1 Code/Development MCP Servers (6 skills)
+### Remaining Free Models to Probe
+- opencode-zen: deepseek-v4-flash-free (already testing)
+- openrouter: additional models beyond nemotron-3-nano
 
-- [ ] ast-grep — code search/replace, AST pattern matching
-- [ ] code-sandbox — isolated Node.js execution sandbox
-- [ ] playwright — browser automation, screenshots, console logs
-- [ ] sequential-thinking — structured reasoning, chain-of-thought
-- [ ] tooling-lint — ESLint + Prettier + Markdownlint + CSpell
-- [ ] tooling-config — pre-commit + git-cliff + .gitignore validation
+## Phase 3: Rank Models
 
-### 2.2 Data/Infrastructure MCP Servers (4 skills)
+### Ranking Algorithm (priority order)
+1. `working=true` — Only verified working models
+2. `vision=true` — Models with vision capability
+3. `reasoning=true` — Models supporting chain-of-thought
+4. `ctx` — Largest context window (capped at 2M tokens)
 
-- [ ] filesystem — file read/write/search, directory ops
-- [ ] memory — persistent memory storage CRUD
-- [ ] postgres — PostgreSQL query, schema, connection management
-- [ ] mcp-docker — Docker container management via MCP gateway
+### Expected Ranked Chain
+Based on current probe results:
+1. nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free (openrouter) — working, vision, reasoning, ctx=2000
+2. meituan/longcat-2.0:free (nous) — working, vision, reasoning, ctx=2000
+3. upstage/solar-pro4:free (nous) — working, vision, reasoning, ctx=2000
+4. nemotron-3-ultra-free (opencode-zen) — working, vision, reasoning, ctx=2000
+5. deepseek-v4-flash-free (opencode-zen) — to be confirmed
 
-### 2.3 Search/Discovery MCP Servers (4 skills)
+## Phase 4: Configure Hermes
 
-- [ ] context7 — authoritative external docs, API references
-- [ ] tavily — web search with API key
-- [ ] parallel-search — parallel web search
-- [ ] parallel-task — parallel task execution
+### Commands to Execute
 
-### 2.4 Platform/Integration MCP Servers (5 skills)
+```bash
+# 1. Set primary model (highest-ranked verified working)
+hermes config set model.provider opencode-zen
+hermes config set model.default nemotron-3-ultra-free
 
-- [ ] github — GitHub API, PRs, issues, repos, code search
-- [ ] fetch — web content extraction, HTTP requests
-- [ ] smithery — MCP toolbox registry, tool discovery
-- [ ] honcho — MCP gateway, session management (✅ DONE)
-- [ ] mindstudio — MindStudio CLI, project management
+# 2. Set fallback chain (ordered by capability)
+hermes config set fallback_providers '["openrouter","nous","opencode-zen"]'
 
-### 2.5 Testing/Quality/Other MCP Servers (4 skills)
+# 3. Set default models per provider
+hermes config set providers.openrouter.default_model "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+hermes config set providers.nous.default_model "meituan/longcat-2.0:free"
+hermes config set providers.opencode-zen.default_model "nemotron-3-ultra-free"
+```
 
-- [ ] python-quality — ruff linting + pyright type checking
-- [ ] docs — documentation generation/management
-- [ ] pytest — Python test execution
-- [ ] django — Django ORM, settings, migrations
-- [ ] neon — PostgreSQL cloud database (Neon)
-- [ ] sentry — error tracking, issue management
+### Verify YAML Type
+```bash
+python -c "import yaml,os; c=yaml.safe_load(open(os.environ['LOCALAPPDATA']+'/hermes/config.yaml')); print(type(c['fallback_providers']), c['fallback_providers'])"
+```
 
-## Phase 3: Profile Identity Sync
+Expected: `fallback_providers` must be a YAML list, not a string.
 
-### 3.1 Audit profiles
+## Phase 5: Propagate to Agents
 
-- [ ] Check each of 7 profiles for SOUL.md, USER.md, MEMORY.md
-- [ ] Identify missing/incomplete files
+### Files to Update
+1. **Hermes profiles** (~/AppData/Local/hermes/profiles/*/):
+   - SOUL.md — update model references
+   - memories/USER.md — update model references
+   - memories/MEMORY.md — update if stale
 
-### 3.2 Create/complete profile files
+2. **Workspace context files**:
+   - .hermes.md — update provider/model tables
+   - AGENTS.md — update profile routing table
+   - .github/copilot-instructions.md — update model references
 
-- [ ] Create SOUL.md/USER.md/MEMORY.md for any missing
-- [ ] Complete any stubs
+3. **Agent configs**:
+   - ~/.opencode/mcp.json — update model if referenced
+   - ~/.codex/mcp.json — update model if referenced
 
-### 3.3 Profile sync scripts
+### Propagation Rules
+- Only models with `working=true` may be written
+- Prefer `hermes config set` CLI; avoid raw YAML edits
+- Record every changed file and command
 
-- [ ] Create scripts/profile-audit.py — audit all profiles
-- [ ] Create scripts/profile-sync.py — sync common content
+## Phase 6: Verify (Pending)
 
-## Phase 4: Reference Triage
+### Verification Gates
+- [ ] `hermes config check` passes
+- [ ] `model.provider` and `model.default` set to verified working model
+- [ ] `fallback_providers` is a YAML list ordered by capability
+- [ ] Each listed provider has a working `default_model`
+- [ ] Installed agents updated to verified working models only
+- [ ] Non-working models excluded from config and instruction files
+- [ ] No secrets/tokens introduced
+- [ ] Documentation reflects verified chain
 
-### 4.1 Categorize instruction files
-
-- [ ] Group 189 ~/Desktop/instructions/*.instructions.md by domain
-- [ ] Group 407 ~/Desktop/SandBox/**/*.instructions.md by domain
-- [ ] Map instruction files to MCP servers where relevant
-
-### 4.2 Create reference catalog
-
-- [ ] Create docs/mcp-server-reference-catalog.md
-
-## Phase 5: Tools, Hooks, Quick Commands
-
-### 5.1 MCP Management Tool
-
-- [x] hermes-mcp-manager.py: list, test, install, skills commands ✅ DONE
-- [ ] Fix any bugs in the tool
-
-### 5.2 Health Check Hook
-
-- [x] mcp-health-check.sh created ✅ DONE
-- [ ] Fix bash syntax error in case statement
-- [ ] Register in config.yaml hooks section
-
-### 5.3 Quick Commands
-
-- [ ] config.yaml: add mcp:list, mcp:test, mcp:install, mcp:skills
-
-## Phase 6: Git Operations
-
-### 6.1 Root
-
-- [ ] git add, commit, push
-
-### 6.2 Subrepos
-
-- [ ] For each affected subrepo: git add, commit, push
-
-## Acceptance
-
-- All bunx packages installed and working
-- 23 SKILL.md files with complete content
-- All 7 profiles complete
-- Reference catalog created
-- Tools/hooks/quick-commands working
-- Git clean + pushed
+### Final Verification Commands
+```bash
+hermes config check
+hermes profile list
+python -c "import yaml,os; c=yaml.safe_load(open(os.environ['LOCALAPPDATA']+'/hermes/config.yaml')); assert isinstance(c['fallback_providers'], list), 'fallback_providers must be a list'; print('OK:', c['fallback_providers'])"
+```

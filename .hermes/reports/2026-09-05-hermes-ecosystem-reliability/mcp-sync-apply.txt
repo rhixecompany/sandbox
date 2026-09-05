@@ -1,0 +1,6 @@
+
+APPLIED sync results:
+  ✓ opencode.json             written              (C:\Users\Alexa\Desktop\SandBox\opencode.json)
+  ✓ .codex/mcp.json           written              (C:\Users\Alexa\Desktop\SandBox\.codex\mcp.json)
+  ✓ .copilot/mcp.json         written              (C:\Users\Alexa\Desktop\SandBox\.copilot\mcp.json)
+  ✓ .vscode/mcp.json          written              (C:\Users\Alexa\Desktop\SandBox\.vscode\mcp.json)

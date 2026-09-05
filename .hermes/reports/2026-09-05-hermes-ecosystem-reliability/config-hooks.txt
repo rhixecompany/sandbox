@@ -1,0 +1,49 @@
+on_session_end:
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"'
+  timeout: 60
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-auto-commit/hook.sh"'
+  timeout: 60
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"'
+  timeout: 60
+on_session_start:
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"'
+  timeout: 60
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"'
+  timeout: 60
+post_tool_call:
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"'
+  timeout: 30
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"'
+  timeout: 30
+pre_llm_call:
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"'
+  timeout: 60
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"'
+  timeout: 60
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" -c "python C:/Users/Alexa/AppData/Local/hermes/skills/devops/mcp-server-health/scripts/mcp_preflight_check.py
+    --hook --critical ast-grep,github,fetch,sequential-thinking"'
+  timeout: 30
+pre_tool_call:
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"'
+  timeout: 30
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"'
+  timeout: 30
+subagent_stop:
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"'
+  timeout: 30
+- allowed: true
+  command: '"C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"'
+  timeout: 30

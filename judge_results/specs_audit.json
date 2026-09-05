@@ -1,9 +1,169 @@
 {
-  "ts": "2026-08-31T19:37:16.003634Z",
-  "dir": ".hermes\\specs",
+  "ts": "2026-09-05T07:37:37.339549Z",
+  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs",
+  "plans_dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans",
   "threshold": 70,
-  "count": 0,
-  "avg": 0.0,
-  "passed": 0,
-  "results": []
+  "count": 4,
+  "avg": 81.5,
+  "passed": 4,
+  "results": [
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-goals-implementation-spec.md",
+      "score": 77,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 0,
+        "spec_plan_coupling": 15,
+        "cross_refs": 10,
+        "dry": 12
+      },
+      "lines": 291,
+      "fm_fields": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [
+        ".hermes/specs/comprehensive-goals-implementation-spec.md"
+      ],
+      "plan_refs": [
+        "../plans/comprehensive-goals-implementation-plan.md",
+        ".hermes/plans/comprehensive-goals-implementation-plan.md"
+      ]
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-hermes-maintenance-spec.md",
+      "score": 84,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 14,
+        "content": 0,
+        "spec_plan_coupling": 20,
+        "cross_refs": 10,
+        "dry": 20
+      },
+      "lines": 176,
+      "fm_fields": [
+        "approval",
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "prompt",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [],
+      "plan_refs": [
+        ".hermes/plans/comprehensive-hermes-maintenance-plan.md",
+        "../plans/comprehensive-hermes-maintenance-plan.md"
+      ]
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-implementation-spec.md",
+      "score": 75,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 18,
+        "content": 0,
+        "spec_plan_coupling": 15,
+        "cross_refs": 10,
+        "dry": 12
+      },
+      "lines": 329,
+      "fm_fields": [
+        "author",
+        "created",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [],
+      "plan_refs": [
+        ".hermes/plans/comprehensive-implementation-plan.md",
+        "../plans/comprehensive-implementation-plan.md"
+      ]
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\hermes-root-scripts-quick-commands-spec.md",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 0,
+        "spec_plan_coupling": 20,
+        "cross_refs": 10,
+        "dry": 20
+      },
+      "lines": 157,
+      "fm_fields": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [],
+      "plan_refs": [
+        ".hermes/plans/hermes-root-scripts-quick-commands-plan.md",
+        "../plans/hermes-root-scripts-quick-commands-plan.md"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,4 @@
+[INFO] Starting container scavenger. Timeout: 3600s, Check Interval: 60s 
+[INFO] Initializing server... 
+[INFO] Server started and connected successfully 
+[INFO] Container timeout set to: 3600 seconds (3600000ms) 

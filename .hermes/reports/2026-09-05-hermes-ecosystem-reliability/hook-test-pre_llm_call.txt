@@ -1,0 +1,26 @@
+Firing 3 hook(s) for event 'pre_llm_call':
+
+  → "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      exit=1  elapsed=0.368s
+      stderr: Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hooks\session-logger\hook.py", line 23, in <module>
+    from lib import (
+    ...<17 lines>...
+    )
+ImportError: cannot import name 'duration_seconds_between' from 'lib' (C:\Users\Alexa\AppData\Local\hermes\hooks\lib.py)
+      parsed: <none — hook contributed nothing to the dispatcher>
+
+  → "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      exit=1  elapsed=0.355s
+      stderr: Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\hooks\governance-audit/hook.py", line 24, in <module>
+    from lib import (
+    ...<17 lines>...
+    )
+ImportError: cannot import name 'duration_seconds_between' from 'lib' (C:\Users\Alexa\AppData\Local\hermes\hooks\lib.py)
+      parsed: <none — hook contributed nothing to the dispatcher>
+
+  → "C:/Program Files/Git/usr/bin/bash.exe" -c "python C:/Users/Alexa/AppData/Local/hermes/skills/devops/mcp-server-health/scripts/mcp_preflight_check.py --hook --critical ast-grep,github,fetch,sequential-thinking"
+      exit=0  elapsed=1.592s
+      parsed: <none — hook contributed nothing to the dispatcher>
+

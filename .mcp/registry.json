@@ -12,18 +12,27 @@
 	"servers": {
 		"anthropic-resources": {
 			"type": "http",
-			"enabled": true,
+			"enabled": false,
 			"url": "https://resources.anthropic.com/mcp",
 			"description": "Anthropic resources reference",
-			"tags": ["reference"]
+			"tags": [
+				"reference"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"ast-grep": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": ["-y", "@notprolands/ast-grep-mcp"],
+			"args": [
+				"-y",
+				"@notprolands/ast-grep-mcp"
+			],
 			"description": "AST-based code search/rewrite across the workspace",
-			"tags": ["code", "ast"]
+			"tags": [
+				"code",
+				"ast"
+			]
 		},
 		"atlassian": {
 			"type": "sse",
@@ -31,64 +40,108 @@
 			"enabled": true,
 			"auth": "oauth",
 			"description": "Atlassian Jira + Confluence (enabled — configure OAuth for full functionality)",
-			"tags": ["jira", "confluence"]
+			"tags": [
+				"jira",
+				"confluence"
+			]
 		},
 		"code-sandbox": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": ["-y", "node-code-sandbox-mcp"],
+			"args": [
+				"-y",
+				"node-code-sandbox-mcp"
+			],
 			"description": "Run JavaScript/TypeScript snippets in an isolated Docker container",
-			"tags": ["sandbox", "code"]
+			"tags": [
+				"sandbox",
+				"code"
+			]
 		},
 		"context7": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://mcp.context7.com/mcp",
 			"description": "Up-to-date library docs and code examples via context7.com",
-			"tags": ["docs", "library"]
+			"tags": [
+				"docs",
+				"library"
+			]
 		},
 		"django": {
 			"type": "stdio",
-			"enabled": true,
+			"enabled": false,
 			"command": "bunx",
-			"args": ["-y", "django-mcp"],
+			"args": [
+				"-y",
+				"django-mcp"
+			],
 			"env": {
 				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
 			},
 			"description": "Django project introspection (ecom)",
-			"tags": ["django", "web"]
+			"tags": [
+				"django",
+				"web"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"docs": {
 			"type": "stdio",
 			"command": "bunx",
-			"args": ["-y", "docs-mcp", "docs/"],
-			"enabled": true,
+			"args": [
+				"-y",
+				"docs-mcp",
+				"docs/"
+			],
+			"enabled": false,
 			"description": "Local docs indexer (enabled — requires local doc corpus setup)",
-			"tags": ["docs", "local"]
+			"tags": [
+				"docs",
+				"local"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"evals": {
 			"type": "stdio",
-			"enabled": true,
+			"enabled": false,
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-evals"],
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-evals"
+			],
 			"description": "Model evaluation harness",
-			"tags": ["eval", "ml"]
+			"tags": [
+				"eval",
+				"ml"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"everart": {
 			"type": "http",
-			"enabled": true,
+			"enabled": false,
 			"url": "https://mcp.everart.ai/mcp",
 			"description": "EverArt image generation",
-			"tags": ["image", "gen"]
+			"tags": [
+				"image",
+				"gen"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"fetch": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": ["-y", "mcp-server-fetch-typescript"],
+			"args": [
+				"-y",
+				"mcp-server-fetch-typescript"
+			],
 			"description": "Fetch web pages and convert to markdown",
-			"tags": ["web", "fetch"]
+			"tags": [
+				"web",
+				"fetch"
+			]
 		},
 		"filesystem": {
 			"type": "stdio",
@@ -102,172 +155,326 @@
 				"${workspaceFolder}"
 			],
 			"description": "Read/write/list files in allowed directories",
-			"tags": ["fs", "io"]
+			"tags": [
+				"fs",
+				"io"
+			]
 		},
 		"github": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-github"],
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-github"
+			],
 			"env": {
 				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
 			},
 			"description": "GitHub repo, issue, PR, and file operations",
-			"tags": ["github", "git"]
+			"tags": [
+				"github",
+				"git"
+			]
 		},
 		"honcho": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://mcp.honcho.dev/",
 			"description": "Honcho peer-memory (user profile + cross-session context)",
-			"tags": ["memory", "user"]
+			"tags": [
+				"memory",
+				"user"
+			]
 		},
 		"mcp-docker": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "docker",
-			"args": ["mcp", "gateway", "run", "--profile", "adminbot"],
+			"args": [
+				"mcp",
+				"gateway",
+				"run",
+				"--profile",
+				"adminbot"
+			],
 			"description": "Docker MCP gateway for the adminbot profile",
-			"tags": ["docker", "infra"]
+			"tags": [
+				"docker",
+				"infra"
+			]
 		},
 		"memory": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-memory"],
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-memory"
+			],
 			"description": "Persistent knowledge graph (entities + relations + observations)",
-			"tags": ["memory", "kg"]
+			"tags": [
+				"memory",
+				"kg"
+			]
 		},
 		"mindstudio": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
-			"args": ["mcp"],
+			"args": [
+				"mcp"
+			],
 			"description": "MindStudio vision/image fallback and OOC workflows",
-			"tags": ["vision", "image", "ooc"]
+			"tags": [
+				"vision",
+				"image",
+				"ooc"
+			]
 		},
 		"neon": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://mcp.neon.tech/mcp",
 			"description": "Neon serverless Postgres — branches, schema, query",
-			"tags": ["db", "postgres"]
+			"tags": [
+				"db",
+				"postgres"
+			]
 		},
 		"parallel-search": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://search.parallel.ai/mcp",
 			"description": "Parallel.ai web search with semantic ranking",
-			"tags": ["search", "web"]
+			"tags": [
+				"search",
+				"web"
+			]
 		},
 		"parallel-task": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://task-mcp.parallel.ai/mcp",
 			"description": "Parallel.ai deep research task delegation",
-			"tags": ["research", "task"]
+			"tags": [
+				"research",
+				"task"
+			]
 		},
 		"plaid": {
 			"type": "http",
-			"enabled": true,
+			"enabled": false,
 			"url": "https://mcp.plaid.com/mcp",
 			"description": "Plaid banking/financial data",
-			"tags": ["finance", "banking"]
+			"tags": [
+				"finance",
+				"banking"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"playwright": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": ["-y", "@playwright/mcp@0.0.78"],
+			"args": [
+				"-y",
+				"@playwright/mcp@0.0.78"
+			],
 			"description": "Browser automation via Playwright",
-			"tags": ["browser", "e2e"]
+			"tags": [
+				"browser",
+				"e2e"
+			]
 		},
 		"postgres": {
 			"type": "stdio",
-			"enabled": true,
+			"enabled": false,
 			"command": "bunx",
-			"args": ["-y", "postgres-mcp"],
+			"args": [
+				"-y",
+				"postgres-mcp"
+			],
 			"env": {
 				"DATABASE_URL": "${env:DATABASE_URL}"
 			},
 			"description": "Postgres direct connection (enabled — use neon for serverless)",
-			"tags": ["db", "postgres"]
+			"tags": [
+				"db",
+				"postgres"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"pytest": {
 			"type": "stdio",
-			"enabled": true,
+			"enabled": false,
 			"command": "bunx",
-			"args": ["-y", "pytest-mcp"],
+			"args": [
+				"-y",
+				"pytest-mcp"
+			],
 			"description": "Pytest test runner",
-			"tags": ["test", "python"]
+			"tags": [
+				"test",
+				"python"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"python-quality": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"],
+			"args": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"
+			],
 			"description": "Ruff + mypy + pytest orchestration for Python projects",
-			"tags": ["python", "quality"]
+			"tags": [
+				"python",
+				"quality"
+			]
 		},
 		"sentry": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://mcp.sentry.dev/mcp",
 			"description": "Sentry error monitoring — search, analyze, triage issues",
-			"tags": ["monitoring", "errors"]
+			"tags": [
+				"monitoring",
+				"errors"
+			]
 		},
 		"sequential-thinking": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking"
+			],
 			"description": "Structured multi-step reasoning with revision + branching",
-			"tags": ["reasoning", "cot"]
+			"tags": [
+				"reasoning",
+				"cot"
+			]
 		},
 		"smithery": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://mcp.smithery.ai/alexanderrhixe30",
 			"description": "Smithery MCP toolbox discovery and installation",
-			"tags": ["discovery", "tools"]
+			"tags": [
+				"discovery",
+				"tools"
+			]
 		},
 		"stripe": {
 			"type": "http",
-			"enabled": true,
+			"enabled": false,
 			"url": "https://mcp.stripe.com/mcp",
 			"description": "Stripe payments",
-			"tags": ["payments"]
+			"tags": [
+				"payments"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"tavily": {
 			"type": "http",
 			"enabled": true,
 			"url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}",
 			"description": "Web search + extract API for research",
-			"tags": ["search", "web"]
+			"tags": [
+				"search",
+				"web"
+			]
 		},
 		"time": {
 			"type": "stdio",
-			"enabled": true,
+			"enabled": false,
 			"command": "bunx",
-			"args": ["-y", "@modelcontextprotocol/server-time"],
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-time"
+			],
 			"description": "Time/date utilities",
-			"tags": ["utility"]
+			"tags": [
+				"utility"
+			],
+			"disabled_reason": "not enabled in the selected Hermes profile"
 		},
 		"tooling-config": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"],
+			"args": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"
+			],
 			"description": "Tooling config (eslintrc/prettierrc/markdownlint) audit and repair",
-			"tags": ["config", "lint"]
+			"tags": [
+				"config",
+				"lint"
+			]
 		},
 		"tooling-lint": {
 			"type": "stdio",
 			"enabled": true,
 			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"],
+			"args": [
+				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
+			],
 			"description": "ESLint/Prettier/Markdownlint orchestration for JS/TS/markdown",
-			"tags": ["lint", "format"]
+			"tags": [
+				"lint",
+				"format"
+			]
+		},
+		"cloudinary": {
+			"url": "https://asset-management.mcp.cloudinary.com/mcp",
+			"type": "http",
+			"auth_mode": "configured",
+			"enabled": true,
+			"description": "Imported from the selected Hermes profile; review before enabling in clients.",
+			"tags": [
+				"hermes-profile"
+			]
+		},
+		"paypal": {
+			"url": "https://mcp.paypal.com/sse",
+			"type": "http",
+			"auth_mode": "configured",
+			"enabled": true,
+			"description": "Imported from the selected Hermes profile; review before enabling in clients.",
+			"tags": [
+				"hermes-profile"
+			]
+		},
+		"supabase": {
+			"url": "https://mcp.supabase.com/mcp",
+			"type": "http",
+			"auth_mode": "configured",
+			"enabled": true,
+			"description": "Imported from the selected Hermes profile; review before enabling in clients.",
+			"tags": [
+				"hermes-profile"
+			]
+		},
+		"twilio-docs": {
+			"url": "https://mcp.twilio.com/docs",
+			"type": "http",
+			"enabled": true,
+			"description": "Imported from the selected Hermes profile; review before enabling in clients.",
+			"tags": [
+				"hermes-profile"
+			]
+		},
+		"vercel": {
+			"url": "https://mcp.vercel.com",
+			"type": "http",
+			"auth_mode": "configured",
+			"enabled": true,
+			"description": "Imported from the selected Hermes profile; review before enabling in clients.",
+			"tags": [
+				"hermes-profile"
+			]
 		}
 	}
 }

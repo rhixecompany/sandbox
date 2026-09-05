@@ -33,6 +33,7 @@ import argparse
 import json
 import os
 import random
+import re
 import sys
 import time
 from dataclasses import dataclass, field
@@ -62,10 +63,30 @@ _NON_RETRYABLE_PATTERNS = (
     "context_length",
 )
 
+_SECRET_PATTERNS = (
+    re.compile(r"(?i)Bearer[ ]+[A-Za-z0-9._~+/=-]+"),
+    re.compile(r"(?i)(?:sk|pk|rk|ghp|github_pat|xoxb|xapp|AIza)[-_A-Za-z0-9]{8,}"),
+    re.compile(r"(?i)(api[_-]?key|token|password|secret|authorization)[ \t]*[:=][ \t]*[^ \t,;]+"),
+)
+
+
+def _safe_error(exc: Exception | str) -> str:
+    """Bound and redact provider error text before writing the audit log."""
+    value = str(exc or "")[:400]
+    for pattern in _SECRET_PATTERNS:
+        value = pattern.sub("[REDACTED]", value)
+    return value
+
+
+def _is_permanent(exc: Exception) -> bool:
+    """Return whether an error is known to be non-retryable."""
+    msg = (str(exc) or "").lower()
+    return any(pattern in msg for pattern in _NON_RETRYABLE_PATTERNS)
+
 
 def _is_rate_limit(exc: Exception) -> bool:
     msg = (str(exc) or "").lower()
-    if any(p in msg for p in _NON_RETRYABLE_PATTERNS):
+    if _is_permanent(exc):
         return False
     return any(p in msg for p in _RATE_PATTERNS)
 
@@ -99,6 +120,7 @@ def _retry_after(exc: Exception, default: float = 2.0) -> float:
 @dataclass
 class BypassConfig:
     max_attempts: int = 6
+    per_model_attempts: int = 2
     base_sleep: float = 1.5
     max_sleep: float = 30.0
     jitter: float = 0.4
@@ -114,10 +136,18 @@ class BypassConfig:
     @classmethod
     def from_env(cls) -> "BypassConfig":
         cfg = cls()
-        for k in ("max_attempts",):
-            v = os.environ.get(f"HERMES_BYPASS_{k.upper()}")
-            if v and v.isdigit():
-                setattr(cfg, k, max(1, int(v)))
+        for key in ("max_attempts", "per_model_attempts"):
+            value = os.environ.get(f"HERMES_BYPASS_{key.upper()}")
+            if value and value.isdigit():
+                setattr(cfg, key, max(1, int(value)))
+        for key in ("base_sleep", "max_sleep", "jitter"):
+            value = os.environ.get(f"HERMES_BYPASS_{key.upper()}")
+            if value:
+                try:
+                    setattr(cfg, key, max(0.0, float(value)))
+                except ValueError:
+                    pass
+        cfg.per_model_attempts = min(cfg.max_attempts, max(1, cfg.per_model_attempts))
         return cfg
 
 
@@ -126,6 +156,8 @@ class BypassConfig:
 
 def _audit(log_path: Path, record: dict[str, Any]) -> None:
     log_path.parent.mkdir(parents=True, exist_ok=True)
+    if "error" in record:
+        record = {**record, "error": _safe_error(record["error"])}
     record = {"ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"), **record}
     with log_path.open("a", encoding="utf-8") as fh:
         fh.write(json.dumps(record) + "\n")
@@ -159,17 +191,44 @@ class Bypass:
         """Each factory takes a model name and returns a 0-arg callable.
         We try the primary, then rotate through `factories[1:]`."""
         last_exc: Optional[Exception] = None
-        for idx, factory in enumerate(factories[: self.cfg.max_attempts]):
-            model = start_model if idx == 0 else f"fallback[{idx}]"
-            try:
-                return self._invoke(factory(model), model=model, label=str(idx))
-            except _PermanentError as e:
-                last_exc = e
-                _audit(self.cfg.audit_log, {"event": "permanent", "model": model, "error": str(e)})
+        remaining = self.cfg.max_attempts
+        for idx, factory in enumerate(factories):
+            if remaining <= 0:
                 break
-            except Exception as e:  # noqa: BLE001 — last resort
-                last_exc = e
-        raise RuntimeError(f"rate_limit_bypass: exhausted {len(factories)} attempts") from last_exc
+            model = start_model if idx == 0 else (
+                self.fallbacks[idx - 1] if idx - 1 < len(self.fallbacks) else f"fallback[{idx}]"
+            )
+            local_attempts = 0
+            while remaining > 0:
+                remaining -= 1
+                local_attempts += 1
+                try:
+                    result = factory(model)()
+                    if local_attempts > 1:
+                        _audit(self.cfg.audit_log, {"event": "recovered", "model": model, "attempt": local_attempts})
+                    return result
+                except Exception as exc:  # noqa: BLE001 — classify below
+                    if _is_permanent(exc):
+                        _audit(self.cfg.audit_log, {"event": "permanent", "model": model, "error": _safe_error(exc)})
+                        raise _PermanentError(str(exc)) from exc
+                    if not _is_rate_limit(exc):
+                        raise
+                    last_exc = exc
+                    if local_attempts >= self.cfg.per_model_attempts or remaining == 0:
+                        _audit(
+                            self.cfg.audit_log,
+                            {"event": "exhausted" if remaining == 0 else "rotate", "model": model, "attempt": local_attempts, "error": _safe_error(exc)},
+                        )
+                        break
+                    sleep_for = min(self.cfg.max_sleep, _retry_after(exc, self.cfg.base_sleep))
+                    sleep_for *= 1.0 + random.uniform(-self.cfg.jitter, self.cfg.jitter)
+                    sleep_for = max(0.01, sleep_for)
+                    _audit(
+                        self.cfg.audit_log,
+                        {"event": "retry", "model": model, "attempt": local_attempts, "sleep_s": round(sleep_for, 2), "error": _safe_error(exc)},
+                    )
+                    time.sleep(sleep_for)
+        raise RuntimeError(f"rate_limit_bypass: exhausted {self.cfg.max_attempts} total attempts") from last_exc
 
     # -- internals ---------------------------------------------------------
 
@@ -188,6 +247,9 @@ class Bypass:
             except _PermanentError:
                 raise
             except Exception as e:  # noqa: BLE001
+                if _is_permanent(e):
+                    _audit(self.cfg.audit_log, {"event": "permanent", "model": model, "error": _safe_error(e)})
+                    raise _PermanentError(str(e)) from e
                 if not _is_rate_limit(e):
                     raise
                 if attempt >= self.cfg.max_attempts:
@@ -197,13 +259,13 @@ class Bypass:
                             "event": "exhausted",
                             "model": model,
                             "attempt": attempt,
-                            "error": str(e),
+                            "error": _safe_error(e),
                         },
                     )
                     raise
                 sleep_for = min(self.cfg.max_sleep, _retry_after(e, self.cfg.base_sleep))
                 sleep_for *= 1.0 + random.uniform(-self.cfg.jitter, self.cfg.jitter)
-                sleep_for = max(0.5, sleep_for)
+                sleep_for = max(0.01, sleep_for)
                 _audit(
                     self.cfg.audit_log,
                     {
@@ -211,13 +273,13 @@ class Bypass:
                         "model": model,
                         "attempt": attempt,
                         "sleep_s": round(sleep_for, 2),
-                        "error": str(e)[:200],
+                        "error": _safe_error(e),
                     },
                 )
                 time.sleep(sleep_for)
 
 
-class _PermanentError(Exception):
+class _PermanentError(RuntimeError):
     """Marker for errors that should not trigger retries."""
 
 
@@ -269,12 +331,25 @@ def _self_test() -> int:
     else:
         raise AssertionError("expected exhaustion")
 
-    # 5. Rotation: factory list with one permanent skips the rest.
+    # 5. Rotation stays within the total attempt budget.
     factories = [
-        lambda m: (lambda: (_ for _ in ()).throw(RuntimeError("invalid api key"))),
+        lambda m: (lambda: (_ for _ in ()).throw(RuntimeError("429 rate limit exceeded"))),
         lambda m: (lambda: "fb-b"),
     ]
     assert bypass.call_rotating(factories, start_model="primary") == "fb-b"
+
+    # 6. Permanent rotating errors stop immediately and are audited.
+    try:
+        bypass.call_rotating(
+            [lambda m: (lambda: (_ for _ in ()).throw(RuntimeError("invalid api key")))],
+            start_model="primary",
+        )
+    except RuntimeError as e:
+        assert "invalid api key" in str(e)
+    else:
+        raise AssertionError("permanent rotating error should stop")
+
+    assert _safe_error("Bearer secret-value token=another-secret") == "[REDACTED] [REDACTED]"
 
     print("rate_limit_bypass self-test OK")
     return 0

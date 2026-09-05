@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "content": "Create implementation plan for judge skill enhancements",
+    "status": "completed"
+  },
+  {
+    "id": "2",
+    "content": "Update specs-judge: enforce plan must have/use at least one spec, multi-spec support",
+    "status": "completed"
+  },
+  {
+    "id": "3",
+    "content": "Update plans-judge: enforce plan must have/use at least one spec, multi-spec support",
+    "status": "completed"
+  },
+  {
+    "id": "4",
+    "content": "Update prompts-judge: enforce categorization, parent dir, template/script co-location, trigger/folder match, skills/scripts/specs/plans verification",
+    "status": "completed"
+  },
+  {
+    "id": "5",
+    "content": "Fix all issues/warnings/errors in all three judge skills",
+    "status": "in_progress"
+  },
+  {
+    "id": "6",
+    "content": "Verify all judges score >= 98 on test run",
+    "status": "pending"
+  }
+]

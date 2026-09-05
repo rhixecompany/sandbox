@@ -1,0 +1,7 @@
+usage: vault_key_validate.py [-h] [--apply] [--dry-run] [--only ONLY]
+
+options:
+  -h, --help   show this help message and exit
+  --apply      write verified keys to .env
+  --dry-run    default: show results only
+  --only ONLY  comma-separated key names to test

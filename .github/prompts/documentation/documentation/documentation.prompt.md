@@ -1,0 +1,250 @@
+---
+name: documentation
+title: Documentation Authoring
+description: Author and synchronize project documentation: impact analysis, content authoring, and cross-reference with skills and subagents.
+trigger: /documentation
+category: documentation
+version: 1.0.0
+author: Hermes Agent
+tags: 
+metadata: 
+hermes: 
+profile: code-architect
+priority: medium
+copilot: 
+model_required: sonnet
+opencode: 
+enabled: true
+codex: 
+toolsets: 
+skills: 
+- skill: using-superpowers
+dependencies: []
+formatter: markdown
+license: MIT
+---
+
+## Table of Contents
+
+## Goal
+Author and synchronize project documentation: impact analysis, content authoring, and cross-reference with skills and subagents.
+
+## Context
+
+## Phases
+
+
+
+# Table of Contents
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+  - [Phase 1: Documentation Impact Analysis](#phase-1:-documentation-impact-analysis)
+  - [Phase 2: Authoring and Synchronization](#phase-2:-authoring-and-synchronization)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+- [Goal](#goal)
+- [Description](#description)
+- [Context](#context)
+- [Skills Required](#skills-required)
+- [Subagents](#subagents)
+- [Personas](#personas)
+- [Rules](#rules)
+- [Phases](#phases)
+- [Phase 1: Documentation Impact Analysis](#phase-1:-documentation-impact-analysis)
+- [Phase 2: Authoring and Synchronization](#phase-2:-authoring-and-synchronization)
+- [Steps](#steps)
+- [Tasks](#tasks)
+- [Subtasks](#subtasks)
+- [Actions Summary](#actions-summary)
+- [Template References](#template-references)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [MCP Servers & Tools](#mcp-servers-&-tools)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
+
+
+
+
+Use when "Comprehensive documentation prompt aligned to repository documentation standards." to accomplish the associated tasks and objectives.
+
+## Description
+
+Create and maintain documentation that is accurate, complete, and updated in the same change set as code updates.
+
+
+Use this prompt when writing or updating markdown docs, TSDoc comments, API docs, README sections, architecture notes, or doc examples.
+
+## Skills Required
+
+> See full table with per-domain purposes:
+> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+
+- Technical writing for developers and maintainers
+- API and architecture documentation design
+- Consistency and change-tracking discipline
+
+## Subagents
+
+| Subagent | Role | When to Use || --
+
+- | --- | --- || Docs Writer | Drafts and restructures docs for clarity | Always || API Documenter | Ensures endpoint docs are accurate and complete | API or SDK updates || Reviewer | Checks doc drift and missing sections | Final verification |
+
+## Personas
+
+- Docs Writer: Produces concise, accurate docs with practical examples.
+- API Documenter: Maps implementation to endpoint and schema documentation.
+- Reviewer: Rejects stale or incomplete docs that diverge from code behavior.
+
+## Rules
+
+> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+
+- Update documentation in the same PR or change as code modifications.
+- Use TSDoc for non-trivial types, functions, hooks, and component props.
+- Ensure README setup and usage instructions remain executable.
+- Keep examples current and aligned with current APIs and config.
+- Validate internal links and remove obsolete references.
+
+
+### Phase 1: Documentation Impact Analysis
+
+### Phase 2: Authoring and Synchronization
+
+## Steps
+
+1. Identify code changes that alter behavior, APIs, setup, or configuration.
+2. Map each change to required documentation updates.
+3. Update README, API docs, and relevant architecture references.
+4. Refresh examples, TSDoc, and configuration documentation.
+5. Validate links, terminology consistency, and maintenance readiness.
+
+## Tasks
+
+- Task 1.1 — Build a documentation impact matrix for all relevant code changes.
+- Task 1.2 — Update user-facing docs such as README and usage guides.
+- Task 1.3 — Update developer-facing docs including TSDoc and architecture notes.
+- Task 1.4 — Verify examples, links, and API references for correctness.
+- Task 1.5 — Publish a concise change summary of documentation updates.
+
+## Subtasks
+
+- Subtask 1.1.1 — Identify public API and configuration surface changes.
+- Subtask 1.2.1 — Revise setup, usage, and troubleshooting sections when needed.
+- Subtask 1.3.1 — Add or refresh TSDoc on complex types and hooks.
+- Subtask 1.4.1 — Statistically validate snippets for syntax and symbol accuracy.
+- Subtask 1.5.1 — Note any known doc debt and planned follow-ups.
+
+## Actions Summary
+
+1. Analyze doc impact.
+2. Update all affected docs in the same change.
+3. Validate correctness and link integrity.
+4. Deliver a maintainable, synchronized documentation set.
+
+## Template References
+
+Templates in `templates/`:- `phases.md`
+
+## Personality
+
+See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+## Best Practices
+
+See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+| --- | ------ | ----------- |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+## Dependencies
+
+See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+## Related Prompts
+
+## Workflow
+
+<content>
+
+Same-family prompts:
+
+- [`documentation-writer.prompt.md`](documentation-writer.prompt.md)
+```
+# Prompt template
+Execute the workflow defined in this file.
+```
