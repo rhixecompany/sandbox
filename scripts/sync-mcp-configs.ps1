@@ -17,8 +17,9 @@ $ErrorActionPreference = "Stop"
 # Configuration
 $workspaceRoot = "C:\Users\Alexa\Desktop\SandBox"
 $opencodeJson = Join-Path $workspaceRoot "opencode.json"
-$copilotMcp = Join-Path $workspaceRoot ".copilot\mcp.json"
+$copilotMcp = Join-Path $workspaceRoot ".github\mcp.json"   # Canonical Copilot config (was .copilot/mcp.json — phantom path)
 $codexMcp = Join-Path $workspaceRoot ".codex\mcp.json"
+$vscodeMcp = Join-Path $workspaceRoot ".vscode\mcp.json"     # Optional sync to VSCode (schema uses "servers", not "mcpServers")
 
 # New MCP servers to add
 $newServers = @{

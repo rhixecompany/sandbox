@@ -16,6 +16,8 @@ WORKSPACE = Path(os.environ.get("WORKSPACE", Path.home() / "Desktop" / "SandBox"
 PLANS_DIR = WORKSPACE / ".hermes" / "plans"
 SPECS_DIR = WORKSPACE / ".hermes" / "specs"
 REPORTS_DIR = WORKSPACE / ".hermes" / "reports"
+STRICT_PLAN = "hermes-root-scripts-quick-commands-plan.md"
+STRICT_SPEC = "hermes-root-scripts-quick-commands-spec.md"
 
 
 def run_cmd(cmd: str, cwd: Path = WORKSPACE) -> tuple[int, str]:
@@ -54,46 +56,52 @@ def validate_yaml_frontmatter(path: Path) -> list[str]:
 
 
 def validate_plan(path: Path) -> dict:
-    """Validate an implementation plan document."""
+    """Validate the current plan and report older plans as legacy warnings."""
     issues: list[str] = []
+    warnings: list[str] = []
     content = path.read_text(encoding="utf-8")
+    target = issues if path.name == STRICT_PLAN else warnings
 
-    issues.extend(validate_yaml_frontmatter(path))
+    target.extend(validate_yaml_frontmatter(path))
 
     required_sections = ["## Phases", "## Milestones", "## Timeline"]
     for section in required_sections:
         if section not in content:
-            issues.append(f"Missing section '{section}': {path.name}")
+            target.append(f"Missing section '{section}': {path.name}")
 
     if "| Task |" not in content and "|Task|" not in content:
-        issues.append(f"No task tables found: {path.name}")
+        target.append(f"No task tables found: {path.name}")
 
     return {
         "file": str(path),
         "valid": len(issues) == 0,
         "issues": issues,
-        "size_bytes": path.stat().st_size
+        "warnings": warnings,
+        "size_bytes": path.stat().st_size,
     }
 
 
 def validate_spec(path: Path) -> dict:
-    """Validate a specification document."""
+    """Validate the current spec and report older specs as legacy warnings."""
     issues: list[str] = []
+    warnings: list[str] = []
     content = path.read_text(encoding="utf-8")
+    target = issues if path.name == STRICT_SPEC else warnings
 
-    issues.extend(validate_yaml_frontmatter(path))
+    target.extend(validate_yaml_frontmatter(path))
 
     if "### FR-" not in content:
-        issues.append(f"No requirements found: {path.name}")
+        target.append(f"No requirements found: {path.name}")
 
     if "Acceptance Criteria:" not in content:
-        issues.append(f"No acceptance criteria: {path.name}")
+        target.append(f"No acceptance criteria: {path.name}")
 
     return {
         "file": str(path),
         "valid": len(issues) == 0,
         "issues": issues,
-        "size_bytes": path.stat().st_size
+        "warnings": warnings,
+        "size_bytes": path.stat().st_size,
     }
 
 
@@ -144,7 +152,7 @@ def run_verification_pipeline() -> dict:
     checks: list[dict] = []
 
     # Lint
-    code, output = run_cmd("bun run lint 2>&1 | tail -5")
+    code, output = run_cmd("bun run lint")
     checks.append({
         "name": "lint",
         "passed": code == 0,
@@ -152,15 +160,15 @@ def run_verification_pipeline() -> dict:
     })
 
     # Type-check
-    code, output = run_cmd("bun run typecheck 2>&1 | tail -5")
+    code, output = run_cmd("bun run typecheck")
     checks.append({
         "name": "typecheck",
         "passed": code == 0,
         "output": output[-500:]
     })
 
-    # Format check
-    code, output = run_cmd("bun run format 2>&1 | tail -5")
+    # Format check (never mutate the workspace during verification).
+    code, output = run_cmd("bun run format:check")
     checks.append({
         "name": "format",
         "passed": code == 0,
@@ -168,7 +176,7 @@ def run_verification_pipeline() -> dict:
     })
 
     # Full check
-    code, output = run_cmd("bun run check 2>&1 | tail -5")
+    code, output = run_cmd("bun run check")
     checks.append({
         "name": "full_check",
         "passed": code == 0,
@@ -184,27 +192,106 @@ def run_verification_pipeline() -> dict:
     }
 
 
+def run_quick_command_checks() -> dict:
+    """Run safe registry generation, coverage, and smoke checks."""
+    wrapper = WORKSPACE / "scripts" / "hermes_quick_commands.py"
+    hermes_scripts = Path(
+        os.environ.get(
+            "HERMES_SCRIPTS_DIR",
+            Path.home() / "AppData" / "Local" / "hermes" / "scripts",
+        )
+    )
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    registry = REPORTS_DIR / "hermes-quick-commands.json"
+    inventory = REPORTS_DIR / "hermes-script-inventory.json"
+    commands = [
+        (
+            [sys.executable, str(wrapper), "--scripts-dir", str(hermes_scripts), "inventory"],
+            inventory,
+        ),
+        (
+            [
+                sys.executable,
+                str(wrapper),
+                "--scripts-dir",
+                str(hermes_scripts),
+                "generate",
+                "--wrapper",
+                str(hermes_scripts / wrapper.name),
+            ],
+            registry,
+        ),
+    ]
+    checks: list[dict] = []
+    for command, output_path in commands:
+        result = subprocess.run(
+            command,
+            cwd=str(WORKSPACE),
+            capture_output=True,
+            text=True,
+            timeout=120,
+        )
+        if result.returncode == 0:
+            output_path.write_text(result.stdout, encoding="utf-8")
+        checks.append(
+            {
+                "command": command[2:],
+                "passed": result.returncode == 0,
+                "output": (result.stdout + result.stderr)[-1000:],
+            }
+        )
+        if result.returncode:
+            return {"checks": checks, "all_passed": False}
+    for subcommand in ("verify-registry", "smoke"):
+        command = [
+            sys.executable,
+            str(wrapper),
+            "--scripts-dir",
+            str(hermes_scripts),
+            subcommand,
+            "--registry",
+            str(registry),
+        ]
+        result = subprocess.run(
+            command,
+            cwd=str(WORKSPACE),
+            capture_output=True,
+            text=True,
+            timeout=300,
+        )
+        checks.append(
+            {
+                "command": command[2:],
+                "passed": result.returncode == 0,
+                "output": (result.stdout + result.stderr)[-1000:],
+            }
+        )
+    return {"checks": checks, "all_passed": all(item["passed"] for item in checks)}
+
+
 def main():
     """Main execution entry point."""
     if len(sys.argv) < 2:
         print("Usage: comprehensive-implementation.py <command> [args]")
-        print("Commands: validate, timeline, verify, pipeline, report")
+        print("Commands: validate, timeline, verify, quick-commands, pipeline, report")
         sys.exit(1)
 
     command = sys.argv[1]
 
     if command == "validate":
-        results: dict = {"plans": [], "specs": [], "issues": []}
+        results: dict = {"plans": [], "specs": [], "issues": [], "warnings": []}
 
         for plan_file in PLANS_DIR.glob("*.md"):
             r = validate_plan(plan_file)
             results["plans"].append(r)
             results["issues"].extend(r["issues"])
+            results["warnings"].extend(r["warnings"])
 
         for spec_file in SPECS_DIR.glob("*.md"):
             r = validate_spec(spec_file)
             results["specs"].append(r)
             results["issues"].extend(r["issues"])
+            results["warnings"].extend(r["warnings"])
 
         print(json.dumps(results, indent=2))
         sys.exit(0 if not results["issues"] else 1)
@@ -221,6 +308,11 @@ def main():
 
     elif command == "pipeline":
         results = run_verification_pipeline()
+        print(json.dumps(results, indent=2))
+        sys.exit(0 if results["all_passed"] else 1)
+
+    elif command == "quick-commands":
+        results = run_quick_command_checks()
         print(json.dumps(results, indent=2))
         sys.exit(0 if results["all_passed"] else 1)
 

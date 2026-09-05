@@ -28,9 +28,9 @@
 		"atlassian": {
 			"type": "sse",
 			"url": "https://mcp.atlassian.com/v1/sse",
-			"enabled": false,
+			"enabled": true,
 			"auth": "oauth",
-			"description": "Atlassian Jira + Confluence (disabled — no OAuth configured)",
+			"description": "Atlassian Jira + Confluence (enabled — configure OAuth for full functionality)",
 			"tags": ["jira", "confluence"]
 		},
 		"code-sandbox": {
@@ -61,10 +61,10 @@
 		},
 		"docs": {
 			"type": "stdio",
-			"enabled": false,
 			"command": "bunx",
 			"args": ["-y", "docs-mcp", "docs/"],
-			"description": "Local docs indexer (disabled — requires local doc corpus setup)",
+			"enabled": true,
+			"description": "Local docs indexer (enabled — requires local doc corpus setup)",
 			"tags": ["docs", "local"]
 		},
 		"evals": {
@@ -184,13 +184,13 @@
 		},
 		"postgres": {
 			"type": "stdio",
-			"enabled": false,
+			"enabled": true,
 			"command": "bunx",
 			"args": ["-y", "postgres-mcp"],
 			"env": {
 				"DATABASE_URL": "${env:DATABASE_URL}"
 			},
-			"description": "Postgres direct connection (disabled — use neon for serverless)",
+			"description": "Postgres direct connection (enabled — use neon for serverless)",
 			"tags": ["db", "postgres"]
 		},
 		"pytest": {

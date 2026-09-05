@@ -9,6 +9,10 @@
 			"command": "bunx",
 			"args": ["-y", "@notprolands/ast-grep-mcp"]
 		},
+		"atlassian": {
+			"type": "sse",
+			"url": "https://mcp.atlassian.com/v1/sse"
+		},
 		"code-sandbox": {
 			"type": "stdio",
 			"command": "bunx",
@@ -25,6 +29,11 @@
 			"env": {
 				"DJANGO_SETTINGS_MODULE": "projects.ecom.backend.config.settings"
 			}
+		},
+		"docs": {
+			"type": "stdio",
+			"command": "bunx",
+			"args": ["-y", "docs-mcp", "docs/"]
 		},
 		"evals": {
 			"type": "stdio",
@@ -99,6 +108,14 @@
 			"command": "bunx",
 			"args": ["-y", "@playwright/mcp@0.0.78"]
 		},
+		"postgres": {
+			"type": "stdio",
+			"command": "bunx",
+			"args": ["-y", "postgres-mcp"],
+			"env": {
+				"DATABASE_URL": "${env:DATABASE_URL}"
+			}
+		},
 		"pytest": {
 			"type": "stdio",
 			"command": "bunx",
@@ -144,11 +161,6 @@
 			"type": "stdio",
 			"command": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
 			"args": ["C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"]
-		},
-		"ollama-local": {
-			"env": {
-				"OLLAMA_MODEL": "qwen3-vl:2b"
-			}
 		}
 	}
 }

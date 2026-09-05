@@ -1,0 +1,910 @@
+{
+  "add-hooks-to-config": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 5"
+  },
+  "add-mcp-servers": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 6"
+  },
+  "agents-fix-discover": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 1"
+  },
+  "agents-fix-report": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 2"
+  },
+  "align-tables": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 7"
+  },
+  "analyze-hf-models": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 8"
+  },
+  "analyze-prompt-library": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 9"
+  },
+  "analyze-prompt-library-v2": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 10"
+  },
+  "analyze-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 11"
+  },
+  "analyze-skill-codeblocks": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 12"
+  },
+  "apply-pending-memory": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 13"
+  },
+  "apply-pending-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 14"
+  },
+  "apply-vscode-customizations": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 15"
+  },
+  "audit-227": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 16"
+  },
+  "audit-agents-hashes": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 17"
+  },
+  "audit-canonical": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 18"
+  },
+  "audit-fix-remediate-safe": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 19"
+  },
+  "audit-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 20"
+  },
+  "audit-vscode-config": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 21"
+  },
+  "audit-vscode-config-v2": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 22"
+  },
+  "batch-delete-profiles": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 23"
+  },
+  "batch-localappdata-skillcode": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 24"
+  },
+  "batch-remediate": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 25"
+  },
+  "batch-remediate-42-59": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 26"
+  },
+  "batch-rewrite-worst": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 27"
+  },
+  "batch-skill-judge": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 28"
+  },
+  "batch-update-hermes-paths": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 29"
+  },
+  "benchmark-models": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 30"
+  },
+  "benchmark-providers": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 31"
+  },
+  "boost-near-pass-refs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 32"
+  },
+  "bootstrap": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 33"
+  },
+  "build-env": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 34"
+  },
+  "build-path-mapping": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 35"
+  },
+  "build-registry": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 36"
+  },
+  "bulk-install-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 37"
+  },
+  "categorize-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 38"
+  },
+  "check-handle": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 39"
+  },
+  "classify-fences": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 40"
+  },
+  "cleanup-disk": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 41"
+  },
+  "cleanup-inventory": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 42"
+  },
+  "cleanup-placeholder-stubs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 43"
+  },
+  "comprehensive-enhance": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 44"
+  },
+  "configure-hermes": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 45"
+  },
+  "consolidate-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 46"
+  },
+  "convert-groq-docs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 47"
+  },
+  "copilot-mcp-server": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 48"
+  },
+  "create-missing-memories": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 49"
+  },
+  "create-missing-souls": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 50"
+  },
+  "dedupe-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 51"
+  },
+  "dev-init-code-samples": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 52"
+  },
+  "diff": {
+    "type": "exec",
+    "command": "cd ~/Desktop/SandBox && git diff --stat origin/development...HEAD"
+  },
+  "docs-inventory-report": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 53"
+  },
+  "e2e-session-test": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 54"
+  },
+  "enhance-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 55"
+  },
+  "enhance-sections": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 56"
+  },
+  "env-sync": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 57"
+  },
+  "eslint-count": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 58"
+  },
+  "execute-all-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 59"
+  },
+  "execute-workflow": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 60"
+  },
+  "fence-check": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 61"
+  },
+  "find-lock": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 62"
+  },
+  "find-locking-pid": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 63"
+  },
+  "fix-blank-lines": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 68"
+  },
+  "fix-canonical": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 69"
+  },
+  "fix-class-e": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 70"
+  },
+  "fix-collapsed-bullets": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 71"
+  },
+  "fix-collapsed-fences": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 72"
+  },
+  "fix-concatenated-headings": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 73"
+  },
+  "fix-copilot-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 74"
+  },
+  "fix-crlf-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 75"
+  },
+  "fix-duplicate-hooks": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 76"
+  },
+  "fix-eslint-mismatches": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 77"
+  },
+  "fix-fail-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 78"
+  },
+  "fix-fence-glue": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 79"
+  },
+  "fix-fence-lang": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 80"
+  },
+  "fix-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 65"
+  },
+  "fix-frontmatter-plan": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 81"
+  },
+  "fix-frontmatter-yaml": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 64"
+  },
+  "fix-github-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 82"
+  },
+  "fix-github-prompts-inline-lists": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 83"
+  },
+  "fix-github-prompts-remaining": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 84"
+  },
+  "fix-glued-headings": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 85"
+  },
+  "fix-glued-headings-batch2": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 86"
+  },
+  "fix-glued-headings-manual": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 87"
+  },
+  "fix-line-endings": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 66"
+  },
+  "fix-midline-collapses": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 88"
+  },
+  "fix-missing-closers": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 89"
+  },
+  "fix-orphaned-brackets": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 90"
+  },
+  "fix-profile-hook-path": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 91"
+  },
+  "fix-profile-hook-path2": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 92"
+  },
+  "fix-prompt-artifacts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 93"
+  },
+  "fix-prompt-library": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 94"
+  },
+  "fix-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 95"
+  },
+  "fix-prompts-comprehensive": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 96"
+  },
+  "fix-repo-body": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 97"
+  },
+  "fix-repo-body2": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 98"
+  },
+  "fix-residual-glue": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 99"
+  },
+  "fix-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 67"
+  },
+  "fix-tail-generic": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 100"
+  },
+  "fix-tail-glue": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 101"
+  },
+  "fix-tail-glue2": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 102"
+  },
+  "fix-tail-manual": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 103"
+  },
+  "fix-yaml-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 104"
+  },
+  "full-health-check": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 105"
+  },
+  "gc": {
+    "type": "alias",
+    "target": "/commit"
+  },
+  "generate-context-files": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 106"
+  },
+  "generate-session-report": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 107"
+  },
+  "generate-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 108"
+  },
+  "generate-vscode-audit-report": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 109"
+  },
+  "generate-vscode-configs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 110"
+  },
+  "health-check": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 111"
+  },
+  "hello": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 112"
+  },
+  "hello-world": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 113"
+  },
+  "hermes-quick-commands": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 114"
+  },
+  "hook-health-check": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 115"
+  },
+  "hq": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 116"
+  },
+  "instruction-quick-commands": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 117"
+  },
+  "inventory-agents": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 118"
+  },
+  "inventory-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 119"
+  },
+  "joystick-event-router": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 120"
+  },
+  "joystick-handler": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 121"
+  },
+  "lcs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 122"
+  },
+  "list-cli-tools": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 123"
+  },
+  "log": {
+    "type": "exec",
+    "command": "cd ~/Desktop/SandBox && git log --oneline -10"
+  },
+  "memory-repair": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 124"
+  },
+  "merge-config": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 125"
+  },
+  "merge-skill": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 126"
+  },
+  "model-discovery": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 127"
+  },
+  "normalize-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 128"
+  },
+  "normalize-lf": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 129"
+  },
+  "normalize-plan-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 130"
+  },
+  "normalize-plans": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 131"
+  },
+  "normalize-prompt-actions": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 132"
+  },
+  "omo-doctor": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 133"
+  },
+  "patch-all-fail-sections": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 134"
+  },
+  "patch-fail-structure": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 135"
+  },
+  "pathutil": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 3"
+  },
+  "phase1-inventory": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 136"
+  },
+  "phase2-analysis": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 137"
+  },
+  "phase3-changelog": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 138"
+  },
+  "phase3-gate-check": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 139"
+  },
+  "phase4-reconstruct": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 140"
+  },
+  "phase4-verify": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 141"
+  },
+  "phase5-postapply": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 142"
+  },
+  "pr": {
+    "type": "exec",
+    "command": "cd ~/Desktop/SandBox && git branch --show-current && git log origin/development..HEAD --oneline"
+  },
+  "prime-factors": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 143"
+  },
+  "profile-discover": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 144"
+  },
+  "project": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 145"
+  },
+  "prompt-audit-all": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 146"
+  },
+  "prompt-batch-audit": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 149"
+  },
+  "prompt-fix-metadata": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 150"
+  },
+  "prompt-inventory": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 147"
+  },
+  "prompt-repair-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 148"
+  },
+  "purge-dead-keys": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 151"
+  },
+  "python-quality-mcp-server": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 152"
+  },
+  "quarantine-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 153"
+  },
+  "refresh-hook-allowlist": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 154"
+  },
+  "register-command": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 155"
+  },
+  "register-instruction-personalities": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 156"
+  },
+  "remediate-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 157"
+  },
+  "remove-flat-duplicates": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 158"
+  },
+  "repair-codex-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 160"
+  },
+  "repair-doubled-pipes": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 161"
+  },
+  "repair-frontmatter-closes": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 159"
+  },
+  "repair-yaml": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 162"
+  },
+  "repair-yaml-v2": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 163"
+  },
+  "repo-init": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 164"
+  },
+  "repo-plan-spec": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 165"
+  },
+  "repo-planning-quick-commands": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 166"
+  },
+  "reset-runtime": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 167"
+  },
+  "restore-repo-tables": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 168"
+  },
+  "review-pending-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 169"
+  },
+  "run-cron-safe": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 170"
+  },
+  "score-docs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 171"
+  },
+  "server-bootstrap": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 172"
+  },
+  "session-audit": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 176"
+  },
+  "session-audit-227": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 173"
+  },
+  "session-end-capture": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 174"
+  },
+  "session-start-capture": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 175"
+  },
+  "setup-cto": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 177"
+  },
+  "setup-integrations": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 178"
+  },
+  "ship-this-idea": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 179"
+  },
+  "skill-audit": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 180"
+  },
+  "skills-audit": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 181"
+  },
+  "soul-propagate": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 182"
+  },
+  "split-glued-headings": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 183"
+  },
+  "st": {
+    "type": "exec",
+    "command": "cd ~/Desktop/SandBox && git status --short | head -30"
+  },
+  "status": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 184"
+  },
+  "sweep-corruption": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 185"
+  },
+  "sync-governance-audit-hooks": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 186"
+  },
+  "sync-profile-configs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 187"
+  },
+  "sync-profile-hooks": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 188"
+  },
+  "sync-profile-memories": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 189"
+  },
+  "test": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 190"
+  },
+  "test-models": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 191"
+  },
+  "tooling-config-mcp-server": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 193"
+  },
+  "tooling-full-check": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 194"
+  },
+  "tooling-lint-mcp-server": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 195"
+  },
+  "tooling-quick-commands": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 192"
+  },
+  "tree": {
+    "type": "exec",
+    "command": "ls -d ~/Desktop/SandBox/projects/*/ | sed 's|.*/projects/||;s|/||'"
+  },
+  "trim-banking": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 196"
+  },
+  "trim-remaining": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 197"
+  },
+  "trim-research-reports": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 198"
+  },
+  "trim-research-reports-final": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 199"
+  },
+  "uninstall": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 200"
+  },
+  "update-agents-md": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 201"
+  },
+  "validate-prompt-inventory": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 204"
+  },
+  "validate-prompts": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 205"
+  },
+  "validate-services": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 206"
+  },
+  "validate-skills": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 202"
+  },
+  "validate-vscode-configs": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 207"
+  },
+  "validate-vscode-json": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 208"
+  },
+  "validate-yaml": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 203"
+  },
+  "vault-key-sync": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 209"
+  },
+  "vault-key-validate": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 210"
+  },
+  "verify": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 213"
+  },
+  "verify-and-dedupe": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 4"
+  },
+  "verify-canonical": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 214"
+  },
+  "verify-frontmatter": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 212"
+  },
+  "verify-frontmatter-normalization": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 211"
+  },
+  "verify-phase3": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 215"
+  },
+  "verify-prompt-library": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 216"
+  },
+  "verify-sync": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 217"
+  },
+  "verify-templates-after-create": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 218"
+  },
+  "vision-fallback": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 219"
+  },
+  "win-ocr": {
+    "type": "exec",
+    "command": "py \"C:/Users/Alexa/AppData/Local/hermes/scripts/hermes_quick_commands.py\" a -i 220"
+  },
+  "ws": {
+    "type": "exec",
+    "command": "pwd"
+  }
+}

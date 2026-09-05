@@ -1,0 +1,13 @@
+usage: hermes_quick_commands.py [-h] [--scripts-dir SCRIPTS_DIR]
+                                {inventory,generate,audit,verify-registry,smoke,env-inventory} ...
+
+Build and verify safe Hermes quick commands for root scripts. The generated
+commands invoke this module in ``audit`` mode. They validate a script exists
+and parses, but never execute the target script's business logic.
+
+positional arguments:
+  {inventory,generate,audit,verify-registry,smoke,env-inventory}
+
+options:
+  -h, --help            show this help message and exit
+  --scripts-dir SCRIPTS_DIR
