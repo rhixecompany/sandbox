@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T18:21:20.952933Z",
+  "ts": "2026-09-07T18:21:21.907593Z",
   "dir": ".hermes\\specs",
   "plans_dir": ".hermes\\plans",
   "threshold": 70,
@@ -129,8 +129,8 @@
         ".hermes/specs/comprehensive-implementation-spec.md"
       ],
       "plan_refs": [
-        ".hermes/plans/comprehensive-implementation-plan.md",
-        "../plans/comprehensive-implementation-plan.md"
+        "../plans/comprehensive-implementation-plan.md",
+        ".hermes/plans/comprehensive-implementation-plan.md"
       ]
     },
     {

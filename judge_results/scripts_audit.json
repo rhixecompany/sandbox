@@ -1,10 +1,10 @@
 {
-  "ts": "2026-09-07T18:14:47.119667Z",
+  "ts": "2026-09-07T18:21:30.703057Z",
   "dir": "scripts",
-  "threshold": 88,
+  "threshold": 98,
   "count": 62,
-  "avg": 88.8,
-  "passed": 45,
+  "avg": 88.2,
+  "passed": 1,
   "syntax_failed": 5,
   "quick_commands": null,
   "results": [
@@ -485,7 +485,7 @@
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 350,
+      "lines": 348,
       "syntax_error": ""
     },
     {
@@ -858,12 +858,12 @@
     },
     {
       "file": "scripts\\sync-mcp-configs.ps1",
-      "score": 80,
-      "rating": "PASS",
+      "score": 46,
+      "rating": "FAIL",
       "dims": {
         "syntax": 20,
-        "cli": 14,
-        "error_handling": 20,
+        "cli": 0,
+        "error_handling": 0,
         "documentation": 6,
         "dry": 20
       },

@@ -1,7 +1,7 @@
-# Scripts Audit — 2026-09-07 18:14 UTC
+# Scripts Audit — 2026-09-07 18:21 UTC
 
-Dir: `scripts` | Threshold: 88
-Count: 62 | Avg: 88.8 | Passed: 45
+Dir: `scripts` | Threshold: 98
+Count: 62 | Avg: 88.2 | Passed: 1
 Syntax failures: 5
 Quick-command registry: PASS
 
@@ -60,7 +60,7 @@ Quick-command registry: PASS
 | `subagent_dispatcher.py` | python | 82 | PASS | 20 | 20 | 12 | 20 | 10 |
 | `submodule_commit.sh` | bash | 88 | PASS | 20 | 14 | 20 | 14 | 20 |
 | `sync-mcp-config.ts` | ts | 60 | WARN | 20 | 12 | 0 | 8 | 20 |
-| `sync-mcp-configs.ps1` | ps1 | 80 | PASS | 20 | 14 | 20 | 6 | 20 |
+| `sync-mcp-configs.ps1` | ps1 | 46 | FAIL | 20 | 0 | 0 | 6 | 20 |
 | `sync_env_config.py` | python | 96 | PASS | 20 | 20 | 20 | 20 | 16 |
 | `sync_hermes_root_mcp.py` | python | 96 | PASS | 20 | 20 | 20 | 20 | 16 |
 | `test_session_capture.py` | python | 76 | PASS | 4 | 20 | 12 | 20 | 20 |

@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T18:21:20.692454Z",
+  "ts": "2026-09-07T18:21:21.584142Z",
   "dir": ".hermes\\plans",
   "specs_dir": ".hermes\\specs",
   "threshold": 70,
@@ -1060,8 +1060,8 @@
       "status": "in_progress",
       "checklist_items": 12,
       "spec_refs": [
-        "../specs/comprehensive-hermes-maintenance-spec.md",
-        ".hermes/specs/hermes-ecosystem-reliability-spec.md"
+        ".hermes/specs/hermes-ecosystem-reliability-spec.md",
+        "../specs/comprehensive-hermes-maintenance-spec.md"
       ],
       "spec_valid": 2,
       "spec_total": 2
@@ -1176,9 +1176,9 @@
       "status": "in_progress",
       "checklist_items": 27,
       "spec_refs": [
+        "../specs/hermes-root-scripts-quick-commands-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-goals-implementation-spec.md",
-        "../specs/hermes-root-scripts-quick-commands-spec.md"
+        "../specs/comprehensive-goals-implementation-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -1226,8 +1226,8 @@
       "checklist_items": 4,
       "spec_refs": [
         "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -1251,8 +1251,8 @@
       "checklist_items": 4,
       "spec_refs": [
         "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -1276,8 +1276,8 @@
       "checklist_items": 4,
       "spec_refs": [
         "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -1301,8 +1301,8 @@
       "checklist_items": 4,
       "spec_refs": [
         "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -1349,8 +1349,8 @@
       "checklist_items": 4,
       "spec_refs": [
         "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -1396,8 +1396,8 @@
       "status": "in_progress",
       "checklist_items": 9,
       "spec_refs": [
-        ".hermes/specs/comprehensive-hermes-maintenance-spec.md",
-        "../specs/comprehensive-hermes-maintenance-spec.md"
+        "../specs/comprehensive-hermes-maintenance-spec.md",
+        ".hermes/specs/comprehensive-hermes-maintenance-spec.md"
       ],
       "spec_valid": 2,
       "spec_total": 2
@@ -1512,8 +1512,8 @@
       "status": "in_progress",
       "checklist_items": 0,
       "spec_refs": [
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 2,
       "spec_total": 2
@@ -1996,8 +1996,8 @@
       "checklist_items": 4,
       "spec_refs": [
         "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -2021,8 +2021,8 @@
       "checklist_items": 4,
       "spec_refs": [
         "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
