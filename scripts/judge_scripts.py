@@ -83,8 +83,6 @@ def score_one(p: Path) -> dict:
         cli_pts = 12
     elif lang == "bash" and re.search(r"getopts|--help|\-h\)", text):
         cli_pts = 14
-    elif lang == "ps1" and ("param(" in text or "--help" in text):
-        cli_pts = 14
 
     # Error Handling (20): try/except, set -e, exit codes
     eh_pts = 0
@@ -95,8 +93,8 @@ def score_one(p: Path) -> dict:
             eh_pts += 6
         if "logging" in text or "print(" in text:
             eh_pts += 6
-    elif lang == "bash" or lang == "ps1":
-        if "set -e" in text or "set -euo pipefail" in text or "try {" in text:
+    elif lang == "bash":
+        if "set -e" in text or "set -euo pipefail" in text:
             eh_pts += 12
         if "exit " in text:
             eh_pts += 8
