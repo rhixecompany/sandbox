@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T18:14:35.030107Z",
+  "ts": "2026-09-07T18:14:36.113123Z",
   "dir": ".hermes\\plans",
   "specs_dir": ".hermes\\specs",
   "threshold": 70,
@@ -1176,9 +1176,9 @@
       "status": "in_progress",
       "checklist_items": 27,
       "spec_refs": [
-        "../specs/hermes-root-scripts-quick-commands-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-goals-implementation-spec.md"
+        "../specs/comprehensive-goals-implementation-spec.md",
+        "../specs/hermes-root-scripts-quick-commands-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
@@ -1396,8 +1396,8 @@
       "status": "in_progress",
       "checklist_items": 9,
       "spec_refs": [
-        "../specs/comprehensive-hermes-maintenance-spec.md",
-        ".hermes/specs/comprehensive-hermes-maintenance-spec.md"
+        ".hermes/specs/comprehensive-hermes-maintenance-spec.md",
+        "../specs/comprehensive-hermes-maintenance-spec.md"
       ],
       "spec_valid": 2,
       "spec_total": 2
@@ -1605,8 +1605,8 @@
       "status": "in_progress",
       "checklist_items": 7,
       "spec_refs": [
-        "../specs/comprehensive-hermes-maintenance-spec.md",
-        ".hermes/specs/hermes-root-scripts-quick-commands-spec.md"
+        ".hermes/specs/hermes-root-scripts-quick-commands-spec.md",
+        "../specs/comprehensive-hermes-maintenance-spec.md"
       ],
       "spec_valid": 2,
       "spec_total": 2

@@ -1,9 +1,9 @@
-# Scripts Audit — 2026-09-07 18:09 UTC
+# Scripts Audit — 2026-09-07 18:14 UTC
 
-Dir: `scripts` | Threshold: 70
-Count: 62 | Avg: 88.8 | Passed: 60
+Dir: `scripts` | Threshold: 88
+Count: 62 | Avg: 88.8 | Passed: 45
 Syntax failures: 5
-Quick-command registry: FAIL
+Quick-command registry: PASS
 
 | File | Lang | Score | Rating | Syntax | CLI | Err | Doc | DRY |
 |---|---|---|---|---|---|---|---|---|
