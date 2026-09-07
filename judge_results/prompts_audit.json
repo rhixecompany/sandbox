@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-05T06:56:59.413275+00:00",
+  "ts": "2026-09-07T17:49:33.921153+00:00",
   "dir": ".github\\prompts",
   "threshold": 70,
   "count": 236,
@@ -1941,20 +1941,6 @@
         "scripts_dir": ".github\\prompts\\general\\tasksync\\scripts"
       },
       {
-        "prompt": ".github\\prompts\\general\\test-providers-models\\test-providers-models.prompt.md",
-        "trigger": "test-providers-models",
-        "category": "general",
-        "trigger_dir": "test-providers-models",
-        "structure_valid": false,
-        "errors": [
-          "Invalid category: general"
-        ],
-        "has_templates": true,
-        "has_scripts_dir": true,
-        "template_dir": ".github\\prompts\\general\\test-providers-models\\templates",
-        "scripts_dir": ".github\\prompts\\general\\test-providers-models\\scripts"
-      },
-      {
         "prompt": ".github\\prompts\\general\\tldr-prompt\\tldr-prompt.prompt.md",
         "trigger": "tldr-prompt",
         "category": "general",
@@ -2249,6 +2235,18 @@
         "has_scripts_dir": true,
         "template_dir": ".github\\prompts\\operations\\disk-space-cleanup\\templates",
         "scripts_dir": ".github\\prompts\\operations\\disk-space-cleanup\\scripts"
+      },
+      {
+        "prompt": ".github\\prompts\\operations\\test-providers-models\\test-providers-models.prompt.md",
+        "trigger": "test-providers-models",
+        "category": "operations",
+        "trigger_dir": "test-providers-models",
+        "structure_valid": true,
+        "errors": [],
+        "has_templates": true,
+        "has_scripts_dir": true,
+        "template_dir": ".github\\prompts\\operations\\test-providers-models\\templates",
+        "scripts_dir": ".github\\prompts\\operations\\test-providers-models\\scripts"
       },
       {
         "prompt": ".github\\prompts\\planning\\breakdown-epic-arch\\breakdown-epic-arch.prompt.md",
@@ -2966,8 +2964,8 @@
       }
     ],
     "total": 236,
-    "valid": 174,
-    "invalid": 62
+    "valid": 175,
+    "invalid": 61
   },
   "results": [
     {
@@ -7304,6 +7302,86 @@
       "template_dir": ".github\\prompts\\operations\\disk-space-cleanup\\templates",
       "has_template_dir": true,
       "template_file_count": 1
+    },
+    {
+      "file": ".github\\prompts\\operations\\test-providers-models\\test-providers-models.prompt.md",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 10,
+        "structure_enforcement": 30,
+        "structure_sections": 10,
+        "content": 10,
+        "code_quality": 4,
+        "asset_colocation": 15,
+        "asset_verification": 0,
+        "cross_judge_gates": 7,
+        "dry": 2
+      },
+      "fm_fields": [
+        "auth_providers",
+        "author",
+        "category",
+        "deepseek",
+        "description",
+        "gemini",
+        "hermes",
+        "huggingface",
+        "license",
+        "metadata",
+        "name",
+        "nous",
+        "openai-api",
+        "openai-codex",
+        "opencode-zen",
+        "openrouter",
+        "tags",
+        "title",
+        "toolsets",
+        "trigger",
+        "verified_states",
+        "version",
+        "xai"
+      ],
+      "fences": 0,
+      "fences_balanced": true,
+      "phases": 0,
+      "has_placeholder": false,
+      "category": "operations",
+      "trigger": "test-providers-models",
+      "trigger_dir": "test-providers-models",
+      "structure_valid": true,
+      "refs": {
+        "skills": [
+          "qa/prompts-judge/scripts/judge"
+        ],
+        "scripts": [
+          "test-providers-probe.py",
+          "test-providers-probe.py",
+          "audit-sessions.py",
+          "test-providers-probe.py",
+          "judge.py",
+          "test-providers-probe.py"
+        ],
+        "specs": [],
+        "plans": [],
+        "templates": [
+          "auth-inventory-template",
+          "free-model-catalog",
+          "probe-live-template",
+          "ranking-report",
+          "free-model-catalog",
+          "ranking-report",
+          "auth-inventory-template",
+          "probe-live-template",
+          "provider-docs-template",
+          "free-model-catalog",
+          "ranking-report"
+        ]
+      },
+      "template_dir": ".github\\prompts\\operations\\test-providers-models\\templates",
+      "has_template_dir": true,
+      "template_file_count": 6
     },
     {
       "file": ".github\\prompts\\monitoring\\postgresql-optimization\\postgresql-optimization.prompt.md",
@@ -12360,69 +12438,6 @@
         ]
       },
       "template_dir": ".github\\prompts\\general\\tasksync\\templates",
-      "has_template_dir": true,
-      "template_file_count": 1
-    },
-    {
-      "file": ".github\\prompts\\general\\test-providers-models\\test-providers-models.prompt.md",
-      "score": 93,
-      "rating": "PASS",
-      "dims": {
-        "frontmatter": 10,
-        "structure_enforcement": 25,
-        "structure_sections": 7,
-        "content": 10,
-        "code_quality": 8,
-        "asset_colocation": 15,
-        "asset_verification": 9,
-        "cross_judge_gates": 7,
-        "dry": 2
-      },
-      "fm_fields": [
-        "author",
-        "category",
-        "codex",
-        "copilot",
-        "dependencies",
-        "description",
-        "enabled",
-        "formatter",
-        "hermes",
-        "license",
-        "metadata",
-        "model_required",
-        "name",
-        "opencode",
-        "priority",
-        "profile",
-        "skills",
-        "tags",
-        "title",
-        "toolsets",
-        "trigger",
-        "version"
-      ],
-      "fences": 18,
-      "fences_balanced": true,
-      "phases": 0,
-      "has_placeholder": false,
-      "category": "general",
-      "trigger": "test-providers-models",
-      "trigger_dir": "test-providers-models",
-      "structure_valid": true,
-      "refs": {
-        "skills": [],
-        "scripts": [
-          "provider_executor.py",
-          "batch_skill_judge.py"
-        ],
-        "specs": [],
-        "plans": [],
-        "templates": [
-          "fail"
-        ]
-      },
-      "template_dir": ".github\\prompts\\general\\test-providers-models\\templates",
       "has_template_dir": true,
       "template_file_count": 1
     },

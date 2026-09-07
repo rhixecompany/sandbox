@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+while [[ $# -gt 0 ]]; do case "$1" in --help|-h) echo "Usage: $0"; exit 0;; esac; shift; done
 # Stage missing LSP server binaries into Hermes' lsp/bin dir.
 # Hermes probes <HERMES_HOME>/lsp/bin/ before PATH (agent/lsp/install.py),
 # so staging there registers servers as installed.

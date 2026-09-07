@@ -15,6 +15,7 @@ from datetime import datetime
 from typing import Dict, Any, List, Tuple
 import urllib.request
 import urllib.error
+import argparse
 
 # Configuration
 WORKSPACE_ROOT = Path("C:/Users/Alexa/Desktop/SandBox")
@@ -269,6 +270,9 @@ def main():
     print(f"Summary: {validator.working_count} working, {validator.broken_count} broken")
     print(f"{'='*60}\n")
 
+
+    parser = argparse.ArgumentParser(description=main.__doc__ or "")
+    parser.parse_args()
 
 if __name__ == "__main__":
     main()

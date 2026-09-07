@@ -39,3 +39,8 @@ model: default
 - [ ] All phases complete
 - [ ] All gates passed
 - [ ] All checks green
+
+## Linked Specs
+
+- ../specs/comprehensive-goals-implementation-spec.md
+

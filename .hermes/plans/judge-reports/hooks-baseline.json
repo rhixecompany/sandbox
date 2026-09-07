@@ -1,0 +1,25 @@
+{
+  "ts": "2026-09-07T14:42:46.433517Z",
+  "dir": "hooks",
+  "threshold": 70,
+  "count": 1,
+  "avg": 60.0,
+  "passed": 0,
+  "results": [
+    {
+      "file": "hooks\\mcp-health-check.sh",
+      "score": 60,
+      "rating": "WARN",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 9,
+        "error_handling": 15,
+        "logging": 16
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    }
+  ]
+}

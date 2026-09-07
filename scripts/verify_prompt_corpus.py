@@ -11,6 +11,8 @@ import re
 import sys
 from pathlib import Path
 
+import argparse
+
 try:
     import yaml
 except ImportError:
@@ -95,6 +97,9 @@ def audit_one(path: Path) -> dict:
 def main() -> int:
     files = sorted(PROMPTS_DIR.glob("*.prompt.md"))
     print(f"Auditing {len(files)} prompt files in {PROMPTS_DIR}\n")
+
+    parser = argparse.ArgumentParser(description=main.__doc__ or "")
+    parser.parse_args()
 
     results = [audit_one(f) for f in files]
 

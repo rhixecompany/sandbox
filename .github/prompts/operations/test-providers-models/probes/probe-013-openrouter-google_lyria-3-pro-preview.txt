@@ -1,0 +1,10 @@
+# Probe task #013 -- openrouter:google/lyria-3-pro-preview
+# Source: https://openrouter.ai/api/v1/models captured 2026-09-07T15:09:01.258191+00:00
+# Status: valid
+# Knowledge cutoff: n/a
+# Context length: 1048576
+# Max output: 65536
+# Reasoning: no
+
+# Exact invocation -- run in the foreground (probe < 30s expected):
+hermes chat --provider "openrouter" --model "google/lyria-3-pro-preview" -q "Answer in one paragraph: what is your knowledge cutoff date, what is your context length, do you support reasoning, and what is your max output tokens?" --oneshot

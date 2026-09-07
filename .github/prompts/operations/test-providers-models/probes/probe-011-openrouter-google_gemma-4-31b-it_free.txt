@@ -1,0 +1,10 @@
+# Probe task #011 -- openrouter:google/gemma-4-31b-it:free
+# Source: https://openrouter.ai/api/v1/models captured 2026-09-07T15:09:01.258191+00:00
+# Status: valid
+# Knowledge cutoff: n/a
+# Context length: 262144
+# Max output: 32768
+# Reasoning: yes
+
+# Exact invocation -- run in the foreground (probe < 30s expected):
+hermes chat --provider "openrouter" --model "google/gemma-4-31b-it:free" -q "Answer in one paragraph: what is your knowledge cutoff date, what is your context length, do you support reasoning, and what is your max output tokens?" --oneshot

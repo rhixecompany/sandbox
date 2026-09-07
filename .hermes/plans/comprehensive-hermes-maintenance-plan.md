@@ -197,3 +197,27 @@ Gate: no criterion is marked complete from a stale report or an unverified subag
 - [ ] M6 dedupe/cleanup changes are allowlisted and verified.
 - [ ] M7 tests, safe staging, commits, and pushes are verified.
 - [ ] M8 final report and acceptance matrix are current.
+
+## Risks
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|--------|------------|------------|
+| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
+| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
+| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+
+## Files to Create or Modify
+
+- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
+- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
+
+## Linked Specs
+
+- ../specs/comprehensive-hermes-maintenance-spec.md
+
+## Verification
+
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.

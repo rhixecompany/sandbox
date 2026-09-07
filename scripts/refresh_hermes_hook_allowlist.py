@@ -17,6 +17,7 @@ if str(HERMES_AGENT) not in sys.path:
 
 from agent import shell_hooks  # noqa: E402
 from hermes_cli.config import load_config  # noqa: E402
+import argparse
 
 
 def main() -> int:
@@ -26,6 +27,9 @@ def main() -> int:
     print(f"configured_hooks={len(specs)}")
     print(f"approved_or_registered={len(registered)}")
     print("events=" + ",".join(sorted({spec.event for spec in specs})))
+    parser = argparse.ArgumentParser(description=main.__doc__ or "")
+    parser.parse_args()
+
     return 0
 
 

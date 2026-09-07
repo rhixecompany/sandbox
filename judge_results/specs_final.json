@@ -1,0 +1,261 @@
+{
+  "ts": "2026-09-07T18:02:57.503486Z",
+  "dir": ".hermes\\specs",
+  "plans_dir": ".hermes\\plans",
+  "threshold": 70,
+  "count": 6,
+  "avg": 103.8,
+  "passed": 6,
+  "results": [
+    {
+      "file": ".hermes\\specs\\comprehensive-goals-implementation-spec.md",
+      "score": 102,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_plan_coupling": 20,
+        "cross_refs": 10,
+        "dry": 12
+      },
+      "lines": 291,
+      "fm_fields": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [
+        ".hermes/specs/comprehensive-goals-implementation-spec.md"
+      ],
+      "plan_refs": [
+        ".hermes/plans/comprehensive-goals-implementation-plan.md",
+        "../plans/comprehensive-goals-implementation-plan.md"
+      ]
+    },
+    {
+      "file": ".hermes\\specs\\comprehensive-hermes-maintenance-spec.md",
+      "score": 102,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 12,
+        "spec_plan_coupling": 20,
+        "cross_refs": 10,
+        "dry": 20
+      },
+      "lines": 210,
+      "fm_fields": [
+        "approval",
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "prompt",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [
+        ".hermes/specs/comprehensive-hermes-maintenance-spec.md"
+      ],
+      "plan_refs": [
+        ".hermes/plans/comprehensive-hermes-maintenance-plan.md",
+        "../plans/comprehensive-hermes-maintenance-plan.md"
+      ]
+    },
+    {
+      "file": ".hermes\\specs\\comprehensive-implementation-spec.md",
+      "score": 102,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_plan_coupling": 20,
+        "cross_refs": 10,
+        "dry": 12
+      },
+      "lines": 363,
+      "fm_fields": [
+        "author",
+        "created",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [
+        ".hermes/specs/comprehensive-implementation-spec.md"
+      ],
+      "plan_refs": [
+        "../plans/comprehensive-implementation-plan.md",
+        ".hermes/plans/comprehensive-implementation-plan.md"
+      ]
+    },
+    {
+      "file": ".hermes\\specs\\hermes-ecosystem-reliability-spec.md",
+      "score": 102,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 12,
+        "spec_plan_coupling": 20,
+        "cross_refs": 10,
+        "dry": 20
+      },
+      "lines": 192,
+      "fm_fields": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [
+        ".hermes/specs/hermes-ecosystem-reliability-spec.md",
+        "../plans/2026-09-05_084556-hermes-ecosystem-reliability.md"
+      ],
+      "plan_refs": [
+        ".hermes/plans/2026-09-05_084556-hermes-ecosystem-reliability.md",
+        "../plans/2026-09-05_084556-hermes-ecosystem-reliability.md"
+      ]
+    },
+    {
+      "file": ".hermes\\specs\\hermes-root-scripts-quick-commands-spec.md",
+      "score": 110,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_plan_coupling": 20,
+        "cross_refs": 10,
+        "dry": 20
+      },
+      "lines": 157,
+      "fm_fields": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan"
+      ],
+      "spec_refs": [],
+      "plan_refs": [
+        "../plans/hermes-root-scripts-quick-commands-plan.md",
+        ".hermes/plans/hermes-root-scripts-quick-commands-plan.md"
+      ]
+    },
+    {
+      "file": ".hermes\\specs\\test-providers-models-spec.md",
+      "score": 105,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_plan_coupling": 15,
+        "cross_refs": 10,
+        "dry": 20
+      },
+      "lines": 81,
+      "fm_fields": [
+        "author",
+        "description",
+        "license",
+        "name",
+        "owner",
+        "plan",
+        "status",
+        "tags",
+        "title",
+        "version"
+      ],
+      "sections_found": [
+        "## Goal",
+        "## Requirements",
+        "## Acceptance Criteria",
+        "## Non-Functional Requirements",
+        "## Verification",
+        "## Linked Plan",
+        "## Linked Specs"
+      ],
+      "spec_refs": [
+        "../../plans/2026-09-07_162000-test-providers-models-implementation.md",
+        "./hermes-ecosystem-reliability-spec.md"
+      ],
+      "plan_refs": [
+        "../../plans/2026-09-07_162000-test-providers-models-implementation.md",
+        "../plans/2026-09-07_162000-test-providers-models-implementation.md"
+      ]
+    }
+  ]
+}

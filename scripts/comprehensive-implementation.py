@@ -10,6 +10,7 @@ import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
+import argparse
 
 # Configuration
 WORKSPACE = Path(os.environ.get("WORKSPACE", Path.home() / "Desktop" / "SandBox"))
@@ -271,6 +272,9 @@ def run_quick_command_checks() -> dict:
 
 def main():
     """Main execution entry point."""
+    parser = argparse.ArgumentParser(description=main.__doc__ or "")
+    parser.parse_args()
+
     if len(sys.argv) < 2:
         print("Usage: comprehensive-implementation.py <command> [args]")
         print("Commands: validate, timeline, verify, quick-commands, pipeline, report")

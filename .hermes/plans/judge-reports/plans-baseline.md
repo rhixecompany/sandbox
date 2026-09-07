@@ -1,0 +1,86 @@
+# Plans Audit — 2026-09-07 14:22 UTC
+
+Dir: `.hermes\plans` | Specs Dir: `.hermes\specs` | Threshold: 70
+Count: 79 | Avg: 82.4 | Passed: 68
+
+| File | Score | Rating | FM | Struct | Content | Spec Coupling | Status | DRY | Phases | Gates |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `2026-06-30-execution-plan-for-prompt-and-plan-normalization.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-07-23-comprehensive-github-prompts-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-07-23-migrate-hermes-prompts-to-github-prompts.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-07-25-yaml-workflows-audit-fix-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-07-31-workspace-cleanup.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-01_async-script-tooling-master.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-01_consolidated-goal-tooling-cleanup.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-01_repo-tooling.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-01_tooling-implementation.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-11_213801-prompt-library-maintenance.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-11_214500-repo-init-all-agents.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-11_hermes-platform-diagnostics-debug.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-12_010844-repo-prompts-debug-fix-enhance.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-12_012441-prompts-library-debug-fix-enhance.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-12_043000-terminal-agent-ecosystem-sync.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-15_202608_four-agent-prompt-audit-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-15_202608_four-agent-prompt-audit-spec.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-15_202608_openrouter-sdk-integration-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-15_202608_openrouter-sdk-integration-spec.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-15_202608_openrouter-sdk-integration.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-15_hermes-profile-skills-enhancement-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-15_hermes-profile-skills-enhancement-spec.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-16_142300_cross-platform-agent-sync-spec.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-16_142300_mcp-sync-all-agents-implementation.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-19_235900-subagent-driven-development-full-implementation.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-24_072315-comprehensive-hermes-debugging-fix.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-24_235959-update-hermes-profiles-and-agent-configs.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-24_comprehensive-context-and-model-sync.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-24_comprehensive-platform-remediation-spec.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-24_comprehensive-platform-remediation.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-24_hermes-full-diagnostic-repair.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-24_update-enhance-verify-context-files.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-25_015239-dependency-toolchain-update.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-28_phase-b-prompt-enhancement.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-28_prompt-corpus-enhance.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-29-master-consolidated-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-29_full-audit-remediation.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-31_152242-comprehensive-reimplementation-master.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-31_180000-comprehensive-reimplementation-master.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-31_goal1-identity-triage.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-31_goal2-plugins-hooks.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-08-31_six-judge-skills.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `2026-09-04-dedupe-triage-report.md` | 15 | FAIL | 0 | 0 | 0 | 0 | 0 | 15 | 0 | 0 |
+| `2026-09-05_084556-hermes-ecosystem-reliability.md` | 65 | WARN | 9 | 0 | 6 | 20 | 15 | 15 | 0 | 8 |
+| `2026-09-05_docker-cleanup-plan.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 5 | 15 | 0 | 0 |
+| `2026-09-05_file-triage-summary.md` | 15 | FAIL | 0 | 0 | 0 | 0 | 0 | 15 | 0 | 0 |
+| `2026-09-05_goal-using-superpowers-full.md` | 20 | FAIL | 0 | 0 | 0 | 0 | 5 | 15 | 0 | 0 |
+| `2026-09-05_test-providers-models-rebuild.md` | 15 | FAIL | 0 | 0 | 0 | 0 | 0 | 15 | 0 | 0 |
+| `agent-provider-matrix.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `audit-report.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `comprehensive-goals-implementation-plan.md` | 34 | FAIL | 0 | 14 | 6 | 0 | 5 | 9 | 12 | 0 |
+| `comprehensive-hermes-maintenance-plan.md` | 61 | WARN | 11 | 0 | 0 | 20 | 15 | 15 | 0 | 0 |
+| `comprehensive-implementation-plan.md` | 36 | FAIL | 11 | 0 | 6 | 0 | 4 | 15 | 0 | 0 |
+| `deepseek-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `disk-cleanup-skill-implementation.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `disk-cleanup-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `example-subagent-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `execution-summary.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `gemini-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `hermes-root-scripts-quick-commands-plan.md` | 67 | WARN | 11 | 0 | 6 | 20 | 15 | 15 | 0 | 0 |
+| `honcho-hermes-integration-implementation.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `honcho-hermes-integration-spec.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `huggingface-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `judge-qa-rerun.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `judge-skills-enhancement-plan.md` | 40 | FAIL | 0 | 14 | 6 | 0 | 5 | 15 | 5 | 0 |
+| `next-steps-implementation-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `next-steps-specs.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `nous-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `ollama-cloud-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `opencode-zen-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `openrouter-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `phase-10-ollama-docker-blocked.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `provider-workflow-master-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `provider-workflow-strategy.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `release-notes-profile-sync-2026-08-24.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `skill-implementation-master-plan.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |
+| `xai-workflow.md` | 90 | PASS | 20 | 20 | 20 | 0 | 15 | 15 | 3 | 3 |

@@ -4,6 +4,7 @@ Generate SKILL.md files for all 23 MCP servers from the catalog.
 Run: python generate-mcp-skills.py
 """
 
+import sys
 import json
 import os
 from pathlib import Path
@@ -172,3 +173,9 @@ Run `hermes mcp list` to verify {name} is enabled and configured correctly.
 
 print(f"\nGenerated {len(servers)} MCP skills in {skills_dir}")
 print("Next: run `hermes skills audit` to validate, then `hermes skills check`")
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Tool for Hermes ecosystem")
+    parser.add_argument("--help", action="help", help="Show this help message")
+    args = parser.parse_args()

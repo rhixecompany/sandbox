@@ -213,3 +213,24 @@ Use one canonical registry plus generated projections and secret-safe validators
 - [ ] Phase 5 rate-limit resilience complete.
 - [ ] Phase 6 cross-client verification complete.
 - [ ] Phase 7 regression/completion report complete.
+
+## Risks
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|--------|------------|------------|
+| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
+| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
+| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+
+## Files to Create or Modify
+
+- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
+- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
+
+## Linked Specs
+
+- ../specs/comprehensive-hermes-maintenance-spec.md
+

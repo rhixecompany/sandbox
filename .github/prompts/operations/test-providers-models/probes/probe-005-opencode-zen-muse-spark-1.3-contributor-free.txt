@@ -1,0 +1,10 @@
+# Probe task #005 -- opencode-zen:muse-spark-1.3-contributor-free
+# Source: https://opencode.ai/zen/v1/models captured 2026-09-07T15:09:00.264933+00:00
+# Status: auth-failed-401/403
+# Knowledge cutoff: n/a
+# Context length: n/a
+# Max output: n/a
+# Reasoning: no
+
+# Exact invocation -- run in the foreground (probe < 30s expected):
+hermes chat --provider "opencode-zen" --model "muse-spark-1.3-contributor-free" -q "Answer in one paragraph: what is your knowledge cutoff date, what is your context length, do you support reasoning, and what is your max output tokens?" --oneshot

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+while [[ $# -gt 0 ]]; do case "$1" in --help|-h) echo "Usage: $0"; exit 0;; esac; shift; done
 # Run the agent/provider matrix against a single live cell to validate the integration.
 # Uses the default profile + openai-codex provider to confirm hermes chat --query-file works.
 root="$(cygpath -u "$(dirname "$0")/..")"

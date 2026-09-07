@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Inventory sensitive configuration filenames without exposing values."""
 
-from __future__ import annotations
+from __future__ import sys
+import annotations
 
 import argparse
 import json

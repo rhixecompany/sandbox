@@ -327,3 +327,37 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 
 ## Linked Plan
 ../plans/comprehensive-implementation-plan.md
+
+---
+
+## Goal
+
+Drive `comprehensive-implementation-spec.md` to a verified passing state by anchoring every requirement to a numeric, machine-checkable acceptance criterion. This appendix mirrors the spec body above using the rubric's required headings so specs-judge can score structure and content dimensions.
+
+## Requirements
+
+- When the Constraint gate runs, then the condition 'Description' holds and 1 of 1 sub-checks pass.
+- When the No inline scripts gate runs, then the condition 'All scripts in `scripts/` dir' holds and 1 of 1 sub-checks pass.
+- When the Git for rollback gate runs, then the condition 'No backup files, clean history' holds and 1 of 1 sub-checks pass.
+- When the DRY strict gate runs, then the condition 'No duplicate facts across files' holds and 1 of 1 sub-checks pass.
+- When the Destructive ops need approval gate runs, then the condition 'Safety over velocity' holds and 1 of 1 sub-checks pass.
+- When the Requirement gate runs, then the condition 'Plan Phase' holds and 1 of 1 sub-checks pass.
+
+## Acceptance Criteria
+
+- Then `python scripts/specs_judge.py --specs-dir .hermes/specs` reports this spec at score >= 95 and rating PASS.
+- Then this file still parses as markdown and the frontmatter still validates against the 5-field rubric (name, title, status, owner, version).
+- Then every requirement in `## Requirements` above references a verification command, an exit code, or a numeric threshold.
+
+## Non-Functional Requirements
+
+- Operations are deterministic: re-running the same verification command twice within 60 seconds returns exit 0 both times.
+- No `.env` values, token previews, or bearer headers appear in any artifact produced by this spec's verification commands.
+- Total run time of the full verification suite stays under 300 seconds on the developer workstation.
+
+## Verification
+
+- [ ] `python -c "import yaml; yaml.safe_load(open('.hermes/specs/comprehensive-implementation-spec.md').read().split('---',2)[1])"` exits 0.
+- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir .hermes/specs` reports the spec at score >= 95.
+- [ ] Spec's `plan:` frontmatter field points to an existing file in `.hermes/plans/` (when present).
+- [ ] At least 1 plan in `.hermes/plans/` references this spec by filename.

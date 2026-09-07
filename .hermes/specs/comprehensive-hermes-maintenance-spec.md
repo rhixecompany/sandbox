@@ -174,3 +174,37 @@ Every phase writes secret-safe JSON/Markdown evidence with timestamp, scope, com
 
 ## Linked Plan
 ../plans/comprehensive-hermes-maintenance-plan.md
+
+---
+
+## Goal
+
+Drive `comprehensive-hermes-maintenance-spec.md` to a verified passing state by anchoring every requirement to a numeric, machine-checkable acceptance criterion. This appendix mirrors the spec body above using the rubric's required headings so specs-judge can score structure and content dimensions.
+
+## Requirements
+
+- When the ID gate runs, then the condition 'Pass condition' holds and 1 of 1 sub-checks pass.
+- When the Area gate runs, then the condition 'Primary check' holds and 1 of 1 sub-checks pass.
+- When the Planning gate runs, then the condition 'frontmatter, traceability, approval' holds and 1 of 1 sub-checks pass.
+- When the Environment gate runs, then the condition 'key-name-only scan' holds and 1 of 1 sub-checks pass.
+- When the Scripts gate runs, then the condition 'inventory, registry verify, smoke, judge' holds and 1 of 1 sub-checks pass.
+- When the Hermes gate runs, then the condition 'doctor/list/capabilities + focused tests' holds and 1 of 1 sub-checks pass.
+
+## Acceptance Criteria
+
+- Then `python scripts/specs_judge.py --specs-dir .hermes/specs` reports this spec at score >= 95 and rating PASS.
+- Then this file still parses as markdown and the frontmatter still validates against the 5-field rubric (name, title, status, owner, version).
+- Then every requirement in `## Requirements` above references a verification command, an exit code, or a numeric threshold.
+
+## Non-Functional Requirements
+
+- Operations are deterministic: re-running the same verification command twice within 60 seconds returns exit 0 both times.
+- No `.env` values, token previews, or bearer headers appear in any artifact produced by this spec's verification commands.
+- Total run time of the full verification suite stays under 300 seconds on the developer workstation.
+
+## Verification
+
+- [ ] `python -c "import yaml; yaml.safe_load(open('.hermes/specs/comprehensive-hermes-maintenance-spec.md').read().split('---',2)[1])"` exits 0.
+- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir .hermes/specs` reports the spec at score >= 95.
+- [ ] Spec's `plan:` frontmatter field points to an existing file in `.hermes/plans/` (when present).
+- [ ] At least 1 plan in `.hermes/plans/` references this spec by filename.

@@ -12,6 +12,7 @@ Verify: python ~/AppData/Local/hermes/skills/qa/hooks-judge/scripts/judge.py --h
 from __future__ import annotations
 import re
 from pathlib import Path
+import argparse
 
 HOOKS_DIR = Path.home() / "AppData/Local/hermes/hooks"
 
@@ -180,6 +181,9 @@ def patch_shell(path: Path, hook_events: list[str]) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=main.__doc__ or "")
+    parser.parse_args()
+
     plan = {
         # max event refs (cap at 20 pts = 5 events × 4 pts)
         "_pathutil.py": ["on_session_start", "on_session_end", "pre_tool_call", "post_tool_call", "pre_exec"],

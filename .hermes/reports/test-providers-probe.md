@@ -34,16 +34,19 @@ openai-api (5 credentials):
   #5  api-key-2            api_key manual
 
 openai-codex (3 credentials):
-  #1  device_code          oauth   device_code ←
-  #2  openai-codex-oauth-2 oauth   device_code rate-limited usage_limit_reached (429) (29d 12h left)
-  #3  alexanderrhixe30@gmail.com oauth   device_code
+  #1  device_code          oauth   device_code rate-limited usage_limit_reached (429) (27d 6h left)
+  #2  openai-codex-oauth-2 oauth   device_code rate-limited usage_limit_reached (429) (27d 9h left)
+  #3  alexanderrhixe30@gmail.com oauth   device_code rate-limited usage_limit_reached (429) (27d 17h left)
 
-opencode-zen (2 credentials):
-  #1  OPENCODE_ZEN_API_KEY api_key env:OPENCODE_ZEN_API_KEY ←
-  #2  zen-backup           api_key manual
+opencode-zen (4 credentials):
+  #1  OPENCODE_ZEN_API_KEY api_key env:OPENCODE_ZEN_API_KEY
+  #2  api-key-3            api_key manual auth failed ModelError (401) (re-auth may be required) ←
+  #3  api-key-4            api_key manual auth failed ModelError (401) (re-auth may be required)
+  #4  api-key-1            api_key manual auth failed ModelError (401) (re-auth may be required)
 
-openrouter (1 credentials):
+openrouter (2 credentials):
   #1  OPENROUTER_API_KEY   api_key env:OPENROUTER_API_KEY ←
+  #2  api-key-2            api_key manual
 
 xai (2 credentials):
   #1  api-key-1            api_key manual auth failed (403) (re-auth may be required) ←
@@ -63,8 +66,8 @@ exit=0
 └─────────────────────────────────────────────────────────┘
 
 ◆ Paths
-  Config:       C:\Users\Alexa\AppData\Local\hermes\profiles\ops\config.yaml
-  Secrets:      C:\Users\Alexa\AppData\Local\hermes\profiles\ops\.env
+  Config:       C:\Users\Alexa\AppData\Local\hermes\config.yaml
+  Secrets:      C:\Users\Alexa\AppData\Local\hermes\.env
   Install:      C:\Users\Alexa\AppData\Local\hermes\hermes-agent
 
 ◆ API Keys
@@ -81,11 +84,11 @@ exit=0
   Anthropic      (not set)
 
 ◆ Model
-  Model:        {'base_url': 'https://opencode.ai/zen/v1', 'default': 'nemotron-3-ultra-free', 'provider': 'opencode-zen', 'api_mode': 'chat_completions'}
+  Model:        {'base_url': 'https://chatgpt.com/backend-api/codex', 'default': 'gpt-5.6-luna', 'provider': 'openai-codex'}
   Max turns:    150
 
 ◆ Display
-  Personality:  concise
+  Personality:  teacher
   Reasoning:    on
   Bell:         complete=on, prompt=off
   User preview: first 2 line(s), last 2 line(s)
@@ -113,6 +116,9 @@ exit=0
   Telegram:     configured
   Discord:      not configured
 
+◆ Skill Settings
+  hermes.skill.skills.enabled true  [hermes-skills]
+
 ────────────────────────────────────────────────────────────
   hermes config edit     # Edit config file
   hermes config set <key> <value>
@@ -132,8 +138,8 @@ exit=0
   Project:      C:\Users\Alexa\AppData\Local\hermes\hermes-agent
   Python:       3.13.14
   .env file:    ✓ exists
-  Model:        nemotron-3-ultra-free
-  Provider:     OpenCode Zen
+  Model:        gpt-5.6-luna
+  Provider:     ChatGPT or Codex Subscription
 
 ◆ API Keys
   OpenRouter    ✓ sk-o...0554
@@ -163,12 +169,12 @@ exit=0
   Nous Portal   ✓ logged in
     Portal URL: https://portal.nousresearch.com
     Inference:  https://inference-api.nousresearch.com/v1
-    Access exp: 2026-09-05 12:58:27 W. Central Africa Standard Time
-    Key exp:    2026-09-05 12:58:27 W. Central Africa Standard Time
+    Access exp: 2026-09-07 16:44:30 W. Central Africa Standard Time
+    Key exp:    2026-09-07 16:44:30 W. Central Africa Standard Time
     Refresh:    yes
   OpenAI Codex  ✓ logged in
-    Auth file:  C:\Users\Alexa\AppData\Local\hermes\profiles\ops\auth.json
-    Refreshed:  2026-09-05 09:10:57 W. Central Africa Standard Time
+    Auth file:  C:\Users\Alexa\AppData\Local\hermes\auth.json
+    Refreshed:  2026-09-04 22:30:54 W. Central Africa Standard Time
   Qwen OAuth    ✗ not logged in (run: qwen auth qwen-oauth)
     Auth file:  C:\Users\Alexa\.qwen\oauth_creds.json
     Error:      Qwen CLI credentials not found. Run 'qwen auth qwen-oauth' first.
@@ -176,8 +182,8 @@ exit=0
     Region:     global
     Access exp: 2027-08-31T16:20:05.475000+00:00
   xAI OAuth     ✓ logged in
-    Auth file:  C:\Users\Alexa\AppData\Local\hermes\profiles\ops\auth.json
-    Refreshed:  2026-09-05 10:33:23 W. Central Africa Standard Time
+    Auth file:  C:\Users\Alexa\AppData\Local\hermes\auth.json
+    Refreshed:  2026-09-07 15:02:32 W. Central Africa Standard Time
 
 ◆ Nous Tool Gateway
   Your Nous Portal account has no usable paid credits, so managed web, image, TTS, STT, browser, and Modal tools is unavailable. Add credits or update billing at https://portal.nousresearch.com/billing. If you recently bought credits, run `hermes model` to refresh Hermes.
@@ -226,16 +232,18 @@ exit=0
   WhatsApp      ✓ configured (plugin)
 
 ◆ Gateway Service
-  Status:       ✗ stopped
+  Status:       ✓ running
   Manager:      manual process
+  PID(s):       6728
 
 ◆ Scheduled Jobs
-  Jobs:         0
+  Jobs:         0 active, 2 total
 
 ◆ Sessions
-  Active:       0
+  Active:       1 session(s)
+  Last activity:   2026-08-24
   Slots:        1/10 in use
-                desktop           20260905_115455_ac280c   16m
+                tui               20260907_151439_50277d   48m
 
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
@@ -261,10 +269,11 @@ exit=0
   ✓ Python 3.13.14
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (1.3 MB)
+    → state.db: WAL journal mode (429.7 MB)
     → cron/executions.db: WAL journal mode (20.0 KB)
     → projects.db: WAL journal mode (44.0 KB)
-    → verification_evidence.db: WAL journal mode (32.0 KB)
+    → verification_evidence.db: WAL journal mode (552.0 KB)
+    → kanban.db: WAL journal mode (112.0 KB)
   ✓ Virtual environment active
   ✓ Version files consistent (0.21.0)
 
@@ -282,9 +291,9 @@ exit=0
   ✓ discord.py (optional)
 
 ◆ Configuration Files
-  ✓ ~/AppData/Local/hermes/profiles/ops/.env file exists
+  ✓ ~/AppData/Local/hermes/.env file exists
   ✓ API key or custom endpoint configured
-  ✓ ~/AppData/Local/hermes/profiles/ops/config.yaml exists
+  ✓ ~/AppData/Local/hermes/config.yaml exists
   ✓ Config version up to date (v40)
   ✓ No deprecated config keys or env vars
 
@@ -301,20 +310,21 @@ exit=0
   ✓ xAI OAuth (logged in)
 
 ◆ Directory Structure
-  ✓ ~/AppData/Local/hermes/profiles/ops directory exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/cron/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/sessions/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/logs/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/skills/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/memories/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/SOUL.md exists (persona configured)
-  ✓ ~/AppData/Local/hermes/profiles/ops/memories/ directory exists
-  ✓ MEMORY.md exists (4161 chars)
-  ✓ USER.md exists (1237 chars)
-  ✓ ~/AppData/Local/hermes/profiles/ops/state.db exists (1 sessions)
-    → state.db logical size 1.3 MB, 328 pages, 37 free, WAL 2.7 MB
-    → 172 messages, 1 sessions, journal_mode=wal
+  ✓ ~/AppData/Local/hermes directory exists
+  ✓ ~/AppData/Local/hermes/cron/ exists
+  ✓ ~/AppData/Local/hermes/sessions/ exists
+  ✓ ~/AppData/Local/hermes/logs/ exists
+  ✓ ~/AppData/Local/hermes/skills/ exists
+  ✓ ~/AppData/Local/hermes/memories/ exists
+  ✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
+  ✓ ~/AppData/Local/hermes/memories/ directory exists
+  ✓ MEMORY.md exists (4920 chars)
+  ✓ USER.md exists (1754 chars)
+  ✓ ~/AppData/Local/hermes/state.db exists (127 sessions)
+    → state.db logical size 429.7 MB, 110,015 pages, 14,371 free, WAL 64.0 MB
+    → 10,948 messages, 127 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
+  ⚠ WAL file is large (64 MB) (may indicate missed checkpoints)
 
 ◆ External Tools
   ✓ git
@@ -323,9 +333,8 @@ exit=0
   ✓ Node.js
   ✓ agent-browser (browser automation)
   ✓ Playwright Chromium (browser engine)
-  ⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 0 moderate — run: cd C:\Users\Alexa\AppData\Local\hermes\hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 1 high, 1 moderate — build-tool advisory; clears via lockfile bump)
-    →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
+  ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
+  ✓ web workspace deps (1 moderate vulnerability)
   ✓ ui-tui workspace deps (no known vulnerabilities)
 
 ◆ API Connectivity
@@ -334,7 +343,6 @@ exit=0
   ✓ OpenRouter API
   ✓ DeepSeek            
   ✓ Hugging Face        
-  ✓ OpenCode Zen        
   ✓ gemini              
   ✓ ollama-cloud        
   ⚠ xai                  (HTTP 403)
@@ -349,6 +357,7 @@ exit=0
   ✓ desktop_ui
   ✓ file
   ✓ memory
+  ✓ opencode
   ✓ project
   ✓ session_search
   ✓ skills
@@ -375,7 +384,7 @@ exit=0
 
 ◆ Skills Hub
   ✓ Skills Hub directory exists
-  ✓ Lock file OK (13 hub-installed skill(s))
+  ✓ Lock file OK (24 hub-installed skill(s))
   ✓ GitHub token configured (authenticated API access)
 
 ◆ Memory Provider
@@ -383,25 +392,24 @@ exit=0
 
 ◆ Profiles
   ✓ 13 profile(s) found
-  ✓   alexa: nemotron-3-ultra-free, no alias
+  ✓   alexa: gateway running, nemotron-3-ultra-free, no alias
   ✓   code-architect: nemotron-3-ultra-free, no alias
-  ✓   creative-director: nemotron-3-ultra-free, no alias
-  ✓   cto: nemotron-3-ultra-free, no alias
-  ✓   designer: nemotron-3-ultra-free, no alias
-  ✓   dev: nemotron-3-ultra-free, no alias
-  ✓   exec-assistant: nemotron-3-ultra-free, no alias
-  ✓   ops: nemotron-3-ultra-free, no alias
-  ✓   patient-tutor: nemotron-3-ultra-free, no alias
-  ✓   pm: nemotron-3-ultra-free, no alias
-  ✓   qa: nemotron-3-ultra-free, no alias
-  ✓   research-analyst: nemotron-3-ultra-free, no alias
-  ✓   security: nemotron-3-ultra-free, no alias
+  ✓   creative-director: gateway running, nemotron-3-ultra-free, no alias
+  ✓   cto: gateway running, nemotron-3-ultra-free, no alias
+  ✓   designer: gateway running, nemotron-3-ultra-free, no alias
+  ✓   dev: gateway running, nemotron-3-ultra-free, no alias
+  ✓   exec-assistant: gateway running, nemotron-3-ultra-free, no alias
+  ✓   ops: gateway running, deepseek-v4-flash-free, no alias
+  ✓   patient-tutor: gateway running, nemotron-3-ultra-free, no alias
+  ✓   pm: gateway running, nemotron-3-ultra-free, no alias
+  ✓   qa: gateway running, nemotron-3-ultra-free, no alias
+  ✓   research-analyst: gateway running, nemotron-3-ultra-free, no alias
+  ✓   security: gateway running, nemotron-3-ultra-free, no alias
 
 ────────────────────────────────────────────────────────────
-  Found 2 issue(s) to address:
+  Found 1 issue(s) to address:
 
-  1. Browser tools (agent-browser) has 1 npm vulnerability
-  2. web workspace has 2 npm vulnerabilities
+  1. Large WAL file — run 'hermes doctor --fix' to checkpoint
 
   Tip: run 'hermes doctor --fix' to auto-fix what's possible.
 
@@ -425,10 +433,11 @@ exit=0
   ✓ Python 3.13.14
   ✓ SQLite 3.53.1
     → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (1.3 MB)
+    → state.db: WAL journal mode (429.7 MB)
     → cron/executions.db: WAL journal mode (20.0 KB)
     → projects.db: WAL journal mode (44.0 KB)
-    → verification_evidence.db: WAL journal mode (32.0 KB)
+    → verification_evidence.db: WAL journal mode (552.0 KB)
+    → kanban.db: WAL journal mode (112.0 KB)
   ✓ Virtual environment active
   ✓ Version files consistent (0.21.0)
 
@@ -446,9 +455,9 @@ exit=0
   ✓ discord.py (optional)
 
 ◆ Configuration Files
-  ✓ ~/AppData/Local/hermes/profiles/ops/.env file exists
+  ✓ ~/AppData/Local/hermes/.env file exists
   ✓ API key or custom endpoint configured
-  ✓ ~/AppData/Local/hermes/profiles/ops/config.yaml exists
+  ✓ ~/AppData/Local/hermes/config.yaml exists
   ✓ Config version up to date (v40)
   ✓ No deprecated config keys or env vars
 
@@ -465,20 +474,22 @@ exit=0
   ✓ xAI OAuth (logged in)
 
 ◆ Directory Structure
-  ✓ ~/AppData/Local/hermes/profiles/ops directory exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/cron/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/sessions/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/logs/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/skills/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/memories/ exists
-  ✓ ~/AppData/Local/hermes/profiles/ops/SOUL.md exists (persona configured)
-  ✓ ~/AppData/Local/hermes/profiles/ops/memories/ directory exists
-  ✓ MEMORY.md exists (4161 chars)
-  ✓ USER.md exists (1237 chars)
-  ✓ ~/AppData/Local/hermes/profiles/ops/state.db exists (1 sessions)
-    → state.db logical size 1.3 MB, 328 pages, 37 free, WAL 2.7 MB
-    → 172 messages, 1 sessions, journal_mode=wal
+  ✓ ~/AppData/Local/hermes directory exists
+  ✓ ~/AppData/Local/hermes/cron/ exists
+  ✓ ~/AppData/Local/hermes/sessions/ exists
+  ✓ ~/AppData/Local/hermes/logs/ exists
+  ✓ ~/AppData/Local/hermes/skills/ exists
+  ✓ ~/AppData/Local/hermes/memories/ exists
+  ✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
+  ✓ ~/AppData/Local/hermes/memories/ directory exists
+  ✓ MEMORY.md exists (4920 chars)
+  ✓ USER.md exists (1754 chars)
+  ✓ ~/AppData/Local/hermes/state.db exists (127 sessions)
+    → state.db logical size 429.7 MB, 110,015 pages, 14,371 free, WAL 64.0 MB
+    → 10,948 messages, 127 sessions, journal_mode=wal
     → FTS tables: messages_fts, messages_fts_trigram
+  ⚠ WAL file is large (64 MB) (may indicate missed checkpoints)
+  ✓ WAL checkpoint performed (65536K → 65536K)
 
 ◆ External Tools
   ✓ git
@@ -487,9 +498,8 @@ exit=0
   ✓ Node.js
   ✓ agent-browser (browser automation)
   ✓ Playwright Chromium (browser engine)
-  ⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 0 moderate — run: cd C:\Users\Alexa\AppData\Local\hermes\hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 1 high, 1 moderate — build-tool advisory; clears via lockfile bump)
-    →   ^ build-time tooling (not runtime); if manual npm remediation errors with an arborist crash it's a known npm bug — clears via a lockfile bump
+  ✓ Browser tools (agent-browser) deps (no known vulnerabilities)
+  ✓ web workspace deps (1 moderate vulnerability)
   ✓ ui-tui workspace deps (no known vulnerabilities)
 
 ◆ API Connectivity
@@ -498,7 +508,6 @@ exit=0
   ✓ OpenRouter API
   ✓ DeepSeek            
   ✓ Hugging Face        
-  ✓ OpenCode Zen        
   ✓ gemini              
   ✓ ollama-cloud        
   ⚠ xai                  (HTTP 403)
@@ -513,6 +522,7 @@ exit=0
   ✓ desktop_ui
   ✓ file
   ✓ memory
+  ✓ opencode
   ✓ project
   ✓ session_search
   ✓ skills
@@ -539,7 +549,7 @@ exit=0
 
 ◆ Skills Hub
   ✓ Skills Hub directory exists
-  ✓ Lock file OK (13 hub-installed skill(s))
+  ✓ Lock file OK (24 hub-installed skill(s))
   ✓ GitHub token configured (authenticated API access)
 
 ◆ Memory Provider
@@ -547,25 +557,22 @@ exit=0
 
 ◆ Profiles
   ✓ 13 profile(s) found
-  ✓   alexa: nemotron-3-ultra-free, no alias
+  ✓   alexa: gateway running, nemotron-3-ultra-free, no alias
   ✓   code-architect: nemotron-3-ultra-free, no alias
-  ✓   creative-director: nemotron-3-ultra-free, no alias
-  ✓   cto: nemotron-3-ultra-free, no alias
-  ✓   designer: nemotron-3-ultra-free, no alias
-  ✓   dev: nemotron-3-ultra-free, no alias
-  ✓   exec-assistant: nemotron-3-ultra-free, no alias
-  ✓   ops: nemotron-3-ultra-free, no alias
-  ✓   patient-tutor: nemotron-3-ultra-free, no alias
-  ✓   pm: nemotron-3-ultra-free, no alias
-  ✓   qa: nemotron-3-ultra-free, no alias
-  ✓   research-analyst: nemotron-3-ultra-free, no alias
-  ✓   security: nemotron-3-ultra-free, no alias
+  ✓   creative-director: gateway running, nemotron-3-ultra-free, no alias
+  ✓   cto: gateway running, nemotron-3-ultra-free, no alias
+  ✓   designer: gateway running, nemotron-3-ultra-free, no alias
+  ✓   dev: gateway running, nemotron-3-ultra-free, no alias
+  ✓   exec-assistant: gateway running, nemotron-3-ultra-free, no alias
+  ✓   ops: gateway running, deepseek-v4-flash-free, no alias
+  ✓   patient-tutor: gateway running, nemotron-3-ultra-free, no alias
+  ✓   pm: gateway running, nemotron-3-ultra-free, no alias
+  ✓   qa: gateway running, nemotron-3-ultra-free, no alias
+  ✓   research-analyst: gateway running, nemotron-3-ultra-free, no alias
+  ✓   security: gateway running, nemotron-3-ultra-free, no alias
 
 ────────────────────────────────────────────────────────────
-  Found 2 issue(s) to address:
-
-  1. Browser tools (agent-browser) has 1 npm vulnerability
-  2. web workspace has 2 npm vulnerabilities
+  Fixed 1 issue(s).
 
 
 
@@ -579,72 +586,108 @@ exit=0
   ║                       Last 30 days                       ║
   ╚══════════════════════════════════════════════════════════╝
 
-  Period: Sep 05, 2026 — Sep 05, 2026
+  Period: Aug 19, 2026 — Sep 07, 2026
 
   📋 Overview
   ────────────────────────────────────────────────────────
-  Sessions:          1             Messages:        172
-  Tool calls:        82            User messages:   4
-  Input tokens:      203,756       Output tokens:   22,779
-  Total tokens:      7,321,831
-  Avg msgs/session:  172.0
+  Sessions:          127           Messages:        7,840
+  Tool calls:        4,727         User messages:   293
+  Input tokens:      25,581,146    Output tokens:   2,041,741
+  Total tokens:      454,882,121
+  Active time:       ~138.6d       Avg session:     ~1.1d
+  Avg msgs/session:  61.7
 
   💰 Cost
   ────────────────────────────────────────────────────────
-  Unknown:            1 session(s) (no pricing data)
+  Estimated:          ~$0.01
+  Included:           19 session(s) (subscription — no provider invoice)
+  Unknown:            92 session(s) (no pricing data)
 
   🤖 Models Used
   ────────────────────────────────────────────────────────
   Model                          Sessions       Tokens
-  inkling:free                          1    7,321,831
+  gpt-5.6-luna                         22  162,756,620
+  minimax-m3:free                      21   96,557,445
+  nemotron-3-ultra-free                15   74,613,193
+  longcat-2.0:free                      5   53,427,495
+  inkling:free                          1   19,093,259
+  solar-pro4:free                       6   16,990,735
+  nemotron-3.5-lightning-free           3   14,530,917
+  step-3.7-flash:free                  10   10,697,379
+  nemotron-3-nano-omni-30b-a3b          4    5,129,752
+  mimo-v2.5-free                        2      313,261
+  MiniMax-M3                            1      308,152
+  big-pickle                            2      256,734
+  gemini-2.5-flash                      1       72,945
+  gpt-5.4-mini                          1       52,719
+  free                                  2       51,046
+  nemotron-3-ultra-550b-a55b:f          6       30,469
+  gpt-5-mini                            0            0
 
   📱 Platforms
   ────────────────────────────────────────────────────────
   Platform       Sessions   Messages         Tokens
-  desktop               1        172      6,388,825
+  tui                  91      5,202    292,627,613
+  cli                  28      2,033    133,043,210
+  desktop               4        386     18,133,315
+  subagent              3        216      6,715,178
+  telegram              1          3         49,807
 
   🔧 Top Tools
   ────────────────────────────────────────────────────────
   Tool                            Calls        %
-  terminal                           32    39.0%
-  read_file                          15    18.3%
-  write_file                          9    11.0%
-  execute_code                        7     8.5%
-  search_files                        7     8.5%
-  skill_view                          4     4.9%
-  patch                               2     2.4%
-  memory                              2     2.4%
-  clarify                             2     2.4%
-  grep                                1     1.2%
-  skills_list                         1     1.2%
+  terminal                        2,115    27.4%
+  read_file                       1,413    18.3%
+  skill_view                      1,210    15.7%
+  tool_call                         705     9.1%
+  search_files                      534     6.9%
+  patch                             301     3.9%
+  execute_code                      270     3.5%
+  mcp__filesystem__read_text_file      262     3.4%
+  write_file                        178     2.3%
+  mcp__filesystem__list_directory      144     1.9%
+  mcp__filesystem__list_directory_with_sizes       80     1.0%
+  todo                               70     0.9%
+  mcp__filesystem__search_files       62     0.8%
+  mcp__filesystem__read_multiple_files       56     0.7%
+  tool_describe                      47     0.6%
+  ... and 24 more tools
 
   🧠 Top Skills
   ────────────────────────────────────────────────────────
   Skill                          Loads   Edits   Last used
-  mcp-sequential-thinking            1       0      Sep 05
-  plan                               1       0      Sep 05
-  brainstorming                      1       0      Sep 05
-  using-superpowers                  1       0      Sep 05
-  Distinct skills: 4  Loads: 4  Edits: 0
+  using-superpowers                 42       0      Sep 07
+  user-communication-preferenc      41       0      Sep 07
+  hermes-agent                      41       0      Sep 07
+  scripts-judge                     33       0      Sep 07
+  session-audit-report              31       0      Sep 07
+  mcp-filesystem                    30       0      Sep 07
+  mcp-sequential-thinking           29       0      Sep 07
+  mcp-memory                        29       0      Sep 07
+  systematic-debugging              28       0      Sep 07
+  subagent-driven-development       28       0      Sep 07
+  Distinct skills: 164  Loads: 1,210  Edits: 0
 
   📅 Activity Patterns
   ────────────────────────────────────────────────────────
-  Mon                  0
+  Mon  ███████         38
   Tue                  0
-  Wed                  0
+  Wed  █               1
   Thu                  0
-  Fri                  0
-  Sat  ███████████████ 1
+  Fri  ███             15
+  Sat  ███████████████ 73
   Sun                  0
 
-  Peak hours: 11AM (1)
-  Active days: 1
+  Peak hours: 5AM (27), 4AM (16), 5PM (10), 6PM (9), 7PM (8)
+  Active days: 7
+  Best streak: 2 consecutive days
 
   🏆 Notable Sessions
   ────────────────────────────────────────────────────────
-  Most messages        172 msgs           (Sep 05, 20260905_115455_)
-  Most tokens          207,321 tokens     (Sep 05, 20260905_115455_)
-  Most tool calls      82 calls           (Sep 05, 20260905_115455_)
+  Longest session      18.7d              (Aug 19, 20260819_213515_)
+  Most messages        591 msgs           (Aug 31, 20260831_194116_)
+  Most tokens          3,416,929 tokens   (Sep 05, 20260905_055505_)
+  Most tool calls      326 calls          (Aug 31, 20260831_194116_)
 
 
 ```
@@ -662,8 +705,8 @@ exit=0
 exit=0
 ```
 
-  Current model:    nemotron-3-ultra-free
-  Active provider:  OpenCode Zen
+  Current model:    gpt-5.6-luna
+  Active provider:  ChatGPT or Codex Subscription
 
 
   Select provider:
@@ -676,7 +719,7 @@ exit=0
   (○)  5. NovitaAI (Cloud: Model API, Agent Sandbox, GPU Cloud)
   (○)  6. LM Studio (Local desktop app with built-in model server)
   (○)  7. Anthropic (Claude models via API key or Claude Code)
-  (○)  8. OpenAI ▸ (ChatGPT/Codex subscription or direct OpenAI API)
+  (●)  8. OpenAI ▸ (ChatGPT/Codex subscription or direct OpenAI API)  ← currently active
   (○)  9. Qwen ▸ (Qwen Cloud / DashScope, Coding Plan, Token Plan & Qwen CLI OAuth)
   (○) 10. xAI Grok ▸ (Direct API or SuperGrok / Premium+ OAuth)
   (○) 11. Xiaomi MiMo (MiMo-V2.5 and V2 models: pro, omni, flash)
@@ -695,7 +738,7 @@ exit=0
   (○) 24. Arcee AI (Trinity models, direct API)
   (○) 25. GMI Cloud (Multi-model direct API)
   (○) 26. Kilo Code (Kilo Gateway API)
-  (●) 27. OpenCode ▸ (Zen pay-as-you-go, Go subscription, or free tier)  ← currently active
+  (○) 27. OpenCode ▸ (Zen pay-as-you-go, Go subscription, or free tier)
   (○) 28. AWS Bedrock (Claude, Nova, Llama, DeepSeek; IAM or API key)
   (○) 29. Azure Foundry (OpenAI-style or Anthropic-style endpoint, your Azure AI deployment)
   (○) 30. Vercel AI Gateway (Multi-model aggregator)
@@ -723,7 +766,7 @@ Select provider:
     5. NovitaAI (Cloud: Model API, Agent Sandbox, GPU Cloud)
     6. LM Studio (Local desktop app with built-in model server)
     7. Anthropic (Claude models via API key or Claude Code)
-    8. OpenAI ▸ (ChatGPT/Codex subscription or direct OpenAI API)
+  → 8. OpenAI ▸ (ChatGPT/Codex subscription or direct OpenAI API)  ← currently active
     9. Qwen ▸ (Qwen Cloud / DashScope, Coding Plan, Token Plan & Qwen CLI OAuth)
     10. xAI Grok ▸ (Direct API or SuperGrok / Premium+ OAuth)
     11. Xiaomi MiMo (MiMo-V2.5 and V2 models: pro, omni, flash)
@@ -742,7 +785,7 @@ Select provider:
     24. Arcee AI (Trinity models, direct API)
     25. GMI Cloud (Multi-model direct API)
     26. Kilo Code (Kilo Gateway API)
-  → 27. OpenCode ▸ (Zen pay-as-you-go, Go subscription, or free tier)  ← currently active
+    27. OpenCode ▸ (Zen pay-as-you-go, Go subscription, or free tier)
     28. AWS Bedrock (Claude, Nova, Llama, DeepSeek; IAM or API key)
     29. Azure Foundry (OpenAI-style or Anthropic-style endpoint, your Azure AI deployment)
     30. Vercel AI Gateway (Multi-model aggregator)
@@ -762,7 +805,7 @@ Select provider:
     44. Configure auxiliary models...
     45. Leave unchanged
 
-Choice [1-45] (27): 
+Choice [1-45] (8): 
 No change.
 
 ```

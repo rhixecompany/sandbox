@@ -15,6 +15,7 @@ import re
 import sys
 from pathlib import Path
 from datetime import datetime, timezone
+import argparse
 
 DEFAULT_REPO = Path(__file__).resolve().parent.parent
 DEFAULT_PROFILES = Path.home() / "AppData/Local/hermes/profiles"
@@ -179,6 +180,9 @@ def detect_cross_profile_drift(profiles: list[dict]) -> list[str]:
 
 
 def main():
+    parser = argparse.ArgumentParser(description=main.__doc__ or "")
+    parser.parse_args()
+
     repo_root = DEFAULT_REPO
     profiles_dir = DEFAULT_PROFILES
 

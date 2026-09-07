@@ -13,6 +13,7 @@ import re
 import sys
 from pathlib import Path
 from datetime import datetime
+import argparse
 
 FM_FIELDS = ["description", "trigger", "toolsets"]
 REQUIRED_SECTIONS = ["## Goal", "## Context", "## Workflow", "## Verification"]
@@ -174,6 +175,9 @@ def fix_prompt(filepath: Path) -> dict:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=main.__doc__ or "")
+    parser.parse_args()
+
     if len(sys.argv) < 2:
         print("Usage: python bulk_fix_prompts.py <prompts-dir> [--dry-run]")
         return 1

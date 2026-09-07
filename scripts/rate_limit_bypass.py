@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """rate_limit_bypass.py — Provider-aware rate-limit / usage-limit bypass layer.
 
 Wraps every model invocation in a tiny retry/rotation wrapper:

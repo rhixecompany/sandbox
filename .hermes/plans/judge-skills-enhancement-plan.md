@@ -1,3 +1,13 @@
+---
+title: Judge Skills Enhancement Plan
+description: Phase-by-phase execution plan for judge-skills-enhancement-plan. Decomposes the matching spec into verifiable tasks with explicit gates.
+date: 2026-09-07
+author: Alexa
+status: in_progress
+profile: code-architect
+model: nemotron-3-ultra-free
+---
+
 # Judge Skills Enhancement Plan
 
 ## Overview
@@ -25,6 +35,7 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 - Spec has ≥1 `## Linked Plan` or plan reference: 20 pts
 - Missing both directions: 0 pts
 
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
 ## Phase 2: plans-judge Enhancement
 
 ### New Requirements
@@ -45,6 +56,7 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 - Inline spec references to valid files: 15 pts
 - No spec references: 0 pts
 
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
 ## Phase 3: prompts-judge Enhancement
 
 ### New Requirements
@@ -69,6 +81,7 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 - New dimensions: Category Enforcement, Asset Co-location, Asset Verification, Cross-judge Gates
 - Each dimension: PASS=20, FAIL=0 (hard gates)
 
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
 ## Phase 4: Fix Issues & Achieve ≥98 Score
 
 ### For each judge:
@@ -78,12 +91,14 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 4. Create test fixtures that score 100
 5. Verify all three judges score ≥98 on their respective corpuses
 
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
 ## Phase 5: Integration Testing
 - Run all three judges in sequence
 - Verify cross-validation works
 - Ensure no circular dependencies
 - Document any remaining edge cases
 
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
 ## Verification Gates
 - [ ] specs-judge scores ≥98 on `.hermes/specs/`
 - [ ] plans-judge scores ≥98 on `.hermes/plans/`
@@ -93,3 +108,20 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 - [ ] Prompt asset verification works
 - [ ] Template/script co-location enforced
 - [ ] Category enforcement works
+
+## Risks
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|--------|------------|------------|
+| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
+| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
+| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+
+## Files to Create or Modify
+
+- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
+- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
+

@@ -1,1502 +1,513 @@
 {
-  "ts": "2026-08-31T19:37:15.318104Z",
-  "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts",
+  "ts": "2026-09-07T18:09:13.964282Z",
+  "dir": "scripts",
   "threshold": 70,
-  "count": 217,
-  "avg": 77.9,
-  "passed": 169,
-  "syntax_failed": 28,
+  "count": 62,
+  "avg": 88.8,
+  "passed": 60,
+  "syntax_failed": 5,
+  "quick_commands": {
+    "registry": ".hermes\\reports\\hermes-quick-commands.json",
+    "scripts": 62,
+    "commands": 227,
+    "generated": 62,
+    "covered": 62,
+    "smoke_enabled": true,
+    "smoked": 62,
+    "smoke_failed": 0,
+    "issues": [
+      "find-locking-pid: script index 63 is out of range",
+      "fix-blank-lines: script index 68 is out of range",
+      "fix-canonical: script index 69 is out of range",
+      "fix-class-e: script index 70 is out of range",
+      "fix-collapsed-bullets: script index 71 is out of range",
+      "fix-collapsed-fences: script index 72 is out of range",
+      "fix-concatenated-headings: script index 73 is out of range",
+      "fix-copilot-frontmatter: script index 74 is out of range",
+      "fix-crlf-frontmatter: script index 75 is out of range",
+      "fix-duplicate-hooks: script index 76 is out of range",
+      "fix-eslint-mismatches: script index 77 is out of range",
+      "fix-fail-skills: script index 78 is out of range",
+      "fix-fence-glue: script index 79 is out of range",
+      "fix-fence-lang: script index 80 is out of range",
+      "fix-frontmatter: script index 65 is out of range",
+      "fix-frontmatter-plan: script index 81 is out of range",
+      "fix-frontmatter-yaml: script index 64 is out of range",
+      "fix-github-prompts: script index 82 is out of range",
+      "fix-github-prompts-inline-lists: script index 83 is out of range",
+      "fix-github-prompts-remaining: script index 84 is out of range",
+      "fix-glued-headings: script index 85 is out of range",
+      "fix-glued-headings-batch2: script index 86 is out of range",
+      "fix-glued-headings-manual: script index 87 is out of range",
+      "fix-line-endings: script index 66 is out of range",
+      "fix-midline-collapses: script index 88 is out of range",
+      "fix-missing-closers: script index 89 is out of range",
+      "fix-orphaned-brackets: script index 90 is out of range",
+      "fix-profile-hook-path: script index 91 is out of range",
+      "fix-profile-hook-path2: script index 92 is out of range",
+      "fix-prompt-artifacts: script index 93 is out of range",
+      "fix-prompt-library: script index 94 is out of range",
+      "fix-prompts: script index 95 is out of range",
+      "fix-prompts-comprehensive: script index 96 is out of range",
+      "fix-repo-body: script index 97 is out of range",
+      "fix-repo-body2: script index 98 is out of range",
+      "fix-residual-glue: script index 99 is out of range",
+      "fix-skills: script index 67 is out of range",
+      "fix-tail-generic: script index 100 is out of range",
+      "fix-tail-glue: script index 101 is out of range",
+      "fix-tail-glue2: script index 102 is out of range",
+      "fix-tail-manual: script index 103 is out of range",
+      "fix-yaml-frontmatter: script index 104 is out of range",
+      "full-health-check: script index 105 is out of range",
+      "generate-context-files: script index 106 is out of range",
+      "generate-session-report: script index 107 is out of range",
+      "generate-skills: script index 108 is out of range",
+      "generate-vscode-audit-report: script index 109 is out of range",
+      "generate-vscode-configs: script index 110 is out of range",
+      "health-check: script index 111 is out of range",
+      "hello: script index 112 is out of range",
+      "hello-world: script index 113 is out of range",
+      "hermes-quick-commands: script index 114 is out of range",
+      "hook-health-check: script index 115 is out of range",
+      "hq: script index 116 is out of range",
+      "instruction-quick-commands: script index 117 is out of range",
+      "inventory-agents: script index 118 is out of range",
+      "inventory-prompts: script index 119 is out of range",
+      "joystick-event-router: script index 120 is out of range",
+      "joystick-handler: script index 121 is out of range",
+      "lcs: script index 122 is out of range",
+      "list-cli-tools: script index 123 is out of range",
+      "memory-repair: script index 124 is out of range",
+      "merge-config: script index 125 is out of range",
+      "merge-skill: script index 126 is out of range",
+      "model-discovery: script index 127 is out of range",
+      "normalize-frontmatter: script index 128 is out of range",
+      "normalize-lf: script index 129 is out of range",
+      "normalize-plan-frontmatter: script index 130 is out of range",
+      "normalize-plans: script index 131 is out of range",
+      "normalize-prompt-actions: script index 132 is out of range",
+      "omo-doctor: script index 133 is out of range",
+      "patch-all-fail-sections: script index 134 is out of range",
+      "patch-fail-structure: script index 135 is out of range",
+      "phase1-inventory: script index 136 is out of range",
+      "phase2-analysis: script index 137 is out of range",
+      "phase3-changelog: script index 138 is out of range",
+      "phase3-gate-check: script index 139 is out of range",
+      "phase4-reconstruct: script index 140 is out of range",
+      "phase4-verify: script index 141 is out of range",
+      "phase5-postapply: script index 142 is out of range",
+      "prime-factors: script index 143 is out of range",
+      "profile-discover: script index 144 is out of range",
+      "project: script index 145 is out of range",
+      "prompt-audit-all: script index 146 is out of range",
+      "prompt-batch-audit: script index 149 is out of range",
+      "prompt-fix-metadata: script index 150 is out of range",
+      "prompt-inventory: script index 147 is out of range",
+      "prompt-repair-frontmatter: script index 148 is out of range",
+      "purge-dead-keys: script index 151 is out of range",
+      "python-quality-mcp-server: script index 152 is out of range",
+      "quarantine-skills: script index 153 is out of range",
+      "refresh-hook-allowlist: script index 154 is out of range",
+      "register-command: script index 155 is out of range",
+      "register-instruction-personalities: script index 156 is out of range",
+      "remediate-skills: script index 157 is out of range",
+      "remove-flat-duplicates: script index 158 is out of range",
+      "repair-codex-skills: script index 160 is out of range",
+      "repair-doubled-pipes: script index 161 is out of range",
+      "repair-frontmatter-closes: script index 159 is out of range",
+      "repair-yaml: script index 162 is out of range",
+      "repair-yaml-v2: script index 163 is out of range",
+      "repo-init: script index 164 is out of range",
+      "repo-plan-spec: script index 165 is out of range",
+      "repo-planning-quick-commands: script index 166 is out of range",
+      "reset-runtime: script index 167 is out of range",
+      "restore-repo-tables: script index 168 is out of range",
+      "review-pending-skills: script index 169 is out of range",
+      "run-cron-safe: script index 170 is out of range",
+      "score-docs: script index 171 is out of range",
+      "server-bootstrap: script index 172 is out of range",
+      "session-audit: script index 176 is out of range",
+      "session-audit-227: script index 173 is out of range",
+      "session-end-capture: script index 174 is out of range",
+      "session-start-capture: script index 175 is out of range",
+      "setup-cto: script index 177 is out of range",
+      "setup-integrations: script index 178 is out of range",
+      "ship-this-idea: script index 179 is out of range",
+      "skill-audit: script index 180 is out of range",
+      "skills-audit: script index 181 is out of range",
+      "soul-propagate: script index 182 is out of range",
+      "split-glued-headings: script index 183 is out of range",
+      "status: script index 184 is out of range",
+      "sweep-corruption: script index 185 is out of range",
+      "sync-governance-audit-hooks: script index 186 is out of range",
+      "sync-profile-configs: script index 187 is out of range",
+      "sync-profile-hooks: script index 188 is out of range",
+      "sync-profile-memories: script index 189 is out of range",
+      "test: script index 190 is out of range",
+      "test-models: script index 191 is out of range",
+      "tooling-config-mcp-server: script index 193 is out of range",
+      "tooling-full-check: script index 194 is out of range",
+      "tooling-lint-mcp-server: script index 195 is out of range",
+      "tooling-quick-commands: script index 192 is out of range",
+      "trim-banking: script index 196 is out of range",
+      "trim-remaining: script index 197 is out of range",
+      "trim-research-reports: script index 198 is out of range",
+      "trim-research-reports-final: script index 199 is out of range",
+      "uninstall: script index 200 is out of range",
+      "update-agents-md: script index 201 is out of range",
+      "validate-prompt-inventory: script index 204 is out of range",
+      "validate-prompts: script index 205 is out of range",
+      "validate-services: script index 206 is out of range",
+      "validate-skills: script index 202 is out of range",
+      "validate-vscode-configs: script index 207 is out of range",
+      "validate-vscode-json: script index 208 is out of range",
+      "validate-yaml: script index 203 is out of range",
+      "vault-key-sync: script index 209 is out of range",
+      "vault-key-validate: script index 210 is out of range",
+      "verify: script index 213 is out of range",
+      "verify-canonical: script index 214 is out of range",
+      "verify-frontmatter: script index 212 is out of range",
+      "verify-frontmatter-normalization: script index 211 is out of range",
+      "verify-phase3: script index 215 is out of range",
+      "verify-prompt-library: script index 216 is out of range",
+      "verify-sync: script index 217 is out of range",
+      "verify-templates-after-create: script index 218 is out of range",
+      "vision-fallback: script index 219 is out of range",
+      "win-ocr: script index 220 is out of range"
+    ],
+    "passed": false,
+    "smoke_results": [
+      {
+        "key": "add-hooks-to-config",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "add-mcp-servers",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "agents-fix-discover",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "agents-fix-report",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "align-tables",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "analyze-hf-models",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "analyze-prompt-library",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "analyze-prompt-library-v2",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "analyze-prompts",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "analyze-skill-codeblocks",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "apply-pending-memory",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "apply-pending-skills",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "apply-vscode-customizations",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "audit-227",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "audit-agents-hashes",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "audit-canonical",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "audit-fix-remediate-safe",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "audit-prompts",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "audit-vscode-config",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "audit-vscode-config-v2",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "batch-delete-profiles",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "batch-localappdata-skillcode",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "batch-remediate",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "batch-remediate-42-59",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "batch-rewrite-worst",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "batch-skill-judge",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "batch-update-hermes-paths",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "benchmark-models",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "benchmark-providers",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "boost-near-pass-refs",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "bootstrap",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "build-env",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "build-path-mapping",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "build-registry",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "bulk-install-skills",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "categorize-skills",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "check-handle",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "classify-fences",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "cleanup-disk",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "cleanup-inventory",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "cleanup-placeholder-stubs",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "comprehensive-enhance",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "configure-hermes",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "consolidate-skills",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "convert-groq-docs",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "copilot-mcp-server",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "create-missing-memories",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "create-missing-souls",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "dedupe-skills",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "dev-init-code-samples",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "docs-inventory-report",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "e2e-session-test",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "enhance-prompts",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "enhance-sections",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "env-sync",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "eslint-count",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "execute-all-prompts",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "execute-workflow",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "fence-check",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "find-lock",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "pathutil",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "key": "verify-and-dedupe",
+        "status": "PASS",
+        "returncode": 0
+      }
+    ]
+  },
   "results": [
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\_agents_fix_discover.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 283,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\_agents_fix_report.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 224,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\_pathutil.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 14,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 82,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\_verify_and_dedupe.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 80,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\add_hooks_to_config.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 57,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\add_mcp_servers.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 96,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\align_tables.py",
+      "file": "scripts\\agent-provider-matrix-smokecheck.sh",
       "score": 88,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 12,
+        "cli": 14,
         "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 181,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\analyze_hf_models.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
+        "documentation": 14,
         "dry": 20
       },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 49,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\analyze_prompt_library.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 288,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\analyze_prompt_library_v2.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 206,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\analyze_prompts.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 251,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\analyze_skill_codeblocks.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 108,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\apply_pending_memory.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 12,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 101,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\apply_pending_skills.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 158,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\apply_vscode_customizations.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 278,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\audit-227.ts",
-      "score": 40,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "ts",
-      "syntax_ok": true,
-      "lines": 61,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\audit-agents-hashes.ps1",
-      "score": 40,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "ps1",
-      "syntax_ok": true,
-      "lines": 19,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\audit_canonical.py",
-      "score": 76,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 148,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\audit_fix_remediate_safe.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 204,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\audit_prompts.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 300,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\audit_vscode_config.py",
-      "score": 66,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 123,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\audit_vscode_config_v2.py",
-      "score": 70,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 6,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 80,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\batch_delete_profiles.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 68,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\batch_localappdata_skillcode.py",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 12,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 103,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\batch_remediate.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
+      "lang": "bash",
       "syntax_ok": true,
       "lines": 14,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\batch_remediate_42_59.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 202,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\batch_rewrite_worst.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 200,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\batch_skill_judge.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 155,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\batch_update_hermes_paths.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 158,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\benchmark_models.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 193,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\benchmark_providers.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 165,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\boost_near_pass_refs.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 150,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\bootstrap.sh",
-      "score": 54,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 16
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 167,
-      "syntax_error": "<3>WSL (9 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\build_env.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 145,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\build_path_mapping.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 110,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\build_registry.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 189,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\bulk-install-skills.sh",
-      "score": 38,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 40,
-      "syntax_error": "<3>WSL (12 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\categorize_skills.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 183,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\check_handle.ps1",
-      "score": 46,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 6,
-        "dry": 20
-      },
-      "lang": "ps1",
-      "syntax_ok": true,
-      "lines": 15,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\classify_fences.py",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 55,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\cleanup_disk.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 306,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\cleanup_inventory.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 335,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\cleanup_placeholder_stubs.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 127,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\comprehensive_enhance.py",
-      "score": 82,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 385,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\configure_hermes.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 206,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\consolidate_skills.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 157,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\convert_groq_docs.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 443,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\copilot_mcp_server.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 188,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\create_missing_memories.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 235,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\create_missing_souls.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 104,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\dedupe_skills.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 207,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\dev-init-code-samples.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 100,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\docs-inventory-report.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 141,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\e2e-session-test.sh",
-      "score": 50,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 12,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 88,
-      "syntax_error": "<3>WSL (15 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\enhance_prompts.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 299,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\enhance_sections.py",
-      "score": 68,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 140,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\env_sync.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 175,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\eslint_count.py",
-      "score": 70,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 6,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 37,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\execute_all_prompts.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 277,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\execute_workflow.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 176,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fence_check.py",
-      "score": 66,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 27,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\find_lock.ps1",
-      "score": 46,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 6,
-        "dry": 20
-      },
-      "lang": "ps1",
-      "syntax_ok": true,
-      "lines": 48,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\find_locking_pid.ps1",
-      "score": 40,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "ps1",
-      "syntax_ok": true,
-      "lines": 1,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix-frontmatter-yaml.ts",
-      "score": 40,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "ts",
-      "syntax_ok": true,
-      "lines": 68,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix-frontmatter.py",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 46,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix-line-endings.sh",
-      "score": 38,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 9,
-      "syntax_error": "<3>WSL (18 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix-skills.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 233,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_blank_lines.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 96,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_canonical.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 364,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_class_e.py",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 97,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_collapsed_bullets.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 91,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_collapsed_fences.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 369,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_concatenated_headings.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 199,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_copilot_frontmatter.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 194,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_crlf_frontmatter.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 141,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_duplicate_hooks.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 33,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_eslint_mismatches.py",
-      "score": 64,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 6,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 64,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_fail_skills.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 139,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_fence_glue.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 98,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_fence_lang.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 99,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_frontmatter_plan.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 62,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_github_prompts.py",
-      "score": 82,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 457,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_github_prompts_inline_lists.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 134,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_github_prompts_remaining.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 178,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_glued_headings.py",
-      "score": 82,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 388,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_glued_headings_batch2.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 143,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_glued_headings_manual.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 204,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_midline_collapses.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 138,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_missing_closers.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 90,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_orphaned_brackets.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 156,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_profile_hook_path.py",
-      "score": 66,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 39,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_profile_hook_path2.py",
-      "score": 66,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 32,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_prompt_artifacts.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 211,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_prompt_library.py",
+      "file": "scripts\\agent_provider_matrix.py",
       "score": 85,
       "rating": "PASS",
       "dims": {
@@ -1508,123 +519,75 @@
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 625,
+      "lines": 779,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_prompts.py",
-      "score": 88,
+      "file": "scripts\\apply_quick_commands.py",
+      "score": 92,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 12,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 20
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 96,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\augment_plans_with_required_sections.py",
+      "score": 72,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 4,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": false,
+      "lines": 217,
+      "syntax_error": "  File \"scripts\\augment_plans_with_required_sections.py\", line 29\n    from __future__ import sys\n                           ^^^\nSyntaxError: future feature sys is not defined\n"
+    },
+    {
+      "file": "scripts\\augment_specs_with_required_sections.py",
+      "score": 72,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 4,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": false,
+      "lines": 177,
+      "syntax_error": "  File \"scripts\\augment_specs_with_required_sections.py\", line 20\n    from __future__ import sys\n                           ^^^\nSyntaxError: future feature sys is not defined\n"
+    },
+    {
+      "file": "scripts\\auth_inventory.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
         "error_handling": 20,
         "documentation": 20,
         "dry": 16
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 227,
+      "lines": 288,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_prompts_comprehensive.py",
-      "score": 82,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 477,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_repo_body.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 47,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_repo_body2.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 52,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_residual_glue.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 144,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_tail_generic.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 114,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_tail_glue.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 156,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_tail_glue2.py",
+      "file": "scripts\\bulk_fix_plans.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
@@ -1640,7 +603,7 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_tail_manual.py",
+      "file": "scripts\\bulk_fix_prompts.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
@@ -1652,1195 +615,27 @@
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 207,
+      "lines": 212,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\fix_yaml_frontmatter.py",
+      "file": "scripts\\comprehensive-implementation.py",
       "score": 82,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 12,
-        "error_handling": 14,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 103,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\full-health-check.sh",
-      "score": 42,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 8,
-        "documentation": 14,
-        "dry": 16
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 136,
-      "syntax_error": "<3>WSL (21 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\generate_context_files.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 14,
-        "documentation": 12,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 191,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\generate_session_report.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
         "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 372,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\generate_skills.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
         "error_handling": 12,
         "documentation": 20,
         "dry": 10
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 377,
+      "lines": 345,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\generate_vscode_audit_report.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 113,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\generate_vscode_configs.py",
-      "score": 77,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 5
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 1344,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\health_check.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 171,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\hello.py",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 13,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\hello_world.py",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 9,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\hook-health-check.sh",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 92,
-      "syntax_error": "<3>WSL (24 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\instruction-quick-commands.sh",
-      "score": 34,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 14,
-        "dry": 16
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 133,
-      "syntax_error": "<3>WSL (27 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\inventory-agents.ps1",
-      "score": 40,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "ps1",
-      "syntax_ok": true,
-      "lines": 5,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\inventory_prompts.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 39,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\joystick_event_router.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 391,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\joystick_handler.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 317,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\lcs.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 103,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\list-cli-tools.sh",
-      "score": 38,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 5,
-      "syntax_error": "<3>WSL (30 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\memory_repair.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 148,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\merge_config.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 72,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\merge_skill.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 174,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\model_discovery.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 173,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\normalize-frontmatter.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 273,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\normalize_lf.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 44,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\normalize_plan_frontmatter.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 42,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\normalize_plans.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 183,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\normalize_prompt_actions.py",
-      "score": 86,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 14,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 33,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\omo_doctor.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 135,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\patch_all_fail_sections.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 142,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\patch_fail_structure.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 87,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\phase1_inventory.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 155,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\phase2_analysis.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 222,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\phase3_changelog.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 144,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\phase3_gate_check.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 160,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\phase4-reconstruct.ts",
-      "score": 40,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "ts",
-      "syntax_ok": true,
-      "lines": 37,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\phase4_verify.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 229,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\phase5_postapply.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 128,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\prime_factors.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 67,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\profile_discover.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 92,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\project.sh",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 4,
-        "cli": 14,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 94,
-      "syntax_error": "<3>WSL (33 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\prompt-audit-all.ts",
-      "score": 40,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
-      },
-      "lang": "ts",
-      "syntax_ok": true,
-      "lines": 43,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\prompt-inventory.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 149,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\prompt-repair-frontmatter.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 54,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\prompt_batch_audit.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 66,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\prompt_fix_metadata.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 83,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\purge_dead_keys.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 94,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py",
-      "score": 70,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 14,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 270,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\quarantine_skills.sh",
-      "score": 50,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 12,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 56,
-      "syntax_error": "<3>WSL (36 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\register-command.sh",
-      "score": 26,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 189,
-      "syntax_error": "<3>WSL (39 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\register-instruction-personalities.py",
-      "score": 82,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 343,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\remediate_skills.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 81,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\remove_flat_duplicates.py",
-      "score": 86,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 14,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 66,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repair-frontmatter-closes.py",
-      "score": 78,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 64,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repair_codex_skills.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 179,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repair_doubled_pipes.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 85,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repair_yaml.py",
-      "score": 92,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 93,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repair_yaml_v2.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 155,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repo-init.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 328,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repo-plan-spec.py",
-      "score": 90,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 343,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\repo-planning-quick-commands.sh",
-      "score": 46,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 8,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 35,
-      "syntax_error": "<3>WSL (42 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\reset-runtime.sh",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 4,
-        "cli": 14,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 49,
-      "syntax_error": "<3>WSL (45 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\restore_repo_tables.py",
-      "score": 84,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 86,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\review_pending_skills.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 104,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\run-cron-safe.sh",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 4,
-        "cli": 14,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 63,
-      "syntax_error": "<3>WSL (48 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\score-docs.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 259,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\server-bootstrap.sh",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 4,
-        "cli": 14,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 81,
-      "syntax_error": "<3>WSL (51 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\session-audit-227.ts",
-      "score": 42,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 6,
-        "dry": 16
-      },
-      "lang": "ts",
-      "syntax_ok": true,
-      "lines": 164,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\session-end-capture.sh",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 24,
-      "syntax_error": "<3>WSL (54 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\session-start-capture.sh",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 26,
-      "syntax_error": "<3>WSL (57 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\session_audit.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 275,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\setup-cto.sh",
-      "score": 62,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 14,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 10
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 416,
-      "syntax_error": "<3>WSL (60 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\setup-integrations.sh",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 4,
-        "cli": 14,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 83,
-      "syntax_error": "<3>WSL (63 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\ship-this-idea.sh",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 22,
-      "syntax_error": "<3>WSL (66 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\skill_audit.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 139,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\skills-audit.py",
+      "file": "scripts\\disk_cleanup.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -2856,199 +651,23 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\soul_propagate.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 123,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\split_glued_headings.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 148,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\status.sh",
-      "score": 50,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 12,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 95,
-      "syntax_error": "<3>WSL (69 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\sweep_corruption.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 103,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\sync_governance_audit_hooks.py",
-      "score": 66,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 73,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\sync_profile_configs.py",
-      "score": 88,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 190,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\sync_profile_hooks.py",
-      "score": 66,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 6,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 37,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\sync_profile_memories.py",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 138,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\test.sh",
-      "score": 56,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 14,
-        "error_handling": 8,
-        "documentation": 14,
-        "dry": 16
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 112,
-      "syntax_error": "<3>WSL (72 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\test_models.py",
-      "score": 96,
+      "file": "scripts\\docker_cleanup.py",
+      "score": 100,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
         "cli": 20,
         "error_handling": 20,
         "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 212,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling-quick-commands.sh",
-      "score": 46,
-      "rating": "FAIL",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 8,
-        "documentation": 14,
         "dry": 20
       },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 54,
-      "syntax_error": "<3>WSL (75 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py",
-      "score": 64,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 14,
-        "documentation": 20,
-        "dry": 10
-      },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 418,
+      "lines": 50,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_full_check.py",
+      "file": "scripts\\fanout.py",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -3060,27 +679,11 @@
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 325,
+      "lines": 337,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py",
-      "score": 64,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 14,
-        "documentation": 20,
-        "dry": 10
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 356,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\trim_banking.py",
+      "file": "scripts\\fix_provider_models.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -3092,171 +695,75 @@
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 130,
+      "lines": 208,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\trim_remaining.py",
-      "score": 96,
+      "file": "scripts\\generate-mcp-skills.py",
+      "score": 82,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
         "cli": 20,
-        "error_handling": 20,
+        "error_handling": 6,
         "documentation": 20,
         "dry": 16
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 150,
+      "lines": 181,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\trim_research_reports.py",
-      "score": 96,
+      "file": "scripts\\git_sync.sh",
+      "score": 84,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 127,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\trim_research_reports_final.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 145,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\uninstall.sh",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 85,
-      "syntax_error": "<3>WSL (78 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\update_agents_md.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 137,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\validate-skills.sh",
-      "score": 54,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
+        "cli": 14,
         "error_handling": 20,
         "documentation": 14,
         "dry": 16
       },
       "lang": "bash",
-      "syntax_ok": false,
-      "lines": 110,
-      "syntax_error": "<3>WSL (81 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\validate-yaml.sh",
-      "score": 58,
-      "rating": "WARN",
-      "dims": {
-        "syntax": 4,
-        "cli": 0,
-        "error_handling": 20,
-        "documentation": 14,
-        "dry": 20
-      },
-      "lang": "bash",
-      "syntax_ok": false,
-      "lines": 45,
-      "syntax_error": "<3>WSL (84 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\validate_prompt_inventory.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
       "syntax_ok": true,
-      "lines": 129,
+      "lines": 134,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\validate_prompts.py",
-      "score": 96,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 20,
-        "error_handling": 20,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 229,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\validate_services.py",
-      "score": 88,
+      "file": "scripts\\hermes-mcp-manager.py",
+      "score": 82,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
         "cli": 12,
         "error_handling": 20,
         "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 429,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes_config_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
         "dry": 16
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 227,
+      "lines": 254,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\validate_vscode_configs.py",
+      "file": "scripts\\hermes_diagnostic.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -3272,7 +779,23 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\validate_vscode_json.py",
+      "file": "scripts\\hermes_doctor.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 346,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\hermes_maintenance.py",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -3284,128 +807,256 @@
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 107,
+      "lines": 229,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\vault_key_sync.py",
-      "score": 80,
+      "file": "scripts\\hermes_quick_commands.py",
+      "score": 90,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 12,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 16
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 104,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\vault_key_validate.py",
-      "score": 74,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 4,
         "cli": 20,
         "error_handling": 20,
         "documentation": 20,
         "dry": 10
       },
       "lang": "python",
-      "syntax_ok": false,
-      "lines": 330,
-      "syntax_error": "  File \"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\vault_key_validate.py\", line 301\n    global TESTERS\n    ^^^^^^^^^^^^^^\nSyntaxError: name 'TESTERS' is used prior to global declaration\n"
+      "syntax_ok": true,
+      "lines": 399,
+      "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify-frontmatter-normalization.py",
-      "score": 78,
+      "file": "scripts\\hq.py",
+      "score": 94,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 12,
-        "error_handling": 20,
-        "documentation": 6,
+        "cli": 20,
+        "error_handling": 14,
+        "documentation": 20,
         "dry": 20
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 78,
+      "lines": 40,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify-frontmatter.ts",
-      "score": 40,
-      "rating": "FAIL",
+      "file": "scripts\\instruction_audit.py",
+      "score": 90,
+      "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
       },
-      "lang": "ts",
+      "lang": "python",
       "syntax_ok": true,
-      "lines": 65,
+      "lines": 335,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify.sh",
-      "score": 36,
-      "rating": "FAIL",
+      "file": "scripts\\instruction_fix.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 245,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\inventory_sensitive_configs.py",
+      "score": 84,
+      "rating": "PASS",
       "dims": {
         "syntax": 4,
-        "cli": 0,
-        "error_handling": 8,
-        "documentation": 8,
-        "dry": 16
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 20
       },
-      "lang": "bash",
+      "lang": "python",
       "syntax_ok": false,
-      "lines": 147,
-      "syntax_error": "<3>WSL (87 - Relay) ERROR: CreateProcessCommon:818: execvpe(/bin/bash) failed: No such file or directory\n"
+      "lines": 89,
+      "syntax_error": "  File \"scripts\\inventory_sensitive_configs.py\", line 4\n    from __future__ import sys\n                           ^^^\nSyntaxError: future feature sys is not defined\n"
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify_canonical.py",
-      "score": 88,
+      "file": "scripts\\judge_hooks.py",
+      "score": 96,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 12,
+        "cli": 20,
         "error_handling": 20,
         "documentation": 20,
         "dry": 16
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 137,
+      "lines": 197,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify_phase3.py",
-      "score": 72,
-      "rating": "PASS",
-      "dims": {
-        "syntax": 20,
-        "cli": 0,
-        "error_handling": 12,
-        "documentation": 20,
-        "dry": 20
-      },
-      "lang": "python",
-      "syntax_ok": true,
-      "lines": 80,
-      "syntax_error": ""
-    },
-    {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify_prompt_library.py",
+      "file": "scripts\\judge_plans.py",
       "score": 88,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 266,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\judge_plugins.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 210,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\judge_prompts.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 556,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\judge_scripts.py",
+      "score": 82,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 350,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\judge_specs.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 274,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\log_analysis.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 163,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\mcp_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 243,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\mcp_sync.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 256,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\migrate_prompts.py",
+      "score": 82,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
         "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 421,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\ollama_wire.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
         "error_handling": 20,
         "documentation": 20,
         "dry": 16
@@ -3416,67 +1067,419 @@
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify_sync.py",
-      "score": 68,
-      "rating": "WARN",
+      "file": "scripts\\package_inspector.py",
+      "score": 96,
+      "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 0,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 219,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\plugins_hooks_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 249,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\profile_config_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 260,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\profile_config_fix.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 312,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\prompt_dry_audit.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 221,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\prompt_dry_bulk_fields.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
         "error_handling": 12,
         "documentation": 20,
         "dry": 16
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 145,
+      "lines": 105,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\verify_templates_after_create.py",
-      "score": 86,
+      "file": "scripts\\prompt_dry_fix.py",
+      "score": 88,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 12,
-        "error_handling": 14,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 101,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\provider_executor.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 225,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\provider_executor_noninteractive.sh",
+      "score": 74,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 20,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 46,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\rate_limit_bypass.py",
+      "score": 90,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 398,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\reconcile_mcp_registry.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 188,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\refresh_hermes_hook_allowlist.py",
+      "score": 92,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
         "documentation": 20,
         "dry": 20
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 68,
+      "lines": 37,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\vision_fallback.py",
-      "score": 92,
+      "file": "scripts\\remediate_hooks_score.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 212,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\stage_missing_lsps.sh",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 14,
+        "error_handling": 20,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 61,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\subagent_dispatcher.py",
+      "score": 82,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 352,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\submodule_commit.sh",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 14,
+        "error_handling": 20,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 51,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\sync-mcp-config.ts",
+      "score": 60,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 0,
+        "documentation": 8,
+        "dry": 20
+      },
+      "lang": "ts",
+      "syntax_ok": true,
+      "lines": 28,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\sync-mcp-configs.ps1",
+      "score": 80,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 14,
+        "error_handling": 20,
+        "documentation": 6,
+        "dry": 20
+      },
+      "lang": "ps1",
+      "syntax_ok": true,
+      "lines": 25,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\sync_env_config.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 222,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\sync_hermes_root_mcp.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 128,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\test_session_capture.py",
+      "score": 76,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 4,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 20
+      },
+      "lang": "python",
+      "syntax_ok": false,
+      "lines": 95,
+      "syntax_error": "Sorry: IndentationError: unexpected indent (test_session_capture.py, line 51)"
+    },
+    {
+      "file": "scripts\\validate-mcp-consistency.ts",
+      "score": 60,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 0,
+        "documentation": 8,
+        "dry": 20
+      },
+      "lang": "ts",
+      "syntax_ok": true,
+      "lines": 20,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\validate-mcp-servers.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 278,
+      "syntax_error": ""
+    },
+    {
+      "file": "scripts\\validate_maintenance_artifacts.py",
+      "score": 80,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 4,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": false,
+      "lines": 114,
+      "syntax_error": "  File \"scripts\\validate_maintenance_artifacts.py\", line 8\n    from __future__ import sys\n                           ^^^\nSyntaxError: future feature sys is not defined\n"
+    },
+    {
+      "file": "scripts\\verify-full-implementation.py",
+      "score": 88,
       "rating": "PASS",
       "dims": {
         "syntax": 20,
         "cli": 12,
         "error_handling": 20,
         "documentation": 20,
-        "dry": 20
+        "dry": 16
       },
       "lang": "python",
       "syntax_ok": true,
-      "lines": 84,
+      "lines": 243,
       "syntax_error": ""
     },
     {
-      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\win_ocr.ps1",
-      "score": 40,
-      "rating": "FAIL",
+      "file": "scripts\\verify_prompt_corpus.py",
+      "score": 96,
+      "rating": "PASS",
       "dims": {
         "syntax": 20,
-        "cli": 0,
-        "error_handling": 0,
-        "documentation": 0,
-        "dry": 20
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
       },
-      "lang": "ps1",
+      "lang": "python",
       "syntax_ok": true,
-      "lines": 31,
+      "lines": 135,
       "syntax_error": ""
     }
   ]

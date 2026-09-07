@@ -1,9 +1,9 @@
-# Prompts Audit — 2026-09-05 06:56 UTC
+# Prompts Audit — 2026-09-07 17:49 UTC
 
 Dir: `.github\prompts` | Threshold: 70
 Count: 236 | Avg: 91.7 | Passed: 236
 Unbalanced-fence files: 2
-Structure: 174/236 valid
+Structure: 175/236 valid
 
 | File | Score | Rating | FM | Struct | Sections | Content | CQ | Coloc | Verify | Cross | DRY |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -67,6 +67,7 @@ Structure: 174/236 valid
 | `update-implementation-plan.prompt.md` | 92 | PASS | 10 | 30 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
 | `update-specification.prompt.md` | 92 | PASS | 10 | 30 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
 | `disk-space-cleanup.prompt.md` | 92 | PASS | 10 | 30 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
+| `test-providers-models.prompt.md` | 88 | PASS | 10 | 30 | 10 | 10 | 4 | 15 | 0 | 7 | 2 |
 | `postgresql-optimization.prompt.md` | 92 | PASS | 10 | 30 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
 | `power-bi-performance-troubleshooting.prompt.md` | 92 | PASS | 10 | 30 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
 | `quality-gate-debugger.prompt.md` | 92 | PASS | 10 | 30 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
@@ -139,7 +140,6 @@ Structure: 174/236 valid
 | `structured-autonomy-plan.prompt.md` | 87 | PASS | 10 | 25 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
 | `sync-hermes-opencode.prompt.md` | 87 | PASS | 10 | 25 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
 | `tasksync.prompt.md` | 87 | PASS | 10 | 25 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |
-| `test-providers-models.prompt.md` | 93 | PASS | 10 | 25 | 7 | 10 | 8 | 15 | 9 | 7 | 2 |
 | `tldr-prompt.prompt.md` | 96 | PASS | 10 | 25 | 10 | 10 | 8 | 15 | 9 | 7 | 2 |
 | `update-avm-modules-in-bicep.prompt.md` | 102 | PASS | 10 | 25 | 10 | 10 | 8 | 15 | 15 | 7 | 2 |
 | `what-context-needed.prompt.md` | 87 | PASS | 10 | 25 | 10 | 10 | 8 | 15 | 0 | 7 | 2 |

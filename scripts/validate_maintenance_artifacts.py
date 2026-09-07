@@ -5,7 +5,8 @@ The validator checks frontmatter, cross-references, required sections, and
 secret-safe output. It never reads or prints values from environment files.
 """
 
-from __future__ import annotations
+from __future__ import sys
+import annotations
 
 import argparse
 import json

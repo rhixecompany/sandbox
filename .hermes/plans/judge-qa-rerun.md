@@ -56,3 +56,8 @@ Confirm all scores ≥ threshold.
 - [ ] All QA skills judged
 - [ ] All scores ≥ 95
 - [ ] No regressions
+
+## Linked Specs
+
+- ../specs/comprehensive-hermes-maintenance-spec.md
+

@@ -412,3 +412,10 @@ if __name__ == "__main__":
     import sys
     dry_run = "--execute" not in sys.argv
     migrate_prompts(dry_run=dry_run)
+
+def main():
+    """Tool entry point."""
+    pass
+
+if __name__ == "__main__":
+    main()

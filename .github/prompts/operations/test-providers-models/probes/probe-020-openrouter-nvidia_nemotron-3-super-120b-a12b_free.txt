@@ -1,0 +1,10 @@
+# Probe task #020 -- openrouter:nvidia/nemotron-3-super-120b-a12b:free
+# Source: https://openrouter.ai/api/v1/models captured 2026-09-07T15:09:01.258191+00:00
+# Status: valid
+# Knowledge cutoff: n/a
+# Context length: 262144
+# Max output: 235929
+# Reasoning: yes
+
+# Exact invocation -- run in the foreground (probe < 30s expected):
+hermes chat --provider "openrouter" --model "nvidia/nemotron-3-super-120b-a12b:free" -q "Answer in one paragraph: what is your knowledge cutoff date, what is your context length, do you support reasoning, and what is your max output tokens?" --oneshot

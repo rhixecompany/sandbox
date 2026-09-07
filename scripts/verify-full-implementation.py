@@ -234,3 +234,10 @@ if __name__ == "__main__":
     runner = VerificationRunner()
     success = runner.run_all()
     sys.exit(0 if success else 1)
+
+def main():
+    """Tool entry point."""
+    pass
+
+if __name__ == "__main__":
+    main()

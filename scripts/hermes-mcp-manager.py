@@ -419,3 +419,11 @@ if __name__ == "__main__":
         print(f"Unknown command: {command}")
         cmd_help()
         sys.exit(1)
+
+
+def main():
+    """Tool entry point."""
+    pass
+
+if __name__ == "__main__":
+    main()

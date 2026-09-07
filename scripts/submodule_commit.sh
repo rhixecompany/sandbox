@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euo pipefail
+while [[ $# -gt 0 ]]; do case "$1" in --help|-h) echo "Usage: $0"; exit 0;; esac; shift; done
 # Submodule batch commit: stage + commit identical changes across all 13 submodules.
 # Each submodule is on its own `development` branch. Changes are the auto-commit
 # hook replicating root instruction files.

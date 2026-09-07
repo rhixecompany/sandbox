@@ -1,3 +1,13 @@
+---
+title: Comprehensive Implementation Spec — goal-using-superpowers-brainstormin.txt
+description: Phase-by-phase execution plan for 2026-09-05_goal-using-superpowers-full. Decomposes the matching spec into verifiable tasks with explicit gates.
+date: 2026-09-07
+author: Alexa
+status: in_progress
+profile: code-architect
+model: nemotron-3-ultra-free
+---
+
 # Comprehensive Implementation Spec — goal-using-superpowers-brainstormin.txt
 
 > Generated: 2026-09-05 | Source: `goal-using-superpowers-brainstormin.txt` (all 12 lines: 6 goals + 6 subgoals) | Profile: ops | Authorization: full execution (destructive authorized, git push/docker cleanup included)
@@ -109,3 +119,27 @@
 - [PASS] Concise / action-first format (no fluff; results first, explanation minimal)
 
 Status: ALL 6 GOALS + ALL 6 SUBGOALS implemented at spec/plan/execution level. Background tasks running. Score target: 99+ (judge skills will be run on artifacts; fix loop included).
+
+## Risks
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|--------|------------|------------|
+| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
+| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
+| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+
+## Files to Create or Modify
+
+- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
+- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
+
+## Linked Specs
+
+- ../specs/comprehensive-hermes-maintenance-spec.md
+
+## Verification
+
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
