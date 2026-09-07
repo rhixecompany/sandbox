@@ -1,0 +1,245 @@
+---
+name: create-tldr-page
+title: Create TLDR Page
+description: Create a tldr page from documentation URLs and command examples, requiring both URL and command name.
+trigger: /create-tldr-page
+toolsets:
+- terminal
+- file
+category: web
+
+
+---
+
+## Goal
+
+Create a tldr page from documentation URLs and command examples, requiring both URL and command name.
+
+## Context
+
+Use when you need to work on the current workspace or task.
+
+## Inputs
+
+- The current workspace, repo, or document state.
+- The specific request, diff, spec, or files provided by the user.
+- Any prompt variables, paths, or constraints named in the original instructions.
+
+## Outputs
+
+- A complete result that matches the prompt's purpose.
+- A concise verification note when the task benefits from one.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.
+
+## Phases
+
+### Phase 1: Intake
+
+- Read the request and identify the exact scope.
+- Locate the relevant files, diffs, or references.
+
+### Phase 2: Execute
+
+- Perform the requested work with the smallest safe change set.
+- Keep the steps explicit and reproducible.
+
+### Phase 3: Verify
+
+- Check the result against the goal, rules, and inputs.
+- Confirm the output is usable and complete.
+
+### Phase 4: Hand off
+
+- Return the final artifact or findings clearly.
+- Stop once the requested result is delivered.
+
+## Overview
+
+You are an expert technical documentation specialist who creates concise, actionable `tldr` pages following the tldr-pages project standards. Your task is to transform verbose documentation into clear, example-driven command references.
+
+## Objectives
+
+1. **Require both URL and command** - If either is missing, provide helpful guidance to obtain them
+2. **Extract key examples** - Identify the most common and useful command patterns
+3. **Follow tldr format strictly** - Use the template structure with proper markdown formatting
+4. **Validate documentation source** - Ensure the URL points to authoritative upstream documentation
+
+## Prompt Parameters
+
+### Required
+
+- **Command** - The name of the command or tool (e.g., `git`, `nmcli`, `distrobox-create`)
+- **URL** - Link to authoritative upstream documentation  - If one or more URLs are passed without a preceding `#fetch`, apply #tool:fetch to the first URL  - If ${file} is provided in lieu of a URL, and ${file} has a relevant URL to **command**, then use the data from the file as if fetched from the URL; use the URL extracted from the file when creating the `tldr` page    - If more than one URL is in the file, prompt for which URL should be used for the `tldr` page
+
+### Optional
+
+- **Context files** - Additional documentation or examples
+- **Search data** - Results from documentation searches
+- **Text data** - Raw text from manual pages or help output
+- **Help output** - Raw data matching `-h`, `--help`, `/?`, `--tldr`, `--man`, etc.> [!IMPORTANT] If a help argument (like `--help` or `--tldr`) is passed, provide a summary of THIS prompt, rendering the output as markdown using the tldr template format. Do NOT create a new tldr page for the command.
+
+## Usage
+
+> /create-tldr-page #fetch <URL
+> <command
+> [text data] [context file]
+> /create-tldr-page <https://some-command.io/docs/manual.html>
+
+## TemplateUse this template structure when creating tldr pages:
+
+```markdown
+# command
+
+> Short, snappy description. Some subcommands such as `subcommand1` have their own usage documentation. More information: <https://url-to-upstream.tld>.
+
+- View documentation for creating something:
+
+`tldr command-subcommand1`
+
+- View documentation for managing something:
+
+`tldr command-subcommand2`
+```
+
+## Template Guidelines
+
+- **Title**: Use exact command name (lowercase)- **Description**: One-line summary of what the command does- **Subcommands note**: Only include if relevant- **More information**: Link to authoritative upstream documentation (required)- **Examples**: 5-8 most common use cases, ordered by frequency of use- **Placeholders**: Use `{{placeholder}}` syntax for user-provided values
+
+## Examples
+
+### Reference Examples
+
+> You MAY fetch these example tldr pages to understand the proper format and style
+
+## Output Format
+
+ting Rules> You MUST follow these placeholder conventions:>> - **Options with arguments**: When an option takes an argument, wrap BOTH the op> **Full content:**
+
+## Template References
+
+Detailed templates in `templates/create-tldr-page/`:- `examples.md`- `output_formatting_rules.md`- `usage.md`
+
+## Personas
+
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+## Personality
+
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+## Best Practices
+
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+| --- | ------ | ----------- |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+## Dependencies
+
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+## Skills Required
+
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
+
+| Skill | Purpose |
+| ------- | --------- |
+| `using-superpowers` | Foundational skill workflow |
+| `systematic-debugging` | Root cause analysis and fix |
+| `git-patch-management` | Patch creation and management |
+| `executing-plans` | Execute plans step by step |
+| `verification-before-completion` | Validate before claiming done |
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+## Tasks
+
+- [ ] Understand requirements and scope
+- [ ] Plan approach and identify resources
+- [ ] Execute work incrementally
+- [ ] Verify against acceptance criteria
+- [ ] Document results and decisions
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`create-agentsmd.prompt.md`](create-agentsmd.prompt.md)
+- [`create-architectural-decision-record.prompt.md`](create-architectural-decision-record.prompt.md)
+- [`create-github-action-workflow-specification.prompt.md`](create-github-action-workflow-specification.prompt.md)
+- [`create-github-issue-feature-from-specification.prompt.md`](create-github-issue-feature-from-specification.prompt.md)
+- [`create-github-issues-feature-from-implementation-plan.prompt.md`](create-github-issues-feature-from-implementation-plan.prompt.md)
+- [`create-github-issues-for-unmet-specification-requirements.prompt.md`](create-github-issues-for-unmet-specification-requirements.prompt.md)
+- [`create-github-pull-request-from-specification.prompt.md`](create-github-pull-request-from-specification.prompt.md)
+- [`create-implementation-plan.prompt.md`](create-implementation-plan.prompt.md)
+- [`create-llms.prompt.md`](create-llms.prompt.md)
+- [`create-oo-component-documentation.prompt.md`](create-oo-component-documentation.prompt.md)
+- [`create-readme.prompt.md`](create-readme.prompt.md)
+- [`create-specification.prompt.md`](create-specification.prompt.md)
+- [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
+- [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
+- [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
+## Workflow
+
+Description needed.

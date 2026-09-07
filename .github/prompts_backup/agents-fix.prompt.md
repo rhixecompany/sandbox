@@ -1,0 +1,197 @@
+---
+name: agents-fix
+title: Agents Sync and Deduplication
+description: No description
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /agents-fix
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: default
+    mcp_servers:
+    - filesystem
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /agents-fix
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- language:typescript
+scripts: []
+## Goal
+
+Sync agent definitions across Hermes and Copilot without losing schema fidelity or registration details.
+
+## Context
+
+Use this prompt when agent definitions, agent-style prompts, or platformregistrations drift across the three ecosystems. The workflow is discoveryfirst, then mapping, then sync, then verification.
+
+## Inputs
+
+- The agent files and registrations in each platform
+- Workspace context and platform configuration
+- Optional user constraints, platform targets, or migration rules
+
+## Outputs
+
+- A cross-reference table for equivalent agents
+- A sync plan with deduplication notes
+- Updated files or config entries
+- A verification report showing what changed
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
+1. Detect the file format before modifying anything.
+2. Preserve registrations unless the user explicitly requests a rename or   removal.
+
+## Skills Required
+
+> See full table with per-domain purposes:
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
+
+## Phases
+
+### Phase 1: Discovery
+
+Discover agent files across Hermes, and Copilot. Record names,triggers, descriptions, and registration state.
+
+### Phase 2: Cross-reference mapping
+
+Build a mapping table that links equivalent agents across platforms andhighlights gaps.
+
+### Phase 3: Sync and deduplicate
+
+Apply the minimal set of changes needed to align the agent definitions.
+
+### Phase 4: Verification
+
+Verify that each platform still matches its expected schema and that no agentswere lost.
+
+## Steps
+
+1. Load the planning and debugging skills.
+2. Discover agents on Hermes, and Copilot.
+3. Build a three-way cross-reference table.
+4. Identify gaps, inconsistencies, and duplicates.
+5. Apply sync corrections platform by platform.
+6. Run platform-specific validation after each change.
+7. Produce a consolidated registry with platform mappings.
+
+## Tasks
+
+- [ ] Discover all agents in Hermes, and Copilot scopes- [ ] Build a three-way agent cross-reference table- [ ] Flag agents present on one platform but missing on another- [ ] Flag agents with different names that serve the same purpose- [ ] Sync missing agents to each platform- [ ] Deduplicate redundant agent entries- [ ] Validate all modified files- [ ] Generate a consolidated agent registry
+
+## Actions
+
+- `search_files(pattern="*.md", target="files")` — Locate agent definition files
+- `read_file(path)` — Read agent definitions for comparison
+- `patch(path, old_string, new_string)` — Apply targeted fixes
+- `write_file(path, content)` — Create new agent files where needed
+- `delegate_task(goal, toolsets)` — Parallel discovery across platforms
+- `skill_view(name="acpx-executor")` — Dispatch tasks to ACPX providers
+
+## Personas
+
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
+
+| Persona | When to Use |
+| ------- | ----------- |
+| **Developer** | Implementation, debugging, refactoring |
+| **Reviewer** | Code review, quality assurance |
+| **User** | General purpose, operations |
+
+## Personality
+
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
+
+- **Tone**: Direct, practical, actionable
+- **Style**: Structured with clear steps and verification
+- **Avoid**: Ambiguity, assumptions, scope creep
+- **Encourage**: Evidence-based decisions, minimal changes
+
+## Best Practices
+
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
+
+1. **DRY** — Reference shared templates instead of duplicating content.
+2. **Structured output** — Use clear sections with consistent heading levels.
+3. **Verification gates** — Always verify before claiming completion.
+4. **Minimal changes** — Fix root cause, not symptoms.
+
+## Verification Checklist
+
+| # | Gate | Criterion |
+| --- | ------ | ----------- |
+| 1 | Scope | Change matches the original request |
+| 2 | Quality | Meets project standards |
+| 3 | Tests | Tests pass (if applicable) |
+| 4 | Regression | No unintended side effects |
+| 5 | Docs | Changes documented if needed |
+
+## Dependencies
+
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
+
+## Subgoals
+
+1. **Prepare** — Understand requirements and prerequisites.
+2. **Execute** — Follow structured workflow with incremental progress.
+3. **Verify** — Confirm output meets requirements and standards.
+4. **Document** — Record results, decisions, and lessons learned.
+
+## MCP Servers & Tools
+
+The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
+
+| `ast-grep` | AST-based code search and replace |
+| `filesystem` | File read/write operations |
+| `sequential-thinking` | Structured reasoning for complex problems |
+| `fetch` | Web page content extraction |
+| `playwright` | Browser automation for interactive pages |
+| `github` | GitHub API operations |
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+
+## Related Prompts
+
+Same-family prompts:
+
+- [`agents-generator.prompt.md`](agents-generator.prompt.md)
+- [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
+
+

@@ -1,0 +1,8 @@
+# Rules
+
+> Extracted from `create-github-action-workflow-specification.prompt.md`.
+
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.

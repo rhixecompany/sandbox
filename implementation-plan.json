@@ -1,0 +1,58 @@
+{
+  "project": "test-providers-models enhancement",
+  "timestamp": "2026-09-07T22:11:35.163583",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Inventory & Current State",
+      "description": "Run hermes commands and capture current state of all auth providers and models",
+      "actions": [
+        "hermes config show",
+        "hermes auth list",
+        "hermes status",
+        "hermes insights",
+        "hermes fallback list"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Web Research Pipeline",
+      "description": "Use web-research-pipeline to gather all provider documentation and model info",
+      "actions": [
+        "Search web for each provider's free models",
+        "Extract documentation URLs",
+        "Build catalog of :free models"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Catalog Building & Model Testing",
+      "description": "Build free-model catalog and test each model via hermes chat --oneshot",
+      "actions": [
+        "Build free-model catalog with capabilities",
+        "Test each model with standardized prompts",
+        "Capture results with Provider, Context, max-output, capabilities"
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Ranking & Configuration",
+      "description": "Rank models and configure Hermes primary + fallback chain",
+      "actions": [
+        "Rank top 5 models by capability",
+        "Configure primary model via hermes config set",
+        "Configure fallback chain via hermes fallback clear/add"
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Verification & Audit",
+      "description": "Run prompts-judge and verify all configurations",
+      "actions": [
+        "Run /prompts-judge on test-providers-models.prompt.md",
+        "Verify all sessions ranked",
+        "Confirm Hermes config updates"
+      ]
+    }
+  ]
+}

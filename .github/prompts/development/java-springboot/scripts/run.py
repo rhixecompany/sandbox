@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+# java-springboot
+
+def run():
+    pass
+
+if __name__ == "__main__":
+    run()

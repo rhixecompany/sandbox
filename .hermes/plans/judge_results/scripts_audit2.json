@@ -1,0 +1,98 @@
+{
+  "ts": "2026-09-07T18:59:26.239212Z",
+  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts",
+  "threshold": 70,
+  "count": 5,
+  "avg": 83.2,
+  "passed": 4,
+  "syntax_failed": 0,
+  "quick_commands": {
+    "registry": ".hermes\\reports\\hermes-quick-commands.json",
+    "issues": [
+      "registry check failed: [Errno 2] No such file or directory: '.hermes\\\\reports\\\\hermes-quick-commands.json'"
+    ],
+    "passed": false
+  },
+  "results": [
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\generate-mcp-skills.py",
+      "score": 100,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 20
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 89,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\hermes-mcp-manager.py",
+      "score": 96,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 142,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\stage_missing_lsps.sh",
+      "score": 62,
+      "rating": "WARN",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 8,
+        "documentation": 14,
+        "dry": 20
+      },
+      "lang": "bash",
+      "syntax_ok": true,
+      "lines": 59,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\subagent_dispatcher.py",
+      "score": 82,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 20,
+        "error_handling": 12,
+        "documentation": 20,
+        "dry": 10
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 352,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\scripts\\verify-full-implementation.py",
+      "score": 76,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 0,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 236,
+      "syntax_error": ""
+    }
+  ]
+}
