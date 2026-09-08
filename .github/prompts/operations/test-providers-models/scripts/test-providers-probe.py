@@ -4,10 +4,10 @@ Test probe script for Hermes LLM providers and models.
 Executes standardized test prompts and logs results.
 """
 
-import subprocess
 import json
-import time
 import os
+import subprocess
+import time
 from datetime import datetime
 
 TEST_PROMPT = """You are an AI assistant testing your own capabilities. Please respond with a JSON object containing:
