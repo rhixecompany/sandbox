@@ -1,20 +1,20 @@
 {
-  "generated": "2026-09-05T03:24:54",
+  "generated": "2026-09-08T03:13:32",
   "registry": ".mcp\\registry.json",
-  "total": 32,
+  "total": 37,
   "counts": {
-    "PASS": 28,
-    "WARN": 4,
+    "PASS": 26,
+    "WARN": 1,
     "FAIL": 0,
-    "SKIP": 0
+    "SKIP": 10
   },
   "results": [
     {
       "name": "anthropic-resources",
       "type": "http",
-      "status": "PASS",
+      "status": "SKIP",
       "checks": [
-        "✓ https://resources.anthropic.com/mcp: HTTP 404 (reachable)"
+        "⊘ disabled in registry"
       ]
     },
     {
@@ -33,6 +33,14 @@
       "status": "PASS",
       "checks": [
         "✓ https://mcp.atlassian.com/v1/sse: HTTP 401 (reachable)"
+      ]
+    },
+    {
+      "name": "cloudinary",
+      "type": "http",
+      "status": "PASS",
+      "checks": [
+        "✓ https://asset-management.mcp.cloudinary.com/mcp: HTTP 405 (reachable)"
       ]
     },
     {
@@ -56,40 +64,33 @@
     {
       "name": "django",
       "type": "stdio",
-      "status": "PASS",
+      "status": "SKIP",
       "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: django-mcp"
+        "⊘ disabled in registry"
       ]
     },
     {
       "name": "docs",
       "type": "stdio",
-      "status": "PASS",
+      "status": "SKIP",
       "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: docs-mcp",
-        "· args[2]: docs/"
+        "⊘ disabled in registry"
       ]
     },
     {
       "name": "evals",
       "type": "stdio",
-      "status": "PASS",
+      "status": "SKIP",
       "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @modelcontextprotocol/server-evals"
+        "⊘ disabled in registry"
       ]
     },
     {
       "name": "everart",
       "type": "http",
-      "status": "WARN",
+      "status": "SKIP",
       "checks": [
-        "⚠ https://mcp.everart.ai/mcp: unreachable (URLError)"
+        "⊘ disabled in registry"
       ]
     },
     {
@@ -191,11 +192,19 @@
       ]
     },
     {
+      "name": "paypal",
+      "type": "http",
+      "status": "PASS",
+      "checks": [
+        "✓ https://mcp.paypal.com/sse: HTTP 401 (reachable)"
+      ]
+    },
+    {
       "name": "plaid",
       "type": "http",
-      "status": "WARN",
+      "status": "SKIP",
       "checks": [
-        "⚠ https://mcp.plaid.com/mcp: unreachable (URLError)"
+        "⊘ disabled in registry"
       ]
     },
     {
@@ -211,22 +220,17 @@
     {
       "name": "postgres",
       "type": "stdio",
-      "status": "WARN",
+      "status": "SKIP",
       "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: postgres-mcp",
-        "⚠ env.DATABASE_URL: unresolved placeholder ${env:DATABASE_URL}"
+        "⊘ disabled in registry"
       ]
     },
     {
       "name": "pytest",
       "type": "stdio",
-      "status": "PASS",
+      "status": "SKIP",
       "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: pytest-mcp"
+        "⊘ disabled in registry"
       ]
     },
     {
@@ -267,9 +271,17 @@
     {
       "name": "stripe",
       "type": "http",
+      "status": "SKIP",
+      "checks": [
+        "⊘ disabled in registry"
+      ]
+    },
+    {
+      "name": "supabase",
+      "type": "http",
       "status": "PASS",
       "checks": [
-        "✓ https://mcp.stripe.com/mcp: HTTP 404 (reachable)"
+        "✓ https://mcp.supabase.com/mcp: HTTP 401 (reachable)"
       ]
     },
     {
@@ -283,11 +295,9 @@
     {
       "name": "time",
       "type": "stdio",
-      "status": "PASS",
+      "status": "SKIP",
       "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @modelcontextprotocol/server-time"
+        "⊘ disabled in registry"
       ]
     },
     {
@@ -306,6 +316,22 @@
       "checks": [
         "✓ command path exists: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
         "✓ args[0]: C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
+      ]
+    },
+    {
+      "name": "twilio-docs",
+      "type": "http",
+      "status": "PASS",
+      "checks": [
+        "✓ https://mcp.twilio.com/docs: HTTP 405 (reachable)"
+      ]
+    },
+    {
+      "name": "vercel",
+      "type": "http",
+      "status": "PASS",
+      "checks": [
+        "✓ https://mcp.vercel.com: HTTP 401 (reachable)"
       ]
     }
   ]
