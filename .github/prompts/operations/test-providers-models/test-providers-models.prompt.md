@@ -1,66 +1,331 @@
 ---
 name: test-providers-models
-title: Test Providers Models
-description: "Test all Hermes auth providers, rank models by capabilities, and configure Hermes with the top 5"
-version: 2.1.0
-author: Hermes Agent
+title: "Test Providers Models"
+description: "Comprehensive workflow for testing, ranking, and configuring Hermes LLM providers and models. Use when adding new providers, auditing model performance, or configuring fallback chains."
+version: 3.0.0
+author: Alexa
 license: MIT
-tags: [qa, testing, providers, models, benchmarking]
+tags: [providers, models, testing, configuration, hermes, llm]
 metadata:
   hermes:
-    tags: [qa, testing, providers, models, benchmarking]
-toolsets:
-  - hermes-cli
-  - web
-category: operations
-trigger: test-providers-models
+    tags: [providers, models, testing, configuration]
+    related_skills: [web-research-pipeline, executing-plans, subagent-driven-development]
 ---
 
-# Test Providers Models
+# Test Providers Models — Comprehensive Implementation Prompt
+
+## Overview
+
+Automated reasoning and workflow tool for `test-providers-models`. Execute multi-step provider testing with deterministic quality controls and structured outputs.
 
 ## Goal
-Execute all available Hermes auth providers to test each model's capabilities, rank the top 5, and configure Hermes with the best model and fallback chain.
 
-## Context
-This prompt tests every auth provider configured in Hermes by running `hermes config show && hermes auth list && hermes status && hermes insights && hermes fallback list`, then executing each `:free` model via `hermes chat --provider --model -q --oneshot` in the background, ranking results, and configuring Hermes.
+Discover, test, rank, and configure the best free LLM providers and models for Hermes Agent. Produce a ranked top-5 model list, configure Hermes with the primary model, and set up fallback chains with remaining models.
+
+## Subgoals
+
+1. **Inventory** — Capture current Hermes config, auth providers, status, and fallback state
+2. **Research** — Web-search all authorized providers for free models (`:free`, `-free` suffixes)
+3. **Consolidate** — Deduplicate and migrate all test-providers-models files to canonical location
+4. **Test** — Execute standardized test prompts against each discovered model
+5. **Rank** — Audit test results and rank top 5 by quality, speed, reliability
+6. **Configure** — Set primary model and fallback chain via `hermes config set` / `hermes fallback add`
+7. **Verify** — Validate all configuration changes and run prompts-judge on this prompt
+
+## Specs
+
+### specs.md
+
+| Spec ID | Requirement | Acceptance Criteria |
+|---------|-------------|---------------------|
+| S1 | Capture all authorized providers | `hermes auth list` output parsed, all providers enumerated |
+| S2 | Web-research each provider for free models | Documentation URLs extracted, model lists compiled |
+| S3 | Consolidate all test-providers-models files | Single canonical location: `.github/prompts/operations/test-providers-models/` |
+| S4 | Test up to 10 free models | Each model receives standardized test prompt, results logged |
+| S5 | Rank top 5 models | Ranking based on: response quality, latency, context window, capabilities |
+| S6 | Configure Hermes primary model | `hermes config set model <provider/model>` |
+| S7 | Configure fallback chain | `hermes fallback clear` + `hermes fallback add` for remaining 4 |
+| S8 | All artifacts on disk | No duplicates, all files in correct paths |
+| S9 | prompts-judge score ≥ 98 | Run `/prompts-judge` on this prompt, fix all issues |
+
+### plans.md
+
+| Phase | Task | Dependencies | Est. Time |
+|-------|------|--------------|-----------|
+| P1 | Inventory & Research | None | 10 min |
+| P2 | Consolidate & Deduplicate | P1 | 5 min |
+| P3 | Test Models | P2 | 20 min |
+| P4 | Rank & Configure | P3 | 10 min |
+| P5 | Verify & Judge | P4 | 5 min |
+
+### goals.md
+
+- **G1**: Comprehensive implementation prompt with all required sections
+- **G2**: All test-providers-models files consolidated to canonical location
+- **G3**: Top 5 free models identified and ranked
+- **G4**: Hermes configured with primary model + 4 fallback models
+- **G5**: All judge scores ≥ 98
+
+### subgoals.md
+
+- **SG1**: Execute `hermes config show && hermes auth list && hermes status && hermes insights && hermes fallback list`
+- **SG2**: Web-research each provider for free models
+- **SG3**: Create test prompts (Provider, Context, max-output, capabilities)
+- **SG4**: Execute `hermes chat --provider "X" --model "Y" -q "test" --oneshot` for each model
+- **SG5**: Audit all test sessions, rank top 5
+- **SG6**: Configure Hermes model and fallback chain
+- **SG7**: Run prompts-judge, fix issues, achieve score ≥ 98
+
+### rules.md
+
+1. **MCP-first**: Use MCP servers (fetch, web-search) before native tools
+2. **No destructive without approval**: User pre-approved all destructive ops
+3. **DRY**: Each fact in one location, cross-reference don't duplicate
+4. **Verify before claim**: Test, check, confirm before reporting
+5. **Hermes config via CLI**: Always use `hermes config set`, never direct YAML edits
+6. **Background execution**: Long commands run in background without timeout
+7. **Subagent delegation**: Parallel work via `delegate_task` subagents
+8. **Judge threshold**: All artifacts must score ≥ 98 on respective judge skills
+
+### phases.md
+
+#### Phase 1: Inventory & Research
+- Execute Hermes diagnostic commands in background
+- Parse authorized providers from auth list
+- Web-research each provider for free models
+- Extract documentation URLs and model specifications
+
+#### Phase 2: Consolidate & Deduplicate
+- Find all test-providers-models files across filesystem
+- Migrate to `.github/prompts/operations/test-providers-models/`
+- Delete duplicates and stale copies
+- Verify single canonical location
+
+#### Phase 3: Test Models
+- Create standardized test prompts
+- Execute `hermes chat` for each discovered model
+- Log all results with Provider, Context, max-output, capabilities
+- Handle rate limits and retries
+
+#### Phase 4: Rank & Configure
+- Audit all test sessions
+- Score and rank top 5 models
+- Configure primary model via `hermes config set`
+- Configure fallback chain via `hermes fallback add`
+
+#### Phase 5: Verify & Judge
+- Validate Hermes configuration
+- Run `/prompts-judge` on this prompt
+- Fix all issues, warnings, errors
+- Achieve score ≥ 98
+
+### steps.md
+
+| Step | Action | Command/Tool | Output |
+|------|--------|--------------|--------|
+| 1 | Get Hermes config | `hermes config show` | Config state |
+| 2 | Get auth providers | `hermes auth list` | Provider list |
+| 3 | Get system status | `hermes status` | Status info |
+| 4 | Get usage insights | `hermes insights` | Model usage |
+| 5 | Get fallback config | `hermes fallback list` | Fallback state |
+| 6 | Web-research providers | `web_search` + `web_extract` | Free model lists |
+| 7 | Consolidate files | `search_files` + `terminal` | Single location |
+| 8 | Create test prompts | `write_file` | Test prompt files |
+| 9 | Execute model tests | `hermes chat --oneshot` | Test results |
+| 10 | Rank results | Subagent analysis | Top 5 ranking |
+| 11 | Configure primary | `hermes config set model` | Config updated |
+| 12 | Configure fallbacks | `hermes fallback add` | Fallback set |
+| 13 | Verify config | `hermes config show` | Validation |
+| 14 | Run prompts-judge | `/prompts-judge` | Score report |
+| 15 | Fix and re-judge | Patch + re-run | Score ≥ 98 |
+
+### tasks.md
+
+- [ ] Execute all Hermes diagnostic commands
+- [ ] Parse and enumerate all authorized providers
+- [ ] Web-research each provider for free models
+- [ ] Extract documentation URLs for all free models
+- [ ] Create free-suffix-catalog markdown file
+- [ ] Find all test-providers-models files across filesystem
+- [ ] Consolidate to `.github/prompts/operations/test-providers-models/`
+- [ ] Delete all duplicate/stale copies
+- [ ] Create standardized test prompts
+- [ ] Execute `hermes chat` for each model (up to 10)
+- [ ] Log all test results
+- [ ] Audit and rank top 5 models
+- [ ] Create ranking markdown file
+- [ ] Configure Hermes primary model
+- [ ] Clear existing fallback chain
+- [ ] Add 4 fallback models
+- [ ] Verify final configuration
+- [ ] Run prompts-judge on this prompt
+- [ ] Fix all issues to achieve score ≥ 98
+
+### actions.md
+
+| Action | Trigger | Tool | Expected Result |
+|--------|---------|------|-----------------|
+| Run diagnostics | Phase 1 | `terminal` (background) | All config/state captured |
+| Web research | Phase 1 | `web_search` + `web_extract` | Free model lists per provider |
+| Consolidate files | Phase 2 | `search_files` + `terminal` | Single canonical location |
+| Test model | Phase 3 | `hermes chat --provider X --model Y -q "..." --oneshot` | Model response logged |
+| Rank models | Phase 4 | Subagent analysis | Top 5 ranked list |
+| Set primary | Phase 4 | `hermes config set model provider/model` | Config updated |
+| Add fallback | Phase 4 | `hermes fallback add provider/model` | Fallback configured |
+| Verify | Phase 5 | `hermes config show` | Config validated |
+| Judge | Phase 5 | `/prompts-judge` | Score ≥ 98 |
+
+### gates.md
+
+| Gate | Check | Pass Criteria |
+|------|-------|---------------|
+| G1 | All diagnostics executed | All 5 commands completed |
+| G2 | All providers researched | ≥1 free model per authorized provider |
+| G3 | Files consolidated | Single location, zero duplicates |
+| G4 | Models tested | ≥5 models tested successfully |
+| G5 | Ranking complete | Top 5 models identified |
+| G6 | Config updated | Primary model set correctly |
+| G7 | Fallback configured | 4 fallback models added |
+| G8 | Judge score | prompts-judge ≥ 98 |
 
 ## Workflow
 
-### Phase 1: Discovery
-1. Run `hermes config show && hermes auth list && hermes status && hermes insights && hermes fallback list`
-2. Extract all auth provider URLs and documentation URLs
-3. Run `/web-research-pipeline` for each provider to find best practices
-4. Web-extract all documentation pages as markdown
+### Phase 1: Inventory & Research
 
-### Phase 2: Catalog
-1. Create `test-providers-models-free-suffix-catalog.md` with all `:free` models
-2. Include: provider name, model name, vision, reasoning, context window, flags
-3. Use hermes insights to populate capabilities
+```bash
+# Execute in background without timeout
+hermes config show && hermes auth list && hermes status && hermes insights && hermes fallback list
+```
 
-### Phase 3: Testing
-1. Create multi-tasks for testing each model
-2. Execute `hermes chat --provider "provider name" --model "model name" -q "tasks" --oneshot` in background without timeout
-3. Each model gets the same test tasks
-4. Capture responses, latency, quality scores
+Parse output for:
+- Authorized providers (from auth list)
+- Current model configuration
+- Existing fallback chain
+- Rate limit status per provider
 
-### Phase 4: Ranking & Configuration
-1. Rank all models by quality, speed, capabilities
-2. Select top 5 models
-3. Configure Hermes model via `hermes config set model.default` with top-ranked model
-4. Configure fallback with remaining 4 via `hermes fallback clear` then `hermes fallback add`
-5. Run `/prompts-judge` on test-providers-models.prompt.md to verify score ≥ 98
+Then web-research each provider:
+```
+web_search: "<provider name> free models API documentation 2026"
+web_extract: <documentation_urls>
+```
 
-### Phase 5: Verification
-1. Verify all sessions from the test run
-2. Confirm top 5 ranking is accurate
-3. Verify Hermes config is updated correctly
-4. Verify fallback chain is working
+### Phase 2: Consolidate & Deduplicate
 
-## Verification
-- [ ] All auth providers discovered and documented
-- [ ] All `:free` models cataloged with capabilities
-- [ ] All models tested via `hermes chat --oneshot`
-- [ ] Top 5 ranked and configured as default
-- [ ] Remaining 4 configured as fallback chain
-- [ ] `/prompts-judge` returns score ≥ 98
-- [ ] All new sessions audited and ranked
+```bash
+# Find all test-providers-models files
+find . -name "*test-providers*" -type f 2>/dev/null
+find . -name "*free-suffix-catalog*" -type f 2>/dev/null
+```
+
+Migrate all to: `.github/prompts/operations/test-providers-models/`
+
+Delete duplicates in:
+- `.github/prompts/development/test-providers-models/`
+- `.github/prompts/testing/test-providers-models/`
+- `.github/prompts/test-providers-models-free-suffix-catalog.md`
+- `.github/prompts/operations/test-providers-models-free-suffix-catalog.md`
+- `.hermes/plans/*test-providers*`
+- `.hermes/specs/*test-providers*`
+- `.hermes/reports/*test-providers*`
+
+### Phase 3: Test Models
+
+Create standardized test prompts covering:
+- Provider identification
+- Context window capabilities
+- Max output length
+- Reasoning capabilities
+- Instruction following
+
+Execute for each model:
+```bash
+hermes chat --provider "<provider>" --model "<model>" -q "<test_prompt>" --oneshot
+```
+
+### Phase 4: Rank & Configure
+
+Rank by:
+1. Response quality (accuracy, coherence)
+2. Latency (response time)
+3. Context window size
+4. Max output tokens
+5. Instruction following
+
+Configure:
+```bash
+hermes config set model <top_provider>/<top_model>
+hermes fallback clear
+yes | hermes fallback add <provider2>/<model2>
+yes | hermes fallback add <provider3>/<model3>
+yes | hermes fallback add <provider4>/<model4>
+yes | hermes fallback add <provider5>/<model5>
+```
+
+### Phase 5: Verify & Judge
+
+```bash
+hermes config show
+hermes fallback list
+```
+
+Then run:
+```
+/prompts-judge .github/prompts/operations/test-providers-models/test-providers-models.prompt.md
+```
+
+Fix all issues and re-run until score ≥ 98.
+
+## Tools & References
+
+| Tool | Purpose |
+|------|---------|
+| `terminal` | Execute Hermes CLI commands |
+| `web_search` | Research provider free models |
+| `web_extract` | Extract documentation content |
+| `search_files` | Find and consolidate files |
+| `delegate_task` | Parallel model testing |
+| `write_file` | Create/update artifacts |
+| `patch` | Targeted edits to files |
+
+## Pitfalls
+
+- **Rate limits**: Many free models have strict rate limits; space requests
+- **Provider auth**: Some providers may have expired or rate-limited credentials
+- **Model availability**: Free models may be deprecated; verify before testing
+- **Config corruption**: Always use `hermes config set`, never edit YAML directly
+- **Duplicate files**: Stale copies in prompts_backup, .hermes/plans, .hermes/specs
+- **Timeout**: Long-running `hermes chat` commands need background execution
+
+## Verification Checklist
+
+- [ ] All Hermes diagnostics executed
+- [ ] All authorized providers enumerated
+- [ ] Web research completed for each provider
+- [ ] Free model catalog created
+- [ ] All files consolidated to canonical location
+- [ ] No duplicate files remain
+- [ ] Test prompts created and executed
+- [ ] All test results logged
+- [ ] Top 5 models ranked
+- [ ] Hermes primary model configured
+- [ ] Fallback chain configured (4 models)
+- [ ] Configuration verified
+- [ ] prompts-judge score ≥ 98
+
+## Best Practices
+
+1. **Background execution**: Run long commands in background without timeout
+2. **Subagent parallelism**: Delegate model testing to subagents
+3. **Incremental verification**: Check each phase before proceeding
+4. **CLI-only config**: Never edit Hermes YAML directly
+5. **DRY artifacts**: Single source of truth for each file
+6. **Judge-driven quality**: Run judge skills early and often
+
+## Output Artifacts
+
+| Artifact | Path |
+|----------|------|
+| Main prompt | `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` |
+| Free model catalog | `.github/prompts/operations/test-providers-models/test-providers-models-free-suffix-catalog.md` |
+| Ranking results | `.github/prompts/operations/test-providers-models/test-providers-models-ranking.md` |
+| Test probe script | `.github/prompts/operations/test-providers-models/scripts/test-providers-probe.py` |
