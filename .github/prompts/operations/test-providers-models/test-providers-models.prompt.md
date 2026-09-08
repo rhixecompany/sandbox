@@ -5,6 +5,9 @@ description: "Comprehensive workflow for testing, ranking, and configuring Herme
 version: 3.0.0
 author: Alexa
 license: MIT
+trigger: /test-providers-models
+toolsets: [terminal, file, web, memory, skills, delegation]
+category: operations
 tags: [providers, models, testing, configuration, hermes, llm]
 metadata:
   hermes:
@@ -31,6 +34,33 @@ Discover, test, rank, and configure the best free LLM providers and models for H
 5. **Rank** — Audit test results and rank top 5 by quality, speed, reliability
 6. **Configure** — Set primary model and fallback chain via `hermes config set` / `hermes fallback add`
 7. **Verify** — Validate all configuration changes and run prompts-judge on this prompt
+
+## Context
+
+This prompt lives at `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` with co-located templates and scripts. It is invoked when the user needs to discover, test, or configure LLM providers and models for Hermes Agent.
+
+### Current State (September 2026)
+
+- **Primary model**: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+- **Free models available**: 19 on OpenRouter (verified via API)
+- **Tested models**: 10 (results in `test-providers-models-results.json`)
+- **Hermes profiles**: 15 configured
+- **MCP servers**: 16 active
+
+### Authorized Providers
+
+| Provider | Auth | Status |
+|----------|------|--------|
+| openrouter | API Key | Active |
+| nous | OAuth (device_code) | Active |
+| opencode-zen | API Key + OAuth | Active |
+| deepseek | API Key | Active |
+| gemini | API Key | Rate-limited |
+| huggingface | API Key | Active |
+| ollama-cloud | API Key | Active |
+| minimax | API Key | Insufficient balance |
+| openai-api | API Key | Active |
+| openai-codex | OAuth | Rate-limited |
 
 ## Specs
 
@@ -275,6 +305,22 @@ Then run:
 
 Fix all issues and re-run until score ≥ 98.
 
+## Verification
+
+- [ ] All Hermes diagnostics executed
+- [ ] All authorized providers enumerated
+- [ ] Web research completed for each provider
+- [ ] Free model catalog created
+- [ ] All files consolidated to canonical location
+- [ ] No duplicate files remain
+- [ ] Test prompts created and executed
+- [ ] All test results logged
+- [ ] Top 5 models ranked
+- [ ] Hermes primary model configured
+- [ ] Fallback chain configured (4 models)
+- [ ] Configuration verified
+- [ ] prompts-judge score ≥ 98
+
 ## Tools & References
 
 | Tool | Purpose |
@@ -296,22 +342,6 @@ Fix all issues and re-run until score ≥ 98.
 - **Duplicate files**: Stale copies in prompts_backup, .hermes/plans, .hermes/specs
 - **Timeout**: Long-running `hermes chat` commands need background execution
 
-## Verification Checklist
-
-- [ ] All Hermes diagnostics executed
-- [ ] All authorized providers enumerated
-- [ ] Web research completed for each provider
-- [ ] Free model catalog created
-- [ ] All files consolidated to canonical location
-- [ ] No duplicate files remain
-- [ ] Test prompts created and executed
-- [ ] All test results logged
-- [ ] Top 5 models ranked
-- [ ] Hermes primary model configured
-- [ ] Fallback chain configured (4 models)
-- [ ] Configuration verified
-- [ ] prompts-judge score ≥ 98
-
 ## Best Practices
 
 1. **Background execution**: Run long commands in background without timeout
@@ -329,3 +359,4 @@ Fix all issues and re-run until score ≥ 98.
 | Free model catalog | `.github/prompts/operations/test-providers-models/test-providers-models-free-suffix-catalog.md` |
 | Ranking results | `.github/prompts/operations/test-providers-models/test-providers-models-ranking.md` |
 | Test probe script | `.github/prompts/operations/test-providers-models/scripts/test-providers-probe.py` |
+| Test results | `.github/prompts/operations/test-providers-models/test-providers-models-results.json` |
