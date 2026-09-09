@@ -1,21 +1,21 @@
 {
-  "ts": "2026-09-07T18:21:20.692454Z",
+  "ts": "2026-09-08T03:47:49.439897Z",
   "dir": ".hermes\\plans",
   "specs_dir": ".hermes\\specs",
   "threshold": 70,
-  "count": 88,
-  "avg": 100.7,
-  "passed": 88,
+  "count": 98,
+  "avg": 100.6,
+  "passed": 93,
   "results": [
     {
       "file": ".hermes\\plans\\2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -32,13 +32,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-07-23-comprehensive-github-prompts-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -55,13 +55,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -78,13 +78,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-07-25-yaml-workflows-audit-fix-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -101,13 +101,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-07-31-workspace-cleanup.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -124,13 +124,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-01_async-script-tooling-master.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -147,13 +147,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-01_consolidated-goal-tooling-cleanup.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -170,13 +170,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-01_repo-tooling.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -193,13 +193,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-01_tooling-implementation.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -216,13 +216,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-11_213801-prompt-library-maintenance.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -239,13 +239,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-11_214500-repo-init-all-agents.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -262,13 +262,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-11_hermes-platform-diagnostics-debug.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -285,13 +285,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -308,13 +308,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-12_012441-prompts-library-debug-fix-enhance.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -331,13 +331,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-12_043000-terminal-agent-ecosystem-sync.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -354,13 +354,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -377,13 +377,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-spec.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -400,13 +400,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -423,13 +423,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-spec.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -446,13 +446,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -469,13 +469,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -492,13 +492,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-spec.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -515,13 +515,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-16_142300_cross-platform-agent-sync-spec.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -538,13 +538,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-16_142300_mcp-sync-all-agents-implementation.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -561,13 +561,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -584,13 +584,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -607,13 +607,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-08-19_235900-subagent-driven-development-full-implementation.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1021,13 +1021,13 @@
     },
     {
       "file": ".hermes\\plans\\2026-09-04-dedupe-triage-report.md",
-      "score": 80,
+      "score": 85,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 0,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 10,
         "dry": 15
       },
@@ -1060,8 +1060,8 @@
       "status": "in_progress",
       "checklist_items": 12,
       "spec_refs": [
-        "../specs/comprehensive-hermes-maintenance-spec.md",
-        ".hermes/specs/hermes-ecosystem-reliability-spec.md"
+        ".hermes/specs/hermes-ecosystem-reliability-spec.md",
+        "../specs/comprehensive-hermes-maintenance-spec.md"
       ],
       "spec_valid": 2,
       "spec_total": 2
@@ -1136,29 +1136,6 @@
       "spec_total": 1
     },
     {
-      "file": ".hermes\\plans\\2026-09-05_test-providers-models-rebuild.md",
-      "score": 80,
-      "rating": "PASS",
-      "dims": {
-        "frontmatter": 20,
-        "structure": 0,
-        "content": 20,
-        "spec_coupling": 15,
-        "status": 10,
-        "dry": 15
-      },
-      "lines": 49,
-      "phases": 0,
-      "gates": 1,
-      "status": "in_progress",
-      "checklist_items": 0,
-      "spec_refs": [
-        "../specs/comprehensive-implementation-spec.md"
-      ],
-      "spec_valid": 1,
-      "spec_total": 1
-    },
-    {
       "file": ".hermes\\plans\\2026-09-07_144500-multi-judge-remediation-progress.md",
       "score": 105,
       "rating": "PASS",
@@ -1176,36 +1153,12 @@
       "status": "in_progress",
       "checklist_items": 27,
       "spec_refs": [
-        "../specs/hermes-ecosystem-reliability-spec.md",
         "../specs/comprehensive-goals-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md",
         "../specs/hermes-root-scripts-quick-commands-spec.md"
       ],
       "spec_valid": 3,
       "spec_total": 3
-    },
-    {
-      "file": ".hermes\\plans\\2026-09-07_162000-test-providers-models-implementation.md",
-      "score": 83,
-      "rating": "PASS",
-      "dims": {
-        "frontmatter": 20,
-        "structure": 0,
-        "content": 13,
-        "spec_coupling": 20,
-        "status": 15,
-        "dry": 15
-      },
-      "lines": 112,
-      "phases": 0,
-      "gates": 5,
-      "status": "in_progress",
-      "checklist_items": 19,
-      "spec_refs": [
-        "../specs/test-providers-models-spec.md",
-        "../specs/hermes-ecosystem-reliability-spec.md"
-      ],
-      "spec_valid": 2,
-      "spec_total": 2
     },
     {
       "file": ".hermes\\plans\\2026-09-07_170000-ecosystem-master-plan.md",
@@ -1225,11 +1178,11 @@
       "status": "completed",
       "checklist_items": 4,
       "spec_refs": [
-        "../specs/test-providers-models-spec.md",
+        "../specs/comprehensive-implementation-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/test-providers-models-spec.md"
       ],
-      "spec_valid": 3,
+      "spec_valid": 2,
       "spec_total": 3
     },
     {
@@ -1250,11 +1203,11 @@
       "status": "completed",
       "checklist_items": 4,
       "spec_refs": [
-        "../specs/test-providers-models-spec.md",
+        "../specs/comprehensive-implementation-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/test-providers-models-spec.md"
       ],
-      "spec_valid": 3,
+      "spec_valid": 2,
       "spec_total": 3
     },
     {
@@ -1275,12 +1228,63 @@
       "status": "completed",
       "checklist_items": 4,
       "spec_refs": [
-        "../specs/test-providers-models-spec.md",
+        "../specs/comprehensive-implementation-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/test-providers-models-spec.md"
       ],
-      "spec_valid": 3,
+      "spec_valid": 2,
       "spec_total": 3
+    },
+    {
+      "file": ".hermes\\plans\\2026-09-07_ecosystem-v3-awesome-plugins.md",
+      "score": 110,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_coupling": 20,
+        "status": 15,
+        "dry": 15
+      },
+      "lines": 249,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 5,
+      "spec_refs": [
+        ".hermes/specs/master-spec.md",
+        "../specs/master-spec.md"
+      ],
+      "spec_valid": 2,
+      "spec_total": 2
+    },
+    {
+      "file": ".hermes\\plans\\2026-09-07_ecosystem-v3-COMPLETION.md",
+      "score": 105,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_coupling": 15,
+        "status": 15,
+        "dry": 15
+      },
+      "lines": 140,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 5,
+      "spec_refs": [
+        "../specs/01-config-foundation-repair.md",
+        "../specs/03-subagent-driven-development.md",
+        "master-spec.md",
+        "../specs/master-spec.md",
+        "../specs/02-mcp-server-suite.md"
+      ],
+      "spec_valid": 4,
+      "spec_total": 5
     },
     {
       "file": ".hermes\\plans\\2026-09-07_master-ecosystem-integration.md",
@@ -1300,11 +1304,11 @@
       "status": "completed",
       "checklist_items": 4,
       "spec_refs": [
-        "../specs/test-providers-models-spec.md",
+        "../specs/comprehensive-implementation-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/test-providers-models-spec.md"
       ],
-      "spec_valid": 3,
+      "spec_valid": 2,
       "spec_total": 3
     },
     {
@@ -1331,6 +1335,30 @@
       "spec_total": 1
     },
     {
+      "file": ".hermes\\plans\\audit-log.md",
+      "score": 110,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_coupling": 20,
+        "status": 15,
+        "dry": 15
+      },
+      "lines": 151,
+      "phases": 4,
+      "gates": 4,
+      "status": "in_progress",
+      "checklist_items": 5,
+      "spec_refs": [
+        ".hermes/specs/master-spec.md",
+        "../specs/master-spec.md"
+      ],
+      "spec_valid": 2,
+      "spec_total": 2
+    },
+    {
       "file": ".hermes\\plans\\audit-report.md",
       "score": 91,
       "rating": "PASS",
@@ -1348,12 +1376,108 @@
       "status": "completed",
       "checklist_items": 4,
       "spec_refs": [
-        "../specs/test-providers-models-spec.md",
+        "../specs/comprehensive-implementation-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/test-providers-models-spec.md"
       ],
-      "spec_valid": 3,
+      "spec_valid": 2,
       "spec_total": 3
+    },
+    {
+      "file": ".hermes\\plans\\awesome-extract-0xNyk-awesome-hermes-agent.md",
+      "score": 110,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_coupling": 20,
+        "status": 15,
+        "dry": 15
+      },
+      "lines": 289,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 5,
+      "spec_refs": [
+        ".hermes/specs/master-spec.md",
+        "../specs/master-spec.md"
+      ],
+      "spec_valid": 2,
+      "spec_total": 2
+    },
+    {
+      "file": ".hermes\\plans\\awesome-extract-awesome-opencode.md",
+      "score": 110,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_coupling": 20,
+        "status": 15,
+        "dry": 15
+      },
+      "lines": 135,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 5,
+      "spec_refs": [
+        ".hermes/specs/master-spec.md",
+        "../specs/master-spec.md"
+      ],
+      "spec_valid": 2,
+      "spec_total": 2
+    },
+    {
+      "file": ".hermes\\plans\\awesome-extract-github-awesome-copilot.md",
+      "score": 110,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_coupling": 20,
+        "status": 15,
+        "dry": 15
+      },
+      "lines": 287,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 5,
+      "spec_refs": [
+        ".hermes/specs/master-spec.md",
+        "../specs/master-spec.md"
+      ],
+      "spec_valid": 2,
+      "spec_total": 2
+    },
+    {
+      "file": ".hermes\\plans\\awesome-extract-rogge-ota-awesome-codex-cli.md",
+      "score": 110,
+      "rating": "PASS",
+      "dims": {
+        "frontmatter": 20,
+        "structure": 20,
+        "content": 20,
+        "spec_coupling": 20,
+        "status": 15,
+        "dry": 15
+      },
+      "lines": 171,
+      "phases": 3,
+      "gates": 3,
+      "status": "in_progress",
+      "checklist_items": 5,
+      "spec_refs": [
+        ".hermes/specs/master-spec.md",
+        "../specs/master-spec.md"
+      ],
+      "spec_valid": 2,
+      "spec_total": 2
     },
     {
       "file": ".hermes\\plans\\comprehensive-goals-implementation-plan.md",
@@ -1404,20 +1528,20 @@
     },
     {
       "file": ".hermes\\plans\\comprehensive-implementation-plan.md",
-      "score": 70,
+      "score": 99,
       "rating": "PASS",
       "dims": {
-        "frontmatter": 11,
-        "structure": 0,
+        "frontmatter": 20,
+        "structure": 14,
         "content": 20,
         "spec_coupling": 20,
-        "status": 4,
+        "status": 10,
         "dry": 15
       },
-      "lines": 276,
-      "phases": 0,
+      "lines": 279,
+      "phases": 5,
       "gates": 1,
-      "status": "active",
+      "status": "completed",
       "checklist_items": 0,
       "spec_refs": [
         "../specs/comprehensive-implementation-spec.md"
@@ -1426,14 +1550,35 @@
       "spec_total": 1
     },
     {
+      "file": ".hermes\\plans\\context-files-plan.md",
+      "score": 30,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 11,
+        "structure": 0,
+        "content": 0,
+        "spec_coupling": 0,
+        "status": 4,
+        "dry": 15
+      },
+      "lines": 287,
+      "phases": 0,
+      "gates": 0,
+      "status": "pending",
+      "checklist_items": 0,
+      "spec_refs": [],
+      "spec_valid": 0,
+      "spec_total": 0
+    },
+    {
       "file": ".hermes\\plans\\deepseek-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1450,13 +1595,13 @@
     },
     {
       "file": ".hermes\\plans\\disk-cleanup-skill-implementation.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1473,13 +1618,13 @@
     },
     {
       "file": ".hermes\\plans\\disk-cleanup-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1512,21 +1657,21 @@
       "status": "in_progress",
       "checklist_items": 0,
       "spec_refs": [
-        "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/comprehensive-implementation-spec.md",
+        "../specs/hermes-ecosystem-reliability-spec.md"
       ],
       "spec_valid": 2,
       "spec_total": 2
     },
     {
       "file": ".hermes\\plans\\example-subagent-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1543,13 +1688,13 @@
     },
     {
       "file": ".hermes\\plans\\execution-summary.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1566,13 +1711,13 @@
     },
     {
       "file": ".hermes\\plans\\gemini-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1613,13 +1758,13 @@
     },
     {
       "file": ".hermes\\plans\\honcho-hermes-integration-implementation.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1636,13 +1781,13 @@
     },
     {
       "file": ".hermes\\plans\\honcho-hermes-integration-spec.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1659,13 +1804,13 @@
     },
     {
       "file": ".hermes\\plans\\huggingface-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1725,6 +1870,27 @@
       "spec_total": 0
     },
     {
+      "file": ".hermes\\plans\\multi-file-protocol-plan.md",
+      "score": 30,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 11,
+        "structure": 0,
+        "content": 0,
+        "spec_coupling": 0,
+        "status": 4,
+        "dry": 15
+      },
+      "lines": 248,
+      "phases": 0,
+      "gates": 0,
+      "status": "pending",
+      "checklist_items": 0,
+      "spec_refs": [],
+      "spec_valid": 0,
+      "spec_total": 0
+    },
+    {
       "file": ".hermes\\plans\\next-steps-implementation-plan.md",
       "score": 105,
       "rating": "PASS",
@@ -1772,13 +1938,13 @@
     },
     {
       "file": ".hermes\\plans\\nous-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1795,13 +1961,13 @@
     },
     {
       "file": ".hermes\\plans\\ollama-cloud-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1818,13 +1984,13 @@
     },
     {
       "file": ".hermes\\plans\\opencode-zen-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1841,13 +2007,13 @@
     },
     {
       "file": ".hermes\\plans\\openrouter-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1886,14 +2052,56 @@
       "spec_total": 1
     },
     {
+      "file": ".hermes\\plans\\prompt-library-plan.md",
+      "score": 24,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 11,
+        "structure": 0,
+        "content": 0,
+        "spec_coupling": 0,
+        "status": 4,
+        "dry": 9
+      },
+      "lines": 447,
+      "phases": 0,
+      "gates": 0,
+      "status": "pending",
+      "checklist_items": 0,
+      "spec_refs": [],
+      "spec_valid": 0,
+      "spec_total": 0
+    },
+    {
+      "file": ".hermes\\plans\\prompt-skill-spec-plan-management-plan.md",
+      "score": 38,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 11,
+        "structure": 8,
+        "content": 6,
+        "spec_coupling": 0,
+        "status": 4,
+        "dry": 9
+      },
+      "lines": 413,
+      "phases": 1,
+      "gates": 0,
+      "status": "pending",
+      "checklist_items": 0,
+      "spec_refs": [],
+      "spec_valid": 0,
+      "spec_total": 0
+    },
+    {
       "file": ".hermes\\plans\\provider-workflow-master-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1910,13 +2118,13 @@
     },
     {
       "file": ".hermes\\plans\\provider-workflow-strategy.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1955,14 +2163,35 @@
       "spec_total": 1
     },
     {
+      "file": ".hermes\\plans\\skill-enhancement-plan.md",
+      "score": 24,
+      "rating": "FAIL",
+      "dims": {
+        "frontmatter": 11,
+        "structure": 0,
+        "content": 0,
+        "spec_coupling": 0,
+        "status": 4,
+        "dry": 9
+      },
+      "lines": 318,
+      "phases": 0,
+      "gates": 0,
+      "status": "pending",
+      "checklist_items": 0,
+      "spec_refs": [],
+      "spec_valid": 0,
+      "spec_total": 0
+    },
+    {
       "file": ".hermes\\plans\\skill-implementation-master-plan.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },
@@ -1995,11 +2224,11 @@
       "status": "completed",
       "checklist_items": 4,
       "spec_refs": [
-        "../specs/test-providers-models-spec.md",
+        "../specs/comprehensive-implementation-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/test-providers-models-spec.md"
       ],
-      "spec_valid": 3,
+      "spec_valid": 2,
       "spec_total": 3
     },
     {
@@ -2020,22 +2249,22 @@
       "status": "completed",
       "checklist_items": 4,
       "spec_refs": [
-        "../specs/test-providers-models-spec.md",
+        "../specs/comprehensive-implementation-spec.md",
         "../specs/hermes-ecosystem-reliability-spec.md",
-        "../specs/comprehensive-implementation-spec.md"
+        "../specs/test-providers-models-spec.md"
       ],
-      "spec_valid": 3,
+      "spec_valid": 2,
       "spec_total": 3
     },
     {
       "file": ".hermes\\plans\\xai-workflow.md",
-      "score": 105,
+      "score": 110,
       "rating": "PASS",
       "dims": {
         "frontmatter": 20,
         "structure": 20,
         "content": 20,
-        "spec_coupling": 15,
+        "spec_coupling": 20,
         "status": 15,
         "dry": 15
       },

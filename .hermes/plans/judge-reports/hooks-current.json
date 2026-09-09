@@ -1,0 +1,130 @@
+{
+  "ts": "2026-09-08T03:45:09.418816Z",
+  "dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks",
+  "threshold": 70,
+  "count": 8,
+  "avg": 94.8,
+  "passed": 8,
+  "results": [
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\_pathutil.py",
+      "score": 78,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 4,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 16
+      },
+      "events_referenced": 13,
+      "syntax_ok": false,
+      "syntax_error": "  File \"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\_pathutil.py\", line 59\n    import sys; sys.stderr.write(msg + \"\n                                       ^\nSyntaxError: unterminated string literal (det"
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\capture_common.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 13,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\lib.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 13,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\lib.sh",
+      "score": 95,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 15,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 6,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\post-exec-state-log.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 5,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\pre-exec-validate.sh",
+      "score": 95,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 15,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 5,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session_end_capture.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 5,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session_start_capture.py",
+      "score": 98,
+      "rating": "PASS",
+      "dims": {
+        "event_coverage": 20,
+        "syntax": 20,
+        "idempotency": 18,
+        "error_handling": 20,
+        "logging": 20
+      },
+      "events_referenced": 7,
+      "syntax_ok": true,
+      "syntax_error": ""
+    }
+  ]
+}

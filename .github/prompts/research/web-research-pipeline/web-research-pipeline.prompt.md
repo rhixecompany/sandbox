@@ -6,19 +6,18 @@ trigger: /web-research-pipeline
 category: research
 version: 1.0.0
 author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
+tags: [research, web-search, tavily, pipeline, automation]
 profile: code-architect
 priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
+date: 2026-09-08
 enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
+model_required: sonnet
+skills:
+  - using-superpowers
+  - systematic-debugging
+  - git-patch-management
+  - executing-plans
+  - verification-before-completion
 dependencies: []
 formatter: markdown
 license: MIT
@@ -26,55 +25,23 @@ license: MIT
 
 ## Table of Contents
 
+- [Goal](#goal)
+- [Workflow](#workflow)
+- [Rules](#rules)
+- [Personas](#personas)
+- [Personality](#personality)
+- [Best Practices](#best-practices)
+- [Verification Checklist](#verification-checklist)
+- [Dependencies](#dependencies)
+- [Subgoals](#subgoals)
+- [Skills Required](#skills-required)
+- [MCP Servers & Tools](#mcp-servers--tools)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Scripts](#scripts)
+- [Related Prompts](#related-prompts)
+
 ## Goal
-Run a web search → extract full content → save as formatted markdown pipeline using a Tavily-first approach with fetch MCP fallback for robust research capture.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Workflow](#workflow)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Workflow](#workflow)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Web search → extract full content → save as formatted markdown. **Tavily-first approach:** prefer `mcp__tavily__tavily_search` + `mcp__tavily__tavily_extract`, fall back to `mcp__fetch__get_markdown`, then `web_extract`.
 
@@ -90,7 +57,7 @@ Load the `web-research-pipeline` skill (this is a delegation prompt):
 6. **Phase 6: Report** — Summary table
 
 ## Rules
->
+
 > Core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 1. **Tavily-first** — Prefer `mcp__tavily__tavily_search` over other backends.
@@ -117,9 +84,6 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-
-Use when researching topics or synthesizing findings. Start with broad discovery, then narrow to specific sources.
 
 ## Best Practices
 
@@ -167,6 +131,8 @@ See [`templates/skills-table-core.md`](templates/skills-table-core.md) for share
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
+| Server | Purpose |
+| --------------------- | ------------------------------------------------------ |
 | `ast-grep` | AST-based code search and replace |
 | `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
@@ -199,7 +165,9 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`repo-research-pipeline.prompt.md`](repo-research-pipeline.prompt.md)
-```
+
+---
+
 # Prompt template
+
 Execute the workflow defined in this file.
-```

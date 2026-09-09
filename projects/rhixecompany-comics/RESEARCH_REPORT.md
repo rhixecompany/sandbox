@@ -106,6 +106,8 @@
 - **Banking** — shared Drizzle ORM + PostgreSQL + Next.js 16 conventions; fintech patterns
 
 ---
+- **Django-Scrapy-Selenium** — shared Scrapy + Celery patterns; consolidation source
+- **selenium_webdriver** — shared browser automation patterns; Selenium reference
 
 ## Resources
 

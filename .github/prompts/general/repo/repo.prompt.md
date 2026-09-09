@@ -1,26 +1,32 @@
 ---
 name: repo
 title: Repository Operations
-description: |
+description: >
+  Research each of the 17 projects under projects/ — web-search for similar projects,
+  guides, cheatsheets, best practices; extract useful content; update or create
+  RESEARCH_REPORT.md per project; maintain RESEARCH_INDEX.md with symmetric cross-references.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
 trigger: /repo
 category: general
-toolsets: 
-skills: 
-- skill: executing-plans
+profile: code-architect
+priority: medium
+date: 2026-09-08
+enabled: true
+model_required: sonnet
+skills:
+  - using-superpowers
+  - executing-plans
+  - content-research-writer
+  - writing-skills
+  - context7
+  - systematic-debugging
+  - verification-before-completion
+  - web-research-pipeline
+  - repo-research-pipeline
 dependencies: []
 formatter: markdown
-metadata: 
-hermes: 
-profile: code-architect
-context_size: large
-copilot: 
-opencode: 
-command: opencode /repo
-codex: 
-model_override: null
 ---
 
 ## Table of Contents
@@ -74,8 +80,8 @@ Research each of the 17 projects under `projects/`. For every project:
 
 **Workspace:** `$HOME/Desktop/SandBox` (resolves to `C:\Users\Alexa\Desktop\SandBox`)
 
-All 16 reports currently exist on disk; 1 project (`mcp-servers`) needs its report created.
-Default action is **UPDATE** (refresh findings, verify links). Only fall back to **CREATE** if a report was deleted or for `mcp-servers`.
+15 reports currently exist on disk; 2 projects (`Bash`, `Resume_maker`) need their reports created.
+Default action is **UPDATE** (refresh findings, verify links). Only fall back to **CREATE** if a report was deleted or for `Bash`/`Resume_maker`.
 
 This prompt is the umbrella for repo-level work: it covers both the 17-project research pipeline and the lightweight single-repo onboarding questions (Q1–Q4) that users ask directly. The two modes share tooling (Tavily, filesystem, GitHub) but differ in scope — research pipeline is batched and report-driven, onboarding is ad-hoc and conversational.
 
@@ -97,9 +103,9 @@ This prompt is the umbrella for repo-level work: it covers both the 17-project r
 | 12 | xamehi | Full-stack (Django + Express + React) | ✅ Update |
 | 13 | xamehi.tv | Streaming (DRF + React 17, Redux, MUI) | ✅ Update |
 | 14 | youtube-downloader | YouTube CLI (yt-dlp, curl_cffi) | ✅ Update |
-| 15 | Bash | Automation Toolkit (Bun/TypeScript) | ✅ Update |
-| 16 | Resume_maker | Job Documents Generator (Bun/CLI) | ✅ Update |
-| 17 | mcp-servers | Multi-language MCP server implementations | ❌ Create |
+| 15 | Bash | Automation Toolkit (Bun/TypeScript) | ❌ Create |
+| 16 | Resume_maker | Job Documents Generator (Bun/CLI) | ❌ Create |
+| 17 | mcp-servers | Multi-language MCP server implementations | ✅ Update |
 
 ## Constraints
 
@@ -122,13 +128,13 @@ Verify tools and workspace before research begins.
 1. Test `mcp__tavily__tavily_search` with one real query — confirm results return.
 2. Confirm working dir: `pwd` → `$HOME/Desktop/SandBox`
 3. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' | sort`
-4. Confirm count = 16 (existing), flag `mcp-servers` as CREATE target.
+4. Confirm count = 15 (existing), flag `Bash` and `Resume_maker` as CREATE targets.
 
 **Tasks:**
 
 - [ ] `mcp__tavily__tavily_search` reachable (1 test query returns results)
 - [ ] `pwd` matches workspace path
-- [ ] 16 existing reports found, 1 flagged for CREATE
+- [ ] 15 existing reports found, 2 flagged for CREATE
 
 **Actions:**
 
@@ -185,7 +191,7 @@ Write or update `RESEARCH_REPORT.md` per project using the template in `## Repor
 
 **Tasks:**
 
-- [ ] 2.1–2.17 All 17 RESEARCH_REPORT.md files written/updated (17 new for `mcp-servers`)
+- [ ] 2.1–2.17 All 17 RESEARCH_REPORT.md files written/updated (2 new for `Bash`, `Resume_maker`)
 
 **Actions:**
 
@@ -205,7 +211,7 @@ Update the master index. Verify cross-references are symmetric.
 
 1. Scan disk: `find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md'`
 2. Rewrite `projects/RESEARCH_INDEX.md` — 17 rows, file size, last-updated date.
-3. For each report, verify `## Related Projects` lists all workspace projects sharing its tech stack. Add missing references for `mcp-servers`.
+3. For each report, verify `## Related Projects` lists all workspace projects sharing its tech stack. Add missing references for `Bash` and `Resume_maker`.
 4. Confirm symmetry: if A references B, read B and confirm B references A.
 
 **Tasks:**
@@ -217,7 +223,7 @@ Update the master index. Verify cross-references are symmetric.
 **Actions:**
 
 ```python
-terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' -exec ls -lh {} \;")
+terminal("find projects/ -maxdepth 2 -name 'RESEARCH_REPORT.md' -exec ls -lh {} \\;")
 write_file("projects/RESEARCH_INDEX.md", content=<updated index>)
 ```
 

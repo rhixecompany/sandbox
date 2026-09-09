@@ -10,7 +10,7 @@ SandBox/
 ├── CLAUDE.md / .cursorrules # Thin stubs deferring here
 ├── .github/prompts/         # Canonical prompt library (190+ prompts)
 ├── projects/                # 16+ subprojects (monorepo)
-│   ├── Bash/                # Primary automation toolkit (Bun/TypeScript)
+│   ├── Bash/                # Primary automation toolkit (Bun/TS)
 │   ├── Banking/             # Next.js fintech (Drizzle, Plaid, Dwolla)
 │   ├── comicwise/           # Next.js comic streaming (Prisma, Stripe)
 │   ├── ecom/                # Django REST + React/Redux ecommerce
@@ -30,20 +30,20 @@ SandBox/
 
 | Layer | Technology | Notes |
 |-------|-----------|-------|
-| **Runtime (TS)** | Bun 1.3.14+ | Runtime + package manager + test runner |
-| **Runtime (Python)** | Python 3.11 / 3.13 | Dual install: python3=3.13.14, python=3.11.15 |
-| **Python Package Mgr** | pip + uv | Prefer uv for speed |
-| **TypeScript** | ESNext, strict mode | noUncheckedIndexedAccess, verbatimModuleSyntax |
-| **Python Quality** | Ruff + Pyright | Ruff lint/format, Pyright typecheck |
-| **JS Linting** | ESLint 10 flat config | Zero-warning gate |
-| **Formatter** | Prettier 3 | .prettierrc.json |
-| **Markdown** | markdownlint-cli2 | MD013 line_length=500 |
-| **Spell Check** | cspell 10 | cspell.json |
-| **Testing (TS)** | Vitest | bun run test |
-| **Testing (Python)** | pytest 9 | pytest-asyncio |
-| **Browser Testing** | Playwright | .github/prompts/playwright-*.prompt.md |
-| **Pre-commit** | pre-commit 4.6 | .pre-commit-config.yaml |
-| **Changelog** | git-cliff 2.13 | cliff.toml |
+| **Runtime (TS)** | Bun 1.3.14+ | Runtime + package manager + test runner; `bun install` + `bun run <script>` |
+| **Runtime (Python)** | Python 3.11 / 3.13 | Dual install: python3=3.13.14, python=3.11.15; `uv` preferred for speed |
+| **Python Package Mgr** | pip + uv | `uv pip install` faster than pip; `requirements.txt` at root |
+| **TypeScript** | ESNext, strict mode | `noUncheckedIndexedAccess`, `verbatimModuleSyntax`; `bun run typecheck` |
+| **Python Quality** | Ruff + Pyright | `ruff check .` / `pyright .`; zero-warning gate |
+| **JS Linting** | ESLint 10 flat config | `eslint.config.mts` (Bash), `eslint.config.mjs` (root); zero-warning gate |
+| **Formatter** | Prettier 3 | `.prettierrc.json` at root; `printWidth: 120, singleQuote: false` |
+| **Markdown** | markdownlint-cli2 | MD013 disabled (`.markdownlint.jsonc` sets `MD013: false`); MD013 line_length=500 **no longer enforced** |
+| **Spell Check** | cspell 10 | `.cspell.json` in subprojects; not at root |
+| **Testing (TS)** | Vitest | `bun run test`; `vitest run` in Bash |
+| **Testing (Python)** | pytest 9 | `python -m pytest -v` or `python test.py`; `pytest-asyncio` |
+| **Browser Testing** | Playwright | `.github/prompts/playwright-*.prompt.md`; `bun run test:ui` in Banking |
+| **Pre-commit** | pre-commit 4.6 | `.pre-commit-config.yaml` at root |
+| **Changelog** | git-cliff 2.13 | `cliff.toml`; `git cliff` for CHANGELOG generation |
 
 ## 3. Architecture Overview
 
@@ -53,28 +53,13 @@ The SandBox is a multi-language monorepo workspace tightly integrated with **Her
 
 ### Cross-Component Communication
 
-- **Shared CI**: `.github/workflows/` at workspace root applies to `projects/Bash/` and any subproject with matching workflows
+- **Shared CI**: `.github/workflows/` at workspace root applies to `projects/Bash/` and matching subprojects
 - **Prompt Library**: All `.github/prompts/*.prompt.md` are the single source of truth — consumed by Copilot, OpenCode, and Hermes agents
 - **Hermes Profile Routing**: code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot, general→default
 
 ### MCP-First Tool Precedence
 
 Before using native tools (terminal commands, direct file access), check MCP servers. The workspace has **16 active MCP servers** configured.
-
-| Priority | MCP Server | Equivalent Native | Purpose |
-|----------|-----------|-------------------|---------|
-| 1 | `filesystem` | `read_file`, `write_file`, `search_files`, `patch` | File read/write/stat/search ops |
-| 2 | `github` | `gh` CLI | PR, issues, file contents, repos |
-| 3 | `ast-grep` | `grep`/`rg` | AST-based code search and replace |
-| 4 | `playwright` | `browser_*` tools | Browser automation for interactive pages |
-| 5 | `fetch` | `curl` | HTTP web page content extraction |
-| 6 | `sequential-thinking` | N/A | Structured multi-step reasoning |
-| 7 | `code-sandbox` | `terminal` | Isolated Node.js sandbox for running code |
-| 8 | `mcp-docker` | `docker` CLI | Container management + GitHub ops |
-| 9 | `memory` | N/A | Persistent cross-session memory |
-| 10 | `python-quality` | Manual | Ruff lint + Pyright typecheck on Python files |
-| 11 | `tooling-lint` | Manual | ESLint, Prettier, markdownlint, cspell |
-| 12 | `tooling-config` | Manual | pre-commit, git-cliff, .gitignore validation |
 
 ## 4. Critical Developer Workflows
 
@@ -94,7 +79,11 @@ bun run index.ts
 
 ### Subproject Workflows
 
-Each subproject has its own AGENTS.md with specific commands. See subproject AGENTS.md for details.
+Each subproject has its own AGENTS.md with specific commands. Key workflows:
+
+- **Bash**: `bun run test` (Vitest), `bash test-all.sh` (shell script testing), `bash verify-dryrun.sh` (dry-run checks)
+- **Banking**: `bun run build` (Next.js), `bun run test:ui` (Playwright), `bun run lint:strict`, `bun run verify:rules`
+- **Python-projects**: `ruff check .` (lint), `pyright .` (typecheck), `python -m pytest -v` (tests), `python basic_calculator.py` (smoke)
 
 ## 5. Codebase Patterns & Conventions
 
@@ -150,9 +139,9 @@ Examples:
   feat/bash/add-dry-run-mode
   fix/banking/plaid-webhook-signature
   refactor/ecom/extract-payment-service
-```
 
 - **PR target branch**: `development` (not `main`)
+```
 
 ## 6. .github/prompts Library
 
@@ -249,5 +238,4 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 6. **Strict sequential** — "only then" is a hard constraint
 
 ---
-
 *Last updated: 2026-09-08 by comprehensive implementation prompt v3.0*

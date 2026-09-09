@@ -7,19 +7,17 @@ category: general
 version: 1.0.0
 author: Hermes Agent
 tags: [repo, git, narrative, summary, history, documentation]
-metadata: 
-hermes: 
 profile: code-architect
 priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
+date: 2026-09-08
 enabled: true
-codex: 
-date: 2026-08-25
-toolsets: 
-skills: 
-- skill: using-superpowers
+model_required: sonnet
+skills:
+  - using-superpowers
+  - systematic-debugging
+  - git-patch-management
+  - executing-plans
+  - verification-before-completion
 dependencies: []
 formatter: markdown
 license: MIT
@@ -116,8 +114,6 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
-
-Use for the task described in the Goal section. Follow structured workflow and verify results.
 
 ## Best Practices
 

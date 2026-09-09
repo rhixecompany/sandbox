@@ -48,8 +48,6 @@ def create_fixture(home: Path, session_id: str) -> None:
 
 def main() -> int:
     session_id = "capture-test-20260905"
-        parser = argparse.ArgumentParser(description=main.__doc__ or "")
-        parser.parse_args()
 
     with tempfile.TemporaryDirectory(prefix="hermes-capture-test-") as temp:
         home = Path(temp)
@@ -60,7 +58,6 @@ def main() -> int:
         sys.path.insert(0, str(HOOKS))
         import session_end_capture  # noqa: PLC0415
         import session_start_capture  # noqa: PLC0415
-import argparse
 
         create_fixture(home, session_id)
         start = session_start_capture.run_capture(

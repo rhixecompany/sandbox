@@ -111,6 +111,7 @@
 | Bash | TypeScript tooling and linting conventions |
 
 ---
+- **Bash** — shared TypeScript tooling and linting conventions
 
 ## Resources
 
