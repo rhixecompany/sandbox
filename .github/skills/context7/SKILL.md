@@ -1,144 +1,41 @@
 ---
-author: Alexa
-description: Use when looking up current library or framework documentation, finding
-  code examples for specific APIs, or verifying correct usage of library functions.
-license: MIT
 name: context7
-tags:
-- imported
-title: Context7
-version: 1.0.0
+description: 'MCP server for context7. Use when you need context7 via MCP.'
+license: Complete terms in LICENSE.txt
 ---
-## Goal
-Use when looking up current library or framework documentation, finding code examples for specific APIs, or verifying correct usage of library functions.
 
+# context7
 
 ## Overview
-
-Automated reasoning and workflow tool for `context7`. Execute multi-step tasks with deterministic quality controls and structured outputs.
-
-## context7
-
-## Description
-
-
-Retrieve up-to-date documentation for software libraries, frameworks, and components via the Context7 MCP server. Provides current information about library APIs, features, and usage examples by injecting live docs into agent context.
-
-Context7 runs as an HTTP MCP server. Configure it under `mcp_servers` in the Hermes config with an API key header (`CONTEXT7_API_KEY`). Test with `hermes mcp test context7` — expected output: connected with 2 tools (`resolve-library-id`, `query-docs`). See the `native-mcp` skill for the MCP config format reference.
-
-
-## Skills Required
-
-| Skill | Purpose |
-|-------|---------|
-| `terminal` | CLI commands execution |
-| `file` | Read/write files |
-
-## Prerequisites
-
-- Context7 API key from context7.com/dashboard (free tier available)
-- Hermes MCP client active (the `mcp` Python package must be available)
-
-## Configuration
-
-```yaml
-mcp_servers:
-  context7:
-    url: https://mcp.context7.com/mcp
-    headers:
-      CONTEXT7_API_KEY: "your-api-key"
-    enabled: true
-```
-
-Use the literal key string in the headers field — ${VAR} expansion is not guaranteed in MCP headers.
-
-## Testing
-
-After configuring, verify with:
-```
-hermes mcp test context7
-```
-
-Expected: "Connected" with 2 tools discovered. Slow responses may need a higher `connect_timeout`.
-
-## Available Tools
-
-| MCP Tool | Purpose |
-|----------|---------|
-| `resolve-library-id` | Converts a package name to a Context7 library ID |
-| `query-docs` | Fetches documentation and code examples |
-
-Hermes prefixes these as `mcp_context7_resolve_library_id` and `mcp_context7_query_docs`.
+MCP server for context7.
 
 ## When to Use
+- Debugging context7 MCP issues
+- Configuring context7 settings
 
-- Looking up library or framework documentation
-- Finding code examples for specific APIs
-- Verifying correct usage of library functions
-- Obtaining current information about library APIs
-- Checking for API changes or deprecations
-- Learning new library features
+## Prerequisites
+- Hermès or MCP-compatible agent
 
-## When NOT to Use
+## Configuration
+**Transport:** N/A | **Command:** `N/A` | **Enabled:** yes
 
-- General programming questions
-- Language standard library usage
-- Offline or local documentation lookup
-- Historical API versions
+**Arguments:**
+- (none)
 
-## Workflow
+## Workflows
+- Pre-configured
 
-### Phase 1: Identify Library
+## Gotchas
+- No known gotchas
 
-- Determine library name and version
-- Confirm library is available in Context7
-- Note specific API or feature needed
+## Troubleshooting
+| Issue | Solution |
+|-------|----------|
+| Server not responding | Run hermes mcp list |
 
-### Phase 2: Query Documentation
+## Testing
+Run `hermes mcp list`. For stdio: `bunx -y context7`
 
-- Search for relevant documentation
-- Filter by version if needed
-- Review available examples
-
-### Phase 3: Extract Information
-
-- Find API signatures and parameters
-- Locate usage examples
-- Note any deprecations or warnings
-
-### Phase 4: Apply Learning
-
-- Implement based on documentation
-- Test with provided examples
-- Verify behavior matches docs
-
-## Tools & References
-
-- **Related Skills**: claude-api, clonedeps
-- **Context7 API**: Up-to-date library documentation
-- **Supported Libraries**: 1000+ frameworks and packages
-
-## Best Practices
-
-- Always check for version-specific information
-- Review examples before implementing
-- Note deprecation warnings
-- Keep documentation links in code comments
-- Update code when library versions change
-- Report documentation gaps or errors
-
-
-
-## Pitfalls
-
-- **Stale cache:** Always re-read files from disk after editing; don't rely on cached context
-- **Context limits:** Process in batches; write results after each batch
-## Verification Checklist
-
-- [ ] Frontmatter complete (name, title, description, version, author, license, tags)
-- [ ] Skills Required table present
-- [ ] Workflow has ≥3 phases
-- [ ] Pitfalls section present
-- [ ] All references cited in SKILL.md body
-- [ ] SKILL.md is under 250 lines
-- [ ] No placeholder text
+## References
+- [MCP Catalog](../mcp-servers/references/mcp-server-catalog.json)
+- [Management Tool](../scripts/hermes-mcp-manager.py)

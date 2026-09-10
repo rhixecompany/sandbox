@@ -145,25 +145,9 @@
 				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
 			]
 		},
-		"cloudinary": {
-			"type": "http",
-			"url": "https://asset-management.mcp.cloudinary.com/mcp"
-		},
-		"paypal": {
-			"type": "http",
-			"url": "https://mcp.paypal.com/sse"
-		},
-		"supabase": {
-			"type": "http",
-			"url": "https://mcp.supabase.com/mcp"
-		},
 		"twilio-docs": {
 			"type": "http",
 			"url": "https://mcp.twilio.com/docs"
-		},
-		"vercel": {
-			"type": "http",
-			"url": "https://mcp.vercel.com"
 		}
 	}
 }

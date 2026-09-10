@@ -6,6 +6,7 @@ Cursor IDE rules. All workspace rules in `AGENTS.md`.
 - No `any`, no backup files, no `.env` writes
 - All toolchain, routing, and conventions: see `AGENTS.md`
 - Multi-file protocol (≥5 files): see `SOUL.md` canonical block
+- Profile routing: code→code-architect, research→research-analyst, design→creative-director, planning→exec-assistant, teaching→patient-tutor, ops→adminbot, general→default
 
 ## Profile Routing
 

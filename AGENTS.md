@@ -35,9 +35,9 @@ SandBox/
 | **Python Package Mgr** | pip + uv | `uv pip install` faster than pip; `requirements.txt` at root |
 | **TypeScript** | ESNext, strict mode | `noUncheckedIndexedAccess`, `verbatimModuleSyntax`; `bun run typecheck` |
 | **Python Quality** | Ruff + Pyright | `ruff check .` / `pyright .`; zero-warning gate |
-| **JS Linting** | ESLint 10 flat config | `eslint.config.mts` (Bash), `eslint.config.mjs` (root); zero-warning gate |
-| **Formatter** | Prettier 3 | `.prettierrc.json` at root; `printWidth: 120, singleQuote: false` |
-| **Markdown** | markdownlint-cli2 | MD013 disabled (`.markdownlint.jsonc` sets `MD013: false`); MD013 line_length=500 **no longer enforced** |
+| **JS Linting** | ESLint 10 flat config | `eslint.config.mjs` (root); zero-warning gate |
+| **Formatter** | Prettier 3 | `.prettierrc.json` at root; `printWidth: 120, singleQuote: false, tabWidth: 2, trailingComma: "all"` |
+| **Markdown** | markdownlint-cli2 | MD013 disabled (`.markdownlint.jsonc` sets `MD013: false`); line_length no longer enforced |
 | **Spell Check** | cspell 10 | `.cspell.json` in subprojects; not at root |
 | **Testing (TS)** | Vitest | `bun run test`; `vitest run` in Bash |
 | **Testing (Python)** | pytest 9 | `python -m pytest -v` or `python test.py`; `pytest-asyncio` |

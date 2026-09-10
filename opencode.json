@@ -152,11 +152,6 @@
       "type": "remote",
       "url": "https://task-mcp.parallel.ai/mcp"
     },
-    "plaid": {
-      "enabled": false,
-      "type": "remote",
-      "url": "https://mcp.plaid.com/mcp"
-    },
     "playwright": {
       "enabled": true,
       "type": "local",
@@ -214,11 +209,6 @@
       "type": "remote",
       "url": "https://mcp.smithery.ai/alexanderrhixe30"
     },
-    "stripe": {
-      "enabled": false,
-      "type": "remote",
-      "url": "https://mcp.stripe.com/mcp"
-    },
     "tavily": {
       "enabled": true,
       "type": "remote",
@@ -249,35 +239,16 @@
         "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
       ]
     },
-    "cloudinary": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://asset-management.mcp.cloudinary.com/mcp"
-    },
-    "paypal": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://mcp.paypal.com/sse"
-    },
-    "supabase": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://mcp.supabase.com/mcp"
-    },
     "twilio-docs": {
       "enabled": true,
       "type": "remote",
       "url": "https://mcp.twilio.com/docs"
-    },
-    "vercel": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://mcp.vercel.com"
     }
   },
-  "model": "openrouter/minimax/minimax-m3:free",
+  "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
   "plugin": [
-    "oh-my-openagent@latest"
+    "oh-my-openagent@latest",
+    "opencode-antigravity-auth"
   ],
   "provider": {
     "ollama": {
@@ -293,5 +264,5 @@
       }
     }
   },
-  "small_model": "opencode/nemotron-3-super-free"
+  "small_model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
 }

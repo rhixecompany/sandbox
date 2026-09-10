@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sandbox"
+version = "0.1.0"
+description = "Hermes Agent Sandbox monorepo"
+requires-python = ">=3.11"
+license = "MIT"
+
+[project.tool-setuptools.config-file]
+pyproject = "true"
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "I", "B", "N", "W"]
+exclude = ["node_modules", ".venv", ".git"]
+validate = true
+
+[tool.ruff.format]
+theme = "one-dark"
+
+[tool.pyright]
+pythonPlatform = "Windows"
+pythonVersion = "3.11"
+disableOrganizeImports = false
+
+[tool.pytest]
+testpaths = ["projects"]
+python_functions = ["test_", "pytest_"]
+addopts = "-q --tb=short"
+
+[tool.bun]
+version = "1.3.14"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+multi_line_output = "split_on_newline"
