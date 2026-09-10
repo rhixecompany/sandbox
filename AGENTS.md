@@ -154,7 +154,6 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 ├── index.md                           # Library overview
 ├── *.prompt.md                        # Canonical prompts (190+)
 ├── templates/                         # Shared templates
-├── .enhance/                          # Enhanced versions
 └── archived/                          # Deprecated prompts
 ```
 
