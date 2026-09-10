@@ -172,9 +172,15 @@
       "enabled": true,
       "type": "local",
       "command": [
-        "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "~/myvenv/bin/python",
         "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"
-      ]
+      ],
+      "env": {
+        "PYTHONPATH": "~/myvenv/lib/site-packages",
+        "MCP_VERSION": "2.0.0",
+        "UV_USE": "true",
+        "UVM_ACTIVE": "~/myvenv"
+      }
     },
     "sentry": {
       "enabled": true,
@@ -213,17 +219,29 @@
       "enabled": true,
       "type": "local",
       "command": [
-        "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "~/myvenv/bin/python",
         "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"
-      ]
+      ],
+      "env": {
+        "PYTHONPATH": "~/myvenv/lib/site-packages",
+        "MCP_VERSION": "2.0.0",
+        "UV_USE": "true",
+        "UVM_ACTIVE": "~/myvenv"
+      }
     },
     "tooling-lint": {
       "enabled": true,
       "type": "local",
       "command": [
-        "C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+        "~/myvenv/bin/python",
         "C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
-      ]
+      ],
+      "env": {
+        "PYTHONPATH": "~/myvenv/lib/site-packages",
+        "MCP_VERSION": "2.0.0",
+        "UV_USE": "true",
+        "UVM_ACTIVE": "~/myvenv"
+      }
     },
     "twilio-docs": {
       "enabled": true,
