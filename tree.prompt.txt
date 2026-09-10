@@ -1,14 +1,11 @@
 /goal /using-superpowers /brainstorming /user-communication-preferences /sequential-thinking  /filesytem ,  /ast-grep /memory /plan /plan-mode /plans-and-specs  /create-implementation-plan /implementation-plan /executing-plans /writing-clearly-and-concisely /subagent-driven-development create, update, refactor, implement, execute, reimplement a comprehensive implementation specs, plan, prompt, scripts, skills that fully implements, reimplements all goal and subgoal in the best and fastest sequence or in parallel where possible,  use the concise tool to ask questions about closing all openitems,  use all available tools to implement,  reimplement,  debug,  fix,  verify,  enhance,  validate all subgoal in the best and fastest sequence or in parallel where possible,  run all judge skill on the specs, plans, prompts, scripts, hooks, plugins judge skills and raise score to be 99 or above it begin by asking anything, unknown, confusing, needed questions using the clarify tool, you are approved on all destructive operations so implement all fixes, creations, updates, enhancements that outlines the steps needed to achieve the desired outcomes,  including timelines,  milestones,  and resource allocation create, validate a comprehensive implementation specs, plans, scripts, skills, prompt  that outlines the steps needed to achieve the desired outcomes,  including timelines,  milestones,  and resource allocation:
-delete and cleanup .enhance,.goals,.hermes_diagnostics,.mcp,.*_cache,.worktrees,hermes-memory-safety,judge_results,logs,session-state,thoughts folders.
-search,delete and cleanup *.json,*-report.md files expect for package.json,pyrightconfig.json.
-update,refactor, and verify .editorconfig,.git-blame-ignore-revs,.gitattributes,.gitignore,.gitmodules,.markdownlint-cli2.jsonc,.markdownlint.jsonc,.pre-commit-config.yaml,.prettierignore,.prettierrc.json,*.toml,*.yaml.
-search,delete and cleanup *.log,*.txt skip *.prompt.txt files.
-convert,update,refactor, and verify *.mjs files into mts files.
-cleanup, update, refactor, and verify *.md files including PLAN.md,SOUL.md,SPEC.md,USER.md and all files in docs and its subdirectories.
-update, refactor, and verify *.py files including main.py,*.py files create a src directory an migrate files into src and its subdirectories.
-update, refactor, and verify requirements.txt,tsconfig.json
-update, refactor, and verify .markdownlint-cli2.jsonc,.markdownlint.jsonc,.pre-commit-config.yaml,.prettierignore,.prettierrc.json files create mts files.
-update, refactor, and verify package.json,pyrightconfig.json,*.json files.
-
-
-
+/goal /using-superpowers /brainstorming  delete and cleanup .enhance,.goals,.hermes_diagnostics,.mcp,.*_cache,.worktrees,hermes-memory-safety,judge_results,logs,session-state,thoughts folders.
+/goal /using-superpowers /brainstorming  search,delete and cleanup *.json,*-report.md files expect for package.json,pyrightconfig.json.
+/goal /using-superpowers /brainstorming  update,refactor, and verify .editorconfig,.git-blame-ignore-revs,.gitattributes,.gitignore,.gitmodules,.markdownlint-cli2.jsonc,.markdownlint.jsonc,.pre-commit-config.yaml,.prettierignore,.prettierrc.json,*.toml,*.yaml.
+/goal /using-superpowers /brainstorming  search,delete and cleanup *.log,*.txt skip *.prompt.txt files.
+/goal /using-superpowers /brainstorming  convert,update,refactor, and verify *.mjs files into mts files.
+/goal /using-superpowers /brainstorming  cleanup, update, refactor, and verify *.md files including PLAN.md,SOUL.md,SPEC.md,USER.md and all files in docs and its subdirectories.
+/goal /using-superpowers /brainstorming  update, refactor, and verify *.py,*.mjs,*.mts files including main.py,*.py files create a src directory an migrate files into src and its subdirectories.
+/goal /using-superpowers /brainstorming  update, refactor, and verify requirements.txt,tsconfig.json
+/goal /using-superpowers /brainstorming  update, refactor, and verify .markdownlint-cli2.jsonc,.markdownlint.jsonc,.pre-commit-config.yaml,.prettierignore,.prettierrc.json files create mts files.
+/goal /using-superpowers /brainstorming  update, refactor, and verify package.json,pyrightconfig.json,*.json files.

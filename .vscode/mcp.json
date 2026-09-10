@@ -1,179 +1,183 @@
 {
-	"servers": {
-		"ast-grep": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"@notprolands/ast-grep-mcp"
-			]
-		},
-		"atlassian": {
-			"type": "sse",
-			"url": "https://mcp.atlassian.com/v1/sse"
-		},
-		"code-sandbox": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"node-code-sandbox-mcp"
-			]
-		},
-		"context7": {
-			"type": "http",
-			"url": "https://mcp.context7.com/mcp"
-		},
-		"fetch": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"mcp-server-fetch-typescript"
-			]
-		},
-		"filesystem": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-filesystem",
-				"C:/Users/Alexa",
-				"C:/Users/Alexa/AppData/Local/hermes",
-				"${workspaceFolder}"
-			]
-		},
-		"github": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-github"
-			],
-			"env": {
-				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
-			}
-		},
-		"honcho": {
-			"type": "http",
-			"url": "https://mcp.honcho.dev/"
-		},
-		"mcp-docker": {
-			"type": "stdio",
-			"command": "docker",
-			"args": [
-				"mcp",
-				"gateway",
-				"run",
-				"--profile",
-				"adminbot"
-			]
-		},
-		"memory": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-memory"
-			]
-		},
-		"mindstudio": {
-			"type": "stdio",
-			"command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
-			"args": [
-				"mcp"
-			]
-		},
-		"neon": {
-			"type": "http",
-			"url": "https://mcp.neon.tech/mcp"
-		},
-		"parallel-search": {
-			"type": "http",
-			"url": "https://search.parallel.ai/mcp"
-		},
-		"parallel-task": {
-			"type": "http",
-			"url": "https://task-mcp.parallel.ai/mcp"
-		},
-		"playwright": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"@playwright/mcp@0.0.78"
-			]
-		},
-		"python-quality": {
-			"type": "stdio",
-			"command": "~/myvenv/bin/python",
-			"args": [
-				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"
-			],
-			"env": {
-				"PYTHONPATH": "~/myvenv/lib/site-packages",
-				"MCP_VERSION": "2.0.0",
-				"UV_USE": "true",
-				"UVM_ACTIVE": "~/myvenv"
-			}
-		},
-		"sentry": {
-			"type": "http",
-			"url": "https://mcp.sentry.dev/mcp"
-		},
-		"sequential-thinking": {
-			"type": "stdio",
-			"command": "bunx",
-			"args": [
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			]
-		},
-		"smithery": {
-			"type": "http",
-			"url": "https://mcp.smithery.ai/alexanderrhixe30"
-		},
-		"tavily": {
-			"type": "http",
-			"url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
-		},
-		"tooling-config": {
-			"type": "stdio",
-			"command": "~/myvenv/bin/python",
-			"args": [
-				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"
-			],
-			"env": {
-				"PYTHONPATH": "~/myvenv/lib/site-packages",
-				"MCP_VERSION": "2.0.0",
-				"UV_USE": "true",
-				"UVM_ACTIVE": "~/myvenv"
-			}
-		},
-		"tooling-lint": {
-			"type": "stdio",
-			"command": "~/myvenv/bin/python",
-			"args": [
-				"C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
-			],
-			"env": {
-				"PYTHONPATH": "~/myvenv/lib/site-packages",
-				"MCP_VERSION": "2.0.0",
-				"UV_USE": "true",
-				"UVM_ACTIVE": "~/myvenv"
-			}
-		},
-		"twilio-docs": {
-			"type": "http",
-			"url": "https://mcp.twilio.com/docs"
-		}
-	},
-	"inputs": [
-		{
-			"id": "workspaceFolder",
-			"type": "promptString",
-			"description": "Workspace root path",
-			"default": "${workspaceFolder}"
-		}
-	]
+  "servers": {
+    "ast-grep": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "@notprolands/ast-grep-mcp"
+      ]
+    },
+    "atlassian": {
+      "type": "sse",
+      "url": "https://mcp.atlassian.com/v1/sse"
+    },
+    "code-sandbox": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "node-code-sandbox-mcp"
+      ]
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "fetch": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "mcp-server-fetch-typescript"
+      ]
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/Alexa",
+        "C:/Users/Alexa/AppData/Local/hermes",
+        "${workspaceFolder}"
+      ]
+    },
+    "github": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}",
+        "UVM_ACTIVE": "C:/Users/Alexa/myvenv",
+        "UV_USE": "true",
+        "MCP_VERSION": "2.0.0",
+        "PYTHONPATH": "C:/Users/Alexa/myvenv/lib/site-packages"
+      }
+    },
+    "honcho": {
+      "type": "http",
+      "url": "https://mcp.honcho.dev/"
+    },
+    "mcp-docker": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "mcp",
+        "gateway",
+        "run",
+        "--profile",
+        "adminbot"
+      ]
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "mindstudio": {
+      "type": "stdio",
+      "command": "C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
+      "args": [
+        "mcp"
+      ]
+    },
+    "neon": {
+      "type": "http",
+      "url": "https://mcp.neon.tech/mcp"
+    },
+    "parallel-search": {
+      "type": "http",
+      "url": "https://search.parallel.ai/mcp"
+    },
+    "parallel-task": {
+      "type": "http",
+      "url": "https://task-mcp.parallel.ai/mcp"
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "@playwright/mcp@0.0.78"
+      ]
+    },
+    "python-quality": {
+      "type": "stdio",
+      "command": "~/myvenv/bin/python",
+      "args": [
+        "C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:/Users/Alexa/myvenv/lib/site-packages",
+        "MCP_VERSION": "2.0.0",
+        "UV_USE": "true",
+        "UVM_ACTIVE": "C:/Users/Alexa/myvenv"
+      }
+    },
+    "sentry": {
+      "type": "http",
+      "url": "https://mcp.sentry.dev/mcp"
+    },
+    "sequential-thinking": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "smithery": {
+      "type": "http",
+      "url": "https://mcp.smithery.ai/alexanderrhixe30"
+    },
+    "tavily": {
+      "type": "http",
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${env:TAVILY_API_KEY}"
+    },
+    "tooling-config": {
+      "type": "stdio",
+      "command": "~/myvenv/bin/python",
+      "args": [
+        "C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_config_mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:/Users/Alexa/myvenv/lib/site-packages",
+        "MCP_VERSION": "2.0.0",
+        "UV_USE": "true",
+        "UVM_ACTIVE": "C:/Users/Alexa/myvenv"
+      }
+    },
+    "tooling-lint": {
+      "type": "stdio",
+      "command": "~/myvenv/bin/python",
+      "args": [
+        "C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:/Users/Alexa/myvenv/lib/site-packages",
+        "MCP_VERSION": "2.0.0",
+        "UV_USE": "true",
+        "UVM_ACTIVE": "C:/Users/Alexa/myvenv"
+      }
+    },
+    "twilio-docs": {
+      "type": "http",
+      "url": "https://mcp.twilio.com/docs"
+    }
+  },
+  "inputs": [
+    {
+      "id": "workspaceFolder",
+      "type": "promptString",
+      "description": "Workspace root path",
+      "default": "${workspaceFolder}"
+    }
+  ]
 }
