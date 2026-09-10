@@ -1,0 +1,2061 @@
+{
+  "ts": "2026-09-10T21:00:25.124228+00:00",
+  "logs_dir": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs",
+  "file_count": 96,
+  "total_lines": 450472,
+  "total_errors": 15733,
+  "by_category": {
+    "other": 373956,
+    "hook": 29163,
+    "network": 26088,
+    "plugin": 8301,
+    "mcp": 3943,
+    "chat": 3603,
+    "provider": 2864,
+    "session": 1623,
+    "rate_limit": 520,
+    "subagent": 242,
+    "config": 160,
+    "tool": 9
+  },
+  "by_level": {
+    "NONE": 312502,
+    "DEBUG": 50313,
+    "WARNING": 49714,
+    "INFO": 22155,
+    "ERROR": 15597,
+    "CRITICAL": 136,
+    "TRACE": 55
+  },
+  "per_file": [
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\.__agent.lock",
+      "size": 0,
+      "lines": 0,
+      "errors": 0,
+      "by_category": {}
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\.__errors.lock",
+      "size": 0,
+      "lines": 0,
+      "errors": 0,
+      "by_category": {}
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\.__gateway.lock",
+      "size": 0,
+      "lines": 0,
+      "errors": 0,
+      "by_category": {}
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\.__gui.lock",
+      "size": 0,
+      "lines": 0,
+      "errors": 0,
+      "by_category": {}
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\.capture_initialized",
+      "size": 0,
+      "lines": 0,
+      "errors": 0,
+      "by_category": {}
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\.session_end_initialized",
+      "size": 0,
+      "lines": 0,
+      "errors": 0,
+      "by_category": {}
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\.session_start_initialized",
+      "size": 0,
+      "lines": 0,
+      "errors": 0,
+      "by_category": {}
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-curator-run.log",
+      "name": "action-curator-run.log",
+      "size": 856,
+      "lines": 16,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 16
+      },
+      "by_category": {
+        "other": 16
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-doctor.log",
+      "name": "action-doctor.log",
+      "size": 19060,
+      "lines": 483,
+      "errors": 7,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 476,
+        "CRITICAL": 7
+      },
+      "by_category": {
+        "other": 391,
+        "provider": 71,
+        "session": 9,
+        "plugin": 9,
+        "config": 3
+      },
+      "sample_errors": [
+        "  \u26a0 Browser tools (agent-browser) deps (0 critical, 2 high, 0 moderate \u2014 run: cd C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent && npm audit fix --workspaces=false)",
+        "  \u26a0 web workspace deps (0 critical, 4 high, 0 moderate \u2014 build-tool advisory; clears via lockfile bump)",
+        "  \u26a0 ui-tui workspace deps (0 critical, 2 high, 0 moderate \u2014 build-tool advisory; clears via lockfile bump)",
+        "  \u26a0 web workspace deps (0 critical, 4 high, 0 moderate \u2014 build-tool advisory; clears via lockfile bump)",
+        "  \u26a0 ui-tui workspace deps (0 critical, 3 high, 0 moderate \u2014 build-tool advisory; clears via lockfile bump)",
+        "  \u26a0 Browser tools (agent-browser) deps (0 critical, 1 high, 0 moderate \u2014 run: cd C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent && npm audit fix --workspaces=false)",
+        "  \u26a0 web workspace deps (0 critical, 1 high, 1 moderate \u2014 build-tool advisory; clears via lockfile bump)"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-security-audit.log",
+      "name": "action-security-audit.log",
+      "size": 4024,
+      "lines": 78,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 76,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 76,
+        "network": 2
+      },
+      "sample_errors": [
+        "           AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+        "           AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-agent-hooks-21d3eec4.log",
+      "name": "action-skills-install-agent-hooks-21d3eec4.log",
+      "size": 8645,
+      "lines": 147,
+      "errors": 25,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 122,
+        "CRITICAL": 25
+      },
+      "by_category": {
+        "other": 146,
+        "plugin": 1
+      },
+      "sample_errors": [
+        "  CRITICAL exfiltration   SKILL.md:450                   \"| `pre_tool_call` ",
+        "  CRITICAL destructive    SKILL.md:195                   \"| `This command is ",
+        "  CRITICAL destructive    SKILL.md:327                   \"echo ",
+        "  CRITICAL destructive    SKILL.md:450                   \"| `pre_tool_call` ",
+        "  CRITICAL destructive    SKILL.md:218                   \"\"reason\": \" Blocked ",
+        "  CRITICAL destructive    SKILL.md:219                   \"//  ->  \"Blocked ",
+        "  CRITICAL destructive    SKILL.md:222                   \"{\"decision\": \"block\",",
+        "  CRITICAL destructive    SKILL.md:223                   \"{\"decision\": \"block\",",
+        "  CRITICAL destructive    SKILL.md:236                   \"matcher: \"rm -rf|dd ",
+        "  CRITICAL destructive    SKILL.md:422                   \"if "
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-agentmemory-hooks-1da657c2.log",
+      "name": "action-skills-install-agentmemory-hooks-1da657c2.log",
+      "size": 1457,
+      "lines": 24,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 24
+      },
+      "by_category": {
+        "other": 22,
+        "plugin": 2
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-automation-scripts-87f17be5.log",
+      "name": "action-skills-install-automation-scripts-87f17be5.log",
+      "size": 394,
+      "lines": 9,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 9
+      },
+      "by_category": {
+        "other": 9
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-browse-sh-agent-email-get-email-inbox-5e963107.log",
+      "name": "action-skills-install-browse-sh-agent-email-get-email-inbox-5e963107.log",
+      "size": 233,
+      "lines": 6,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 5,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": [
+        "Error: Could not fetch 'browse-sh/agent.email/get-email-inbox' from any source."
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-browse-sh-agentpowers-ai-search-skills-plugins-s-422cdd19.log",
+      "name": "action-skills-install-browse-sh-agentpowers-ai-search-skills-plugins-s-422cdd19.log",
+      "size": 1124,
+      "lines": 24,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 24
+      },
+      "by_category": {
+        "other": 23,
+        "plugin": 1
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-bun-scripts-0188e601.log",
+      "name": "action-skills-install-bun-scripts-0188e601.log",
+      "size": 196,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-devops-scripts-224aaa27.log",
+      "name": "action-skills-install-devops-scripts-224aaa27.log",
+      "size": 211,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-git-hooks-generator-d3ed007b.log",
+      "name": "action-skills-install-git-hooks-generator-d3ed007b.log",
+      "size": 236,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-git-hooks-manager-1acaec54.log",
+      "name": "action-skills-install-git-hooks-manager-1acaec54.log",
+      "size": 226,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-git-hooks-toolkit-d1a18d38.log",
+      "name": "action-skills-install-git-hooks-toolkit-d1a18d38.log",
+      "size": 226,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-init-hooks-33601839.log",
+      "name": "action-skills-install-init-hooks-33601839.log",
+      "size": 191,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-live-qa-scripts-bef61c17.log",
+      "name": "action-skills-install-live-qa-scripts-bef61c17.log",
+      "size": 217,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-milaex-crypto-api-61c38fe7.log",
+      "name": "action-skills-install-milaex-crypto-api-61c38fe7.log",
+      "size": 308,
+      "lines": 7,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 7
+      },
+      "by_category": {
+        "other": 7
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-official-autonomous-ai-agents-antigravity-cli-c50527af.log",
+      "name": "action-skills-install-official-autonomous-ai-agents-antigravity-cli-c50527af.log",
+      "size": 286,
+      "lines": 8,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 7,
+        "WARNING": 1
+      },
+      "by_category": {
+        "other": 8
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-prompt-9c7e05e5.log",
+      "name": "action-skills-install-prompt-9c7e05e5.log",
+      "size": 184,
+      "lines": 8,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 7,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 8
+      },
+      "sample_errors": [
+        "Error: Could not fetch 'prompt' from any source."
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-react-game-loop-a621caf2.log",
+      "name": "action-skills-install-react-game-loop-a621caf2.log",
+      "size": 222,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-realtime-react-hooks-3ca811ed.log",
+      "name": "action-skills-install-realtime-react-hooks-3ca811ed.log",
+      "size": 241,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-senpub-124ab220.log",
+      "name": "action-skills-install-senpub-124ab220.log",
+      "size": 181,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log",
+      "name": "action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log",
+      "size": 1793,
+      "lines": 28,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 28
+      },
+      "by_category": {
+        "other": 27,
+        "plugin": 1
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log",
+      "name": "action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log",
+      "size": 967,
+      "lines": 22,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 22
+      },
+      "by_category": {
+        "other": 21,
+        "plugin": 1
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log",
+      "name": "action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log",
+      "size": 1464,
+      "lines": 25,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 25
+      },
+      "by_category": {
+        "other": 24,
+        "plugin": 1
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log",
+      "name": "action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log",
+      "size": 1660,
+      "lines": 33,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 32,
+        "CRITICAL": 1
+      },
+      "by_category": {
+        "other": 30,
+        "hook": 2,
+        "plugin": 1
+      },
+      "sample_errors": [
+        "  CRITICAL destructive    SKILL.md:106                   \"npx claude-flow hook "
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log",
+      "name": "action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log",
+      "size": 1519,
+      "lines": 24,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 24
+      },
+      "by_category": {
+        "other": 23,
+        "plugin": 1
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-solo-plan-14e77242.log",
+      "name": "action-skills-install-solo-plan-14e77242.log",
+      "size": 181,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-install-trpg-data-context-hooks-24858dd4.log",
+      "name": "action-skills-install-trpg-data-context-hooks-24858dd4.log",
+      "size": 259,
+      "lines": 6,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 6
+      },
+      "by_category": {
+        "other": 6
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\action-skills-update.log",
+      "name": "action-skills-update.log",
+      "size": 167137,
+      "lines": 3139,
+      "errors": 100,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 2977,
+        "WARNING": 60,
+        "CRITICAL": 100,
+        "DEBUG": 2
+      },
+      "by_category": {
+        "other": 2957,
+        "provider": 64,
+        "plugin": 60,
+        "config": 24,
+        "network": 18,
+        "subagent": 16
+      },
+      "sample_errors": [
+        "  CRITICAL supply_chain   references\\cli-docs.md:9       \"- macOS/Linux: `curl ",
+        "  CRITICAL exfiltration   scripts\\watch_github.py:118    \"token = ",
+        "  CRITICAL exfiltration   scripts\\stocks_client.py:247   \"key = ",
+        "  CRITICAL exfiltration   scripts\\stocks_client.py:381   \"av_key = ",
+        "  CRITICAL exfiltration   SKILL.md:173                   \"curl -s ",
+        "  CRITICAL exfiltration   SKILL.md:194                   \"curl -s ",
+        "  CRITICAL exfiltration   scripts\\nutrition_search.py:20 \"API_KEY = ",
+        "  CRITICAL obfuscation    scripts\\nutrition_search.py:8  \"echo -e ",
+        "  CRITICAL supply_chain   references\\other.md:310        \"curl -LsSf ",
+        "  CRITICAL supply_chain   references\\llms-full.md:7590   \"curl -fsSL "
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\agent.log",
+      "name": "agent.log",
+      "size": 1535474,
+      "lines": 10413,
+      "errors": 363,
+      "warnings": 0,
+      "by_level": {
+        "INFO": 515,
+        "DEBUG": 5968,
+        "WARNING": 634,
+        "ERROR": 363,
+        "NONE": 2933
+      },
+      "by_category": {
+        "other": 6792,
+        "hook": 1324,
+        "network": 1293,
+        "plugin": 382,
+        "chat": 253,
+        "mcp": 198,
+        "provider": 129,
+        "session": 28,
+        "rate_limit": 7,
+        "config": 5,
+        "subagent": 2
+      },
+      "sample_errors": [
+        "2026-09-10 21:26:40,262 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "openai.InternalServerError: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "2026-09-10 21:26:44,555 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "openai.InternalServerError: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "[ERROR] Traceback (most recent call last):",
+        "[ERROR] Traceback (most recent call last):",
+        "[ERROR] Traceback (most recent call last):",
+        "[ERROR] Traceback (most recent call last):",
+        "2026-09-10 21:27:24,398 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "openai.InternalServerError: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\agent.log.1",
+      "name": "agent.log.1",
+      "size": 5243328,
+      "lines": 33699,
+      "errors": 388,
+      "warnings": 0,
+      "by_level": {
+        "DEBUG": 17688,
+        "INFO": 1880,
+        "NONE": 10062,
+        "ERROR": 388,
+        "WARNING": 3681
+      },
+      "by_category": {
+        "other": 20967,
+        "hook": 4639,
+        "network": 3038,
+        "plugin": 2966,
+        "mcp": 669,
+        "provider": 588,
+        "chat": 575,
+        "session": 166,
+        "rate_limit": 52,
+        "config": 26,
+        "subagent": 13
+      },
+      "sample_errors": [
+        "httpx2.HTTPStatusError: Client error '405 Method Not Allowed' for url 'https://search.parallel.ai/mcp'",
+        "2026-09-10 20:17:31,299 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "openai.RateLimitError: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "2026-09-10 20:17:32,870 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own k",
+        "openai.RateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integr",
+        "2026-09-10 20:17:37,297 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own k",
+        "openai.RateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integr",
+        "2026-09-10 20:29:12,956 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'type': 'error', 'error': {'type': 'AuthError', 'message': 'Invalid API key.'}}",
+        "openai.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'AuthError', 'message': 'Invalid API key.'}}",
+        "2026-09-10 20:29:31,125 ERROR agent.chat_completion_helpers: Streaming failed before delivery: [WinError 10053] An established connection was aborted by the software in your host machine"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\agent.log.2",
+      "name": "agent.log.2",
+      "size": 5263720,
+      "lines": 31957,
+      "errors": 126,
+      "warnings": 0,
+      "by_level": {
+        "DEBUG": 12679,
+        "INFO": 1852,
+        "WARNING": 2630,
+        "NONE": 14670,
+        "ERROR": 126
+      },
+      "by_category": {
+        "other": 19831,
+        "hook": 5874,
+        "network": 2130,
+        "plugin": 1451,
+        "mcp": 1174,
+        "chat": 734,
+        "provider": 446,
+        "session": 154,
+        "rate_limit": 114,
+        "subagent": 32,
+        "config": 17
+      },
+      "sample_errors": [
+        "pywintypes.error: (5, 'AssignProcessToJobObject', 'Access is denied.')",
+        "pywintypes.error: (5, 'AssignProcessToJobObject', 'Access is denied.')",
+        "httpx2.HTTPStatusError: Client error '405 Method Not Allowed' for url 'https://search.parallel.ai/mcp'",
+        "httpx2.HTTPStatusError: Client error '405 Method Not Allowed' for url 'https://search.parallel.ai/mcp'",
+        "2026-09-10 19:48:34,017 ERROR [20260910_194621_d64612] agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "openai.RateLimitError: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "2026-09-10 19:48:34,629 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "openai.RateLimitError: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "2026-09-10 19:51:47,862 ERROR [20260910_194653_f1463e] agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': \"Hold up for a bit, you've exceeded the rate limit on your API key.\"}",
+        "openai.RateLimitError: Error code: 429 - {'status': 429, 'message': \"Hold up for a bit, you've exceeded the rate limit on your API key.\"}"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\agent.log.3",
+      "name": "agent.log.3",
+      "size": 5242993,
+      "lines": 24558,
+      "errors": 30,
+      "warnings": 0,
+      "by_level": {
+        "DEBUG": 13964,
+        "NONE": 7518,
+        "WARNING": 1272,
+        "INFO": 1774,
+        "ERROR": 30
+      },
+      "by_category": {
+        "other": 14400,
+        "hook": 3326,
+        "plugin": 2834,
+        "network": 1980,
+        "mcp": 749,
+        "provider": 513,
+        "chat": 465,
+        "session": 187,
+        "rate_limit": 63,
+        "config": 29,
+        "subagent": 11,
+        "tool": 1
+      },
+      "sample_errors": [
+        "2026-09-10 18:34:54,321 ERROR [20260910_175132_d8685f] agent.conversation_loop: Error during OpenAI-compatible API call #1: BLOCKED_MISSING_PREREQUISITE: required pre-compress checkpoint unavailable: no active provider implements checkpoint API v2",
+        "2026-09-10 18:34:54,323 ERROR [20260910_175132_d8685f] agent.conversation_loop: Outer loop error in API call #1",
+        "httpx2.HTTPStatusError: Client error '405 Method Not Allowed' for url 'https://search.parallel.ai/mcp'",
+        "httpx2.HTTPStatusError: Client error '405 Method Not Allowed' for url 'https://search.parallel.ai/mcp'",
+        "httpx2.HTTPStatusError: Client error '405 Method Not Allowed' for url 'https://search.parallel.ai/mcp'",
+        "httpx2.HTTPStatusError: Client error '405 Method Not Allowed' for url 'https://search.parallel.ai/mcp'",
+        "openai.BadRequestError: Error code: 400 - {'status': 400, 'message': 'This request is not valid. Check the model name and other parameters. Additional info: Provider returned error'}",
+        "2026-09-10 18:48:34,517 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50",
+        "openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1789084800000'}, ",
+        "2026-09-10 18:48:35,227 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\bootstrap-installer.log",
+      "name": "bootstrap-installer.log",
+      "size": 346003,
+      "lines": 2657,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "INFO": 2438,
+        "NONE": 219
+      },
+      "by_category": {
+        "other": 2366,
+        "chat": 142,
+        "session": 59,
+        "network": 38,
+        "plugin": 37,
+        "mcp": 6,
+        "provider": 5,
+        "config": 2,
+        "tool": 1,
+        "hook": 1
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\capture_common.log",
+      "name": "capture_common.log",
+      "size": 21838,
+      "lines": 716,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 716
+      },
+      "by_category": {
+        "other": 358,
+        "session": 358
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\desktop.log",
+      "name": "desktop.log",
+      "size": 612328,
+      "lines": 4861,
+      "errors": 297,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 4549,
+        "ERROR": 297,
+        "INFO": 15
+      },
+      "by_category": {
+        "other": 4513,
+        "subagent": 154,
+        "provider": 82,
+        "network": 59,
+        "rate_limit": 26,
+        "session": 15,
+        "config": 6,
+        "chat": 3,
+        "mcp": 3
+      },
+      "sample_errors": [
+        "[hermes] [boot] could not read served dashboard token (Hermes backend): 404: {\"error\":\"Headless backend (hermes serve): web UI disabled \u2014 use `hermes dashboard` for the browser UI.\"}",
+        "[hermes] [boot] could not read served dashboard token (Hermes backend for profile \"cto\"): 404: {\"error\":\"Headless backend (hermes serve): web UI disabled \u2014 use `hermes dashboard` for the browser UI.\"}",
+        "[hermes] [boot] could not read served dashboard token (Hermes backend for profile \"creative-director\"): 404: {\"error\":\"Headless backend (hermes serve): web UI disabled \u2014 use `hermes dashboard` for the browser UI.\"}",
+        "[hermes] [boot] could not read served dashboard token (Hermes backend for profile \"pm\"): 404: {\"error\":\"Headless backend (hermes serve): web UI disabled \u2014 use `hermes dashboard` for the browser UI.\"}",
+        "[hermes]    \ud83d\udcdd Error: Connection error.",
+        "[hermes]    \ud83d\udcdd Error: Connection error.",
+        "[hermes]    \ud83d\udcdd Error: Connection error.",
+        "[hermes]    \ud83d\udcdd Error: Connection error.",
+        "[hermes]    \ud83d\udcdd Error: Connection error.",
+        "[hermes]    \ud83d\udcdd Error: Gemini streaming request failed: [Errno 11001] getaddrinfo failed"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\errors.log",
+      "name": "errors.log",
+      "size": 702214,
+      "lines": 6600,
+      "errors": 378,
+      "warnings": 0,
+      "by_level": {
+        "WARNING": 1688,
+        "NONE": 4534,
+        "ERROR": 378
+      },
+      "by_category": {
+        "other": 4408,
+        "hook": 1885,
+        "mcp": 81,
+        "provider": 69,
+        "chat": 65,
+        "plugin": 62,
+        "network": 23,
+        "rate_limit": 7
+      },
+      "sample_errors": [
+        "2026-09-10 20:49:40,870 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "openai.InternalServerError: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "2026-09-10 20:51:30,890 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "openai.InternalServerError: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "2026-09-10 20:51:34,879 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "openai.InternalServerError: Error code: 503 - {'error': {'type': 'server_error', 'message': 'Error from provider (Console): Upstream request failed: Endpoint is unavailable.'}}",
+        "2026-09-10 20:51:36,560 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50",
+        "openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1789084800000'}, ",
+        "[ERROR] Traceback (most recent call last):",
+        "[ERROR] Traceback (most recent call last):"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\errors.log.1",
+      "name": "errors.log.1",
+      "size": 2097754,
+      "lines": 17488,
+      "errors": 74,
+      "warnings": 0,
+      "by_level": {
+        "WARNING": 6041,
+        "NONE": 11373,
+        "ERROR": 74
+      },
+      "by_category": {
+        "other": 11794,
+        "hook": 4722,
+        "plugin": 302,
+        "chat": 204,
+        "provider": 199,
+        "mcp": 144,
+        "rate_limit": 58,
+        "network": 34,
+        "session": 22,
+        "subagent": 6,
+        "config": 3
+      },
+      "sample_errors": [
+        "2026-09-10 19:27:08,371 ERROR gateway.run: \u2717 telegram error: telegram connect timed out after 45s",
+        "2026-09-10 19:37:37,329 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "openai.RateLimitError: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "2026-09-10 19:37:40,417 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "openai.RateLimitError: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "2026-09-10 19:37:46,258 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "openai.RateLimitError: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "2026-09-10 19:37:46,297 ERROR [20260910_193731_eef2cf] agent.conversation_loop: API call failed after 3 retries. HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later. | provider=opencode-zen model=mimo-v2.5-free msgs=2 tokens=~36,938",
+        "2026-09-10 19:38:21,799 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}",
+        "openai.RateLimitError: Error code: 429 - {'type': 'error', 'error': {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}}"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\errors.log.2",
+      "name": "errors.log.2",
+      "size": 2097382,
+      "lines": 17600,
+      "errors": 113,
+      "warnings": 0,
+      "by_level": {
+        "WARNING": 4280,
+        "NONE": 13207,
+        "ERROR": 113
+      },
+      "by_category": {
+        "other": 11532,
+        "hook": 5238,
+        "provider": 305,
+        "chat": 271,
+        "plugin": 103,
+        "rate_limit": 79,
+        "network": 28,
+        "session": 19,
+        "mcp": 19,
+        "subagent": 5,
+        "tool": 1
+      },
+      "sample_errors": [
+        "2026-09-10 16:36:30,420 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "openai.RateLimitError: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "2026-09-10 16:41:38,689 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "openai.RateLimitError: Error code: 429 - {'status': 429, 'message': \"The requested model is temporarily at capacity upstream. This is not your API key's rate limit \u2014 please retry shortly.\"}",
+        "2026-09-10 16:43:45,247 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 401 - {'type': 'error', 'error': {'type': 'ModelError', 'message': 'Model minimax-m3-free is not supported'}}",
+        "openai.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'ModelError', 'message': 'Model minimax-m3-free is not supported'}}",
+        "2026-09-10 16:44:37,774 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own k",
+        "openai.RateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integr",
+        "2026-09-10 16:44:41,497 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own k",
+        "openai.RateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'poolside/laguna-s-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integr"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\gateway-exit-diag.log",
+      "name": "gateway-exit-diag.log",
+      "size": 36057,
+      "lines": 127,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 127
+      },
+      "by_category": {
+        "other": 127
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\gateway-restart.log",
+      "name": "gateway-restart.log",
+      "size": 137,
+      "lines": 4,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 4
+      },
+      "by_category": {
+        "other": 4
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\gateway-stdio.log",
+      "name": "gateway-stdio.log",
+      "size": 1893030,
+      "lines": 21933,
+      "errors": 296,
+      "warnings": 0,
+      "by_level": {
+        "WARNING": 3505,
+        "NONE": 18131,
+        "ERROR": 296,
+        "DEBUG": 1
+      },
+      "by_category": {
+        "other": 16807,
+        "hook": 2140,
+        "network": 1384,
+        "mcp": 896,
+        "chat": 360,
+        "provider": 278,
+        "rate_limit": 32,
+        "session": 18,
+        "config": 15,
+        "plugin": 3
+      },
+      "sample_errors": [
+        "ERROR asyncio: Task exception was never retrieved",
+        "ERROR telegram.ext.Updater: Error while calling `get_updates` one more time to mark all fetched updates. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_r",
+        "telegram.error.NetworkError: httpx.ConnectError: All connection attempts failed",
+        "ERROR telegram.ext: Network Retry Loop (Bootstrap delete Webhook): Failed run number 0 of 0. Aborting.",
+        "telegram.error.NetworkError: httpx.ConnectError: All connection attempts failed",
+        "ERROR telegram.ext: Network Retry Loop (Bootstrap delete Webhook): Failed run number 0 of 0. Aborting.",
+        "telegram.error.NetworkError: httpx.ConnectError: All connection attempts failed",
+        "ERROR telegram.ext: Network Retry Loop (Bootstrap delete Webhook): Failed run number 0 of 0. Aborting.",
+        "telegram.error.NetworkError: httpx.ConnectError: All connection attempts failed",
+        "ERROR asyncio: Task exception was never retrieved"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\gateway.log",
+      "name": "gateway.log",
+      "size": 4383439,
+      "lines": 27814,
+      "errors": 567,
+      "warnings": 0,
+      "by_level": {
+        "WARNING": 24851,
+        "NONE": 2002,
+        "ERROR": 566,
+        "INFO": 394,
+        "CRITICAL": 1
+      },
+      "by_category": {
+        "other": 14205,
+        "network": 13450,
+        "session": 52,
+        "chat": 49,
+        "rate_limit": 34,
+        "config": 19,
+        "plugin": 5
+      },
+      "sample_errors": [
+        "telegram.error.TimedOut: Timed out",
+        "telegram.error.NetworkError: httpx.ConnectError: All connection attempts failed",
+        "2026-08-09 07:11:25,386 ERROR hermes_plugins.telegram_platform.adapter: [Telegram] Failed to connect to Telegram: httpx.ConnectError: All connection attempts failed",
+        "2026-08-09 07:12:57,901 ERROR hermes_plugins.telegram_platform.adapter: [Telegram] Failed to connect to Telegram: httpx.ConnectError: All connection attempts failed",
+        "2026-08-09 07:14:59,666 ERROR hermes_plugins.telegram_platform.adapter: [Telegram] Failed to connect to Telegram: httpx.ConnectError: All connection attempts failed",
+        "2026-08-09 07:18:26,885 ERROR hermes_plugins.telegram_platform.adapter: [Telegram] Failed to connect to Telegram: httpx.ConnectError: All connection attempts failed",
+        "2026-08-09 07:23:29,854 ERROR hermes_plugins.telegram_platform.adapter: [Telegram] Failed to connect to Telegram: httpx.ConnectError: All connection attempts failed",
+        "telegram.error.NetworkError: httpx.ConnectError: All connection attempts failed",
+        "2026-08-09 09:07:15,313 ERROR hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling could not reconnect after 10 network error retries. Escalating to gateway recovery. Last error: httpx.ConnectError: All connection attempts failed",
+        "2026-08-09 09:07:15,348 ERROR gateway.run: Fatal telegram adapter error (telegram_network_error): Telegram polling could not reconnect after 10 network error retries. Escalating to gateway recovery."
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\gui.log",
+      "name": "gui.log",
+      "size": 19544,
+      "lines": 146,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "WARNING": 38,
+        "INFO": 108
+      },
+      "by_category": {
+        "other": 81,
+        "plugin": 54,
+        "session": 11
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\hooks.log",
+      "name": "hooks.log",
+      "size": 662544,
+      "lines": 5026,
+      "errors": 0,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 5026
+      },
+      "by_category": {
+        "other": 5026
+      },
+      "sample_errors": []
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\mcp-stderr.log",
+      "name": "mcp-stderr.log",
+      "size": 21825845,
+      "lines": 224122,
+      "errors": 12366,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 197517,
+        "WARNING": 1011,
+        "INFO": 13162,
+        "ERROR": 12364,
+        "TRACE": 55,
+        "DEBUG": 11,
+        "CRITICAL": 2
+      },
+      "by_category": {
+        "other": 220583,
+        "network": 2563,
+        "session": 467,
+        "chat": 459,
+        "provider": 16,
+        "plugin": 12,
+        "rate_limit": 8,
+        "config": 8,
+        "hook": 3,
+        "mcp": 2,
+        "subagent": 1
+      },
+      "sample_errors": [
+        "verifying docker images: Get \"https://auth.docker.io/token?scope=repository%3Amcp%2Fsignatures%3Apull&service=registry.docker.io\": remote error: tls: bad record MAC",
+        "      throw er; // Unhandled 'error' event",
+        "Error: EPIPE: broken pipe, write",
+        "Emitted 'error' event on Socket instance at:",
+        "      throw er; // Unhandled 'error' event",
+        "Error: EPIPE: broken pipe, write",
+        "Emitted 'error' event on Socket instance at:",
+        "      throw er; // Unhandled 'error' event",
+        "Error: EPIPE: broken pipe, write",
+        "Emitted 'error' event on Socket instance at:"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\rate-limit-bypass.jsonl",
+      "name": "rate-limit-bypass.jsonl",
+      "size": 6492,
+      "lines": 51,
+      "errors": 46,
+      "warnings": 0,
+      "by_level": {
+        "ERROR": 46,
+        "NONE": 5
+      },
+      "by_category": {
+        "rate_limit": 38,
+        "other": 13
+      },
+      "sample_errors": [
+        "{\"ts\": \"2026-09-05T03:36:11+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 1, \"sleep_s\": 0.5, \"error\": \"429 rate limit exceeded\"}",
+        "{\"ts\": \"2026-09-05T03:36:12+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 2, \"sleep_s\": 0.5, \"error\": \"429 rate limit exceeded\"}",
+        "{\"ts\": \"2026-09-05T03:36:12+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 1, \"sleep_s\": 0.5, \"error\": \"429 too many requests\"}",
+        "{\"ts\": \"2026-09-05T03:36:13+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 2, \"sleep_s\": 0.5, \"error\": \"429 too many requests\"}",
+        "{\"ts\": \"2026-09-05T03:36:13+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 3, \"sleep_s\": 0.5, \"error\": \"429 too many requests\"}",
+        "{\"ts\": \"2026-09-05T03:36:14+0100\", \"event\": \"exhausted\", \"model\": \"primary\", \"attempt\": 4, \"error\": \"429 too many requests\"}",
+        "{\"ts\": \"2026-09-05T10:54:51+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 1, \"sleep_s\": 0.05, \"error\": \"429 rate limit exceeded\"}",
+        "{\"ts\": \"2026-09-05T10:54:51+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 2, \"sleep_s\": 0.03, \"error\": \"429 rate limit exceeded\"}",
+        "{\"ts\": \"2026-09-05T10:54:51+0100\", \"event\": \"permanent\", \"model\": \"primary\", \"error\": \"invalid api key\"}",
+        "{\"ts\": \"2026-09-05T10:54:51+0100\", \"event\": \"retry\", \"model\": \"primary\", \"attempt\": 1, \"sleep_s\": 0.06, \"error\": \"429 too many requests\"}"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\tui_gateway_crash.log",
+      "name": "tui_gateway_crash.log",
+      "size": 219507,
+      "lines": 3011,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 3009,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 2959,
+        "session": 25,
+        "network": 25,
+        "rate_limit": 2
+      },
+      "sample_errors": [
+        "[tui-parent] 2026-08-24T23:14:34.511Z uncaughtException: Error: write EPIPE",
+        "[tui-parent] 2026-08-31T15:40:11.431Z uncaughtException: Error: write EPIPE"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\update.log",
+      "name": "update.log",
+      "size": 402523,
+      "lines": 5500,
+      "errors": 32,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 5429,
+        "WARNING": 22,
+        "INFO": 17,
+        "ERROR": 32
+      },
+      "by_category": {
+        "other": 5388,
+        "session": 33,
+        "chat": 23,
+        "network": 22,
+        "plugin": 11,
+        "hook": 9,
+        "tool": 6,
+        "provider": 2,
+        "config": 2,
+        "mcp": 2,
+        "subagent": 2
+      },
+      "sample_errors": [
+        "dist/assets/error-state-D-dzDtJy.js                        1.35 kB \u2502 gzip:     0.64 kB",
+        "dist/assets/error-boundary-CJVQAT8r.js                     2.68 kB \u2502 gzip:     1.08 kB",
+        "dist/assets/error-state-DbQn86jw.js                        1.35 kB \u2502 gzip:     0.64 kB",
+        "dist/assets/error-boundary-BcLStJ3n.js                     2.88 kB \u2502 gzip:     1.17 kB",
+        "dist/assets/error-state-DI7tkfOo.js                        1.35 kB \u2502 gzip:     0.64 kB",
+        "npm error code ECONNRESET",
+        "npm error syscall read",
+        "npm error errno -4077",
+        "npm error network read ECONNRESET",
+        "npm error network This is a problem related to network connectivity."
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\vision_tools_debug_7b2d14c9-e1e7-40a8-9a23-a7752aeff1dc.json",
+      "name": "vision_tools_debug_7b2d14c9-e1e7-40a8-9a23-a7752aeff1dc.json",
+      "size": 5731,
+      "lines": 93,
+      "errors": 6,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 87,
+        "ERROR": 6
+      },
+      "by_category": {
+        "other": 87,
+        "provider": 6
+      },
+      "sample_errors": [
+        "      \"error\": \"Error analyzing image: Error code: 400 - {'error': {'message': 'Error from provider (DeepSeek): Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 276816', 'type': 'invalid_request_error', 'param': None",
+        "      \"error\": \"Error analyzing image: Error code: 400 - {'error': {'message': 'Error from provider (DeepSeek): Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 287020', 'type': 'invalid_request_error', 'param': None",
+        "      \"error\": \"Error analyzing image: Error code: 400 - {'error': {'message': 'Error from provider (DeepSeek): Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 288720', 'type': 'invalid_request_error', 'param': None",
+        "      \"error\": \"Error analyzing image: Error code: 400 - {'error': {'message': 'Error from provider (DeepSeek): Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 287026', 'type': 'invalid_request_error', 'param': None",
+        "      \"error\": \"Error analyzing image: Error code: 400 - {'error': {'message': 'Error from provider (DeepSeek): Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 276822', 'type': 'invalid_request_error', 'param': None",
+        "      \"error\": \"Error analyzing image: Error code: 400 - {'error': {'message': 'Error from provider (DeepSeek): Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 288726', 'type': 'invalid_request_error', 'param': None"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\vision_tools_debug_fad158d1-ffcb-4d15-911c-09838dcb9e21.json",
+      "name": "vision_tools_debug_fad158d1-ffcb-4d15-911c-09838dcb9e21.json",
+      "size": 1203,
+      "lines": 23,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 22,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 22,
+        "provider": 1
+      },
+      "sample_errors": [
+        "      \"error\": \"Error analyzing image: Error code: 400 - {'error': {'message': 'Error from provider (DeepSeek): Failed to deserialize the JSON body into the target type: messages[0]: unknown variant `image_url`, expected `text` at line 1 column 123259', 'type': 'invalid_request_error', 'param': None"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_0404a025-c034-455c-bee5-5d91324bbc68.json",
+      "name": "web_tools_debug_0404a025-c034-455c-bee5-5d91324bbc68.json",
+      "size": 23880,
+      "lines": 844,
+      "errors": 40,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 804,
+        "ERROR": 40
+      },
+      "by_category": {
+        "other": 804,
+        "provider": 40
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_065d3dd5-dd7d-4893-98fb-7c2ee39d8c12.json",
+      "name": "web_tools_debug_065d3dd5-dd7d-4893-98fb-7c2ee39d8c12.json",
+      "size": 4087,
+      "lines": 135,
+      "errors": 5,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 130,
+        "ERROR": 5
+      },
+      "by_category": {
+        "other": 135
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_0d15d3a5-aef5-48d3-b400-769b61b40027.json",
+      "name": "web_tools_debug_0d15d3a5-aef5-48d3-b400-769b61b40027.json",
+      "size": 1432,
+      "lines": 44,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 42,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 44
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_14bed752-4e0e-432f-8d57-23a9c25cd29e.json",
+      "name": "web_tools_debug_14bed752-4e0e-432f-8d57-23a9c25cd29e.json",
+      "size": 1915,
+      "lines": 65,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 63,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 65
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_14d1e2bc-9292-4273-884f-41d14a6d3fd7.json",
+      "name": "web_tools_debug_14d1e2bc-9292-4273-884f-41d14a6d3fd7.json",
+      "size": 2280,
+      "lines": 81,
+      "errors": 6,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 75,
+        "ERROR": 6
+      },
+      "by_category": {
+        "other": 77,
+        "provider": 4
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_158e6182-ac16-431c-b170-3e2204fd8fd7.json",
+      "name": "web_tools_debug_158e6182-ac16-431c-b170-3e2204fd8fd7.json",
+      "size": 83549,
+      "lines": 2742,
+      "errors": 209,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 2533,
+        "ERROR": 209
+      },
+      "by_category": {
+        "other": 2741,
+        "network": 1
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_1f78cd24-dee5-4257-b1ff-977a39a776be.json",
+      "name": "web_tools_debug_1f78cd24-dee5-4257-b1ff-977a39a776be.json",
+      "size": 6306,
+      "lines": 225,
+      "errors": 9,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 216,
+        "ERROR": 9
+      },
+      "by_category": {
+        "other": 224,
+        "provider": 1
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_21807d2a-46c3-485f-b20f-b4b88dd81401.json",
+      "name": "web_tools_debug_21807d2a-46c3-485f-b20f-b4b88dd81401.json",
+      "size": 6746,
+      "lines": 213,
+      "errors": 17,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 196,
+        "ERROR": 17
+      },
+      "by_category": {
+        "other": 201,
+        "provider": 10,
+        "plugin": 1,
+        "config": 1
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_35b66d71-e510-4981-9b1e-d9f864d34a5f.json",
+      "name": "web_tools_debug_35b66d71-e510-4981-9b1e-d9f864d34a5f.json",
+      "size": 1373,
+      "lines": 49,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 47,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 45,
+        "provider": 4
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_369bba39-604a-4140-b71b-503b191e1c38.json",
+      "name": "web_tools_debug_369bba39-604a-4140-b71b-503b191e1c38.json",
+      "size": 5571,
+      "lines": 190,
+      "errors": 8,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 182,
+        "ERROR": 8
+      },
+      "by_category": {
+        "other": 190
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_369c0aa7-c32b-437c-819d-549890d696e0.json",
+      "name": "web_tools_debug_369c0aa7-c32b-437c-819d-549890d696e0.json",
+      "size": 58199,
+      "lines": 1925,
+      "errors": 134,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 1791,
+        "ERROR": 134
+      },
+      "by_category": {
+        "other": 1925
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_421bbdfe-f5ac-4c38-8dfb-57a10901c396.json",
+      "name": "web_tools_debug_421bbdfe-f5ac-4c38-8dfb-57a10901c396.json",
+      "size": 4097,
+      "lines": 133,
+      "errors": 4,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 129,
+        "ERROR": 4
+      },
+      "by_category": {
+        "other": 133
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_43300a95-96cb-4737-8872-55b11a45d50f.json",
+      "name": "web_tools_debug_43300a95-96cb-4737-8872-55b11a45d50f.json",
+      "size": 973,
+      "lines": 33,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 31,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 32,
+        "provider": 1
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_5a46d6d1-647b-42df-bfd9-14d8b7eec415.json",
+      "name": "web_tools_debug_5a46d6d1-647b-42df-bfd9-14d8b7eec415.json",
+      "size": 912,
+      "lines": 33,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 31,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 31,
+        "provider": 2
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_6f842f5a-4e23-4fc2-9306-410d62fa304c.json",
+      "name": "web_tools_debug_6f842f5a-4e23-4fc2-9306-410d62fa304c.json",
+      "size": 920,
+      "lines": 33,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 31,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 33
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_728a9190-de1a-42b5-90fe-de0158ea659d.json",
+      "name": "web_tools_debug_728a9190-de1a-42b5-90fe-de0158ea659d.json",
+      "size": 2411,
+      "lines": 81,
+      "errors": 6,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 75,
+        "ERROR": 6
+      },
+      "by_category": {
+        "other": 76,
+        "provider": 5
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_78cc725a-58e5-46b1-b680-b442f4399f98.json",
+      "name": "web_tools_debug_78cc725a-58e5-46b1-b680-b442f4399f98.json",
+      "size": 948,
+      "lines": 36,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 35,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 34,
+        "provider": 2
+      },
+      "sample_errors": [
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_7fd8ed1a-4730-4791-89ca-d61211bb4f99.json",
+      "name": "web_tools_debug_7fd8ed1a-4730-4791-89ca-d61211bb4f99.json",
+      "size": 1709,
+      "lines": 64,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 62,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 64
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_831a3c9c-69ac-4abe-b0c8-be8c576772f8.json",
+      "name": "web_tools_debug_831a3c9c-69ac-4abe-b0c8-be8c576772f8.json",
+      "size": 1426,
+      "lines": 48,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 46,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 48
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_8398453b-6e47-47be-974c-f366d98b802b.json",
+      "name": "web_tools_debug_8398453b-6e47-47be-974c-f366d98b802b.json",
+      "size": 2350,
+      "lines": 81,
+      "errors": 6,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 75,
+        "ERROR": 6
+      },
+      "by_category": {
+        "other": 76,
+        "provider": 5
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_88e6925e-3d6e-4185-a57b-7691948ddc2f.json",
+      "name": "web_tools_debug_88e6925e-3d6e-4185-a57b-7691948ddc2f.json",
+      "size": 1309,
+      "lines": 45,
+      "errors": 3,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 42,
+        "ERROR": 3
+      },
+      "by_category": {
+        "other": 42,
+        "provider": 3
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_8a3e7bbd-6e1b-43f6-aeac-ebcf99969eaa.json",
+      "name": "web_tools_debug_8a3e7bbd-6e1b-43f6-aeac-ebcf99969eaa.json",
+      "size": 1298,
+      "lines": 45,
+      "errors": 3,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 42,
+        "ERROR": 3
+      },
+      "by_category": {
+        "other": 45
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_94fe9bac-c11e-43ff-8ef9-43aac1c67931.json",
+      "name": "web_tools_debug_94fe9bac-c11e-43ff-8ef9-43aac1c67931.json",
+      "size": 817,
+      "lines": 31,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 30,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 31
+      },
+      "sample_errors": [
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_97a800a2-3f98-41c9-be79-a22767f9dff4.json",
+      "name": "web_tools_debug_97a800a2-3f98-41c9-be79-a22767f9dff4.json",
+      "size": 1657,
+      "lines": 57,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 55,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 57
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_9f092cd8-5a72-4272-8f9b-bcf4c8b0f3c3.json",
+      "name": "web_tools_debug_9f092cd8-5a72-4272-8f9b-bcf4c8b0f3c3.json",
+      "size": 544,
+      "lines": 21,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 20,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 20,
+        "provider": 1
+      },
+      "sample_errors": [
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_a1517a7d-aeee-4f0a-86a1-78c84a1b79bf.json",
+      "name": "web_tools_debug_a1517a7d-aeee-4f0a-86a1-78c84a1b79bf.json",
+      "size": 1671,
+      "lines": 57,
+      "errors": 4,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 53,
+        "ERROR": 4
+      },
+      "by_category": {
+        "other": 57
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_a4da6304-a074-4fa3-8d12-b0ea1e076a19.json",
+      "name": "web_tools_debug_a4da6304-a074-4fa3-8d12-b0ea1e076a19.json",
+      "size": 1309,
+      "lines": 45,
+      "errors": 3,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 42,
+        "ERROR": 3
+      },
+      "by_category": {
+        "other": 45
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_a623bf91-feac-4576-b37f-4317d680c935.json",
+      "name": "web_tools_debug_a623bf91-feac-4576-b37f-4317d680c935.json",
+      "size": 2063,
+      "lines": 69,
+      "errors": 5,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 64,
+        "ERROR": 5
+      },
+      "by_category": {
+        "other": 69
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_a685efca-914a-4c1d-8dbe-e2f227704f4b.json",
+      "name": "web_tools_debug_a685efca-914a-4c1d-8dbe-e2f227704f4b.json",
+      "size": 947,
+      "lines": 33,
+      "errors": 2,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 31,
+        "ERROR": 2
+      },
+      "by_category": {
+        "other": 33
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_b526f1e4-8887-421f-bf44-87ab8cf82b42.json",
+      "name": "web_tools_debug_b526f1e4-8887-421f-bf44-87ab8cf82b42.json",
+      "size": 1297,
+      "lines": 45,
+      "errors": 3,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 42,
+        "ERROR": 3
+      },
+      "by_category": {
+        "other": 42,
+        "provider": 3
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_d54f353a-081b-45c5-944c-f02a990bcbf5.json",
+      "name": "web_tools_debug_d54f353a-081b-45c5-944c-f02a990bcbf5.json",
+      "size": 2373,
+      "lines": 81,
+      "errors": 6,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 75,
+        "ERROR": 6
+      },
+      "by_category": {
+        "other": 77,
+        "provider": 4
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_d7314bfe-036b-444a-a26a-033b77567657.json",
+      "name": "web_tools_debug_d7314bfe-036b-444a-a26a-033b77567657.json",
+      "size": 1889,
+      "lines": 66,
+      "errors": 4,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 62,
+        "ERROR": 4
+      },
+      "by_category": {
+        "other": 66
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_dee6fbb5-586d-4607-bafe-1b9dcce61fec.json",
+      "name": "web_tools_debug_dee6fbb5-586d-4607-bafe-1b9dcce61fec.json",
+      "size": 1351,
+      "lines": 45,
+      "errors": 3,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 42,
+        "ERROR": 3
+      },
+      "by_category": {
+        "other": 42,
+        "provider": 3
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_e46e7b3a-eeea-4320-a48f-db78ccf4dfc8.json",
+      "name": "web_tools_debug_e46e7b3a-eeea-4320-a48f-db78ccf4dfc8.json",
+      "size": 1655,
+      "lines": 57,
+      "errors": 4,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 53,
+        "ERROR": 4
+      },
+      "by_category": {
+        "other": 56,
+        "provider": 1
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_e73330c6-8645-447f-83b8-55d2d57fc0b4.json",
+      "name": "web_tools_debug_e73330c6-8645-447f-83b8-55d2d57fc0b4.json",
+      "size": 1938,
+      "lines": 66,
+      "errors": 3,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 63,
+        "ERROR": 3
+      },
+      "by_category": {
+        "other": 66
+      },
+      "sample_errors": [
+        "      \"error\": null,",
+        "      \"error\": null,",
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_f032d6fb-379c-495d-8c57-062244f88f56.json",
+      "name": "web_tools_debug_f032d6fb-379c-495d-8c57-062244f88f56.json",
+      "size": 2122,
+      "lines": 60,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 59,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 60
+      },
+      "sample_errors": [
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_f9119bf5-eb29-4935-bf65-e1f4ee034cf2.json",
+      "name": "web_tools_debug_f9119bf5-eb29-4935-bf65-e1f4ee034cf2.json",
+      "size": 592,
+      "lines": 21,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 20,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 20,
+        "provider": 1
+      },
+      "sample_errors": [
+        "      \"error\": null,"
+      ]
+    },
+    {
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\logs\\web_tools_debug_fa7fe07a-d96c-490c-93c8-97256f1649b5.json",
+      "name": "web_tools_debug_fa7fe07a-d96c-490c-93c8-97256f1649b5.json",
+      "size": 746,
+      "lines": 21,
+      "errors": 1,
+      "warnings": 0,
+      "by_level": {
+        "NONE": 20,
+        "ERROR": 1
+      },
+      "by_category": {
+        "other": 21
+      },
+      "sample_errors": [
+        "      \"error\": \"web is configured to use 'tavily' (set via hermes tools), but no registered web search provider has that name. Run 'hermes tools' to change it.\","
+      ]
+    }
+  ]
+}

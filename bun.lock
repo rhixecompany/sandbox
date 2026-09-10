@@ -4,6 +4,9 @@
   "workspaces": {
     "": {
       "name": "sandbox",
+      "dependencies": {
+        "@swc/helpers": "^0.5.23",
+      },
       "devDependencies": {
         "@eslint-react/eslint-plugin": "^5.19.0",
         "@eslint/eslintrc": "^3.3.7",
