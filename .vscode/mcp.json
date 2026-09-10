@@ -110,7 +110,7 @@
     },
     "python-quality": {
       "type": "stdio",
-      "command": "~/myvenv/bin/python",
+      "command": "C:/Users/Alexa/myvenv/Scripts/python",
       "args": [
         "C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_mcp_server.py"
       ],
@@ -143,7 +143,7 @@
     },
     "tooling-config": {
       "type": "stdio",
-      "command": "~/myvenv/bin/python",
+      "command": "C:/Users/Alexa/myvenv/Scripts/python",
       "args": [
         "C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_config_mcp_server.py"
       ],
@@ -156,7 +156,7 @@
     },
     "tooling-lint": {
       "type": "stdio",
-      "command": "~/myvenv/bin/python",
+      "command": "C:/Users/Alexa/myvenv/Scripts/python",
       "args": [
         "C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py"
       ],

@@ -172,7 +172,7 @@
       "enabled": true,
       "type": "local",
       "command": [
-        "C:/Users/Alexa/myvenv/bin/python",
+        "C:/Users/Alexa/myvenv/Scripts/python",
         "C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_mcp_server.py"
       ],
       "env": {
@@ -219,7 +219,7 @@
       "enabled": true,
       "type": "local",
       "command": [
-        "C:/Users/Alexa/myvenv/bin/python",
+        "C:/Users/Alexa/myvenv/Scripts/python",
         "C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_config_mcp_server.py"
       ],
       "env": {
@@ -233,7 +233,7 @@
       "enabled": true,
       "type": "local",
       "command": [
-        "C:/Users/Alexa/myvenv/bin/python",
+        "C:/Users/Alexa/myvenv/Scripts/python",
         "C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py"
       ],
       "env": {
