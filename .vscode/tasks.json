@@ -76,7 +76,7 @@
 				"owner": "markdownlint-cli2",
 				"fileLocation": ["relative", "${workspaceFolder}"],
 				"pattern": {
-					"regexp": "^(.*):(\\d+):(\\d+)\\s+(MD\\w+)\\s+(.*)$",
+					"regexp": "^(.*):(\\\\d+):(\\\\d+)\\\\s+(MD\\\\w+)\\\\s+(.*)$",
 					"file": 1,
 					"line": 2,
 					"column": 3,
@@ -105,6 +105,83 @@
 			"type": "shell",
 			"group": "build",
 			"problemMatcher": "$tsc",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"command": "bun test",
+			"label": "Bun: Test All",
+			"type": "shell",
+			"group": "test",
+			"problemMatcher": "$bun-test",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"command": "bun run lint",
+			"label": "Bun: Lint",
+			"type": "shell",
+			"group": "build",
+			"problemMatcher": "$eslint-stylish",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"command": "go test ./...",
+			"label": "Go: Test All",
+			"type": "shell",
+			"group": "test",
+			"problemMatcher": "$go-test",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"command": "dotnet build",
+			"label": "C#: Build",
+			"type": "shell",
+			"group": "build",
+			"problemMatcher": "$msCompile",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"command": "dotnet test",
+			"label": "C#: Test",
+			"type": "shell",
+			"group": "test",
+			"problemMatcher": "$xunit",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"command": "java -jar",
+			"label": "Java: Run",
+			"type": "shell",
+			"group": "build",
+			"problemMatcher": "$java",
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"command": "pytest",
+			"label": "Python: Debug Test",
+			"type": "shell",
+			"group": "test",
+			"problemMatcher": "$python.pytest",
 			"presentation": {
 				"reveal": "always",
 				"panel": "shared"

@@ -33,6 +33,62 @@
 			"request": "launch",
 			"program": "${file}",
 			"console": "integratedTerminal"
+		},
+		{
+			"name": "Go: Current File",
+			"type": "go",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {},
+			"envFile": "${workspaceFolder}/.env"
+		},
+		{
+			"name": "Java: Current File",
+			"type": "java",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "C#: Current File",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"preLaunchTask": "C#: Build"
+		},
+		{
+			"name": "Playwright: Current Test",
+			"type": "node",
+			"request": "launch",
+			"runtimeExecutable": "bun",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"env": {
+				"PWDEBUG": "1"
+			}
+		},
+		{
+			"name": "Vitest: Current File",
+			"type": "node",
+			"request": "launch",
+			"runtimeExecutable": "bun",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"env": {
+				"TEST_NAME_PATTERN": "${fileBasenameNoExtension}"
+			}
+		},
+		{
+			"name": "Jupyter: Current Notebook",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal",
+			"justMyCode": true,
+			"python": "${workspaceFolder}/.venv/Scripts/python.exe"
 		}
 	]
 }

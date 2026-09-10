@@ -1,31 +1,148 @@
 {
 	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
 	},
 	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
 	},
 	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[python]": {
+		"editor.defaultFormatter": "charliermarsh.ruff",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true,
+		"python.defaultInterpreterPath": "C:\\Users\\Alexa\\myvenv\\Scripts\\python.exe",
+		"python.analysis.autoImportCompletions": true,
+		"python.terminal.useEnvFile": true,
+		"python-envs.alwaysUseUv": true,
+		"python-envs.autoActivate": true
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true,
 		"editor.wordWrap": "on"
 	},
-	"[python]": {
-		"editor.defaultFormatter": "charliermarsh.ruff"
-	},
-	"[shellscript]": {
-		"editor.defaultFormatter": "foxundermoon.shell-format"
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
 	},
 	"[toml]": {
-		"editor.defaultFormatter": "tamasfe.even-better-toml"
+		"editor.defaultFormatter": "tamasfe.even-better-toml",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true
 	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
 	},
-	"[yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[less]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "redhat.vscode-xml",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[go]": {
+		"editor.defaultFormatter": "golang.go",
+		"editor.tabSize": 8,
+		"editor.formatOnSave": true
+	},
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true
+	},
+	"[csharp]": {
+		"editor.defaultFormatter": "ms-dotnettools.csharp",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true
+	},
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust-analyzer",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true
+	},
+	"[graphql]": {
+		"editor.defaultFormatter": "prisma.prisma",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[sql]": {
+		"editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[dockerfile]": {
+		"editor.defaultFormatter": "ms-azuretools.vscode-containers",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[makefile]": {
+		"editor.defaultFormatter": "ms-vscode.makefile-tools",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true
+	},
+	"[cmake]": {
+		"editor.defaultFormatter": "ms-vscode.cmake-tools",
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+	},
+	"[powershell]": {
+		"editor.defaultFormatter": "ms-vscode.powershell",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true
+	},
+	"[ini]": {
+		"editor.defaultFormatter": "vscode.ini-language-features",
+		"editor.tabSize": 4
 	},
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "explicit",
@@ -42,7 +159,18 @@
 		"*.css": "tailwindcss",
 		"*.scss": "tailwindcss",
 		"**/*.{txt,in}": "django-txt",
-		"**/requirements/**/*.{txt,in}": "pip-requirements"
+		"**/requirements/**/*.{txt,in}": "pip-requirements",
+		"**/*.test.ts": "typescript",
+		"**/*.spec.ts": "typescript",
+		"**/*.test.js": "javascript",
+		"**/*.spec.js": "javascript",
+		"**/*.test.tsx": "typescriptreact",
+		"**/*.spec.tsx": "typescriptreact",
+		"Dockerfile": "dockerfile",
+		"docker-compose*.yml": "yaml",
+		"docker-compose*.yaml": "yaml",
+		"**/*.graphql": "graphql",
+		"**/*.gql": "graphql"
 	},
 	"files.exclude": {
 		"**/__pycache__": true,
@@ -94,5 +222,28 @@
 	},
 	"workbench.browser.dataStorage": "workspace",
 	"workbench.browser.enableRemoteProxy": true,
-	"workbench.browser.experimentalUserTools.enabled": true
+	"workbench.browser.experimentalUserTools.enabled": true,
+	"git.autofetch": true,
+	"js/ts.experimental.useTsgo": true,
+	"json.schemaDownload.trustedDomains": {
+		"https://developer.microsoft.com/json-schemas/": true,
+		"https://json-schema.org/": true,
+		"https://json.schemastore.org/": true,
+		"https://models.dev/model-schema.json": true,
+		"https://opencode.ai": true,
+		"https://raw.githubusercontent.com/devcontainers/spec/": true,
+		"https://raw.githubusercontent.com/microsoft/vscode/": true,
+		"https://schemastore.azurewebsites.net/": true,
+		"https://www.schemastore.org/": true
+	},
+	"prettier.requireConfig": true,
+	"prettier.useEditorConfig": true,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"typescript.tsdk": "C:\\Users\\Alexa\\myvenv\\node_modules\\typescript\\lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true
 }
