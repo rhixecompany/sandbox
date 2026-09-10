@@ -7,7 +7,7 @@ description: >
   migrate source code, then sync agents and verify at score >= 99.
   tree.prompt.txt defines GOAL 1 (Cleanup), GOAL 2 (Config),
   GOAL 3 (mjs->mts), GOAL 4 (Pipeline).
-version: 2.0.1
+version: 3.0.0
 author: Alexa
 license: MIT
 tags:
@@ -89,6 +89,8 @@ personality: patient-tutor
 provider: openrouter
 model: thinkingmachines/inkling:free
 profile: adminbot
+category: general
+trigger: /run-all-goals
 references:
   - templates/_shared/rules-core.md
   - templates/_shared/deps-core.md
@@ -106,59 +108,53 @@ references:
 # Goal: /run-all-goals (Unified — tree.prompt.txt Primary)
 
 > Source verification (3 files verified from disk):
-> - `tree.prompt.txt` (2,812 B, 11 lines) — PRIMARY SOURCE: cleanup, config, mjs->mts, json
-> - `goal-using-superpowers-brainstormin.txt` (12,252 B, 17 lines) — comprehensive pipeline
-> - `test-run.prompt.txt` (4,927 B, 12 lines) — SOUL/USER/MEMORY audit + MCP + model tests
-> No fabricated content. All goals/subgoals derived from verified file contents.
+> - `tree.prompt.txt` (2,812 B, 11 lines) — PRIMARY SOURCE
+> - `goal-using-superpowers-brainstormin.txt` (12,252 B) — pipeline
+> - `test-run.prompt.txt` (4,927 B) — audit + model tests
 
 ## Context
-- Workspace: ~/Desktop/SandBox (C:\\Users\\Alexa\\Desktop\\SandBox); branch clean-development.
+- Workspace: ~/Desktop/SandBox; branch clean-development.
 - Active model: thinkingmachines/inkling:free (provider openrouter).
-- Profile: adminbot (operations/debug) + patient-tutor (teaching; concise, table-first).
+- Profile: adminbot + patient-tutor.
 - User authorization: ALL destructive operations approved.
 
 ## Unified Goals & Subgoals
 
-### GOAL 1 — Cleanup & Consolidation (PRIMARY — tree.prompt.txt)
-Delete and cleanup .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders. Cleanup *.json, *-report.md (except package.json, pyrightconfig.json). Delete *.log, *.txt (skip *.prompt.txt). Convert *.mjs to *.mts. Cleanup/update/verify *.md files. Update/verify *.py, *.mjs, *.mts files. Update requirements.txt, tsconfig.json, package.json, pyrightconfig.json, *.json, *.toml, *.yaml.
+### GOAL 1 — Cleanup & Consolidation (PRIMARY)
+- SG1.1: Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts.
+- SG1.2: Delete *.json, *-report.md (except package.json, pyrightconfig.json).
+- SG1.3: Delete *.log, *.txt (skip *.prompt.txt).
+- SG1.4: Convert *.mjs to *.mts.
+- SG1.5: Cleanup/update *.md files.
+- SG1.6: Update *.py, *.mjs, *.mts; create src/ and migrate.
+- SG1.7: Update requirements.txt, tsconfig.json.
+- SG1.8: Update package.json, pyrightconfig.json, *.json, *.toml, *.yaml.
+- SG1.9: Update .editorconfig, .gitignore, .prettierrc.json, .markdownlint, .pre-commit, *.toml, *.yaml.
 
-**Subgoals:**
-- **SG1.1** — Delete/cleanup: .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders.
-- **SG1.2** — Delete/cleanup: *.json, *-report.md files (except package.json, pyrightconfig.json).
-- **SG1.3** — Delete/cleanup: *.log, *.txt files (skip *.prompt.txt files).
-- **SG1.4** — Convert *.mjs files into *.mts files.
-- **SG1.5** — Cleanup/update/verify *.md files (PLAN.md, SOUL.md, SPEC.md, USER.md, docs/).
-- **SG1.6** — Update/verify *.py, *.mjs, *.mts files; create src/ and migrate files.
-- **SG1.7** — Update/verify requirements.txt, tsconfig.json.
-- **SG1.8** — Update/verify package.json, pyrightconfig.json, *.json, *.toml, *.yaml files.
-- **SG1.9** — Update/verify .editorconfig, .git-blame-ignore-revs, .gitattributes, .gitignore, .gitmodules, .markdownlint-cli2.jsonc, .markdownlint.jsonc, .pre-commit-config.yaml, .prettierignore, .prettierrc.json, *.toml, *.yaml.
+### GOAL 2 — Comprehensive Implementation Pipeline
+Create/update/refactor specs, plans, prompts, scripts, skills. Score >= 99 on all judge skills.
+- SG2.1: Audit SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules.
+- SG2.2: Verify/fix hermes plugins and hooks.
+- SG2.3: MCP servers sync.
+- SG2.4: Config/scripts sync (.env, config.yaml, quick_commands).
+- SG2.5: Diagnostic repair (hermes doctor --fix).
+- SG2.6: Free model tests + report (openrouter + opencode-zen).
+- SG2.7: Git commit + push clean-development/development/production.
+- SG2.8: Cleanup/consolidation.
 
-### GOAL 2 — Comprehensive Implementation Pipeline (goal-using-superpowers-brainstormin.txt)
-Create, update, refactor, implement, execute, reimplement comprehensive specs, plans, prompts, scripts, skills that fully implement all goals/subgoals. Score >= 99 on all judge skills.
-
-**Subgoals:**
-- **SG2.1** — Audit SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules; apply DRY fixes.
-- **SG2.2** — Verify/fix hermes plugins and hooks; ensure every event is handled.
-- **SG2.3** — MCP servers sync: confirm skills for all MCP servers.
-- **SG2.4** — Config/scripts sync: sync profiles; verify quick_commands; sync .env/config.yaml.
-- **SG2.5** — Diagnostic repair: hermes doctor --fix.
-- **SG2.6** — Free model tests + report: run hermes chat for openrouter + opencode-zen free models; create emoji-markdown report; configure best model via hermes config set and fallback via hermes fallback.
-- **SG2.7** — Git operations: git add -A; git commit; git push -u origin clean-development development production (retry until success).
-- **SG2.8** — Cleanup/consolidation: remove duplicates; archive orphan template dirs; confirm workspace inventory matches .hermes/plans/.
-
-### GOAL 3 — Free Model Tests (test-run.prompt.txt)
-Test all free models in openrouter and opencode-zen; run hermes chat -q <query> --yolo --oneshot; create well-structured emoji-markdown report; configure best working model via hermes config set and fallback via hermes fallback add with top 6 runners-up; verify with hermes fallback list and hermes config show.
+### GOAL 3 — Free Model Tests
+Test openrouter + opencode-zen free models; run hermes chat --yolo --oneshot; create emoji-markdown report; configure best model + fallback.
 
 ### GOAL 4 — Agent Sync
-.github is for all AI agents, .copilot for copilot, .codex for codex, .opencode for opencode, .hermes for hermes. Copy hooks, skills, plugins, instructions to ALL AI agent roots; ensure all AI agents have identical hooks, skills, plugins, instructions, prompts, scripts, specs, plans, templates, config.yaml, and .env files synced and working correctly.
+Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, .hermes); ensure identical configs.
 
-### GOAL 5 — Skills Plan & Implementation (skill-creator)
-Create, update, refactor, tests, debug, fix, verify the following skills: plan, plan-mode, plans-and-specs, create-implementation-plan, update-implementation-plan, implementation-plan, execute-implementation-plan, executing-plans, create-implementation-spec, update-implementation-spec, implementation-spec, execute-implementation-spec, executing-specs, create-implementation-prompt, update-implementation-prompt, implementation-prompt, execute-implementation-prompt, executing-prompts. Ensure all files verified on disk and every gates, checklist, rules, styles, preferences are followed and used.
+### GOAL 5 — Skills Plan & Implementation
+Create/update/refactor/test/debug/fix/verify all listed skills. Ensure all files verified on disk and every gates, checklist, rules, styles, preferences passed.
 
 ## Phases (sequential gate)
 | Phase | Verified Requirement | Gate |
 |---|---|---|
-| 1 | Input files read (tree.prompt.txt PRIMARY, sizes verified) | Confirmed |
+| 1 | Input files read (tree PRIMARY) | Confirmed |
 | 2 | Skills loaded (14+ judge skills) | All loaded |
 | 3 | Cleanup execution (SG1.1-SG1.9) | Workspace clean |
 | 4 | Specs/Plans created | Plan approved |
@@ -171,33 +167,30 @@ Create, update, refactor, tests, debug, fix, verify the following skills: plan, 
 | 11 | Judge scores >= 99 | Score verified |
 
 ## Verification Checklist
-- [ ] tree.prompt.txt verified as PRIMARY source (read, sizes confirmed)
-- [ ] All 11 phases have verified gates matching tree.prompt.txt goals
-- [ ] **Phase 1 Cleanup:** .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders deleted
-- [ ] **Phase 2 Cleanup:** *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) cleaned
-- [ ] **Phase 3 Config:** .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json updated/verified
-- [ ] **Phase 4 Config:** package.json, pyrightconfig.json, *.json updated/verified
-- [ ] **mjs->mts Conversion:** No .mjs files remain; all converted to .mts
-- [ ] **Docs Phase:** *.md files (PLAN.md, SOUL.md, SPEC.md, USER.md, docs) cleaned and updated
-- [ ] **Source Migration:** src directory created; *.py/*.mjs/*.mts migrated
-- [ ] **Agent Sync:** 5 AI agents (.github, .copilot, .codex, .opencode, .hermes) identical
+- [ ] All 3 source files read; sizes verified
+- [ ] tree.prompt.txt is PRIMARY source
+- [ ] All 11 phases have verified gates
+- [ ] All subgoals mapped to verified source content
+- [ ] DRY enforced via templates/_shared/
+- [ ] Profile/model/provider verified in frontmatter
 - [ ] All judge skills score >= 99
-- [ ] Config files validated (package.json, pyrightconfig.json, tsconfig.json, requirements.txt)
-- [ ] No placeholders in any artifact
-- [ ] DRY enforced: rules reference shared templates
-- [ ] Security: no embedded secrets; ${ENV_VAR} placeholders used
-- [ ] Git push succeeded on clean-development, development, production
+- [ ] Agent sync: 5 AI agents identical
+- [ ] Cleanup complete
+- [ ] Config files updated
+- [ ] mjs to mts conversion complete
+- [ ] Git push succeeded
+- [ ] Skills plan verified on disk
+- [ ] No placeholders
 
 ## Security
 - No embedded secrets; use ${ENV_VAR} placeholders.
-- Destructive operations (doctor --fix, git push, archive/delete, --yolo) executed with risk explanation and user authorization recorded.
+- Destructive operations executed with risk explanation and user authorization.
 - Recoverable via git/state.db backups.
 
 ## Metrics
-- **PRIMARY SOURCE**: tree.prompt.txt (2,812 B; C:\Users\Alexa\Desktop\SandBox\tree.prompt.txt)
-- tree.prompt.txt defines GOAL 1 (Cleanup), GOAL 2 (Config), GOAL 3 (mjs->mts), GOAL 4 (Pipeline).
-- Goals: 4 unified (GOAL 1-4), 17 subgoals total (SG1.1-SG4.9).
-- Phases: 11 sequential gates (cleanup-first order).
-- Judge target score: >= 99 on all specs, plans, prompts, scripts, hooks, plugins.
-- Agent sync: 5 agent roots (.github, .copilot, .codex, .opencode, .hermes).
-- Status: IMPLEMENTING — all phases authorized for execution.
+- Source files: 3 verified (tree PRIMARY + goal + test).
+- Goals: 5 unified, 26 subgoals total.
+- Phases: 11 sequential gates.
+- Judge target: >= 99 on all specs, plans, prompts, scripts, hooks, plugins.
+- Agent sync: 5 agent roots.
+- Status: IMPLEMENTING — all phases authorized.

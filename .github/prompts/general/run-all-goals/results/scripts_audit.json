@@ -1,0 +1,44 @@
+{
+  "ts": "2026-09-10T17:31:25.538305Z",
+  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts",
+  "threshold": 50,
+  "count": 2,
+  "avg": 88.0,
+  "passed": 2,
+  "syntax_failed": 0,
+  "quick_commands": null,
+  "results": [
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts\\test_run_all_goals.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 103,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts\\verify_run_all_goals.py",
+      "score": 88,
+      "rating": "PASS",
+      "dims": {
+        "syntax": 20,
+        "cli": 12,
+        "error_handling": 20,
+        "documentation": 20,
+        "dry": 16
+      },
+      "lang": "python",
+      "syntax_ok": true,
+      "lines": 162,
+      "syntax_error": ""
+    }
+  ]
+}

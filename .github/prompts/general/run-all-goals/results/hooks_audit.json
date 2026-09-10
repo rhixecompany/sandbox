@@ -1,0 +1,205 @@
+{
+  "ts": "2026-09-10T17:31:35.941011Z",
+  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks",
+  "threshold": 50,
+  "count": 13,
+  "avg": 36.1,
+  "passed": 0,
+  "results": [
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\01-session-logger-hook.sh",
+      "score": 42,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 3,
+        "error_handling": 15,
+        "logging": 4
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\02-governance-audit-hook.sh",
+      "score": 42,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 3,
+        "error_handling": 15,
+        "logging": 4
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\03-session-auto-commit-hook.sh",
+      "score": 42,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 3,
+        "error_handling": 15,
+        "logging": 4
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\04-pre-exec-validate.sh",
+      "score": 46,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 3,
+        "error_handling": 15,
+        "logging": 8
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\05-post-exec-state-log.py",
+      "score": 29,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 0,
+        "error_handling": 5,
+        "logging": 4
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\_pathutil.py",
+      "score": 20,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 0,
+        "error_handling": 0,
+        "logging": 0
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\generate_session_report.py",
+      "score": 29,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 0,
+        "error_handling": 5,
+        "logging": 4
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\lib.py",
+      "score": 33,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 4,
+        "syntax": 20,
+        "idempotency": 0,
+        "error_handling": 5,
+        "logging": 4
+      },
+      "events_referenced": 1,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\lib.sh",
+      "score": 31,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 3,
+        "error_handling": 0,
+        "logging": 8
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\post-exec-state-log.py",
+      "score": 29,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 0,
+        "error_handling": 5,
+        "logging": 4
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\pre-exec-validate.sh",
+      "score": 46,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 0,
+        "syntax": 20,
+        "idempotency": 3,
+        "error_handling": 15,
+        "logging": 8
+      },
+      "events_referenced": 0,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\session_end_capture.py",
+      "score": 40,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 4,
+        "syntax": 20,
+        "idempotency": 0,
+        "error_handling": 0,
+        "logging": 16
+      },
+      "events_referenced": 1,
+      "syntax_ok": true,
+      "syntax_error": ""
+    },
+    {
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\hooks\\session_start_capture.py",
+      "score": 40,
+      "rating": "FAIL",
+      "dims": {
+        "event_coverage": 4,
+        "syntax": 20,
+        "idempotency": 0,
+        "error_handling": 0,
+        "logging": 16
+      },
+      "events_referenced": 1,
+      "syntax_ok": true,
+      "syntax_error": ""
+    }
+  ]
+}
