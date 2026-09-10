@@ -1,0 +1,91 @@
+{
+  "$schema": "https://oh-my-opencode.ai/config.json",
+  "agent": {
+    "default_agent": "sisyphus",
+    "agents": [
+      "hephaestus",
+      "oracle",
+      "librarian",
+      "explore",
+      "atlas",
+      "prometheus",
+      "metis",
+      "momus"
+    ],
+    "parallel_limit": 8,
+    "use_best_model_for_task": true,
+    "auto_route_complex_tasks": true,
+    "context_window_size": 200000,
+    "max_turn_memory_lines": 15000,
+    "compaction_threshold": 500,
+    "compaction_interval": "long",
+    "compaction_strategy": "smart-summarization",
+    "reasoning_echo": true,
+    "verify_on_stop": true,
+    "strict_verification": true
+  },
+  "plugins": {
+    "enabled": [
+      "oh-my-openagent@latest",
+      "superpowers@git+https://github.com/obra/superpowers.git#main",
+      "opencode-antigravity-auth@latest",
+      "context-engineing",
+      "cli-enhancements",
+      "tui-enhancements"
+    ],
+    "install_on_startup": false,
+    "update_check_interval_hours": 24
+  },
+  "models": {
+    "primary": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+    "fallback_chain": [
+      "openrouter/thinkingmachines/inkling:free",
+      "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "openrouter/poolside/laguna-s-2.1:free"
+    ],
+    "reasoning_model": "openrouter/thinkingmachines/inkling:free",
+    "fast_model": "openrouter/deepseek/deepseek-v4-flash-free",
+    "vision_model": "openrouter/nemotron-3-ultra-550b-a55b:free"
+  },
+  "context": {
+    "max_context_tokens": 200000,
+    "use_long_context_model": true,
+    "context_injection_hook": true,
+    "experimental_chat_transform": true,
+    "preserve_critical_context": true,
+    "compress_older_turns": true,
+    "memory_backbone": "sqlite-fts5",
+    "session_summary_length_max": 3000
+  },
+  "performance": {
+    "speed_priority": true,
+    "cache_enabled": true,
+    "reuse_recent_context": true,
+    "parallel_agent_limit": 8,
+    "batch_task_processing": true,
+    "preload_frequent_skills": true,
+    "reduce_token_usage_for_simple_tasks": true
+  },
+  "quality": {
+    "multi_stage_review": true,
+    "evidence_based_results": true,
+    "dr_dry_compliant": true,
+    "require_tests_before_merge": true,
+    "security_scan_before_commit": true,
+    "lint_strict_mode": true
+  },
+  "development_guidelines": {
+    "use_dr_dry_principles": true,
+    "enforce_strict_typescript": true,
+    "python_strict_mode": true,
+    "no_any_except_explicit_exempt": true,
+    "require_documentation_for_public_apis": true,
+    "require_tests_for_new_features": true,
+    "use_modern_dependencies_only": true,
+    "no_backup_files_in_git": true,
+    "use_dry_run_for_destructive_operations": true,
+    "use_conventional_commits": true,
+    "branch_target": "development",
+    "code_review_priority_order": ["security", "correctness", "tests", "readability", "performance", "documentation"]
+  }
+}

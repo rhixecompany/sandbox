@@ -1,0 +1,24 @@
+name: omo-workspace-config
+version: 2.0.0
+description: Oh-My-OpenCode workspace configuration for enhanced context, longer compaction, better models, speed, and accuracy with DRY best practices
+platforms: [windows, macos, linux]
+plugins_required:
+  - oh-my-openagent
+  - opencode
+  - superpowers
+required_skills:
+  - using-superpowers
+  - customize-opencode
+  - opencode-driven-development
+  - subagent-driven-development
+related_skills:
+  - writing-plans
+  - executing-plans
+  - requesting-code-review
+  - receiving-code-review
+  - test-driven-development
+  - systematic-debugging
+  - verification-before-completion
+  - using-git-worktrees
+  - skill-creator
+  - skill-management
