@@ -1,13 +1,34 @@
 ---
 name: prompt-workflow
 category: references
-version: 1.0.0
+version: 2.0.0
 license: MIT
-author: derived from prompt-management skill (verified linked file: references/prompt_workflow.md)
-description: Prompt workflow reference for run-all-goals execution phases. Derived from verified prompt-management skill documentation (not synthesized from unverified sources).
+author: derived from prompt-management skill + tree.prompt.txt (PRIMARY source)
+description: Prompt workflow reference for run-all-goals execution phases. tree-cleanup-first approach per tree.prompt.txt.
 ---
 
-# Prompt Workflow — Reference (Verified Source)
+# Prompt Workflow — Reference (tree-Primary)
+
+> **tree.prompt.txt** is the PRIMARY source defining the cleanup-first execution pipeline.
+> Phases follow tree.prompt.txt goal order: Cleanup, Config, mjs->mts, Pipeline.
+
+## Workflow Overview (tree-Cleanup-First)
+
+Per tree.prompt.txt directives, the execution pipeline follows this order:
+
+| Phase | tree.prompt.txt Goal | Description |
+|---|---|---|
+| 1 | Cleanup folders | Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, etc. |
+| 2 | Cleanup files | Delete *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt |
+| 3 | Config update | Update/verify .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml |
+| 4 | Config update | Update/verify requirements.txt, tsconfig.json, package.json, pyrightconfig.json |
+| 5 | mjs->mts | Convert all *.mjs to *.mts |
+| 6 | Docs cleanup | Cleanup/update *.md (PLAN.md, SOUL.md, SPEC.md, USER.md, docs) |
+| 7 | Source migration | Update/verify *.py/*.mjs/*.mts; create src/ directory |
+| 8 | Agent sync | Copy hooks/skills/plugins to all AI agent roots |
+| 9 | Config/scripts sync | Sync profiles, quick_commands, .env/config.yaml |
+| 10 | Diagnostic repair | hermes doctor --fix |
+| 11 | Judge verification | Score >= 99 on all judge skills |
 
 > Source: `productivity/prompt-management` skill (`SKILL.md` verified read); linked files include `references/prompt_workflow.md` (verified present in linked_files list). Content derived from verified skill descriptions; no fabricated commands or APIs.
 

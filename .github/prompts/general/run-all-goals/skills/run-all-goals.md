@@ -1,14 +1,15 @@
 ---
 name: run-all-goals
-title: "Run All Goals — Unified Pipeline Skill"
+title: "Run All Goals — Unified Pipeline Skill (Tree-Primary)"
 description: >
-  Execute the unified run-all-goals pipeline: comprehensive implementation
-  covering context audit, plugins/hooks, MCP sync, config sync, diagnostic
-  repair, model tests, agent sync, cleanup, and verification at score >= 99.
-version: 2.0.0
+  Execute the unified run-all-goals pipeline with tree.prompt.txt as PRIMARY source.
+  Cleanup-first execution: delete workspace clutter, update config files,
+  convert mjs to mts, migrate source code, then sync agents and verify.
+  Score >= 99 on all judge skills.
+version: 3.0.0
 author: Alexa (via OWL)
 license: MIT
-tags: [implementation, execution, unified, score-99, audit]
+tags: [implementation, execution, unified, tree-primary, score-99, cleanup-first]
 metadata:
   hermes:
     related_skills:
@@ -17,37 +18,55 @@ metadata:
     - subagent-driven-development
     - prompt-management
     - executing-plans
-tags: [implementation, execution, audit, verification]
 ---
 
-# Run All Goals — Unified Pipeline Skill
+# Run All Goals — Unified Pipeline Skill (Tree-Primary)
 
 ## Overview
-Execute the comprehensive run-all-goals pipeline merging three source files into a single execution plan with 4 goals, 17 subgoals, and 11 phases.
+Execute the comprehensive run-all-goals pipeline with tree.prompt.txt as PRIMARY source.
+Cleanup-first execution: delete workspace clutter, update config files, convert mjs to mts,
+migrate source code, then sync agents and verify. 4 goals, 17 subgoals, 11 phases.
 
-## Workflow
+## Primary Source
+**tree.prompt.txt** (C:\Users\Alexa\Desktop\SandBox\tree.prompt.txt) is the authoritative primary source.
+All goals, subgoals, phases derive from tree.prompt.txt.
 
-### Phase 1: Audit
-- Read all 3 source files
-- Verify workspace inventory
-- Load all 14 mandatory skills + judge skills
+## Workflow (Tree-Cleanup-First)
 
-### Phase 2: Plan
-- Create implementation plan (.hermes/plans/run-all-goals-implementation.md)
-- Create shared templates (_shared/)
-- Create reference docs (references/)
-- Create scripts (scripts/)
+### Phase 1: Cleanup
+Delete workspace clutter per tree.prompt.txt:
+- .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders
+- *.json (except package.json, pyrightconfig.json), *-report.md files
+- *.log, *.txt files (skip *.prompt.txt files)
 
-### Phase 3: Execute
-- SG1.1 through SG4.9: All subgoals
-- GOAL 1-4: All goals
-- 11 phases with verified gates
+### Phase 2: Config Files Update
+Update/verify config files per tree.prompt.txt:
+- .editorconfig, .git-blame-ignore-revs, .gitattributes, .gitignore, .gitmodules
+- .markdownlint-cli2.jsonc, .markdownlint.jsonc, .pre-commit-config.yaml, .prettierignore, .prettierrc.json
+- *.toml, *.yaml files
+- requirements.txt, tsconfig.json
+- package.json, pyrightconfig.json, *.json files
 
-### Phase 4: Verify
-- Run judge skills (specs-judge, plans-judge, prompts-judge, skill-judge)
-- Target score >= 99 on all
-- Run verify_run_all_goals.py
-- Generate execution summary
+### Phase 3: mjs->mts Conversion
+Convert all *.mjs files to *.mts per tree.prompt.txt
+
+### Phase 4: Docs & Markdown Cleanup
+Cleanup/update *.md files including PLAN.md, SOUL.md, SPEC.md, USER.md and all docs
+
+### Phase 5: Source Migration
+Update/verify *.py, *.mjs, *.mts files; create src directory and migrate files into src
+
+### Phase 6: Agent Sync
+Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, .hermes); ensure identical configs
+
+### Phase 7: Config/scripts Sync
+Sync profiles; verify quick_commands; sync .env/config.yaml
+
+### Phase 8: Diagnostic Repair
+hermes doctor --fix
+
+### Phase 9: Judge Verification
+Run judge skills; target score >= 99 on all
 
 ## Skills Required
 | Skill | Purpose |
@@ -72,20 +91,27 @@ Execute the comprehensive run-all-goals pipeline merging three source files into
 | specs-judge | Specs scoring |
 
 ## Verification Checklist
-- [ ] All 3 source files read; sizes verified
-- [ ] All 14 mandatory skills loaded
-- [ ] All 11 phases have verified gates
-- [ ] All judge skills score >= 99
+- [ ] tree.prompt.txt verified as primary source
+- [ ] Phase 1 Cleanup complete: .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts removed
+- [ ] Phase 2 Cleanup: *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt cleaned
+- [ ] Phase 3 Config files updated/verified (.editorconfig, .gitignore, etc.)
+- [ ] Phase 4 mjs->mts conversion complete (no .mjs remains)
+- [ ] Phase 5 *.md files cleaned and updated
+- [ ] Phase 6 src directory created; *.py/*.mjs/*.mts migrated
 - [ ] Agent sync: 5 AI agents identical
-- [ ] Cleanup complete
-- [ ] Config files updated
-- [ ] Git push succeeded
+- [ ] All judge skills score >= 99
+- [ ] Config files validated (package.json, pyrightconfig.json, tsconfig.json, requirements.txt)
 - [ ] No placeholders in any artifact
-- [ ] Execution summary generated
+- [ ] DRY enforced: rules reference shared templates
+- [ ] Security: no embedded secrets; ${ENV_VAR} placeholders used
+- [ ] Git push succeeded on clean-development, development, production
 
 ## Best Practices
+- tree.prompt.txt is PRIMARY source — all goals/subgoals derive from it
+- Cleanup-first: delete before constructing
 - Use MCP servers first
 - DRY: shared components in _shared/
 - Concise, action-first responses
 - Verify with tools, not memory
 - Score >= 99 on all judge skills
+- Use clarify tool when ambiguous

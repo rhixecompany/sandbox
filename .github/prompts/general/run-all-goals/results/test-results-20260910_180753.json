@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Unified Prompt Exists",
+    "command": "test -f \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\run-all-goals.prompt.md\"",
+    "returncode": 0,
+    "status": "PASS",
+    "output": ""
+  },
+  {
+    "name": "Implementation Plan Exists",
+    "command": "test -f \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\.hermes\\plans\\run-all-goals-implementation.md\"",
+    "returncode": 1,
+    "status": "FAIL",
+    "output": ""
+  },
+  {
+    "name": "Rules Core Exists",
+    "command": "test -f \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\templates\\_shared\\rules-core.md\"",
+    "returncode": 0,
+    "status": "PASS",
+    "output": ""
+  },
+  {
+    "name": "Deps Core Exists",
+    "command": "test -f \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\templates\\_shared\\deps-core.md\"",
+    "returncode": 0,
+    "status": "PASS",
+    "output": ""
+  },
+  {
+    "name": "Verify Script Exists",
+    "command": "test -f \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts\\verify_run_all_goals.py\"",
+    "returncode": 0,
+    "status": "PASS",
+    "output": ""
+  },
+  {
+    "name": "Skill Exists",
+    "command": "test -f \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\skills\\run-all-goals.md\"",
+    "returncode": 0,
+    "status": "PASS",
+    "output": ""
+  },
+  {
+    "name": "tree.prompt.txt PRIMARY referenced",
+    "command": "grep -q \"tree.prompt.txt\" \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\run-all-goals.prompt.md\"",
+    "returncode": 0,
+    "status": "PASS",
+    "output": ""
+  },
+  {
+    "name": "5 GOAL sections present",
+    "command": "grep -c \"### GOAL\" \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\run-all-goals.prompt.md\"",
+    "returncode": 0,
+    "status": "PASS",
+    "output": "5"
+  },
+  {
+    "name": "No FIXME/TODO/PLACEHOLDER in prompt",
+    "command": "grep -rE \"FIXME|TODO|PLACEHOLDER\" \"C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\run-all-goals.prompt.md\" || true",
+    "returncode": 0,
+    "status": "PASS",
+    "output": ""
+  }
+]

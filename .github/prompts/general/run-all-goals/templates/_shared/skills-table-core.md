@@ -1,10 +1,10 @@
 ---
 name: skills-table-core
 category: templates/_shared
-version: 1.0.0
+version: 2.0.0
 license: MIT
-author: derived from verified workspace skills inventory (85 workspace skills + 27 .github/skills/ SKILL.md + 275 category skills)
-description: Shared skills reference table format for run-all-goals artifacts.
+author: derived from verified workspace skills inventory (85 workspace skills + 27 .github/skills/ SKILL.md + 275 category skills) + tree.prompt.txt
+description: Shared skills reference table format for run-all-goals artifacts. tree.prompt.txt is PRIMARY source.
 ---
 
 # Skills Table — Shared Template

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Unified Prompt Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts/run-all-goals.prompt.md",
+    "returncode": 1,
+    "status": "FAIL"
+  },
+  {
+    "name": "Implementation Plan Exists",
+    "command": "test -f .hermes/plans/run-all-goals-implementation.md",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "Rules Core Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts/templates/_shared/rules-core.md",
+    "returncode": 1,
+    "status": "FAIL"
+  },
+  {
+    "name": "Deps Core Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts/templates/_shared/deps-core.md",
+    "returncode": 1,
+    "status": "FAIL"
+  },
+  {
+    "name": "Verify Script Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts/scripts/verify_run_all_goals.py",
+    "returncode": 1,
+    "status": "FAIL"
+  },
+  {
+    "name": "Skill Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts/skills/run-all-goals.md",
+    "returncode": 1,
+    "status": "FAIL"
+  },
+  {
+    "name": "No Placeholders",
+    "command": "grep -r 'FIXME' C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals\\scripts --include='*.md' --include='*.py' || true",
+    "returncode": 0,
+    "status": "PASS"
+  }
+]

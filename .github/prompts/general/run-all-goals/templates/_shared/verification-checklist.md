@@ -1,28 +1,48 @@
 ---
 name: verification-checklist
 category: templates/_shared
-version: 1.0.0
+version: 2.0.0
 license: MIT
-author: derived from run-all-goals.prompt.md verification block + prompt-management verification checklist + skill-judge scoring rules
-description: Shared verification checklist format. Applied to every phase output.
+author: derived from run-all-goals.prompt.md verification block + tree.prompt.txt (primary source) + prompt-management verification checklist + skill-judge scoring rules
+description: Shared verification checklist format. Applied to every phase output. tree.prompt.txt is PRIMARY source.
 ---
 
 # Verification Checklist — Shared Template
 
-> Source: verified from `.github/prompts/general/run-all-goals/run-all-goals.prompt.md` lines 114â123; `prompt-management` skill verification checklist; `skill-judge` scoring rules (0â100 scale; 99+ target). No fabricated criteria.
+> Sources: verified from `.github/prompts/general/run-all-goals/run-all-goals.prompt.md` + **`tree.prompt.txt`** (PRIMARY source) + `prompt-management` skill verification checklist + `skill-judge` scoring rules (0-100 scale; 99+ target). No fabricated criteria.
 
 ## Mandatory Checks (Every Artifact)
 
 Apply in order. Halt on first failure; do not proceed to next phase until gate passes.
 
+### Tree-Primary Source Verification
+
+- [ ] **tree.prompt.txt** verified as PRIMARY source (read from disk; file size confirmed).
+- [ ] All goals/subgoals derive from tree.prompt.txt directives (not synthesized).
+- [ ] No fabricated content; all goals/subgoals backed by tree.prompt.txt lines.
+- [ ] tree.prompt.txt referenced in prompt frontmatter, plan, and all artifacts.
+
+### Tree Cleanup Verification (tree.prompt.txt Goals 1-3)
+
+- [ ] **Phase 1 Cleanup:** .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders deleted/verified.
+- [ ] **Phase 2 Cleanup:** *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) cleaned/verified.
+- [ ] **Phase 3 Config:** .editorconfig, .git-blame-ignore-revs, .gitattributes, .gitignore, .gitmodules, .markdownlint-cli2.jsonc, .markdownlint.jsonc, .pre-commit-config.yaml, .prettierignore, .prettierrc.json, *.toml, *.yaml updated/verified.
+- [ ] **Phase 4 Config:** requirements.txt, tsconfig.json, package.json, pyrightconfig.json updated/verified.
+
+### mjs->mts Conversion Verification (tree.prompt.txt Goal 5)
+
+- [ ] All *.mjs files converted to *.mts files.
+- [ ] No .mjs files remain without .mts counterparts.
+- [ ] Conversion verified via `find . -name '*.mjs'` or equivalent.
+
 ### Source Integrity
 
 - [ ] All source files read directly from disk (not synthesized from memory).
 - [ ] File sizes verified (`ls -l` or `read_file` byte count reported).
-- [ ] Missing source files documented explicitly (e.g., `test-run.prompt.txt`: 0 matches â NOT fabricated).
+- [ ] Missing source files documented explicitly (e.g., `test-run.prompt.txt`: 0 matches — NOT fabricated).
 - [ ] No placeholder markers (`FIXME:`, `TODO:`, `PLACEHOLDER`, `[SKILL_PRUNED]`) present in output.
 
-### Structural Integrity
+### Structure Integrity
 
 - [ ] YAML frontmatter loads with `yaml.safe_load` (no duplicate fields, no broken fences).
 - [ ] `name:` matches folder/file name; `trigger:` equals `/<name>`.

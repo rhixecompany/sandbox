@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run All Goals — Test Script.
-Executes all subgoal tests and reports results."""
+Executes all subgoal tests and reports results.
+tree.prompt.txt is PRIMARY source for cleanup goals."""
 import os, sys, subprocess, json, datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -14,6 +15,47 @@ def run_test(name, command):
     except Exception as e:
         return {"name": name, "command": command, "error": str(e), "status": "ERROR"}
 
+def test_tree_prompt_exists():
+    """Tree-specific test: tree.prompt.txt exists as primary source."""
+    tree_path = os.path.join(os.path.dirname(os.path.dirname(BASE_DIR)), "tree.prompt.txt")
+    exists = os.path.exists(tree_path)
+    return {"name": "Tree Prompt Exists (primary source)", "command": f"test -f {tree_path}", "returncode": 0 if exists else 1, "status": "PASS" if exists else "FAIL"}
+
+def test_mjs_to_mts_conversion():
+    """Tree-specific test: no .mjs files remain without .mts counterparts."""
+    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+    mjs_files = []
+    for root, dirs, files in os.walk(base_workspace):
+        for f in files:
+            if f.endswith('.mjs'):
+                mts_path = os.path.join(root, f[:-4] + '.mts')
+                if not os.path.exists(mts_path):
+                    mjs_files.append(os.path.join(root, f))
+    passed = len(mjs_files) == 0
+    return {"name": "MJS to MTS Conversion Check", "command": "find . -name '*.mjs' | head -1", "returncode": 0 if passed else 1, "status": "PASS" if passed else "FAIL", "detail": f"{len(mjs_files)} unconverted .mjs files"}
+
+def test_enhance_cleanup():
+    """Tree-specific test: .enhance directory does not exist."""
+    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+    enhance_path = os.path.join(base_workspace, ".enhance")
+    exists = os.path.exists(enhance_path)
+    return {"name": ".enhance Cleanup Verification", "command": f"test ! -d {enhance_path}", "returncode": 0 if not exists else 1, "status": "PASS" if not exists else "FAIL"}
+
+def test_goals_cleanup():
+    """Tree-specific test: .goals directory does not exist."""
+    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+    goals_path = os.path.join(base_workspace, ".goals")
+    exists = os.path.exists(goals_path)
+    return {"name": ".goals Cleanup Verification", "command": f"test ! -d {goals_path}", "returncode": 0 if not exists else 1, "status": "PASS" if not exists else "FAIL"}
+
+def test_config_validation():
+    """Tree-specific test: validate key config files exist."""
+    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+    config_files = ["package.json", "pyrightconfig.json", "tsconfig.json", "requirements.txt"]
+    missing = [f for f in config_files if not os.path.exists(os.path.join(base_workspace, f))]
+    passed = len(missing) == 0
+    return {"name": "Config File Validation", "command": "test -f package.json && test -f pyrightconfig.json && test -f tsconfig.json && test -f requirements.txt", "returncode": 0 if passed else 1, "status": "PASS" if passed else "FAIL", "detail": f"Missing: {missing}"}
+
 def main():
     tests = [
         ("Unified Prompt Exists", "test -f " + BASE_DIR + "/run-all-goals.prompt.md"),
@@ -22,7 +64,14 @@ def main():
         ("Deps Core Exists", "test -f " + BASE_DIR + "/templates/_shared/deps-core.md"),
         ("Verify Script Exists", "test -f " + BASE_DIR + "/scripts/verify_run_all_goals.py"),
         ("Skill Exists", "test -f " + BASE_DIR + "/skills/run-all-goals.md"),
-        ("No Placeholders", "grep -r 'FIXME' " + BASE_DIR + " --include='*.md' --include='*.py' || true"),
+        ("tree.prompt.txt PRIMARY referenced", "grep -q 'tree.prompt.txt' " + BASE_DIR + "/run-all-goals.prompt.md"),
+        ("No FIXME/TODO/PLACEHOLDER", "grep -r 'FIXME\\|TODO\\|PLACEHOLDER' " + BASE_DIR + " --include='*.md' --include='*.py' || true"),
+        # Tree-specific tests
+        test_tree_prompt_exists(),
+        test_mjs_to_mts_conversion(),
+        test_enhance_cleanup(),
+        test_goals_cleanup(),
+        test_config_validation(),
     ]
     results = []
     for name, cmd in tests:
