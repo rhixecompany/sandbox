@@ -57,25 +57,35 @@ def test_config_validation():
     return {"name": "Config File Validation", "command": "test -f package.json && test -f pyrightconfig.json && test -f tsconfig.json && test -f requirements.txt", "returncode": 0 if passed else 1, "status": "PASS" if passed else "FAIL", "detail": f"Missing: {missing}"}
 
 def main():
-    tests = [
-        ("Unified Prompt Exists", "test -f " + BASE_DIR + "/run-all-goals.prompt.md"),
-        ("Implementation Plan Exists", "test -f .hermes/plans/run-all-goals-implementation.md"),
-        ("Rules Core Exists", "test -f " + BASE_DIR + "/templates/_shared/rules-core.md"),
-        ("Deps Core Exists", "test -f " + BASE_DIR + "/templates/_shared/deps-core.md"),
-        ("Verify Script Exists", "test -f " + BASE_DIR + "/scripts/verify_run_all_goals.py"),
-        ("Skill Exists", "test -f " + BASE_DIR + "/skills/run-all-goals.md"),
-        ("tree.prompt.txt PRIMARY referenced", "grep -q 'tree.prompt.txt' " + BASE_DIR + "/run-all-goals.prompt.md"),
-        ("No FIXME/TODO/PLACEHOLDER", "grep -r 'FIXME\\|TODO\\|PLACEHOLDER' " + BASE_DIR + " --include='*.md' --include='*.py' || true"),
-        # Tree-specific tests
-        test_tree_prompt_exists(),
-        test_mjs_to_mts_conversion(),
-        test_enhance_cleanup(),
-        test_goals_cleanup(),
-        test_config_validation(),
-    ]
+    tests = []
+    tests.append(("Unified Prompt Exists", "test -f " + BASE_DIR + "/run-all-goals.prompt.md"))
+    tests.append(("Implementation Plan Exists", "test -f .hermes/plans/run-all-goals-implementation.md"))
+    tests.append(("Rules Core Exists", "test -f " + BASE_DIR + "/templates/_shared/rules-core.md"))
+    tests.append(("Deps Core Exists", "test -f " + BASE_DIR + "/templates/_shared/deps-core.md"))
+    tests.append(("Verify Script Exists", "test -f " + BASE_DIR + "/scripts/verify_run_all_goals.py"))
+    tests.append(("Skill Exists", "test -f " + BASE_DIR + "/skills/run-all-goals.md"))
+    tests.append(("tree.prompt.txt PRIMARY referenced", "grep -q 'tree.prompt.txt' " + BASE_DIR + "/run-all-goals.prompt.md"))
+    tests.append(("No FIXME/TODO/PLACEHOLDER", "grep -r 'FIXME\\|TODO\\|PLACEHOLDER' " + BASE_DIR + " --include='*.md' --include='*.py' || true"))
+    # Tree-specific tests
+    tests.append(("Tree Prompt Exists (primary source)", test_tree_prompt_exists()["command"]))
+    tests.append(("MJS to MTS Conversion", test_mjs_to_mts_conversion()["command"]))
+    tests.append((".enhance Cleanup", test_enhance_cleanup()["command"]))
+    tests.append((".goals Cleanup", test_goals_cleanup()["command"]))
+    tests.append(("Config File Validation", test_config_validation()["command"]))
     results = []
     for name, cmd in tests:
         result = run_test(name, cmd)
+        # Override with detailed results from tree-specific tests
+        if name == "Tree Prompt Exists (primary source)":
+            result = test_tree_prompt_exists()
+        elif name == "MJS to MTS Conversion":
+            result = test_mjs_to_mts_conversion()
+        elif name == ".enhance Cleanup":
+            result = test_enhance_cleanup()
+        elif name == ".goals Cleanup":
+            result = test_goals_cleanup()
+        elif name == "Config File Validation":
+            result = test_config_validation()
         results.append(result)
         symbol = "\u2705" if result["status"] == "PASS" else "\u274c"
         print(symbol + " " + name + ": " + result["status"])
