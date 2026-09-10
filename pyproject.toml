@@ -9,9 +9,6 @@ description = "Hermes Agent Sandbox monorepo"
 requires-python = ">=3.11"
 license = "MIT"
 
-[project.tool-setuptools.config-file]
-pyproject = "true"
-
 [tool.ruff]
 line-length = 120
 select = ["E", "F", "I", "B", "N", "W"]

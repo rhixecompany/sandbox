@@ -1,0 +1,174 @@
+{
+  "ts": "2026-09-10T19:48:21.545242+00:00",
+  "timeout_s": 120,
+  "total": 12,
+  "ok_count": 10,
+  "fail_count": 2,
+  "results": [
+    {
+      "cmd": [
+        "hermes",
+        "doctor"
+      ],
+      "exit": 0,
+      "elapsed_s": 45.9,
+      "stdout_tail": "OKEN)\n  \u26a0 feishu_doc (system dependency not met)\n  \u26a0 feishu_drive (system dependency not met)\n  \u26a0 hermes-yuanbao (system dependency not met)\n  \u26a0 homeassistant (system dependency not met)\n  \u26a0 image_gen (system dependency not met)\n\n\u25c6 Skills Hub\n  \u2713 Skills Hub directory exists\n  \u2713 Lock file OK (30 hub-installed skill(s))\n  \u2713 GitHub token configured (authenticated API access)\n\n\u25c6 Memory Provider\n  \u2713 Honcho connected workspace=hermes mode=hybrid freq=async\n\n\u25c6 Profiles\n  \u2713 14 profile(s) found\n  \u2713   alexa: nemotron-3-ultra-free, no alias\n  \u2713   code-architect: nemotron-3-ultra-free, no alias\n  \u2713   creative-director: nemotron-3-ultra-free, no alias\n  \u2713   cto: nemotron-3-ultra-free, no alias\n  \u2713   designer: nemotron-3-ultra-free, no alias\n  \u2713   dev: nemotron-3-ultra-free, no alias\n  \u2713   exec-assistant: deepseek-v4-flash-free, no alias\n  \u2713   ops: nemotron-3-ultra-free, no alias\n  \u2713   patient-tutor: nemotron-3-ultra-free, no alias\n  \u2713   pm: nemotron-3-ultra-free, no alias\n  \u2713   qa: nemotron-3-ultra-free, no alias\n  \u2713   research-analyst: nemotron-3-ultra-free, no alias\n  \u2713   security: nemotron-3-ultra-free, no alias\n  \u2713   skills: nemotron-3-ultra-free, no alias\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Found 1 issue(s) to address:\n\n  1. Update 1 plugin(s) still importing pre-decomposition paths (hermes plugins compat) \u2014 they stop loading on 2026-09-14; escape hatch: plugins.allow_deprecated_imports: true\n\n  Tip: run 'hermes doctor --fix' to auto-fix what's possible.\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "doctor",
+      "ts": "2026-09-10T19:47:05.629697+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "doctor",
+        "--fix"
+      ],
+      "exit": 0,
+      "elapsed_s": 36.78,
+      "stdout_tail": "ng DISCORD_BOT_TOKEN)\n  \u26a0 discord_admin (missing DISCORD_BOT_TOKEN)\n  \u26a0 feishu_doc (system dependency not met)\n  \u26a0 feishu_drive (system dependency not met)\n  \u26a0 hermes-yuanbao (system dependency not met)\n  \u26a0 homeassistant (system dependency not met)\n  \u26a0 image_gen (system dependency not met)\n\n\u25c6 Skills Hub\n  \u2713 Skills Hub directory exists\n  \u2713 Lock file OK (30 hub-installed skill(s))\n  \u2713 GitHub token configured (authenticated API access)\n\n\u25c6 Memory Provider\n  \u2713 Honcho connected workspace=hermes mode=hybrid freq=async\n\n\u25c6 Profiles\n  \u2713 14 profile(s) found\n  \u2713   alexa: nemotron-3-ultra-free, no alias\n  \u2713   code-architect: nemotron-3-ultra-free, no alias\n  \u2713   creative-director: nemotron-3-ultra-free, no alias\n  \u2713   cto: nemotron-3-ultra-free, no alias\n  \u2713   designer: nemotron-3-ultra-free, no alias\n  \u2713   dev: nemotron-3-ultra-free, no alias\n  \u2713   exec-assistant: deepseek-v4-flash-free, no alias\n  \u2713   ops: nemotron-3-ultra-free, no alias\n  \u2713   patient-tutor: nemotron-3-ultra-free, no alias\n  \u2713   pm: nemotron-3-ultra-free, no alias\n  \u2713   qa: nemotron-3-ultra-free, no alias\n  \u2713   research-analyst: nemotron-3-ultra-free, no alias\n  \u2713   security: nemotron-3-ultra-free, no alias\n  \u2713   skills: nemotron-3-ultra-free, no alias\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Found 1 issue(s) to address:\n\n  1. Update 1 plugin(s) still importing pre-decomposition paths (hermes plugins compat) \u2014 they stop loading on 2026-09-14; escape hatch: plugins.allow_deprecated_imports: true\n\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "doctor-fix",
+      "ts": "2026-09-10T19:47:42.409918+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "security",
+        "audit"
+      ],
+      "exit": 1,
+      "elapsed_s": 7.77,
+      "stdout_tail": "P servers\n           fixed in: 2.14.2\n  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-2475\n           FastMCP has a Command Injection vulnerability - Gemini CLI\n           fixed in: 3.2.0\n  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-2476\n           FastMCP: Missing Consent Verification in OAuth Proxy Callback Facilitates Confused Deputy Vulnera...\n           fixed in: 3.2.0\n  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-338\n           FastMCP OpenAPI Provider has an SSRF & Path Traversal Vulnerability\n           fixed in: 3.2.0\n  UNKNOWN   httpcore2==2.7.0  PYSEC-2026-3844\n           HTTPX2: Secure WebSocket traffic sent without TLS through SOCKS proxies\n           fixed in: 2.10.0\n  UNKNOWN   httpx2==2.7.0  PYSEC-2026-3845\n           HTTPX2: Secure WebSocket traffic sent without TLS through SOCKS proxies\n           fixed in: 2.10.0\n  UNKNOWN   httpx2==2.7.0  PYSEC-2026-3846\n           HTTPX2: Streaming response decompression does not bound peak memory (decompression amplification)\n           fixed in: 2.12.0\n  UNKNOWN   httpx2==2.7.0  PYSEC-2026-3847\n           HTTPX2: Quadratic SSE line buffering can cause CPU denial of service\n           fixed in: 2.10.0\n  UNKNOWN   httpx2==2.7.0  PYSEC-2026-3848\n           HTTPX2: Multipart part header injection via unvalidated file Content-Type and custom headers\n           fixed in: 2.11.0\n  UNKNOWN   httpx2==2.7.0  PYSEC-2026-3849\n           HTTPX2: Conflicting Content-Length and Transfer-Encoding headers can be auto-generated\n           fixed in: 2.11.0\n",
+      "stderr_tail": "",
+      "ok": false,
+      "label": "security",
+      "ts": "2026-09-10T19:47:50.175230+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "status"
+      ],
+      "exit": 0,
+      "elapsed_s": 14.39,
+      "stdout_tail": " not configured\n  WhatsApp      \u2717 not configured\n  Signal        \u2717 not configured\n  Slack         \u2717 not configured\n  Email         \u2717 not configured\n  SMS           \u2717 not configured\n  DingTalk      \u2717 not configured\n  Feishu        \u2717 not configured\n  WeCom         \u2717 not configured\n  WeCom Callback  \u2717 not configured\n  Weixin        \u2717 not configured\n  BlueBubbles   \u2717 not configured\n  QQBot         \u2717 not configured\n  Yuanbao       \u2717 not configured\n  A2A           \u2713 configured (plugin)\n  Buzz          \u2717 not configured (plugin)\n  DingTalk      \u2717 not configured (plugin)\n  Email         \u2717 not configured (plugin)\n  Feishu / Lark  \u2717 not configured (plugin)\n  Matrix        \u2717 not configured (plugin)\n  ntfy          \u2717 not configured (plugin)\n  Raft          \u2717 not configured (plugin)\n  Slack         \u2713 configured (plugin)\n  SMS (Twilio)  \u2717 not configured (plugin)\n  Telegram      \u2713 configured (plugin)\n  WeCom (Enterprise WeChat)  \u2713 configured (plugin)\n  WeCom Callback (self-built apps)  \u2713 configured (plugin)\n  WhatsApp      \u2713 configured (plugin)\n\n\u25c6 Gateway Service\n  Status:       \u2713 running\n  Manager:      manual process\n  PID(s):       17848\n\n\u25c6 Scheduled Jobs\n  Jobs:         4 active, 6 total\n\n\u25c6 Sessions\n  Active:       1 session(s)\n  Last activity:      31m ago\n  Slots:        1/10 in use\n                tui               20260910_204105_c02513   6m\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Run 'hermes doctor' for detailed diagnostics\n  Run 'hermes setup' to configure\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "status",
+      "ts": "2026-09-10T19:48:04.564985+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "insights"
+      ],
+      "exit": 0,
+      "elapsed_s": 3.23,
+      "stdout_tail": " \ud83e\udde0 Top Skills\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Skill                          Loads   Edits   Last used\n  using-superpowers                 16       0      Sep 10\n  writing-clearly-and-concisel      13       0      Sep 10\n  user-communication-preferenc      13       0      Sep 10\n  plans-and-specs                   13       0      Sep 10\n  brainstorming                     13       0      Sep 10\n  subagent-driven-development       12       0      Sep 10\n  create-implementation-plan        11       0      Sep 10\n  mcp-sequential-thinking           10       0      Sep 10\n  executing-plans                   10       0      Sep 10\n  implementation-plan                9       0      Sep 10\n  Distinct skills: 107  Loads: 313  Edits: 0\n\n  \ud83d\udcc5 Activity Patterns\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Mon  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  56\n  Tue  \u2588\u2588\u2588             15\n  Wed  \u2588               3\n  Thu  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 57\n  Fri                  0\n  Sat                  0\n  Sun                  0\n\n  Peak hours: 4PM (36), 5PM (16), 7PM (15), 10PM (10), 2AM (7)\n  Active days: 5\n  Best streak: 4 consecutive days\n\n  \ud83c\udfc6 Notable Sessions\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Longest session      2.4d               (Sep 07, 20260907_151439_)\n  Most messages        549 msgs           (Sep 10, 20260910_175132_)\n  Most tokens          4,264,875 tokens   (Sep 10, 20260910_125720_)\n  Most tool calls      302 calls          (Sep 10, 20260910_175132_)\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "insights",
+      "ts": "2026-09-10T19:48:07.791762+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "list"
+      ],
+      "exit": 0,
+      "elapsed_s": 2.52,
+      "stdout_tail": "6-08-11\n  action-skills-install-realtime-react-hooks-3ca811ed.log     241B   2026-08-11\n  action-skills-install-senpub-124ab220.log     181B   2026-08-11\n  action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log    1.8KB   2026-08-11\n  action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log     967B   2026-08-11\n  action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log    1.4KB   2026-08-11\n  action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log    1.6KB   2026-08-11\n  action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log    1.5KB   2026-08-11\n  action-skills-install-solo-plan-14e77242.log     181B   2026-08-11\n  action-skills-install-trpg-data-context-hooks-24858dd4.log     259B   2026-08-11\n  action-skills-update.log   163.2KB   2026-09-07\n  agent.log                    3.1MB   just now\n  bootstrap-installer.log    337.9KB   2026-08-19\n  desktop.log                598.0KB   58m ago\n  errors.log                  29.2KB   just now\n  gateway-exit-diag.log       35.2KB   1h ago\n  gateway-restart.log           137B   2026-08-11\n  gateway-stdio.log            1.7MB   just now\n  gateway.log                  4.2MB   31m ago\n  gui.log                     19.1KB   12m ago\n  hooks.log                  647.0KB   2026-09-07\n  mcp-stderr.log              20.3MB   just now\n  tui_gateway_crash.log      214.4KB   20m ago\n  update.log                 393.1KB   1h ago\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-list",
+      "ts": "2026-09-10T19:48:10.316706+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "errors"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.74,
+      "stdout_tail": "/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh\"); stderr=pathutil initialized\n\u001b[0;31m[RED]\u001b[0m Unhandled exception: Traceback (most recent call last):\n  File \"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session-logger\\hook.py\", line 43, in <module>\n    import session_end_capture  # noqa: E402  (hooks dir on sys.path via _LIB_DIR above)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Alexa\\AppData\\Local\\hermes\\hooks\\session_end_capture.py\", line 81, in <mo\n2026-09-10 20:48:09,490 WARNING hermes_cli.plugins: Hook 'post_tool_call' callback shell_hook[post_tool_call:\"C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh\"] skipped after previous timeout or while still running\n2026-09-10 20:48:09,982 WARNING agent.shell_hooks: shell hook exited 1 (event=post_tool_call command=\"C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh\"); stderr=pathutil initialized\n\u001b[0;34m[BLUE]\u001b[0m governance-audit event='post_tool_call' normalized=post_tool_call session_id=cron_33eb54fc37c6_20260910_204737\n\u001b[0;31m[RED]\u001b[0m Unknown event: post_tool_call\n2026-09-10 20:48:10,003 WARNING [cron_33eb54fc37c6_20260910_204737] agent.tool_executor: Tool read_file returned error (4.51s): {\"content\": \"\", \"total_lines\": 0, \"file_size\": 0, \"truncated\": false, \"is_binary\": false, \"is_image\": false, \"error\": \"File not found: /c/Users/Alexa/AppData/Local/hermes/MEMORY.md\"}\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-errors",
+      "ts": "2026-09-10T19:48:12.059239+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "desktop"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.63,
+      "stdout_tail": "pc\": \"2.0\", \"method\": \"event\", \"params\": {\"type\": \"sessions.changed\", \"session_id\": \"\", \"payload\": {}}}\n[2026-09-10T18:45:28.847Z] [hermes] {\"jsonrpc\": \"2.0\", \"method\": \"event\", \"params\": {\"type\": \"sessions.changed\", \"session_id\": \"\", \"payload\": {}}}\n[2026-09-10T18:45:52.072Z] [hermes] {\"jsonrpc\": \"2.0\", \"method\": \"event\", \"params\": {\"type\": \"sessions.changed\", \"session_id\": \"\", \"payload\": {}}}\n[2026-09-10T18:45:58.220Z] [hermes] {\"jsonrpc\": \"2.0\", \"method\": \"event\", \"params\": {\"type\": \"sessions.changed\", \"session_id\": \"\", \"payload\": {}}}\n[2026-09-10T18:46:02.373Z] [hermes] {\"jsonrpc\": \"2.0\", \"method\": \"event\", \"params\": {\"type\": \"sessions.changed\", \"session_id\": \"\", \"payload\": {}}}\n[2026-09-10T18:46:04.542Z] [hermes] [boot] Hermes runtime is ready\n[2026-09-10T18:46:04.548Z] [hermes] Starting Hermes backend for profile \"alexa\" via Hermes at C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent (venv: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv)\n[2026-09-10T18:46:04.608Z] [hermes] {\"jsonrpc\": \"2.0\", \"method\": \"event\", \"params\": {\"type\": \"sessions.changed\", \"session_id\": \"\", \"payload\": {}}}\n[2026-09-10T18:46:32.741Z] [hermes] HERMES_BACKEND_READY port=52615\n[2026-09-10T18:46:32.744Z] [hermes] Hermes backend listening on 127.0.0.1:52615\n[2026-09-10T18:50:00.274Z] [hermes] Ignoring stale Hermes backend exit (1)\n[2026-09-10T18:50:00.276Z] [hermes] Hermes backend for profile \"default\" exited (1)\n[2026-09-10T18:50:00.291Z] [hermes] Hermes backend for profile \"alexa\" exited (1)\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-desktop",
+      "ts": "2026-09-10T19:48:13.691323+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "gateway"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.53,
+      "stdout_tail": "_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)\n\n2026-09-10 19:28:06,349 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)\n\n2026-09-10 19:28:06,350 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 1132 hidden (over 60 limit). Use /commands for full list.\n\n2026-09-10 19:28:15,880 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)\n\n2026-09-10 19:31:06,096 WARNING hermes_plugins.observability__langfuse: Langfuse plugin is enabled but the langfuse SDK is unavailable; tracing is disabled. Run `hermes tools` and configure Langfuse Observability to reinstall it.\n\n2026-09-10 19:40:12,421 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Cannot create DM topic 'Hermes \u2014 Important-mail monitor' in chat 7043401427: Topics mode is not enabled. The user must open the DM with this bot in Telegram, tap the bot name at the top, and enable 'Topics' in chat settings before topics can be created.\n\n2026-09-10 20:16:52,743 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Cannot create DM topic 'Hermes \u2014 Important-mail monitor' in chat 7043401427: Topics mode is not enabled. The user must open the DM with this bot in Telegram, tap the bot name at the top, and enable 'Topics' in chat settings before topics can be created.\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-gateway",
+      "ts": "2026-09-10T19:48:15.220321+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "gui"
+      ],
+      "exit": 0,
+      "elapsed_s": 1.73,
+      "stdout_tail": "ilt in 0.916s (plugins=79 memory_options=8)\n2026-09-10 20:34:36,757 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.717s (plugins=79 memory_options=8)\n2026-09-10 20:34:47,269 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.955s (plugins=79 memory_options=8)\n2026-09-10 20:34:59,800 INFO hermes_cli.web_server: plugins/hub rebuilt in 1.708s (plugins=79 memory_options=8)\n2026-09-10 20:35:08,191 INFO hermes_cli.web_server: plugins/hub rebuilt in 1.160s (plugins=79 memory_options=8)\n2026-09-10 20:35:13,410 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.647s (plugins=79 memory_options=8)\n2026-09-10 20:35:20,072 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.725s (plugins=79 memory_options=8)\n2026-09-10 20:35:29,355 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.711s (plugins=79 memory_options=8)\n2026-09-10 20:35:35,208 INFO hermes_cli.web_server: plugins/hub rebuilt in 1.022s (plugins=79 memory_options=8)\n2026-09-10 20:35:43,973 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.713s (plugins=79 memory_options=8)\n2026-09-10 20:35:47,944 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.698s (plugins=79 memory_options=8)\n2026-09-10 20:35:51,337 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.699s (plugins=79 memory_options=8)\n2026-09-10 20:35:57,731 INFO hermes_cli.web_server: plugins/hub rebuilt in 0.881s (plugins=79 memory_options=8)\n2026-09-10 20:36:03,783 INFO hermes_cli.web_server: plugins/hub rebuilt in 1.306s (plugins=79 memory_options=8)\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-gui",
+      "ts": "2026-09-10T19:48:16.946884+00:00"
+    },
+    {
+      "cmd": [
+        "hermes",
+        "logs",
+        "agent"
+      ],
+      "exit": 0,
+      "elapsed_s": 3.48,
+      "stdout_tail": "nt.shell_hooks: shell hook exited 1 (event=pre_tool_call command=\"C:/Program Files/Git/usr/bin/bash.exe\" \"C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh\"); stderr=pathutil initialized\n\n\u001b[0;34m[BLUE]\u001b[0m governance-audit event='pre_tool_call' normalized=pre_tool_call session_id=cron_33eb54fc37c6_20260910_204737\n\n\u001b[0;31m[RED]\u001b[0m Unknown event: pre_tool_call\n\n2026-09-10 20:48:17,520 DEBUG tools.environments.local: Stripped Hermes-owned entries from PYTHONPATH: ['C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent', 'C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Lib\\\\site-packages']\n\n2026-09-10 20:48:17,539 DEBUG tools.environments.local: Stripped Hermes-owned entries from PYTHONPATH: ['C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent', 'C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Lib\\\\site-packages']\n\n2026-09-10 20:48:17,782 DEBUG tools.environments.local: Stripped Hermes-owned entries from PYTHONPATH: ['C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent', 'C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Lib\\\\site-packages']\n\n2026-09-10 20:48:18,198 DEBUG tools.environments.local: Stripped Hermes-owned entries from PYTHONPATH: ['C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent', 'C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\hermes\\\\hermes-agent\\\\venv\\\\Lib\\\\site-packages']\n\n2026-09-10 20:48:18,802 DEBUG gateway.run: kanban notifier: board default has no subscriptions owned by ['default']; skipping open\n\n",
+      "stderr_tail": "",
+      "ok": true,
+      "label": "logs-agent",
+      "ts": "2026-09-10T19:48:20.427782+00:00"
+    },
+    {
+      "cmd": [
+        "bun",
+        "run",
+        "check"
+      ],
+      "exit": 2,
+      "elapsed_s": 1.12,
+      "stdout_tail": "",
+      "stderr_tail": "hedDefaultResolve (node:internal/modules/esm/loader:708:20)\n    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)\n    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)\n    at #resolve (node:internal/modules/esm/loader:690:17)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)\n    at ModuleJob.syncLink (node:internal/modules/esm/module_job:277:33)\n    at ModuleJob.link (node:internal/modules/esm/module_job:389:17)\n",
+      "ok": false,
+      "label": "bun-run-check",
+      "ts": "2026-09-10T19:48:21.545193+00:00"
+    }
+  ]
+}
