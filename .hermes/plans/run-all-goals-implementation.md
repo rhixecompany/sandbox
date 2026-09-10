@@ -30,19 +30,19 @@ All goals, subgoals, phases, and rules derive from tree.prompt.txt. Secondary so
 
 ## Goals (tree-derived + expanded)
 
-### GOAL 1 — Cleanup & Consolidation (PRIMARY)
+### GOAL 1 — Cleanup & Consolidation (PRIMARY) ✅ COMPLETE
 Delete and cleanup workspace clutter. tree.prompt.txt primary directive.
 
 **Subgoals:**
-- SG1.1: Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders
-- SG1.2: Delete *.json, *-report.md (except package.json, pyrightconfig.json)
-- SG1.3: Delete *.log, *.txt (skip *.prompt.txt)
-- SG1.4: Convert *.mjs to *.mts
-- SG1.5: Cleanup/update *.md files
-- SG1.6: Update *.py, *.mjs, *.mts; create src/ and migrate
-- SG1.7: Update requirements.txt, tsconfig.json
-- SG1.8: Update package.json, pyrightconfig.json, *.json, *.toml, *.yaml
-- SG1.9: Update .editorconfig, .gitignore, .prettierrc.json, .markdownlint, .pre-commit, *.toml, *.yaml
+- SG1.1: Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders ✅
+- SG1.2: Delete *.json, *-report.md (except package.json, pyrightconfig.json) ✅
+- SG1.3: Delete *.log, *.txt (skip *.prompt.txt) ✅
+- SG1.4: Convert *.mjs to *.mts ✅
+- SG1.5: Cleanup/update *.md files ✅
+- SG1.6: Update *.py, *.mjs, *.mts; create src/ and migrate ✅
+- SG1.7: Update requirements.txt, tsconfig.json ✅
+- SG1.8: Update package.json, pyrightconfig.json, *.json, *.toml, *.yaml ✅
+- SG1.9: Update .editorconfig, .gitignore, .prettierrc.json, .markdownlint, .pre-commit, *.toml, *.yaml ✅
 
 ### GOAL 2 — Comprehensive Implementation Pipeline
 Create/update/refactor specs, plans, prompts, scripts, skills. Score >= 99 on all judge skills.
@@ -69,14 +69,14 @@ Create/update/refactor/test/debug/fix/verify all listed skills. Ensure all files
 ## Phases (sequential gate)
 | Phase | Task | Gate | Status |
 |---|---|---|---|
-| 1 | **Tree Cleanup** — Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts | Cleanup verified | in_progress |
-| 2 | **Config Cleanup** — Delete *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) | Cleanup verified | pending |
-| 3 | **Config Files Update** — Update/verify .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json | Config verified | pending |
-| 4 | **Package Config** — Update/verify package.json, pyrightconfig.json, *.json | Config verified | pending |
-| 5 | **mjs->mts Conversion** — Convert all *.mjs to *.mts | No .mjs remains | pending |
-| 6 | **Docs & Markdown Cleanup** — Cleanup/update *.md files (PLAN.md, SOUL.md, SPEC.md, USER.md, docs) | Docs verified | pending |
-| 7 | **Source Migration** — Update/verify *.py/*.mjs/*.mts; create src directory | Migration verified | pending |
-| 8 | **Agent Sync** — Copy hooks, skills, plugins, instructions to ALL AI agent roots | 5 agents identical | pending |
+| 1 | **Tree Cleanup** — Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts | Cleanup verified | ✅ COMPLETE |
+| 2 | **Config Cleanup** — Delete *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) | Cleanup verified | ✅ COMPLETE |
+| 3 | **Config Files Update** — Update/verify .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json | Config verified | ✅ COMPLETE |
+| 4 | **Package Config** — Update/verify package.json, pyrightconfig.json, *.json | Config verified | ✅ COMPLETE |
+| 5 | **mjs->mts Conversion** — Convert all *.mjs to *.mts | No .mjs remains | ✅ COMPLETE |
+| 6 | **Docs & Markdown Cleanup** — Cleanup/update *.md files (PLAN.md, SOUL.md, SPEC.md, USER.md, docs) | Docs verified | ✅ COMPLETE |
+| 7 | **Source Migration** — Update/verify *.py/*.mjs/*.mts; create src directory | Migration verified | ✅ COMPLETE |
+| 8 | **Agent Sync** — Copy hooks, skills, plugins, instructions to ALL AI agent roots | 5 agents identical | in_progress |
 | 9 | **Config/scripts Sync** — Sync profiles; verify quick_commands; sync .env/config.yaml | Config verified | pending |
 | 10 | **Diagnostic Repair** — hermes doctor --fix | AST PASS | pending |
 | 11 | **Judge Scores >= 99** — All judge skills score >= 99 | Score verified | pending |
@@ -86,15 +86,15 @@ Create/update/refactor/test/debug/fix/verify all listed skills. Ensure all files
 - scripts/verify_run_all_goals.py — Verify output exists, no placeholders, tree-specific validation
 
 ## Verification Checklist (tree-specific)
-- [ ] tree.prompt.txt verified as primary source (read, sizes confirmed)
-- [ ] All 11 phases have verified gates matching tree.prompt.txt goals
-- [ ] **Cleanup Phase (Phase 1):** .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders deleted
-- [ ] **Cleanup Phase (Phase 2):** *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) cleaned
-- [ ] **Config Phase (Phase 3):** .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json updated/verified
-- [ ] **mjs->mts Conversion (Phase 5):** No .mjs files remain; all converted to .mts
-- [ ] **Docs Phase (Phase 6):** *.md files (PLAN.md, SOUL.md, SPEC.md, USER.md, docs) cleaned and updated
-- [ ] **Source Migration (Phase 7):** src directory created; *.py/*.mjs/*.mts migrated
-- [ ] **Agent Sync:** 5 AI agents (.github, .copilot, .codex, .opencode, .hermes) identical
+- [x] tree.prompt.txt verified as primary source (read, sizes confirmed)
+- [x] All 11 phases have verified gates matching tree.prompt.txt goals
+- [x] **Cleanup Phase (Phase 1):** .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders deleted ✅
+- [x] **Cleanup Phase (Phase 2):** *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) cleaned ✅
+- [x] **Config Phase (Phase 3):** .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json updated/verified ✅
+- [x] **mjs->mts Conversion (Phase 5):** No .mjs files remain; all converted to .mts ✅
+- [x] **Docs Phase (Phase 6):** *.md files (PLAN.md, SOUL.md, SPEC.md, USER.md, docs) cleaned and updated ✅
+- [x] **Source Migration (Phase 7):** src directory created; *.py/*.mjs/*.mts migrated ✅
+- [ ] **Agent Sync:** 5 AI agents (.github, .copilot, .codex, .opencode, .hermes) identical — in_progress
 - [ ] All judge skills score >= 99
 - [ ] Config files (package.json, pyrightconfig.json, tsconfig.json, requirements.txt) validated
 - [ ] No placeholders in any artifact
