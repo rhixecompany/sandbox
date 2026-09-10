@@ -6,10 +6,16 @@ trigger: /tooling-implementation
 category: tooling
 version: 1.0.0
 author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
+tags:
+- tooling
+- mcp
+- uv
+- python-quality
+metadata:
+  version: "2.0.0"
+  package: "mcp"
+hermes:
+  profile: default
 priority: medium
 copilot: 
 model_required: sonnet
@@ -17,9 +23,14 @@ opencode:
 enabled: true
 codex: 
 toolsets: 
-skills: 
+skills:
 - skill: using-superpowers
-dependencies: []
+- skill: python-package-manager
+- skill: uv-package-manager
+dependencies:
+- mcp==2.0.0
+- uv>=0.12.11
+- fastmcp>=4.0.3
 formatter: markdown
 license: MIT
 ---

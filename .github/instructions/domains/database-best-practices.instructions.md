@@ -1,6 +1,6 @@
 ---
 applyTo: src/dal/**/*.ts,src/database/**/*.ts
-description: "PLACEHOLDER: brief description required. Please update before merging."
+description: "Database best practices: Drizzle ORM, type-safe queries, schema migrations, N+1 prevention, secure data handling."
 ---
 
 # Database Best Practices (Drizzle/Postgres)

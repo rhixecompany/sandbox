@@ -1,4 +1,5 @@
 ---
+name: "testing"
 description: Testing guidelines for this repository
 applyTo: "tests/**/*"
 ---

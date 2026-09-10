@@ -1,4 +1,5 @@
 ---
+name: "performance"
 description: Performance guidelines for the Banking project
 applyTo: "**/*"
 ---

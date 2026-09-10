@@ -18,6 +18,7 @@ Image vision: primary REJECTS; MindStudio OOC. Fallback: mindstudio uploadFile �
 Copilot removed 2026-08-04: 9 skills, 6 plugins deleted; providers DISABLED. OpenCode v1.18.13 at C:\nm4w\nodejs\opencode.cmd.§
 multi-agent-sync: verify_sync.py at ~/Desktop/SandBox/hermes-profiles/ = parity root↔Codex↔OpenCode↔mirror↔6 profiles (65 checks); skill count 619. Git Bash ASLR → use execute_code.§
 github-repo=rhixecompany/sandbox§
+Profile identity verified: default (user: Alexa). Routing: code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot, general→default. No fabricated profile 'adminbot' assigned to user — adminbot is routing target only for ops/devops tasks. Enhanced: mcp==2.0.0 installed in ~/myvenv; .mcp/.vscode/.opencode/.copilot configs verified; scripts fixed; prompt structure fixed.§
 OpenCode: `opencode.cmd run` zero exit ≠ done. Verify artifacts/diffs or re-dispatch.§
 USER-OWNED skills (curator blocks): profile-directive-sync, convert-plaintext-to-md, enhance-markdown. Alt: scraped-docs-to-markdown.§
 hermes-agent .npmrc min-release-age=14: fix<14d unless exclude. Vuln bump: pin + exclude + npm update + overrides.§

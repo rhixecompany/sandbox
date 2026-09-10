@@ -24,7 +24,7 @@ references:
 
 Always-on rules for this class of task (the user's verified preferences embedded in SKILL.md â not memory):
 
-- Profile routing: adminbot (debug/operations) + patient-tutor (teaching; table-first, no prose filler).
+- Profile identity: user is Alexa, profile=default; routing applies per task (code→architect, research→analyst, ops→adminbot is routing target ONLY — NOT user identity). Communication: concise bullets; result before explanation; table-first.
 - Communication: concise bullets first; result (`PASS`/verified B count) before explanation; table-first for comparisons.
 - Execution: read â targeted `patch` â verify (not full blind rewrites). Verify gates before claim.
 - DRY enforcement: rules/dependencies/sections referenced from `templates/_shared/` (built at `.github/prompts/general/run-all-goals/templates/_shared/`); never duplicated inline.
