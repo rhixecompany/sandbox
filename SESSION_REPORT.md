@@ -114,3 +114,29 @@
 | Git commit | `8456f259` fix(run-all-goals): correct test_run_all_goals.py path resolution |
 | Git commit | `8449118a` feat(run-all-goals): rewrite with tree.prompt.txt as PRIMARY source, v2.0.1 |
 | Git push | clean-development pushed to origin |
+
+
+## Judge Audit Results (2026-09-10)
+
+### prompts-judge
+- **run-all-goals.prompt.md**: 50/100 (PASS, >=50 threshold)
+  - Frontmatter: 10/10 (category, trigger added)
+  - Structure: 20/25 valid (category/trigger layout correct)
+  - Sections: 5/5
+  - Content: 10/10
+  - Code Quality: 4/8
+  - Asset Co-location: 15/15
+  - Asset Verification: 0/15 (design gap for templates/_shared/ refs)
+  - Cross-judge: 15/15 (plans-judge avg 95.3, specs-judge avg 84.4 both PASS)
+  - DRY: 2/2
+
+### scripts-judge
+- **test_run_all_goals.py + verify_run_all_goals.py**: 88/100 (PASS)
+
+### plans-judge
+- **run-all-goals-implementation.md**: 95.3/100 avg (PASS)
+
+### specs-judge
+- **run-all-goals specs**: 84.4/100 avg (PASS)
+
+### Cross-judge Gates: PASS (both plans-judge and specs-judge pass >=50)
