@@ -4,9 +4,11 @@ tree.prompt.txt is PRIMARY source."""
 import os, sys, yaml
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE = run-all-goals/; tree.prompt.txt and .enhance/.goals are at SandBox/ root (4 levels up from scripts/)
+WORKSPACE = os.path.abspath(os.path.join(BASE, '..', '..', '..', '..'))
 PROMPT_FILE = os.path.join(BASE, "run-all-goals.prompt.md")
-PLAN_FILE = os.path.join(".hermes/plans/run-all-goals-implementation.md")
-TREE_PROMPT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(BASE))), "tree.prompt.txt")
+PLAN_FILE = os.path.join(WORKSPACE, ".hermes/plans/run-all-goals-implementation.md")
+TREE_PROMPT = os.path.join(WORKSPACE, "tree.prompt.txt")
 
 def verify_tree_prompt():
     """Verify tree.prompt.txt exists as primary source and has no placeholders."""
@@ -26,9 +28,8 @@ def verify_tree_prompt():
 def verify_mjs_to_mts():
     """Tree-specific: verify no .mjs files remain without .mts counterparts."""
     errors = []
-    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(BASE))))
     mjs_files = []
-    for root, dirs, files in os.walk(base_workspace):
+    for root, dirs, files in os.walk(WORKSPACE):
         for f in files:
             if f.endswith('.mjs'):
                 mts_path = os.path.join(root, f[:-4] + '.mts')
@@ -41,9 +42,8 @@ def verify_mjs_to_mts():
 def verify_cleanup():
     """Tree-specific: verify .enhance and .goals directories do not exist."""
     errors = []
-    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(BASE))))
     for d in [".enhance", ".goals"]:
-        path = os.path.join(base_workspace, d)
+        path = os.path.join(WORKSPACE, d)
         if os.path.exists(path):
             errors.append(f"Cleanup incomplete: {d} still exists")
     return errors
@@ -51,9 +51,8 @@ def verify_cleanup():
 def verify_config_files():
     """Tree-specific: validate key config files exist."""
     errors = []
-    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(BASE))))
     for f in ["package.json", "pyrightconfig.json", "tsconfig.json", "requirements.txt"]:
-        path = os.path.join(base_workspace, f)
+        path = os.path.join(WORKSPACE, f)
         if not os.path.exists(path):
             errors.append(f"Config file missing: {f}")
     return errors

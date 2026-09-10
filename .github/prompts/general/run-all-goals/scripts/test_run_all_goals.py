@@ -5,7 +5,9 @@ tree.prompt.txt is PRIMARY source for cleanup goals."""
 import os, sys, subprocess, json, datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-RESULTS_DIR = os.path.join(BASE_DIR, "results")
+# BASE_DIR is scripts/; run-all-goals/ is the parent
+PROMPTS_DIR = os.path.dirname(BASE_DIR)
+RESULTS_DIR = os.path.join(PROMPTS_DIR, "results")
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 def run_test(name, command):
@@ -36,21 +38,21 @@ def test_mjs_to_mts_conversion():
 
 def test_enhance_cleanup():
     """Tree-specific test: .enhance directory does not exist."""
-    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(PROMPTS_DIR)))
     enhance_path = os.path.join(base_workspace, ".enhance")
     exists = os.path.exists(enhance_path)
     return {"name": ".enhance Cleanup Verification", "command": f"test ! -d {enhance_path}", "returncode": 0 if not exists else 1, "status": "PASS" if not exists else "FAIL"}
 
 def test_goals_cleanup():
     """Tree-specific test: .goals directory does not exist."""
-    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(PROMPTS_DIR)))
     goals_path = os.path.join(base_workspace, ".goals")
     exists = os.path.exists(goals_path)
     return {"name": ".goals Cleanup Verification", "command": f"test ! -d {goals_path}", "returncode": 0 if not exists else 1, "status": "PASS" if not exists else "FAIL"}
 
 def test_config_validation():
     """Tree-specific test: validate key config files exist."""
-    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+    base_workspace = os.path.dirname(os.path.dirname(os.path.dirname(PROMPTS_DIR)))
     config_files = ["package.json", "pyrightconfig.json", "tsconfig.json", "requirements.txt"]
     missing = [f for f in config_files if not os.path.exists(os.path.join(base_workspace, f))]
     passed = len(missing) == 0
@@ -58,14 +60,14 @@ def test_config_validation():
 
 def main():
     tests = []
-    tests.append(("Unified Prompt Exists", "test -f " + BASE_DIR + "/run-all-goals.prompt.md"))
+    tests.append(("Unified Prompt Exists", "test -f " + PROMPTS_DIR + "/run-all-goals.prompt.md"))
     tests.append(("Implementation Plan Exists", "test -f .hermes/plans/run-all-goals-implementation.md"))
-    tests.append(("Rules Core Exists", "test -f " + BASE_DIR + "/templates/_shared/rules-core.md"))
-    tests.append(("Deps Core Exists", "test -f " + BASE_DIR + "/templates/_shared/deps-core.md"))
-    tests.append(("Verify Script Exists", "test -f " + BASE_DIR + "/scripts/verify_run_all_goals.py"))
-    tests.append(("Skill Exists", "test -f " + BASE_DIR + "/skills/run-all-goals.md"))
-    tests.append(("tree.prompt.txt PRIMARY referenced", "grep -q 'tree.prompt.txt' " + BASE_DIR + "/run-all-goals.prompt.md"))
-    tests.append(("No FIXME/TODO/PLACEHOLDER", "grep -r 'FIXME\\|TODO\\|PLACEHOLDER' " + BASE_DIR + " --include='*.md' --include='*.py' || true"))
+    tests.append(("Rules Core Exists", "test -f " + PROMPTS_DIR + "/templates/_shared/rules-core.md"))
+    tests.append(("Deps Core Exists", "test -f " + PROMPTS_DIR + "/templates/_shared/deps-core.md"))
+    tests.append(("Verify Script Exists", "test -f " + PROMPTS_DIR + "/scripts/verify_run_all_goals.py"))
+    tests.append(("Skill Exists", "test -f " + PROMPTS_DIR + "/skills/run-all-goals.md"))
+    tests.append(("tree.prompt.txt PRIMARY referenced", "grep -q 'tree.prompt.txt' " + PROMPTS_DIR + "/run-all-goals.prompt.md"))
+    tests.append(("No FIXME/TODO/PLACEHOLDER", "grep -r 'FIXME\\|TODO\\|PLACEHOLDER' " + PROMPTS_DIR + " --include='*.md' --include='*.py' || true"))
     # Tree-specific tests
     tests.append(("Tree Prompt Exists (primary source)", test_tree_prompt_exists()["command"]))
     tests.append(("MJS to MTS Conversion", test_mjs_to_mts_conversion()["command"]))
