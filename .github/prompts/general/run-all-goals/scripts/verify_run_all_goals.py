@@ -30,6 +30,7 @@ def verify_mjs_to_mts():
     errors = []
     mjs_files = []
     for root, dirs, files in os.walk(WORKSPACE):
+        dirs[:] = [d for d in dirs if d not in ('node_modules', '.opencode')]
         for f in files:
             if f.endswith('.mjs'):
                 mts_path = os.path.join(root, f[:-4] + '.mts')
