@@ -56,8 +56,8 @@
       "enabled": true
     },
     "python-quality": {
-      "command": "python",
-      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_server.py"],
+      "command": "C:/Users/Alexa/myvenv/Scripts/python",
+      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_mcp_server.py"],
       "enabled": true
     },
     "sequential-thinking": {
@@ -74,13 +74,13 @@
       "enabled": true
     },
     "tooling-config": {
-      "command": "python",
-      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_config_server.py"],
+      "command": "C:/Users/Alexa/myvenv/Scripts/python",
+      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_config_mcp_server.py"],
       "enabled": true
     },
     "tooling-lint": {
-      "command": "python",
-      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_server.py"],
+      "command": "C:/Users/Alexa/myvenv/Scripts/python",
+      "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py"],
       "enabled": true
     },
     "mcp-docker": {
@@ -95,6 +95,20 @@
     "mindstudio": {
       "command": "mindstudio",
       "args": ["mcp"],
+      "enabled": true
+    },
+    "vercel": {
+      "url": "https://mcp.vercel.com",
+      "auth": "oauth",
+      "enabled": true
+    },
+    "twilio-docs": {
+      "url": "https://mcp.twilio.com/docs",
+      "enabled": true
+    },
+    "atlassian": {
+      "url": "https://mcp.atlassian.com/v1/mcp/authv2",
+      "auth": "oauth",
       "enabled": true
     }
   },

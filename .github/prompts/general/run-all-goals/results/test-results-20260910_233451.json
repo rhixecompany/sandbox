@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Unified Prompt Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals/run-all-goals.prompt.md",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "Implementation Plan Exists",
+    "command": "test -f .hermes/plans/run-all-goals-implementation.md",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "Rules Core Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals/templates/_shared/rules-core.md",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "Deps Core Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals/templates/_shared/deps-core.md",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "Verify Script Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals/scripts/verify_run_all_goals.py",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "Skill Exists",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals/skills/run-all-goals.md",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "tree.prompt.txt PRIMARY referenced",
+    "command": "grep -q 'tree.prompt.txt' C:\\Users\\Alexa\\Desktop\\SandBox\\.github\\prompts\\general\\run-all-goals/run-all-goals.prompt.md",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "No placeholders in primary artifacts",
+    "command": "primary artifact marker scan",
+    "returncode": 0,
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "Tree Prompt Exists (primary source)",
+    "command": "test -f C:\\Users\\Alexa\\Desktop\\SandBox\\tree.prompt.txt",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "MJS to MTS Conversion Check",
+    "command": "find . -name '*.mjs' | head -1",
+    "returncode": 0,
+    "status": "PASS",
+    "detail": "0 unconverted .mjs files"
+  },
+  {
+    "name": ".enhance Cleanup Verification",
+    "command": "test ! -d C:\\Users\\Alexa\\Desktop\\SandBox\\.enhance",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": ".goals Cleanup Verification",
+    "command": "test ! -d C:\\Users\\Alexa\\Desktop\\SandBox\\.goals",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "Config File Validation",
+    "command": "test -f package.json && test -f pyrightconfig.json && test -f tsconfig.json && test -f requirements.txt",
+    "returncode": 0,
+    "status": "PASS",
+    "detail": "Missing: []"
+  }
+]
