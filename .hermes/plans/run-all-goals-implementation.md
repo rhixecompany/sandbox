@@ -14,70 +14,69 @@ license: MIT
 tags: [implementation, execution, unified, tree-primary, score-99, cleanup-first]
 status: in_progress
 phases: 11
-subgoals: 17
+subgoals: 26
 ---
 
 # Run All Goals — Implementation Plan
 
 ## Overview
 Tree-primary implementation plan. **Primary source: `tree.prompt.txt`** (cleanup-first pipeline).
-tree.prompt.txt defines the cleanup-first execution pipeline with 4 goals, 17 subgoals, and 11 phases.
+tree.prompt.txt defines the cleanup-first execution pipeline with 5 goals, 26 subgoals, and 11 phases.
 Target score: >= 99 on all judge skills (specs-judge, plans-judge, prompts-judge, skill-judge).
 
 ## Primary Source
 **`tree.prompt.txt`** (C:\Users\Alexa\Desktop\SandBox\tree.prompt.txt) is the authoritative primary source.
-All goals, subgoals, phases, and rules derive from tree.prompt.txt. Secondary sources (goal-using-superpowers-brainstormin.txt, test-run.prompt.txt) supplement but never override tree.prompt.txt.
+All goals, subgoals, phases, and rules derive from tree.prompt.txt. Secondary sources supplement but never override tree.prompt.txt.
 
-## Goals (tree-derived)
+## Goals (tree-derived + expanded)
 
-### GOAL 1 — Cleanup & Delete
+### GOAL 1 — Cleanup & Consolidation (PRIMARY)
 Delete and cleanup workspace clutter. tree.prompt.txt primary directive.
 
 **Subgoals:**
-1. SG1.1 — Delete/cleanup folders: .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders
-2. SG1.2 — Search, delete and cleanup *.json, *-report.md files (except package.json, pyrightconfig.json)
-3. SG1.3 — Search, delete and cleanup *.log, *.txt files (skip *.prompt.txt files)
+- SG1.1: Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders
+- SG1.2: Delete *.json, *-report.md (except package.json, pyrightconfig.json)
+- SG1.3: Delete *.log, *.txt (skip *.prompt.txt)
+- SG1.4: Convert *.mjs to *.mts
+- SG1.5: Cleanup/update *.md files
+- SG1.6: Update *.py, *.mjs, *.mts; create src/ and migrate
+- SG1.7: Update requirements.txt, tsconfig.json
+- SG1.8: Update package.json, pyrightconfig.json, *.json, *.toml, *.yaml
+- SG1.9: Update .editorconfig, .gitignore, .prettierrc.json, .markdownlint, .pre-commit, *.toml, *.yaml
 
-### GOAL 2 — Config Files Update & Verify
-Update, refactor, and verify configuration files.
-
-**Subgoals:**
-4. SG2.1 — Update/verify: .editorconfig, .git-blame-ignore-revs, .gitattributes, .gitignore, .gitmodules, .markdownlint-cli2.jsonc, .markdownlint.jsonc, .pre-commit-config.yaml, .prettierignore, .prettierrc.json, *.toml, *.yaml
-5. SG2.2 — Update/verify requirements.txt, tsconfig.json
-6. SG2.3 — Update/verify package.json, pyrightconfig.json, *.json files
-
-### GOAL 3 — Code Conversion & Migration
-Convert and migrate source code files.
+### GOAL 2 — Comprehensive Implementation Pipeline
+Create/update/refactor specs, plans, prompts, scripts, skills. Score >= 99 on all judge skills.
 
 **Subgoals:**
-7. SG3.1 — Convert, update, refactor, verify *.mjs files into mts files
-8. SG3.2 — Update/verify *.py, *.mjs, *.mts files; create src directory and migrate files into src
-9. SG3.3 — Cleanup, update, refactor, verify *.md files including PLAN.md, SOUL.md, SPEC.md, USER.md and all files in docs
+- SG2.1: Audit SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules
+- SG2.2: Verify/fix hermes plugins and hooks
+- SG2.3: MCP servers sync
+- SG2.4: Config/scripts sync (.env, config.yaml, quick_commands)
+- SG2.5: Diagnostic repair (hermes doctor --fix)
+- SG2.6: Free model tests + report (openrouter + opencode-zen)
+- SG2.7: Git commit + push clean-development/development/production
+- SG2.8: Cleanup/consolidation
 
-### GOAL 4 — Unified Pipeline (Implementation/Execution)
-Create, update, refactor comprehensive specs, plans, prompts, scripts, skills that fully implement all goals/subgoals. Score >= 99 on all judge skills.
+### GOAL 3 — Free Model Tests
+Test openrouter + opencode-zen free models; run hermes chat --yolo --oneshot; create emoji-markdown report; configure best model + fallback.
 
-**Subgoals:**
-10. SG4.1 — Audit SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules; apply DRY fixes
-11. SG4.2 — Verify/fix hermes plugins and hooks; ensure every event is handled
-12. SG4.3 — MCP servers sync: confirm skills for all 25+ MCP servers
-13. SG4.4 — Config/scripts sync: sync profiles; verify quick_commands; sync .env/config.yaml
-14. SG4.5 — Diagnostic repair: hermes doctor --fix
-15. SG4.6 — Free model tests + report: run hermes chat for openrouter + opencode-zen free models; create emoji-markdown report; configure best model via hermes config set and fallback via hermes fallback
-16. SG4.7 — Git operations: git add -A; git commit; git push -u origin clean-development development production
-17. SG4.8 — Cleanup/consolidation: remove duplicates; archive orphan template dirs; confirm workspace inventory matches .hermes/plans/
+### GOAL 4 — Agent Sync
+Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, .hermes); ensure identical configs.
 
-## Phases (tree-cleanup-first, sequential gate)
+### GOAL 5 — Skills Plan & Implementation
+Create/update/refactor/test/debug/fix/verify all listed skills. Ensure all files verified on disk and every gates, checklist, rules, styles, preferences passed.
+
+## Phases (sequential gate)
 | Phase | Task | Gate | Status |
 |---|---|---|---|
-| 1 | **Tree Cleanup** — Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts | Cleanup verified | pending |
+| 1 | **Tree Cleanup** — Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts | Cleanup verified | in_progress |
 | 2 | **Config Cleanup** — Delete *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) | Cleanup verified | pending |
 | 3 | **Config Files Update** — Update/verify .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json | Config verified | pending |
 | 4 | **Package Config** — Update/verify package.json, pyrightconfig.json, *.json | Config verified | pending |
 | 5 | **mjs->mts Conversion** — Convert all *.mjs to *.mts | No .mjs remains | pending |
 | 6 | **Docs & Markdown Cleanup** — Cleanup/update *.md files (PLAN.md, SOUL.md, SPEC.md, USER.md, docs) | Docs verified | pending |
 | 7 | **Source Migration** — Update/verify *.py/*.mjs/*.mts; create src directory | Migration verified | pending |
-| 8 | **Agent Sync** — Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, .hermes) | 5 agents identical | pending |
+| 8 | **Agent Sync** — Copy hooks, skills, plugins, instructions to ALL AI agent roots | 5 agents identical | pending |
 | 9 | **Config/scripts Sync** — Sync profiles; verify quick_commands; sync .env/config.yaml | Config verified | pending |
 | 10 | **Diagnostic Repair** — hermes doctor --fix | AST PASS | pending |
 | 11 | **Judge Scores >= 99** — All judge skills score >= 99 | Score verified | pending |
