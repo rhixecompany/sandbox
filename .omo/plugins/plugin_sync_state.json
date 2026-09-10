@@ -1,0 +1,29 @@
+{
+  "plugin_states": {
+    "oh-my-openagent@latest": "installed",
+    "opencode-antigravity-auth@latest": "installed",
+    "superpowers@git+https://github.com/obra/superpowers.git#main": "installed",
+    "context-engineing": "enabled",
+    "cli-enhancements": "enabled",
+    "tui-enhancements": "enabled",
+    "eagle-eye": "available",
+    "cronalytics": "available",
+    "weather": "available",
+    "telegram-bot": "available",
+    "project-planning": "available",
+    "gh-skills-builder": "available",
+    "mindstudio-agent": "available"
+  },
+  "plugin_sync_check": {
+    "opencode_plugin_array": ["oh-my-openagent@latest", "opencode-antigravity-auth@latest", "superpowers@git+https://github.com/obra/superpowers.git#main"],
+    "omo_plugins_enabled": ["oh-my-openagent@latest", "opencode-antigravity-auth@latest", "superpowers@git+https://github.com/obra/superpowers.git#main"],
+    "in_sync": true,
+    "last_verified": "2026-09-10"
+  },
+  "plugin_install_commands": {
+    "install_all_recommended": "bunx oh-my-openagent install && bunx oh-my-openagent doctor",
+    "update_plugins": "opencode plugin update --all",
+    "list_plugins": "opencode plugin list",
+    "verify_plugin_loads": "opencode run --dry-run --agent=sisyphus --print-logs 'test plugin load'"
+  }
+}

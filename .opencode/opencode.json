@@ -263,7 +263,17 @@
   "quality": {
     "strict_verification": true,
     "multi_stage_review": true,
-    "evidence_based_results": true
+    "evidence_based_results": true,
+    "dr_dry_compliant": true
+  },
+  "development_guidelines": {
+    "use_dr_dry_principles": true,
+    "enforce_strict_typescript": true,
+    "python_strict_mode": true,
+    "no_any_except_explicit_exempt": true,
+    "require_tests_before_merge": true,
+    "security_scan_before_commit": true,
+    "lint_strict_mode": true
   },
   "experiments": {
     "chat_messages_transform": true,

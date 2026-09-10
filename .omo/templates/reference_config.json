@@ -1,0 +1,44 @@
+{
+  "workspace_name": "SandBox Monorepo",
+  "workspace_path": "C:/Users/Alexa/Desktop/SandBox",
+  "opencode_config": ".opencode/opencode.json",
+  "omo_config": ".omo/config.json",
+  "plugin_sync_reference": ".omo/plugins/plugin_sync_state.json",
+  "templates_directory": ".omo/templates/",
+  "skills_directory": ".omo/skills/",
+  "plugin_tests_directory": ".omo/plugins/tests/",
+  "reference_docs": [
+    ".omo/templates/DRY_BEST_PRACTICES.md",
+    ".omo/VERIFICATION_REPORT.md"
+  ],
+  "global_hermes_config": "C:/Users/Alexa/AppData/Local/hermes/config.yaml",
+  "plugin_install_command": "bunx oh-my-openagent install",
+  "doctor_command": "bunx oh-my-openagent doctor",
+  "enhancements_applied": [
+    "context_size_200k",
+    "high_compression_compaction",
+    "long_history_15000_lines",
+    "best_model_routing",
+    "multi_stage_review",
+    "evidence_based_results",
+    "speed_priority_caching"
+  ],
+  "plugins_enabled": [
+    "oh-my-openagent",
+    "opencode-antigravity-auth",
+    "superpowers"
+  ],
+  "plugins_recommended": [
+    "context-engineering",
+    "cli-enhancements",
+    "tui-enhancements",
+    "eagle-eye",
+    "cronalytics"
+  ],
+  "verification_commands": [
+    "python .omo/plugins/tests/verify_plugin_config.py",
+    "bash .omo/plugins/tests/verify_plugins.sh",
+    "bunx oh-my-openagent doctor"
+  ],
+  "notes": "All destructive operations use dry-run first. No secrets committed. No `.env` modifications made without user approval. DRY principle: one source of truth per setting."
+}
