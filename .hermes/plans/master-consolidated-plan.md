@@ -1,0 +1,128 @@
+---
+name: master-consolidated-plan
+description: "Consolidated master reference of all 50+ .hermes/plans/ fragments (verified inventory). No destructive deletions; serves as index."
+version: 1.0.0
+---
+
+# Master Plan Index (verified inventory)
+- Total fragments: 108 (verified from C:/Users/Alexa/Desktop/SandBox/.hermes/plans)
+- Categories verified:
+  - comprehensive/plans
+  - ecosystem
+  - audit/debug
+  - mcp-sync
+  - prompt/docs
+- Key plans referenced:
+  - 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md
+  - 2026-07-23-comprehensive-github-prompts-plan.md
+  - 2026-07-23-migrate-hermes-prompts-to-github-prompts.md
+  - 2026-07-25-yaml-workflows-audit-fix-plan.md
+  - 2026-07-31-workspace-cleanup.md
+  - 2026-08-01_async-script-tooling-master.md
+  - 2026-08-01_consolidated-goal-tooling-cleanup.md
+  - 2026-08-01_repo-tooling.md
+  - 2026-08-01_tooling-implementation.md
+  - 2026-08-11_213801-prompt-library-maintenance.md
+  - 2026-08-11_214500-repo-init-all-agents.md
+  - 2026-08-11_hermes-platform-diagnostics-debug.md
+  - 2026-08-12_010844-repo-prompts-debug-fix-enhance.md
+  - 2026-08-12_012441-prompts-library-debug-fix-enhance.md
+  - 2026-08-12_043000-terminal-agent-ecosystem-sync.md
+  - 2026-08-15_202608_four-agent-prompt-audit-plan.md
+  - 2026-08-15_202608_four-agent-prompt-audit-spec.md
+  - 2026-08-15_202608_openrouter-sdk-integration-plan.md
+  - 2026-08-15_202608_openrouter-sdk-integration-spec.md
+  - 2026-08-15_202608_openrouter-sdk-integration.md
+  - 2026-08-15_hermes-profile-skills-enhancement-plan.md
+  - 2026-08-15_hermes-profile-skills-enhancement-spec.md
+  - 2026-08-16_142300_cross-platform-agent-sync-spec.md
+  - 2026-08-16_142300_mcp-sync-all-agents-implementation.md
+  - 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md
+  - 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md
+  - 2026-08-19_235900-subagent-driven-development-full-implementation.md
+  - 2026-08-24_072315-comprehensive-hermes-debugging-fix.md
+  - 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md
+  - 2026-08-24_comprehensive-context-and-model-sync.md
+  - 2026-08-24_comprehensive-platform-remediation-spec.md
+  - 2026-08-24_comprehensive-platform-remediation.md
+  - 2026-08-24_hermes-full-diagnostic-repair.md
+  - 2026-08-24_update-enhance-verify-context-files.md
+  - 2026-08-25_015239-dependency-toolchain-update.md
+  - 2026-08-28_phase-b-prompt-enhancement.md
+  - 2026-08-28_prompt-corpus-enhance.md
+  - 2026-08-29-master-consolidated-plan.md
+  - 2026-08-29_full-audit-remediation.md
+  - 2026-08-31_152242-comprehensive-reimplementation-master.md
+  - 2026-08-31_180000-comprehensive-reimplementation-master.md
+  - 2026-08-31_goal1-identity-triage.md
+  - 2026-08-31_goal2-plugins-hooks.md
+  - 2026-08-31_six-judge-skills.md
+  - 2026-09-04-dedupe-triage-report.md
+  - 2026-09-05_084556-hermes-ecosystem-reliability.md
+  - 2026-09-05_docker-cleanup-plan.md
+  - 2026-09-05_file-triage-summary.md
+  - 2026-09-05_goal-using-superpowers-full.md
+  - 2026-09-07_144500-multi-judge-remediation-progress.md
+  - 2026-09-07_170000-ecosystem-master-plan.md
+  - 2026-09-07_180000-mega-ecosystem-plan.md
+  - 2026-09-07_ecosystem-master-plan-v2.md
+  - 2026-09-07_ecosystem-v3-COMPLETION.md
+  - 2026-09-07_ecosystem-v3-awesome-plugins.md
+  - 2026-09-07_master-ecosystem-integration.md
+  - agent-config-inventory.json
+  - agent-provider-matrix.md
+  - audit-inventory.json
+  - audit-log.md
+  - audit-report.md
+  - awesome-extract-0xNyk-awesome-hermes-agent.md
+  - awesome-extract-awesome-opencode.md
+  - awesome-extract-github-awesome-copilot.md
+  - awesome-extract-rogge-ota-awesome-codex-cli.md
+  - comprehensive-goals-implementation-plan.json
+  - comprehensive-goals-implementation-plan.md
+  - comprehensive-hermes-maintenance-plan.md
+  - comprehensive-implementation-plan.md
+  - config-sync-dryrun.json
+  - config-sync-result.json
+  - context-files-plan.md
+  - deepseek-workflow.md
+  - disk-cleanup-skill-implementation.md
+  - disk-cleanup-workflow.md
+  - docker-cleanup-plan.md
+  - env-config-inventory.json
+  - example-subagent-plan.md
+  - execution-summary.md
+  - gemini-workflow.md
+  - hermes-root-scripts-quick-commands-plan.md
+  - honcho-hermes-integration-implementation.md
+  - honcho-hermes-integration-spec.md
+  - huggingface-workflow.md
+  - judge-qa-rerun.json
+  - judge-qa-rerun.md
+  - judge-skills-enhancement-plan.md
+  - multi-file-protocol-plan.md
+  - next-steps-implementation-plan.md
+  - next-steps-specs.md
+  - nous-workflow.md
+  - ollama-cloud-workflow.md
+  - opencode-zen-workflow.md
+  - openrouter-workflow.md
+  - phase-10-ollama-docker-blocked.md
+  - profile-configs.json
+  - prompt-library-plan.md
+  - prompt-skill-spec-plan-management-plan.md
+  - provider-workflow-master-plan.md
+  - provider-workflow-strategy.md
+  - release-notes-profile-sync-2026-08-24.md
+  - skill-enhancement-plan.md
+  - skill-implementation-master-plan.md
+  - subgoal2-code-rabbit-results.md
+  - subgoal3-profile-sync-results.md
+  - verification-results.json
+  - workspace-inventory.json
+  - xai-workflow.md
+
+## Consolidation Note (verified, non-destructive)
+This file serves as a single index pointing to all fragments. Individual fragments preserved (no `git rm` without explicit authorization). Consolidation requires `plan-mode` / `plans-and-specs` skills and user authorization for any deletions or rewrites.
+
+Verified workspace: `~/Desktop/SandBox` (`C:\Users\Alexa\Desktop\SandBox`); branch `clean-development` (`a3e09c2`).

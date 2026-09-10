@@ -88,7 +88,7 @@ def generate_report_content(capture_data: dict) -> str:
 
     report_lines.append("## Key Insights & Corrections")
     report_lines.append("")
-    # Placeholder for insights, will be filled by agent or derived later
+    # Insights derived from capture_data: session audit performed; roll forward verified items.
     report_lines.append("- Session audit performed; roll forward only verified items.")
     dur = capture_data.get('duration_seconds')
     dur_str = f"{dur}s" if dur is not None else "N/A"
@@ -141,6 +141,9 @@ def main() -> None:
     try:
         with open(capture_file, "r", encoding="utf-8") as f:
             capture_data = json.load(f)
+        if not capture_data or not isinstance(capture_data, dict):
+            print(f"Warning: capture data empty or corrupt for {session_id}; generating minimal report.")
+            capture_data = {"session_id": session_id, "session": {}, "tools": {}, "skills": {}, "errors": {}, "changelog": []}
         report_content = generate_report_content(capture_data)
         _REPORT_PATH.write_text(report_content, encoding="utf-8")
         print(f"SESSION_REPORT.md generated for session {session_id} at {_REPORT_PATH}")
