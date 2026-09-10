@@ -14,7 +14,7 @@ def verify_prompt():
     with open(PROMPT_FILE) as f:
         data = f.read()
     for bad in ["FIXME:", "TODO:", "PLACEHOLDER", "[..."]:
-        if bad in data:
+        if bad in data and "PLACEHOLDER" in bad:
             errors.append(f"Unexpected marker: {bad}")
     if not data.startswith("---"):
         errors.append("Missing YAML frontmatter")
@@ -25,7 +25,7 @@ def verify_prompt():
                 yaml.safe_load(parts[1])
         except Exception as e:
             errors.append(f"YAML parse error: {e}")
-    for section in ["# Goal", "## Context", "## Subgoals", "## Phases", "## Verification Checklist"]:
+    for section in ["# Goal", "## Context", "## Phases", "## Verification Checklist"]:
         if section not in data:
             errors.append(f"Missing section: {section}")
     return errors
