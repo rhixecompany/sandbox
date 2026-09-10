@@ -1,110 +1,59 @@
-# VS Code Stable Uninstall + Code-Insiders Full Configuration — Session Report
+# SESSION_REPORT.md
 
-## Summary
+> Generated: 2026-09-10T23:02+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 
-Successfully uninstalled stable VS Code and configured Code-Insiders v1.138.0 with all 85 extensions mapped to their supported file types across both SandBox workspace and Roaming User configs.
+## Last Session Summary
 
-## Phases Completed
+| Field | Value |
+| --- | --- |
+| Session ID | cron_33eb54fc37c6_20260910_234920 |
+| Title | Important-mail monitor · Sep 10 23:56 |
+| When | 2026-09-10 22:49 |
+| Model | nemotron-3.5-lightning-free |
+| Source | state.db:cron |
 
-### Phase 1: Uninstall Stable VS Code ✅
+## Tools Used
 
-- Deleted `C:\Users\Alexa\AppData\Local\Programs\Microsoft VS Code\` (523MB)
+| Tool | Calls | Purpose |
+| --- | --- | --- |
+| terminal | 12 |  |
+| execute_code | 2 |  |
+| search_files | 1 |  |
+| read_file | 1 |  |
 
-- Deleted `C:\Users\Alexa\AppData\Roaming\Code\`
+## Skills Loaded
 
-- Deleted `C:\Users\Alexa\AppData\Local\Code\`
+| Skill | Trigger |
+| --- | --- |
+| validate-memories | Loaded |
+| hermes-profiles | Loaded |
+| session-audit-report | Loaded |
+| using-superpowers | Loaded |
+| user-communication-preferences | Loaded |
 
-- Verified stable VS Code completely removed
+## Key Insights & Corrections
 
-- Code-Insiders intact at `C:\Users\Alexa\AppData\Local\Programs\Microsoft VS Code Insiders\`
+1. MCP path unavailable; used local session sources.
+2. MCP session_search oldest fallback failed: 'NoneType' object is not callable
+3. State-db source: 34 messages, 16 tool calls, profile=default
+4. Session audit performed; roll forward only verified items.
 
-### Phase 2: Extension-to-Filetype Mapping ✅
+## Open Items
 
-- Created comprehensive mapping document at `.hermes/specs/vscode-extension-mapping.md`
+| Item | Status |
+| --- | --- |
+| Session replay | Pending |
 
-- Mapped all 85 installed extensions to their supported file types
+## Errors Resolved
 
-- Categorized extensions: formatters, language servers, debuggers, tools, UI, themes
+| Error | Fix |
+| --- | --- |
+| Placeholder generator | Delegated to full generator |
 
-### Phase 3: SandBox .vscode/ Configuration ✅
+## Session Changelog
 
-- **settings.json**: 24 language-specific formatters configured, all JSON validated
+| File | Action |
+| --- | --- |
+| cron_33eb54fc37c6_20260910_234920 | Selected as latest MCP session source |
+| C:\Users\Alexa\Desktop\SandBox\SESSION_REPORT.md | Generated session report |
 
-- **tasks.json**: 15 task definitions (pytest, ruff, mypy, eslint, prettier, markdownlint, cspell, tsc, bun test, go test, dotnet build/test, java, playwright, vitest, jupyter)
-
-- **launch.json**: 10 debug configurations (Bun, Python, Node.js, Go, Java, C#, Playwright, Vitest, Jupyter)
-
-- **extensions.json**: All 85 extensions as recommendations with 4 unwanted
-
-- **mcp.json**: Already correct, verified valid
-
-### Phase 4: Code-Insiders Roaming User/ Configuration ✅
-
-- **settings.json**: Full language-specific formatter settings (24 languages)
-
-- **tasks.json**: Initialized as empty `{}`
-
-- Added [vue], [jsonc], [typescriptreact], [javascriptreact], [ini] sections
-
-### Phase 5: Verification ✅
-
-- All 7 JSON config files validated as valid JSON
-
-- Code-Insiders v1.138.0 running with 85 extensions
-
-- All known file types have configured formatters in both settings files
-
-- Stable VS Code completely removed
-
-- Code-Insiders binary intact
-
-### Phase 6: Final Validation ✅
-
-- All validation gates passed
-|- Git committed and pushed to clean-development (commit b6b69b3a)
-
-## Files Created/Modified
-
-### Created:
-
-- `.hermes/plans/vscode-code-insiders-setup.md` — Implementation plan
-
-- `.hermes/specs/vscode-code-insiders-spec.md` — Specification
-
-- `.hermes/specs/vscode-extension-mapping.md` — Extension-to-filetype mapping
-
-### Modified:
-
-- `.vscode/settings.json` — 24 language-specific formatters + all settings
-
-- `.vscode/tasks.json` — 15 task definitions
-
-- `.vscode/launch.json` — 10 debug configurations
-
-- `.vscode/extensions.json` — 85 recommendations
-
-- `~/.AppData/Roaming/Code - Insiders/User/settings.json` — 24 language-specific formatters
-
-- `~/.AppData/Roaming/Code - Insiders/User/tasks.json` — Initialized
-
-## Extension Count: 85 installed and verified
-
-## Known File Types Configured (24 languages):
-
-javascript, typescript, javascriptreact, typescriptreact, json, jsonc, python, markdown, yaml, toml, shellscript, css, scss, html, vue, xml, go, java, csharp, rust, graphql, sql, dockerfile, makefile, powershell, ini
-
-## Validation Results
-
-- All JSON configs: VALID ✅
-
-- Stable VS Code removed: PASS ✅
-
-- Code-Insiders intact: PASS ✅
-
-- All file types have formatters: PASS ✅
-
-- Extension count verified: 85 ✅
-
-- Code-Insiders version: 1.138.0-insider ✅
-
-- Git commit: 74fd8f0b ✅
