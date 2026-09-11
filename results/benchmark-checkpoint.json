@@ -232,5 +232,44 @@
    "output": "",
    "exit": -1
   }
+ },
+ {
+  "provider": "opencode-zen",
+  "model": "nemotron-3.5-lightning-free",
+  "latency": {
+   "probe": "latency",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 103.13,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  }
  }
 ]

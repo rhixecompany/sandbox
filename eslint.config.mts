@@ -1,9 +1,22 @@
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import eslintPlugin from "eslint";
 
 export default [
+	{
+		// Submodules are separate repos with their own configs/deps (see
+		// projects/*/AGENTS.md). Root lint covers meta-repo code only.
+		ignores: [
+			"projects/**",
+			"**/node_modules/**",
+			".next/**",
+			"out/**",
+			"dist/**",
+			"build/**",
+			"coverage/**",
+			".eslintcache",
+		],
+	},
 	js.configs.recommended,
 	...tseslint.configs.recommendedTypeChecked,
 	{
