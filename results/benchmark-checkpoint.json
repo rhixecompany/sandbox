@@ -310,5 +310,44 @@
    "output": "YES",
    "exit": 0
   }
+ },
+ {
+  "provider": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "latency": {
+   "probe": "latency",
+   "status": "SUCCESS",
+   "seconds": 58.14,
+   "output": "PONG",
+   "exit": 0
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 57.74,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 66.53,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "SUCCESS",
+   "seconds": 57.96,
+   "output": "Context window: 200k tokens | Knowledge cutoff: April 2024 | Tools: 20+ \u2014 terminal, read/write/patch/search files, execute_code (Python), web_search/web_extract, browser automation, vision_analyze, MCP servers (github, filesystem, playwright, neon, docker, memory, honcho, sentry, ast-grep, code-sand",
+   "exit": 0
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "SUCCESS",
+   "seconds": 49.53,
+   "output": "YES",
+   "exit": 0
+  }
  }
 ]
