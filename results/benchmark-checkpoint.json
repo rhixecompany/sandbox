@@ -271,5 +271,44 @@
    "output": "",
    "exit": -1
   }
+ },
+ {
+  "provider": "openrouter",
+  "model": "cohere/north-mini-code:free",
+  "latency": {
+   "probe": "latency",
+   "status": "SUCCESS",
+   "seconds": 49.63,
+   "output": "PONG",
+   "exit": 0
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 58.56,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 53.96,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "SUCCESS",
+   "seconds": 57.98,
+   "output": "I'm Hermes Agent using nemotron-3-ultra-free (context window ~8K tokens, knowledge cutoff Sept 2024), with comprehensive tool access including web search, file operations, browser automation, coding assistants, document processing, and 200+ MCP servers for specialized tasks.",
+   "exit": 0
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "SUCCESS",
+   "seconds": 52.59,
+   "output": "YES",
+   "exit": 0
+  }
  }
 ]
