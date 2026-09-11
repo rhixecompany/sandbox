@@ -21,16 +21,13 @@
 │ agent-supply-chain  │                     │ local     │ local     │ enabled │
 │ agentic-eval        │                     │ local     │ local     │ enabled │
 │ agentmemory-hooks   │                     │ skills.sh │ community │ enabled │
-│ ai-prompt-engineer… │                     │ local     │ local     │ enabled │
 │ ai-ready            │                     │ local     │ local     │ enabled │
 │ ai-team-orchestrat… │                     │ local     │ local     │ enabled │
-│ airtable            │                     │ builtin   │ builtin   │ enabled │
 │ algorithmic-art     │                     │ local     │ local     │ enabled │
 │ anti-ui-slop        │                     │ local     │ local     │ enabled │
 │ appinsights-instru… │                     │ local     │ local     │ enabled │
 │ apple-appstore-rev… │                     │ local     │ local     │ enabled │
 │ arch-linux-triage   │                     │ local     │ local     │ enabled │
-│ architecture-bluep… │                     │ local     │ local     │ enabled │
 │ architecture-diagr… │                     │ local     │ local     │ enabled │
 │ arduino-azure-iot-… │                     │ local     │ local     │ enabled │
 │ arize-ai-provider-… │                     │ local     │ local     │ enabled │
@@ -44,7 +41,6 @@
 │ arize-trace         │                     │ local     │ local     │ enabled │
 │ ascii-art           │                     │ local     │ local     │ enabled │
 │ asdf                │                     │ local     │ local     │ enabled │
-│ aspire              │                     │ local     │ local     │ enabled │
 │ aspnet-minimal-api… │                     │ local     │ local     │ enabled │
 │ ast-grep            │                     │ local     │ local     │ enabled │
 │ atlassian           │                     │ local     │ local     │ enabled │
@@ -104,14 +100,11 @@
 │ build-evidence-map  │                     │ local     │ local     │ enabled │
 │ bun-nextjs          │                     │ local     │ local     │ enabled │
 │ bun-shell           │                     │ local     │ local     │ enabled │
-│ canvas              │                     │ local     │ local     │ enabled │
 │ canvas-design       │                     │ local     │ local     │ enabled │
 │ caveman-unified     │                     │ local     │ local     │ enabled │
 │ centos-linux-triage │                     │ local     │ local     │ enabled │
-│ chrome-devtools     │                     │ local     │ local     │ enabled │
 │ ci-cd-best-practic… │                     │ local     │ local     │ enabled │
 │ ci-cd-pipeline-bui… │                     │ local     │ local     │ enabled │
-│ claude-api          │                     │ local     │ local     │ enabled │
 │ claude-design       │                     │ builtin   │ builtin   │ enabled │
 │ cli-mastery         │                     │ local     │ local     │ enabled │
 │ clonedeps           │                     │ local     │ local     │ enabled │
@@ -129,7 +122,6 @@
 │ codemap             │                     │ local     │ local     │ enabled │
 │ codeql              │                     │ local     │ local     │ enabled │
 │ coderabbit-cli-mcp  │                     │ local     │ local     │ enabled │
-│ comfyui             │                     │ local     │ local     │ enabled │
 │ comment-code-gener… │                     │ local     │ local     │ enabled │
 │ commit-message-sto… │                     │ local     │ local     │ enabled │
 │ competitor-ad-inte… │                     │ local     │ local     │ enabled │
@@ -140,7 +132,6 @@
 │ containerize-aspne… │                     │ local     │ local     │ enabled │
 │ content-management… │                     │ local     │ local     │ enabled │
 │ content-research-w… │                     │ local     │ local     │ enabled │
-│ context-map         │                     │ local     │ local     │ enabled │
 │ context7            │                     │ local     │ local     │ enabled │
 │ conventional-branch │                     │ local     │ local     │ enabled │
 │ conventional-commit │                     │ local     │ local     │ enabled │
@@ -234,7 +225,6 @@
 │ filesystem          │                     │ local     │ local     │ enabled │
 │ filesystem-mcp      │                     │ local     │ local     │ enabled │
 │ finalize-agent-pro… │                     │ local     │ local     │ enabled │
-│ finnish-humanizer   │                     │ local     │ local     │ enabled │
 │ first-ask           │                     │ local     │ local     │ enabled │
 │ fix-prompt-frontma… │                     │ local     │ local     │ enabled │
 │ flowstudio-power-a… │                     │ local     │ local     │ enabled │
@@ -242,7 +232,6 @@
 │ flowstudio-power-a… │                     │ local     │ local     │ enabled │
 │ flowstudio-power-a… │                     │ local     │ local     │ enabled │
 │ flowstudio-power-a… │                     │ local     │ local     │ enabled │
-│ fluentui-blazor     │                     │ local     │ local     │ enabled │
 │ foundry-agent-sync  │                     │ local     │ local     │ enabled │
 │ foundry-hosted-age… │                     │ local     │ local     │ enabled │
 │ freecad-scripts     │                     │ local     │ local     │ enabled │
@@ -257,7 +246,6 @@
 │ generate-image      │                     │ local     │ local     │ enabled │
 │ geofeed-tuner       │                     │ local     │ local     │ enabled │
 │ gh-attach           │                     │ local     │ local     │ enabled │
-│ git-commit          │                     │ local     │ local     │ enabled │
 │ git-flow-branch-cr… │                     │ local     │ local     │ enabled │
 │ github              │                     │ builtin   │ builtin   │ enabled │
 │ github-actions-har… │                     │ local     │ local     │ enabled │
@@ -291,7 +279,6 @@
 │ impediment-priorit… │                     │ local     │ local     │ enabled │
 │ import-infrastruct… │                     │ local     │ local     │ enabled │
 │ incident-postmortem │                     │ local     │ local     │ enabled │
-│ inference-sh-cli    │                     │ local     │ local     │ enabled │
 │ integrate-context-… │                     │ local     │ local     │ enabled │
 │ introspection-only… │                     │ local     │ local     │ enabled │
 │ issue-fields-migra… │                     │ local     │ local     │ enabled │
@@ -312,9 +299,7 @@
 │ linkedin-post-form… │                     │ local     │ local     │ enabled │
 │ lsp-setup           │                     │ local     │ local     │ enabled │
 │ make-repo-contribu… │                     │ local     │ local     │ enabled │
-│ markdown-to-html    │                     │ local     │ local     │ enabled │
 │ markstream-install  │                     │ local     │ local     │ enabled │
-│ mcp-cli             │                     │ local     │ local     │ enabled │
 │ mcp-coding-agent-s… │                     │ local     │ local     │ enabled │
 │ mcp-copilot-studio… │                     │ local     │ local     │ enabled │
 │ mcp-create-adaptiv… │                     │ local     │ local     │ enabled │
@@ -323,9 +308,7 @@
 │ mcp-docker          │                     │ local     │ local     │ enabled │
 │ mcp-implementation… │                     │ local     │ local     │ enabled │
 │ mcp-release-qa      │                     │ local     │ local     │ enabled │
-│ mcp-security-audit  │                     │ local     │ local     │ enabled │
 │ md-to-docx          │                     │ local     │ local     │ enabled │
-│ meeting-minutes     │                     │ local     │ local     │ enabled │
 │ memory              │                     │ local     │ local     │ enabled │
 │ memory-merger       │                     │ local     │ local     │ enabled │
 │ mentoring-juniors   │                     │ local     │ local     │ enabled │
@@ -349,14 +332,12 @@
 │ no-git-delete       │                     │ local     │ local     │ enabled │
 │ no-net-fetch        │                     │ local     │ local     │ enabled │
 │ noob-mode           │                     │ local     │ local     │ enabled │
-│ nuget-manager       │                     │ local     │ local     │ enabled │
 │ onboard-context-ma… │                     │ local     │ local     │ enabled │
 │ oo-component-docum… │                     │ local     │ local     │ enabled │
 │ openapi-to-applica… │                     │ local     │ local     │ enabled │
 │ optimize-simplicit… │                     │ local     │ local     │ enabled │
 │ parallel-search     │                     │ local     │ local     │ enabled │
 │ parallel-task       │                     │ local     │ local     │ enabled │
-│ pdftk-server        │                     │ local     │ local     │ enabled │
 │ performance-review… │                     │ local     │ local     │ enabled │
 │ pester-migration    │                     │ local     │ local     │ enabled │
 │ pester-should-migr… │                     │ local     │ local     │ enabled │
@@ -368,13 +349,10 @@
 │ planning-oracle-to… │                     │ local     │ local     │ enabled │
 │ plans-judge         │                     │ local     │ local     │ enabled │
 │ playwright          │                     │ local     │ local     │ enabled │
-│ playwright-automat… │                     │ local     │ local     │ enabled │
 │ playwright-explore… │                     │ local     │ local     │ enabled │
-│ playwright-generat… │                     │ local     │ local     │ enabled │
 │ playwright-mcp      │                     │ local     │ local     │ enabled │
 │ plugin-health-check │                     │ local     │ local     │ enabled │
 │ poka-yoke           │                     │ local     │ local     │ enabled │
-│ postgresql-code-re… │                     │ local     │ local     │ enabled │
 │ postgresql-optimiz… │                     │ local     │ local     │ enabled │
 │ power-apps-code-ap… │                     │ local     │ local     │ enabled │
 │ power-bi-dax-optim… │                     │ local     │ local     │ enabled │
@@ -385,7 +363,6 @@
 │ power-platform-mcp… │                     │ local     │ local     │ enabled │
 │ pr-dashboard        │                     │ local     │ local     │ enabled │
 │ pr-screenshots      │                     │ local     │ local     │ enabled │
-│ prd                 │                     │ local     │ local     │ enabled │
 │ premium-frontend-ui │                     │ local     │ local     │ enabled │
 │ profile-diff-sync   │                     │ local     │ local     │ enabled │
 │ project-workflow-a… │                     │ local     │ local     │ enabled │
@@ -410,7 +387,6 @@
 │ qdrant-search-qual… │                     │ local     │ local     │ enabled │
 │ qdrant-version-upg… │                     │ local     │ local     │ enabled │
 │ quality-playbook    │                     │ local     │ local     │ enabled │
-│ quasi-coder         │                     │ local     │ local     │ enabled │
 │ react-audit-grep-p… │                     │ local     │ local     │ enabled │
 │ react-container-pr… │                     │ local     │ local     │ enabled │
 │ react18-batching-p… │                     │ local     │ local     │ enabled │
@@ -423,7 +399,6 @@
 │ react19-source-pat… │                     │ local     │ local     │ enabled │
 │ react19-test-patte… │                     │ local     │ local     │ enabled │
 │ readme-blueprint-g… │                     │ local     │ local     │ enabled │
-│ refactor            │                     │ local     │ local     │ enabled │
 │ refactor-method-co… │                     │ local     │ local     │ enabled │
 │ refactor-plan       │                     │ local     │ local     │ enabled │
 │ remember            │                     │ local     │ local     │ enabled │
@@ -464,6 +439,7 @@
 │ smithery            │                     │ local     │ local     │ enabled │
 │ speak-summary       │                     │ local     │ local     │ enabled │
 │ specs-judge         │                     │ local     │ local     │ enabled │
+│ sponsor-finder      │                     │ local     │ local     │ enabled │
 │ spring-boot-testing │                     │ local     │ local     │ enabled │
 │ sql-code-review     │                     │ local     │ local     │ enabled │
 │ sql-optimization    │                     │ local     │ local     │ enabled │
@@ -519,12 +495,14 @@
 │ x-twitter-scraper   │                     │ local     │ local     │ enabled │
 │ instruction-triage  │ agent-core-archite… │ local     │ local     │ enabled │
 │ multi-agent-fanout  │ agent-development   │ local     │ local     │ enabled │
+│ architecture-bluep… │ architecture        │ local     │ local     │ enabled │
 │ folder-structure-b… │ architecture        │ local     │ local     │ enabled │
 │ technology-stack-b… │ architecture        │ local     │ local     │ enabled │
 │ Chainlink           │ blockchain          │ local     │ local     │ enabled │
 │ evm                 │ blockchain          │ official  │ official  │ enabled │
 │ solana              │ blockchain          │ local     │ local     │ enabled │
 │ one-three-one-rule  │ communication       │ official  │ official  │ enabled │
+│ comfyui             │ creative            │ local     │ local     │ enabled │
 │ creative-design     │ creative            │ local     │ local     │ enabled │
 │ excalidraw          │ creative            │ local     │ local     │ enabled │
 │ excalidraw-diagram… │ creative            │ local     │ local     │ enabled │
@@ -564,6 +542,7 @@
 │ add-hooks-to-config │ development         │ local     │ local     │ enabled │
 │ add-mcp-servers     │ development         │ local     │ local     │ enabled │
 │ agents-system-prom… │ development         │ local     │ local     │ enabled │
+│ ai-prompt-engineer… │ development         │ local     │ local     │ enabled │
 │ align-tables        │ development         │ local     │ local     │ enabled │
 │ analyze-hf-models   │ development         │ local     │ local     │ enabled │
 │ analyze-prompt-lib… │ development         │ local     │ local     │ enabled │
@@ -608,6 +587,7 @@
 │ busha-quick-start-… │ development         │ local     │ local     │ enabled │
 │ categorize-skills   │ development         │ local     │ local     │ enabled │
 │ check-handle        │ development         │ local     │ local     │ enabled │
+│ chrome-devtools     │ development         │ local     │ local     │ enabled │
 │ classify-fences     │ development         │ local     │ local     │ enabled │
 │ cleanup-disk        │ development         │ local     │ local     │ enabled │
 │ cleanup-inventory   │ development         │ local     │ local     │ enabled │
@@ -615,6 +595,7 @@
 │ comprehensive-enha… │ development         │ local     │ local     │ enabled │
 │ configure-hermes    │ development         │ local     │ local     │ enabled │
 │ consolidate-skills  │ development         │ local     │ local     │ enabled │
+│ context-map         │ development         │ local     │ local     │ enabled │
 │ convert-groq-docs   │ development         │ local     │ local     │ enabled │
 │ copilot-mcp-server  │ development         │ local     │ local     │ enabled │
 │ crypto-wallet-api-… │ development         │ local     │ local     │ enabled │
@@ -829,6 +810,7 @@
 │ vscode-workspace-c… │ development         │ local     │ local     │ enabled │
 │ win-ocr             │ development         │ local     │ local     │ enabled │
 │ writing-skills      │ development         │ local     │ local     │ enabled │
+│ aspire              │ devops              │ local     │ local     │ enabled │
 │ docker-management   │ devops              │ local     │ local     │ enabled │
 │ entra-agent-user    │ devops              │ local     │ local     │ enabled │
 │ fabric-lakehouse    │ devops              │ local     │ local     │ enabled │
@@ -853,6 +835,7 @@
 │ hermes-setup        │ devops              │ local     │ local     │ enabled │
 │ hermes-skills       │ devops              │ local     │ local     │ enabled │
 │ hermes-system-main… │ devops              │ local     │ local     │ enabled │
+│ inference-sh-cli    │ devops              │ local     │ local     │ enabled │
 │ jira                │ devops              │ local     │ local     │ enabled │
 │ kanban-orchestrator │ devops              │ local     │ local     │ enabled │
 │ kanban-worker       │ devops              │ local     │ local     │ enabled │
@@ -905,13 +888,6 @@
 │ merger-model        │ finance             │ local     │ local     │ enabled │
 │ pptx-author         │ finance             │ local     │ local     │ enabled │
 │ pokemon-player      │ gaming              │ official  │ official  │ enabled │
-│ finishing-a-develo… │ github-legacy       │ local     │ local     │ enabled │
-│ gh-cli              │ github-legacy       │ local     │ local     │ enabled │
-│ git-helper          │ github-legacy       │ local     │ local     │ enabled │
-│ git-multi-repo-orc… │ github-legacy       │ local     │ local     │ enabled │
-│ git-submodule-work… │ github-legacy       │ local     │ local     │ enabled │
-│ github-repo-manage… │ github-legacy       │ local     │ local     │ enabled │
-│ sponsor-finder      │ github-legacy       │ local     │ local     │ enabled │
 │ neuroskill-bci      │ health              │ official  │ official  │ enabled │
 │ joystick-controller │ input               │ local     │ local     │ enabled │
 │ fastmcp             │ mcp                 │ local     │ local     │ enabled │
@@ -920,6 +896,7 @@
 │ mcp-atlassian       │ mcp                 │ local     │ local     │ enabled │
 │ mcp-audit-orchestr… │ mcp                 │ local     │ local     │ enabled │
 │ mcp-builder         │ mcp                 │ local     │ local     │ enabled │
+│ mcp-cli             │ mcp                 │ local     │ local     │ enabled │
 │ mcp-code-sandbox    │ mcp                 │ local     │ local     │ enabled │
 │ mcp-coderabbit-cli… │ mcp                 │ local     │ local     │ enabled │
 │ mcp-codex           │ mcp                 │ local     │ local     │ enabled │
@@ -936,6 +913,7 @@
 │ mcp-parallel-task   │ mcp                 │ local     │ local     │ enabled │
 │ mcp-playwright      │ mcp                 │ local     │ local     │ enabled │
 │ mcp-python-quality  │ mcp                 │ local     │ local     │ enabled │
+│ mcp-security-audit  │ mcp                 │ local     │ local     │ enabled │
 │ mcp-sentry          │ mcp                 │ local     │ local     │ enabled │
 │ mcp-sequential-thi… │ mcp                 │ local     │ local     │ enabled │
 │ mcp-smithery        │ mcp                 │ local     │ local     │ enabled │
@@ -1021,16 +999,23 @@
 │ plans-and-specs     │ planning            │ local     │ local     │ enabled │
 │ prompt-planning-or… │ planning            │ local     │ local     │ enabled │
 │ repo-planning       │ planning            │ local     │ local     │ enabled │
+│ prd                 │ product             │ local     │ local     │ enabled │
+│ airtable            │ productivity        │ builtin   │ builtin   │ enabled │
+│ canvas              │ productivity        │ local     │ local     │ enabled │
 │ file-organizer      │ productivity        │ local     │ local     │ enabled │
+│ finnish-humanizer   │ productivity        │ local     │ local     │ enabled │
 │ google-workspace    │ productivity        │ builtin   │ builtin   │ enabled │
 │ internal-comms      │ productivity        │ local     │ local     │ enabled │
 │ linear              │ productivity        │ local     │ local     │ enabled │
 │ maps                │ productivity        │ builtin   │ builtin   │ enabled │
+│ markdown-to-html    │ productivity        │ local     │ local     │ enabled │
 │ meeting-insights-a… │ productivity        │ local     │ local     │ enabled │
+│ meeting-minutes     │ productivity        │ local     │ local     │ enabled │
 │ nano-pdf            │ productivity        │ local     │ local     │ enabled │
 │ notion              │ productivity        │ builtin   │ builtin   │ enabled │
 │ ocr-and-documents   │ productivity        │ local     │ local     │ enabled │
 │ pdf                 │ productivity        │ local     │ local     │ enabled │
+│ pdftk-server        │ productivity        │ local     │ local     │ enabled │
 │ petdex              │ productivity        │ local     │ local     │ enabled │
 │ powerpoint          │ productivity        │ builtin   │ builtin   │ enabled │
 │ pptx                │ productivity        │ local     │ local     │ enabled │
@@ -1050,9 +1035,12 @@
 │ create-missing-mem… │ profiles            │ local     │ local     │ enabled │
 │ create-missing-sou… │ profiles            │ local     │ local     │ enabled │
 │ hooks-judge         │ qa                  │ local     │ local     │ enabled │
+│ playwright-automat… │ qa                  │ local     │ local     │ enabled │
+│ playwright-generat… │ qa                  │ local     │ local     │ enabled │
 │ playwright-generat… │ qa                  │ local     │ local     │ enabled │
 │ plugins-judge       │ qa                  │ local     │ local     │ enabled │
 │ polyglot-test-agent │ qa                  │ local     │ local     │ enabled │
+│ postgresql-code-re… │ qa                  │ local     │ local     │ enabled │
 │ scoutqa-test        │ qa                  │ local     │ local     │ enabled │
 │ scripts-judge       │ qa                  │ local     │ local     │ enabled │
 │ session-audit       │ qa                  │ local     │ local     │ enabled │
@@ -1099,18 +1087,23 @@
 │ sherlock            │ security            │ local     │ local     │ enabled │
 │ openhue             │ smart-home          │ local     │ local     │ enabled │
 │ xurl                │ social-media        │ builtin   │ builtin   │ enabled │
+│ claude-api          │ software-developme… │ local     │ local     │ enabled │
 │ executing-plans     │ software-developme… │ local     │ local     │ enabled │
 │ executing-prompt-w… │ software-developme… │ local     │ local     │ enabled │
+│ fluentui-blazor     │ software-developme… │ local     │ local     │ enabled │
 │ generator-first-do… │ software-developme… │ local     │ local     │ enabled │
 │ hermes-agent-skill… │ software-developme… │ builtin   │ builtin   │ enabled │
 │ httpie              │ software-developme… │ local     │ local     │ enabled │
 │ inspecting-hermes-… │ software-developme… │ builtin   │ builtin   │ enabled │
 │ mindstudio-wrapper  │ software-developme… │ local     │ local     │ enabled │
+│ nuget-manager       │ software-developme… │ local     │ local     │ enabled │
 │ opencode-driven-de… │ software-developme… │ local     │ local     │ enabled │
 │ package-manager-mi… │ software-developme… │ local     │ local     │ enabled │
 │ plan-mode           │ software-developme… │ local     │ local     │ enabled │
 │ project-docs        │ software-developme… │ local     │ local     │ enabled │
+│ quasi-coder         │ software-developme… │ local     │ local     │ enabled │
 │ receiving-code-rev… │ software-developme… │ local     │ local     │ enabled │
+│ refactor            │ software-developme… │ local     │ local     │ enabled │
 │ requesting-code-re… │ software-developme… │ local     │ local     │ enabled │
 │ sandbox             │ software-developme… │ local     │ local     │ enabled │
 │ script-orchestrati… │ software-developme… │ local     │ local     │ enabled │
@@ -1131,5 +1124,5 @@
 │ firecrawl-search    │ web-development     │ local     │ local     │ enabled │
 │ page-agent          │ web-development     │ local     │ local     │ enabled │
 └─────────────────────┴─────────────────────┴───────────┴───────────┴─────────┘
-25 hub-installed, 31 builtin, 1072 local — 1128 enabled, 0 disabled
+25 hub-installed, 31 builtin, 1065 local — 1121 enabled, 0 disabled
 

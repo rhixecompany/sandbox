@@ -77,6 +77,9 @@ hermes-profiles/
 # Auth result files (contain tokens — do not commit)
 .hermes/plans/results/
 
+# Session token files (contain GitHub PATs — do not commit)
+/mytoken.txt
+
 # Plugin directories (embedded git repos — do not commit)
 .hermes/plugins/
 .hermes/profiles/*/plugins/

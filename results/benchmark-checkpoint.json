@@ -115,5 +115,122 @@
    "output": "Use this model for this invocation? [y/N]",
    "exit": 1
   }
+ },
+ {
+  "provider": "opencode-zen",
+  "model": "mimo-v2.5-free",
+  "latency": {
+   "probe": "latency",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "context": {
+   "probe": "context",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "SUCCESS",
+   "seconds": 99.64,
+   "output": "YES",
+   "exit": 0
+  }
+ },
+ {
+  "provider": "opencode-zen",
+  "model": "ling-3.0-flash-fin-free",
+  "latency": {
+   "probe": "latency",
+   "status": "SUCCESS",
+   "seconds": 74.94,
+   "output": "PONG",
+   "exit": 0
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 76.88,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 79.48,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "SUCCESS",
+   "seconds": 86.94,
+   "output": "**Hermes Agent** (Nous Research) \u2014 model `nemotron-3-ultra-free` (opencode-zen) w/ `deepseek-v4-flash-free` fallback. Context window size and knowledge cutoff are not explicitly published in my config; I operate with a working memory pool (~7.2K chars) plus persistent memory, ~619+ skills, and 30+ M",
+   "exit": 0
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "SUCCESS",
+   "seconds": 50.43,
+   "output": "YES",
+   "exit": 0
+  }
+ },
+ {
+  "provider": "opencode-zen",
+  "model": "nemotron-3-ultra-free",
+  "latency": {
+   "probe": "latency",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 88.2,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  }
  }
 ]
