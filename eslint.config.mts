@@ -18,8 +18,8 @@ export default [
 		],
 	},
 	js.configs.recommended,
-	...tseslint.configs.recommendedTypeChecked,
-	{
+		...tseslint.configs.recommended,
+		{
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
