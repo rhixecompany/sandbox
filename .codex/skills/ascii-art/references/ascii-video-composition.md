@@ -67,27 +67,32 @@ BLEND_MODES = {
 ### Blend Mode Selection Guide
 
 **Modes that brighten** (safe for dark inputs):
+
 - `screen` — always brightens. Two 50% gray layers screen to 75%. The go-to safe blend.
 - `add` — simple addition, clips at white. Good for sparkles, glows, particle overlays.
 - `colordodge` — extreme brightening at overlap zones. Can blow out. Use low opacity (0.3-0.5).
 - `linearlight` — aggressive brightening. Similar to add but with offset.
 
 **Modes that darken** (avoid with dark inputs):
+
 - `multiply` — darkens everything. Only use when both layers are already bright.
 - `overlay` — darkens when base < 0.5, brightens when base > 0.5. Crushes dark inputs: `2 * 0.12 * 0.12 = 0.03`. Use `screen` instead for dark material.
 - `colorburn` — extreme darkening at overlap zones.
 
 **Modes that create contrast**:
+
 - `softlight` — gentle contrast. Good for subtle texture overlay.
 - `hardlight` — strong contrast. Like overlay but keyed on the top layer.
 - `vividlight` — very aggressive contrast. Use sparingly.
 
 **Modes that create color effects**:
+
 - `difference` — XOR-like patterns. Two identical layers difference to black; offset layers create wild colors. Great for psychedelic looks.
 - `exclusion` — softer version of difference. Creates complementary color patterns.
 - `hard_mix` — posterizes to pure black/white/saturated color at intersections.
 
 **Modes for texture blending**:
+
 - `grain_extract` / `grain_merge` — extract a texture from one layer, apply it to another.
 
 ### Multi-Layer Chaining
@@ -113,7 +118,7 @@ Uses `srgb_to_linear()` / `linear_to_srgb()` from `architecture.md` § OKLAB Col
 ```python
 def blend_canvas_linear(base, top, mode="normal", opacity=1.0):
     """Blend in linear light space for physically accurate results.
-    
+
     Identical API to blend_canvas(), but converts sRGB → linear before
     blending and linear → sRGB after. More expensive (~2x) due to the
     gamma conversions, but produces correct results for additive blending,
@@ -131,21 +136,21 @@ def blend_canvas_linear(base, top, mode="normal", opacity=1.0):
 
 **When to use `blend_canvas_linear()` vs `blend_canvas()`:**
 
-| Scenario | Use | Why |
-|----------|-----|-----|
-| Screen-blending two bright layers | `linear` | sRGB screen over-brightens highlights |
-| Add mode for glow/bloom effects | `linear` | Additive light follows linear physics |
-| Blending text overlay at low opacity | `srgb` | Perceptual blending looks more natural for text |
-| Multiply for shadow/darkening | `srgb` | Differences are minimal for darken ops |
-| Color-critical work (matching reference) | `linear` | Avoids sRGB hue shifts in midtones |
-| Performance-critical inner loop | `srgb` | ~2x faster, good enough for most ASCII art |
+| Scenario                                 | Use      | Why                                             |
+| ---------------------------------------- | -------- | ----------------------------------------------- |
+| Screen-blending two bright layers        | `linear` | sRGB screen over-brightens highlights           |
+| Add mode for glow/bloom effects          | `linear` | Additive light follows linear physics           |
+| Blending text overlay at low opacity     | `srgb`   | Perceptual blending looks more natural for text |
+| Multiply for shadow/darkening            | `srgb`   | Differences are minimal for darken ops          |
+| Color-critical work (matching reference) | `linear` | Avoids sRGB hue shifts in midtones              |
+| Performance-critical inner loop          | `srgb`   | ~2x faster, good enough for most ASCII art      |
 
 **Batch version** for compositing many layers (converts once, blends multiple, converts back):
 
 ```python
 def blend_many_linear(layers, modes, opacities):
     """Blend a stack of layers in linear light space.
-    
+
     Args:
         layers: list of uint8 (H,W,3) canvases
         modes: list of blend mode strings (len = len(layers) - 1)
@@ -225,12 +230,12 @@ def _render_vf(r, grid_key, val_fn, hue_fn, pal, f, t, S, sat=0.8, threshold=0.0
 
 ### Grid Combination Strategies
 
-| Combination | Effect | Good For |
-|-------------|--------|----------|
-| `sm` + `lg` | Maximum contrast between fine detail and chunky blocks | Bold, graphic looks |
-| `sm` + `md` | Subtle texture layering, similar scales | Organic, flowing looks |
-| `md` + `lg` + `xs` | Three-scale interference, maximum complexity | Psychedelic, dense |
-| `sm` + `sm` (different effects) | Same scale, pattern interference only | Moire, interference |
+| Combination                     | Effect                                                 | Good For               |
+| ------------------------------- | ------------------------------------------------------ | ---------------------- |
+| `sm` + `lg`                     | Maximum contrast between fine detail and chunky blocks | Bold, graphic looks    |
+| `sm` + `md`                     | Subtle texture layering, similar scales                | Organic, flowing looks |
+| `md` + `lg` + `xs`              | Three-scale interference, maximum complexity           | Psychedelic, dense     |
+| `sm` + `sm` (different effects) | Same scale, pattern interference only                  | Moire, interference    |
 
 ### Complete Multi-Grid Scene Example
 
@@ -270,6 +275,7 @@ def fx_psychedelic(r, f, t, S):
 ### The Brightness Problem
 
 ASCII characters are small bright dots on a black background. Most pixels in any frame are background (black). This means:
+
 - Mean frame brightness is inherently low (often 5-30 out of 255)
 - Different effect combinations produce wildly different brightness levels
 - A spiral scene might be 50 mean, while a fire scene is 9 mean
@@ -306,6 +312,7 @@ def tonemap(canvas, target_mean=90, gamma=0.75, black_point=2, white_point=253):
 ### Why Gamma, Not Linear
 
 Linear multiplier `* 2.0`:
+
 ```
 input 10  -> output 20   (still dark)
 input 100 -> output 200  (ok)
@@ -313,6 +320,7 @@ input 200 -> output 255  (clipped, lost detail)
 ```
 
 Gamma 0.75 after normalization:
+
 ```
 input 0.04 -> output 0.08 (lifted from invisible to visible)
 input 0.39 -> output 0.50 (moderate lift)
@@ -338,6 +346,7 @@ scene_fn(r, f, t, S)  ->  canvas
 ```
 
 Tonemap runs BEFORE feedback and shaders. This means:
+
 - Feedback operates on normalized data (consistent behavior regardless of scene brightness)
 - Shaders like solarize, posterize, contrast operate on properly-ranged data
 - The brightness shader in the chain is no longer needed (tonemap handles it)
@@ -346,13 +355,13 @@ Tonemap runs BEFORE feedback and shaders. This means:
 
 Default gamma is 0.75. Scenes that apply destructive post-processing need more aggressive lift because the destruction happens after tonemap:
 
-| Scene Type | Recommended Gamma | Why |
-|------------|-------------------|-----|
-| Standard effects | 0.75 | Default, works for most scenes |
-| Solarize post-process | 0.50-0.60 | Solarize inverts bright pixels, reducing overall brightness |
-| Posterize post-process | 0.50-0.55 | Posterize quantizes, often crushing mid-values to black |
-| Heavy difference blending | 0.60-0.70 | Difference mode creates many near-zero pixels |
-| Already bright scenes | 0.85-1.0 | Don't over-boost scenes that are naturally bright |
+| Scene Type                | Recommended Gamma | Why                                                         |
+| ------------------------- | ----------------- | ----------------------------------------------------------- |
+| Standard effects          | 0.75              | Default, works for most scenes                              |
+| Solarize post-process     | 0.50-0.60         | Solarize inverts bright pixels, reducing overall brightness |
+| Posterize post-process    | 0.50-0.55         | Posterize quantizes, often crushing mid-values to black     |
+| Heavy difference blending | 0.60-0.70         | Difference mode creates many near-zero pixels               |
+| Already bright scenes     | 0.85-1.0          | Don't over-boost scenes that are naturally bright           |
 
 Configure via the scene table:
 
@@ -381,6 +390,7 @@ print(f"Mean brightness: {canvas.astype(float).mean():.1f}, max: {canvas.max()}"
 ```
 
 Target ranges after tonemap + shaders:
+
 - Quiet/ambient scenes: mean 30-60
 - Active scenes: mean 40-100
 - Climax/peak scenes: mean 60-150
@@ -510,14 +520,14 @@ class FeedbackBuffer:
 
 ### Feedback Presets
 
-| Preset | Config | Visual Effect |
-|--------|--------|---------------|
-| Infinite zoom tunnel | `decay=0.8, blend="screen", transform="zoom", transform_amt=0.015` | Expanding ring patterns |
-| Rainbow trails | `decay=0.7, blend="screen", transform="zoom", transform_amt=0.01, hue_shift=0.02` | Psychedelic color trails |
-| Ghostly echo | `decay=0.9, blend="add", opacity=0.15, transform="shift_up", transform_amt=0.01` | Faint upward smearing |
+| Preset                  | Config                                                                                   | Visual Effect             |
+| ----------------------- | ---------------------------------------------------------------------------------------- | ------------------------- |
+| Infinite zoom tunnel    | `decay=0.8, blend="screen", transform="zoom", transform_amt=0.015`                       | Expanding ring patterns   |
+| Rainbow trails          | `decay=0.7, blend="screen", transform="zoom", transform_amt=0.01, hue_shift=0.02`        | Psychedelic color trails  |
+| Ghostly echo            | `decay=0.9, blend="add", opacity=0.15, transform="shift_up", transform_amt=0.01`         | Faint upward smearing     |
 | Kaleidoscopic recursion | `decay=0.75, blend="screen", transform="rotate_cw", transform_amt=0.005, hue_shift=0.01` | Rotating mandala feedback |
-| Color evolution | `decay=0.8, blend="difference", opacity=0.4, hue_shift=0.03` | Frame-to-frame color XOR |
-| Rising heat haze | `decay=0.5, blend="add", opacity=0.2, transform="shift_up", transform_amt=0.02` | Hot air shimmer |
+| Color evolution         | `decay=0.8, blend="difference", opacity=0.4, hue_shift=0.03`                             | Frame-to-frame color XOR  |
+| Rising heat haze        | `decay=0.5, blend="add", opacity=0.2, transform="shift_up", transform_amt=0.02`          | Hot air shimmer           |
 
 ---
 
@@ -756,9 +766,9 @@ from scipy.ndimage import gaussian_filter
 
 def apply_text_backdrop(canvas, glyphs, padding=80, darkness=0.75):
     """Darken the background behind text for readability.
-    
+
     Call AFTER rendering background, BEFORE rendering text.
-    
+
     Args:
         canvas: (VH, VW, 3) uint8 background
         glyphs: list of {"x": float, "y": float, ...} glyph positions
@@ -775,12 +785,12 @@ def apply_text_backdrop(canvas, glyphs, padding=80, darkness=0.75):
     y0 = max(0, int(min(ys)) - padding)
     x1 = min(VW, int(max(xs)) + padding + 50)   # extra for char width
     y1 = min(VH, int(max(ys)) + padding + 60)   # extra for char height
-    
+
     # Soft dark mask with gaussian blur for feathered edges
     mask = np.zeros((VH, VW), dtype=np.float32)
     mask[y0:y1, x0:x1] = 1.0
     mask = gaussian_filter(mask, sigma=padding * 0.6)
-    
+
     factor = 1.0 - mask * darkness
     return (canvas.astype(np.float32) * factor[:, :, np.newaxis]).astype(np.uint8)
 ```
@@ -820,32 +830,35 @@ Layout Engine (browser/Node.js)  →  layouts.json  →  Python ASCII Renderer
 
 ```json
 {
-  "meta": {
-    "canvas_width": 1080, "canvas_height": 1080,
-    "fps": 24, "total_frames": 1248,
-    "fonts": {
-      "body": {"charW": 12.04, "charH": 24, "fontSize": 20},
-      "hero": {"charW": 24.08, "charH": 48, "fontSize": 40}
-    }
-  },
-  "scenes": [
-    {
-      "id": "scene_name",
-      "start_frame": 0, "end_frame": 96,
-      "frames": {
-        "0": {
-          "glyphs": [
-            {"char": "H", "x": 287.1, "y": 400.0, "alpha": 1.0},
-            {"char": "e", "x": 311.2, "y": 400.0, "alpha": 1.0}
-          ],
-          "obstacles": [
-            {"type": "circle", "cx": 540, "cy": 540, "r": 80},
-            {"type": "rect", "x": 300, "y": 500, "w": 120, "h": 80}
-          ]
-        }
-      }
-    }
-  ]
+	"meta": {
+		"canvas_width": 1080,
+		"canvas_height": 1080,
+		"fps": 24,
+		"total_frames": 1248,
+		"fonts": {
+			"body": { "charW": 12.04, "charH": 24, "fontSize": 20 },
+			"hero": { "charW": 24.08, "charH": 48, "fontSize": 40 }
+		}
+	},
+	"scenes": [
+		{
+			"id": "scene_name",
+			"start_frame": 0,
+			"end_frame": 96,
+			"frames": {
+				"0": {
+					"glyphs": [
+						{ "char": "H", "x": 287.1, "y": 400.0, "alpha": 1.0 },
+						{ "char": "e", "x": 311.2, "y": 400.0, "alpha": 1.0 }
+					],
+					"obstacles": [
+						{ "type": "circle", "cx": 540, "cy": 540, "r": 80 },
+						{ "type": "rect", "x": 300, "y": 500, "w": 120, "h": 80 }
+					]
+				}
+			}
+		}
+	]
 }
 ```
 
@@ -868,13 +881,13 @@ Use Playwright to run the layout engine in a headless browser:
 
 ```javascript
 // extract.mjs
-import { chromium } from 'playwright';
+import { chromium } from "playwright";
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 await page.goto(`file://${oraclePath}`);
 await page.waitForFunction(() => window.__ORACLE_DONE__ === true, null, { timeout: 60000 });
 const result = await page.evaluate(() => window.__ORACLE_RESULT__);
-writeFileSync('layouts.json', JSON.stringify(result));
+writeFileSync("layouts.json", JSON.stringify(result));
 await browser.close();
 ```
 

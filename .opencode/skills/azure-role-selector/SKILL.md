@@ -7,18 +7,18 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: azure-role-selector
 tags:
-- azure
-- rbac
-- security
-- iam
-- least-privilege
+  - azure
+  - rbac
+  - security
+  - iam
+  - least-privilege
 title: Azure Role Selector
 version: 1.0.0
-
 ---
+
 # Azure Role Selector
 
 ## Overview
@@ -41,10 +41,10 @@ Determine the least-privilege Azure RBAC (Role-Based Access Control) role that m
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `rbac-audit-logging` | Audit existing role assignments |
-| `azure-resource-visualizer` | Map resource relationships |
+| Skill                       | Purpose                         |
+| --------------------------- | ------------------------------- |
+| `rbac-audit-logging`        | Audit existing role assignments |
+| `azure-resource-visualizer` | Map resource relationships      |
 
 ## Workflow
 
@@ -77,15 +77,15 @@ az role definition list --name "Virtual Machine Contributor" --output json
 
 Common built-in roles by use case:
 
-| Use Case | Built-in Role | Scope |
-|----------|--------------|-------|
-| Read-only access | Reader | Any |
-| VM management | Virtual Machine Contributor | RG or resource |
-| Storage management | Storage Account Contributor | RG or resource |
-| Database admin | SQL DB Contributor | RG or resource |
-| Full resource management | Contributor | RG (avoid subscription) |
-| Security admin | Security Admin | Subscription |
-| Billing | Billing Reader | Subscription |
+| Use Case                 | Built-in Role               | Scope                   |
+| ------------------------ | --------------------------- | ----------------------- |
+| Read-only access         | Reader                      | Any                     |
+| VM management            | Virtual Machine Contributor | RG or resource          |
+| Storage management       | Storage Account Contributor | RG or resource          |
+| Database admin           | SQL DB Contributor          | RG or resource          |
+| Full resource management | Contributor                 | RG (avoid subscription) |
+| Security admin           | Security Admin              | Subscription            |
+| Billing                  | Billing Reader              | Subscription            |
 
 ### Phase 3: Apply Least Privilege
 

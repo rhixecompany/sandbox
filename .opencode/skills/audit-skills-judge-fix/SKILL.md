@@ -1,75 +1,79 @@
 ---
 author: Alexa
-description: 'Use for running the full skills audit pipeline: inventory, categorize,
-  deduplicate, judge, remediate, consolidate, and verify all Hermes skills.'
+description: "Use for running the full skills audit pipeline: inventory, categorize,
+  deduplicate, judge, remediate, consolidate, and verify all Hermes skills."
 license: MIT
 metadata:
   hermes:
     category: qa
     tags:
-    - skills
-    - audit
-    - judge
-    - remediation
-    - pipeline
-    - dedup
+      - skills
+      - audit
+      - judge
+      - remediation
+      - pipeline
+      - dedup
 name: audit-skills-judge-fix
 tags:
-- skills
-- audit
-- judge
-- remediation
-- pipeline
-- dedup
+  - skills
+  - audit
+  - judge
+  - remediation
+  - pipeline
+  - dedup
 title: Audit Skills Judge Fix
 version: 2.1.0
-
 ---
 
 # Audit Skills Judge Fix Pipeline
 
 ## Current State (2026-06-29)
-| Metric | Value |
-|--------|-------|
-| Total skills | 429 |
-| PASS (≥80) | 64 (15%) |
-| WARN (60-79) | 365 (85%) |
-| FAIL (<60) | 0 (0%) |
-| Average score | 71.9/100 |
+
+| Metric        | Value     |
+| ------------- | --------- |
+| Total skills  | 429       |
+| PASS (≥80)    | 64 (15%)  |
+| WARN (60-79)  | 365 (85%) |
+| FAIL (<60)    | 0 (0%)    |
+| Average score | 71.9/100  |
 
 Note: Skill count grew from 343→429 as `hermes skills update` installs fresh official optional skills. Even when FAIL count is 0, new installs from upstream can lower the average — re-running the pipeline periodically maintains the baseline.
 
 ## Scripts in `~/AppData/Local/hermes/scripts/`
 
-| Script | Purpose |
-|--------|---------|
-| `batch_skill_judge.py` | Score all skills on 5 dimensions (20pts each). Supports `--resume`. |
-| `batch_remediate.py` | Add missing frontmatter, pitfalls, verification checklist to sub-80 skills |
-| `batch_rewrite_worst.py` | Full rewrite template for FAIL skills (hardcoded list — needs update) |
-| `batch_remediate_42_59.py` | Aggressive patching for 42-59 scoring skills |
-| `dedupe_skills.py` | Find same-name skills across multiple paths |
-| `consolidate_skills.py` | Identify overlapping skills by keyword/tag |
-| `merge_skill.py` | Merge a thin skill into an umbrella |
-| `categorize_skills.py` | Add `metadata.hermes.category` to flat skills |
-| `fix_yaml_frontmatter.py` | Repair YAML description quoting issues |
-| `build_path_mapping.py` | Rebuild `skill_name_to_path.json` from disk |
-| `fix_fail_skills.py` | Add reference files + phased workflows to FAIL skills |
-| `patch_fail_structure.py` | Quick first-aid: add version, When NOT to Use, Verification Checklist, refs dir to all FAIL skills |
+| Script                       | Purpose                                                                                                                                                              |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `batch_skill_judge.py`       | Score all skills on 5 dimensions (20pts each). Supports `--resume`.                                                                                                  |
+| `batch_remediate.py`         | Add missing frontmatter, pitfalls, verification checklist to sub-80 skills                                                                                           |
+| `batch_rewrite_worst.py`     | Full rewrite template for FAIL skills (hardcoded list — needs update)                                                                                                |
+| `batch_remediate_42_59.py`   | Aggressive patching for 42-59 scoring skills                                                                                                                         |
+| `dedupe_skills.py`           | Find same-name skills across multiple paths                                                                                                                          |
+| `consolidate_skills.py`      | Identify overlapping skills by keyword/tag                                                                                                                           |
+| `merge_skill.py`             | Merge a thin skill into an umbrella                                                                                                                                  |
+| `categorize_skills.py`       | Add `metadata.hermes.category` to flat skills                                                                                                                        |
+| `fix_yaml_frontmatter.py`    | Repair YAML description quoting issues                                                                                                                               |
+| `build_path_mapping.py`      | Rebuild `skill_name_to_path.json` from disk                                                                                                                          |
+| `fix_fail_skills.py`         | Add reference files + phased workflows to FAIL skills                                                                                                                |
+| `patch_fail_structure.py`    | Quick first-aid: add version, When NOT to Use, Verification Checklist, refs dir to all FAIL skills                                                                   |
 | `patch_all_fail_sections.py` | Full structure injection: add Goal, When to Use, When NOT to Use, Skills Required, Workflow(3 phases), Verification Checklist, Pitfalls, refs dir to all FAIL skills |
-| `boost_near_pass_refs.py` | Push near-PASS (75-79) over 80 by creating domain-appropriate reference files |
-| `audit_prompts.py` | Audit prompt files for formatting issues |
+| `boost_near_pass_refs.py`    | Push near-PASS (75-79) over 80 by creating domain-appropriate reference files                                                                                        |
+| `audit_prompts.py`           | Audit prompt files for formatting issues                                                                                                                             |
 
 ## Pipeline Workflow
 
 ### Phase 0: Pre-Audit — MSYS Path Check
+
 Before any audit, scan all Python and shell scripts for hardcoded `C:\Users\...` or `C:/Users/...` paths:
+
 ```bash
 echo "=== Hardcoded Windows paths in scripts ==="
 grep -rn 'C:\\\\Users\\\\Alexa\\|C:/Users/Alexa' $LOCALAPPDATA/hermes/scripts/ --include="*.py" --include="*.sh" 2>/dev/null | grep -v __pycache__ || echo "(clean)"
 ```
+
 If any found, fix them using the env-var derivation pattern (`_HOME = os.environ.get("HOME", os.environ.get("USERPROFILE"))` + `os.path.join()`). This prevents MSYS path translation failures when scripts run under Git Bash.
 
 ### Phase 0.5: First-Aid — Restore Missing Skills
+
 If the audit shows many "path missing" warnings, restore all official skills first:
 
 ```bash
@@ -79,6 +83,7 @@ hermes skills repair-official --restore --yes all
 This rescans the official skill manifest and recreates any SKILL.md that is missing from the filesystem. It also backfills provenance metadata. Run this BEFORE the full pipeline when repair-official hasn't been run recently — it prevents dozens of false-positive missing-path errors from contaminating the audit.
 
 ### Phase 1: Audit & Inventory
+
 ```bash
 hermes skills audit
 hermes skills check
@@ -93,18 +98,21 @@ python3 $LOCALAPPDATA/hermes/scripts/build_path_mapping.py
 ```
 
 ### Phase 2: Categorize
+
 ```bash
 python3 $LOCALAPPDATA/hermes/scripts/categorize_skills.py
 # Verify: 0 skills with empty category in CLI display
 ```
 
 ### Phase 3: Deduplicate
+
 ```bash
 python3 $LOCALAPPDATA/hermes/scripts/dedupe_skills.py
 # Review docs/dedupe-report.md, delete flat duplicates
 ```
 
 ### Phase 4: Judge
+
 ```bash
 cd ~/Desktop/SandBox
 rm -f judge_results/batch_*.md judge_results/all_results.tsv judge_results/summary.md
@@ -112,6 +120,7 @@ python3 $LOCALAPPDATA/hermes/scripts/batch_skill_judge.py
 ```
 
 ### Phase 5: Remediate
+
 ```bash
 # Structural fixes (all below 80)
 python3 $LOCALAPPDATA/hermes/scripts/batch_remediate.py
@@ -234,32 +243,38 @@ _(Validate outputs, document, clean resources)_
 References in `references/` directory add up to 20pts on the `refs` dimension.
 
 ### Phase 6: Consolidate
+
 ```bash
 python3 $LOCALAPPDATA/hermes/scripts/consolidate_skills.py
 ```
 
 ### Phase 7: Verify
+
 - Check `judge_results/summary.md` for score distribution
 - Check `docs/audit-skills-judge-fix-report.md` for full report
 - Commit: `git add docs/ judge_results/ && git commit -m "chore: skills audit pipeline $(date +%F)"`
 
 ## Known Issues
+
 1. **batch_rewrite_worst.py** has a hardcoded list of 30 skills — needs dynamic reading from `rewrite_list.txt`
 2. **consolidate_skills.py** reports 3000+ keyword overlaps (mostly noise — "install", "model") — only the thin skills (<100 lines) are actionable
 3. **Skill count drift:** `hermes skills list` shows ~221 (its own inventory) while the judge finds ~368 (disk count) — the difference includes skills in flat dirs that hermes doesn't index, plus backup copies under `.restore-backups/` after `repair-official --restore`. The list count is authoritative for active skills; the judge count includes everything.
 4. **Reference file target ambiguity:** When `fix_fail_skills.py` runs after a recent `repair-official --restore`, the script may resolve FAIL-skill paths to `.restore-backups/official-optional-*/` instead of the live skill directory, leaving the actual SKILL.md untouched. See `references/repair-official-workflow.md` for workarounds.
 
 ## Script Fixes Applied (2026-06-22)
+
 - `batch_skill_judge.py`: Depth filter changed from `<=2` to `<=3` to include category subdir skills
 - `batch_remediate.py`: Path resolution fixed to not double-append `SKILL.md`
 
 ## Script Fixes Applied (2026-06-28) — MSYS Path Safety Sweep
+
 - **29 Python scripts** patched to derive paths from `$HOME`/`$USERPROFILE` env vars instead of hardcoded `C:\Users\Alexa\...`
 - Affected scripts: `batch_*.py` (4), `build_path_mapping.py`, `categorize_skills.py`, `consolidate_skills.py`, `create_missing_*.py` (2), `dedupe_skills.py`, `fix_*.py` (3), `generate_*.py` (3), `merge_*.py` (2), `apply_vscode_*.py`, `audit_*.py` (3), `configure_hermes.py`, `copilot_mcp_server.py`, `trim_*.py`, `update_*.py`, `validate_*.py` (3)
 - Fix pattern: `_HOME = os.environ.get("HOME", os.environ.get("USERPROFILE", "C:\\Users\\Alexa"))` + `os.path.join()`
 - Context files updated: `SOUL.md`, `MASTER_RULES.md`, `USER.md`, `.hermes.md`, `PROJECT_RULES.md` — all now enforce MSYS path safety
 
 ## Pitfalls
+
 - **CRLF line endings:** Files use `\r\n` on Windows. Regex patterns with `\n` must account for this.
 - **YAML description quoting:** Description fields with embedded double quotes break `yaml.safe_load()`. Fix with `fix_yaml_frontmatter.py`.
 - **Stale cache:** After editing skills, always re-judge fresh (don't trust old results).

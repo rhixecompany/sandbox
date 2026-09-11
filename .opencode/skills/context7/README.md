@@ -4,6 +4,7 @@ description: "Context7 Skill"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Context7 Skill
      2|
      3|## Purpose
@@ -103,14 +104,15 @@ author: Alexa
     97|   - **Aliases**: `alias1`, `alias2`, `package-name`
     98|   - **Docs**: https://example.com/docs
     99|   - **Context7**: `use context7 for library-name`
-   100|   - **Common topics**: topic1, topic2, topic3
-   101|   ```
-   102|
-   103|3. (Optional) Add query optimization patterns
-   104|4. ExternalScout will automatically detect the new library
-   105|
-   106|## Related
-   107|
-   108|- **ExternalScout**: `.opencode/agents/subagents/core/externalscout.md`
-   109|- **ContextScout**: `.opencode/agents/subagents/core/contextscout.md`
-   110|
+
+100| - **Common topics**: topic1, topic2, topic3
+101| ```
+102|
+103|3. (Optional) Add query optimization patterns
+104|4. ExternalScout will automatically detect the new library
+105|
+106|## Related
+107|
+108|- **ExternalScout**: `.opencode/agents/subagents/core/externalscout.md`
+109|- **ContextScout**: `.opencode/agents/subagents/core/contextscout.md`
+110|

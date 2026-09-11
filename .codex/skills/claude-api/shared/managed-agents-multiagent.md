@@ -4,6 +4,7 @@ description: "Managed Agents — Multiagent Sessions"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Multiagent Sessions
      2|
      3|A coordinator agent can delegate to other agents within one session. All agents **share the container and filesystem**; each runs in its own **thread** — a context-isolated event stream with its own conversation history, model, system prompt, tools, MCP servers, and skills (from that agent's own config). Threads are persistent: the coordinator can send a follow-up to a subagent it called earlier and that subagent retains its prior turns.
@@ -103,4 +104,5 @@ author: Alexa
     97|- **Depth > 1 is ignored.** A subagent's own `multiagent` roster (if any) doesn't cascade — only the session's coordinator delegates.
     98|
     99|For per-language bindings beyond Python, WebFetch `https://platform.claude.com/docs/en/managed-agents/multi-agent.md` (see `shared/live-sources.md`).
-   100|
+
+100|

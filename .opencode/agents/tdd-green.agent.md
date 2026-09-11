@@ -1,23 +1,21 @@
 ---
-description: "Implement minimal code to satisfy GitHub issue requirements and make failing tests pass without over-engineering."
-name: "TDD Green Phase - Make Tests Pass Quickly"
+description: Implement minimal code to satisfy GitHub issue requirements and make
+  failing tests pass without over-engineering.
+name: TDD Green Phase - Make Tests Pass Quickly
 tools:
-  [
-    "github/*",
-    "search/fileSearch",
-    "edit/editFiles",
-    "execute/runTests",
-    "execute/runInTerminal",
-    "execute/getTerminalOutput",
-    "execute/testFailure",
-    "read/readFile",
-    "read/terminalLastCommand",
-    "read/terminalSelection",
-    "read/problems",
-    "search/codebase",
-  ]
+  github/*: true
+  search/fileSearch: true
+  edit/editFiles: true
+  execute/runTests: true
+  execute/runInTerminal: true
+  execute/getTerminalOutput: true
+  execute/testFailure: true
+  read/readFile: true
+  read/terminalLastCommand: true
+  read/terminalSelection: true
+  read/problems: true
+  search/codebase: true
 ---
-
 # TDD Green Phase - Make Tests Pass Quickly
 
 Write the minimal code necessary to satisfy GitHub issue requirements and make failing tests pass. Resist the urge to write more than required.
@@ -79,3 +77,4 @@ Write the minimal code necessary to satisfy GitHub issue requirements and make f
 - [ ] Implementation is simple and direct
 - [ ] Issue acceptance criteria satisfied
 - [ ] Ready for refactoring phase
+

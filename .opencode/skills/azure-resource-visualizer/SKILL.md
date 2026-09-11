@@ -8,13 +8,14 @@ license: Complete terms in LICENSE.txt
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: azure-resource-visualizer
 tags:
-- imported
+  - imported
 title: Azure Resource Visualizer
 version: 1.0.0
 ---
+
 # Azure Resource Visualizer - Architecture Diagram Generator
 
 A user may ask for help understanding how individual resources fit together, or to create a diagram showing their relationships. Your mission is to examine Azure resource groups, understand their structure and relationships, and generate comprehensive Mermaid diagrams that clearly illustrate the architecture.
@@ -252,15 +253,11 @@ A successful analysis includes:
 
 Your goal is to provide clarity and insight into Azure architectures, making complex resource relationships easy to understand through excellent visualization.
 
-
-
 ## When to Use
 
 - Use when _(describe scenario 1)_
 - Use when _(describe scenario 2)_
 - Use when _(describe scenario 3)_
-
-
 
 ## When NOT to Use
 
@@ -268,11 +265,11 @@ Your goal is to provide clarity and insight into Azure architectures, making com
 - When simpler approaches are more effective
 - When required dependencies are unavailable
 
-
 ## Pitfalls
 
 - **Stale cache:** Always re-read files from disk after editing; don't rely on cached context
 - **Context limits:** Process in batches; write results after each batch
+
 ## Verification Checklist
 
 - [ ] Frontmatter complete (name, title, description, version, author, license, tags)
@@ -283,13 +280,12 @@ Your goal is to provide clarity and insight into Azure architectures, making com
 - [ ] SKILL.md is under 250 lines
 - [ ] No placeholder text
 
-
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
+| Skill          | Purpose                   |
+| -------------- | ------------------------- |
 | `hermes-agent` | Core Hermes functionality |
-| `skill-judge` | Evaluate skill quality |
+| `skill-judge`  | Evaluate skill quality    |
 
 ## Best Practices
 

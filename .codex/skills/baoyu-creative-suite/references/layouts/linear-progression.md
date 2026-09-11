@@ -12,10 +12,10 @@ Sequential progression showing steps, timeline, or chronological events.
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
-| **Timeline** | Chronological events, dates | Time markers, period labels |
-| **Process** | Action steps, numbered sequence | Step numbers, action icons |
+| Variant      | Focus                           | Visual Emphasis             |
+| ------------ | ------------------------------- | --------------------------- |
+| **Timeline** | Chronological events, dates     | Time markers, period labels |
+| **Process**  | Action steps, numbered sequence | Step numbers, action icons  |
 
 ## Best For
 

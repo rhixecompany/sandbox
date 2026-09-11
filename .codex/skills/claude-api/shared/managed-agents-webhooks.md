@@ -4,6 +4,7 @@ description: "Managed Agents — Webhooks"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Webhooks
      2|
      3|Anthropic can POST to your HTTPS endpoint when a Managed Agents resource changes state — an alternative to holding an SSE stream or polling. Payloads are **thin** (event type + resource IDs only); on receipt, fetch the resource for current state. Every delivery is HMAC-signed.
@@ -103,15 +104,16 @@ author: Alexa
     97|| `vault_credential.deleted` | Vault credential was deleted |
     98|| `vault_credential.refresh_failed` | MCP OAuth vault credential failed to refresh |
     99|
-   100|> These are **webhook** `data.type` values — a separate namespace from SSE event types (`session.status_idle`, `span.outcome_evaluation_end`, etc. in `shared/managed-agents-events.md`). Don't reuse SSE constants in webhook handlers.
-   101|
-   102|---
-   103|
-   104|## Delivery behavior & pitfalls
-   105|
-   106|- **No ordering guarantee.** `session.status_idled` may arrive before `session.outcome_evaluation_ended` even if the evaluation finished first. Sort by envelope `created_at` if order matters.
-   107|- **Retries carry the same `event.id`.** At least one retry on non-2xx. Dedupe on `event.id`.
-   108|- **3xx is failure.** Redirects are not followed — update the URL in Console if your endpoint moves.
-   109|- **Auto-disable** after ~20 consecutive failed deliveries, or immediately if the hostname resolves to a private IP or returns a redirect. Re-enable manually in Console.
-   110|- **Thin payload is intentional.** Don't expect `stop_reason`, `outcome_evaluations`, credential secrets, etc. on the webhook body — fetch the resource.
-   111|
+
+100|> These are **webhook** `data.type` values — a separate namespace from SSE event types (`session.status_idle`, `span.outcome_evaluation_end`, etc. in `shared/managed-agents-events.md`). Don't reuse SSE constants in webhook handlers.
+101|
+102|---
+103|
+104|## Delivery behavior & pitfalls
+105|
+106|- **No ordering guarantee.** `session.status_idled` may arrive before `session.outcome_evaluation_ended` even if the evaluation finished first. Sort by envelope `created_at` if order matters.
+107|- **Retries carry the same `event.id`.** At least one retry on non-2xx. Dedupe on `event.id`.
+108|- **3xx is failure.** Redirects are not followed — update the URL in Console if your endpoint moves.
+109|- **Auto-disable** after ~20 consecutive failed deliveries, or immediately if the hostname resolves to a private IP or returns a redirect. Re-enable manually in Console.
+110|- **Thin payload is intentional.** Don't expect `stop_reason`, `outcome_evaluations`, credential secrets, etc. on the webhook body — fetch the resource.
+111|

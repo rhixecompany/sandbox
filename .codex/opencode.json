@@ -9,11 +9,7 @@
 		"ast-grep": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"@notprolands/ast-grep-mcp"
-			]
+			"command": ["bunx", "-y", "@notprolands/ast-grep-mcp"]
 		},
 		"atlassian": {
 			"enabled": true,
@@ -23,11 +19,7 @@
 		"code-sandbox": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"node-code-sandbox-mcp"
-			]
+			"command": ["bunx", "-y", "node-code-sandbox-mcp"]
 		},
 		"context7": {
 			"enabled": true,
@@ -37,30 +29,17 @@
 		"django": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"django-mcp"
-			]
+			"command": ["bunx", "-y", "django-mcp"]
 		},
 		"docs": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"docs-mcp",
-				"docs/"
-			]
+			"command": ["bunx", "-y", "docs-mcp", "docs/"]
 		},
 		"evals": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"@modelcontextprotocol/server-evals"
-			]
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-evals"]
 		},
 		"everart": {
 			"enabled": false,
@@ -70,11 +49,7 @@
 		"fetch": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"mcp-server-fetch-typescript"
-			]
+			"command": ["bunx", "-y", "mcp-server-fetch-typescript"]
 		},
 		"filesystem": {
 			"enabled": true,
@@ -91,40 +66,22 @@
 		"github": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"@modelcontextprotocol/server-github"
-			]
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-github"]
 		},
 		"mcp-docker": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"docker",
-				"mcp",
-				"gateway",
-				"run",
-				"--profile",
-				"adminbot"
-			]
+			"command": ["docker", "mcp", "gateway", "run", "--profile", "adminbot"]
 		},
 		"memory": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"@modelcontextprotocol/server-memory"
-			]
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-memory"]
 		},
 		"mindstudio": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"C:/Users/Alexa/.mindstudio/bin/mindstudio.exe",
-				"mcp"
-			]
+			"command": ["C:/Users/Alexa/.mindstudio/bin/mindstudio.exe", "mcp"]
 		},
 		"neon": {
 			"enabled": true,
@@ -144,29 +101,17 @@
 		"playwright": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"@playwright/mcp@0.0.78"
-			]
+			"command": ["bunx", "-y", "@playwright/mcp@0.0.78"]
 		},
 		"postgres": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"postgres-mcp"
-			]
+			"command": ["bunx", "-y", "postgres-mcp"]
 		},
 		"pytest": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"pytest-mcp"
-			]
+			"command": ["bunx", "-y", "pytest-mcp"]
 		},
 		"python-quality": {
 			"enabled": true,
@@ -190,11 +135,7 @@
 		"sequential-thinking": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"@modelcontextprotocol/server-sequential-thinking"
-			]
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-sequential-thinking"]
 		},
 		"smithery": {
 			"enabled": true,
@@ -209,11 +150,7 @@
 		"time": {
 			"enabled": true,
 			"type": "local",
-			"command": [
-				"bunx",
-				"-y",
-				"@modelcontextprotocol/server-time"
-			]
+			"command": ["bunx", "-y", "@modelcontextprotocol/server-time"]
 		},
 		"tooling-config": {
 			"enabled": true,
@@ -256,5 +193,5 @@
 		"superpowers@git+https://github.com/obra/superpowers.git#main"
 	],
 	"small_model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
-	"compaction": {},
+	"compaction": {}
 }

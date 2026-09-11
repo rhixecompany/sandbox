@@ -28,13 +28,13 @@ aspire update --self
 
 All commands support these options:
 
-| Option | Description |
-| --- | --- |
-| `-d, --debug` | Enable debug logging to the console |
-| `--non-interactive` | Disable all interactive prompts and spinners |
+| Option                | Description                                    |
+| --------------------- | ---------------------------------------------- |
+| `-d, --debug`         | Enable debug logging to the console            |
+| `--non-interactive`   | Disable all interactive prompts and spinners   |
 | `--wait-for-debugger` | Wait for a debugger to attach before executing |
-| `-?, -h, --help` | Show help and usage information |
-| `--version` | Show version information |
+| `-?, -h, --help`      | Show help and usage information                |
+| `--version`           | Show version information                       |
 
 ---
 
@@ -283,12 +283,12 @@ aspire mcp start
 
 The following commands are **not valid** in Aspire CLI 13.1. Use alternatives:
 
-| Invalid Command | Alternative |
-| --- | --- |
-| `aspire build` | Use `dotnet build ./AppHost` |
-| `aspire test` | Use `dotnet test ./Tests` |
-| `aspire dev` | Use `aspire run` (includes file watching) |
-| `aspire list` | Use `aspire new --help` for templates, `aspire add` for integrations |
+| Invalid Command | Alternative                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| `aspire build`  | Use `dotnet build ./AppHost`                                         |
+| `aspire test`   | Use `dotnet test ./Tests`                                            |
+| `aspire dev`    | Use `aspire run` (includes file watching)                            |
+| `aspire list`   | Use `aspire new --help` for templates, `aspire add` for integrations |
 
 ---
 

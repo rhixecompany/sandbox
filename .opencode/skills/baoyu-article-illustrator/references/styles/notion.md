@@ -13,16 +13,16 @@ Clean, minimalist hand-drawn line art with intellectual feel. Simple doodle-styl
 
 ## Color Palette
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | White | #FFFFFF | Primary background |
-| Alt Background | Off-White | #FAFAFA | Subtle variation |
-| Primary | Black | #1A1A1A | Main outlines |
-| Secondary | Dark Gray | #4A4A4A | Supporting lines |
-| Accent 1 | Pastel Blue | #A8D4F0 | Soft highlight |
-| Accent 2 | Pastel Yellow | #F9E79F | Warm highlight |
-| Accent 3 | Pastel Pink | #FADBD8 | Gentle accent |
-| Text | Near Black | #1A1A1A | Text elements |
+| Role           | Color         | Hex     | Usage              |
+| -------------- | ------------- | ------- | ------------------ |
+| Background     | White         | #FFFFFF | Primary background |
+| Alt Background | Off-White     | #FAFAFA | Subtle variation   |
+| Primary        | Black         | #1A1A1A | Main outlines      |
+| Secondary      | Dark Gray     | #4A4A4A | Supporting lines   |
+| Accent 1       | Pastel Blue   | #A8D4F0 | Soft highlight     |
+| Accent 2       | Pastel Yellow | #F9E79F | Warm highlight     |
+| Accent 3       | Pastel Pink   | #FADBD8 | Gentle accent      |
+| Text           | Near Black    | #1A1A1A | Text elements      |
 
 ## Visual Elements
 

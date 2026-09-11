@@ -4,6 +4,7 @@ description: "Agent Design Patterns"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Agent Design Patterns
      2|
      3|This file covers decision heuristics for building agents on the Claude API: which primitives to reach for, how to design your tool surface, and how to manage context and cost over long runs. For per-tool mechanics and code examples, see `tool-use-concepts.md` and the language-specific folders.
@@ -103,6 +104,7 @@ author: Alexa
     97|For multi-turn breakpoint placement, use top-level auto-caching — see `prompt-caching.md` §Placement patterns.
     98|
     99|---
-   100|
-   101|For live documentation on any of these features, see `live-sources.md`.
-   102|
+
+100|
+101|For live documentation on any of these features, see `live-sources.md`.
+102|

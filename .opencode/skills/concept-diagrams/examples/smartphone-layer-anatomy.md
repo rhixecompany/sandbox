@@ -13,6 +13,7 @@ An exploded view diagram showing all internal layers of a smartphone from front 
 ## New Shape Techniques
 
 ### Capacitive Touch Grid
+
 ```xml
 <rect class="digitizer" x="0" y="0" width="140" height="90" rx="14"/>
 <g transform="translate(8, 8)">
@@ -29,6 +30,7 @@ An exploded view diagram showing all internal layers of a smartphone from front 
 ```
 
 ### OLED RGB Subpixels
+
 ```xml
 <rect class="oled-panel" x="0" y="0" width="140" height="90" rx="12"/>
 <g transform="translate(10, 10)">
@@ -44,6 +46,7 @@ An exploded view diagram showing all internal layers of a smartphone from front 
 ```
 
 ### Logic Board with Chips
+
 ```xml
 <rect class="pcb" x="0" y="0" width="116" height="106" rx="3"/>
 <!-- PCB traces -->
@@ -63,6 +66,7 @@ An exploded view diagram showing all internal layers of a smartphone from front 
 ```
 
 ### Camera Lens Array
+
 ```xml
 <!-- Main camera -->
 <circle class="camera-lens" cx="20" cy="20" r="18"/>
@@ -77,6 +81,7 @@ An exploded view diagram showing all internal layers of a smartphone from front 
 ```
 
 ### Wireless Charging Coil with Magnets
+
 ```xml
 <!-- Concentric coil rings -->
 <circle class="charging-coil-outer" cx="0" cy="0" r="30"/>
@@ -93,6 +98,7 @@ An exploded view diagram showing all internal layers of a smartphone from front 
 ```
 
 ### Battery Cell
+
 ```xml
 <rect class="battery" x="0" y="0" width="140" height="90" rx="10"/>
 <rect class="battery-cell" x="10" y="12" width="120" height="60" rx="6"/>
@@ -107,41 +113,120 @@ An exploded view diagram showing all internal layers of a smartphone from front 
 
 ```css
 /* Glass */
-.front-glass { fill: #E8E6DE; stroke: #888780; stroke-width: 1; opacity: 0.9; }
-.back-glass { fill: #2C2C2A; stroke: #444441; stroke-width: 1; }
+.front-glass {
+	fill: #e8e6de;
+	stroke: #888780;
+	stroke-width: 1;
+	opacity: 0.9;
+}
+.back-glass {
+	fill: #2c2c2a;
+	stroke: #444441;
+	stroke-width: 1;
+}
 
 /* Touch digitizer */
-.digitizer { fill: #EEEDFE; stroke: #534AB7; stroke-width: 1; }
-.digitizer-grid { stroke: #AFA9EC; stroke-width: 0.3; fill: none; }
+.digitizer {
+	fill: #eeedfe;
+	stroke: #534ab7;
+	stroke-width: 1;
+}
+.digitizer-grid {
+	stroke: #afa9ec;
+	stroke-width: 0.3;
+	fill: none;
+}
 
 /* OLED */
-.oled-panel { fill: #1a1a18; stroke: #444441; stroke-width: 1; }
-.oled-subpixel-r { fill: #E24B4A; }
-.oled-subpixel-g { fill: #97C459; }
-.oled-subpixel-b { fill: #378ADD; }
+.oled-panel {
+	fill: #1a1a18;
+	stroke: #444441;
+	stroke-width: 1;
+}
+.oled-subpixel-r {
+	fill: #e24b4a;
+}
+.oled-subpixel-g {
+	fill: #97c459;
+}
+.oled-subpixel-b {
+	fill: #378add;
+}
 
 /* Midframe */
-.midframe { fill: #B4B2A9; stroke: #5F5E5A; stroke-width: 1.5; }
+.midframe {
+	fill: #b4b2a9;
+	stroke: #5f5e5a;
+	stroke-width: 1.5;
+}
 
 /* Logic board */
-.pcb { fill: #0F6E56; stroke: #085041; stroke-width: 1; }
-.pcb-trace { stroke: #5DCAA5; stroke-width: 0.3; fill: none; }
-.chip-cpu { fill: #3C3489; stroke: #534AB7; stroke-width: 0.5; }
-.chip-ram { fill: #185FA5; stroke: #378ADD; stroke-width: 0.5; }
-.chip-storage { fill: #27500A; stroke: #3B6D11; stroke-width: 0.5; }
+.pcb {
+	fill: #0f6e56;
+	stroke: #085041;
+	stroke-width: 1;
+}
+.pcb-trace {
+	stroke: #5dcaa5;
+	stroke-width: 0.3;
+	fill: none;
+}
+.chip-cpu {
+	fill: #3c3489;
+	stroke: #534ab7;
+	stroke-width: 0.5;
+}
+.chip-ram {
+	fill: #185fa5;
+	stroke: #378add;
+	stroke-width: 0.5;
+}
+.chip-storage {
+	fill: #27500a;
+	stroke: #3b6d11;
+	stroke-width: 0.5;
+}
 
 /* Battery */
-.battery { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 1.5; }
-.battery-cell { fill: #97C459; stroke: #639922; stroke-width: 0.5; }
+.battery {
+	fill: #eaf3de;
+	stroke: #3b6d11;
+	stroke-width: 1.5;
+}
+.battery-cell {
+	fill: #97c459;
+	stroke: #639922;
+	stroke-width: 0.5;
+}
 
 /* Camera */
-.camera-lens { fill: #0C447C; stroke: #185FA5; stroke-width: 0.5; }
-.camera-lens-inner { fill: #1a1a18; stroke: #378ADD; stroke-width: 0.3; }
-.camera-sensor { fill: #3C3489; stroke: #534AB7; stroke-width: 0.3; }
+.camera-lens {
+	fill: #0c447c;
+	stroke: #185fa5;
+	stroke-width: 0.5;
+}
+.camera-lens-inner {
+	fill: #1a1a18;
+	stroke: #378add;
+	stroke-width: 0.3;
+}
+.camera-sensor {
+	fill: #3c3489;
+	stroke: #534ab7;
+	stroke-width: 0.3;
+}
 
 /* Wireless charging */
-.charging-coil { fill: none; stroke: #EF9F27; stroke-width: 1.5; }
-.magnet { fill: #5F5E5A; stroke: #444441; stroke-width: 0.5; }
+.charging-coil {
+	fill: none;
+	stroke: #ef9f27;
+	stroke-width: 1.5;
+}
+.magnet {
+	fill: #5f5e5a;
+	stroke: #444441;
+	stroke-width: 0.5;
+}
 ```
 
 ## Layout Notes

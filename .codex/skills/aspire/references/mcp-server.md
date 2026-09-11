@@ -37,13 +37,13 @@ Creates or updates `.vscode/mcp.json`:
 
 ```json
 {
-  "servers": {
-    "aspire": {
-      "type": "stdio",
-      "command": "aspire",
-      "args": ["mcp", "start"]
-    }
-  }
+	"servers": {
+		"aspire": {
+			"type": "stdio",
+			"command": "aspire",
+			"args": ["mcp", "start"]
+		}
+	}
 }
 ```
 
@@ -57,40 +57,40 @@ The tools available depend on your Aspire CLI version. Check with `aspire --vers
 
 These tools require a running AppHost (`aspire run`).
 
-| Tool | Description |
-| --- | --- |
-| `list_resources` | Lists all resources, including state, health status, source, endpoints, and commands |
-| `list_console_logs` | Lists console logs for a resource |
-| `list_structured_logs` | Lists structured logs, optionally filtered by resource name |
-| `list_traces` | Lists distributed traces. Traces can be filtered using an optional resource name parameter |
-| `list_trace_structured_logs` | Lists structured logs for a specific trace |
-| `execute_resource_command` | Executes a resource command (accepts resource name and command name) |
+| Tool                         | Description                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------ |
+| `list_resources`             | Lists all resources, including state, health status, source, endpoints, and commands       |
+| `list_console_logs`          | Lists console logs for a resource                                                          |
+| `list_structured_logs`       | Lists structured logs, optionally filtered by resource name                                |
+| `list_traces`                | Lists distributed traces. Traces can be filtered using an optional resource name parameter |
+| `list_trace_structured_logs` | Lists structured logs for a specific trace                                                 |
+| `execute_resource_command`   | Executes a resource command (accepts resource name and command name)                       |
 
 #### AppHost management tools
 
-| Tool | Description |
-| --- | --- |
-| `list_apphosts` | Lists all detected AppHost connections, showing which are in/out of working directory scope |
-| `select_apphost` | Selects which AppHost to use when multiple are running |
+| Tool             | Description                                                                                 |
+| ---------------- | ------------------------------------------------------------------------------------------- |
+| `list_apphosts`  | Lists all detected AppHost connections, showing which are in/out of working directory scope |
+| `select_apphost` | Selects which AppHost to use when multiple are running                                      |
 
 #### Integration tools
 
 These work without a running AppHost.
 
-| Tool | Description |
-| --- | --- |
-| `list_integrations` | Lists available Aspire hosting integrations (NuGet packages for databases, message brokers, cloud services, etc.) |
-| `get_integration_docs` | Gets documentation for a specific Aspire hosting integration package |
+| Tool                   | Description                                                                                                       |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `list_integrations`    | Lists available Aspire hosting integrations (NuGet packages for databases, message brokers, cloud services, etc.) |
+| `get_integration_docs` | Gets documentation for a specific Aspire hosting integration package                                              |
 
 ### Tools added in 13.2+ (documentation search)
 
 > **Version gate:** These tools were added in [PR #14028](https://github.com/dotnet/aspire/pull/14028) and ship in Aspire CLI **13.2**. If you are on 13.1, these tools will NOT appear. To get them early, update to the daily channel: `aspire update --self --channel daily`.
 
-| Tool | Description |
-| --- | --- |
-| `list_docs` | Lists all available documentation from aspire.dev |
+| Tool          | Description                                                              |
+| ------------- | ------------------------------------------------------------------------ |
+| `list_docs`   | Lists all available documentation from aspire.dev                        |
 | `search_docs` | Performs weighted lexical search across indexed aspire.dev documentation |
-| `get_doc` | Retrieves a specific document by its slug |
+| `get_doc`     | Retrieves a specific document by its slug                                |
 
 These tools index aspire.dev content using the `llms.txt` specification and provide weighted lexical search (titles 10x, summaries 8x, headings 6x, code 5x, body 1x). They work without a running AppHost.
 

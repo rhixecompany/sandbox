@@ -18,12 +18,12 @@ Default balanced tone suitable for educational and informative content. Neither 
 
 When applied to any art style:
 
-| Adjustment | Direction |
-|------------|-----------|
-| Saturation | Standard (no shift) |
-| Contrast | Balanced |
-| Temperature | Neutral |
-| Brightness | Slightly bright |
+| Adjustment  | Direction           |
+| ----------- | ------------------- |
+| Saturation  | Standard (no shift) |
+| Contrast    | Balanced            |
+| Temperature | Neutral             |
+| Brightness  | Slightly bright     |
 
 ## Lighting
 
@@ -35,12 +35,12 @@ When applied to any art style:
 
 ## Emotional Range
 
-| Emotion | Expression Level |
-|---------|-----------------|
-| Joy | Moderate smile |
-| Concern | Thoughtful expression |
-| Surprise | Mild widening of eyes |
-| Frustration | Slight frown |
+| Emotion     | Expression Level      |
+| ----------- | --------------------- |
+| Joy         | Moderate smile        |
+| Concern     | Thoughtful expression |
+| Surprise    | Mild widening of eyes |
+| Frustration | Slight frown          |
 
 ## Composition
 

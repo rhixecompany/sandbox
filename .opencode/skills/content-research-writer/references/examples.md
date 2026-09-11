@@ -4,6 +4,7 @@ description: "Examples: Real-World Workflow"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Examples: Real-World Workflow
      2|
      3|## Example 1: Teresa Torres' Continuous Discovery Article
@@ -103,26 +104,27 @@ author: Alexa
     97|2000-word article that reads like Teresa, sounds authoritative, has solid customer data backing every claim, and lands with her target audience (product managers who already respect her thinking).
     98|
     99|---
-   100|
-   101|## Example 2: Research-Heavy SaaS Technical Article
-   102|
-   103|### Initial Request
-   104|
-   105|"I need to write about AI's impact on product management tools. Very research-heavy. I have strong opinions but need data to back them up. Where do I start?"
-   106|
-   107|### Research Phase
-   108|
-   109|**Me:** "Let's identify what claims you want to make, then find sources for each."
-   110|
-   111|**Writer's Key Claims:**
-   112|
-   113|1. "AI will automate 40% of routine PM work"
-   114|2. "Adoption is increasing but many PMs are skeptical"
-   115|3. "The best use cases are [X, Y, Z]"
-   116|
-   117|### Research Compiled
-   118|
-   119|```markdown
+
+100|
+101|## Example 2: Research-Heavy SaaS Technical Article
+102|
+103|### Initial Request
+104|
+105|"I need to write about AI's impact on product management tools. Very research-heavy. I have strong opinions but need data to back them up. Where do I start?"
+106|
+107|### Research Phase
+108|
+109|**Me:** "Let's identify what claims you want to make, then find sources for each."
+110|
+111|**Writer's Key Claims:**
+112|
+113|1. "AI will automate 40% of routine PM work"
+114|2. "Adoption is increasing but many PMs are skeptical"
+115|3. "The best use cases are [X, Y, Z]"
+116|
+117|### Research Compiled
+118|
+119|`markdown
    120|## Claim 1: AI Will Automate 40% of PM Work
    121|
    122|**Sources Found:**
@@ -159,27 +161,27 @@ author: Alexa
    153|---
    154|
    155|[Full citation details below]
-   156|```
-   157|
-   158|### Writer's Approval
-   159|
-   160|"Great, this gives me confidence. I'm going to use the Gartner stat but also explain why the McKinsey perspective matters for context."
-   161|
-   162|### Result
-   163|
-   164|Research-heavy article that's credible because sources are verified, properly attributed, and chosen strategically (not exhaustively).
-   165|
-   166|---
-   167|
-   168|## Example 3: Hook Improvement Iterations
-   169|
-   170|### Original Hook (Writer's First Draft)
-   171|
-   172|> "Artificial intelligence is changing product management. In this article, I explore how product managers can adapt to this shift."
-   173|
-   174|### My Analysis & Alternatives
-   175|
-   176|```
+   156|`
+157|
+158|### Writer's Approval
+159|
+160|"Great, this gives me confidence. I'm going to use the Gartner stat but also explain why the McKinsey perspective matters for context."
+161|
+162|### Result
+163|
+164|Research-heavy article that's credible because sources are verified, properly attributed, and chosen strategically (not exhaustively).
+165|
+166|---
+167|
+168|## Example 3: Hook Improvement Iterations
+169|
+170|### Original Hook (Writer's First Draft)
+171|
+172|> "Artificial intelligence is changing product management. In this article, I explore how product managers can adapt to this shift."
+173|
+174|### My Analysis & Alternatives
+175|
+176|`
    177|Current Hook Analysis:
    178|- What works: You've identified an important topic
    179|- What could be stronger: It's generic (could apply to any trending topic)
@@ -208,29 +210,29 @@ author: Alexa
    202|And more importantly: on what are you NOT spending time because of it?"
    203|
    204|Why it works: Makes reader think about opportunity cost, not just automation
-   205|```
-   206|
-   207|### Writer's Choice
-   208|
-   209|"I like option 2 (story) because it matches my voice, but the third sentence needs work. Let me revise: 'But the bot missed the insight that convinced the CEO to fund our moonshot.'"
-   210|
-   211|**My Response:** "Better. Specific outcome matters. Ready to draft section 1?"
-   212|
-   213|### Result
-   214|
-   215|Hook that captures attention _and_ sounds like the writer (authentic voice + compelling).
-   216|
-   217|---
-   218|
-   219|## Example 4: Section Feedback in Action
-   220|
-   221|### Writer's Draft: "How to Structure Your Discovery Process"
-   222|
-   223|> "Product managers often struggle with discovery. Many teams don't have a systematic approach. This leads to missed opportunities and wasted time. A good discovery process should include interviews, surveys, and data analysis. You should do this monthly. You should also document what you learn."
-   224|
-   225|### Feedback Provided
-   226|
-   227|```
+   205|`
+206|
+207|### Writer's Choice
+208|
+209|"I like option 2 (story) because it matches my voice, but the third sentence needs work. Let me revise: 'But the bot missed the insight that convinced the CEO to fund our moonshot.'"
+210|
+211|**My Response:** "Better. Specific outcome matters. Ready to draft section 1?"
+212|
+213|### Result
+214|
+215|Hook that captures attention _and_ sounds like the writer (authentic voice + compelling).
+216|
+217|---
+218|
+219|## Example 4: Section Feedback in Action
+220|
+221|### Writer's Draft: "How to Structure Your Discovery Process"
+222|
+223|> "Product managers often struggle with discovery. Many teams don't have a systematic approach. This leads to missed opportunities and wasted time. A good discovery process should include interviews, surveys, and data analysis. You should do this monthly. You should also document what you learn."
+224|
+225|### Feedback Provided
+226|
+227|`
    228|What Works Well ✓
    229|- You're identifying a real problem that readers face
    230|- Clear structure (problem → solution framework)
@@ -259,27 +261,27 @@ author: Alexa
    253|Why: Specific enough for readers to actually do it
    254|
    255|Ready to revise this section?
-   256|```
-   257|
-   258|### Writer's Revision
-   259|
-   260|> "Product managers often struggle with discovery because they're doing it ad-hoc, without rhythm or documentation. Every decision you make should be informed by recent customer learning. Here's the process I've used at [Company A] and [Company B]: lightweight interviews (10-15 people) + behavioral data analysis. Every two weeks, or whenever you're making a major decision, document the insight—just three bullets: What surprised you? What changed your thinking? What's the next question?"
-   261|
-   262|**My Response:** "Better. You've added specificity, examples, and your voice. The framework is now actionable. Ready for section 3?"
-   263|
-   264|---
-   265|
-   266|## Pattern Recognition Across Examples
-   267|
-   268|What makes these work:
-   269|
-   270|1. **Clear outline before drafting** — Not all-at-once writing; structured thinking first
-   271|2. **Section-by-section feedback** — Early feedback prevents downstream mistakes
-   272|3. **Writer's voice throughout** — I suggest, they choose; final piece reads like them
-   273|4. **Specific, actionable feedback** — Not "good work" but "here's what works and why"
-   274|5. **Research serves the voice** — Sources amplify authority, don't override perspective
-   275|6. **Respect for deadlines** — Quick iteration, not perfectionism
-   276|7. **Learning as you write** — Patterns from section 1 → applied independently in section 3
-   277|
-   278|All of these pieces work together to create writing that's both excellent and authentically theirs.
-   279|
+   256|`
+257|
+258|### Writer's Revision
+259|
+260|> "Product managers often struggle with discovery because they're doing it ad-hoc, without rhythm or documentation. Every decision you make should be informed by recent customer learning. Here's the process I've used at [Company A] and [Company B]: lightweight interviews (10-15 people) + behavioral data analysis. Every two weeks, or whenever you're making a major decision, document the insight—just three bullets: What surprised you? What changed your thinking? What's the next question?"
+261|
+262|**My Response:** "Better. You've added specificity, examples, and your voice. The framework is now actionable. Ready for section 3?"
+263|
+264|---
+265|
+266|## Pattern Recognition Across Examples
+267|
+268|What makes these work:
+269|
+270|1. **Clear outline before drafting** — Not all-at-once writing; structured thinking first
+271|2. **Section-by-section feedback** — Early feedback prevents downstream mistakes
+272|3. **Writer's voice throughout** — I suggest, they choose; final piece reads like them
+273|4. **Specific, actionable feedback** — Not "good work" but "here's what works and why"
+274|5. **Research serves the voice** — Sources amplify authority, don't override perspective
+275|6. **Respect for deadlines** — Quick iteration, not perfectionism
+276|7. **Learning as you write** — Patterns from section 1 → applied independently in section 3
+277|
+278|All of these pieces work together to create writing that's both excellent and authentically theirs.
+279|

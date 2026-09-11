@@ -1,0 +1,41 @@
+[
+ {
+  "provider": "opencode-zen",
+  "model": "deepseek-v4-flash-free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 1.64,
+   "output": "usage: hermes [-h] [--version] [-z PROMPT] [--usage-file PATH] [-m MODEL]\n              [--provider PROVIDER] [--reasoning LEVEL] [-t TOOLSETS]\n              [--resume SESSION] [--no-restore-cwd] [--in DIR]\n              [--continue [SESSION_NAME]] [--worktree] [--accept-hooks]\n              [--skil",
+   "exit": 2
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 1.54,
+   "output": "usage: hermes [-h] [--version] [-z PROMPT] [--usage-file PATH] [-m MODEL]\n              [--provider PROVIDER] [--reasoning LEVEL] [-t TOOLSETS]\n              [--resume SESSION] [--no-restore-cwd] [--in DIR]\n              [--continue [SESSION_NAME]] [--worktree] [--accept-hooks]\n              [--skil",
+   "exit": 2
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 1.62,
+   "output": "usage: hermes [-h] [--version] [-z PROMPT] [--usage-file PATH] [-m MODEL]\n              [--provider PROVIDER] [--reasoning LEVEL] [-t TOOLSETS]\n              [--resume SESSION] [--no-restore-cwd] [--in DIR]\n              [--continue [SESSION_NAME]] [--worktree] [--accept-hooks]\n              [--skil",
+   "exit": 2
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 1.49,
+   "output": "usage: hermes [-h] [--version] [-z PROMPT] [--usage-file PATH] [-m MODEL]\n              [--provider PROVIDER] [--reasoning LEVEL] [-t TOOLSETS]\n              [--resume SESSION] [--no-restore-cwd] [--in DIR]\n              [--continue [SESSION_NAME]] [--worktree] [--accept-hooks]\n              [--skil",
+   "exit": 2
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 1.5,
+   "output": "usage: hermes [-h] [--version] [-z PROMPT] [--usage-file PATH] [-m MODEL]\n              [--provider PROVIDER] [--reasoning LEVEL] [-t TOOLSETS]\n              [--resume SESSION] [--no-restore-cwd] [--in DIR]\n              [--continue [SESSION_NAME]] [--worktree] [--accept-hooks]\n              [--skil",
+   "exit": 2
+  }
+ }
+]

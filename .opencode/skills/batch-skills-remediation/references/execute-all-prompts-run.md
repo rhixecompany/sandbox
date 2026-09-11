@@ -12,13 +12,13 @@ Run the 5-phase orchestrator by executing `%LOCALAPPDATA%/hermes/prompts/execute
 
 ## Key Outcomes
 
-| Phase | Counts |
-|-------|--------|
-| Skills | 574 skills, 0 fail (after removing `.restore-backups.DISABLED` + `.archive` duplicates) |
-| Agents | 174 Copilot agents, 186 instructions, 1 Codex twin pair |
-| Plans | 1 plan in `.hermes/plans/`, `SESSION_REPORT.md` regenerated |
-| Prompts | 211 scanned, 2 fixed (tags format), 209 clean |
-| Providers | 9 providers, 342 OpenRouter models (23 free) |
+| Phase     | Counts                                                                                  |
+| --------- | --------------------------------------------------------------------------------------- |
+| Skills    | 574 skills, 0 fail (after removing `.restore-backups.DISABLED` + `.archive` duplicates) |
+| Agents    | 174 Copilot agents, 186 instructions, 1 Codex twin pair                                 |
+| Plans     | 1 plan in `.hermes/plans/`, `SESSION_REPORT.md` regenerated                             |
+| Prompts   | 211 scanned, 2 fixed (tags format), 209 clean                                           |
+| Providers | 9 providers, 342 OpenRouter models (23 free)                                            |
 
 ## Known Pitfalls
 

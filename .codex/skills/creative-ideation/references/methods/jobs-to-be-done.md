@@ -1,6 +1,6 @@
 # Jobs to Be Done
 
-Clayton Christensen et al., *Competing Against Luck* (HarperBusiness, 2016). Customers don't buy products based on demographics — they "hire" products to do specific jobs in specific situations.
+Clayton Christensen et al., _Competing Against Luck_ (HarperBusiness, 2016). Customers don't buy products based on demographics — they "hire" products to do specific jobs in specific situations.
 
 ## When to use
 
@@ -39,6 +39,7 @@ Most failed product launches don't lose on (2). They have an excellent product. 
 Talk to someone who recently switched to your category, or recently bought it for the first time. Recency matters; memory degrades.
 
 Walk the timeline:
+
 - When did you first realize you needed something different? (Be specific: time of day, where, what had just happened.)
 - What did you try first? Why didn't it work?
 - What were the alternatives?
@@ -50,7 +51,7 @@ Then identify the job ("When... I want to... so I can...") and the four forces.
 
 ## Worked example
 
-*Switch from Mendeley to Zotero* (academic citation manager):
+_Switch from Mendeley to Zotero_ (academic citation manager):
 
 - Push: Mendeley sync failed for 6 months; lost references.
 - Pull: Zotero free, open source, recommended by colleague.
@@ -60,7 +61,7 @@ Then identify the job ("When... I want to... so I can...") and the four forces.
 
 **Job**: "When my reference manager fails me and I have years of accumulated work in it, I want to migrate to a new tool without losing my notes, so I can stay productive on my research."
 
-**Design implication**: a citation manager whose strongest pitch is *migration*, not features. Killer feature: "import from anywhere with notes preserved." Verified import quality from each major competitor. Reverse-migration tool. All addresses force 3 (anxiety) and force 4 (habit) — what most competitors neglect. The *features* (citation management) are barely differentiating. The *migration* is the product.
+**Design implication**: a citation manager whose strongest pitch is _migration_, not features. Killer feature: "import from anywhere with notes preserved." Verified import quality from each major competitor. Reverse-migration tool. All addresses force 3 (anxiety) and force 4 (habit) — what most competitors neglect. The _features_ (citation management) are barely differentiating. The _migration_ is the product.
 
 ## Anti-slop notes
 
@@ -70,4 +71,4 @@ Then identify the job ("When... I want to... so I can...") and the four forces.
 - Don't reduce humans to job-doers. JTBD is useful for purchase decisions; not all human behavior.
 - The "hired to do a job" can become catechism. Use where it fits; don't import where it doesn't.
 
-Source: Christensen et al., *Competing Against Luck* (HarperBusiness, 2016); Moesta, *Demand-Side Sales 101* (Lioncrest, 2020).
+Source: Christensen et al., _Competing Against Luck_ (HarperBusiness, 2016); Moesta, _Demand-Side Sales 101_ (Lioncrest, 2020).

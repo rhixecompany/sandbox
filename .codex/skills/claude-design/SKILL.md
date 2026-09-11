@@ -5,14 +5,14 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: claude-design
 tags:
-- imported
+  - imported
 title: Claude Design
 version: 1.0.0
-
 ---
+
 # Claude Design for CLI/API Agents
 
 Use this skill when the user asks for design work that would normally fit Claude Design, but the agent is running in a CLI/API environment instead of the hosted Claude Design web UI.
@@ -25,11 +25,11 @@ The goal is to preserve Claude Design's useful design behavior and taste while r
 
 Hermes has three design-related skills under `skills/creative/`. They do different jobs — load the right one (or combine them):
 
-| Skill | What it gives you | Use when the user wants... |
-|---|---|---|
-| **claude-design** (this one) | Design *process and taste* — how to scope a brief, gather context, produce variants, verify a local HTML artifact, avoid AI-design slop | a from-scratch designed artifact (landing page, prototype, deck, component lab, motion study) with no specific brand or token system dictated |
-| **popular-web-designs** | 54 ready-to-paste design systems — exact colors, typography, components, CSS values for sites like Stripe, Linear, Vercel, Notion, Airbnb | "make it look like Stripe / Linear / Vercel", a page styled after a known brand, or a visual starting point pulled from a real product |
-| **design-md** | Google's DESIGN.md spec format — author/validate/diff/export design-token files, WCAG contrast checking, Tailwind/DTCG export | a formal, persistent, machine-readable design-system *spec file* (tokens + rationale) that lives in a repo and gets consumed by agents over time |
+| Skill                        | What it gives you                                                                                                                         | Use when the user wants...                                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **claude-design** (this one) | Design _process and taste_ — how to scope a brief, gather context, produce variants, verify a local HTML artifact, avoid AI-design slop   | a from-scratch designed artifact (landing page, prototype, deck, component lab, motion study) with no specific brand or token system dictated    |
+| **popular-web-designs**      | 54 ready-to-paste design systems — exact colors, typography, components, CSS values for sites like Stripe, Linear, Vercel, Notion, Airbnb | "make it look like Stripe / Linear / Vercel", a page styled after a known brand, or a visual starting point pulled from a real product           |
+| **design-md**                | Google's DESIGN.md spec format — author/validate/diff/export design-token files, WCAG contrast checking, Tailwind/DTCG export             | a formal, persistent, machine-readable design-system _spec file_ (tokens + rationale) that lives in a repo and gets consumed by agents over time |
 
 Rule of thumb:
 
@@ -214,14 +214,17 @@ When proceeding with assumptions, label only the important ones.
    - next decision or next iteration
 
 ### Phase 1: Preparation
+
 - Review prerequisites and setup requirements
 - Gather necessary tools and dependencies
 
 ### Phase 2: Execution
+
 - Follow the step-by-step workflow
 - Handle errors and edge cases as they arise
 
 ### Phase 3: Verification
+
 - Confirm the output meets requirements
 - Run verification checks before completing
 

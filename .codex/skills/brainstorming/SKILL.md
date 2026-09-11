@@ -10,6 +10,7 @@ metadata:
   hermes:
     tags: [imported]
 ---
+
 # Brainstorming
 
 ## Overview
@@ -17,38 +18,44 @@ metadata:
 Automated reasoning and workflow tool for `brainstorming`. Execute multi-step tasks with deterministic quality controls and structured outputs.
 
 ## Goal
+
 Explore user intent, requirements, and design through structured divergent thinking before any creative work. Produce a documented decision with rationale, trade-offs, and implementation plan.
 
 ## Subgoals
+
 1. **Understand** — Clarify problem, user, desired outcome, and constraints
 2. **Explore** — Generate multiple approaches with pros/cons
 3. **Evaluate** — Compare options against requirements; get feedback
 4. **Plan** — Break down into tasks with dependencies and estimates
 
 ## Personas
-| Persona | When to Use |
-|---------|-------------|
+
+| Persona             | When to Use                                  |
+| ------------------- | -------------------------------------------- |
 | **Product Manager** | Defining features, prioritizing requirements |
-| **Developer** | Exploring implementation approaches |
-| **Designer** | Exploring UI/UX directions |
-| **Architect** | Evaluating system-level trade-offs |
+| **Developer**       | Exploring implementation approaches          |
+| **Designer**        | Exploring UI/UX directions                   |
+| **Architect**       | Evaluating system-level trade-offs           |
 
 ## Personality & Tone
+
 - **Tone**: Open, curious, non-judgmental
 - **Style**: Generate quantity first, then filter for quality
 - **Avoid**: Premature convergence on a single idea, dismissing impractical concepts
 - **Encourage**: "Yes, and..." thinking, building on others' ideas
 
 ## Profile Selection
-| Task Type | Recommended Profile |
-|-----------|---------------------|
-| Feature ideation | `creative-director` |
-| Technical approach | `code-architect` |
-| Research/synthesis | `research-analyst` |
-| Planning/coordination | `exec-assistant` |
-| General purpose | `default` |
+
+| Task Type             | Recommended Profile |
+| --------------------- | ------------------- |
+| Feature ideation      | `creative-director` |
+| Technical approach    | `code-architect`    |
+| Research/synthesis    | `research-analyst`  |
+| Planning/coordination | `exec-assistant`    |
+| General purpose       | `default`           |
 
 ## When to Use
+
 - Creating new features
 - Building components
 - Adding functionality
@@ -59,6 +66,7 @@ Explore user intent, requirements, and design through structured divergent think
 **Triggers**: "Build X", "Create feature Y", "Add component Z", "Design this", "How should we approach", "What's the best way to"
 
 ## When NOT to Use
+
 - For code review (use `requesting-code-review` instead)
 - For debugging (use `systematic-debugging` instead)
 - For implementation (use `test-driven-development` instead)
@@ -67,23 +75,26 @@ Explore user intent, requirements, and design through structured divergent think
 - **For audit/reporting tasks** — if the user asks to "audit all sessions" or "list all X", use the appropriate audit skill instead.
 
 ## Skills Required
-| Skill | Purpose |
-|-------|---------|
-| `plans-and-specs` | Document the plan after brainstorming |
+
+| Skill                     | Purpose                                     |
+| ------------------------- | ------------------------------------------- |
+| `plans-and-specs`         | Document the plan after brainstorming       |
 | `test-driven-development` | Implement using TDD after deciding approach |
-| `frontend-design` | Design UI/UX if brainstorming interface |
-| `mermaid-diagrams` | Visualize architecture options |
-| `writing-plans` | Document the implementation plan |
+| `frontend-design`         | Design UI/UX if brainstorming interface     |
+| `mermaid-diagrams`        | Visualize architecture options              |
+| `writing-plans`           | Document the implementation plan            |
 
 ## Workflow
 
 ### Phase 1: Understand Intent
+
 - What problem are we solving?
 - Who is the user?
 - What's the desired outcome?
 - What constraints exist?
 
 ### Phase 2: Explore Options
+
 - Generate multiple approaches (aim for 3+)
 - List pros and cons for each
 - Consider trade-offs
@@ -91,6 +102,7 @@ Explore user intent, requirements, and design through structured divergent think
 - **Techniques**: See `references/ideation-techniques.md` for SCAMPER, brainwriting, mind mapping
 
 ### Phase 3: Evaluate & Decide
+
 - Compare options against requirements
 - Get stakeholder feedback
 - Document decision rationale
@@ -98,6 +110,7 @@ Explore user intent, requirements, and design through structured divergent think
 - **Framework**: See `references/ideation-techniques.md` for feasibility matrix
 
 ### Phase 4: Plan Implementation
+
 - Break down into tasks
 - Identify dependencies
 - Estimate effort
@@ -105,6 +118,7 @@ Explore user intent, requirements, and design through structured divergent think
 - **Template**: See `references/ideation-techniques.md` for decision documentation template
 
 ## Pitfalls
+
 - **Premature convergence**: Don't settle on the first idea. Generate at least 3 options before evaluating.
 - **No stakeholder input**: Always involve relevant stakeholders before deciding.
 - **Missing documentation**: Record WHY you chose an approach, not just WHAT.
@@ -113,6 +127,7 @@ Explore user intent, requirements, and design through structured divergent think
 - **Skill mismatch**: If the user invokes this skill alongside a direct command (e.g., "delete all X and verify"), recognize that the brainstorming workflow does NOT apply. Execute the direct command and skip the ideation phases.
 
 ## Best Practices
+
 - **Involve stakeholders**: Get input early
 - **Document decisions**: Record why you chose this approach
 - **Consider alternatives**: Don't settle on first idea
@@ -120,6 +135,7 @@ Explore user intent, requirements, and design through structured divergent think
 - **Plan before coding**: Brainstorm before implementation
 
 ## Verification Checklist
+
 - [ ] Problem and user are clearly defined
 - [ ] Multiple approaches were considered and documented (≥3)
 - [ ] Decision rationale is recorded with pros/cons

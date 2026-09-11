@@ -10,10 +10,10 @@ Hand-drawn and paper craft aesthetic with warm, organic feel.
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
-| **Hand-drawn** | Cartoon illustration | Simple icons, slightly imperfect lines |
-| **Paper-cutout** | Layered paper craft | Drop shadows, torn edges, texture |
+| Variant          | Focus                | Visual Emphasis                        |
+| ---------------- | -------------------- | -------------------------------------- |
+| **Hand-drawn**   | Cartoon illustration | Simple icons, slightly imperfect lines |
+| **Paper-cutout** | Layered paper craft  | Drop shadows, torn edges, texture      |
 
 ## Visual Elements
 

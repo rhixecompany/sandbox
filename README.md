@@ -481,5 +481,3 @@ This project is private workspace software. See individual subprojects for their
 ---
 
 > **Maintained by Hermes Agent** · Workspace for multi-language automation, research, and toolkit development.
-
-

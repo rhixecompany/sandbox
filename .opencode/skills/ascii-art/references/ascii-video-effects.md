@@ -9,6 +9,7 @@ Effect building blocks that produce visual patterns. In v2, these are used **ins
 Effects are the creative core. Don't copy these verbatim for every project -- use them as **building blocks** and **combine, modify, and invent** new ones. Every project should feel distinct.
 
 Key principles:
+
 - **Layer multiple effects** rather than using a single monolithic function
 - **Parameterize everything** -- hue, speed, density, amplitude should all be arguments
 - **React to features** -- audio/video features should modulate at least 2-3 parameters per effect
@@ -22,6 +23,7 @@ Key principles:
 Every effect should start with a background. Never leave flat black.
 
 ### Animated Sine Field (General Purpose)
+
 ```python
 def bg_sinefield(g, f, t, hue=0.6, bri=0.5, pal=PAL_DEFAULT,
                  freq=(0.13, 0.17, 0.07, 0.09), speed=(0.5, -0.4, -0.3, 0.2)):
@@ -39,6 +41,7 @@ def bg_sinefield(g, f, t, hue=0.6, bri=0.5, pal=PAL_DEFAULT,
 ```
 
 ### Video-Source Background
+
 ```python
 def bg_video(g, frame_rgb, pal=PAL_DEFAULT, brightness=0.5):
     small = np.array(Image.fromarray(frame_rgb).resize((g.cols, g.rows)))
@@ -50,6 +53,7 @@ def bg_video(g, frame_rgb, pal=PAL_DEFAULT, brightness=0.5):
 ```
 
 ### Noise / Static Field
+
 ```python
 def bg_noise(g, f, t, pal=PAL_BLOCKS, density=0.3, hue_drift=0.02):
     val = np.random.random((g.rows, g.cols)).astype(np.float32) * density * (0.5 + f["rms"]*0.5)
@@ -60,6 +64,7 @@ def bg_noise(g, f, t, pal=PAL_BLOCKS, density=0.3, hue_drift=0.02):
 ```
 
 ### Perlin-Like Smooth Noise
+
 ```python
 def bg_smooth_noise(g, f, t, hue=0.5, bri=0.5, pal=PAL_DOTS, octaves=3):
     """Layered sine approximation of Perlin noise. Cheap, smooth, organic."""
@@ -78,6 +83,7 @@ def bg_smooth_noise(g, f, t, hue=0.5, bri=0.5, pal=PAL_DOTS, octaves=3):
 ```
 
 ### Cellular / Voronoi Approximation
+
 ```python
 def bg_cellular(g, f, t, n_centers=12, hue=0.5, bri=0.6, pal=PAL_BLOCKS):
     """Voronoi-like cells using distance to nearest of N moving centers."""
@@ -110,7 +116,9 @@ def bg_cellular(g, f, t, n_centers=12, hue=0.5, bri=0.6, pal=PAL_BLOCKS):
 ## Particle Systems
 
 ### General Pattern
+
 All particle systems use persistent state via the `S` dict parameter:
+
 ```python
 # S is the persistent state dict (same as r.S, passed explicitly)
 if "px" not in S:
@@ -148,6 +156,7 @@ PART_DASH    = list("-=~\u2500\u2550")
 ```
 
 ### Explosion (Beat-Triggered)
+
 ```python
 def emit_explosion(S, f, center_r, center_c, char_set=PART_ENERGY, count_base=80):
     if f.get("beat", 0) > 0:
@@ -165,6 +174,7 @@ def emit_explosion(S, f, center_r, center_c, char_set=PART_ENERGY, count_base=80
 ```
 
 ### Rising Embers
+
 ```python
 # Emit: sy = rows-1, vy = -random.uniform(1,5), vx = random.uniform(-1.5,1.5)
 # Update: vx += random jitter * 0.3, life -= 0.01
@@ -172,6 +182,7 @@ def emit_explosion(S, f, center_r, center_c, char_set=PART_ENERGY, count_base=80
 ```
 
 ### Dissolving Cloud
+
 ```python
 # Init: N=600 particles spread across screen
 # Update: slow upward drift, fade life progressively
@@ -179,6 +190,7 @@ def emit_explosion(S, f, center_r, center_c, char_set=PART_ENERGY, count_base=80
 ```
 
 ### Starfield (3D Projection)
+
 ```python
 # N stars with (sx, sy, sz) in normalized coords
 # Move: sz -= speed (stars approach camera)
@@ -188,6 +200,7 @@ def emit_explosion(S, f, center_r, center_c, char_set=PART_ENERGY, count_base=80
 ```
 
 ### Orbit (Circular/Elliptical Motion)
+
 ```python
 def emit_orbit(S, n=20, radius=15, speed=1.0, char_set=PART_DOT):
     """Particles orbiting a center point."""
@@ -202,6 +215,7 @@ def emit_orbit(S, n=20, radius=15, speed=1.0, char_set=PART_DOT):
 ```
 
 ### Gravity Well
+
 ```python
 # Particles attracted toward one or more gravity points
 # Update: compute force vector toward each well, apply as acceleration
@@ -440,6 +454,7 @@ def draw_particle_trails(S, g, trail_key="trails", max_trail=8, fade=0.7):
 ## Rain / Matrix Effects
 
 ### Column Rain (Vectorized)
+
 ```python
 def eff_matrix_rain(g, f, t, S, hue=0.33, bri=0.6, pal=PAL_KATA,
                     speed_base=0.5, speed_beat=3.0):
@@ -485,6 +500,7 @@ def eff_matrix_rain(g, f, t, S, hue=0.33, bri=0.6, pal=PAL_KATA,
 ## Glitch / Data Effects
 
 ### Horizontal Band Displacement
+
 ```python
 def eff_glitch_displace(ch, co, f, intensity=1.0):
     n_bands = int(8 + f.get("flux", 0.3)*25 + f.get("bdecay", 0)*15) * intensity
@@ -502,6 +518,7 @@ def eff_glitch_displace(ch, co, f, intensity=1.0):
 ```
 
 ### Block Corruption
+
 ```python
 def eff_block_corrupt(ch, co, f, char_pool=None, count_base=20):
     if char_pool is None:
@@ -522,6 +539,7 @@ def eff_block_corrupt(ch, co, f, char_pool=None, count_base=20):
 ```
 
 ### Scan Bars (Vertical)
+
 ```python
 def eff_scanbars(ch, co, f, t, n_base=4, chars="|\u2551|!1l"):
     for bi in range(int(n_base + f.get("himid_r", 0.3)*12)):
@@ -533,6 +551,7 @@ def eff_scanbars(ch, co, f, t, n_base=4, chars="|\u2551|!1l"):
 ```
 
 ### Error Messages
+
 ```python
 # Parameterize the error vocabulary per project:
 ERRORS_TECH = ["SEGFAULT","0xDEADBEEF","BUFFER_OVERRUN","PANIC!","NULL_PTR",
@@ -544,6 +563,7 @@ ERRORS_ORGANIC = ["CELL_DIVISION_ERR","DNA_MISMATCH","MUTATION_OVERFLOW",
 ```
 
 ### Hex Data Stream
+
 ```python
 hex_str = "".join(random.choice("0123456789ABCDEF") for _ in range(random.randint(8,20)))
 stamp(ch, co, hex_str, rand_row, rand_col, (0, 160, 80))
@@ -554,6 +574,7 @@ stamp(ch, co, hex_str, rand_row, rand_col, (0, 160, 80))
 ## Spectrum / Visualization
 
 ### Mirrored Spectrum Bars
+
 ```python
 def eff_spectrum(g, f, t, n_bars=64, pal=PAL_BLOCKS, mirror=True):
     bar_w = max(1, g.cols // n_bars); mid = g.rows // 2
@@ -581,6 +602,7 @@ def eff_spectrum(g, f, t, n_bars=64, pal=PAL_BLOCKS, mirror=True):
 ```
 
 ### Waveform
+
 ```python
 def eff_waveform(g, f, t, row_offset=-5, hue=0.1):
     ch = np.full((g.rows, g.cols), " ", dtype="U1")
@@ -602,6 +624,7 @@ def eff_waveform(g, f, t, row_offset=-5, hue=0.1):
 ## Fire / Lava
 
 ### Fire Columns
+
 ```python
 def eff_fire(g, f, t, n_base=20, hue_base=0.02, hue_range=0.12, pal=PAL_BLOCKS):
     n_cols = int(n_base + f.get("bass",0.3)*30 + f.get("sub_r",0.3)*20)
@@ -623,6 +646,7 @@ def eff_fire(g, f, t, n_base=20, hue_base=0.02, hue_range=0.12, pal=PAL_BLOCKS):
 ```
 
 ### Ice / Cold Fire (same structure, different hue range)
+
 ```python
 # hue_base=0.55, hue_range=0.15 -- blue to cyan
 # Lower intensity, slower movement
@@ -633,6 +657,7 @@ def eff_fire(g, f, t, n_base=20, hue_base=0.02, hue_range=0.12, pal=PAL_BLOCKS):
 ## Text Overlays
 
 ### Scrolling Ticker
+
 ```python
 def eff_ticker(ch, co, t, text, row, speed=15, color=(80, 100, 140)):
     off = int(t * speed) % max(len(text), 1)
@@ -641,6 +666,7 @@ def eff_ticker(ch, co, t, text, row, speed=15, color=(80, 100, 140)):
 ```
 
 ### Beat-Triggered Words
+
 ```python
 def eff_beat_words(ch, co, f, words, row_center=None, color=(255,240,220)):
     if f.get("beat", 0) > 0:
@@ -650,6 +676,7 @@ def eff_beat_words(ch, co, f, words, row_center=None, color=(255,240,220)):
 ```
 
 ### Fading Message Sequence
+
 ```python
 def eff_fading_messages(ch, co, t, elapsed, messages, period=4.0, color_base=(220,220,220)):
     msg_idx = int(elapsed / period) % len(messages)
@@ -665,7 +692,9 @@ def eff_fading_messages(ch, co, t, elapsed, messages, period=4.0, color_base=(22
 ---
 
 ## Screen Shake
+
 Shift entire char/color arrays on beat:
+
 ```python
 def eff_shake(ch, co, f, x_amp=6, y_amp=3):
     shake_x = int(f.get("sub",0.3)*x_amp*(random.random()-0.5)*2 + f.get("bdecay",0)*4*(random.random()-0.5)*2)
@@ -1798,25 +1827,25 @@ def scene_complex(r, f, t, S):
     r = Renderer, f = audio features, t = time, S = persistent state dict."""
     g = r.grids["md"]
     rows, cols = g.rows, g.cols
-    
+
     # 1. Value field composition
     plasma = vf_plasma(g, f, t, S)
     vortex = vf_vortex(g, f, t, S, twist=4.0)
     combined = np.clip(plasma * 0.6 + vortex * 0.5 + plasma * vortex * 0.4, 0, 1)
-    
+
     # 2. Color from hue field
     h = (hf_angle(0.3)(g,f,t,S) * 0.5 + hf_time_cycle(0.08)(g,f,t,S) * 0.5) % 1.0
-    
+
     # 3. Render to canvas via _render_vf helper
     canvas = _render_vf(g, combined, h, sat=0.75, pal=PAL_DENSE)
-    
+
     # 4. Optional: blend a second layer
     overlay = _render_vf(r.grids["sm"], vf_rings(r.grids["sm"],f,t,S),
                          hf_fixed(0.6)(r.grids["sm"],f,t,S), pal=PAL_BLOCK)
     canvas = blend_canvas(canvas, overlay, "screen", 0.4)
-    
+
     return canvas
-    
+
 # In the render_clip() loop (handled by the framework):
 # canvas = scene_fn(r, f, t, S)
 # canvas = tonemap(canvas, gamma=scene_gamma)
@@ -1834,31 +1863,38 @@ Vary the **value field combo**, **hue field**, **palette**, **blend modes**, **f
 The catalog above is vocabulary. Here's how to compose it into something that looks intentional.
 
 ### Layering for Depth
+
 Every scene should have at least two layers at different grid densities:
+
 - **Background** (sm or xs): dense, dim texture that prevents flat black. fBM, smooth noise, or domain warp at low brightness (bri=0.15-0.25).
 - **Content** (md): the main visual — rings, voronoi, spirals, tunnel. Full brightness.
 - **Accent** (lg or xl): sparse highlights — particles, text stencil, glow pulse. Screen-blended on top.
 
 ### Interesting Effect Pairs
-| Pair | Blend | Why it works |
-|------|-------|-------------|
-| fBM + voronoi edges | `screen` | Organic fills the cells, edges add structure |
-| Domain warp + plasma | `difference` | Psychedelic organic interference |
-| Tunnel + vortex | `screen` | Depth perspective + rotational energy |
-| Spiral + interference | `exclusion` | Moire patterns from different spatial frequencies |
-| Reaction-diffusion + fire | `add` | Living organic base + dynamic foreground |
-| SDF geometry + domain warp | `screen` | Clean shapes floating in organic texture |
+
+| Pair                       | Blend        | Why it works                                      |
+| -------------------------- | ------------ | ------------------------------------------------- |
+| fBM + voronoi edges        | `screen`     | Organic fills the cells, edges add structure      |
+| Domain warp + plasma       | `difference` | Psychedelic organic interference                  |
+| Tunnel + vortex            | `screen`     | Depth perspective + rotational energy             |
+| Spiral + interference      | `exclusion`  | Moire patterns from different spatial frequencies |
+| Reaction-diffusion + fire  | `add`        | Living organic base + dynamic foreground          |
+| SDF geometry + domain warp | `screen`     | Clean shapes floating in organic texture          |
 
 ### Effects as Masks
+
 Any value field can be used as a mask for another effect via `mask_from_vf()`:
+
 - Voronoi cells masking fire (fire visible only inside cells)
 - fBM masking a solid color layer (organic color clouds)
 - SDF shapes masking a reaction-diffusion field
 - Animated iris/wipe revealing one effect over another
 
 ### Inventing New Effects
+
 For every project, create at least one effect that isn't in the catalog:
-- **Combine two vf_* functions** with math: `np.clip(vf_fbm(...) * vf_rings(...), 0, 1)`
+
+- _\*Combine two vf_* functions_* with math: `np.clip(vf_fbm(...) * vf_rings(...), 0, 1)`
 - **Apply coordinate transforms** before evaluation: `vf_plasma(twisted_grid, ...)`
 - **Use one field to modulate another's parameters**: `vf_spiral(..., tightness=2 + vf_fbm(...) * 5)`
 - **Stack time offsets**: render the same field at `t` and `t - 0.5`, difference-blend for motion trails

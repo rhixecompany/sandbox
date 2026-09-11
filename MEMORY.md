@@ -5,13 +5,13 @@ Skill bundles: stacked invocations (e.g. /user-communication-preferences /update
 Report size-trim: subagents loop patch→check→repatch; use buffer 4800B + explicit trim.§
 Repo-management: gh auth switch --user <org> before gh api repos/... delete.§
 tech-stack-blueprint: user-owned; `hermes curator adopt` before patch. Root + per-project TECHNOLOGY_STACK.md.§
-Key-sync: ~/AppData/Local/hermes/scripts/: vault_key_validate.py + vault_key_sync.py (live-test from ~/Desktop/Github/*.txt).§
+Key-sync: ~~/AppData/Local/hermes/scripts/: vault_key_validate.py + vault_key_sync.py (live-test from ~~/Desktop/Github/_.txt).§
 Neon MCP: REMOTE https://mcp.neon.tech/mcp (Bearer). npm @neondatabase/mcp-server-neon deprecated. Windows: use C:\nvm4w\nodejs\npx.cmd.§
 config.yaml mcp_servers args must be YAML list. patch/write_file REFUSE config.yaml — use python I/O.§
 SandBox .enhance: 8 LF-only fixers + normalize_lf.py + analyze_prompts.py. Write LF only (core.autocrlf=true).§
-hermes-profiles mirror WIPED 2026-08-05 (gitignored). Backups at /tmp/hermes-profiles-*.bak.§
+hermes-profiles mirror WIPED 2026-08-05 (gitignored). Backups at /tmp/hermes-profiles-_.bak.§
 Session truth = state.db. session-logger v1.5.0: start_capture→start.json; end_capture→.end.json; both→generate_session_report.py.§
-Session Env: whoami=Alexa | Win11 MSYS2/git-bash | bash (NOT PowerShell) | cwd=~/Desktop/SandBox | Hermes home=~/AppData/Local/hermes.§
+Session Env: whoami=Alexa | Win11 MSYS2/git-bash | bash (NOT PowerShell) | cwd=~~/Desktop/SandBox | Hermes home=~~/AppData/Local/hermes.§
 oh-my-opencode v4.19.4 at ~/.omo/omo.jsonc; OpenCode Zen 401 → use opencode/deepseek-v4-flash-free. Windows: use opencode.cmd.§
 Windows npm: `npm config get omit` = dev globally → pass --include=dev. Global eslint 10.7.0 shadows local — use ./node_modules/.bin/eslint.§
 Image vision: primary REJECTS; MindStudio OOC. Fallback: mindstudio uploadFile → OpenRouter nvidia/nemotron-nano-12b-v2-vl:free via vision_fallback.py.§

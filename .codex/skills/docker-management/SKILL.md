@@ -12,6 +12,7 @@ metadata:
     category: devops
     requires_toolsets: [terminal]
 ---
+
 # Docker Management
 
 Manage Docker containers, images, volumes, networks, and Compose stacks using standard Docker CLI commands. No additional dependencies beyond Docker itself.
@@ -44,18 +45,18 @@ docker --version && docker compose version
 
 ## Quick Reference
 
-| Task | Command |
-|------|---------|
-| Run container (background) | `docker run -d --name NAME IMAGE` |
-| Stop + remove | `docker stop NAME && docker rm NAME` |
-| View logs (follow) | `docker logs --tail 50 -f NAME` |
-| Shell into container | `docker exec -it NAME /bin/sh` |
-| List all containers | `docker ps -a` |
-| Build image | `docker build -t TAG .` |
-| Compose up | `docker compose up -d` |
-| Compose down | `docker compose down` |
-| Disk usage | `docker system df` |
-| Cleanup dangling | `docker image prune && docker container prune` |
+| Task                       | Command                                        |
+| -------------------------- | ---------------------------------------------- |
+| Run container (background) | `docker run -d --name NAME IMAGE`              |
+| Stop + remove              | `docker stop NAME && docker rm NAME`           |
+| View logs (follow)         | `docker logs --tail 50 -f NAME`                |
+| Shell into container       | `docker exec -it NAME /bin/sh`                 |
+| List all containers        | `docker ps -a`                                 |
+| Build image                | `docker build -t TAG .`                        |
+| Compose up                 | `docker compose up -d`                         |
+| Compose down               | `docker compose down`                          |
+| Disk usage                 | `docker system df`                             |
+| Cleanup dangling           | `docker image prune && docker container prune` |
 
 ## Procedure
 
@@ -250,16 +251,16 @@ docker system prune -a --volumes       # EVERYTHING — named volumes too
 
 ## Pitfalls
 
-| Problem | Cause | Fix |
-|---------|-------|-----|
-| Container exits immediately | Main process finished or crashed | Check `docker logs NAME`, try `docker run -it --entrypoint /bin/sh IMAGE` |
-| "port is already allocated" | Another process using that port | `docker ps` or `lsof -i :PORT` to find it |
-| "no space left on device" | Docker disk full | `docker system df` then targeted prune |
-| Can't connect to container | App binds to 127.0.0.1 inside container | App must bind to `0.0.0.0`, check `-p` mapping |
-| Permission denied on volume | UID/GID mismatch host vs container | Use `--user $(id -u):$(id -g)` or fix permissions |
-| Compose services can't reach each other | Wrong network or service name | Services use service name as hostname, check `docker compose config` |
-| Build cache not working | Layer order wrong in Dockerfile | Put rarely-changing layers first (deps before source code) |
-| Image too large | No multi-stage build, no .dockerignore | Use multi-stage builds, add `.dockerignore` |
+| Problem                                 | Cause                                   | Fix                                                                       |
+| --------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------- |
+| Container exits immediately             | Main process finished or crashed        | Check `docker logs NAME`, try `docker run -it --entrypoint /bin/sh IMAGE` |
+| "port is already allocated"             | Another process using that port         | `docker ps` or `lsof -i :PORT` to find it                                 |
+| "no space left on device"               | Docker disk full                        | `docker system df` then targeted prune                                    |
+| Can't connect to container              | App binds to 127.0.0.1 inside container | App must bind to `0.0.0.0`, check `-p` mapping                            |
+| Permission denied on volume             | UID/GID mismatch host vs container      | Use `--user $(id -u):$(id -g)` or fix permissions                         |
+| Compose services can't reach each other | Wrong network or service name           | Services use service name as hostname, check `docker compose config`      |
+| Build cache not working                 | Layer order wrong in Dockerfile         | Put rarely-changing layers first (deps before source code)                |
+| Image too large                         | No multi-stage build, no .dockerignore  | Use multi-stage builds, add `.dockerignore`                               |
 
 ## Verification
 

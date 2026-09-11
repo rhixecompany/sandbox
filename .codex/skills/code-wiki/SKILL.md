@@ -11,6 +11,7 @@ metadata:
     tags: [Documentation, Mermaid, Architecture, Diagrams, Wiki, Code-Analysis]
     related_skills: [codebase-inspection, github-repo-management]
 ---
+
 # Code Wiki Skill
 
 Generate a comprehensive wiki for any codebase — overview, architecture, per-module deep-dives, Mermaid class and sequence diagrams. Inspired by Google CodeWiki, but works on local repos, private repos, and any language. Uses only existing Hermes tools (`terminal`, `read_file`, `search_files`, `write_file`); no Docker, no external services, no extra dependencies.
@@ -29,6 +30,7 @@ Automated reasoning and workflow tool for `code-wiki`. Execute multi-step tasks 
 - Need a stable artifact (markdown + Mermaid) that renders on GitHub
 
 Do NOT use this for:
+
 - Single-file or single-function documentation — just answer directly
 - API reference for one specific endpoint — use `read_file` and answer inline
 - Strategic "why does this exist" narrative — different skill, different purpose
@@ -46,20 +48,20 @@ Invoke through the `terminal` tool from the target repo's root, then use `read_f
 
 ## Quick Reference
 
-| Step | Action |
-|---|---|
-| 1 | Resolve target — local cwd, given path, or `git clone --depth 50 <url>` to a temp dir |
-| 2 | Scan structure — `ls`, `find -maxdepth 3`, manifest files, README |
-| 3 | Pick 8–10 modules to document |
-| 4 | Write `README.md` (overview + module map) |
-| 5 | Write `architecture.md` with Mermaid flowchart |
-| 6 | Write per-module docs in `modules/` |
-| 7 | Write `diagrams/class-diagram.md` (Mermaid classDiagram) |
-| 8 | Write `diagrams/sequences.md` (Mermaid sequenceDiagram, 2–4 workflows) |
-| 9 | Write `getting-started.md` |
-| 10 | Write `api.md` if applicable, else skip |
-| 11 | Write `.codewiki-state.json` |
-| 12 | Report paths to user |
+| Step | Action                                                                                |
+| ---- | ------------------------------------------------------------------------------------- |
+| 1    | Resolve target — local cwd, given path, or `git clone --depth 50 <url>` to a temp dir |
+| 2    | Scan structure — `ls`, `find -maxdepth 3`, manifest files, README                     |
+| 3    | Pick 8–10 modules to document                                                         |
+| 4    | Write `README.md` (overview + module map)                                             |
+| 5    | Write `architecture.md` with Mermaid flowchart                                        |
+| 6    | Write per-module docs in `modules/`                                                   |
+| 7    | Write `diagrams/class-diagram.md` (Mermaid classDiagram)                              |
+| 8    | Write `diagrams/sequences.md` (Mermaid sequenceDiagram, 2–4 workflows)                |
+| 9    | Write `getting-started.md`                                                            |
+| 10   | Write `api.md` if applicable, else skip                                               |
+| 11   | Write `.codewiki-state.json`                                                          |
+| 12   | Report paths to user                                                                  |
 
 ## Procedure
 
@@ -128,6 +130,7 @@ Cap initial pass at **8–10 modules**. Heuristics by language:
 - Mixed/unfamiliar: top-level directories that contain source code (not config, not tests)
 
 For very large repos, prioritize by:
+
 1. Imported-from count (a module imported by many is core)
 2. LOC (bigger modules usually warrant their own doc)
 3. Mentions in README / top-level docs
@@ -138,7 +141,7 @@ State the module list to the user before generating per-module docs on big repos
 
 `read_file` the actual project README plus the top 2–3 entry-point files. Then `write_file`:
 
-````markdown
+```markdown
 # <Project Name>
 
 <One paragraph: what it is and what it's for. Self-contained — don't assume the
@@ -151,8 +154,8 @@ reader has the source README.>
 
 ## Entry Points
 
-- [`path/to/main.py`](<link>) — <what runs when you start it>
-- [`path/to/cli.py`](<link>) — <CLI surface>
+- [`path/to/main.py`](link) — <what runs when you start it>
+- [`path/to/cli.py`](link) — <CLI surface>
 
 ## High-Level Architecture
 
@@ -162,14 +165,14 @@ See [architecture.md](architecture.md).
 
 ## Module Map
 
-| Module | Purpose |
-|---|---|
+| Module                            | Purpose            |
+| --------------------------------- | ------------------ |
 | [`<module>`](modules/<module>.md) | <one-line purpose> |
 
 ## Getting Started
 
 See [getting-started.md](getting-started.md).
-````
+```
 
 For link targets in local mode use relative paths. For cloned repos use `https://github.com/<owner>/<repo>/blob/<sha>/<path>` so links survive future commits.
 
@@ -197,8 +200,8 @@ flowchart TD
 
 ## Data Flow
 
-1. **<Step>** — [`<file>`](<link>)
-2. **<Step>** — [`<file>`](<link>)
+1. **<Step>** — [`<file>`](link)
+2. **<Step>** — [`<file>`](link)
 
 ## Key Design Decisions
 
@@ -206,6 +209,7 @@ flowchart TD
 ````
 
 **Mermaid shape semantics:**
+
 - `[]` = component
 - `[()]` = database / storage
 - `{{}}` = external service
@@ -218,7 +222,7 @@ Cap at ~20 nodes per diagram. Split into sub-diagrams if larger.
 
 For each selected module, inspect its layout with `ls`, identify 3–5 most important files (by size, by being named `core.py` / `main.py` / `__init__.py`, by being imported a lot), then `read_file` those files (use `offset` / `limit` to read only what you need; prefer `search_files` for specific symbols).
 
-````markdown
+```markdown
 # Module: `<module>`
 
 <1-2 sentence purpose.>
@@ -230,7 +234,7 @@ For each selected module, inspect its layout with `ls`, identify 3–5 most impo
 
 ## Key Files
 
-- [`<module>/<file>`](<link>) — <what it does>
+- [`<module>/<file>`](link) — <what it does>
 
 ## Public API
 
@@ -249,7 +253,7 @@ signatures, not full implementations.>
 ## Notable Patterns / Gotchas
 
 - <Anything non-obvious>
-````
+```
 
 ### 7. Write `diagrams/class-diagram.md`
 
@@ -311,8 +315,8 @@ sequenceDiagram
 
 ### Walkthrough
 
-1. **User input** — [`cli.py:HermesCLI.run_session`](<link>)
-2. **Message dispatch** — [`run_agent.py:AIAgent.chat`](<link>)
+1. **User input** — [`cli.py:HermesCLI.run_session`](link)
+2. **Message dispatch** — [`run_agent.py:AIAgent.chat`](link)
 ````
 
 Don't invent participants. Every box must correspond to a real component the reader can find in the code.
@@ -341,6 +345,7 @@ Don't invent participants. Every box must correspond to a real component the rea
 ## Common Workflows
 
 ### <Workflow 1>
+
 <commands>
 
 ## Configuration
@@ -433,13 +438,13 @@ Full incremental-regeneration is a future enhancement — for now, regenerating 
 After writing, verify:
 
 1. **Mermaid blocks balance** — opens equal closes per file:
-   ```bash
+   ````bash
    for f in "$OUTPUT_DIR"/diagrams/*.md "$OUTPUT_DIR"/architecture.md; do
      opens=$(grep -c '^```mermaid' "$f")
      total=$(grep -c '^```' "$f")
      echo "$f: $opens mermaid blocks, $total total fences (expect total = opens*2)"
    done
-   ```
+   ````
 2. **All expected files exist** —
    ```bash
    ls "$OUTPUT_DIR"/{README.md,architecture.md,getting-started.md,.codewiki-state.json} \

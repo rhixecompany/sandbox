@@ -4,6 +4,7 @@ description: "Managed Agents — Core Concepts"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Core Concepts
      2|
      3|## Architecture
@@ -103,16 +104,17 @@ author: Alexa
     97|  name: "Coding Assistant",
     98|  model: "claude-opus-4-7",
     99|  system: "You are a helpful coding agent.",
-   100|  tools: [{ type: "agent_toolset_20260401" }]
-   101|});
-   102|
-   103|// 2. Start a session that references it
-   104|const session = await client.beta.sessions.create({
-   105|  agent: agent.id, // string shorthand → latest version. Or: { type: "agent", id: agent.id, version: agent.version }
-   106|  environment_id: environmentId,
-   107|  title: "Hello World Session"
-   108|});
-   109|```
+
+100| tools: [{ type: "agent_toolset_20260401" }]
+101|});
+102|
+103|// 2. Start a session that references it
+104|const session = await client.beta.sessions.create({
+105| agent: agent.id, // string shorthand → latest version. Or: { type: "agent", id: agent.id, version: agent.version }
+106| environment_id: environmentId,
+107| title: "Hello World Session"
+108|});
+109|``
    110|
    111|**Session creation parameters:**
    112|
@@ -165,13 +167,13 @@ author: Alexa
    159|
    160|The agent is a **persistent resource**, not a per-run parameter. The intended pattern:
    161|
-   162|```
-   163|┌─ setup (once) ─────────┐     ┌─ runtime (every invocation) ─┐
-   164|│ agents.create()        │     │ sessions.create(             │
-   165|│   → store agent_id     │ ──→ │   agent={type:..., id: ID}   │
-   166|│     in config/env/db   │     │ )                            │
-   167|└────────────────────────┘     └──────────────────────────────┘
-   168|```
+   162|``
+163|┌─ setup (once) ─────────┐ ┌─ runtime (every invocation) ─┐
+164|│ agents.create() │ │ sessions.create( │
+165|│ → store agent_id │ ──→ │ agent={type:..., id: ID} │
+166|│ in config/env/db │ │ ) │
+167|└────────────────────────┘ └──────────────────────────────┘
+168|``
    169|
    170|**Anti-pattern:** calling `agents.create()` at the top of every script run. This accumulates orphaned agent objects, pays create latency on every invocation, and defeats the versioning model. If you see `agents.create()` in a function that's called per-request or per-cron-tick, that's wrong — hoist it to one-time setup and persist the ID.
    171|
@@ -207,17 +209,17 @@ author: Alexa
    201|
    202|Reference the agent by string ID (latest version) or by object with an explicit version:
    203|
-   204|```python
-   205|# String shorthand — uses the agent's latest version
-   206|session = client.beta.sessions.create(
-   207|    agent=agent.id,
-   208|    environment_id=environment_id,
-   209|)
-   210|
-   211|# Or pin to a specific version (int)
-   212|session = client.beta.sessions.create(
-   213|    agent={"type": "agent", "id": agent.id, "version": agent.version},
-   214|    environment_id=environment_id,
-   215|)
-   216|```
-   217|
+   204|``python
+205|# String shorthand — uses the agent's latest version
+206|session = client.beta.sessions.create(
+207| agent=agent.id,
+208| environment_id=environment_id,
+209|)
+210|
+211|# Or pin to a specific version (int)
+212|session = client.beta.sessions.create(
+213| agent={"type": "agent", "id": agent.id, "version": agent.version},
+214| environment_id=environment_id,
+215|)
+216|```
+217|

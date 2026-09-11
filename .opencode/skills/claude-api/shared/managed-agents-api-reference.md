@@ -4,6 +4,7 @@ description: "Managed Agents — Endpoint Reference"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Endpoint Reference
      2|
      3|All endpoints require `x-api-key` and `anthropic-version: 2023-06-01` headers. Managed Agents endpoints additionally require the `anthropic-beta` header.
@@ -103,111 +104,112 @@ author: Alexa
     97|| `POST` | `/v1/sessions/{session_id}/resources/{resource_id}` | UpdateResource | Update resource |
     98|| `DELETE` | `/v1/sessions/{session_id}/resources/{resource_id}` | DeleteResource | Remove resource from session |
     99|
-   100|## Environments
-   101|
-   102|| Method | Path | Operation | Description |
-   103|| --- | --- | --- | --- |
-   104|| `POST` | `/v1/environments` | CreateEnvironment | Create environment |
-   105|| `GET` | `/v1/environments` | ListEnvironments | List environments |
-   106|| `GET` | `/v1/environments/{environment_id}` | GetEnvironment | Get environment details |
-   107|| `POST` | `/v1/environments/{environment_id}` | UpdateEnvironment | Update environment |
-   108|| `DELETE` | `/v1/environments/{environment_id}` | DeleteEnvironment | Delete environment. Returns 204. |
-   109|| `POST` | `/v1/environments/{environment_id}/archive` | ArchiveEnvironment | Archive environment. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive — this is the terminal state. |
-   110|
-   111|## Vaults
-   112|
-   113|Vaults store MCP credentials that Anthropic manages on your behalf — OAuth credentials with auto-refresh, or static bearer tokens. Attach to sessions via `vault_ids`. See `managed-agents-tools.md` §Vaults for the conceptual guide and credential shapes.
-   114|
-   115|| Method | Path | Operation | Description |
-   116|| --- | --- | --- | --- |
-   117|| `POST` | `/v1/vaults` | CreateVault | Create a vault |
-   118|| `GET` | `/v1/vaults` | ListVaults | List vaults |
-   119|| `GET` | `/v1/vaults/{vault_id}` | GetVault | Get vault details |
-   120|| `POST` | `/v1/vaults/{vault_id}` | UpdateVault | Update vault |
-   121|| `DELETE` | `/v1/vaults/{vault_id}` | DeleteVault | Delete vault |
-   122|| `POST` | `/v1/vaults/{vault_id}/archive` | ArchiveVault | Archive vault |
-   123|
-   124|## Credentials
-   125|
-   126|Credentials are individual secrets stored inside a vault.
-   127|
-   128|| Method | Path | Operation | Description |
-   129|| --- | --- | --- | --- |
-   130|| `POST` | `/v1/vaults/{vault_id}/credentials` | CreateCredential | Create a credential |
-   131|| `GET` | `/v1/vaults/{vault_id}/credentials` | ListCredentials | List credentials in vault |
-   132|| `GET` | `/v1/vaults/{vault_id}/credentials/{credential_id}` | GetCredential | Get credential metadata |
-   133|| `POST` | `/v1/vaults/{vault_id}/credentials/{credential_id}` | UpdateCredential | Update credential |
-   134|| `DELETE` | `/v1/vaults/{vault_id}/credentials/{credential_id}` | DeleteCredential | Delete credential |
-   135|| `POST` | `/v1/vaults/{vault_id}/credentials/{credential_id}/archive` | ArchiveCredential | Archive credential |
-   136|| `POST` | `/v1/vaults/{vault_id}/credentials/{credential_id}/mcp_oauth_validate` | McpOauthValidate | Validate an MCP OAuth credential |
-   137|
-   138|## Memory Stores
-   139|
-   140|Workspace-scoped persistent memory that survives across sessions. Attach to a session via a `{"type": "memory_store", "memory_store_id": ...}` entry in `resources[]` (session-create time only). See `shared/managed-agents-memory.md` for the conceptual guide, the FUSE-mount agent interface, preconditions, and versioning.
-   141|
-   142|| Method | Path | Operation | Description |
-   143|| --- | --- | --- | --- |
-   144|| `POST` | `/v1/memory_stores` | CreateMemoryStore | Create a store (`name`, `description`, `metadata`) |
-   145|| `GET` | `/v1/memory_stores` | ListMemoryStores | List stores (`include_archived`, `created_at_{gte,lte}`) |
-   146|| `GET` | `/v1/memory_stores/{memory_store_id}` | GetMemoryStore | Get store details |
-   147|| `POST` | `/v1/memory_stores/{memory_store_id}` | UpdateMemoryStore | Update store |
-   148|| `DELETE` | `/v1/memory_stores/{memory_store_id}` | DeleteMemoryStore | Delete store |
-   149|| `POST` | `/v1/memory_stores/{memory_store_id}/archive` | ArchiveMemoryStore | Archive store. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive. |
-   150|
-   151|## Memories
-   152|
-   153|Individual text documents inside a store (≤ 100KB each). `create` creates at a `path` and returns `409` (`memory_path_conflict_error`, with `conflicting_memory_id`) if the path is occupied; `update` mutates by `mem_...` ID (rename and/or content). Only `update` accepts a `precondition` (`{"type": "content_sha256", "content_sha256": ...}`) — on mismatch returns `409` (`memory_precondition_failed_error`). List endpoints accept `view: "basic"|"full"` (controls whether `content` is populated; `retrieve` defaults to `full`).
-   154|
-   155|| Method | Path | Operation | Description |
-   156|| --- | --- | --- | --- |
-   157|| `GET` | `/v1/memory_stores/{memory_store_id}/memories` | ListMemories | Returns `Memory \| MemoryPrefix`; filter by `path_prefix`, `depth`, `order_by`/`order` |
-   158|| `POST` | `/v1/memory_stores/{memory_store_id}/memories` | CreateMemory | Create at `path` (SDK: `memories.create`); `409 memory_path_conflict_error` if occupied |
-   159|| `GET` | `/v1/memory_stores/{memory_store_id}/memories/{memory_id}` | GetMemory | Read one memory (defaults to `view="full"`) |
-   160|| `PATCH` | `/v1/memory_stores/{memory_store_id}/memories/{memory_id}` | UpdateMemory | Change `content`, `path`, or both by ID; optional `precondition` |
-   161|| `DELETE` | `/v1/memory_stores/{memory_store_id}/memories/{memory_id}` | DeleteMemory | Delete (optional `expected_content_sha256`) |
-   162|
-   163|## Memory Versions
-   164|
-   165|Immutable per-mutation snapshots (`memver_...`) — the audit and rollback surface. `operation` ∈ `created` / `modified` / `deleted`.
-   166|
-   167|| Method | Path | Operation | Description |
-   168|| --- | --- | --- | --- |
-   169|| `GET` | `/v1/memory_stores/{memory_store_id}/memory_versions` | ListMemoryVersions | Newest-first; filter by `memory_id`, `operation`, `session_id`, `api_key_id`, `created_at_{gte,lte}` |
-   170|| `GET` | `/v1/memory_stores/{memory_store_id}/memory_versions/{version_id}` | GetMemoryVersion | List fields + full `content` |
-   171|| `POST` | `/v1/memory_stores/{memory_store_id}/memory_versions/{version_id}/redact` | RedactMemoryVersion | Clear `content`/`content_sha256`/`content_size_bytes`/`path`; preserve actor + timestamps |
-   172|
-   173|## Files
-   174|
-   175|| Method | Path | Operation | Description |
-   176|| --- | --- | --- | --- |
-   177|| `POST` | `/v1/files` | UploadFile | Upload a file |
-   178|| `GET` | `/v1/files` | ListFiles | List files |
-   179|| `GET` | `/v1/files/{file_id}` | GetFile | Get file metadata (SDK method: `retrieve_metadata`) |
-   180|| `GET` | `/v1/files/{file_id}/content` | DownloadFile | Download file content |
-   181|| `DELETE` | `/v1/files/{file_id}` | DeleteFile | Delete a file |
-   182|
-   183|## Skills
-   184|
-   185|| Method | Path | Operation | Description |
-   186|| --- | --- | --- | --- |
-   187|| `POST` | `/v1/skills` | CreateSkill | Create a skill |
-   188|| `GET` | `/v1/skills` | ListSkills | List skills |
-   189|| `GET` | `/v1/skills/{skill_id}` | GetSkill | Get skill details |
-   190|| `DELETE` | `/v1/skills/{skill_id}` | DeleteSkill | Delete a skill |
-   191|| `POST` | `/v1/skills/{skill_id}/versions` | CreateVersion | Create skill version |
-   192|| `GET` | `/v1/skills/{skill_id}/versions` | ListVersions | List skill versions |
-   193|| `GET` | `/v1/skills/{skill_id}/versions/{version}` | GetVersion | Get skill version |
-   194|| `DELETE` | `/v1/skills/{skill_id}/versions/{version}` | DeleteVersion | Delete skill version |
-   195|
-   196|---
-   197|
-   198|## Request/Response Schema Quick Reference
-   199|
-   200|### CreateAgent Request Body
-   201|
-   202|**Always start here.** `model`, `system`, `tools`, `mcp_servers`, `skills` are top-level fields on this object — they do NOT go on the session.
-   203|
-   204|```json
+
+100|## Environments
+101|
+102|| Method | Path | Operation | Description |
+103|| --- | --- | --- | --- |
+104|| `POST` | `/v1/environments` | CreateEnvironment | Create environment |
+105|| `GET` | `/v1/environments` | ListEnvironments | List environments |
+106|| `GET` | `/v1/environments/{environment_id}` | GetEnvironment | Get environment details |
+107|| `POST` | `/v1/environments/{environment_id}` | UpdateEnvironment | Update environment |
+108|| `DELETE` | `/v1/environments/{environment_id}` | DeleteEnvironment | Delete environment. Returns 204. |
+109|| `POST` | `/v1/environments/{environment_id}/archive` | ArchiveEnvironment | Archive environment. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive — this is the terminal state. |
+110|
+111|## Vaults
+112|
+113|Vaults store MCP credentials that Anthropic manages on your behalf — OAuth credentials with auto-refresh, or static bearer tokens. Attach to sessions via `vault_ids`. See `managed-agents-tools.md` §Vaults for the conceptual guide and credential shapes.
+114|
+115|| Method | Path | Operation | Description |
+116|| --- | --- | --- | --- |
+117|| `POST` | `/v1/vaults` | CreateVault | Create a vault |
+118|| `GET` | `/v1/vaults` | ListVaults | List vaults |
+119|| `GET` | `/v1/vaults/{vault_id}` | GetVault | Get vault details |
+120|| `POST` | `/v1/vaults/{vault_id}` | UpdateVault | Update vault |
+121|| `DELETE` | `/v1/vaults/{vault_id}` | DeleteVault | Delete vault |
+122|| `POST` | `/v1/vaults/{vault_id}/archive` | ArchiveVault | Archive vault |
+123|
+124|## Credentials
+125|
+126|Credentials are individual secrets stored inside a vault.
+127|
+128|| Method | Path | Operation | Description |
+129|| --- | --- | --- | --- |
+130|| `POST` | `/v1/vaults/{vault_id}/credentials` | CreateCredential | Create a credential |
+131|| `GET` | `/v1/vaults/{vault_id}/credentials` | ListCredentials | List credentials in vault |
+132|| `GET` | `/v1/vaults/{vault_id}/credentials/{credential_id}` | GetCredential | Get credential metadata |
+133|| `POST` | `/v1/vaults/{vault_id}/credentials/{credential_id}` | UpdateCredential | Update credential |
+134|| `DELETE` | `/v1/vaults/{vault_id}/credentials/{credential_id}` | DeleteCredential | Delete credential |
+135|| `POST` | `/v1/vaults/{vault_id}/credentials/{credential_id}/archive` | ArchiveCredential | Archive credential |
+136|| `POST` | `/v1/vaults/{vault_id}/credentials/{credential_id}/mcp_oauth_validate` | McpOauthValidate | Validate an MCP OAuth credential |
+137|
+138|## Memory Stores
+139|
+140|Workspace-scoped persistent memory that survives across sessions. Attach to a session via a `{"type": "memory_store", "memory_store_id": ...}` entry in `resources[]` (session-create time only). See `shared/managed-agents-memory.md` for the conceptual guide, the FUSE-mount agent interface, preconditions, and versioning.
+141|
+142|| Method | Path | Operation | Description |
+143|| --- | --- | --- | --- |
+144|| `POST` | `/v1/memory_stores` | CreateMemoryStore | Create a store (`name`, `description`, `metadata`) |
+145|| `GET` | `/v1/memory_stores` | ListMemoryStores | List stores (`include_archived`, `created_at_{gte,lte}`) |
+146|| `GET` | `/v1/memory_stores/{memory_store_id}` | GetMemoryStore | Get store details |
+147|| `POST` | `/v1/memory_stores/{memory_store_id}` | UpdateMemoryStore | Update store |
+148|| `DELETE` | `/v1/memory_stores/{memory_store_id}` | DeleteMemoryStore | Delete store |
+149|| `POST` | `/v1/memory_stores/{memory_store_id}/archive` | ArchiveMemoryStore | Archive store. Makes it **read-only**; existing sessions continue, new sessions cannot reference it. No unarchive. |
+150|
+151|## Memories
+152|
+153|Individual text documents inside a store (≤ 100KB each). `create` creates at a `path` and returns `409` (`memory_path_conflict_error`, with `conflicting_memory_id`) if the path is occupied; `update` mutates by `mem_...` ID (rename and/or content). Only `update` accepts a `precondition` (`{"type": "content_sha256", "content_sha256": ...}`) — on mismatch returns `409` (`memory_precondition_failed_error`). List endpoints accept `view: "basic"|"full"` (controls whether `content` is populated; `retrieve` defaults to `full`).
+154|
+155|| Method | Path | Operation | Description |
+156|| --- | --- | --- | --- |
+157|| `GET` | `/v1/memory_stores/{memory_store_id}/memories` | ListMemories | Returns `Memory \| MemoryPrefix`; filter by `path_prefix`, `depth`, `order_by`/`order` |
+158|| `POST` | `/v1/memory_stores/{memory_store_id}/memories` | CreateMemory | Create at `path` (SDK: `memories.create`); `409 memory_path_conflict_error` if occupied |
+159|| `GET` | `/v1/memory_stores/{memory_store_id}/memories/{memory_id}` | GetMemory | Read one memory (defaults to `view="full"`) |
+160|| `PATCH` | `/v1/memory_stores/{memory_store_id}/memories/{memory_id}` | UpdateMemory | Change `content`, `path`, or both by ID; optional `precondition` |
+161|| `DELETE` | `/v1/memory_stores/{memory_store_id}/memories/{memory_id}` | DeleteMemory | Delete (optional `expected_content_sha256`) |
+162|
+163|## Memory Versions
+164|
+165|Immutable per-mutation snapshots (`memver_...`) — the audit and rollback surface. `operation` ∈ `created` / `modified` / `deleted`.
+166|
+167|| Method | Path | Operation | Description |
+168|| --- | --- | --- | --- |
+169|| `GET` | `/v1/memory_stores/{memory_store_id}/memory_versions` | ListMemoryVersions | Newest-first; filter by `memory_id`, `operation`, `session_id`, `api_key_id`, `created_at_{gte,lte}` |
+170|| `GET` | `/v1/memory_stores/{memory_store_id}/memory_versions/{version_id}` | GetMemoryVersion | List fields + full `content` |
+171|| `POST` | `/v1/memory_stores/{memory_store_id}/memory_versions/{version_id}/redact` | RedactMemoryVersion | Clear `content`/`content_sha256`/`content_size_bytes`/`path`; preserve actor + timestamps |
+172|
+173|## Files
+174|
+175|| Method | Path | Operation | Description |
+176|| --- | --- | --- | --- |
+177|| `POST` | `/v1/files` | UploadFile | Upload a file |
+178|| `GET` | `/v1/files` | ListFiles | List files |
+179|| `GET` | `/v1/files/{file_id}` | GetFile | Get file metadata (SDK method: `retrieve_metadata`) |
+180|| `GET` | `/v1/files/{file_id}/content` | DownloadFile | Download file content |
+181|| `DELETE` | `/v1/files/{file_id}` | DeleteFile | Delete a file |
+182|
+183|## Skills
+184|
+185|| Method | Path | Operation | Description |
+186|| --- | --- | --- | --- |
+187|| `POST` | `/v1/skills` | CreateSkill | Create a skill |
+188|| `GET` | `/v1/skills` | ListSkills | List skills |
+189|| `GET` | `/v1/skills/{skill_id}` | GetSkill | Get skill details |
+190|| `DELETE` | `/v1/skills/{skill_id}` | DeleteSkill | Delete a skill |
+191|| `POST` | `/v1/skills/{skill_id}/versions` | CreateVersion | Create skill version |
+192|| `GET` | `/v1/skills/{skill_id}/versions` | ListVersions | List skill versions |
+193|| `GET` | `/v1/skills/{skill_id}/versions/{version}` | GetVersion | Get skill version |
+194|| `DELETE` | `/v1/skills/{skill_id}/versions/{version}` | DeleteVersion | Delete skill version |
+195|
+196|---
+197|
+198|## Request/Response Schema Quick Reference
+199|
+200|### CreateAgent Request Body
+201|
+202|**Always start here.** `model`, `system`, `tools`, `mcp_servers`, `skills` are top-level fields on this object — they do NOT go on the session.
+203|
+204|`json
    205|{
    206|  "description": "string (optional, up to 2048 chars)",
    207|  "mcp_servers": [
@@ -237,13 +239,13 @@ author: Alexa
    231|  "system": "string (optional, up to 100,000 chars)",
    232|  "tools": [{ "type": "agent_toolset_20260401" }]
    233|}
-   234|```
-   235|
-   236|> Limits: `tools` max 128, `skills` max 20, `mcp_servers` max 20 (unique names). `multiagent.agents` 1–20 entries (string ID | `{type:"agent",id,version?}` | `{type:"self"}`) — see `shared/managed-agents-multiagent.md`.
-   237|
-   238|### CreateSession Request Body
-   239|
-   240|```json
+   234|`
+235|
+236|> Limits: `tools` max 128, `skills` max 20, `mcp_servers` max 20 (unique names). `multiagent.agents` 1–20 entries (string ID | `{type:"agent",id,version?}` | `{type:"self"}`) — see `shared/managed-agents-multiagent.md`.
+237|
+238|### CreateSession Request Body
+239|
+240|`json
    241|{
    242|  "agent": "agent_abc123 (required — string shorthand for latest version, or {type: \"agent\", id, version} object)",
    243|  "environment_id": "env_abc123 (required)",
@@ -264,15 +266,15 @@ author: Alexa
    258|    "vlt_abc123 (optional — MCP credentials with auto-refresh)"
    259|  ]
    260|}
-   261|```
-   262|
-   263|> The `agent` field accepts only a string ID or `{type: "agent", id, version}` — `model`/`system`/`tools` live on the agent, not here.
-   264|>
-   265|> **`checkout`** accepts `{type: "branch", name: "..."}` or `{type: "commit", sha: "..."}`. Omit for the repo's default branch.
-   266|
-   267|### CreateEnvironment Request Body
-   268|
-   269|```json
+   261|`
+262|
+263|> The `agent` field accepts only a string ID or `{type: "agent", id, version}` — `model`/`system`/`tools` live on the agent, not here.
+264|>
+265|> **`checkout`** accepts `{type: "branch", name: "..."}` or `{type: "commit", sha: "..."}`. Omit for the repo's default branch.
+266|
+267|### CreateEnvironment Request Body
+268|
+269|`json
    270|{
    271|  "config": {
    272|    "type": "cloud",
@@ -285,11 +287,11 @@ author: Alexa
    279|  "metadata": { "key": "value" },
    280|  "name": "string (required)"
    281|}
-   282|```
-   283|
-   284|### SendEvents Request Body
-   285|
-   286|```json
+   282|`
+283|
+284|### SendEvents Request Body
+285|
+286|`json
    287|{
    288|  "events": [
    289|    {
@@ -303,39 +305,39 @@ author: Alexa
    297|    }
    298|  ]
    299|}
-   300|```
-   301|
-   302|### Define Outcome Event
-   303|
-   304|```json
+   300|`
+301|
+302|### Define Outcome Event
+303|
+304|`json
    305|{
    306|  "description": "Build a DCF model for Costco in .xlsx",
    307|  "max_iterations": 5,
    308|  "rubric": { "type": "file", "file_id": "file_01..." },
    309|  "type": "user.define_outcome"
    310|}
-   311|```
-   312|
-   313|> `rubric` is required: `{type: "text", content}` or `{type: "file", file_id}`. `max_iterations` default 3, max 20. Echoed back with `outcome_id` + `processed_at`. See `shared/managed-agents-outcomes.md`.
-   314|
-   315|### Tool Result Event
-   316|
-   317|```json
+   311|`
+312|
+313|> `rubric` is required: `{type: "text", content}` or `{type: "file", file_id}`. `max_iterations` default 3, max 20. Echoed back with `outcome_id` + `processed_at`. See `shared/managed-agents-outcomes.md`.
+314|
+315|### Tool Result Event
+316|
+317|`json
    318|{
    319|  "content": [{ "type": "text", "text": "Result data" }],
    320|  "custom_tool_use_id": "sevt_abc123",
    321|  "is_error": false,
    322|  "type": "user.custom_tool_result"
    323|}
-   324|```
-   325|
-   326|---
-   327|
-   328|## Error Handling
-   329|
-   330|Managed Agents endpoints use the standard Anthropic API error format. Errors are returned with an HTTP status code and a JSON body containing `type`, `error`, and `request_id`:
-   331|
-   332|```json
+   324|`
+325|
+326|---
+327|
+328|## Error Handling
+329|
+330|Managed Agents endpoints use the standard Anthropic API error format. Errors are returned with an HTTP status code and a JSON body containing `type`, `error`, and `request_id`:
+331|
+332|`json
    333|{
    334|  "error": {
    335|    "type": "invalid_request_error",
@@ -344,37 +346,37 @@ author: Alexa
    338|  "request_id": "req_011CRv1W3XQ8XpFikNYG7RnE",
    339|  "type": "error"
    340|}
-   341|```
-   342|
-   343|Include the `request_id` when reporting issues to Anthropic — it lets us trace the request end-to-end. The inner `error.type` is one of the following:
-   344|
-   345|| Status | Error type | Description |
-   346|| --- | --- | --- |
-   347|| 400 | `invalid_request_error` | The request was malformed or missing required parameters |
-   348|| 401 | `authentication_error` | Invalid or missing API key |
-   349|| 403 | `permission_error` | The API key doesn't have permission for this operation |
-   350|| 404 | `not_found_error` | The requested resource doesn't exist |
-   351|| 409 | `invalid_request_error` | The request conflicts with the resource's current state (e.g., sending to an archived session) |
-   352|| 413 | `request_too_large` | The request body exceeds the maximum allowed size |
-   353|| 429 | `rate_limit_error` | Too many requests — check rate limit headers for retry timing |
-   354|| 500 | `api_error` | An internal server error occurred |
-   355|| 529 | `overloaded_error` | The service is temporarily overloaded — retry with backoff |
-   356|
-   357|Note that `409 Conflict` carries `error.type: "invalid_request_error"` (there is no separate `conflict_error` type); inspect both the HTTP status and the `message` to distinguish conflicts from other invalid requests.
-   358|
-   359|---
-   360|
-   361|## Rate Limits
-   362|
-   363|Managed Agents endpoints have per-organization request-per-minute (RPM) limits, separate from your [Messages API token limits](https://platform.claude.com/docs/en/api/rate-limits). Model inference inside a session still draws from your organization's standard ITPM/OTPM limits.
-   364|
-   365|| Endpoint group | Scope | RPM | Max concurrent |
-   366|| --- | --- | --- | --- |
-   367|| Create operations (Agents, Sessions, Vaults) | organization | 60 | — |
-   368|| All other operations (Agents, Sessions, Vaults) | organization | 600 | — |
-   369|| All operations (Environments) | organization | 60 | 5 |
-   370|
-   371|Files and Skills endpoints use the standard tier-based [rate limits](https://platform.claude.com/docs/en/api/rate-limits).
-   372|
-   373|When a limit is exceeded the API returns `429` with a `rate_limit_error` (see [Error Handling](#error-handling) for the response envelope) and a `retry-after` header indicating how many seconds to wait before retrying. The Anthropic SDK reads this header and retries automatically.
-   374|
+   341|`
+342|
+343|Include the `request_id` when reporting issues to Anthropic — it lets us trace the request end-to-end. The inner `error.type` is one of the following:
+344|
+345|| Status | Error type | Description |
+346|| --- | --- | --- |
+347|| 400 | `invalid_request_error` | The request was malformed or missing required parameters |
+348|| 401 | `authentication_error` | Invalid or missing API key |
+349|| 403 | `permission_error` | The API key doesn't have permission for this operation |
+350|| 404 | `not_found_error` | The requested resource doesn't exist |
+351|| 409 | `invalid_request_error` | The request conflicts with the resource's current state (e.g., sending to an archived session) |
+352|| 413 | `request_too_large` | The request body exceeds the maximum allowed size |
+353|| 429 | `rate_limit_error` | Too many requests — check rate limit headers for retry timing |
+354|| 500 | `api_error` | An internal server error occurred |
+355|| 529 | `overloaded_error` | The service is temporarily overloaded — retry with backoff |
+356|
+357|Note that `409 Conflict` carries `error.type: "invalid_request_error"` (there is no separate `conflict_error` type); inspect both the HTTP status and the `message` to distinguish conflicts from other invalid requests.
+358|
+359|---
+360|
+361|## Rate Limits
+362|
+363|Managed Agents endpoints have per-organization request-per-minute (RPM) limits, separate from your [Messages API token limits](https://platform.claude.com/docs/en/api/rate-limits). Model inference inside a session still draws from your organization's standard ITPM/OTPM limits.
+364|
+365|| Endpoint group | Scope | RPM | Max concurrent |
+366|| --- | --- | --- | --- |
+367|| Create operations (Agents, Sessions, Vaults) | organization | 60 | — |
+368|| All other operations (Agents, Sessions, Vaults) | organization | 600 | — |
+369|| All operations (Environments) | organization | 60 | 5 |
+370|
+371|Files and Skills endpoints use the standard tier-based [rate limits](https://platform.claude.com/docs/en/api/rate-limits).
+372|
+373|When a limit is exceeded the API returns `429` with a `rate_limit_error` (see [Error Handling](#error-handling) for the response envelope) and a `retry-after` header indicating how many seconds to wait before retrying. The Anthropic SDK reads this header and retries automatically.
+374|

@@ -6,18 +6,18 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: customization-audit
 tags:
-- audit
-- monorepo
-- agents
-- drift
-- customization
+  - audit
+  - monorepo
+  - agents
+  - drift
+  - customization
 title: Customization Audit
 version: 1.0.0
-
 ---
+
 # Customization Audit
 
 ## Overview
@@ -39,10 +39,10 @@ Run a targeted audit of chat customization assets and instruction routing in a m
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
+| Skill             | Purpose                                                  |
+| ----------------- | -------------------------------------------------------- |
 | `workspace-audit` | Inspect repo-level and project-level customization files |
-| `hermes-setup` | Verify profile and environment conventions |
+| `hermes-setup`    | Verify profile and environment conventions               |
 
 ## Workflow
 

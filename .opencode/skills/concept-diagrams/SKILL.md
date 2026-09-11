@@ -12,6 +12,7 @@ metadata:
     tags: [diagrams, svg, visualization, education, physics, chemistry, engineering]
     related_skills: [architecture-diagram, excalidraw, generative-widgets]
 ---
+
 # Concept Diagrams
 
 Generate production-quality SVG diagrams with a unified flat, minimal design system. Output is a single self-contained HTML file that renders identically in any modern browser, with automatic light/dark mode.
@@ -23,6 +24,7 @@ Automated reasoning and workflow tool for `concept-diagrams`. Execute multi-step
 ## Scope
 
 **Best suited for:**
+
 - Physics setups, chemistry mechanisms, math curves, biology
 - Physical objects (aircraft, turbines, smartphones, mechanical watches, cells)
 - Anatomy, cross-sections, exploded layer views
@@ -33,6 +35,7 @@ Automated reasoning and workflow tool for `concept-diagrams`. Execute multi-step
 - Quantitative charts (grouped bars, energy profiles)
 
 **Look elsewhere first for:**
+
 - Dedicated software / cloud infrastructure architecture with a dark tech aesthetic (consider `architecture-diagram` if available)
 - Hand-drawn whiteboard sketches (consider `excalidraw` if available)
 - Animated explainers or video output (consider an animation skill)
@@ -50,6 +53,7 @@ If a more specialized skill is available for the subject, prefer that. If none f
 Optional: if the user wants a browsable gallery of multiple diagrams, see "Local Preview Server" at the bottom.
 
 Load the HTML template:
+
 ```
 skill_view(name="concept-diagrams", file_path="templates/template.html")
 ```
@@ -72,16 +76,16 @@ The template embeds the full CSS design system (`c-*` color classes, text classe
 9 color ramps, each with 7 stops. Put the class name on a `<g>` or shape element; the template CSS handles both modes.
 
 | Class      | 50 (lightest) | 100     | 200     | 400     | 600     | 800     | 900 (darkest) |
-|------------|---------------|---------|---------|---------|---------|---------|---------------|
-| `c-purple` | #EEEDFE | #CECBF6 | #AFA9EC | #7F77DD | #534AB7 | #3C3489 | #26215C |
-| `c-teal`   | #E1F5EE | #9FE1CB | #5DCAA5 | #1D9E75 | #0F6E56 | #085041 | #04342C |
-| `c-coral`  | #FAECE7 | #F5C4B3 | #F0997B | #D85A30 | #993C1D | #712B13 | #4A1B0C |
-| `c-pink`   | #FBEAF0 | #F4C0D1 | #ED93B1 | #D4537E | #993556 | #72243E | #4B1528 |
-| `c-gray`   | #F1EFE8 | #D3D1C7 | #B4B2A9 | #888780 | #5F5E5A | #444441 | #2C2C2A |
-| `c-blue`   | #E6F1FB | #B5D4F4 | #85B7EB | #378ADD | #185FA5 | #0C447C | #042C53 |
-| `c-green`  | #EAF3DE | #C0DD97 | #97C459 | #639922 | #3B6D11 | #27500A | #173404 |
-| `c-amber`  | #FAEEDA | #FAC775 | #EF9F27 | #BA7517 | #854F0B | #633806 | #412402 |
-| `c-red`    | #FCEBEB | #F7C1C1 | #F09595 | #E24B4A | #A32D2D | #791F1F | #501313 |
+| ---------- | ------------- | ------- | ------- | ------- | ------- | ------- | ------------- |
+| `c-purple` | #EEEDFE       | #CECBF6 | #AFA9EC | #7F77DD | #534AB7 | #3C3489 | #26215C       |
+| `c-teal`   | #E1F5EE       | #9FE1CB | #5DCAA5 | #1D9E75 | #0F6E56 | #085041 | #04342C       |
+| `c-coral`  | #FAECE7       | #F5C4B3 | #F0997B | #D85A30 | #993C1D | #712B13 | #4A1B0C       |
+| `c-pink`   | #FBEAF0       | #F4C0D1 | #ED93B1 | #D4537E | #993556 | #72243E | #4B1528       |
+| `c-gray`   | #F1EFE8       | #D3D1C7 | #B4B2A9 | #888780 | #5F5E5A | #444441 | #2C2C2A       |
+| `c-blue`   | #E6F1FB       | #B5D4F4 | #85B7EB | #378ADD | #185FA5 | #0C447C | #042C53       |
+| `c-green`  | #EAF3DE       | #C0DD97 | #97C459 | #639922 | #3B6D11 | #27500A | #173404       |
+| `c-amber`  | #FAEEDA       | #FAC775 | #EF9F27 | #BA7517 | #854F0B | #633806 | #412402       |
+| `c-red`    | #FCEBEB       | #F7C1C1 | #F09595 | #E24B4A | #A32D2D | #791F1F | #501313       |
 
 #### Color Assignment Rules
 
@@ -94,18 +98,19 @@ Color encodes **meaning**, not sequence. Never cycle through colors like a rainb
 - Reserve `c-blue`, `c-green`, `c-amber`, `c-red` for semantic meaning (info, success, warning, error).
 
 Light/dark stop mapping (handled by the template CSS — just use the class):
+
 - Light mode: 50 fill + 600 stroke + 800 title / 600 subtitle
-- Dark mode:  800 fill + 200 stroke + 100 title / 200 subtitle
+- Dark mode: 800 fill + 200 stroke + 100 title / 200 subtitle
 
 ### Typography
 
 Only two font sizes. No exceptions.
 
-| Class | Size | Weight | Use |
-|-------|------|--------|-----|
-| `th`  | 14px | 500    | Node titles, region labels |
+| Class | Size | Weight | Use                                   |
+| ----- | ---- | ------ | ------------------------------------- |
+| `th`  | 14px | 500    | Node titles, region labels            |
 | `ts`  | 12px | 400    | Subtitles, descriptions, arrow labels |
-| `t`   | 14px | 400    | General text |
+| `t`   | 14px | 400    | General text                          |
 
 - **Sentence case always.** Never Title Case, never ALL CAPS.
 - Every `<text>` MUST carry a class (`t`, `ts`, or `th`). No unclassed text.
@@ -113,6 +118,7 @@ Only two font sizes. No exceptions.
 - `text-anchor="middle"` for centered text in boxes.
 
 **Width estimation (approx):**
+
 - 14px weight 500: ~8px per character
 - 12px weight 400: ~6.5px per character
 - Always verify: `box_width >= (char_count × px_per_char) + 48` (24px padding each side)
@@ -187,6 +193,7 @@ Replace `{HEIGHT}` with the actual computed height (last element bottom + 40px).
 ### Node Patterns
 
 **Single-line node (44px):**
+
 ```xml
 <g class="node c-blue">
   <rect x="100" y="20" width="180" height="44" rx="8" stroke-width="0.5"/>
@@ -195,6 +202,7 @@ Replace `{HEIGHT}` with the actual computed height (last element bottom + 40px).
 ```
 
 **Two-line node (56px):**
+
 ```xml
 <g class="node c-teal">
   <rect x="100" y="20" width="200" height="56" rx="8" stroke-width="0.5"/>
@@ -204,11 +212,13 @@ Replace `{HEIGHT}` with the actual computed height (last element bottom + 40px).
 ```
 
 **Connector (no label):**
+
 ```xml
 <line x1="200" y1="76" x2="200" y2="120" class="arr" marker-end="url(#arrow)"/>
 ```
 
 **Container (dashed or solid):**
+
 ```xml
 <g class="c-purple">
   <rect x="40" y="92" width="600" height="300" rx="16" stroke-width="0.5"/>
@@ -292,6 +302,7 @@ xdg-open ./sn2-mechanism.html
 Only use this when the user explicitly wants a browsable gallery of multiple diagrams.
 
 **Rules:**
+
 - Bind to `127.0.0.1` only. Never `0.0.0.0`. Exposing diagrams on all network interfaces is a security hazard on shared networks.
 - Pick a free port (do NOT hard-code one) and tell the user the chosen URL.
 - The server is optional and opt-in — prefer the standalone HTML file first.
@@ -320,25 +331,26 @@ If the user insists on a fixed port, use `127.0.0.1:<port>` — still never `0.0
 
 The `examples/` directory ships 15 complete, tested diagrams. Browse them for working patterns before writing a new diagram of a similar type:
 
-| File | Type | Demonstrates |
-|------|------|--------------|
-| `hospital-emergency-department-flow.md` | Flowchart | Priority routing with semantic colors |
-| `feature-film-production-pipeline.md` | Flowchart | Phased workflow, horizontal sub-flows |
-| `automated-password-reset-flow.md` | Flowchart | Auth flow with error branches |
-| `autonomous-llm-research-agent-flow.md` | Flowchart | Loop-back arrows, decision branches |
-| `place-order-uml-sequence.md` | Sequence | UML sequence diagram style |
-| `commercial-aircraft-structure.md` | Physical | Paths, polygons, ellipses for realistic shapes |
-| `wind-turbine-structure.md` | Physical cross-section | Underground/above-ground separation, color coding |
-| `smartphone-layer-anatomy.md` | Exploded view | Alternating left/right labels, layered components |
-| `apartment-floor-plan-conversion.md` | Floor plan | Walls, doors, proposed changes in dotted red |
-| `banana-journey-tree-to-smoothie.md` | Narrative journey | Winding path, progressive state changes |
-| `cpu-ooo-microarchitecture.md` | Hardware pipeline | Fan-out, memory hierarchy sidebar |
-| `sn2-reaction-mechanism.md` | Chemistry | Molecules, curved arrows, energy profile |
-| `smart-city-infrastructure.md` | Hub-spoke | Semantic line styles per system |
-| `electricity-grid-flow.md` | Multi-stage flow | Voltage hierarchy, flow markers |
-| `ml-benchmark-grouped-bar-chart.md` | Chart | Grouped bars, dual axis |
+| File                                    | Type                   | Demonstrates                                      |
+| --------------------------------------- | ---------------------- | ------------------------------------------------- |
+| `hospital-emergency-department-flow.md` | Flowchart              | Priority routing with semantic colors             |
+| `feature-film-production-pipeline.md`   | Flowchart              | Phased workflow, horizontal sub-flows             |
+| `automated-password-reset-flow.md`      | Flowchart              | Auth flow with error branches                     |
+| `autonomous-llm-research-agent-flow.md` | Flowchart              | Loop-back arrows, decision branches               |
+| `place-order-uml-sequence.md`           | Sequence               | UML sequence diagram style                        |
+| `commercial-aircraft-structure.md`      | Physical               | Paths, polygons, ellipses for realistic shapes    |
+| `wind-turbine-structure.md`             | Physical cross-section | Underground/above-ground separation, color coding |
+| `smartphone-layer-anatomy.md`           | Exploded view          | Alternating left/right labels, layered components |
+| `apartment-floor-plan-conversion.md`    | Floor plan             | Walls, doors, proposed changes in dotted red      |
+| `banana-journey-tree-to-smoothie.md`    | Narrative journey      | Winding path, progressive state changes           |
+| `cpu-ooo-microarchitecture.md`          | Hardware pipeline      | Fan-out, memory hierarchy sidebar                 |
+| `sn2-reaction-mechanism.md`             | Chemistry              | Molecules, curved arrows, energy profile          |
+| `smart-city-infrastructure.md`          | Hub-spoke              | Semantic line styles per system                   |
+| `electricity-grid-flow.md`              | Multi-stage flow       | Voltage hierarchy, flow markers                   |
+| `ml-benchmark-grouped-bar-chart.md`     | Chart                  | Grouped bars, dual axis                           |
 
 Load any example with:
+
 ```
 skill_view(name="concept-diagrams", file_path="examples/<filename>")
 ```
@@ -347,23 +359,23 @@ skill_view(name="concept-diagrams", file_path="examples/<filename>")
 
 ## Quick Reference: What to Use When
 
-| User says | Diagram type | Suggested colors |
-|-----------|--------------|------------------|
-| "show the pipeline" | Flowchart | gray start/end, purple steps, red errors, teal deploy |
-| "draw the data flow" | Data pipeline (left-right) | gray sources, purple processing, teal sinks |
-| "visualize the system" | Structural (containment) | purple container, teal services, coral data |
-| "map the endpoints" | API tree | purple root, one ramp per resource group |
-| "show the services" | Microservice topology | gray ingress, teal services, purple bus, coral workers |
-| "draw the aircraft/vehicle" | Physical | paths, polygons, ellipses for realistic shapes |
-| "smart city / IoT" | Hub-spoke integration | semantic line styles per subsystem |
-| "show the dashboard" | UI mockup | dark screen, chart colors: teal, purple, coral for alerts |
-| "power grid / electricity" | Multi-stage flow | voltage hierarchy (HV/MV/LV line weights) |
-| "wind turbine / turbine" | Physical cross-section | foundation + tower cutaway + nacelle color-coded |
-| "journey of X / lifecycle" | Narrative journey | winding path, progressive state changes |
-| "layers of X / exploded" | Exploded layer view | vertical stack, alternating labels |
-| "CPU / pipeline" | Hardware pipeline | vertical stages, fan-out to execution ports |
-| "floor plan / apartment" | Floor plan | walls, doors, proposed changes in dotted red |
-| "reaction mechanism" | Chemistry | atoms, bonds, curved arrows, transition state, energy profile |
+| User says                   | Diagram type               | Suggested colors                                              |
+| --------------------------- | -------------------------- | ------------------------------------------------------------- |
+| "show the pipeline"         | Flowchart                  | gray start/end, purple steps, red errors, teal deploy         |
+| "draw the data flow"        | Data pipeline (left-right) | gray sources, purple processing, teal sinks                   |
+| "visualize the system"      | Structural (containment)   | purple container, teal services, coral data                   |
+| "map the endpoints"         | API tree                   | purple root, one ramp per resource group                      |
+| "show the services"         | Microservice topology      | gray ingress, teal services, purple bus, coral workers        |
+| "draw the aircraft/vehicle" | Physical                   | paths, polygons, ellipses for realistic shapes                |
+| "smart city / IoT"          | Hub-spoke integration      | semantic line styles per subsystem                            |
+| "show the dashboard"        | UI mockup                  | dark screen, chart colors: teal, purple, coral for alerts     |
+| "power grid / electricity"  | Multi-stage flow           | voltage hierarchy (HV/MV/LV line weights)                     |
+| "wind turbine / turbine"    | Physical cross-section     | foundation + tower cutaway + nacelle color-coded              |
+| "journey of X / lifecycle"  | Narrative journey          | winding path, progressive state changes                       |
+| "layers of X / exploded"    | Exploded layer view        | vertical stack, alternating labels                            |
+| "CPU / pipeline"            | Hardware pipeline          | vertical stages, fan-out to execution ports                   |
+| "floor plan / apartment"    | Floor plan                 | walls, doors, proposed changes in dotted red                  |
+| "reaction mechanism"        | Chemistry                  | atoms, bonds, curved arrows, transition state, energy profile |
 
 ## Pitfalls
 
@@ -381,7 +393,6 @@ skill_view(name="concept-diagrams", file_path="examples/<filename>")
 - [ ] Changes are documented and committed if applicable
 
 ## When to Use
-
 
 - When you need to perform "Concept Diagrams" operations or tasks
 - When managing "Concept Diagrams" infrastructure or configurations

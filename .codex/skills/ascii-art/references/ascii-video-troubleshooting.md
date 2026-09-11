@@ -4,18 +4,18 @@
 
 ## Quick Diagnostic
 
-| Symptom | Likely Cause | Fix |
-|---------|-------------|-----|
-| All black output | tonemap gamma too high or no effects rendering | Lower gamma to 0.5, check scene_fn returns non-zero canvas |
-| Washed out / too bright | Linear brightness multiplier instead of tonemap | Replace `canvas * N` with `tonemap(canvas, gamma=0.75)` |
-| ffmpeg hangs mid-render | stderr=subprocess.PIPE deadlock | Redirect stderr to file |
-| "read-only" array error | broadcast_to view without .copy() | Add `.copy()` after broadcast_to |
-| PicklingError | Lambda or closure in SCENES table | Define all fx_* at module level |
-| Random dark holes in output | Font missing Unicode glyphs | Validate palettes at init |
-| Audio-visual desync | Frame timing accumulation | Use integer frame counter, compute t fresh each frame |
-| Single-color flat output | Hue field shape mismatch | Ensure h,s,v arrays all (rows,cols) before hsv2rgb |
-| Text unreadable over busy bg | No contrast between text and background | Use `apply_text_backdrop()` (composition.md) + `reverse_vignette` shader (shaders.md) |
-| Text garbled/mirrored | Kaleidoscope or mirror shader applied to text scene | **Never apply kaleidoscope, mirror_h/v/quad/diag to scenes with readable text** — radial folding destroys legibility. Apply these only to background layers or text-free scenes |
+| Symptom                      | Likely Cause                                        | Fix                                                                                                                                                                             |
+| ---------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| All black output             | tonemap gamma too high or no effects rendering      | Lower gamma to 0.5, check scene_fn returns non-zero canvas                                                                                                                      |
+| Washed out / too bright      | Linear brightness multiplier instead of tonemap     | Replace `canvas * N` with `tonemap(canvas, gamma=0.75)`                                                                                                                         |
+| ffmpeg hangs mid-render      | stderr=subprocess.PIPE deadlock                     | Redirect stderr to file                                                                                                                                                         |
+| "read-only" array error      | broadcast_to view without .copy()                   | Add `.copy()` after broadcast_to                                                                                                                                                |
+| PicklingError                | Lambda or closure in SCENES table                   | Define all fx_* at module level                                                                                                                                                 |
+| Random dark holes in output  | Font missing Unicode glyphs                         | Validate palettes at init                                                                                                                                                       |
+| Audio-visual desync          | Frame timing accumulation                           | Use integer frame counter, compute t fresh each frame                                                                                                                           |
+| Single-color flat output     | Hue field shape mismatch                            | Ensure h,s,v arrays all (rows,cols) before hsv2rgb                                                                                                                              |
+| Text unreadable over busy bg | No contrast between text and background             | Use `apply_text_backdrop()` (composition.md) + `reverse_vignette` shader (shaders.md)                                                                                           |
+| Text garbled/mirrored        | Kaleidoscope or mirror shader applied to text scene | **Never apply kaleidoscope, mirror_h/v/quad/diag to scenes with readable text** — radial folding destroys legibility. Apply these only to background layers or text-free scenes |
 
 Common bugs, gotchas, and platform-specific issues encountered during ASCII video development.
 
@@ -95,12 +95,12 @@ The `vf_plasma()` function had this bug. Use `+` instead of `+=` when mixing dif
 
 `ProcessPoolExecutor` serializes function arguments via pickle. This constrains what you can pass to workers:
 
-| Can Pickle | Cannot Pickle |
-|-----------|---------------|
-| Module-level functions (`def fx_foo():`) | Lambdas (`lambda x: x + 1`) |
-| Dicts, lists, numpy arrays | Closures (functions defined inside functions) |
-| Class instances (with `__reduce__`) | Instance methods |
-| Strings, numbers | File handles, sockets |
+| Can Pickle                               | Cannot Pickle                                 |
+| ---------------------------------------- | --------------------------------------------- |
+| Module-level functions (`def fx_foo():`) | Lambdas (`lambda x: x + 1`)                   |
+| Dicts, lists, numpy arrays               | Closures (functions defined inside functions) |
+| Class instances (with `__reduce__`)      | Instance methods                              |
+| Strings, numbers                         | File handles, sockets                         |
 
 **Impact**: All scene functions referenced in the SCENES table must be defined at module level with `def`. If you use a lambda or closure, you get:
 
@@ -122,11 +122,13 @@ On macOS, `multiprocessing` defaults to `spawn` (full serialization). On Linux, 
 ### Per-Worker State Isolation
 
 Each worker creates its own:
+
 - `Renderer` instance (with fresh grid cache)
 - `FeedbackBuffer` (feedback doesn't cross scene boundaries)
 - Random seed (`random.seed(hash(seg_id) + 42)`)
 
 This means:
+
 - Particle state doesn't carry between scenes (expected)
 - Feedback trails reset at scene cuts (expected)
 - `np.random` state is NOT seeded by `random.seed()` — they use separate RNGs
@@ -159,6 +161,7 @@ python reel.py --test-frame 10.0
 ```
 
 If mean < 20, the scene needs attention. Common fixes:
+
 - Lower gamma in the SCENES entry
 - Change internal blend modes from overlay/multiply to screen/add
 - Increase value field multipliers (e.g., `vf_plasma(...) * 1.5`)
@@ -174,6 +177,7 @@ canvas = np.clip(canvas.astype(np.float32) * 2.0, 0, 255).astype(np.uint8)
 ```
 
 This fails because:
+
 - Dark scenes (mean 8): `8 * 2.0 = 16` — still dark
 - Bright scenes (mean 130): `130 * 2.0 = 255` — clipped, lost detail
 
@@ -203,6 +207,7 @@ pipe = subprocess.Popen(cmd, stdin=subprocess.PIPE,
 ### Frame Count Mismatch
 
 If the number of frames written to the pipe doesn't match what ffmpeg expects (based on `-r` and duration), the output may have:
+
 - Missing frames at the end
 - Incorrect duration
 - Audio-video desync
@@ -216,6 +221,7 @@ If the number of frames written to the pipe doesn't match what ffmpeg expects (b
 ```
 
 **Fix**: Always use `-safe 0`:
+
 ```python
 ["ffmpeg", "-f", "concat", "-safe", "0", "-i", concat_path, ...]
 ```
@@ -260,11 +266,11 @@ for c in all_chars:
 
 ### Platform Font Paths
 
-| Platform | Common Paths |
-|----------|-------------|
-| macOS | `/System/Library/Fonts/Menlo.ttc`, `/System/Library/Fonts/Monaco.ttf` |
-| Linux | `/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf` |
-| Windows | `C:\Windows\Fonts\consola.ttf` (Consolas) |
+| Platform | Common Paths                                                          |
+| -------- | --------------------------------------------------------------------- |
+| macOS    | `/System/Library/Fonts/Menlo.ttc`, `/System/Library/Fonts/Monaco.ttf` |
+| Linux    | `/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf`                 |
+| Windows  | `C:\Windows\Fonts\consola.ttf` (Consolas)                             |
 
 Always probe multiple paths and fall back gracefully. See `architecture.md` § Font Selection.
 
@@ -276,15 +282,16 @@ Always probe multiple paths and fall back gracefully. See `architecture.md` § F
 
 Some shaders use Python loops and are very slow at 1080p:
 
-| Shader | Issue | Fix |
-|--------|-------|-----|
-| `wave_distort` | Per-row Python loop | Use vectorized fancy indexing |
-| `halftone` | Triple-nested loop | Vectorize with block reduction |
-| `matrix rain` | Per-column per-trail loop | Accumulate index arrays, bulk assign |
+| Shader         | Issue                     | Fix                                  |
+| -------------- | ------------------------- | ------------------------------------ |
+| `wave_distort` | Per-row Python loop       | Use vectorized fancy indexing        |
+| `halftone`     | Triple-nested loop        | Vectorize with block reduction       |
+| `matrix rain`  | Per-column per-trail loop | Accumulate index arrays, bulk assign |
 
 ### Render Time Scaling
 
 If render is taking much longer than expected:
+
 1. Check grid count — each extra grid adds ~100-150ms/frame for init
 2. Check particle count — cap at quality-appropriate limits
 3. Check shader count — each shader adds 2-25ms
@@ -359,6 +366,7 @@ The `_render_vf()` helper clips automatically, but if you're building custom sce
 - Test frames early: render single frames at key timestamps before committing to full render
 
 **Quick checklist before full render:**
+
 1. Render 3 test frames (start, middle, end)
 2. Check `canvas.mean() > 8` after tonemap
 3. Check no scene is visually flat black

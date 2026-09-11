@@ -1,25 +1,23 @@
 ---
-description: "Expert prompt engineering and validation system for creating high-quality prompts - Brought to you by microsoft/edge-ai"
-name: "Prompt Builder"
+description: Expert prompt engineering and validation system for creating high-quality
+  prompts - Brought to you by microsoft/edge-ai
+name: Prompt Builder
 tools:
-  [
-    "codebase",
-    "edit/editFiles",
-    "web/fetch",
-    "githubRepo",
-    "problems",
-    "runCommands",
-    "search",
-    "searchResults",
-    "terminalLastCommand",
-    "terminalSelection",
-    "usages",
-    "terraform",
-    "Microsoft Docs",
-    "context7",
-  ]
+  codebase: true
+  edit/editFiles: true
+  web/fetch: true
+  githubRepo: true
+  problems: true
+  runCommands: true
+  search: true
+  searchResults: true
+  terminalLastCommand: true
+  terminalSelection: true
+  usages: true
+  terraform: true
+  Microsoft Docs: true
+  context7: true
 ---
-
 # Prompt Builder Instructions
 
 ## Core Directives
@@ -417,3 +415,4 @@ Use these prompting terms consistently:
 - MANDATORY: Marks required steps
 
 <!-- </imperative-terms> -->
+

@@ -5,6 +5,7 @@ Deep analysis framework applying instructional design principles to infographic 
 ## Purpose
 
 Before creating an infographic, thoroughly analyze the source material to:
+
 - Understand the content at a deep level
 - Identify clear learning objectives for the viewer
 - Structure information for maximum clarity and retention
@@ -15,97 +16,99 @@ Before creating an infographic, thoroughly analyze the source material to:
 
 Approach content analysis as a **world-class instructional designer**:
 
-| Principle | Application |
-|-----------|-------------|
-| **Deep Understanding** | Read the entire document before analyzing any part |
-| **Learner-Centered** | Focus on what the viewer needs to understand |
-| **Visual Storytelling** | Use visuals to communicate, not just decorate |
-| **Cognitive Load** | Simplify complex ideas without losing accuracy |
-| **Data Integrity** | Never alter, summarize, or paraphrase source facts |
+| Principle               | Application                                        |
+| ----------------------- | -------------------------------------------------- |
+| **Deep Understanding**  | Read the entire document before analyzing any part |
+| **Learner-Centered**    | Focus on what the viewer needs to understand       |
+| **Visual Storytelling** | Use visuals to communicate, not just decorate      |
+| **Cognitive Load**      | Simplify complex ideas without losing accuracy     |
+| **Data Integrity**      | Never alter, summarize, or paraphrase source facts |
 
 ## Analysis Dimensions
 
 ### 1. Content Type Classification
 
-| Type | Characteristics | Best Layout | Best Style |
-|------|-----------------|-------------|------------|
-| **Timeline/History** | Sequential events, dates, progression | linear-progression | craft-handmade, aged-academia |
-| **Process/Tutorial** | Step-by-step instructions, how-to | linear-progression, winding-roadmap | ikea-manual, technical-schematic |
-| **Comparison** | A vs B, pros/cons, before-after | binary-comparison, comparison-matrix | corporate-memphis, bold-graphic |
-| **Hierarchy** | Levels, priorities, pyramids | hierarchical-layers, tree-branching | craft-handmade, corporate-memphis |
-| **Relationships** | Connections, overlaps, influences | venn-diagram, hub-spoke, jigsaw | craft-handmade, subway-map |
-| **Data/Metrics** | Statistics, KPIs, measurements | dashboard, periodic-table | corporate-memphis, technical-schematic |
-| **Cycle/Loop** | Recurring processes, feedback loops | circular-flow | craft-handmade, technical-schematic |
-| **System/Structure** | Components, architecture, anatomy | structural-breakdown, bento-grid | technical-schematic, ikea-manual |
-| **Journey/Narrative** | Stories, user flows, milestones | winding-roadmap, story-mountain | storybook-watercolor, comic-strip |
-| **Overview/Summary** | Multiple topics, feature highlights | bento-grid, periodic-table, dense-modules | chalkboard, bold-graphic |
-| **Product/Buying Guide** | Multi-dimension comparisons, specs, pitfalls | dense-modules | morandi-journal, pop-laboratory, retro-pop-grid |
+| Type                     | Characteristics                              | Best Layout                               | Best Style                                      |
+| ------------------------ | -------------------------------------------- | ----------------------------------------- | ----------------------------------------------- |
+| **Timeline/History**     | Sequential events, dates, progression        | linear-progression                        | craft-handmade, aged-academia                   |
+| **Process/Tutorial**     | Step-by-step instructions, how-to            | linear-progression, winding-roadmap       | ikea-manual, technical-schematic                |
+| **Comparison**           | A vs B, pros/cons, before-after              | binary-comparison, comparison-matrix      | corporate-memphis, bold-graphic                 |
+| **Hierarchy**            | Levels, priorities, pyramids                 | hierarchical-layers, tree-branching       | craft-handmade, corporate-memphis               |
+| **Relationships**        | Connections, overlaps, influences            | venn-diagram, hub-spoke, jigsaw           | craft-handmade, subway-map                      |
+| **Data/Metrics**         | Statistics, KPIs, measurements               | dashboard, periodic-table                 | corporate-memphis, technical-schematic          |
+| **Cycle/Loop**           | Recurring processes, feedback loops          | circular-flow                             | craft-handmade, technical-schematic             |
+| **System/Structure**     | Components, architecture, anatomy            | structural-breakdown, bento-grid          | technical-schematic, ikea-manual                |
+| **Journey/Narrative**    | Stories, user flows, milestones              | winding-roadmap, story-mountain           | storybook-watercolor, comic-strip               |
+| **Overview/Summary**     | Multiple topics, feature highlights          | bento-grid, periodic-table, dense-modules | chalkboard, bold-graphic                        |
+| **Product/Buying Guide** | Multi-dimension comparisons, specs, pitfalls | dense-modules                             | morandi-journal, pop-laboratory, retro-pop-grid |
 
 ### 2. Learning Objective Identification
 
 Every infographic should have 1-3 clear learning objectives.
 
 **Good Learning Objectives**:
+
 - Specific and measurable
 - Focus on what the viewer will understand, not just see
 - Written from the viewer's perspective
 
 **Format**: "After viewing this infographic, the viewer will understand..."
 
-| Content Aspect | Objective Type |
-|----------------|----------------|
-| Core concept | "...what [topic] is and why it matters" |
-| Process | "...how to [accomplish something]" |
-| Comparison | "...the key differences between [A] and [B]" |
-| Relationships | "...how [elements] connect to each other" |
-| Data | "...the significance of [key statistics]" |
+| Content Aspect | Objective Type                               |
+| -------------- | -------------------------------------------- |
+| Core concept   | "...what [topic] is and why it matters"      |
+| Process        | "...how to [accomplish something]"           |
+| Comparison     | "...the key differences between [A] and [B]" |
+| Relationships  | "...how [elements] connect to each other"    |
+| Data           | "...the significance of [key statistics]"    |
 
 ### 3. Audience Analysis
 
-| Factor | Questions | Impact |
-|--------|-----------|--------|
-| **Knowledge Level** | What do they already know? | Determines complexity depth |
-| **Context** | Why are they viewing this? | Determines emphasis points |
-| **Expectations** | What do they hope to learn? | Determines success criteria |
-| **Visual Preferences** | Professional, playful, technical? | Influences style choice |
+| Factor                 | Questions                         | Impact                      |
+| ---------------------- | --------------------------------- | --------------------------- |
+| **Knowledge Level**    | What do they already know?        | Determines complexity depth |
+| **Context**            | Why are they viewing this?        | Determines emphasis points  |
+| **Expectations**       | What do they hope to learn?       | Determines success criteria |
+| **Visual Preferences** | Professional, playful, technical? | Influences style choice     |
 
 ### 4. Complexity Assessment
 
-| Level | Indicators | Layout Recommendation |
-|-------|------------|----------------------|
-| **Simple** (3-5 points) | Few main concepts, clear relationships | sparse layouts, single focus |
-| **Moderate** (6-8 points) | Multiple concepts, some relationships | balanced layouts, clear sections |
-| **Complex** (9+ points) | Many concepts, intricate relationships | dense layouts, multiple sections |
+| Level                     | Indicators                             | Layout Recommendation            |
+| ------------------------- | -------------------------------------- | -------------------------------- |
+| **Simple** (3-5 points)   | Few main concepts, clear relationships | sparse layouts, single focus     |
+| **Moderate** (6-8 points) | Multiple concepts, some relationships  | balanced layouts, clear sections |
+| **Complex** (9+ points)   | Many concepts, intricate relationships | dense layouts, multiple sections |
 
 ### 5. Visual Opportunity Mapping
 
 Identify what can be shown rather than told:
 
-| Content Element | Visual Treatment |
-|-----------------|------------------|
-| Numbers/Statistics | Large, highlighted numerals |
-| Comparisons | Side-by-side, split screen |
-| Processes | Arrows, numbered steps, flow |
-| Hierarchies | Pyramids, layers, size differences |
-| Relationships | Lines, connections, overlapping shapes |
-| Categories | Color coding, grouping, sections |
-| Timelines | Horizontal/vertical progression |
-| Quotes | Callout boxes, quotation marks |
+| Content Element    | Visual Treatment                       |
+| ------------------ | -------------------------------------- |
+| Numbers/Statistics | Large, highlighted numerals            |
+| Comparisons        | Side-by-side, split screen             |
+| Processes          | Arrows, numbered steps, flow           |
+| Hierarchies        | Pyramids, layers, size differences     |
+| Relationships      | Lines, connections, overlapping shapes |
+| Categories         | Color coding, grouping, sections       |
+| Timelines          | Horizontal/vertical progression        |
+| Quotes             | Callout boxes, quotation marks         |
 
 ### 6. Data Verbatim Extraction
 
 **Critical**: All factual information must be preserved exactly as written in the source.
 
-| Data Type | Handling Rule |
-|-----------|---------------|
-| **Statistics** | Copy exactly: "73%" not "about 70%" |
-| **Quotes** | Copy word-for-word with attribution |
-| **Names** | Preserve exact spelling |
-| **Dates** | Keep original format |
-| **Technical Terms** | Do not simplify or substitute |
-| **Lists** | Preserve order and wording |
+| Data Type           | Handling Rule                       |
+| ------------------- | ----------------------------------- |
+| **Statistics**      | Copy exactly: "73%" not "about 70%" |
+| **Quotes**          | Copy word-for-word with attribution |
+| **Names**           | Preserve exact spelling             |
+| **Dates**           | Keep original format                |
+| **Technical Terms** | Do not simplify or substitute       |
+| **Lists**           | Preserve order and wording          |
 
 **Never**:
+
 - Round numbers
 - Paraphrase quotes
 - Substitute simpler words

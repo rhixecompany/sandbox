@@ -4,6 +4,7 @@ description: "Tool Use — Python"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Tool Use — Python
      2|
      3|For conceptual overview (tool definitions, tool choice, tips), see [shared/tool-use-concepts.md](../../shared/tool-use-concepts.md).
@@ -103,8 +104,9 @@ author: Alexa
     97|```
     98|
     99|### MCP Resources as Content
-   100|
-   101|```python
+
+100|
+101|`python
    102|from anthropic.lib.tools.mcp import mcp_resource_to_content
    103|
    104|resource = await mcp_client.read_resource(uri="file:///path/to/doc.txt")
@@ -119,26 +121,26 @@ author: Alexa
    113|        ],
    114|    }],
    115|)
-   116|```
-   117|
-   118|### Upload MCP Resources as Files
-   119|
-   120|```python
+   116|`
+117|
+118|### Upload MCP Resources as Files
+119|
+120|`python
    121|from anthropic.lib.tools.mcp import mcp_resource_to_file
    122|
    123|resource = await mcp_client.read_resource(uri="file:///path/to/data.json")
    124|uploaded = await client.beta.files.upload(file=mcp_resource_to_file(resource))
-   125|```
-   126|
-   127|Conversion functions raise `UnsupportedMCPValueError` if an MCP value cannot be converted (e.g., unsupported content types like audio, unsupported MIME types).
-   128|
-   129|---
-   130|
-   131|## Manual Agentic Loop
-   132|
-   133|Use this when you need fine-grained control over the loop (e.g., custom logging, conditional tool execution, human-in-the-loop approval):
-   134|
-   135|```python
+   125|`
+126|
+127|Conversion functions raise `UnsupportedMCPValueError` if an MCP value cannot be converted (e.g., unsupported content types like audio, unsupported MIME types).
+128|
+129|---
+130|
+131|## Manual Agentic Loop
+132|
+133|Use this when you need fine-grained control over the loop (e.g., custom logging, conditional tool execution, human-in-the-loop approval):
+134|
+135|`python
    136|import anthropic
    137|
    138|client = anthropic.Anthropic()
@@ -187,13 +189,13 @@ author: Alexa
    181|
    182|# Final response text
    183|final_text = next(b.text for b in response.content if b.type == "text")
-   184|```
-   185|
-   186|---
-   187|
-   188|## Handling Tool Results
-   189|
-   190|```python
+   184|`
+185|
+186|---
+187|
+188|## Handling Tool Results
+189|
+190|`python
    191|response = client.messages.create(
    192|    model="claude-opus-4-7",
    193|    max_tokens=16000,
@@ -226,13 +228,13 @@ author: Alexa
    220|                }
    221|            ]
    222|        )
-   223|```
-   224|
-   225|---
-   226|
-   227|## Multiple Tool Calls
-   228|
-   229|```python
+   223|`
+224|
+225|---
+226|
+227|## Multiple Tool Calls
+228|
+229|`python
    230|tool_results = []
    231|
    232|for block in response.content:
@@ -256,26 +258,26 @@ author: Alexa
    250|            {"role": "user", "content": tool_results}
    251|        ]
    252|    )
-   253|```
-   254|
-   255|---
-   256|
-   257|## Error Handling in Tool Results
-   258|
-   259|```python
+   253|`
+254|
+255|---
+256|
+257|## Error Handling in Tool Results
+258|
+259|`python
    260|tool_result = {
    261|    "type": "tool_result",
    262|    "tool_use_id": tool_use_id,
    263|    "content": "Error: Location 'xyz' not found. Please provide a valid city name.",
    264|    "is_error": True
    265|}
-   266|```
-   267|
-   268|---
-   269|
-   270|## Tool Choice
-   271|
-   272|```python
+   266|`
+267|
+268|---
+269|
+270|## Tool Choice
+271|
+272|`python
    273|response = client.messages.create(
    274|    model="claude-opus-4-7",
    275|    max_tokens=16000,
@@ -283,15 +285,15 @@ author: Alexa
    277|    tool_choice={"type": "tool", "name": "get_weather"},  # Force specific tool
    278|    messages=[{"role": "user", "content": "What's the weather in Paris?"}]
    279|)
-   280|```
-   281|
-   282|---
-   283|
-   284|## Code Execution
-   285|
-   286|### Basic Usage
-   287|
-   288|```python
+   280|`
+281|
+282|---
+283|
+284|## Code Execution
+285|
+286|### Basic Usage
+287|
+288|`python
    289|import anthropic
    290|
    291|client = anthropic.Anthropic()
@@ -314,11 +316,11 @@ author: Alexa
    308|        print(block.text)
    309|    elif block.type == "bash_code_execution_tool_result":
    310|        print(f"stdout: {block.content.stdout}")
-   311|```
-   312|
-   313|### Upload Files for Analysis
-   314|
-   315|```python
+   311|`
+312|
+313|### Upload Files for Analysis
+314|
+315|`python
    316|# 1. Upload a file
    317|uploaded = client.beta.files.upload(file=open("sales_data.csv", "rb"))
    318|
@@ -337,11 +339,11 @@ author: Alexa
    331|    }],
    332|    tools=[{"type": "code_execution_20260120", "name": "code_execution"}]
    333|)
-   334|```
-   335|
-   336|### Retrieve Generated Files
-   337|
-   338|```python
+   334|`
+335|
+336|### Retrieve Generated Files
+337|
+338|`python
    339|import os
    340|
    341|OUTPUT_DIR = "./claude_outputs"
@@ -363,11 +365,11 @@ author: Alexa
    357|                    output_path = os.path.join(OUTPUT_DIR, safe_name)
    358|                    file_content.write_to_file(output_path)
    359|                    print(f"Saved: {output_path}")
-   360|```
-   361|
-   362|### Container Reuse
-   363|
-   364|```python
+   360|`
+361|
+362|### Container Reuse
+363|
+364|`python
    365|# First request: set up environment
    366|response1 = client.messages.create(
    367|    model="claude-opus-4-7",
@@ -387,11 +389,11 @@ author: Alexa
    381|    messages=[{"role": "user", "content": "Read data.json and display as a formatted table"}],
    382|    tools=[{"type": "code_execution_20260120", "name": "code_execution"}]
    383|)
-   384|```
-   385|
-   386|### Response Structure
-   387|
-   388|```python
+   384|`
+385|
+386|### Response Structure
+387|
+388|`python
    389|for block in response.content:
    390|    if block.type == "text":
    391|        print(block.text)  # Claude's explanation
@@ -408,15 +410,15 @@ author: Alexa
    402|            print(f"Tool error: {result.error_code}")
    403|    elif block.type == "text_editor_code_execution_tool_result":
    404|        print(f"File operation: {block.content}")
-   405|```
-   406|
-   407|---
-   408|
-   409|## Memory Tool
-   410|
-   411|### Basic Usage
-   412|
-   413|```python
+   405|`
+406|
+407|---
+408|
+409|## Memory Tool
+410|
+411|### Basic Usage
+412|
+413|`python
    414|import anthropic
    415|
    416|client = anthropic.Anthropic()
@@ -427,13 +429,13 @@ author: Alexa
    421|    messages=[{"role": "user", "content": "Remember that my preferred language is Python."}],
    422|    tools=[{"type": "memory_20250818", "name": "memory"}],
    423|)
-   424|```
-   425|
-   426|### SDK Memory Helper
-   427|
-   428|Subclass `BetaAbstractMemoryTool`:
-   429|
-   430|```python
+   424|`
+425|
+426|### SDK Memory Helper
+427|
+428|Subclass `BetaAbstractMemoryTool`:
+429|
+430|`python
    431|from anthropic.lib.tools import BetaAbstractMemoryTool
    432|
    433|class MyMemoryTool(BetaAbstractMemoryTool):
@@ -456,19 +458,19 @@ author: Alexa
    450|
    451|for message in runner:
    452|    print(message)
-   453|```
-   454|
-   455|For full implementation examples, use WebFetch:
-   456|
-   457|- `https://github.com/anthropics/anthropic-sdk-python/blob/main/examples/memory/basic.py`
-   458|
-   459|---
-   460|
-   461|## Structured Outputs
-   462|
-   463|### JSON Outputs (Pydantic — Recommended)
-   464|
-   465|```python
+   453|`
+454|
+455|For full implementation examples, use WebFetch:
+456|
+457|- `https://github.com/anthropics/anthropic-sdk-python/blob/main/examples/memory/basic.py`
+458|
+459|---
+460|
+461|## Structured Outputs
+462|
+463|### JSON Outputs (Pydantic — Recommended)
+464|
+465|`python
    466|from pydantic import BaseModel
    467|from typing import List
    468|import anthropic
@@ -496,12 +498,12 @@ author: Alexa
    490|contact = response.parsed_output
    491|print(contact.name)           # "Jane Doe"
    492|print(contact.interests)      # ["API", "SDKs"]
-   493|```
-   494|
-   495|### Raw Schema
-   496|
-   497|```python
-   498|response = client.messages.create(
-   499|    model="claude-opus-4-7",
-   500|    max_tokens=16000,
-   501|
+   493|`
+494|
+495|### Raw Schema
+496|
+497|```python
+498|response = client.messages.create(
+499| model="claude-opus-4-7",
+500| max_tokens=16000,
+501|

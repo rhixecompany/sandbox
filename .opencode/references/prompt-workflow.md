@@ -15,15 +15,15 @@ description: Prompt workflow reference for run-all-goals execution phases. Deriv
 
 A prompt in Hermes packages all execution context for a reproducible task. Components verified in skill:
 
-| Component | Verified Reference |
-|---|---|
-| Plans-and-Specs | `plans-and-specs` skill reference |
-| Scripts | `scripts/` directory (verified: `scripts/validate_prompt_frontmatter.py`, `scripts/dry_run_prompts.py`, etc.) |
-| Profiles | Hermes profile selection (`hermes profile use <name>`) |
-| Personalities | Personality settings (verified: `.hermes.md` profile table) |
-| Skills | Skill references (`dependencies:` + `skills:`) |
-| Tools | Toolset declarations (`toolsets:`) |
-| Personas | Role-based behavior overrides (optional) |
+| Component       | Verified Reference                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------------- |
+| Plans-and-Specs | `plans-and-specs` skill reference                                                                             |
+| Scripts         | `scripts/` directory (verified: `scripts/validate_prompt_frontmatter.py`, `scripts/dry_run_prompts.py`, etc.) |
+| Profiles        | Hermes profile selection (`hermes profile use <name>`)                                                        |
+| Personalities   | Personality settings (verified: `.hermes.md` profile table)                                                   |
+| Skills          | Skill references (`dependencies:` + `skills:`)                                                                |
+| Tools           | Toolset declarations (`toolsets:`)                                                                            |
+| Personas        | Role-based behavior overrides (optional)                                                                      |
 
 ## Execution Modes (Verified From Skill)
 

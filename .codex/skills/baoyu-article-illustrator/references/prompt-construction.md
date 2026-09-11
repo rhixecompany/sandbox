@@ -9,32 +9,32 @@ Each prompt file uses YAML frontmatter + content:
 illustration_id: 01
 type: infographic
 style: blueprint
-references:                    # ⚠️ ONLY if files EXIST in references/ directory
+references: # ⚠️ ONLY if files EXIST in references/ directory
   - ref_id: 01
     filename: 01-ref-diagram.png
-    usage: direct              # direct | style | palette
+    usage: direct # direct | style | palette
 ---
-
 [Type-specific template content below...]
 ```
 
 **⚠️ CRITICAL - When to include `references` field**:
 
-| Situation | Action |
-|-----------|--------|
-| Reference file saved to `references/` | Include in frontmatter ✓ |
-| Style extracted verbally (no file) | DO NOT include in frontmatter, append to prompt body instead |
-| File path in frontmatter but file doesn't exist | ERROR - remove references field |
+| Situation                                       | Action                                                       |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+| Reference file saved to `references/`           | Include in frontmatter ✓                                     |
+| Style extracted verbally (no file)              | DO NOT include in frontmatter, append to prompt body instead |
+| File path in frontmatter but file doesn't exist | ERROR - remove references field                              |
 
 **Reference Usage Types** (only when file exists):
 
-| Usage | Description | Generation Action |
-|-------|-------------|-------------------|
-| `direct` | Primary visual reference | Describe the reference (composition, subject, style, palette) in prompt text — `image_generate` does not accept reference-image inputs |
-| `style` | Style characteristics only | Describe style in prompt text |
-| `palette` | Color palette extraction | Include colors in prompt |
+| Usage     | Description                | Generation Action                                                                                                                      |
+| --------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `direct`  | Primary visual reference   | Describe the reference (composition, subject, style, palette) in prompt text — `image_generate` does not accept reference-image inputs |
+| `style`   | Style characteristics only | Describe style in prompt text                                                                                                          |
+| `palette` | Color palette extraction   | Include colors in prompt                                                                                                               |
 
 **If no reference file but style/palette extracted verbally**, append directly to prompt body:
+
 ```
 COLORS (from reference):
 - Primary: #E8756D coral
@@ -53,16 +53,17 @@ STYLE (from reference):
 
 **Apply to ALL prompts by default**:
 
-| Requirement | Description |
-|-------------|-------------|
-| **Clean composition** | Simple layouts, no visual clutter |
-| **White space** | Generous margins, breathing room around elements |
-| **No complex backgrounds** | Solid colors or subtle gradients only, avoid busy textures |
+| Requirement                         | Description                                                  |
+| ----------------------------------- | ------------------------------------------------------------ |
+| **Clean composition**               | Simple layouts, no visual clutter                            |
+| **White space**                     | Generous margins, breathing room around elements             |
+| **No complex backgrounds**          | Solid colors or subtle gradients only, avoid busy textures   |
 | **Centered or content-appropriate** | Main visual elements centered or positioned by content needs |
-| **Matching graphics** | Use graphic elements that align with content theme |
-| **Highlight core info** | White space draws attention to key information |
+| **Matching graphics**               | Use graphic elements that align with content theme           |
+| **Highlight core info**             | White space draws attention to key information               |
 
 **Add to ALL prompts**:
+
 > Clean composition with generous white space. Simple or no background. Main elements centered or positioned by content needs.
 
 ---
@@ -74,6 +75,7 @@ Colors in prompts use hex codes for **rendering guidance only** — they tell th
 **⚠️ CRITICAL**: Image generation models sometimes render color names and hex values as visible text labels in the image (e.g., painting "Macaron Blue #A8D8EA" as a label). This must be prevented.
 
 **Add to ALL prompts that contain a COLORS section**:
+
 > Color values (#hex) and color names are rendering guidance only — do NOT display color names, hex codes, or palette labels as visible text in the image.
 
 ---
@@ -82,28 +84,30 @@ Colors in prompts use hex codes for **rendering guidance only** — they tell th
 
 When depicting people:
 
-| Guideline | Description |
-|-----------|-------------|
-| **Style** | Simplified cartoon silhouettes or symbolic expressions |
-| **Avoid** | Realistic human portrayals, detailed faces |
-| **Diversity** | Varied body types when showing multiple people |
-| **Emotion** | Express through posture and simple gestures |
+| Guideline     | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| **Style**     | Simplified cartoon silhouettes or symbolic expressions |
+| **Avoid**     | Realistic human portrayals, detailed faces             |
+| **Diversity** | Varied body types when showing multiple people         |
+| **Emotion**   | Express through posture and simple gestures            |
 
 **Add to ALL prompts with human figures**:
+
 > Human figures: simplified stylized silhouettes or symbolic representations, not photorealistic.
 
 ---
 
 ## Text in Illustrations
 
-| Element | Guideline |
-|---------|-----------|
-| **Size** | Large, prominent, immediately readable |
-| **Style** | Handwritten fonts preferred for warmth |
-| **Content** | Concise keywords and core concepts only |
-| **Language** | Match article language |
+| Element      | Guideline                               |
+| ------------ | --------------------------------------- |
+| **Size**     | Large, prominent, immediately readable  |
+| **Style**    | Handwritten fonts preferred for warmth  |
+| **Content**  | Concise keywords and core concepts only |
+| **Language** | Match article language                  |
 
 **Add to prompts with text**:
+
 > Text should be large and prominent with handwritten-style fonts. Keep minimal, focus on keywords.
 
 ---
@@ -140,6 +144,7 @@ ASPECT: 16:9
 ```
 
 **Infographic + vector-illustration**:
+
 ```
 Flat vector illustration infographic. Clean black outlines on all elements.
 COLORS: Cream background (#F5F0E6), Coral Red (#E07A5F), Mint Green (#81B29A), Mustard Yellow (#F2CC8F)
@@ -147,6 +152,7 @@ ELEMENTS: Geometric simplified icons, no gradients, playful decorative elements 
 ```
 
 **Infographic + vector-illustration + warm palette**:
+
 ```
 Flat vector illustration infographic. Clean black outlines on all elements.
 PALETTE OVERRIDE (warm): Warm-only color palette, no cool colors.
@@ -187,6 +193,7 @@ ASPECT: 16:9
 ```
 
 **Flowchart + vector-illustration**:
+
 ```
 Flat vector flowchart with bold arrows and geometric step containers.
 COLORS: Cream background (#F5F0E6), steps in Coral/Mint/Mustard, black outlines
@@ -194,6 +201,7 @@ ELEMENTS: Rounded rectangles, thick arrows, simple icons per step
 ```
 
 **Flowchart + sketch-notes + macaron palette**:
+
 ```
 Hand-drawn educational flowchart on warm cream paper. Slight wobble on all lines.
 PALETTE: macaron — soft pastel color blocks
@@ -205,6 +213,7 @@ STYLE: Color fills don't completely fill outlines, hand-drawn lettering, generou
 ```
 
 **Flowchart + ink-notes + mono-ink palette**:
+
 ```
 Professional hand-drawn visual-note flowchart on pure white. Black ink line work
 with slight wobble, à la Mike Rohde sketchnoting.
@@ -239,6 +248,7 @@ ASPECT: 16:9
 ```
 
 **Comparison + vector-illustration**:
+
 ```
 Flat vector comparison with split layout. Clear visual separation.
 COLORS: Left side Coral (#E07A5F), Right side Mint (#81B29A), cream background
@@ -246,6 +256,7 @@ ELEMENTS: Bold icons, black outlines, centered divider line
 ```
 
 **Comparison + vector-illustration + warm palette**:
+
 ```
 Flat vector comparison with split layout. Clear visual separation.
 PALETTE OVERRIDE (warm): Warm-only color palette, no cool colors.
@@ -255,6 +266,7 @@ ELEMENTS: Bold icons, black outlines, centered divider line
 ```
 
 **Comparison + ink-notes + mono-ink palette** (Before/After, Traditional vs New):
+
 ```
 Professional hand-drawn sketchnote comparison on pure white. Black ink line work
 with slight wobble, à la Mike Rohde sketchnoting.
@@ -293,6 +305,7 @@ ASPECT: 16:9
 ```
 
 **Framework + vector-illustration**:
+
 ```
 Flat vector framework diagram with geometric nodes and bold connectors.
 COLORS: Cream background (#F5F0E6), nodes in Coral/Mint/Mustard/Blue, black outlines
@@ -300,6 +313,7 @@ ELEMENTS: Rounded rectangles or circles for nodes, thick connecting lines
 ```
 
 **Framework + vector-illustration + warm palette**:
+
 ```
 Flat vector framework diagram with geometric nodes and bold connectors.
 PALETTE OVERRIDE (warm): Warm-only color palette, no cool colors.
@@ -309,6 +323,7 @@ ELEMENTS: Rounded rectangles or circles for nodes, thick connecting lines
 ```
 
 **Framework + ink-notes + mono-ink palette** (command center, OS analogy):
+
 ```
 Professional hand-drawn sketchnote framework on pure white. Black ink line work
 with slight wobble, à la Mike Rohde sketchnoting.
@@ -359,6 +374,7 @@ TYPOGRAPHY: Bold condensed sans-serif integrated into composition (not overlaid)
 ```
 
 **Scene + screen-print**:
+
 ```
 Conceptual poster scene. Single symbolic focal point, NOT literal illustration.
 COLORS: Duotone pair (e.g., Burnt Orange #E8751A + Deep Teal #0A6E6E) on Off-Black #121212
@@ -367,6 +383,7 @@ TEXTURE: Halftone dots, paper grain, slight print misregistration
 ```
 
 **Comparison + screen-print**:
+
 ```
 Split poster composition. Each side dominated by one color from duotone pair.
 LEFT: [Color A] side with silhouette/icon for [Option A]
@@ -388,6 +405,7 @@ When a palette is specified (via `--palette` or preset), it overrides the style'
 5. Build prompt: style rendering instructions + palette colors
 
 **Prompt frontmatter** includes palette when specified:
+
 ```yaml
 ---
 illustration_id: 01
@@ -398,6 +416,7 @@ palette: macaron
 ```
 
 **Example**: `vector-illustration` + `macaron` palette:
+
 ```
 Flat vector illustration infographic. Clean black outlines on all elements.
 PALETTE: macaron — soft pastel color blocks

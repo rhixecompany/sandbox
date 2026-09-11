@@ -1,23 +1,21 @@
 ---
-description: "Guide test-first development by writing failing tests that describe desired behaviour from GitHub issue context before implementation exists."
-name: "TDD Red Phase - Write Failing Tests First"
+description: Guide test-first development by writing failing tests that describe desired
+  behaviour from GitHub issue context before implementation exists.
+name: TDD Red Phase - Write Failing Tests First
 tools:
-  [
-    "github/*",
-    "search/fileSearch",
-    "edit/editFiles",
-    "execute/runTests",
-    "execute/runInTerminal",
-    "execute/getTerminalOutput",
-    "execute/testFailure",
-    "read/readFile",
-    "read/terminalLastCommand",
-    "read/terminalSelection",
-    "read/problems",
-    "search/codebase",
-  ]
+  github/*: true
+  search/fileSearch: true
+  edit/editFiles: true
+  execute/runTests: true
+  execute/runInTerminal: true
+  execute/getTerminalOutput: true
+  execute/testFailure: true
+  read/readFile: true
+  read/terminalLastCommand: true
+  read/terminalSelection: true
+  read/problems: true
+  search/codebase: true
 ---
-
 # TDD Red Phase - Write Failing Tests First
 
 Focus on writing clear, specific failing tests that describe the desired behaviour from GitHub issue requirements before any implementation exists.
@@ -80,3 +78,4 @@ Focus on writing clear, specific failing tests that describe the desired behavio
 - [ ] Test follows AAA pattern
 - [ ] Edge cases from issue discussion considered
 - [ ] No production code written yet
+

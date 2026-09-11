@@ -34,6 +34,7 @@ esac
 **Symptoms:** `bash -n` reports `syntax error: unexpected end of file`. No obvious nested-block mismatch.
 
 **Root cause:** An `if` block has no matching `fi`. Common when:
+
 - Adding new code before closing an existing `if`
 - The `then` branch ends but the next line starts a new `if` before the first one is closed
 

@@ -14,6 +14,7 @@ A chemistry diagram showing the bimolecular nucleophilic substitution (SN2) mech
 ## Diagram Type
 
 This is a **chemistry mechanism diagram** with:
+
 - **Molecular rendering**: Atoms as colored circles with element symbols
 - **Bond notation**: Solid, wedge, dash, and partial (dashed) bonds
 - **Reaction arrows**: Curved for electron movement, straight for reaction progress
@@ -42,11 +43,23 @@ This is a **chemistry mechanism diagram** with:
 ```
 
 ```css
-.carbon { fill: #2C2C2A; }
-.hydrogen { fill: #F1EFE8; stroke: #888780; stroke-width: 1; }
-.oxygen { fill: #E24B4A; }
-.bromine { fill: #993C1D; }
-.nitrogen { fill: #378ADD; }  /* for other reactions */
+.carbon {
+	fill: #2c2c2a;
+}
+.hydrogen {
+	fill: #f1efe8;
+	stroke: #888780;
+	stroke-width: 1;
+}
+.oxygen {
+	fill: #e24b4a;
+}
+.bromine {
+	fill: #993c1d;
+}
+.nitrogen {
+	fill: #378add;
+} /* for other reactions */
 ```
 
 ### Bond Types
@@ -66,11 +79,33 @@ This is a **chemistry mechanism diagram** with:
 ```
 
 ```css
-.bond { stroke: var(--text-primary); stroke-width: 2.5; fill: none; stroke-linecap: round; }
-.bond-thin { stroke: var(--text-primary); stroke-width: 1.5; fill: none; }
-.bond-partial { stroke: var(--text-primary); stroke-width: 2; fill: none; stroke-dasharray: 4 3; }
-.bond-wedge { fill: var(--text-primary); stroke: none; }
-.bond-dash { stroke: var(--text-primary); stroke-width: 2; fill: none; stroke-dasharray: 2 2; }
+.bond {
+	stroke: var(--text-primary);
+	stroke-width: 2.5;
+	fill: none;
+	stroke-linecap: round;
+}
+.bond-thin {
+	stroke: var(--text-primary);
+	stroke-width: 1.5;
+	fill: none;
+}
+.bond-partial {
+	stroke: var(--text-primary);
+	stroke-width: 2;
+	fill: none;
+	stroke-dasharray: 4 3;
+}
+.bond-wedge {
+	fill: var(--text-primary);
+	stroke: none;
+}
+.bond-dash {
+	stroke: var(--text-primary);
+	stroke-width: 2;
+	fill: none;
+	stroke-dasharray: 2 2;
+}
 ```
 
 ### Lone Pairs and Charges
@@ -89,8 +124,15 @@ This is a **chemistry mechanism diagram** with:
 ```
 
 ```css
-.charge { font-family: "Times New Roman", Georgia, serif; font-size: 12px; }
-.partial { font-family: "Times New Roman", Georgia, serif; font-size: 11px; font-style: italic; }
+.charge {
+	font-family: "Times New Roman", Georgia, serif;
+	font-size: 12px;
+}
+.partial {
+	font-family: "Times New Roman", Georgia, serif;
+	font-size: 11px;
+	font-style: italic;
+}
 ```
 
 ### Curved Arrow (Electron Movement)
@@ -107,8 +149,14 @@ This is a **chemistry mechanism diagram** with:
 ```
 
 ```css
-.arrow-curved { stroke: #534AB7; stroke-width: 2; fill: none; }
-.arrow-fill { fill: #534AB7; }
+.arrow-curved {
+	stroke: #534ab7;
+	stroke-width: 2;
+	fill: none;
+}
+.arrow-fill {
+	fill: #534ab7;
+}
 ```
 
 ### Transition State Brackets
@@ -125,7 +173,11 @@ This is a **chemistry mechanism diagram** with:
 ```
 
 ```css
-.ts-bracket { stroke: var(--text-primary); stroke-width: 1.5; fill: none; }
+.ts-bracket {
+	stroke: var(--text-primary);
+	stroke-width: 1.5;
+	fill: none;
+}
 ```
 
 ## Energy Profile Diagram
@@ -147,25 +199,31 @@ This is a **chemistry mechanism diagram** with:
 ```xml
 <!-- Filled area under curve -->
 <path class="energy-fill" d="
-  M 40,200 
-  Q 150,200 250,50 
-  Q 350,200 500,220 
+  M 40,200
+  Q 150,200 250,50
+  Q 350,200 500,220
   L 500,280 L 40,280 Z
 "/>
 
 <!-- Curve line -->
 <path class="energy-curve" d="
-  M 40,200 
+  M 40,200
   Q 100,200 150,150
-  Q 200,80 250,50 
+  Q 200,80 250,50
   Q 300,80 350,150
   Q 400,210 500,220
 "/>
 ```
 
 ```css
-.energy-curve { stroke: #534AB7; stroke-width: 2.5; fill: none; }
-.energy-fill { fill: rgba(83, 74, 183, 0.1); }
+.energy-curve {
+	stroke: #534ab7;
+	stroke-width: 2.5;
+	fill: none;
+}
+.energy-fill {
+	fill: rgba(83, 74, 183, 0.1);
+}
 ```
 
 ### Energy Levels and Annotations
@@ -189,18 +247,41 @@ This is a **chemistry mechanism diagram** with:
 ```
 
 ```css
-.energy-level { stroke: var(--text-secondary); stroke-width: 1; stroke-dasharray: 4 2; fill: none; }
-.delta-arrow { stroke: #3B6D11; stroke-width: 1.5; fill: none; }
-.delta-fill { fill: #3B6D11; }
+.energy-level {
+	stroke: var(--text-secondary);
+	stroke-width: 1;
+	stroke-dasharray: 4 2;
+	fill: none;
+}
+.delta-arrow {
+	stroke: #3b6d11;
+	stroke-width: 1.5;
+	fill: none;
+}
+.delta-fill {
+	fill: #3b6d11;
+}
 ```
 
 ## Chemistry Text Styles
 
 ```css
 /* Chemistry notation (serif font for formulas) */
-.chem { font-family: "Times New Roman", Georgia, serif; font-size: 16px; fill: var(--text-primary); }
-.chem-sm { font-family: "Times New Roman", Georgia, serif; font-size: 12px; fill: var(--text-primary); }
-.chem-lg { font-family: "Times New Roman", Georgia, serif; font-size: 18px; fill: var(--text-primary); }
+.chem {
+	font-family: "Times New Roman", Georgia, serif;
+	font-size: 16px;
+	fill: var(--text-primary);
+}
+.chem-sm {
+	font-family: "Times New Roman", Georgia, serif;
+	font-size: 12px;
+	fill: var(--text-primary);
+}
+.chem-lg {
+	font-family: "Times New Roman", Georgia, serif;
+	font-size: 18px;
+	fill: var(--text-primary);
+}
 ```
 
 ## Subscript/Superscript in SVG
@@ -216,16 +297,16 @@ This is a **chemistry mechanism diagram** with:
 
 ## Color Coding
 
-| Element | Color | Hex |
-|---------|-------|-----|
-| Carbon | Dark gray | #2C2C2A |
-| Hydrogen | Light cream | #F1EFE8 |
-| Oxygen | Red | #E24B4A |
-| Bromine | Brown | #993C1D |
-| Nitrogen | Blue | #378ADD |
-| Electron arrows | Purple | #534AB7 |
-| Positive charge | Green | #3B6D11 |
-| Negative charge | Red | #A32D2D |
+| Element         | Color       | Hex     |
+| --------------- | ----------- | ------- |
+| Carbon          | Dark gray   | #2C2C2A |
+| Hydrogen        | Light cream | #F1EFE8 |
+| Oxygen          | Red         | #E24B4A |
+| Bromine         | Brown       | #993C1D |
+| Nitrogen        | Blue        | #378ADD |
+| Electron arrows | Purple      | #534AB7 |
+| Positive charge | Green       | #3B6D11 |
+| Negative charge | Red         | #A32D2D |
 
 ## Layout Notes
 
@@ -239,6 +320,7 @@ This is a **chemistry mechanism diagram** with:
 ## When to Use This Pattern
 
 Use this diagram style for:
+
 - Organic reaction mechanisms (SN1, SN2, E1, E2, additions, eliminations)
 - Reaction energy profiles and kinetics
 - Stereochemistry illustrations

@@ -6,14 +6,14 @@ Extended pattern for migrating 20+ scripts from multiple scattered source locati
 
 ## Phases at a Glance
 
-| Phase | Name | Goal | Artifacts | Duration |
-|-------|------|------|-----------|----------|
-| 1 | Inventory | Discover & catalog all scripts | Script list, classification, exception handling | 1-2 hours |
-| 2 | Planning | Design migration strategy, batch dependencies | Migration plan, batch definitions, parity strategy | 2-4 hours |
-| 3 | Code Review | Manual code review, fix blocking issues | Issue audit, fix recommendations, safety verdicts | 4-8 hours |
-| 4 | Migration | Move scripts, apply fixes, update references | Migration logs, reference updates, git tags | 4-8 hours |
-| 5 | Testing | Comprehensive verification & regression testing | Test reports, pass/fail matrix, coverage analysis | 2-4 hours |
-| 6 | Cleanup | Delete originals after parity verified, finalize | Cleanup checklist, archive index, completion cert | 2-4 hours |
+| Phase | Name        | Goal                                             | Artifacts                                          | Duration  |
+| ----- | ----------- | ------------------------------------------------ | -------------------------------------------------- | --------- |
+| 1     | Inventory   | Discover & catalog all scripts                   | Script list, classification, exception handling    | 1-2 hours |
+| 2     | Planning    | Design migration strategy, batch dependencies    | Migration plan, batch definitions, parity strategy | 2-4 hours |
+| 3     | Code Review | Manual code review, fix blocking issues          | Issue audit, fix recommendations, safety verdicts  | 4-8 hours |
+| 4     | Migration   | Move scripts, apply fixes, update references     | Migration logs, reference updates, git tags        | 4-8 hours |
+| 5     | Testing     | Comprehensive verification & regression testing  | Test reports, pass/fail matrix, coverage analysis  | 2-4 hours |
+| 6     | Cleanup     | Delete originals after parity verified, finalize | Cleanup checklist, archive index, completion cert  | 2-4 hours |
 
 **Total: 15–30 hours for 54 scripts (assuming 4 scripts/hour throughput)**
 
@@ -22,6 +22,7 @@ Extended pattern for migrating 20+ scripts from multiple scattered source locati
 **Objective:** Discover all custom scripts across source locations; classify by type, purpose, and criticality.
 
 **Commands:**
+
 ```bash
 # Bash/shell scripts
 find {Banking,comicwise,rhixe_scans,ecom,.} -name "*.sh" \
@@ -44,10 +45,12 @@ find . -name "*.bat" | wc -l  # BAT
 **Output artifact:** `docs/<project>-scripts-list-context.md`
 
 **Structure:**
+
 ```markdown
 # Script Inventory
 
 ## Summary
+
 - Total scripts: 369
 - Bash: 208 (.sh)
 - PowerShell: 144 (.ps1)
@@ -55,6 +58,7 @@ find . -name "*.bat" | wc -l  # BAT
 - Conflicting (to migrate): 54
 
 ## Source Locations
+
 - Banking/: 34 scripts
 - comicwise/: 10 scripts
 - rhixe_scans/: 7 scripts
@@ -62,9 +66,11 @@ find . -name "*.bat" | wc -l  # BAT
 - Root: 2 scripts
 
 ## Script Classification
+
 [by purpose: orchestrators, install-framework, utilities, MCP, plugins]
 
 ## Exception Handling
+
 [scripts to skip, archive, keep as-is]
 ```
 
@@ -80,6 +86,7 @@ find . -name "*.bat" | wc -l  # BAT
    - Criticality (high-criticality scripts early for testing, low-criticality last)
 
    Example:
+
    ```
    Batch 1: Banking Orchestrators (6 scripts)
    Batch 2: Banking Install Framework (11 scripts)
@@ -97,6 +104,7 @@ find . -name "*.bat" | wc -l  # BAT
    - Rollback plan (git commit tags, revert procedure)
 
 3. **Parity Verification Strategy** — Before deleting originals:
+
    ```bash
    # Compare migrated vs original
    diff -u <original> <migrated>
@@ -136,6 +144,7 @@ find . -name "*.bat" | wc -l  # BAT
    - `REVIEW` — Requires manual analysis before proceeding
 
    Example verdicts:
+
    ```
    ✓ SAFE: trap cleanup code (legitimate pattern, not injection)
    ✓ SAFE: rm /tmp/$LOCK_FILE inside trap (locked scope, safe)
@@ -153,10 +162,12 @@ find . -name "*.bat" | wc -l  # BAT
 **Output artifact:** `docs/<project>-scripts-issues-context.md` (5–8 KB)
 
 **Structure:**
+
 ```markdown
 # Issues Audit
 
 ## Summary
+
 - Total scripts audited: 54
 - CRITICAL issues: 12
 - HIGH issues: 23
@@ -164,12 +175,15 @@ find . -name "*.bat" | wc -l  # BAT
 - LOW issues: 7
 
 ## CRITICAL Issues
+
 [with safety verdicts: SAFE/BLOCKED/REVIEW]
 
 ## Recommended Fixes
+
 [per-issue fix template: file, line, current, replacement, verification]
 
 ## Standards Checklist
+
 [bash conventions, PowerShell conventions, BAT conventions]
 ```
 
@@ -180,6 +194,7 @@ find . -name "*.bat" | wc -l  # BAT
 **Process:**
 
 1. **Copy Scripts** — Copy each batch to `Bash/**` target location:
+
    ```bash
    cp Banking/script.sh Bash/scripts/
    cp comicwise/script.ps1 Bash/scripts/
@@ -198,6 +213,7 @@ find . -name "*.bat" | wc -l  # BAT
    - `README.md` — update setup/usage instructions
 
 4. **Verification** — After each batch:
+
    ```bash
    bash -n Bash/scripts/<script>.sh          # syntax check
    shellcheck Bash/scripts/<script>.sh       # lint check
@@ -213,6 +229,7 @@ find . -name "*.bat" | wc -l  # BAT
    ```
 
 **Output artifacts:**
+
 - `BASH_SCRIPTS_FIX_PHASE4_REPORT.md` — per-batch migration logs
 - `Bash/MIGRATION_LOG.md` — append-only log of all migrations
 - Git tags: `batch-1-complete`, `batch-2-complete`, etc.
@@ -223,17 +240,18 @@ find . -name "*.bat" | wc -l  # BAT
 
 **Test Matrix:**
 
-| Test | Scope | Command | Expected |
-|------|-------|---------|----------|
-| **Syntax** | All scripts | `bash -n *.sh` `pwsh -File *.ps1` | 0 errors |
-| **Lint** | Bash scripts | `shellcheck *.sh` | 0 errors |
-| **Help flag** | Executables | `./script.sh --help` | Exits 0, displays help |
-| **Dry-run** | Tools with `--dry-run` | `./script.sh --dry-run` | Exits 0, shows dry-run output |
-| **Exit codes** | All scripts | Execute with valid/invalid args | Correct propagation (0 for success, 1+ for error) |
-| **Parity** | Original vs migrated | Side-by-side execution | Identical output, same exit code |
-| **Regression** | npm scripts | `npm run <script>` | All pass (20+ scripts tested) |
+| Test           | Scope                  | Command                           | Expected                                          |
+| -------------- | ---------------------- | --------------------------------- | ------------------------------------------------- |
+| **Syntax**     | All scripts            | `bash -n *.sh` `pwsh -File *.ps1` | 0 errors                                          |
+| **Lint**       | Bash scripts           | `shellcheck *.sh`                 | 0 errors                                          |
+| **Help flag**  | Executables            | `./script.sh --help`              | Exits 0, displays help                            |
+| **Dry-run**    | Tools with `--dry-run` | `./script.sh --dry-run`           | Exits 0, shows dry-run output                     |
+| **Exit codes** | All scripts            | Execute with valid/invalid args   | Correct propagation (0 for success, 1+ for error) |
+| **Parity**     | Original vs migrated   | Side-by-side execution            | Identical output, same exit code                  |
+| **Regression** | npm scripts            | `npm run <script>`                | All pass (20+ scripts tested)                     |
 
 **Test Execution:**
+
 ```bash
 # Phase 5 test suite
 bash tests/verify-phase5-testing.sh
@@ -270,6 +288,7 @@ bash tests/verify-phase5-testing.sh
 18. ✓ Completion certificate issued
 
 **Deletion Pattern:**
+
 ```bash
 # After all verification complete
 rm -f Banking/script.sh
@@ -284,6 +303,7 @@ git tag migration-complete
 ```
 
 **Archive Pattern** (for one-shot artifacts):
+
 ```bash
 mkdir -p docs/archive/one-shot-artifacts
 mv skills-commit-batch-*.{sh,ps1} docs/archive/one-shot-artifacts/
@@ -292,6 +312,7 @@ git commit -m "archive: move one-shot migration artifacts to archive/"
 ```
 
 **Output artifacts:**
+
 - `BASH_SCRIPTS_FIX_PHASE6_CLEANUP_REPORT.md` — 18-point checklist + completion summary
 - `BASH_SCRIPTS_MIGRATION_COMPLETION_CERT.md` — formal completion certificate
 
@@ -308,12 +329,14 @@ git commit -m "archive: move one-shot migration artifacts to archive/"
 ## Rollback Procedures
 
 **Per-batch rollback** (if Phase 4 batch fails):
+
 ```bash
 git reset --hard batch-N-start  # requires pre-batch tag
 git revert batch-N-complete     # if already committed
 ```
 
 **Full rollback** (if Phase 5 discovers blocking issue):
+
 ```bash
 git reset --hard migration-start
 git tag -d batch-*-complete
@@ -324,33 +347,39 @@ rm -rf Bash/scripts/<migrated-scripts>
 ## Metrics
 
 **Phase 1 Inventory:**
+
 - 369 total scripts discovered
 - 54 flagged for migration (87.5% Bash, 12.5% PowerShell)
 - 315 scripts no-op (keep in place)
 
 **Phase 2 Planning:**
+
 - 7 batches designed
 - 6 inter-batch dependencies identified
 - 3 rollback checkpoints per batch
 
 **Phase 3 Code Review:**
+
 - 12 CRITICAL issues reviewed (9 SAFE, 3 BLOCKED)
 - 23 HIGH issues recommended for fix
 - 18 MEDIUM issues documented
 - 7 LOW issues deferred
 
 **Phase 4 Migration:**
+
 - 7 batches executed sequentially
 - 54/54 scripts migrated (100%)
 - 140+ references updated across package.json, .github/, docs/
 - 7 git tags created
 
 **Phase 5 Testing:**
+
 - 54 scripts tested (100% pass)
 - 156 test cases executed (156 passed, 0 failed)
 - 0 regressions detected
 
 **Phase 6 Cleanup:**
+
 - 54 original scripts archived
 - 1 one-shot artifact family archived (skills-commit-batch-*)
 - 18-point checklist completed
@@ -359,16 +388,20 @@ rm -rf Bash/scripts/<migrated-scripts>
 ## Artifacts Manifest
 
 **Phase 1 deliverables:**
+
 - `docs/bash-scripts-list-context.md` (7.0 KB)
 
 **Phase 2 deliverables:**
+
 - `docs/bash-scripts-plan.md` (14.2 KB)
 - `docs/bash-scripts-issues-context.md` (5.8 KB)
 
 **Phase 3 deliverables:**
+
 - Phase 3 audit results (embedded in Phase 2)
 
 **Phase 4 deliverables:**
+
 - `BASH_SCRIPTS_FIX_PHASE4_REPORT.md` (12+ KB)
 - 54 migrated scripts in `Bash/scripts/**`
 - Updated `Bash/package.json`
@@ -376,11 +409,13 @@ rm -rf Bash/scripts/<migrated-scripts>
 - 7 git batch tags
 
 **Phase 5 deliverables:**
+
 - `BASH_SCRIPTS_FIX_PHASE5_TESTING_REPORT.md` (8–12 KB)
 - Test execution logs
 - Pass/fail matrix
 
 **Phase 6 deliverables:**
+
 - `BASH_SCRIPTS_FIX_PHASE6_CLEANUP_REPORT.md` (5–8 KB)
 - `BASH_SCRIPTS_MIGRATION_COMPLETION_CERT.md` (1–2 KB)
 - Archived originals in `docs/archive/`
@@ -393,6 +428,7 @@ rm -rf Bash/scripts/<migrated-scripts>
 User provided `Prompts/skills-fix.prompts.md` (the specification document) and invoked "implement all phases using its steps."
 
 **Execution pattern:**
+
 1. Load specification document
 2. Execute Phase 1 with real `find` commands → generate inventory artifact
 3. Execute Phase 2 with planning logic → generate plan artifact
@@ -401,6 +437,7 @@ User provided `Prompts/skills-fix.prompts.md` (the specification document) and i
 6. Commit all artifacts to git
 
 **Key artifacts produced:**
+
 - `docs/bash-scripts-list-context.md` — Phase 1 inventory
 - `docs/bash-scripts-plan.md` — Phase 2 plan
 - `docs/bash-scripts-issues-context.md` — Phase 3 issues audit

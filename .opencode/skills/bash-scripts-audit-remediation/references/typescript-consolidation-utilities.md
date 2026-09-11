@@ -7,6 +7,7 @@ This reference captures the utility-first consolidation approach used in Batch 3
 **Principle:** When consolidating duplicated logic across multiple runners, create the shared utility FIRST, verify its interface, then stage the migration of consumers. Do NOT refactor all consumers immediately.
 
 **Benefits:**
+
 - Minimizes risk by validating the new utility interface before widespread adoption
 - Allows verification of the utility pattern against real use cases
 - Enables staged rollout: prioritize high-value consumers first
@@ -24,22 +25,22 @@ This reference captures the utility-first consolidation approach used in Batch 3
 
 ```typescript
 interface StepDefinition {
-  name: string;           // Unique step name (used in --only/--skip filters)
-  cmd: string;            // Shell command to run
-  description?: string;   // Optional log description
+	name: string; // Unique step name (used in --only/--skip filters)
+	cmd: string; // Shell command to run
+	description?: string; // Optional log description
 }
 
 interface ParsedFilters {
-  only: string[];         // Steps to run (--only filter)
-  skip: string[];         // Steps to skip (--skip filter)
-  dryRun: boolean;        // Enable dry-run mode (--dry-run)
+	only: string[]; // Steps to run (--only filter)
+	skip: string[]; // Steps to skip (--skip filter)
+	dryRun: boolean; // Enable dry-run mode (--dry-run)
 }
 
 interface RunStepsResult {
-  total: number;          // Total steps in sequence
-  passed: string[];       // Steps that ran successfully
-  failed: string[];       // Steps that failed
-  exitCode: number;       // Overall exit code (0 on success)
+	total: number; // Total steps in sequence
+	passed: string[]; // Steps that ran successfully
+	failed: string[]; // Steps that failed
+	exitCode: number; // Overall exit code (0 on success)
 }
 ```
 
@@ -77,6 +78,7 @@ runSteps(steps, filters, options = {}): RunStepsResult
 Create shared utility with rich interface, export all types and functions, add inline docs.
 
 **Verification:**
+
 - TypeScript AST validation (no syntax errors)
 - Import path resolution (all dependencies exist)
 - Interface completeness (all exported types are used/useful)
@@ -85,11 +87,13 @@ Create shared utility with rich interface, export all types and functions, add i
 ### Phase 2: Document Consolidation Opportunities (IMMEDIATE)
 
 Create `BATCH_3_CONSOLIDATION_SUMMARY.md` (or similar) documenting:
+
 - Which existing runners should migrate to the new utility
 - What refactoring would look like (line count reduction, deferral reason)
 - Integration points for future batches (can Comicwise runners use this? Bash runners?)
 
 Example from Banking consolidation:
+
 ```markdown
 ### Immediate Consolidation Candidates
 
@@ -105,6 +109,7 @@ Example from Banking consolidation:
 ### Phase 3: Defer Consumer Refactoring (NEXT CHECKPOINT)
 
 After Phase 2 completes, defer active refactoring to:
+
 - Batch 3.5 (post-wrapper-stabilization checkpoint), OR
 - Post-Batch 4 review (once Comicwise wrappers are stable), OR
 - Batch 6+ (consolidation and cleanup phase)
@@ -114,6 +119,7 @@ After Phase 2 completes, defer active refactoring to:
 ### Phase 4: Staged Consumer Migration (LATER CHECKPOINT)
 
 When deferral period ends:
+
 1. Migrate highest-value consumers first (e.g., run-ci-checks — used by all builds)
 2. Verify parity after each migration (output, exit codes, dry-run behavior)
 3. Remove old utility functions only after all consumers migrated
@@ -142,6 +148,7 @@ When consolidating duplicated logic into a new TypeScript utility:
 ## Future Applications
 
 This pattern applies to:
+
 - **Bash orchestrators** — Bash/scripts/lib/*.sh patterns that repeat across multiple runners
 - **Comicwise setup/cleanup** — dev.sh, setup-dev.sh, quality-gate.sh duplication (Batch 4–5)
 - **Plugin validation** — common patterns in plugin-verify.ts and plugin-repair.ts (Batch 6+)

@@ -12,10 +12,10 @@ Nested layers showing levels of importance, influence, or proximity.
 
 ## Variants
 
-| Variant | Shape | Visual Emphasis |
-|---------|-------|-----------------|
-| **Pyramid** | Triangle, vertical | Top-down hierarchy, quantity |
-| **Concentric** | Rings, radial | Center-out influence, proximity |
+| Variant        | Shape              | Visual Emphasis                 |
+| -------------- | ------------------ | ------------------------------- |
+| **Pyramid**    | Triangle, vertical | Top-down hierarchy, quantity    |
+| **Concentric** | Rings, radial      | Center-out influence, proximity |
 
 ## Best For
 

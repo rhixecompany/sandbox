@@ -147,15 +147,15 @@ A multi-path flowchart showing patient journey through an emergency department w
 
 ## Color Assignments
 
-| Element | Color | Reason |
-|---------|-------|--------|
-| Entry points (Ambulance, Walk-in) | `c-gray` | Neutral starting points |
-| Triage | `c-purple` | Processing/assessment step |
-| Trauma bay | `c-red` | Critical priority (semantic) |
-| Exam rooms | `c-amber` | Urgent priority (semantic) |
-| Waiting area | `c-green` | Stable priority (semantic) |
-| Diagnostics | `c-teal` | Clinical services category |
-| Outcomes | `c-coral` | Final disposition category |
+| Element                           | Color      | Reason                       |
+| --------------------------------- | ---------- | ---------------------------- |
+| Entry points (Ambulance, Walk-in) | `c-gray`   | Neutral starting points      |
+| Triage                            | `c-purple` | Processing/assessment step   |
+| Trauma bay                        | `c-red`    | Critical priority (semantic) |
+| Exam rooms                        | `c-amber`  | Urgent priority (semantic)   |
+| Waiting area                      | `c-green`  | Stable priority (semantic)   |
+| Diagnostics                       | `c-teal`   | Clinical services category   |
+| Outcomes                          | `c-coral`  | Final disposition category   |
 
 ## Layout Notes
 

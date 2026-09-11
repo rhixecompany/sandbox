@@ -9,16 +9,16 @@ Vibrant neon colors on dark backgrounds
 
 ## Colors
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | Deep Purple | #2D1B4E | Primary background |
-| Alt Background | Dark Teal | #0F4C5C | Alternative sections |
-| Primary | Hot Pink | #FF1493 | Main accent |
-| Secondary | Electric Cyan | #00FFFF | Supporting elements |
-| Tertiary | Neon Yellow | #FFFF00 | Highlights |
-| Accent 1 | Lime Green | #32CD32 | Energy, success |
-| Accent 2 | Orange | #FF6B35 | Warmth |
-| Text | White | #FFFFFF | Text elements |
+| Role           | Color         | Hex     | Usage                |
+| -------------- | ------------- | ------- | -------------------- |
+| Background     | Deep Purple   | #2D1B4E | Primary background   |
+| Alt Background | Dark Teal     | #0F4C5C | Alternative sections |
+| Primary        | Hot Pink      | #FF1493 | Main accent          |
+| Secondary      | Electric Cyan | #00FFFF | Supporting elements  |
+| Tertiary       | Neon Yellow   | #FFFF00 | Highlights           |
+| Accent 1       | Lime Green    | #32CD32 | Energy, success      |
+| Accent 2       | Orange        | #FF6B35 | Warmth               |
+| Text           | White         | #FFFFFF | Text elements        |
 
 ## Accent
 

@@ -5,13 +5,14 @@
 ## Scene Design Philosophy
 
 Scenes are storytelling units, not effect demos. Every scene needs:
+
 - A **concept** — what is happening visually? Not "plasma + rings" but "emergence from void" or "crystallization"
 - An **arc** — how does it change over its duration? Build, decay, transform, reveal?
 - A **role** — how does it serve the larger video narrative? Opening tension, peak energy, resolution?
 
 The design patterns below provide compositional techniques. The scene examples show them in practice at increasing complexity. The protocol section covers the technical contract.
 
-Good scene design starts with the concept, then selects effects and parameters that serve it. The design patterns section shows *how* to compose layers intentionally. The examples section shows complete working scenes at every complexity level. The protocol section covers the technical contract that all scenes must follow.
+Good scene design starts with the concept, then selects effects and parameters that serve it. The design patterns section shows _how_ to compose layers intentionally. The examples section shows complete working scenes at every complexity level. The protocol section covers the technical contract that all scenes must follow.
 
 ---
 
@@ -23,13 +24,13 @@ Higher-order patterns for composing scenes that feel intentional rather than ran
 
 Every scene should have clear visual layers with distinct roles:
 
-| Layer | Grid | Brightness | Purpose |
-|-------|------|-----------|---------|
-| **Background** | xs or sm (dense) | 0.1–0.25 | Atmosphere, texture. Never competes with content. |
-| **Content** | md (balanced) | 0.4–0.8 | The main visual idea. Carries the scene's concept. |
-| **Accent** | lg or sm (sparse) | 0.5–1.0 (sparse coverage) | Highlights, punctuation, sparse bright points. |
+| Layer          | Grid              | Brightness                | Purpose                                            |
+| -------------- | ----------------- | ------------------------- | -------------------------------------------------- |
+| **Background** | xs or sm (dense)  | 0.1–0.25                  | Atmosphere, texture. Never competes with content.  |
+| **Content**    | md (balanced)     | 0.4–0.8                   | The main visual idea. Carries the scene's concept. |
+| **Accent**     | lg or sm (sparse) | 0.5–1.0 (sparse coverage) | Highlights, punctuation, sparse bright points.     |
 
-The background sets mood. The content layer is what the scene *is about*. The accent adds visual interest without overwhelming.
+The background sets mood. The content layer is what the scene _is about_. The accent adds visual interest without overwhelming.
 
 ```python
 def fx_example(r, f, t, S):
@@ -57,55 +58,56 @@ def fx_example(r, f, t, S):
 
 ## Directional Parameter Arcs
 
-Parameters should *go somewhere* over the scene's duration — not oscillate aimlessly with `sin(t * N)`.
+Parameters should _go somewhere_ over the scene's duration — not oscillate aimlessly with `sin(t * N)`.
 
 **Bad:** `twist = 3.0 + 2.0 * math.sin(t * 0.6)` — wobbles back and forth, feels aimless.
 
-**Good:** `twist = 2.0 + progress * 5.0` — starts gentle, ends intense. The scene *builds*.
+**Good:** `twist = 2.0 + progress * 5.0` — starts gentle, ends intense. The scene _builds_.
 
 Use `progress = min(local / duration, 1.0)` (0→1 over the scene) to drive directional change:
 
-| Pattern | Formula | Feel |
-|---------|---------|------|
-| Linear ramp | `progress * range` | Steady buildup |
-| Ease-out | `1 - (1 - progress) ** 2` | Fast start, gentle finish |
-| Ease-in | `progress ** 2` | Slow start, accelerating |
-| Step reveal | `np.clip((progress - 0.5) / 0.25, 0, 1)` | Nothing until 50%, then fades in |
-| Build + plateau | `min(1.0, progress * 1.5)` | Reaches full at 67%, holds |
+| Pattern         | Formula                                  | Feel                             |
+| --------------- | ---------------------------------------- | -------------------------------- |
+| Linear ramp     | `progress * range`                       | Steady buildup                   |
+| Ease-out        | `1 - (1 - progress) ** 2`                | Fast start, gentle finish        |
+| Ease-in         | `progress ** 2`                          | Slow start, accelerating         |
+| Step reveal     | `np.clip((progress - 0.5) / 0.25, 0, 1)` | Nothing until 50%, then fades in |
+| Build + plateau | `min(1.0, progress * 1.5)`               | Reaches full at 67%, holds       |
 
-Oscillation is fine for *secondary* parameters (saturation shimmer, hue drift). But the *defining* parameter of the scene should have a direction.
+Oscillation is fine for _secondary_ parameters (saturation shimmer, hue drift). But the _defining_ parameter of the scene should have a direction.
 
 ### Examples of Directional Arcs
 
-| Scene concept | Parameter | Arc |
-|--------------|-----------|-----|
-| Emergence | Ring radius | 0 → max (ease-out) |
-| Shatter | Voronoi cell count | 8 → 38 (linear) |
-| Descent | Tunnel speed | 2.0 → 10.0 (linear) |
-| Mandala | Shape complexity | ring → +polygon → +star → +rosette (step reveals) |
-| Crescendo | Layer count | 1 → 7 (staggered entry) |
-| Entropy | Geometry visibility | 1.0 → 0.0 (consumed) |
+| Scene concept | Parameter           | Arc                                               |
+| ------------- | ------------------- | ------------------------------------------------- |
+| Emergence     | Ring radius         | 0 → max (ease-out)                                |
+| Shatter       | Voronoi cell count  | 8 → 38 (linear)                                   |
+| Descent       | Tunnel speed        | 2.0 → 10.0 (linear)                               |
+| Mandala       | Shape complexity    | ring → +polygon → +star → +rosette (step reveals) |
+| Crescendo     | Layer count         | 1 → 7 (staggered entry)                           |
+| Entropy       | Geometry visibility | 1.0 → 0.0 (consumed)                              |
 
 ## Scene Concepts
 
-Each scene should be built around a *visual idea*, not an effect name.
+Each scene should be built around a _visual idea_, not an effect name.
 
 **Bad:** "fx_plasma_cascade" — named after the effect. No concept.
-**Good:** "fx_emergence" — a point of light expands into a field. The name tells you *what happens*.
+**Good:** "fx_emergence" — a point of light expands into a field. The name tells you _what happens_.
 
 Good scene concepts have:
+
 1. A **visual metaphor** (emergence, descent, collision, entropy)
 2. A **directional arc** (things change from A to B, not oscillate)
 3. **Motivated layer choices** (each layer serves the concept)
 4. **Motivated feedback** (transform direction matches the metaphor)
 
-| Concept | Metaphor | Feedback transform | Why |
-|---------|----------|-------------------|-----|
-| Emergence | Birth, expansion | zoom-out | Past frames expand outward |
-| Descent | Falling, acceleration | zoom-in | Past frames rush toward center |
-| Inferno | Rising fire | shift-up | Past frames rise with the flames |
-| Entropy | Decay, dissolution | none | Clean, no persistence — things disappear |
-| Crescendo | Accumulation | zoom + hue_shift | Everything compounds and shifts |
+| Concept   | Metaphor              | Feedback transform | Why                                      |
+| --------- | --------------------- | ------------------ | ---------------------------------------- |
+| Emergence | Birth, expansion      | zoom-out           | Past frames expand outward               |
+| Descent   | Falling, acceleration | zoom-in            | Past frames rush toward center           |
+| Inferno   | Rising fire           | shift-up           | Past frames rise with the flames         |
+| Entropy   | Decay, dissolution    | none               | Clean, no persistence — things disappear |
+| Crescendo | Accumulation          | zoom + hue_shift   | Everything compounds and shifts          |
 
 ## Compositional Techniques
 
@@ -197,6 +199,7 @@ For a 15-second crescendo, 7 layers entering every 2 seconds works well. Use dif
 ## Scene Ordering
 
 For a multi-scene reel or video:
+
 - **Vary mood between adjacent scenes** — don't put two calm scenes next to each other
 - **Randomize order** rather than grouping by type — prevents "effect demo" feel
 - **End on the strongest scene** — crescendo or something with a clear payoff

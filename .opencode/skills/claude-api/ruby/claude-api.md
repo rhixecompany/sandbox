@@ -4,6 +4,7 @@ description: "Claude API — Ruby"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Claude API — Ruby
      2|
      3|> **Note:** The Ruby SDK supports the Claude API. A tool runner is available in beta via `client.beta.messages.tool_runner()`. Agent SDK is not yet available for Ruby.
@@ -103,7 +104,8 @@ author: Alexa
     97|
     98|`system_:` (trailing underscore — avoids shadowing `Kernel#system`) takes an array of text blocks; set `cache_control` on the last block. Plain hashes work via the `OrHash` type alias. For placement patterns and the silent-invalidator audit checklist, see `shared/prompt-caching.md`.
     99|
-   100|```ruby
+
+100|`ruby
    101|message = client.messages.create(
    102|  model: :"claude-opus-4-7",
    103|  max_tokens: 16000,
@@ -112,9 +114,9 @@ author: Alexa
    106|  ],
    107|  messages: [{ role: "user", content: "Summarize the key points" }]
    108|)
-   109|```
-   110|
-   111|For 1-hour TTL: `cache_control: { type: "ephemeral", ttl: "1h" }`. There's also a top-level `cache_control:` on `messages.create` that auto-places on the last cacheable block.
-   112|
-   113|Verify hits via `message.usage.cache_creation_input_tokens` / `message.usage.cache_read_input_tokens`.
-   114|
+   109|`
+110|
+111|For 1-hour TTL: `cache_control: { type: "ephemeral", ttl: "1h" }`. There's also a top-level `cache_control:` on `messages.create` that auto-places on the last cacheable block.
+112|
+113|Verify hits via `message.usage.cache_creation_input_tokens` / `message.usage.cache_read_input_tokens`.
+114|

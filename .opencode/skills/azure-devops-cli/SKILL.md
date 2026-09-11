@@ -6,20 +6,20 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: azure-devops-cli
 tags:
-- azure
-- devops
-- cli
-- pipelines
-- repos
-- boards
-- artifacts
+  - azure
+  - devops
+  - cli
+  - pipelines
+  - repos
+  - boards
+  - artifacts
 title: Azure DevOps CLI
 version: 1.0.0
-
 ---
+
 # Azure DevOps CLI
 
 ## Overview
@@ -42,10 +42,10 @@ Manage Azure DevOps resources via `az` CLI after installing the Azure DevOps ext
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `git-helper` | Branching and repository operations outside CLI-specific flows |
-| `task-management` | Track work-item and pipeline tasks |
+| Skill             | Purpose                                                        |
+| ----------------- | -------------------------------------------------------------- |
+| `git-helper`      | Branching and repository operations outside CLI-specific flows |
+| `task-management` | Track work-item and pipeline tasks                             |
 
 ## Workflow
 

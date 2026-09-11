@@ -7,13 +7,14 @@ description: Helps create, configure, and deploy Azure Static Web Apps using the
 license: MIT
 name: azure-static-web-apps
 tags:
-- imported
+  - imported
 title: Azure Static Web Apps
 version: 1.0.0
 metadata:
   hermes:
     tags: []
 ---
+
 ## When to Use
 
 - Use this skill when working with azure static web apps tasks
@@ -66,17 +67,17 @@ Example of generated config (for reference only):
 
 ```json
 {
-  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
-  "configurations": {
-    "app": {
-      "appLocation": ".",
-      "apiLocation": "api",
-      "outputLocation": "dist",
-      "appBuildCommand": "npm run build",
-      "run": "npm run dev",
-      "appDevserverUrl": "http://localhost:3000"
-    }
-  }
+	"$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+	"configurations": {
+		"app": {
+			"appLocation": ".",
+			"apiLocation": "api",
+			"outputLocation": "dist",
+			"appBuildCommand": "npm run build",
+			"run": "npm run dev",
+			"appDevserverUrl": "http://localhost:3000"
+		}
+	}
 }
 ```
 
@@ -84,14 +85,14 @@ Example of generated config (for reference only):
 
 ```json
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/images/*", "/css/*"]
-  },
-  "platform": {
-    "apiRuntime": "node:20"
-  },
-  "routes": [{ "route": "/api/*", "allowedRoles": ["authenticated"] }]
+	"navigationFallback": {
+		"rewrite": "/index.html",
+		"exclude": ["/images/*", "/css/*"]
+	},
+	"platform": {
+		"apiRuntime": "node:20"
+	},
+	"routes": [{ "route": "/api/*", "allowedRoles": ["authenticated"] }]
 }
 ```
 
@@ -229,12 +230,12 @@ func new --name message --template "HTTP trigger"
 const { app } = require("@azure/functions");
 
 app.http("message", {
-  methods: ["GET", "POST"],
-  authLevel: "anonymous",
-  handler: async request => {
-    const name = request.query.get("name") || "World";
-    return { jsonBody: { message: `Hello, ${name}!` } };
-  }
+	methods: ["GET", "POST"],
+	authLevel: "anonymous",
+	handler: async (request) => {
+		const name = request.query.get("name") || "World";
+		return { jsonBody: { message: `Hello, ${name}!` } };
+	},
 });
 ```
 
@@ -242,7 +243,7 @@ app.http("message", {
 
 ```json
 {
-  "platform": { "apiRuntime": "node:20" }
+	"platform": { "apiRuntime": "node:20" }
 }
 ```
 
@@ -250,9 +251,9 @@ app.http("message", {
 
 ```json
 {
-  "configurations": {
-    "app": { "apiLocation": "api" }
-  }
+	"configurations": {
+		"app": { "apiLocation": "api" }
+	}
 }
 ```
 
@@ -320,16 +321,16 @@ jobs:
 
 ## Troubleshooting
 
-| Issue | Solution |
-| --- | --- |
-| 404 on client routes | Add `navigationFallback` with `rewrite: "/index.html"` to `staticwebapp.config.json` |
-| API returns 404 | Verify `api` folder structure, ensure `platform.apiRuntime` is set, check function exports |
-| Build output not found | Verify `output_location` matches actual build output directory |
-| Auth not working locally | Use `/.auth/login/<provider>` to access auth emulator UI |
-| CORS errors | APIs under `/api/*` are same-origin; external APIs need CORS headers |
-| Deployment token expired | Regenerate in Azure Portal → Static Web App → Manage deployment token |
-| Config not applied | Ensure `staticwebapp.config.json` is in `app_location` or `output_location` |
-| Local API timeout | Default is 45 seconds; optimize function or check for blocking calls |
+| Issue                    | Solution                                                                                   |
+| ------------------------ | ------------------------------------------------------------------------------------------ |
+| 404 on client routes     | Add `navigationFallback` with `rewrite: "/index.html"` to `staticwebapp.config.json`       |
+| API returns 404          | Verify `api` folder structure, ensure `platform.apiRuntime` is set, check function exports |
+| Build output not found   | Verify `output_location` matches actual build output directory                             |
+| Auth not working locally | Use `/.auth/login/<provider>` to access auth emulator UI                                   |
+| CORS errors              | APIs under `/api/*` are same-origin; external APIs need CORS headers                       |
+| Deployment token expired | Regenerate in Azure Portal → Static Web App → Manage deployment token                      |
+| Config not applied       | Ensure `staticwebapp.config.json` is in `app_location` or `output_location`                |
+| Local API timeout        | Default is 45 seconds; optimize function or check for blocking calls                       |
 
 **Debug commands:**
 
@@ -339,11 +340,11 @@ swa deploy --dry-run           # Preview deployment
 swa --print-config             # Show resolved configuration
 ```
 
-
 ## Pitfalls
 
 - **Stale cache:** Always re-read files from disk after editing; don't rely on cached context
 - **Context limits:** Process in batches; write results after each batch
+
 ## Verification Checklist
 
 - [ ] Frontmatter complete (name, title, description, version, author, license, tags)
@@ -354,13 +355,12 @@ swa --print-config             # Show resolved configuration
 - [ ] SKILL.md is under 250 lines
 - [ ] No placeholder text
 
-
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
+| Skill          | Purpose                   |
+| -------------- | ------------------------- |
 | `hermes-agent` | Core Hermes functionality |
-| `skill-judge` | Evaluate skill quality |
+| `skill-judge`  | Evaluate skill quality    |
 
 ## Workflow
 

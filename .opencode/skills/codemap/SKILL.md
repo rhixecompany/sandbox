@@ -10,6 +10,7 @@ metadata:
   hermes:
     tags: [imported]
 ---
+
 # Code Map
 
 ## Overview
@@ -34,17 +35,18 @@ Generate comprehensive hierarchical code maps (codemaps) for unfamiliar reposito
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `context-map` | Map component boundaries and data flows |
-| `project-docs` | Generate full documentation set |
-| `architecture-blueprint-generator` | Full architecture blueprint |
+| Skill                              | Purpose                                 |
+| ---------------------------------- | --------------------------------------- |
+| `context-map`                      | Map component boundaries and data flows |
+| `project-docs`                     | Generate full documentation set         |
+| `architecture-blueprint-generator` | Full architecture blueprint             |
 
 ## Workflow
 
 ### Phase 1: Scan Repository
 
 1. Identify project type and language:
+
    ```bash
    # Detect language by file extensions
    find . -name "*.ts" -o -name "*.py" -o -name "*.go" -o -name "*.rs" | head -5
@@ -54,6 +56,7 @@ Generate comprehensive hierarchical code maps (codemaps) for unfamiliar reposito
    ```
 
 2. List directory structure:
+
    ```bash
    # Directory tree (exclude noise)
    find . -type d -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*/__pycache__/*' -not -path '*/dist/*' -not -path '*/build/*' | sort
@@ -130,19 +133,23 @@ Save the codemap to `docs/codemap.md`:
 **Last Updated:** 2026-06-14
 
 ## Directory Structure
+
 [tree diagram]
 
 ## Module Index
-| Module | Purpose | Key Files | Dependencies |
-|--------|---------|-----------|--------------|
-| api/ | HTTP layer | routes/index.ts | models/, services/ |
-| services/ | Business logic | user-service.ts | models/, utils/ |
-| models/ | Data layer | user.model.ts | prisma/ |
+
+| Module    | Purpose        | Key Files       | Dependencies       |
+| --------- | -------------- | --------------- | ------------------ |
+| api/      | HTTP layer     | routes/index.ts | models/, services/ |
+| services/ | Business logic | user-service.ts | models/, utils/    |
+| models/   | Data layer     | user.model.ts   | prisma/            |
 
 ## Data Flow
+
 [diagram or description]
 
 ## Key Architectural Decisions
+
 - Clean architecture with service layer abstraction
 - Prisma ORM for database access
 - JWT-based authentication via middleware

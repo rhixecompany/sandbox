@@ -10,6 +10,7 @@ metadata:
   hermes:
     tags: [imported]
 ---
+
 # Content Research Writer
 
 ## Overview
@@ -32,10 +33,10 @@ Collaborative writing workflow for research-assisted content creation. Use this 
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
+| Skill                           | Purpose                                |
+| ------------------------------- | -------------------------------------- |
 | `writing-clearly-and-concisely` | Improve clarity, flow, and readability |
-| `humanizer` | Preserve natural voice during revision |
+| `humanizer`                     | Preserve natural voice during revision |
 
 ## Workflow
 

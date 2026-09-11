@@ -243,12 +243,12 @@ Traditional ARM parameter files:
 
 ```json
 {
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "location": { "value": "eastus" },
-    "environment": { "value": "dev" }
-  }
+	"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"location": { "value": "eastus" },
+		"environment": { "value": "dev" }
+	}
 }
 ```
 
@@ -303,22 +303,22 @@ targetScope = 'tenant'
 
 **Scope to Command Mapping:**
 
-| targetScope | Command | Required Parameters |
-| --- | --- | --- |
-| `resourceGroup` | `az deployment group what-if` | `--resource-group` |
-| `subscription` | `az deployment sub what-if` | `--location` |
-| `managementGroup` | `az deployment mg what-if` | `--location`, `--management-group-id` |
-| `tenant` | `az deployment tenant what-if` | `--location` |
+| targetScope       | Command                        | Required Parameters                   |
+| ----------------- | ------------------------------ | ------------------------------------- |
+| `resourceGroup`   | `az deployment group what-if`  | `--resource-group`                    |
+| `subscription`    | `az deployment sub what-if`    | `--location`                          |
+| `managementGroup` | `az deployment mg what-if`     | `--location`, `--management-group-id` |
+| `tenant`          | `az deployment tenant what-if` | `--location`                          |
 
 ---
 
 ## Version Requirements
 
-| Tool | Minimum Version | Recommended Version | Key Features |
-| --- | --- | --- | --- |
-| Azure CLI | 2.14.0 | 2.76.0+ | `--validation-level` switch |
-| Azure Developer CLI | 1.0.0 | Latest | `--preview` flag |
-| Bicep CLI | 0.4.0 | Latest | Best error messages |
+| Tool                | Minimum Version | Recommended Version | Key Features                |
+| ------------------- | --------------- | ------------------- | --------------------------- |
+| Azure CLI           | 2.14.0          | 2.76.0+             | `--validation-level` switch |
+| Azure Developer CLI | 1.0.0           | Latest              | `--preview` flag            |
+| Bicep CLI           | 0.4.0           | Latest              | Best error messages         |
 
 **Check versions:**
 

@@ -7,6 +7,7 @@ author: Alexa
 license: MIT
 tags: [imported]
 ---
+
 # Azure Deployment Preflight Validation
 
 This skill validates Bicep deployments before execution, supporting both Azure CLI (`az`) and Azure Developer CLI (`azd`) workflows.
@@ -173,12 +174,12 @@ Use the template structure from [references/REPORT-TEMPLATE.md](references/REPOR
 
 Before running validation, gather:
 
-| Information | Required For | How to Obtain |
-| --- | --- | --- |
+| Information    | Required For          | How to Obtain                               |
+| -------------- | --------------------- | ------------------------------------------- |
 | Resource Group | `az deployment group` | Ask user or check existing `.azure/` config |
-| Subscription | All deployments | `az account show` or ask user |
-| Location | Sub/MG/Tenant scope | Ask user or use default from config |
-| Environment | azd projects | `azd env list` or ask user |
+| Subscription   | All deployments       | `az account show` or ask user               |
+| Location       | Sub/MG/Tenant scope   | Ask user or use default from config         |
+| Environment    | azd projects          | `azd env list` or ask user                  |
 
 If required information is missing, prompt the user before proceeding.
 
@@ -188,13 +189,13 @@ See [references/ERROR-HANDLING.md](references/ERROR-HANDLING.md) for detailed er
 
 **Key principle:** Continue validation even when errors occur. Capture all issues in the final report.
 
-| Error Type | Action |
-| --- | --- |
-| Not logged in | Note in report, suggest `az login` or `azd auth login` |
-| Permission denied | Fall back to `ProviderNoRbac`, note in report |
-| Bicep syntax error | Include all errors, continue to other files |
-| Tool not installed | Note in report, skip that validation step |
-| Resource group not found | Note in report, suggest creating it |
+| Error Type               | Action                                                 |
+| ------------------------ | ------------------------------------------------------ |
+| Not logged in            | Note in report, suggest `az login` or `azd auth login` |
+| Permission denied        | Fall back to `ProviderNoRbac`, note in report          |
+| Bicep syntax error       | Include all errors, continue to other files            |
+| Tool not installed       | Note in report, skip that validation step              |
+| Resource group not found | Note in report, suggest creating it                    |
 
 ## Tool Requirements
 
@@ -228,7 +229,6 @@ bicep --version
 - [Validation Commands Reference](references/VALIDATION-COMMANDS.md)
 - [Report Template](references/REPORT-TEMPLATE.md)
 - [Error Handling Guide](references/ERROR-HANDLING.md)
-
 
 ## Pitfalls
 

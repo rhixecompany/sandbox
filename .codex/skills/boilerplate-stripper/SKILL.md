@@ -1,19 +1,19 @@
 ---
 author: Alexa
-description: 'Strip known template boilerplate from SKILL.md, .prompts.md, or any
+description: "Strip known template boilerplate from SKILL.md, .prompts.md, or any
   markdown file. Detects and removes empty generic sections left behind by template
   scaffolding. Run against a single file, a folder, or the entire skills library.
 
-  '
+  "
 license: MIT
 name: boilerplate-stripper
 tags:
-- cleanup
-- boilerplate
-- template
-- markdown
-- normalization
-- batch
+  - cleanup
+  - boilerplate
+  - template
+  - markdown
+  - normalization
+  - batch
 title: Markdown Boilerplate Stripper
 version: 1.0.0
 
@@ -48,14 +48,14 @@ the exact known template text and nothing else.
 
 ### Patterns Removed
 
-| # | Section | What Matches |
-|---|---------|-------------|
-| 1 | `## Overview` | Self-referential "The X skill provides tools and workflows..." |
-| 2 | `## Workflow` | Generic Phase 1–4 (Preparation → Execution → Verification → Completion) |
-| 3 | `## When to Use` | "When you need to perform X operations or tasks" + 3 bullets |
-| 4 | `## Best Practices` | 5 numbered generic rules starting with "Prepare before executing" |
-| 5 | `## Verification Checklist` | 5 generic checkboxes with "Prerequisites and environment" |
-| 6 | Stray path ref | Inline `, use skills\...\skill.md` fragments |
+| #   | Section                     | What Matches                                                            |
+| --- | --------------------------- | ----------------------------------------------------------------------- |
+| 1   | `## Overview`               | Self-referential "The X skill provides tools and workflows..."          |
+| 2   | `## Workflow`               | Generic Phase 1–4 (Preparation → Execution → Verification → Completion) |
+| 3   | `## When to Use`            | "When you need to perform X operations or tasks" + 3 bullets            |
+| 4   | `## Best Practices`         | 5 numbered generic rules starting with "Prepare before executing"       |
+| 5   | `## Verification Checklist` | 5 generic checkboxes with "Prerequisites and environment"               |
+| 6   | Stray path ref              | Inline `, use skills\...\skill.md` fragments                            |
 
 The patterns are embedded in `scripts/strip-boilerplate.py` as compiled
 `re.Pattern` objects — easy to add more.
@@ -76,6 +76,7 @@ If `--path` is omitted, defaults to the Hermes skills directory
 ### Phase 2: Review Dry-Run Output
 
 The dry-run shows:
+
 - How many files are affected
 - Which patterns were found in each file
 - Total number of boilerplate removals
@@ -111,12 +112,12 @@ tail -5 path/to/skill/SKILL.md
 
 ## CLI Reference
 
-| Flag | Default | Description |
-|------|---------|-------------|
-| `--dry-run` | `False` | Report what would be removed without modifying files |
-| `--path` | Hermes skills dir | Target file or folder. File = single file. Folder = recursive scan for `<glob>` |
-| `--glob` | `*SKILL.md` | Glob pattern when path is a directory |
-| `--exclude` | — | Glob patterns to exclude (repeatable) |
+| Flag        | Default           | Description                                                                     |
+| ----------- | ----------------- | ------------------------------------------------------------------------------- |
+| `--dry-run` | `False`           | Report what would be removed without modifying files                            |
+| `--path`    | Hermes skills dir | Target file or folder. File = single file. Folder = recursive scan for `<glob>` |
+| `--glob`    | `*SKILL.md`       | Glob pattern when path is a directory                                           |
+| `--exclude` | —                 | Glob patterns to exclude (repeatable)                                           |
 
 ## Pitfalls
 

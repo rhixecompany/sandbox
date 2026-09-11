@@ -4,6 +4,7 @@ description: "Claude API — PHP"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Claude API — PHP
      2|
      3|> **Note:** The PHP SDK is the official Anthropic SDK for PHP. A beta tool runner is available via `$client->beta->messages->toolRunner()`. Structured output helpers are supported via `StructuredOutputModel` classes. Agent SDK is not available. Bedrock, Vertex AI, and Foundry clients are supported.
@@ -103,15 +104,16 @@ author: Alexa
     97|
     98|$stream = $client->messages->createStream(
     99|    model: 'claude-opus-4-7',
-   100|    maxTokens: 64000,
-   101|    messages: [
-   102|        ['role' => 'user', 'content' => 'Write a haiku'],
-   103|    ],
-   104|);
-   105|
-   106|foreach ($stream as $event) {
-   107|    if ($event instanceof RawContentBlockDeltaEvent && $event->delta instanceof TextDelta) {
-   108|        echo $event->delta->text;
+
+100| maxTokens: 64000,
+101| messages: [
+102| ['role' => 'user', 'content' => 'Write a haiku'],
+103| ],
+104|);
+105|
+106|foreach ($stream as $event) {
+107| if ($event instanceof RawContentBlockDeltaEvent && $event->delta instanceof TextDelta) {
+108| echo $event->delta->text;
    109|    }
    110|}
    111|```
@@ -122,7 +124,7 @@ author: Alexa
    116|
    117|### Tool Runner (Beta)
    118|
-   119|**Beta:** The PHP SDK provides a tool runner via `$client->beta->messages->toolRunner()`. Define tools with `BetaRunnableTool` — a definition array plus a `run` closure:
+   119|**Beta:** The PHP SDK provides a tool runner via `$client->beta->messages->toolRunner()`. Define tools with `BetaRunnableTool`— a definition array plus a`run` closure:
    120|
    121|```php
    122|use Anthropic\Lib\Tools\BetaRunnableTool;
@@ -249,14 +251,14 @@ author: Alexa
    243|// ThinkingBlock(s) precede TextBlock in content
    244|foreach ($message->content as $block) {
    245|    if ($block instanceof ThinkingBlock) {
-   246|        echo "Thinking:\n{$block->thinking}\n\n";
+246| echo "Thinking:\n{$block->thinking}\n\n";
    247|        // $block->signature is an opaque string — preserve verbatim if
-   248|        // passing thinking blocks back in multi-turn conversations
-   249|    } elseif ($block->type === 'text') {
+248| // passing thinking blocks back in multi-turn conversations
+249| } elseif ($block->type === 'text') {
    250|        echo "Answer: {$block->text}\n";
-   251|    }
-   252|}
-   253|```
+251| }
+252|}
+253|``
    254|
    255|> **Deprecated:** `['type' => 'enabled', 'budgetTokens' => N]` (fixed-budget extended thinking) still works on Claude 4.6 but is deprecated. Use adaptive thinking above.
    256|
@@ -268,12 +270,12 @@ author: Alexa
    262|
    263|`system:` takes an array of text blocks; set `cacheControl` on the last block. Array-shape syntax (camelCase keys) is idiomatic. For placement patterns and the silent-invalidator audit checklist, see `shared/prompt-caching.md`.
    264|
-   265|```php
-   266|$message = $client->messages->create(
-   267|    model: 'claude-opus-4-7',
-   268|    maxTokens: 16000,
-   269|    system: [
-   270|        ['type' => 'text', 'text' => $longSystemPrompt, 'cacheControl' => ['type' => 'ephemeral']],
+   265|``php
+266|$message = $client->messages->create(
+267| model: 'claude-opus-4-7',
+268| maxTokens: 16000,
+269| system: [
+270| ['type' => 'text', 'text' => $longSystemPrompt, 'cacheControl' => ['type' => 'ephemeral']],
    271|    ],
    272|    messages: [['role' => 'user', 'content' => 'Summarize the key points']],
    273|);
@@ -281,7 +283,7 @@ author: Alexa
    275|
    276|For 1-hour TTL: `'cacheControl' => ['type' => 'ephemeral', 'ttl' => '1h']`. There's also a top-level `cacheControl:` on `messages->create(...)` that auto-places on the last cacheable block.
    277|
-   278|Verify hits via `$message->usage->cacheCreationInputTokens` / `$message->usage->cacheReadInputTokens`.
+   278|Verify hits via `$message->usage->cacheCreationInputTokens`/`$message->usage->cacheReadInputTokens`.
    279|
    280|---
    281|
@@ -302,21 +304,21 @@ author: Alexa
    296|
    297|    #[Constrained(description: 'Full name')]
    298|    public string $name;
-   299|
-   300|    public int $age;
+299|
+300| public int $age;
    301|
-   302|    public ?string $email = null;  // nullable = optional field
-   303|}
-   304|
-   305|$message = $client->messages->create(
-   306|    model: 'claude-opus-4-7',
-   307|    maxTokens: 16000,
-   308|    messages: [['role' => 'user', 'content' => 'Generate a profile for Alice, age 30']],
-   309|    outputConfig: ['format' => Person::class],
-   310|);
-   311|
-   312|$person = $message->parsedOutput();  // Person instance
-   313|echo $person->name;
+   302|    public ?string $email = null; // nullable = optional field
+303|}
+304|
+305|$message = $client->messages->create(
+306| model: 'claude-opus-4-7',
+307| maxTokens: 16000,
+308| messages: [['role' => 'user', 'content' => 'Generate a profile for Alice, age 30']],
+309| outputConfig: ['format' => Person::class],
+310|);
+311|
+312|$person = $message->parsedOutput(); // Person instance
+313|echo $person->name;
    314|```
    315|
    316|Types are inferred from PHP type hints. Use `#[Constrained(description: '...')]` to add descriptions. Nullable properties (`?string`) become optional fields.
@@ -348,11 +350,11 @@ author: Alexa
    342|// First text block contains valid JSON
    343|foreach ($message->content as $block) {
    344|    if ($block->type === 'text') {
-   345|        $data = json_decode($block->text, true);
-   346|        break;
-   347|    }
-   348|}
-   349|```
+345| $data = json_decode($block->text, true);
+346| break;
+347| }
+348|}
+349|``
    350|
    351|---
    352|
@@ -360,22 +362,22 @@ author: Alexa
    354|
    355|**`betas:` is NOT a param on `$client->messages->create()`** — it only exists on the beta namespace. Use it for features that need an explicit opt-in header:
    356|
-   357|```php
-   358|use Anthropic\Beta\Messages\BetaRequestMCPServerURLDefinition;
-   359|
-   360|$response = $client->beta->messages->create(
-   361|    model: 'claude-opus-4-7',
-   362|    maxTokens: 16000,
-   363|    mcpServers: [
-   364|        BetaRequestMCPServerURLDefinition::with(
-   365|            name: 'my-server',
-   366|            url: 'https://example.com/mcp',
-   367|        ),
-   368|    ],
-   369|    betas: ['mcp-client-2025-11-20'],  // only valid on ->beta->messages
-   370|    messages: [['role' => 'user', 'content' => 'Use the MCP tools']],
-   371|);
-   372|```
-   373|
-   374|**Server-side tools** (bash, web_search, text_editor, code_execution) are GA and work on both paths — `Anthropic\Messages\ToolBash20250124` / `WebSearchTool20260209` / `ToolTextEditor20250728` / `CodeExecutionTool20260120` for non-beta, `Anthropic\Beta\Messages\BetaToolBash20250124` / `BetaWebSearchTool20260209` / `BetaToolTextEditor20250728` / `BetaCodeExecutionTool20260120` for beta. No `betas:` header needed for these.
-   375|
+   357|``php
+358|use Anthropic\Beta\Messages\BetaRequestMCPServerURLDefinition;
+359|
+360|$response = $client->beta->messages->create(
+361| model: 'claude-opus-4-7',
+362| maxTokens: 16000,
+363| mcpServers: [
+364| BetaRequestMCPServerURLDefinition::with(
+365| name: 'my-server',
+366| url: 'https://example.com/mcp',
+367| ),
+368| ],
+369| betas: ['mcp-client-2025-11-20'], // only valid on ->beta->messages
+370| messages: [['role' => 'user', 'content' => 'Use the MCP tools']],
+371|);
+372|```
+373|
+374|**Server-side tools** (bash, web_search, text_editor, code_execution) are GA and work on both paths — `Anthropic\Messages\ToolBash20250124` / `WebSearchTool20260209` / `ToolTextEditor20250728` / `CodeExecutionTool20260120` for non-beta, `Anthropic\Beta\Messages\BetaToolBash20250124` / `BetaWebSearchTool20260209` / `BetaToolTextEditor20250728` / `BetaCodeExecutionTool20260120` for beta. No `betas:` header needed for these.
+375|

@@ -4,14 +4,14 @@ Guidance for drawing physical objects (vehicles, buildings, hardware, mechanical
 
 ## Shape selection
 
-| Physical form | SVG element | Example use |
-|---------------|-------------|-------------|
-| Curved bodies | `<path>` with Q/C curves | Fuselage, tanks, pipes |
-| Tapered/angular shapes | `<polygon>` | Wings, fins, wedges |
-| Cylindrical/round | `<ellipse>`, `<circle>` | Engines, wheels, buttons |
-| Linear structures | `<line>` | Struts, beams, connections |
-| Internal sections | `<rect>` inside parent | Compartments, rooms |
-| Dashed boundaries | `stroke-dasharray` | Hidden parts, fuel tanks |
+| Physical form          | SVG element              | Example use                |
+| ---------------------- | ------------------------ | -------------------------- |
+| Curved bodies          | `<path>` with Q/C curves | Fuselage, tanks, pipes     |
+| Tapered/angular shapes | `<polygon>`              | Wings, fins, wedges        |
+| Cylindrical/round      | `<ellipse>`, `<circle>`  | Engines, wheels, buttons   |
+| Linear structures      | `<line>`                 | Struts, beams, connections |
+| Internal sections      | `<rect>` inside parent   | Compartments, rooms        |
+| Dashed boundaries      | `stroke-dasharray`       | Hidden parts, fuel tanks   |
 
 ## Layering approach
 
@@ -25,9 +25,21 @@ Guidance for drawing physical objects (vehicles, buildings, hardware, mechanical
 For physical diagrams, define component-specific classes directly rather than applying `c-*` color classes. This makes each part self-documenting and lets you keep a restrained palette:
 
 ```css
-.fuselage { fill: #F1EFE8; stroke: #5F5E5A; stroke-width: 1; }
-.wing     { fill: #E6F1FB; stroke: #185FA5; stroke-width: 1; }
-.engine   { fill: #FAECE7; stroke: #993C1D; stroke-width: 1; }
+.fuselage {
+	fill: #f1efe8;
+	stroke: #5f5e5a;
+	stroke-width: 1;
+}
+.wing {
+	fill: #e6f1fb;
+	stroke: #185fa5;
+	stroke-width: 1;
+}
+.engine {
+	fill: #faece7;
+	stroke: #993c1d;
+	stroke-width: 1;
+}
 ```
 
 Add these to a local `<style>` inside the SVG (or extend the host page's `<style>` block). The light-mode/dark-mode pattern still works — use the CSS variables from the template (`var(--bg-secondary)`, `var(--border)`, `var(--text-primary)`) if you want dark-mode awareness.

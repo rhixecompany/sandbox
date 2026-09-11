@@ -17,7 +17,7 @@ import os
 def detect_hardware():
     """Detect hardware capabilities and return render config."""
     cpu_count = multiprocessing.cpu_count()
-    
+
     # Leave 1-2 cores free for OS + ffmpeg encoding
     if cpu_count >= 16:
         workers = cpu_count - 2
@@ -27,7 +27,7 @@ def detect_hardware():
         workers = cpu_count - 1
     else:
         workers = max(1, cpu_count)
-    
+
     # Memory detection (platform-specific)
     try:
         if platform.system() == "Darwin":
@@ -45,16 +45,16 @@ def detect_hardware():
         mem_bytes = 8 * 1024**3
 
     mem_gb = mem_bytes / (1024**3)
-    
+
     # Each worker uses ~50-150MB depending on grid sizes
     # Cap workers if memory is tight
     mem_per_worker_mb = 150
     max_workers_by_mem = int(mem_gb * 1024 * 0.6 / mem_per_worker_mb)  # use 60% of RAM
     workers = min(workers, max_workers_by_mem)
-    
+
     # ffmpeg availability and codec support
     has_ffmpeg = shutil.which("ffmpeg") is not None
-    
+
     return {
         "cpu_count": cpu_count,
         "workers": workers,
@@ -78,31 +78,31 @@ def quality_profile(hw, target_duration_s, user_preference="auto"):
     if user_preference == "draft":
         return {"vw": 960, "vh": 540, "fps": 12, "crf": 28, "workers": min(4, hw["workers"]),
                 "grid_scale": 0.5, "shaders": "minimal", "particles_max": 200}
-    
+
     if user_preference == "preview":
         return {"vw": 1280, "vh": 720, "fps": 15, "crf": 25, "workers": hw["workers"],
                 "grid_scale": 0.75, "shaders": "standard", "particles_max": 500}
-    
+
     if user_preference == "max":
         return {"vw": 3840, "vh": 2160, "fps": 30, "crf": 15, "workers": hw["workers"],
                 "grid_scale": 2.0, "shaders": "full", "particles_max": 3000}
-    
+
     # "production" or "auto"
     # Auto-detect: estimate render time, downgrade if it would take too long
     n_frames = int(target_duration_s * 24)
     est_seconds_per_frame = 0.18  # ~180ms at 1080p
     est_total_s = n_frames * est_seconds_per_frame / max(1, hw["workers"])
-    
+
     if hw["mem_gb"] < 4 or hw["cpu_count"] <= 2:
         # Low-end: 720p, 15fps
         return {"vw": 1280, "vh": 720, "fps": 15, "crf": 23, "workers": hw["workers"],
                 "grid_scale": 0.75, "shaders": "standard", "particles_max": 500}
-    
+
     if est_total_s > 3600:  # would take over an hour
         # Downgrade to 720p to speed up
         return {"vw": 1280, "vh": 720, "fps": 24, "crf": 20, "workers": hw["workers"],
                 "grid_scale": 0.75, "shaders": "standard", "particles_max": 800}
-    
+
     # Standard production: 1080p 24fps
     return {"vw": 1920, "vh": 1080, "fps": 24, "crf": 20, "workers": hw["workers"],
             "grid_scale": 1.0, "shaders": "full", "particles_max": 1200}
@@ -160,19 +160,20 @@ log(f"Render:   {profile['vw']}x{profile['vh']} @{profile['fps']}fps, "
 
 Portrait (1080x1920) has the same pixel count as landscape 1080p, so performance is equivalent. But composition patterns differ:
 
-| Concern | Landscape | Portrait |
-|---------|-----------|----------|
-| Grid cols at `lg` | 160 | 90 |
-| Grid rows at `lg` | 45 | 80 |
-| Max text line chars | ~50 centered | ~25-30 centered |
-| Vertical rain | Short travel | Long, dramatic travel |
-| Horizontal spectrum | Full width | Needs rotation or compression |
-| Radial effects | Natural circles | Tall ellipses (aspect correction handles this) |
-| Particle explosions | Wide spread | Tall spread |
-| Text stacking | 3-4 lines comfortable | 8-10 lines comfortable |
-| Quote layout | 2-3 wide lines | 5-6 short lines |
+| Concern             | Landscape             | Portrait                                       |
+| ------------------- | --------------------- | ---------------------------------------------- |
+| Grid cols at `lg`   | 160                   | 90                                             |
+| Grid rows at `lg`   | 45                    | 80                                             |
+| Max text line chars | ~50 centered          | ~25-30 centered                                |
+| Vertical rain       | Short travel          | Long, dramatic travel                          |
+| Horizontal spectrum | Full width            | Needs rotation or compression                  |
+| Radial effects      | Natural circles       | Tall ellipses (aspect correction handles this) |
+| Particle explosions | Wide spread           | Tall spread                                    |
+| Text stacking       | 3-4 lines comfortable | 8-10 lines comfortable                         |
+| Quote layout        | 2-3 wide lines        | 5-6 short lines                                |
 
 **Portrait-optimized patterns:**
+
 - Vertical rain/matrix effects are naturally enhanced — longer column travel
 - Fire columns rise through more screen space
 - Rising embers/particles have more vertical runway
@@ -181,6 +182,7 @@ Portrait (1080x1920) has the same pixel count as landscape 1080p, so performance
 - Spectrum bars can be rotated 90 degrees (vertical bars from bottom)
 
 **Portrait text layout:**
+
 ```python
 def layout_text_portrait(text, max_chars_per_line=25, grid=None):
     """Break text into short lines for portrait display."""
@@ -201,13 +203,13 @@ def layout_text_portrait(text, max_chars_per_line=25, grid=None):
 
 Target: 100-200ms per frame (5-10 fps single-threaded, 40-80 fps across 8 workers).
 
-| Component | Time | Notes |
-|-----------|------|-------|
-| Feature extraction | 1-5ms | Pre-computed for all frames before render |
-| Effect function | 2-15ms | Vectorized numpy, avoid Python loops |
-| Character render | 80-150ms | **Bottleneck** -- per-cell Python loop |
-| Shader pipeline | 5-25ms | Depends on active shaders |
-| ffmpeg encode | ~5ms | Amortized by pipe buffering |
+| Component          | Time     | Notes                                     |
+| ------------------ | -------- | ----------------------------------------- |
+| Feature extraction | 1-5ms    | Pre-computed for all frames before render |
+| Effect function    | 2-15ms   | Vectorized numpy, avoid Python loops      |
+| Character render   | 80-150ms | **Bottleneck** -- per-cell Python loop    |
+| Shader pipeline    | 5-25ms   | Depends on active shaders                 |
+| ffmpeg encode      | ~5ms     | Amortized by pipe buffering               |
 
 ## Bitmap Pre-Rasterization
 
@@ -316,6 +318,7 @@ self.dist_n = ...                      # normalized distance
 The render loop (compositing bitmaps) is unavoidably per-cell. But effect functions must be fully vectorized numpy -- never iterate over rows/cols in Python.
 
 Bad (O(rows*cols) Python loop):
+
 ```python
 for r in range(rows):
     for c in range(cols):
@@ -323,6 +326,7 @@ for r in range(rows):
 ```
 
 Good (vectorized):
+
 ```python
 val = np.sin(g.cc * 0.1 + t) * np.cos(g.rr * 0.1 - t)
 ```
@@ -509,6 +513,7 @@ with ProcessPoolExecutor(max_workers=N_WORKERS) as pool:
 ### Worker Isolation
 
 Each worker:
+
 - Creates its own `Renderer` instance (with full grid + bitmap init)
 - Opens its own ffmpeg subprocess
 - Has independent random seed (`random.seed(batch_id * 10000)`)
@@ -551,14 +556,15 @@ subprocess.run(cmd, capture_output=True, check=True)
 
 Cap particle counts based on quality profile:
 
-| System | Low | Standard | High |
-|--------|-----|----------|------|
-| Explosion | 300 | 1000 | 2500 |
-| Embers | 500 | 1500 | 3000 |
-| Starfield | 300 | 800 | 1500 |
-| Dissolve | 200 | 600 | 1200 |
+| System    | Low | Standard | High |
+| --------- | --- | -------- | ---- |
+| Explosion | 300 | 1000     | 2500 |
+| Embers    | 500 | 1500     | 3000 |
+| Starfield | 300 | 800      | 1500 |
+| Dissolve  | 200 | 600      | 1200 |
 
 Cull by truncating lists:
+
 ```python
 MAX_PARTICLES = profile.get("particles_max", 1200)
 if len(S["px"]) > MAX_PARTICLES:
@@ -597,12 +603,12 @@ Target: mean > 5 for quiet sections, mean > 15 for active sections. If consisten
 Scale with hardware. Baseline: 1080p, 24fps, ~180ms/frame/worker.
 
 | Duration | Frames | 4 workers | 8 workers | 16 workers |
-|----------|--------|-----------|-----------|------------|
-| 30s | 720 | ~3 min | ~2 min | ~1 min |
-| 2 min | 2,880 | ~13 min | ~7 min | ~4 min |
-| 3.5 min | 5,040 | ~23 min | ~12 min | ~6 min |
-| 5 min | 7,200 | ~33 min | ~17 min | ~9 min |
-| 10 min | 14,400 | ~65 min | ~33 min | ~17 min |
+| -------- | ------ | --------- | --------- | ---------- |
+| 30s      | 720    | ~3 min    | ~2 min    | ~1 min     |
+| 2 min    | 2,880  | ~13 min   | ~7 min    | ~4 min     |
+| 3.5 min  | 5,040  | ~23 min   | ~12 min   | ~6 min     |
+| 5 min    | 7,200  | ~33 min   | ~17 min   | ~9 min     |
+| 10 min   | 14,400 | ~65 min   | ~33 min   | ~17 min    |
 
 At 720p: multiply times by ~0.5. At 4K: multiply by ~4.
 
@@ -616,13 +622,13 @@ Rendering generates intermediate files that accumulate across runs. Clean up aft
 
 ### Files to Clean
 
-| File type | Source | Location |
-|-----------|--------|----------|
-| WAV extracts | `ffmpeg -i input.mp3 ... tmp.wav` | `tempfile.mktemp()` or project dir |
-| Segment clips | `render_clip()` output | `segments/seg_00.mp4` etc. |
-| Concat list | ffmpeg concat demuxer input | `segments/concat.txt` |
-| ffmpeg stderr logs | piped to file for debugging | `*.log` in project dir |
-| Feature cache | pickled numpy arrays | `*.pkl` or `*.npz` |
+| File type          | Source                            | Location                           |
+| ------------------ | --------------------------------- | ---------------------------------- |
+| WAV extracts       | `ffmpeg -i input.mp3 ... tmp.wav` | `tempfile.mktemp()` or project dir |
+| Segment clips      | `render_clip()` output            | `segments/seg_00.mp4` etc.         |
+| Concat list        | ffmpeg concat demuxer input       | `segments/concat.txt`              |
+| ffmpeg stderr logs | piped to file for debugging       | `*.log` in project dir             |
+| Feature cache      | pickled numpy arrays              | `*.pkl` or `*.npz`                 |
 
 ### Cleanup Function
 
@@ -633,36 +639,36 @@ import shutil
 
 def cleanup_render_artifacts(segments_dir="segments", keep_final=True):
     """Remove intermediate files after successful render.
-    
+
     Call this AFTER verifying the final output exists and plays correctly.
-    
+
     Args:
         segments_dir: directory containing segment clips and concat list
         keep_final: if True, only delete intermediates (not the final output)
     """
     removed = []
-    
+
     # 1. Segment clips
     if os.path.isdir(segments_dir):
         shutil.rmtree(segments_dir)
         removed.append(f"directory: {segments_dir}")
-    
+
     # 2. Temporary WAV files
     for wav in glob.glob("*.wav"):
         if wav.startswith("tmp") or wav.startswith("extracted_"):
             os.remove(wav)
             removed.append(wav)
-    
+
     # 3. ffmpeg stderr logs
     for log in glob.glob("ffmpeg_*.log"):
         os.remove(log)
         removed.append(log)
-    
+
     # 4. Feature cache (optional — useful to keep for re-renders)
     # for cache in glob.glob("features_*.npz"):
     #     os.remove(cache)
     #     removed.append(cache)
-    
+
     print(f"Cleaned {len(removed)} artifacts: {removed}")
     return removed
 ```

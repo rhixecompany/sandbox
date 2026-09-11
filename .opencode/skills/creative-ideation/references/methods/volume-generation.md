@@ -1,9 +1,10 @@
 # Volume Generation
 
 Three traditions for producing many ideas fast:
-- **Crazy 8s** — Google Ventures Sprint method. Codified in *Sprint* (Knapp et al., 2016).
+
+- **Crazy 8s** — Google Ventures Sprint method. Codified in _Sprint_ (Knapp et al., 2016).
 - **Brainwriting 6-3-5** — Bernd Rohrbach, 1968. German design-method literature.
-- **James Webb Young** — *A Technique for Producing Ideas* (1940). 60-page book; canonical advertising-copywriter manual.
+- **James Webb Young** — _A Technique for Producing Ideas_ (1940). 60-page book; canonical advertising-copywriter manual.
 
 ## When to use
 
@@ -35,33 +36,33 @@ Outperforms verbal brainstorming consistently in academic creativity research (D
 
 1. **6 participants**, each with a sheet.
 2. Each writes **3 ideas** in **5 minutes**, in a row at the top.
-3. Papers rotate. Each participant now sees the previous 3 ideas; writes 3 *new* ones — building or fresh.
+3. Papers rotate. Each participant now sees the previous 3 ideas; writes 3 _new_ ones — building or fresh.
 4. Repeat until each sheet has been seen by all 6.
 5. Result: 6 × 6 × 3 = 108 ideas in 30 minutes.
 
 ## James Webb Young — 5 stages
 
-Honest about the *temporal* structure of idea formation. Most methods assume ideas come on demand; Young's account is that they often don't, and the work is upstream.
+Honest about the _temporal_ structure of idea formation. Most methods assume ideas come on demand; Young's account is that they often don't, and the work is upstream.
 
-1. **Gather material.** Specific *and* general material. Most idea-generators fail here. *"Just one more idea about the product, just one more bit of factual material — many a time these have made all the difference."*
+1. **Gather material.** Specific _and_ general material. Most idea-generators fail here. _"Just one more idea about the product, just one more bit of factual material — many a time these have made all the difference."_
 2. **Mentally digest.** Turn the material over. Make tentative partial connections. Don't reach for a final idea.
 3. **Drop it.** Stop working. Sleep, walk, watch a movie. The unconscious works on it.
-4. **The idea arrives.** Often during a shower or walk. *"It will come to you when you are least expecting it."*
+4. **The idea arrives.** Often during a shower or walk. _"It will come to you when you are least expecting it."_
 5. **Shape and develop.** The arriving idea is half-formed. Subject it to actual scrutiny.
 
 The drop stage is non-negotiable. Compressing it back into 1→2→4 produces incomplete ideas.
 
 ## When to use which
 
-| Time available | Group size | Use |
-|---|---|---|
-| 8 minutes | Solo | Crazy 8s |
-| 8 minutes | Group | Crazy 8s + share |
-| 30 minutes | Solo | Crazy 8s + 22 min elaboration |
-| 30 minutes | Group of 4–8 | Brainwriting 6-3-5 |
-| 1 hour | Group | Brainwriting + 30 min affinity diagram |
-| 1 day | Solo | Young stages 1–3 |
-| 1 week | Solo or small group | Full Young 5 stages |
+| Time available | Group size          | Use                                    |
+| -------------- | ------------------- | -------------------------------------- |
+| 8 minutes      | Solo                | Crazy 8s                               |
+| 8 minutes      | Group               | Crazy 8s + share                       |
+| 30 minutes     | Solo                | Crazy 8s + 22 min elaboration          |
+| 30 minutes     | Group of 4–8        | Brainwriting 6-3-5                     |
+| 1 hour         | Group               | Brainwriting + 30 min affinity diagram |
+| 1 day          | Solo                | Young stages 1–3                       |
+| 1 week         | Solo or small group | Full Young 5 stages                    |
 
 ## Anti-slop notes
 
@@ -71,4 +72,4 @@ The drop stage is non-negotiable. Compressing it back into 1→2→4 produces in
 - Don't conflate volume with depth. Volume is breadth-first; depth comes later with elaboration methods.
 - Respect Young's drop stage. Rushing from gather → idea in one session usually fails.
 
-Sources: Young, *A Technique for Producing Ideas* (Advertising Publications, 1940); Rohrbach, "Methode 635" (*Absatzwirtschaft* 12, 1968); Knapp et al., *Sprint* (Simon & Schuster, 2016).
+Sources: Young, _A Technique for Producing Ideas_ (Advertising Publications, 1940); Rohrbach, "Methode 635" (_Absatzwirtschaft_ 12, 1968); Knapp et al., _Sprint_ (Simon & Schuster, 2016).

@@ -6,17 +6,18 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: canvas-design
 tags:
-- design
-- visual-art
-- posters
-- infographics
-- canvas
+  - design
+  - visual-art
+  - posters
+  - infographics
+  - canvas
 title: Canvas Design
 version: 1.0.0
 ---
+
 ## Description
 
 Create beautiful visual art in .png and .pdf documents using design philosophy. Create original visual designs, never copying existing artists' work to avoid copyright violations.
@@ -104,11 +105,11 @@ Use this skill when:
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
+| Skill              | Purpose                           |
+| ------------------ | --------------------------------- |
 | `brand-guidelines` | Apply brand colors and typography |
-| `theme-factory` | Create and apply design themes |
-| `frontend-design` | Design UI layout and interaction |
+| `theme-factory`    | Create and apply design themes    |
+| `frontend-design`  | Design UI layout and interaction  |
 
 ## Verification Checklist
 

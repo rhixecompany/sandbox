@@ -4,6 +4,7 @@ description: "Files API — Python"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Files API — Python
      2|
      3|The Files API uploads files for use in Messages API requests. Reference files via `file_id` in content blocks, avoiding re-uploads across multiple API calls.
@@ -103,24 +104,25 @@ author: Alexa
     97|
     98|```python
     99|file_info = client.beta.files.retrieve_metadata("file_011CNha8iCJcU1wXNR6q4V8w")
-   100|print(f"Filename: {file_info.filename}")
-   101|print(f"MIME type: {file_info.mime_type}")
-   102|```
+
+100|print(f"Filename: {file_info.filename}")
+101|print(f"MIME type: {file_info.mime_type}")
+102|`
    103|
    104|### Delete a File
    105|
-   106|```python
-   107|client.beta.files.delete("file_011CNha8iCJcU1wXNR6q4V8w")
-   108|```
+   106|`python
+107|client.beta.files.delete("file_011CNha8iCJcU1wXNR6q4V8w")
+108|`
    109|
    110|### Download a File
    111|
    112|Only files created by the code execution tool or skills can be downloaded (not user-uploaded files).
    113|
-   114|```python
-   115|file_content = client.beta.files.download("file_011CNha8iCJcU1wXNR6q4V8w")
-   116|file_content.write_to_file("output.txt")
-   117|```
+   114|`python
+115|file_content = client.beta.files.download("file_011CNha8iCJcU1wXNR6q4V8w")
+116|file_content.write_to_file("output.txt")
+117|`
    118|
    119|---
    120|
@@ -128,45 +130,45 @@ author: Alexa
    122|
    123|Upload a document once, ask multiple questions about it:
    124|
-   125|```python
-   126|import anthropic
-   127|
-   128|client = anthropic.Anthropic()
-   129|
-   130|# 1. Upload once
-   131|uploaded = client.beta.files.upload(
-   132|    file=("contract.pdf", open("contract.pdf", "rb"), "application/pdf"),
-   133|)
-   134|print(f"Uploaded: {uploaded.id}")
-   135|
-   136|# 2. Ask multiple questions using the same file_id
-   137|questions = [
-   138|    "What are the key terms and conditions?",
-   139|    "What is the termination clause?",
-   140|    "Summarize the payment schedule.",
-   141|]
-   142|
-   143|for question in questions:
-   144|    response = client.beta.messages.create(
-   145|        model="claude-opus-4-7",
-   146|        max_tokens=16000,
-   147|        messages=[{
-   148|            "role": "user",
-   149|            "content": [
-   150|                {"type": "text", "text": question},
-   151|                {
-   152|                    "type": "document",
-   153|                    "source": {"type": "file", "file_id": uploaded.id}
-   154|                }
-   155|            ]
-   156|        }],
-   157|        betas=["files-api-2025-04-14"],
-   158|    )
-   159|    print(f"\nQ: {question}")
-   160|    text = next((b.text for b in response.content if b.type == "text"), "")
-   161|    print(f"A: {text[:200]}")
-   162|
-   163|# 3. Clean up when done
-   164|client.beta.files.delete(uploaded.id)
-   165|```
-   166|
+   125|`python
+126|import anthropic
+127|
+128|client = anthropic.Anthropic()
+129|
+130|# 1. Upload once
+131|uploaded = client.beta.files.upload(
+132| file=("contract.pdf", open("contract.pdf", "rb"), "application/pdf"),
+133|)
+134|print(f"Uploaded: {uploaded.id}")
+135|
+136|# 2. Ask multiple questions using the same file_id
+137|questions = [
+138| "What are the key terms and conditions?",
+139| "What is the termination clause?",
+140| "Summarize the payment schedule.",
+141|]
+142|
+143|for question in questions:
+144| response = client.beta.messages.create(
+145| model="claude-opus-4-7",
+146| max_tokens=16000,
+147| messages=[{
+148| "role": "user",
+149| "content": [
+150| {"type": "text", "text": question},
+151| {
+152| "type": "document",
+153| "source": {"type": "file", "file_id": uploaded.id}
+154| }
+155| ]
+156| }],
+157| betas=["files-api-2025-04-14"],
+158| )
+159| print(f"\nQ: {question}")
+160| text = next((b.text for b in response.content if b.type == "text"), "")
+161| print(f"A: {text[:200]}")
+162|
+163|# 3. Clean up when done
+164|client.beta.files.delete(uploaded.id)
+165|```
+166|

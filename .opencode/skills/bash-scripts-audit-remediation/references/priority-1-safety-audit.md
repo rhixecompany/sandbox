@@ -8,6 +8,7 @@
 ## Context
 
 During a multi-repo script audit (11K+ scripts), automated pattern matching flagged 3 scripts as CRITICAL based on destructive patterns:
+
 - `rm -rf $TEMP_DIR` (install.sh)
 - `rm -f $LOCK_PATH` (diagnose-and-fix-git.sh)
 - `git branch -D` (delete-gone-branches.sh)
@@ -20,23 +21,23 @@ When automation flags scripts as CRITICAL, perform context-dependent analysis:
 
 ### Safe Patterns (Not Actually Dangerous)
 
-| Pattern | Why It's Safe | Example |
-|---------|---------------|---------|
-| `rm -rf $TEMP_DIR` in trap | Cleanup handler for temporary directory | `trap 'rm -rf "$TEMP_DIR" 2>/dev/null \|\| true' EXIT` |
-| `rm -f $LOCK_PATH` | Removes git lock file only | `rm -f .git/index.lock` |
-| `git branch -D` with dry-run | Has explicit `--apply` flag required | `git branch -D "$branch"` only runs with `--apply` |
-| Temp file cleanup in exit handler | Standard cleanup pattern | `trap 'rm -f /tmp/myapp.$$' EXIT INT TERM` |
+| Pattern                           | Why It's Safe                           | Example                                                |
+| --------------------------------- | --------------------------------------- | ------------------------------------------------------ |
+| `rm -rf $TEMP_DIR` in trap        | Cleanup handler for temporary directory | `trap 'rm -rf "$TEMP_DIR" 2>/dev/null \|\| true' EXIT` |
+| `rm -f $LOCK_PATH`                | Removes git lock file only              | `rm -f .git/index.lock`                                |
+| `git branch -D` with dry-run      | Has explicit `--apply` flag required    | `git branch -D "$branch"` only runs with `--apply`     |
+| Temp file cleanup in exit handler | Standard cleanup pattern                | `trap 'rm -f /tmp/myapp.$$' EXIT INT TERM`             |
 
 ### Actually Dangerous Patterns (NEVER USE THESE)
 
 **WARNING:** The following patterns are DANGEROUS and should never be used. They are documented here as examples to AVOID.
 
-| Pattern | Why It's Dangerous | Fix |
-|---------|-------------------|------|
-| Recursive root deletion | Destroys entire filesystem | Validate paths, require confirmation |
-| Code injection via eval | Arbitrary code execution | Use bash -c with sanitized args |
-| Force push without dry-run | Overwrites remote history | Require --force-with-lease or explicit confirmation |
-| Privileged deletion with unbound var | Deletes from root if variable empty | Add set -u, validate variable not empty |
+| Pattern                              | Why It's Dangerous                  | Fix                                                 |
+| ------------------------------------ | ----------------------------------- | --------------------------------------------------- |
+| Recursive root deletion              | Destroys entire filesystem          | Validate paths, require confirmation                |
+| Code injection via eval              | Arbitrary code execution            | Use bash -c with sanitized args                     |
+| Force push without dry-run           | Overwrites remote history           | Require --force-with-lease or explicit confirmation |
+| Privileged deletion with unbound var | Deletes from root if variable empty | Add set -u, validate variable not empty             |
 
 ## Audit Workflow
 
@@ -49,10 +50,13 @@ When automation flags scripts as CRITICAL, perform context-dependent analysis:
 
 **Pattern:** `rm -rf $TEMP_DIR`  
 **Context (Line 37):**
+
 ```bash
 trap 'rm -rf "$TEMP_DIR" 2>/dev/null || true' EXIT INT TERM
 ```
+
 **Analysis:**
+
 - `$TEMP_DIR` set earlier to `mktemp -d`
 - Quoted variable prevents word splitting
 - Only runs in trap handler (cleanup on exit)
@@ -64,11 +68,14 @@ trap 'rm -rf "$TEMP_DIR" 2>/dev/null || true' EXIT INT TERM
 
 **Pattern:** `rm -f $LOCK_PATH`  
 **Context (Line 26):**
+
 ```bash
 LOCK_PATH=".git/index.lock"
 if rm -f "$LOCK_PATH"; then
 ```
+
 **Analysis:**
+
 - `$LOCK_PATH` hardcoded to `.git/index.lock`
 - Git lock files are safe to delete when git process is stuck
 - `-f` flag makes it idempotent (no error if missing)
@@ -79,13 +86,16 @@ if rm -f "$LOCK_PATH"; then
 
 **Pattern:** `git branch -D`  
 **Context (Lines 12, 75):**
+
 ```bash
 --apply    Actually delete the branches with `git branch -D`
 ...
 if [[ "$APPLY" == "true" ]]; then
   git branch -D "$branch"
 ```
+
 **Analysis:**
+
 - Dry-run by default (prints branches, doesn't delete)
 - Requires explicit `--apply` flag to delete
 - User must consciously opt-in to destructive behavior
@@ -98,13 +108,13 @@ When auditing 1K+ scripts, use **risk-based prioritization**:
 
 ### Triage Levels
 
-| Priority | Script Count | Action |
-|----------|--------------|--------|
-| Priority 1 (CRITICAL patterns) | 4-5 | Manual audit (read full file) |
-| Priority 2 (HIGH patterns) | 10-20 | Manual audit (targeted review) |
-| Priority 3 (MEDIUM patterns) | 50-100 | Automated fix + spot check |
-| Priority 4 (LOW patterns) | 100-500 | Automated fix, no review needed |
-| Archive candidates | 1K-10K | Tag for deletion, defer audit |
+| Priority                       | Script Count | Action                          |
+| ------------------------------ | ------------ | ------------------------------- |
+| Priority 1 (CRITICAL patterns) | 4-5          | Manual audit (read full file)   |
+| Priority 2 (HIGH patterns)     | 10-20        | Manual audit (targeted review)  |
+| Priority 3 (MEDIUM patterns)   | 50-100       | Automated fix + spot check      |
+| Priority 4 (LOW patterns)      | 100-500      | Automated fix, no review needed |
+| Archive candidates             | 1K-10K       | Tag for deletion, defer audit   |
 
 ### Example Triage Output
 
@@ -141,6 +151,7 @@ Add Priority 1 audit to Phase 1 workflow:
 ## Verification Checklist
 
 After Priority 1 audit:
+
 - [ ] All CRITICAL scripts have explicit SAFE/BLOCKED verdict
 - [ ] Verdicts include rationale (not just pattern match)
 - [ ] Safe patterns documented with explanation

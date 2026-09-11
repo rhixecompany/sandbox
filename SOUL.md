@@ -22,4 +22,3 @@ For full content, rules, and authority, see the canonical SOUL.md in the profile
 - → [.hermes.md](.hermes.md) (project overrides)
 - → [CLAUDE.md](CLAUDE.md) (Claude-specific)
 - → [.cursorrules](.cursorrules) (Cursor IDE)
-

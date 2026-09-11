@@ -67,15 +67,15 @@ Every resource has:
 
 Annotations are metadata bags attached to resources. Common built-in annotations:
 
-| Annotation | Purpose |
-| --- | --- |
-| `EndpointAnnotation` | Defines an HTTP/HTTPS/TCP endpoint |
-| `EnvironmentCallbackAnnotation` | Deferred env var resolution |
-| `HealthCheckAnnotation` | Health check configuration |
-| `ContainerImageAnnotation` | Docker image details |
-| `VolumeAnnotation` | Volume mount configuration |
-| `CommandLineArgsCallbackAnnotation` | Dynamic CLI arguments |
-| `ManifestPublishingCallbackAnnotation` | Custom publish behavior |
+| Annotation                             | Purpose                            |
+| -------------------------------------- | ---------------------------------- |
+| `EndpointAnnotation`                   | Defines an HTTP/HTTPS/TCP endpoint |
+| `EnvironmentCallbackAnnotation`        | Deferred env var resolution        |
+| `HealthCheckAnnotation`                | Health check configuration         |
+| `ContainerImageAnnotation`             | Docker image details               |
+| `VolumeAnnotation`                     | Volume mount configuration         |
+| `CommandLineArgsCallbackAnnotation`    | Dynamic CLI arguments              |
+| `ManifestPublishingCallbackAnnotation` | Custom publish behavior            |
 
 ### Resource lifecycle states
 
@@ -309,13 +309,13 @@ builder.Eventing.Subscribe<BeforeResourceStartedEvent>("db", async (evt, ct) =>
 
 ### Available events
 
-| Event | When |
-| --- | --- |
-| `BeforeResourceStartedEvent` | Before a resource starts |
-| `ResourceReadyEvent` | Resource is healthy and ready |
-| `ResourceStateChangedEvent` | Any state transition |
-| `BeforeStartEvent` | Before the entire application starts |
-| `AfterEndpointsAllocatedEvent` | After all ports are assigned |
+| Event                          | When                                 |
+| ------------------------------ | ------------------------------------ |
+| `BeforeResourceStartedEvent`   | Before a resource starts             |
+| `ResourceReadyEvent`           | Resource is healthy and ready        |
+| `ResourceStateChangedEvent`    | Any state transition                 |
+| `BeforeStartEvent`             | Before the entire application starts |
+| `AfterEndpointsAllocatedEvent` | After all ports are assigned         |
 
 ---
 

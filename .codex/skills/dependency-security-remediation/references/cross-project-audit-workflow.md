@@ -11,6 +11,7 @@ pip-audit --strict --desc
 ```
 
 For each flagged package, record:
+
 - Package name & current version
 - Fixed version (from the advisory description)
 - Which CVEs are resolved by the upgrade
@@ -118,13 +119,13 @@ pip-audit --strict
 
 Given `pillow==12.2.0` flagged with 10 HIGH + 3 MODERATE CVEs (fixed in 12.3.0):
 
-| File | Original | Fix |
-|------|----------|-----|
-| `requirements.txt` | `pillow==12.2.0` | `pillow==12.3.0` |
-| `projects/ecom/requirements.txt` | `pillow==9.0.1` | `pillow>=12.3.0` |
-| `projects/Python-projects/requirements.txt` | `pillow==11.1.0` | `pillow>=12.3.0` |
-| `projects/profile/requirements.txt` | `Pillow` (unpinned) | no change needed |
-| `projects/xamehi.tv/requirements.txt` | `pillow` (unpinned) | no change needed |
+| File                                        | Original            | Fix              |
+| ------------------------------------------- | ------------------- | ---------------- |
+| `requirements.txt`                          | `pillow==12.2.0`    | `pillow==12.3.0` |
+| `projects/ecom/requirements.txt`            | `pillow==9.0.1`     | `pillow>=12.3.0` |
+| `projects/Python-projects/requirements.txt` | `pillow==11.1.0`    | `pillow>=12.3.0` |
+| `projects/profile/requirements.txt`         | `Pillow` (unpinned) | no change needed |
+| `projects/xamehi.tv/requirements.txt`       | `pillow` (unpinned) | no change needed |
 
 ## Pitfalls
 

@@ -37,12 +37,14 @@ batches = {
 ### Step 2: Create Minimal Synthetic Scripts
 
 For each script in the spec, create a placeholder with:
+
 - Correct shebang (`#!/bin/bash` or PowerShell header)
 - Essential safety headers (`set -euo pipefail`, `Set-StrictMode`)
 - Minimal business logic: one `echo` statement or `Write-Host` call
 - Exit code 0
 
 **Example Bash:**
+
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -52,6 +54,7 @@ exit 0
 ```
 
 **Example PowerShell:**
+
 ```powershell
 param([switch]$DryRun)
 Write-Host "Orchestrator running"
@@ -59,6 +62,7 @@ exit 0
 ```
 
 **Example Batch:**
+
 ```batch
 @echo off
 echo Orchestrator running
@@ -97,12 +101,14 @@ With synthetic scripts in place, execute each phase:
 ### Step 5: Generate Real Reports
 
 Each phase generates a real markdown report with:
+
 - Actual execution results (not theoretical)
 - Batch-by-batch breakdown
 - Pass/fail metrics
 - Timestamps and environment context
 
 **Key metrics:**
+
 - Bash scripts: expected 100% pass rate (simple echo + exit 0)
 - PowerShell/Batch: environment-dependent (may not run in bash-on-Windows context)
 - Parity verification: 100% for synthetic fixtures
@@ -145,11 +151,13 @@ Each phase generates a real markdown report with:
 ## Anti-Pattern: Avoid Over-Fidelity
 
 Don't try to make synthetic scripts realistic:
+
 - ❌ Don't include real business logic
 - ❌ Don't try to simulate the script's actual behavior
 - ❌ Don't test against production-like data
 
 **Do:**
+
 - ✅ Keep synthetic scripts minimal (5–10 lines each)
 - ✅ Focus on structure and execution, not logic
 - ✅ Test that the migration procedures work, not the scripts themselves
@@ -184,5 +192,6 @@ Procedures validated on synthetic fixtures; ready for production migration.
 ## Reference Files
 
 This pattern is used in conjunction with:
+
 - `references/six-phase-migration-specifications.md` — Full 6-phase spec with real 54-script example
 - `references/six-phase-migration-with-safety-gates.md` — Safety gates and rollback procedures

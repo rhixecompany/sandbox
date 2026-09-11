@@ -11,6 +11,7 @@ metadata:
     tags: [cloudflare, workers, wrangler, deploy, temporary, agent, serverless, web-development]
     category: web-development
 ---
+
 # Cloudflare Temporary Deploy Skill
 
 Deploy a Cloudflare Worker to a live `workers.dev` URL with zero account setup, using `wrangler deploy --temporary`. Cloudflare provisions a throwaway account, deploys, and prints a claim URL valid for 60 minutes; unclaimed accounts auto-delete. This gives an agent a tight write → deploy → verify loop without any OAuth, signup, or token copy-paste.
@@ -51,36 +52,43 @@ Use the `terminal` tool for every step. Always pin the version (`wrangler@latest
 1. **Scaffold a minimal Worker** (skip if the project already exists). A Worker needs a `wrangler.toml` (or `wrangler.jsonc`) and an entry script. Minimal TypeScript example — write these with `write_file`:
 
    `wrangler.jsonc`:
+
    ```jsonc
    {
-     "name": "hello-agent",
-     "main": "src/index.ts",
-     "compatibility_date": "2025-01-01"
+   	"name": "hello-agent",
+   	"main": "src/index.ts",
+   	"compatibility_date": "2025-01-01",
    }
    ```
 
    `src/index.ts`:
+
    ```typescript
    export default {
-     async fetch(): Promise<Response> {
-       return new Response("hello cloudflare");
-     },
+   	async fetch(): Promise<Response> {
+   		return new Response("hello cloudflare");
+   	},
    };
    ```
 
 2. **Deploy with `--temporary`** from the project directory:
+
    ```
    npx wrangler@latest deploy --temporary
    ```
+
    The proof-of-work check adds a short automatic delay. On success Wrangler prints an `Account: <name> (created)` (or `(reused)`) line, a `Claim URL`, and the live `https://<worker>.<account>.workers.dev` URL.
 
 3. **Parse the URLs** from that output. Run the helper to extract them reliably instead of eyeballing:
+
    ```
    npx wrangler@latest deploy --temporary 2>&1 | python3 scripts/parse_deploy_output.py
    ```
+
    (Resolve `scripts/parse_deploy_output.py` to this skill's absolute path.) It prints JSON: `{"live_url", "claim_url", "account", "account_state", "expires_minutes", "deployed"}`.
 
 4. **Verify the deploy is actually live** — do not trust the deploy log alone. `curl` the live URL and confirm the body matches what the code returns:
+
    ```
    curl -sS <live_url>
    ```
@@ -91,26 +99,26 @@ Use the `terminal` tool for every step. Always pin the version (`wrangler@latest
 
 ## Quick Reference
 
-| Step | Command |
-|---|---|
-| Check version (need 4.102.0+) | `npx wrangler@latest --version` |
-| Deploy (no account) | `npx wrangler@latest deploy --temporary` |
-| Deploy + parse URLs | `npx wrangler@latest deploy --temporary 2>&1 \| python3 scripts/parse_deploy_output.py` |
-| Verify live | `curl -sS <live_url>` |
-| Clear cached temp account | `npx wrangler@latest logout` |
+| Step                          | Command                                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
+| Check version (need 4.102.0+) | `npx wrangler@latest --version`                                                         |
+| Deploy (no account)           | `npx wrangler@latest deploy --temporary`                                                |
+| Deploy + parse URLs           | `npx wrangler@latest deploy --temporary 2>&1 \| python3 scripts/parse_deploy_output.py` |
+| Verify live                   | `curl -sS <live_url>`                                                                   |
+| Clear cached temp account     | `npx wrangler@latest logout`                                                            |
 
 ### Temporary account product limits
 
-| Product | Limit on a temporary account |
-|---|---|
-| Workers | Deploys to `workers.dev` |
-| Static Assets | Up to 1,000 files, 5 MiB each |
-| KV | Allowed |
-| D1 | 1 database, 100 MB per DB / 100 MB total |
-| Durable Objects | Allowed |
-| Hyperdrive | 2 configs, 10 connections |
-| Queues | Up to 10 |
-| SSL/TLS certs | Allowed |
+| Product         | Limit on a temporary account             |
+| --------------- | ---------------------------------------- |
+| Workers         | Deploys to `workers.dev`                 |
+| Static Assets   | Up to 1,000 files, 5 MiB each            |
+| KV              | Allowed                                  |
+| D1              | 1 database, 100 MB per DB / 100 MB total |
+| Durable Objects | Allowed                                  |
+| Hyperdrive      | 2 configs, 10 connections                |
+| Queues          | Up to 10                                 |
+| SSL/TLS certs   | Allowed                                  |
 
 ## Pitfalls
 

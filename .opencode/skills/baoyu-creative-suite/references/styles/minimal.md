@@ -13,14 +13,14 @@ Maximum simplicity with purposeful restraint. Every element serves a function. Z
 
 ## Color Palette
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | White | #FFFFFF | Primary background |
-| Alt Background | Off-White | #FAFAFA | Subtle variation |
-| Primary | Pure Black | #000000 | Main elements |
-| Accent | Content-Derived | varies | Single accent color |
-| Text | Black | #000000 | Text elements |
-| Alt Text | Medium Gray | #6B6B6B | Secondary text |
+| Role           | Color           | Hex     | Usage               |
+| -------------- | --------------- | ------- | ------------------- |
+| Background     | White           | #FFFFFF | Primary background  |
+| Alt Background | Off-White       | #FAFAFA | Subtle variation    |
+| Primary        | Pure Black      | #000000 | Main elements       |
+| Accent         | Content-Derived | varies  | Single accent color |
+| Text           | Black           | #000000 | Text elements       |
+| Alt Text       | Medium Gray     | #6B6B6B | Secondary text      |
 
 Note: Accent color is derived from content context. Use sparingly.
 

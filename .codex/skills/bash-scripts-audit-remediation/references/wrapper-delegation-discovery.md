@@ -10,12 +10,12 @@ When normalizing wrapper families, you must first identify the **canonical runne
 
 Examine the package manager configuration to identify command mappings:
 
-| Package Manager | Files to Check | Command Mapping |
-|---|---|---|
-| npm/pnpm | `package.json` | `"scripts": { "command": "runner ..." }` |
-| Bun | `bunfig.toml` or `package.json` | Same as npm/pnpm; Bun uses package.json scripts |
-| Make | `Makefile` | `.PHONY: target` and `target: command` |
-| Custom runners | `Dockerfile`, `.github/workflows/`, shell source | May require inspecting shell sourcing or CI config |
+| Package Manager | Files to Check                                   | Command Mapping                                    |
+| --------------- | ------------------------------------------------ | -------------------------------------------------- |
+| npm/pnpm        | `package.json`                                   | `"scripts": { "command": "runner ..." }`           |
+| Bun             | `bunfig.toml` or `package.json`                  | Same as npm/pnpm; Bun uses package.json scripts    |
+| Make            | `Makefile`                                       | `.PHONY: target` and `target: command`             |
+| Custom runners  | `Dockerfile`, `.github/workflows/`, shell source | May require inspecting shell sourcing or CI config |
 
 ### Step 2: Trace the Command
 
@@ -42,6 +42,7 @@ $ grep '"setup":' package.json
 ### Step 3: Verify Runner Exists
 
 Before converting the wrapper, confirm the runner:
+
 - Is executable or callable
 - Exists at the path specified
 - Accepts the flags/arguments the wrapper intends to forward

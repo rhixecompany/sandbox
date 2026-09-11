@@ -1,6 +1,6 @@
 # Oblique Strategies
 
-Brian Eno + Peter Schmidt, 1975. A deck of ~110 gnomic cards for breaking studio deadlocks. Used on Bowie's *Berlin Trilogy*, *Music for Airports*, and dozens of other records.
+Brian Eno + Peter Schmidt, 1975. A deck of ~110 gnomic cards for breaking studio deadlocks. Used on Bowie's _Berlin Trilogy_, _Music for Airports_, and dozens of other records.
 
 ## When to use
 
@@ -24,6 +24,7 @@ Brian Eno + Peter Schmidt, 1975. A deck of ~110 gnomic cards for breaking studio
 ## The cards (working subset)
 
 ### General provocations
+
 - Use an old idea.
 - State the problem in words as clearly as possible.
 - Only one element of each kind.
@@ -46,6 +47,7 @@ Brian Eno + Peter Schmidt, 1975. A deck of ~110 gnomic cards for breaking studio
 - Once the search is in progress, something will be found.
 
 ### On material
+
 - Use unqualified people.
 - Tape your mouth.
 - Disconnect from desire.
@@ -59,6 +61,7 @@ Brian Eno + Peter Schmidt, 1975. A deck of ~110 gnomic cards for breaking studio
 - The most important thing is the thing most easily forgotten.
 
 ### On process
+
 - Don't be afraid of things because they're easy to do.
 - Cluster analysis.
 - Emphasize differences.

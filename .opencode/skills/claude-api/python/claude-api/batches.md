@@ -4,6 +4,7 @@ description: "Message Batches API — Python"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Message Batches API — Python
      2|
      3|The Batches API (`POST /v1/messages/batches`) processes Messages API requests asynchronously at 50% of standard prices.
@@ -103,12 +104,13 @@ author: Alexa
     97|cancelled = client.messages.batches.cancel(message_batch.id)
     98|print(f"Status: {cancelled.processing_status}")  # "canceling"
     99|```
-   100|
-   101|---
-   102|
-   103|## Batch with Prompt Caching
-   104|
-   105|```python
+
+100|
+101|---
+102|
+103|## Batch with Prompt Caching
+104|
+105|`python
    106|shared_system = [
    107|    {"type": "text", "text": "You are a literary analyst."},
    108|    {
@@ -132,13 +134,13 @@ author: Alexa
    126|        for i, question in enumerate(questions)
    127|    ]
    128|)
-   129|```
-   130|
-   131|---
-   132|
-   133|## Full End-to-End Example
-   134|
-   135|```python
+   129|`
+130|
+131|---
+132|
+133|## Full End-to-End Example
+134|
+135|`python
    136|import anthropic
    137|import time
    138|from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
@@ -188,5 +190,5 @@ author: Alexa
    182|
    183|for custom_id, classification in sorted(results.items()):
    184|    print(f"{custom_id}: {classification}")
-   185|```
-   186|
+   185|`
+186|

@@ -1,17 +1,18 @@
 ---
 author: 0xbyt4, Hermes Agent
-description: 'ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.'
+description: "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii."
 license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: ascii-art
 tags:
-- imported
+  - imported
 title: Ascii Art
 version: 4.0.0
 ---
+
 # ASCII Art Skill
 
 Multiple tools for different ASCII art needs. All tools are local CLI programs or free REST APIs — no API keys required.
@@ -40,16 +41,16 @@ python3 -m pyfiglet --list_fonts             # List all 571 fonts
 
 ### Recommended fonts
 
-| Style | Font | Best for |
-|-------|------|----------|
-| Clean & modern | `slant` | Project names, headers |
-| Bold & blocky | `doom` | Titles, logos |
-| Big & readable | `big` | Banners |
-| Classic banner | `banner3` | Wide displays |
-| Compact | `small` | Subtitles |
-| Cyberpunk | `cyberlarge` | Tech themes |
-| 3D effect | `3-d` | Splash screens |
-| Gothic | `gothic` | Dramatic text |
+| Style          | Font         | Best for               |
+| -------------- | ------------ | ---------------------- |
+| Clean & modern | `slant`      | Project names, headers |
+| Bold & blocky  | `doom`       | Titles, logos          |
+| Big & readable | `big`        | Banners                |
+| Classic banner | `banner3`    | Wide displays          |
+| Compact        | `small`      | Subtitles              |
+| Cyberpunk      | `cyberlarge` | Tech themes            |
+| 3D effect      | `3-d`        | Splash screens         |
+| Gothic         | `gothic`     | Dramatic text          |
 
 ### Tips
 
@@ -188,6 +189,7 @@ for art in arts:
 ```
 
 **Available subjects** (use as URL path):
+
 - Animals: `cat`, `dog`, `horse`, `bird`, `fish`, `dragon`, `snake`, `rabbit`, `elephant`, `dolphin`, `butterfly`, `owl`, `wolf`, `bear`, `penguin`, `turtle`
 - Objects: `car`, `ship`, `airplane`, `rocket`, `guitar`, `computer`, `coffee`, `beer`, `cake`, `house`, `castle`, `sword`, `crown`, `key`
 - Nature: `tree`, `flower`, `sun`, `moon`, `star`, `mountain`, `ocean`, `rainbow`
@@ -195,6 +197,7 @@ for art in arts:
 - Holidays: `christmas`, `halloween`, `valentine`
 
 **Tips:**
+
 - Preserve artist signatures/initials — important etiquette
 - Multiple art pieces per page — pick the best one for the user
 - Works reliably via curl, no JavaScript needed
@@ -279,6 +282,7 @@ mood and visual story first; first-render excellence is non-negotiable; one unif
 language across all scenes; dense, layered, intentional — never flat black backgrounds.
 
 **Critical implementation notes**
+
 - **Brightness:** use adaptive `tonemap()` (percentile-based), never `canvas * N` multipliers (they
   clip highlights). Default gamma 0.75.
 - **ffmpeg pipe deadlock:** never `stderr=subprocess.PIPE` on long ffmpeg runs — buffer fills at
@@ -288,22 +292,24 @@ language across all scenes; dense, layered, intentional — never flat black bac
 - **Font compatibility:** validate Unicode palettes at init (blank-output check).
 
 **Reference library (under `references/`):**
-| File | Contents |
-|------|----------|
-| `ascii-video-pipeline.md` | Full SKILL body: modes, stack, 6-stage pipeline, creative direction, build steps, perf budgets |
-| `ascii-video-architecture.md` | Grid system, resolution presets, font selection, character palettes (20+), color system, `GridLayer` |
-| `ascii-video-composition.md` | Pixel blend modes (20), multi-grid composition, adaptive `tonemap()`, `FeedbackBuffer` |
-| `ascii-video-effects.md` | Effect building blocks: noise/fBM/domain warp, voronoi, reaction-diffusion, SDFs, particles, coordinate transforms |
-| `ascii-video-shaders.md` | `ShaderChain`, shader catalog (38), audio-reactive scaling, transitions, terminal rendering |
-| `ascii-video-scenes.md` | Scene protocol, `Renderer`, beat-synced cutting, parallel rendering, complete examples |
-| `ascii-video-inputs.md` | Audio FFT/bands/beats, video sampling, image conversion, text/lyrics, TTS integration |
-| `ascii-video-optimization.md` | Hardware detection, quality profiles, vectorized patterns, parallel rendering |
-| `ascii-video-troubleshooting.md` | NumPy broadcasting, blend pitfalls, multiprocessing, brightness/ffmpeg/font diagnostics |
+
+| File                             | Contents                                                                                                           |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `ascii-video-pipeline.md`        | Full SKILL body: modes, stack, 6-stage pipeline, creative direction, build steps, perf budgets                     |
+| `ascii-video-architecture.md`    | Grid system, resolution presets, font selection, character palettes (20+), color system, `GridLayer`               |
+| `ascii-video-composition.md`     | Pixel blend modes (20), multi-grid composition, adaptive `tonemap()`, `FeedbackBuffer`                             |
+| `ascii-video-effects.md`         | Effect building blocks: noise/fBM/domain warp, voronoi, reaction-diffusion, SDFs, particles, coordinate transforms |
+| `ascii-video-shaders.md`         | `ShaderChain`, shader catalog (38), audio-reactive scaling, transitions, terminal rendering                        |
+| `ascii-video-scenes.md`          | Scene protocol, `Renderer`, beat-synced cutting, parallel rendering, complete examples                             |
+| `ascii-video-inputs.md`          | Audio FFT/bands/beats, video sampling, image conversion, text/lyrics, TTS integration                              |
+| `ascii-video-optimization.md`    | Hardware detection, quality profiles, vectorized patterns, parallel rendering                                      |
+| `ascii-video-troubleshooting.md` | NumPy broadcasting, blend pitfalls, multiprocessing, brightness/ffmpeg/font diagnostics                            |
 
 ## Pitfalls
 
 - **Stale cache:** Always re-read files from disk after editing; don't rely on cached context
 - **Context limits:** Process in batches; write results after each batch
+
 ## Verification Checklist
 
 - [ ] Environment and dependencies are properly configured
@@ -318,21 +324,21 @@ language across all scenes; dense, layered, intentional — never flat black bac
 
 Prepare the environment and select the appropriate ASCII art tool.
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 1.1 | Choose tool (pyfiglet, cowsay, boxes, jp2a, chafa, etc.) | Tool selected |
-| 1.2 | Configure parameters (font, size, color, output format) | Configuration set |
-| 1.3 | Verify tool availability — install if missing | Tool ready |
+| Step | Action                                                   | Output            |
+| ---- | -------------------------------------------------------- | ----------------- |
+| 1.1  | Choose tool (pyfiglet, cowsay, boxes, jp2a, chafa, etc.) | Tool selected     |
+| 1.2  | Configure parameters (font, size, color, output format)  | Configuration set |
+| 1.3  | Verify tool availability — install if missing            | Tool ready        |
 
 ### Phase 2: Generate
 
 Create the ASCII art output.
 
-| Step | Action | Output |
-| --- | --- | --- |
-| 2.1 | Run the selected tool with configured parameters | Raw output |
-| 2.2 | Apply any post-processing (color, alignment, border) | Formatted output |
-| 2.3 | Save or display the result | Final artifact |
+| Step | Action                                               | Output           |
+| ---- | ---------------------------------------------------- | ---------------- |
+| 2.1  | Run the selected tool with configured parameters     | Raw output       |
+| 2.2  | Apply any post-processing (color, alignment, border) | Formatted output |
+| 2.3  | Save or display the result                           | Final artifact   |
 
 ### Phase 3: Verify
 

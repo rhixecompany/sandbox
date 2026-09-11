@@ -10,10 +10,10 @@ High-contrast comic style with bold outlines and dramatic visuals.
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
-| **Graphic-novel** | Dramatic narratives | Action lines, hatching, panels |
-| **Pop-art** | High-energy impact | Halftone dots, Warhol repetition |
+| Variant           | Focus               | Visual Emphasis                  |
+| ----------------- | ------------------- | -------------------------------- |
+| **Graphic-novel** | Dramatic narratives | Action lines, hatching, panels   |
+| **Pop-art**       | High-energy impact  | Halftone dots, Warhol repetition |
 
 ## Visual Elements
 

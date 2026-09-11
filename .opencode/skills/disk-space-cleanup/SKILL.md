@@ -6,38 +6,45 @@ description: "Free disk space: delete venvs, node_modules, caches, logs."
 # Disk Space Cleanup (full-sweep)
 
 ## Trigger
-User wants more disk space; wants to delete stale/unused venv, .venv, myvenv, node_modules, .archive, __pycache__, python/node caches in repos/subrepos/hermes root; delete backup files/folders; clean temp/tmp/logs; verify disk space; or uninstall unused apps.
+
+User wants more disk space; wants to delete stale/unused venv, .venv, myvenv, node_modules, .archive, **pycache**, python/node caches in repos/subrepos/hermes root; delete backup files/folders; clean temp/tmp/logs; verify disk space; or uninstall unused apps.
 
 ## Canonical script
+
 `~/Desktop/SandBox/scripts/cleanup_disk.py` — Python, dry-run-first, categories, dedup, safe hermes-root filtering.
 
 ## Workflow
 
 1. **Measure first** — always record before/after free space:
+
    ```bash
    df -h /c   # or target drive
    du -sh <root>  # find big roots first
    ```
 
 2. **Run the script dry-run** (default — nothing deleted):
+
    ```bash
    python scripts/cleanup_disk.py --verify --min-size 5 \
      "C:/path/to/repo" "C:/path/to/subrepos" ...
    ```
-   - Categories: `deps` (node_modules, venv, .venv, myvenv, __pycache__, dist, build, .next, .tox), `archive` (.archive, backup, *.bak, *.orig, *.rej, *~), `cache` (.cache, npm-cache), `logs` (*.log, *.tmp).
+   - Categories: `deps` (node_modules, venv, .venv, myvenv, **pycache**, dist, build, .next, .tox), `archive` (.archive, backup, *.bak, *.orig, *.rej, _~), `cache` (.cache, npm-cache), `logs` (_.log, *.tmp).
    - `--cats deps,archive,cache,logs` restricts scope.
    - `--include-os-caches` adds pip/npm/bun/Temp OS-level caches.
    - MSYS pitfall on Windows: pass **Windows-style** paths (`C:/...`) to native Python, not MSYS `/c/...`, and use `MSYS_NO_PATHCONV=1`.
 
 3. **Get approval** for destructive apply (SOUL rule: destructive ops need approval). Then:
+
    ```bash
    python scripts/cleanup_disk.py --apply --min-size 5 <roots>
    ```
 
 4. **Hermes root — never delete runtime deps.** Use conservative cats only:
+
    ```bash
    python scripts/cleanup_disk.py --apply --cats cache,logs,archive "C:/Users/<user>/AppData/Local/hermes"
    ```
+
    Active log files (e.g. `mcp-stderr.log`) may be locked → script logs the error and continues; that's expected.
 
 5. **Temp folder — don't rmtree wholesale** (files in use). Delete only entries older than ~3 days + empty dirs via a small Python one-liner (see pitfalls).
@@ -45,10 +52,12 @@ User wants more disk space; wants to delete stale/unused venv, .venv, myvenv, no
 6. **Bloated `.git`** — check `git count-objects -vH`; if `size-garbage` or giant unreachable packs, run `git gc --prune=now` (safe, non-history-rewriting, can reclaim GBs). Never run `filter-repo`/`filter-branch` without explicit approval — that rewrites history.
 
 7. **App uninstall** — inventory first, present deletion list for approval:
+
    ```bash
    winget list | sort  # inventory
    winget uninstall --id <id> --silent  # only after approval
    ```
+
    Never uninstall without an approved list.
 
 8. **Verify** — `df -h /c` after; report before → after deltas and any locked/error items.
@@ -77,7 +86,6 @@ User wants more disk space; wants to delete stale/unused venv, .venv, myvenv, no
 - [ ] Changes are documented and committed if applicable
 
 ## When to Use
-
 
 - When you need to perform Disk Space Cleanup (full-sweep) operations or tasks
 - When managing Disk Space Cleanup (full-sweep) infrastructure or configurations

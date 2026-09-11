@@ -8,9 +8,9 @@ Inspect the repository for existing Box clients, `BOX_` configuration, token sto
 
 ## Choose an identity
 
-| Identity | Use when |
-| --- | --- |
-| OAuth | each end user connects their own Box account |
+| Identity | Use when                                     |
+| -------- | -------------------------------------------- |
+| OAuth    | each end user connects their own Box account |
 
 OAuth follows the signed-in user's permissions and app scopes. For a shared or background application, the Box account that authorizes the application defines its access boundary; invite that account only to the files, folders, or Hubs the application needs.
 
@@ -71,10 +71,10 @@ answer = client.ai.create_ai_ask(
 
 ```typescript
 const answer = await client.ai.createAiAsk({
-  mode: "single_item_qa",
-  prompt: "What changed in the latest policy?",
-  items: [{ id: hubId, type: "hubs" }],
-  includeCitations: true,
+	mode: "single_item_qa",
+	prompt: "What changed in the latest policy?",
+	items: [{ id: hubId, type: "hubs" }],
+	includeCitations: true,
 });
 ```
 

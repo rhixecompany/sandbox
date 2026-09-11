@@ -6,17 +6,18 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: brand-guidelines
 tags:
-- brand
-- design
-- anthropic
-- colors
-- typography
+  - brand
+  - design
+  - anthropic
+  - colors
+  - typography
 title: Brand Guidelines
 version: 1.0.0
 ---
+
 ## Description
 
 Applies Anthropic official brand colors and typography to artifacts. Use when brand colors or style guidelines, visual formatting, or company design standards apply.
@@ -102,11 +103,11 @@ Use this skill when:
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `frontend-design` | Design UI with brand alignment |
-| `canvas-design` | Create visual art with brand colors |
-| `theme-factory` | Apply consistent themes across artifacts |
+| Skill             | Purpose                                  |
+| ----------------- | ---------------------------------------- |
+| `frontend-design` | Design UI with brand alignment           |
+| `canvas-design`   | Create visual art with brand colors      |
+| `theme-factory`   | Apply consistent themes across artifacts |
 
 ## Verification Checklist
 

@@ -9,6 +9,7 @@ metadata:
     tags: []
     related_skills: []
 ---
+
      1|# DAL Patterns Reference
      2|
      3|## Overview
@@ -108,9 +109,10 @@ metadata:
     97|
     98|**NEVER #3: Over-fetch all relations upfront**
     99|
-   100|❌ WRONG:
-   101|
-   102|```typescript
+
+100|❌ WRONG:
+101|
+102|`typescript
    103|// This loads all wallets, accounts, transactions for every user
    104|async function findByIdWithEverything(id: string) {
    105|  return db
@@ -120,11 +122,11 @@ metadata:
    109|    .leftJoin(accounts, eq(accounts.userId, users.id))
    110|    .leftJoin(transactions, eq(transactions.userId, users.id));
    111|}
-   112|```
-   113|
-   114|✅ RIGHT:
-   115|
-   116|```typescript
+   112|`
+113|
+114|✅ RIGHT:
+115|
+116|`typescript
    117|// Load only what the caller needs
    118|async function findById(id: string) {
    119|  return db.select().from(users).where(eq(users.id, id));
@@ -134,43 +136,43 @@ metadata:
    123|  // Separate function if wallets are needed
    124|  return findById(id); // + batch-fetch wallets separately
    125|}
-   126|```
-   127|
-   128|**WHY**: Over-fetching causes cartesian products, duplicate rows, and massive result sets. Load only what you need, when you need it.
-   129|
-   130|---
-   131|
-   132|**NEVER #4: Assume relationships always exist**
-   133|
-   134|❌ WRONG:
-   135|
-   136|```typescript
+   126|`
+127|
+128|**WHY**: Over-fetching causes cartesian products, duplicate rows, and massive result sets. Load only what you need, when you need it.
+129|
+130|---
+131|
+132|**NEVER #4: Assume relationships always exist**
+133|
+134|❌ WRONG:
+135|
+136|`typescript
    137|// If a wallet was deleted, senderWallet becomes undefined
    138|const txn = {
    139|  ...t,
    140|  senderWallet: walletsMap.get(t.senderWalletId) // Could be undefined!
    141|};
-   142|```
-   143|
-   144|✅ RIGHT:
-   145|
-   146|```typescript
+   142|`
+143|
+144|✅ RIGHT:
+145|
+146|`typescript
    147|// Use null-coalescing to safely handle missing data
    148|const txn = {
    149|  ...t,
    150|  senderWallet: walletsMap.get(t.senderWalletId) ?? null
    151|};
-   152|```
-   153|
-   154|**WHY**: Soft-deleted records leave orphaned references. Without null-coalescing, your code crashes or returns undefined, breaking frontend expectations.
-   155|
-   156|---
-   157|
-   158|**NEVER #5: Forget to check if your batch is empty**
-   159|
-   160|❌ WRONG:
-   161|
-   162|```typescript
+   152|`
+153|
+154|**WHY**: Soft-deleted records leave orphaned references. Without null-coalescing, your code crashes or returns undefined, breaking frontend expectations.
+155|
+156|---
+157|
+158|**NEVER #5: Forget to check if your batch is empty**
+159|
+160|❌ WRONG:
+161|
+162|`typescript
    163|const walletIds = new Set<string>();
    164|// ... collect IDs ...
    165|const walletsMap = new Map();
@@ -179,11 +181,11 @@ metadata:
    168|  .from(wallets)
    169|  .where(inArray(wallets.id, Array.from(walletIds)));
    170|// If walletIds is empty, inArray() might error
-   171|```
-   172|
-   173|✅ RIGHT:
-   174|
-   175|```typescript
+   171|`
+172|
+173|✅ RIGHT:
+174|
+175|`typescript
    176|const walletIds = new Set<string>();
    177|// ... collect IDs ...
    178|const walletsMap = new Map();
@@ -194,112 +196,112 @@ metadata:
    183|    .where(inArray(wallets.id, Array.from(walletIds)));
    184|  for (const row of rows) walletsMap.set(row.id, row);
    185|}
-   186|```
-   187|
-   188|**WHY**: Empty `inArray()` clauses can cause SQL errors. Guard with a size check first.
-   189|
-   190|---
-   191|
-   192|## DAL Files
-   193|
-   194|### user.dal.ts
-   195|
-   196|- `findByEmail(email)` — Find user by email, excludes soft-deleted
-   197|- `findById(id)` — Find user by ID, excludes soft-deleted
-   198|- `findByIdWithProfile(id)` — JOIN query, returns UserWithProfile
-   199|- `create(data)` — Insert new user
-   200|- `update(id, data)` — Partial update user
-   201|- `createWithProfile(data)` — Transactional user + profile creation
-   202|- `updateProfile(userId, data)` — Upsert profile
-   203|- `toggleAdmin(id)` — Flip isAdmin flag
-   204|- `toggleActive(id)` — Flip isActive flag
-   205|- `softDelete(id)` — Set deletedAt timestamp
-   206|- `hardDelete(id)` — Permanent delete
-   207|
-   208|### wallet.dal.ts
-   209|
-   210|- `findByUserId(userId)` — Get user's wallets
-   211|- `findById(id)` — Get wallet by ID
-   212|- `create(data)` — Create new wallet
-   213|- `update(id, data)` — Update wallet
-   214|- `delete(id)` — Soft delete wallet
-   215|
-   216|### transaction.dal.ts
-   217|
-   218|- `findByUserIdWithWallets(userId, limit, offset)` — N+1 prevention pattern
-   219|- `findById(id)` — Get transaction by ID
-   220|- `findByWalletId(walletId)` — Transactions for wallet
-   221|- `create(data)` — Create transaction
-   222|- `updateStatus(id, status)` — Update transaction status
-   223|
-   224|### recipient.dal.ts
-   225|
-   226|- `findByUserId(userId)` — User's transfer recipients
-   227|- `findById(id)` — Get recipient by ID
-   228|- `create(data)` — Add recipient
-   229|- `update(id, data)` — Update recipient
-   230|- `delete(id)` — Remove recipient
-   231|
-   232|### dwolla.dal.ts
-   233|
-   234|- `createFundingSource(data)` — Create Dwolla funding source
-   235|- `getFundingSource(id)` — Get funding source details
-   236|- `initiateTransfer(data)` — Start ACH transfer
-   237|- `getTransfer(id)` — Get transfer status
-   238|
-   239|## Return Types
-   240|
-   241|All DAL methods return typed objects, not raw DB results:
-   242|
-   243|```typescript
+   186|`
+187|
+188|**WHY**: Empty `inArray()` clauses can cause SQL errors. Guard with a size check first.
+189|
+190|---
+191|
+192|## DAL Files
+193|
+194|### user.dal.ts
+195|
+196|- `findByEmail(email)` — Find user by email, excludes soft-deleted
+197|- `findById(id)` — Find user by ID, excludes soft-deleted
+198|- `findByIdWithProfile(id)` — JOIN query, returns UserWithProfile
+199|- `create(data)` — Insert new user
+200|- `update(id, data)` — Partial update user
+201|- `createWithProfile(data)` — Transactional user + profile creation
+202|- `updateProfile(userId, data)` — Upsert profile
+203|- `toggleAdmin(id)` — Flip isAdmin flag
+204|- `toggleActive(id)` — Flip isActive flag
+205|- `softDelete(id)` — Set deletedAt timestamp
+206|- `hardDelete(id)` — Permanent delete
+207|
+208|### wallet.dal.ts
+209|
+210|- `findByUserId(userId)` — Get user's wallets
+211|- `findById(id)` — Get wallet by ID
+212|- `create(data)` — Create new wallet
+213|- `update(id, data)` — Update wallet
+214|- `delete(id)` — Soft delete wallet
+215|
+216|### transaction.dal.ts
+217|
+218|- `findByUserIdWithWallets(userId, limit, offset)` — N+1 prevention pattern
+219|- `findById(id)` — Get transaction by ID
+220|- `findByWalletId(walletId)` — Transactions for wallet
+221|- `create(data)` — Create transaction
+222|- `updateStatus(id, status)` — Update transaction status
+223|
+224|### recipient.dal.ts
+225|
+226|- `findByUserId(userId)` — User's transfer recipients
+227|- `findById(id)` — Get recipient by ID
+228|- `create(data)` — Add recipient
+229|- `update(id, data)` — Update recipient
+230|- `delete(id)` — Remove recipient
+231|
+232|### dwolla.dal.ts
+233|
+234|- `createFundingSource(data)` — Create Dwolla funding source
+235|- `getFundingSource(id)` — Get funding source details
+236|- `initiateTransfer(data)` — Start ACH transfer
+237|- `getTransfer(id)` — Get transfer status
+238|
+239|## Return Types
+240|
+241|All DAL methods return typed objects, not raw DB results:
+242|
+243|`typescript
    244|// Returns { ok: boolean; user?: User; error?: string }
    245|const result = await userDal.findById(id);
    246|if (!result.ok) {
    247|  return { error: result.error, ok: false };
    248|}
-   249|```
-   250|
-   251|## Transaction Support
-   252|
-   253|Use `db.transaction()` for atomic operations:
-   254|
-   255|```typescript
+   249|`
+250|
+251|## Transaction Support
+252|
+253|Use `db.transaction()` for atomic operations:
+254|
+255|`typescript
    256|await db.transaction(async (tx) => {
    257|  const [user] = await tx.insert(users).values({...}).returning();
    258|  await tx.insert(user_profiles).values({ userId: user.id, ... });
    259|});
-   260|```
-   261|
-   262|## Soft Delete Pattern
-   263|
-   264|All find methods automatically filter `deletedAt IS NULL` at the database level:
-   265|
-   266|```typescript
+   260|`
+261|
+262|## Soft Delete Pattern
+263|
+264|All find methods automatically filter `deletedAt IS NULL` at the database level:
+265|
+266|`typescript
    267|async findById(id: string) {
    268|  const [user] = await db.select().from(users)
    269|    .where(and(eq(users.id, id), isNull(users.deletedAt)));
    270|  return user;
    271|}
-   272|```
-   273|
-   274|**Standard Filtering Approach (Phase B.2 Standardization):**
-   275|
-   276|All DAL helpers use database-level filtering with `isNull()` to exclude soft-deleted records. This approach:
-   277|
-   278|1. **Prevents unnecessary row transfers** — Database filters before returning data
-   279|2. **Clarifies SQL intent** — `WHERE deletedAt IS NULL` explicitly shows filter in generated SQL
-   280|3. **Unifies pattern across DAL** — All tables follow the same convention
-   281|
-   282|**Soft-delete across tables:**
-   283|
-   284|- **users table:** `isNull(users.deletedAt)` in `user.dal.ts` `findByEmail()`, `findById()`, `findByIdWithProfile()`
-   285|- **wallets table:** `isNull(wallets.deletedAt)` in `wallet.dal.ts` `findById()`, `findBySharableId()`, `findByAccountId()`
-   286|- **transactions table:** `isNull(transactions.deletedAt)` in `transaction.dal.ts` `findByUserId()`, etc.
-   287|- **recipients table:** Hard delete only (no `deletedAt` column; use cascade delete instead)
-   288|
-   289|**NEVER use `where()` without soft-delete check:**
-   290|
-   291|```typescript
+   272|`
+273|
+274|**Standard Filtering Approach (Phase B.2 Standardization):**
+275|
+276|All DAL helpers use database-level filtering with `isNull()` to exclude soft-deleted records. This approach:
+277|
+278|1. **Prevents unnecessary row transfers** — Database filters before returning data
+279|2. **Clarifies SQL intent** — `WHERE deletedAt IS NULL` explicitly shows filter in generated SQL
+280|3. **Unifies pattern across DAL** — All tables follow the same convention
+281|
+282|**Soft-delete across tables:**
+283|
+284|- **users table:** `isNull(users.deletedAt)` in `user.dal.ts` `findByEmail()`, `findById()`, `findByIdWithProfile()`
+285|- **wallets table:** `isNull(wallets.deletedAt)` in `wallet.dal.ts` `findById()`, `findBySharableId()`, `findByAccountId()`
+286|- **transactions table:** `isNull(transactions.deletedAt)` in `transaction.dal.ts` `findByUserId()`, etc.
+287|- **recipients table:** Hard delete only (no `deletedAt` column; use cascade delete instead)
+288|
+289|**NEVER use `where()` without soft-delete check:**
+290|
+291|`typescript
    292|// ❌ WRONG (returns deleted records too)
    293|async findById(id: string) {
    294|  return await db.select().from(users).where(eq(users.id, id));
@@ -310,21 +312,21 @@ metadata:
    299|  return await db.select().from(users)
    300|    .where(and(eq(users.id, id), isNull(users.deletedAt)));
    301|}
-   302|```
-   303|
-   304|**Testing soft deletes:**
-   305|
-   306|See `tests/e2e/soft-delete.spec.ts` for comprehensive E2E tests covering:
-   307|
-   308|- Soft-deleted users excluded from active queries
-   309|- Soft-deleted wallets excluded from active queries
-   310|- Soft-deleted transactions excluded from active queries
-   311|
-   312|## N+1 Prevention Pattern: Batch Fetch Example
-   313|
-   314|This is the canonical pattern. Follow these 4 steps exactly:
-   315|
-   316|```typescript
+   302|`
+303|
+304|**Testing soft deletes:**
+305|
+306|See `tests/e2e/soft-delete.spec.ts` for comprehensive E2E tests covering:
+307|
+308|- Soft-deleted users excluded from active queries
+309|- Soft-deleted wallets excluded from active queries
+310|- Soft-deleted transactions excluded from active queries
+311|
+312|## N+1 Prevention Pattern: Batch Fetch Example
+313|
+314|This is the canonical pattern. Follow these 4 steps exactly:
+315|
+316|`typescript
    317|export async function findByUserIdWithWallets(
    318|  userId: string,
    319|  limit = 50,
@@ -364,45 +366,45 @@ metadata:
    353|    receiverWallet: walletsMap.get(txn.receiverWalletId) ?? null
    354|  }));
    355|}
-   356|```
-   357|
-   358|### Handling Edge Cases
-   359|
-   360|**Empty result set** — walletIds is empty, so batch-fetch is skipped:
-   361|
-   362|```typescript
+   356|`
+357|
+358|### Handling Edge Cases
+359|
+360|**Empty result set** — walletIds is empty, so batch-fetch is skipped:
+361|
+362|`typescript
    363|if (walletIds.size > 0) {
    364|  // Only query if we have IDs to fetch
    365|  const rows = await db.select().from(wallets)...
    366|}
    367|// walletsMap remains empty Map, all wallet refs become null
-   368|```
-   369|
-   370|**Orphaned references** — wallet was soft-deleted after transaction created:
-   371|
-   372|```typescript
+   368|`
+369|
+370|**Orphaned references** — wallet was soft-deleted after transaction created:
+371|
+372|`typescript
    373|// walletsMap.get() returns undefined for deleted wallets
    374|senderWallet: walletsMap.get(txn.senderWalletId) ?? null;
    375|// Safe coalescing to null instead of crashing
-   376|```
-   377|
-   378|**Null/missing relationships** — transaction has no sender wallet initially:
-   379|
-   380|```typescript
+   376|`
+377|
+378|**Null/missing relationships** — transaction has no sender wallet initially:
+379|
+380|``typescript
    381|// The guard `if (t.senderWalletId)` prevents adding null/undefined to Set
    382|if (t.senderWalletId) walletIds.add(t.senderWalletId);
    383|// Skipped for null values, no wasted queries
-   384|```
-   385|
-   386|---
-   387|
-   388|## Quick Decision Flow
-   389|
-   390|```
+   384|``
+385|
+386|---
+387|
+388|## Quick Decision Flow
+389|
+390|`
    391|Do I need related data? →
    392|  YES → Can I batch-fetch all related records in one query?
    393|    YES → Use N+1 prevention pattern (4 steps above)
    394|    NO  → Use LEFT JOIN or separate queries with grouping
    395|  NO → Use direct single-query (findById, findByEmail, etc.)
-   396|```
-   397|
+   396|`
+397|

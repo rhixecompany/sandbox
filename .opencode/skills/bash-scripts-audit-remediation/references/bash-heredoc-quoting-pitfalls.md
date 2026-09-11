@@ -2,9 +2,10 @@
 
 ## Problem: Variable Expansion Inside Heredocs
 
-When creating bash scripts inline via `cat > file << 'EOF'`, unquoted heredocs expand `$variables` and `$(commands)` immediately in the *parent* shell, not in the created file.
+When creating bash scripts inline via `cat > file << 'EOF'`, unquoted heredocs expand `$variables` and `$(commands)` immediately in the _parent_ shell, not in the created file.
 
 Failure modes:
+
 1. `$(...)` executes in parent shell, output gets baked in as literal text
 2. `$variables` expand to empty if unset in parent scope
 

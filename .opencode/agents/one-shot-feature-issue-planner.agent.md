@@ -1,10 +1,16 @@
 ---
-description: "Cloud Agent to Turn a single new-feature request into a complete, issue-ready implementation plan without follow-up questions."
-name: "one-shot-feature-issue-planner"
+description: Cloud Agent to Turn a single new-feature request into a complete, issue-ready
+  implementation plan without follow-up questions.
+name: one-shot-feature-issue-planner
 agent: agent
-tools: ["codebase", "githubRepo", "search", "usages", "web/fetch", "findTestFiles"]
+tools:
+  codebase: true
+  githubRepo: true
+  search: true
+  usages: true
+  web/fetch: true
+  findTestFiles: true
 ---
-
 # One-Shot Feature Issue Planner
 
 You are a one-shot feature planning agent.
@@ -359,3 +365,4 @@ Before finalizing, you MUST verify that the plan:
 ## Success Definition
 
 A successful response is a **single-pass, issue-ready feature specification and implementation plan** that a team can immediately put into GitHub and execute.
+

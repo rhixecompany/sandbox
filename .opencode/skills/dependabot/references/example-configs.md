@@ -141,7 +141,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 0  # disables version update PRs
+    open-pull-requests-limit: 0 # disables version update PRs
     groups:
       security-all:
         applies-to: security-updates
@@ -229,14 +229,14 @@ updates:
     directory: "/"
     schedule:
       interval: "cron"
-      cronjob: "0 9 * * 1"  # Every Monday at 9:00 AM
+      cronjob: "0 9 * * 1" # Every Monday at 9:00 AM
       timezone: "America/New_York"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "cron"
-      cronjob: "0 6 1 * *"  # First day of each month at 6:00 AM
+      cronjob: "0 6 1 * *" # First day of each month at 6:00 AM
 ```
 
 ---

@@ -4,6 +4,7 @@ description: "Claude Model Catalog"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Claude Model Catalog
      2|
      3|**Only use exact model IDs listed in this file.** Never guess or construct model IDs — incorrect IDs will cause API errors. Use aliases wherever available. For the latest information, WebFetch the Models Overview URL in `shared/live-sources.md`, or query the Models API directly (see Programmatic Model Discovery below).
@@ -103,27 +104,28 @@ author: Alexa
     97|| Claude Sonnet 3   | `claude-3-sonnet-20240229`   | Jul 21, 2025 |
     98|| Claude 2.1        | `claude-2.1`                 | Jul 21, 2025 |
     99|| Claude 2.0        | `claude-2.0`                 | Jul 21, 2025 |
-   100|
-   101|## Resolving User Requests
-   102|
-   103|When a user asks for a model by name, use this table to find the correct model ID:
-   104|
-   105|| User says...             | Use this model ID                       |
-   106|| ------------------------ | --------------------------------------- |
-   107|| "opus", "most powerful"  | `claude-opus-4-7`                       |
-   108|| "opus 4.7"               | `claude-opus-4-7`                       |
-   109|| "opus 4.6"               | `claude-opus-4-6`                       |
-   110|| "opus 4.5"               | `claude-opus-4-5`                       |
-   111|| "opus 4.1"               | `claude-opus-4-1`                       |
-   112|| "opus 4", "opus 4.0"     | `claude-opus-4-0`                       |
-   113|| "sonnet", "balanced"     | `claude-sonnet-4-6`                     |
-   114|| "sonnet 4.6"             | `claude-sonnet-4-6`                     |
-   115|| "sonnet 4.5"             | `claude-sonnet-4-5`                     |
-   116|| "sonnet 4", "sonnet 4.0" | `claude-sonnet-4-0`                     |
-   117|| "sonnet 3.7"             | Retired — suggest `claude-sonnet-4-5`   |
-   118|| "sonnet 3.5"             | Retired — suggest `claude-sonnet-4-5`   |
-   119|| "haiku", "fast", "cheap" | `claude-haiku-4-5`                      |
-   120|| "haiku 4.5"              | `claude-haiku-4-5`                      |
-   121|| "haiku 3.5"              | Retired — suggest `claude-haiku-4-5`    |
-   122|| "haiku 3"                | Deprecated — suggest `claude-haiku-4-5` |
-   123|
+
+100|
+101|## Resolving User Requests
+102|
+103|When a user asks for a model by name, use this table to find the correct model ID:
+104|
+105|| User says... | Use this model ID |
+106|| ------------------------ | --------------------------------------- |
+107|| "opus", "most powerful" | `claude-opus-4-7` |
+108|| "opus 4.7" | `claude-opus-4-7` |
+109|| "opus 4.6" | `claude-opus-4-6` |
+110|| "opus 4.5" | `claude-opus-4-5` |
+111|| "opus 4.1" | `claude-opus-4-1` |
+112|| "opus 4", "opus 4.0" | `claude-opus-4-0` |
+113|| "sonnet", "balanced" | `claude-sonnet-4-6` |
+114|| "sonnet 4.6" | `claude-sonnet-4-6` |
+115|| "sonnet 4.5" | `claude-sonnet-4-5` |
+116|| "sonnet 4", "sonnet 4.0" | `claude-sonnet-4-0` |
+117|| "sonnet 3.7" | Retired — suggest `claude-sonnet-4-5` |
+118|| "sonnet 3.5" | Retired — suggest `claude-sonnet-4-5` |
+119|| "haiku", "fast", "cheap" | `claude-haiku-4-5` |
+120|| "haiku 4.5" | `claude-haiku-4-5` |
+121|| "haiku 3.5" | Retired — suggest `claude-haiku-4-5` |
+122|| "haiku 3" | Deprecated — suggest `claude-haiku-4-5` |
+123|

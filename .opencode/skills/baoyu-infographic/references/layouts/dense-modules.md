@@ -12,23 +12,23 @@ High-density modular layout with 6-7 typed information modules packed with concr
 
 ## Module Archetypes
 
-| Module | Purpose | Content Requirements |
-|--------|---------|---------------------|
-| **Brand/Selection Array** | Grid of options with recommendations | 4-8 items with icons, names, brief descriptions; highlight "best choice" |
-| **Specification Scale** | Quality/measurement gauge | 3-5 levels with precise numerical increments, quality indicators (emoji faces, checkmarks) |
-| **Deep Dive/Detail** | Technical breakdown of key item | Zoom-in callouts, internal components, cross-section or exploded view |
-| **Scenario Comparison** | Side-by-side use cases | 3-6 scenarios with specific recommendations and data per scenario |
-| **Identification Tips** | How-to checklist | 3-5 inspection methods: look/test/check/ask format |
-| **Warning/Pitfall Zone** | Critical mistakes to avoid | 3-5 pitfalls with consequences, 1-2 correct approaches; high visual contrast |
-| **Quick Reference** | Compact summary | Dense table, one-line summaries, decision flowchart, or key takeaways |
+| Module                    | Purpose                              | Content Requirements                                                                       |
+| ------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------ |
+| **Brand/Selection Array** | Grid of options with recommendations | 4-8 items with icons, names, brief descriptions; highlight "best choice"                   |
+| **Specification Scale**   | Quality/measurement gauge            | 3-5 levels with precise numerical increments, quality indicators (emoji faces, checkmarks) |
+| **Deep Dive/Detail**      | Technical breakdown of key item      | Zoom-in callouts, internal components, cross-section or exploded view                      |
+| **Scenario Comparison**   | Side-by-side use cases               | 3-6 scenarios with specific recommendations and data per scenario                          |
+| **Identification Tips**   | How-to checklist                     | 3-5 inspection methods: look/test/check/ask format                                         |
+| **Warning/Pitfall Zone**  | Critical mistakes to avoid           | 3-5 pitfalls with consequences, 1-2 correct approaches; high visual contrast               |
+| **Quick Reference**       | Compact summary                      | Dense table, one-line summaries, decision flowchart, or key takeaways                      |
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
-| **Coordinate-labeled** | Precision and systematicity | Each module has alphanumeric coordinate (A-01, B-05, C-12), ruler/axis markers |
-| **Grid-cell** | Order and structure | Modules in strict rectangular cells divided by thick lines, Swiss grid feel |
-| **Free-flowing** | Organic density | Magazine-style layout with dotted frames, varying module sizes, connected by arrows |
+| Variant                | Focus                       | Visual Emphasis                                                                     |
+| ---------------------- | --------------------------- | ----------------------------------------------------------------------------------- |
+| **Coordinate-labeled** | Precision and systematicity | Each module has alphanumeric coordinate (A-01, B-05, C-12), ruler/axis markers      |
+| **Grid-cell**          | Order and structure         | Modules in strict rectangular cells divided by thick lines, Swiss grid feel         |
+| **Free-flowing**       | Organic density             | Magazine-style layout with dotted frames, varying module sizes, connected by arrows |
 
 ## Best For
 

@@ -5,10 +5,11 @@ description: Use when creating algorithmic art with p5.js, generating flow field
 license: MIT
 name: algorithmic-art
 tags:
-- imported
+  - imported
 title: Algorithmic Art
 version: 1.0.0
 ---
+
 ## Description
 
 Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Generate original algorithmic art, flow fields, and particle systems.
@@ -83,10 +84,10 @@ Use this skill when:
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `canvas-design` | Visual art and design principles |
-| `frontend-design` | Interactive UI implementation |
+| Skill             | Purpose                          |
+| ----------------- | -------------------------------- |
+| `canvas-design`   | Visual art and design principles |
+| `frontend-design` | Interactive UI implementation    |
 
 ## Best Practices
 

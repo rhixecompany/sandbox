@@ -8,10 +8,10 @@ Aspire has **144+ integrations** across 13 categories. Rather than maintaining a
 
 The Aspire MCP server provides two tools for integration discovery — these work on **all CLI versions** (13.1+) and do **not** require a running AppHost.
 
-| Tool | What it does | When to use |
-| --- | --- | --- |
-| `list_integrations` | Returns all available Aspire hosting integrations with their NuGet package IDs | "What integrations are available for databases?" / "Show me all Redis-related integrations" |
-| `get_integration_docs` | Retrieves detailed documentation for a specific integration package (setup, configuration, code samples) | "How do I configure PostgreSQL?" / "Show me the docs for `Aspire.Hosting.Redis`" |
+| Tool                   | What it does                                                                                             | When to use                                                                                 |
+| ---------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `list_integrations`    | Returns all available Aspire hosting integrations with their NuGet package IDs                           | "What integrations are available for databases?" / "Show me all Redis-related integrations" |
+| `get_integration_docs` | Retrieves detailed documentation for a specific integration package (setup, configuration, code samples) | "How do I configure PostgreSQL?" / "Show me the docs for `Aspire.Hosting.Redis`"            |
 
 ### Workflow
 
@@ -48,20 +48,20 @@ builder.AddRedisClient("cache");        // Aspire.StackExchange.Redis
 
 Use `list_integrations` for the full live list. This summary covers the major categories:
 
-| Category | Key integrations | Example hosting package |
-| --- | --- | --- |
-| **AI** | Azure OpenAI, OpenAI, GitHub Models, Ollama | `Aspire.Hosting.Azure.CognitiveServices` |
-| **Caching** | Redis, Garnet, Valkey, Azure Cache for Redis | `Aspire.Hosting.Redis` |
-| **Cloud / Azure** | Storage, Cosmos DB, Service Bus, Key Vault, Event Hubs, Functions, SQL, SignalR (25+) | `Aspire.Hosting.Azure.Storage` |
-| **Cloud / AWS** | AWS SDK integration | `Aspire.Hosting.AWS` |
-| **Databases** | PostgreSQL, SQL Server, MongoDB, MySQL, Oracle, Elasticsearch, Milvus, Qdrant, SQLite | `Aspire.Hosting.PostgreSQL` |
-| **DevTools** | Data API Builder, Dev Tunnels, Mailpit, k6, Flagd, Ngrok, Stripe | `Aspire.Hosting.DevTunnels` |
-| **Messaging** | RabbitMQ, Kafka, NATS, ActiveMQ, LavinMQ | `Aspire.Hosting.RabbitMQ` |
-| **Observability** | OpenTelemetry (built-in), Seq, OTel Collector | `Aspire.Hosting.Seq` |
-| **Compute** | Docker Compose, Kubernetes | `Aspire.Hosting.Docker` |
-| **Reverse Proxies** | YARP | `Aspire.Hosting.Yarp` |
-| **Security** | Keycloak | `Aspire.Hosting.Keycloak` |
-| **Frameworks** | JavaScript, Python, Go, Java, Rust, Bun, Deno, Orleans, MAUI, Dapr, PowerShell | `Aspire.Hosting.Python` |
+| Category            | Key integrations                                                                      | Example hosting package                  |
+| ------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------- |
+| **AI**              | Azure OpenAI, OpenAI, GitHub Models, Ollama                                           | `Aspire.Hosting.Azure.CognitiveServices` |
+| **Caching**         | Redis, Garnet, Valkey, Azure Cache for Redis                                          | `Aspire.Hosting.Redis`                   |
+| **Cloud / Azure**   | Storage, Cosmos DB, Service Bus, Key Vault, Event Hubs, Functions, SQL, SignalR (25+) | `Aspire.Hosting.Azure.Storage`           |
+| **Cloud / AWS**     | AWS SDK integration                                                                   | `Aspire.Hosting.AWS`                     |
+| **Databases**       | PostgreSQL, SQL Server, MongoDB, MySQL, Oracle, Elasticsearch, Milvus, Qdrant, SQLite | `Aspire.Hosting.PostgreSQL`              |
+| **DevTools**        | Data API Builder, Dev Tunnels, Mailpit, k6, Flagd, Ngrok, Stripe                      | `Aspire.Hosting.DevTunnels`              |
+| **Messaging**       | RabbitMQ, Kafka, NATS, ActiveMQ, LavinMQ                                              | `Aspire.Hosting.RabbitMQ`                |
+| **Observability**   | OpenTelemetry (built-in), Seq, OTel Collector                                         | `Aspire.Hosting.Seq`                     |
+| **Compute**         | Docker Compose, Kubernetes                                                            | `Aspire.Hosting.Docker`                  |
+| **Reverse Proxies** | YARP                                                                                  | `Aspire.Hosting.Yarp`                    |
+| **Security**        | Keycloak                                                                              | `Aspire.Hosting.Keycloak`                |
+| **Frameworks**      | JavaScript, Python, Go, Java, Rust, Bun, Deno, Orleans, MAUI, Dapr, PowerShell        | `Aspire.Hosting.Python`                  |
 
 For polyglot framework method signatures, see [Polyglot APIs](polyglot-apis.md).
 

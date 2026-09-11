@@ -27,10 +27,10 @@ Hand-drawn doodle illustration with warm Morandi color tones and cozy bullet jou
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
-| **Cozy journal** | Maximum warmth | More washi tape, stickers, decorative doodles |
-| **Clean sketch** | Readability | Cleaner lines, less decoration, more structured |
+| Variant          | Focus          | Visual Emphasis                                 |
+| ---------------- | -------------- | ----------------------------------------------- |
+| **Cozy journal** | Maximum warmth | More washi tape, stickers, decorative doodles   |
+| **Clean sketch** | Readability    | Cleaner lines, less decoration, more structured |
 
 ## Typography
 

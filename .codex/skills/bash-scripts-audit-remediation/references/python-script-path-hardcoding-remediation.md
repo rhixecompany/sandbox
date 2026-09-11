@@ -5,6 +5,7 @@
 Python scripts written for a specific user's Windows machine often hardcode
 absolute paths like `C:\Users\Alexa\...` or `C:/Users/Alexa/...`. These break
 when:
+
 - The username changes
 - The machine changes
 - The directory structure evolves
@@ -80,11 +81,11 @@ with open(os.path.join(_HOME, "Desktop", "SandBox", "judge_results", "remaining.
 
 ### Environment variable resolution (MSYS vs Windows)
 
-| Context | `$HOME` value | `$USERPROFILE` value | Python `os.environ.get("HOME")` |
-|---------|---------------|----------------------|---------------------------------|
-| MSYS/Git Bash | `/c/Users/Alexa` | `C:\Users\Alexa` | `C:\Users\Alexa` (translated) |
-| Windows cmd | (unset or not Windows) | `C:\Users\Alexa` | `C:\Users\Alexa` |
-| Python (any) | — | — | `C:\Users\Alexa` |
+| Context       | `$HOME` value          | `$USERPROFILE` value | Python `os.environ.get("HOME")` |
+| ------------- | ---------------------- | -------------------- | ------------------------------- |
+| MSYS/Git Bash | `/c/Users/Alexa`       | `C:\Users\Alexa`     | `C:\Users\Alexa` (translated)   |
+| Windows cmd   | (unset or not Windows) | `C:\Users\Alexa`     | `C:\Users\Alexa`                |
+| Python (any)  | —                      | —                    | `C:\Users\Alexa`                |
 
 Both `HOME` and `USERPROFILE` work because Python on Windows accepts both
 `/c/Users/...` and `C:\Users\...` style paths in all file APIs. The fallback

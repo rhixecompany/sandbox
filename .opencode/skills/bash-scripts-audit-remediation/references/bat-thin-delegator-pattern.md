@@ -24,8 +24,10 @@ exit /b %ERRORLEVEL%
 ```
 
 **Trade-offs**:
-+ Single source of truth (logic lives in .ps1)
-+ No escaping/multiline PS-in-BAT issues
-+ Can still run without PS via the fallback path
-- Requires PowerShell on PATH (standard on Windows 10+)
-- Slightly slower startup (PS overhead vs cmd.exe)
+
+- Single source of truth (logic lives in .ps1)
+- No escaping/multiline PS-in-BAT issues
+- Can still run without PS via the fallback path
+
+* Requires PowerShell on PATH (standard on Windows 10+)
+* Slightly slower startup (PS overhead vs cmd.exe)

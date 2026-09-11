@@ -9,6 +9,7 @@ metadata:
     tags: []
     related_skills: []
 ---
+
      1|# Visual Companion Guide
      2|
      3|Browser-based visual brainstorming companion for showing mockups, diagrams, and options.
@@ -108,48 +109,49 @@ metadata:
     97|Use `--url-host` to control what hostname is printed in the returned URL JSON.
     98|
     99|## The Loop
-   100|
-   101|1. **Check server is alive**, then **write HTML** to a new file in `screen_dir`:
-   102|   - Before each write, check that `$STATE_DIR/server-info` exists. If it doesn't (or `$STATE_DIR/server-stopped` exists), the server has shut down — restart it with `start-server.sh` before continuing. The server auto-exits after 30 minutes of inactivity.
-   103|   - Use semantic filenames: `platform.html`, `visual-style.html`, `layout.html`
-   104|   - **Never reuse filenames** — each screen gets a fresh file
-   105|   - Use Write tool — **never use cat/heredoc** (dumps noise into terminal)
-   106|   - Server automatically serves the newest file
-   107|
-   108|2. **Tell user what to expect and end your turn:**
-   109|   - Remind them of the URL (every step, not just first)
-   110|   - Give a brief text summary of what's on screen (e.g., "Showing 3 layout options for the homepage")
-   111|   - Ask them to respond in the terminal: "Take a look and let me know what you think. Click to select an option if you'd like."
-   112|
-   113|3. **On your next turn** — after the user responds in the terminal:
-   114|   - Read `$STATE_DIR/events` if it exists — this contains the user's browser interactions (clicks, selections) as JSON lines
-   115|   - Merge with the user's terminal text to get the full picture
-   116|   - The terminal message is the primary feedback; `state_dir/events` provides structured interaction data
-   117|
-   118|4. **Iterate or advance** — if feedback changes current screen, write a new file (e.g., `layout-v2.html`). Only move to the next question when the current step is validated.
-   119|
-   120|5. **Unload when returning to terminal** — when the next step doesn't need the browser (e.g., a clarifying question, a tradeoff discussion), push a waiting screen to clear the stale content:
-   121|
-   122|   ```html
+
+100|
+101|1. **Check server is alive**, then **write HTML** to a new file in `screen_dir`:
+102| - Before each write, check that `$STATE_DIR/server-info` exists. If it doesn't (or `$STATE_DIR/server-stopped` exists), the server has shut down — restart it with `start-server.sh` before continuing. The server auto-exits after 30 minutes of inactivity.
+103| - Use semantic filenames: `platform.html`, `visual-style.html`, `layout.html`
+104| - **Never reuse filenames** — each screen gets a fresh file
+105| - Use Write tool — **never use cat/heredoc** (dumps noise into terminal)
+106| - Server automatically serves the newest file
+107|
+108|2. **Tell user what to expect and end your turn:**
+109| - Remind them of the URL (every step, not just first)
+110| - Give a brief text summary of what's on screen (e.g., "Showing 3 layout options for the homepage")
+111| - Ask them to respond in the terminal: "Take a look and let me know what you think. Click to select an option if you'd like."
+112|
+113|3. **On your next turn** — after the user responds in the terminal:
+114| - Read `$STATE_DIR/events` if it exists — this contains the user's browser interactions (clicks, selections) as JSON lines
+115| - Merge with the user's terminal text to get the full picture
+116| - The terminal message is the primary feedback; `state_dir/events` provides structured interaction data
+117|
+118|4. **Iterate or advance** — if feedback changes current screen, write a new file (e.g., `layout-v2.html`). Only move to the next question when the current step is validated.
+119|
+120|5. **Unload when returning to terminal** — when the next step doesn't need the browser (e.g., a clarifying question, a tradeoff discussion), push a waiting screen to clear the stale content:
+121|
+122| `html
    123|   <!-- filename: waiting.html (or waiting-2.html, etc.) -->
    124|   <div
    125|     style="display:flex;align-items:center;justify-content:center;min-height:60vh"
    126|   >
    127|     <p class="subtitle">Continuing in terminal...</p>
    128|   </div>
-   129|   ```
-   130|
-   131|   This prevents the user from staring at a resolved choice while the conversation has moved on. When the next visual question comes up, push a new content file as usual.
-   132|
-   133|6. Repeat until done.
-   134|
-   135|## Writing Content Fragments
-   136|
-   137|Write just the content that goes inside the page. The server wraps it in the frame template automatically (header, theme CSS, selection indicator, and all interactive infrastructure).
-   138|
-   139|**Minimal example:**
-   140|
-   141|```html
+   129|   `
+130|
+131| This prevents the user from staring at a resolved choice while the conversation has moved on. When the next visual question comes up, push a new content file as usual.
+132|
+133|6. Repeat until done.
+134|
+135|## Writing Content Fragments
+136|
+137|Write just the content that goes inside the page. The server wraps it in the frame template automatically (header, theme CSS, selection indicator, and all interactive infrastructure).
+138|
+139|**Minimal example:**
+140|
+141|`html
    142|<h2>Which layout works better?</h2>
    143|<p class="subtitle">Consider readability and visual hierarchy</p>
    144|
@@ -169,17 +171,17 @@ metadata:
    158|    </div>
    159|  </div>
    160|</div>
-   161|```
-   162|
-   163|That's it. No `<html>`, no CSS, no `<script>` tags needed. The server provides all of that.
-   164|
-   165|## CSS Classes Available
-   166|
-   167|The frame template provides these CSS classes for your content:
-   168|
-   169|### Options (A/B/C choices)
-   170|
-   171|```html
+   161|`
+162|
+163|That's it. No `<html>`, no CSS, no `<script>` tags needed. The server provides all of that.
+164|
+165|## CSS Classes Available
+166|
+167|The frame template provides these CSS classes for your content:
+168|
+169|### Options (A/B/C choices)
+170|
+171|`html
    172|<div class="options">
    173|  <div class="option" data-choice="a" onclick="toggleSelect(this)">
    174|    <div class="letter">A</div>
@@ -189,19 +191,19 @@ metadata:
    178|    </div>
    179|  </div>
    180|</div>
-   181|```
-   182|
-   183|**Multi-select:** Add `data-multiselect` to the container to let users select multiple options. Each click toggles the item. The indicator bar shows the count.
-   184|
-   185|```html
+   181|`
+182|
+183|**Multi-select:** Add `data-multiselect` to the container to let users select multiple options. Each click toggles the item. The indicator bar shows the count.
+184|
+185|`html
    186|<div class="options" data-multiselect>
    187|  <!-- same option markup — users can select/deselect multiple -->
    188|</div>
-   189|```
-   190|
-   191|### Cards (visual designs)
-   192|
-   193|```html
+   189|`
+190|
+191|### Cards (visual designs)
+192|
+193|`html
    194|<div class="cards">
    195|  <div
    196|    class="card"
@@ -215,29 +217,29 @@ metadata:
    204|    </div>
    205|  </div>
    206|</div>
-   207|```
-   208|
-   209|### Mockup container
-   210|
-   211|```html
+   207|`
+208|
+209|### Mockup container
+210|
+211|`html
    212|<div class="mockup">
    213|  <div class="mockup-header">Preview: Dashboard Layout</div>
    214|  <div class="mockup-body"><!-- your mockup HTML --></div>
    215|</div>
-   216|```
-   217|
-   218|### Split view (side-by-side)
-   219|
-   220|```html
+   216|`
+217|
+218|### Split view (side-by-side)
+219|
+220|`html
    221|<div class="split">
    222|  <div class="mockup"><!-- left --></div>
    223|  <div class="mockup"><!-- right --></div>
    224|</div>
-   225|```
-   226|
-   227|### Pros/Cons
-   228|
-   229|```html
+   225|`
+226|
+227|### Pros/Cons
+228|
+229|`html
    230|<div class="pros-cons">
    231|  <div class="pros">
    232|    <h4>Pros</h4>
@@ -252,11 +254,11 @@ metadata:
    241|    </ul>
    242|  </div>
    243|</div>
-   244|```
-   245|
-   246|### Mock elements (wireframe building blocks)
-   247|
-   248|```html
+   244|`
+245|
+246|### Mock elements (wireframe building blocks)
+247|
+248|`html
    249|<div class="mock-nav">Logo | Home | About | Contact</div>
    250|<div style="display: flex;">
    251|  <div class="mock-sidebar">Navigation</div>
@@ -265,56 +267,56 @@ metadata:
    254|<button class="mock-button">Action Button</button>
    255|<input class="mock-input" placeholder="Input field" />
    256|<div class="placeholder">Placeholder area</div>
-   257|```
-   258|
-   259|### Typography and sections
-   260|
-   261|- `h2` — page title
-   262|- `h3` — section heading
-   263|- `.subtitle` — secondary text below title
-   264|- `.section` — content block with bottom margin
-   265|- `.label` — small uppercase label text
-   266|
-   267|## Browser Events Format
-   268|
-   269|When the user clicks options in the browser, their interactions are recorded to `$STATE_DIR/events` (one JSON object per line). The file is cleared automatically when you push a new screen.
-   270|
-   271|```jsonl
+   257|`
+258|
+259|### Typography and sections
+260|
+261|- `h2` — page title
+262|- `h3` — section heading
+263|- `.subtitle` — secondary text below title
+264|- `.section` — content block with bottom margin
+265|- `.label` — small uppercase label text
+266|
+267|## Browser Events Format
+268|
+269|When the user clicks options in the browser, their interactions are recorded to `$STATE_DIR/events` (one JSON object per line). The file is cleared automatically when you push a new screen.
+270|
+271|`jsonl
    272|{"type":"click","choice":"a","text":"Option A - Simple Layout","timestamp":1706000101}
    273|{"type":"click","choice":"c","text":"Option C - Complex Grid","timestamp":1706000108}
    274|{"type":"click","choice":"b","text":"Option B - Hybrid","timestamp":1706000115}
-   275|```
-   276|
-   277|The full event stream shows the user's exploration path — they may click multiple options before settling. The last `choice` event is typically the final selection, but the pattern of clicks can reveal hesitation or preferences worth asking about.
-   278|
-   279|If `$STATE_DIR/events` doesn't exist, the user didn't interact with the browser — use only their terminal text.
-   280|
-   281|## Design Tips
-   282|
-   283|- **Scale fidelity to the question** — wireframes for layout, polish for polish questions
-   284|- **Explain the question on each page** — "Which layout feels more professional?" not just "Pick one"
-   285|- **Iterate before advancing** — if feedback changes current screen, write a new version
-   286|- **2-4 options max** per screen
-   287|- **Use real content when it matters** — for a photography portfolio, use actual images (Unsplash). Placeholder content obscures design issues.
-   288|- **Keep mockups simple** — focus on layout and structure, not pixel-perfect design
-   289|
-   290|## File Naming
-   291|
-   292|- Use semantic names: `platform.html`, `visual-style.html`, `layout.html`
-   293|- Never reuse filenames — each screen must be a new file
-   294|- For iterations: append version suffix like `layout-v2.html`, `layout-v3.html`
-   295|- Server serves newest file by modification time
-   296|
-   297|## Cleaning Up
-   298|
-   299|```bash
+   275|`
+276|
+277|The full event stream shows the user's exploration path — they may click multiple options before settling. The last `choice` event is typically the final selection, but the pattern of clicks can reveal hesitation or preferences worth asking about.
+278|
+279|If `$STATE_DIR/events` doesn't exist, the user didn't interact with the browser — use only their terminal text.
+280|
+281|## Design Tips
+282|
+283|- **Scale fidelity to the question** — wireframes for layout, polish for polish questions
+284|- **Explain the question on each page** — "Which layout feels more professional?" not just "Pick one"
+285|- **Iterate before advancing** — if feedback changes current screen, write a new version
+286|- **2-4 options max** per screen
+287|- **Use real content when it matters** — for a photography portfolio, use actual images (Unsplash). Placeholder content obscures design issues.
+288|- **Keep mockups simple** — focus on layout and structure, not pixel-perfect design
+289|
+290|## File Naming
+291|
+292|- Use semantic names: `platform.html`, `visual-style.html`, `layout.html`
+293|- Never reuse filenames — each screen must be a new file
+294|- For iterations: append version suffix like `layout-v2.html`, `layout-v3.html`
+295|- Server serves newest file by modification time
+296|
+297|## Cleaning Up
+298|
+299|`bash
    300|scripts/stop-server.sh $SESSION_DIR
-   301|```
-   302|
-   303|If the session used `--project-dir`, mockup files persist in `.superpowers/brainstorm/` for later reference. Only `/tmp` sessions get deleted on stop.
-   304|
-   305|## Reference
-   306|
-   307|- Frame template (CSS reference): `scripts/frame-template.html`
-   308|- Helper script (client-side): `scripts/helper.js`
-   309|
+   301|`
+302|
+303|If the session used `--project-dir`, mockup files persist in `.superpowers/brainstorm/` for later reference. Only `/tmp` sessions get deleted on stop.
+304|
+305|## Reference
+306|
+307|- Frame template (CSS reference): `scripts/frame-template.html`
+308|- Helper script (client-side): `scripts/helper.js`
+309|

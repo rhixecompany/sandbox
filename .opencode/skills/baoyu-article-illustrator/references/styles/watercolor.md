@@ -13,16 +13,16 @@ Gentle watercolor aesthetic with visible brush strokes and natural color bleedin
 
 ## Color Palette
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
+| Role       | Color          | Hex     | Usage              |
+| ---------- | -------------- | ------- | ------------------ |
 | Background | Warm Off-White | #FAF8F0 | Primary background |
-| Primary | Soft Coral | #F4A261 | Primary warmth |
-| Secondary | Dusty Rose | #E8A0A0 | Secondary warmth |
-| Tertiary | Sage Green | #87A96B | Nature, growth |
-| Accent 1 | Sky Blue | #7EC8E3 | Water, calm |
-| Accent 2 | Soft Lavender | #C5B4E3 | Accent, creativity |
-| Wash | Pale Yellow | #FFF3C4 | Background washes |
-| Text | Warm Charcoal | #3D3D3D | Text elements |
+| Primary    | Soft Coral     | #F4A261 | Primary warmth     |
+| Secondary  | Dusty Rose     | #E8A0A0 | Secondary warmth   |
+| Tertiary   | Sage Green     | #87A96B | Nature, growth     |
+| Accent 1   | Sky Blue       | #7EC8E3 | Water, calm        |
+| Accent 2   | Soft Lavender  | #C5B4E3 | Accent, creativity |
+| Wash       | Pale Yellow    | #FFF3C4 | Background washes  |
+| Text       | Warm Charcoal  | #3D3D3D | Text elements      |
 
 ## Visual Elements
 

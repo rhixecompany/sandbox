@@ -1,17 +1,18 @@
 ---
 author: Hermes Agent
-description: 'Inspect codebases w/ pygount: LOC, languages, ratios.'
+description: "Inspect codebases w/ pygount: LOC, languages, ratios."
 license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: codebase-inspection
 tags:
-- imported
+  - imported
 title: Codebase Inspection
 version: 1.0.0
 ---
+
 # Codebase Inspection with pygount
 
 Analyze repositories for lines of code, language breakdown, file counts, and code-vs-comment ratios using `pygount`.
@@ -98,6 +99,7 @@ pygount --format=summary . 2>/dev/null
 ## 6. Interpreting Results
 
 The summary table columns:
+
 - **Language** — detected programming language
 - **Files** — number of files of that language
 - **Code** — lines of actual code (executable/declarative)
@@ -105,6 +107,7 @@ The summary table columns:
 - **%** — percentage of total
 
 Special pseudo-languages:
+
 - `__empty__` — empty files
 - `__binary__` — binary files (images, compiled, etc.)
 - `__generated__` — auto-generated files (detected heuristically)
@@ -135,8 +138,6 @@ Check outputs against expected results and resolve any issues.
 ### Phase 4: Cleanup
 
 Document outcomes and store any artifacts or configuration changes.
-
-
 
 ## Verification Checklist
 

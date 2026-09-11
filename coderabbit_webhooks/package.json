@@ -1,1 +1,16 @@
-{"name": "coderabbit-webhooks","version": "1.0.0","description": "CodeRabbit MCP server and webhook endpoints","type": "module","main": "coderabbit_webhooks.mjs","scripts": {"start": "node coderabbit_webhooks.cjs","test": "node test_webhooks.js"},"dependencies": {"cors": "^2.8.6","dotenv": "^16.6.1","express": "^5.2.1"}}
+{
+	"name": "coderabbit-webhooks",
+	"version": "1.0.0",
+	"description": "CodeRabbit MCP server and webhook endpoints",
+	"type": "module",
+	"main": "coderabbit_webhooks.mjs",
+	"scripts": {
+		"start": "node coderabbit_webhooks.cjs",
+		"test": "node test_webhooks.js"
+	},
+	"dependencies": {
+		"cors": "^2.8.6",
+		"dotenv": "^16.6.1",
+		"express": "^5.2.1"
+	}
+}

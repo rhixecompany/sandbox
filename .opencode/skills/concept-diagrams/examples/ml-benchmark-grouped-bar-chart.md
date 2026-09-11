@@ -15,6 +15,7 @@ A quantitative data visualization comparing LLM inference speed across quantizat
 ## Diagram Type
 
 This is a **quantitative data chart** with:
+
 - **Grouped vertical bars**: Range bars showing min–max performance per category
 - **Secondary axis line**: VRAM usage overlaid as a connected scatter plot
 - **Threshold annotation**: Hardware constraint line
@@ -37,60 +38,151 @@ Table:        Below chart, alternating row fills
 
 ## Data Mapped
 
-| Quantization | Model Size | Speed (tok/s) | VRAM (GB) | MMLU Pro | Status |
-|-------------|-----------|---------------|-----------|----------|--------|
-| FP16 | 62 GB | 0.5–2 | 62 | 75.2 | OOM / unusable |
-| Q8_0 | 32 GB | 3–5 | 32 | 75.0 | Partial offload |
-| Q4_K_M | 16.8 GB | 8–12 | 16.8 | 73.1 | Fits in VRAM ✓ |
-| IQ3_M | 12 GB | 12–15 | 12 | 70.5 | Full GPU speed |
+| Quantization | Model Size | Speed (tok/s) | VRAM (GB) | MMLU Pro | Status          |
+| ------------ | ---------- | ------------- | --------- | -------- | --------------- |
+| FP16         | 62 GB      | 0.5–2         | 62        | 75.2     | OOM / unusable  |
+| Q8_0         | 32 GB      | 3–5           | 32        | 75.0     | Partial offload |
+| Q4_K_M       | 16.8 GB    | 8–12          | 16.8      | 73.1     | Fits in VRAM ✓  |
+| IQ3_M        | 12 GB      | 12–15         | 12        | 70.5     | Full GPU speed  |
 
 ## Bar CSS Classes
 
 ```css
 /* Light mode */
-.bar-fp16-min { fill: #FCEBEB; stroke: #A32D2D; stroke-width: 0.75; }
-.bar-fp16-max { fill: #F7C1C1; stroke: #A32D2D; stroke-width: 0.75; }
-.bar-q8-min   { fill: #FAEEDA; stroke: #854F0B; stroke-width: 0.75; }
-.bar-q8-max   { fill: #FAC775; stroke: #854F0B; stroke-width: 0.75; }
-.bar-q4-min   { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 0.75; }
-.bar-q4-max   { fill: #9FE1CB; stroke: #0F6E56; stroke-width: 0.75; }
-.bar-iq3-min  { fill: #E6F1FB; stroke: #185FA5; stroke-width: 0.75; }
-.bar-iq3-max  { fill: #B5D4F4; stroke: #185FA5; stroke-width: 0.75; }
+.bar-fp16-min {
+	fill: #fcebeb;
+	stroke: #a32d2d;
+	stroke-width: 0.75;
+}
+.bar-fp16-max {
+	fill: #f7c1c1;
+	stroke: #a32d2d;
+	stroke-width: 0.75;
+}
+.bar-q8-min {
+	fill: #faeeda;
+	stroke: #854f0b;
+	stroke-width: 0.75;
+}
+.bar-q8-max {
+	fill: #fac775;
+	stroke: #854f0b;
+	stroke-width: 0.75;
+}
+.bar-q4-min {
+	fill: #e1f5ee;
+	stroke: #0f6e56;
+	stroke-width: 0.75;
+}
+.bar-q4-max {
+	fill: #9fe1cb;
+	stroke: #0f6e56;
+	stroke-width: 0.75;
+}
+.bar-iq3-min {
+	fill: #e6f1fb;
+	stroke: #185fa5;
+	stroke-width: 0.75;
+}
+.bar-iq3-max {
+	fill: #b5d4f4;
+	stroke: #185fa5;
+	stroke-width: 0.75;
+}
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  .bar-fp16-min { fill: #501313; stroke: #F09595; }
-  .bar-fp16-max { fill: #791F1F; stroke: #F09595; }
-  .bar-q8-min   { fill: #412402; stroke: #EF9F27; }
-  .bar-q8-max   { fill: #633806; stroke: #EF9F27; }
-  .bar-q4-min   { fill: #04342C; stroke: #5DCAA5; }
-  .bar-q4-max   { fill: #085041; stroke: #5DCAA5; }
-  .bar-iq3-min  { fill: #042C53; stroke: #85B7EB; }
-  .bar-iq3-max  { fill: #0C447C; stroke: #85B7EB; }
+	.bar-fp16-min {
+		fill: #501313;
+		stroke: #f09595;
+	}
+	.bar-fp16-max {
+		fill: #791f1f;
+		stroke: #f09595;
+	}
+	.bar-q8-min {
+		fill: #412402;
+		stroke: #ef9f27;
+	}
+	.bar-q8-max {
+		fill: #633806;
+		stroke: #ef9f27;
+	}
+	.bar-q4-min {
+		fill: #04342c;
+		stroke: #5dcaa5;
+	}
+	.bar-q4-max {
+		fill: #085041;
+		stroke: #5dcaa5;
+	}
+	.bar-iq3-min {
+		fill: #042c53;
+		stroke: #85b7eb;
+	}
+	.bar-iq3-max {
+		fill: #0c447c;
+		stroke: #85b7eb;
+	}
 }
 ```
 
 ## Overlay Line CSS
 
 ```css
-.vram-line { stroke: #534AB7; stroke-width: 2.5; fill: none; }
-.vram-dot  { fill: #534AB7; stroke: var(--bg-primary); stroke-width: 2; }
-.vram-label { font-family: system-ui, sans-serif; font-size: 10px; fill: #534AB7; font-weight: 500; }
+.vram-line {
+	stroke: #534ab7;
+	stroke-width: 2.5;
+	fill: none;
+}
+.vram-dot {
+	fill: #534ab7;
+	stroke: var(--bg-primary);
+	stroke-width: 2;
+}
+.vram-label {
+	font-family: system-ui, sans-serif;
+	font-size: 10px;
+	fill: #534ab7;
+	font-weight: 500;
+}
 ```
 
 ## Threshold CSS
 
 ```css
-.threshold { stroke: #A32D2D; stroke-width: 1; stroke-dasharray: 6 3; fill: none; }
-.threshold-label { font-family: system-ui, sans-serif; font-size: 10px; fill: #A32D2D; font-weight: 500; }
+.threshold {
+	stroke: #a32d2d;
+	stroke-width: 1;
+	stroke-dasharray: 6 3;
+	fill: none;
+}
+.threshold-label {
+	font-family: system-ui, sans-serif;
+	font-size: 10px;
+	fill: #a32d2d;
+	font-weight: 500;
+}
 ```
 
 ## Table CSS
 
 ```css
-.tbl-header { fill: var(--bg-secondary); stroke: var(--border); stroke-width: 0.5; }
-.tbl-row    { fill: transparent; stroke: var(--border); stroke-width: 0.25; }
-.tbl-alt    { fill: var(--bg-secondary); stroke: var(--border); stroke-width: 0.25; }
+.tbl-header {
+	fill: var(--bg-secondary);
+	stroke: var(--border);
+	stroke-width: 0.5;
+}
+.tbl-row {
+	fill: transparent;
+	stroke: var(--border);
+	stroke-width: 0.25;
+}
+.tbl-alt {
+	fill: var(--bg-secondary);
+	stroke: var(--border);
+	stroke-width: 0.25;
+}
 ```
 
 ## Layout Notes
@@ -106,6 +198,7 @@ Table:        Below chart, alternating row fills
 ## When to Use This Pattern
 
 Use this diagram style for:
+
 - Model benchmark comparisons across quantization levels
 - Performance vs. resource usage tradeoff analysis
 - Any multi-metric comparison with a hardware/software constraint

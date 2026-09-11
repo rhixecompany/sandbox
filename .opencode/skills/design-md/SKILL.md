@@ -5,14 +5,14 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: design-md
 tags:
-- imported
+  - imported
 title: Design Md
 version: 1.0.0
-
 ---
+
 # DESIGN.md Skill
 
 DESIGN.md is Google's open spec (Apache-2.0, `google-labs-code/design.md`) for
@@ -21,7 +21,7 @@ describing a visual identity to coding agents. One file combines:
 - **YAML front matter** — machine-readable design tokens (normative values)
 - **Markdown body** — human-readable rationale, organized into canonical sections
 
-Tokens give exact values. Prose tells agents *why* those values exist and how to
+Tokens give exact values. Prose tells agents _why_ those values exist and how to
 apply them. The CLI (`npx @google/design.md`) lints structure + WCAG contrast,
 diffs versions for regressions, and exports to Tailwind or W3C DTCG JSON.
 
@@ -34,9 +34,9 @@ diffs versions for regressions, and exports to Tailwind or W3C DTCG JSON.
 - User wants contrast / WCAG accessibility validation on their color palette
 
 For purely visual inspiration or layout examples, use `popular-web-designs`
-instead. For *process and taste* when designing a one-off HTML artifact
+instead. For _process and taste_ when designing a one-off HTML artifact
 from scratch (prototype, deck, landing page, component lab), use
-`claude-design`. This skill is for the *formal spec file* itself.
+`claude-design`. This skill is for the _formal spec file_ itself.
 
 ## File anatomy
 
@@ -113,12 +113,12 @@ Public Sans for everything except small all-caps labels...
 
 ## Token types
 
-| Type | Format | Example |
-|------|--------|---------|
-| Color | `#` + hex (sRGB) | `"#1A1C1E"` |
-| Dimension | number + unit (`px`, `em`, `rem`) | `48px`, `-0.02em` |
-| Token reference | `{path.to.token}` | `{colors.primary}` |
-| Typography | object with `fontFamily`, `fontSize`, `fontWeight`, `lineHeight`, `letterSpacing`, `fontFeature`, `fontVariation` | see above |
+| Type            | Format                                                                                                            | Example            |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------ |
+| Color           | `#` + hex (sRGB)                                                                                                  | `"#1A1C1E"`        |
+| Dimension       | number + unit (`px`, `em`, `rem`)                                                                                 | `48px`, `-0.02em`  |
+| Token reference | `{path.to.token}`                                                                                                 | `{colors.primary}` |
+| Typography      | object with `fontFamily`, `fontSize`, `fontWeight`, `lineHeight`, `letterSpacing`, `fontFeature`, `fontVariation` | see above          |
 
 Component property whitelist: `backgroundColor`, `textColor`, `typography`,
 `rounded`, `padding`, `size`, `height`, `width`. Variants (hover, active,

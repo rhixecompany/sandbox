@@ -152,14 +152,14 @@ A phased workflow showing the five stages of filmmaking, using containers with i
 
 ## Color Assignments
 
-| Element | Color | Reason |
-|---------|-------|--------|
-| Phase containers | Neutral (dashed) | Subtle grouping, doesn't compete with content |
-| Development tasks | `c-purple` | Creative/concept work |
-| Pre-production tasks | `c-teal` | Planning and preparation |
-| Production tasks | `c-coral` | Active filming (main event) |
-| Post-production tasks | `c-amber` | Processing/refinement |
-| Distribution tasks | `c-blue` | Outward delivery/release |
+| Element               | Color            | Reason                                        |
+| --------------------- | ---------------- | --------------------------------------------- |
+| Phase containers      | Neutral (dashed) | Subtle grouping, doesn't compete with content |
+| Development tasks     | `c-purple`       | Creative/concept work                         |
+| Pre-production tasks  | `c-teal`         | Planning and preparation                      |
+| Production tasks      | `c-coral`        | Active filming (main event)                   |
+| Post-production tasks | `c-amber`        | Processing/refinement                         |
+| Distribution tasks    | `c-blue`         | Outward delivery/release                      |
 
 ## Layout Notes
 

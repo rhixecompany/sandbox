@@ -23,13 +23,13 @@ The `-c` and `-o` overrides isolate this suite from any parent
 
 ## Test files
 
-| File | Coverage |
-|------|----------|
-| `test_common.py` | Cloud detection, URL routing, format validation, embeddings, paths, seeds, model-list parsing, folder aliases |
-| `test_extract_schema.py` | Connection tracing, positive/negative prompt detection, dedup logic, embedding deps |
-| `test_run_workflow.py` | Param injection (incl. -1 seed, link refusal), output download walk, runner construction |
-| `test_check_deps.py` | Model-name fuzzy matching, install command suggestions |
-| `test_cloud_integration.py` | Live cloud API contract tests (auto-skipped without API key) |
+| File                        | Coverage                                                                                                      |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `test_common.py`            | Cloud detection, URL routing, format validation, embeddings, paths, seeds, model-list parsing, folder aliases |
+| `test_extract_schema.py`    | Connection tracing, positive/negative prompt detection, dedup logic, embedding deps                           |
+| `test_run_workflow.py`      | Param injection (incl. -1 seed, link refusal), output download walk, runner construction                      |
+| `test_check_deps.py`        | Model-name fuzzy matching, install command suggestions                                                        |
+| `test_cloud_integration.py` | Live cloud API contract tests (auto-skipped without API key)                                                  |
 
 ## Adding tests
 

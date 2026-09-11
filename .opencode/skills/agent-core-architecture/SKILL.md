@@ -6,6 +6,7 @@ version: 1.0.0
 author: "Hermes Agent"
 tags: [hermes, profiles, soul, user, memory, architecture]
 ---
+
 # Agent Core File Architecture
 
 ## Overview
@@ -30,11 +31,11 @@ Automated reasoning and workflow tool for `agent-core-architecture`. Execute mul
 
 Each file owns exactly one concern — no overlap:
 
-| File | Owns | Content Includes |
-|------|------|------------------|
-| **SOUL.md** | Behavioral invariants | Persona, cognitive style, execution frameworks, architectural invariants, standing rules, memory hierarchy |
-| **USER.md** | Operator preferences | Identity, communication, environment stack, planning style, prompting prefs, skill utilization, automation hooks, execution preferences |
-| **MEMORY.md** | Learned heuristics | Plan failures, prompt insights, skill cache, hook state — organized by category with dated entries |
+| File          | Owns                  | Content Includes                                                                                                                        |
+| ------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **SOUL.md**   | Behavioral invariants | Persona, cognitive style, execution frameworks, architectural invariants, standing rules, memory hierarchy                              |
+| **USER.md**   | Operator preferences  | Identity, communication, environment stack, planning style, prompting prefs, skill utilization, automation hooks, execution preferences |
+| **MEMORY.md** | Learned heuristics    | Plan failures, prompt insights, skill cache, hook state — organized by category with dated entries                                      |
 
 ## Canonical Section Map
 
@@ -120,6 +121,7 @@ When the user provides a reference document (blog post, guide, framework docs) d
 ### Phase 3: Verify role separation
 
 After the update, verify no DRY violations:
+
 - USER.md should NOT contain SOUL.md rules (execution frameworks, architectural invariants)
 - MEMORY.md should NOT contain USER.md preferences
 - SOUL.md should NOT contain user-specific preferences
@@ -127,6 +129,7 @@ After the update, verify no DRY violations:
 ### Phase 4: Multi-round iteration
 
 Reference documents may arrive in sequence. Each round:
+
 1. Only add what's genuinely new this round
 2. Don't re-add rules already incorporated from previous rounds
 3. If the reference renames existing concepts, prefer the newer canonical name
@@ -154,13 +157,13 @@ grep -ci "architectural\|cognitive\|standing rule" USER.md  # Should be 0
 
 ## Pitfalls
 
-| Pitfall | Mitigation |
-|---------|------------|
-| Reference doc proposes flat rule-list instead of structured sections | Structure into categorized sections — flat lists scale poorly across sessions |
-| Multiple reference rounds contradict each other | The latest round's naming wins; older references should be treated as superseded |
-| Reference doc written for different framework (e.g., OpenClaw vs Hermes) | Map concepts to equivalent Hermes structures; don't copy verbatim if names differ |
-| Section count creeps up every round | Track target: SOUL.md=5 top-level, USER.md=10, MEMORY.md=4. Prune duplicate rules before adding new ones |
-| DRY violation creeps in | After each round, grep USER.md for SOUL.md rule keywords; grep MEMORY.md for USER.md preference keywords |
+| Pitfall                                                                  | Mitigation                                                                                               |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Reference doc proposes flat rule-list instead of structured sections     | Structure into categorized sections — flat lists scale poorly across sessions                            |
+| Multiple reference rounds contradict each other                          | The latest round's naming wins; older references should be treated as superseded                         |
+| Reference doc written for different framework (e.g., OpenClaw vs Hermes) | Map concepts to equivalent Hermes structures; don't copy verbatim if names differ                        |
+| Section count creeps up every round                                      | Track target: SOUL.md=5 top-level, USER.md=10, MEMORY.md=4. Prune duplicate rules before adding new ones |
+| DRY violation creeps in                                                  | After each round, grep USER.md for SOUL.md rule keywords; grep MEMORY.md for USER.md preference keywords |
 
 ## Verification Checklist
 

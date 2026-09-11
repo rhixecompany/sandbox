@@ -27,12 +27,26 @@ A "screen" is a rounded dark rect inside a lighter "frame" rect, with chart/gaug
 ## CSS
 
 ```css
-.dashboard      { fill: #F1EFE8; stroke: #5F5E5A; stroke-width: 1.5; }
-.screen         { fill: #1a1a18; }
-.screen-content { fill: #2C2C2A; }
-.screen-chart   { fill: #5DCAA5; }
-.screen-bar     { fill: #7F77DD; }
-.screen-alert   { fill: #E24B4A; }
+.dashboard {
+	fill: #f1efe8;
+	stroke: #5f5e5a;
+	stroke-width: 1.5;
+}
+.screen {
+	fill: #1a1a18;
+}
+.screen-content {
+	fill: #2c2c2a;
+}
+.screen-chart {
+	fill: #5dcaa5;
+}
+.screen-bar {
+	fill: #7f77dd;
+}
+.screen-alert {
+	fill: #e24b4a;
+}
 ```
 
 ## Tips

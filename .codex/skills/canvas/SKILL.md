@@ -12,10 +12,10 @@ metadata:
   hermes:
     tags: [Canvas, LMS, Education, Courses, Assignments]
 ---
+
 # Canvas LMS — Course & Assignment Access
 
 Read-only access to Canvas LMS for listing courses and assignments.
-
 
 ## When to Use
 
@@ -67,13 +67,35 @@ $CANVAS list_assignments 12345 --order-by due_at
 ## Output Format
 
 **list_courses** returns:
+
 ```json
-[{"id": 12345, "name": "Intro to CS", "course_code": "CS101", "workflow_state": "available", "start_at": "...", "end_at": "..."}]
+[
+	{
+		"id": 12345,
+		"name": "Intro to CS",
+		"course_code": "CS101",
+		"workflow_state": "available",
+		"start_at": "...",
+		"end_at": "..."
+	}
+]
 ```
 
 **list_assignments** returns:
+
 ```json
-[{"id": 67890, "name": "Homework 1", "due_at": "2025-02-15T23:59:00Z", "points_possible": 100, "submission_types": ["online_upload"], "html_url": "...", "description": "...", "course_id": 12345}]
+[
+	{
+		"id": 67890,
+		"name": "Homework 1",
+		"due_at": "2025-02-15T23:59:00Z",
+		"points_possible": 100,
+		"submission_types": ["online_upload"],
+		"html_url": "...",
+		"description": "...",
+		"course_id": 12345
+	}
+]
 ```
 
 Note: Assignment descriptions are truncated to 500 characters. The `html_url` field links to the full assignment page in Canvas.
@@ -100,13 +122,13 @@ Canvas uses `Link` headers for pagination. The Python script handles pagination 
 
 ## Troubleshooting
 
-| Problem | Fix |
-|---------|-----|
-| 401 Unauthorized | Token invalid or expired — regenerate in Canvas Settings |
-| 403 Forbidden | Token lacks permission for this course |
+| Problem           | Fix                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| 401 Unauthorized  | Token invalid or expired — regenerate in Canvas Settings           |
+| 403 Forbidden     | Token lacks permission for this course                             |
 | Empty course list | Try `--enrollment-state active` or omit the flag to see all states |
-| Wrong institution | Verify `CANVAS_BASE_URL` matches the URL in your browser |
-| Timeout errors | Check network connectivity to your Canvas instance |
+| Wrong institution | Verify `CANVAS_BASE_URL` matches the URL in your browser           |
+| Timeout errors    | Check network connectivity to your Canvas instance                 |
 
 ## Pitfalls
 

@@ -16,6 +16,7 @@ tags:
 When working with unstructured text sources, convert them to clean Markdown matching workspace conventions (no H1 duplication per MEMORY.md rules; use headings only at level 2+ for sections).
 
 ## Workflow
+
 1. Read source file with `read_file` or terminal.
 2. Normalize line endings (`normalize_lf.py` available in workspace).
 3. Apply heading structure using confirmed workspace rules.
@@ -23,6 +24,7 @@ When working with unstructured text sources, convert them to clean Markdown matc
 5. Commit change; no `.bak` files.
 
 ## References
+
 - `references/session-reporting.md` (for format examples)
 - `references/preference-preferences.md` (for DRY/style rules)
 

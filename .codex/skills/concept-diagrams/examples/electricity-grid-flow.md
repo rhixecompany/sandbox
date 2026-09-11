@@ -14,6 +14,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ## New Shape Techniques
 
 ### Nuclear Plant (cooling tower + reactor)
+
 ```xml
 <!-- Cooling tower (hyperbolic curve) -->
 <path class="nuclear-tower" d="M 25 80 Q 15 60 20 40 Q 25 20 40 15 Q 55 20 60 40 Q 65 60 55 80 Z"/>
@@ -25,6 +26,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ```
 
 ### Gas Peaker Plant (with flames)
+
 ```xml
 <rect class="gas-plant" x="0" y="25" width="70" height="40" rx="3"/>
 <!-- Smokestacks -->
@@ -36,6 +38,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ```
 
 ### Transmission Pylon with Insulators
+
 ```xml
 <!-- Tapered tower -->
 <polygon class="pylon" points="20,0 25,0 30,80 15,80"/>
@@ -48,6 +51,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ```
 
 ### Transformer Symbol
+
 ```xml
 <!-- Two coils with core -->
 <circle class="transformer-coil" cx="25" cy="25" r="12"/>
@@ -58,6 +62,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ```
 
 ### Pole-mounted Transformer
+
 ```xml
 <rect class="pole" x="18" y="0" width="4" height="60"/>
 <line x1="10" y1="8" x2="30" y2="8" stroke="#854F0B" stroke-width="2"/>
@@ -66,6 +71,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ```
 
 ### House with Roof
+
 ```xml
 <rect class="home" x="0" y="25" width="35" height="30" rx="2"/>
 <polygon class="home-roof" points="0,25 17,8 35,25"/>
@@ -76,6 +82,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ```
 
 ### Factory Building
+
 ```xml
 <rect class="factory" x="0" y="15" width="90" height="50" rx="3"/>
 <!-- Smokestacks -->
@@ -88,6 +95,7 @@ A left-to-right flow diagram showing electricity from multiple generation source
 ```
 
 ### EV Charger with Car
+
 ```xml
 <!-- Charging station -->
 <rect class="ev-charger" x="20" y="0" width="25" height="45" rx="3"/>
@@ -112,23 +120,41 @@ A left-to-right flow diagram showing electricity from multiple generation source
 
 ```css
 /* High voltage (transmission) - thick, bright */
-.hv-line { stroke: #EF9F27; stroke-width: 2.5; fill: none; }
+.hv-line {
+	stroke: #ef9f27;
+	stroke-width: 2.5;
+	fill: none;
+}
 
 /* Medium voltage (distribution) - medium */
-.mv-line { stroke: #BA7517; stroke-width: 2; fill: none; }
+.mv-line {
+	stroke: #ba7517;
+	stroke-width: 2;
+	fill: none;
+}
 
 /* Low voltage (consumer) - thin, darker */
-.lv-line { stroke: #854F0B; stroke-width: 1.5; fill: none; }
+.lv-line {
+	stroke: #854f0b;
+	stroke-width: 1.5;
+	fill: none;
+}
 
 /* Smart grid data - dashed purple */
-.data-flow { stroke: #7F77DD; stroke-width: 1; fill: none; stroke-dasharray: 3 2; opacity: 0.7; }
+.data-flow {
+	stroke: #7f77dd;
+	stroke-width: 1;
+	fill: none;
+	stroke-dasharray: 3 2;
+	opacity: 0.7;
+}
 ```
 
 ## Flow Arrow Marker
 
 ```xml
 <defs>
-  <marker id="flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" 
+  <marker id="flow-arrow" viewBox="0 0 10 10" refX="9" refY="5"
           markerWidth="6" markerHeight="6" orient="auto">
     <path d="M0,0 L10,5 L0,10 Z" fill="#EF9F27"/>
   </marker>
@@ -141,33 +167,107 @@ A left-to-right flow diagram showing electricity from multiple generation source
 
 ```css
 /* Generation */
-.nuclear-tower { fill: #B4B2A9; stroke: #5F5E5A; stroke-width: 1; }
-.nuclear-building { fill: #EEEDFE; stroke: #534AB7; stroke-width: 1; }
-.solar-panel { fill: #3C3489; stroke: #534AB7; stroke-width: 0.5; }
-.wind-tower { fill: #B4B2A9; stroke: #5F5E5A; stroke-width: 1; }
-.wind-blade { fill: #F1EFE8; stroke: #888780; stroke-width: 0.5; }
-.gas-plant { fill: #FAECE7; stroke: #993C1D; stroke-width: 1; }
-.gas-flame { fill: #EF9F27; }
+.nuclear-tower {
+	fill: #b4b2a9;
+	stroke: #5f5e5a;
+	stroke-width: 1;
+}
+.nuclear-building {
+	fill: #eeedfe;
+	stroke: #534ab7;
+	stroke-width: 1;
+}
+.solar-panel {
+	fill: #3c3489;
+	stroke: #534ab7;
+	stroke-width: 0.5;
+}
+.wind-tower {
+	fill: #b4b2a9;
+	stroke: #5f5e5a;
+	stroke-width: 1;
+}
+.wind-blade {
+	fill: #f1efe8;
+	stroke: #888780;
+	stroke-width: 0.5;
+}
+.gas-plant {
+	fill: #faece7;
+	stroke: #993c1d;
+	stroke-width: 1;
+}
+.gas-flame {
+	fill: #ef9f27;
+}
 
 /* Transmission */
-.pylon { fill: #5F5E5A; stroke: #444441; stroke-width: 0.5; }
-.insulator { fill: #FAEEDA; stroke: #854F0B; stroke-width: 0.5; }
-.substation { fill: #E6F1FB; stroke: #185FA5; stroke-width: 1; }
-.transformer-coil { fill: none; stroke: #185FA5; stroke-width: 1.5; }
+.pylon {
+	fill: #5f5e5a;
+	stroke: #444441;
+	stroke-width: 0.5;
+}
+.insulator {
+	fill: #faeeda;
+	stroke: #854f0b;
+	stroke-width: 0.5;
+}
+.substation {
+	fill: #e6f1fb;
+	stroke: #185fa5;
+	stroke-width: 1;
+}
+.transformer-coil {
+	fill: none;
+	stroke: #185fa5;
+	stroke-width: 1.5;
+}
 
 /* Distribution */
-.pole { fill: #854F0B; stroke: #633806; stroke-width: 0.5; }
-.dist-transformer { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 1; }
+.pole {
+	fill: #854f0b;
+	stroke: #633806;
+	stroke-width: 0.5;
+}
+.dist-transformer {
+	fill: #e1f5ee;
+	stroke: #0f6e56;
+	stroke-width: 1;
+}
 
 /* Consumption */
-.home { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 1; }
-.home-roof { fill: #0F6E56; stroke: #085041; stroke-width: 0.5; }
-.factory { fill: #FAECE7; stroke: #993C1D; stroke-width: 1; }
-.ev-charger { fill: #EEEDFE; stroke: #534AB7; stroke-width: 1; }
-.ev-car { fill: #3C3489; stroke: #534AB7; stroke-width: 0.5; }
+.home {
+	fill: #e1f5ee;
+	stroke: #0f6e56;
+	stroke-width: 1;
+}
+.home-roof {
+	fill: #0f6e56;
+	stroke: #085041;
+	stroke-width: 0.5;
+}
+.factory {
+	fill: #faece7;
+	stroke: #993c1d;
+	stroke-width: 1;
+}
+.ev-charger {
+	fill: #eeedfe;
+	stroke: #534ab7;
+	stroke-width: 1;
+}
+.ev-car {
+	fill: #3c3489;
+	stroke: #534ab7;
+	stroke-width: 0.5;
+}
 
 /* Smart grid */
-.smart-grid { fill: #EEEDFE; stroke: #534AB7; stroke-width: 1.5; }
+.smart-grid {
+	fill: #eeedfe;
+	stroke: #534ab7;
+	stroke-width: 1.5;
+}
 ```
 
 ## Layout Notes

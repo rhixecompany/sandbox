@@ -31,31 +31,35 @@ When remediating scripts across multiple files in a cross-platform context (Bash
 ### Per-Batch: Execution & Verification
 
 **Step 1: Scope Selection**
+
 - Choose ≤7 files based on priority (critical/high-risk first)
 - Group by logical unit (e.g., all variants of a wrapper family: `.sh`, `.ps1`, `.bat`)
 - Prefer file families over scattering changes
 
 **Step 2: Read & Analyze**
+
 - Read all current variants to understand existing patterns
 - Identify canonical implementations and deviations
 - Look for bugs (business logic hiding in wrappers, missing handlers, stale references)
 
 **Step 3: Implement Changes**
+
 - Apply fixes using `patch()` or `write_file()` — not shell commands
 - Keep changes focused (wrapper normalization, not refactoring unrelated code)
 - Test changes locally where possible (syntax check, dry-run execution)
 
 **Step 4: Verification Checkpoint**
 
-| Check Type | Tools | What To Verify |
-|------------|-------|---|
-| **Syntax** | AST parser (PS1), `bash -n` (SH), readable (BAT) | All files parse without errors |
-| **Execution** | Direct run or mock invocation | Help output works, arguments forward correctly |
-| **Exit Code** | Check `$LASTEXITCODE` / `$?` / `%ERRORLEVEL%` | Wrapper propagates runner exit code |
-| **Argument Pass-Through** | Run wrapper with `--flag value` | All arguments reach the runner unchanged |
-| **Parity** | Compare wrapper behavior across platforms | `.sh`, `.ps1`, `.bat` produce same output |
+| Check Type                | Tools                                            | What To Verify                                 |
+| ------------------------- | ------------------------------------------------ | ---------------------------------------------- |
+| **Syntax**                | AST parser (PS1), `bash -n` (SH), readable (BAT) | All files parse without errors                 |
+| **Execution**             | Direct run or mock invocation                    | Help output works, arguments forward correctly |
+| **Exit Code**             | Check `$LASTEXITCODE` / `$?` / `%ERRORLEVEL%`    | Wrapper propagates runner exit code            |
+| **Argument Pass-Through** | Run wrapper with `--flag value`                  | All arguments reach the runner unchanged       |
+| **Parity**                | Compare wrapper behavior across platforms        | `.sh`, `.ps1`, `.bat` produce same output      |
 
 **Example verification for Banking wrapper batch:**
+
 ```bash
 # Syntax check
 powershell.exe -NoProfile -Command "[System.Management.Automation.Language.Parser]::ParseFile('path/to/orchestrator.ps1', [ref]$null, [ref]$null)"
@@ -71,9 +75,10 @@ cmd.exe /c "orchestrator.bat nonexistent; echo %ERRORLEVEL%"
 **Step 5: Update Artifacts**
 
 1. **Progress log entry** (append-only):
+
    ```markdown
    ### Batch N — <scope>
-   
+
    - Date: YYYY-MM-DD
    - Scope: <what was normalized>
    - Files changed:
@@ -92,16 +97,17 @@ cmd.exe /c "orchestrator.bat nonexistent; echo %ERRORLEVEL%"
    ```
 
 2. **Verification report matrix** (update relevant row):
+
    ```markdown
-   | Area | Check | Result | Notes |
-   | --- | --- | --- | --- |
+   | Area             | Check                     | Result  | Notes                                        |
+   | ---------------- | ------------------------- | ------- | -------------------------------------------- |
    | Banking wrappers | Syntax / dry-run / parity | Partial | Batch 2 wrapper contract aligned on 7 files. |
    ```
 
 3. **Verification report log** (append batch summary):
    ```markdown
    ### Batch N — <scope>
-   
+
    - Files verified: [list]
    - Checks performed: [list]
    - Result: Pass | Fail
@@ -111,12 +117,14 @@ cmd.exe /c "orchestrator.bat nonexistent; echo %ERRORLEVEL%"
 ### Post-Batch: Review & Planning
 
 **After each batch:**
+
 - Confirm verification checkpoint passed before proceeding to next batch
 - Review progress log for patterns or recurring issues
 - Update plan if new issues discovered
 - Plan next batch scope based on learnings
 
 **At end of all batches:**
+
 - Perform final verification sweep (syntax, parity, dead code)
 - Consolidate lessons into skill or memory
 - Archive progress logs as part of project record
@@ -139,6 +147,7 @@ cmd.exe /c "orchestrator.bat nonexistent; echo %ERRORLEVEL%"
 - ✓ Append to verification log section
 
 This ensures:
+
 - Full audit trail of remediation decisions
 - Ability to review changes over time
 - Traceability for rollbacks if needed

@@ -7,6 +7,7 @@ author: Alexa
 license: MIT
 tags: [security, venv, pip, remediation]
 ---
+
 ## Goal
 
 Systematically fix CVE findings in Python dependencies: identify the real venv, cross-reference constraints, upgrade safely, verify with imports.

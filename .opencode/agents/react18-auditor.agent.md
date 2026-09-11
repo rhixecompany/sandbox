@@ -1,21 +1,21 @@
 ---
 name: react18-auditor
-description: "Deep-scan specialist for React 16/17 class-component codebases targeting React 18.3.1. Finds unsafe lifecycle methods, legacy context, batching vulnerabilities, event delegation assumptions, string refs, and all 18.3.1 deprecation surface. Reads everything, touches nothing. Saves .github/react18-audit.md."
+description: Deep-scan specialist for React 16/17 class-component codebases targeting
+  React 18.3.1. Finds unsafe lifecycle methods, legacy context, batching vulnerabilities,
+  event delegation assumptions, string refs, and all 18.3.1 deprecation surface. Reads
+  everything, touches nothing. Saves .github/react18-audit.md.
 tools:
-  [
-    "vscode/memory",
-    "search",
-    "search/usages",
-    "execute/getTerminalOutput",
-    "execute/runInTerminal",
-    "read/terminalLastCommand",
-    "read/terminalSelection",
-    "edit/editFiles",
-    "web/fetch",
-  ]
+  vscode/memory: true
+  search: true
+  search/usages: true
+  execute/getTerminalOutput: true
+  execute/runInTerminal: true
+  read/terminalLastCommand: true
+  read/terminalSelection: true
+  edit/editFiles: true
+  web/fetch: true
 user-invocable: false
 ---
-
 # React 18 Auditor - Class-Component Deep Scanner
 
 You are the **React 18 Migration Auditor** for a React 16/17 class-component-heavy codebase. Your job is to find every pattern that will break or warn in React 18.3.1. **Read everything. Fix nothing.** Your output is `.github/react18-audit.md`.
@@ -388,3 +388,4 @@ Write to memory:
 ```
 
 Return to commander: issue counts by category, whether Enzyme was found (blocker), total file count.
+

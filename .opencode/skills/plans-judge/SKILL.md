@@ -6,18 +6,18 @@ metadata:
   hermes:
     category: qa
     tags:
-    - plans
-    - judge
-    - audit
-    - quality
-    - implementation
+      - plans
+      - judge
+      - audit
+      - quality
+      - implementation
 name: plans-judge
 tags:
-- plans
-- judge
-- audit
-- quality
-- implementation
+  - plans
+  - judge
+  - audit
+  - quality
+  - implementation
 title: Plans Judge
 version: 1.0.0
 ---
@@ -37,34 +37,38 @@ Audits plan files in `.hermes/plans/` for quality, completeness, and adherence t
 
 ## Quality Rubric (0-100)
 
-| Dimension | Points | Criteria |
-|-----------|--------|----------|
-| Frontmatter | 15 | Valid YAML with name, date, status, phases |
-| Structure | 20 | Phases, tasks, checkpoints clearly defined |
-| Task Breakdown | 20 | Each task is actionable with clear deliverables |
-| Verification | 20 | Each phase has verification criteria/gates |
-| Completeness | 15 | All required sections present (overview, prerequisites, timeline) |
-| Dependencies | 10 | Task dependencies and ordering are clear |
+| Dimension      | Points | Criteria                                                          |
+| -------------- | ------ | ----------------------------------------------------------------- |
+| Frontmatter    | 15     | Valid YAML with name, date, status, phases                        |
+| Structure      | 20     | Phases, tasks, checkpoints clearly defined                        |
+| Task Breakdown | 20     | Each task is actionable with clear deliverables                   |
+| Verification   | 20     | Each phase has verification criteria/gates                        |
+| Completeness   | 15     | All required sections present (overview, prerequisites, timeline) |
+| Dependencies   | 10     | Task dependencies and ordering are clear                          |
 
 ## Scoring Criteria
 
 ### 95-100 (PASS)
+
 - All dimensions satisfied
 - Every task has clear deliverables and verification criteria
 - Phases have explicit gates
 - Dependencies documented
 
 ### 80-94 (WARN)
+
 - Minor gaps in one dimension
 - Missing verification criteria for 1-2 tasks
 - Usable but could be more detailed
 
 ### 60-79 (FAIL)
+
 - Missing required sections or vague task descriptions
 - No verification criteria
 - Unclear task ordering
 
 ### Below 60 (FAIL - rewrite)
+
 - Fundamentally broken structure
 - Most tasks are vague or missing
 - No clear phases or gates

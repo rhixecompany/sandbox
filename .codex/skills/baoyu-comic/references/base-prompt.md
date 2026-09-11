@@ -10,12 +10,14 @@ Create a knowledge biography comic page following these guidelines:
 ## Panel Structure
 
 ### Panel Borders
+
 - Clean black lines (1-2px) around each panel
 - White gutters between panels (8-12px)
 - Panels arranged for clear reading flow
 - Variety in panel sizes for visual rhythm
 
 ### Panel Composition
+
 - Clear focal points in each panel
 - Proper use of foreground, midground, background
 - Camera angles vary: eye level, bird's eye, low angle, close-up, wide shot
@@ -25,29 +27,34 @@ Create a knowledge biography comic page following these guidelines:
 ## Text Elements
 
 ### Speech Bubbles
+
 - **Dialogue**: Oval/elliptical bubbles with pointed tails
 - White fill with thin black outline
 - Tail points clearly to speaker
 - Hand-lettered style font (not computer-generated)
 
 ### Narrator Boxes
+
 - **Fourth Wall/Narrator**: Rectangular boxes
 - Often positioned at panel edges (top or bottom)
 - Slightly different fill color (cream or light yellow)
 - Used for commentary, time jumps, explanations
 
 ### Thought Bubbles
+
 - Cloud-shaped with bubble trail leading to thinker
 - Softer outline than speech bubbles
 - For internal monologue
 
 ### Caption Bars
+
 - Rectangular bars at panel edges
 - Time and place information
 - "Meanwhile...", "Three years later..." type transitions
 - Darker fill with white text, or vice versa
 
 ### Typography
+
 - Hand-drawn lettering style throughout
 - Bold for emphasis and key terms
 - Consistent letter sizing
@@ -58,15 +65,15 @@ Create a knowledge biography comic page following these guidelines:
 
 When depicting abstract concepts:
 
-| Concept | Visual Metaphor |
-|---------|----------------|
+| Concept         | Visual Metaphor                        |
+| --------------- | -------------------------------------- |
 | Neural networks | Glowing nodes connected by clean lines |
-| Data flow | Luminous particles along simple paths |
-| Algorithms | Geometric patterns, building blocks |
-| Logic/proof | Interlocking puzzle pieces |
-| Discovery | Light breaking through darkness |
-| Uncertainty | Forking paths, question marks |
-| Time | Clock motifs, calendar pages |
+| Data flow       | Luminous particles along simple paths  |
+| Algorithms      | Geometric patterns, building blocks    |
+| Logic/proof     | Interlocking puzzle pieces             |
+| Discovery       | Light breaking through darkness        |
+| Uncertainty     | Forking paths, question marks          |
+| Time            | Clock motifs, calendar pages           |
 
 - Integrate diagrams naturally into narrative panels
 - Use inset panels or thought-bubble style for explanations
@@ -75,6 +82,7 @@ When depicting abstract concepts:
 ## Fourth Wall / Narrator Character
 
 When depicting narrator characters addressing the reader:
+
 - Character may look directly out of panel
 - Can appear in "present day" framing scenes
 - Distinct visual treatment from main timeline

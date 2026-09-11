@@ -4,6 +4,7 @@ description: "Managed Agents — Memory Stores"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Memory Stores
      2|
      3|> **Public beta.** Memory stores ship under the `managed-agents-2026-04-01` beta header; the SDK sets it automatically on all `client.beta.memory_stores.*` calls. If `client.beta.memory_stores` is missing, upgrade to the latest SDK release.
@@ -103,7 +104,8 @@ author: Alexa
     97|```python
     98|mem = client.beta.memory_stores.memories.retrieve(memory_id, memory_store_id=store.id)
     99|print(mem.content)
-   100|```
+
+100|``
    101|
    102|`retrieve` defaults to `view="full"` (content included); `view` matters mainly on list endpoints.
    103|
@@ -114,38 +116,38 @@ author: Alexa
    108|| `memories.create(store_id, path=..., content=...)` | **Path** | Create at `path`. `409` (`memory_path_conflict_error`, includes `conflicting_memory_id`) if the path is already occupied. |
    109|| `memories.update(mem_id, memory_store_id=..., path=..., content=...)` | **`mem_...` ID** | Mutate existing memory. Change `content`, `path` (rename), or both. Renaming onto an occupied path returns the same `409 memory_path_conflict_error`. |
    110|
-   111|```python
-   112|mem = client.beta.memory_stores.memories.create(
-   113|    store.id,
-   114|    path="/preferences/formatting.md",
-   115|    content="Always use tabs, not spaces.",
-   116|)
-   117|
-   118|client.beta.memory_stores.memories.update(
-   119|    mem.id,
-   120|    memory_store_id=store.id,
-   121|    path="/archive/2026_q1_formatting.md",  # rename
-   122|)
-   123|```
+   111|``python
+112|mem = client.beta.memory_stores.memories.create(
+113| store.id,
+114| path="/preferences/formatting.md",
+115| content="Always use tabs, not spaces.",
+116|)
+117|
+118|client.beta.memory_stores.memories.update(
+119| mem.id,
+120| memory_store_id=store.id,
+121| path="/archive/2026_q1_formatting.md", # rename
+122|)
+123|``
    124|
    125|### Optimistic concurrency (precondition on `update`)
    126|
    127|`memories.update` accepts a `precondition` so you can read → modify → write back without clobbering a concurrent writer. The only supported type is `content_sha256`. On mismatch the API returns `409` (`memory_precondition_failed_error`) — re-read and retry against fresh state.
    128|
-   129|```python
-   130|client.beta.memory_stores.memories.update(
-   131|    mem.id,
-   132|    memory_store_id=store.id,
-   133|    content="CORRECTED: Always use 2-space indentation.",
-   134|    precondition={"type": "content_sha256", "content_sha256": mem.content_sha256},
-   135|)
-   136|```
+   129|``python
+130|client.beta.memory_stores.memories.update(
+131| mem.id,
+132| memory_store_id=store.id,
+133| content="CORRECTED: Always use 2-space indentation.",
+134| precondition={"type": "content_sha256", "content_sha256": mem.content_sha256},
+135|)
+136|`
    137|
    138|### Delete
    139|
-   140|```python
-   141|client.beta.memory_stores.memories.delete(mem.id, memory_store_id=store.id)
-   142|```
+   140|`python
+141|client.beta.memory_stores.memories.delete(mem.id, memory_store_id=store.id)
+142|``
    143|
    144|Pass `expected_content_sha256` for a conditional delete.
    145|
@@ -165,40 +167,40 @@ author: Alexa
    159|
    160|Newest-first, paginated. Filter by `memory_id`, `operation`, `session_id`, `api_key_id`, or `created_at_gte` / `created_at_lte`. Pass `view="full"` to include `content`; default is metadata-only.
    161|
-   162|```python
-   163|for v in client.beta.memory_stores.memory_versions.list(store.id, memory_id=mem.id):
-   164|    print(f"{v.id}: {v.operation}")
-   165|```
+   162|``python
+163|for v in client.beta.memory_stores.memory_versions.list(store.id, memory_id=mem.id):
+164| print(f"{v.id}: {v.operation}")
+165|`
    166|
    167|### Retrieve a version
    168|
-   169|```python
-   170|version = client.beta.memory_stores.memory_versions.retrieve(
-   171|    version_id, memory_store_id=store.id
-   172|)
-   173|print(version.content)
-   174|```
+   169|`python
+170|version = client.beta.memory_stores.memory_versions.retrieve(
+171| version_id, memory_store_id=store.id
+172|)
+173|print(version.content)
+174|``
    175|
    176|### Redact a version
    177|
    178|Scrubs content from a historical version while preserving the audit trail (actor + timestamps). Clears `content`, `content_sha256`, `content_size_bytes`, and `path`; everything else stays. Use for leaked secrets, PII, or user-deletion requests.
    179|
-   180|```python
-   181|client.beta.memory_stores.memory_versions.redact(version_id, memory_store_id=store.id)
-   182|```
+   180|``python
+181|client.beta.memory_stores.memory_versions.redact(version_id, memory_store_id=store.id)
+182|``
    183|
    184|## Endpoint reference
    185|
    186|See `shared/managed-agents-api-reference.md` → Memory Stores / Memories / Memory Versions for the full HTTP method/path tables. Raw HTTP base path:
    187|
-   188|```
-   189|POST   /v1/memory_stores
-   190|POST   /v1/memory_stores/{memory_store_id}/archive
-   191|GET    /v1/memory_stores/{memory_store_id}/memories
-   192|PATCH  /v1/memory_stores/{memory_store_id}/memories/{memory_id}
-   193|GET    /v1/memory_stores/{memory_store_id}/memory_versions
-   194|POST   /v1/memory_stores/{memory_store_id}/memory_versions/{version_id}/redact
-   195|```
-   196|
-   197|For cURL examples and the CLI (`ant beta:memory-stores ...`), WebFetch the Memory URL in `shared/live-sources.md` → Managed Agents.
-   198|
+   188|``
+189|POST /v1/memory_stores
+190|POST /v1/memory_stores/{memory_store_id}/archive
+191|GET /v1/memory_stores/{memory_store_id}/memories
+192|PATCH /v1/memory_stores/{memory_store_id}/memories/{memory_id}
+193|GET /v1/memory_stores/{memory_store_id}/memory_versions
+194|POST /v1/memory_stores/{memory_store_id}/memory_versions/{version_id}/redact
+195|```
+196|
+197|For cURL examples and the CLI (`ant beta:memory-stores ...`), WebFetch the Memory URL in `shared/live-sources.md` → Managed Agents.
+198|

@@ -44,6 +44,7 @@ bm = bmesh.new()
 
 The addon returns `{"executed": true, "result": ""}` for ALL code — the
 eval result is not captured in Blender 5.x. To get values out:
+
 - Use `get_scene_info` or `get_object_info` for queries
 - Write results to a temp file and read back:
 

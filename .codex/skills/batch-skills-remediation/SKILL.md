@@ -10,6 +10,7 @@ metadata:
   hermes:
     tags: [qa, skills, audit]
 ---
+
 ## Goal
 
 Run the full Hermes skills quality pipeline — audit, judge, remediate, and re-judge — across all installed skills. This skill scripts the structural fixes (frontmatter, section headers, reference files) that eliminate FAIL scores and push WARN skills toward PASS.
@@ -34,24 +35,24 @@ Automated reasoning and workflow tool for `batch-skills-remediation`. Execute mu
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `skill-judge` | Per-skill scoring and verification |
+| Skill           | Purpose                              |
+| --------------- | ------------------------------------ |
+| `skill-judge`   | Per-skill scoring and verification   |
 | `hermes-skills` | Skill install/update/list operations |
 
 ## Scripts Required
 
 All scripts live under `~/AppData/Local/hermes/scripts/`:
 
-| Script | Purpose | Phase |
-|--------|---------|-------|
-| `batch_skill_judge.py` | Score all skills on 5 dimensions (fm, struct, content, dry, refs) | Judge |
-| `batch_remediate.py` | Add frontmatter + pitfalls + verification checklist to sub-80 skills | Remediate |
-| `fix_yaml_frontmatter.py` | Fix YAML formatting issues in frontmatter | Remediate |
-| `fix_fail_skills.py` | Add workflow phases + reference files to FAIL skills | Remediate |
-| `patch_fail_structure.py` | Batch-add When NOT to Use + Verification Checklist + refs | Structure |
-| `patch_all_fail_sections.py` | Full section template injector (all 7 critical sections) | Structure |
-| `boost_near_pass_refs.py` | Create domain-specific reference files for near-PASS skills | Reference |
+| Script                       | Purpose                                                              | Phase     |
+| ---------------------------- | -------------------------------------------------------------------- | --------- |
+| `batch_skill_judge.py`       | Score all skills on 5 dimensions (fm, struct, content, dry, refs)    | Judge     |
+| `batch_remediate.py`         | Add frontmatter + pitfalls + verification checklist to sub-80 skills | Remediate |
+| `fix_yaml_frontmatter.py`    | Fix YAML formatting issues in frontmatter                            | Remediate |
+| `fix_fail_skills.py`         | Add workflow phases + reference files to FAIL skills                 | Remediate |
+| `patch_fail_structure.py`    | Batch-add When NOT to Use + Verification Checklist + refs            | Structure |
+| `patch_all_fail_sections.py` | Full section template injector (all 7 critical sections)             | Structure |
+| `boost_near_pass_refs.py`    | Create domain-specific reference files for near-PASS skills          | Reference |
 
 ## Workflow
 
@@ -86,6 +87,7 @@ python3 $LOCALAPPDATA/hermes/scripts/dedupe_skills.py > docs/dedupe-report.md 2>
 ```
 
 **Pattern reference:** The dedupe report is a markdown table. Entries look like:
+
 ```
 | 1password | 1password | 163 | ❌ |  ← flat copy, DELETE
 | 1password | security/1password | 163 | ✅ |  ← canonical, KEEP
@@ -103,6 +105,7 @@ python3 $LOCALAPPDATA/hermes/scripts/batch_skill_judge.py
 ```
 
 Check `judge_results/summary.md` for baseline distribution:
+
 - ✅ PASS (≥80): target
 - ⚠️ WARN (60-79): needs structural improvements
 - 🔴 FAIL (<60): needs deep content fixes
@@ -154,7 +157,7 @@ For skills that stall at 70-79 after batch fixes, apply these targeted patches:
 
 3. **Templates/scripts directories** — Create `templates/` and `scripts/` with real, runnable content (not stubs). Three reference types (references + templates + scripts) max the refs dimension score.
 
-4. **Cite references from body** — The References section at the bottom is NOT enough. The SKILL.md body must explicitly reference each support file with a one-line `- \`references/foo.md\` — description` entry in a References section, AND at least one inline reference in the body text (e.g., "See `references/auth-patterns.md` for error handling"). The judge checks this as a DRY/dimensionality criterion.
+4. **Cite references from body** — The References section at the bottom is NOT enough. The SKILL.md body must explicitly reference each support file with a one-line `- \`references/foo.md\` — description`entry in a References section, AND at least one inline reference in the body text (e.g., "See`references/auth-patterns.md` for error handling"). The judge checks this as a DRY/dimensionality criterion.
 
 5. **≥3 code blocks** — Code-less skills (tutorials, conceptual docs) still need ≥3 fenced code blocks. Even simple `platform.system()` + error map + config snippet count.
 
@@ -169,6 +172,7 @@ python3 $LOCALAPPDATA/hermes/scripts/batch_skill_judge.py
 ```
 
 **Expected outcomes:**
+
 - **Round 1** (batch_remediate): 36+ FAIL → WARN, avg +1.9
 - **Round 2** (structure patch): 39+ FAIL → WARN, avg +2.0
 - **Round 3** (refs boost): 22+ WARN → PASS, avg +0.3

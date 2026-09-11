@@ -10,7 +10,7 @@ time_span: "[e.g., 1912-1954]"
 narrative_approach: "[chronological/thematic/character-focused]"
 recommended_style: "[style name]"
 recommended_layout: "[layout name or varies]"
-aspect_ratio: "3:4"    # 3:4 (portrait), 4:3 (landscape), 16:9 (widescreen)
+aspect_ratio: "3:4" # 3:4 (portrait), 4:3 (landscape), 16:9 (widescreen)
 language: "[zh/en/ja/etc.]"
 page_count: [N]
 generated: "YYYY-MM-DD HH:mm"
@@ -28,6 +28,7 @@ generated: "YYYY-MM-DD HH:mm"
 **Core Message**: [one-liner]
 
 **Visual Design**:
+
 - Title typography style
 - Main visual composition
 - Color scheme
@@ -54,6 +55,7 @@ generated: "YYYY-MM-DD HH:mm"
 
 **Scene**: [Time, location]
 **Image Description**:
+
 - Camera angle: [bird's eye / low angle / eye level / close-up / wide shot]
 - Characters: [pose, expression, action]
 - Environment: [scene details, period markers]
@@ -61,6 +63,7 @@ generated: "YYYY-MM-DD HH:mm"
 - Color tone: [palette reference]
 
 **Text Elements**:
+
 - Dialogue bubble (oval): "Character line"
 - Narrator box (rectangular): 「Narrator commentary」
 - Caption bar: [Background info text]
@@ -75,6 +78,7 @@ generated: "YYYY-MM-DD HH:mm"
 ---
 
 ## Page 2 / N
+
 ...
 ```
 
@@ -87,12 +91,12 @@ generated: "YYYY-MM-DD HH:mm"
 
 ## Panel Composition Guidelines
 
-| Panel Type | Recommended Count | Usage |
-|-----------|-------------------|-------|
-| Main narrative | 3-5 per page | Story progression |
-| Concept diagram | 1-2 per page | Visualize abstractions |
-| Narrator panel | 0-1 per page | Commentary, transition |
-| Splash (full/half) | Occasional | Major moments |
+| Panel Type         | Recommended Count | Usage                  |
+| ------------------ | ----------------- | ---------------------- |
+| Main narrative     | 3-5 per page      | Story progression      |
+| Concept diagram    | 1-2 per page      | Visualize abstractions |
+| Narrator panel     | 0-1 per page      | Commentary, transition |
+| Splash (full/half) | Occasional        | Major moments          |
 
 ## Panel Size Reference
 
@@ -105,25 +109,25 @@ generated: "YYYY-MM-DD HH:mm"
 
 Transform abstract concepts into concrete visuals:
 
-| Abstract Concept | Visual Approach |
-|-----------------|-----------------|
-| Neural network | Glowing nodes with connecting lines |
-| Gradient descent | Ball rolling down valley terrain |
-| Data flow | Luminous particles flowing through pipes |
-| Algorithm iteration | Ascending spiral staircase |
-| Breakthrough moment | Shattering barrier, piercing light |
-| Logical proof | Building blocks assembling |
-| Uncertainty | Forking paths, fog, multiple shadows |
+| Abstract Concept    | Visual Approach                          |
+| ------------------- | ---------------------------------------- |
+| Neural network      | Glowing nodes with connecting lines      |
+| Gradient descent    | Ball rolling down valley terrain         |
+| Data flow           | Luminous particles flowing through pipes |
+| Algorithm iteration | Ascending spiral staircase               |
+| Breakthrough moment | Shattering barrier, piercing light       |
+| Logical proof       | Building blocks assembling               |
+| Uncertainty         | Forking paths, fog, multiple shadows     |
 
 ## Text Element Design
 
-| Text Type | Style | Usage |
-|-----------|-------|-------|
-| Character dialogue | Oval speech bubble | Main narrative speech |
-| Narrator commentary | Rectangular box | Explanation, commentary |
-| Caption bar | Edge-mounted rectangle | Time, location info |
-| Thought bubble | Cloud shape | Character inner monologue |
-| Term label | Bold / special color | First appearance of technical terms |
+| Text Type           | Style                  | Usage                               |
+| ------------------- | ---------------------- | ----------------------------------- |
+| Character dialogue  | Oval speech bubble     | Main narrative speech               |
+| Narrator commentary | Rectangular box        | Explanation, commentary             |
+| Caption bar         | Edge-mounted rectangle | Time, location info                 |
+| Thought bubble      | Cloud shape            | Character inner monologue           |
+| Term label          | Bold / special color   | First appearance of technical terms |
 
 ## Prompt Structure for Consistency
 

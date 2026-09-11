@@ -4,6 +4,7 @@ description: "Blog Post Workflow"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Blog Post Workflow
      2|
      3|## Timeline: 1-2 weeks (with feedback cycles)
@@ -103,30 +104,31 @@ author: Alexa
     97|- [ ] Format: headers, bold, lists clear
     98|- [ ] All links working
     99|- [ ] Featured image ready
-   100|- [ ] Meta description written
-   101|
-   102|**Publishing:**
-   103|
-   104|- Add to CMS/blog platform
-   105|- Social media post draft
-   106|- Internal sharing plan
-   107|
-   108|## Tips for Blog Success
-   109|
-   110|- **Voice matters** — Blog readers want authentic perspective, not corporate tone
-   111|- **Examples are oxygen** — Generic claims bore; specific examples engage
-   112|- **Link generously** — Show your sources; gives reader confidence + SEO benefit
-   113|- **Call to action** — Don't leave readers hanging; tell them what's next
-   114|- **Deadline helps** — "I want to publish this Thursday" creates focus
-   115|
-   116|## What Feedback Looks Like (Blog-Specific)
-   117|
-   118|**For blog posts, I focus on:**
-   119|
-   120|- Does the hook grab you in first 2 sentences?
-   121|- Is the core argument clear by end of section 1?
-   122|- Do examples feel specific and true?
-   123|- Is the voice consistent and authentic?
-   124|- Does conclusion drive action?
-   125|- Is this shareable? Would you tweet this?
-   126|
+
+100|- [ ] Meta description written
+101|
+102|**Publishing:**
+103|
+104|- Add to CMS/blog platform
+105|- Social media post draft
+106|- Internal sharing plan
+107|
+108|## Tips for Blog Success
+109|
+110|- **Voice matters** — Blog readers want authentic perspective, not corporate tone
+111|- **Examples are oxygen** — Generic claims bore; specific examples engage
+112|- **Link generously** — Show your sources; gives reader confidence + SEO benefit
+113|- **Call to action** — Don't leave readers hanging; tell them what's next
+114|- **Deadline helps** — "I want to publish this Thursday" creates focus
+115|
+116|## What Feedback Looks Like (Blog-Specific)
+117|
+118|**For blog posts, I focus on:**
+119|
+120|- Does the hook grab you in first 2 sentences?
+121|- Is the core argument clear by end of section 1?
+122|- Do examples feel specific and true?
+123|- Is the voice consistent and authentic?
+124|- Does conclusion drive action?
+125|- Is this shareable? Would you tweet this?
+126|

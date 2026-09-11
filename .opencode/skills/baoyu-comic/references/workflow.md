@@ -37,6 +37,7 @@ Input → Analyze → [Check Existing?] → [Confirm: Style + Reviews] → Story
 Read source content, save it if needed, and perform deep analysis.
 
 **Actions**:
+
 1. **Save source content** (if not already a file):
    - If user provides a file path: use as-is
    - If user pastes content: save to `source-{slug}.md` in the target directory using `write_file`, where `{slug}` is the kebab-case topic slug used for the output directory
@@ -78,6 +79,7 @@ options:
 ```
 
 Save result and handle accordingly:
+
 - **Regenerate storyboard**: Skip to Step 3, preserve `prompts/` and images
 - **Regenerate images**: Skip to Step 7, use existing prompts
 - **Backup and regenerate**: Move directory, start fresh from Step 2
@@ -90,6 +92,7 @@ Save result and handle accordingly:
 **Purpose**: Select visual style + decide whether to review outline before generation. **Do NOT skip.**
 
 **Display summary first**:
+
 - Content type + topic identified
 - Key figures extracted
 - Time span detected
@@ -158,6 +161,7 @@ options:
 ```
 
 **After responses**:
+
 1. Update `analysis.md` with user preferences
 2. **Store `skip_outline_review`** flag based on Question 4 response
 3. **Store `skip_prompt_review`** flag based on Question 5 response
@@ -170,6 +174,7 @@ options:
 Create storyboard and character definitions using the confirmed style from Step 2.
 
 **Loading Style References**:
+
 - Art style: `art-styles/{art}.md`
 - Tone: `tones/{tone}.md`
 - If preset (ohmsha/wuxia/shoujo/concept-story/four-panel): also load `presets/{preset}.md`
@@ -192,16 +197,17 @@ Create storyboard and character definitions using the confirmed style from Step 
 
 **Ohmsha Default Characters** (use these unless user specifies custom characters):
 
-| Role | Character | Visual Description |
-|------|-----------|-------------------|
-| Student | 大雄 (Nobita) | Japanese boy, 10yo, round glasses, black hair parted in middle, yellow shirt, navy shorts |
-| Mentor | 哆啦 A 梦 (Doraemon) | Round blue robot cat, big white eyes, red nose, whiskers, white belly with 4D pocket, golden bell, no ears |
-| Challenge | 胖虎 (Gian) | Stocky boy, rough features, small eyes, orange shirt |
-| Support | 静香 (Shizuka) | Cute girl, black short hair, pink dress, gentle expression |
+| Role      | Character            | Visual Description                                                                                         |
+| --------- | -------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Student   | 大雄 (Nobita)        | Japanese boy, 10yo, round glasses, black hair parted in middle, yellow shirt, navy shorts                  |
+| Mentor    | 哆啦 A 梦 (Doraemon) | Round blue robot cat, big white eyes, red nose, whiskers, white belly with 4D pocket, golden bell, no ears |
+| Challenge | 胖虎 (Gian)          | Stocky boy, rough features, small eyes, orange shirt                                                       |
+| Support   | 静香 (Shizuka)       | Cute girl, black short hair, pink dress, gentle expression                                                 |
 
 These are the canonical ohmsha-style characters. Do NOT create custom characters for ohmsha unless explicitly requested.
 
 **After generation**:
+
 - If `skip_outline_review` is true → Skip Step 4, go directly to Step 5
 - If `skip_outline_review` is false → Continue to Step 4
 
@@ -214,6 +220,7 @@ These are the canonical ohmsha-style characters. Do NOT create custom characters
 **Purpose**: User reviews and confirms storyboard + characters before generation.
 
 **Display**:
+
 - Page count and structure
 - Art style + Tone combination
 - Page-by-page summary (Cover → P1 → P2...)
@@ -231,6 +238,7 @@ options:
 ```
 
 **After response**:
+
 1. If user wants to edit → Wait for user to finish editing, then ask again
 2. If user confirms → Continue to Step 5
 
@@ -241,35 +249,43 @@ options:
 Create image generation prompts for all pages.
 
 **Style Reference Loading**:
+
 - Read `art-styles/{art}.md` for rendering guidelines
 - Read `tones/{tone}.md` for mood/color adjustments
 - If preset: Read `presets/{preset}.md` for special rules
 
 **For each page (cover + pages)**:
+
 1. Create prompt following art style + tone guidelines
 2. **Embed character descriptions** inline (copy relevant traits from `characters/characters.md`) — `image_generate` is prompt-only, so the prompt text is the sole vehicle for character consistency
 3. Save to `prompts/NN-{cover|page}-[slug].md` using `write_file`
    - **Backup rule**: If prompt file exists, rename to `prompts/NN-{cover|page}-[slug]-backup-YYYYMMDD-HHMMSS.md`
 
 **Prompt File Format**:
+
 ```markdown
 # Page NN: [Title]
 
 ## Visual Style
+
 Art: [art style] | Tone: [tone] | Layout: [layout type]
 
 ## Character Reference (embedded inline — maintain exact traits below)
+
 - [Character A]: [detailed visual traits from characters/characters.md]
 - [Character B]: [detailed visual traits from characters/characters.md]
 
 ## Panel Breakdown
+
 [From storyboard.md - panel descriptions, actions, dialogue]
 
 ## Generation Prompt
+
 [Combined prompt passed to image_generate]
 ```
 
 **After generation**:
+
 - If `skip_prompt_review` is true → Skip Step 6, go directly to Step 7
 - If `skip_prompt_review` is false → Continue to Step 6
 
@@ -283,11 +299,11 @@ Art: [art style] | Tone: [tone] | Layout: [layout type]
 
 **Display prompt summary table**:
 
-| Page | Title | Key Elements |
-|------|-------|--------------|
-| Cover | [title] | [main visual] |
-| P1 | [title] | [key elements] |
-| ... | ... | ... |
+| Page  | Title   | Key Elements   |
+| ----- | ------- | -------------- |
+| Cover | [title] | [main visual]  |
+| P1    | [title] | [key elements] |
+| ...   | ...     | ...            |
 
 **Use `clarify`**:
 
@@ -300,6 +316,7 @@ options:
 ```
 
 **After response**:
+
 1. If user wants to edit → Wait for user to finish editing, then ask again
 2. If user wants to regenerate → Go back to Step 5
 3. If user confirms → Continue to Step 7
@@ -312,11 +329,11 @@ With confirmed prompts from Step 5/6, use the `image_generate` tool. The tool ac
 
 **Aspect ratio mapping** — map the storyboard's `aspect_ratio` to the tool's enum:
 
-| Storyboard ratio | `image_generate` format |
-|------------------|-------------------------|
-| `3:4`, `9:16`, `2:3` | `portrait` |
-| `4:3`, `16:9`, `3:2` | `landscape` |
-| `1:1` | `square` |
+| Storyboard ratio     | `image_generate` format |
+| -------------------- | ----------------------- |
+| `3:4`, `9:16`, `2:3` | `portrait`              |
+| `4:3`, `16:9`, `3:2` | `landscape`             |
+| `1:1`                | `square`                |
 
 **Download procedure** (run after every successful `image_generate` call):
 
@@ -330,13 +347,14 @@ Character sheet is recommended for multi-page comics with recurring characters, 
 
 **When to generate**:
 
-| Condition | Action |
-|-----------|--------|
-| Multi-page comic with detailed/recurring characters | Generate character sheet (recommended) |
+| Condition                                                       | Action                                    |
+| --------------------------------------------------------------- | ----------------------------------------- |
+| Multi-page comic with detailed/recurring characters             | Generate character sheet (recommended)    |
 | Preset with simplified characters (e.g., four-panel minimalist) | Skip — prompt descriptions are sufficient |
-| Single-page comic | Skip unless characters are complex |
+| Single-page comic                                               | Skip unless characters are complex        |
 
 **When generating**:
+
 1. Use Reference Sheet Prompt from `characters/characters.md`
 2. **Backup rule**: If `characters/characters.png` exists, rename to `characters/characters-backup-YYYYMMDD-HHMMSS.png`
 3. Call `image_generate` with `landscape` format
@@ -347,6 +365,7 @@ Character sheet is recommended for multi-page comics with recurring characters, 
 ### 7.2 Generate Comic Pages
 
 **Before generating any page**:
+
 1. Confirm each prompt file exists at `prompts/NN-{cover|page}-[slug].md`
 2. Confirm that each prompt has character descriptions embedded inline (see Step 5). `image_generate` is prompt-only, so the prompt text is the sole consistency mechanism.
 
@@ -358,14 +377,17 @@ Character sheet is recommended for multi-page comics with recurring characters, 
 # Page 01: [Title]
 
 ## Character Reference (embedded inline — maintain consistency)
+
 - 大雄：Japanese boy, round glasses, yellow shirt, navy shorts, worried expression...
 - 哆啦 A 梦：Round blue robot cat, white belly, red nose, golden bell, 4D pocket...
 
 ## Page Content
+
 [Original page prompt body — panels, dialogue, visual metaphors]
 ```
 
 **For each page (cover + pages)**:
+
 1. Read prompt from `prompts/NN-{cover|page}-[slug].md`
 2. **Backup rule**: If image file exists, rename to `NN-{cover|page}-[slug]-backup-YYYYMMDD-HHMMSS.png`
 3. Call `image_generate` with the prompt text and mapped aspect ratio
@@ -390,12 +412,13 @@ Location: [path]
 
 ## Page Modification
 
-| Action | Steps |
-|--------|-------|
-| **Edit** | Update prompt → Regenerate image → Download new PNG |
-| **Add** | Create prompt at position → Generate image → Download PNG → Renumber subsequent (NN+1) → Update storyboard |
-| **Delete** | Remove files → Renumber subsequent (NN-1) → Update storyboard |
+| Action     | Steps                                                                                                      |
+| ---------- | ---------------------------------------------------------------------------------------------------------- |
+| **Edit**   | Update prompt → Regenerate image → Download new PNG                                                        |
+| **Add**    | Create prompt at position → Generate image → Download PNG → Renumber subsequent (NN+1) → Update storyboard |
+| **Delete** | Remove files → Renumber subsequent (NN-1) → Update storyboard                                              |
 
 **File naming**: `NN-{cover|page}-[slug].png` (e.g., `03-page-enigma-machine.png`)
+
 - Slugs: kebab-case, unique, derived from content
 - Renumbering: Update NN prefix only, slugs unchanged

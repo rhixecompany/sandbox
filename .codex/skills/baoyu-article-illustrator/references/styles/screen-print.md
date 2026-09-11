@@ -13,24 +13,24 @@ Screen print / silkscreen aesthetic inspired by Mondo limited-edition posters an
 
 ## Color Palette
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | Off-Black | #121212 | Dark compositions |
-| Background Alt | Warm Cream | #F5E6D0 | Light compositions |
-| Primary | Burnt Orange | #E8751A | Main accent |
-| Secondary | Deep Teal | #0A6E6E | Contrast accent |
-| Tertiary | Crimson | #C0392B | Bold emphasis |
-| Highlight | Amber | #F4A623 | Small accents |
-| Text | Cream White | #FAF3E0 | On dark backgrounds |
+| Role           | Color        | Hex     | Usage               |
+| -------------- | ------------ | ------- | ------------------- |
+| Background     | Off-Black    | #121212 | Dark compositions   |
+| Background Alt | Warm Cream   | #F5E6D0 | Light compositions  |
+| Primary        | Burnt Orange | #E8751A | Main accent         |
+| Secondary      | Deep Teal    | #0A6E6E | Contrast accent     |
+| Tertiary       | Crimson      | #C0392B | Bold emphasis       |
+| Highlight      | Amber        | #F4A623 | Small accents       |
+| Text           | Cream White  | #FAF3E0 | On dark backgrounds |
 
 **Duotone Pairs** (choose ONE pair for high-impact compositions):
 
-| Pair | Color A | Color B | Feel |
-|------|---------|---------|------|
-| Orange + Teal | #E8751A | #0A6E6E | Cinematic, action |
-| Red + Cream | #C0392B | #F5E6D0 | Bold, classic |
-| Blue + Gold | #1A3A5C | #D4A843 | Prestigious, premium |
-| Crimson + Navy | #DC143C | #0D1B2A | Dramatic, noir |
+| Pair           | Color A | Color B | Feel                 |
+| -------------- | ------- | ------- | -------------------- |
+| Orange + Teal  | #E8751A | #0A6E6E | Cinematic, action    |
+| Red + Cream    | #C0392B | #F5E6D0 | Bold, classic        |
+| Blue + Gold    | #1A3A5C | #D4A843 | Prestigious, premium |
+| Crimson + Navy | #DC143C | #0D1B2A | Dramatic, noir       |
 
 **Rule**: Use 2-5 colors maximum. Fewer colors = stronger impact.
 

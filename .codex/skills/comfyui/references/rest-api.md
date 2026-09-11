@@ -6,13 +6,13 @@ auth/path differences.**
 
 ## Connection
 
-| | Local ComfyUI | Comfy Cloud |
-|---|---|---|
-| Base URL | `http://127.0.0.1:8188` | `https://cloud.comfy.org` |
-| API path prefix | none (`/prompt`, `/view`, …) | `/api/...` (`/api/prompt`, `/api/view`, …) |
-| Auth | none (or bearer token if configured) | `X-API-Key` header |
-| WebSocket | `ws://host:port/ws?clientId={uuid}` | `wss://cloud.comfy.org/ws?clientId={uuid}&token={API_KEY}` |
-| `/api/view` response | direct bytes | 302 redirect → signed URL (use `curl -L`) |
+|                      | Local ComfyUI                        | Comfy Cloud                                                |
+| -------------------- | ------------------------------------ | ---------------------------------------------------------- |
+| Base URL             | `http://127.0.0.1:8188`              | `https://cloud.comfy.org`                                  |
+| API path prefix      | none (`/prompt`, `/view`, …)         | `/api/...` (`/api/prompt`, `/api/view`, …)                 |
+| Auth                 | none (or bearer token if configured) | `X-API-Key` header                                         |
+| WebSocket            | `ws://host:port/ws?clientId={uuid}`  | `wss://cloud.comfy.org/ws?clientId={uuid}&token={API_KEY}` |
+| `/api/view` response | direct bytes                         | 302 redirect → signed URL (use `curl -L`)                  |
 
 The skill scripts route URLs automatically via `_common.resolve_url()`.
 
@@ -22,20 +22,20 @@ The cloud surface diverges from local ComfyUI in several ways. The skill
 scripts handle these transparently; document them here so anyone calling
 `curl` directly knows.
 
-| Local path | Cloud path | Notes |
-|------------|-----------|-------|
-| `/system_stats` | `/api/system_stats` | Cloud version is **public** (no auth required) |
-| `/object_info` | `/api/object_info` | **Paid tier only** — free returns 403 |
-| `/queue` | `/api/queue` | Paid tier only |
-| `/userdata` | `/api/userdata` | Paid tier only |
-| `/prompt` (POST) | `/api/prompt` (POST) | Paid tier only |
-| `/upload/image` | `/api/upload/image` | Paid tier only; `subfolder` accepted but ignored |
-| `/upload/mask` | `/api/upload/mask` | Same as above |
-| `/view` | `/api/view` | Paid tier only; **returns 302** to signed URL |
-| `/history` | `/api/history_v2` | **Renamed**; old path returns 404 |
-| `/history/{id}` | `/api/history_v2/{id}` or `/api/jobs/{id}` | Both work; `/jobs` returns full job |
-| `/models` | `/api/experiment/models` | **Renamed** |
-| `/models/{folder}` | `/api/experiment/models/{folder}` | **Renamed**; response shape differs (see below) |
+| Local path         | Cloud path                                 | Notes                                            |
+| ------------------ | ------------------------------------------ | ------------------------------------------------ |
+| `/system_stats`    | `/api/system_stats`                        | Cloud version is **public** (no auth required)   |
+| `/object_info`     | `/api/object_info`                         | **Paid tier only** — free returns 403            |
+| `/queue`           | `/api/queue`                               | Paid tier only                                   |
+| `/userdata`        | `/api/userdata`                            | Paid tier only                                   |
+| `/prompt` (POST)   | `/api/prompt` (POST)                       | Paid tier only                                   |
+| `/upload/image`    | `/api/upload/image`                        | Paid tier only; `subfolder` accepted but ignored |
+| `/upload/mask`     | `/api/upload/mask`                         | Same as above                                    |
+| `/view`            | `/api/view`                                | Paid tier only; **returns 302** to signed URL    |
+| `/history`         | `/api/history_v2`                          | **Renamed**; old path returns 404                |
+| `/history/{id}`    | `/api/history_v2/{id}` or `/api/jobs/{id}` | Both work; `/jobs` returns full job              |
+| `/models`          | `/api/experiment/models`                   | **Renamed**                                      |
+| `/models/{folder}` | `/api/experiment/models/{folder}`          | **Renamed**; response shape differs (see below)  |
 
 ### Cloud model-list response shape
 
@@ -64,8 +64,9 @@ curl -X POST "https://cloud.comfy.org/api/prompt" \
 ```
 
 **Response:**
+
 ```json
-{"prompt_id": "abc-123-def", "number": 1, "node_errors": {}}
+{ "prompt_id": "abc-123-def", "number": 1, "node_errors": {} }
 ```
 
 If `node_errors` is non-empty, the workflow has validation errors (missing
@@ -105,6 +106,7 @@ curl -s "http://127.0.0.1:8188/history/{id}"     # one prompt_id
 ```
 
 Local entry shape:
+
 ```json
 {
   "<prompt_id>": {
@@ -156,27 +158,27 @@ user are broadcast to every connection. Filter messages client-side by
 
 ### JSON Message Types
 
-| Type | When | Key Fields |
-|------|------|------------|
-| `status` | Queue change | `status.exec_info.queue_remaining` |
-| `notification` | User-friendly status string | `value` |
-| `execution_start` | Workflow begins | `prompt_id` |
-| `executing` | Node running (or end-of-run if `node` is null on local) | `node`, `prompt_id` |
-| `progress` | Sampling steps | `node`, `value`, `max` |
-| `progress_state` | Extended progress with per-node metadata | `nodes` (dict) |
-| `executed` | Node output ready | `node`, `output` (with `images`/`video`/etc.) |
-| `execution_cached` | Nodes skipped because of cache | `nodes` (list of IDs) |
-| `execution_success` | All done | `prompt_id` |
-| `execution_error` | Failure | `exception_type`, `exception_message`, `traceback`, `node_id` |
-| `execution_interrupted` | Cancelled | `prompt_id` |
+| Type                    | When                                                    | Key Fields                                                    |
+| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------- |
+| `status`                | Queue change                                            | `status.exec_info.queue_remaining`                            |
+| `notification`          | User-friendly status string                             | `value`                                                       |
+| `execution_start`       | Workflow begins                                         | `prompt_id`                                                   |
+| `executing`             | Node running (or end-of-run if `node` is null on local) | `node`, `prompt_id`                                           |
+| `progress`              | Sampling steps                                          | `node`, `value`, `max`                                        |
+| `progress_state`        | Extended progress with per-node metadata                | `nodes` (dict)                                                |
+| `executed`              | Node output ready                                       | `node`, `output` (with `images`/`video`/etc.)                 |
+| `execution_cached`      | Nodes skipped because of cache                          | `nodes` (list of IDs)                                         |
+| `execution_success`     | All done                                                | `prompt_id`                                                   |
+| `execution_error`       | Failure                                                 | `exception_type`, `exception_message`, `traceback`, `node_id` |
+| `execution_interrupted` | Cancelled                                               | `prompt_id`                                                   |
 
 ### Binary Frames (Preview Images)
 
-| Type code | Meaning |
-|-----------|---------|
+| Type code    | Meaning                                                                     |
+| ------------ | --------------------------------------------------------------------------- |
 | `0x00000001` | `PREVIEW_IMAGE` — `[type:4][image_type:4][data]` (image_type 1=JPEG, 2=PNG) |
-| `0x00000003` | `TEXT` — `[type:4][nid_len:4][nid][text]` (UTF-8) |
-| `0x00000004` | `PREVIEW_IMAGE_WITH_METADATA` — `[type:4][meta_len:4][json][image_data]` |
+| `0x00000003` | `TEXT` — `[type:4][nid_len:4][nid][text]` (UTF-8)                           |
+| `0x00000004` | `PREVIEW_IMAGE_WITH_METADATA` — `[type:4][meta_len:4][json][image_data]`    |
 
 `scripts/ws_monitor.py --previews <dir>` saves preview frames to disk.
 
@@ -270,27 +272,27 @@ curl -X POST "http://127.0.0.1:8188/manager/queue/install_model" \
 
 ```json
 {
-  "prompt": {
-    "3": {
-      "class_type": "KSampler",
-      "inputs": {
-        "seed": 42,
-        "steps": 20,
-        "cfg": 7.5,
-        "sampler_name": "euler",
-        "scheduler": "normal",
-        "denoise": 1.0,
-        "model": ["4", 0],
-        "positive": ["6", 0],
-        "negative": ["7", 0],
-        "latent_image": ["5", 0]
-      }
-    }
-  },
-  "client_id": "unique-uuid-for-ws-filtering",
-  "extra_data": {
-    "api_key_comfy_org": "optional-PARTNER-NODE-key (NOT the cloud auth key)"
-  }
+	"prompt": {
+		"3": {
+			"class_type": "KSampler",
+			"inputs": {
+				"seed": 42,
+				"steps": 20,
+				"cfg": 7.5,
+				"sampler_name": "euler",
+				"scheduler": "normal",
+				"denoise": 1.0,
+				"model": ["4", 0],
+				"positive": ["6", 0],
+				"negative": ["7", 0],
+				"latent_image": ["5", 0]
+			}
+		}
+	},
+	"client_id": "unique-uuid-for-ws-filtering",
+	"extra_data": {
+		"api_key_comfy_org": "optional-PARTNER-NODE-key (NOT the cloud auth key)"
+	}
 }
 ```
 
@@ -302,11 +304,11 @@ curl -X POST "http://127.0.0.1:8188/manager/queue/install_model" \
 
 ## Error Categories (cloud `execution_error` `exception_type`)
 
-| Type | Meaning |
-|------|---------|
-| `ValidationError` | Bad workflow / inputs (often nicer to surface from `node_errors`) |
-| `ModelDownloadError` | Required model not available |
-| `ImageDownloadError` | Failed to fetch input image from URL |
-| `OOMError` | Out of GPU memory |
-| `InsufficientFundsError` | Account balance too low (partner nodes) |
-| `InactiveSubscriptionError` | Subscription not active |
+| Type                        | Meaning                                                           |
+| --------------------------- | ----------------------------------------------------------------- |
+| `ValidationError`           | Bad workflow / inputs (often nicer to surface from `node_errors`) |
+| `ModelDownloadError`        | Required model not available                                      |
+| `ImageDownloadError`        | Failed to fetch input image from URL                              |
+| `OOMError`                  | Out of GPU memory                                                 |
+| `InsufficientFundsError`    | Account balance too low (partner nodes)                           |
+| `InactiveSubscriptionError` | Subscription not active                                           |

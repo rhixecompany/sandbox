@@ -48,20 +48,20 @@ connected.
 
 ## Quick Reference
 
-| MCP tool                  | Use for                                    |
-|---------------------------|--------------------------------------------|
-| `get_scene_info`          | List objects before touching the scene     |
-| `get_object_info`         | Inspect one object (transform, materials)  |
-| `get_viewport_screenshot` | Visual check of what you built             |
-| `execute_blender_code`    | Everything else — arbitrary bpy Python     |
+| MCP tool                  | Use for                                   |
+| ------------------------- | ----------------------------------------- |
+| `get_scene_info`          | List objects before touching the scene    |
+| `get_object_info`         | Inspect one object (transform, materials) |
+| `get_viewport_screenshot` | Visual check of what you built            |
+| `execute_blender_code`    | Everything else — arbitrary bpy Python    |
 
 Deeper material lives in the reference files (load on demand):
 
-| Reference | Contents |
-|-----------|----------|
-| `references/bpy-api.md` | Essential bpy operations: modeling, materials, modifiers, rendering |
-| `references/recipes.md` | Complete working scenes: low-poly terrain, glass sphere, HDRI lighting, turntable animation |
-| `references/pitfalls.md` | Hard-won lessons: empty code results in 5.x, ops-vs-data API, engine names by version |
+| Reference                | Contents                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| `references/bpy-api.md`  | Essential bpy operations: modeling, materials, modifiers, rendering                         |
+| `references/recipes.md`  | Complete working scenes: low-poly terrain, glass sphere, HDRI lighting, turntable animation |
+| `references/pitfalls.md` | Hard-won lessons: empty code results in 5.x, ops-vs-data API, engine names by version       |
 
 Optional asset-service tools (PolyHaven, Sketchfab, Hyper3D, Hunyuan3D) are
 disabled by default. If the user has enabled a service in the addon panel,

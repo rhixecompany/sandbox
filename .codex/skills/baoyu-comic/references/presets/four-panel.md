@@ -4,12 +4,12 @@
 
 ## Base Configuration
 
-| Dimension | Value |
-|-----------|-------|
-| Art Style | minimalist |
-| Tone | neutral |
-| Layout | four-panel (default) |
-| Aspect | 4:3 (landscape) |
+| Dimension | Value                |
+| --------- | -------------------- |
+| Art Style | minimalist           |
+| Tone      | neutral              |
+| Layout    | four-panel (default) |
+| Aspect    | 4:3 (landscape)      |
 
 Equivalent to: art=minimalist, tone=neutral, layout=four-panel, aspect=4:3
 
@@ -21,12 +21,12 @@ This preset includes special rules beyond the art+tone combination. When the `fo
 
 Every comic MUST follow the four-panel 起承转合 structure:
 
-| Panel | Role | Requirements |
-|-------|------|-------------|
-| 1 (起 Setup) | Introduce the situation | Show character(s) in a recognizable context. Establish the "normal" state or problem |
-| 2 (承 Development) | Build on the setup | Add complication, show an attempt, or introduce the concept. Stakes become clearer |
-| 3 (转 Turn) | The twist or key insight | **Most important panel.** Show the unexpected reversal, contrast, or "aha" moment that makes the allegory work |
-| 4 (合 Conclusion) | Resolution and takeaway | Show the result, consequence, or lesson learned. Can be a visual punchline or summary |
+| Panel              | Role                     | Requirements                                                                                                   |
+| ------------------ | ------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| 1 (起 Setup)       | Introduce the situation  | Show character(s) in a recognizable context. Establish the "normal" state or problem                           |
+| 2 (承 Development) | Build on the setup       | Add complication, show an attempt, or introduce the concept. Stakes become clearer                             |
+| 3 (转 Turn)        | The twist or key insight | **Most important panel.** Show the unexpected reversal, contrast, or "aha" moment that makes the allegory work |
+| 4 (合 Conclusion)  | Resolution and takeaway  | Show the result, consequence, or lesson learned. Can be a visual punchline or summary                          |
 
 **CRITICAL**: Do NOT deviate from exactly 4 panels. No 5th panel, no title panel, no footer panel within the image.
 
@@ -73,11 +73,11 @@ Every comic MUST follow the four-panel 起承转合 structure:
 
 Create simple stick-figure characters based on content. No fixed defaults:
 
-| Role | Archetype | Visual Cues |
-|------|-----------|------------|
+| Role        | Archetype                          | Visual Cues                                                  |
+| ----------- | ---------------------------------- | ------------------------------------------------------------ |
 | Protagonist | Worker/employee facing a situation | Simple figure, minimal distinguishing feature (glasses, tie) |
-| Authority | Boss/manager/expert | Slightly larger figure, or prop like pointer/clipboard |
-| Object | The concept itself | Labeled object, icon, or highlighted text with accent color |
+| Authority   | Boss/manager/expert                | Slightly larger figure, or prop like pointer/clipboard       |
+| Object      | The concept itself                 | Labeled object, icon, or highlighted text with accent color  |
 
 ### Prompt Template
 
@@ -86,6 +86,7 @@ When generating image prompts for four-panel comics, include these keywords:
 > A minimalist, clean line art digital comic strip in a four-panel grid layout (2×2). The style is simplified cartoon illustration with clear black outlines and a minimal color palette of black, white, and specific spot [accent color] for key concepts.
 
 Each panel description should specify:
+
 - Panel position (Top Left / Top Right / Bottom Left / Bottom Right)
 - Character poses and gestures (simple, stick-figure style)
 - Dialogue text in Chinese (hand-drawn style)

@@ -41,14 +41,14 @@ Minimalist cartoon illustration characterized by clean black line art on white b
 
 ## Default Color Palette
 
-| Role | Color | Hex |
-|------|-------|-----|
-| Primary | Black ink | `#1A1A1A` |
-| Background | Clean white | `#FFFFFF` |
-| Accent 1 | Spot orange | `#FF6B35` |
-| Accent 2 | Spot blue (optional) | `#3182CE` |
-| Text labels | Dark gray | `#4A4A4A` |
-| Panel border | Medium gray | `#666666` |
+| Role         | Color                | Hex       |
+| ------------ | -------------------- | --------- |
+| Primary      | Black ink            | `#1A1A1A` |
+| Background   | Clean white          | `#FFFFFF` |
+| Accent 1     | Spot orange          | `#FF6B35` |
+| Accent 2     | Spot blue (optional) | `#3182CE` |
+| Text labels  | Dark gray            | `#4A4A4A` |
+| Panel border | Medium gray          | `#666666` |
 
 ## Visual Elements
 
@@ -69,15 +69,15 @@ Minimalist cartoon illustration characterized by clean black line art on white b
 
 ## Compatibility
 
-| Tone | Fit | Notes |
-|------|-----|-------|
-| neutral | ✓✓ | Ideal for business/educational content |
-| warm | ✓ | Works for gentle stories, slight warmth in accent |
-| energetic | ✓ | Works for punchy, high-energy content |
-| dramatic | ✗ | Style too stripped down for dramatic intensity |
-| vintage | ✗ | Minimalist aesthetic conflicts with aged/textured look |
-| romantic | ✗ | No capacity for decorative/soft elements |
-| action | ✗ | No dynamic line capability for speed/impact |
+| Tone      | Fit | Notes                                                  |
+| --------- | --- | ------------------------------------------------------ |
+| neutral   | ✓✓  | Ideal for business/educational content                 |
+| warm      | ✓   | Works for gentle stories, slight warmth in accent      |
+| energetic | ✓   | Works for punchy, high-energy content                  |
+| dramatic  | ✗   | Style too stripped down for dramatic intensity         |
+| vintage   | ✗   | Minimalist aesthetic conflicts with aged/textured look |
+| romantic  | ✗   | No capacity for decorative/soft elements               |
+| action    | ✗   | No dynamic line capability for speed/impact            |
 
 ## Best For
 

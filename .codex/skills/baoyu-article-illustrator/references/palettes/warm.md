@@ -9,15 +9,15 @@ Warm earth tones on soft peach, no cool colors
 
 ## Colors
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | Soft Peach | #FFECD2 | Primary background |
-| Outlines | Deep Charcoal | #2D2D2D | All element outlines |
-| Primary | Warm Orange | #ED8936 | Main accent color |
-| Secondary | Terracotta | #C05621 | Warm depth |
-| Tertiary | Golden Yellow | #F6AD55 | Highlights, energy |
-| Accent | Deep Brown | #744210 | Grounding, anchoring |
-| Text | Warm Charcoal | #4A4A4A | Text elements |
+| Role       | Color         | Hex     | Usage                |
+| ---------- | ------------- | ------- | -------------------- |
+| Background | Soft Peach    | #FFECD2 | Primary background   |
+| Outlines   | Deep Charcoal | #2D2D2D | All element outlines |
+| Primary    | Warm Orange   | #ED8936 | Main accent color    |
+| Secondary  | Terracotta    | #C05621 | Warm depth           |
+| Tertiary   | Golden Yellow | #F6AD55 | Highlights, energy   |
+| Accent     | Deep Brown    | #744210 | Grounding, anchoring |
+| Text       | Warm Charcoal | #4A4A4A | Text elements        |
 
 ## Accent
 

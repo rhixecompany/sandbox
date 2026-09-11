@@ -94,4 +94,3 @@ Package capabilities:
 ## Final instruction
 
 Return only JSON unless the runner explicitly asks for a short markdown summary.
-

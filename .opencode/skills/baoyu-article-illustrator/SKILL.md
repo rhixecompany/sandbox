@@ -24,11 +24,11 @@ Trigger this skill when the user asks to illustrate an article, add images to an
 
 ## Three Dimensions
 
-| Dimension | Controls | Examples |
-|-----------|----------|----------|
-| **Type** | Information structure | infographic, scene, flowchart, comparison, framework, timeline |
-| **Style** | Rendering approach | notion, warm, minimal, blueprint, watercolor, elegant |
-| **Palette** | Color scheme (optional) | macaron, warm, neon — overrides style's default colors |
+| Dimension   | Controls                | Examples                                                       |
+| ----------- | ----------------------- | -------------------------------------------------------------- |
+| **Type**    | Information structure   | infographic, scene, flowchart, comparison, framework, timeline |
+| **Style**   | Rendering approach      | notion, warm, minimal, blueprint, watercolor, elegant          |
+| **Palette** | Color scheme (optional) | macaron, warm, neon — overrides style's default colors         |
 
 Combine freely: `type=infographic, style=vector-illustration, palette=macaron`.
 
@@ -36,14 +36,14 @@ Or use presets: `edu-visual` → type + style + palette in one shot. See [style-
 
 ## Types
 
-| Type | Best For |
-|------|----------|
+| Type          | Best For                 |
+| ------------- | ------------------------ |
 | `infographic` | Data, metrics, technical |
-| `scene` | Narratives, emotional |
-| `flowchart` | Processes, workflows |
-| `comparison` | Side-by-side, options |
-| `framework` | Models, architecture |
-| `timeline` | History, evolution |
+| `scene`       | Narratives, emotional    |
+| `flowchart`   | Processes, workflows     |
+| `comparison`  | Side-by-side, options    |
+| `framework`   | Models, architecture     |
+| `timeline`    | History, evolution       |
 
 ## Styles
 
@@ -62,10 +62,10 @@ See [references/styles.md](references/styles.md) for Core Styles, the full galle
 
 **Default output directory**:
 
-| Input | Output Directory | Markdown Insert Path |
-|-------|------------------|----------------------|
-| Article file path | `{article-dir}/imgs/` | `imgs/NN-{type}-{slug}.png` |
-| Pasted content | `illustrations/{topic-slug}/` (cwd) | `illustrations/{topic-slug}/NN-{type}-{slug}.png` |
+| Input             | Output Directory                    | Markdown Insert Path                              |
+| ----------------- | ----------------------------------- | ------------------------------------------------- |
+| Article file path | `{article-dir}/imgs/`               | `imgs/NN-{type}-{slug}.png`                       |
+| Pasted content    | `illustrations/{topic-slug}/` (cwd) | `illustrations/{topic-slug}/NN-{type}-{slug}.png` |
 
 If the user asks for a different layout (e.g., images alongside the article, or a `illustrations/` subdirectory), honor that.
 
@@ -102,12 +102,12 @@ Full procedures: [references/workflow.md](references/workflow.md#step-1-detect-r
 
 ### Step 2: Analyze
 
-| Analysis | Output |
-|----------|--------|
-| Content type | Technical / Tutorial / Methodology / Narrative |
-| Purpose | information / visualization / imagination |
-| Core arguments | 2-5 main points |
-| Positions | Where illustrations add value |
+| Analysis       | Output                                         |
+| -------------- | ---------------------------------------------- |
+| Content type   | Technical / Tutorial / Methodology / Narrative |
+| Purpose        | information / visualization / imagination      |
+| Core arguments | 2-5 main points                                |
+| Positions      | Where illustrations add value                  |
 
 Read source (file path → `read_file`, or pasted text) and write the analysis to `{output-dir}/analysis.md` using `write_file`.
 
@@ -117,13 +117,13 @@ Full procedures: [references/workflow.md](references/workflow.md#step-2-analyze)
 
 Use the `clarify` tool. Since `clarify` handles one question at a time, ask the most important question first. Skip any question whose answer is already present in the user's request.
 
-| Order | Question | Options |
-|-------|----------|---------|
-| Q1 | **Preset or Type** | [Recommended preset], [alt preset], or manual: infographic, scene, flowchart, comparison, framework, timeline, mixed |
-| Q2 | **Density** | minimal (1-2), balanced (3-5), per-section (Recommended), rich (6+) |
-| Q3 | **Style** *(skip if preset chosen in Q1)* | [Recommended], minimal-flat, sci-fi, hand-drawn, editorial, scene, poster |
-| Q4 | **Palette** *(optional)* | Default (style colors), macaron, warm, neon |
-| Q5 | **Language** *(only if article language is ambiguous)* | article language / user language |
+| Order | Question                                               | Options                                                                                                              |
+| ----- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| Q1    | **Preset or Type**                                     | [Recommended preset], [alt preset], or manual: infographic, scene, flowchart, comparison, framework, timeline, mixed |
+| Q2    | **Density**                                            | minimal (1-2), balanced (3-5), per-section (Recommended), rich (6+)                                                  |
+| Q3    | **Style** _(skip if preset chosen in Q1)_              | [Recommended], minimal-flat, sci-fi, hand-drawn, editorial, scene, poster                                            |
+| Q4    | **Palette** _(optional)_                               | Default (style colors), macaron, warm, neon                                                                          |
+| Q5    | **Language** _(only if article language is ambiguous)_ | article language / user language                                                                                     |
 
 Don't ask more than 2-3 `clarify` questions in a row. If the user already specified these in their request, skip entirely.
 
@@ -180,21 +180,21 @@ Images: X/N generated
 
 ## Modification
 
-| Action | Steps |
-|--------|-------|
-| Edit | Update prompt → Regenerate → Update reference |
-| Add | Position → Prompt → Generate → Update outline → Insert |
-| Delete | Delete files → Remove reference → Update outline |
+| Action | Steps                                                  |
+| ------ | ------------------------------------------------------ |
+| Edit   | Update prompt → Regenerate → Update reference          |
+| Add    | Position → Prompt → Generate → Update outline → Insert |
+| Delete | Delete files → Remove reference → Update outline       |
 
 ## References
 
-| File | Content |
-|------|---------|
-| [references/workflow.md](references/workflow.md) | Detailed procedures |
-| [references/usage.md](references/usage.md) | Invocation examples |
-| [references/styles.md](references/styles.md) | Style gallery + Palette gallery |
-| [references/style-presets.md](references/style-presets.md) | Preset shortcuts (type + style + palette) |
-| [references/prompt-construction.md](references/prompt-construction.md) | Prompt templates |
+| File                                                                   | Content                                   |
+| ---------------------------------------------------------------------- | ----------------------------------------- |
+| [references/workflow.md](references/workflow.md)                       | Detailed procedures                       |
+| [references/usage.md](references/usage.md)                             | Invocation examples                       |
+| [references/styles.md](references/styles.md)                           | Style gallery + Palette gallery           |
+| [references/style-presets.md](references/style-presets.md)             | Preset shortcuts (type + style + palette) |
+| [references/prompt-construction.md](references/prompt-construction.md) | Prompt templates                          |
 
 ## Pitfalls
 

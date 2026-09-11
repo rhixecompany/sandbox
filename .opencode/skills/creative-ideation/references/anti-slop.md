@@ -9,7 +9,7 @@ Apply to every output this skill produces. Slop is what the model produces when 
 - **Vague abstractions.** "A platform that connects people who want X with people who offer X." A category, not an idea.
 - **Solution in search of problem.** "What if we used AR to..." "Imagine a chatbot that..."
 - **Decade-old startup pitch shapes.** Two-sided marketplace, subscription box, gig-economy, social network for niche.
-- **Buzzwords.** *empowers, seamless, leverage, innovative, cutting-edge, revolutionary, unlock, holistic, ecosystem, journey, game-changing, powerful*. None of these belong in idea output.
+- **Buzzwords.** _empowers, seamless, leverage, innovative, cutting-edge, revolutionary, unlock, holistic, ecosystem, journey, game-changing, powerful_. None of these belong in idea output.
 - **Generic settings for fiction/essay.** "A small town", "an unlikely friendship", "the changing nature of X in the digital age".
 - **Lists of exactly 5 of equal length.** Suspicious. Use 3 or 7. Never produce 5 ideas of identical shape.
 - **Y Combinator portfolio names.** Two-syllable invented words, dropped vowels, .ai TLDs.
@@ -43,7 +43,7 @@ Replace abstractions with proper nouns. Not "a city" — Lisbon, Lagos, Sapporo,
 
 Test: every noun in the idea answers "which one specifically?".
 
-**Name-dropping a tech stack is NOT specificity.** "Built with React Native, SQLite, GPT-4, Pinecone, Stripe" sounds concrete but is generic — those tokens fit any product. Listing a stack is the slop disguise that fools shallow specificity checks. Real specificity is a concrete *mechanism*, a named real person / place / work, or an exact unusual material or constraint — something that pins the idea to *one situation* and could not be swapped into a different prompt. "Uses an embedding model" is name-drop; "ranks your unread tabs by how semantically far they've drifted from anything you've opened in 30 days" is a mechanism.
+**Name-dropping a tech stack is NOT specificity.** "Built with React Native, SQLite, GPT-4, Pinecone, Stripe" sounds concrete but is generic — those tokens fit any product. Listing a stack is the slop disguise that fools shallow specificity checks. Real specificity is a concrete _mechanism_, a named real person / place / work, or an exact unusual material or constraint — something that pins the idea to _one situation_ and could not be swapped into a different prompt. "Uses an embedding model" is name-drop; "ranks your unread tabs by how semantically far they've drifted from anything you've opened in 30 days" is a mechanism.
 
 ### 3. Weirdness budget
 
@@ -59,10 +59,10 @@ Don't combine these with each other: AI/LLM/ML, blockchain/web3/crypto, AR/VR/sp
 
 Cite actual works, actual people, actual places, actual numbers. Ideas grounded in specifics resist averaging.
 
-| Slop | Specific |
-|---|---|
-| "A tool for writers to track manuscript revisions" | "A `git`-style version control system for novelists, modeled on Toni Morrison's numbered binders for *Beloved*, with a `morrison diff` subcommand that prints the difference between two binders as if read aloud" |
-| "An app for runners" | "A heart-rate sonifier that turns your zone-2 pace into the rhythm of Steve Reich's *Music for 18 Musicians* — slowing the piece when you slow down" |
+| Slop                                               | Specific                                                                                                                                                                                                           |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "A tool for writers to track manuscript revisions" | "A `git`-style version control system for novelists, modeled on Toni Morrison's numbered binders for _Beloved_, with a `morrison diff` subcommand that prints the difference between two binders as if read aloud" |
+| "An app for runners"                               | "A heart-rate sonifier that turns your zone-2 pace into the rhythm of Steve Reich's _Music for 18 Musicians_ — slowing the piece when you slow down"                                                               |
 
 ### 6. Embrace failure modes
 

@@ -244,72 +244,180 @@ Add these classes to the hosting page `<style>` block (in addition to the standa
 
 ```css
 /* ── Actor lifeline header boxes ── */
-.actor       { fill: var(--bg-secondary); stroke: var(--text-secondary); stroke-width: 0.5; }
-.actor-name  { font-family: system-ui, sans-serif; font-size: 11.5px; font-weight: 600;
-               fill: var(--text-primary); }
-.actor-colon { font-family: system-ui, sans-serif; font-size: 10px; fill: var(--text-tertiary); }
+.actor {
+	fill: var(--bg-secondary);
+	stroke: var(--text-secondary);
+	stroke-width: 0.5;
+}
+.actor-name {
+	font-family: system-ui, sans-serif;
+	font-size: 11.5px;
+	font-weight: 600;
+	fill: var(--text-primary);
+}
+.actor-colon {
+	font-family: system-ui, sans-serif;
+	font-size: 10px;
+	fill: var(--text-tertiary);
+}
 
 /* ── Lifeline dashed stems ── */
-.lifeline { stroke: var(--text-tertiary); stroke-width: 1; stroke-dasharray: 6 4; fill: none; }
+.lifeline {
+	stroke: var(--text-tertiary);
+	stroke-width: 1;
+	stroke-dasharray: 6 4;
+	fill: none;
+}
 
 /* ── Activation bars ── */
-.activation { fill: var(--bg-secondary); stroke: var(--text-secondary); stroke-width: 0.75; }
+.activation {
+	fill: var(--bg-secondary);
+	stroke: var(--text-secondary);
+	stroke-width: 0.75;
+}
 
 /* ── Message arrows ── */
-.msg-call { stroke: var(--text-primary);   stroke-width: 1.5; fill: none; }
-.msg-ret  { stroke: var(--text-secondary); stroke-width: 1.5; fill: none; stroke-dasharray: 6 3; }
+.msg-call {
+	stroke: var(--text-primary);
+	stroke-width: 1.5;
+	fill: none;
+}
+.msg-ret {
+	stroke: var(--text-secondary);
+	stroke-width: 1.5;
+	fill: none;
+	stroke-dasharray: 6 3;
+}
 
 /* ── Message labels ── */
-.mlbl { font-family: system-ui, sans-serif; font-size: 11px; fill: var(--text-primary); }
-.rlbl { font-family: system-ui, sans-serif; font-size: 11px; fill: var(--text-secondary);
-        font-style: italic; }
+.mlbl {
+	font-family: system-ui, sans-serif;
+	font-size: 11px;
+	fill: var(--text-primary);
+}
+.rlbl {
+	font-family: system-ui, sans-serif;
+	font-size: 11px;
+	fill: var(--text-secondary);
+	font-style: italic;
+}
 
 /* ── Combined fragment: alt (amber) ── */
-.frag-alt-bg  { fill: #FAEEDA; fill-opacity: 0.18; stroke: #854F0B; stroke-width: 1; }
-.frag-alt-tag { fill: #FAEEDA; stroke: #854F0B; stroke-width: 0.75; }
-.frag-alt-kw  { font-family: system-ui, sans-serif; font-size: 11px; font-weight: 700;
-                fill: #633806; }
-.frag-alt-div { stroke: #854F0B; stroke-width: 0.75; fill: none; }
-.guard-lbl    { font-family: system-ui, sans-serif; font-size: 10.5px; font-style: italic;
-                fill: #854F0B; }
+.frag-alt-bg {
+	fill: #faeeda;
+	fill-opacity: 0.18;
+	stroke: #854f0b;
+	stroke-width: 1;
+}
+.frag-alt-tag {
+	fill: #faeeda;
+	stroke: #854f0b;
+	stroke-width: 0.75;
+}
+.frag-alt-kw {
+	font-family: system-ui, sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	fill: #633806;
+}
+.frag-alt-div {
+	stroke: #854f0b;
+	stroke-width: 0.75;
+	fill: none;
+}
+.guard-lbl {
+	font-family: system-ui, sans-serif;
+	font-size: 10.5px;
+	font-style: italic;
+	fill: #854f0b;
+}
 
 /* ── Combined fragment: par (teal) ── */
-.frag-par-bg  { fill: #E1F5EE; fill-opacity: 0.35; stroke: #0F6E56; stroke-width: 1; }
-.frag-par-tag { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 0.75; }
-.frag-par-kw  { font-family: system-ui, sans-serif; font-size: 11px; font-weight: 700;
-                fill: #085041; }
-.frag-par-div { stroke: #0F6E56; stroke-width: 0.75; stroke-dasharray: 5 3; fill: none; }
+.frag-par-bg {
+	fill: #e1f5ee;
+	fill-opacity: 0.35;
+	stroke: #0f6e56;
+	stroke-width: 1;
+}
+.frag-par-tag {
+	fill: #e1f5ee;
+	stroke: #0f6e56;
+	stroke-width: 0.75;
+}
+.frag-par-kw {
+	font-family: system-ui, sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	fill: #085041;
+}
+.frag-par-div {
+	stroke: #0f6e56;
+	stroke-width: 0.75;
+	stroke-dasharray: 5 3;
+	fill: none;
+}
 
 /* ── Dark mode overrides ── */
 @media (prefers-color-scheme: dark) {
-  .actor       { fill: #2c2c2a; stroke: #b4b2a9; }
-  .actor-name  { fill: #e8e6de; }
-  .actor-colon { fill: #888780; }
-  .frag-alt-bg  { fill: #633806; fill-opacity: 0.25; stroke: #EF9F27; }
-  .frag-alt-tag { fill: #633806; stroke: #EF9F27; }
-  .frag-alt-kw  { fill: #FAC775; }
-  .frag-alt-div { stroke: #EF9F27; }
-  .guard-lbl    { fill: #EF9F27; }
-  .frag-par-bg  { fill: #085041; fill-opacity: 0.35; stroke: #5DCAA5; }
-  .frag-par-tag { fill: #085041; stroke: #5DCAA5; }
-  .frag-par-kw  { fill: #9FE1CB; }
-  .frag-par-div { stroke: #5DCAA5; }
+	.actor {
+		fill: #2c2c2a;
+		stroke: #b4b2a9;
+	}
+	.actor-name {
+		fill: #e8e6de;
+	}
+	.actor-colon {
+		fill: #888780;
+	}
+	.frag-alt-bg {
+		fill: #633806;
+		fill-opacity: 0.25;
+		stroke: #ef9f27;
+	}
+	.frag-alt-tag {
+		fill: #633806;
+		stroke: #ef9f27;
+	}
+	.frag-alt-kw {
+		fill: #fac775;
+	}
+	.frag-alt-div {
+		stroke: #ef9f27;
+	}
+	.guard-lbl {
+		fill: #ef9f27;
+	}
+	.frag-par-bg {
+		fill: #085041;
+		fill-opacity: 0.35;
+		stroke: #5dcaa5;
+	}
+	.frag-par-tag {
+		fill: #085041;
+		stroke: #5dcaa5;
+	}
+	.frag-par-kw {
+		fill: #9fe1cb;
+	}
+	.frag-par-div {
+		stroke: #5dcaa5;
+	}
 }
 ```
 
 ## Color Assignments
 
-| Element | Color | Reason |
-|---------|-------|--------|
-| Actor header boxes | Neutral (`var(--bg-secondary)`) | Structural / non-semantic — all lifelines share one style |
-| Activation bars | Neutral (`var(--bg-secondary)`) | Show execution periods without adding semantic color |
+| Element                 | Color                                   | Reason                                                      |
+| ----------------------- | --------------------------------------- | ----------------------------------------------------------- |
+| Actor header boxes      | Neutral (`var(--bg-secondary)`)         | Structural / non-semantic — all lifelines share one style   |
+| Activation bars         | Neutral (`var(--bg-secondary)`)         | Show execution periods without adding semantic color        |
 | Synchronous call arrows | `var(--text-primary)` + filled triangle | High contrast for calls — the primary interaction direction |
-| Return / dashed arrows | `var(--text-secondary)` + open chevron | Lower contrast for returns — secondary flow direction |
-| `alt` fragment | Amber (`#FAEEDA` / `#854F0B`) | Warning / conditional — matches `c-amber` semantic meaning |
-| Guard condition text | Amber italic | Belongs visually to the alt fragment |
-| `par` fragment | Teal (`#E1F5EE` / `#0F6E56`) | Concurrent success path — matches `c-teal` semantic meaning |
-| Alt branch dividers | Amber solid line | Continuity with the alt frame color |
-| Par branch divider | Teal dashed line | UML spec: par branches separated by dashed lines |
+| Return / dashed arrows  | `var(--text-secondary)` + open chevron  | Lower contrast for returns — secondary flow direction       |
+| `alt` fragment          | Amber (`#FAEEDA` / `#854F0B`)           | Warning / conditional — matches `c-amber` semantic meaning  |
+| Guard condition text    | Amber italic                            | Belongs visually to the alt fragment                        |
+| `par` fragment          | Teal (`#E1F5EE` / `#0F6E56`)            | Concurrent success path — matches `c-teal` semantic meaning |
+| Alt branch dividers     | Amber solid line                        | Continuity with the alt frame color                         |
+| Par branch divider      | Teal dashed line                        | UML spec: par branches separated by dashed lines            |
 
 ## Layout Notes
 

@@ -9,6 +9,7 @@ metadata:
     tags: []
     related_skills: []
 ---
+
      1|# Testing Reference
      2|
      3|## Choosing Your Testing Approach
@@ -34,22 +35,22 @@ metadata:
     23|
     24|## NEVER Do: Testing Anti-Patterns
     25|
-    26|**NEVER run Playwright with `workers > 1`**  
+    26|**NEVER run Playwright with `workers > 1`**
     27|E2E tests are stateful (shared DB). Parallel execution corrupts data. Config specifies `workers: 1`. Changing this WILL break everything.
     28|
-    29|**NEVER skip port cleanup before E2E**  
+    29|**NEVER skip port cleanup before E2E**
     30|Port 3000 must be freed. If you skip, Playwright waits forever with no error message — just silent hang. Always run port guard first.
     31|
-    32|**NEVER mock Plaid/Dwolla at HTTP layer**  
+    32|**NEVER mock Plaid/Dwolla at HTTP layer**
     33|Use token detection instead. HTTP mocking breaks real integration testing. E2E's purpose: "does actual Plaid Link work?" Mocking HTTP invalidates that.
     34|
-    35|**NEVER mix live and mock tokens in same session**  
+    35|**NEVER mix live and mock tokens in same session**
     36|Pick one: all tests use `seed-*`/`mock-*` tokens OR all use live sandbox. Mixing confuses SDK state. Document which per test file.
     37|
-    38|**NEVER forget `ENCRYPTION_KEY` in `.env.local`**  
+    38|**NEVER forget `ENCRYPTION_KEY` in `.env.local`**
     39|Not in `.env.example` for security reasons. Add it manually. Tests silently fail without it — no error message. Required for E2E setup.
     40|
-    41|**NEVER seed DB inside individual tests**  
+    41|**NEVER seed DB inside individual tests**
     42|Seed once in `global-setup.ts`, reset in `global-teardown.ts`. Per-test seeding is slow and pollutes state. Use soft deletes instead.
     43|
     44|---
@@ -108,13 +109,14 @@ metadata:
     97|
     98|```bash
     99|bun run test:ui
-   100|```
+
+100|`
    101|
    102|**Run one spec:**
    103|
-   104|```bash
-   105|bunx playwright test tests/e2e/wallet.spec.ts --project=chromium
-   106|```
+   104|`bash
+105|bunx playwright test tests/e2e/wallet.spec.ts --project=chromium
+106|``
    107|
    108|**Setup:** Global setup/teardown (`global-setup.ts`, `global-teardown.ts`) manages DB. If `PLAYWRIGHT_PREPARE_DB=true`, runs `bun run db:push && bun run db:seed -- --reset`.
    109|
@@ -124,45 +126,45 @@ metadata:
    113|
    114|Use `isMockAccessToken()` to detect test tokens (start with `seed-`, `mock-`, `mock_`):
    115|
-   116|```typescript
-   117|// lib/plaid.ts
-   118|export function isMockAccessToken(token: string): boolean {
-   119|  if (!token) return false;
-   120|  const t = token.toLowerCase();
-   121|  return (
-   122|    t.startsWith("seed-") ||
-   123|    t.startsWith("mock-") ||
-   124|    t.startsWith("mock_")
-   125|  );
-   126|}
-   127|```
+   116|``typescript
+117|// lib/plaid.ts
+118|export function isMockAccessToken(token: string): boolean {
+119| if (!token) return false;
+120| const t = token.toLowerCase();
+121| return (
+122| t.startsWith("seed-") ||
+123| t.startsWith("mock-") ||
+124| t.startsWith("mock_")
+125| );
+126|}
+127|`
    128|
    129|**Skip network calls for mock tokens:**
    130|
-   131|```typescript
-   132|if (isMockAccessToken(accessToken)) {
-   133|  return { item_id: "mock-item-id", status: "success" };
-   134|}
-   135|```
+   131|`typescript
+132|if (isMockAccessToken(accessToken)) {
+133| return { item_id: "mock-item-id", status: "success" };
+134|}
+135|`
    136|
    137|**Examples of mock tokens (all bypass API calls):**
    138|
-   139|```typescript
-   140|// Valid mock tokens (detected and skip API)
-   141|"seed-plaid-access-token";
-   142|"seed-user-wallet-123";
-   143|"SEED-TEST-TOKEN";
-   144|"mock-dwolla-transfer";
-   145|"MOCK-TEST-ACCOUNT";
-   146|"mock_bank_account_token";
-   147|"MOCK_FUNDING_SOURCE";
-   148|
-   149|// Invalid mock tokens (treated as real, hit API)
-   150|"access-prod-abc123";
-   151|"pk_live_abc123def";
-   152|"***";
-   153|"sometoken"; // no prefix
-   154|```
+   139|`typescript
+140|// Valid mock tokens (detected and skip API)
+141|"seed-plaid-access-token";
+142|"seed-user-wallet-123";
+143|"SEED-TEST-TOKEN";
+144|"mock-dwolla-transfer";
+145|"MOCK-TEST-ACCOUNT";
+146|"mock_bank_account_token";
+147|"MOCK_FUNDING_SOURCE";
+148|
+149|// Invalid mock tokens (treated as real, hit API)
+150|"access-prod-abc123";
+151|"pk_live_abc123def";
+152|"***";
+153|"sometoken"; // no prefix
+154|`
    155|
    156|**Why mock tokens?**
    157|
@@ -185,15 +187,15 @@ metadata:
    174|
    175|**Inject Plaid Link mock in browser (E2E only):**
    176|
-   177|```typescript
-   178|// tests/e2e/helpers/plaid.mock.ts
-   179|import { Page } from "@playwright/test";
-   180|
-   181|export async function addMockPlaidInitScript(
-   182|  page: Page,
-   183|  publicToken = "MOCK_PUBLIC_TOKEN"
-   184|): Promise<void> {
-   185|  const script = `(() => {
+   177|`typescript
+178|// tests/e2e/helpers/plaid.mock.ts
+179|import { Page } from "@playwright/test";
+180|
+181|export async function addMockPlaidInitScript(
+182| page: Page,
+183| publicToken = "MOCK_PUBLIC_TOKEN"
+184|): Promise<void> {
+185| const script = `(() => {
    186|    window.Plaid = {
    187|      create: function(opts) {
    188|        setTimeout(() => {
@@ -205,16 +207,16 @@ metadata:
    194|      }
    195|    };
    196|  })();`;
-   197|  await page.addInitScript(script);
-   198|}
-   199|
-   200|// Usage in test
-   201|test("should link bank", async ({ page }) => {
-   202|  await addMockPlaidInitScript(page);
-   203|  await page.goto("/dashboard");
-   204|  // ... test flow
-   205|});
-   206|```
+197| await page.addInitScript(script);
+198|}
+199|
+200|// Usage in test
+201|test("should link bank", async ({ page }) => {
+202| await addMockPlaidInitScript(page);
+203| await page.goto("/dashboard");
+204| // ... test flow
+205|});
+206|`
    207|
    208|---
    209|
@@ -222,43 +224,43 @@ metadata:
    211|
    212|**Windows (PowerShell):**
    213|
-   214|```powershell
-   215|$pids = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique
+   214|`powershell
+215|$pids = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique
    216|if ($pids) { $pids | ForEach-Object { Stop-Process -Id $_ -Force } }
-   217|```
+217|`
    218|
    219|**macOS/Linux:**
    220|
-   221|```bash
-   222|lsof -ti :3000 | xargs kill -9 2>/dev/null || true
-   223|```
-   224|
-   225|---
-   226|
-   227|## Troubleshooting Common Failures
-   228|
-   229|**Tests hang indefinitely:** Port 3000 not freed. Re-run port guard above.
-   230|
-   231|**Playwright can't connect:** Dev server not running. Start with `bun run dev` before E2E tests.
-   232|
-   233|**ENCRYPTION_KEY missing:** Tests silently fail. Add `ENCRYPTION_KEY=<32-byte-hex>` to `.env.local` (not in `.env.example` for security).
-   234|
-   235|**DB seed fails in global-setup.ts:** Ensure PostgreSQL is running via `docker-compose up -d postgres`. Check `DATABASE_URL` is set correctly.
-   236|
-   237|**Flaky Plaid Link tests:** Ensure `addMockPlaidInitScript()` is called BEFORE `page.goto()`. Mock must inject before page loads.
-   238|
-   239|---
-   240|
-   241|## Reference: File Locations & Seed User
-   242|
-   243|**Test locations:**
-   244|
-   245|- Unit: `tests/unit/**/*.test.{ts,tsx}`
-   246|- E2E: `tests/e2e/**/*.spec.ts`
-   247|- Helpers: `tests/e2e/helpers/*.ts`
-   248|- Mocks: `tests/mocks/server.ts`
-   249|
-   250|**Seed user (E2E):** Email `seed-user@example.com` / Password `password123`
-   251|
-   252|**Required environment:** PostgreSQL (`DATABASE_URL`), `ENCRYPTION_KEY`, `NEXTAUTH_SECRET`
-   253|
+   221|`bash
+222|lsof -ti :3000 | xargs kill -9 2>/dev/null || true
+223|```
+224|
+225|---
+226|
+227|## Troubleshooting Common Failures
+228|
+229|**Tests hang indefinitely:** Port 3000 not freed. Re-run port guard above.
+230|
+231|**Playwright can't connect:** Dev server not running. Start with `bun run dev` before E2E tests.
+232|
+233|**ENCRYPTION_KEY missing:** Tests silently fail. Add `ENCRYPTION_KEY=<32-byte-hex>` to `.env.local` (not in `.env.example` for security).
+234|
+235|**DB seed fails in global-setup.ts:** Ensure PostgreSQL is running via `docker-compose up -d postgres`. Check `DATABASE_URL` is set correctly.
+236|
+237|**Flaky Plaid Link tests:** Ensure `addMockPlaidInitScript()` is called BEFORE `page.goto()`. Mock must inject before page loads.
+238|
+239|---
+240|
+241|## Reference: File Locations & Seed User
+242|
+243|**Test locations:**
+244|
+245|- Unit: `tests/unit/**/*.test.{ts,tsx}`
+246|- E2E: `tests/e2e/**/*.spec.ts`
+247|- Helpers: `tests/e2e/helpers/*.ts`
+248|- Mocks: `tests/mocks/server.ts`
+249|
+250|**Seed user (E2E):** Email `seed-user@example.com` / Password `password123`
+251|
+252|**Required environment:** PostgreSQL (`DATABASE_URL`), `ENCRYPTION_KEY`, `NEXTAUTH_SECRET`
+253|

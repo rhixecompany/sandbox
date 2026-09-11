@@ -1,5 +1,5 @@
 ---
-author: '[kshitijk4poor, alt-glitch, purzbeats]'
+author: "[kshitijk4poor, alt-glitch, purzbeats]"
 description: Generate images, video, and audio with ComfyUI — install, launch, manage
   nodes/models, run workflows with parameter injection. Uses the official comfy-cli
   for lifecycle and direct REST/WebSocket API for execution.
@@ -7,14 +7,14 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: comfyui
 tags:
-- imported
+  - imported
 title: Comfyui
 version: 5.1.0
-
 ---
+
 # ComfyUI
 
 Generate images, video, audio, and 3D content through ComfyUI using the
@@ -37,19 +37,19 @@ for workflow execution.
 
 **Scripts (`scripts/`):**
 
-| Script | Purpose |
-|--------|---------|
-| `_common.py` | Shared HTTP, cloud routing, node catalogs (don't run directly) |
-| `hardware_check.py` | Probe GPU/VRAM/disk → recommend local vs Comfy Cloud |
-| `comfyui_setup.sh` | Hardware check + comfy-cli + ComfyUI install + launch + verify |
-| `extract_schema.py` | Read a workflow → list controllable params + model deps |
-| `check_deps.py` | Check workflow against running server → list missing nodes/models |
-| `auto_fix_deps.py` | Run check_deps then `comfy node install` / `comfy model download` |
-| `run_workflow.py` | Inject params, submit, monitor, download outputs (HTTP or WS) |
-| `run_batch.py` | Submit a workflow N times with sweeps, parallel up to your tier |
-| `ws_monitor.py` | Real-time WebSocket viewer for executing jobs (live progress) |
-| `health_check.py` | Verification checklist runner — comfy-cli + server + models + smoke test |
-| `fetch_logs.py` | Pull traceback / status messages for a given prompt_id |
+| Script              | Purpose                                                                  |
+| ------------------- | ------------------------------------------------------------------------ |
+| `_common.py`        | Shared HTTP, cloud routing, node catalogs (don't run directly)           |
+| `hardware_check.py` | Probe GPU/VRAM/disk → recommend local vs Comfy Cloud                     |
+| `comfyui_setup.sh`  | Hardware check + comfy-cli + ComfyUI install + launch + verify           |
+| `extract_schema.py` | Read a workflow → list controllable params + model deps                  |
+| `check_deps.py`     | Check workflow against running server → list missing nodes/models        |
+| `auto_fix_deps.py`  | Run check_deps then `comfy node install` / `comfy model download`        |
+| `run_workflow.py`   | Inject params, submit, monitor, download outputs (HTTP or WS)            |
+| `run_batch.py`      | Submit a workflow N times with sweeps, parallel up to your tier          |
+| `ws_monitor.py`     | Real-time WebSocket viewer for executing jobs (live progress)            |
+| `health_check.py`   | Verification checklist runner — comfy-cli + server + models + smoke test |
+| `fetch_logs.py`     | Pull traceback / status messages for a given prompt_id                   |
 
 **Example workflows (`workflows/`):** SD 1.5, SDXL, Flux Dev, SDXL img2img,
 SDXL inpaint, ESRGAN upscale, AnimateDiff video, Wan T2V. See
@@ -180,41 +180,38 @@ The scripts emit JSON to stdout describing every output file:
 
 ```json
 {
-  "status": "success",
-  "prompt_id": "abc-123",
-  "outputs": [
-    {"file": "./outputs/sdxl_00001_.png", "node_id": "9",
-     "type": "image", "filename": "sdxl_00001_.png"}
-  ]
+	"status": "success",
+	"prompt_id": "abc-123",
+	"outputs": [{ "file": "./outputs/sdxl_00001_.png", "node_id": "9", "type": "image", "filename": "sdxl_00001_.png" }]
 }
 ```
 
 ## Decision Tree
 
-| User says | Tool | Command |
-|-----------|------|---------|
-| **Lifecycle (use comfy-cli)** | | |
-| "install ComfyUI" | comfy-cli | `bash scripts/comfyui_setup.sh` |
-| "start ComfyUI" | comfy-cli | `comfy launch --background` |
-| "stop ComfyUI" | comfy-cli | `comfy stop` |
-| "install X node" | comfy-cli | `comfy node install <name>` |
-| "download X model" | comfy-cli | `comfy model download --url <url> --relative-path models/checkpoints` |
-| "list installed models" | comfy-cli | `comfy model list` |
-| "list installed nodes" | comfy-cli | `comfy node show installed` |
-| **Execution (use scripts)** | | |
-| "is everything ready?" | script | `health_check.py` (optionally with `--workflow X --smoke-test`) |
-| "what can I change in this workflow?" | script | `extract_schema.py W.json` |
-| "check if W's deps are met" | script | `check_deps.py W.json` |
-| "fix missing deps" | script | `auto_fix_deps.py W.json` |
-| "generate an image" | script | `run_workflow.py --workflow W --args '{...}'` |
-| "use this image" (img2img) | script | `run_workflow.py --input-image image=./x.png ...` |
-| "8 variations with random seeds" | script | `run_batch.py --count 8 --randomize-seed ...` |
-| "show me live progress" | script | `ws_monitor.py --prompt-id <id>` |
-| "fetch the error from job X" | script | `fetch_logs.py <prompt_id>` |
-| **Direct REST** | | |
-| "what's in the queue?" | REST | `curl http://HOST:8188/queue` (local) or `--host https://cloud.comfy.org` |
-| "cancel that" | REST | `curl -X POST http://HOST:8188/interrupt` |
-| "free GPU memory" | REST | `curl -X POST http://HOST:8188/free` |
+| User says                             | Tool      | Command                                                                   |
+| ------------------------------------- | --------- | ------------------------------------------------------------------------- |
+| **Lifecycle (use comfy-cli)**         |           |                                                                           |
+| "install ComfyUI"                     | comfy-cli | `bash scripts/comfyui_setup.sh`                                           |
+| "start ComfyUI"                       | comfy-cli | `comfy launch --background`                                               |
+| "stop ComfyUI"                        | comfy-cli | `comfy stop`                                                              |
+| "install X node"                      | comfy-cli | `comfy node install <name>`                                               |
+| "download X model"                    | comfy-cli | `comfy model download --url <url> --relative-path models/checkpoints`     |
+| "list installed models"               | comfy-cli | `comfy model list`                                                        |
+| "list installed nodes"                | comfy-cli | `comfy node show installed`                                               |
+| **Execution (use scripts)**           |           |                                                                           |
+| "is everything ready?"                | script    | `health_check.py` (optionally with `--workflow X --smoke-test`)           |
+| "what can I change in this workflow?" | script    | `extract_schema.py W.json`                                                |
+| "check if W's deps are met"           | script    | `check_deps.py W.json`                                                    |
+| "fix missing deps"                    | script    | `auto_fix_deps.py W.json`                                                 |
+| "generate an image"                   | script    | `run_workflow.py --workflow W --args '{...}'`                             |
+| "use this image" (img2img)            | script    | `run_workflow.py --input-image image=./x.png ...`                         |
+| "8 variations with random seeds"      | script    | `run_batch.py --count 8 --randomize-seed ...`                             |
+| "show me live progress"               | script    | `ws_monitor.py --prompt-id <id>`                                          |
+| "fetch the error from job X"          | script    | `fetch_logs.py <prompt_id>`                                               |
+| **Direct REST**                       |           |                                                                           |
+| "what's in the queue?"                | REST      | `curl http://HOST:8188/queue` (local) or `--host https://cloud.comfy.org` |
+| "cancel that"                         | REST      | `curl -X POST http://HOST:8188/interrupt`                                 |
+| "free GPU memory"                     | REST      | `curl -X POST http://HOST:8188/free`                                      |
 
 ## Setup & Onboarding
 
@@ -259,10 +256,10 @@ python3 scripts/hardware_check.py --json
 python3 scripts/hardware_check.py --json --check-pytorch
 ```
 
-| Verdict    | Meaning                                                       | Action |
-|------------|---------------------------------------------------------------|--------|
-| `ok`       | ≥8 GB VRAM (discrete) OR ≥32 GB unified (Apple Silicon)       | Local install — use `comfy_cli_flag` from report |
-| `marginal` | SD1.5 works; SDXL tight; Flux/video unlikely                  | Local OK for light workflows, else **Path A (Cloud)** |
+| Verdict    | Meaning                                                                    | Action                                                  |
+| ---------- | -------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `ok`       | ≥8 GB VRAM (discrete) OR ≥32 GB unified (Apple Silicon)                    | Local install — use `comfy_cli_flag` from report        |
+| `marginal` | SD1.5 works; SDXL tight; Flux/video unlikely                               | Local OK for light workflows, else **Path A (Cloud)**   |
 | `cloud`    | No usable GPU, <6 GB VRAM, <16 GB Apple unified, Intel Mac, Rosetta Python | **Switch to Cloud** unless user explicitly forces local |
 
 The script also surfaces `wsl: true` (WSL2 with NVIDIA passthrough) and
@@ -277,15 +274,15 @@ Cloud or (b) force a local install (will OOM or be unusably slow on modern model
 Use the hardware check first. The table below is the fallback for when the
 user has already told you their hardware:
 
-| Situation | Recommended Path |
-|-----------|------------------|
-| `verdict: cloud` from hardware check | **Path A: Comfy Cloud** |
-| No GPU / want to try without commitment | **Path A: Comfy Cloud** |
-| Windows + NVIDIA + non-technical | **Path B: ComfyUI Desktop** |
-| Windows + NVIDIA + technical | **Path C: Portable** or **Path D: comfy-cli** |
-| Linux + any GPU | **Path D: comfy-cli** (easiest) |
-| macOS + Apple Silicon | **Path B: Desktop** or **Path D: comfy-cli** |
-| Headless / server / CI / agents | **Path D: comfy-cli** |
+| Situation                               | Recommended Path                              |
+| --------------------------------------- | --------------------------------------------- |
+| `verdict: cloud` from hardware check    | **Path A: Comfy Cloud**                       |
+| No GPU / want to try without commitment | **Path A: Comfy Cloud**                       |
+| Windows + NVIDIA + non-technical        | **Path B: ComfyUI Desktop**                   |
+| Windows + NVIDIA + technical            | **Path C: Portable** or **Path D: comfy-cli** |
+| Linux + any GPU                         | **Path D: comfy-cli** (easiest)               |
+| macOS + Apple Silicon                   | **Path B: Desktop** or **Path D: comfy-cli**  |
+| Headless / server / CI / agents         | **Path D: comfy-cli**                         |
 
 For the fully automated path (hardware check → install → launch → verify):
 
@@ -335,6 +332,7 @@ required for `/api/prompt`, `/api/upload/*`, `/api/view`, etc.
 One-click installer for non-technical users. Currently Beta.
 
 **Docs:** https://docs.comfy.org/installation/desktop
+
 - **Windows (NVIDIA):** https://download.comfy.org/windows/nsis/x64
 - **macOS (Apple Silicon):** https://comfy.org
 
@@ -369,6 +367,7 @@ pip install --user comfy-cli
 ```
 
 Disable analytics non-interactively:
+
 ```bash
 comfy --skip-prompt tracking disable
 ```
@@ -488,6 +487,7 @@ python3 scripts/run_workflow.py \
 ```
 
 Manual upload via REST:
+
 ```bash
 curl -X POST "http://127.0.0.1:8188/upload/image" \
   -F "image=@photo.png" -F "type=input" -F "overwrite=true"

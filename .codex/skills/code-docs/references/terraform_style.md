@@ -4,6 +4,7 @@ description: "Terraform Documentation Style"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Terraform Documentation Style
      2|
      3|Complete reference for documenting Terraform code, following HashiCorp best practices and terraform-docs standards.
@@ -103,70 +104,71 @@ author: Alexa
     97|
     98|```hcl
     99|variable "allowed_cidr_blocks" {
-   100|  description = "List of CIDR blocks allowed to access the application. Use 0.0.0.0/0 for public access (not recommended for production)."
-   101|  type        = list(string)
-   102|  default     = []
-   103|}
-   104|```
+
+100| description = "List of CIDR blocks allowed to access the application. Use 0.0.0.0/0 for public access (not recommended for production)."
+101| type = list(string)
+102| default = []
+103|}
+104|`
    105|
    106|### Map Variable
    107|
-   108|```hcl
-   109|variable "instance_types_by_env" {
-   110|  description = "Map of environment names to EC2 instance types. Allows different instance sizes per environment."
-   111|  type        = map(string)
-   112|
-   113|  default = {
-   114|    dev     = "t3.small"
-   115|    staging = "t3.medium"
-   116|    prod    = "t3.large"
-   117|  }
-   118|}
-   119|```
+   108|`hcl
+109|variable "instance_types_by_env" {
+110| description = "Map of environment names to EC2 instance types. Allows different instance sizes per environment."
+111| type = map(string)
+112|
+113| default = {
+114| dev = "t3.small"
+115| staging = "t3.medium"
+116| prod = "t3.large"
+117| }
+118|}
+119|`
    120|
    121|## Output Documentation
    122|
    123|### Basic Output
    124|
-   125|```hcl
-   126|output "vpc_id" {
-   127|  description = "ID of the created VPC."
-   128|  value       = aws_vpc.main.id
-   129|}
-   130|```
+   125|`hcl
+126|output "vpc_id" {
+127| description = "ID of the created VPC."
+128| value = aws_vpc.main.id
+129|}
+130|`
    131|
    132|### Output with Sensitive Data
    133|
-   134|```hcl
-   135|output "database_endpoint" {
-   136|  description = "Connection endpoint for the RDS database."
-   137|  value       = aws_db_instance.main.endpoint
-   138|  sensitive   = true
-   139|}
-   140|```
+   134|`hcl
+135|output "database_endpoint" {
+136| description = "Connection endpoint for the RDS database."
+137| value = aws_db_instance.main.endpoint
+138| sensitive = true
+139|}
+140|`
    141|
    142|### Complex Output
    143|
-   144|```hcl
-   145|output "load_balancer_details" {
-   146|  description = "Load balancer configuration including DNS name, ARN, and zone ID."
-   147|  value = {
-   148|    dns_name = aws_lb.main.dns_name
-   149|    arn      = aws_lb.main.arn
-   150|    zone_id  = aws_lb.main.zone_id
-   151|  }
-   152|}
-   153|```
+   144|`hcl
+145|output "load_balancer_details" {
+146| description = "Load balancer configuration including DNS name, ARN, and zone ID."
+147| value = {
+148| dns_name = aws_lb.main.dns_name
+149| arn = aws_lb.main.arn
+150| zone_id = aws_lb.main.zone_id
+151| }
+152|}
+153|`
    154|
    155|### Output with Usage Instructions
    156|
-   157|```hcl
-   158|output "ssh_command" {
-   159|  description = <<-EOT
-   160|    SSH command to connect to the bastion host.
-   161|
-   162|    Usage:
-   163|      $(terraform output -raw ssh_command)
+   157|`hcl
+158|output "ssh_command" {
+159| description = <<-EOT
+160| SSH command to connect to the bastion host.
+161|
+162| Usage:
+163| $(terraform output -raw ssh_command)
    164|  EOT
    165|  value = "ssh -i ${var.key_name}.pem ec2-user@${aws_instance.bastion.public_ip}"
    166|}
@@ -185,28 +187,28 @@ author: Alexa
    179|
    180|  tags = merge(var.common_tags, {
    181|    Name = "${var.project_name}-vpc"
-   182|  })
-   183|}
-   184|```
+182| })
+183|}
+184|`
    185|
    186|### Complex Resource with Inline Comments
    187|
-   188|```hcl
-   189|resource "aws_instance" "app_server" {
-   190|  ami           = data.aws_ami.ubuntu.id
-   191|  instance_type = var.instance_type
-   192|
-   193|  # Use the first available private subnet
-   194|  subnet_id = var.private_subnet_ids[0]
-   195|
-   196|  # Security group for application traffic
-   197|  vpc_security_group_ids = [aws_security_group.app.id]
-   198|
-   199|  # IAM role for CloudWatch logs and S3 access
-   200|  iam_instance_profile = aws_iam_instance_profile.app.name
-   201|
-   202|  # User data script runs on first boot
-   203|  user_data = templatefile("${path.module}/scripts/init.sh", {
+   188|`hcl
+189|resource "aws_instance" "app_server" {
+190| ami = data.aws_ami.ubuntu.id
+191| instance_type = var.instance_type
+192|
+193| # Use the first available private subnet
+194| subnet_id = var.private_subnet_ids[0]
+195|
+196| # Security group for application traffic
+197| vpc_security_group_ids = [aws_security_group.app.id]
+198|
+199| # IAM role for CloudWatch logs and S3 access
+200| iam_instance_profile = aws_iam_instance_profile.app.name
+201|
+202| # User data script runs on first boot
+203| user_data = templatefile("${path.module}/scripts/init.sh", {
    204|    environment = var.environment
    205|    region      = var.aws_region
    206|  })
@@ -248,74 +250,74 @@ author: Alexa
    242|```hcl
    243|resource "aws_security_group" "app" {
    244|  name        = "${var.project_name}-app-sg"
-   245|  description = "Security group for application servers"
-   246|  vpc_id      = aws_vpc.main.id
-   247|
-   248|  # Create ingress rules from variable list
-   249|  dynamic "ingress" {
-   250|    for_each = var.ingress_rules
-   251|    content {
-   252|      description = ingress.value.description
-   253|      from_port   = ingress.value.from_port
-   254|      to_port     = ingress.value.to_port
-   255|      protocol    = ingress.value.protocol
-   256|      cidr_blocks = ingress.value.cidr_blocks
-   257|    }
-   258|  }
-   259|
-   260|  # Allow all outbound traffic
-   261|  egress {
-   262|    description = "Allow all outbound traffic"
-   263|    from_port   = 0
-   264|    to_port     = 0
-   265|    protocol    = "-1"
-   266|    cidr_blocks = ["0.0.0.0/0"]
-   267|  }
-   268|
-   269|  tags = var.common_tags
-   270|}
-   271|```
+245| description = "Security group for application servers"
+246| vpc_id = aws_vpc.main.id
+247|
+248| # Create ingress rules from variable list
+249| dynamic "ingress" {
+250| for_each = var.ingress_rules
+251| content {
+252| description = ingress.value.description
+253| from_port = ingress.value.from_port
+254| to_port = ingress.value.to_port
+255| protocol = ingress.value.protocol
+256| cidr_blocks = ingress.value.cidr_blocks
+257| }
+258| }
+259|
+260| # Allow all outbound traffic
+261| egress {
+262| description = "Allow all outbound traffic"
+263| from_port = 0
+264| to_port = 0
+265| protocol = "-1"
+266| cidr_blocks = ["0.0.0.0/0"]
+267| }
+268|
+269| tags = var.common_tags
+270|}
+271|`
    272|
    273|## Data Source Comments
    274|
-   275|```hcl
-   276|# Get the latest Ubuntu 22.04 LTS AMI
-   277|data "aws_ami" "ubuntu" {
-   278|  most_recent = true
-   279|  owners      = ["099720109477"] # Canonical
-   280|
-   281|  filter {
-   282|    name   = "name"
-   283|    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-   284|  }
-   285|
-   286|  filter {
-   287|    name   = "virtualization-type"
-   288|    values = ["hvm"]
-   289|  }
-   290|}
-   291|
-   292|# Retrieve current AWS region
-   293|data "aws_region" "current" {}
-   294|
-   295|# Get availability zones in current region
-   296|data "aws_availability_zones" "available" {
-   297|  state = "available"
-   298|}
-   299|```
+   275|`hcl
+276|# Get the latest Ubuntu 22.04 LTS AMI
+277|data "aws_ami" "ubuntu" {
+278| most_recent = true
+279| owners = ["099720109477"] # Canonical
+280|
+281| filter {
+282| name = "name"
+283| values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+284| }
+285|
+286| filter {
+287| name = "virtualization-type"
+288| values = ["hvm"]
+289| }
+290|}
+291|
+292|# Retrieve current AWS region
+293|data "aws_region" "current" {}
+294|
+295|# Get availability zones in current region
+296|data "aws_availability_zones" "available" {
+297| state = "available"
+298|}
+299|`
    300|
    301|## Module Documentation
    302|
    303|### Module Block with Comments
    304|
-   305|```hcl
-   306|# VPC module creates networking infrastructure
-   307|# including subnets, route tables, and internet gateway
-   308|module "vpc" {
-   309|  source  = "terraform-aws-modules/vpc/aws"
-   310|  version = "5.1.0"
-   311|
-   312|  name = "${var.project_name}-vpc"
+   305|`hcl
+306|# VPC module creates networking infrastructure
+307|# including subnets, route tables, and internet gateway
+308|module "vpc" {
+309| source = "terraform-aws-modules/vpc/aws"
+310| version = "5.1.0"
+311|
+312| name = "${var.project_name}-vpc"
    313|  cidr = var.vpc_cidr
    314|
    315|  # Create subnets across multiple availability zones
@@ -342,86 +344,86 @@ author: Alexa
    336|locals {
    337|  # Common name prefix for all resources
    338|  name_prefix = "${var.project_name}-${var.environment}"
-   339|
-   340|  # Map of AZ names to subnet indices
-   341|  # Used for distributing resources across AZs
-   342|  az_to_subnet_index = {
-   343|    for idx, az in data.aws_availability_zones.available.names :
-   344|    az => idx
-   345|  }
-   346|
-   347|  # Merged tags combining common tags with resource-specific ones
-   348|  common_tags = merge(
-   349|    var.tags,
-   350|    {
-   351|      Environment = var.environment
-   352|      ManagedBy   = "terraform"
-   353|      Project     = var.project_name
-   354|    }
-   355|  )
-   356|}
-   357|```
+339|
+340| # Map of AZ names to subnet indices
+341| # Used for distributing resources across AZs
+342| az_to_subnet_index = {
+343| for idx, az in data.aws_availability_zones.available.names :
+344| az => idx
+345| }
+346|
+347| # Merged tags combining common tags with resource-specific ones
+348| common_tags = merge(
+349| var.tags,
+350| {
+351| Environment = var.environment
+352| ManagedBy = "terraform"
+353| Project = var.project_name
+354| }
+355| )
+356|}
+357|`
    358|
    359|## File Headers
    360|
    361|### variables.tf
    362|
-   363|```hcl
-   364|# Variables for the VPC module
-   365|#
-   366|# This file defines all configurable parameters for the VPC,
-   367|# including CIDR blocks, subnet configuration, and feature flags.
-   368|
-   369|variable "vpc_cidr" {
-   370|  description = "CIDR block for the VPC."
-   371|  type        = string
-   372|  default     = "10.0.0.0/16"
-   373|}
-   374|
-   375|# ... more variables
-   376|```
+   363|`hcl
+364|# Variables for the VPC module
+365|#
+366|# This file defines all configurable parameters for the VPC,
+367|# including CIDR blocks, subnet configuration, and feature flags.
+368|
+369|variable "vpc_cidr" {
+370| description = "CIDR block for the VPC."
+371| type = string
+372| default = "10.0.0.0/16"
+373|}
+374|
+375|# ... more variables
+376|`
    377|
    378|### outputs.tf
    379|
-   380|```hcl
-   381|# Outputs from the VPC module
-   382|#
-   383|# These outputs expose VPC resources for use by other modules
-   384|# or for displaying important information to users.
-   385|
-   386|output "vpc_id" {
-   387|  description = "ID of the created VPC."
-   388|  value       = aws_vpc.main.id
-   389|}
-   390|
-   391|# ... more outputs
-   392|```
+   380|`hcl
+381|# Outputs from the VPC module
+382|#
+383|# These outputs expose VPC resources for use by other modules
+384|# or for displaying important information to users.
+385|
+386|output "vpc_id" {
+387| description = "ID of the created VPC."
+388| value = aws_vpc.main.id
+389|}
+390|
+391|# ... more outputs
+392|`
    393|
    394|### main.tf
    395|
-   396|```hcl
-   397|# Main VPC infrastructure
-   398|#
-   399|# This file creates the core VPC resources including:
-   400|# - VPC with DNS support
-   401|# - Internet Gateway
-   402|# - Public and private subnets
-   403|# - Route tables and associations
-   404|# - NAT Gateway (production only)
-   405|
-   406|terraform {
-   407|  required_version = ">= 1.5.0"
-   408|
-   409|  required_providers {
-   410|    aws = {
-   411|      source  = "hashicorp/aws"
-   412|      version = "~> 5.0"
-   413|    }
-   414|  }
-   415|}
-   416|
-   417|# ... resources
-   418|```
+   396|`hcl
+397|# Main VPC infrastructure
+398|#
+399|# This file creates the core VPC resources including:
+400|# - VPC with DNS support
+401|# - Internet Gateway
+402|# - Public and private subnets
+403|# - Route tables and associations
+404|# - NAT Gateway (production only)
+405|
+406|terraform {
+407| required_version = ">= 1.5.0"
+408|
+409| required_providers {
+410| aws = {
+411| source = "hashicorp/aws"
+412| version = "~> 5.0"
+413| }
+414| }
+415|}
+416|
+417|# ... resources
+418|`
    419|
    420|## Module README.md Template
    421|
@@ -440,22 +442,22 @@ author: Alexa
    434|
    435|## Usage
    436|
-   437|```hcl
-   438|module "vpc" {
-   439|  source = "./modules/vpc"
-   440|
-   441|  project_name = "myapp"
-   442|  environment  = "production"
-   443|  vpc_cidr     = "10.0.0.0/16"
-   444|
-   445|  private_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
-   446|  public_subnet_cidrs  = ["10.0.10.0/24", "10.0.11.0/24"]
-   447|
-   448|  tags = {
-   449|    Owner = "platform-team"
-   450|  }
-   451|}
-   452|```
+   437|`hcl
+438|module "vpc" {
+439| source = "./modules/vpc"
+440|
+441| project_name = "myapp"
+442| environment = "production"
+443| vpc_cidr = "10.0.0.0/16"
+444|
+445| private_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+446| public_subnet_cidrs = ["10.0.10.0/24", "10.0.11.0/24"]
+447|
+448| tags = {
+449| Owner = "platform-team"
+450| }
+451|}
+452|``
    453|````
    454|
    455|## Requirements
@@ -499,9 +501,9 @@ author: Alexa
    493|
    494|**DO** ✅
    495|
-   496|```hcl
-   497|variable "instance_count" {
-   498|  description = "Number of EC2 instances to create. Set to 0 to disable."
-   499|  type        = number
-   500|  default     = 1
-   501|
+   496|``hcl
+497|variable "instance_count" {
+498| description = "Number of EC2 instances to create. Set to 0 to disable."
+499| type = number
+500| default = 1
+501|

@@ -78,12 +78,13 @@ The **Ideal Final Result**: the desired function performed without the system th
 **Contradiction**: speed vs completeness of extraction.
 **Candidate principles**: 1 (Segmentation), 17 (Another dimension), 19 (Periodic action), 35 (Parameter changes).
 **Translations**:
+
 - Segmentation: pre-extract concentrates; dilute on demand. (Nespresso.)
 - Another dimension: extract under pressure (espresso).
 - Periodic action: pulse-extract with pauses (some pour-over).
 - Parameter changes: brew at different temperature/pressure (cold brew = low T long time; espresso = high P short time).
 
-**IFR comparison**: closest to "no brewing time" is pre-extracted concentrate (Segmentation). Resolves the contradiction by *separating extraction from delivery in time*.
+**IFR comparison**: closest to "no brewing time" is pre-extracted concentrate (Segmentation). Resolves the contradiction by _separating extraction from delivery in time_.
 
 ## Anti-slop notes
 
@@ -92,4 +93,4 @@ The **Ideal Final Result**: the desired function performed without the system th
 - Don't claim TRIZ where it doesn't apply (artistic, social, preference contradictions).
 - Don't invent principles in Altshuller's style.
 
-Tools: triz40.com (interactive matrix). Source: Altshuller, *And Suddenly the Inventor Appeared* (1994).
+Tools: triz40.com (interactive matrix). Source: Altshuller, _And Suddenly the Inventor Appeared_ (1994).

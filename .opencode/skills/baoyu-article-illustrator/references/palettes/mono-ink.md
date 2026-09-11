@@ -9,14 +9,14 @@ Black ink on pure white with sparse semantic accent colors
 
 ## Colors
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | Pure White | #FFFFFF | Canvas |
-| Primary | Near Black | #1A1A1A | All lines, text, figures, arrows |
-| Accent (risk/emphasis) | Coral Red | #E8655A | Risk, problem, gap, key emphasis |
-| Accent (positive) | Muted Teal | #5FA8A8 | Positive, solution, "after" state |
-| Accent (neutral tag) | Dusty Lavender | #9B8AB5 | Neutral tags, category labels |
-| Soft Fill | Pale Gray | #F0F0F0 | Subtle zone backgrounds (optional) |
+| Role                   | Color          | Hex     | Usage                              |
+| ---------------------- | -------------- | ------- | ---------------------------------- |
+| Background             | Pure White     | #FFFFFF | Canvas                             |
+| Primary                | Near Black     | #1A1A1A | All lines, text, figures, arrows   |
+| Accent (risk/emphasis) | Coral Red      | #E8655A | Risk, problem, gap, key emphasis   |
+| Accent (positive)      | Muted Teal     | #5FA8A8 | Positive, solution, "after" state  |
+| Accent (neutral tag)   | Dusty Lavender | #9B8AB5 | Neutral tags, category labels      |
+| Soft Fill              | Pale Gray      | #F0F0F0 | Subtle zone backgrounds (optional) |
 
 ## Accent
 

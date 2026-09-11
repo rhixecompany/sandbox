@@ -13,17 +13,17 @@ Nostalgic vintage aesthetic with aged paper textures and historical document sty
 
 ## Color Palette
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | Aged Parchment | #F5E6D3 | Primary background |
-| Alt Background | Sepia Cream | #FFF8DC | Secondary areas |
-| Primary Text | Dark Brown | #3D2914 | Main elements |
-| Secondary | Medium Brown | #6B4423 | Supporting details |
-| Accent 1 | Forest Green | #2D5A3D | Nature, maps |
-| Accent 2 | Navy Blue | #1E3A5F | Ocean, lines |
-| Accent 3 | Burgundy | #722F37 | Emphasis |
-| Accent 4 | Gold | #C9A227 | Highlights |
-| Ink | Sepia Black | #3D3D3D | Fine details |
+| Role           | Color          | Hex     | Usage              |
+| -------------- | -------------- | ------- | ------------------ |
+| Background     | Aged Parchment | #F5E6D3 | Primary background |
+| Alt Background | Sepia Cream    | #FFF8DC | Secondary areas    |
+| Primary Text   | Dark Brown     | #3D2914 | Main elements      |
+| Secondary      | Medium Brown   | #6B4423 | Supporting details |
+| Accent 1       | Forest Green   | #2D5A3D | Nature, maps       |
+| Accent 2       | Navy Blue      | #1E3A5F | Ocean, lines       |
+| Accent 3       | Burgundy       | #722F37 | Emphasis           |
+| Accent 4       | Gold           | #C9A227 | Highlights         |
+| Ink            | Sepia Black    | #3D3D3D | Fine details       |
 
 ## Visual Elements
 

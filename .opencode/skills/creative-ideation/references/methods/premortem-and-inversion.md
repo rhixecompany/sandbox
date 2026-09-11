@@ -1,20 +1,23 @@
 # Premortem and Inversion
 
 Two methods for failure-oriented ideation:
-- **Premortem** — Gary Klein, *HBR* September 2007. Imagine the project has already failed catastrophically; work backwards to causes.
-- **Inversion** — Charlie Munger via Carl Jacobi: *"Tell me where I'm going to die so I'll never go there."* Solve problems by figuring out how to fail and avoiding that.
 
-Both exploit prospective hindsight (Mitchell, Russo, Pennington 1989): people generate more concrete reasons for an event when imagining it has *already happened* than when imagining it might.
+- **Premortem** — Gary Klein, _HBR_ September 2007. Imagine the project has already failed catastrophically; work backwards to causes.
+- **Inversion** — Charlie Munger via Carl Jacobi: _"Tell me where I'm going to die so I'll never go there."_ Solve problems by figuring out how to fail and avoiding that.
+
+Both exploit prospective hindsight (Mitchell, Russo, Pennington 1989): people generate more concrete reasons for an event when imagining it has _already happened_ than when imagining it might.
 
 ## When to use
 
 ### Premortem
+
 - Choosing between project options
 - Pressure-testing a near-term decision
 - Late-stage planning for a long-horizon project
 - Group decisions with social pressure suppressing dissent
 
 ### Inversion
+
 - Strategic direction choice (easier to identify clear failures than clear successes)
 - Personal life decisions (career, marriage, investments, health)
 - Identifying hidden anti-patterns in your own behavior
@@ -30,7 +33,7 @@ Both exploit prospective hindsight (Mitchell, Russo, Pennington 1989): people ge
 ## Premortem procedure
 
 1. **State the project as if it's complete and failed.** "It is [date 6 months from now]. We launched. The result was a complete disaster."
-2. **Generate failure narratives independently.** Each member writes a paragraph describing what happened, in concrete terms. *Independence is essential* — group brainstorming surfaces socially safe concerns; independent writing surfaces uncomfortable ones.
+2. **Generate failure narratives independently.** Each member writes a paragraph describing what happened, in concrete terms. _Independence is essential_ — group brainstorming surfaces socially safe concerns; independent writing surfaces uncomfortable ones.
 3. **Round-robin failure causes.** Each shares one cause; no comment. Continue until exhausted.
 4. **Cluster and assess.** Group similar; estimate probability and severity.
 5. **Generate mitigations for the top 3.** Update the plan.
@@ -39,7 +42,7 @@ Both exploit prospective hindsight (Mitchell, Russo, Pennington 1989): people ge
 ## Inversion procedure
 
 1. State the goal: "I want to [original goal]."
-2. Invert: "How would I guarantee the *opposite*?"
+2. Invert: "How would I guarantee the _opposite_?"
 3. List 5–10 things that would guarantee the inverted goal. Be specific.
 4. Self-check: which am I accidentally doing or could drift into?
 5. Avoid those; return to original goal.
@@ -63,9 +66,9 @@ Both exploit prospective hindsight (Mitchell, Russo, Pennington 1989): people ge
 
 ## Anti-slop notes
 
-- Premortem slop = generic risk lists ("execution risk", "market risk"). Real premortem narrative says *specifically* what went wrong.
-- Inversion slop = "do the opposite of successful people" — that's contrarianism. Real inversion identifies *specific* failure-guaranteeing actions in *your* situation.
+- Premortem slop = generic risk lists ("execution risk", "market risk"). Real premortem narrative says _specifically_ what went wrong.
+- Inversion slop = "do the opposite of successful people" — that's contrarianism. Real inversion identifies _specific_ failure-guaranteeing actions in _your_ situation.
 - Don't generate fake fears. If there are no real concerns, the premortem is short.
 - Don't use these to talk users out of pursuing things they should pursue. Premortem and inversion are pressure tests, not vetoes.
 
-Source: Klein, "Performing a Project Premortem", *HBR* Sept 2007. Munger, *Poor Charlie's Almanack* (PCA, 2005).
+Source: Klein, "Performing a Project Premortem", _HBR_ Sept 2007. Munger, _Poor Charlie's Almanack_ (PCA, 2005).

@@ -14,6 +14,7 @@ setup-dev.ps1    ← PowerShell wrapper → pnpm setup
 ```
 
 All variants must:
+
 1. Accept the same arguments from caller
 2. Forward arguments unchanged to the canonical runner
 3. Propagate exit code back to caller
@@ -23,11 +24,13 @@ All variants must:
 ## Help Flag Convention
 
 **Bash**: Use `--help` or `-h`
+
 - Trigger: `[[ "$*" == *"--help"* ]] || [[ "$*" == *"-h"* ]]`
 - Output with `echo` or `cat`
 - Exit with code 0
 
 **PowerShell**: Use `-Help` switch parameter
+
 - Trigger: `param( [switch]$Help )`
 - Output with `Write-Host`
 - Exit with code 0
@@ -35,6 +38,7 @@ All variants must:
 ## Exit Code Propagation
 
 **Bash**:
+
 ```bash
 exec pnpm dev "$@"
 # or
@@ -43,6 +47,7 @@ exit $?
 ```
 
 **PowerShell**:
+
 ```powershell
 & pnpm dev @args_list @args
 exit $LASTEXITCODE
@@ -51,11 +56,13 @@ exit $LASTEXITCODE
 ## Argument Forwarding
 
 **Bash**: All args passed as-is
+
 ```bash
 exec pnpm quality:gate:sh "$@"
 ```
 
 **PowerShell**: Build args array and pass
+
 ```powershell
 $args_list = @()
 if ($SkipLint) { $args_list += "--skip-lint" }
@@ -67,6 +74,7 @@ if ($Json) { $args_list += "--json" }
 ## Size Targets
 
 For wrapper families delegating to pnpm commands:
+
 - **Thin delegators**: 40–60 lines per variant is normal
 - **Quality gate family** (5 commands chained): 44–62 lines per variant
 - **Cleanup family** (1 command): 39–47 lines per variant
@@ -98,6 +106,7 @@ For each wrapper pair:
 ## Example: quality-gate.sh & quality-gate.ps1
 
 **quality-gate.sh** (44 lines):
+
 ```bash
 #!/bin/bash
 set -e
@@ -115,6 +124,7 @@ exec pnpm quality:gate:sh "$@"
 ```
 
 **quality-gate.ps1** (62 lines):
+
 ```powershell
 param(
   [switch]$SkipLint,

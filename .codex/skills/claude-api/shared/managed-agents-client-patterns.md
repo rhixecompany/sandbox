@@ -4,6 +4,7 @@ description: "Managed Agents — Common Client Patterns"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Common Client Patterns
      2|
      3|Patterns you'll write on the client side when driving a Managed Agent session, grounded in working SDK examples.
@@ -103,16 +104,17 @@ author: Alexa
     97|    await client.beta.sessions.events.send(session.id, {
     98|      events: [
     99|        {
-   100|          type: "user.tool_confirmation",
-   101|          tool_use_id: event.id, // not a toolu_ id — use event.id
-   102|          result: "allow" // or 'deny'
-   103|          // deny_message: '...',        // optional, only with result: 'deny'
-   104|        }
-   105|      ]
-   106|    });
-   107|  }
-   108|}
-   109|```
+
+100| type: "user.tool_confirmation",
+101| tool_use_id: event.id, // not a toolu_ id — use event.id
+102| result: "allow" // or 'deny'
+103| // deny_message: '...', // optional, only with result: 'deny'
+104| }
+105| ]
+106| });
+107| }
+108|}
+109|``
    110|
    111|Key points:
    112|
@@ -128,16 +130,16 @@ author: Alexa
    122|
    123|Do not break on `session.status_idle` alone. The session goes idle transiently — e.g. between parallel tool executions, while waiting for a `user.tool_confirmation`, or while awaiting a `user.custom_tool_result`. Break when idle with a terminal `stop_reason`, or on `session.status_terminated`.
    124|
-   125|```ts
-   126|for await (const event of stream) {
-   127|  handle(event);
-   128|  if (event.type === "session.status_terminated") break;
-   129|  if (event.type === "session.status_idle") {
-   130|    if (event.stop_reason.type === "requires_action") continue; // waiting on you — handle it
-   131|    break; // end_turn or retries_exhausted — both terminal
-   132|  }
-   133|}
-   134|```
+   125|``ts
+126|for await (const event of stream) {
+127| handle(event);
+128| if (event.type === "session.status_terminated") break;
+129| if (event.type === "session.status_idle") {
+130| if (event.stop_reason.type === "requires_action") continue; // waiting on you — handle it
+131| break; // end_turn or retries_exhausted — both terminal
+132| }
+133|}
+134|``
    135|
    136|`stop_reason.type` values on `session.status_idle`:
    137|
@@ -153,17 +155,17 @@ author: Alexa
    147|
    148|Poll before cleanup:
    149|
-   150|```ts
-   151|let s;
-   152|for (let i = 0; i < 10; i++) {
-   153|  s = await client.beta.sessions.retrieve(session.id);
-   154|  if (s.status !== "running") break;
-   155|  await new Promise(r => setTimeout(r, 200));
-   156|}
-   157|if (s?.status !== "running") {
-   158|  await client.beta.sessions.archive(session.id);
-   159|} // else: still running after 2s — don't archive, let it settle or escalate
-   160|```
+   150|``ts
+151|let s;
+152|for (let i = 0; i < 10; i++) {
+153| s = await client.beta.sessions.retrieve(session.id);
+154| if (s.status !== "running") break;
+155| await new Promise(r => setTimeout(r, 200));
+156|}
+157|if (s?.status !== "running") {
+158| await client.beta.sessions.archive(session.id);
+159|} // else: still running after 2s — don't archive, let it settle or escalate
+160|`
    161|
    162|---
    163|
@@ -171,20 +173,20 @@ author: Alexa
    165|
    166|Always open the stream **before** sending the kickoff event. Otherwise the agent may process the event and emit the first events before your consumer is attached, and you'll miss them.
    167|
-   168|```ts
-   169|const stream = await client.beta.sessions.events.stream(session.id);
-   170|await client.beta.sessions.events.send(session.id, {
-   171|  events: [
-   172|    {
-   173|      type: "user.message",
-   174|      content: [{ type: "text", text: "Hello" }]
-   175|    }
-   176|  ]
-   177|});
-   178|for await (const event of stream) {
-   179|  /* ... */
-   180|}
-   181|```
+   168|`ts
+169|const stream = await client.beta.sessions.events.stream(session.id);
+170|await client.beta.sessions.events.send(session.id, {
+171| events: [
+172| {
+173| type: "user.message",
+174| content: [{ type: "text", text: "Hello" }]
+175| }
+176| ]
+177|});
+178|for await (const event of stream) {
+179| /* ... _/
+180|}
+181|``
    182|
    183|The `Promise.all([stream, send])` shape works too, but stream-first is simpler and has the same effect — the stream starts buffering the moment it's opened.
    184|
@@ -194,21 +196,21 @@ author: Alexa
    188|
    189|**The mounted resource has a different `file_id` than the file you uploaded.** Session creation makes a session-scoped copy.
    190|
-   191|```ts
-   192|const uploaded = await client.beta.files.upload({ file });
-   193|// uploaded.id         → the original file
-   194|const session = await client.beta.sessions.create({
-   195|  /* ... */
-   196|  resources: [
-   197|    {
-   198|      type: "file",
-   199|      file_id: uploaded.id,
-   200|      mount_path: "/workspace/data.csv"
-   201|    }
-   202|  ]
-   203|});
-   204|// session.resources[0].file_id !== uploaded.id  ← different IDs
-   205|```
+   191|``ts
+192|const uploaded = await client.beta.files.upload({ file });
+193|// uploaded.id → the original file
+194|const session = await client.beta.sessions.create({
+195| /_ ... _/
+196| resources: [
+197| {
+198| type: "file",
+199| file_id: uploaded.id,
+200| mount_path: "/workspace/data.csv"
+201| }
+202| ]
+203|});
+204|// session.resources[0].file_id !== uploaded.id ← different IDs
+205|``
    206|
    207|Delete the original via `files.delete(uploaded.id)`; the session-scoped copy is garbage-collected with the session. `mount_path` must be absolute — see `shared/managed-agents-environments.md`.
    208|
@@ -220,44 +222,44 @@ author: Alexa
    214|
    215|**Solution:** move the authenticated call to your side. Declare a custom tool on the agent; when the agent emits `agent.custom_tool_use`, your orchestrator (the process reading the SSE stream) executes the call with its own credentials and responds with `user.custom_tool_result`. The container never sees the key.
    216|
-   217|```ts
-   218|// Agent template: declare the tool, no credentials
-   219|tools: [
-   220|  {
-   221|    type: "custom",
-   222|    name: "linear_graphql",
-   223|    input_schema: {
-   224|      /* query, vars */
-   225|    }
-   226|  }
-   227|];
-   228|
-   229|// Orchestrator: handle the call with host-side creds
-   230|for await (const event of stream) {
-   231|  if (
-   232|    event.type === "agent.custom_tool_use" &&
-   233|    event.name === "linear_graphql"
-   234|  ) {
-   235|    const result = await linear.request(
-   236|      event.input.query,
-   237|      event.input.vars
-   238|    ); // host's key
-   239|    await client.beta.sessions.events.send(session.id, {
-   240|      events: [
-   241|        {
-   242|          type: "user.custom_tool_result",
-   243|          tool_use_id: event.id,
-   244|          result
-   245|        }
-   246|      ]
-   247|    });
-   248|  }
-   249|}
-   250|```
-   251|
-   252|Same shape works for `gh` CLI, local eval scripts, or anything else that needs host-side auth or binaries.
-   253|
-   254|**Security note:** this does not expose a public endpoint. `agent.custom_tool_use` arrives on the SSE stream your orchestrator already holds open with your Anthropic API key, and `user.custom_tool_result` goes back via `events.send()` under the same key. Your orchestrator is a client, not a server — nothing unauthenticated is listening.
-   255|
-   256|**Do not embed API keys in the system prompt or user messages as a workaround.** Prompts and messages are stored in the session's event history, returned by `events.list()`, and included in compaction summaries — a secret placed there is durably persisted and readable via the API for the life of the session.
-   257|
+   217|``ts
+218|// Agent template: declare the tool, no credentials
+219|tools: [
+220| {
+221| type: "custom",
+222| name: "linear_graphql",
+223| input_schema: {
+224| /_ query, vars */
+225| }
+226| }
+227|];
+228|
+229|// Orchestrator: handle the call with host-side creds
+230|for await (const event of stream) {
+231| if (
+232| event.type === "agent.custom_tool_use" &&
+233| event.name === "linear_graphql"
+234| ) {
+235| const result = await linear.request(
+236| event.input.query,
+237| event.input.vars
+238| ); // host's key
+239| await client.beta.sessions.events.send(session.id, {
+240| events: [
+241| {
+242| type: "user.custom_tool_result",
+243| tool_use_id: event.id,
+244| result
+245| }
+246| ]
+247| });
+248| }
+249|}
+250|```
+251|
+252|Same shape works for `gh` CLI, local eval scripts, or anything else that needs host-side auth or binaries.
+253|
+254|**Security note:** this does not expose a public endpoint. `agent.custom_tool_use` arrives on the SSE stream your orchestrator already holds open with your Anthropic API key, and `user.custom_tool_result` goes back via `events.send()` under the same key. Your orchestrator is a client, not a server — nothing unauthenticated is listening.
+255|
+256|**Do not embed API keys in the system prompt or user messages as a workaround.** Prompts and messages are stored in the session's event history, returned by `events.list()`, and included in compaction summaries — a secret placed there is durably persisted and readable via the API for the life of the session.
+257|

@@ -18,26 +18,31 @@ Edward de Bono, 1967–. The PO operator and five provocation moves for breaking
 ## The five operators
 
 **1. Escape (negation).** Take something normally true of the system; negate it.
+
 - Po: restaurants do not serve food.
 - Po: code review does not happen before merge.
 - Po: the meeting has no agenda.
 
 **2. Reversal.** Reverse a relationship.
+
 - Po: the patient operates on the surgeon.
 - Po: the listener composes the song.
 - Po: the readers write the book.
 
 **3. Exaggeration.** Push a parameter to extreme.
+
 - Po: the meeting has 1000 attendees.
 - Po: the novel has one sentence.
 - Po: the company has one customer.
 
 **4. Distortion.** Change order, location, or relationship of components.
+
 - Po: customers pay before they're born.
 - Po: the recipe lists ingredients after the cooking instructions.
 - Po: revenue arrives the year before expenses.
 
 **5. Wishful thinking.** State an impossible outcome.
+
 - Po: the medication cures before the patient is sick.
 - Po: the software ships without bugs.
 - Po: the painting paints itself.
@@ -49,9 +54,10 @@ Edward de Bono, 1967–. The PO operator and five provocation moves for breaking
 3. Use the strongest.
 
 Example. Problem: my CLI is hard to discover. Random word: "lighthouse".
+
 - Lighthouses are visible from far; my CLI's affordances are not visible at all.
 - Lighthouses are lit at the right time; my CLI's help is always on, never contextual.
-- Lighthouses signal *danger*; my CLI doesn't signal when an action is irreversible. ← strongest
+- Lighthouses signal _danger_; my CLI doesn't signal when an action is irreversible. ← strongest
 - Lighthouse keepers signal back; mine has no two-way contact.
 - Lighthouses are passive; the ship approaches them.
 
@@ -60,6 +66,7 @@ Result: the CLI should signal danger when about to do something irreversible. Co
 ## Procedure
 
 ### Single-PO session
+
 1. State the problem.
 2. Pick an operator.
 3. Generate a PO statement.
@@ -68,6 +75,7 @@ Result: the CLI should signal danger when about to do something irreversible. Co
 6. Translate into a real proposal.
 
 ### Stacked operators
+
 Two operators on the same problem. Intersection often more interesting than either alone. Example: Escape ("po: meetings don't have agendas") + Reversal ("po: attendees set the agenda after the meeting") → an asynchronous "what we ended up discussing" doc, written collectively after the fact.
 
 ## Anti-slop notes
@@ -78,4 +86,4 @@ Two operators on the same problem. Intersection often more interesting than eith
 - Take the provocation seriously for at least 5 minutes. Dismissing it defeats the operation.
 - Pick the operator deliberately. Different operators surface different things: Escape → purpose; Reversal → relationship; Exaggeration → parameter; Distortion → sequencing; Wishful Thinking → constraint.
 
-Source: de Bono, *Lateral Thinking* (Harper, 1970); *Po: Beyond Yes and No* (Penguin, 1972).
+Source: de Bono, _Lateral Thinking_ (Harper, 1970); _Po: Beyond Yes and No_ (Penguin, 1972).

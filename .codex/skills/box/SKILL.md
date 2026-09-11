@@ -63,17 +63,17 @@ Ask before a delete, a collaboration/shared-link or permission change, an identi
 
 ## Choose the right path
 
-| Need | Read |
-| --- | --- |
-| CLI conventions, environments, JSON, or REST escape hatch | [CLI guide](references/cli-guide.md) |
-| Files, folders, versions, links, or collaborations | [Content workflows](references/content-workflows.md) |
-| Search, metadata, Box AI, or AI units | [Search and AI](references/search-and-ai.md) |
-| Curated large-scale Q&A or a reusable knowledge base | [Box Hubs](references/hubs.md) |
-| Many files or a resumable batch | [Bulk operations](references/bulk-operations.md) |
-| Application code or a Box SDK | [SDK development](references/sdk-development.md) |
-| Webhooks or Events API | [Webhooks and events](references/webhooks-and-events.md) |
-| CLI unavailable or a missing CLI operation | [REST API fallback](references/rest-api.md) |
-| Auth, permissions, rate limits, or API errors | [Troubleshooting](references/troubleshooting.md) |
+| Need                                                      | Read                                                     |
+| --------------------------------------------------------- | -------------------------------------------------------- |
+| CLI conventions, environments, JSON, or REST escape hatch | [CLI guide](references/cli-guide.md)                     |
+| Files, folders, versions, links, or collaborations        | [Content workflows](references/content-workflows.md)     |
+| Search, metadata, Box AI, or AI units                     | [Search and AI](references/search-and-ai.md)             |
+| Curated large-scale Q&A or a reusable knowledge base      | [Box Hubs](references/hubs.md)                           |
+| Many files or a resumable batch                           | [Bulk operations](references/bulk-operations.md)         |
+| Application code or a Box SDK                             | [SDK development](references/sdk-development.md)         |
+| Webhooks or Events API                                    | [Webhooks and events](references/webhooks-and-events.md) |
+| CLI unavailable or a missing CLI operation                | [REST API fallback](references/rest-api.md)              |
+| Auth, permissions, rate limits, or API errors             | [Troubleshooting](references/troubleshooting.md)         |
 
 ## Content handling policy
 

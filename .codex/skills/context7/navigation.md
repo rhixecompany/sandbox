@@ -4,6 +4,7 @@ description: "Context7 Skill Navigation"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Context7 Skill Navigation
      2|
      3|**Purpose**: Live documentation fetching for external libraries via Context7 API

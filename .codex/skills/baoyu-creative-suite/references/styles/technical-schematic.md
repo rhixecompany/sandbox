@@ -10,10 +10,10 @@ Technical diagrams with engineering precision and clean geometry.
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
-| **Blueprint** | Engineering schematics | White on blue, measurements, grid |
-| **Isometric** | 3D spatial representation | 30° angle blocks, clean fills |
+| Variant       | Focus                     | Visual Emphasis                   |
+| ------------- | ------------------------- | --------------------------------- |
+| **Blueprint** | Engineering schematics    | White on blue, measurements, grid |
+| **Isometric** | 3D spatial representation | 30° angle blocks, clean fills     |
 
 ## Visual Elements
 

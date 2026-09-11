@@ -5,11 +5,12 @@ description: "Use when installing or configuring asdf version manager, managing 
 version: 1.0.0
 author: "Hermes Agent"
 license: MIT
-tags: 
+tags:
 metadata:
   hermes:
     tags: [imported]
 ---
+
 # Asdf
 
 ## Overview
@@ -33,9 +34,9 @@ Universal version manager for multiple runtimes (Node.js, Python, Go, Terraform,
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `git-helper` | Branch and environment versioning discipline |
+| Skill             | Purpose                                            |
+| ----------------- | -------------------------------------------------- |
+| `git-helper`      | Branch and environment versioning discipline       |
 | `task-management` | Track runtime-migration tasks and validation steps |
 
 ## Workflow

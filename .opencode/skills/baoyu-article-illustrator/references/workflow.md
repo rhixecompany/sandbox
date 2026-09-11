@@ -6,18 +6,18 @@ If the user provides reference images (local path or URL), the goal is to produc
 
 **Tool rules**:
 
-| Task | Tool | Notes |
-|------|------|-------|
-| Analyze a reference image | `vision_analyze` | Accepts URL or local path. Ask for style, palette, composition, subject. |
-| Write the text description | `write_file` | Sidecar `.md` files only — never try to `write_file` a PNG/JPG. |
-| (Optional) Keep a local copy of the binary | `terminal` | `cp "$src" "{output-dir}/references/NN-ref-{slug}.{ext}"` — purely for the record; the skill itself doesn't read the binary. |
+| Task                                       | Tool             | Notes                                                                                                                        |
+| ------------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Analyze a reference image                  | `vision_analyze` | Accepts URL or local path. Ask for style, palette, composition, subject.                                                     |
+| Write the text description                 | `write_file`     | Sidecar `.md` files only — never try to `write_file` a PNG/JPG.                                                              |
+| (Optional) Keep a local copy of the binary | `terminal`       | `cp "$src" "{output-dir}/references/NN-ref-{slug}.{ext}"` — purely for the record; the skill itself doesn't read the binary. |
 
-| Input Type | Action |
-|------------|--------|
-| Image file path provided | `vision_analyze` → write sidecar `.md`. Optional `terminal cp` for a local record. |
-| Image URL provided | `vision_analyze` with the URL → write sidecar `.md`. |
-| Image in conversation (no path, no URL) | Ask via `clarify` for a path or URL, or for a verbal description. |
-| User can't provide either | Extract style/palette verbally from the user → write `references/extracted-style.md`. Do NOT add `references:` to prompt frontmatter. |
+| Input Type                              | Action                                                                                                                                |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Image file path provided                | `vision_analyze` → write sidecar `.md`. Optional `terminal cp` for a local record.                                                    |
+| Image URL provided                      | `vision_analyze` with the URL → write sidecar `.md`.                                                                                  |
+| Image in conversation (no path, no URL) | Ask via `clarify` for a path or URL, or for a verbal description.                                                                     |
+| User can't provide either               | Extract style/palette verbally from the user → write `references/extracted-style.md`. Do NOT add `references:` to prompt frontmatter. |
 
 **Procedure** (when a path/URL is available):
 
@@ -27,12 +27,13 @@ If the user provides reference images (local path or URL), the goal is to produc
 4. Mark the reference in the outline with usage `direct` / `style` / `palette`. In Step 5.1 the description gets appended to the prompt body.
 
 **Sidecar File Format**:
+
 ```yaml
 ---
 ref_id: NN
 source: "<original path or URL>"
-local_copy: "NN-ref-{slug}.png"   # omit if no copy made
-usage_hint: style                 # direct | style | palette
+local_copy: "NN-ref-{slug}.png" # omit if no copy made
+usage_hint: style # direct | style | palette
 ---
 [vision_analyze description — colors, style, composition, subject]
 ```
@@ -43,23 +44,23 @@ usage_hint: style                 # direct | style | palette
 
 ### 2.1 Determine Output Directory
 
-| Input | Output Directory | Source-save path |
-|-------|------------------|------------------|
-| Article file path | `{article-dir}/imgs/` (default) | — (read article via `read_file`) |
-| Pasted content | `illustrations/{topic-slug}/` (cwd) | `source-{slug}.{ext}` (save via `write_file`) |
+| Input             | Output Directory                    | Source-save path                              |
+| ----------------- | ----------------------------------- | --------------------------------------------- |
+| Article file path | `{article-dir}/imgs/` (default)     | — (read article via `read_file`)              |
+| Pasted content    | `illustrations/{topic-slug}/` (cwd) | `source-{slug}.{ext}` (save via `write_file`) |
 
 If the user explicitly asked for a different layout (e.g., images in the article's folder, or an `illustrations/` subdirectory), honor that.
 
 ### 2.2 Analyze Content
 
-| Analysis | Description |
-|----------|-------------|
-| Content type | Technical / Tutorial / Methodology / Narrative |
-| Illustration purpose | information / visualization / imagination |
-| Core arguments | 2-5 main points to visualize |
-| Visual opportunities | Positions where illustrations add value |
-| Recommended type | Based on content signals and purpose |
-| Recommended density | Based on length and complexity |
+| Analysis             | Description                                    |
+| -------------------- | ---------------------------------------------- |
+| Content type         | Technical / Tutorial / Methodology / Narrative |
+| Illustration purpose | information / visualization / imagination      |
+| Core arguments       | 2-5 main points to visualize                   |
+| Visual opportunities | Positions where illustrations add value        |
+| Recommended type     | Based on content signals and purpose           |
+| Recommended density  | Based on length and complexity                 |
 
 Save analysis to `{output-dir}/analysis.md` using `write_file`.
 
@@ -75,12 +76,14 @@ Save analysis to `{output-dir}/analysis.md` using `write_file`.
 ### 2.4 Identify Positions
 
 **Illustrate**:
+
 - Core arguments (REQUIRED)
 - Abstract concepts
 - Data comparisons
 - Processes, workflows
 
 **Do NOT Illustrate**:
+
 - Metaphors literally
 - Decorative scenes
 - Generic illustrations
@@ -89,19 +92,19 @@ Save analysis to `{output-dir}/analysis.md` using `write_file`.
 
 For each reference image (use the `vision_analyze` description from Step 1):
 
-| Analysis | Description |
-|----------|-------------|
-| Visual characteristics | Style, colors, composition |
-| Content/subject | What the reference depicts |
-| Suitable positions | Which sections match this reference |
-| Style match | Which illustration types/styles align |
-| Usage recommendation | `direct` / `style` / `palette` |
+| Analysis               | Description                           |
+| ---------------------- | ------------------------------------- |
+| Visual characteristics | Style, colors, composition            |
+| Content/subject        | What the reference depicts            |
+| Suitable positions     | Which sections match this reference   |
+| Style match            | Which illustration types/styles align |
+| Usage recommendation   | `direct` / `style` / `palette`        |
 
-| Usage | When to Use | How it's applied in Step 5.1 |
-|-------|-------------|------------------------------|
-| `direct` | Reference matches desired output closely | Paste the description (composition + subject + style + palette) into the prompt body |
-| `style` | Extract visual style characteristics only | Append style traits to prompt body |
-| `palette` | Extract color scheme only | Append extracted hex colors to prompt body |
+| Usage     | When to Use                               | How it's applied in Step 5.1                                                         |
+| --------- | ----------------------------------------- | ------------------------------------------------------------------------------------ |
+| `direct`  | Reference matches desired output closely  | Paste the description (composition + subject + style + palette) into the prompt body |
+| `style`   | Extract visual style characteristics only | Append style traits to prompt body                                                   |
+| `palette` | Extract color scheme only                 | Append extracted hex colors to prompt body                                           |
 
 Note: `image_generate` does not accept reference-image inputs under any usage type. Everything is mediated through the `vision_analyze` description.
 
@@ -140,14 +143,14 @@ Present Core Styles first:
 
 **Core Styles** (simplified selection):
 
-| Core Style | Maps To | Best For |
-|------------|---------|----------|
-| `minimal-flat` | notion | General, knowledge sharing, SaaS |
-| `sci-fi` | blueprint | AI, frontier tech, system design |
-| `hand-drawn` | sketch/warm | Relaxed, reflective, casual |
-| `editorial` | editorial | Processes, data, journalism |
-| `scene` | warm/watercolor | Narratives, emotional, lifestyle |
-| `poster` | screen-print | Opinion, editorial, cultural, cinematic |
+| Core Style     | Maps To         | Best For                                |
+| -------------- | --------------- | --------------------------------------- |
+| `minimal-flat` | notion          | General, knowledge sharing, SaaS        |
+| `sci-fi`       | blueprint       | AI, frontier tech, system design        |
+| `hand-drawn`   | sketch/warm     | Relaxed, reflective, casual             |
+| `editorial`    | editorial       | Processes, data, journalism             |
+| `scene`        | warm/watercolor | Narratives, emotional, lifestyle        |
+| `poster`       | screen-print    | Opinion, editorial, cultural, cinematic |
 
 Style selection based on Type × Style compatibility matrix ([styles.md](styles.md)).
 **In Step 5**, read `styles/<style>.md` for visual elements and rendering rules.
@@ -168,6 +171,7 @@ See Palette Gallery in [styles.md](styles.md#palette-gallery) and full specs in 
 ### Q5: Image Text Language (only when ambiguous)
 
 If the article language is different from the user's conversational language, ask which to use:
+
 - Article language (match article content) (Recommended)
 - User's conversational language
 
@@ -223,6 +227,7 @@ references:                    # Only if references provided
 **Backup rule**: If `outline.md` exists, rename to `outline-backup-YYYYMMDD-HHMMSS.md` before writing.
 
 **Requirements**:
+
 - Each position justified by content needs
 - Type applied consistently
 - Style reflected in descriptions
@@ -260,6 +265,7 @@ For each illustration in the outline:
 8. **Backup rule**: If a prompt file exists, rename to `prompts/NN-{type}-{slug}-backup-YYYYMMDD-HHMMSS.md`
 
 **CRITICAL - References in Frontmatter**:
+
 - Only add `references` field if a sidecar `.md` description exists in `{output-dir}/references/`
 - If style/palette was extracted verbally (no description file), append info to prompt BODY only
 - Before writing frontmatter, confirm the sidecar exists (try `read_file` on the `.md`)
@@ -268,11 +274,11 @@ For each illustration in the outline:
 
 Read the `vision_analyze` description from the sidecar `references/NN-ref-{slug}.md` (via `read_file`) and embed it in the prompt body. `image_generate` never receives the binary.
 
-| Usage | Action |
-|-------|--------|
-| `direct` | Paste the full reference description (composition, subject, style, palette) into the prompt body |
-| `style` | Append only the style traits: "Style: clean lines, gradient backgrounds..." |
-| `palette` | Append only the hex colors: "Colors: #E8756D coral, #7ECFC0 mint..." |
+| Usage     | Action                                                                                           |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| `direct`  | Paste the full reference description (composition, subject, style, palette) into the prompt body |
+| `style`   | Append only the style traits: "Style: clean lines, gradient backgrounds..."                      |
+| `palette` | Append only the hex colors: "Colors: #E8756D coral, #7ECFC0 mint..."                             |
 
 ---
 
@@ -303,12 +309,12 @@ For each prompt file:
 
 Insert after the corresponding paragraph, using the path relative to the article file:
 
-| Input | Insert Path |
-|-------|-------------|
-| Article file path (default `imgs-subdir`) | `![description](imgs/NN-{type}-{slug}.png)` |
-| Article file path (images alongside) | `![description](NN-{type}-{slug}.png)` |
-| Article file path (`illustrations/` subdirectory) | `![description](illustrations/NN-{type}-{slug}.png)` |
-| Pasted content | `![description](illustrations/{topic-slug}/NN-{type}-{slug}.png)` (relative to cwd) |
+| Input                                             | Insert Path                                                                         |
+| ------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Article file path (default `imgs-subdir`)         | `![description](imgs/NN-{type}-{slug}.png)`                                         |
+| Article file path (images alongside)              | `![description](NN-{type}-{slug}.png)`                                              |
+| Article file path (`illustrations/` subdirectory) | `![description](illustrations/NN-{type}-{slug}.png)`                                |
+| Pasted content                                    | `![description](illustrations/{topic-slug}/NN-{type}-{slug}.png)` (relative to cwd) |
 
 Alt text: concise description in the article's language.
 

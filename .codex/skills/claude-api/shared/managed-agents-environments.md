@@ -4,6 +4,7 @@ description: "Managed Agents — Environments & Resources"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Environments & Resources
      2|
      3|## Environments
@@ -103,46 +104,47 @@ author: Alexa
     97|}
     98|```
     99|
-   100|**Requirements:**
-   101|
-   102|- The `write` tool (or `bash`) must be enabled for the agent to create output files.
-   103|- Session-scoped `files.list` / `files.download` captures outputs written to `/mnt/session/outputs/`.
-   104|- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource auto-adds only the `files-api-2025-04-14` header, so pass `betas: ["managed-agents-2026-04-01"]` explicitly (or both headers on raw HTTP) — without it the API may reject `scope_id` as an unknown field. Requires `@anthropic-ai/sdk` ≥ 0.88.0 / `anthropic` (Python) ≥ 0.92.0 — older versions don't type `scope_id`. The `ant` CLI does **not** expose this flag yet; use the SDK or curl.
-   105|- Pass the session ID returned by `sessions.create()` verbatim (e.g. `sesn_011CZx...`) — the API validates the prefix.
-   106|- There's a brief indexing lag (~1–3s) between `session.status_idle` and output files appearing in `files.list`. Retry once or twice if empty.
-   107|
-   108|> **Fallback when `scope_id` filtering is unavailable** (older SDK, or endpoint returns an error): send a follow-up `user.message` asking the agent to `read` each file under `/mnt/session/outputs/` and return the contents. The agent streams the file bodies back as `agent.message` text. This works for text files only and costs output tokens — use it to unblock, not as the primary path.
-   109|
-   110|This gives you a bidirectional file bridge: upload reference data in, download agent artifacts out.
-   111|
-   112|### GitHub Repositories
-   113|
-   114|Clones a GitHub repository into the session container during initialization, before the agent begins execution. The agent can read, edit, commit, and push via `bash` (`git`). Multiple repositories per session are supported — add one `resources` entry per repo. Repositories are cached, so future sessions that use the same repository start faster.
-   115|
-   116|Repositories are attached for the lifetime of the session — to change which repositories are mounted, create a new session. You **can** rotate a repository's `authorization_token` on a running session via `client.beta.sessions.resources.update(resource_id, {session_id, authorization_token})`; the resource `id` is returned at session creation and by `resources.list()`.
-   117|
-   118|**Fields:**
-   119|
-   120|| Field | Required | Notes |
-   121|| --- | --- | --- |
-   122|| `type` | ✅ | `"github_repository"` |
-   123|| `url` | ✅ | The GitHub repository URL |
-   124|| `authorization_token` | ✅ | GitHub Personal Access Token with repository access. **Never echoed in API responses.** |
-   125|| `mount_path` | ❌ | Path where the repository will be cloned. Defaults to `/workspace/<repo-name>`. |
-   126|| `checkout` | ❌ | `{type: "branch", name: "..."}` or `{type: "commit", sha: "..."}`. Defaults to the repo's default branch. |
-   127|
-   128|**Token permission levels** (fine-grained PATs):
-   129|
-   130|- `Contents: Read` — clone only
-   131|- `Contents: Read and write` — push changes and create pull requests
-   132|
-   133|**How auth works:** `authorization_token` is never placed inside the container. `git pull` / `git push` and GitHub REST calls against the attached repository are routed through an Anthropic-side git proxy that injects the token after the request leaves the sandbox. Code running in the container — including anything the agent writes — cannot read or exfiltrate it.
-   134|
-   135|> ‼️ **To generate pull requests** you also need GitHub **MCP server** access — the `github_repository` resource gives filesystem + git access only. See `shared/managed-agents-tools.md` → MCP Servers. The PR workflow is: edit files in the mounted repo → push branch via `bash` (authenticated via the git proxy using `authorization_token`) → create PR via the MCP `create_pull_request` tool (authenticated via the vault).
-   136|
-   137|**TypeScript:**
-   138|
-   139|```ts
+
+100|**Requirements:**
+101|
+102|- The `write` tool (or `bash`) must be enabled for the agent to create output files.
+103|- Session-scoped `files.list` / `files.download` captures outputs written to `/mnt/session/outputs/`.
+104|- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource auto-adds only the `files-api-2025-04-14` header, so pass `betas: ["managed-agents-2026-04-01"]` explicitly (or both headers on raw HTTP) — without it the API may reject `scope_id` as an unknown field. Requires `@anthropic-ai/sdk` ≥ 0.88.0 / `anthropic` (Python) ≥ 0.92.0 — older versions don't type `scope_id`. The `ant` CLI does **not** expose this flag yet; use the SDK or curl.
+105|- Pass the session ID returned by `sessions.create()` verbatim (e.g. `sesn_011CZx...`) — the API validates the prefix.
+106|- There's a brief indexing lag (~1–3s) between `session.status_idle` and output files appearing in `files.list`. Retry once or twice if empty.
+107|
+108|> **Fallback when `scope_id` filtering is unavailable** (older SDK, or endpoint returns an error): send a follow-up `user.message` asking the agent to `read` each file under `/mnt/session/outputs/` and return the contents. The agent streams the file bodies back as `agent.message` text. This works for text files only and costs output tokens — use it to unblock, not as the primary path.
+109|
+110|This gives you a bidirectional file bridge: upload reference data in, download agent artifacts out.
+111|
+112|### GitHub Repositories
+113|
+114|Clones a GitHub repository into the session container during initialization, before the agent begins execution. The agent can read, edit, commit, and push via `bash` (`git`). Multiple repositories per session are supported — add one `resources` entry per repo. Repositories are cached, so future sessions that use the same repository start faster.
+115|
+116|Repositories are attached for the lifetime of the session — to change which repositories are mounted, create a new session. You **can** rotate a repository's `authorization_token` on a running session via `client.beta.sessions.resources.update(resource_id, {session_id, authorization_token})`; the resource `id` is returned at session creation and by `resources.list()`.
+117|
+118|**Fields:**
+119|
+120|| Field | Required | Notes |
+121|| --- | --- | --- |
+122|| `type` | ✅ | `"github_repository"` |
+123|| `url` | ✅ | The GitHub repository URL |
+124|| `authorization_token` | ✅ | GitHub Personal Access Token with repository access. **Never echoed in API responses.** |
+125|| `mount_path` | ❌ | Path where the repository will be cloned. Defaults to `/workspace/<repo-name>`. |
+126|| `checkout` | ❌ | `{type: "branch", name: "..."}` or `{type: "commit", sha: "..."}`. Defaults to the repo's default branch. |
+127|
+128|**Token permission levels** (fine-grained PATs):
+129|
+130|- `Contents: Read` — clone only
+131|- `Contents: Read and write` — push changes and create pull requests
+132|
+133|**How auth works:** `authorization_token` is never placed inside the container. `git pull` / `git push` and GitHub REST calls against the attached repository are routed through an Anthropic-side git proxy that injects the token after the request leaves the sandbox. Code running in the container — including anything the agent writes — cannot read or exfiltrate it.
+134|
+135|> ‼️ **To generate pull requests** you also need GitHub **MCP server** access — the `github_repository` resource gives filesystem + git access only. See `shared/managed-agents-tools.md` → MCP Servers. The PR workflow is: edit files in the mounted repo → push branch via `bash` (authenticated via the git proxy using `authorization_token`) → create PR via the MCP `create_pull_request` tool (authenticated via the vault).
+136|
+137|**TypeScript:**
+138|
+139|`ts
    140|// 1. Create the agent — declare GitHub MCP (no auth here)
    141|const agent = await client.beta.agents.create({
    142|  name: "GitHub Agent",
@@ -177,11 +179,11 @@ author: Alexa
    171|    }
    172|  ]
    173|});
-   174|```
-   175|
-   176|**Python:**
-   177|
-   178|```python
+   174|`
+175|
+176|**Python:**
+177|
+178|`python
    179|import os
    180|
    181|agent = client.beta.agents.create(
@@ -209,21 +211,21 @@ author: Alexa
    203|        "checkout": {"type": "branch", "name": "main"},
    204|    }],
    205|)
-   206|```
-   207|
-   208|---
-   209|
-   210|## Files API
-   211|
-   212|Upload and manage files for use as session resources, and download files the agent wrote to `/mnt/session/outputs/`.
-   213|
-   214|| Operation | Method | Path | SDK |
-   215|| --- | --- | --- | --- |
-   216|| Upload | `POST` | `/v1/files` | `client.beta.files.upload({ file })` |
-   217|| List | `GET` | `/v1/files?scope_id=...` | `client.beta.files.list({ scope_id, betas: ["managed-agents-2026-04-01"] })` |
-   218|| Get Metadata | `GET` | `/v1/files/{id}` | `client.beta.files.retrieveMetadata(id)` |
-   219|| Download | `GET` | `/v1/files/{id}/content` | `client.beta.files.download(id)` → `Response` |
-   220|| Delete | `DELETE` | `/v1/files/{id}` | `client.beta.files.delete(id)` |
-   221|
-   222|The `scope_id` filter on List scopes the results to files written to `/mnt/session/outputs/` by that session. Without the filter, you get all files uploaded to your account.
-   223|
+   206|`
+207|
+208|---
+209|
+210|## Files API
+211|
+212|Upload and manage files for use as session resources, and download files the agent wrote to `/mnt/session/outputs/`.
+213|
+214|| Operation | Method | Path | SDK |
+215|| --- | --- | --- | --- |
+216|| Upload | `POST` | `/v1/files` | `client.beta.files.upload({ file })` |
+217|| List | `GET` | `/v1/files?scope_id=...` | `client.beta.files.list({ scope_id, betas: ["managed-agents-2026-04-01"] })` |
+218|| Get Metadata | `GET` | `/v1/files/{id}` | `client.beta.files.retrieveMetadata(id)` |
+219|| Download | `GET` | `/v1/files/{id}/content` | `client.beta.files.download(id)` → `Response` |
+220|| Delete | `DELETE` | `/v1/files/{id}` | `client.beta.files.delete(id)` |
+221|
+222|The `scope_id` filter on List scopes the results to files written to `/mnt/session/outputs/` by that session. Without the filter, you get all files uploaded to your account.
+223|

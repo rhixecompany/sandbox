@@ -26,28 +26,28 @@ This is visual art. ASCII characters are the medium; cinema is the standard.
 
 ## Modes
 
-| Mode | Input | Output | Reference |
-|------|-------|--------|-----------|
-| **Video-to-ASCII** | Video file | ASCII recreation of source footage | `ascii-video-inputs.md` § Video Sampling |
-| **Audio-reactive** | Audio file | Generative visuals driven by audio features | `ascii-video-inputs.md` § Audio Analysis |
-| **Generative** | None (or seed params) | Procedural ASCII animation | `ascii-video-effects.md` |
-| **Hybrid** | Video + audio | ASCII video with audio-reactive overlays | Both input refs |
-| **Lyrics/text** | Audio + text/SRT | Timed text with visual effects | `ascii-video-inputs.md` § Text/Lyrics |
-| **TTS narration** | Text quotes + TTS API | Narrated testimonial/quote video with typed text | `ascii-video-inputs.md` § TTS Integration |
+| Mode               | Input                 | Output                                           | Reference                                 |
+| ------------------ | --------------------- | ------------------------------------------------ | ----------------------------------------- |
+| **Video-to-ASCII** | Video file            | ASCII recreation of source footage               | `ascii-video-inputs.md` § Video Sampling  |
+| **Audio-reactive** | Audio file            | Generative visuals driven by audio features      | `ascii-video-inputs.md` § Audio Analysis  |
+| **Generative**     | None (or seed params) | Procedural ASCII animation                       | `ascii-video-effects.md`                  |
+| **Hybrid**         | Video + audio         | ASCII video with audio-reactive overlays         | Both input refs                           |
+| **Lyrics/text**    | Audio + text/SRT      | Timed text with visual effects                   | `ascii-video-inputs.md` § Text/Lyrics     |
+| **TTS narration**  | Text quotes + TTS API | Narrated testimonial/quote video with typed text | `ascii-video-inputs.md` § TTS Integration |
 
 ## Stack
 
 Single self-contained Python script per project. No GPU required.
 
-| Layer | Tool | Purpose |
-|-------|------|---------|
-| Core | Python 3.10+, NumPy | Math, array ops, vectorized effects |
-| Signal | SciPy | FFT, peak detection (audio modes) |
-| Imaging | Pillow (PIL) | Font rasterization, frame decoding, image I/O |
-| Video I/O | ffmpeg (CLI) | Decode input, encode output, mux audio |
-| Parallel | concurrent.futures | N workers for batch/clip rendering |
-| TTS | ElevenLabs API (optional) | Generate narration clips |
-| Optional | OpenCV | Video frame sampling, edge detection |
+| Layer     | Tool                      | Purpose                                       |
+| --------- | ------------------------- | --------------------------------------------- |
+| Core      | Python 3.10+, NumPy       | Math, array ops, vectorized effects           |
+| Signal    | SciPy                     | FFT, peak detection (audio modes)             |
+| Imaging   | Pillow (PIL)              | Font rasterization, frame decoding, image I/O |
+| Video I/O | ffmpeg (CLI)              | Decode input, encode output, mux audio        |
+| Parallel  | concurrent.futures        | N workers for batch/clip rendering            |
+| TTS       | ElevenLabs API (optional) | Generate narration clips                      |
+| Optional  | OpenCV                    | Video frame sampling, edge detection          |
 
 ## Pipeline Architecture
 
@@ -68,23 +68,24 @@ INPUT → ANALYZE → SCENE_FN → TONEMAP → SHADE → ENCODE
 
 ### Aesthetic Dimensions
 
-| Dimension | Options | Reference |
-|-----------|---------|-----------|
-| **Character palette** | Density ramps, block elements, symbols, scripts (katakana, Greek, runes, braille), project-specific | `ascii-video-architecture.md` § Palettes |
-| **Color strategy** | HSV, OKLAB/OKLCH, discrete RGB palettes, auto-generated harmony, monochrome, temperature | `ascii-video-architecture.md` § Color System |
-| **Background texture** | Sine fields, fBM noise, domain warp, voronoi, reaction-diffusion, cellular automata, video | `ascii-video-effects.md` |
-| **Primary effects** | Rings, spirals, tunnel, vortex, waves, interference, aurora, fire, SDFs, strange attractors | `ascii-video-effects.md` |
-| **Particles** | Sparks, snow, rain, bubbles, runes, orbits, flocking boids, flow-field followers, trails | `ascii-video-effects.md` § Particles |
-| **Shader mood** | Retro CRT, clean modern, glitch art, cinematic, dreamy, industrial, psychedelic | `ascii-video-shaders.md` |
-| **Grid density** | xs(8px) through xxl(40px), mixed per layer | `ascii-video-architecture.md` § Grid System |
-| **Coordinate space** | Cartesian, polar, tiled, rotated, fisheye, Möbius, domain-warped | `ascii-video-effects.md` § Transforms |
-| **Feedback** | Zoom tunnel, rainbow trails, ghostly echo, rotating mandala, color evolution | `ascii-video-composition.md` § Feedback |
-| **Masking** | Circle, ring, gradient, text stencil, animated iris/wipe/dissolve | `ascii-video-composition.md` § Masking |
-| **Transitions** | Crossfade, wipe, dissolve, glitch cut, iris, mask-based reveal | `ascii-video-shaders.md` § Transitions |
+| Dimension              | Options                                                                                             | Reference                                    |
+| ---------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **Character palette**  | Density ramps, block elements, symbols, scripts (katakana, Greek, runes, braille), project-specific | `ascii-video-architecture.md` § Palettes     |
+| **Color strategy**     | HSV, OKLAB/OKLCH, discrete RGB palettes, auto-generated harmony, monochrome, temperature            | `ascii-video-architecture.md` § Color System |
+| **Background texture** | Sine fields, fBM noise, domain warp, voronoi, reaction-diffusion, cellular automata, video          | `ascii-video-effects.md`                     |
+| **Primary effects**    | Rings, spirals, tunnel, vortex, waves, interference, aurora, fire, SDFs, strange attractors         | `ascii-video-effects.md`                     |
+| **Particles**          | Sparks, snow, rain, bubbles, runes, orbits, flocking boids, flow-field followers, trails            | `ascii-video-effects.md` § Particles         |
+| **Shader mood**        | Retro CRT, clean modern, glitch art, cinematic, dreamy, industrial, psychedelic                     | `ascii-video-shaders.md`                     |
+| **Grid density**       | xs(8px) through xxl(40px), mixed per layer                                                          | `ascii-video-architecture.md` § Grid System  |
+| **Coordinate space**   | Cartesian, polar, tiled, rotated, fisheye, Möbius, domain-warped                                    | `ascii-video-effects.md` § Transforms        |
+| **Feedback**           | Zoom tunnel, rainbow trails, ghostly echo, rotating mandala, color evolution                        | `ascii-video-composition.md` § Feedback      |
+| **Masking**            | Circle, ring, gradient, text stencil, animated iris/wipe/dissolve                                   | `ascii-video-composition.md` § Masking       |
+| **Transitions**        | Crossfade, wipe, dissolve, glitch cut, iris, mask-based reveal                                      | `ascii-video-shaders.md` § Transitions       |
 
 ### Per-Section Variation
 
 Never use the same config for the entire video. For each section/scene:
+
 - **Different background effect** (or compose 2-3)
 - **Different character palette** (match the mood)
 - **Different color strategy** (or at minimum a different hue)
@@ -94,6 +95,7 @@ Never use the same config for the entire video. For each section/scene:
 ### Project-Specific Invention
 
 For every project, invent at least one of:
+
 - A custom character palette matching the theme
 - A custom background effect (combine/modify existing building blocks)
 - A custom color palette (discrete RGB set matching the brand/mood)
@@ -186,32 +188,32 @@ For segmented videos (quotes, scenes, chapters), render each as a separate clip 
 
 ## Performance Targets
 
-| Component | Budget |
-|-----------|--------|
-| Feature extraction | 1-5ms |
-| Effect function | 2-15ms |
-| Character render | 80-150ms (bottleneck) |
-| Shader pipeline | 5-25ms |
-| **Total** | ~100-200ms/frame |
+| Component          | Budget                |
+| ------------------ | --------------------- |
+| Feature extraction | 1-5ms                 |
+| Effect function    | 2-15ms                |
+| Character render   | 80-150ms (bottleneck) |
+| Shader pipeline    | 5-25ms                |
+| **Total**          | ~100-200ms/frame      |
 
 ## References
 
-| File | Contents |
-|------|----------|
-| `ascii-video-architecture.md` | Grid system, resolution presets, font selection, character palettes (20+), color system (HSV + OKLAB + discrete RGB + harmony generation), `_render_vf()` helper, GridLayer class |
-| `ascii-video-composition.md` | Pixel blend modes (20 modes), `blend_canvas()`, multi-grid composition, adaptive `tonemap()`, `FeedbackBuffer`, `PixelBlendStack`, masking/stencil system |
-| `ascii-video-effects.md` | Effect building blocks: value field generators, hue fields, noise/fBM/domain warp, voronoi, reaction-diffusion, cellular automata, SDFs, strange attractors, particle systems, coordinate transforms, temporal coherence |
-| `ascii-video-shaders.md` | `ShaderChain`, `_apply_shader_step()` dispatch, 38 shader catalog, audio-reactive scaling, transitions, tint presets, output format encoding, terminal rendering |
-| `ascii-video-scenes.md` | Scene protocol, `Renderer` class, `SCENES` table, `render_clip()`, beat-synced cutting, parallel rendering, design patterns (layer hierarchy, directional arcs, visual metaphors, compositional techniques), complete scene examples at every complexity level, scene design checklist |
-| `ascii-video-inputs.md` | Audio analysis (FFT, bands, beats), video sampling, image conversion, text/lyrics, TTS integration (ElevenLabs, voice assignment, audio mixing) |
-| `ascii-video-optimization.md` | Hardware detection, quality profiles, vectorized patterns, parallel rendering, memory management, performance budgets |
-| `ascii-video-troubleshooting.md` | NumPy broadcasting traps, blend mode pitfalls, multiprocessing/pickling, brightness diagnostics, ffmpeg issues, font problems, common mistakes |
+| File                             | Contents                                                                                                                                                                                                                                                                               |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ascii-video-architecture.md`    | Grid system, resolution presets, font selection, character palettes (20+), color system (HSV + OKLAB + discrete RGB + harmony generation), `_render_vf()` helper, GridLayer class                                                                                                      |
+| `ascii-video-composition.md`     | Pixel blend modes (20 modes), `blend_canvas()`, multi-grid composition, adaptive `tonemap()`, `FeedbackBuffer`, `PixelBlendStack`, masking/stencil system                                                                                                                              |
+| `ascii-video-effects.md`         | Effect building blocks: value field generators, hue fields, noise/fBM/domain warp, voronoi, reaction-diffusion, cellular automata, SDFs, strange attractors, particle systems, coordinate transforms, temporal coherence                                                               |
+| `ascii-video-shaders.md`         | `ShaderChain`, `_apply_shader_step()` dispatch, 38 shader catalog, audio-reactive scaling, transitions, tint presets, output format encoding, terminal rendering                                                                                                                       |
+| `ascii-video-scenes.md`          | Scene protocol, `Renderer` class, `SCENES` table, `render_clip()`, beat-synced cutting, parallel rendering, design patterns (layer hierarchy, directional arcs, visual metaphors, compositional techniques), complete scene examples at every complexity level, scene design checklist |
+| `ascii-video-inputs.md`          | Audio analysis (FFT, bands, beats), video sampling, image conversion, text/lyrics, TTS integration (ElevenLabs, voice assignment, audio mixing)                                                                                                                                        |
+| `ascii-video-optimization.md`    | Hardware detection, quality profiles, vectorized patterns, parallel rendering, memory management, performance budgets                                                                                                                                                                  |
+| `ascii-video-troubleshooting.md` | NumPy broadcasting traps, blend mode pitfalls, multiprocessing/pickling, brightness diagnostics, ffmpeg issues, font problems, common mistakes                                                                                                                                         |
 
 ---
-metadata:
-  hermes:
-    tags: []
 
+metadata:
+hermes:
+tags: []
 
 ## Creative Divergence (use only when user requests experimental/creative/unique output)
 
@@ -222,18 +224,21 @@ If the user asks for creative, experimental, surprising, or unconventional outpu
 - **Oblique Strategies** — when the user is maximally open ("surprise me," "something I've never seen")
 
 ### Forced Connections
+
 1. Pick a domain unrelated to the visual goal (weather systems, microbiology, architecture, fluid dynamics, textile weaving)
 2. List its core visual/structural elements (erosion → gradual reveal; mitosis → splitting duplication; weaving → interlocking patterns)
 3. Map those elements onto ASCII characters and animation patterns
 4. Synthesize — what does "erosion" or "crystallization" look like in a character grid?
 
 ### Conceptual Blending
+
 1. Name two distinct visual/conceptual spaces (e.g., ocean waves + sheet music)
 2. Map correspondences (crests = high notes, troughs = rests, foam = staccato)
 3. Blend selectively — keep the most interesting mappings, discard forced ones
 4. Develop emergent properties that exist only in the blend
 
 ### Oblique Strategies
+
 1. Draw one: "Honor thy error as a hidden intention" / "Use an old idea" / "What would your closest friend do?" / "Emphasize the flaws" / "Turn it upside down" / "Only a part, not the whole" / "Reverse"
 2. Interpret the directive against the current ASCII animation challenge
 3. Apply the lateral insight to the visual design before writing code
@@ -249,11 +254,11 @@ If the user asks for creative, experimental, surprising, or unconventional outpu
 
 The Skills\creative\ascii Video\skill.md skill provides tools and workflows for managing skills\creative\ascii video\skill.md operations efficiently.
 
-
 ## Pitfalls
 
 - **Stale cache:** Always re-read files from disk after editing; don't rely on cached context
 - **Context limits:** Process in batches; write results after each batch
+
 ## Verification Checklist
 
 - [ ] Environment and dependencies are properly configured
@@ -261,4 +266,3 @@ The Skills\creative\ascii Video\skill.md skill provides tools and workflows for 
 - [ ] Output meets expected quality and style requirements
 - [ ] Any errors during execution were resolved
 - [ ] Final result is saved or delivered as expected
-

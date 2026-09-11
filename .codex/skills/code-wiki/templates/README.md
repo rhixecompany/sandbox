@@ -21,8 +21,8 @@ See [architecture.md](architecture.md) for the full picture.
 
 ## Module Map
 
-| Module | Purpose |
-|---|---|
+| Module                                    | Purpose              |
+| ----------------------------------------- | -------------------- |
 | [`{{MODULE_1}}`](modules/{{MODULE_1}}.md) | {{ONE_LINE_PURPOSE}} |
 | [`{{MODULE_2}}`](modules/{{MODULE_2}}.md) | {{ONE_LINE_PURPOSE}} |
 

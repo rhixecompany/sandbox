@@ -4,6 +4,7 @@ description: "Decision Trees: Handling Edge Cases"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Decision Trees: Handling Edge Cases
      2|
      3|This guide helps you route to the right approach when common writing scenarios arise.
@@ -103,12 +104,13 @@ author: Alexa
     97|**Before Feedback Ask**: "What type of writing is this? What's your primary goal?"
     98|
     99|---
-   100|
-   101|## When Writer Asks: "Should I Include This?"
-   102|
-   103|**Inclusion Decision Tree**:
-   104|
-   105|```
+
+100|
+101|## When Writer Asks: "Should I Include This?"
+102|
+103|**Inclusion Decision Tree**:
+104|
+105|`
    106|Question: "Does this serve the main argument?"
    107|
    108|├─ YES: "Keep it"
@@ -126,17 +128,17 @@ author: Alexa
    120|   └─ Is it a lost love (writer wants it despite weak relevance)?
    121|      ├─ YES → Compromise: one sentence reference only
    122|      └─ NO → Cut cleanly and move on
-   123|```
-   124|
-   125|**Your Role**: Don't decide. Help writer decide by asking: "Does this move your main argument forward?"
-   126|
-   127|---
-   128|
-   129|## When Citations Need Consistency Audit
-   130|
-   131|**Citation Format Decision**:
-   132|
-   133|```
+   123|`
+124|
+125|**Your Role**: Don't decide. Help writer decide by asking: "Does this move your main argument forward?"
+126|
+127|---
+128|
+129|## When Citations Need Consistency Audit
+130|
+131|**Citation Format Decision**:
+132|
+133|`
    134|Ask writer: "Which citation style do you prefer?"
    135|
    136|├─ INLINE: Author (Year) or [link]
@@ -147,24 +149,24 @@ author: Alexa
    141|│
    142|└─ FOOTNOTE: Endnote style with full citations
    143|   └─ Best for: Technical docs, formal reports, scholarly work
-   144|```
-   145|
-   146|**Then**:
-   147|
-   148|- Audit entire document for consistency
-   149|- Convert any mismatched citations to chosen style
-   150|- Create a references list using that style
-   151|- Flag any citations missing publication details
-   152|
-   153|**Red Flag**: If different sections use different styles, that's a professionalism issue. Fix it.
-   154|
-   155|---
-   156|
-   157|## When Writer Is Overwhelmed by Feedback
-   158|
-   159|**Triage & Prioritize**:
-   160|
-   161|```
+   144|`
+145|
+146|**Then**:
+147|
+148|- Audit entire document for consistency
+149|- Convert any mismatched citations to chosen style
+150|- Create a references list using that style
+151|- Flag any citations missing publication details
+152|
+153|**Red Flag**: If different sections use different styles, that's a professionalism issue. Fix it.
+154|
+155|---
+156|
+157|## When Writer Is Overwhelmed by Feedback
+158|
+159|**Triage & Prioritize**:
+160|
+161|`
    162|Identify: What type of feedback is most important?
    163|
    164|1. CRITICAL (must fix):
@@ -181,28 +183,28 @@ author: Alexa
    175|   ├─ Word choice alternatives
    176|   ├─ Style tweaks
    177|   └─ Nice-to-have examples
-   178|```
-   179|
-   180|**Then**: Present only CRITICAL + 2-3 IMPORTANT items. Save OPTIONAL for next pass.
-   181|
-   182|**Say**: "Here are the 3 things that will have biggest impact. Ready to tackle these?"
-   183|
-   184|---
-   185|
-   186|## When Writer Needs to Adapt Content for Different Audiences
-   187|
-   188|**Audience Adaptation Framework**:
-   189|
-   190|| Audience | Adjust | Keep | Example |
-   191|| --- | --- | --- | --- |
-   192|| **From Technical → Business** | Jargon removed, ROI framed, examples simplified | Core insights, data, credibility | Replace "ML algorithms" with "automated decision-making" |
-   193|| **From Narrative → Academic** | Anecdotes reduced, formal citations required, neutral tone | Core argument, evidence, originality | Add literature review, formal citations, remove storytelling |
-   194|| **From Long-form → Social Media** | Length cut 90%, snappier sentences, hook at start | Main takeaway, credibility, call-to-action | Thread 10 posts from 2000-word article |
-   195|| **From Expert → Beginner** | Jargon explained, more examples, foundational context | Nuance, credibility, depth | Add "What is X?" section before diving into analysis |
-   196|
-   197|**Your Role**: Identify what changes, what stays. Let writer decide adaptation approach.
-   198|
-   199|---
-   200|
-   201|**Summary**: These decision trees help you diagnose situations quickly and route to the right approach. When stuck, ask diagnostic questions before offering solutions.
-   202|
+   178|`
+179|
+180|**Then**: Present only CRITICAL + 2-3 IMPORTANT items. Save OPTIONAL for next pass.
+181|
+182|**Say**: "Here are the 3 things that will have biggest impact. Ready to tackle these?"
+183|
+184|---
+185|
+186|## When Writer Needs to Adapt Content for Different Audiences
+187|
+188|**Audience Adaptation Framework**:
+189|
+190|| Audience | Adjust | Keep | Example |
+191|| --- | --- | --- | --- |
+192|| **From Technical → Business** | Jargon removed, ROI framed, examples simplified | Core insights, data, credibility | Replace "ML algorithms" with "automated decision-making" |
+193|| **From Narrative → Academic** | Anecdotes reduced, formal citations required, neutral tone | Core argument, evidence, originality | Add literature review, formal citations, remove storytelling |
+194|| **From Long-form → Social Media** | Length cut 90%, snappier sentences, hook at start | Main takeaway, credibility, call-to-action | Thread 10 posts from 2000-word article |
+195|| **From Expert → Beginner** | Jargon explained, more examples, foundational context | Nuance, credibility, depth | Add "What is X?" section before diving into analysis |
+196|
+197|**Your Role**: Identify what changes, what stays. Let writer decide adaptation approach.
+198|
+199|---
+200|
+201|**Summary**: These decision trees help you diagnose situations quickly and route to the right approach. When stuck, ask diagnostic questions before offering solutions.
+202|

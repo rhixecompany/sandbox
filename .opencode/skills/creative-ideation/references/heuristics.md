@@ -4,55 +4,55 @@ Decision tree for picking a method. Read top to bottom; first match wins.
 
 ## Phase signals — what stage is the user in?
 
-| Signal | Method |
-|---|---|
-| Blank page, no domain | constraint dispatch (`full-prompt-library.md`) |
-| Has a domain, no project | route by domain (next section) |
-| Has one idea, want variations | `methods/scamper.md` |
-| Need many ideas fast | `methods/volume-generation.md` |
-| Idea too safe | `methods/lateral-provocations.md` |
-| Many ideas, need to choose | `methods/premortem-and-inversion.md` |
-| Have idea, want to sharpen | `methods/creative-discipline.md` (Tharp's spine) |
-| Stuck mid-project | `methods/oblique-strategies.md` |
-| "Is this any good?" | `methods/premortem-and-inversion.md` + `methods/compression-progress.md` |
+| Signal                        | Method                                                                   |
+| ----------------------------- | ------------------------------------------------------------------------ |
+| Blank page, no domain         | constraint dispatch (`full-prompt-library.md`)                           |
+| Has a domain, no project      | route by domain (next section)                                           |
+| Has one idea, want variations | `methods/scamper.md`                                                     |
+| Need many ideas fast          | `methods/volume-generation.md`                                           |
+| Idea too safe                 | `methods/lateral-provocations.md`                                        |
+| Many ideas, need to choose    | `methods/premortem-and-inversion.md`                                     |
+| Have idea, want to sharpen    | `methods/creative-discipline.md` (Tharp's spine)                         |
+| Stuck mid-project             | `methods/oblique-strategies.md`                                          |
+| "Is this any good?"           | `methods/premortem-and-inversion.md` + `methods/compression-progress.md` |
 
 ## Domain signals
 
-| Domain | Method |
-|---|---|
-| Fiction with formal interest | `methods/oulipo.md` |
-| Narrative with story shape | `methods/story-skeletons.md` |
-| Essay / non-fiction | `methods/defamiliarization.md` + `methods/compression-progress.md` |
-| Poetry | `methods/oulipo.md` or `methods/chance-and-remix.md` |
-| Lyrics / songwriting | `methods/oblique-strategies.md` + `methods/chance-and-remix.md` |
-| Music / sound | `methods/oblique-strategies.md` (origin domain) |
-| Visual art / sculpture / installation | `methods/oblique-strategies.md`, `methods/creative-discipline.md` (LeWitt) |
-| Performance / theater | `methods/defamiliarization.md` (Brecht) |
-| Site-specific | `methods/derive-and-mapping.md` |
-| Engineering invention | `methods/triz-principles.md` |
-| Software architecture | `methods/pattern-languages.md` |
-| Algorithm / data structure | `methods/polya.md` + `methods/first-principles.md` |
-| Civic / policy | `methods/leverage-points.md` |
-| Org design | `methods/leverage-points.md` + `methods/pattern-languages.md` |
-| Research / picking a question | `methods/compression-progress.md` |
-| Attacking a known problem | `methods/polya.md` + `methods/first-principles.md` |
-| Product strategy / why-does-this-exist | `methods/jobs-to-be-done.md` |
-| New venture from scratch | `full-prompt-library.md` "solve your own itch" + `methods/jobs-to-be-done.md` |
-| Career / what to study | `methods/derive-and-mapping.md` + `methods/compression-progress.md` |
-| Habit / discipline | `methods/creative-discipline.md` |
+| Domain                                 | Method                                                                        |
+| -------------------------------------- | ----------------------------------------------------------------------------- |
+| Fiction with formal interest           | `methods/oulipo.md`                                                           |
+| Narrative with story shape             | `methods/story-skeletons.md`                                                  |
+| Essay / non-fiction                    | `methods/defamiliarization.md` + `methods/compression-progress.md`            |
+| Poetry                                 | `methods/oulipo.md` or `methods/chance-and-remix.md`                          |
+| Lyrics / songwriting                   | `methods/oblique-strategies.md` + `methods/chance-and-remix.md`               |
+| Music / sound                          | `methods/oblique-strategies.md` (origin domain)                               |
+| Visual art / sculpture / installation  | `methods/oblique-strategies.md`, `methods/creative-discipline.md` (LeWitt)    |
+| Performance / theater                  | `methods/defamiliarization.md` (Brecht)                                       |
+| Site-specific                          | `methods/derive-and-mapping.md`                                               |
+| Engineering invention                  | `methods/triz-principles.md`                                                  |
+| Software architecture                  | `methods/pattern-languages.md`                                                |
+| Algorithm / data structure             | `methods/polya.md` + `methods/first-principles.md`                            |
+| Civic / policy                         | `methods/leverage-points.md`                                                  |
+| Org design                             | `methods/leverage-points.md` + `methods/pattern-languages.md`                 |
+| Research / picking a question          | `methods/compression-progress.md`                                             |
+| Attacking a known problem              | `methods/polya.md` + `methods/first-principles.md`                            |
+| Product strategy / why-does-this-exist | `methods/jobs-to-be-done.md`                                                  |
+| New venture from scratch               | `full-prompt-library.md` "solve your own itch" + `methods/jobs-to-be-done.md` |
+| Career / what to study                 | `methods/derive-and-mapping.md` + `methods/compression-progress.md`           |
+| Habit / discipline                     | `methods/creative-discipline.md`                                              |
 
 ## Mood / tone signals
 
-| User wants | Method |
-|---|---|
-| Beautiful / elegant | `methods/compression-progress.md` |
-| Weird / strange | `methods/pataphysics.md`, `methods/chance-and-remix.md` |
-| Useful / practical | `methods/triz-principles.md`, `methods/jobs-to-be-done.md`, "solve your own itch" |
-| Fun / playful | `methods/oulipo.md`, `methods/oblique-strategies.md` |
-| Serious / rigorous | `methods/polya.md`, `methods/first-principles.md`, `methods/compression-progress.md` |
-| Personal / intimate | `methods/creative-discipline.md`, `methods/derive-and-mapping.md` |
-| Political / intervention | `methods/leverage-points.md`, `methods/chance-and-remix.md` (détournement) |
-| Critical / subversive | `methods/defamiliarization.md`, `methods/pataphysics.md` |
+| User wants               | Method                                                                               |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| Beautiful / elegant      | `methods/compression-progress.md`                                                    |
+| Weird / strange          | `methods/pataphysics.md`, `methods/chance-and-remix.md`                              |
+| Useful / practical       | `methods/triz-principles.md`, `methods/jobs-to-be-done.md`, "solve your own itch"    |
+| Fun / playful            | `methods/oulipo.md`, `methods/oblique-strategies.md`                                 |
+| Serious / rigorous       | `methods/polya.md`, `methods/first-principles.md`, `methods/compression-progress.md` |
+| Personal / intimate      | `methods/creative-discipline.md`, `methods/derive-and-mapping.md`                    |
+| Political / intervention | `methods/leverage-points.md`, `methods/chance-and-remix.md` (détournement)           |
+| Critical / subversive    | `methods/defamiliarization.md`, `methods/pataphysics.md`                             |
 
 ## When to stack methods (rare)
 

@@ -213,18 +213,18 @@ A multi-section flowchart showing Karpathy's autoresearch framework: human-agent
 
 ## Color Assignments
 
-| Element | Color | Reason |
-|---------|-------|--------|
-| Human, program.md | `c-gray` | Neutral setup / input nodes |
-| AI agent | `c-purple` | The active intelligent actor |
-| Loop action steps | `c-teal` | Agent's analytical/editing actions |
-| Run training | `c-coral` | Highlighted key step — the 5-min training run |
-| Decision check | `c-gray` | Neutral evaluation checkpoint |
-| Keep (improved) | `c-green` | Semantic success — val_bpb decreased |
-| Discard (not improved) | `c-red` | Semantic failure — no improvement |
-| Training pipeline nodes | `c-coral` | Training infrastructure components |
-| Evaluation node | `c-amber` | Distinct from training — measurement/metric role |
-| Containers | Neutral (dashed) | Subtle grouping that recedes behind content |
+| Element                 | Color            | Reason                                           |
+| ----------------------- | ---------------- | ------------------------------------------------ |
+| Human, program.md       | `c-gray`         | Neutral setup / input nodes                      |
+| AI agent                | `c-purple`       | The active intelligent actor                     |
+| Loop action steps       | `c-teal`         | Agent's analytical/editing actions               |
+| Run training            | `c-coral`        | Highlighted key step — the 5-min training run    |
+| Decision check          | `c-gray`         | Neutral evaluation checkpoint                    |
+| Keep (improved)         | `c-green`        | Semantic success — val_bpb decreased             |
+| Discard (not improved)  | `c-red`          | Semantic failure — no improvement                |
+| Training pipeline nodes | `c-coral`        | Training infrastructure components               |
+| Evaluation node         | `c-amber`        | Distinct from training — measurement/metric role |
+| Containers              | Neutral (dashed) | Subtle grouping that recedes behind content      |
 
 ## Layout Notes
 

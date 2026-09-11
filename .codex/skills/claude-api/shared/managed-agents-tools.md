@@ -4,6 +4,7 @@ description: "Managed Agents — Tools & Skills"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Tools & Skills
      2|
      3|## Tools
@@ -103,15 +104,16 @@ author: Alexa
     97|  "tools": [
     98|    {
     99|      "type": "agent_toolset_20260401",
-   100|      "default_config": { "enabled": false },
-   101|      "configs": [
-   102|        { "name": "bash", "enabled": true },
-   103|        { "name": "read", "enabled": true }
-   104|      ]
-   105|    }
-   106|  ]
-   107|}
-   108|```
+
+100| "default_config": { "enabled": false },
+101| "configs": [
+102| { "name": "bash", "enabled": true },
+103| { "name": "read", "enabled": true }
+104| ]
+105| }
+106| ]
+107|}
+108|``
    109|
    110|### Custom Tools (Client-Side)
    111|
@@ -125,24 +127,24 @@ author: Alexa
    119|
    120|No permission policy needed — you're the one executing.
    121|
-   122|```json
-   123|{
-   124|  "tools": [
-   125|    {
-   126|      "type": "custom",
-   127|      "name": "get_weather",
-   128|      "description": "Fetch current weather for a city.",
-   129|      "input_schema": {
-   130|        "type": "object",
-   131|        "properties": {
-   132|          "city": { "type": "string", "description": "City name" }
-   133|        },
-   134|        "required": ["city"]
-   135|      }
-   136|    }
-   137|  ]
-   138|}
-   139|```
+   122|``json
+123|{
+124| "tools": [
+125| {
+126| "type": "custom",
+127| "name": "get_weather",
+128| "description": "Fetch current weather for a city.",
+129| "input_schema": {
+130| "type": "object",
+131| "properties": {
+132| "city": { "type": "string", "description": "City name" }
+133| },
+134| "required": ["city"]
+135| }
+136| }
+137| ]
+138|}
+139|``
    140|
    141|### MCP Servers
    142|
@@ -161,28 +163,28 @@ author: Alexa
    155|| `name` | ✅ | Unique name — referenced by `mcp_toolset.mcp_server_name` |
    156|| `url` | ✅ | The MCP server's endpoint URL (Streamable HTTP transport) |
    157|
-   158|```json
-   159|{
-   160|  "mcp_servers": [
-   161|    {
-   162|      "type": "url",
-   163|      "name": "linear",
-   164|      "url": "https://mcp.linear.app/mcp"
-   165|    }
-   166|  ],
-   167|  "tools": [{ "type": "mcp_toolset", "mcp_server_name": "linear" }]
-   168|}
-   169|```
+   158|``json
+159|{
+160| "mcp_servers": [
+161| {
+162| "type": "url",
+163| "name": "linear",
+164| "url": "https://mcp.linear.app/mcp"
+165| }
+166| ],
+167| "tools": [{ "type": "mcp_toolset", "mcp_server_name": "linear" }]
+168|}
+169|`
    170|
    171|**Session side — attach vault:**
    172|
-   173|```json
-   174|{
-   175|  "agent": "agent_abc123",
-   176|  "environment_id": "env_abc123",
-   177|  "vault_ids": ["vlt_abc123"]
-   178|}
-   179|```
+   173|`json
+174|{
+175| "agent": "agent_abc123",
+176| "environment_id": "env_abc123",
+177| "vault_ids": ["vlt_abc123"]
+178|}
+179|``
    180|
    181|> 💡 **Per-tool enablement (empirical):** `mcp_toolset` has been observed accepting `default_config: {enabled: false}` + `configs: [{name, enabled: true}]` for an allowlist pattern. The API ref shows only the minimal `{type, mcp_server_name}` form.
    182|
@@ -217,23 +219,23 @@ author: Alexa
    211|
    212|**Credential shape**:
    213|
-   214|```json
-   215|{
-   216|  "auth": {
-   217|    "type": "mcp_oauth",
-   218|    "mcp_server_url": "https://mcp.notion.com/mcp",
-   219|    "access_token": "<current access token>",
-   220|    "expires_at": "2026-04-02T14:00:00Z",
-   221|    "refresh": {
-   222|      "refresh_token": "<refresh token>",
-   223|      "client_id": "<your OAuth client_id>",
-   224|      "token_endpoint": "https://api.notion.com/v1/oauth/token",
-   225|      "token_endpoint_auth": { "type": "none" }
-   226|    }
-   227|  },
-   228|  "display_name": "Notion (workspace-foo)"
-   229|}
-   230|```
+   214|``json
+215|{
+216| "auth": {
+217| "type": "mcp_oauth",
+218| "mcp_server_url": "https://mcp.notion.com/mcp",
+219| "access_token": "<current access token>",
+220| "expires_at": "2026-04-02T14:00:00Z",
+221| "refresh": {
+222| "refresh_token": "<refresh token>",
+223| "client_id": "<your OAuth client_id>",
+224| "token_endpoint": "https://api.notion.com/v1/oauth/token",
+225| "token_endpoint_auth": { "type": "none" }
+226| }
+227| },
+228| "display_name": "Notion (workspace-foo)"
+229|}
+230|``
    231|
    232|The `refresh` block is what enables auto-refresh — `token_endpoint` is where Anthropic posts the `refresh_token` grant. `token_endpoint_auth` is a discriminated union:
    233|
@@ -268,50 +270,50 @@ author: Alexa
    262|
    263|Skills are attached to the **agent** definition via `agents.create()`:
    264|
-   265|```ts
-   266|const agent = await client.beta.agents.create({
-   267|  name: "Financial Agent",
-   268|  model: "claude-opus-4-7",
-   269|  system: "You are a financial analysis agent.",
-   270|  skills: [
-   271|    { type: "anthropic", skill_id: "xlsx" },
-   272|    { type: "custom", skill_id: "skill_abc123", version: "latest" }
-   273|  ]
-   274|});
-   275|```
+   265|``ts
+266|const agent = await client.beta.agents.create({
+267| name: "Financial Agent",
+268| model: "claude-opus-4-7",
+269| system: "You are a financial analysis agent.",
+270| skills: [
+271| { type: "anthropic", skill_id: "xlsx" },
+272| { type: "custom", skill_id: "skill_abc123", version: "latest" }
+273| ]
+274|});
+275|`
    276|
    277|Python:
    278|
-   279|```python
-   280|agent = client.beta.agents.create(
-   281|    name="Financial Agent",
-   282|    model="claude-opus-4-7",
-   283|    system="You are a financial analysis agent.",
-   284|    skills=[
-   285|        {"type": "anthropic", "skill_id": "xlsx"},
-   286|        {"type": "custom", "skill_id": "skill_abc123", "version": "latest"},
-   287|    ]
-   288|)
-   289|```
-   290|
-   291|**Skill reference fields:**
-   292|
-   293|| Field | Anthropic skill | Custom skill |
-   294|| --- | --- | --- |
-   295|| `type` | `"anthropic"` | `"custom"` |
-   296|| `skill_id` | Skill name (e.g. `"xlsx"`, `"docx"`, `"pptx"`, `"pdf"`) | Skill ID from Skills API (e.g. `"skill_abc123"`) |
-   297|| `version` | — | `"latest"` or a specific version number |
-   298|
-   299|### Skills API
-   300|
-   301|| Operation      | Method   | Path                                 |
-   302|| -------------- | -------- | ------------------------------------ |
-   303|| Create Skill   | `POST`   | `/v1/skills`                         |
-   304|| List Skills    | `GET`    | `/v1/skills`                         |
-   305|| Get Skill      | `GET`    | `/v1/skills/{id}`                    |
-   306|| Delete Skill   | `DELETE` | `/v1/skills/{id}`                    |
-   307|| Create Version | `POST`   | `/v1/skills/{id}/versions`           |
-   308|| List Versions  | `GET`    | `/v1/skills/{id}/versions`           |
-   309|| Get Version    | `GET`    | `/v1/skills/{id}/versions/{version}` |
-   310|| Delete Version | `DELETE` | `/v1/skills/{id}/versions/{version}` |
-   311|
+   279|`python
+280|agent = client.beta.agents.create(
+281| name="Financial Agent",
+282| model="claude-opus-4-7",
+283| system="You are a financial analysis agent.",
+284| skills=[
+285| {"type": "anthropic", "skill_id": "xlsx"},
+286| {"type": "custom", "skill_id": "skill_abc123", "version": "latest"},
+287| ]
+288|)
+289|```
+290|
+291|**Skill reference fields:**
+292|
+293|| Field | Anthropic skill | Custom skill |
+294|| --- | --- | --- |
+295|| `type` | `"anthropic"` | `"custom"` |
+296|| `skill_id` | Skill name (e.g. `"xlsx"`, `"docx"`, `"pptx"`, `"pdf"`) | Skill ID from Skills API (e.g. `"skill_abc123"`) |
+297|| `version` | — | `"latest"` or a specific version number |
+298|
+299|### Skills API
+300|
+301|| Operation | Method | Path |
+302|| -------------- | -------- | ------------------------------------ |
+303|| Create Skill | `POST` | `/v1/skills` |
+304|| List Skills | `GET` | `/v1/skills` |
+305|| Get Skill | `GET` | `/v1/skills/{id}` |
+306|| Delete Skill | `DELETE` | `/v1/skills/{id}` |
+307|| Create Version | `POST` | `/v1/skills/{id}/versions` |
+308|| List Versions | `GET` | `/v1/skills/{id}/versions` |
+309|| Get Version | `GET` | `/v1/skills/{id}/versions/{version}` |
+310|| Delete Version | `DELETE` | `/v1/skills/{id}/versions/{version}` |
+311|

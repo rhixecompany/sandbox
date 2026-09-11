@@ -6,13 +6,14 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: banking
 tags:
-- imported
+  - imported
 title: Banking
 version: 1.0.0
 ---
+
 # Banking
 
 ## Overview
@@ -103,11 +104,11 @@ Use this skill when:
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `test-driven-development` | Write tests for banking operations |
-| `requesting-code-review` | Get code reviewed before merge |
-| `systematic-debugging` | Debug payment and transaction issues |
+| Skill                     | Purpose                              |
+| ------------------------- | ------------------------------------ |
+| `test-driven-development` | Write tests for banking operations   |
+| `requesting-code-review`  | Get code reviewed before merge       |
+| `systematic-debugging`    | Debug payment and transaction issues |
 
 ## Verification Checklist
 

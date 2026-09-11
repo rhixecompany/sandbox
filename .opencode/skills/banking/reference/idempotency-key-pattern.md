@@ -9,6 +9,7 @@ metadata:
     tags: []
     related_skills: []
 ---
+
      1|# Idempotency Key Pattern
      2|
      3|## Overview
@@ -108,49 +109,50 @@ metadata:
     97|**Result without Idempotency:**
     98|
     99|- Second request has no idempotencyKey
-   100|- Dwolla processes as new transfer
-   101|- Duplicate transfer created (bad)
-   102|
-   103|### Scenario 2: Duplicate Request (Same Button Click)
-   104|
-   105|**Step-by-step:**
-   106|
-   107|1. Client calls `initiateTransfer()` with idempotencyKey = "abc123"
-   108|2. Server creates `dwolla_transfers` record
-   109|3. Dwolla API call succeeds
-   110|4. Response is lost; client retries with same idempotencyKey = "abc123"
-   111|
-   112|**Result:**
-   113|
-   114|- Database unique constraint on `idempotencyKey` blocks insertion
-   115|- Application catches error, returns existing transfer
-   116|- No duplicate created
-   117|
-   118|## Testing
-   119|
-   120|See `tests/e2e/transfer-idempotency.spec.ts` for comprehensive E2E tests:
-   121|
-   122|- **Test 1:** Duplicate transfer with same idempotency key is rejected
-   123|- **Test 2:** Different idempotency keys allow separate transfers
-   124|- **Test 3:** Transaction ledger remains consistent after idempotent retry
-   125|
-   126|## References
-   127|
-   128|- **Database schema:** `database/schema.ts` (lines 682–722)
-   129|- **DAL pattern:** `dal/dwolla-transfer.dal.ts` (if exists)
-   130|- **Server action:** `actions/dwolla.actions.ts`
-   131|- **E2E tests:** `tests/e2e/transfer-idempotency.spec.ts`
-   132|
-   133|## Key Rules
-   134|
-   135|1. **Never reuse idempotency keys** across different transfer requests
-   136|2. **Always generate a new UUID** for each new transfer
-   137|3. **Store the key before calling Dwolla** (to catch retries)
-   138|4. **Let the database unique constraint handle duplicates** (don't check in app logic)
-   139|5. **Return the existing transfer if unique constraint fails** (idempotent behavior)
-   140|
-   141|---
-   142|
-   143|**Last Updated:** May 5, 2026  
-   144|**Phase:** Phase C (Testing)
-   145|
+
+100|- Dwolla processes as new transfer
+101|- Duplicate transfer created (bad)
+102|
+103|### Scenario 2: Duplicate Request (Same Button Click)
+104|
+105|**Step-by-step:**
+106|
+107|1. Client calls `initiateTransfer()` with idempotencyKey = "abc123"
+108|2. Server creates `dwolla_transfers` record
+109|3. Dwolla API call succeeds
+110|4. Response is lost; client retries with same idempotencyKey = "abc123"
+111|
+112|**Result:**
+113|
+114|- Database unique constraint on `idempotencyKey` blocks insertion
+115|- Application catches error, returns existing transfer
+116|- No duplicate created
+117|
+118|## Testing
+119|
+120|See `tests/e2e/transfer-idempotency.spec.ts` for comprehensive E2E tests:
+121|
+122|- **Test 1:** Duplicate transfer with same idempotency key is rejected
+123|- **Test 2:** Different idempotency keys allow separate transfers
+124|- **Test 3:** Transaction ledger remains consistent after idempotent retry
+125|
+126|## References
+127|
+128|- **Database schema:** `database/schema.ts` (lines 682–722)
+129|- **DAL pattern:** `dal/dwolla-transfer.dal.ts` (if exists)
+130|- **Server action:** `actions/dwolla.actions.ts`
+131|- **E2E tests:** `tests/e2e/transfer-idempotency.spec.ts`
+132|
+133|## Key Rules
+134|
+135|1. **Never reuse idempotency keys** across different transfer requests
+136|2. **Always generate a new UUID** for each new transfer
+137|3. **Store the key before calling Dwolla** (to catch retries)
+138|4. **Let the database unique constraint handle duplicates** (don't check in app logic)
+139|5. **Return the existing transfer if unique constraint fails** (idempotent behavior)
+140|
+141|---
+142|
+143|**Last Updated:** May 5, 2026  
+144|**Phase:** Phase C (Testing)
+145|

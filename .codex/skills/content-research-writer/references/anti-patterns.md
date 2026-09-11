@@ -4,6 +4,7 @@ description: "Anti-Patterns: What NOT to Do"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Anti-Patterns: What NOT to Do
      2|
      3|This document outlines critical mistakes to avoid when assisting with collaborative writing.
@@ -103,109 +104,110 @@ author: Alexa
     97|
     98|**What to Do Instead**:
     99|
-   100|- Ask writer: "Which citation style do you prefer? Inline, numbered, or footnotes?"
-   101|- Maintain consistency throughout the entire document
-   102|- Use the same format in research.md as in final draft.md
-   103|- If transitioning styles: "You've used inline citations through section 3; should we convert 1-2 to numbered for the glossary?"
-   104|
-   105|---
-   106|
-   107|## NEVER: Suggest All-or-Nothing Rewrites
-   108|
-   109|**The Anti-Pattern**: "Delete this section and rewrite it as..." or "This doesn't work; try this instead."
-   110|
-   111|**Why It Fails**:
-   112|
-   113|- Feels directive, not collaborative
-   114|- Writer loses autonomy and trust
-   115|- Dismisses their effort without acknowledging what worked
-   116|- Creates confrontation instead of partnership
-   117|
-   118|**What to Do Instead**:
-   119|
-   120|- Offer 2-3 options with reasoning for each
-   121|- Preserve elements that work: "The story is good; the transition to data is the gap"
-   122|- Suggest edits, not replacements: "Add this data point between these two paragraphs"
-   123|- Frame as alternatives: "Here's one way... another approach would be..."
-   124|
-   125|---
-   126|
-   127|## NEVER: Assume Outline is Final
-   128|
-   129|**The Anti-Pattern**: Writer approves outline, but mid-way through drafting, changes structure without revisiting outline.
-   130|
-   131|**Why It Fails**:
-   132|
-   133|- Creates inconsistency between outline and draft
-   134|- Writer loses sight of original logic
-   135|- Feedback becomes disconnected from plan
-   136|- "I thought we covered this" confusion
-   137|
-   138|**What to Do Instead**:
-   139|
-   140|- Before draft progresses beyond 20%: "Are we still following the outline, or does the draft suggest changes?"
-   141|- If structure changes: "Update outline first, then draft. This keeps us aligned."
-   142|- After each section: "Does this match the outline, or should we update the plan?"
-   143|
-   144|---
-   145|
-   146|## NEVER: Ignore Writer's Preferred Feedback Style
-   147|
-   148|**The Anti-Pattern**: You give detailed line-by-line feedback when writer wants high-level assessment, or vice versa.
-   149|
-   150|**Why It Fails**:
-   151|
-   152|- Mismatched feedback style frustrates writer
-   153|- Cognitive load mismatch (too much detail or not enough)
-   154|- Partnership breaks down if writer doesn't get what they need
-   155|
-   156|**What to Do Instead**:
-   157|
-   158|- Ask early: "Do you want detailed line edits or high-level structure feedback?"
-   159|- Match style to request: "Line-by-line? Or focus on flow?"
-   160|- Adapt if feedback style isn't working: "Is this level of detail helpful, or should I zoom out?"
-   161|
-   162|---
-   163|
-   164|## NEVER: Conflate Research with Writing
-   165|
-   166|**The Anti-Pattern**: You conduct deep research before writer has outlined, or spend hours finding perfect sources for draft sections that might change.
-   167|
-   168|**Why It Fails**:
-   169|
-   170|- Wasted research on sections that get cut or restructured
-   171|- Writer doesn't learn research strategy (skill should teach, not do all work)
-   172|- Research might be too specialized/narrow if done before full outline
-   173|- Writer feels removed from research process (ownership loss)
-   174|
-   175|**What to Do Instead**:
-   176|
-   177|- Outline first, then identify research needs together
-   178|- Ask: "What do we still need to understand?" (collaborative decision)
-   179|- Show research paths, let writer explore some
-   180|- Research fills specific outline gaps, not "everything about topic"
-   181|
-   182|---
-   183|
-   184|## NEVER: Provide Feedback in a Vacuum Without Asking for Writer's Concerns
-   185|
-   186|**The Anti-Pattern**: You review section and deliver feedback without asking what the writer is worried about.
-   187|
-   188|**Why It Fails**:
-   189|
-   190|- Your feedback might miss what writer is actually concerned about
-   191|- Writer feels unheard (you didn't ask, you just told)
-   192|- Feedback misses the forest for the trees
-   193|
-   194|**What to Do Instead**:
-   195|
-   196|- Before feedback: "Anything you're worried about in this section?"
-   197|- Listen for writer's concerns first
-   198|- Address those concerns in feedback
-   199|- Then add observations they didn't mention
-   200|- Feedback feels collaborative, not judged
-   201|
-   202|---
-   203|
-   204|**Summary**: These anti-patterns destroy the collaborative partnership that makes this skill valuable. Avoid them religiously.
-   205|
+
+100|- Ask writer: "Which citation style do you prefer? Inline, numbered, or footnotes?"
+101|- Maintain consistency throughout the entire document
+102|- Use the same format in research.md as in final draft.md
+103|- If transitioning styles: "You've used inline citations through section 3; should we convert 1-2 to numbered for the glossary?"
+104|
+105|---
+106|
+107|## NEVER: Suggest All-or-Nothing Rewrites
+108|
+109|**The Anti-Pattern**: "Delete this section and rewrite it as..." or "This doesn't work; try this instead."
+110|
+111|**Why It Fails**:
+112|
+113|- Feels directive, not collaborative
+114|- Writer loses autonomy and trust
+115|- Dismisses their effort without acknowledging what worked
+116|- Creates confrontation instead of partnership
+117|
+118|**What to Do Instead**:
+119|
+120|- Offer 2-3 options with reasoning for each
+121|- Preserve elements that work: "The story is good; the transition to data is the gap"
+122|- Suggest edits, not replacements: "Add this data point between these two paragraphs"
+123|- Frame as alternatives: "Here's one way... another approach would be..."
+124|
+125|---
+126|
+127|## NEVER: Assume Outline is Final
+128|
+129|**The Anti-Pattern**: Writer approves outline, but mid-way through drafting, changes structure without revisiting outline.
+130|
+131|**Why It Fails**:
+132|
+133|- Creates inconsistency between outline and draft
+134|- Writer loses sight of original logic
+135|- Feedback becomes disconnected from plan
+136|- "I thought we covered this" confusion
+137|
+138|**What to Do Instead**:
+139|
+140|- Before draft progresses beyond 20%: "Are we still following the outline, or does the draft suggest changes?"
+141|- If structure changes: "Update outline first, then draft. This keeps us aligned."
+142|- After each section: "Does this match the outline, or should we update the plan?"
+143|
+144|---
+145|
+146|## NEVER: Ignore Writer's Preferred Feedback Style
+147|
+148|**The Anti-Pattern**: You give detailed line-by-line feedback when writer wants high-level assessment, or vice versa.
+149|
+150|**Why It Fails**:
+151|
+152|- Mismatched feedback style frustrates writer
+153|- Cognitive load mismatch (too much detail or not enough)
+154|- Partnership breaks down if writer doesn't get what they need
+155|
+156|**What to Do Instead**:
+157|
+158|- Ask early: "Do you want detailed line edits or high-level structure feedback?"
+159|- Match style to request: "Line-by-line? Or focus on flow?"
+160|- Adapt if feedback style isn't working: "Is this level of detail helpful, or should I zoom out?"
+161|
+162|---
+163|
+164|## NEVER: Conflate Research with Writing
+165|
+166|**The Anti-Pattern**: You conduct deep research before writer has outlined, or spend hours finding perfect sources for draft sections that might change.
+167|
+168|**Why It Fails**:
+169|
+170|- Wasted research on sections that get cut or restructured
+171|- Writer doesn't learn research strategy (skill should teach, not do all work)
+172|- Research might be too specialized/narrow if done before full outline
+173|- Writer feels removed from research process (ownership loss)
+174|
+175|**What to Do Instead**:
+176|
+177|- Outline first, then identify research needs together
+178|- Ask: "What do we still need to understand?" (collaborative decision)
+179|- Show research paths, let writer explore some
+180|- Research fills specific outline gaps, not "everything about topic"
+181|
+182|---
+183|
+184|## NEVER: Provide Feedback in a Vacuum Without Asking for Writer's Concerns
+185|
+186|**The Anti-Pattern**: You review section and deliver feedback without asking what the writer is worried about.
+187|
+188|**Why It Fails**:
+189|
+190|- Your feedback might miss what writer is actually concerned about
+191|- Writer feels unheard (you didn't ask, you just told)
+192|- Feedback misses the forest for the trees
+193|
+194|**What to Do Instead**:
+195|
+196|- Before feedback: "Anything you're worried about in this section?"
+197|- Listen for writer's concerns first
+198|- Address those concerns in feedback
+199|- Then add observations they didn't mention
+200|- Feedback feels collaborative, not judged
+201|
+202|---
+203|
+204|**Summary**: These anti-patterns destroy the collaborative partnership that makes this skill valuable. Avoid them religiously.
+205|

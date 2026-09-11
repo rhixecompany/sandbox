@@ -4,6 +4,7 @@ description: "Files API — TypeScript"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Files API — TypeScript
      2|
      3|The Files API uploads files for use in Messages API requests. Reference files via `file_id` in content blocks, avoiding re-uploads across multiple API calls.
@@ -103,6 +104,7 @@ author: Alexa
     97|  { betas: ["files-api-2025-04-14"] }
     98|);
     99|const content = Buffer.from(await response.arrayBuffer());
-   100|await fs.promises.writeFile("output.txt", content);
-   101|```
-   102|
+
+100|await fs.promises.writeFile("output.txt", content);
+101|```
+102|

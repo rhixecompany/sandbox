@@ -14,6 +14,7 @@ An architectural floor plan showing a 1,500 sq ft apartment with proposed modifi
 ## Diagram Type
 
 This is an **architectural floor plan** with:
+
 - **Plan view**: Top-down orthographic projection
 - **Overlay technique**: Existing structure + proposed changes
 - **Quantitative data**: Area measurements and comparison table
@@ -34,9 +35,23 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.wall { stroke: var(--text-primary); stroke-width: 6; fill: none; stroke-linecap: square; }
-.wall-thin { stroke: var(--text-primary); stroke-width: 3; fill: none; }
-.proposed-wall { stroke: #A32D2D; stroke-width: 4; fill: none; stroke-dasharray: 8 4; }
+.wall {
+	stroke: var(--text-primary);
+	stroke-width: 6;
+	fill: none;
+	stroke-linecap: square;
+}
+.wall-thin {
+	stroke: var(--text-primary);
+	stroke-width: 3;
+	fill: none;
+}
+.proposed-wall {
+	stroke: #a32d2d;
+	stroke-width: 4;
+	fill: none;
+	stroke-dasharray: 8 4;
+}
 ```
 
 ### Door Symbols
@@ -58,8 +73,17 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.door { stroke: var(--text-secondary); stroke-width: 1.5; fill: none; }
-.door-swing { stroke: var(--text-tertiary); stroke-width: 1; fill: none; stroke-dasharray: 3 2; }
+.door {
+	stroke: var(--text-secondary);
+	stroke-width: 1.5;
+	fill: none;
+}
+.door-swing {
+	stroke: var(--text-tertiary);
+	stroke-width: 1;
+	fill: none;
+	stroke-dasharray: 3 2;
+}
 ```
 
 ### Window Symbols
@@ -75,8 +99,16 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.window { stroke: var(--text-primary); stroke-width: 1; fill: var(--bg-primary); }
-.window-glass { stroke: #378ADD; stroke-width: 2; fill: none; }
+.window {
+	stroke: var(--text-primary);
+	stroke-width: 1;
+	fill: var(--bg-primary);
+}
+.window-glass {
+	stroke: #378add;
+	stroke-width: 2;
+	fill: none;
+}
 ```
 
 ### Room Fills
@@ -94,13 +126,27 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.room-master { fill: rgba(206, 203, 246, 0.3); }  /* purple tint */
-.room-bed2 { fill: rgba(159, 225, 203, 0.3); }    /* teal tint */
-.room-bed3 { fill: rgba(250, 199, 117, 0.3); }    /* amber tint */
-.room-living { fill: rgba(245, 196, 179, 0.3); }  /* coral tint */
-.room-kitchen { fill: rgba(237, 147, 177, 0.3); } /* pink tint */
-.room-bath { fill: rgba(133, 183, 235, 0.3); }    /* blue tint */
-.room-new { fill: rgba(163, 45, 45, 0.15); }      /* red tint for proposed */
+.room-master {
+	fill: rgba(206, 203, 246, 0.3);
+} /* purple tint */
+.room-bed2 {
+	fill: rgba(159, 225, 203, 0.3);
+} /* teal tint */
+.room-bed3 {
+	fill: rgba(250, 199, 117, 0.3);
+} /* amber tint */
+.room-living {
+	fill: rgba(245, 196, 179, 0.3);
+} /* coral tint */
+.room-kitchen {
+	fill: rgba(237, 147, 177, 0.3);
+} /* pink tint */
+.room-bath {
+	fill: rgba(133, 183, 235, 0.3);
+} /* blue tint */
+.room-new {
+	fill: rgba(163, 45, 45, 0.15);
+} /* red tint for proposed */
 ```
 
 ### Support Fixtures
@@ -115,8 +161,15 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.balcony { fill: none; stroke: var(--text-secondary); stroke-width: 2; stroke-dasharray: 6 3; }
-.balcony-fill { fill: rgba(93, 202, 165, 0.1); }
+.balcony {
+	fill: none;
+	stroke: var(--text-secondary);
+	stroke-width: 2;
+	stroke-dasharray: 6 3;
+}
+.balcony-fill {
+	fill: rgba(93, 202, 165, 0.1);
+}
 ```
 
 ### Room Labels
@@ -133,8 +186,17 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.room-label { font-family: system-ui; font-size: 11px; fill: var(--text-primary); font-weight: 500; }
-.area-label { font-family: system-ui; font-size: 9px; fill: var(--text-tertiary); }
+.room-label {
+	font-family: system-ui;
+	font-size: 11px;
+	fill: var(--text-primary);
+	font-weight: 500;
+}
+.area-label {
+	font-family: system-ui;
+	font-size: 9px;
+	fill: var(--text-tertiary);
+}
 ```
 
 ### Circulation Arrow
@@ -151,8 +213,14 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.circulation { stroke: #3B6D11; stroke-width: 2; fill: none; }
-.circulation-fill { fill: #3B6D11; }
+.circulation {
+	stroke: #3b6d11;
+	stroke-width: 2;
+	fill: none;
+}
+.circulation-fill {
+	fill: #3b6d11;
+}
 ```
 
 ### North Arrow and Scale Bar
@@ -205,10 +273,24 @@ This is an **architectural floor plan** with:
 ```
 
 ```css
-.table-header { fill: var(--bg-secondary); }
-.table-row { fill: var(--bg-primary); stroke: var(--border); stroke-width: 0.5; }
-.table-row-alt { fill: var(--bg-tertiary); stroke: var(--border); stroke-width: 0.5; }
-.table-highlight { fill: rgba(163, 45, 45, 0.1); stroke: #A32D2D; stroke-width: 0.5; }
+.table-header {
+	fill: var(--bg-secondary);
+}
+.table-row {
+	fill: var(--bg-primary);
+	stroke: var(--border);
+	stroke-width: 0.5;
+}
+.table-row-alt {
+	fill: var(--bg-tertiary);
+	stroke: var(--border);
+	stroke-width: 0.5;
+}
+.table-highlight {
+	fill: rgba(163, 45, 45, 0.1);
+	stroke: #a32d2d;
+	stroke-width: 0.5;
+}
 ```
 
 ## Layout Notes
@@ -222,19 +304,20 @@ This is an **architectural floor plan** with:
 
 ## Color Coding
 
-| Element | Color | Usage |
-|---------|-------|-------|
-| Proposed walls | Red (#A32D2D) dotted | New construction |
-| New room fill | Red 15% opacity | Bedroom 4 area |
-| Circulation | Green (#3B6D11) | New access path |
-| Window glass | Blue (#378ADD) | Glass indication |
-| Bedrooms | Purple/Teal/Amber tints | Room differentiation |
-| Wet areas | Blue tint | Bathrooms |
-| Living | Coral tint | Common areas |
+| Element        | Color                   | Usage                |
+| -------------- | ----------------------- | -------------------- |
+| Proposed walls | Red (#A32D2D) dotted    | New construction     |
+| New room fill  | Red 15% opacity         | Bedroom 4 area       |
+| Circulation    | Green (#3B6D11)         | New access path      |
+| Window glass   | Blue (#378ADD)          | Glass indication     |
+| Bedrooms       | Purple/Teal/Amber tints | Room differentiation |
+| Wet areas      | Blue tint               | Bathrooms            |
+| Living         | Coral tint              | Common areas         |
 
 ## When to Use This Pattern
 
 Use this diagram style for:
+
 - Apartment/house floor plans
 - Office layout planning
 - Renovation proposals showing before/after

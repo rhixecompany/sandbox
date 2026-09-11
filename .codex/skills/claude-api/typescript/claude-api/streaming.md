@@ -4,6 +4,7 @@ description: "Streaming — TypeScript"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Streaming — TypeScript
      2|
      3|## Quick Start
@@ -103,43 +104,44 @@ author: Alexa
     97|});
     98|
     99|// Outer loop: each tool runner iteration
-   100|for await (const messageStream of runner) {
-   101|  // Inner loop: stream events for this iteration
-   102|  for await (const event of messageStream) {
-   103|    switch (event.type) {
-   104|      case "content_block_delta":
-   105|        switch (event.delta.type) {
-   106|          case "text_delta":
-   107|            process.stdout.write(event.delta.text);
-   108|            break;
-   109|          case "input_json_delta":
-   110|            // Tool input being streamed
-   111|            break;
-   112|        }
-   113|        break;
-   114|    }
-   115|  }
-   116|}
-   117|```
+
+100|for await (const messageStream of runner) {
+101| // Inner loop: stream events for this iteration
+102| for await (const event of messageStream) {
+103| switch (event.type) {
+104| case "content_block_delta":
+105| switch (event.delta.type) {
+106| case "text_delta":
+107| process.stdout.write(event.delta.text);
+108| break;
+109| case "input_json_delta":
+110| // Tool input being streamed
+111| break;
+112| }
+113| break;
+114| }
+115| }
+116|}
+117|`
    118|
    119|---
    120|
    121|## Getting the Final Message
    122|
-   123|```typescript
-   124|const stream = client.messages.stream({
-   125|  model: "claude-opus-4-7",
-   126|  max_tokens: 64000,
-   127|  messages: [{ role: "user", content: "Hello" }]
-   128|});
-   129|
-   130|for await (const event of stream) {
-   131|  // Process events...
-   132|}
-   133|
-   134|const finalMessage = await stream.finalMessage();
-   135|console.log(`Tokens used: ${finalMessage.usage.output_tokens}`);
-   136|```
+   123|`typescript
+124|const stream = client.messages.stream({
+125| model: "claude-opus-4-7",
+126| max_tokens: 64000,
+127| messages: [{ role: "user", content: "Hello" }]
+128|});
+129|
+130|for await (const event of stream) {
+131| // Process events...
+132|}
+133|
+134|const finalMessage = await stream.finalMessage();
+135|console.log(`Tokens used: ${finalMessage.usage.output_tokens}`);
+136|``
    137|
    138|---
    139|
@@ -168,23 +170,23 @@ author: Alexa
    162|
    163|If using raw HTTP (not SDKs), the stream returns Server-Sent Events:
    164|
-   165|```
-   166|event: message_start
-   167|data: {"type":"message_start","message":{"id":"msg_...","type":"message",...}}
-   168|
-   169|event: content_block_start
-   170|data: {"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}}
-   171|
-   172|event: content_block_delta
-   173|data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"Hello"}}
-   174|
-   175|event: content_block_stop
-   176|data: {"type":"content_block_stop","index":0}
-   177|
-   178|event: message_delta
-   179|data: {"type":"message_delta","delta":{"stop_reason":"end_turn"},"usage":{"output_tokens":12}}
-   180|
-   181|event: message_stop
-   182|data: {"type":"message_stop"}
-   183|```
-   184|
+   165|``
+166|event: message_start
+167|data: {"type":"message_start","message":{"id":"msg_...","type":"message",...}}
+168|
+169|event: content_block_start
+170|data: {"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}}
+171|
+172|event: content_block_delta
+173|data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"Hello"}}
+174|
+175|event: content_block_stop
+176|data: {"type":"content_block_stop","index":0}
+177|
+178|event: message_delta
+179|data: {"type":"message_delta","delta":{"stop_reason":"end_turn"},"usage":{"output_tokens":12}}
+180|
+181|event: message_stop
+182|data: {"type":"message_stop"}
+183|```
+184|

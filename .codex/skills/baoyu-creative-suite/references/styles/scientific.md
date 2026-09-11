@@ -13,17 +13,17 @@ Academic scientific illustration aesthetic for biological, chemical, and technic
 
 ## Color Palette
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | Off-White | #FAFAFA | Primary background |
-| Primary Text | Dark Slate | #1E293B | Labels, headers |
-| Label Text | Medium Gray | #475569 | Annotations |
-| Pathway 1 | Teal | #0D9488 | Primary pathway |
-| Pathway 2 | Blue | #3B82F6 | Secondary pathway |
-| Pathway 3 | Purple | #8B5CF6 | Tertiary pathway |
-| Structure | Amber | #F59E0B | Membranes, structures |
-| Alert | Red | #EF4444 | Key elements |
-| Positive | Green | #22C55E | Products, outputs |
+| Role         | Color       | Hex     | Usage                 |
+| ------------ | ----------- | ------- | --------------------- |
+| Background   | Off-White   | #FAFAFA | Primary background    |
+| Primary Text | Dark Slate  | #1E293B | Labels, headers       |
+| Label Text   | Medium Gray | #475569 | Annotations           |
+| Pathway 1    | Teal        | #0D9488 | Primary pathway       |
+| Pathway 2    | Blue        | #3B82F6 | Secondary pathway     |
+| Pathway 3    | Purple      | #8B5CF6 | Tertiary pathway      |
+| Structure    | Amber       | #F59E0B | Membranes, structures |
+| Alert        | Red         | #EF4444 | Key elements          |
+| Positive     | Green       | #22C55E | Products, outputs     |
 
 ## Visual Elements
 

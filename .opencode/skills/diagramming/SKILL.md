@@ -16,12 +16,14 @@ tags:
 Use when creating visual architecture diagrams, system flows, or documentation artifacts for the workspace.
 
 ## When to Use
+
 - System architecture documentation
 - Data flow / sequence diagrams
 - Technical presentations
 - Design review artifacts
 
 ## References
+
 - `references/mermaid-diagrams.md` (if available)
 - `references/excalidraw-diagram-generator.md` (if available)
 

@@ -4,6 +4,7 @@ description: "Reference: examples-curl"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Claude API — cURL / Raw HTTP
      2|
      3|Use these examples when the user needs raw HTTP requests or is working in a language without an official SDK.
@@ -103,8 +104,9 @@ author: Alexa
     97|
     98|```bash
     99|curl https://api.anthropic.com/v1/messages \
-   100|  -H "Content-Type: application/json" \
-   101|  -H "x-api-key: $ANTHROPIC_API_KEY" \
+
+100| -H "Content-Type: application/json" \
+101| -H "x-api-key: $ANTHROPIC_API_KEY" \
    102|  -H "anthropic-version: 2023-06-01" \
    103|  -d '{
    104|    "model": "claude-opus-4-7",
@@ -130,33 +132,33 @@ author: Alexa
    124|curl https://api.anthropic.com/v1/messages \
    125|  -H "Content-Type: application/json" \
    126|  -H "x-api-key: $ANTHROPIC_API_KEY" \
-   127|  -H "anthropic-version: 2023-06-01" \
-   128|  -d '{
-   129|    "model": "claude-opus-4-7",
-   130|    "max_tokens": 16000,
-   131|    "tools": [{
-   132|      "name": "get_weather",
-   133|      "description": "Get current weather for a location",
-   134|      "input_schema": {
-   135|        "type": "object",
-   136|        "properties": {
-   137|          "location": {"type": "string", "description": "City name"}
-   138|        },
-   139|        "required": ["location"]
-   140|      }
-   141|    }],
-   142|    "messages": [
-   143|      {"role": "user", "content": "What is the weather in Paris?"},
-   144|      {"role": "assistant", "content": [
-   145|        {"type": "text", "text": "Let me check the weather."},
-   146|        {"type": "tool_use", "id": "toolu_abc123", "name": "get_weather", "input": {"location": "Paris"}}
-   147|      ]},
-   148|      {"role": "user", "content": [
-   149|        {"type": "tool_result", "tool_use_id": "toolu_abc123", "content": "72°F and sunny"}
-   150|      ]}
-   151|    ]
-   152|  }'
-   153|```
+127| -H "anthropic-version: 2023-06-01" \
+128| -d '{
+129| "model": "claude-opus-4-7",
+130| "max_tokens": 16000,
+131| "tools": [{
+132| "name": "get_weather",
+133| "description": "Get current weather for a location",
+134| "input_schema": {
+135| "type": "object",
+136| "properties": {
+137| "location": {"type": "string", "description": "City name"}
+138| },
+139| "required": ["location"]
+140| }
+141| }],
+142| "messages": [
+143| {"role": "user", "content": "What is the weather in Paris?"},
+144| {"role": "assistant", "content": [
+145| {"type": "text", "text": "Let me check the weather."},
+146| {"type": "tool_use", "id": "toolu_abc123", "name": "get_weather", "input": {"location": "Paris"}}
+147| ]},
+148| {"role": "user", "content": [
+149| {"type": "tool_result", "tool_use_id": "toolu_abc123", "content": "72°F and sunny"}
+150| ]}
+151| ]
+152| }'
+153|``
    154|
    155|---
    156|
@@ -164,10 +166,10 @@ author: Alexa
    158|
    159|Put `cache_control` on the last block of the stable prefix. See `shared/prompt-caching.md` for placement patterns and the silent-invalidator audit checklist.
    160|
-   161|```bash
-   162|curl https://api.anthropic.com/v1/messages \
-   163|  -H "Content-Type: application/json" \
-   164|  -H "x-api-key: $ANTHROPIC_API_KEY" \
+   161|``bash
+162|curl https://api.anthropic.com/v1/messages \
+163| -H "Content-Type: application/json" \
+164| -H "x-api-key: $ANTHROPIC_API_KEY" \
    165|  -H "anthropic-version: 2023-06-01" \
    166|  -d '{
    167|    "model": "claude-opus-4-7",
@@ -192,28 +194,28 @@ author: Alexa
    186|curl https://api.anthropic.com/v1/messages \
    187|  -H "Content-Type: application/json" \
    188|  -H "x-api-key: $ANTHROPIC_API_KEY" \
-   189|  -H "anthropic-version: 2023-06-01" \
-   190|  -d '{
-   191|    "model": "claude-opus-4-7",
-   192|    "max_tokens": 16000,
-   193|    "thinking": {
-   194|      "type": "adaptive"
-   195|    },
-   196|    "output_config": {
-   197|      "effort": "high"
-   198|    },
-   199|    "messages": [{"role": "user", "content": "Solve this step by step..."}]
-   200|  }'
-   201|```
-   202|
-   203|---
-   204|
-   205|## Required Headers
-   206|
-   207|| Header | Value | Description |
-   208|| --- | --- | --- |
-   209|| `Content-Type` | `application/json` | Required |
-   210|| `x-api-key` | Your API key | Authentication |
-   211|| `anthropic-version` | `2023-06-01` | API version |
-   212|| `anthropic-beta` | Beta feature IDs | Required for beta features |
-   213|
+189| -H "anthropic-version: 2023-06-01" \
+190| -d '{
+191| "model": "claude-opus-4-7",
+192| "max_tokens": 16000,
+193| "thinking": {
+194| "type": "adaptive"
+195| },
+196| "output_config": {
+197| "effort": "high"
+198| },
+199| "messages": [{"role": "user", "content": "Solve this step by step..."}]
+200| }'
+201|```
+202|
+203|---
+204|
+205|## Required Headers
+206|
+207|| Header | Value | Description |
+208|| --- | --- | --- |
+209|| `Content-Type` | `application/json` | Required |
+210|| `x-api-key` | Your API key | Authentication |
+211|| `anthropic-version` | `2023-06-01` | API version |
+212|| `anthropic-beta` | Beta feature IDs | Required for beta features |
+213|

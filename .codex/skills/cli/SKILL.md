@@ -11,6 +11,7 @@ metadata:
     tags: [AI, image-generation, video, LLM, search, inference, FLUX, Veo, Claude]
     related_skills: []
 ---
+
 # inference.sh CLI
 
 Run 150+ AI apps in the cloud with a simple CLI. No GPU required.

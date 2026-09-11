@@ -6,12 +6,12 @@ Professional black-ink visual notes on pure white, in the tradition of Mike Rohd
 
 `ink-notes` and `sketch-notes` are distinct styles. Pick the right one:
 
-| | `sketch-notes` | `ink-notes` |
-|---|---|---|
-| Background | Warm Off-White #FAF8F0 with paper grain | Pure White #FFFFFF, clean, no texture |
-| Palette | Soft warm accents (orange, mustard, sage, light blue) | Black ink dominant + sparse semantic accents |
-| Feel | Soft, warm, educational, approachable | Professional, structured, whiteboard-presentation |
-| Best For | Friendly tutorials, onboarding, casual explainers | Before/After essays, tech manifestos, framework analogies |
+|            | `sketch-notes`                                        | `ink-notes`                                               |
+| ---------- | ----------------------------------------------------- | --------------------------------------------------------- |
+| Background | Warm Off-White #FAF8F0 with paper grain               | Pure White #FFFFFF, clean, no texture                     |
+| Palette    | Soft warm accents (orange, mustard, sage, light blue) | Black ink dominant + sparse semantic accents              |
+| Feel       | Soft, warm, educational, approachable                 | Professional, structured, whiteboard-presentation         |
+| Best For   | Friendly tutorials, onboarding, casual explainers     | Before/After essays, tech manifestos, framework analogies |
 
 When in doubt: warm & friendly → `sketch-notes`. Disciplined & professional → `ink-notes`.
 
@@ -26,14 +26,14 @@ Disciplined hand-drawn visual note. Confident black ink line work with slight wo
 
 ## Color Palette
 
-| Role | Color | Hex | Usage |
-|------|-------|-----|-------|
-| Background | Pure White | #FFFFFF | Canvas |
-| Primary Ink | Near Black | #1A1A1A | All lines, text, figures, arrows |
-| Accent Warm | Coral Red | #E8655A | Risk, problem, gap, emphasis |
-| Accent Cool | Muted Teal | #5FA8A8 | Positive, solution, "after" state |
-| Accent Neutral | Dusty Lavender | #9B8AB5 | Neutral tags, category labels |
-| Soft Fill | Pale Gray | #F0F0F0 | Subtle zone backgrounds (optional) |
+| Role           | Color          | Hex     | Usage                              |
+| -------------- | -------------- | ------- | ---------------------------------- |
+| Background     | Pure White     | #FFFFFF | Canvas                             |
+| Primary Ink    | Near Black     | #1A1A1A | All lines, text, figures, arrows   |
+| Accent Warm    | Coral Red      | #E8655A | Risk, problem, gap, emphasis       |
+| Accent Cool    | Muted Teal     | #5FA8A8 | Positive, solution, "after" state  |
+| Accent Neutral | Dusty Lavender | #9B8AB5 | Neutral tags, category labels      |
+| Soft Fill      | Pale Gray      | #F0F0F0 | Subtle zone backgrounds (optional) |
 
 Color accents must remain under 10% of canvas area and only carry semantic meaning. Black ink does the structural work.
 
@@ -76,14 +76,14 @@ Color accents must remain under 10% of canvas area and only carry semantic meani
 
 ## Type Compatibility
 
-| Type | Rating | Notes |
-|------|--------|-------|
-| comparison | ✓✓ | Best fit — Before/After, Traditional vs New, side-by-side contrasts |
-| framework | ✓✓ | OS-style command centers, layered architectures, organizational models |
-| flowchart | ✓✓ | Process explainers with labeled stages, workforce pipelines |
-| infographic | ✓ | Multi-zone technical summaries, manifesto-style posters |
-| timeline | ✓ | Hand-drawn horizontal arrow with era markers and milestones |
-| scene | ✗ | Not recommended — lacks scenic space |
+| Type        | Rating | Notes                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------- |
+| comparison  | ✓✓     | Best fit — Before/After, Traditional vs New, side-by-side contrasts    |
+| framework   | ✓✓     | OS-style command centers, layered architectures, organizational models |
+| flowchart   | ✓✓     | Process explainers with labeled stages, workforce pipelines            |
+| infographic | ✓      | Multi-zone technical summaries, manifesto-style posters                |
+| timeline    | ✓      | Hand-drawn horizontal arrow with era markers and milestones            |
+| scene       | ✗      | Not recommended — lacks scenic space                                   |
 
 ## Best For
 

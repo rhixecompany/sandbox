@@ -11,6 +11,7 @@ metadata:
     tags: [evolution, optimization, prompt-engineering, research]
     related_skills: [arxiv, jupyter-live-kernel]
 ---
+
 # Darwinian Evolver
 
 Run Imbue's [darwinian_evolver](https://github.com/imbue-ai/darwinian_evolver) — an
@@ -40,6 +41,7 @@ Automated reasoning and workflow tool for `darwinian-evolver`. Execute multi-ste
   on Claude Sonnet it can be a few dollars.
 
 Do **not** use this when:
+
 - The optimization target is differentiable (use gradient descent / DSPy).
 - You only need to try 2–3 variants — just write them by hand.
 - The fitness signal is purely subjective with no measurable criterion.
@@ -85,6 +87,7 @@ uv run darwinian_evolver parrot \
 ```
 
 Outputs:
+
 - `/tmp/parrot_demo/snapshots/iteration_N.pkl` — pickled population per iteration
 - `/tmp/parrot_demo/<jsonl>` — per-iteration JSON log (path printed at end)
 
@@ -148,16 +151,16 @@ shipped `scripts/parrot_openrouter.py` is the reference.
 
 ## Hyperparameters That Actually Matter
 
-| flag | default | when to change |
-|---|---|---|
-| `--num_iterations` | 5 | bump to 10–20 once you trust the evaluator |
-| `--num_parents_per_iteration` | 4 | drop to 2 for cheap exploration |
-| `--mutator_concurrency` | 10 | drop to 2–4 to avoid rate limits |
-| `--evaluator_concurrency` | 10 | same; evaluator hits the LLM too |
-| `--batch_size` | 1 | raise to 3–5 once your mutator handles multiple failures |
-| `--verify_mutations` | off | turn on once mutator is wasteful (>10× cost saving on later runs per Imbue) |
-| `--midpoint_score` | `p75` | leave alone unless scores cluster |
-| `--sharpness` | 10 | leave alone |
+| flag                          | default | when to change                                                              |
+| ----------------------------- | ------- | --------------------------------------------------------------------------- |
+| `--num_iterations`            | 5       | bump to 10–20 once you trust the evaluator                                  |
+| `--num_parents_per_iteration` | 4       | drop to 2 for cheap exploration                                             |
+| `--mutator_concurrency`       | 10      | drop to 2–4 to avoid rate limits                                            |
+| `--evaluator_concurrency`     | 10      | same; evaluator hits the LLM too                                            |
+| `--batch_size`                | 1       | raise to 3–5 once your mutator handles multiple failures                    |
+| `--verify_mutations`          | off     | turn on once mutator is wasteful (>10× cost saving on later runs per Imbue) |
+| `--midpoint_score`            | `p75`   | leave alone unless scores cluster                                           |
+| `--sharpness`                 | 10      | leave alone                                                                 |
 
 ## Pitfalls
 

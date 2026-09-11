@@ -93,9 +93,9 @@ docker run --rm -d \
   mcr.microsoft.com/dotnet/aspire-dashboard:latest
 ```
 
-| Port | Purpose |
-| --- | --- |
-| `18888` | Dashboard web UI |
+| Port             | Purpose                                                      |
+| ---------------- | ------------------------------------------------------------ |
+| `18888`          | Dashboard web UI                                             |
 | `4317` → `18889` | OTLP gRPC receiver (standard OTel port → dashboard internal) |
 
 ### Configure your services
@@ -211,22 +211,16 @@ trace.set_tracer_provider(provider)
 ### JavaScript (OpenTelemetry SDK)
 
 ```javascript
-const {
-  NodeTracerProvider
-} = require("@opentelemetry/sdk-trace-node");
-const {
-  OTLPTraceExporter
-} = require("@opentelemetry/exporter-trace-otlp-grpc");
+const { NodeTracerProvider } = require("@opentelemetry/sdk-trace-node");
+const { OTLPTraceExporter } = require("@opentelemetry/exporter-trace-otlp-grpc");
 
 const provider = new NodeTracerProvider();
 provider.addSpanProcessor(
-  new BatchSpanProcessor(
-    new OTLPTraceExporter({
-      url:
-        process.env.OTEL_EXPORTER_OTLP_ENDPOINT ||
-        "http://localhost:4317"
-    })
-  )
+	new BatchSpanProcessor(
+		new OTLPTraceExporter({
+			url: process.env.OTEL_EXPORTER_OTLP_ENDPOINT || "http://localhost:4317",
+		}),
+	),
 );
 provider.register();
 ```

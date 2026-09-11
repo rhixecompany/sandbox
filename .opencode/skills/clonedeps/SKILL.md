@@ -6,17 +6,17 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: clonedeps
 tags:
-- debugging
-- dependencies
-- source-inspection
-- libraries
+  - debugging
+  - dependencies
+  - source-inspection
+  - libraries
 title: Clone Dependencies
 version: 1.0.0
-
 ---
+
 # Clone Dependencies
 
 ## Overview
@@ -41,16 +41,17 @@ Clone project dependency source code into an ignored local workspace for inspect
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `systematic-debugging` | Trace bugs through dependency source |
-| `context7` | Look up library API docs before cloning |
+| Skill                  | Purpose                                 |
+| ---------------------- | --------------------------------------- |
+| `systematic-debugging` | Trace bugs through dependency source    |
+| `context7`             | Look up library API docs before cloning |
 
 ## Workflow
 
 ### Phase 1: Identify Dependencies to Inspect
 
 1. List project dependencies:
+
    ```bash
    # Node.js
    cat package.json | grep -A 50 '"dependencies"'
@@ -83,6 +84,7 @@ Clone project dependency source code into an ignored local workspace for inspect
 ### Phase 2: Clone to Workspace
 
 1. Create an ignored workspace directory:
+
    ```bash
    mkdir -p .deps-source
    # Ensure it's in .gitignore
@@ -90,6 +92,7 @@ Clone project dependency source code into an ignored local workspace for inspect
    ```
 
 2. Clone the dependency repository:
+
    ```bash
    cd .deps-source
    git clone https://github.com/<owner>/<repo>.git
@@ -112,6 +115,7 @@ Clone project dependency source code into an ignored local workspace for inspect
 ### Phase 3: Inspect & Understand
 
 1. Navigate the source structure:
+
    ```bash
    # Understand the project layout
    ls -la <repo>/
@@ -120,6 +124,7 @@ Clone project dependency source code into an ignored local workspace for inspect
    ```
 
 2. Read the specific code causing issues:
+
    ```bash
    # Search for the function/method in question
    grep -r "functionName" <repo>/src/
@@ -129,6 +134,7 @@ Clone project dependency source code into an ignored local workspace for inspect
    ```
 
 3. Trace function calls and behavior:
+
    ```bash
    # Find all callers of a function
    grep -r "functionName(" <repo>/src/
@@ -140,6 +146,7 @@ Clone project dependency source code into an ignored local workspace for inspect
 4. Document findings in the actual project:
    ```markdown
    # Debugging notes
+
    - Library: <name> v<version>
    - File inspected: `.deps-source/<repo>/src/path/file.js:42`
    - Finding: The function does X when Y is null, causing Z

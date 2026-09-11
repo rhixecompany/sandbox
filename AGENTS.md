@@ -28,22 +28,22 @@ SandBox/
 
 ## 2. Technology Stack
 
-| Layer | Technology | Notes |
-|-------|-----------|-------|
-| **Runtime (TS)** | Bun 1.3.14+ | Runtime + package manager + test runner; `bun install` + `bun run <script>` |
-| **Runtime (Python)** | Python 3.11 / 3.13 | Dual install: python3=3.13.14, python=3.11.15; `uv` preferred for speed |
-| **Python Package Mgr** | pip + uv | `uv pip install` faster than pip; `requirements.txt` at root |
-| **TypeScript** | ESNext, strict mode | `noUncheckedIndexedAccess`, `verbatimModuleSyntax`; `bun run typecheck` |
-| **Python Quality** | Ruff + Pyright | `ruff check .` / `pyright .`; zero-warning gate |
-| **JS Linting** | ESLint 10 flat config | `eslint.config.mjs` (root); zero-warning gate |
-| **Formatter** | Prettier 3 | `.prettierrc.json` at root; `printWidth: 120, singleQuote: false, tabWidth: 2, trailingComma: "all"` |
-| **Markdown** | markdownlint-cli2 | MD013 disabled (`.markdownlint.jsonc` sets `MD013: false`); line_length no longer enforced |
-| **Spell Check** | cspell 10 | `.cspell.json` in subprojects; not at root |
-| **Testing (TS)** | Vitest | `bun run test`; `vitest run` in Bash |
-| **Testing (Python)** | pytest 9 | `python -m pytest -v` or `python test.py`; `pytest-asyncio` |
-| **Browser Testing** | Playwright | `.github/prompts/playwright-*.prompt.md`; `bun run test:ui` in Banking |
-| **Pre-commit** | pre-commit 4.6 | `.pre-commit-config.yaml` at root |
-| **Changelog** | git-cliff 2.13 | `cliff.toml`; `git cliff` for CHANGELOG generation |
+| Layer                  | Technology            | Notes                                                                                                |
+| ---------------------- | --------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Runtime (TS)**       | Bun 1.3.14+           | Runtime + package manager + test runner; `bun install` + `bun run <script>`                          |
+| **Runtime (Python)**   | Python 3.11 / 3.13    | Dual install: python3=3.13.14, python=3.11.15; `uv` preferred for speed                              |
+| **Python Package Mgr** | pip + uv              | `uv pip install` faster than pip; `requirements.txt` at root                                         |
+| **TypeScript**         | ESNext, strict mode   | `noUncheckedIndexedAccess`, `verbatimModuleSyntax`; `bun run typecheck`                              |
+| **Python Quality**     | Ruff + Pyright        | `ruff check .` / `pyright .`; zero-warning gate                                                      |
+| **JS Linting**         | ESLint 10 flat config | `eslint.config.mjs` (root); zero-warning gate                                                        |
+| **Formatter**          | Prettier 3            | `.prettierrc.json` at root; `printWidth: 120, singleQuote: false, tabWidth: 2, trailingComma: "all"` |
+| **Markdown**           | markdownlint-cli2     | MD013 disabled (`.markdownlint.jsonc` sets `MD013: false`); line_length no longer enforced           |
+| **Spell Check**        | cspell 10             | `.cspell.json` in subprojects; not at root                                                           |
+| **Testing (TS)**       | Vitest                | `bun run test`; `vitest run` in Bash                                                                 |
+| **Testing (Python)**   | pytest 9              | `python -m pytest -v` or `python test.py`; `pytest-asyncio`                                          |
+| **Browser Testing**    | Playwright            | `.github/prompts/playwright-*.prompt.md`; `bun run test:ui` in Banking                               |
+| **Pre-commit**         | pre-commit 4.6        | `.pre-commit-config.yaml` at root                                                                    |
+| **Changelog**          | git-cliff 2.13        | `cliff.toml`; `git cliff` for CHANGELOG generation                                                   |
 
 ## 3. Architecture Overview
 
@@ -89,13 +89,13 @@ Each subproject has its own AGENTS.md with specific commands. Key workflows:
 
 ### File Naming
 
-| Language | Convention | Example |
-|----------|-----------|---------|
-| TypeScript | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx` |
-| Python | `snake_case.py` (PEP 8) | `health_check.py`, `audit_prompts.py` |
-| PowerShell | `PascalCase.ps1` | `Orchestrator-Unified.ps1` |
-| Shell (Bash) | `kebab-case.sh` | `test-all.sh`, `cache-clean.sh` |
-| Markdown | `kebab-case.md` | `health-check.md` |
+| Language     | Convention                                               | Example                               |
+| ------------ | -------------------------------------------------------- | ------------------------------------- |
+| TypeScript   | `kebab-case.ts` (scripts), `PascalCase.tsx` (components) | `cache-clean.ts`, `UserProfile.tsx`   |
+| Python       | `snake_case.py` (PEP 8)                                  | `health_check.py`, `audit_prompts.py` |
+| PowerShell   | `PascalCase.ps1`                                         | `Orchestrator-Unified.ps1`            |
+| Shell (Bash) | `kebab-case.sh`                                          | `test-all.sh`, `cache-clean.sh`       |
+| Markdown     | `kebab-case.md`                                          | `health-check.md`                     |
 
 ### Code Style
 
@@ -159,37 +159,37 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### Key Prompt Categories
 
-| Category | Example Files | Purpose |
-|----------|--------------|---------|
+| Category     | Example Files                                                                                                                                    | Purpose                    |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
 | Architecture | `architecture-blueprint-generator.prompt.md`, `folder-structure-blueprint-generator.prompt.md`, `technology-stack-blueprint-generator.prompt.md` | Generate architecture docs |
-| Generator | `agents-generator.prompt.md`, `create-agentsmd.prompt.md`, `readme-blueprint-generator.prompt.md` | Generate agent guidance |
-| Dev | `debug-issue.prompt.md`, `refactor-code.prompt.md`, `code-review.prompt.md` | Development workflows |
-| Testing | `write-tests.prompt.md`, `playwright-generate-test.prompt.md`, `pytest-coverage.prompt.md` | Test generation |
-| DevOps | `containerize-aspnetcore.prompt.md`, `multi-stage-dockerfile.prompt.md`, `terraform-azurerm-set-diff-analyzer.prompt.md` | Infrastructure |
-| Planning | `create-implementation-plan.prompt.md`, `breakdown-plan.prompt.md`, `executing-plans.prompt.md` | Project planning |
-| Content | `comprehensive-prompt-enhancer.prompt.md`, `convert-plaintext-to-md.prompt.md` | Content creation |
+| Generator    | `agents-generator.prompt.md`, `create-agentsmd.prompt.md`, `readme-blueprint-generator.prompt.md`                                                | Generate agent guidance    |
+| Dev          | `debug-issue.prompt.md`, `refactor-code.prompt.md`, `code-review.prompt.md`                                                                      | Development workflows      |
+| Testing      | `write-tests.prompt.md`, `playwright-generate-test.prompt.md`, `pytest-coverage.prompt.md`                                                       | Test generation            |
+| DevOps       | `containerize-aspnetcore.prompt.md`, `multi-stage-dockerfile.prompt.md`, `terraform-azurerm-set-diff-analyzer.prompt.md`                         | Infrastructure             |
+| Planning     | `create-implementation-plan.prompt.md`, `breakdown-plan.prompt.md`, `executing-plans.prompt.md`                                                  | Project planning           |
+| Content      | `comprehensive-prompt-enhancer.prompt.md`, `convert-plaintext-to-md.prompt.md`                                                                   | Content creation           |
 
 ## 7. Hermes Agent Integration
 
 ### Profile Configuration
 
-| Profile | Model / Guidance |
-|---------|-----------------|
-| **default** | Verify with `hermes profile list` / `hermes config show` |
-| alexa | Verify with `hermes profile list` / `hermes config show` |
-| code-architect | Verify with `hermes profile list` / `hermes config show` |
+| Profile           | Model / Guidance                                         |
+| ----------------- | -------------------------------------------------------- |
+| **default**       | Verify with `hermes profile list` / `hermes config show` |
+| alexa             | Verify with `hermes profile list` / `hermes config show` |
+| code-architect    | Verify with `hermes profile list` / `hermes config show` |
 | creative-director | Verify with `hermes profile list` / `hermes config show` |
-| exec-assistant | Verify with `hermes profile list` / `hermes config show` |
-| patient-tutor | Verify with `hermes profile list` / `hermes config show` |
-| research-analyst | Verify with `hermes profile list` / `hermes config show` |
+| exec-assistant    | Verify with `hermes profile list` / `hermes config show` |
+| patient-tutor     | Verify with `hermes profile list` / `hermes config show` |
+| research-analyst  | Verify with `hermes profile list` / `hermes config show` |
 
 ### Provider Configuration
 
-| Provider | Auth Method | Default Model | Vision | Reasoning | Context |
-|----------|-------------|---------------|--------|-----------|---------|
-| **nous** | OAuth (device_code) | meituan/longcat-2.0:free | yes | yes | 2000 |
-| **opencode-zen** | API Key + OAuth | nemotron-3-ultra-free | yes | yes | 2000 |
-| **openrouter** | API Key | nvidia/nemotron-3-ultra-550b-a55b:free | yes | yes | 2000 |
+| Provider         | Auth Method         | Default Model                          | Vision | Reasoning | Context |
+| ---------------- | ------------------- | -------------------------------------- | ------ | --------- | ------- |
+| **nous**         | OAuth (device_code) | meituan/longcat-2.0:free               | yes    | yes       | 2000    |
+| **opencode-zen** | API Key + OAuth     | nemotron-3-ultra-free                  | yes    | yes       | 2000    |
+| **openrouter**   | API Key             | nvidia/nemotron-3-ultra-550b-a55b:free | yes    | yes       | 2000    |
 
 ### Session Startup Sequence
 
@@ -210,14 +210,14 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 
 ### File Hierarchy (Precedence Order)
 
-| # | File | Purpose | Authority |
-|---|------|---------|-----------|
-| 1 | `.hermes.md` | Hermes-specific overrides | Highest — overrides all below |
-| 2 | `AGENTS.md` | General agent guidance | This file |
-| 3 | `PROJECT_RULES.md` | Workspace-level rules | Rules |
-| 4 | `MASTER_RULES.md` | Universal agent rules | Cross-project rules |
-| 5 | `CLAUDE.md` | Claude-specific behavior | Copilot/Claude only |
-| 6 | `.cursorrules` | Cursor IDE rules | Cursor IDE only |
+| #   | File               | Purpose                   | Authority                     |
+| --- | ------------------ | ------------------------- | ----------------------------- |
+| 1   | `.hermes.md`       | Hermes-specific overrides | Highest — overrides all below |
+| 2   | `AGENTS.md`        | General agent guidance    | This file                     |
+| 3   | `PROJECT_RULES.md` | Workspace-level rules     | Rules                         |
+| 4   | `MASTER_RULES.md`  | Universal agent rules     | Cross-project rules           |
+| 5   | `CLAUDE.md`        | Claude-specific behavior  | Copilot/Claude only           |
+| 6   | `.cursorrules`     | Cursor IDE rules          | Cursor IDE only               |
 
 ### Available Hermes Toolsets (16)
 
@@ -237,4 +237,5 @@ The prompt library at `.github/prompts/` is the single source of truth for all p
 6. **Strict sequential** — "only then" is a hard constraint
 
 ---
-*Last updated: 2026-09-08 by comprehensive implementation prompt v3.0*
+
+_Last updated: 2026-09-08 by comprehensive implementation prompt v3.0_

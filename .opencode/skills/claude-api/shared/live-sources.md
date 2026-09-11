@@ -4,6 +4,7 @@ description: "Live Documentation Sources"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Live Documentation Sources
      2|
      3|This file contains WebFetch URLs for fetching current information from platform.claude.com and Agent SDK repositories. Use these when users need the latest data that may have changed since the cached content was last updated.
@@ -103,38 +104,39 @@ author: Alexa
     97|| Onboarding | `https://platform.claude.com/docs/en/managed-agents/onboarding.md` | "Extract first-run setup, prerequisites, and account/region requirements" |
     98|| Cloud Containers | `https://platform.claude.com/docs/en/managed-agents/cloud-containers.md` | "Extract cloud container runtime, image config, and network/storage knobs" |
     99|| Migration | `https://platform.claude.com/docs/en/managed-agents/migration.md` | "Extract migration paths from earlier APIs/preview shapes to GA managed agents" |
-   100|
-   101|### Anthropic CLI
-   102|
-   103|The `ant` CLI provides terminal access to the Claude API. Every API resource is exposed as a subcommand. It is one convenient way to create agents, environments, sessions, and other resources from version-controlled YAML, and to inspect responses interactively.
-   104|
-   105|| Topic | URL | Extraction Prompt |
-   106|| --- | --- | --- |
-   107|| Anthropic CLI | `https://platform.claude.com/docs/en/api/sdks/cli.md` | "Extract CLI install, authentication, command structure, and the beta:agents/environments/sessions commands" |
-   108|
-   109|---
-   110|
-   111|## Claude API SDK Repositories
-   112|
-   113|WebFetch these when a binding (class, method, namespace, field) isn't covered in the cached `{lang}/` skill files or in the managed-agents docs above. The SDKs include beta managed-agents support for `/v1/agents`, `/v1/sessions`, `/v1/environments`, and related resources — search the repo for `BetaManagedAgents`, `beta.agents`, `beta.sessions`, or the equivalent namespace for that language.
-   114|
-   115|| SDK | URL | Extraction Prompt |
-   116|| --- | --- | --- |
-   117|| Python | `https://github.com/anthropics/anthropic-sdk-python` | "Extract beta managed-agents namespaces, classes, and method signatures (`client.beta.agents`, `client.beta.sessions`)" |
-   118|| TypeScript | `https://github.com/anthropics/anthropic-sdk-typescript` | "Extract beta managed-agents namespaces, classes, and method signatures (`client.beta.agents`, `client.beta.sessions`)" |
-   119|| Java | `https://github.com/anthropics/anthropic-sdk-java` | "Extract beta managed-agents classes, builders, and method signatures (`client.beta().agents()`, `BetaManagedAgents*`)" |
-   120|| Go | `https://github.com/anthropics/anthropic-sdk-go` | "Extract beta managed-agents types and method signatures (`client.Beta.Agents`, `BetaManagedAgents*` event types)" |
-   121|| Ruby | `https://github.com/anthropics/anthropic-sdk-ruby` | "Extract beta managed-agents methods and parameter shapes (`client.beta.agents`, `client.beta.sessions`)" |
-   122|| C# | `https://github.com/anthropics/anthropic-sdk-csharp` | "Extract beta managed-agents classes and method signatures (NuGet package, `BetaManagedAgents*` types)" |
-   123|| PHP | `https://github.com/anthropics/anthropic-sdk-php` | "Extract beta managed-agents classes and method signatures (`$client->beta->agents`, `BetaManagedAgents*` params)" |
-   124|
-   125|---
-   126|
-   127|## Fallback Strategy
-   128|
-   129|If WebFetch fails (network issues, URL changed):
-   130|
-   131|1. Use cached content from the language-specific files (note the cache date)
-   132|2. Inform user the data may be outdated
-   133|3. Suggest they check platform.claude.com or the GitHub repos directly
-   134|
+
+100|
+101|### Anthropic CLI
+102|
+103|The `ant` CLI provides terminal access to the Claude API. Every API resource is exposed as a subcommand. It is one convenient way to create agents, environments, sessions, and other resources from version-controlled YAML, and to inspect responses interactively.
+104|
+105|| Topic | URL | Extraction Prompt |
+106|| --- | --- | --- |
+107|| Anthropic CLI | `https://platform.claude.com/docs/en/api/sdks/cli.md` | "Extract CLI install, authentication, command structure, and the beta:agents/environments/sessions commands" |
+108|
+109|---
+110|
+111|## Claude API SDK Repositories
+112|
+113|WebFetch these when a binding (class, method, namespace, field) isn't covered in the cached `{lang}/` skill files or in the managed-agents docs above. The SDKs include beta managed-agents support for `/v1/agents`, `/v1/sessions`, `/v1/environments`, and related resources — search the repo for `BetaManagedAgents`, `beta.agents`, `beta.sessions`, or the equivalent namespace for that language.
+114|
+115|| SDK | URL | Extraction Prompt |
+116|| --- | --- | --- |
+117|| Python | `https://github.com/anthropics/anthropic-sdk-python` | "Extract beta managed-agents namespaces, classes, and method signatures (`client.beta.agents`, `client.beta.sessions`)" |
+118|| TypeScript | `https://github.com/anthropics/anthropic-sdk-typescript` | "Extract beta managed-agents namespaces, classes, and method signatures (`client.beta.agents`, `client.beta.sessions`)" |
+119|| Java | `https://github.com/anthropics/anthropic-sdk-java` | "Extract beta managed-agents classes, builders, and method signatures (`client.beta().agents()`, `BetaManagedAgents*`)" |
+120|| Go | `https://github.com/anthropics/anthropic-sdk-go` | "Extract beta managed-agents types and method signatures (`client.Beta.Agents`, `BetaManagedAgents*` event types)" |
+121|| Ruby | `https://github.com/anthropics/anthropic-sdk-ruby` | "Extract beta managed-agents methods and parameter shapes (`client.beta.agents`, `client.beta.sessions`)" |
+122|| C# | `https://github.com/anthropics/anthropic-sdk-csharp` | "Extract beta managed-agents classes and method signatures (NuGet package, `BetaManagedAgents*` types)" |
+123|| PHP | `https://github.com/anthropics/anthropic-sdk-php` | "Extract beta managed-agents classes and method signatures (`$client->beta->agents`, `BetaManagedAgents*` params)" |
+124|
+125|---
+126|
+127|## Fallback Strategy
+128|
+129|If WebFetch fails (network issues, URL changed):
+130|
+131|1. Use cached content from the language-specific files (note the cache date)
+132|2. Inform user the data may be outdated
+133|3. Suggest they check platform.claude.com or the GitHub repos directly
+134|

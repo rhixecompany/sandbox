@@ -15,22 +15,22 @@ Use this template structure when generating `preflight-report.md` in the project
 
 ## Summary
 
-| Property              | Value                 |
+| Property | Value |
 | --------------------- | --------------------- | ----------------- | --------------- | ------- |
-| **Template File(s)**  | {bicep-files}         |
+| **Template File(s)** | {bicep-files} |
 | **Parameter File(s)** | {param-files-or-none} |
-| **Project Type**      | {azd-project          | standalone-bicep} |
-| **Deployment Scope**  | {resourceGroup        | subscription      | managementGroup | tenant} |
-| **Target**            | {resource-group-name  | subscription-name | mg-id}          |
-| **Validation Level**  | {Provider             | ProviderNoRbac}   |
+| **Project Type** | {azd-project | standalone-bicep} |
+| **Deployment Scope** | {resourceGroup | subscription | managementGroup | tenant} |
+| **Target** | {resource-group-name | subscription-name | mg-id} |
+| **Validation Level** | {Provider | ProviderNoRbac} |
 
 ### Validation Results
 
-| Check            | Status   | Details    |
+| Check | Status | Details |
 | ---------------- | -------- | ---------- | ----------- | ----------- | --------- |
-| Bicep Syntax     | {✅ Pass | ❌ Fail    | ⚠️ Warnings | ⏭️ Skipped} | {details} |
-| What-If Analysis | {✅ Pass | ❌ Fail    | ⏭️ Skipped} | {details}   |
-| Permission Check | {✅ Pass | ⚠️ Limited | ❌ Fail}    | {details}   |
+| Bicep Syntax | {✅ Pass | ❌ Fail | ⚠️ Warnings | ⏭️ Skipped} | {details} |
+| What-If Analysis | {✅ Pass | ❌ Fail | ⏭️ Skipped} | {details} |
+| Permission Check | {✅ Pass | ⚠️ Limited | ❌ Fail} | {details} |
 
 ---
 
@@ -38,10 +38,10 @@ Use this template structure when generating `preflight-report.md` in the project
 
 ### Commands Run
 
-| Step | Command     | Exit Code | Duration  |
+| Step | Command | Exit Code | Duration |
 | ---- | ----------- | --------- | --------- | ---------- |
-| 1    | `{command}` | {0        | non-zero} | {duration} |
-| 2    | `{command}` | {0        | non-zero} | {duration} |
+| 1 | `{command}` | {0 | non-zero} | {duration} |
+| 2 | `{command}` | {0 | non-zero} | {duration} |
 
 ### Tool Versions
 

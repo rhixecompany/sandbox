@@ -5,13 +5,14 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: airtable
 tags:
-- imported
+  - imported
 title: Airtable
 version: 1.1.0
 ---
+
 # Airtable — Bases, Tables & Records
 
 Work with Airtable's REST API directly via `curl` using the `terminal` tool. No MCP server, no OAuth flow, no Python SDK — just `curl` and a personal access token.
@@ -44,6 +45,7 @@ Automated reasoning and workflow tool for `airtable`. Execute multi-step tasks w
 - **Rate limit:** 5 requests/sec/base. `429` → back off. Burst on a single base will be throttled.
 
 Base curl pattern:
+
 ```bash
 curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE?maxRecords=5" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
@@ -53,52 +55,59 @@ curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE?maxRecords=5" \
 
 ## Field Types (request body shapes)
 
-| Field type | Write shape |
-|---|---|
-| Single line text | `"Name": "hello"` |
-| Long text | `"Notes": "multi\nline"` |
-| Number | `"Score": 42` |
-| Checkbox | `"Done": true` |
-| Single select | `"Status": "Todo"` (name must already exist unless `typecast: true`) |
-| Multi-select | `"Tags": ["urgent", "bug"]` |
-| Date | `"Due": "2026-04-01"` |
-| DateTime (UTC) | `"At": "2026-04-01T14:30:00.000Z"` |
-| URL / Email / Phone | `"Link": "https://…"` |
-| Attachment | `"Files": [{"url": "https://…"}]` (Airtable fetches + rehosts) |
-| Linked record | `"Owner": ["recXXXXXXXXXXXXXX"]` (array of record IDs) |
-| User | `"AssignedTo": {"id": "usrXXXXXXXXXXXXXX"}` |
+| Field type          | Write shape                                                          |
+| ------------------- | -------------------------------------------------------------------- |
+| Single line text    | `"Name": "hello"`                                                    |
+| Long text           | `"Notes": "multi\nline"`                                             |
+| Number              | `"Score": 42`                                                        |
+| Checkbox            | `"Done": true`                                                       |
+| Single select       | `"Status": "Todo"` (name must already exist unless `typecast: true`) |
+| Multi-select        | `"Tags": ["urgent", "bug"]`                                          |
+| Date                | `"Due": "2026-04-01"`                                                |
+| DateTime (UTC)      | `"At": "2026-04-01T14:30:00.000Z"`                                   |
+| URL / Email / Phone | `"Link": "https://…"`                                                |
+| Attachment          | `"Files": [{"url": "https://…"}]` (Airtable fetches + rehosts)       |
+| Linked record       | `"Owner": ["recXXXXXXXXXXXXXX"]` (array of record IDs)               |
+| User                | `"AssignedTo": {"id": "usrXXXXXXXXXXXXXX"}`                          |
 
 Pass `"typecast": true` at the top level of a create/update body to let Airtable auto-coerce values (e.g. create a new select option on the fly, convert `"42"` → `42`).
 
 ## Common Queries
 
 ### List bases the token can see
+
 ```bash
 curl -s "https://api.airtable.com/v0/meta/bases" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
 ```
 
 ### List tables + schema for a base
+
 ```bash
 curl -s "https://api.airtable.com/v0/meta/bases/$BASE_ID/tables" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
 ```
+
 Use this BEFORE mutating — confirms exact field names and IDs, surfaces `options.choices` for select fields, and shows primary-field names.
 
 ### List records (first 10)
+
 ```bash
 curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE?maxRecords=10" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
 ```
 
 ### Get a single record
+
 ```bash
 curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE/$RECORD_ID" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
 ```
 
 ### Filter records (filterByFormula)
+
 Airtable formulas must be URL-encoded. Let Python stdlib do it — never hand-encode:
+
 ```bash
 FORMULA="{Status}='Todo'"
 ENC=$(python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$FORMULA")
@@ -107,6 +116,7 @@ curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE?filterByFormula=$ENC&maxRec
 ```
 
 Useful formula patterns:
+
 - Exact match: `{Email}='user@example.com'`
 - Contains: `FIND('bug', LOWER({Title}))`
 - Multiple conditions: `AND({Status}='Todo', {Priority}='High')`
@@ -115,22 +125,27 @@ Useful formula patterns:
 - Date comparison: `IS_AFTER({Due}, TODAY())`
 
 ### Sort + select specific fields
+
 ```bash
 curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE?sort%5B0%5D%5Bfield%5D=Priority&sort%5B0%5D%5Bdirection%5D=asc&fields%5B%5D=Name&fields%5B%5D=Status" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
 ```
+
 Square brackets in query params MUST be URL-encoded (`%5B` / `%5D`).
 
 ### Use a named view
+
 ```bash
 curl -s "https://api.airtable.com/v0/$BASE_ID/$TABLE?view=Grid%20view&maxRecords=50" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
 ```
+
 Views apply their saved filter + sort server-side.
 
 ## Common Mutations
 
 ### Create a record
+
 ```bash
 curl -s -X POST "https://api.airtable.com/v0/$BASE_ID/$TABLE" \
   -H "Authorization: Bearer $AIRTA...KEY" \
@@ -139,6 +154,7 @@ curl -s -X POST "https://api.airtable.com/v0/$BASE_ID/$TABLE" \
 ```
 
 ### Create up to 10 records in one call
+
 ```bash
 curl -s -X POST "https://api.airtable.com/v0/$BASE_ID/$TABLE" \
   -H "Authorization: Bearer $AIRTA...KEY" \
@@ -151,9 +167,11 @@ curl -s -X POST "https://api.airtable.com/v0/$BASE_ID/$TABLE" \
     ]
   }' | python3 -m json.tool
 ```
+
 Batch endpoints are capped at **10 records per request**. For larger inserts, loop in batches of 10 with a short sleep to respect 5 req/sec/base.
 
 ### Update a record (PATCH — merges, preserves unchanged fields)
+
 ```bash
 curl -s -X PATCH "https://api.airtable.com/v0/$BASE_ID/$TABLE/$RECORD_ID" \
   -H "Authorization: Bearer $AIRTA...KEY" \
@@ -162,6 +180,7 @@ curl -s -X PATCH "https://api.airtable.com/v0/$BASE_ID/$TABLE/$RECORD_ID" \
 ```
 
 ### Upsert by a merge field (no ID needed)
+
 ```bash
 curl -s -X PATCH "https://api.airtable.com/v0/$BASE_ID/$TABLE" \
   -H "Authorization: Bearer $AIRTA...KEY" \
@@ -173,15 +192,18 @@ curl -s -X PATCH "https://api.airtable.com/v0/$BASE_ID/$TABLE" \
     ]
   }' | python3 -m json.tool
 ```
+
 `performUpsert` creates records whose merge-field values are new, patches records whose merge-field values already exist. Great for idempotent syncs.
 
 ### Delete a record
+
 ```bash
 curl -s -X DELETE "https://api.airtable.com/v0/$BASE_ID/$TABLE/$RECORD_ID" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
 ```
 
 ### Delete up to 10 records in one call
+
 ```bash
 curl -s -X DELETE "https://api.airtable.com/v0/$BASE_ID/$TABLE?records%5B%5D=rec1&records%5B%5D=rec2" \
   -H "Authorization: Bearer $AIRTA...KEY" | python3 -m json.tool
@@ -254,8 +276,6 @@ Check outputs against expected results and resolve any issues.
 ### Phase 4: Cleanup
 
 Document outcomes and store any artifacts or configuration changes.
-
-
 
 ## Verification Checklist
 

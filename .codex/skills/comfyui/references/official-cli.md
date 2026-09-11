@@ -16,21 +16,23 @@ pip install --user comfy-cli      # fallback
 The skill's `comfyui_setup.sh` picks the best available method.
 
 First run may prompt for analytics. Disable non-interactively:
+
 ```bash
 comfy --skip-prompt tracking disable
 ```
 
 ## Global Options
 
-| Option | Description |
-|--------|-------------|
-| `--workspace <path>` | Target a specific ComfyUI workspace |
-| `--recent` | Use most recently used workspace |
-| `--here` | Use current directory as workspace |
-| `--skip-prompt` | No interactive prompts (use defaults) |
-| `-v` / `--version` | Print version |
+| Option               | Description                           |
+| -------------------- | ------------------------------------- |
+| `--workspace <path>` | Target a specific ComfyUI workspace   |
+| `--recent`           | Use most recently used workspace      |
+| `--here`             | Use current directory as workspace    |
+| `--skip-prompt`      | No interactive prompts (use defaults) |
+| `-v` / `--version`   | Print version                         |
 
 Workspace resolution priority:
+
 1. `--workspace` (explicit path)
 2. `--recent` (from config)
 3. `--here` (cwd)
@@ -54,18 +56,18 @@ comfy install --fast-deps        # use uv for deps
 comfy install --skip-manager     # skip ComfyUI-Manager
 ```
 
-| Option | Description |
-|--------|-------------|
-| `--nvidia` / `--amd` / `--m-series` / `--cpu` | GPU type |
-| `--cuda-version` | 11.8, 12.1, 12.4, 12.6, 12.8, 12.9, 13.0 |
-| `--rocm-version` | 6.1, 6.2, 6.3, 7.0, 7.1 |
-| `--fast-deps` | uv-based dependency resolution |
-| `--skip-manager` | Don't install ComfyUI-Manager |
-| `--skip-torch-or-directml` | Skip PyTorch install |
-| `--version <ver>` | `0.2.0`, `latest`, `nightly` |
-| `--commit <hash>` | Install specific commit |
-| `--pr "#1234"` | Install from a PR |
-| `--restore` | Restore deps for existing install |
+| Option                                        | Description                              |
+| --------------------------------------------- | ---------------------------------------- |
+| `--nvidia` / `--amd` / `--m-series` / `--cpu` | GPU type                                 |
+| `--cuda-version`                              | 11.8, 12.1, 12.4, 12.6, 12.8, 12.9, 13.0 |
+| `--rocm-version`                              | 6.1, 6.2, 6.3, 7.0, 7.1                  |
+| `--fast-deps`                                 | uv-based dependency resolution           |
+| `--skip-manager`                              | Don't install ComfyUI-Manager            |
+| `--skip-torch-or-directml`                    | Skip PyTorch install                     |
+| `--version <ver>`                             | `0.2.0`, `latest`, `nightly`             |
+| `--commit <hash>`                             | Install specific commit                  |
+| `--pr "#1234"`                                | Install from a PR                        |
+| `--restore`                                   | Restore deps for existing install        |
 
 ### `comfy launch`
 
@@ -155,11 +157,11 @@ comfy node bisect reset
 
 ### Dependency Resolution Options
 
-| Flag | Description |
-|------|-------------|
-| `--fast-deps` | comfy-cli built-in uv resolver |
+| Flag           | Description                                          |
+| -------------- | ---------------------------------------------------- |
+| `--fast-deps`  | comfy-cli built-in uv resolver                       |
 | `--uv-compile` | ComfyUI-Manager v4.1+ unified resolver (recommended) |
-| `--no-deps` | Skip dep installation |
+| `--no-deps`    | Skip dep installation                                |
 
 Make `uv-compile` default: `comfy manager uv-compile-default true`
 
@@ -179,16 +181,17 @@ comfy model remove                     # interactive
 comfy model remove --relative-path models/checkpoints --model-names "model.safetensors"
 ```
 
-| Option | Description |
-|--------|-------------|
-| `--url` | Download URL (CivitAI, HuggingFace, direct) |
-| `--relative-path` | Subdirectory under workspace (e.g. `models/checkpoints`) |
-| `--filename` | Custom save filename |
-| `--set-civitai-api-token` | Persist CivitAI token |
-| `--set-hf-api-token` | Persist HuggingFace token |
-| `--downloader` | `httpx` (default) or `aria2` |
+| Option                    | Description                                              |
+| ------------------------- | -------------------------------------------------------- |
+| `--url`                   | Download URL (CivitAI, HuggingFace, direct)              |
+| `--relative-path`         | Subdirectory under workspace (e.g. `models/checkpoints`) |
+| `--filename`              | Custom save filename                                     |
+| `--set-civitai-api-token` | Persist CivitAI token                                    |
+| `--set-hf-api-token`      | Persist HuggingFace token                                |
+| `--downloader`            | `httpx` (default) or `aria2`                             |
 
 Standard model directories:
+
 ```
 ComfyUI/models/
 ├── checkpoints/        # Full model files
@@ -235,11 +238,11 @@ Cache expires after 7 days; max 10 builds.
 
 ## Configuration
 
-| OS | Path |
-|----|------|
-| Linux | `~/.config/comfy-cli/config.ini` |
-| macOS | `~/Library/Application Support/comfy-cli/config.ini` |
-| Windows | `~/AppData/Local/comfy-cli/config.ini` |
+| OS      | Path                                                 |
+| ------- | ---------------------------------------------------- |
+| Linux   | `~/.config/comfy-cli/config.ini`                     |
+| macOS   | `~/Library/Application Support/comfy-cli/config.ini` |
+| Windows | `~/AppData/Local/comfy-cli/config.ini`               |
 
 Stores: default workspace, recent workspace, background server PID, API
 tokens, manager GUI mode, launch extras.
@@ -247,9 +250,11 @@ tokens, manager GUI mode, launch extras.
 ## Discovery
 
 Custom-node registry:
+
 - https://registry.comfy.org/
 
 Model browsers:
+
 - https://huggingface.co/models
 - https://civitai.com (NSFW; requires API token for many)
 - https://comfyworkflows.com (community workflows)

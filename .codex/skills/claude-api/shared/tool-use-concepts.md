@@ -4,6 +4,7 @@ description: "Tool Use Concepts"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Tool Use Concepts
      2|
      3|This file covers the conceptual foundations of tool use with the Claude API. For language-specific code examples, see the `python/`, `typescript/`, or other language folders. For decision heuristics on which tools to expose, how to manage context in long-running agents, and caching strategy, see `agent-design.md`.
@@ -103,18 +104,19 @@ author: Alexa
     97|**Multiple tool calls:** Claude can request multiple tools in a single response. Handle them all before continuing — send all results back in a single `user` message.
     98|
     99|---
-   100|
-   101|## Server-Side Tools: Code Execution
-   102|
-   103|The code execution tool lets Claude run code in a secure, sandboxed container. Unlike user-defined tools, server-side tools run on Anthropic's infrastructure — you don't execute anything client-side. Just include the tool definition and Claude handles the rest.
-   104|
-   105|### Key Facts
-   106|
-   107|- Runs in an isolated container (1 CPU, 5 GiB RAM, 5 GiB disk)
-   108|- No internet access (fully sandboxed)
-   109|- Python 3.11 with data science libraries pre-installed
-   110|- Containers persist for 30 days and can be reused across requests
-   111|- Free when used with web search/web fetch tools; otherwise $0.05/hour after 1,550 free hours/month per organization
+
+100|
+101|## Server-Side Tools: Code Execution
+102|
+103|The code execution tool lets Claude run code in a secure, sandboxed container. Unlike user-defined tools, server-side tools run on Anthropic's infrastructure — you don't execute anything client-side. Just include the tool definition and Claude handles the rest.
+104|
+105|### Key Facts
+106|
+107|- Runs in an isolated container (1 CPU, 5 GiB RAM, 5 GiB disk)
+108|- No internet access (fully sandboxed)
+109|- Python 3.11 with data science libraries pre-installed
+110|- Containers persist for 30 days and can be reused across requests
+111|- Free when used with web search/web fetch tools; otherwise $0.05/hour after 1,550 free hours/month per organization
    112|
    113|### Tool Definition
    114|
@@ -295,9 +297,7 @@ author: Alexa
    289|**Supported:**
    290|
    291|- Basic types: object, array, string, integer, number, boolean, null
-   292|- `enum`, `const`, `anyOf`, `allOf`, `$ref`/`$def`
-   293|- String formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `uri`, `ipv4`, `ipv6`, `uuid`
-   294|- `additionalProperties: false` (required for all objects)
+   292|- `enum`, `const`, `anyOf`, `allOf`, `$ref`/`$def`   293|- String formats:`date-time`, `time`, `date`, `duration`, `email`, `hostname`, `uri`, `ipv4`, `ipv6`, `uuid`   294|-`additionalProperties: false` (required for all objects)
    295|
    296|**Not supported:**
    297|
@@ -305,7 +305,7 @@ author: Alexa
    299|- Numerical constraints (`minimum`, `maximum`, `multipleOf`)
    300|- String constraints (`minLength`, `maxLength`)
    301|- Complex array constraints
-   302|- `additionalProperties` set to anything other than `false`
+   302|- `additionalProperties`set to anything other than`false`
    303|
    304|The Python and TypeScript SDKs automatically handle unsupported constraints by removing them from the schema sent to the API and validating them client-side.
    305|
@@ -322,13 +322,12 @@ author: Alexa
    316|## Tips for Effective Tool Use
    317|
    318|1. **Provide detailed descriptions**: Claude relies heavily on descriptions to understand when and how to use tools
-   319|2. **Use specific tool names**: `get_current_weather` is better than `weather`
-   320|3. **Validate inputs**: Always validate tool inputs before execution
+   319|2. **Use specific tool names**: `get_current_weather`is better than`weather`   320|3. **Validate inputs**: Always validate tool inputs before execution
    321|4. **Handle errors gracefully**: Return informative error messages so Claude can adapt
    322|5. **Limit tool count**: Too many tools can confuse the model — keep the set focused
    323|6. **Test tool interactions**: Verify Claude uses tools correctly in various scenarios
    324|
    325|For detailed tool use documentation, use WebFetch:
    326|
-   327|- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview`
-   328|
+   327|- URL:`https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview`
+328|

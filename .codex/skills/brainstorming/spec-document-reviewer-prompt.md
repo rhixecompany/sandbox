@@ -9,6 +9,7 @@ metadata:
     tags: []
     related_skills: []
 ---
+
      1|# Spec Document Reviewer Prompt Template
      2|
      3|Use this template when dispatching a spec document reviewer subagent.

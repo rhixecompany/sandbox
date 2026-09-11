@@ -4,6 +4,7 @@ description: "Message Batches API — TypeScript"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Message Batches API — TypeScript
      2|
      3|The Batches API (`POST /v1/messages/batches`) processes Messages API requests asynchronously at 50% of standard prices.
@@ -103,23 +104,24 @@ author: Alexa
     97|        console.log(
     98|          `[${result.custom_id}] Server error - safe to retry`
     99|        );
-   100|      }
-   101|      break;
-   102|    case "expired":
-   103|      console.log(`[${result.custom_id}] Expired - resubmit`);
-   104|      break;
-   105|  }
-   106|}
-   107|```
+
+100| }
+101| break;
+102| case "expired":
+103| console.log(`[${result.custom_id}] Expired - resubmit`);
+104| break;
+105| }
+106|}
+107|`
    108|
    109|---
    110|
    111|## Cancel a Batch
    112|
-   113|```typescript
-   114|const cancelled = await client.messages.batches.cancel(
-   115|  messageBatch.id
-   116|);
-   117|console.log(`Status: ${cancelled.processing_status}`); // "canceling"
-   118|```
-   119|
+   113|`typescript
+114|const cancelled = await client.messages.batches.cancel(
+115| messageBatch.id
+116|);
+117|console.log(`Status: ${cancelled.processing_status}`); // "canceling"
+118|```
+119|

@@ -241,28 +241,39 @@ Add these classes to the hosting page `<style>` block (in addition to the standa
 
 ```css
 /* Decision diamond — amber fill, same palette as c-amber */
-.decision > polygon { fill: #FAEEDA; stroke: #854F0B; stroke-width: 0.5; }
-.decision > .th     { fill: #633806; }
+.decision > polygon {
+	fill: #faeeda;
+	stroke: #854f0b;
+	stroke-width: 0.5;
+}
+.decision > .th {
+	fill: #633806;
+}
 
 @media (prefers-color-scheme: dark) {
-  .decision > polygon { fill: #633806; stroke: #EF9F27; }
-  .decision > .th     { fill: #FAC775; }
+	.decision > polygon {
+		fill: #633806;
+		stroke: #ef9f27;
+	}
+	.decision > .th {
+		fill: #fac775;
+	}
 }
 ```
 
 ## Color Assignments
 
-| Element | Color | Reason |
-|---------|-------|--------|
-| Start / end terminals | `c-gray` | Neutral entry and exit points |
-| User actions (enter email, click link, enter password) | `c-gray` | User-facing steps with no system processing |
-| Generic message + request-handled terminal | `c-gray` | Intentionally neutral — the security message must not reveal data |
-| Generate & store token | `c-purple` | Backend system operations |
-| Send reset email | `c-teal` | Positive external action (outbound communication) |
-| Token expired error | `c-red` | Failure / blocking error state |
-| Password mismatch error | `c-red` | Validation failure |
-| Reset password + success | `c-teal` / `c-green` | Positive outcome: teal for the action, green pill for the terminal |
-| Decision diamonds | `c-amber` (custom `.decision`) | Warning / branch point — matches amber semantic meaning |
+| Element                                                | Color                          | Reason                                                             |
+| ------------------------------------------------------ | ------------------------------ | ------------------------------------------------------------------ |
+| Start / end terminals                                  | `c-gray`                       | Neutral entry and exit points                                      |
+| User actions (enter email, click link, enter password) | `c-gray`                       | User-facing steps with no system processing                        |
+| Generic message + request-handled terminal             | `c-gray`                       | Intentionally neutral — the security message must not reveal data  |
+| Generate & store token                                 | `c-purple`                     | Backend system operations                                          |
+| Send reset email                                       | `c-teal`                       | Positive external action (outbound communication)                  |
+| Token expired error                                    | `c-red`                        | Failure / blocking error state                                     |
+| Password mismatch error                                | `c-red`                        | Validation failure                                                 |
+| Reset password + success                               | `c-teal` / `c-green`           | Positive outcome: teal for the action, green pill for the terminal |
+| Decision diamonds                                      | `c-amber` (custom `.decision`) | Warning / branch point — matches amber semantic meaning            |
 
 ## Layout Notes
 

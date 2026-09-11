@@ -44,15 +44,17 @@ When a workflow submission fails, the server response looks like:
 
 ```json
 {
-  "node_errors": {
-    "238": {
-      "errors": [{
-        "message": "Required input is missing",
-        "details": "width",
-        "extra_info": { "input_name": "resize_type.width" }
-      }]
-    }
-  }
+	"node_errors": {
+		"238": {
+			"errors": [
+				{
+					"message": "Required input is missing",
+					"details": "width",
+					"extra_info": { "input_name": "resize_type.width" }
+				}
+			]
+		}
+	}
 }
 ```
 
@@ -92,10 +94,10 @@ a template:
 - Fix: replace all occurrences of `vae: ["255", 0]` with `vae: ["236", 2]`.
 - `CheckpointLoaderSimple` slot 2 = VAE (not slot 0 = MODEL).
 
-| | |
-|---|---|
-| ❌ Wrong  | `vae: ["236", 0]` → `MODELV mismatch input_type(VAE)` |
-| ✅ Correct | `vae: ["236", 2]` |
+|            |                                                       |
+| ---------- | ----------------------------------------------------- |
+| ❌ Wrong   | `vae: ["236", 0]` → `MODELV mismatch input_type(VAE)` |
+| ✅ Correct | `vae: ["236", 2]`                                     |
 
 ---
 
@@ -105,11 +107,11 @@ a template:
 
 ```json
 {
-  "class_type": "ComfyMathExpression",
-  "inputs": {
-    "expression": "a/2",
-    "values.a": ["257", 0]
-  }
+	"class_type": "ComfyMathExpression",
+	"inputs": {
+		"expression": "a/2",
+		"values.a": ["257", 0]
+	}
 }
 ```
 
@@ -122,15 +124,15 @@ a template:
 
 ```json
 {
-  "class_type": "ResizeImageMaskNode",
-  "inputs": {
-    "input": ["276", 0],
-    "scale_method": "lanczos",
-    "resize_type": "scale dimensions",
-    "resize_type.width": 1920,
-    "resize_type.height": 1088,
-    "resize_type.crop": "center"
-  }
+	"class_type": "ResizeImageMaskNode",
+	"inputs": {
+		"input": ["276", 0],
+		"scale_method": "lanczos",
+		"resize_type": "scale dimensions",
+		"resize_type.width": 1920,
+		"resize_type.height": 1088,
+		"resize_type.crop": "center"
+	}
 }
 ```
 
@@ -157,14 +159,14 @@ a template:
 
 ## What to NEVER change in a template
 
-| Element | Why |
-|---------|-----|
-| Node topology | Graph is designed for the specific model |
-| Sigmas values | Tuned for the model/sampler combination |
-| LoRA/distilled paths | Required for quality, even if they look unused |
-| Model parameters (cfg, steps, shifts) | Model-specific |
-| Conditioning chains (zero-out, crop guides) | Required for correct conditioning |
-| Pass-through wiring | Don't remove nodes, bypass them |
+| Element                                     | Why                                            |
+| ------------------------------------------- | ---------------------------------------------- |
+| Node topology                               | Graph is designed for the specific model       |
+| Sigmas values                               | Tuned for the model/sampler combination        |
+| LoRA/distilled paths                        | Required for quality, even if they look unused |
+| Model parameters (cfg, steps, shifts)       | Model-specific                                 |
+| Conditioning chains (zero-out, crop guides) | Required for correct conditioning              |
+| Pass-through wiring                         | Don't remove nodes, bypass them                |
 
 ---
 

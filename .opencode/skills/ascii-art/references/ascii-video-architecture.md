@@ -29,35 +29,36 @@ Pre-initialize multiple grid sizes. Switch per section for visual variety. Grid 
 
 **Landscape (1920x1080):**
 
-| Key | Font Size | Grid (cols x rows) | Use |
-|-----|-----------|-------------------|-----|
-| xs | 8 | 400x108 | Ultra-dense data fields |
-| sm | 10 | 320x83 | Dense detail, rain, starfields |
-| md | 16 | 192x56 | Default balanced, transitions |
-| lg | 20 | 160x45 | Quote/lyric text (readable at 1080p) |
-| xl | 24 | 137x37 | Short quotes, large titles |
-| xxl | 40 | 80x22 | Giant text, minimal |
+| Key | Font Size | Grid (cols x rows) | Use                                  |
+| --- | --------- | ------------------ | ------------------------------------ |
+| xs  | 8         | 400x108            | Ultra-dense data fields              |
+| sm  | 10        | 320x83             | Dense detail, rain, starfields       |
+| md  | 16        | 192x56             | Default balanced, transitions        |
+| lg  | 20        | 160x45             | Quote/lyric text (readable at 1080p) |
+| xl  | 24        | 137x37             | Short quotes, large titles           |
+| xxl | 40        | 80x22              | Giant text, minimal                  |
 
 **Portrait (1080x1920):**
 
-| Key | Font Size | Grid (cols x rows) | Use |
-|-----|-----------|-------------------|-----|
-| xs | 8 | 225x192 | Ultra-dense, tall data columns |
-| sm | 10 | 180x148 | Dense detail, vertical rain |
-| md | 16 | 112x100 | Default balanced |
-| lg | 20 | 90x80 | Readable text (~30 chars/line centered) |
-| xl | 24 | 75x66 | Short quotes, stacked |
-| xxl | 40 | 45x39 | Giant text, minimal |
+| Key | Font Size | Grid (cols x rows) | Use                                     |
+| --- | --------- | ------------------ | --------------------------------------- |
+| xs  | 8         | 225x192            | Ultra-dense, tall data columns          |
+| sm  | 10        | 180x148            | Dense detail, vertical rain             |
+| md  | 16        | 112x100            | Default balanced                        |
+| lg  | 20        | 90x80              | Readable text (~30 chars/line centered) |
+| xl  | 24        | 75x66              | Short quotes, stacked                   |
+| xxl | 40        | 45x39              | Giant text, minimal                     |
 
 **Square (1080x1080):**
 
-| Key | Font Size | Grid (cols x rows) | Use |
-|-----|-----------|-------------------|-----|
-| sm | 10 | 180x83 | Dense detail |
-| md | 16 | 112x56 | Default balanced |
-| lg | 20 | 90x45 | Readable text |
+| Key | Font Size | Grid (cols x rows) | Use              |
+| --- | --------- | ------------------ | ---------------- |
+| sm  | 10        | 180x83             | Dense detail     |
+| md  | 16        | 112x56             | Default balanced |
+| lg  | 20        | 90x45              | Readable text    |
 
 **Key differences in portrait mode:**
+
 - Fewer columns (90 at `lg` vs 160) — lines must be shorter or wrap
 - Many more rows (80 at `lg` vs 45) — vertical stacking is natural
 - Aspect ratio correction flips: `asp = cw / ch` still works but the visual emphasis is vertical
@@ -73,17 +74,17 @@ Grid dimensions: `cols = VW // cell_width`, `rows = VH // cell_height`.
 
 Don't hardcode a single font. Choose fonts to match the project's mood. Monospace fonts are required for grid alignment but vary widely in personality:
 
-| Font | Personality | Platform |
-|------|-------------|----------|
-| Menlo | Clean, neutral, Apple-native | macOS |
-| Monaco | Retro terminal, compact | macOS |
-| Courier New | Classic typewriter, wide | Cross-platform |
-| SF Mono | Modern, tight spacing | macOS |
-| Consolas | Windows native, clean | Windows |
-| JetBrains Mono | Developer, ligature-ready | Install |
-| Fira Code | Geometric, modern | Install |
-| IBM Plex Mono | Corporate, authoritative | Install |
-| Source Code Pro | Adobe, balanced | Install |
+| Font            | Personality                  | Platform       |
+| --------------- | ---------------------------- | -------------- |
+| Menlo           | Clean, neutral, Apple-native | macOS          |
+| Monaco          | Retro terminal, compact      | macOS          |
+| Courier New     | Classic typewriter, wide     | Cross-platform |
+| SF Mono         | Modern, tight spacing        | macOS          |
+| Consolas        | Windows native, clean        | Windows        |
+| JetBrains Mono  | Developer, ligature-ready    | Install        |
+| Fira Code       | Geometric, modern            | Install        |
+| IBM Plex Mono   | Corporate, authoritative     | Install        |
+| Source Code Pro | Adobe, balanced              | Install        |
 
 **Font detection at init**: probe available fonts and fall back gracefully:
 
@@ -258,6 +259,7 @@ Character palettes are the primary visual texture of ASCII video. They control n
 Organized by visual family. Mix and match per project -- don't default to PAL_DEFAULT for everything.
 
 #### Density / Brightness Palettes
+
 ```python
 PAL_DEFAULT  = " .`'-:;!><=+*^~?/|(){}[]#&$@%"       # classic ASCII art
 PAL_DENSE    = " .:;+=xX$#@\u2588"                          # simple 11-level ramp
@@ -267,6 +269,7 @@ PAL_GRADIENT = " \u2591\u2592\u2593\u2588"                              # 4-leve
 ```
 
 #### Unicode Block Elements
+
 ```python
 PAL_BLOCKS   = " \u2591\u2592\u2593\u2588\u2584\u2580\u2590\u258c"                 # standard blocks
 PAL_BLOCKS_EXT = " \u2596\u2597\u2598\u2599\u259a\u259b\u259c\u259d\u259e\u259f\u2591\u2592\u2593\u2588"  # quadrant blocks (more detail)
@@ -274,6 +277,7 @@ PAL_SHADE    = " \u2591\u2592\u2593\u2588\u2587\u2586\u2585\u2584\u2583\u2582\u2
 ```
 
 #### Symbolic / Thematic
+
 ```python
 PAL_MATH     = " \u00b7\u2218\u2219\u2022\u00b0\u00b1\u2213\u00d7\u00f7\u2248\u2260\u2261\u2264\u2265\u221e\u222b\u2211\u220f\u221a\u2207\u2202\u2206\u03a9"    # math symbols
 PAL_BOX      = " \u2500\u2502\u250c\u2510\u2514\u2518\u251c\u2524\u252c\u2534\u253c\u2550\u2551\u2554\u2557\u255a\u255d\u2560\u2563\u2566\u2569\u256c"          # box drawing
@@ -286,6 +290,7 @@ PAL_MUSIC    = " \u266a\u266b\u266c\u2669\u266d\u266e\u266f\u25cb\u25cf"        
 ```
 
 #### Script / Writing System
+
 ```python
 PAL_KATA     = " \u00b7\uff66\uff67\uff68\uff69\uff6a\uff6b\uff6c\uff6d\uff6e\uff6f\uff70\uff71\uff72\uff73\uff74\uff75\uff76\uff77"          # katakana halfwidth (matrix rain)
 PAL_GREEK    = " \u03b1\u03b2\u03b3\u03b4\u03b5\u03b6\u03b7\u03b8\u03b9\u03ba\u03bb\u03bc\u03bd\u03be\u03c0\u03c1\u03c3\u03c4\u03c6\u03c8\u03c9"    # Greek lowercase
@@ -294,6 +299,7 @@ PAL_ARABIC   = " \u0627\u0628\u062a\u062b\u062c\u062d\u062e\u062f\u0630\u0631\u0
 ```
 
 #### Dot / Point Progressions
+
 ```python
 PAL_DOTS     = " ⋅∘∙●◉◎◆✦★"                   # dot size progression
 PAL_BRAILLE  = " ⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠿"  # braille patterns
@@ -303,6 +309,7 @@ PAL_HATCH    = " ▣▤▥▦▧▨▩"                     # crosshatch density
 ```
 
 #### Project-Specific (examples -- invent new ones per project)
+
 ```python
 PAL_HERMES   = " .\u00b7~=\u2248\u221e\u26a1\u263f\u2726\u2605\u2295\u25ca\u25c6\u25b2\u25bc\u25cf\u25a0"   # mythology/tech blend
 PAL_OCEAN    = " ~\u2248\u2248\u2248\u223c\u2307\u2248\u224b\u224c\u2248"                       # water/wave characters
@@ -386,20 +393,20 @@ def hsv2rgb(h, s, v):
 
 Don't default to a single strategy. Choose based on the visual intent:
 
-| Strategy | Hue source | Effect | Good for |
-|----------|------------|--------|----------|
-| Angle-mapped | `g.angle / (2*pi)` | Rainbow around center | Radial effects, kaleidoscopes |
-| Distance-mapped | `g.dist_n * 0.3` | Gradient from center | Tunnels, depth effects |
-| Frequency-mapped | `f["cent"] * 0.2` | Timbral color shifting | Audio-reactive |
-| Value-mapped | `val * 0.15` | Brightness-dependent hue | Fire, heat maps |
-| Time-cycled | `t * rate` | Slow color rotation | Ambient, chill |
-| Source-sampled | Video frame pixel colors | Preserve original color | Video-to-ASCII |
-| Palette-indexed | Discrete color lookup | Flat graphic style | Retro, pixel art |
-| Temperature | Blend between warm/cool | Emotional tone | Mood-driven scenes |
-| Complementary | `hue` and `hue + 0.5` | High contrast | Bold, dramatic |
-| Triadic | `hue`, `hue + 0.33`, `hue + 0.66` | Vibrant, balanced | Psychedelic |
-| Analogous | `hue +/- 0.08` | Harmonious, subtle | Elegant, cohesive |
-| Monochrome | Fixed hue, vary S and V | Restrained, focused | Noir, minimal |
+| Strategy         | Hue source                        | Effect                   | Good for                      |
+| ---------------- | --------------------------------- | ------------------------ | ----------------------------- |
+| Angle-mapped     | `g.angle / (2*pi)`                | Rainbow around center    | Radial effects, kaleidoscopes |
+| Distance-mapped  | `g.dist_n * 0.3`                  | Gradient from center     | Tunnels, depth effects        |
+| Frequency-mapped | `f["cent"] * 0.2`                 | Timbral color shifting   | Audio-reactive                |
+| Value-mapped     | `val * 0.15`                      | Brightness-dependent hue | Fire, heat maps               |
+| Time-cycled      | `t * rate`                        | Slow color rotation      | Ambient, chill                |
+| Source-sampled   | Video frame pixel colors          | Preserve original color  | Video-to-ASCII                |
+| Palette-indexed  | Discrete color lookup             | Flat graphic style       | Retro, pixel art              |
+| Temperature      | Blend between warm/cool           | Emotional tone           | Mood-driven scenes            |
+| Complementary    | `hue` and `hue + 0.5`             | High contrast            | Bold, dramatic                |
+| Triadic          | `hue`, `hue + 0.33`, `hue + 0.66` | Vibrant, balanced        | Psychedelic                   |
+| Analogous        | `hue +/- 0.08`                    | Harmonious, subtle       | Elegant, cohesive             |
+| Monochrome       | Fixed hue, vary S and V           | Restrained, focused      | Noir, minimal                 |
 
 ### Color Palettes (Discrete RGB)
 
@@ -434,6 +441,7 @@ def rgb_palette_map(val, mask, palette):
 ### OKLAB Color Space (Perceptually Uniform)
 
 HSV hue is perceptually non-uniform: green occupies far more visual range than blue. OKLAB / OKLCH provide perceptually even color steps — hue increments of 0.1 look equally different regardless of starting hue. Use OKLAB for:
+
 - Gradient interpolation (no unwanted intermediate hues)
 - Color harmony generation (perceptually balanced palettes)
 - Smooth color transitions over time

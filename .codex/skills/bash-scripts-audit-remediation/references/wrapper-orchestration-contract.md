@@ -33,6 +33,7 @@ exit $?
 ```
 
 **Key points:**
+
 - `set -euo pipefail` for strict mode
 - `"$@"` passes all arguments unchanged
 - `exit $?` propagates the TS runner's exit code
@@ -66,6 +67,7 @@ try {
 ```
 
 **Key points:**
+
 - `param([Parameter(ValueFromRemainingArguments = $true)] [string[]]$Arguments)` captures all args
 - `Set-StrictMode -Version Latest` and `$ErrorActionPreference = 'Stop'` for error handling
 - `@Arguments` splatting passes all args unchanged
@@ -89,6 +91,7 @@ exit /b %ERRORLEVEL%
 ```
 
 **Key points:**
+
 - `setlocal enabledelayedexpansion` for variable expansion
 - `%~dp0` gets the script directory
 - `%*` passes all arguments unchanged
@@ -109,6 +112,7 @@ exit /b %ERRORLEVEL%
 ### Business Logic Hidden in Wrapper (Bug to Fix)
 
 Red flags:
+
 - Script is 50+ lines
 - Contains loops, extensive conditionals, or test runners
 - Runs external commands (e.g. `bun run type-check`, `bun run lint:strict`) that are not delegated to the TS runner

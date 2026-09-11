@@ -1,0 +1,119 @@
+[
+ {
+  "provider": "opencode-zen",
+  "model": "deepseek-v4-flash-free",
+  "latency": {
+   "probe": "latency",
+   "status": "SUCCESS",
+   "seconds": 62.71,
+   "output": "PONG",
+   "exit": 0
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 94.16,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 91.31,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "SUCCESS",
+   "seconds": 99.82,
+   "output": "Hermes Agent (nemotron-3-ultra-free via opencode-zen) \u2014 ~200K token context, knowledge through June 2025, 30+ MCP-enabled tool suites available (browser automation, filesystem, git, web search/extract, Docker, PostgreSQL, Python/TypeScript quality, memory, terminal, vision, TTS, and domain skills fo",
+   "exit": 0
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "TIMEOUT",
+   "seconds": 110,
+   "output": "",
+   "exit": -1
+  }
+ },
+ {
+  "provider": "opencode-zen",
+  "model": "muse-spark-1.3-contributor-free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 5.1,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 8.97,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 6.35,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 5.46,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 6.71,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  }
+ },
+ {
+  "provider": "opencode-zen",
+  "model": "muse-spark-1.2-contributor-free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 13.75,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 15.43,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 4.75,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 4.81,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 4.69,
+   "output": "Use this model for this invocation? [y/N]",
+   "exit": 1
+  }
+ }
+]

@@ -1,6 +1,6 @@
 # Biomimicry
 
-Janine Benyus, *Biomimicry* (1997). Evolution has 3.8 billion years of R&D on most physical design problems. Use biological strategies as a library of mechanisms — adapt the *operative principle*, not the metaphor.
+Janine Benyus, _Biomimicry_ (1997). Evolution has 3.8 billion years of R&D on most physical design problems. Use biological strategies as a library of mechanisms — adapt the _operative principle_, not the metaphor.
 
 ## When to use
 
@@ -18,27 +18,27 @@ Janine Benyus, *Biomimicry* (1997). Evolution has 3.8 billion years of R&D on mo
 
 ## Catalog of strong precedents
 
-**Velcro** ← burrs (*Arctium*). Many small barbed mechanical hooks. *Operative principle: many small interlocks, not one strong glue.*
+**Velcro** ← burrs (_Arctium_). Many small barbed mechanical hooks. _Operative principle: many small interlocks, not one strong glue._
 
-**Shinkansen 500-series train nose** ← kingfisher beak. Tapered shape allows dive from air to water with minimal splash. *Operative principle: gradient-density transition reduces shock at medium-to-fluid interfaces.*
+**Shinkansen 500-series train nose** ← kingfisher beak. Tapered shape allows dive from air to water with minimal splash. _Operative principle: gradient-density transition reduces shock at medium-to-fluid interfaces._
 
-**Lotus effect** ← *Nelumbo* leaves. Self-cleaning via micro-structured wax. *Operative principle: hierarchical micro/nanostructure + low-energy surface = superhydrophobicity.*
+**Lotus effect** ← _Nelumbo_ leaves. Self-cleaning via micro-structured wax. _Operative principle: hierarchical micro/nanostructure + low-energy surface = superhydrophobicity._
 
-**Gecko adhesive** ← gecko foot pads. Millions of setae adhering via van der Waals forces. *Operative principle: many small contact points + flexible substrate = strong reversible adhesion.*
+**Gecko adhesive** ← gecko foot pads. Millions of setae adhering via van der Waals forces. _Operative principle: many small contact points + flexible substrate = strong reversible adhesion._
 
-**Termite mound HVAC** ← *Macrotermes* mounds maintain near-constant interior temperature in fluctuating Sahel conditions via passive convection. Mick Pearce's Eastgate Centre, Harare, 1996. *Operative principle: passive convection through engineered geometry.*
+**Termite mound HVAC** ← _Macrotermes_ mounds maintain near-constant interior temperature in fluctuating Sahel conditions via passive convection. Mick Pearce's Eastgate Centre, Harare, 1996. _Operative principle: passive convection through engineered geometry._
 
-**Whale-fin tubercles** ← humpback flipper bumpy leading edges delay stall, reduce drag. Wind-turbine blades, WhalePower. *Operative principle: leading-edge perturbation alters boundary-layer behavior.*
+**Whale-fin tubercles** ← humpback flipper bumpy leading edges delay stall, reduce drag. Wind-turbine blades, WhalePower. _Operative principle: leading-edge perturbation alters boundary-layer behavior._
 
-**Slime-mold pathfinding** ← *Physarum polycephalum* solves shortest-path. Tero et al., *Science* 2010, recreated Tokyo rail network. *Operative principle: distributed reinforcement of high-flux paths, dissolution of unused ones.*
+**Slime-mold pathfinding** ← _Physarum polycephalum_ solves shortest-path. Tero et al., _Science_ 2010, recreated Tokyo rail network. _Operative principle: distributed reinforcement of high-flux paths, dissolution of unused ones._
 
-**Sharkskin antimicrobial** ← microscopic ribbed denticles prevent bacterial colonization. Sharklet hospital surfaces. *Operative principle: surface microtopology disrupts colonization.*
+**Sharkskin antimicrobial** ← microscopic ribbed denticles prevent bacterial colonization. Sharklet hospital surfaces. _Operative principle: surface microtopology disrupts colonization._
 
-**Spider silk** ← *Nephila*, *Araneus*. Specific strength higher than steel; toughness higher than Kevlar. Spiber, Bolt Threads. *Operative principle: hierarchical protein assembly under shear-flow control.*
+**Spider silk** ← _Nephila_, _Araneus_. Specific strength higher than steel; toughness higher than Kevlar. Spiber, Bolt Threads. _Operative principle: hierarchical protein assembly under shear-flow control._
 
-**Mussel adhesive** ← *Mytilus* DOPA-rich proteins stick to wet rocks. Surgical adhesives. *Operative principle: catechol chemistry remains effective in water.*
+**Mussel adhesive** ← _Mytilus_ DOPA-rich proteins stick to wet rocks. Surgical adhesives. _Operative principle: catechol chemistry remains effective in water._
 
-**Mycelial structure** ← fungus binds particles into rigid forms. Ecovative MycoComposite packaging. *Operative principle: cellulose-bonding via biological agents → biodegradable rigid structure.*
+**Mycelial structure** ← fungus binds particles into rigid forms. Ecovative MycoComposite packaging. _Operative principle: cellulose-bonding via biological agents → biodegradable rigid structure._
 
 ## Procedure
 
@@ -55,4 +55,4 @@ Janine Benyus, *Biomimicry* (1997). Evolution has 3.8 billion years of R&D on mo
 - Don't assume "natural" = "good". Parasitism, deception, exploitation are well-engineered.
 - Resist the spiritual register. Biomimicry is engineering; the slop variant is greeting-card.
 
-Source: Benyus, *Biomimicry* (Morrow, 1997). AskNature.org.
+Source: Benyus, _Biomimicry_ (Morrow, 1997). AskNature.org.

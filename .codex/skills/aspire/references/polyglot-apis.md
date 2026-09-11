@@ -6,11 +6,11 @@ Aspire supports 10+ languages/runtimes. The AppHost is always .NET, but orchestr
 
 ## Hosting model differences
 
-| Model | Resource type | How it runs | Examples |
-| --- | --- | --- | --- |
-| **Project** | `ProjectResource` | .NET project reference, built by SDK | `AddProject<T>()` |
-| **Container** | `ContainerResource` | Docker/OCI image | `AddContainer()`, `AddRedis()`, `AddPostgres()` |
-| **Executable** | `ExecutableResource` | Native OS process | `AddExecutable()`, all `Add*App()` polyglot methods |
+| Model          | Resource type        | How it runs                          | Examples                                            |
+| -------------- | -------------------- | ------------------------------------ | --------------------------------------------------- |
+| **Project**    | `ProjectResource`    | .NET project reference, built by SDK | `AddProject<T>()`                                   |
+| **Container**  | `ContainerResource`  | Docker/OCI image                     | `AddContainer()`, `AddRedis()`, `AddPostgres()`     |
+| **Executable** | `ExecutableResource` | Native OS process                    | `AddExecutable()`, all `Add*App()` polyglot methods |
 
 All polyglot `Add*App()` methods create `ExecutableResource` instances under the hood. They don't require the target language's SDK on the AppHost side — only that the workload's runtime is installed on the dev machine.
 

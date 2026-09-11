@@ -10,10 +10,10 @@ Historical scientific illustration with aged paper aesthetic.
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
+| Variant      | Focus                         | Visual Emphasis                   |
+| ------------ | ----------------------------- | --------------------------------- |
 | **Notebook** | Personal sketches, inventions | Cursive notes, margin annotations |
-| **Specimen** | Scientific classification | Numbered diagrams, Latin labels |
+| **Specimen** | Scientific classification     | Numbered diagrams, Latin labels   |
 
 ## Visual Elements
 

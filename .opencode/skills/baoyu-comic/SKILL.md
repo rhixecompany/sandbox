@@ -26,17 +26,18 @@ Trigger this skill when the user asks to create a knowledge/educational comic, b
 Hermes' `image_generate` tool is **prompt-only** — it accepts a text prompt and an aspect ratio, and returns an image URL. It does **NOT** accept reference images. When the user supplies a reference image, use it to **extract traits in text** that get embedded in every page prompt:
 
 **Intake**: Accept file paths when the user provides them (or pastes images in conversation).
+
 - File path(s) → copy to `refs/NN-ref-{slug}.{ext}` alongside the comic output for provenance
 - Pasted image with no path → ask the user for the path via `clarify`, or extract style traits verbally as a text fallback
 - No reference → skip this section
 
 **Usage modes** (per reference):
 
-| Usage | Effect |
-|-------|--------|
-| `style` | Extract style traits (line treatment, texture, mood) and append to every page's prompt body |
-| `palette` | Extract hex colors and append to every page's prompt body |
-| `scene` | Extract scene composition or subject notes and append to the relevant page(s) |
+| Usage     | Effect                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------- |
+| `style`   | Extract style traits (line treatment, texture, mood) and append to every page's prompt body |
+| `palette` | Extract hex colors and append to every page's prompt body                                   |
+| `scene`   | Extract scene composition or subject notes and append to the relevant page(s)               |
 
 **Record in each page's prompt frontmatter** when refs exist:
 
@@ -54,23 +55,23 @@ Character consistency is driven by **text descriptions** in `characters/characte
 
 ### Visual Dimensions
 
-| Option | Values | Description |
-|--------|--------|-------------|
-| Art | ligne-claire (default), manga, realistic, ink-brush, chalk, minimalist | Art style / rendering technique |
-| Tone | neutral (default), warm, dramatic, romantic, energetic, vintage, action | Mood / atmosphere |
-| Layout | standard (default), cinematic, dense, splash, mixed, webtoon, four-panel | Panel arrangement |
-| Aspect | 3:4 (default, portrait), 4:3 (landscape), 16:9 (widescreen) | Page aspect ratio |
-| Language | auto (default), zh, en, ja, etc. | Output language |
-| Refs | File paths | Reference images used for style / palette trait extraction (not passed to the image model). See [Reference Images](#reference-images) above. |
+| Option   | Values                                                                   | Description                                                                                                                                  |
+| -------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Art      | ligne-claire (default), manga, realistic, ink-brush, chalk, minimalist   | Art style / rendering technique                                                                                                              |
+| Tone     | neutral (default), warm, dramatic, romantic, energetic, vintage, action  | Mood / atmosphere                                                                                                                            |
+| Layout   | standard (default), cinematic, dense, splash, mixed, webtoon, four-panel | Panel arrangement                                                                                                                            |
+| Aspect   | 3:4 (default, portrait), 4:3 (landscape), 16:9 (widescreen)              | Page aspect ratio                                                                                                                            |
+| Language | auto (default), zh, en, ja, etc.                                         | Output language                                                                                                                              |
+| Refs     | File paths                                                               | Reference images used for style / palette trait extraction (not passed to the image model). See [Reference Images](#reference-images) above. |
 
 ### Partial Workflow Options
 
-| Option | Description |
-|--------|-------------|
-| Storyboard only | Generate storyboard only, skip prompts and images |
-| Prompts only | Generate storyboard + prompts, skip images |
-| Images only | Generate images from existing prompts directory |
-| Regenerate N | Regenerate specific page(s) only (e.g., `3` or `2,5,8`) |
+| Option          | Description                                             |
+| --------------- | ------------------------------------------------------- |
+| Storyboard only | Generate storyboard only, skip prompts and images       |
+| Prompts only    | Generate storyboard + prompts, skip images              |
+| Images only     | Generate images from existing prompts directory         |
+| Regenerate N    | Regenerate specific page(s) only (e.g., `3` or `2,5,8`) |
 
 Details: [references/partial-workflows.md](references/partial-workflows.md)
 
@@ -80,13 +81,13 @@ Details: [references/partial-workflows.md](references/partial-workflows.md)
 - **Tones** (7): `neutral`, `warm`, `dramatic`, `romantic`, `energetic`, `vintage`, `action`. Full definitions at `references/tones/<tone>.md`.
 - **Presets** (5) with special rules beyond plain art+tone:
 
-  | Preset | Equivalent | Hook |
-  |--------|-----------|------|
-  | `ohmsha` | manga + neutral | Visual metaphors, no talking heads, gadget reveals |
-  | `wuxia` | ink-brush + action | Qi effects, combat visuals, atmospheric |
-  | `shoujo` | manga + romantic | Decorative elements, eye details, romantic beats |
-  | `concept-story` | manga + warm | Visual symbol system, growth arc, dialogue+action balance |
-  | `four-panel` | minimalist + neutral + four-panel layout | 起承转合 structure, B&W + spot color, stick-figure characters |
+  | Preset          | Equivalent                               | Hook                                                          |
+  | --------------- | ---------------------------------------- | ------------------------------------------------------------- |
+  | `ohmsha`        | manga + neutral                          | Visual metaphors, no talking heads, gadget reveals            |
+  | `wuxia`         | ink-brush + action                       | Qi effects, combat visuals, atmospheric                       |
+  | `shoujo`        | manga + romantic                         | Decorative elements, eye details, romantic beats              |
+  | `concept-story` | manga + warm                             | Visual symbol system, growth arc, dialogue+action balance     |
+  | `four-panel`    | minimalist + neutral + four-panel layout | 起承转合 structure, B&W + spot color, stick-figure characters |
 
   Full rules at `references/presets/<preset>.md` — load the file when a preset is picked.
 
@@ -95,29 +96,33 @@ Details: [references/partial-workflows.md](references/partial-workflows.md)
 ## File Structure
 
 Output directory: `comic/{topic-slug}/`
+
 - Slug: 2-4 words kebab-case from topic (e.g., `alan-turing-bio`)
 - Conflict: append timestamp (e.g., `turing-story-20260118-143052`)
 
 **Contents**:
-| File | Description |
-|------|-------------|
-| `source-{slug}.md` | Saved source content (kebab-case slug matches the output directory) |
-| `analysis.md` | Content analysis |
-| `storyboard.md` | Storyboard with panel breakdown |
-| `characters/characters.md` | Character definitions |
-| `characters/characters.png` | Character reference sheet (downloaded from `image_generate`) |
-| `prompts/NN-{cover\|page}-[slug].md` | Generation prompts |
-| `NN-{cover\|page}-[slug].png` | Generated images (downloaded from `image_generate`) |
-| `refs/NN-ref-{slug}.{ext}` | User-supplied reference images (optional, for provenance) |
+
+| File                                 | Description                                                         |
+| ------------------------------------ | ------------------------------------------------------------------- |
+| `source-{slug}.md`                   | Saved source content (kebab-case slug matches the output directory) |
+| `analysis.md`                        | Content analysis                                                    |
+| `storyboard.md`                      | Storyboard with panel breakdown                                     |
+| `characters/characters.md`           | Character definitions                                               |
+| `characters/characters.png`          | Character reference sheet (downloaded from `image_generate`)        |
+| `prompts/NN-{cover\|page}-[slug].md` | Generation prompts                                                  |
+| `NN-{cover\|page}-[slug].png`        | Generated images (downloaded from `image_generate`)                 |
+| `refs/NN-ref-{slug}.{ext}`           | User-supplied reference images (optional, for provenance)           |
 
 ## Language Handling
 
 **Detection Priority**:
+
 1. User-specified language (explicit option)
 2. User's conversation language
 3. Source content language
 
 **Rule**: Use user's input language for ALL interactions:
+
 - Storyboard outlines and scene descriptions
 - Image generation prompts
 - User selection options and confirmations
@@ -153,18 +158,18 @@ Input → Analyze → [Check Existing?] → [Confirm: Style + Reviews] → Story
 
 ### Step Summary
 
-| Step | Action | Key Output |
-|------|--------|------------|
-| 1.1 | Analyze content | `analysis.md`, `source-{slug}.md` |
-| 1.2 | Check existing directory | Handle conflicts |
-| 2 | Confirm style, focus, audience, reviews | User preferences |
-| 3 | Generate storyboard + characters | `storyboard.md`, `characters/` |
-| 4 | Review outline (if requested) | User approval |
-| 5 | Generate prompts | `prompts/*.md` |
-| 6 | Review prompts (if requested) | User approval |
-| 7.1 | Generate character sheet (if needed) | `characters/characters.png` |
-| 7.2 | Generate pages | `*.png` files |
-| 8 | Completion report | Summary |
+| Step | Action                                  | Key Output                        |
+| ---- | --------------------------------------- | --------------------------------- |
+| 1.1  | Analyze content                         | `analysis.md`, `source-{slug}.md` |
+| 1.2  | Check existing directory                | Handle conflicts                  |
+| 2    | Confirm style, focus, audience, reviews | User preferences                  |
+| 3    | Generate storyboard + characters        | `storyboard.md`, `characters/`    |
+| 4    | Review outline (if requested)           | User approval                     |
+| 5    | Generate prompts                        | `prompts/*.md`                    |
+| 6    | Review prompts (if requested)           | User approval                     |
+| 7.1  | Generate character sheet (if needed)    | `characters/characters.png`       |
+| 7.2  | Generate pages                          | `*.png` files                     |
+| 8    | Completion report                       | Summary                           |
 
 ### User Questions
 
@@ -184,13 +189,14 @@ Use Hermes' built-in `image_generate` tool for all image rendering. Its schema a
 
 **Aspect ratio mapping** — the storyboard's `aspect_ratio` field maps to `image_generate`'s format as follows:
 
-| Storyboard ratio | `image_generate` format |
-|------------------|-------------------------|
-| `3:4`, `9:16`, `2:3` | `portrait` |
-| `4:3`, `16:9`, `3:2` | `landscape` |
-| `1:1` | `square` |
+| Storyboard ratio     | `image_generate` format |
+| -------------------- | ----------------------- |
+| `3:4`, `9:16`, `2:3` | `portrait`              |
+| `4:3`, `16:9`, `3:2` | `landscape`             |
+| `1:1`                | `square`                |
 
 **Download step** — after every `image_generate` call:
+
 1. Read the URL from the tool result
 2. Fetch the image bytes using an **absolute** output path, e.g.
    `curl -fsSL "<url>" -o /abs/path/to/comic/<slug>/NN-page-<slug>.png`
@@ -209,29 +215,32 @@ Full step-by-step workflow (analysis, storyboard, review gates, regeneration var
 ## References
 
 **Core Templates**:
+
 - [analysis-framework.md](references/analysis-framework.md) - Deep content analysis
 - [character-template.md](references/character-template.md) - Character definition format
 - [storyboard-template.md](references/storyboard-template.md) - Storyboard structure
 - [ohmsha-guide.md](references/ohmsha-guide.md) - Ohmsha manga specifics
 
 **Style Definitions**:
+
 - `references/art-styles/` - Art styles (ligne-claire, manga, realistic, ink-brush, chalk, minimalist)
 - `references/tones/` - Tones (neutral, warm, dramatic, romantic, energetic, vintage, action)
 - `references/presets/` - Presets with special rules (ohmsha, wuxia, shoujo, concept-story, four-panel)
 - `references/layouts/` - Layouts (standard, cinematic, dense, splash, mixed, webtoon, four-panel)
 
 **Workflow**:
+
 - [workflow.md](references/workflow.md) - Full workflow details
 - [auto-selection.md](references/auto-selection.md) - Content signal analysis
 - [partial-workflows.md](references/partial-workflows.md) - Partial workflow options
 
 ## Page Modification
 
-| Action | Steps |
-|--------|-------|
-| **Edit** | **Update prompt file FIRST** → regenerate image → download new PNG |
-| **Add** | Create prompt at position → generate with character descriptions embedded → renumber subsequent → update storyboard |
-| **Delete** | Remove files → renumber subsequent → update storyboard |
+| Action     | Steps                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Edit**   | **Update prompt file FIRST** → regenerate image → download new PNG                                                  |
+| **Add**    | Create prompt at position → generate with character descriptions embedded → renumber subsequent → update storyboard |
+| **Delete** | Remove files → renumber subsequent → update storyboard                                                              |
 
 **IMPORTANT**: When updating pages, ALWAYS update the prompt file (`prompts/NN-{cover|page}-[slug].md`) FIRST before regenerating. This ensures changes are documented and reproducible.
 

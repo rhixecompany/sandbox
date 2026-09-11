@@ -14,16 +14,16 @@ Search only returns content visible to the current actor. Resolve IDs and confir
 
 ## Select a Box AI operation
 
-| Need | Command |
-| --- | --- |
-| Answer, summarize, or compare 1 file | `ai:ask` with `single_item_qa` |
-| Answer, summarize, or compare 2–25 selected files | `ai:ask` with `multiple_item_qa` |
-| Q&A over more than 25 files | [Box Hubs](hubs.md) |
-| Recurring Q&A over a curated knowledge base | [Box Hubs](hubs.md) |
-| Discover fields from an exploratory prompt | `ai:extract` |
-| Extract a known schema without creating a template | `ai:extract-structured --fields` |
-| Extract against an existing compatible template | `ai:extract-structured --metadata-template` |
-| Write or rewrite text grounded in one file | `ai:text-gen` |
+| Need                                               | Command                                     |
+| -------------------------------------------------- | ------------------------------------------- |
+| Answer, summarize, or compare 1 file               | `ai:ask` with `single_item_qa`              |
+| Answer, summarize, or compare 2–25 selected files  | `ai:ask` with `multiple_item_qa`            |
+| Q&A over more than 25 files                        | [Box Hubs](hubs.md)                         |
+| Recurring Q&A over a curated knowledge base        | [Box Hubs](hubs.md)                         |
+| Discover fields from an exploratory prompt         | `ai:extract`                                |
+| Extract a known schema without creating a template | `ai:extract-structured --fields`            |
+| Extract against an existing compatible template    | `ai:extract-structured --metadata-template` |
+| Write or rewrite text grounded in one file         | `ai:text-gen`                               |
 
 ```bash
 box ai:ask --items=id=<FILE_ID>,type=file \

@@ -37,6 +37,7 @@ infsh app run x/post-create --input '{"text": "Check this out!", "media": "./scr
 ```
 
 Supported paths:
+
 - Absolute paths: `/home/user/images/photo.jpg`
 - Relative paths: `./image.png`, `../data/video.mp4`
 - Home directory: `~/Pictures/photo.jpg`
@@ -147,22 +148,22 @@ Example output:
 
 ```json
 {
-  "images": [
-    {
-      "url": "https://cloud.inference.sh/...",
-      "content_type": "image/png"
-    }
-  ]
+	"images": [
+		{
+			"url": "https://cloud.inference.sh/...",
+			"content_type": "image/png"
+		}
+	]
 }
 ```
 
 ## Error Handling
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "invalid input" | Schema mismatch | Check `infsh app get` for required fields |
-| "app not found" | Wrong app name | Check `infsh app list --search` |
-| "quota exceeded" | Out of credits | Check account balance |
+| Error            | Cause           | Solution                                  |
+| ---------------- | --------------- | ----------------------------------------- |
+| "invalid input"  | Schema mismatch | Check `infsh app get` for required fields |
+| "app not found"  | Wrong app name  | Check `infsh app list --search`           |
+| "quota exceeded" | Out of credits  | Check account balance                     |
 
 ## Documentation
 

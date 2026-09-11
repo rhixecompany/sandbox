@@ -4,6 +4,7 @@ description: "Datadog CLI Reference"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Datadog CLI Reference
      2|
      3|A CLI tool for AI agents to debug and triage using Datadog logs and metrics.

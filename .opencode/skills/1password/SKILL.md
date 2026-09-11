@@ -18,6 +18,7 @@ setup:
       provider_url: "https://developer.1password.com/docs/service-accounts/"
       secret: true
 ---
+
 # 1Password CLI
 
 Use this skill when the user wants secrets managed through 1Password instead of plaintext env vars or files.
@@ -158,7 +159,6 @@ op run -- sh -c '[ -n "$DB_PASSWORD" ] && echo "DB_PASSWORD is set" || echo "DB_
 
 For non-interactive use, authenticate with `OP_SERVICE_ACCOUNT_TOKEN` and avoid interactive `op signin`.
 Service accounts require CLI v2.18.0+.
-
 
 ## Pitfalls
 

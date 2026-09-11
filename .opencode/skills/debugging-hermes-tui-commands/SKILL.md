@@ -1,21 +1,21 @@
 ---
 author: Hermes Agent
-description: 'Debug Hermes TUI slash commands: Python, gateway, Ink UI.'
+description: "Debug Hermes TUI slash commands: Python, gateway, Ink UI."
 license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: debugging-hermes-tui-commands
 tags:
-- imported
+  - imported
 title: Debugging Hermes Tui Commands
 version: 1.0.0
 ---
+
 # Debugging Hermes TUI Slash Commands
 
 ## Overview
-
 
 Hermes slash commands span three layers — Python command registry, tui_gateway JSON-RPC bridge, and the Ink/TypeScript frontend. When a command misbehaves (missing from autocomplete, works in CLI but not TUI, config persists but UI doesn't update), the bug is almost always one layer being out of sync with another.
 
@@ -46,12 +46,14 @@ Command definitions must be registered consistently across Python and TypeScript
 ## Investigation Steps
 
 1. **Check if the command exists in the TUI frontend:**
+
    ```bash
    search_files --pattern "/commandname" --file_glob "*.ts" --path ui-tui/
    search_files --pattern "/commandname" --file_glob "*.tsx" --path ui-tui/
    ```
 
 2. **Examine the TUI command definition:**
+
    ```bash
    read_file ui-tui/src/app/slash/commands/core.ts
    # If not there:
@@ -59,6 +61,7 @@ Command definitions must be registered consistently across Python and TypeScript
    ```
 
 3. **Check if the command exists in the Python backend:**
+
    ```bash
    search_files --pattern "CommandDef" --file_glob "*.py" --path hermes_cli/
    search_files --pattern "commandname" --path hermes_cli/commands.py --context 3
@@ -74,6 +77,7 @@ Command definitions must be registered consistently across Python and TypeScript
 If a command exists in the TUI but doesn't show in autocomplete:
 
 1. Add a `CommandDef` entry to `COMMAND_REGISTRY` in `hermes_cli/commands.py`:
+
    ```python
    CommandDef("commandname", "Description of the command", "Session",
               cli_only=True, aliases=("alias",),
@@ -90,6 +94,7 @@ If a command exists in the TUI but doesn't show in autocomplete:
 3. Ensure `subcommands` matches the expected tab-completion options shown by the TUI.
 
 4. If the command runs server-side, add a handler in `HermesCLI.process_command()` in `cli.py`:
+
    ```python
    elif canonical == "commandname":
        self._handle_commandname(cmd_original)
@@ -135,11 +140,13 @@ When surface-level inspection doesn't reveal the bug:
 After fixing:
 
 1. Rebuild the TUI:
+
    ```bash
    cd /home/bb/hermes-agent && npm --prefix ui-tui run build
    ```
 
 2. Run the TUI and test the command:
+
    ```bash
    hermes --tui
    ```
@@ -153,9 +160,6 @@ After fixing:
 
 5. If the command is also gateway-available, test it from at least one messaging platform (or run the gateway tests: `scripts/run_tests.sh tests/gateway/`).
 
-
-
-
 ## Verification Checklist
 
 - [ ] Frontmatter complete (name, title, description, version, author, license, tags)
@@ -166,13 +170,12 @@ After fixing:
 - [ ] SKILL.md is under 250 lines
 - [ ] No placeholder text
 
-
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
+| Skill          | Purpose                   |
+| -------------- | ------------------------- |
 | `hermes-agent` | Core Hermes functionality |
-| `skill-judge` | Evaluate skill quality |
+| `skill-judge`  | Evaluate skill quality    |
 
 ## Workflow
 

@@ -3,6 +3,7 @@
 ## Detecting Auto-Generated `-script` Stubs
 
 Hermes auto-generates placeholder skills for every Python script in `~/AppData/Local/hermes/scripts/`. These skills:
+
 - End in `-script` suffix (e.g., `fix-frontmatter-script`, `audit-prompts-script`)
 - Have placeholder descriptions: "Placeholder skill for the foo.py script"
 - Have a corresponding non-script equivalent already installed in a categorized subdirectory (e.g., `development/fix-frontmatter`, `development/audit-prompts`)
@@ -47,6 +48,7 @@ rm -rf ~/AppData/Local/hermes/skills/<name>-script
 ```
 
 Verify:
+
 ```bash
 find ~/AppData/Local/hermes/skills -maxdepth 1 -type d -name "*-script" | wc -l
 # Should be 0

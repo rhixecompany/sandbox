@@ -38,17 +38,17 @@ For each frame: extract chunk, apply window, FFT, compute band energies.
 
 ### Feature Set
 
-| Feature | Formula | Controls |
-|---------|---------|----------|
-| `rms` | `sqrt(mean(chunk²))` | Overall loudness/energy |
-| `sub`..`hi` | `sqrt(mean(band_magnitudes²))` | Per-band energy |
-| `centroid` | `sum(freq*mag) / sum(mag)` | Brightness/timbre |
-| `flatness` | `geomean(mag) / mean(mag)` | Noise vs tone |
-| `flux` | `sum(max(0, mag - prev_mag))` | Transient strength |
-| `sub_r`..`hi_r` | `band / sum(all_bands)` | Spectral shape (volume-independent) |
-| `cent_d` | `abs(gradient(centroid))` | Timbral change rate |
-| `beat` | Flux peak detection | Binary beat onset |
-| `bdecay` | Exponential decay from beats | Smooth beat pulse (0→1→0) |
+| Feature         | Formula                        | Controls                            |
+| --------------- | ------------------------------ | ----------------------------------- |
+| `rms`           | `sqrt(mean(chunk²))`           | Overall loudness/energy             |
+| `sub`..`hi`     | `sqrt(mean(band_magnitudes²))` | Per-band energy                     |
+| `centroid`      | `sum(freq*mag) / sum(mag)`     | Brightness/timbre                   |
+| `flatness`      | `geomean(mag) / mean(mag)`     | Noise vs tone                       |
+| `flux`          | `sum(max(0, mag - prev_mag))`  | Transient strength                  |
+| `sub_r`..`hi_r` | `band / sum(all_bands)`        | Spectral shape (volume-independent) |
+| `cent_d`        | `abs(gradient(centroid))`      | Timbral change rate                 |
+| `beat`          | Flux peak detection            | Binary beat onset                   |
+| `bdecay`        | Exponential decay from beats   | Smooth beat pulse (0→1→0)           |
 
 **Band ratios are critical** — they decouple spectral shape from volume, so a quiet bass section and a loud bass section both read as "bassy" rather than just "loud" vs "quiet".
 
@@ -325,6 +325,7 @@ def generate_tts(text, voice_id, api_key, output_path, model="eleven_multilingua
 ```
 
 Voice settings notes:
+
 - `stability` 0.65 gives natural variation without drift. Lower (0.3-0.5) for more expressive reads, higher (0.7-0.9) for monotone/narration.
 - `similarity_boost` 0.80 keeps it close to the voice profile. Lower for more generic sound.
 - `style` 0.15 adds slight stylistic variation. Keep low (0-0.2) for straightforward reads.
@@ -380,6 +381,7 @@ def assign_voices(n_quotes, voice_pool, seed=42):
 TTS text must be separate from display text. The display text has line breaks for visual layout; the TTS text is a flat sentence with phonetic fixes.
 
 Common fixes:
+
 - Brand names: spell phonetically ("Nous" -> "Noose", "nginx" -> "engine-x")
 - Abbreviations: expand ("API" -> "A P I", "CLI" -> "C L I")
 - Technical terms: add phonetic hints
@@ -474,6 +476,7 @@ def build_tts_track(tts_clips, target_duration, intro_pad=5.0, outro_pad=4.0):
 ### Audio Mixing
 
 Mix TTS (center) with background music (wide stereo, low volume). The filter chain:
+
 1. TTS mono duplicated to both channels (centered)
 2. BGM loudness-normalized, volume reduced to 15%, stereo widened with `extrastereo`
 3. Mixed together with dropout transition for smooth endings
@@ -613,7 +616,7 @@ def extract_visual_beat_timestamps(video_path, fps, brightness_jump=30):
     n_frames = n_pixels // ppf
     frames = frames[:n_frames * ppf].reshape(n_frames, ppf)
     means = frames.mean(axis=1)
-    
+
     timestamps = []
     for i in range(1, len(means)):
         if means[i] - means[i-1] > brightness_jump:
@@ -626,12 +629,12 @@ def extract_visual_beat_timestamps(video_path, fps, brightness_jump=30):
 ```python
 def sync_report(audio_beats, visual_beats, tolerance_ms=50):
     """Compare audio beat timestamps to visual beat timestamps.
-    
+
     Args:
         audio_beats: list of timestamps (seconds) from audio analysis
         visual_beats: list of timestamps (seconds) from video brightness analysis
         tolerance_ms: max acceptable drift in milliseconds
-    
+
     Returns:
         dict with matched/unmatched/drift statistics
     """
@@ -639,7 +642,7 @@ def sync_report(audio_beats, visual_beats, tolerance_ms=50):
     matched = []
     unmatched_audio = []
     unmatched_visual = list(visual_beats)
-    
+
     for at in audio_beats:
         best_match = None
         best_delta = float("inf")
@@ -653,7 +656,7 @@ def sync_report(audio_beats, visual_beats, tolerance_ms=50):
             unmatched_visual.remove(best_match)
         else:
             unmatched_audio.append(at)
-    
+
     drifts = [m["drift_ms"] for m in matched]
     return {
         "matched": len(matched),
@@ -677,9 +680,9 @@ print(f"Mean drift: {report['mean_drift_ms']:.1f}ms, Max: {report['max_drift_ms'
 
 ### Common Sync Issues
 
-| Symptom | Cause | Fix |
-|---------|-------|-----|
-| Consistent late visual beats | ffmpeg concat adds frames at boundaries | Use `-vsync cfr` flag; pad segments to exact frame count |
-| Drift increases over time | Floating-point accumulation in `t = fi / fps` | Use integer frame counter, compute `t` fresh each frame |
-| Random missed beats | Beat threshold too high / feature smoothing too aggressive | Lower threshold; reduce EMA alpha for beat feature |
-| Beats land on wrong frame | Off-by-one in frame indexing | Verify: frame 0 = t=0, frame 1 = t=1/fps (not t=0) |
+| Symptom                      | Cause                                                      | Fix                                                      |
+| ---------------------------- | ---------------------------------------------------------- | -------------------------------------------------------- |
+| Consistent late visual beats | ffmpeg concat adds frames at boundaries                    | Use `-vsync cfr` flag; pad segments to exact frame count |
+| Drift increases over time    | Floating-point accumulation in `t = fi / fps`              | Use integer frame counter, compute `t` fresh each frame  |
+| Random missed beats          | Beat threshold too high / feature smoothing too aggressive | Lower threshold; reduce EMA alpha for beat feature       |
+| Beats land on wrong frame    | Off-by-one in frame indexing                               | Verify: frame 0 = t=0, frame 1 = t=1/fps (not t=0)       |

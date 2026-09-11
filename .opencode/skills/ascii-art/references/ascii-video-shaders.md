@@ -11,6 +11,7 @@ Post-processing effects applied to the pixel canvas (`numpy uint8 array, shape (
 The shader pipeline turns raw ASCII renders into cinematic output. The system is designed for **composability** — every shader, blend mode, and feedback transform is an independent building block. Combining them creates infinite visual variety from a small set of primitives.
 
 Choose shaders that reinforce the mood:
+
 - **Retro terminal**: CRT + scanlines + grain + green/amber tint
 - **Clean modern**: light bloom + subtle vignette only
 - **Glitch art**: heavy chromatic aberration + glitch bands + color wobble + pixel sort
@@ -91,11 +92,11 @@ Recursive temporal effect: frame N-1 feeds back into frame N with decay and opti
 class FeedbackBuffer:
     def __init__(self):
         self.buf = None  # previous frame (float32, 0-1)
-    
+
     def apply(self, canvas, decay=0.85, blend="screen", opacity=0.5,
               transform=None, transform_amt=0.02, hue_shift=0.0):
         """Mix current frame with decayed/transformed previous frame.
-        
+
         Args:
             canvas: current frame (uint8 H,W,3)
             decay: how fast old frame fades (0=instant, 1=permanent)
@@ -147,7 +148,7 @@ Composable shader pipeline. Build chains of named shaders with parameters. Order
 ```python
 class ShaderChain:
     """Composable shader pipeline.
-    
+
     Usage:
         chain = ShaderChain()
         chain.add("bloom", thr=120)
@@ -178,7 +179,7 @@ Routes shader names to implementations. Some shaders have **audio-reactive scali
 ```python
 def _apply_shader_step(canvas, name, kwargs, f, t):
     """Dispatch a single shader by name with kwargs.
-    
+
     Args:
         canvas: uint8 (H,W,3) pixel array
         name: shader key string (e.g. "bloom", "chromatic")
@@ -295,12 +296,12 @@ def _apply_shader_step(canvas, name, kwargs, f, t):
 
 Three shaders scale their parameters based on audio features:
 
-| Shader | Reactive To | Effect |
-|--------|------------|--------|
-| `chromatic` | `bdecay` | `amt * (0.4 + bdecay * 0.8)` — aberration kicks on beats |
-| `color_wobble` | `rms` | `amt * (0.5 + rms * 0.8)` — wobble intensity follows energy |
-| `grain` | `rms` | `amt * (0.5 + rms * 0.8)` — grain rougher in loud sections |
-| `glitch_bands` | `bdecay`, `sub` | Number of bands and displacement scale with beat energy |
+| Shader         | Reactive To     | Effect                                                      |
+| -------------- | --------------- | ----------------------------------------------------------- |
+| `chromatic`    | `bdecay`        | `amt * (0.4 + bdecay * 0.8)` — aberration kicks on beats    |
+| `color_wobble` | `rms`           | `amt * (0.5 + rms * 0.8)` — wobble intensity follows energy |
+| `grain`        | `rms`           | `amt * (0.5 + rms * 0.8)` — grain rougher in loud sections  |
+| `glitch_bands` | `bdecay`, `sub` | Number of bands and displacement scale with beat energy     |
 
 To make any shader beat-reactive, scale its parameter in the dispatch: `base_val * (low + bd * range)`.
 
@@ -310,81 +311,81 @@ To make any shader beat-reactive, scale its parameter in the dispatch: `base_val
 
 ### Geometry Shaders
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `crt` | `strength=0.05` | CRT barrel distortion (cached remap) |
-| `pixelate` | `block=4` | Reduce effective resolution |
-| `wave_distort` | `freq, amp, axis` | Sinusoidal row/column displacement |
-| `kaleidoscope` | `folds=6` | Radial symmetry via polar remapping |
-| `mirror_h` | — | Horizontal mirror |
-| `mirror_v` | — | Vertical mirror |
-| `mirror_quad` | — | 4-fold mirror |
-| `mirror_diag` | — | Diagonal mirror |
+| Shader         | Key Params        | Description                          |
+| -------------- | ----------------- | ------------------------------------ |
+| `crt`          | `strength=0.05`   | CRT barrel distortion (cached remap) |
+| `pixelate`     | `block=4`         | Reduce effective resolution          |
+| `wave_distort` | `freq, amp, axis` | Sinusoidal row/column displacement   |
+| `kaleidoscope` | `folds=6`         | Radial symmetry via polar remapping  |
+| `mirror_h`     | —                 | Horizontal mirror                    |
+| `mirror_v`     | —                 | Vertical mirror                      |
+| `mirror_quad`  | —                 | 4-fold mirror                        |
+| `mirror_diag`  | —                 | Diagonal mirror                      |
 
 ### Channel Manipulation
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `chromatic` | `amt=3` | R/B channel horizontal shift (beat-reactive) |
-| `channel_shift` | `r=(sx,sy), g, b` | Independent per-channel x,y shifting |
-| `channel_swap` | `order=(2,1,0)` | Reorder RGB channels (BGR, GRB, etc.) |
-| `rgb_split_radial` | `strength=5` | Chromatic aberration radiating from center |
+| Shader             | Key Params        | Description                                  |
+| ------------------ | ----------------- | -------------------------------------------- |
+| `chromatic`        | `amt=3`           | R/B channel horizontal shift (beat-reactive) |
+| `channel_shift`    | `r=(sx,sy), g, b` | Independent per-channel x,y shifting         |
+| `channel_swap`     | `order=(2,1,0)`   | Reorder RGB channels (BGR, GRB, etc.)        |
+| `rgb_split_radial` | `strength=5`      | Chromatic aberration radiating from center   |
 
 ### Color Manipulation
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `invert` | — | Negate all colors |
-| `posterize` | `levels=4` | Reduce color depth to N levels |
-| `threshold` | `thr=128` | Binary black/white |
-| `solarize` | `threshold=128` | Invert pixels above threshold |
-| `hue_rotate` | `amount=0.1` | Rotate all hues by amount (0-1) |
-| `saturation` | `factor=1.5` | Scale saturation (>1=more, <1=less) |
-| `color_grade` | `tint=(r,g,b)` | Per-channel multiplier |
-| `color_wobble` | `amt=0.3` | Time-varying per-channel sine modulation |
-| `color_ramp` | `ramp=[(R,G,B),...]` | Map luminance to custom color gradient |
+| Shader         | Key Params           | Description                              |
+| -------------- | -------------------- | ---------------------------------------- |
+| `invert`       | —                    | Negate all colors                        |
+| `posterize`    | `levels=4`           | Reduce color depth to N levels           |
+| `threshold`    | `thr=128`            | Binary black/white                       |
+| `solarize`     | `threshold=128`      | Invert pixels above threshold            |
+| `hue_rotate`   | `amount=0.1`         | Rotate all hues by amount (0-1)          |
+| `saturation`   | `factor=1.5`         | Scale saturation (>1=more, <1=less)      |
+| `color_grade`  | `tint=(r,g,b)`       | Per-channel multiplier                   |
+| `color_wobble` | `amt=0.3`            | Time-varying per-channel sine modulation |
+| `color_ramp`   | `ramp=[(R,G,B),...]` | Map luminance to custom color gradient   |
 
 ### Glow / Blur
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `bloom` | `thr=130` | Bright area glow (4x downsample + box blur) |
-| `edge_glow` | `hue=0.5` | Detect edges, add colored overlay |
-| `soft_focus` | `strength=0.3` | Blend with blurred version |
-| `radial_blur` | `strength=0.03` | Zoom blur from center outward |
+| Shader        | Key Params      | Description                                 |
+| ------------- | --------------- | ------------------------------------------- |
+| `bloom`       | `thr=130`       | Bright area glow (4x downsample + box blur) |
+| `edge_glow`   | `hue=0.5`       | Detect edges, add colored overlay           |
+| `soft_focus`  | `strength=0.3`  | Blend with blurred version                  |
+| `radial_blur` | `strength=0.03` | Zoom blur from center outward               |
 
 ### Noise / Grain
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `grain` | `amt=10` | 2x-downsampled film grain (beat-reactive) |
-| `static` | `density=0.05, color=True` | Random pixel noise (TV static) |
+| Shader   | Key Params                 | Description                               |
+| -------- | -------------------------- | ----------------------------------------- |
+| `grain`  | `amt=10`                   | 2x-downsampled film grain (beat-reactive) |
+| `static` | `density=0.05, color=True` | Random pixel noise (TV static)            |
 
 ### Lines / Patterns
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `scanlines` | `intensity=0.08, spacing=3` | Darken every Nth row |
-| `halftone` | `dot_size=6` | Halftone dot pattern overlay |
+| Shader      | Key Params                  | Description                  |
+| ----------- | --------------------------- | ---------------------------- |
+| `scanlines` | `intensity=0.08, spacing=3` | Darken every Nth row         |
+| `halftone`  | `dot_size=6`                | Halftone dot pattern overlay |
 
 ### Tone
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `vignette` | `s=0.22` | Edge darkening (cached distance field) |
-| `contrast` | `factor=1.3` | Adjust contrast around midpoint 128 |
-| `gamma` | `gamma=1.5` | Gamma correction (>1=brighter mids) |
-| `levels` | `black, white, midtone` | Levels adjustment (Photoshop-style) |
-| `brightness` | `factor=1.5` | Global brightness multiplier |
+| Shader       | Key Params              | Description                            |
+| ------------ | ----------------------- | -------------------------------------- |
+| `vignette`   | `s=0.22`                | Edge darkening (cached distance field) |
+| `contrast`   | `factor=1.3`            | Adjust contrast around midpoint 128    |
+| `gamma`      | `gamma=1.5`             | Gamma correction (>1=brighter mids)    |
+| `levels`     | `black, white, midtone` | Levels adjustment (Photoshop-style)    |
+| `brightness` | `factor=1.5`            | Global brightness multiplier           |
 
 ### Glitch / Data
 
-| Shader | Key Params | Description |
-|--------|-----------|-------------|
-| `glitch_bands` | (uses `f`) | Beat-reactive horizontal row displacement |
-| `block_glitch` | `n_blocks=8, max_size=40` | Random rectangular block displacement |
-| `pixel_sort` | `threshold=100, direction="h"` | Sort pixels by brightness in rows/columns |
-| `data_bend` | `offset, chunk` | Raw byte displacement (datamoshing) |
+| Shader         | Key Params                     | Description                               |
+| -------------- | ------------------------------ | ----------------------------------------- |
+| `glitch_bands` | (uses `f`)                     | Beat-reactive horizontal row displacement |
+| `block_glitch` | `n_blocks=8, max_size=40`      | Random rectangular block displacement     |
+| `pixel_sort`   | `threshold=100, direction="h"` | Sort pixels by brightness in rows/columns |
+| `data_bend`    | `offset, chunk`                | Raw byte displacement (datamoshing)       |
 
 ---
 
@@ -441,7 +442,9 @@ def mkc(R, G, B, rows, cols):
 ### Geometry Shaders
 
 #### CRT Barrel Distortion
+
 Cache the coordinate remap — it never changes per frame:
+
 ```python
 _crt_cache = {}
 def sh_crt(c, strength=0.05):
@@ -461,6 +464,7 @@ def sh_crt(c, strength=0.05):
 ```
 
 #### Pixelate
+
 ```python
 def sh_pixelate(c, block=4):
     """Reduce effective resolution."""
@@ -469,6 +473,7 @@ def sh_pixelate(c, block=4):
 ```
 
 #### Wave Distort
+
 ```python
 def sh_wave_distort(c, t, freq=0.02, amp=8, axis="x"):
     """Sinusoidal row/column displacement. Uses time t for animation."""
@@ -486,6 +491,7 @@ def sh_wave_distort(c, t, freq=0.02, amp=8, axis="x"):
 ```
 
 #### Displacement Map
+
 ```python
 def sh_displacement_map(c, dx_map, dy_map, strength=10):
     """Displace pixels using float32 displacement maps (same HxW as c).
@@ -498,6 +504,7 @@ def sh_displacement_map(c, dx_map, dy_map, strength=10):
 ```
 
 #### Kaleidoscope
+
 ```python
 def sh_kaleidoscope(c, folds=6):
     """Radial symmetry by polar coordinate remapping."""
@@ -514,6 +521,7 @@ def sh_kaleidoscope(c, folds=6):
 ```
 
 #### Mirror Variants
+
 ```python
 def sh_mirror_h(c):
     """Horizontal mirror — left half reflected to right."""
@@ -549,6 +557,7 @@ def sh_mirror_diag(c):
 ### Channel Manipulation Shaders
 
 #### Chromatic Aberration
+
 ```python
 def sh_chromatic(c, amt=3):
     """R/B channel horizontal shift. Beat-reactive in dispatch (amt scaled by bdecay)."""
@@ -561,6 +570,7 @@ def sh_chromatic(c, amt=3):
 ```
 
 #### Channel Shift
+
 ```python
 def sh_channel_shift(c, r_shift=(0,0), g_shift=(0,0), b_shift=(0,0)):
     """Independent per-channel x,y shifting."""
@@ -572,6 +582,7 @@ def sh_channel_shift(c, r_shift=(0,0), g_shift=(0,0), b_shift=(0,0)):
 ```
 
 #### Channel Swap
+
 ```python
 def sh_channel_swap(c, order=(2,1,0)):
     """Reorder RGB channels. (2,1,0)=BGR, (1,0,2)=GRB, etc."""
@@ -579,6 +590,7 @@ def sh_channel_swap(c, order=(2,1,0)):
 ```
 
 #### RGB Split Radial
+
 ```python
 def sh_rgb_split_radial(c, strength=5):
     """Chromatic aberration radiating from center — stronger at edges."""
@@ -603,12 +615,14 @@ def sh_rgb_split_radial(c, strength=5):
 ### Color Manipulation Shaders
 
 #### Invert
+
 ```python
 def sh_invert(c):
     return 255 - c
 ```
 
 #### Posterize
+
 ```python
 def sh_posterize(c, levels=4):
     """Reduce color depth to N levels per channel."""
@@ -617,6 +631,7 @@ def sh_posterize(c, levels=4):
 ```
 
 #### Threshold
+
 ```python
 def sh_threshold(c, thr=128):
     """Binary black/white at threshold."""
@@ -626,6 +641,7 @@ def sh_threshold(c, thr=128):
 ```
 
 #### Solarize
+
 ```python
 def sh_solarize(c, threshold=128):
     """Invert pixels above threshold — classic darkroom effect."""
@@ -634,6 +650,7 @@ def sh_solarize(c, threshold=128):
 ```
 
 #### Hue Rotate
+
 ```python
 def sh_hue_rotate(c, amount=0.1):
     """Rotate all hues by amount (0-1)."""
@@ -644,6 +661,7 @@ def sh_hue_rotate(c, amount=0.1):
 ```
 
 #### Saturation
+
 ```python
 def sh_saturation(c, factor=1.5):
     """Adjust saturation. >1=more saturated, <1=desaturated."""
@@ -654,6 +672,7 @@ def sh_saturation(c, factor=1.5):
 ```
 
 #### Color Grade
+
 ```python
 def sh_color_grade(c, tint):
     """Per-channel multiplier. tint=(r_mul, g_mul, b_mul)."""
@@ -663,6 +682,7 @@ def sh_color_grade(c, tint):
 ```
 
 #### Color Wobble
+
 ```python
 def sh_color_wobble(c, t, amt=0.3):
     """Time-varying per-channel sine modulation. Audio-reactive in dispatch (amt scaled by rms)."""
@@ -674,6 +694,7 @@ def sh_color_wobble(c, t, amt=0.3):
 ```
 
 #### Color Ramp
+
 ```python
 def sh_color_ramp(c, ramp_colors):
     """Map luminance to a custom color gradient.
@@ -693,6 +714,7 @@ def sh_color_ramp(c, ramp_colors):
 ### Glow / Blur Shaders
 
 #### Bloom
+
 ```python
 def sh_bloom(c, thr=130):
     """Bright-area glow: 4x downsample, threshold, 3-pass box blur, screen blend."""
@@ -707,6 +729,7 @@ def sh_bloom(c, thr=130):
 ```
 
 #### Edge Glow
+
 ```python
 def sh_edge_glow(c, hue=0.5):
     """Detect edges via gradient, add colored overlay."""
@@ -725,6 +748,7 @@ def sh_edge_glow(c, hue=0.5):
 ```
 
 #### Soft Focus
+
 ```python
 def sh_soft_focus(c, strength=0.3):
     """Blend original with 2x-downsampled box blur."""
@@ -737,6 +761,7 @@ def sh_soft_focus(c, strength=0.3):
 ```
 
 #### Radial Blur
+
 ```python
 def sh_radial_blur(c, strength=0.03, center=None):
     """Zoom blur from center — motion blur radiating outward."""
@@ -758,6 +783,7 @@ def sh_radial_blur(c, strength=0.03, center=None):
 ### Noise / Grain Shaders
 
 #### Film Grain
+
 ```python
 def sh_grain(c, amt=10):
     """2x-downsampled film grain. Audio-reactive in dispatch (amt scaled by rms)."""
@@ -767,6 +793,7 @@ def sh_grain(c, amt=10):
 ```
 
 #### Static Noise
+
 ```python
 def sh_static_noise(c, density=0.05, color=True):
     """Random pixel noise overlay (TV static)."""
@@ -787,6 +814,7 @@ def sh_static_noise(c, density=0.05, color=True):
 ### Lines / Pattern Shaders
 
 #### Scanlines
+
 ```python
 def sh_scanlines(c, intensity=0.08, spacing=3):
     """Darken every Nth row."""
@@ -796,6 +824,7 @@ def sh_scanlines(c, intensity=0.08, spacing=3):
 ```
 
 #### Halftone
+
 ```python
 def sh_halftone(c, dot_size=6):
     """Halftone dot pattern overlay — circular dots sized by local brightness."""
@@ -822,6 +851,7 @@ def sh_halftone(c, dot_size=6):
 ### Tone Shaders
 
 #### Vignette
+
 ```python
 _vig_cache = {}
 def sh_vignette(c, s=0.22):
@@ -857,17 +887,19 @@ def sh_reverse_vignette(c, strength=0.5):
     return np.clip(c.astype(np.float32) * _rvignette_cache[k], 0, 255).astype(np.uint8)
 ```
 
-| Param | Default | Effect |
-|-------|---------|--------|
-| `strength` | 0.5 | 0 = no effect, 1.0 = center nearly black |
+| Param      | Default | Effect                                   |
+| ---------- | ------- | ---------------------------------------- |
+| `strength` | 0.5     | 0 = no effect, 1.0 = center nearly black |
 
 Add to ShaderChain dispatch:
+
 ```python
 elif name == "reverse_vignette":
     return sh_reverse_vignette(canvas, kwargs.get("strength", 0.5))
 ```
 
 #### Contrast
+
 ```python
 def sh_contrast(c, factor=1.3):
     """Adjust contrast around midpoint 128."""
@@ -875,6 +907,7 @@ def sh_contrast(c, factor=1.3):
 ```
 
 #### Gamma
+
 ```python
 def sh_gamma(c, gamma=1.5):
     """Gamma correction. >1=brighter mids, <1=darker mids."""
@@ -882,6 +915,7 @@ def sh_gamma(c, gamma=1.5):
 ```
 
 #### Levels
+
 ```python
 def sh_levels(c, black=0, white=255, midtone=1.0):
     """Levels adjustment (Photoshop-style). Remap black/white points, apply midtone gamma."""
@@ -891,6 +925,7 @@ def sh_levels(c, black=0, white=255, midtone=1.0):
 ```
 
 #### Brightness
+
 ```python
 def sh_brightness(c, factor=1.5):
     """Global brightness multiplier. Prefer tonemap() for scene-level brightness control."""
@@ -902,6 +937,7 @@ def sh_brightness(c, factor=1.5):
 ### Glitch / Data Shaders
 
 #### Glitch Bands
+
 ```python
 def sh_glitch_bands(c, f):
     """Beat-reactive horizontal row displacement. f = audio features dict.
@@ -918,6 +954,7 @@ def sh_glitch_bands(c, f):
 ```
 
 #### Block Glitch
+
 ```python
 def sh_block_glitch(c, n_blocks=8, max_size=40):
     """Random rectangular block displacement — copy blocks to random positions."""
@@ -931,6 +968,7 @@ def sh_block_glitch(c, n_blocks=8, max_size=40):
 ```
 
 #### Pixel Sort
+
 ```python
 def sh_pixel_sort(c, threshold=100, direction="h"):
     """Sort pixels by brightness in contiguous bright regions."""
@@ -962,6 +1000,7 @@ def sh_pixel_sort(c, threshold=100, direction="h"):
 ```
 
 #### Data Bend
+
 ```python
 def sh_data_bend(c, offset=1000, chunk=500):
     """Treat raw pixel bytes as data, copy a chunk to another offset — datamosh artifacts."""
@@ -999,6 +1038,7 @@ TINT_SUNSET    = (1.3, 0.85, 0.7)    # orange dusk
 > **Note:** These operate on character-level `(chars, colors)` arrays (v1 interface). In v2, transitions between scenes are typically handled by hard cuts at beat boundaries (see `scenes.md`), or by rendering both scenes to canvases and using `blend_canvas()` with a time-varying opacity. The character-level transitions below are still useful for within-scene effects.
 
 ### Crossfade
+
 ```python
 def tr_crossfade(ch_a, co_a, ch_b, co_b, blend):
     co = (co_a.astype(np.float32) * (1-blend) + co_b.astype(np.float32) * blend).astype(np.uint8)
@@ -1008,6 +1048,7 @@ def tr_crossfade(ch_a, co_a, ch_b, co_b, blend):
 ```
 
 ### v2 Canvas-Level Crossfade
+
 ```python
 def tr_canvas_crossfade(canvas_a, canvas_b, blend):
     """Smooth pixel crossfade between two canvases."""
@@ -1015,6 +1056,7 @@ def tr_canvas_crossfade(canvas_a, canvas_b, blend):
 ```
 
 ### Wipe (directional)
+
 ```python
 def tr_wipe(ch_a, co_a, ch_b, co_b, blend, direction="left"):
     """direction: left, right, up, down, radial, diagonal"""
@@ -1030,6 +1072,7 @@ def tr_wipe(ch_a, co_a, ch_b, co_b, blend, direction="left"):
 ```
 
 ### Glitch Cut
+
 ```python
 def tr_glitch_cut(ch_a, co_a, ch_b, co_b, blend):
     if blend < 0.5: ch, co = ch_a.copy(), co_a.copy()
@@ -1048,6 +1091,7 @@ def tr_glitch_cut(ch_a, co_a, ch_b, co_b, blend):
 ## Output Formats
 
 ### MP4 (default)
+
 ```python
 cmd = ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
        "-s", f"{W}x{H}", "-r", str(fps), "-i", "pipe:0",
@@ -1056,6 +1100,7 @@ cmd = ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
 ```
 
 ### GIF
+
 ```python
 cmd = ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
        "-s", f"{W}x{H}", "-r", str(fps), "-i", "pipe:0",
@@ -1073,13 +1118,13 @@ import os
 def output_png_sequence(frames, output_dir, W, H, fps, prefix="frame"):
     """Write frames as numbered PNGs. frames = iterable of uint8 (H,W,3) arrays."""
     os.makedirs(output_dir, exist_ok=True)
-    
+
     # Method 1: Direct PIL write (no ffmpeg dependency)
     from PIL import Image
     for i, frame in enumerate(frames):
         img = Image.fromarray(frame)
         img.save(os.path.join(output_dir, f"{prefix}_{i:06d}.png"))
-    
+
     # Method 2: ffmpeg pipe (faster for large sequences)
     cmd = ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
            "-s", f"{W}x{H}", "-r", str(fps), "-i", "pipe:0",
@@ -1087,6 +1132,7 @@ def output_png_sequence(frames, output_dir, W, H, fps, prefix="frame"):
 ```
 
 Reassemble PNG sequence to video:
+
 ```bash
 ffmpeg -framerate 24 -i frame_%06d.png -c:v libx264 -crf 18 -pix_fmt yuv420p output.mp4
 ```
@@ -1121,6 +1167,7 @@ def blend_onto_background(rgba_canvas, bg_rgb):
 ```
 
 RGBA output via ffmpeg (ProRes 4444 for editing, WebM VP9 for web):
+
 ```bash
 # ProRes 4444 — preserves alpha, widely supported in NLEs
 ffmpeg -y -f rawvideo -pix_fmt rgba -s {W}x{H} -r {fps} -i pipe:0 \
@@ -1170,7 +1217,7 @@ ANSI_SHOW_CURSOR = "\033[?25h"
 ```python
 def frame_to_ansi(chars, colors):
     """Convert char+color arrays to a single ANSI string for terminal output.
-    
+
     Args:
         chars: (rows, cols) array of single characters
         colors: (rows, cols, 3) uint8 RGB array
@@ -1225,7 +1272,7 @@ import time
 
 def render_live(scene_fn, r, fps=24, duration=None):
     """Render a scene function live in the terminal.
-    
+
     Args:
         scene_fn: v2 scene function (r, f, t, S) -> canvas
                   OR v1-style function that populates a grid
@@ -1236,10 +1283,10 @@ def render_live(scene_fn, r, fps=24, duration=None):
     frame_time = 1.0 / fps
     S = {}
     f = {}  # synthesize features or connect to live audio
-    
+
     sys.stdout.write(ANSI_HIDE_CURSOR + ANSI_CLEAR)
     sys.stdout.flush()
-    
+
     t0 = time.monotonic()
     frame_count = 0
     try:
@@ -1247,24 +1294,24 @@ def render_live(scene_fn, r, fps=24, duration=None):
             t = time.monotonic() - t0
             if duration and t > duration:
                 break
-            
+
             # Synthesize features from time (or connect to live audio via pyaudio)
             f = synthesize_features(t)
-            
+
             # Render scene — for terminal, use a small grid
             g = r.get_grid("sm")
             # Option A: v2 scene → extract chars/colors from canvas (reverse render)
             # Option B: call effect functions directly for chars/colors
             canvas = scene_fn(r, f, t, S)
-            
+
             # For terminal display, render chars+colors directly
             # (bypassing the pixel canvas — terminal uses character cells)
             chars, colors = scene_to_terminal(scene_fn, r, f, t, S, g)
-            
+
             frame_str = ANSI_CLEAR + frame_to_ansi(chars, colors)
             sys.stdout.write(frame_str)
             sys.stdout.flush()
-            
+
             # Frame timing
             elapsed = time.monotonic() - t0 - (frame_count * frame_time)
             sleep_time = frame_time - elapsed
@@ -1300,18 +1347,18 @@ import curses
 
 def render_curses(scene_fn, r, fps=24):
     """Curses-based live renderer with resize handling and key input."""
-    
+
     def _main(stdscr):
         curses.start_color()
         curses.use_default_colors()
         curses.curs_set(0)  # hide cursor
         stdscr.nodelay(True)  # non-blocking input
-        
+
         # Initialize color pairs (curses supports 256 colors)
         # Map RGB to nearest curses color pair
         color_cache = {}
         next_pair = [1]
-        
+
         def get_color_pair(r, g, b):
             key = (r >> 4, g >> 4, b >> 4)  # quantize to reduce pairs
             if key not in color_cache:
@@ -1323,23 +1370,23 @@ def render_curses(scene_fn, r, fps=24):
                 else:
                     return 0
             return curses.color_pair(color_cache[key])
-        
+
         S = {}
         f = {}
         frame_time = 1.0 / fps
         t0 = time.monotonic()
-        
+
         while True:
             t = time.monotonic() - t0
             f = synthesize_features(t)
-            
+
             # Adapt grid to terminal size
             max_y, max_x = stdscr.getmaxyx()
             g = r.get_grid_for_size(max_x, max_y)  # dynamic grid sizing
-            
+
             chars, colors = scene_to_terminal(scene_fn, r, f, t, S, g)
             rows, cols = chars.shape
-            
+
             for row in range(min(rows, max_y - 1)):
                 for col in range(min(cols, max_x - 1)):
                     ch = chars[row, col]
@@ -1348,30 +1395,31 @@ def render_curses(scene_fn, r, fps=24):
                         stdscr.addch(row, col, ch, get_color_pair(*rgb))
                     except curses.error:
                         pass  # ignore writes outside terminal bounds
-            
+
             stdscr.refresh()
-            
+
             # Handle input
             key = stdscr.getch()
             if key == ord('q'):
                 break
-            
+
             time.sleep(max(0, frame_time - (time.monotonic() - t0 - t)))
-    
+
     curses.wrapper(_main)
 ```
 
 ### Terminal Rendering Constraints
 
-| Constraint | Value | Notes |
-|-----------|-------|-------|
-| Max practical grid | ~200x60 | Depends on terminal size |
-| Color support | 24-bit (modern), 256 (fallback), 16 (minimal) | Check `$COLORTERM` for truecolor |
-| Frame rate ceiling | ~30 fps | Terminal I/O is the bottleneck |
-| Delta updates | 2-5x faster | Only worth it when <30% of cells change per frame |
-| SSH latency | Kills performance | Local terminals only for real-time |
+| Constraint         | Value                                         | Notes                                             |
+| ------------------ | --------------------------------------------- | ------------------------------------------------- |
+| Max practical grid | ~200x60                                       | Depends on terminal size                          |
+| Color support      | 24-bit (modern), 256 (fallback), 16 (minimal) | Check `$COLORTERM` for truecolor                  |
+| Frame rate ceiling | ~30 fps                                       | Terminal I/O is the bottleneck                    |
+| Delta updates      | 2-5x faster                                   | Only worth it when <30% of cells change per frame |
+| SSH latency        | Kills performance                             | Local terminals only for real-time                |
 
 **Detect color support:**
+
 ```python
 import os
 def get_terminal_color_depth():

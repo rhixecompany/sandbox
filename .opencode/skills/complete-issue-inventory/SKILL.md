@@ -7,6 +7,7 @@ author: "Hermes Agent"
 license: MIT
 tags: [qa, verification, debugging, workflow]
 ---
+
 # Complete Issue Inventory
 
 ## Overview
@@ -21,11 +22,11 @@ The user says "debug/fix all issues, errors, warnings" — for code, config, mar
 
 Every issue discovered gets one of three statuses:
 
-| Status | Meaning | Required Evidence |
-|--------|---------|-------------------|
-| ✅ FIXED | Fix applied and confirmed | Diff, lint pass, or command output |
-| 🔴 BLOCKED | Genuinely unfixable | Exact error + alternative tried |
-| 🟡 PENDING | Needs user decision | Justification in summary |
+| Status     | Meaning                   | Required Evidence                  |
+| ---------- | ------------------------- | ---------------------------------- |
+| ✅ FIXED   | Fix applied and confirmed | Diff, lint pass, or command output |
+| 🔴 BLOCKED | Genuinely unfixable       | Exact error + alternative tried    |
+| 🟡 PENDING | Needs user decision       | Justification in summary           |
 
 ## Anti-Pattern: The "Non-Blocking" Dismissal
 
@@ -47,7 +48,6 @@ If a tool can't be installed via one method, try alternatives before labeling it
 - "Non-blocking" in a full-fix context means "skipping without consent"
 - Environment issues (missing binary, network timeout) are addressed, not dismissed
 - Zero unresolved issues after a "fix all" pass builds trust
-
 
 ## Pitfalls
 

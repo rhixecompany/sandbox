@@ -1,27 +1,24 @@
 ---
-description: "Testing mode for Playwright tests"
-name: "Playwright Tester Mode"
+description: Testing mode for Playwright tests
+name: Playwright Tester Mode
 tools:
-  [
-    "changes",
-    "codebase",
-    "edit/editFiles",
-    "fetch",
-    "findTestFiles",
-    "problems",
-    "runCommands",
-    "runTasks",
-    "runTests",
-    "search",
-    "searchResults",
-    "terminalLastCommand",
-    "terminalSelection",
-    "testFailure",
-    "playwright",
-  ]
+  changes: true
+  codebase: true
+  edit/editFiles: true
+  fetch: true
+  findTestFiles: true
+  problems: true
+  runCommands: true
+  runTasks: true
+  runTests: true
+  search: true
+  searchResults: true
+  terminalLastCommand: true
+  terminalSelection: true
+  testFailure: true
+  playwright: true
 model: Claude Sonnet 4
 ---
-
 # Playwright Tester Mode
 
 ## Core Responsibilities
@@ -31,3 +28,4 @@ model: Claude Sonnet 4
 3. **Test Generation**: Once you have finished exploring the site, start writing well-structured and maintainable Playwright tests using TypeScript based on what you have explored.
 4. **Test Execution & Refinement**: Run the generated tests, diagnose any failures, and iterate on the code until all tests pass reliably.
 5. **Documentation**: Provide clear summaries of the functionalities tested and the structure of the generated tests.
+

@@ -10,17 +10,17 @@ Hermes `~/AppData/Local/hermes/hooks/` → `.github/hooks/` (one-way, reference 
 
 ## Active Hermes Hooks
 
-| Hook | Trigger | Reference File |
-|---|---|---|
-| session-logger | on_session_start, on_session_end, pre_llm_call | `session-logger/hook.sh` + `01-session-logger-hook.sh` |
-| governance-audit | on_session_start, on_session_end, pre_llm_call | `governance-audit/hook.sh` + `02-governance-audit-hook.sh` |
-| session-auto-commit | on_session_end | `session-auto-commit/hook.sh` + `03-session-auto-commit-hook.sh` |
+| Hook                | Trigger                                        | Reference File                                                   |
+| ------------------- | ---------------------------------------------- | ---------------------------------------------------------------- |
+| session-logger      | on_session_start, on_session_end, pre_llm_call | `session-logger/hook.sh` + `01-session-logger-hook.sh`           |
+| governance-audit    | on_session_start, on_session_end, pre_llm_call | `governance-audit/hook.sh` + `02-governance-audit-hook.sh`       |
+| session-auto-commit | on_session_end                                 | `session-auto-commit/hook.sh` + `03-session-auto-commit-hook.sh` |
 
 ## Standalone Hook Scripts
 
-| Script | Purpose | Reference File |
-|---|---|---|
-| pre-exec-validate.sh | Pre-execution validation | `pre-exec-validate.sh` + `04-pre-exec-validate.sh` |
+| Script                 | Purpose                      | Reference File                                         |
+| ---------------------- | ---------------------------- | ------------------------------------------------------ |
+| pre-exec-validate.sh   | Pre-execution validation     | `pre-exec-validate.sh` + `04-pre-exec-validate.sh`     |
 | post-exec-state-log.py | Post-execution state logging | `post-exec-state-log.py` + `05-post-exec-state-log.py` |
 
 ## Cross-Platform Quick Commands Reference

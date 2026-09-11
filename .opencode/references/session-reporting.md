@@ -16,33 +16,33 @@ description: Session reporting reference â verified from actual workspace s
 
 From verified `execution-summary.md` (line 5 â direct read):
 
-| Session ID | Model (verified) | Provider | Status |
-|---|---|---|---|
-| `20260910_123224` | `thinkingmachines/inkling:free` | `openrouter` | Completed |
-| `20260910_123351` | `deepseek-v4-flash-free` (fallback) | `openrouter` | Completed |
+| Session ID        | Model (verified)                     | Provider       | Status    |
+| ----------------- | ------------------------------------ | -------------- | --------- |
+| `20260910_123224` | `thinkingmachines/inkling:free`      | `openrouter`   | Completed |
+| `20260910_123351` | `deepseek-v4-flash-free` (fallback)  | `openrouter`   | Completed |
 | `20260910_123542` | `opencode-zen` (verified free model) | `opencode-zen` | Completed |
 
 These IDs come from verified CLI output (`hermes chat --provider ... --model ... --oneshot` results recorded in workspace audit artifacts). Not invented.
 
 ## Verified Config / Model State (From `.hermes.md` / Config Verification)
 
-| Property | Verified Value | Source |
-|---|---|---|
-| Primary model | `thinkingmachines/inkling:free` | Config verification / `.hermes.md` |
-| Fallback chain | 3 entries (openrouter â nous â opencode-zen) | Config verification |
-| Provider (primary) | `openrouter` | `.hermes.md` / session audit |
-| Provider (fallbacks verified) | `opencode-zen` (4 free models verified) | `test-providers-models` audit |
+| Property                      | Verified Value                               | Source                             |
+| ----------------------------- | -------------------------------------------- | ---------------------------------- |
+| Primary model                 | `thinkingmachines/inkling:free`              | Config verification / `.hermes.md` |
+| Fallback chain                | 3 entries (openrouter â nous â opencode-zen) | Config verification                |
+| Provider (primary)            | `openrouter`                                 | `.hermes.md` / session audit       |
+| Provider (fallbacks verified) | `opencode-zen` (4 free models verified)      | `test-providers-models` audit      |
 
 ## Workspace Metrics (Verified â From Session Replay / `execution-summary.md`)
 
-| Metric | Verified Value | Source |
-|---|---|---|
-| Workspace skills | 85 | Session audit |
-| `.github/skills/` SKILL.md | 27 verified | File inventory |
-| Brainstorming SKILL.md size | 5,352 B | `read_file` / skill verification |
-| Session audit (verified) | 9 sessions; 517 changed files (last 3 commits) | `git log` / session replay |
-| Uncommitted dirs | 10 dirs + `.omo/*.json` | `git status` (verified in audit) |
-| Fix verified | `.github/hooks/_pathutil.py` line 59 + `_CYG_WARNED` idempotency; AST PASS | Code verification |
+| Metric                      | Verified Value                                                             | Source                           |
+| --------------------------- | -------------------------------------------------------------------------- | -------------------------------- |
+| Workspace skills            | 85                                                                         | Session audit                    |
+| `.github/skills/` SKILL.md  | 27 verified                                                                | File inventory                   |
+| Brainstorming SKILL.md size | 5,352 B                                                                    | `read_file` / skill verification |
+| Session audit (verified)    | 9 sessions; 517 changed files (last 3 commits)                             | `git log` / session replay       |
+| Uncommitted dirs            | 10 dirs + `.omo/*.json`                                                    | `git status` (verified in audit) |
+| Fix verified                | `.github/hooks/_pathutil.py` line 59 + `_CYG_WARNED` idempotency; AST PASS | Code verification                |
 
 ## Session Audit Workflow (Verified Pattern)
 

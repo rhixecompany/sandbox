@@ -1,23 +1,24 @@
 # Story Skeletons
 
 Three traditions for narrative structure, deliberately heterogeneous (they disagree about what stories are):
+
 - **Emma Coats** — Pixar's 22 Story Basics (Twitter, May 2011). Working principles from Pixar's story room.
-- **George Saunders** — *A Swim in a Pond in the Rain* (Random House, 2021). Stories as escalating-stakes engines, learned by close reading Russian short fiction.
-- **Ursula K. Le Guin** — "The Carrier Bag Theory of Fiction" (1986). Argument *against* conflict-driven shape; *for* fiction as container.
+- **George Saunders** — _A Swim in a Pond in the Rain_ (Random House, 2021). Stories as escalating-stakes engines, learned by close reading Russian short fiction.
+- **Ursula K. Le Guin** — "The Carrier Bag Theory of Fiction" (1986). Argument _against_ conflict-driven shape; _for_ fiction as container.
 
 This file deliberately omits **Hero's Journey / Save the Cat / Story Circle / Three-Act**. Real traditions but so widely formulaic-ized in screenwriting and self-help-adjacent writing that invoking them tends to produce slop.
 
 ## When to use
 
-| Situation | Reach for |
-|---|---|
-| Story has no shape, need a fast spine | Coats #4 |
-| Stuck in early draft | Coats #9, #11, #12 |
-| Draft isn't working, don't know why | Saunders attention to "what does the story now want?" |
-| Conflict-arc is producing forced or shallow work | Le Guin's carrier bag |
-| Writing about a community / place / duration not a hero | Le Guin's carrier bag |
-| Writing literary short fiction | Saunders |
-| Commercial-feature-length narrative | Coats |
+| Situation                                               | Reach for                                             |
+| ------------------------------------------------------- | ----------------------------------------------------- |
+| Story has no shape, need a fast spine                   | Coats #4                                              |
+| Stuck in early draft                                    | Coats #9, #11, #12                                    |
+| Draft isn't working, don't know why                     | Saunders attention to "what does the story now want?" |
+| Conflict-arc is producing forced or shallow work        | Le Guin's carrier bag                                 |
+| Writing about a community / place / duration not a hero | Le Guin's carrier bag                                 |
+| Writing literary short fiction                          | Saunders                                              |
+| Commercial-feature-length narrative                     | Coats                                                 |
 
 ## Don't use when
 
@@ -30,7 +31,8 @@ This file deliberately omits **Hero's Journey / Save the Cat / Story Circle / Th
 The full list is widely circulated. Most-cited:
 
 **#4 — Pixar Pitch (the spine):**
-> *Once upon a time there was ___. Every day, ___. One day ___. Because of that, ___. Because of that, ___. Until finally ___.*
+
+> _Once upon a time there was \_**. Every day, \_**. One day \_**. Because of that, \_**. Because of that, \_**. Until finally \_**._
 
 Six-clause skeleton: stable normalcy → disrupting event → cascading consequences → resolution. Fits most narratives.
 
@@ -60,19 +62,20 @@ Six-clause skeleton: stable normalcy → disrupting event → cascading conseque
 
 **Specificity is the engine.** Generic verbs, generic nouns, generic adjectives produce stories that don't escalate because nothing specific is happening to anyone in particular.
 
-**The story knows more than the writer.** Strong stories are built by *responsiveness*: draft, read what you wrote, ask "what does this story now want?", write the next sentence to fulfill that want. The writer is in service to the story.
+**The story knows more than the writer.** Strong stories are built by _responsiveness_: draft, read what you wrote, ask "what does this story now want?", write the next sentence to fulfill that want. The writer is in service to the story.
 
 This contrasts directly with formula-driven writing.
 
 ## Le Guin — carrier bag
 
-Anthropology has long focused on the *spear* and the *blade* as the early human inventions defining narrative — hunter-warrior stories. The actually-more-important invention was the *container*: the bag, the basket, the sling. Human survival was overwhelmingly gathering, not hunting. The hunting story has rising action and climax. The gathering story has accretion.
+Anthropology has long focused on the _spear_ and the _blade_ as the early human inventions defining narrative — hunter-warrior stories. The actually-more-important invention was the _container_: the bag, the basket, the sling. Human survival was overwhelmingly gathering, not hunting. The hunting story has rising action and climax. The gathering story has accretion.
 
-> *The natural, proper, fitting shape of the novel might be that of a sack, a bag. ... A novel is a medicine bundle, holding things in a particular, powerful relation to one another and to us.*
+> _The natural, proper, fitting shape of the novel might be that of a sack, a bag. ... A novel is a medicine bundle, holding things in a particular, powerful relation to one another and to us._
 
-For ideation: when the conflict-arc is forcing you to flatten the work, use Le Guin. The carrier-bag novel is shaped not as a hero confronting an obstacle on a journey but as a container holding many specific things in particular relation. *Always Coming Home* (1985) is the model — multi-form anthropology of an imagined people: oral histories, recipes, songs, maps, alongside (not subordinated to) the conventional narrative.
+For ideation: when the conflict-arc is forcing you to flatten the work, use Le Guin. The carrier-bag novel is shaped not as a hero confronting an obstacle on a journey but as a container holding many specific things in particular relation. _Always Coming Home_ (1985) is the model — multi-form anthropology of an imagined people: oral histories, recipes, songs, maps, alongside (not subordinated to) the conventional narrative.
 
 Use when:
+
 - Work is essayistic, anthropological, polyvocal
 - About a place, a community, a duration, a way of life
 - "Hero with an obstacle" frame collapses what makes the work specific
@@ -80,11 +83,13 @@ Use when:
 ## Procedure
 
 ### Shaping a story you have material for
+
 1. Try Coats #4 spine. Can you fill in six blanks? If not, you may not have the spine yet.
 2. Apply Saunders attention. Read sentence by sentence; ask "what does this now want?" at each transition.
 3. Ask Le Guin's question: is the conflict-arc actually right for this material, or am I forcing it?
 
 ### Diagnosing a stalled draft
+
 - Coats #16: What are the stakes? If absent, surface them.
 - Saunders: where does the energy stop being introduced? Find the dead zone.
 - Coats #13: Are characters passive? If yes, that's the problem.
@@ -97,4 +102,4 @@ Use when:
 - Saunders writes against self-help-adjacent registers. Don't drift into "the writer's journey" tone.
 - Don't apply Le Guin's carrier bag superficially. It's a serious argument with politics. Using it as "and now my story is a bag of stuff" without engaging the underlying argument is dilution.
 
-Sources: Coats, Pixar story rules tweets (May 2011); Saunders, *A Swim in a Pond in the Rain* (Random House, 2021); Le Guin, "The Carrier Bag Theory of Fiction" in *Dancing at the Edge of the World* (Grove, 1989).
+Sources: Coats, Pixar story rules tweets (May 2011); Saunders, _A Swim in a Pond in the Rain_ (Random House, 2021); Le Guin, "The Carrier Bag Theory of Fiction" in _Dancing at the Edge of the World_ (Grove, 1989).

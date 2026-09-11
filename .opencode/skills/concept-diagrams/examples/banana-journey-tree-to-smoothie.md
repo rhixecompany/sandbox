@@ -14,6 +14,7 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 ## New Shape Techniques
 
 ### Banana (curved fruit shape)
+
 ```xml
 <!-- Green banana -->
 <path class="banana-green" d="M 5 0 Q 0 10 3 20 Q 6 25 10 20 Q 13 10 8 0 Z"/>
@@ -28,6 +29,7 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 ```
 
 ### Banana Tree
+
 ```xml
 <!-- Trunk -->
 <rect class="tree-trunk" x="55" y="50" width="15" height="60" rx="3"/>
@@ -43,6 +45,7 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 ```
 
 ### Cargo Ship
+
 ```xml
 <!-- Ocean waves -->
 <path class="ocean" d="M 0 90 Q 30 85 60 90 Q 90 95 120 90 Q 150 85 180 90 L 180 110 L 0 110 Z" opacity="0.5"/>
@@ -59,6 +62,7 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 ```
 
 ### Inspector Figure
+
 ```xml
 <!-- Body -->
 <rect class="inspector" x="10" y="20" width="25" height="35" rx="3"/>
@@ -72,6 +76,7 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 ```
 
 ### Spider with "No" Symbol
+
 ```xml
 <circle cx="15" cy="15" r="18" fill="none" stroke="#A32D2D" stroke-width="2"/>
 <line x1="3" y1="3" x2="27" y2="27" stroke="#A32D2D" stroke-width="2"/>
@@ -84,6 +89,7 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 ```
 
 ### Blender with Smoothie
+
 ```xml
 <!-- Blender jar -->
 <path class="blender" d="M 5 5 L 0 45 L 35 45 L 30 5 Z"/>
@@ -98,11 +104,12 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 ```
 
 ### Winding Journey Path
+
 ```xml
 <path class="journey-path" d="
-  M 80 100 
-  L 200 100 
-  Q 280 100 280 150 
+  M 80 100
+  L 200 100
+  Q 280 100 280 150
   L 280 180
   Q 280 220 320 220
   L 520 220
@@ -118,36 +125,112 @@ A narrative journey diagram following a single banana across 3,000 miles and 3 w
 
 ```css
 /* Journey */
-.journey-path { stroke: #D3D1C7; stroke-width: 3; fill: none; stroke-linecap: round; }
+.journey-path {
+	stroke: #d3d1c7;
+	stroke-width: 3;
+	fill: none;
+	stroke-linecap: round;
+}
 
 /* Banana ripeness stages */
-.banana-green { fill: #97C459; stroke: #3B6D11; stroke-width: 0.5; }
-.banana-yellow { fill: #FAC775; stroke: #BA7517; stroke-width: 0.5; }
-.banana-brown { fill: #854F0B; stroke: #633806; stroke-width: 0.5; }
-.banana-spots { fill: #633806; }
+.banana-green {
+	fill: #97c459;
+	stroke: #3b6d11;
+	stroke-width: 0.5;
+}
+.banana-yellow {
+	fill: #fac775;
+	stroke: #ba7517;
+	stroke-width: 0.5;
+}
+.banana-brown {
+	fill: #854f0b;
+	stroke: #633806;
+	stroke-width: 0.5;
+}
+.banana-spots {
+	fill: #633806;
+}
 
 /* Environment elements */
-.tree-trunk { fill: #854F0B; stroke: #633806; stroke-width: 1; }
-.tree-leaf { fill: #97C459; stroke: #3B6D11; stroke-width: 0.5; }
-.ocean { fill: #85B7EB; }
-.ship-hull { fill: #5F5E5A; stroke: #444441; stroke-width: 1; }
-.container { fill: #E6F1FB; stroke: #185FA5; stroke-width: 1; }
-.gas-cloud { fill: #C0DD97; stroke: #97C459; stroke-width: 0.5; opacity: 0.6; }
+.tree-trunk {
+	fill: #854f0b;
+	stroke: #633806;
+	stroke-width: 1;
+}
+.tree-leaf {
+	fill: #97c459;
+	stroke: #3b6d11;
+	stroke-width: 0.5;
+}
+.ocean {
+	fill: #85b7eb;
+}
+.ship-hull {
+	fill: #5f5e5a;
+	stroke: #444441;
+	stroke-width: 1;
+}
+.container {
+	fill: #e6f1fb;
+	stroke: #185fa5;
+	stroke-width: 1;
+}
+.gas-cloud {
+	fill: #c0dd97;
+	stroke: #97c459;
+	stroke-width: 0.5;
+	opacity: 0.6;
+}
 
 /* Buildings */
-.packhouse { fill: #F1EFE8; stroke: #5F5E5A; stroke-width: 1; }
-.warehouse { fill: #FAEEDA; stroke: #854F0B; stroke-width: 1; }
-.store { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 1; }
+.packhouse {
+	fill: #f1efe8;
+	stroke: #5f5e5a;
+	stroke-width: 1;
+}
+.warehouse {
+	fill: #faeeda;
+	stroke: #854f0b;
+	stroke-width: 1;
+}
+.store {
+	fill: #e1f5ee;
+	stroke: #0f6e56;
+	stroke-width: 1;
+}
 
 /* Kitchen */
-.counter { fill: #FAECE7; stroke: #993C1D; stroke-width: 1; }
-.blender { fill: #EEEDFE; stroke: #534AB7; stroke-width: 1; }
-.smoothie { fill: #FAC775; }
-.freezer { fill: #E6F1FB; stroke: #185FA5; stroke-width: 1; }
+.counter {
+	fill: #faece7;
+	stroke: #993c1d;
+	stroke-width: 1;
+}
+.blender {
+	fill: #eeedfe;
+	stroke: #534ab7;
+	stroke-width: 1;
+}
+.smoothie {
+	fill: #fac775;
+}
+.freezer {
+	fill: #e6f1fb;
+	stroke: #185fa5;
+	stroke-width: 1;
+}
 
 /* Details */
-.sticker { fill: #378ADD; stroke: #185FA5; stroke-width: 0.3; }
-.spider { fill: #2C2C2A; stroke: #1a1a18; stroke-width: 0.3; }
+.sticker {
+	fill: #378add;
+	stroke: #185fa5;
+	stroke-width: 0.3;
+}
+.spider {
+	fill: #2c2c2a;
+	stroke: #1a1a18;
+	stroke-width: 0.3;
+}
 ```
 
 ## Layout Notes

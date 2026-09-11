@@ -4,6 +4,7 @@ description: "clonedeps"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# clonedeps
      2|
      3|`clonedeps` is a bundled OpenCode workflow skill for cloning a small set of important dependency source repositories into a local ignored workspace so agents can read library internals.

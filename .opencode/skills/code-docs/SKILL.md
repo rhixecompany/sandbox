@@ -10,6 +10,7 @@ metadata:
   hermes:
     tags: [imported]
 ---
+
 # Code Documentation (Google Style)
 
 ## Overview
@@ -34,16 +35,17 @@ Write and maintain Google Style docstrings for Python, Go, and Terraform code. G
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `project-docs` | Full project documentation |
-| `writing-clearly-and-concisely` | Improve prose clarity |
+| Skill                           | Purpose                    |
+| ------------------------------- | -------------------------- |
+| `project-docs`                  | Full project documentation |
+| `writing-clearly-and-concisely` | Improve prose clarity      |
 
 ## Workflow
 
 ### Phase 1: Understand Google Style Conventions
 
 **Python (Google Style):**
+
 ```python
 def function_name(param1: int, param2: str = "default") -> bool:
     """One-line summary of the function.
@@ -73,6 +75,7 @@ def function_name(param1: int, param2: str = "default") -> bool:
 ```
 
 **Go (Godoc style — Go's equivalent of Google Style):**
+
 ```go
 // Package auth provides authentication and authorization utilities.
 package auth
@@ -92,6 +95,7 @@ func Authenticate(token string) (*User, error) {
 ```
 
 **Terraform:**
+
 ```hcl
 # Module: aws-vpc
 # Description: Creates a VPC with public and private subnets
@@ -124,6 +128,7 @@ For each public function/class/module:
 ### Phase 3: Format Consistently
 
 Rules:
+
 - Use triple double-quotes (`"""`) for Python docstrings
 - Start summary on the same line as opening quotes
 - Leave blank line between summary and extended description

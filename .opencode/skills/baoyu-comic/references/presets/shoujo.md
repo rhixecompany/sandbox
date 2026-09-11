@@ -4,11 +4,11 @@
 
 ## Base Configuration
 
-| Dimension | Value |
-|-----------|-------|
-| Art Style | manga |
-| Tone | romantic |
-| Layout | standard (default) |
+| Dimension | Value              |
+| --------- | ------------------ |
+| Art Style | manga              |
+| Tone      | romantic           |
+| Layout    | standard (default) |
 
 Equivalent to: art=manga, tone=romantic
 
@@ -20,48 +20,48 @@ This preset includes special rules beyond the art+tone combination. When the `sh
 
 Every emotional moment must include decorative elements:
 
-| Emotion | Required Decorations |
-|---------|---------------------|
-| Love | Floating hearts, sparkles, rose petals |
-| Longing | Feathers, bubbles, distant sparkles |
-| Joy | Flowers blooming, light bursts, stars |
-| Sadness | Falling petals, fading sparkles |
-| Shyness | Soft sparkles, floating bubbles |
-| Realization | Radiating lines with sparkles |
+| Emotion     | Required Decorations                   |
+| ----------- | -------------------------------------- |
+| Love        | Floating hearts, sparkles, rose petals |
+| Longing     | Feathers, bubbles, distant sparkles    |
+| Joy         | Flowers blooming, light bursts, stars  |
+| Sadness     | Falling petals, fading sparkles        |
+| Shyness     | Soft sparkles, floating bubbles        |
+| Realization | Radiating lines with sparkles          |
 
 ### Eye Detail Requirements
 
 Eyes are critical in shoujo style:
 
-| Aspect | Treatment |
-|--------|-----------|
-| Size | Larger than standard manga (1.2x) |
-| Highlights | Multiple (3-5), placed for emotion |
+| Aspect     | Treatment                             |
+| ---------- | ------------------------------------- |
+| Size       | Larger than standard manga (1.2x)     |
+| Highlights | Multiple (3-5), placed for emotion    |
 | Reflection | Scene reflection in emotional moments |
-| Sparkle | Built-in sparkle effects |
-| Tears | Crystalline, detailed teardrops |
+| Sparkle    | Built-in sparkle effects              |
+| Tears      | Crystalline, detailed teardrops       |
 
 ### Character Beauty Standards
 
-| Feature | Treatment |
-|---------|-----------|
-| Hair | Flowing, detailed strands, shine highlights |
-| Skin | Porcelain, soft blush on cheeks |
-| Lips | Soft, slightly glossy |
-| Hands | Elegant, expressive gestures |
-| Posture | Graceful, elegant poses |
+| Feature | Treatment                                   |
+| ------- | ------------------------------------------- |
+| Hair    | Flowing, detailed strands, shine highlights |
+| Skin    | Porcelain, soft blush on cheeks             |
+| Lips    | Soft, slightly glossy                       |
+| Hands   | Elegant, expressive gestures                |
+| Posture | Graceful, elegant poses                     |
 
 ### Background Effects
 
 **Abstract backgrounds** for emotional moments:
 
-| Moment Type | Background |
-|-------------|-----------|
-| Love confession | Soft gradient + floating flowers |
-| Shock | Screen tone speed lines + sparkles |
-| Memory | Dreamy blur + scattered petals |
-| Realization | Radial lines + light burst |
-| Intimate | Soft focus + floating elements |
+| Moment Type     | Background                         |
+| --------------- | ---------------------------------- |
+| Love confession | Soft gradient + floating flowers   |
+| Shock           | Screen tone speed lines + sparkles |
+| Memory          | Dreamy blur + scattered petals     |
+| Realization     | Radial lines + light burst         |
+| Intimate        | Soft focus + floating elements     |
 
 ### Panel Flow
 
@@ -75,30 +75,30 @@ Eyes are critical in shoujo style:
 
 Slow down pacing for emotional impact:
 
-| Scene Type | Panel Treatment |
-|------------|-----------------|
-| Confession | Multiple small panels, then splash |
-| Eye contact | Close-up sequence |
-| Touch | Slow-motion panel breakdown |
-| Realization | Build-up panels then impact |
+| Scene Type  | Panel Treatment                    |
+| ----------- | ---------------------------------- |
+| Confession  | Multiple small panels, then splash |
+| Eye contact | Close-up sequence                  |
+| Touch       | Slow-motion panel breakdown        |
+| Realization | Build-up panels then impact        |
 
 ### Color Palette Application
 
-| Scene Type | Palette |
-|------------|---------|
-| Romantic | Pink, lavender, rose gold |
-| Happy | Soft yellow, peach, sky blue |
-| Sad | Pale blue, silver, gray lavender |
-| Dramatic | Deep rose, purple, contrast |
+| Scene Type | Palette                          |
+| ---------- | -------------------------------- |
+| Romantic   | Pink, lavender, rose gold        |
+| Happy      | Soft yellow, peach, sky blue     |
+| Sad        | Pale blue, silver, gray lavender |
+| Dramatic   | Deep rose, purple, contrast      |
 
 ### Screen Tone Usage
 
-| Mood | Tone Pattern |
-|------|-------------|
-| Neutral | Clean, minimal |
+| Mood     | Tone Pattern           |
+| -------- | ---------------------- |
+| Neutral  | Clean, minimal         |
 | Romantic | Soft gradient overlays |
-| Dramatic | Heavy contrast tones |
-| Dreamy | Soft dot patterns |
+| Dramatic | Heavy contrast tones   |
+| Dreamy   | Soft dot patterns      |
 
 ## Quality Markers
 

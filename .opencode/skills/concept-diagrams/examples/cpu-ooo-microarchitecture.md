@@ -15,6 +15,7 @@ A structural diagram showing the internal pipeline stages of a modern superscala
 ## Diagram Type
 
 This is a **hybrid structural/flow** diagram:
+
 - **Flow aspect**: Instructions move top-to-bottom through pipeline stages
 - **Structural aspect**: Components are grouped by function (rename unit, execution cluster)
 - **Sidebar**: Memory hierarchy is architecturally separate but connected via data paths
@@ -22,6 +23,7 @@ This is a **hybrid structural/flow** diagram:
 ## Pipeline Stage Breakdown
 
 ### Front End (Purple)
+
 ```xml
 <!-- Fetch Unit -->
 <g class="node c-purple">
@@ -45,6 +47,7 @@ This is a **hybrid structural/flow** diagram:
 ```
 
 ### µop Cache Bypass Path (Teal)
+
 The µop cache (Decoded Stream Buffer) provides an alternate path that bypasses the complex decoder:
 
 ```xml
@@ -56,12 +59,13 @@ The µop cache (Decoded Stream Buffer) provides an alternate path that bypasses 
 </g>
 
 <!-- Dashed bypass path indicating cache hit -->
-<path d="M180 110 L205 110 L205 175 L230 175" fill="none" class="arr" 
+<path d="M180 110 L205 110 L205 175 L230 175" fill="none" class="arr"
       stroke-dasharray="4 3" marker-end="url(#arrow)"/>
 <text class="tx" x="164" y="148" opacity=".6">hit</text>
 ```
 
 ### Rename/Allocate Container (Coral)
+
 Groups related rename components in a container:
 
 ```xml
@@ -81,6 +85,7 @@ Groups related rename components in a container:
 ```
 
 ### Scheduler Fan-Out Pattern (Amber → Teal)
+
 Single unified scheduler dispatching to multiple execution ports:
 
 ```xml
@@ -101,6 +106,7 @@ Single unified scheduler dispatching to multiple execution ports:
 ```
 
 ### Execution Port Box Pattern
+
 Compact boxes showing port number and capabilities:
 
 ```xml
@@ -114,6 +120,7 @@ Compact boxes showing port number and capabilities:
 ```
 
 ### Reorder Buffer (Pink)
+
 Wide horizontal bar at bottom showing retirement:
 
 ```xml
@@ -124,6 +131,7 @@ Wide horizontal bar at bottom showing retirement:
 ```
 
 ### Memory Hierarchy Sidebar (Blue)
+
 Separate column showing cache levels:
 
 ```xml
@@ -145,28 +153,36 @@ Separate column showing cache levels:
 ## Connection Patterns
 
 ### Instruction Fetch Path
+
 Horizontal arrow from L1-I cache to fetch unit:
+
 ```xml
 <path d="M620 95 L200 95" fill="none" class="arr" marker-end="url(#arrow)"/>
 <text class="tx" x="410" y="88" text-anchor="middle" opacity=".6">instruction fetch</text>
 ```
 
 ### Load/Store Path
+
 Complex path from execution ports to L1-D cache:
+
 ```xml
 <path d="M250 604 L250 640 L580 640 L580 160 L620 160" fill="none" class="arr" marker-end="url(#arrow)"/>
 <text class="tx" x="415" y="652" text-anchor="middle" opacity=".6">load / store</text>
 ```
 
 ### Commit Path (dashed)
+
 Dashed line showing write-back from ROB to register file:
+
 ```xml
 <path d="M550 690 L580 690 L580 445 L595 445" fill="none" class="arr" stroke-dasharray="4 3"/>
 <text class="tx" x="590" y="578" opacity=".6" transform="rotate(-90 590 578)">commit</text>
 ```
 
 ### Path Merge (Decode + µop Cache)
+
 Two paths converging before rename:
+
 ```xml
 <line x1="390" y1="98" x2="430" y2="98" class="arr"/>
 <line x1="390" y1="175" x2="430" y2="175" class="arr"/>
@@ -179,25 +195,33 @@ Two paths converging before rename:
 This diagram uses an additional text class for very small labels:
 
 ```css
-.tx { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: var(--text-secondary); }
+.tx {
+	font-family:
+		system-ui,
+		-apple-system,
+		sans-serif;
+	font-size: 10px;
+	fill: var(--text-secondary);
+}
 ```
 
 Used for:
+
 - Execution port capability labels (ALU, Branch, Load, etc.)
 - Connection labels (instruction fetch, load/store, commit)
 - DRAM latency annotation
 
 ## Color Semantic Mapping
 
-| Color | Stage | Components |
-|-------|-------|------------|
+| Color      | Stage     | Components                      |
+| ---------- | --------- | ------------------------------- |
 | `c-purple` | Front end | Fetch, Branch predictor, Decode |
-| `c-teal` | Execution | µop cache, Execution ports |
-| `c-coral` | Rename | RAT, Physical RF, Free list |
-| `c-amber` | Schedule | Unified scheduler |
-| `c-pink` | Retire | Reorder buffer |
-| `c-blue` | Memory | L1-I, L1-D, L2, DRAM |
-| `c-gray` | External | Off-chip DRAM |
+| `c-teal`   | Execution | µop cache, Execution ports      |
+| `c-coral`  | Rename    | RAT, Physical RF, Free list     |
+| `c-amber`  | Schedule  | Unified scheduler               |
+| `c-pink`   | Retire    | Reorder buffer                  |
+| `c-blue`   | Memory    | L1-I, L1-D, L2, DRAM            |
+| `c-gray`   | External  | Off-chip DRAM                   |
 
 ## Layout Notes
 
@@ -212,23 +236,24 @@ Used for:
 
 ## Architectural Details Shown
 
-| Component | Specification | Notes |
-|-----------|---------------|-------|
-| Fetch | 6-wide, 32B/cycle | Typical modern Intel/AMD |
-| Decode | 6-wide, x86→µops | Complex decoder |
-| µop Cache | 4K entries, 8-wide | Bypass for hot code |
-| RAT | 180 physical regs | Supports deep OoO |
-| Scheduler | 97 entries | Unified RS |
-| Execution | 6 ports | ALU×2, Load, Store×2, Vector |
-| ROB | 512 entries, 8-wide | In-order retirement |
-| L1-I | 32 KB, 8-way | Instruction cache |
-| L1-D | 48 KB, 12-way | Data cache |
-| L2 | 1.25 MB, 20-way | Unified |
-| DRAM | DDR5-6400, ~80ns | Off-chip |
+| Component | Specification       | Notes                        |
+| --------- | ------------------- | ---------------------------- |
+| Fetch     | 6-wide, 32B/cycle   | Typical modern Intel/AMD     |
+| Decode    | 6-wide, x86→µops    | Complex decoder              |
+| µop Cache | 4K entries, 8-wide  | Bypass for hot code          |
+| RAT       | 180 physical regs   | Supports deep OoO            |
+| Scheduler | 97 entries          | Unified RS                   |
+| Execution | 6 ports             | ALU×2, Load, Store×2, Vector |
+| ROB       | 512 entries, 8-wide | In-order retirement          |
+| L1-I      | 32 KB, 8-way        | Instruction cache            |
+| L1-D      | 48 KB, 12-way       | Data cache                   |
+| L2        | 1.25 MB, 20-way     | Unified                      |
+| DRAM      | DDR5-6400, ~80ns    | Off-chip                     |
 
 ## When to Use This Pattern
 
 Use this diagram style for:
+
 - CPU/GPU microarchitecture visualization
 - Compiler pipeline stages
 - Network packet processing pipelines

@@ -6,10 +6,10 @@ Aspire separates **orchestration** (what to run) from **deployment** (where to r
 
 ## Publish vs Deploy
 
-| Concept | What it does |
-| --- | --- |
+| Concept              | What it does                                                           |
+| -------------------- | ---------------------------------------------------------------------- |
 | **`aspire publish`** | Generates deployment artifacts (Dockerfiles, Helm charts, Bicep, etc.) |
-| **Deploy** | You run the generated artifacts through your CI/CD pipeline |
+| **Deploy**           | You run the generated artifacts through your CI/CD pipeline            |
 
 Aspire does NOT deploy directly. It generates the manifests — you deploy them.
 
@@ -108,18 +108,18 @@ Generates:
 
 ## Resource model to deployment mapping
 
-| AppHost concept | Docker Compose | Kubernetes | Azure Container Apps |
-| --- | --- | --- | --- |
-| `AddProject<T>()` | `service` with Dockerfile | `Deployment` + `Service` | `Container App` |
-| `AddContainer()` | `service` with `image:` | `Deployment` + `Service` | `Container App` |
-| `AddRedis()` | `service: redis` | `StatefulSet` | Managed Redis |
-| `AddPostgres()` | `service: postgres` | `StatefulSet` | Azure PostgreSQL |
-| `.WithReference()` | `environment:` vars | `ConfigMap` / `Secret` | App settings |
-| `.WithReplicas(n)` | `deploy: replicas: n` | `replicas: n` | `minReplicas: n` |
-| `.WithVolume()` | `volumes:` | `PersistentVolumeClaim` | Azure Files |
-| `.WithHttpEndpoint()` | `ports:` | `Service` port | Ingress |
-| `.WithExternalHttpEndpoints()` | `ports:` (host) | `Ingress` / `LoadBalancer` | External ingress |
-| `AddParameter(secret: true)` | `.env` file | `Secret` | Key Vault reference |
+| AppHost concept                | Docker Compose            | Kubernetes                 | Azure Container Apps |
+| ------------------------------ | ------------------------- | -------------------------- | -------------------- |
+| `AddProject<T>()`              | `service` with Dockerfile | `Deployment` + `Service`   | `Container App`      |
+| `AddContainer()`               | `service` with `image:`   | `Deployment` + `Service`   | `Container App`      |
+| `AddRedis()`                   | `service: redis`          | `StatefulSet`              | Managed Redis        |
+| `AddPostgres()`                | `service: postgres`       | `StatefulSet`              | Azure PostgreSQL     |
+| `.WithReference()`             | `environment:` vars       | `ConfigMap` / `Secret`     | App settings         |
+| `.WithReplicas(n)`             | `deploy: replicas: n`     | `replicas: n`              | `minReplicas: n`     |
+| `.WithVolume()`                | `volumes:`                | `PersistentVolumeClaim`    | Azure Files          |
+| `.WithHttpEndpoint()`          | `ports:`                  | `Service` port             | Ingress              |
+| `.WithExternalHttpEndpoints()` | `ports:` (host)           | `Ingress` / `LoadBalancer` | External ingress     |
+| `AddParameter(secret: true)`   | `.env` file               | `Secret`                   | Key Vault reference  |
 
 ---
 
@@ -225,17 +225,17 @@ Aspire templates include `.devcontainer/` configuration:
 
 ```json
 {
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/node:1": {}
-  },
-  "forwardPorts": [18888],
-  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
-  "name": "Aspire App",
-  "portsAttributes": {
-    "18888": { "label": "Aspire Dashboard" }
-  },
-  "postCreateCommand": "curl -sSL https://aspire.dev/install.sh | bash"
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
+	"forwardPorts": [18888],
+	"image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
+	"name": "Aspire App",
+	"portsAttributes": {
+		"18888": { "label": "Aspire Dashboard" }
+	},
+	"postCreateCommand": "curl -sSL https://aspire.dev/install.sh | bash"
 }
 ```
 

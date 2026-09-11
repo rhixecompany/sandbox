@@ -4,6 +4,7 @@ description: "Reference: managed-agents-curl"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — cURL / Raw HTTP
      2|
      3|Use these examples when the user needs raw HTTP requests or is working without an SDK.
@@ -103,16 +104,17 @@ author: Alexa
     97|          "type": "object",
     98|          "properties": {
     99|            "file_path": { "type": "string", "description": "Path to lint" }
-   100|          },
-   101|          "required": ["file_path"]
-   102|        }
-   103|      }
-   104|    ]
-   105|  }'
-   106|
-   107|# 2. Start a session with the repo mounted
-   108|curl -X POST https://api.anthropic.com/v1/sessions \
-   109|  "${HEADERS[@]}" \
+
+100| },
+101| "required": ["file_path"]
+102| }
+103| }
+104| ]
+105| }'
+106|
+107|# 2. Start a session with the repo mounted
+108|curl -X POST https://api.anthropic.com/v1/sessions \
+109| "${HEADERS[@]}" \
    110|  -d '{
    111|    "agent": { "type": "agent", "id": "agent_abc123", "version": "1772585501101368014" },
    112|    "environment_id": "env_abc123",
@@ -135,7 +137,7 @@ author: Alexa
    129|
    130|```bash
    131|curl -X POST https://api.anthropic.com/v1/sessions/$SESSION_ID/events \
-   132|  "${HEADERS[@]}" \
+132| "${HEADERS[@]}" \
    133|  -d '{
    134|    "events": [
    135|      {
@@ -152,7 +154,7 @@ author: Alexa
    146|
    147|```bash
    148|curl -N https://api.anthropic.com/v1/sessions/$SESSION_ID/events/stream \
-   149|  "${HEADERS[@]}"
+149| "${HEADERS[@]}"
    150|```
    151|
    152|Response format:
@@ -175,11 +177,11 @@ author: Alexa
    169|```bash
    170|# Get all events
    171|curl https://api.anthropic.com/v1/sessions/$SESSION_ID/events \
-   172|  "${HEADERS[@]}"
+172| "${HEADERS[@]}"
    173|
    174|# Paginated — get next page of events
    175|curl "https://api.anthropic.com/v1/sessions/$SESSION_ID/events?page=page_abc123" \
-   176|  "${HEADERS[@]}"
+176| "${HEADERS[@]}"
    177|```
    178|
    179|---
@@ -190,7 +192,7 @@ author: Alexa
    184|
    185|```bash
    186|curl -X POST https://api.anthropic.com/v1/sessions/$SESSION_ID/events \
-   187|  "${HEADERS[@]}" \
+187| "${HEADERS[@]}" \
    188|  -d '{
    189|    "events": [
    190|      {
@@ -208,7 +210,7 @@ author: Alexa
    202|
    203|```bash
    204|curl -X POST https://api.anthropic.com/v1/sessions/$SESSION_ID/events \
-   205|  "${HEADERS[@]}" \
+205| "${HEADERS[@]}" \
    206|  -d '{
    207|    "events": [
    208|      {
@@ -224,7 +226,7 @@ author: Alexa
    218|
    219|```bash
    220|curl https://api.anthropic.com/v1/sessions/$SESSION_ID \
-   221|  "${HEADERS[@]}"
+221| "${HEADERS[@]}"
    222|```
    223|
    224|---
@@ -234,15 +236,15 @@ author: Alexa
    228|```bash
    229|curl https://api.anthropic.com/v1/sessions \
    230|  "${HEADERS[@]}"
-   231|```
+231|`
    232|
    233|---
    234|
    235|## Delete a Session
    236|
-   237|```bash
-   238|curl -X DELETE https://api.anthropic.com/v1/sessions/$SESSION_ID \
-   239|  "${HEADERS[@]}"
+   237|`bash
+238|curl -X DELETE https://api.anthropic.com/v1/sessions/$SESSION_ID \
+239| "${HEADERS[@]}"
    240|```
    241|
    242|---
@@ -252,10 +254,10 @@ author: Alexa
    246|```bash
    247|curl -X POST https://api.anthropic.com/v1/files \
    248|  -H "x-api-key: $ANTHROPIC_API_KEY" \
-   249|  -H "anthropic-version: 2023-06-01" \
-   250|  -H "anthropic-beta: files-api-2025-04-14" \
-   251|  -F "file=@path/to/file.txt"
-   252|```
+249| -H "anthropic-version: 2023-06-01" \
+250| -H "anthropic-beta: files-api-2025-04-14" \
+251| -F "file=@path/to/file.txt"
+252|``
    253|
    254|---
    255|
@@ -263,16 +265,16 @@ author: Alexa
    257|
    258|List files the agent wrote to `/mnt/session/outputs/` during a session, then download them.
    259|
-   260|```bash
-   261|# List files associated with a session
-   262|curl "https://api.anthropic.com/v1/files?scope_id=$SESSION_ID" \
-   263|  -H "x-api-key: $ANTHROPIC_API_KEY" \
+   260|``bash
+261|# List files associated with a session
+262|curl "https://api.anthropic.com/v1/files?scope_id=$SESSION_ID" \
+263| -H "x-api-key: $ANTHROPIC_API_KEY" \
    264|  -H "anthropic-version: 2023-06-01" \
    265|  -H "anthropic-beta: files-api-2025-04-14,managed-agents-2026-04-01"
    266|
    267|# Download a specific file
    268|curl "https://api.anthropic.com/v1/files/$FILE_ID/content" \
-   269|  -H "x-api-key: $ANTHROPIC_API_KEY" \
+269| -H "x-api-key: $ANTHROPIC_API_KEY" \
    270|  -H "anthropic-version: 2023-06-01" \
    271|  -H "anthropic-beta: files-api-2025-04-14,managed-agents-2026-04-01" \
    272|  -o downloaded_file.txt
@@ -285,16 +287,16 @@ author: Alexa
    279|```bash
    280|curl https://api.anthropic.com/v1/agents \
    281|  "${HEADERS[@]}"
-   282|```
+282|`
    283|
    284|---
    285|
    286|## MCP Server Integration
    287|
-   288|```bash
-   289|# 1. Agent declares MCP server (no auth here — auth goes in a vault)
-   290|curl -X POST https://api.anthropic.com/v1/agents \
-   291|  "${HEADERS[@]}" \
+   288|`bash
+289|# 1. Agent declares MCP server (no auth here — auth goes in a vault)
+290|curl -X POST https://api.anthropic.com/v1/agents \
+291| "${HEADERS[@]}" \
    292|  -d '{
    293|    "name": "MCP Agent",
    294|    "model": "claude-opus-4-7",
@@ -310,12 +312,12 @@ author: Alexa
    304|# 2. Session attaches vault containing credentials for that MCP server URL
    305|curl -X POST https://api.anthropic.com/v1/sessions \
    306|  "${HEADERS[@]}" \
-   307|  -d '{
-   308|    "agent": "agent_abc123",
-   309|    "environment_id": "env_abc123",
-   310|    "vault_ids": ["vlt_abc123"]
-   311|  }'
-   312|```
+307| -d '{
+308| "agent": "agent_abc123",
+309| "environment_id": "env_abc123",
+310| "vault_ids": ["vlt_abc123"]
+311| }'
+312|``
    313|
    314|See `shared/managed-agents-tools.md` §Vaults for creating vaults and adding credentials.
    315|
@@ -323,21 +325,21 @@ author: Alexa
    317|
    318|## Tool Configuration
    319|
-   320|```bash
-   321|curl -X POST https://api.anthropic.com/v1/agents \
-   322|  "${HEADERS[@]}" \
-   323|  -d '{
-   324|    "name": "Restricted Agent",
-   325|    "model": "claude-opus-4-7",
-   326|    "tools": [
-   327|      {
-   328|        "type": "agent_toolset_20260401",
-   329|        "default_config": { "enabled": true },
-   330|        "configs": [
-   331|          { "name": "bash", "enabled": false }
-   332|        ]
-   333|      }
-   334|    ]
-   335|  }'
-   336|```
-   337|
+   320|``bash
+321|curl -X POST https://api.anthropic.com/v1/agents \
+322| "${HEADERS[@]}" \
+323| -d '{
+324| "name": "Restricted Agent",
+325| "model": "claude-opus-4-7",
+326| "tools": [
+327| {
+328| "type": "agent_toolset_20260401",
+329| "default_config": { "enabled": true },
+330| "configs": [
+331| { "name": "bash", "enabled": false }
+332| ]
+333| }
+334| ]
+335| }'
+336|```
+337|

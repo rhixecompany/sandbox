@@ -12,10 +12,10 @@ Internal structure visualization with labeled parts or layers.
 
 ## Variants
 
-| Variant | View Type | Visual Emphasis |
-|---------|-----------|-----------------|
-| **Exploded** | Parts separated outward | Component relationships |
-| **Cross-section** | Sliced/cutaway view | Internal layers, composition |
+| Variant           | View Type               | Visual Emphasis              |
+| ----------------- | ----------------------- | ---------------------------- |
+| **Exploded**      | Parts separated outward | Component relationships      |
+| **Cross-section** | Sliced/cutaway view     | Internal layers, composition |
 
 ## Best For
 

@@ -10,6 +10,7 @@ metadata:
   hermes:
     tags: [imported]
 ---
+
 # Dogfood: Systematic Web Application QA Testing
 
 ## Overview
@@ -24,6 +25,7 @@ This skill guides you through systematic exploratory QA testing of web applicati
 ## Inputs
 
 The user provides:
+
 1. **Target URL** — the entry point for testing
 2. **Scope** — what areas/features to focus on (or "full site" for comprehensive testing)
 3. **Output directory** (optional) — where to save screenshots and the report (default: `./dogfood-output`)
@@ -53,25 +55,31 @@ Follow this 5-phase systematic workflow:
 For each page or feature in your plan:
 
 1. **Navigate** to the page:
+
    ```
    browser_navigate(url="https://example.com/page")
    ```
 
 2. **Take a snapshot** to understand the DOM structure:
+
    ```
    browser_snapshot()
    ```
 
 3. **Check the console** for JavaScript errors:
+
    ```
    browser_console(clear=true)
    ```
+
    Do this after every navigation and after every significant interaction. Silent JS errors are high-value findings.
 
 4. **Take an annotated screenshot** to visually assess the page and identify interactive elements:
+
    ```
    browser_vision(question="Describe the page layout, identify any visual issues, broken elements, or accessibility concerns", annotate=true)
    ```
+
    The `annotate=true` flag overlays numbered `[N]` labels on interactive elements. Each `[N]` maps to ref `@eN` for subsequent browser commands.
 
 5. **Test interactive elements** systematically:
@@ -92,9 +100,11 @@ For each page or feature in your plan:
 For every issue found:
 
 1. **Take a screenshot** showing the issue:
+
    ```
    browser_vision(question="Capture and describe the issue visible on this page", annotate=false)
    ```
+
    Save the `screenshot_path` from the response — you will reference it in the report.
 
 2. **Record the details**:
@@ -122,6 +132,7 @@ For every issue found:
 Generate the final report using the template at `templates/dogfood-report-template.md`.
 
 The report must include:
+
 1. **Executive summary** with total issue count, breakdown by severity, and testing scope
 2. **Per-issue sections** with:
    - Issue number and title
@@ -139,17 +150,17 @@ Save the report to `{output_dir}/report.md`.
 
 ## Tools Reference
 
-| Tool | Purpose |
-|------|---------|
-| `browser_navigate` | Go to a URL |
-| `browser_snapshot` | Get DOM text snapshot (accessibility tree) |
-| `browser_click` | Click an element by ref (`@eN`) or text |
-| `browser_type` | Type into an input field |
-| `browser_scroll` | Scroll up/down on the page |
-| `browser_back` | Go back in browser history |
-| `browser_press` | Press a keyboard key |
-| `browser_vision` | Screenshot + AI analysis; use `annotate=true` for element labels |
-| `browser_console` | Get JS console output and errors |
+| Tool               | Purpose                                                          |
+| ------------------ | ---------------------------------------------------------------- |
+| `browser_navigate` | Go to a URL                                                      |
+| `browser_snapshot` | Get DOM text snapshot (accessibility tree)                       |
+| `browser_click`    | Click an element by ref (`@eN`) or text                          |
+| `browser_type`     | Type into an input field                                         |
+| `browser_scroll`   | Scroll up/down on the page                                       |
+| `browser_back`     | Go back in browser history                                       |
+| `browser_press`    | Press a keyboard key                                             |
+| `browser_vision`   | Screenshot + AI analysis; use `annotate=true` for element labels |
+| `browser_console`  | Get JS console output and errors                                 |
 
 ## Tips
 
@@ -162,14 +173,10 @@ Save the report to `{output_dir}/report.md`.
 - **Don't forget edge cases**: empty states, very long text, special characters, rapid clicking.
 - When reporting screenshots to the user, include `MEDIA:<screenshot_path>` so they can see the evidence inline.
 
-
 ## When to Use
-
 
 - reporting screenshots to the user, include `MEDIA:<screenshot_path>` so they can see the evidence inline.
 - **Triggers**: "dogfood" required for a project
-
-
 
 ## Pitfalls
 

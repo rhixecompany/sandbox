@@ -9,6 +9,7 @@ metadata:
     tags: []
     related_skills: []
 ---
+
      1|# Validation & Server Actions Reference
      2|
      3|**Quick Reference**: [NEVER List](#validation-anti-patterns) | [Schemas](#zod-schemas) | [Strategy](#before-writing-a-validation-schema) | [Actions](#action-files) | [Patterns](#server-actions-pattern) | [Errors](#error-handling)
@@ -108,16 +109,17 @@ metadata:
     97|- **Edge Cases**: How do you handle max Int values, empty strings vs. null, timezone-aware dates?
     98|- **Extensibility**: Will this schema need new fields? How will you version it?
     99|- **Consistency**: Do error shapes match everywhere? Is error handling pattern reused?
-   100|
-   101|---
-   102|
-   103|## Zod Schemas
-   104|
-   105|Location: `lib/validations/`
-   106|
-   107|**signUpSchema** (`auth.ts`):
-   108|
-   109|```typescript
+
+100|
+101|---
+102|
+103|## Zod Schemas
+104|
+105|Location: `lib/validations/`
+106|
+107|**signUpSchema** (`auth.ts`):
+108|
+109|`typescript
    110|export const signUpSchema = z.object({
    111|  email: z.string().email(),
    112|  password: z.string().min(8).max(100),
@@ -125,33 +127,33 @@ metadata:
    114|  lastName: z.string().min(1).max(50),
    115|  address1: z.string().optional()
    116|});
-   117|```
-   118|
-   119|**signInSchema** (`auth.ts`):
-   120|
-   121|```typescript
+   117|`
+118|
+119|**signInSchema** (`auth.ts`):
+120|
+121|`typescript
    122|export const signInSchema = z.object({
    123|  email: z.string().email(),
    124|  password: z.string().min(1)
    125|});
-   126|```
-   127|
-   128|**transferSchema** (`transfer.ts`):
-   129|
-   130|```typescript
+   126|`
+127|
+128|**transferSchema** (`transfer.ts`):
+129|
+130|`typescript
    131|export const transferSchema = z.object({
    132|  amount: z.number().positive().max(10000),
    133|  fromWalletId: z.string().uuid(),
    134|  toRecipientId: z.string().uuid(),
    135|  memo: z.string().max(200).optional()
    136|});
-   137|```
-   138|
-   139|## Server Actions Pattern
-   140|
-   141|All actions in `actions/*.ts` follow this flow:
-   142|
-   143|```typescript
+   137|`
+138|
+139|## Server Actions Pattern
+140|
+141|All actions in `actions/*.ts` follow this flow:
+142|
+143|`typescript
    144|"use server";
    145|import { z } from "zod";
    146|import { userDal } from "@/dal";
@@ -186,49 +188,49 @@ metadata:
    175|  revalidatePath("/dashboard");
    176|  return { ok: true, data: result.data };
    177|}
-   178|```
-   179|
-   180|## Action Files
-   181|
-   182|| File                             | Purpose                |
-   183|| -------------------------------- | ---------------------- |
-   184|| `actions/register.ts`            | User registration      |
-   185|| `actions/auth.signin.ts`         | Sign in                |
-   186|| `actions/user.actions.ts`        | User profile updates   |
-   187|| `actions/updateProfile.ts`       | Profile updates        |
-   188|| `actions/wallet.actions.ts`      | Wallet CRUD            |
-   189|| `actions/transaction.actions.ts` | Transaction operations |
-   190|| `actions/plaid.actions.ts`       | Plaid bank linking     |
-   191|| `actions/dwolla.actions.ts`      | ACH transfers          |
-   192|| `actions/recipient.actions.ts`   | Transfer recipients    |
-   193|| `actions/admin.actions.ts`       | Admin operations       |
-   194|| `actions/admin-stats.actions.ts` | Admin statistics       |
-   195|
-   196|## Error Handling
-   197|
-   198|Always return consistent error shape:
-   199|
-   200|```typescript
+   178|`
+179|
+180|## Action Files
+181|
+182|| File | Purpose |
+183|| -------------------------------- | ---------------------- |
+184|| `actions/register.ts` | User registration |
+185|| `actions/auth.signin.ts` | Sign in |
+186|| `actions/user.actions.ts` | User profile updates |
+187|| `actions/updateProfile.ts` | Profile updates |
+188|| `actions/wallet.actions.ts` | Wallet CRUD |
+189|| `actions/transaction.actions.ts` | Transaction operations |
+190|| `actions/plaid.actions.ts` | Plaid bank linking |
+191|| `actions/dwolla.actions.ts` | ACH transfers |
+192|| `actions/recipient.actions.ts` | Transfer recipients |
+193|| `actions/admin.actions.ts` | Admin operations |
+194|| `actions/admin-stats.actions.ts` | Admin statistics |
+195|
+196|## Error Handling
+197|
+198|Always return consistent error shape:
+199|
+200|`typescript
    201|// Success
    202|return { ok: true, user: result.user };
    203|
    204|// Error (always include message)
    205|return { error: "Email already registered", ok: false };
-   206|```
-   207|
-   208|**Rules**:
-   209|
-   210|- Limit error messages to 1–3 per response (focus user attention)
-   211|- Never expose raw Zod errors
-   212|- Never leak sensitive details (avoid "user ID 42 not found" — use "Invalid request")
-   213|
-   214|## TypeScript Types
-   215|
-   216|Export inferred types from Zod schemas for type-safe forms:
-   217|
-   218|```typescript
+   206|`
+207|
+208|**Rules**:
+209|
+210|- Limit error messages to 1–3 per response (focus user attention)
+211|- Never expose raw Zod errors
+212|- Never leak sensitive details (avoid "user ID 42 not found" — use "Invalid request")
+213|
+214|## TypeScript Types
+215|
+216|Export inferred types from Zod schemas for type-safe forms:
+217|
+218|`typescript
    219|export type RegisterInput = z.infer<typeof signUpSchema>;
-   220|```
-   221|
-   222|This allows callers to import and use the type without duplicating validation logic.
-   223|
+   220|`
+221|
+222|This allows callers to import and use the type without duplicating validation logic.
+223|

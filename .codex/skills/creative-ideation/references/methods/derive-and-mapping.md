@@ -1,9 +1,10 @@
 # Dérive and Mapping
 
-Three traditions of *attentive movement through territory* as ideation:
-- **Situationist dérive** — Guy Debord, *Théorie de la dérive* (1958). Drift through a city, displacing productive uses with attentive wandering.
-- **Kevin Lynch's cognitive mapping** — *The Image of the City* (1960). Five-element vocabulary for mental maps: paths, edges, districts, nodes, landmarks.
-- **Gaston Bachelard's topoanalysis** — *La Poétique de l'espace* (1958). Phenomenological reading of intimate spaces.
+Three traditions of _attentive movement through territory_ as ideation:
+
+- **Situationist dérive** — Guy Debord, _Théorie de la dérive_ (1958). Drift through a city, displacing productive uses with attentive wandering.
+- **Kevin Lynch's cognitive mapping** — _The Image of the City_ (1960). Five-element vocabulary for mental maps: paths, edges, districts, nodes, landmarks.
+- **Gaston Bachelard's topoanalysis** — _La Poétique de l'espace_ (1958). Phenomenological reading of intimate spaces.
 
 ## When to use
 
@@ -16,7 +17,7 @@ Three traditions of *attentive movement through territory* as ideation:
 ## Don't use when
 
 - Time pressure (drift is slow)
-- Goal-directed search (drift is for *not knowing what you're looking for*)
+- Goal-directed search (drift is for _not knowing what you're looking for_)
 - Group sizes that make drift into tourism (works solo or 2–3)
 - Using "dérive" as alibi for procrastination (real dérive has discipline)
 
@@ -38,7 +39,8 @@ Three traditions of *attentive movement through territory* as ideation:
 - **Landmarks** — point references identifiable from a distance, used for orientation.
 
 After drifting:
-- Map *your* paths, not the official ones.
+
+- Map _your_ paths, not the official ones.
 - Where were the edges? What did each edge mean — division, transition, prohibition?
 - Which districts did you cross? How did you know you'd entered one?
 - Where were the nodes? What were they doing?
@@ -47,6 +49,7 @@ After drifting:
 ## Conceptual dérive (research / decision)
 
 Same method, conceptual territory:
+
 1. Pick a domain you don't know well.
 2. Drop usual filtering. Not "is this useful?" — just "what's here?"
 3. Read scattered things broadly. Browse a library shelf. Read citation chains backward. Talk to people in adjacent fields. Watch lectures at random.
@@ -57,6 +60,7 @@ Same method, conceptual territory:
 ## Bachelard — small-space attention
 
 Topoanalysis applied to intimate spaces:
+
 1. Pick a small space you spend time in but haven't really looked at — a corner, a drawer, a workshop bench.
 2. Sit with it for an hour.
 3. What does this space mean? What does it shelter? What does it expose? What does it remember?
@@ -70,7 +74,7 @@ Topoanalysis applied to intimate spaces:
 - "Psychogeographical" used as adjective is dilution. Real Situationist dérive is more disciplined and more political.
 - Don't generate fake dérive notes. Method requires the territory; without it, the output is fabrication.
 - Avoid the travel-blog tone ("I wandered down cobbled streets..."). Real dérive includes friction, repulsion, missed destinations.
-- Don't apply Bachelard sentimentally. *La Poétique* is phenomenology, not "your house has feelings".
-- For LLM-mediated conceptual drift: force *places, citations, names, details*. Generic "I drifted through the literature" is not drift.
+- Don't apply Bachelard sentimentally. _La Poétique_ is phenomenology, not "your house has feelings".
+- For LLM-mediated conceptual drift: force _places, citations, names, details_. Generic "I drifted through the literature" is not drift.
 
-Sources: Debord, "Théorie de la dérive" (*Internationale Situationniste* 2, 1958); Lynch, *The Image of the City* (MIT, 1960); Bachelard, *La Poétique de l'espace* (PUF, 1958).
+Sources: Debord, "Théorie de la dérive" (_Internationale Situationniste_ 2, 1958); Lynch, _The Image of the City_ (MIT, 1960); Bachelard, _La Poétique de l'espace_ (PUF, 1958).

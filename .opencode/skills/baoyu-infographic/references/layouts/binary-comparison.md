@@ -12,11 +12,11 @@ Side-by-side comparison of two items, states, or concepts.
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
+| Variant          | Focus                    | Visual Emphasis              |
+| ---------------- | ------------------------ | ---------------------------- |
 | **Before-After** | Transformation over time | Temporal change, improvement |
-| **A vs B** | Feature comparison | Direct contrast, differences |
-| **Pro-Con** | Advantages/disadvantages | Balanced evaluation |
+| **A vs B**       | Feature comparison       | Direct contrast, differences |
+| **Pro-Con**      | Advantages/disadvantages | Balanced evaluation          |
 
 ## Best For
 

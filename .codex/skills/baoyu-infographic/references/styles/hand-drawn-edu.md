@@ -27,10 +27,10 @@ Hand-drawn educational infographic with macaron pastel color blocks on warm crea
 
 ## Variants
 
-| Variant | Focus | Visual Emphasis |
-|---------|-------|-----------------|
+| Variant          | Focus           | Visual Emphasis                                        |
+| ---------------- | --------------- | ------------------------------------------------------ |
 | **Sketch-notes** | Concept mapping | More stick figures, thought bubbles, connecting arrows |
-| **Pastel cards** | Structured info | Cleaner macaron blocks, less doodle, more white space |
+| **Pastel cards** | Structured info | Cleaner macaron blocks, less doodle, more white space  |
 
 ## Typography
 

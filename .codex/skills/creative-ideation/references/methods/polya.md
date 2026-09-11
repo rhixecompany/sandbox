@@ -1,6 +1,6 @@
 # Pólya's Heuristics
 
-George Pólya, *How to Solve It* (Princeton UP, 1945). Four-phase problem-solving framework + dictionary of heuristic moves. Written for math but applies to any well-defined "find X such that..." problem.
+George Pólya, _How to Solve It_ (Princeton UP, 1945). Four-phase problem-solving framework + dictionary of heuristic moves. Written for math but applies to any well-defined "find X such that..." problem.
 
 ## When to use
 
@@ -12,13 +12,14 @@ George Pólya, *How to Solve It* (Princeton UP, 1945). Four-phase problem-solvin
 ## Don't use when
 
 - Open-ended creative problems with no defined target
-- Difficulty is *understanding the problem space*, not solving within it (use dérive or compression-progress first)
+- Difficulty is _understanding the problem space_, not solving within it (use dérive or compression-progress first)
 - Solution is more about taste than analysis
 - Real-world problems where data is incomplete and conditions vague
 
 ## The four phases
 
 ### 1. Understand the problem
+
 - What is the **unknown**?
 - What are the **data**?
 - What is the **condition** linking them?
@@ -29,7 +30,9 @@ George Pólya, *How to Solve It* (Princeton UP, 1945). Four-phase problem-solvin
 This phase is most often skipped. **Most problem-solving failures are upstream of method** — they're failures to understand the problem precisely.
 
 ### 2. Devise a plan
+
 Find the connection between data and unknown. Heuristic moves:
+
 - **Have you seen this problem before?** Or in slightly different form?
 - **Do you know a related problem?**
 - **Look at the unknown** — find a familiar problem with the same or similar unknown.
@@ -44,15 +47,17 @@ Find the connection between data and unknown. Heuristic moves:
 - **Did you use all the data?** All the conditions?
 
 ### 3. Carry out the plan
+
 - Can you see clearly that each step is correct?
 - Can you prove it?
 
 ### 4. Look back
+
 - Check the result. Check the argument.
 - Can you derive it differently? See it at a glance?
 - Can you use the result, or the method, for some other problem?
 
-The looking-back phase is the *learning* phase — what makes Pólya's method an *educational* method, not just a problem-solving one.
+The looking-back phase is the _learning_ phase — what makes Pólya's method an _educational_ method, not just a problem-solving one.
 
 ## Key heuristics from the dictionary
 
@@ -74,4 +79,4 @@ The looking-back phase is the *learning* phase — what makes Pólya's method an
 - Don't claim "Pólya'd it" without consulting specific heuristics.
 - Don't apply to fuzzy problems. Pólya assumes clear problem statements.
 
-Source: Pólya, *How to Solve It* (Princeton UP, 1945; current edition 2014).
+Source: Pólya, _How to Solve It_ (Princeton UP, 1945; current edition 2014).

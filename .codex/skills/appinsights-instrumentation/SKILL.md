@@ -5,18 +5,18 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: appinsights-instrumentation
 tags:
-- azure
-- appinsights
-- observability
-- telemetry
-- instrumentation
+  - azure
+  - appinsights
+  - observability
+  - telemetry
+  - instrumentation
 title: AppInsights Instrumentation
 version: 1.0.0
-
 ---
+
 # AppInsights Instrumentation
 
 ## Overview
@@ -34,13 +34,13 @@ Instrument a webapp to send telemetry to Azure Application Insights. This skill 
 
 - Non-web applications or console-only workloads
 - Observability tooling that is not App Insights
--當 instrumentation should remain outside the product boundary
+  -當 instrumentation should remain outside the product boundary
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `systematic-debugging` | Diagnose missed telemetry or broken SDK setup |
+| Skill                     | Purpose                                         |
+| ------------------------- | ----------------------------------------------- |
+| `systematic-debugging`    | Diagnose missed telemetry or broken SDK setup   |
 | `log-analysis-and-triage` | Cross-check logs against App Insights telemetry |
 
 ## Prerequisites

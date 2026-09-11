@@ -27,6 +27,7 @@ This pattern extends the 5-phase audit-and-remediation model to a **6-phase exec
 **Goal**: Discover all scripts, categorize, identify candidates for migration.
 
 **Steps**:
+
 1. Search all script types recursively (`find` with path exclusions)
 2. Count by type and location
 3. Identify scripts that will move vs. stay in place
@@ -34,6 +35,7 @@ This pattern extends the 5-phase audit-and-remediation model to a **6-phase exec
 5. Document exceptions (read-only, archival, generated)
 
 **Output artifact**: `docs/<project>-scripts-list-context.md`
+
 - Total script inventory
 - Breakdown by type (.sh, .ps1, .bat, .ts)
 - Location mapping (which paths contain which scripts)
@@ -49,12 +51,14 @@ This pattern extends the 5-phase audit-and-remediation model to a **6-phase exec
 **Critical substeps**:
 
 ### 2a. Dependency Analysis
+
 - Map script references in package.json, Makefile, .github/workflows
 - Identify cross-script imports or calls
 - Note if migrating one script requires migrating others
 - Create a **dependency graph** for batch ordering
 
 ### 2b. Batch Organization
+
 - Group scripts by:
   - **Purpose** (cleanup, disk-analysis, quality-gate, etc.)
   - **Dependencies** (must migrate together, or in order)
@@ -63,7 +67,9 @@ This pattern extends the 5-phase audit-and-remediation model to a **6-phase exec
 - Ensure batches are **independent** (batch 1 doesn't require batch 3 done first)
 
 ### 2c. Per-Batch Execution Template
+
 Each batch needs a template specifying:
+
 ```
 Batch N:
   Files: [list]
@@ -75,13 +81,16 @@ Batch N:
 ```
 
 **Output artifact**: `docs/<project>-scripts-plan.md`
+
 - 7 batches outlined with files, purposes, and ordering
 - Dependency matrix
 - Per-batch execution template
 - Total time estimate (~3.25 hours example)
 
 ### 2d. Issues Pre-Audit
+
 Document issue categories you expect to find in Phase 3:
+
 ```
 Batch 1 (cleanup scripts):
   CRITICAL: undefined variables, missing set -e
@@ -98,6 +107,7 @@ Batch 1 (cleanup scripts):
 **Goal**: Identify all issues before migration.
 
 **Steps**:
+
 1. Read each script in batch order
 2. Classify issues (use CRITICAL/HIGH/MEDIUM/LOW taxonomy)
 3. Document fixes needed (line numbers, context, replacement)
@@ -117,21 +127,27 @@ Batch 1 (cleanup scripts):
 **Critical substeps**:
 
 ### 4a. Batch Migration
+
 For each batch:
+
 1. Copy files from source to target directory
 2. **Immediately compare** source vs. target (byte-level check, line count, checksum)
 3. If parity fails → investigate before proceeding
 4. Record copy verification timestamp and hash
 
 ### 4b. Reference Updates
+
 Update all references to moved scripts:
+
 - package.json `scripts` entries
 - .github/workflows (if paths hardcoded)
 - docs and README (if script paths documented)
 - Cross-script imports (if any)
 
 ### 4c. Path Decoupling
+
 Replace hardcoded source paths with environment variables:
+
 ```bash
 # Before:
 cd /projects/Banking/scripts/reconcile.sh
@@ -142,7 +158,9 @@ cd "$BASH_SCRIPT_HOME/reconcile.sh"
 ```
 
 ### 4d. Parity Verification
+
 **BEFORE deleting source**, run:
+
 ```bash
 diff -u source/script.sh target/script.sh || echo "Files differ"
 wc -l source/*.sh target/*.sh  # line count match
@@ -158,6 +176,7 @@ If parity fails → **STOP**. Do not delete. Investigate.
 **Goal**: Verify migrated scripts work correctly in new location.
 
 **Steps per batch**:
+
 1. Run migrated script with `--help` (syntax check)
 2. Run migrated script with `--dry-run` (safety test)
 3. Run migrated script normally (functional test)
@@ -165,6 +184,7 @@ If parity fails → **STOP**. Do not delete. Investigate.
 5. Check exit codes ($? should match original)
 
 **Error scenarios**:
+
 - Broken imports (if script calls other scripts by path)
 - Missing dependencies (if script expects files in original location)
 - Environment variables not set (if script uses $USERPROFILE or similar)
@@ -203,23 +223,27 @@ If parity fails → **STOP**. Do not delete. Investigate.
 ## Safety Gates
 
 ### Before Phase 4 (Migration):
+
 - [ ] All Phase 3 audits complete
 - [ ] No CRITICAL issues are BLOCKED
 - [ ] Dependency order verified (each batch can execute independently)
 - [ ] Git checkpoint created (`git tag ...`)
 
 ### Before Phase 5 (Testing):
+
 - [ ] All batches migrated
 - [ ] Parity verification passed (source == target)
 - [ ] All references updated
 - [ ] Paths decoupled from source locations
 
 ### Before Phase 6 (Cleanup):
+
 - [ ] All Phase 5 tests passed (all 54 scripts work in new location)
 - [ ] No regressions detected
 - [ ] Test report complete
 
 ### Before Deletion:
+
 - [ ] 18-point cleanup checklist completed
 - [ ] No stale references remain
 - [ ] Git state clean and tagged
@@ -229,16 +253,19 @@ If parity fails → **STOP**. Do not delete. Investigate.
 A complete 6-phase execution produces:
 
 **Planning Phase (1-2)**:
+
 - `docs/<project>-scripts-list-context.md` (Phase 1 catalog)
 - `docs/<project>-scripts-plan.md` (Phase 2 execution plan)
 - `docs/<project>-scripts-issues-context.md` (Phase 2 issue pre-audit)
 
 **Ready-State Docs (3-6)**:
+
 - `<PROJECT>_PHASES_3_6_READINESS.md` (complete Phase 3-6 workflows)
 - `<PROJECT>_INDEX.txt` (deliverable index + timeline)
 - `<PROJECT>_PROJECT_SUMMARY.md` (executive overview)
 
 **Execution Reports (during 4-6)**:
+
 - Phase 4 Migration Report (per-batch parity verification)
 - Phase 5 Test Report (test results per script)
 - Phase 6 Cleanup Report (18-point checklist results)
@@ -246,6 +273,7 @@ A complete 6-phase execution produces:
 ## Timing Estimates
 
 For a 54-script migration:
+
 - Phase 1: 15 min (discovery + catalog)
 - Phase 2: 30 min (batch planning + issue pre-audit)
 - Phase 3: 45 min (code review + audit verdicts)

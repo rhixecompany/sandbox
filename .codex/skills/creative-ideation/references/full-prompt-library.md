@@ -23,7 +23,7 @@ Every prompt is interpreted as broadly as possible. "Does this include X?" → y
 ## General — any domain (default)
 
 **Start at the punchline.**
-Think of something that would be a funny sentence. Work backwards to make it real. *"I taught my thermostat to gaslight me"* → now build it.
+Think of something that would be a funny sentence. Work backwards to make it real. _"I taught my thermostat to gaslight me"_ → now build it.
 
 **High concept, low effort.**
 A deep idea, lazily executed. The concept should be brilliant. The implementation should take an afternoon. If it takes longer, you're overthinking it.
@@ -164,7 +164,7 @@ A group of people share control over something. Collective input, emergent behav
 **Lists!**
 Itemizations, taxonomies, exhaustive recountings, iterations. This one. A list of list of lists.
 
-**Did you mean *recursion*?**
+**Did you mean _recursion_?**
 Did you mean recursion?
 
 **Animals.**

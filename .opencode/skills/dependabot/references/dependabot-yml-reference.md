@@ -5,22 +5,22 @@ Complete reference for all configuration options in `.github/dependabot.yml`.
 ## File Structure
 
 ```yaml
-version: 2                    # Required, always 2
+version: 2 # Required, always 2
 
-registries:                   # Optional: private registry access
+registries: # Optional: private registry access
   REGISTRY_NAME:
     type: "..."
     url: "..."
 
-multi-ecosystem-groups:       # Optional: cross-ecosystem grouping
+multi-ecosystem-groups: # Optional: cross-ecosystem grouping
   GROUP_NAME:
     schedule:
       interval: "..."
 
-updates:                      # Required: list of ecosystem configurations
-  - package-ecosystem: "..."  # Required
-    directory: "/"            # Required (or directories)
-    schedule:                 # Required
+updates: # Required: list of ecosystem configurations
+  - package-ecosystem: "..." # Required
+    directory: "/" # Required (or directories)
+    schedule: # Required
       interval: "..."
 ```
 
@@ -34,38 +34,38 @@ Always `2`. Must be at the top level.
 
 Defines which package manager to monitor. One entry per ecosystem (can have multiple entries for the same ecosystem with different directories).
 
-| Package Manager | YAML Value | Manifest Files |
-|---|---|---|
-| Bazel | `bazel` | `MODULE.bazel`, `WORKSPACE` |
-| Bun | `bun` | `bun.lockb` |
-| Bundler (Ruby) | `bundler` | `Gemfile`, `Gemfile.lock` |
-| Cargo (Rust) | `cargo` | `Cargo.toml`, `Cargo.lock` |
-| Composer (PHP) | `composer` | `composer.json`, `composer.lock` |
-| Conda | `conda` | `environment.yml` |
-| Dev Containers | `devcontainers` | `devcontainer.json` |
-| Docker | `docker` | `Dockerfile` |
-| Docker Compose | `docker-compose` | `docker-compose.yml` |
-| .NET SDK | `dotnet-sdk` | `global.json` |
-| Elm | `elm` | `elm.json` |
-| Git Submodules | `gitsubmodule` | `.gitmodules` |
-| GitHub Actions | `github-actions` | `.github/workflows/*.yml` |
-| Go Modules | `gomod` | `go.mod`, `go.sum` |
-| Gradle | `gradle` | `build.gradle`, `build.gradle.kts` |
-| Helm | `helm` | `Chart.yaml` |
-| Hex (Elixir) | `mix` | `mix.exs`, `mix.lock` |
-| Julia | `julia` | `Project.toml`, `Manifest.toml` |
-| Maven | `maven` | `pom.xml` |
-| npm/pnpm/yarn | `npm` | `package.json`, lockfiles |
-| NuGet | `nuget` | `*.csproj`, `packages.config` |
-| OpenTofu | `opentofu` | `*.tf` |
-| pip/pipenv/poetry/uv | `pip` | `requirements.txt`, `Pipfile`, `pyproject.toml` |
-| Pre-commit | `pre-commit` | `.pre-commit-config.yaml` |
-| Pub (Dart/Flutter) | `pub` | `pubspec.yaml` |
-| Rust Toolchain | `rust-toolchain` | `rust-toolchain.toml` |
-| Swift | `swift` | `Package.swift` |
-| Terraform | `terraform` | `*.tf` |
-| uv | `uv` | `uv.lock`, `pyproject.toml` |
-| vcpkg | `vcpkg` | `vcpkg.json` |
+| Package Manager      | YAML Value       | Manifest Files                                  |
+| -------------------- | ---------------- | ----------------------------------------------- |
+| Bazel                | `bazel`          | `MODULE.bazel`, `WORKSPACE`                     |
+| Bun                  | `bun`            | `bun.lockb`                                     |
+| Bundler (Ruby)       | `bundler`        | `Gemfile`, `Gemfile.lock`                       |
+| Cargo (Rust)         | `cargo`          | `Cargo.toml`, `Cargo.lock`                      |
+| Composer (PHP)       | `composer`       | `composer.json`, `composer.lock`                |
+| Conda                | `conda`          | `environment.yml`                               |
+| Dev Containers       | `devcontainers`  | `devcontainer.json`                             |
+| Docker               | `docker`         | `Dockerfile`                                    |
+| Docker Compose       | `docker-compose` | `docker-compose.yml`                            |
+| .NET SDK             | `dotnet-sdk`     | `global.json`                                   |
+| Elm                  | `elm`            | `elm.json`                                      |
+| Git Submodules       | `gitsubmodule`   | `.gitmodules`                                   |
+| GitHub Actions       | `github-actions` | `.github/workflows/*.yml`                       |
+| Go Modules           | `gomod`          | `go.mod`, `go.sum`                              |
+| Gradle               | `gradle`         | `build.gradle`, `build.gradle.kts`              |
+| Helm                 | `helm`           | `Chart.yaml`                                    |
+| Hex (Elixir)         | `mix`            | `mix.exs`, `mix.lock`                           |
+| Julia                | `julia`          | `Project.toml`, `Manifest.toml`                 |
+| Maven                | `maven`          | `pom.xml`                                       |
+| npm/pnpm/yarn        | `npm`            | `package.json`, lockfiles                       |
+| NuGet                | `nuget`          | `*.csproj`, `packages.config`                   |
+| OpenTofu             | `opentofu`       | `*.tf`                                          |
+| pip/pipenv/poetry/uv | `pip`            | `requirements.txt`, `Pipfile`, `pyproject.toml` |
+| Pre-commit           | `pre-commit`     | `.pre-commit-config.yaml`                       |
+| Pub (Dart/Flutter)   | `pub`            | `pubspec.yaml`                                  |
+| Rust Toolchain       | `rust-toolchain` | `rust-toolchain.toml`                           |
+| Swift                | `swift`          | `Package.swift`                                 |
+| Terraform            | `terraform`      | `*.tf`                                          |
+| uv                   | `uv`             | `uv.lock`, `pyproject.toml`                     |
+| vcpkg                | `vcpkg`          | `vcpkg.json`                                    |
 
 ### `directory` / `directories`
 
@@ -91,13 +91,13 @@ For GitHub Actions, use `/` — Dependabot automatically searches `.github/workf
 
 How often to check for updates.
 
-| Parameter | Values | Notes |
-|---|---|---|
-| `interval` | `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron` | Required |
-| `day` | `monday`–`sunday` | Weekly only |
-| `time` | `HH:MM` | UTC by default |
-| `timezone` | IANA timezone string | e.g., `America/New_York` |
-| `cronjob` | Cron expression | Required when interval is `cron` |
+| Parameter  | Values                                                                      | Notes                            |
+| ---------- | --------------------------------------------------------------------------- | -------------------------------- |
+| `interval` | `daily`, `weekly`, `monthly`, `quarterly`, `semiannually`, `yearly`, `cron` | Required                         |
+| `day`      | `monday`–`sunday`                                                           | Weekly only                      |
+| `time`     | `HH:MM`                                                                     | UTC by default                   |
+| `timezone` | IANA timezone string                                                        | e.g., `America/New_York`         |
+| `cronjob`  | Cron expression                                                             | Required when interval is `cron` |
 
 ```yaml
 schedule:
@@ -113,15 +113,15 @@ schedule:
 
 Group dependencies into fewer PRs.
 
-| Parameter | Purpose | Values |
-|---|---|---|
-| `IDENTIFIER` | Group name (used in branch/PR title) | Letters, pipes, underscores, hyphens |
-| `applies-to` | Update type | `version-updates` (default), `security-updates` |
-| `dependency-type` | Filter by type | `development`, `production` |
-| `patterns` | Include matching names | List of strings with `*` wildcard |
-| `exclude-patterns` | Exclude matching names | List of strings with `*` wildcard |
-| `update-types` | SemVer filter | `major`, `minor`, `patch` |
-| `group-by` | Cross-directory grouping | `dependency-name` |
+| Parameter          | Purpose                              | Values                                          |
+| ------------------ | ------------------------------------ | ----------------------------------------------- |
+| `IDENTIFIER`       | Group name (used in branch/PR title) | Letters, pipes, underscores, hyphens            |
+| `applies-to`       | Update type                          | `version-updates` (default), `security-updates` |
+| `dependency-type`  | Filter by type                       | `development`, `production`                     |
+| `patterns`         | Include matching names               | List of strings with `*` wildcard               |
+| `exclude-patterns` | Exclude matching names               | List of strings with `*` wildcard               |
+| `update-types`     | SemVer filter                        | `major`, `minor`, `patch`                       |
+| `group-by`         | Cross-directory grouping             | `dependency-name`                               |
 
 ```yaml
 groups:
@@ -156,9 +156,9 @@ Assign ecosystems with `multi-ecosystem-group: "GROUP_NAME"` in each `updates` e
 
 Explicitly define which dependencies to maintain.
 
-| Parameter | Purpose |
-|---|---|
-| `dependency-name` | Match by name (supports `*` wildcard) |
+| Parameter         | Purpose                                                  |
+| ----------------- | -------------------------------------------------------- |
+| `dependency-name` | Match by name (supports `*` wildcard)                    |
 | `dependency-type` | `direct`, `indirect`, `all`, `production`, `development` |
 
 ```yaml
@@ -171,11 +171,11 @@ allow:
 
 Exclude dependencies or versions from updates.
 
-| Parameter | Purpose |
-|---|---|
-| `dependency-name` | Match by name (supports `*` wildcard) |
-| `versions` | Specific versions or ranges (e.g., `["5.x"]`, `[">=2.0.0"]`) |
-| `update-types` | SemVer levels: `version-update:semver-major`, `version-update:semver-minor`, `version-update:semver-patch` |
+| Parameter         | Purpose                                                                                                    |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- |
+| `dependency-name` | Match by name (supports `*` wildcard)                                                                      |
+| `versions`        | Specific versions or ranges (e.g., `["5.x"]`, `[">=2.0.0"]`)                                               |
+| `update-types`    | SemVer levels: `version-update:semver-major`, `version-update:semver-minor`, `version-update:semver-patch` |
 
 ```yaml
 ignore:
@@ -226,23 +226,23 @@ Assignees must have write access (or read access for org repos).
 ### `milestone`
 
 ```yaml
-milestone: 4  # numeric ID from milestone URL
+milestone: 4 # numeric ID from milestone URL
 ```
 
 ### `commit-message`
 
 ```yaml
 commit-message:
-  prefix: "deps"              # up to 50 chars; colon auto-added if ends with letter/number
-  prefix-development: "deps-dev"  # separate prefix for dev dependencies
-  include: "scope"            # adds deps/deps-dev after prefix
+  prefix: "deps" # up to 50 chars; colon auto-added if ends with letter/number
+  prefix-development: "deps-dev" # separate prefix for dev dependencies
+  include: "scope" # adds deps/deps-dev after prefix
 ```
 
 ### `pull-request-branch-name`
 
 ```yaml
 pull-request-branch-name:
-  separator: "-"  # options: "-", "_", "/"
+  separator: "-" # options: "-", "_", "/"
 ```
 
 ### `target-branch`
@@ -259,14 +259,14 @@ When set, version update config only applies to version updates. Security update
 
 Delay version updates for newly released versions:
 
-| Parameter | Purpose |
-|---|---|
-| `default-days` | Default cooldown (1–90 days) |
-| `semver-major-days` | Cooldown for major updates |
-| `semver-minor-days` | Cooldown for minor updates |
-| `semver-patch-days` | Cooldown for patch updates |
-| `include` | Dependencies to apply cooldown (up to 150, supports `*`) |
-| `exclude` | Dependencies exempt from cooldown (up to 150, takes precedence) |
+| Parameter           | Purpose                                                         |
+| ------------------- | --------------------------------------------------------------- |
+| `default-days`      | Default cooldown (1–90 days)                                    |
+| `semver-major-days` | Cooldown for major updates                                      |
+| `semver-minor-days` | Cooldown for minor updates                                      |
+| `semver-patch-days` | Cooldown for patch updates                                      |
+| `include`           | Dependencies to apply cooldown (up to 150, supports `*`)        |
+| `exclude`           | Dependencies exempt from cooldown (up to 150, takes precedence) |
 
 ```yaml
 cooldown:
@@ -281,7 +281,7 @@ cooldown:
 ### `open-pull-requests-limit`
 
 ```yaml
-open-pull-requests-limit: 10  # default: 5 for version updates
+open-pull-requests-limit: 10 # default: 5 for version updates
 ```
 
 Set to `0` to disable version updates entirely. Security updates have a separate internal limit of 10.
@@ -292,13 +292,13 @@ Set to `0` to disable version updates entirely. Security updates have a separate
 
 Supported by: `bundler`, `cargo`, `composer`, `mix`, `npm`, `pip`, `pub`, `uv`.
 
-| Value | Behavior |
-|---|---|
-| `auto` | Default: increase for apps, widen for libraries |
-| `increase` | Always increase minimum version |
+| Value                   | Behavior                                          |
+| ----------------------- | ------------------------------------------------- |
+| `auto`                  | Default: increase for apps, widen for libraries   |
+| `increase`              | Always increase minimum version                   |
 | `increase-if-necessary` | Only change if current range excludes new version |
-| `lockfile-only` | Only update lockfiles |
-| `widen` | Widen range to include old and new versions |
+| `lockfile-only`         | Only update lockfiles                             |
+| `widen`                 | Widen range to include old and new versions       |
 
 ### `rebase-strategy`
 
@@ -315,7 +315,7 @@ Allow Dependabot to force push over extra commits by including `[dependabot skip
 Supported by: `bundler`, `gomod`.
 
 ```yaml
-vendor: true  # maintain vendored dependencies
+vendor: true # maintain vendored dependencies
 ```
 
 Go modules auto-detect vendored dependencies.

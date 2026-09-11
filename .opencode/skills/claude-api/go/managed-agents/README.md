@@ -4,6 +4,7 @@ description: "Reference: managed-agents-managed-agents"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Go
      2|
      3|> **Bindings not shown here:** This README covers the most common managed-agents flows for Go. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the Go SDK repo **or the relevant docs page** from `shared/live-sources.md` rather than guess. Do not extrapolate from cURL shapes or another language's SDK.
@@ -103,9 +104,10 @@ author: Alexa
     97|
     98|### Updating an Agent
     99|
-   100|Updates create new versions; the agent object is immutable per version.
-   101|
-   102|```go
+
+100|Updates create new versions; the agent object is immutable per version.
+101|
+102|`go
    103|updatedAgent, err := client.Beta.Agents.Update(ctx, agent.ID, anthropic.BetaAgentUpdateParams{
    104|    Version: agent.Version,
    105|    System:  anthropic.String("You are a helpful coding agent. Always write tests."),
@@ -130,13 +132,13 @@ author: Alexa
    124|if err != nil {
    125|    panic(err)
    126|}
-   127|```
-   128|
-   129|---
-   130|
-   131|## Send a User Message
-   132|
-   133|```go
+   127|`
+128|
+129|---
+130|
+131|## Send a User Message
+132|
+133|`go
    134|_, err = client.Beta.Sessions.Events.Send(ctx, session.ID, anthropic.BetaSessionEventSendParams{
    135|    Events: []anthropic.SendEventsParamsUnion{{
    136|        OfUserMessage: &anthropic.BetaManagedAgentsUserMessageEventParams{
@@ -153,15 +155,15 @@ author: Alexa
    147|if err != nil {
    148|    panic(err)
    149|}
-   150|```
-   151|
-   152|> 💡 **Stream-first:** Open the stream _before_ (or concurrently with) sending the message. The stream only delivers events that occur after it opens — stream-after-send means early events arrive buffered in one batch. See [Steering Patterns](../../shared/managed-agents-events.md#steering-patterns).
-   153|
-   154|---
-   155|
-   156|## Stream Events (SSE)
-   157|
-   158|```go
+   150|`
+151|
+152|> 💡 **Stream-first:** Open the stream _before_ (or concurrently with) sending the message. The stream only delivers events that occur after it opens — stream-after-send means early events arrive buffered in one batch. See [Steering Patterns](../../shared/managed-agents-events.md#steering-patterns).
+153|
+154|---
+155|
+156|## Stream Events (SSE)
+157|
+158|`go
    159|// Open the stream first, then send the user message
    160|stream := client.Beta.Sessions.Events.StreamEvents(ctx, session.ID, anthropic.BetaSessionEventStreamParams{})
    161|defer stream.Close()
@@ -201,13 +203,13 @@ author: Alexa
    195|if err := stream.Err(); err != nil {
    196|    panic(err)
    197|}
-   198|```
-   199|
-   200|### Reconnecting and Tailing
-   201|
-   202|When reconnecting mid-session, list past events first to dedupe, then tail live events:
-   203|
-   204|```go
+   198|`
+199|
+200|### Reconnecting and Tailing
+201|
+202|When reconnecting mid-session, list past events first to dedupe, then tail live events:
+203|
+204|`go
    205|stream := client.Beta.Sessions.Events.StreamEvents(ctx, session.ID, anthropic.BetaSessionEventStreamParams{})
    206|defer stream.Close()
    207|
@@ -241,19 +243,19 @@ author: Alexa
    235|if err := stream.Err(); err != nil {
    236|    panic(err)
    237|}
-   238|```
-   239|
-   240|---
-   241|
-   242|## Provide Custom Tool Result
-   243|
-   244|> ℹ️ The Go managed-agents bindings for `user.custom_tool_result` are not yet documented in this skill or in the apps source examples. Refer to `shared/managed-agents-events.md` for the wire format and the `github.com/anthropics/anthropic-sdk-go` repository for the corresponding Go params types.
-   245|
-   246|---
-   247|
-   248|## Poll Events
-   249|
-   250|```go
+   238|`
+239|
+240|---
+241|
+242|## Provide Custom Tool Result
+243|
+244|> ℹ️ The Go managed-agents bindings for `user.custom_tool_result` are not yet documented in this skill or in the apps source examples. Refer to `shared/managed-agents-events.md` for the wire format and the `github.com/anthropics/anthropic-sdk-go` repository for the corresponding Go params types.
+245|
+246|---
+247|
+248|## Poll Events
+249|
+250|`go
    251|// Auto-paginating iterator
    252|iter := client.Beta.Sessions.Events.ListAutoPaging(ctx, session.ID, anthropic.BetaSessionEventListParams{})
    253|for iter.Next() {
@@ -263,13 +265,13 @@ author: Alexa
    257|if err := iter.Err(); err != nil {
    258|    panic(err)
    259|}
-   260|```
-   261|
-   262|---
-   263|
-   264|## Upload a File
-   265|
-   266|```go
+   260|`
+261|
+262|---
+263|
+264|## Upload a File
+265|
+266|`go
    267|csvFile, err := os.Open("data.csv")
    268|if err != nil {
    269|    panic(err)
@@ -301,11 +303,11 @@ author: Alexa
    295|if err != nil {
    296|    panic(err)
    297|}
-   298|```
-   299|
-   300|### Add and Manage Resources on an Existing Session
-   301|
-   302|```go
+   298|`
+299|
+300|### Add and Manage Resources on an Existing Session
+301|
+302|`go
    303|// Attach an additional file to an open session
    304|resource, err := client.Beta.Sessions.Resources.Add(ctx, session.ID, anthropic.BetaSessionResourceAddParams{
    305|    BetaManagedAgentsFileResourceParams: anthropic.BetaManagedAgentsFileResourceParams{
@@ -333,19 +335,19 @@ author: Alexa
    327|}); err != nil {
    328|    panic(err)
    329|}
-   330|```
-   331|
-   332|---
-   333|
-   334|## List and Download Session Files
-   335|
-   336|> ℹ️ Listing and downloading files an agent wrote during a session is not yet documented for Go in this skill or in the apps source examples. See `shared/managed-agents-events.md` and the `github.com/anthropics/anthropic-sdk-go` repository for the `Beta.Files.List` and `Beta.Files.Download` Go params types.
-   337|
-   338|---
-   339|
-   340|## Session Management
-   341|
-   342|```go
+   330|`
+331|
+332|---
+333|
+334|## List and Download Session Files
+335|
+336|> ℹ️ Listing and downloading files an agent wrote during a session is not yet documented for Go in this skill or in the apps source examples. See `shared/managed-agents-events.md` and the `github.com/anthropics/anthropic-sdk-go` repository for the `Beta.Files.List` and `Beta.Files.Download` Go params types.
+337|
+338|---
+339|
+340|## Session Management
+341|
+342|`go
    343|// List environments
    344|environments, err := client.Beta.Environments.List(ctx, anthropic.BetaEnvironmentListParams{})
    345|if err != nil {
@@ -375,13 +377,13 @@ author: Alexa
    369|if err != nil {
    370|    panic(err)
    371|}
-   372|```
-   373|
-   374|---
-   375|
-   376|## MCP Server Integration
-   377|
-   378|```go
+   372|`
+373|
+374|---
+375|
+376|## MCP Server Integration
+377|
+378|`go
    379|// Agent declares MCP server (no auth here — auth goes in a vault)
    380|agent, err := client.Beta.Agents.New(ctx, anthropic.BetaAgentNewParams{
    381|    Name: "GitHub Assistant",
@@ -427,15 +429,15 @@ author: Alexa
    421|if err != nil {
    422|    panic(err)
    423|}
-   424|```
-   425|
-   426|See `shared/managed-agents-tools.md` §Vaults for creating vaults and adding credentials.
-   427|
-   428|---
-   429|
-   430|## Vaults
-   431|
-   432|```go
+   424|`
+425|
+426|See `shared/managed-agents-tools.md` §Vaults for creating vaults and adding credentials.
+427|
+428|---
+429|
+430|## Vaults
+431|
+432|`go
    433|// Create a vault
    434|vault, err := client.Beta.Vaults.New(ctx, anthropic.BetaVaultNewParams{
    435|    DisplayName: "Alice",
@@ -496,12 +498,12 @@ author: Alexa
    490|if err != nil {
    491|    panic(err)
    492|}
-   493|```
-   494|
-   495|---
-   496|
-   497|## GitHub Repository Integration
-   498|
-   499|Mount a GitHub repository as a session resource (a vault holds the GitHub MCP credential):
-   500|
-   501|
+   493|`
+494|
+495|---
+496|
+497|## GitHub Repository Integration
+498|
+499|Mount a GitHub repository as a session resource (a vault holds the GitHub MCP credential):
+500|
+501|

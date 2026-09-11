@@ -4,6 +4,7 @@ description: "Claude API — C# reference documentation"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Claude API — C#
      2|
      3|> **Note:** The C# SDK is the official Anthropic SDK for C#. Tool use is supported via the Messages API. A class-annotation-based tool runner is not available; use raw tool definitions with JSON schema. The SDK also supports Microsoft.Extensions.AI IChatClient integration with function invocation.
@@ -103,9 +104,10 @@ author: Alexa
     97|// ThinkingBlock(s) precede TextBlock in Content. TryPick* narrows the union.
     98|foreach (var block in response.Content)
     99|{
-   100|    if (block.TryPickThinking(out ThinkingBlock? t))
-   101|    {
-   102|        Console.WriteLine($"[thinking] {t.Thinking}");
+
+100| if (block.TryPickThinking(out ThinkingBlock? t))
+101| {
+102| Console.WriteLine($"[thinking] {t.Thinking}");
    103|    }
    104|    else if (block.TryPickText(out TextBlock? text))
    105|    {
@@ -254,40 +256,40 @@ author: Alexa
    248|    {
    249|        // Content is nullable — compaction can fail server-side
    250|        Console.WriteLine($"compaction summary: {compaction.Content}");
-   251|    }
-   252|}
-   253|
-   254|// Context-edit metadata lives on a separate nullable field
-   255|if (resp.ContextManagement is { } ctx)
-   256|{
-   257|    foreach (var edit in ctx.AppliedEdits)
-   258|        Console.WriteLine($"cleared {edit.ClearedInputTokens} tokens");
-   259|}
-   260|
-   261|// ROUND-TRIP: BetaMessageParam.Content is BetaMessageParamContent (a string|list
-   262|// union). It implicit-converts from List<BetaContentBlockParam>, NOT from the
-   263|// response's IReadOnlyList<BetaContentBlock>. Convert each block:
-   264|List<BetaContentBlockParam> paramBlocks = [];
-   265|foreach (var b in resp.Content)
-   266|{
-   267|    if (b.TryPickText(out var t)) paramBlocks.Add(new BetaTextBlockParam { Text = t.Text });
-   268|    else if (b.TryPickCompaction(out var c)) paramBlocks.Add(new BetaCompactionBlockParam { Content = c.Content });
-   269|    // ... other variants as needed
-   270|}
-   271|messages.Add(new BetaMessageParam { Role = Role.Assistant, Content = paramBlocks });
-   272|```
+251| }
+252|}
+253|
+254|// Context-edit metadata lives on a separate nullable field
+255|if (resp.ContextManagement is { } ctx)
+256|{
+257| foreach (var edit in ctx.AppliedEdits)
+258| Console.WriteLine($"cleared {edit.ClearedInputTokens} tokens");
+259|}
+260|
+261|// ROUND-TRIP: BetaMessageParam.Content is BetaMessageParamContent (a string|list
+262|// union). It implicit-converts from List<BetaContentBlockParam>, NOT from the
+263|// response's IReadOnlyList<BetaContentBlock>. Convert each block:
+264|List<BetaContentBlockParam> paramBlocks = [];
+265|foreach (var b in resp.Content)
+266|{
+267| if (b.TryPickText(out var t)) paramBlocks.Add(new BetaTextBlockParam { Text = t.Text });
+268| else if (b.TryPickCompaction(out var c)) paramBlocks.Add(new BetaCompactionBlockParam { Content = c.Content });
+269| // ... other variants as needed
+270|}
+271|messages.Add(new BetaMessageParam { Role = Role.Assistant, Content = paramBlocks });
+272|``
    273|
    274|All 15 `BetaContentBlock.TryPick*` variants: `Text`, `Thinking`, `RedactedThinking`, `ToolUse`, `ServerToolUse`, `WebSearchToolResult`, `WebFetchToolResult`, `CodeExecutionToolResult`, `BashCodeExecutionToolResult`, `TextEditorCodeExecutionToolResult`, `ToolSearchToolResult`, `McpToolUse`, `McpToolResult`, `ContainerUpload`, `Compaction`.
    275|
    276|**`BetaToolUseBlock.Input` is `IReadOnlyDictionary<string, JsonElement>`** — index by key then call the `JsonElement` extractor:
    277|
-   278|```csharp
-   279|if (block.TryPickToolUse(out BetaToolUseBlock? tu))
-   280|{
-   281|    int a = tu.Input["a"].GetInt32();
-   282|    string s = tu.Input["name"].GetString()!;
-   283|}
-   284|```
+   278|``csharp
+279|if (block.TryPickToolUse(out BetaToolUseBlock? tu))
+280|{
+281| int a = tu.Input["a"].GetInt32();
+282| string s = tu.Input["name"].GetString()!;
+283|}
+284|``
    285|
    286|---
    287|
@@ -295,9 +297,9 @@ author: Alexa
    289|
    290|Effort is nested under `OutputConfig`, NOT a top-level property. `ApiEnum<string, Effort>` has an implicit conversion from the enum, so assign `Effort.High` directly.
    291|
-   292|```csharp
-   293|OutputConfig = new OutputConfig { Effort = Effort.High },
-   294|```
+   292|``csharp
+293|OutputConfig = new OutputConfig { Effort = Effort.High },
+294|``
    295|
    296|Values: `Effort.Low`, `Effort.Medium`, `Effort.High`, `Effort.Max`. Combine with `Thinking = new ThinkingConfigAdaptive()` for cost-quality control.
    297|
@@ -307,14 +309,14 @@ author: Alexa
    301|
    302|`System` takes `MessageCreateParamsSystem?` — a union of `string` or `List<TextBlockParam>`. There is no `SystemTextBlockParam`; use plain `TextBlockParam`. The implicit conversion needs the concrete `List<TextBlockParam>` type (array literals won't convert). For placement patterns and the silent-invalidator audit checklist, see `shared/prompt-caching.md`.
    303|
-   304|```csharp
-   305|System = new List<TextBlockParam> {
-   306|    new() {
-   307|        Text = longSystemPrompt,
-   308|        CacheControl = new CacheControlEphemeral(),  // auto-sets Type = "ephemeral"
-   309|    },
-   310|},
-   311|```
+   304|``csharp
+305|System = new List<TextBlockParam> {
+306| new() {
+307| Text = longSystemPrompt,
+308| CacheControl = new CacheControlEphemeral(), // auto-sets Type = "ephemeral"
+309| },
+310|},
+311|``
    312|
    313|Optional `Ttl` on `CacheControlEphemeral`: `new() { Ttl = Ttl.Ttl1h }` or `Ttl.Ttl5m`. `CacheControl` also exists on `Tool.CacheControl` and top-level `MessageCreateParams.CacheControl`.
    314|
@@ -324,13 +326,13 @@ author: Alexa
    318|
    319|## Token Counting
    320|
-   321|```csharp
-   322|MessageTokensCount result = await client.Messages.CountTokens(new MessageCountTokensParams {
-   323|    Model = Model.ClaudeOpus4_6,
-   324|    Messages = [new() { Role = Role.User, Content = "Hello" }],
-   325|});
-   326|long tokens = result.InputTokens;
-   327|```
+   321|``csharp
+322|MessageTokensCount result = await client.Messages.CountTokens(new MessageCountTokensParams {
+323| Model = Model.ClaudeOpus4_6,
+324| Messages = [new() { Role = Role.User, Content = "Hello" }],
+325|});
+326|long tokens = result.InputTokens;
+327|``
    328|
    329|`MessageCountTokensParams.Tools` uses a different union type (`MessageCountTokensTool`) than `MessageCreateParams.Tools` (`ToolUnion`) — if you're passing tools, the compiler will tell you when it matters.
    330|
@@ -338,18 +340,18 @@ author: Alexa
    332|
    333|## Structured Output
    334|
-   335|```csharp
-   336|OutputConfig = new OutputConfig {
-   337|    Format = new JsonOutputFormat {
-   338|        Schema = new Dictionary<string, JsonElement> {
-   339|            ["type"] = JsonSerializer.SerializeToElement("object"),
-   340|            ["properties"] = JsonSerializer.SerializeToElement(
-   341|                new { name = new { type = "string" } }),
-   342|            ["required"] = JsonSerializer.SerializeToElement(new[] { "name" }),
-   343|        },
-   344|    },
-   345|},
-   346|```
+   335|``csharp
+336|OutputConfig = new OutputConfig {
+337| Format = new JsonOutputFormat {
+338| Schema = new Dictionary<string, JsonElement> {
+339| ["type"] = JsonSerializer.SerializeToElement("object"),
+340| ["properties"] = JsonSerializer.SerializeToElement(
+341| new { name = new { type = "string" } }),
+342| ["required"] = JsonSerializer.SerializeToElement(new[] { "name" }),
+343| },
+344| },
+345|},
+346|``
    347|
    348|`JsonOutputFormat.Type` is auto-set to `"json_schema"` by the constructor. `Schema` is `required`.
    349|
@@ -359,15 +361,15 @@ author: Alexa
    353|
    354|`DocumentBlockParam` takes a `DocumentBlockParamSource` union: `Base64PdfSource` / `UrlPdfSource` / `PlainTextSource` / `ContentBlockSource`. `Base64PdfSource` auto-sets `MediaType = "application/pdf"` and `Type = "base64"`.
    355|
-   356|```csharp
-   357|new MessageParam {
-   358|    Role = Role.User,
-   359|    Content = new List<ContentBlockParam> {
-   360|        new DocumentBlockParam { Source = new Base64PdfSource { Data = base64String } },
-   361|        new TextBlockParam { Text = "Summarize this PDF" },
-   362|    },
-   363|}
-   364|```
+   356|``csharp
+357|new MessageParam {
+358| Role = Role.User,
+359| Content = new List<ContentBlockParam> {
+360| new DocumentBlockParam { Source = new Base64PdfSource { Data = base64String } },
+361| new TextBlockParam { Text = "Summarize this PDF" },
+362| },
+363|}
+364|``
    365|
    366|---
    367|
@@ -375,14 +377,14 @@ author: Alexa
    369|
    370|Web search, bash, text editor, and code execution are built-in server tools. Type names are version-suffixed; constructors auto-set `name`/`type`. All implicit-convert to `ToolUnion`.
    371|
-   372|```csharp
-   373|Tools = [
-   374|    new WebSearchTool20260209(),
-   375|    new ToolBash20250124(),
-   376|    new ToolTextEditor20250728(),
-   377|    new CodeExecutionTool20260120(),
-   378|],
-   379|```
+   372|``csharp
+373|Tools = [
+374| new WebSearchTool20260209(),
+375| new ToolBash20250124(),
+376| new ToolTextEditor20250728(),
+377| new CodeExecutionTool20260120(),
+378|],
+379|``
    380|
    381|Also available: `WebFetchTool20260209`, `MemoryTool20250818`. `WebSearchTool20260209` optionals: `AllowedDomains`, `BlockedDomains`, `MaxUses`, `UserLocation`.
    382|
@@ -392,18 +394,18 @@ author: Alexa
    386|
    387|Files live under `client.Beta.Files` (namespace `Anthropic.Models.Beta.Files`). `BinaryContent` implicit-converts from `Stream` and `byte[]`.
    388|
-   389|```csharp
-   390|using Anthropic.Models.Beta.Files;
-   391|using Anthropic.Models.Beta.Messages;
-   392|
-   393|FileMetadata meta = await client.Beta.Files.Upload(
-   394|    new FileUploadParams { File = File.OpenRead("doc.pdf") });
-   395|
-   396|// Referencing the uploaded file requires Beta message types:
-   397|new BetaRequestDocumentBlock {
-   398|    Source = new BetaFileDocumentSource { FileID = meta.ID },
-   399|}
-   400|```
-   401|
-   402|The non-beta `DocumentBlockParamSource` union has no file-ID variant — file references need `client.Beta.Messages.Create()`.
-   403|
+   389|``csharp
+390|using Anthropic.Models.Beta.Files;
+391|using Anthropic.Models.Beta.Messages;
+392|
+393|FileMetadata meta = await client.Beta.Files.Upload(
+394| new FileUploadParams { File = File.OpenRead("doc.pdf") });
+395|
+396|// Referencing the uploaded file requires Beta message types:
+397|new BetaRequestDocumentBlock {
+398| Source = new BetaFileDocumentSource { FileID = meta.ID },
+399|}
+400|```
+401|
+402|The non-beta `DocumentBlockParamSource` union has no file-ID variant — file references need `client.Beta.Messages.Create()`.
+403|

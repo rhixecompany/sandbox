@@ -1,22 +1,22 @@
 ---
 author: Hermes Agent
-description: 'Use when token limits are tight, reducing verbosity in communication,
-  commits, reviews, or code. Triggers: caveman mode, less tokens, be brief, /caveman.'
+description: "Use when token limits are tight, reducing verbosity in communication,
+  commits, reviews, or code. Triggers: caveman mode, less tokens, be brief, /caveman."
 license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: caveman-unified
 tags:
-- token-optimization
-- compression
-- communication
-- efficiency
+  - token-optimization
+  - compression
+  - communication
+  - efficiency
 title: Caveman Unified
 version: 1.1.0
-
 ---
+
 # Caveman Unified
 
 ## Overview
@@ -40,24 +40,27 @@ Ultra-compressed communication mode cutting token usage ~75% while maintaining t
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
+| Skill                           | Purpose                      |
+| ------------------------------- | ---------------------------- |
 | `writing-clearly-and-concisely` | Balance brevity with clarity |
 
 ## Workflow
 
 ### Phase 1: Understand Context & Intent
+
 1. Identify key information to preserve
 2. Determine compression intensity (lite/full/ultra)
 3. Plan compression strategy by domain
 
 ### Phase 2: Apply Compression Rules
+
 1. Remove filler words and redundant phrases
 2. Shorten sentences to essential clauses
 3. Use abbreviations and symbols where clear
 4. Apply domain-specific shorthand
 
 ### Phase 3: Verify Technical Accuracy
+
 1. Check that meaning is preserved
 2. Ensure clarity despite brevity
 3. Verify completeness of critical information
@@ -190,11 +193,11 @@ Use this skill when:
 - Before: "The system encountered a critical issue where the authentication token expired unexpectedly, causing all active user sessions to be terminated abruptly."
 - After: "Auth token expired → all sessions killed"
 
-
 ## Pitfalls
 
 - **Stale cache:** Always re-read files from disk after editing; don't rely on cached context
 - **Context limits:** Process in batches; write results after each batch
+
 ## Verification Checklist
 
 - [ ] Frontmatter complete (name, title, description, version, author, license, tags)
@@ -204,4 +207,3 @@ Use this skill when:
 - [ ] All references cited in SKILL.md body
 - [ ] SKILL.md is under 250 lines
 - [ ] No placeholder text
-

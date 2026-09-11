@@ -21,6 +21,7 @@ Writing "Remaining observations (non-blocking): X can't be installed" without at
 ## Lesson
 
 When the task is "fix ALL issues":
+
 - A tool network timeout on first invocation is fixable by retrying
 - Always look for config issues that compound the problem
 - The user's expectation is zero issues = zero dismissals

@@ -4,11 +4,11 @@
 
 ## Base Configuration
 
-| Dimension | Value |
-|-----------|-------|
-| Art Style | manga |
-| Tone | warm |
-| Layout | standard (default) |
+| Dimension | Value              |
+| --------- | ------------------ |
+| Art Style | manga              |
+| Tone      | warm               |
+| Layout    | standard (default) |
 
 Equivalent to: art=manga, tone=warm
 
@@ -20,13 +20,13 @@ This preset includes special rules beyond the art+tone combination. When the `co
 
 Each major abstract concept SHOULD have a recurring visual symbol/metaphor:
 
-| Concept Type | Visualization Approach |
-|-------------|----------------------|
-| Psychological need | Tangible object character holds or discovers (e.g., glowing energy ball = competence) |
-| Management principle | Environmental metaphor character navigates (e.g., ship wheel = autonomy) |
-| Growth/development | Living organic symbol that transforms (e.g., seed → flowering plant = relatedness) |
-| Abstract framework | Spatial structure characters can enter or observe |
-| Emotional state | Color/lighting shift in the scene atmosphere |
+| Concept Type         | Visualization Approach                                                                |
+| -------------------- | ------------------------------------------------------------------------------------- |
+| Psychological need   | Tangible object character holds or discovers (e.g., glowing energy ball = competence) |
+| Management principle | Environmental metaphor character navigates (e.g., ship wheel = autonomy)              |
+| Growth/development   | Living organic symbol that transforms (e.g., seed → flowering plant = relatedness)    |
+| Abstract framework   | Spatial structure characters can enter or observe                                     |
+| Emotional state      | Color/lighting shift in the scene atmosphere                                          |
 
 **Unlike ohmsha**: Dialogue panels are allowed and expected. The goal is to COMBINE visual metaphors WITH dialogue, not replace dialogue entirely.
 
@@ -36,11 +36,11 @@ Each major abstract concept SHOULD have a recurring visual symbol/metaphor:
 
 Symbols must persist across the story:
 
-| Stage | Treatment |
-|-------|-----------|
-| Introduction | Symbol appears with soft glow effect when concept is first mentioned |
-| Recurrence | Same symbol reappears in background or character interaction when concept is referenced |
-| Resolution | ALL symbols gather in the final composition, showing integration of learned concepts |
+| Stage        | Treatment                                                                               |
+| ------------ | --------------------------------------------------------------------------------------- |
+| Introduction | Symbol appears with soft glow effect when concept is first mentioned                    |
+| Recurrence   | Same symbol reappears in background or character interaction when concept is referenced |
+| Resolution   | ALL symbols gather in the final composition, showing integration of learned concepts    |
 
 **Storyboard requirement**: Include a Symbol Mapping Table defining concept → visual symbol before panel breakdown.
 
@@ -48,11 +48,11 @@ Symbols must persist across the story:
 
 Create original characters based on content domain. No fixed defaults:
 
-| Role | Archetype | Visual Cues |
-|------|-----------|------------|
-| Protagonist | Learner/worker facing a challenge | Modern professional or student, relatable, starts with constrained posture |
-| Mentor | Experienced guide who teaches through experience | Slightly older, calm demeanor, warm color accents |
-| Catalyst | Person or event that triggers transformation | Can be a colleague, situation, challenge, or opportunity |
+| Role        | Archetype                                        | Visual Cues                                                                |
+| ----------- | ------------------------------------------------ | -------------------------------------------------------------------------- |
+| Protagonist | Learner/worker facing a challenge                | Modern professional or student, relatable, starts with constrained posture |
+| Mentor      | Experienced guide who teaches through experience | Slightly older, calm demeanor, warm color accents                          |
+| Catalyst    | Person or event that triggers transformation     | Can be a colleague, situation, challenge, or opportunity                   |
 
 **IMPORTANT**: Characters are created fresh each time based on the source content's domain (business, psychology, education, etc.). No default character set.
 
@@ -60,13 +60,13 @@ Create original characters based on content domain. No fixed defaults:
 
 Enforce a five-stage growth arc:
 
-| Act | Structure | Visual Tone |
-|-----|-----------|------------|
-| Opening | Protagonist stuck in routine, faces frustration | Muted warm tones, tight framing, constrained compositions |
-| Inciting moment | Mentor appears or opportunity arrives | Brightness increases, panels open up |
-| Learning | Concepts introduced through visual metaphors | Rich warm palette, symbols introduced one by one |
-| Turning point | Protagonist applies knowledge, faces test | Contrast increases, dynamic compositions |
-| Transformation | Growth demonstrated, new understanding visible | Full warm palette, expansive composition, all symbols present |
+| Act             | Structure                                       | Visual Tone                                                   |
+| --------------- | ----------------------------------------------- | ------------------------------------------------------------- |
+| Opening         | Protagonist stuck in routine, faces frustration | Muted warm tones, tight framing, constrained compositions     |
+| Inciting moment | Mentor appears or opportunity arrives           | Brightness increases, panels open up                          |
+| Learning        | Concepts introduced through visual metaphors    | Rich warm palette, symbols introduced one by one              |
+| Turning point   | Protagonist applies knowledge, faces test       | Contrast increases, dynamic compositions                      |
+| Transformation  | Growth demonstrated, new understanding visible  | Full warm palette, expansive composition, all symbols present |
 
 ### Dialogue + Action Balance
 
@@ -80,13 +80,13 @@ Enforce a five-stage growth arc:
 
 ### Scene Atmosphere Rules
 
-| Scene Type | Atmosphere |
-|------------|-----------|
-| Problem/frustration | Cool muted tones over warm base, tight framing, cluttered environment |
-| Mentoring moment | Golden hour lighting, open composition, warm indoor glow |
-| Concept visualization | Soft glow effects, clean simplified backgrounds, symbol spotlight |
-| Growth/transformation | Warm light expanding outward, character posture opening up |
-| Resolution | Full warm palette, spacious composition, all visual symbols visible |
+| Scene Type            | Atmosphere                                                            |
+| --------------------- | --------------------------------------------------------------------- |
+| Problem/frustration   | Cool muted tones over warm base, tight framing, cluttered environment |
+| Mentoring moment      | Golden hour lighting, open composition, warm indoor glow              |
+| Concept visualization | Soft glow effects, clean simplified backgrounds, symbol spotlight     |
+| Growth/transformation | Warm light expanding outward, character posture opening up            |
+| Resolution            | Full warm palette, spacious composition, all visual symbols visible   |
 
 ### Ending Requirements
 

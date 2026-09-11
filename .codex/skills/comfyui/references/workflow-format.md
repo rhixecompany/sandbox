@@ -12,26 +12,26 @@ Top-level keys are string node IDs. Each node has `class_type` and `inputs`:
 
 ```json
 {
-  "3": {
-    "class_type": "KSampler",
-    "inputs": {
-      "seed": 156680208700286,
-      "steps": 20,
-      "cfg": 8,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": ["4", 0],
-      "positive": ["6", 0],
-      "negative": ["7", 0],
-      "latent_image": ["5", 0]
-    },
-    "_meta": {"title": "KSampler"}
-  },
-  "4": {
-    "class_type": "CheckpointLoaderSimple",
-    "inputs": {"ckpt_name": "v1-5-pruned-emaonly.safetensors"}
-  }
+	"3": {
+		"class_type": "KSampler",
+		"inputs": {
+			"seed": 156680208700286,
+			"steps": 20,
+			"cfg": 8,
+			"sampler_name": "euler",
+			"scheduler": "normal",
+			"denoise": 1.0,
+			"model": ["4", 0],
+			"positive": ["6", 0],
+			"negative": ["7", 0],
+			"latent_image": ["5", 0]
+		},
+		"_meta": { "title": "KSampler" }
+	},
+	"4": {
+		"class_type": "CheckpointLoaderSimple",
+		"inputs": { "ckpt_name": "v1-5-pruned-emaonly.safetensors" }
+	}
 }
 ```
 
@@ -67,11 +67,11 @@ The full catalog lives in `scripts/_common.py` (`PARAM_PATTERNS` and
 
 ### Text Prompts
 
-| Node Class | Key Fields |
-|------------|------------|
-| `CLIPTextEncode` | `text` |
+| Node Class           | Key Fields                            |
+| -------------------- | ------------------------------------- |
+| `CLIPTextEncode`     | `text`                                |
 | `CLIPTextEncodeSDXL` | `text_g`, `text_l`, `width`, `height` |
-| `CLIPTextEncodeFlux` | `clip_l`, `t5xxl`, `guidance` |
+| `CLIPTextEncodeFlux` | `clip_l`, `t5xxl`, `guidance`         |
 
 To distinguish positive from negative the skill traces `KSampler.negative`
 back through Reroute / Primitive nodes to the source CLIPTextEncode. Falls
@@ -79,71 +79,71 @@ back to `_meta.title` heuristics ("negative", "neg", "anti").
 
 ### Sampling
 
-| Node Class | Key Fields |
-|------------|------------|
-| `KSampler` | `seed`, `steps`, `cfg`, `sampler_name`, `scheduler`, `denoise` |
-| `KSamplerAdvanced` | `noise_seed`, `steps`, `cfg`, `start_at_step`, `end_at_step` |
-| `SamplerCustom` | `noise_seed`, `cfg`, `sampler`, `sigmas` |
-| `SamplerCustomAdvanced` | `noise_seed` (via RandomNoise input) |
-| `RandomNoise` | `noise_seed` |
-| `BasicScheduler` | `steps`, `scheduler`, `denoise` |
-| `KSamplerSelect` | `sampler_name` |
-| `BasicGuider` / `CFGGuider` | `cfg` |
-| `ModelSamplingFlux` | `max_shift`, `base_shift`, `width`, `height` |
-| `SDTurboScheduler` | `steps`, `denoise` |
+| Node Class                  | Key Fields                                                     |
+| --------------------------- | -------------------------------------------------------------- |
+| `KSampler`                  | `seed`, `steps`, `cfg`, `sampler_name`, `scheduler`, `denoise` |
+| `KSamplerAdvanced`          | `noise_seed`, `steps`, `cfg`, `start_at_step`, `end_at_step`   |
+| `SamplerCustom`             | `noise_seed`, `cfg`, `sampler`, `sigmas`                       |
+| `SamplerCustomAdvanced`     | `noise_seed` (via RandomNoise input)                           |
+| `RandomNoise`               | `noise_seed`                                                   |
+| `BasicScheduler`            | `steps`, `scheduler`, `denoise`                                |
+| `KSamplerSelect`            | `sampler_name`                                                 |
+| `BasicGuider` / `CFGGuider` | `cfg`                                                          |
+| `ModelSamplingFlux`         | `max_shift`, `base_shift`, `width`, `height`                   |
+| `SDTurboScheduler`          | `steps`, `denoise`                                             |
 
 ### Latent / Dimensions
 
-| Node Class | Key Fields |
-|------------|------------|
-| `EmptyLatentImage` | `width`, `height`, `batch_size` |
-| `EmptySD3LatentImage` | `width`, `height`, `batch_size` |
+| Node Class                | Key Fields                                |
+| ------------------------- | ----------------------------------------- |
+| `EmptyLatentImage`        | `width`, `height`, `batch_size`           |
+| `EmptySD3LatentImage`     | `width`, `height`, `batch_size`           |
 | `EmptyHunyuanLatentVideo` | `width`, `height`, `length`, `batch_size` |
-| `EmptyMochiLatentVideo` | `width`, `height`, `length`, `batch_size` |
-| `EmptyLTXVLatentVideo` | `width`, `height`, `length`, `batch_size` |
+| `EmptyMochiLatentVideo`   | `width`, `height`, `length`, `batch_size` |
+| `EmptyLTXVLatentVideo`    | `width`, `height`, `length`, `batch_size` |
 
 ### Model Loading
 
-| Node Class | Key Fields | Folder |
-|------------|------------|--------|
-| `CheckpointLoaderSimple` | `ckpt_name` | `checkpoints` |
-| `LoraLoader` | `lora_name`, `strength_model`, `strength_clip` | `loras` |
-| `LoraLoaderModelOnly` | `lora_name`, `strength_model` | `loras` |
-| `VAELoader` | `vae_name` | `vae` |
-| `ControlNetLoader` | `control_net_name` | `controlnet` |
-| `CLIPLoader` | `clip_name` | `clip` |
-| `DualCLIPLoader` | `clip_name1`, `clip_name2` | `clip` |
-| `TripleCLIPLoader` | `clip_name1/2/3` | `clip` |
-| `UNETLoader` | `unet_name` | `unet` |
-| `DiffusionModelLoader` | `model_name` | `diffusion_models` |
-| `UpscaleModelLoader` | `model_name` | `upscale_models` |
-| `IPAdapterModelLoader` | `ipadapter_file` | `ipadapter` |
-| `ADE_AnimateDiffLoaderWithContext` | `model_name`, `motion_scale` | `animatediff_models` |
+| Node Class                         | Key Fields                                     | Folder               |
+| ---------------------------------- | ---------------------------------------------- | -------------------- |
+| `CheckpointLoaderSimple`           | `ckpt_name`                                    | `checkpoints`        |
+| `LoraLoader`                       | `lora_name`, `strength_model`, `strength_clip` | `loras`              |
+| `LoraLoaderModelOnly`              | `lora_name`, `strength_model`                  | `loras`              |
+| `VAELoader`                        | `vae_name`                                     | `vae`                |
+| `ControlNetLoader`                 | `control_net_name`                             | `controlnet`         |
+| `CLIPLoader`                       | `clip_name`                                    | `clip`               |
+| `DualCLIPLoader`                   | `clip_name1`, `clip_name2`                     | `clip`               |
+| `TripleCLIPLoader`                 | `clip_name1/2/3`                               | `clip`               |
+| `UNETLoader`                       | `unet_name`                                    | `unet`               |
+| `DiffusionModelLoader`             | `model_name`                                   | `diffusion_models`   |
+| `UpscaleModelLoader`               | `model_name`                                   | `upscale_models`     |
+| `IPAdapterModelLoader`             | `ipadapter_file`                               | `ipadapter`          |
+| `ADE_AnimateDiffLoaderWithContext` | `model_name`, `motion_scale`                   | `animatediff_models` |
 
 ### Image Input/Output
 
-| Node Class | Key Fields |
-|------------|------------|
-| `LoadImage` | `image` (server-side filename, after upload) |
-| `LoadImageMask` | `image`, `channel` (`red` / `green` / `blue` / `alpha`) |
-| `VAEEncode` / `VAEDecode` | (no controllable fields) |
-| `VAEEncodeForInpaint` | `grow_mask_by` |
-| `SaveImage` | `filename_prefix` |
-| `VHS_VideoCombine` | `frame_rate`, `format`, `filename_prefix`, `loop_count`, `pingpong` |
+| Node Class                | Key Fields                                                          |
+| ------------------------- | ------------------------------------------------------------------- |
+| `LoadImage`               | `image` (server-side filename, after upload)                        |
+| `LoadImageMask`           | `image`, `channel` (`red` / `green` / `blue` / `alpha`)             |
+| `VAEEncode` / `VAEDecode` | (no controllable fields)                                            |
+| `VAEEncodeForInpaint`     | `grow_mask_by`                                                      |
+| `SaveImage`               | `filename_prefix`                                                   |
+| `VHS_VideoCombine`        | `frame_rate`, `format`, `filename_prefix`, `loop_count`, `pingpong` |
 
 ### ControlNet
 
-| Node Class | Key Fields |
-|------------|------------|
-| `ControlNetApply` | `strength` |
+| Node Class                | Key Fields                                 |
+| ------------------------- | ------------------------------------------ |
+| `ControlNetApply`         | `strength`                                 |
 | `ControlNetApplyAdvanced` | `strength`, `start_percent`, `end_percent` |
 
 ### IPAdapter (community pack `comfyui_ipadapter_plus`)
 
-| Node Class | Key Fields |
-|------------|------------|
+| Node Class          | Key Fields                     |
+| ------------------- | ------------------------------ |
 | `IPAdapterAdvanced` | `weight`, `start_at`, `end_at` |
-| `IPAdapter` | `weight` |
+| `IPAdapter`         | `weight`                       |
 
 ### Embeddings (referenced inside prompt strings)
 
@@ -190,7 +190,7 @@ For unknown workflows:
 4. **Steps / CFG** — `KSampler.steps`, `KSampler.cfg`. Steps 20–50 typical.
    CFG 5–15 typical (Flux uses guidance, not CFG).
 5. **Model / checkpoint** — `CheckpointLoaderSimple.ckpt_name`. Filename must
-   match an installed file *exactly*.
+   match an installed file _exactly_.
 6. **LoRA** — `LoraLoader.lora_name`, `.strength_model`.
 7. **Images for img2img / inpaint** — `LoadImage.image`. Server-side filename
    after upload.
@@ -202,14 +202,14 @@ For unknown workflows:
 Output is produced by these node types. The skill's `OUTPUT_NODES` set
 extends to common community packs.
 
-| Node | Output Key | Content |
-|------|-----------|---------|
-| `SaveImage` | `images` | List of `{filename, subfolder, type}` |
-| `PreviewImage` | `images` | Temporary preview (not saved) |
-| `VHS_VideoCombine` | `gifs` (older) or `videos`/`video` (newer cloud) | Video file refs |
-| `SaveAudio` | `audio` | Audio file refs |
-| `SaveAnimatedWEBP` / `SaveAnimatedPNG` | `images` | Animated images |
-| `Save3D` | `3d` | 3D asset refs |
+| Node                                   | Output Key                                       | Content                               |
+| -------------------------------------- | ------------------------------------------------ | ------------------------------------- |
+| `SaveImage`                            | `images`                                         | List of `{filename, subfolder, type}` |
+| `PreviewImage`                         | `images`                                         | Temporary preview (not saved)         |
+| `VHS_VideoCombine`                     | `gifs` (older) or `videos`/`video` (newer cloud) | Video file refs                       |
+| `SaveAudio`                            | `audio`                                          | Audio file refs                       |
+| `SaveAnimatedWEBP` / `SaveAnimatedPNG` | `images`                                         | Animated images                       |
+| `Save3D`                               | `3d`                                             | 3D asset refs                         |
 
 After execution, fetch outputs from `/history/{prompt_id}` (local) or
 `/api/jobs/{prompt_id}` (cloud) → `outputs` → `{node_id}` → `{key}`.

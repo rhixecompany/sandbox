@@ -1,18 +1,19 @@
 ---
 author: Alexa
-description: 'Use when interacting with the Claude API: client patterns, managed agents,
-  and examples.'
+description: "Use when interacting with the Claude API: client patterns, managed agents,
+  and examples."
 license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: claude-api
 tags:
-- imported
+  - imported
 title: Claude Api
 version: 1.0.0
 ---
+
 # Claude Api
 
 ## Overview
@@ -74,10 +75,10 @@ Use when interacting with the Claude API: client patterns, tool use, streaming, 
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `context7` | Look up current Anthropic SDK documentation |
-| `systematic-debugging` | Diagnose SDK integration issues |
+| Skill                  | Purpose                                     |
+| ---------------------- | ------------------------------------------- |
+| `context7`             | Look up current Anthropic SDK documentation |
+| `systematic-debugging` | Diagnose SDK integration issues             |
 
 ## Best Practices
 

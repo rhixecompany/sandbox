@@ -4,6 +4,7 @@ description: "Managed Agents — Overview"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Overview
      2|
      3|Managed Agents provisions a container per session as the agent's workspace. The agent loop runs on Anthropic's orchestration layer; the container is where the agent's _tools_ execute — bash commands, file operations, code. You create a persisted **Agent** config (model, system prompt, tools, MCP servers, skills), then start **Sessions** that reference it. The session streams events back to you; you send user messages and tool results in.

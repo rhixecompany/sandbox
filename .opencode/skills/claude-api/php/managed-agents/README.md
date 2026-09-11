@@ -4,6 +4,7 @@ description: "Managed Agents — PHP"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — PHP
      2|
      3|> **Bindings not shown here:** This README covers the most common managed-agents flows for PHP. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the PHP SDK repo **or the relevant docs page** from `shared/live-sources.md` rather than guess. Do not extrapolate from cURL shapes or another language's SDK.
@@ -103,12 +104,13 @@ author: Alexa
     97|    $session->id,
     98|    events: [
     99|        [
-   100|            'type' => 'user.message',
-   101|            'content' => [['type' => 'text', 'text' => 'Review the auth module']],
-   102|        ],
-   103|    ],
-   104|);
-   105|```
+
+100| 'type' => 'user.message',
+101| 'content' => [['type' => 'text', 'text' => 'Review the auth module']],
+102| ],
+103| ],
+104|);
+105|``
    106|
    107|> 💡 **Stream-first:** Open the stream _before_ (or concurrently with) sending the message. The stream only delivers events that occur after it opens — stream-after-send means early events arrive buffered in one batch. See [Steering Patterns](../../shared/managed-agents-events.md#steering-patterns).
    108|
@@ -118,16 +120,16 @@ author: Alexa
    112|
    113|> ℹ️ **Streaming transporter:** PHP's default buffered PSR-18 client never returns for the open-ended session event stream. Use a streaming Guzzle transporter for `streamStream()` calls — other calls keep the default client.
    114|
-   115|```php
-   116|$streamingClient = new GuzzleHttp\Client(['stream' => true]);
+   115|``php
+116|$streamingClient = new GuzzleHttp\Client(['stream' => true]);
    117|
    118|// Open the stream first, then send the user message
    119|$stream = $client->beta->sessions->events->streamStream(
    120|    $session->id,
-   121|    requestOptions: ['transporter' => $streamingClient],
+121| requestOptions: ['transporter' => $streamingClient],
    122|);
    123|$client->beta->sessions->events->send(
-   124|    $session->id,
+124| $session->id,
    125|    events: [
    126|        [
    127|            'type' => 'user.message',
@@ -138,19 +140,19 @@ author: Alexa
    132|
    133|foreach ($stream as $event) {
    134|    match ($event->type) {
-   135|        'agent.message' => array_walk(
-   136|            $event->content,
+135| 'agent.message' => array_walk(
+136| $event->content,
    137|            static fn($block) => $block->type === 'text' ? print($block->text) : null,
-   138|        ),
-   139|        'agent.tool_use' => print("\n[Using tool: {$event->name}]\n"),
+138| ),
+139| 'agent.tool_use' => print("\n[Using tool: {$event->name}]\n"),
    140|        'session.error' => printf("\n[Error: %s]", $event->error?->message ?? 'unknown'),
-   141|        default => null,
-   142|    };
-   143|    if ($event->type === 'session.status_idle' || $event->type === 'session.error') {
-   144|        break;
-   145|    }
-   146|}
-   147|$stream->close();
+141| default => null,
+142| };
+143| if ($event->type === 'session.status_idle' || $event->type === 'session.error') {
+144| break;
+145| }
+146|}
+147|$stream->close();
    148|```
    149|
    150|### Reconnecting and Tailing
@@ -160,12 +162,12 @@ author: Alexa
    154|```php
    155|$stream = $client->beta->sessions->events->streamStream(
    156|    $session->id,
-   157|    requestOptions: ['transporter' => $streamingClient],
+157| requestOptions: ['transporter' => $streamingClient],
    158|);
    159|
    160|// Stream is open and buffering. List history before tailing live.
    161|$seenEventIds = [];
-   162|foreach ($client->beta->sessions->events->list($session->id)->pagingEachItem() as $event) {
+162|foreach ($client->beta->sessions->events->list($session->id)->pagingEachItem() as $event) {
    163|    $seenEventIds[$event->id] = true;
    164|}
    165|
@@ -176,18 +178,18 @@ author: Alexa
    170|    }
    171|    $seenEventIds[$event->id] = true;
    172|    match ($event->type) {
-   173|        'agent.message' => array_walk(
-   174|            $event->content,
+173| 'agent.message' => array_walk(
+174| $event->content,
    175|            static fn($block) => $block->type === 'text' ? print($block->text) : null,
-   176|        ),
-   177|        default => null,
-   178|    };
-   179|    if ($event->type === 'session.status_idle') {
+176| ),
+177| default => null,
+178| };
+179| if ($event->type === 'session.status_idle') {
    180|        break;
    181|    }
    182|}
    183|$stream->close();
-   184|```
+184|``
    185|
    186|---
    187|
@@ -199,8 +201,8 @@ author: Alexa
    193|
    194|## Poll Events
    195|
-   196|```php
-   197|foreach ($client->beta->sessions->events->list($session->id)->pagingEachItem() as $event) {
+   196|``php
+197|foreach ($client->beta->sessions->events->list($session->id)->pagingEachItem() as $event) {
    198|    echo "{$event->type}: {$event->id}\n";
    199|}
    200|```
@@ -216,28 +218,28 @@ author: Alexa
    210|
    211|// Raw cURL upload (canonical example from the apps source)
    212|$csvPath = 'data.csv';
-   213|$ch = curl_init('https://api.anthropic.com/v1/files');
+213|$ch = curl_init('https://api.anthropic.com/v1/files');
    214|curl_setopt_array($ch, [
-   215|    CURLOPT_RETURNTRANSFER => true,
-   216|    CURLOPT_POST => true,
-   217|    CURLOPT_HTTPHEADER => [
-   218|        'x-api-key: ' . getenv('ANTHROPIC_API_KEY'),
-   219|        'anthropic-version: 2023-06-01',
-   220|        'anthropic-beta: files-api-2025-04-14',
-   221|    ],
-   222|    CURLOPT_POSTFIELDS => ['file' => new CURLFile($csvPath, 'text/csv', 'data.csv')],
+215| CURLOPT_RETURNTRANSFER => true,
+216| CURLOPT_POST => true,
+217| CURLOPT_HTTPHEADER => [
+218| 'x-api-key: ' . getenv('ANTHROPIC_API_KEY'),
+219| 'anthropic-version: 2023-06-01',
+220| 'anthropic-beta: files-api-2025-04-14',
+221| ],
+222| CURLOPT_POSTFIELDS => ['file' => new CURLFile($csvPath, 'text/csv', 'data.csv')],
    223|]);
    224|$file = json_decode(curl_exec($ch));
    225|echo "File ID: {$file->id}\n";
-   226|
-   227|// Mount in a session
-   228|$session = $client->beta->sessions->create(
-   229|    agent: $agent->id,
+226|
+227|// Mount in a session
+228|$session = $client->beta->sessions->create(
+229| agent: $agent->id,
    230|    environmentID: $environment->id,
-   231|    resources: [
-   232|        BetaManagedAgentsFileResourceParams::with(
-   233|            type: 'file',
-   234|            fileID: $file->id,
+231| resources: [
+232| BetaManagedAgentsFileResourceParams::with(
+233| type: 'file',
+234| fileID: $file->id,
    235|            mountPath: '/workspace/data.csv',
    236|        ),
    237|    ],
@@ -250,20 +252,20 @@ author: Alexa
    244|// Attach an additional file to an open session
    245|$resource = $client->beta->sessions->resources->add(
    246|    $session->id,
-   247|    type: 'file',
-   248|    fileID: $file->id,
+247| type: 'file',
+248| fileID: $file->id,
    249|);
    250|echo "{$resource->id}\n"; // "sesrsc_01ABC..."
-   251|
-   252|// List resources on the session
-   253|$listed = $client->beta->sessions->resources->list($session->id);
+251|
+252|// List resources on the session
+253|$listed = $client->beta->sessions->resources->list($session->id);
    254|foreach ($listed->data as $entry) {
    255|    echo "{$entry->id} {$entry->type}\n";
    256|}
    257|
    258|// Detach a resource
    259|$client->beta->sessions->resources->delete($resource->id, sessionID: $session->id);
-   260|```
+260|``
    261|
    262|---
    263|
@@ -275,12 +277,12 @@ author: Alexa
    269|
    270|## Session Management
    271|
-   272|```php
-   273|// List environments
-   274|$environments = $client->beta->environments->list();
-   275|
-   276|// Retrieve a specific environment
-   277|$env = $client->beta->environments->retrieve($environment->id);
+   272|``php
+273|// List environments
+274|$environments = $client->beta->environments->list();
+275|
+276|// Retrieve a specific environment
+277|$env = $client->beta->environments->retrieve($environment->id);
    278|
    279|// Archive an environment (read-only, existing sessions continue)
    280|$client->beta->environments->archive($environment->id);
@@ -327,10 +329,10 @@ author: Alexa
    321|    agent: BetaManagedAgentsAgentParams::with(
    322|        type: 'agent',
    323|        id: $agent->id,
-   324|        version: $agent->version,
+324| version: $agent->version,
    325|    ),
    326|    environmentID: $environment->id,
-   327|    vaultIDs: [$vault->id],
+327| vaultIDs: [$vault->id],
    328|);
    329|```
    330|
@@ -347,10 +349,10 @@ author: Alexa
    341|    metadata: ['external_user_id' => 'usr_abc123'],
    342|);
    343|echo $vault->id . "\n"; // "vlt_01ABC..."
-   344|
-   345|// Add an OAuth credential
-   346|$credential = $client->beta->vaults->credentials->create(
-   347|    vaultID: $vault->id,
+344|
+345|// Add an OAuth credential
+346|$credential = $client->beta->vaults->credentials->create(
+347| vaultID: $vault->id,
    348|    displayName: "Alice's Slack",
    349|    auth: [
    350|        'type' => 'mcp_oauth',
@@ -372,19 +374,19 @@ author: Alexa
    366|
    367|// Rotate the credential (e.g., after a token refresh)
    368|$client->beta->vaults->credentials->update(
-   369|    $credential->id,
+369| $credential->id,
    370|    vaultID: $vault->id,
-   371|    auth: [
-   372|        'type' => 'mcp_oauth',
-   373|        'access_token' => 'xoxp-new-...',
-   374|        'expires_at' => '2026-05-15T00:00:00Z',
-   375|        'refresh' => ['refresh_token' => 'xoxe-1-new-...'],
-   376|    ],
-   377|);
-   378|
-   379|// Archive a vault
-   380|$client->beta->vaults->archive($vault->id);
-   381|```
+371| auth: [
+372| 'type' => 'mcp_oauth',
+373| 'access_token' => 'xoxp-new-...',
+374| 'expires_at' => '2026-05-15T00:00:00Z',
+375| 'refresh' => ['refresh_token' => 'xoxe-1-new-...'],
+376| ],
+377|);
+378|
+379|// Archive a vault
+380|$client->beta->vaults->archive($vault->id);
+381|`
    382|
    383|---
    384|
@@ -392,11 +394,11 @@ author: Alexa
    386|
    387|Mount a GitHub repository as a session resource (a vault holds the GitHub MCP credential):
    388|
-   389|```php
-   390|$session = $client->beta->sessions->create(
-   391|    agent: $agent->id,
+   389|`php
+390|$session = $client->beta->sessions->create(
+391| agent: $agent->id,
    392|    environmentID: $environment->id,
-   393|    vaultIDs: [$vault->id],
+393| vaultIDs: [$vault->id],
    394|    resources: [
    395|        [
    396|            'type' => 'github_repository',
@@ -412,31 +414,31 @@ author: Alexa
    406|
    407|```php
    408|$resources = [
-   409|    [
-   410|        'type' => 'github_repository',
-   411|        'url' => 'https://github.com/org/frontend',
-   412|        'mountPath' => '/workspace/frontend',
-   413|        'authorizationToken' => 'ghp_your_github_token',
-   414|    ],
-   415|    [
-   416|        'type' => 'github_repository',
-   417|        'url' => 'https://github.com/org/backend',
-   418|        'mountPath' => '/workspace/backend',
-   419|        'authorizationToken' => 'ghp_your_github_token',
-   420|    ],
-   421|];
-   422|```
+409| [
+410| 'type' => 'github_repository',
+411| 'url' => 'https://github.com/org/frontend',
+412| 'mountPath' => '/workspace/frontend',
+413| 'authorizationToken' => 'ghp_your_github_token',
+414| ],
+415| [
+416| 'type' => 'github_repository',
+417| 'url' => 'https://github.com/org/backend',
+418| 'mountPath' => '/workspace/backend',
+419| 'authorizationToken' => 'ghp_your_github_token',
+420| ],
+421|];
+422|`
    423|
    424|Rotating a repository's authorization token:
    425|
-   426|```php
-   427|$listed = $client->beta->sessions->resources->list($session->id);
+   426|`php
+427|$listed = $client->beta->sessions->resources->list($session->id);
    428|$repoResourceId = $listed->data[0]->id;
    429|
    430|$client->beta->sessions->resources->update(
-   431|    $repoResourceId,
+431| $repoResourceId,
    432|    sessionID: $session->id,
-   433|    authorizationToken: 'ghp_your_new_github_token',
-   434|);
-   435|```
-   436|
+433| authorizationToken: 'ghp_your_new_github_token',
+434|);
+435|```
+436|

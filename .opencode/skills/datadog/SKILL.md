@@ -6,18 +6,18 @@ license: MIT
 metadata:
   hermes:
     tags:
-    - imported
+      - imported
 name: datadog
 tags:
-- observability
-- debugging
-- monitoring
-- datadog
-- production
+  - observability
+  - debugging
+  - monitoring
+  - datadog
+  - production
 title: Datadog
 version: 1.0.0
-
 ---
+
 # Datadog
 
 ## Overview
@@ -43,10 +43,10 @@ Use Datadog for observability, production debugging, and incident triage. Search
 
 ## Skills Required
 
-| Skill | Purpose |
-|-------|---------|
-| `systematic-debugging` | Debug production issues methodically |
-| `log-analysis-and-triage` | Analyze and prioritize log patterns |
+| Skill                     | Purpose                              |
+| ------------------------- | ------------------------------------ |
+| `systematic-debugging`    | Debug production issues methodically |
+| `log-analysis-and-triage` | Analyze and prioritize log patterns  |
 
 ## Workflow
 
@@ -59,6 +59,7 @@ Use Datadog for observability, production debugging, and incident triage. Search
 ### Phase 2: Search & Filter
 
 **Log Search:**
+
 ```
 # Search by service and error level
 service:web-api status:error
@@ -74,6 +75,7 @@ env:production team:backend
 ```
 
 **Common filters:**
+
 - `service:<name>` — Filter by service
 - `env:<environment>` — Filter by environment
 - `status:error|warn` — Filter by log level

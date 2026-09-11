@@ -4,6 +4,7 @@ description: "Managed Agents — Onboarding Flow"
 version: 1.0.0
 author: Alexa
 ---
+
      1|# Managed Agents — Onboarding Flow
      2|
      3|> **Invoked via `/claude-api managed-agents-onboard`?** You're in the right place. Run the interview below — don't summarize it back to the user, ask the questions.
@@ -103,28 +104,29 @@ author: Alexa
     97|
     98|- [ ] First message to the agent?
     99|
-   100|Session creation blocks until all resources mount. Open the event stream before sending the kickoff. Stream is SSE; break on `session.status_terminated`, or on `session.status_idle` with a terminal `stop_reason` — i.e. anything except `requires_action`, which fires transiently while the session waits on a tool confirmation or custom-tool result (see `shared/managed-agents-client-patterns.md` Pattern 5). Usage lands on `span.model_request_end`. Agent-written artifacts end up in `/mnt/session/outputs/` — download via `files.list({scope_id: session.id, betas: ["managed-agents-2026-04-01"]})`.
-   101|
-   102|---
-   103|
-   104|## 3. Emit the code
-   105|
-   106|Go straight from the last interview answer to the code — no preamble about the setup-vs-runtime split, no "the critical thing to internalize…", no lecture about `agents.create()` being one-time. The two-block structure below already shows that; don't narrate it. Generate **two clearly-separated blocks** per language detected (Python/TS/cURL — see SKILL.md → Language Detection):
-   107|
-   108|**Block 1 — Setup (run once, store the IDs):**
-   109|
-   110|1. `environments.create()` → persist `env_id`
-   111|2. `agents.create()` with everything from §Round A–C → persist `agent_id` and `agent_version`
-   112|
-   113|Label: `# ONE-TIME SETUP — run once, save the IDs to config/.env`
-   114|
-   115|**Block 2 — Runtime (run on every invocation):**
-   116|
-   117|1. Load `env_id` + `agent_id` from config/env
-   118|2. `sessions.create(agent=AGENT_ID, environment_id=ENV_ID, resources=[...], vault_ids=[...])`
-   119|3. Open stream, `events.send()` the kickoff, loop until `session.status_terminated` or `session.status_idle && stop_reason.type !== 'requires_action'` (see `shared/managed-agents-client-patterns.md` Pattern 5 for the full gate — do not break on bare `session.status_idle`)
-   120|
-   121|> ⚠️ **Never emit `agents.create()` and `sessions.create()` in the same unguarded block.** That teaches the user to create a new agent on every run — the #1 anti-pattern. If they need a single script, wrap agent creation in `if not os.getenv("AGENT_ID"):`.
-   122|
-   123|Pull exact syntax from `python/managed-agents/README.md`, `typescript/managed-agents/README.md`, or `curl/managed-agents.md`. Don't invent field names.
-   124|
+
+100|Session creation blocks until all resources mount. Open the event stream before sending the kickoff. Stream is SSE; break on `session.status_terminated`, or on `session.status_idle` with a terminal `stop_reason` — i.e. anything except `requires_action`, which fires transiently while the session waits on a tool confirmation or custom-tool result (see `shared/managed-agents-client-patterns.md` Pattern 5). Usage lands on `span.model_request_end`. Agent-written artifacts end up in `/mnt/session/outputs/` — download via `files.list({scope_id: session.id, betas: ["managed-agents-2026-04-01"]})`.
+101|
+102|---
+103|
+104|## 3. Emit the code
+105|
+106|Go straight from the last interview answer to the code — no preamble about the setup-vs-runtime split, no "the critical thing to internalize…", no lecture about `agents.create()` being one-time. The two-block structure below already shows that; don't narrate it. Generate **two clearly-separated blocks** per language detected (Python/TS/cURL — see SKILL.md → Language Detection):
+107|
+108|**Block 1 — Setup (run once, store the IDs):**
+109|
+110|1. `environments.create()` → persist `env_id`
+111|2. `agents.create()` with everything from §Round A–C → persist `agent_id` and `agent_version`
+112|
+113|Label: `# ONE-TIME SETUP — run once, save the IDs to config/.env`
+114|
+115|**Block 2 — Runtime (run on every invocation):**
+116|
+117|1. Load `env_id` + `agent_id` from config/env
+118|2. `sessions.create(agent=AGENT_ID, environment_id=ENV_ID, resources=[...], vault_ids=[...])`
+119|3. Open stream, `events.send()` the kickoff, loop until `session.status_terminated` or `session.status_idle && stop_reason.type !== 'requires_action'` (see `shared/managed-agents-client-patterns.md` Pattern 5 for the full gate — do not break on bare `session.status_idle`)
+120|
+121|> ⚠️ **Never emit `agents.create()` and `sessions.create()` in the same unguarded block.** That teaches the user to create a new agent on every run — the #1 anti-pattern. If they need a single script, wrap agent creation in `if not os.getenv("AGENT_ID"):`.
+122|
+123|Pull exact syntax from `python/managed-agents/README.md`, `typescript/managed-agents/README.md`, or `curl/managed-agents.md`. Don't invent field names.
+124|
