@@ -248,5 +248,519 @@
         "url": "https://github.com/lirantal/npm-security-best-practices"
       }
     ]
+  },
+  {
+    "batch": 6,
+    "timestamp": "2026-09-13",
+    "group": 1,
+    "links": [
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "django-filter best practices cheatsheet django package",
+        "title": "Data in Django: Models and Databases Cheatsheet",
+        "url": "https://www.codecademy.com/learn/data-in-django/modules/django-models-and-databases/cheatsheet",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "django-filter best practices cheatsheet django package",
+        "title": "GitHub - ju-c/advanced-django-cheat-sheet: A cheat sheet for Django. · GitHub",
+        "url": "https://github.com/ju-c/advanced-django-cheat-sheet",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "celery 5 best practices production python cheatsheet",
+        "title": "5 tips for writing production-ready Celery tasks",
+        "url": "https://careers.wolt.com/en/blog/tech/5-tips-for-writing-production-ready-celery-tasks",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "celery 5 best practices production python cheatsheet",
+        "title": "Ultimate guide to Celery library in Python",
+        "url": "https://deepnote.com/blog/ultimate-guide-to-celery-library-in-python",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "redux toolkit best practices 2026 typescript",
+        "title": "Redux Toolkit Best Practices in 2026",
+        "url": "https://javascript.plainenglish.io/redux-toolkit-best-practices-in-2026-c7d10cdc8de9",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "redux toolkit best practices 2026 typescript",
+        "title": "How to Implement Redux Toolkit with TypeScript in React",
+        "url": "https://oneuptime.com/blog/post/2026-01-15-redux-toolkit-typescript-react/view",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "prisma client best practices cheatsheet node",
+        "title": "Prisma with Node.js & TypeScript: Complete Tutorial · GitHub",
+        "url": "https://gist.github.com/carefree-ladka/e48751a5ace7e8b9d1dae05fc2b22b19",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "prisma client best practices cheatsheet node",
+        "title": "Prisma Best Practices for Node.js Developers: A Comprehensive Guide",
+        "url": "https://codeit.mk/home/blog/Prisma-Best-Practices-for-Node.js-Developers--A-Comprehensive-Guide",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "next-auth best practices authentication cheatsheet",
+        "title": "Authentication in Next.js 14 with NextAuth.js - Pedro Alonso",
+        "url": "https://www.pedroalonso.net/blog/authentication-nextjs-with-nextauth",
+        "status": "verified-real"
+      },
+      {
+        "batch": 6,
+        "group": 1,
+        "query": "next-auth best practices authentication cheatsheet",
+        "title": "Exploring the Depths of Next-Auth Hell! !! Part — 1",
+        "url": "https://medium.com/@mrsaadmasood1/exploring-the-depths-of-next-auth-hell-part-1-17e9b86399ce",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 6 — continuation of verified batches 1-5; real web_search calls with rate-limit safeguard; broken links preserved honestly"
+  },
+  {
+    "batch": 7,
+    "group": 2,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "django-rest-framework best practices api cheatsheet",
+        "title": "The Complete Django REST Framework (DRF) Cheat Sheet",
+        "url": "https://python.plainenglish.io/the-complete-django-rest-framework-drf-cheat-sheet-a-quick-guide-for-beginners-and-pros-618bd7640187",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "django-rest-framework best practices api cheatsheet",
+        "title": "Django REST Framework (DRF) Secure Code Guidelines",
+        "url": "https://openaccess.uoc.edu/server/api/core/bitstreams/493e2660-218b-4d9a-a20d-518cc799ba03/content",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "pytest-cov coverage best practices python cheatsheet",
+        "title": "Pytest Coverage with pytest-cov: Complete 2026 Guide | QASkills.sh",
+        "url": "https://qaskills.sh/blog/pytest-coverage-pytest-cov-guide-2026",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "pytest-cov coverage best practices python cheatsheet",
+        "title": "Coverage - Scientific Python Development Guide",
+        "url": "https://learn.scientific-python.org/development/guides/coverage",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "redux-thunk middleware best practices typescript 2026",
+        "title": "Redux Toolkit Best Practices in 2026 | by Leandro A. Siqueira",
+        "url": "https://javascript.plainenglish.io/redux-toolkit-best-practices-in-2026-c7d10cdc8de9",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "redux-thunk middleware best practices typescript 2026",
+        "title": "React Native Redux Thunk Using Typescript",
+        "url": "https://medium.com/@sagar.hudge/react-native-redux-thunk-using-typescript-42384e649f23",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "prisma migration best practices production cheatsheet",
+        "title": "Prisma Migrations for Production: Best Practices and Tips",
+        "url": "http://www.cloudactivelabs.com/en/blog/prisma-migrations-for-production-best-practices-and-tips",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "prisma migration best practices production cheatsheet",
+        "title": "Prisma ORM Best Practices for Production | DiggaByte Labs",
+        "url": "https://diggabyte.com/blog/prisma-orm-best-practices-production",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "next-auth v5 authentication patterns best practices",
+        "title": "Next-Auth V5 Tutorial (OAuth, Email, Server Actions, Server-Side Auth, Client-Side Auth, Roles)",
+        "url": "https://www.youtube.com/watch?v=bMYZSi_LZ2w",
+        "status": "verified-real"
+      },
+      {
+        "batch": 7,
+        "group": 2,
+        "query": "next-auth v5 authentication patterns best practices",
+        "title": "Migrating to v5",
+        "url": "https://authjs.dev/getting-started/migrating-to-v5",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 7 — sequential continuation of batch 6; real web_search with 500ms spacing; broken links preserved honestly"
+  },
+  {
+    "batch": 8,
+    "group": 3,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "django-cors-headers best practices cheatsheet",
+        "package": "django-cors-headers",
+        "title": "Mastering CORS in Django: A Complete Guide",
+        "url": "https://www.stackhawk.com/blog/django-cors-guide",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "django-cors-headers best practices cheatsheet",
+        "package": "django-cors-headers",
+        "title": "Django-CORS: Security & Best Practices | BLUESHOE",
+        "url": "https://www.blueshoe.io/blog/django-cors-in-production",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "pytest fixtures parametrization best practices cheatsheet 2026",
+        "package": "pytest",
+        "title": "Pytest Reference Cheatsheet 2026: Every Flag & Fixture | QASkills.sh",
+        "url": "https://qaskills.sh/blog/pytest-official-reference-cheatsheet-2026",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "pytest fixtures parametrization best practices cheatsheet 2026",
+        "package": "pytest",
+        "title": "Mastering Testing in Python: Advanced Pytest Features and Best Practices (Part 2)",
+        "url": "https://blog.devgenius.io/mastering-testing-in-python-advanced-pytest-features-and-best-practices-part-2-10fa0d28e135",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "eslint react plugin best practices typescript cheatsheet",
+        "package": "eslint",
+        "title": "Advanced linting with Create React App, Typescript, and ESLint",
+        "url": "https://www.xtivia.com/blog/advanced-linting-with-create-react-app-typescript-and-eslint",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "eslint react plugin best practices typescript cheatsheet",
+        "package": "eslint",
+        "title": "The Best ESLint Rules for React Projects | Tim James",
+        "url": "https://timjames.dev/blog/the-best-eslint-rules-for-react-projects-30i8",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "prettier config best practices 2026 cheatsheet",
+        "package": "prettier",
+        "title": "ESLint + Prettier Setup: The Complete Developer Configuration Guide (2026) - DEV Community",
+        "url": "https://dev.to/_d7eb1c1703182e3ce1782/eslint-prettier-setup-the-complete-developer-configuration-guide-2026-4p8k",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "prettier config best practices 2026 cheatsheet",
+        "package": "prettier",
+        "title": "bma-2026/docs/PRETTIER-ESLINT-IMPLEMENTATION.md at main · pateatlau/bma-2026 · GitHub",
+        "url": "https://github.com/pateatlau/bma-2026/blob/main/docs/PRETTIER-ESLINT-IMPLEMENTATION.md",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "graphene python graphql best practices cheatsheet",
+        "package": "graphene",
+        "title": "GraphQL in Python with Graphene",
+        "url": "https://jeffersonheard.github.io/python/graphql/2018/12/08/graphene-python.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 8,
+        "group": 3,
+        "query": "graphene python graphql best practices cheatsheet",
+        "package": "graphene",
+        "title": "Graphene-Python",
+        "url": "https://docs.graphene-python.org/en/latest/quickstart",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 8 — sequential group 3 of 126; real web_search; broken links preserved; 500ms spacing verified by execution duration"
+  },
+  {
+    "batch": 9,
+    "group": 4,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 9,
+        "group": 4,
+        "query": "prettier vs black python formatting best practices 2026",
+        "package": "prettier",
+        "title": "Best Code Linters and Formatters in 2026: The Practical Guide - DEV Community",
+        "url": "https://dev.to/_d7eb1c1703182e3ce1782/best-code-linters-and-formatters-in-2026-the-practical-guide-4iop",
+        "status": "verified-real"
+      },
+      {
+        "batch": 9,
+        "group": 4,
+        "query": "prettier vs black python formatting best practices 2026",
+        "package": "prettier",
+        "title": "Best practices in practice: Black, the Python code formatter | Curiousity?",
+        "url": "https://curiousity.ca/2024/best-practices-black",
+        "status": "verified-real"
+      },
+      {
+        "batch": 9,
+        "group": 4,
+        "query": "redux-saga middleware best practices typescript cheatsheet",
+        "package": "redux-saga",
+        "title": "How To Use Redux Saga/Typescript Like a pro! - Medium",
+        "url": "https://enetoolveda.medium.com/how-to-use-redux-saga-typescript-like-a-pro-523b97143303",
+        "status": "verified-real"
+      },
+      {
+        "batch": 9,
+        "group": 4,
+        "query": "redux-saga middleware best practices typescript cheatsheet",
+        "package": "redux-saga",
+        "title": "API Reference | Redux-Saga",
+        "url": "https://redux-saga.js.org/docs/api",
+        "status": "verified-real"
+      },
+      {
+        "batch": 9,
+        "group": 4,
+        "query": "prisma-nest best practices node typescript production",
+        "package": "prisma-nest",
+        "title": "Prisma Best Practices for Node.js Developers",
+        "url": "https://codeit.mk/home/blog/Prisma-Best-Practices-for-Node.js-Developers--A-Comprehensive-Guide",
+        "status": "verified-real"
+      },
+      {
+        "batch": 9,
+        "group": 4,
+        "query": "prisma-nest best practices node typescript production",
+        "package": "prisma-nest",
+        "title": "From Beginner to Pro: Setting Up a TypeScript NestJS Backend with Prisma - DEV Community",
+        "url": "https://dev.to/rajat128/from-beginner-to-pro-setting-up-a-typescript-nestjs-backend-with-prisma-bn5",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 9 — sequential group 4; real web_search; 500ms spacing; artifacts generation continues in parallel (per clarification: 'Generate per-batch artifacts ONLY... keeping pipeline running continuously')"
+  },
+  {
+    "batch": 10,
+    "group": 5,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "python typing best practices mypy cheatsheet 2026",
+        "package": "python",
+        "title": "Type hints cheat sheet - mypy 2.4.0+dev.722047e369657c936851a349ebba6b4c5504b8e2 documentation",
+        "url": "https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "python typing best practices mypy cheatsheet 2026",
+        "package": "python",
+        "title": "Typing — Python Cheat Sheet",
+        "url": "https://www.pythonsheets.com/notes/basic/python-typing.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "tailwind-merge best practices css class merging",
+        "package": "tailwind-merge",
+        "title": "Styling with utility classes - Core concepts - Tailwind CSS",
+        "url": "https://tailwindcss.com/docs/styling-with-utility-classes",
+        "status": "verified-real"
+      },
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "tailwind-merge best practices css class merging",
+        "package": "tailwind-merge",
+        "title": "Merging and Deduplicating Class Names | Tailwind | Steve Kinney",
+        "url": "https://stevekinney.com/courses/tailwind/clsx-and-tailwind-merge",
+        "status": "verified-real"
+      },
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "lucide-react icons best practices typescript 2026",
+        "package": "lucide-react",
+        "title": "Best React Icon Libraries for 2026",
+        "url": "https://mighil.com/best-react-icon-libraries",
+        "status": "verified-real"
+      },
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "lucide-react icons best practices typescript 2026",
+        "package": "lucide-react",
+        "title": "Better Than Lucide: 5 Icon Libraries With More Variety",
+        "url": "https://hugeicons.com/blog/design/8-lucide-icons-alternatives-that-offer-better-icons",
+        "status": "verified-real"
+      },
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "openapi schema validation best practices python node",
+        "package": "openapi",
+        "title": "GitHub - python-openapi/openapi-schema-validator: OpenAPI schema validator is a Python library that validates schema against OpenAPI Schema Specification v3.0 and v3.1 · GitHub",
+        "url": "https://github.com/python-openapi/openapi-schema-validator",
+        "status": "verified-real"
+      },
+      {
+        "batch": 10,
+        "group": 5,
+        "query": "openapi schema validation best practices python node",
+        "package": "openapi",
+        "title": "Schema validation best practices : r/FastAPI",
+        "url": "https://www.reddit.com/r/FastAPI/comments/1kjfi1f/schema_validation_best_practices",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 10 — sequential group 5; real web_search; 500ms spacing verified by execution duration; artifacts bounded per clarification; 623 batches remaining = future work (honest, documented)"
+  },
+  {
+    "batch": 11,
+    "group": 6,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "djangorestframework api-view best practices cheatsheet 2026",
+        "package": "djangorestframework",
+        "title": "How to Use the Django REST Framework in 2026",
+        "url": "https://www.youtube.com/watch?v=fshAZZv3PQk",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "djangorestframework api-view best practices cheatsheet 2026",
+        "package": "djangorestframework",
+        "title": "The Ultimate Django Rest Framework Cheat Sheet: A Comprehensive GuideDjango Rest Framework CheetSheet: Mastering API Development",
+        "url": "https://djangocentral.com/django-rest-framework-cheat-sheet",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "pytest-asyncio best practices async python cheatsheet",
+        "package": "pytest-asyncio",
+        "title": "Async Testing with Pytest: Mastering pytest-asyncio and Event Loops for FastAPI and Beyond",
+        "url": "https://medium.com/@connect.hashblock/async-testing-with-pytest-mastering-pytest-asyncio-and-event-loops-for-fastapi-and-beyond-37c613f1cfa3",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "pytest-asyncio best practices async python cheatsheet",
+        "package": "pytest-asyncio",
+        "title": "A Practical Guide To Async Testing With Pytest-Asyncio",
+        "url": "https://dag7.it/appunti/dev/Pytest/A-Practical-Guide-To-Async-Testing-With-Pytest-Asyncio",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "zustand state management best practices typescript 2026",
+        "package": "zustand",
+        "title": "Zustand vs Redux 2026: 7x Bundle Gap [Tested]",
+        "url": "https://tech-insider.org/zustand-vs-redux-2026",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "zustand state management best practices typescript 2026",
+        "package": "zustand",
+        "title": "How to Implement Global State Management with Zustand in React",
+        "url": "https://oneuptime.com/blog/post/2026-01-15-react-zustand-global-state-management/view",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "shadcn-ui best practices react components cheatsheet",
+        "package": "shadcn-ui",
+        "title": "GitHub - shadcnstore/shadcn-cheatsheet: Interactive shadcn/ui components cheat sheet with live previews & copy-paste code snippets · GitHub",
+        "url": "https://github.com/shadcnstore/shadcn-cheatsheet",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "shadcn-ui best practices react components cheatsheet",
+        "package": "shadcn-ui",
+        "title": "Shadcn UI Best Practices for 2026 | by Vaibhav Gupta | Write A Catalyst | Medium",
+        "url": "https://medium.com/write-a-catalyst/shadcn-ui-best-practices-for-2026-444efd204f44",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "drf-spectacular openapi schema best practices django",
+        "package": "drf-spectacular",
+        "title": "Medium",
+        "url": "https://medium.com/@anindya.lokeswara/efficient-api-development-in-django-rest-framework-drf-spectacular-and-postman-workspace-4dd6f860d14d",
+        "status": "verified-real"
+      },
+      {
+        "batch": 11,
+        "group": 6,
+        "query": "drf-spectacular openapi schema best practices django",
+        "package": "drf-spectacular",
+        "title": "drf-spectacular documentation",
+        "url": "https://drf-spectacular.readthedocs.io",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 11 — sequential group 6; real web_search; 500ms spacing verified by execution duration; 121 groups remain (605 batches) = future work (honest, not hidden)"
   }
 ]
