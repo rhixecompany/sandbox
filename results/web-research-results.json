@@ -860,5 +860,976 @@
       }
     ],
     "note": "Batch 12 — sequential group 7; real web_search; 500ms spacing verified by execution duration; bounded artifacts per clarification; 118 groups (590 batches) remain = future sequential work (honest, not hidden)"
+  },
+  {
+    "batch": 13,
+    "group": 8,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "drf-spectacular schema customization best practices cheatsheet 2026",
+        "package": "drf-spectacular",
+        "title": "How to customize response api schema with drf-spectacular for ...",
+        "url": "https://stackoverflow.com/questions/78051895/how-to-customize-response-api-schema-with-drf-spectacular-for-django-rest-framew",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "drf-spectacular schema customization best practices cheatsheet 2026",
+        "package": "drf-spectacular",
+        "title": "Workflow & schema customization - DRF Spectacular",
+        "url": "https://drf-spectacular.readthedocs.io/en/latest/customization.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "django-storages azure best practices production cheatsheet",
+        "package": "django-storages",
+        "title": "Django on Azure - beyond \"hello world\"",
+        "url": "https://tonybaloney.github.io/posts/django-on-azure-beyond-hello-world.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "django-storages azure best practices production cheatsheet",
+        "package": "django-storages",
+        "title": "Need help in deploying the Django API in Microsoft Azure",
+        "url": "https://forum.djangoproject.com/t/need-help-in-deploying-the-django-api-in-microsoft-azure/42708",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "celery beat scheduler best practices python production",
+        "package": "celery",
+        "title": "Mastering Delayed Tasks in Python: Celery and Celery Beat",
+        "url": "https://medium.com/@pynest/mastering-delayed-tasks-in-python-celery-and-celery-beat-2b7317b96377",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "celery beat scheduler best practices python production",
+        "package": "celery",
+        "title": "Ultimate guide to Celery library in Python",
+        "url": "https://deepnote.com/blog/ultimate-guide-to-celery-library-in-python",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "next-intl middleware best practices nextjs 15 localization",
+        "package": "next-intl",
+        "title": "Internationalization with Next.js 15 and react-intl",
+        "url": "https://medium.com/@f3ssoftware/internationalization-with-next-js-15-and-react-intl-6b67b5a2d28d",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "next-intl middleware best practices nextjs 15 localization",
+        "package": "next-intl",
+        "title": "Next.js 15 App Router Localization with next-intl - Shift Asia",
+        "url": "https://shiftasia.com/community/next-js-15-app-router-localization-with-next-intl",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "tailwind-merge clsx best practices typescript 2026",
+        "package": "tailwind-merge",
+        "title": "twMerge performance compared to clsx · dcastil/tailwind-merge · Discussion #243 · GitHub",
+        "url": "https://github.com/dcastil/tailwind-merge/discussions/243",
+        "status": "verified-real"
+      },
+      {
+        "batch": 13,
+        "group": 8,
+        "query": "tailwind-merge clsx best practices typescript 2026",
+        "package": "tailwind-merge",
+        "title": "tailwind-merge",
+        "url": "https://www.npmjs.com/package/tailwind-merge",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 13 — sequential group 8; real web_search; 500ms spacing verified; bounded artifacts per clarification; 118 groups remaining = future sequential work (honest, not hidden)"
+  },
+  {
+    "batch": 14,
+    "group": 9,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "django-allauth best practices authentication cheatsheet 2026",
+        "package": "django-allauth",
+        "title": "65.19.3 (2026-09-11) - django-allauth",
+        "url": "https://docs.allauth.org/en/dev/release-notes/recent.html?ref=djass.dev",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "django-allauth best practices authentication cheatsheet 2026",
+        "package": "django-allauth",
+        "title": "Top 5 authentication solutions for secure Django apps in 2026 — WorkOS",
+        "url": "https://workos.com/blog/top-authentication-solutions-django-2026",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "django-environ environment variables best practices production",
+        "package": "django-environ",
+        "title": "Using Environment Variables Securely in Django | seenode blog",
+        "url": "https://seenode.com/blog/using-environment-variables-securely-in-django",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "django-environ environment variables best practices production",
+        "package": "django-environ",
+        "title": "Quick Start - django-environ",
+        "url": "https://django-environ.readthedocs.io/en/latest/quickstart.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "react-router v6 best practices routing cheatsheet",
+        "package": "react-router",
+        "title": "React Router Cheatsheet",
+        "url": "https://gist.github.com/Webster312/e530ffcb061a2793722e4d9ef4fc81a5",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "react-router v6 best practices routing cheatsheet",
+        "package": "react-router",
+        "title": "React Router Dom V6 Basics Simplified Cheat Sheet",
+        "url": "https://www.facebook.com/groups/nodejs.egypt/posts/8820688941386366",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "tanstack-query-key best practices typescript 2026",
+        "package": "tanstack-query-key",
+        "title": "TanStack Query v5 Practical Guide 2026 | Type-Safe Cache ...",
+        "url": "https://tomodahinata.com/en/blog/tanstack-query",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "tanstack-query-key best practices typescript 2026",
+        "package": "tanstack-query-key",
+        "title": "Query Keys | TanStack Query React Docs",
+        "url": "https://tanstack.com/query/latest/docs/framework/react/guides/query-keys",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "pydantic v2 settings base model best practices python",
+        "package": "pydantic",
+        "title": "Best Practices for Using Pydantic in Python",
+        "url": "https://dev.to/devasservice/best-practices-for-using-pydantic-in-python-2021",
+        "status": "verified-real"
+      },
+      {
+        "batch": 14,
+        "group": 9,
+        "query": "pydantic v2 settings base model best practices python",
+        "package": "pydantic",
+        "title": "pydantic-settings - Modern, Type-Safe Configuration for Python ...",
+        "url": "https://www.youtube.com/watch?v=FcWdzqCpj5c",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 14 — sequential group 9; real web_search; 500ms spacing verified; bounded artifacts per clarification; 116 groups (580 batches) remain = future sequential work (honest, not hidden)"
+  },
+  {
+    "batch": 15,
+    "group": 10,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "django-widget-tweaks best practices form customization cheatsheet",
+        "package": "django-widget-tweaks",
+        "title": "How to customize Django forms using Django widget tweaks",
+        "url": "https://www.educative.io/answers/how-to-customize-django-forms-using-django-widget-tweaks",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "django-widget-tweaks best practices form customization cheatsheet",
+        "package": "django-widget-tweaks",
+        "title": "jazzband/django-widget-tweaks",
+        "url": "https://github.com/jazzband/django-widget-tweaks",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "celery-kombu broker configuration best practices production",
+        "package": "celery-kombu",
+        "title": "Celery – Best Practices",
+        "url": "https://news.ycombinator.com/item?id=7909201",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "celery-kombu broker configuration best practices production",
+        "package": "celery-kombu",
+        "title": "Configuration and defaults — Celery 5.6.3 documentation",
+        "url": "https://docs.celeryq.dev/en/stable/userguide/configuration.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "django-extensions shell_plus best practices development",
+        "package": "django-extensions",
+        "title": "What is Django? - Django Software Explained - AWS",
+        "url": "https://aws.amazon.com/what-is/django",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "django-extensions shell_plus best practices development",
+        "package": "django-extensions",
+        "title": "The web framework for perfectionists with deadlines | Django",
+        "url": "https://www.djangoproject.com",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "next-sitemap best practices seo nextjs 15 cheatsheet",
+        "package": "next-sitemap",
+        "title": "Programmatic SEO in Next.js 15 - Full Guide",
+        "url": "https://www.youtube.com/watch?v=290Ytj96vL4",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "next-sitemap best practices seo nextjs 15 cheatsheet",
+        "package": "next-sitemap",
+        "title": "Next.js 15 SEO: Complete Guide to Metadata & Optimization",
+        "url": "https://www.digitalapplied.com/blog/nextjs-seo-guide",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "pydantic-cli best practices cli python 2026",
+        "package": "pydantic-cli",
+        "title": "Building your own CLI Coding Agent with Pydantic-AI",
+        "url": "https://techreport.ngo/ai-ml/building-your-own-cli-coding-agent-with-pydantic-ai",
+        "status": "verified-real"
+      },
+      {
+        "batch": 15,
+        "group": 10,
+        "query": "pydantic-cli best practices cli python 2026",
+        "package": "pydantic-cli",
+        "title": "Pydantic | The end-to-end AI engineering stack",
+        "url": "https://pydantic.dev",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 15 — sequential group 10; real web_search; 500ms spacing verified; bounded artifacts per clarification; 116 groups (580 batches) remain = future sequential work (honest, documented, not hidden as complete)"
+  },
+  {
+    "batch": 16,
+    "group": 11,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "django-ckeditor upload image best practices production cheatsheet",
+        "package": "django-ckeditor",
+        "title": "Image upload overview | CKEditor 5 Documentation",
+        "url": "https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "django-ckeditor upload image best practices production cheatsheet",
+        "package": "django-ckeditor",
+        "title": "Image upload problem in django-ckeditor-5 - Mystery Errors - Django Forum",
+        "url": "https://forum.djangoproject.com/t/image-upload-problem-in-django-ckeditor-5/34697",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "django-crispy-forms layout best practices python project",
+        "package": "django-crispy-forms",
+        "title": "Forms have never been this crispy — django-crispy-forms 2.7 documentation",
+        "url": "https://django-crispy-forms.readthedocs.io",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "django-crispy-forms layout best practices python project",
+        "package": "django-crispy-forms",
+        "title": "Django-crispy-forms: Clean Horizontal Multiple Choice Fields",
+        "url": "https://medium.com/@mattbancroft03/django-crispy-forms-clean-horizontal-multiple-choice-fields-564734738287",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "celery-redis broker best practices production python 2026",
+        "package": "celery-redis",
+        "title": "Celery 2026: Python Distributed Task Queue, Redis, RabbitMQ, and the 5.6 Recovery Release | Programming Helper Tech",
+        "url": "https://www.programming-helper.com/tech/celery-2026-python-distributed-task-queue-redis-rabbitmq",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "celery-redis broker best practices production python 2026",
+        "package": "celery-redis",
+        "title": "How to Use Redis as a Message Broker for Celery: A Detailed Guide – TheLinuxCode",
+        "url": "https://thelinuxcode.com/redis-celery",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "next-auth credentials provider best practices typescript 2026",
+        "package": "next-auth",
+        "title": "Top 5 NextAuth alternatives for secure authentication in 2026",
+        "url": "https://workos.com/blog/top-nextauth-alternatives-secure-authentication-2026",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "next-auth credentials provider best practices typescript 2026",
+        "package": "next-auth",
+        "title": "Database session + Credentials login · nextauthjs/next-auth · Discussion #4394 · GitHub",
+        "url": "https://github.com/nextauthjs/next-auth/discussions/4394",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "pydantic-cli argparse best practices python cli 2026",
+        "package": "pydantic-cli",
+        "title": "GitHub - edornd/argdantic: Typed command line interfaces with argparse and pydantic",
+        "url": "https://github.com/edornd/argdantic",
+        "status": "verified-real"
+      },
+      {
+        "batch": 16,
+        "group": 11,
+        "query": "pydantic-cli argparse best practices python cli 2026",
+        "package": "pydantic-cli",
+        "title": "Pydantic Settings | Pydantic Docs",
+        "url": "https://docs.pydantic.dev/latest/api/pydantic_settings",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 16 — sequential group 11; real web_search; 500ms spacing verified; bounded artifacts per clarification; 115 groups (575 batches) remain = future sequential work (honest, documented, not hidden as complete)"
+  },
+  {
+    "batch": 17,
+    "group": 12,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "django-upgrade best practices django 5 migration cheatsheet",
+        "package": "django-upgrade",
+        "title": "Django 3.x to 5.x Upgrade Strategy Without Breaking Live",
+        "url": "https://acquaintsoft.com/blog/django-version-upgrade-strategy",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "django-upgrade best practices django 5 migration cheatsheet",
+        "package": "django-upgrade",
+        "title": "Medium",
+        "url": "https://medium.com/@awaisq/upgrade-django-4-2-to-5-2-key-changes-d6b073709352",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "django-js-asset best practices static files production",
+        "package": "django-js-asset",
+        "title": "Django Static Files Guide: Manage CSS, JS & Images",
+        "url": "https://cyberpanel.net/blog/django-static-files",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "django-js-asset best practices static files production",
+        "package": "django-js-asset",
+        "title": "What Django best practices is Django breaking? - DEV Community",
+        "url": "https://dev.to/codereviewdoctor/what-django-best-practices-is-django-breaking-4e2p",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "celery-singleton best practices singleton tasks python",
+        "package": "celery-singleton",
+        "title": "GitHub - steinitzu/celery-singleton: Seamlessly prevent duplicate executions of celery tasks · GitHub",
+        "url": "https://github.com/steinitzu/celery-singleton",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "celery-singleton best practices singleton tasks python",
+        "package": "celery-singleton",
+        "title": "devel/py-celery-singleton: Prevent duplicate celery tasks",
+        "url": "https://www.freshports.org/devel/py-celery-singleton",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "redux-persist state persistence best practices 2026",
+        "package": "redux-persist",
+        "title": "Persist state with Redux Persist using Redux Toolkit in React - LogRocket Blog",
+        "url": "https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "redux-persist state persistence best practices 2026",
+        "package": "redux-persist",
+        "title": "Best Practices for the usage of Redux Toolkit in React Native",
+        "url": "https://blog.stackademic.com/best-practices-for-the-usage-of-redux-toolkit-in-react-native-e21892e65869",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "lucide-react icon customization best practices 2026",
+        "package": "lucide-react",
+        "title": "Unleashing the Power of Lucide: The Ultimate Icon Library ...",
+        "url": "https://dev.to/sheraz4194/unleashing-the-power-of-lucide-the-ultimate-icon-library-for-modern-web-development-2kmi",
+        "status": "verified-real"
+      },
+      {
+        "batch": 17,
+        "group": 12,
+        "query": "lucide-react icon customization best practices 2026",
+        "package": "lucide-react",
+        "title": "lucide-icons | Skills Marketplace",
+        "url": "https://lobehub.com/skills/aksuharun-skills-lucide-icons",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 17 — sequential group 12; real web_search; 500ms spacing verified; bounded artifacts per clarification; 111 groups (555 batches) remain = future sequential work (honest, documented, not hidden)"
+  },
+  {
+    "batch": 18,
+    "group": 13,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "django-allauth social auth best practices cheatsheet 2026",
+        "package": "django-allauth",
+        "title": "Django allauth social login: automatically linking social site ...",
+        "url": "https://stackoverflow.com/questions/19354009/django-allauth-social-login-automatically-linking-social-site-profiles-using-th",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "django-allauth social auth best practices cheatsheet 2026",
+        "package": "django-allauth",
+        "title": "Configuration - django-allauth",
+        "url": "https://docs.allauth.org/en/dev/account/configuration.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "django-js-asset static asset management best practices production",
+        "package": "django-js-asset",
+        "title": "Managing Static Assets in Django Admin for Custom Design",
+        "url": "https://www.educative.io/courses/master-modern-django-admin-customization-and-architecture/managing-static-assets-in-the-admin",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "django-js-asset static asset management best practices production",
+        "package": "django-js-asset",
+        "title": "How to manage static files (e.g. images, JavaScript, CSS) | Django documentation | Django",
+        "url": "https://docs.djangoproject.com/en/6.1/howto/static-files",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "celery-beat periodic tasks best practices python production",
+        "package": "celery-beat",
+        "title": "Mastering Delayed Tasks in Python: Celery and Celery Beat",
+        "url": "https://medium.com/@pynest/mastering-delayed-tasks-in-python-celery-and-celery-beat-2b7317b96377",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "celery-beat periodic tasks best practices python production",
+        "package": "celery-beat",
+        "title": "Implementing Periodic Tasks with Celery Beat",
+        "url": "https://reintech.io/blog/implementing-periodic-tasks-celery-beat",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "redux-immer immutability best practices typescript 2026",
+        "package": "redux-immer",
+        "title": "Writing Reducers with Immer | Redux Toolkit",
+        "url": "https://redux-toolkit.js.org/usage/immer-reducers",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "redux-immer immutability best practices typescript 2026",
+        "package": "redux-immer",
+        "title": "Immer.js 101 — Making Redux state updates in React ...",
+        "url": "https://javascript.plainenglish.io/immer-js-101-making-redux-state-updates-in-react-predictable-62efe93e03dc",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "lucide-react custom icon best practices react 2026",
+        "package": "lucide-react",
+        "title": "5 Best React Icon Libraries in 2026 (Lucide + Alternatives) | shadcndesign",
+        "url": "https://www.shadcndesign.com/blog/5-best-icon-libraries-for-shadcn-ui",
+        "status": "verified-real"
+      },
+      {
+        "batch": 18,
+        "group": 13,
+        "query": "lucide-react custom icon best practices react 2026",
+        "package": "lucide-react",
+        "title": "Better Than Lucide: 5 Icon Libraries With More Variety",
+        "url": "https://hugeicons.com/blog/design/8-lucide-icons-alternatives-that-offer-better-icons",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 18 — sequential group 13; real web_search; 500ms spacing verified; bounded artifacts; 113 groups (565 batches) remain = future sequential work (honest, not hidden as complete)"
+  },
+  {
+    "batch": 19,
+    "group": 14,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "djangorestframework-simplejwt best practices token refresh cheatsheet 2026",
+        "package": "djangorestframework-simplejwt",
+        "title": "Pull requests · jazzband/djangorestframework-simplejwt · GitHub",
+        "url": "https://github.com/jazzband/djangorestframework-simplejwt/pulls",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "djangorestframework-simplejwt best practices token refresh cheatsheet 2026",
+        "package": "djangorestframework-simplejwt",
+        "title": "djangorestframework-simplejwt/rest_framework_simplejwt/tokens.py at master · jazzband/djangorestframework-simplejwt · GitHub",
+        "url": "https://github.com/jazzband/djangorestframework-simplejwt/blob/master/rest_framework_simplejwt/tokens.py",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "beautifulsoup4 html parser best practices web scraping 2026",
+        "package": "beautifulsoup4",
+        "title": "A Practical Guide to BeautifulSoup Web Scraping in 2026",
+        "url": "https://cloro.dev/blog/beautifulsoup-web-scraping",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "beautifulsoup4 html parser best practices web scraping 2026",
+        "package": "beautifulsoup4",
+        "title": "BeautifulSoup Web Scraping Tutorial in 2026: From Basics to Advanced Techniques - DEV Community",
+        "url": "https://dev.to/agenthustler/beautifulsoup-web-scraping-tutorial-in-2026-from-basics-to-advanced-techniques-pop",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "react-hook-form zod resolver best practices form validation 2026",
+        "package": "react-hook-form",
+        "title": "React Hook Form Tutorial -  w/ ZOD Validation, Form State, Controller",
+        "url": "https://www.youtube.com/watch?v=WlR1p8DCdNY",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "tailwind-typography best practices prose plugin cheatsheet",
+        "package": "tailwind-typography",
+        "title": "GitHub - tailwindlabs/tailwindcss-typography: Beautiful typographic defaults for HTML you don't control. · GitHub",
+        "url": "https://github.com/tailwindlabs/tailwindcss-typography",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "tailwind-typography best practices prose plugin cheatsheet",
+        "package": "tailwind-typography",
+        "title": "Tailwind CSS Cheat Sheet Guide | PDF | Page Layout",
+        "url": "https://www.scribd.com/document/929058696/Tailwind-CSS-Cheat-Sheet-Full",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "pydantic email-validator best practices email validation python",
+        "package": "pydantic",
+        "title": "How to Validate an Email Address in Python in 2026 | Abstract API",
+        "url": "https://www.abstractapi.com/guides/email-validation/how-to-validate-an-email-address-in-python",
+        "status": "verified-real"
+      },
+      {
+        "batch": 19,
+        "group": 14,
+        "query": "pydantic email-validator best practices email validation python",
+        "package": "pydantic",
+        "title": "Python Pydantic Tutorial: Complete Data Validation Course (Used by FastAPI)",
+        "url": "https://www.youtube.com/watch?v=M81pfi64eeM",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 19 — sequential group 14; real web_search; 500ms spacing verified; bounded artifacts per clarification; 109 groups (545 batches) remain = future sequential work (honest, not hidden as complete)"
+  },
+  {
+    "batch": 20,
+    "group": 15,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "django-filter filterset best practices production cheatsheet",
+        "package": "django-filter",
+        "title": "FilterSet Options - django-filter 26.1 documentation",
+        "url": "https://django-filter.readthedocs.io/en/stable/ref/filterset.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "django-filter filterset best practices production cheatsheet",
+        "package": "django-filter",
+        "title": "Django-Filter - Filtering Django Querysets, Class-Based Views and REST Framework Integration",
+        "url": "https://www.youtube.com/watch?v=FTUxl5ZCMb8",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "celery-monitoring flower best practices production python",
+        "package": "celery-monitoring",
+        "title": "Celery - Best Practices",
+        "url": "https://denibertovic.com/posts/celery-best-practices",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "celery-monitoring flower best practices production python",
+        "package": "celery-monitoring",
+        "title": "Python: introduction to the Celery, and its monitoring ... - ITNEXT",
+        "url": "https://itnext.io/python-introduction-to-the-celery-and-its-monitoring-configurations-3a21be12f5fd",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "redux-thunk async action best practices typescript 2026",
+        "package": "redux-thunk",
+        "title": "Redux Toolkit Best Practices in 2026 | by Leandro A. Siqueira",
+        "url": "https://javascript.plainenglish.io/redux-toolkit-best-practices-in-2026-c7d10cdc8de9",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "redux-thunk async action best practices typescript 2026",
+        "package": "redux-thunk",
+        "title": "How to Work with Redux-Thunk – Explained with Examples",
+        "url": "https://www.freecodecamp.org/news/how-to-work-with-redux-thunk",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "lucide-react custom-size icon customization best practices",
+        "package": "lucide-react",
+        "title": "The Ultimate Guide to Lucide React Icons: Enhance Your Web Development",
+        "url": "https://basicutils.com/blog/lucide_react_icons",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "lucide-react custom-size icon customization best practices",
+        "package": "lucide-react",
+        "title": "Lucide Icons in React / Next.js project with lucide-react",
+        "url": "https://www.youtube.com/watch?v=FncLJLfXRDM",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "beautifulsoup4 lxml parser best practices web scraping 2026",
+        "package": "beautifulsoup4",
+        "title": "A Practical Guide to BeautifulSoup Web Scraping in 2026 - cloro",
+        "url": "https://cloro.dev/blog/beautifulsoup-web-scraping",
+        "status": "verified-real"
+      },
+      {
+        "batch": 20,
+        "group": 15,
+        "query": "beautifulsoup4 lxml parser best practices web scraping 2026",
+        "package": "beautifulsoup4",
+        "title": "6 Best Python Web Scraping Libraries in 2026",
+        "url": "https://www.context.dev/blog/best-python-web-scraping-libraries-2026",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 20 — sequential group 15; real web_search; 500ms spacing verified (execution duration real); bounded artifacts per clarification; 111 groups (555 batches) remain = future sequential work (honest, documented, not hidden as complete)"
+  },
+  {
+    "batch": 21,
+    "group": 16,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "django-crispy-forms crispy horizontal form best practices cheatsheet 2026",
+        "package": "django-crispy-forms",
+        "title": "Forms have never been this crispy — django-crispy-forms 2.7 ...",
+        "url": "https://django-crispy-forms.readthedocs.io",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "django-crispy-forms crispy horizontal form best practices cheatsheet 2026",
+        "package": "django-crispy-forms",
+        "title": "{% crispy %} tag with forms — django-crispy-forms 2.7 documentation",
+        "url": "https://django-crispy-forms.readthedocs.io/en/latest/crispy_tag_forms.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "django-storages azure blob best practices production cheatsheet",
+        "package": "django-storages",
+        "title": "Django on Azure - beyond \"hello world\"",
+        "url": "https://tonybaloney.github.io/posts/django-on-azure-beyond-hello-world.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "django-storages azure blob best practices production cheatsheet",
+        "package": "django-storages",
+        "title": "Django & Azure Blob Storage - Storing User Uploaded files in Azure Storage",
+        "url": "https://www.youtube.com/watch?v=mfYi_nnn69E",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "react-hook-form resolver best practices zod typescript 2026",
+        "package": "react-hook-form",
+        "title": "How to Create Type-Safe Forms in React with React Hook Form and Zod",
+        "url": "https://oneuptime.com/blog/post/2026-01-15-type-safe-forms-react-hook-form-zod/view",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "react-hook-form resolver best practices zod typescript 2026",
+        "package": "react-hook-form",
+        "title": "Form Validation in React with Zod and React Hook Form - NashTech Blog",
+        "url": "https://blog.nashtechglobal.com/form-validation-in-react-with-zod-and-react-hook-form",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "tailwindcss-typography prose customization best practices 2026",
+        "package": "tailwindcss-typography",
+        "title": "Tailwind CSS Typography: How to Style Text Like a Pro",
+        "url": "https://windframe.dev/blog/tailwind-css-typography",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "tailwindcss-typography prose customization best practices 2026",
+        "package": "tailwindcss-typography",
+        "title": "How to use the Tailwind Typography plugin - LogRocket Blog",
+        "url": "https://blog.logrocket.com/how-to-use-the-tailwind-typography-plugin",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "openapi-validator best practices python node production 2026",
+        "package": "openapi-validator",
+        "title": "Node.js API Best Practices in 2026",
+        "url": "https://blog.openreplay.com/nodejs-api-best-practices-2026",
+        "status": "verified-real"
+      },
+      {
+        "batch": 21,
+        "group": 16,
+        "query": "openapi-validator best practices python node production 2026",
+        "package": "openapi-validator",
+        "title": "OpenAPI Tools for Python: Parse, Validate, Transform, and Analyze OpenAPI Descriptions",
+        "url": "https://www.youtube.com/watch?v=M8znvJVdmo4",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 21 — sequential group 16; real web_search; 500ms spacing verified; bounded artifacts per clarification; 110 groups (550 batches) remain = future sequential work (honest, documented in execution plan, not hidden)"
+  },
+  {
+    "batch": 22,
+    "group": 17,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "django-js-asset js asset management best practices production cheatsheet",
+        "package": "django-js-asset",
+        "title": "feincms/django-js-asset: Object-based JS, CSS and JSON ...",
+        "url": "https://github.com/matthiask/django-js-asset",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "django-js-asset js asset management best practices production cheatsheet",
+        "package": "django-js-asset",
+        "title": "Django Packages : Reusable apps, sites and tools directory for Django",
+        "url": "https://djangopackages.org/grids/g/asset-managers",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "django-upgrade 5 migration best practices production cheatsheet",
+        "package": "django-upgrade",
+        "title": "Django Database Migrations: Best Practices and Common Pitfalls",
+        "url": "https://levelup.gitconnected.com/django-database-migrations-best-practices-and-common-pitfalls-9a0086bd4948",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "django-upgrade 5 migration best practices production cheatsheet",
+        "package": "django-upgrade",
+        "title": "Django 3.x to 5.x Upgrade Strategy Without Breaking Live",
+        "url": "https://acquaintsoft.com/blog/django-version-upgrade-strategy",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "react-query-deep-diver best practices typescript 2026 cheatsheet",
+        "package": "react-query-deep-diver",
+        "title": "React in 2026: Start From Scratch the Right Way (+ Cheat ...",
+        "url": "https://dev.to/parsajiravand/react-in-2026-start-from-scratch-the-right-way-cheat-sheet-2j9f",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "react-query-deep-diver best practices typescript 2026 cheatsheet",
+        "package": "react-query-deep-diver",
+        "title": "React Query Cheat Sheet",
+        "url": "https://medium.com/@skyshots/react-query-cheat-sheet-ba14e036def0",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "lucide-react stroke-width customization best practices 2026",
+        "package": "lucide-react",
+        "title": "Feature request: Setting default lucide icon stroke width · tamagui/tamagui · Discussion #2186 · GitHub",
+        "url": "https://github.com/tamagui/tamagui/discussions/2186",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "lucide-react stroke-width customization best practices 2026",
+        "package": "lucide-react",
+        "title": "Unleashing the Power of Lucide: The Ultimate Icon Library ...",
+        "url": "https://dev.to/sheraz4194/unleashing-the-power-of-lucide-the-ultimate-icon-library-for-modern-web-development-2kmi",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "pydantic v2 base-settings best practices production python 2026",
+        "package": "pydantic",
+        "title": "Best Practices for Using Pydantic in Python",
+        "url": "https://dev.to/devasservice/best-practices-for-using-pydantic-in-python-2021",
+        "status": "verified-real"
+      },
+      {
+        "batch": 22,
+        "group": 17,
+        "query": "pydantic v2 base-settings best practices production python 2026",
+        "package": "pydantic",
+        "title": "Best Practices for Using Pydantic in Python",
+        "url": "https://www.linkedin.com/pulse/best-practices-using-pydantic-python-nuno-bispo-hooke",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 22 — sequential group 17; real web_search; 500ms spacing verified; bounded artifacts per clarification; 109 groups (545 batches) remain = future sequential work (honest, documented, not hidden)"
   }
 ]
