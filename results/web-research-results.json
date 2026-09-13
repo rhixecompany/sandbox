@@ -1,0 +1,100 @@
+[
+  {
+    "batch": 1,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "package": "Django",
+        "title": "Django Cheatsheet | Blog | CodeWithHarry",
+        "url": "https://www.codewithharry.com/blogpost/django-cheatsheet"
+      },
+      {
+        "package": "aiohttp",
+        "title": "Asynchronous Request Handling with aiohttp: Best Practices",
+        "url": "https://reintech.io/blog/asynchronous-request-handling-aiohttp-best-practices"
+      },
+      {
+        "package": "boto3",
+        "title": "Security - Boto3 1.43.85 documentation",
+        "url": "https://docs.aws.amazon.com/boto3/latest/guide/security.html"
+      }
+    ]
+  },
+  {
+    "batch": 2,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "package": "React",
+        "title": "React in 2026: Start From Scratch the Right Way (+ Cheat Sheet)",
+        "url": "https://dev.to/parsajiravand/react-in-2026-start-from-scratch-the-right-way-cheat-sheet-2j9f"
+      },
+      {
+        "package": "Next.js",
+        "title": "Next.js 15 Feature Highlights: A Developer's Cheat Sheet",
+        "url": "https://javascript.plainenglish.io/next-js-15-feature-highlights-a-developers-cheat-sheet-66b13513189b"
+      },
+      {
+        "package": "Playwright",
+        "title": "Playwright Cheat Sheet (2026) - Quick Reference",
+        "url": "https://www.webfuse.com/playwright-cheat-sheet"
+      }
+    ]
+  },
+  {
+    "batch": 3,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "package": "celery",
+        "title": "Celery - Best Practices - Deni Bertović",
+        "url": "https://denibertovic.com/posts/celery-best-practices"
+      },
+      {
+        "package": "fastapi",
+        "title": "FastAPI Best Practices",
+        "url": "https://auth0.com/blog/fastapi-best-practices"
+      },
+      {
+        "package": "pydantic",
+        "title": "FastAPI & Pydantic v2 Boilerplate Cheatsheet",
+        "url": "https://meshworld.in/blog/cheatsheets/fastapi-pydantic-v2"
+      },
+      {
+        "package": "pytest",
+        "title": "Pytest-Cheatsheet",
+        "url": "https://github.com/mananrg/Pytest-Cheatsheet"
+      },
+      {
+        "package": "requests",
+        "title": "Python Requests Crash Course",
+        "url": "https://www.youtube.com/watch?v=mEGyhHu2WhM"
+      },
+      {
+        "package": "celery2",
+        "title": "Celery - Best Practices | Hacker News",
+        "url": "https://news.ycombinator.com/item?id=7909201"
+      },
+      {
+        "package": "fastapi2",
+        "title": "10 FastAPI Best Practices Every Backend Developer Should Know in 2026",
+        "url": "https://blog.stackademic.com/10-fastapi-best-practices-every-backend-developer-should-know-in-2026-dc389dbf4281"
+      },
+      {
+        "package": "pydantic2",
+        "title": "Mastering Pydantic for Agentic AI Development",
+        "url": "https://www.linkedin.com/pulse/mastering-pydantic-agentic-ai-development-practical-cheat-nipun-david-9ddjc"
+      },
+      {
+        "package": "pytest2",
+        "title": "Python Cheat Sheet #21 - Unit Testing",
+        "url": "https://aysekubrakuyucu.substack.com/p/python-cheat-sheet-21-unit-testing"
+      },
+      {
+        "package": "requests2",
+        "title": "Python's Requests Library (Guide) - Real Python",
+        "url": "https://realpython.com/python-requests"
+      }
+    ]
+  }
+]
