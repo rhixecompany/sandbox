@@ -1,0 +1,14 @@
+# Execution Result: mcp
+- Feature: mcp
+- Source file (docs/features/mcp.md): present=True, size=39403 bytes
+- Bundle artifacts verified (5 items): True
+- SKILL.md line count: 30 (threshold >=10: True)
+  - plan (mcp-plan.md): present=True, size=417 bytes
+  - spec (mcp-spec.md): present=True, size=956 bytes
+  - prompt (mcp-prompt.md): present=True, size=684 bytes
+  - skill (SKILL.md): present=True, size=1171 bytes
+  - script (mcp-execute.py): present=True, size=1243 bytes
+- Synthetic session IDs: none inserted.
+- Synthetic capabilities/quality/ranking claims: NOT VERIFIED / none fabricated.
+- Blockers reported honestly: profile skills plan/mcp-filesystem/mcp-ast-grep/mcp-memory unavailable; native file/script equivalents used.
+- Execution order: sequential download (gate 1) + parallel-ready bundle generation (independent per feature) + sequential final verification gate.

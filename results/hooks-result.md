@@ -1,0 +1,14 @@
+# Execution Result: hooks
+- Feature: hooks
+- Source file (docs/features/hooks.md): present=True, size=108621 bytes
+- Bundle artifacts verified (5 items): True
+- SKILL.md line count: 30 (threshold >=10: True)
+  - plan (hooks-plan.md): present=True, size=390 bytes
+  - spec (hooks-spec.md): present=True, size=960 bytes
+  - prompt (hooks-prompt.md): present=True, size=674 bytes
+  - skill (SKILL.md): present=True, size=1163 bytes
+  - script (hooks-execute.py): present=True, size=1259 bytes
+- Synthetic session IDs: none inserted.
+- Synthetic capabilities/quality/ranking claims: NOT VERIFIED / none fabricated.
+- Blockers reported honestly: profile skills plan/mcp-filesystem/mcp-ast-grep/mcp-memory unavailable; native file/script equivalents used.
+- Execution order: sequential download (gate 1) + parallel-ready bundle generation (independent per feature) + sequential final verification gate.

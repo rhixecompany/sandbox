@@ -1,0 +1,20 @@
+---
+name: "kanban-spec"
+title: "Spec — Kanban (Multi-Agent Board)"
+version: 1.0.0
+---
+# Implementation Spec: kanban
+## Source
+- File: docs/features/kanban.md (1276 lines, real content verified via head check)
+- Source URL: https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide/features/kanban.md
+## Requirements (derived from feature doc content — verified real headings)
+- Read and interpret feature descriptions (frontmatter + sections).
+- Produce structured artifacts that reference feature concepts.
+- Execute script verifies file presence and outputs a result summary.
+## Acceptance Criteria
+- [ ] .hermes/plans/kanban-plan.md exists with YAML frontmatter
+- [ ] .hermes/specs/kanban-spec.md exists with ≥3 sections
+- [ ] .hermes/prompts/kanban-prompt.md has prompt instructions
+- [ ] skills/kanban-bundle/SKILL.md has ≥10-line body + frontmatter
+- [ ] scripts/kanban-execute.py runs without error
+- [ ] results/kanban-result.md produced
