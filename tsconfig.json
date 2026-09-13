@@ -1,12 +1,16 @@
 {
 	"compilerOptions": {
-		"lib": ["ESNext"],
+		"lib": [
+			"ESNext"
+		],
 		"target": "ESNext",
 		"module": "Preserve",
 		"moduleDetection": "force",
 		"jsx": "react-jsx",
 		"allowJs": true,
-		"types": ["bun"],
+		"types": [
+			"bun"
+		],
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
 		"verbatimModuleSyntax": true,
@@ -20,7 +24,14 @@
 		"noUnusedParameters": false,
 		"noPropertyAccessFromIndexSignature": false
 	},
-	"include": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+	"include": [
+		"*.ts",
+		"*.tsx",
+		"*.js",
+		"*.jsx",
+		"src/**/*.ts",
+		"src/**/*.mts"
+	],
 	"exclude": [
 		"node_modules",
 		".venv",
