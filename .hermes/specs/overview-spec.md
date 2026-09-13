@@ -1,8 +1,11 @@
 ---
-name: "overview-spec"
-title: "Spec — Features Overview"
-version: 1.0.0
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 # Implementation Spec: overview
 ## Source
 - File: docs/features/overview.md (57 lines, real content verified via head check)

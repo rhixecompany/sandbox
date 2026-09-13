@@ -1,14 +1,43 @@
 ---
 name: create-technical-spike
 title: Create Technical Spike Document
-description: Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation.
+description: Create time-boxed technical spike documents for researching and resolving critical development
+  decisions before implementation.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /create-technical-spike
 toolsets:
-- terminal
-- file
-category: general
-
-
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-technical-spike
+    flags: {}
+    help: Create time-boxed technical spike documents for researching and resolving cri...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- generator
+- prompts
+- specification
+- typescript
+- architecture
+scripts: []
 ---
 
 ## Goal
@@ -292,6 +321,3 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-## Workflow
-
-Description needed.

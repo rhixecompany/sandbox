@@ -1,16 +1,11 @@
 ---
-name: multi-file-protocol-spec
-title: "Multi-File Change Protocol Specification"
-description: "Protocol for changes touching ≥3 files requiring 14-skill stack"
-version: 1.0.0
-author: Hermes Agent
-license: MIT
-tags:
-  - multi-file-protocol
-  - skill-protocol
-  - workflow
-  - governance
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Multi-File Change Protocol Specification
 

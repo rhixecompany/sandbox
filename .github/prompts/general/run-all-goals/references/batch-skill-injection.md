@@ -1,11 +1,10 @@
 ---
-name: batch-skill-injection
-category: references
-version: 1.0.0
-license: MIT
-author: derived from prompt-management skill references/batch-skill-injection.md (verified linked file)
-description: Batch skill dependency injection reference â verified patterns from audit pipeline.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Batch Skill Dependency Injection — Reference (Verified Source)
 

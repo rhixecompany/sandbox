@@ -1,109 +1,51 @@
 ---
 name: typespec-create-api-plugin
-title: TypeSpec Create API Plugin
-description: Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot.
-trigger: /typespec-create-api-plugin
-category: web
+title: Create TypeSpec API Plugin
+description: Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for
+  Microsoft 365 Copilot.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /typespec-create-api-plugin
+toolsets:
+- terminal
+- file
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /typespec-create-api-plugin
+    flags: {}
+    help: Generate a TypeSpec API plugin with REST operations, authentication, and Adap...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- api
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
+
 Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot.
 
 ## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Requirements](#requirements)
-  - [main.tsp](#maintsp)
-- [Authentication Options](#authentication-options)
-- [Function Capabilities](#function-capabilities)
-  - [Confirmation Dialog](#confirmation-dialog)
-- [Best Practices](#best-practices)
-- [Workflow](#workflow)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [Requirements](#requirements)
-- [main.tsp](#maintsp)
-- [Authentication Options](#authentication-options)
-- [Function Capabilities](#function-capabilities)
-- [Confirmation Dialog](#confirmation-dialog)
-- [Best Practices](#best-practices)
-- [Workflow](#workflow)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
-
-Generate a TypeSpec API plugin with REST operations, authentication, and Adaptive Cards for Microsoft 365 Copilot.
-
 
 Use when you need to typespec create api plugin for the current workspace or task.
 
@@ -120,13 +62,14 @@ Use when you need to typespec create api plugin for the current workspace or tas
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -145,7 +88,7 @@ Use when you need to typespec create api plugin for the current workspace or tas
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Requirements
@@ -188,11 +131,11 @@ Ask the user:1. What is the API base URL and purpose?2. What operations are need
 
 ## Template References
 
-Templates in `templates/`:- `authentication_options.md`- `function_capabilities.md`- `phases.md`- `requirements.md`- `workflow.md`
+Templates in `templates/typespec-create-api-plugin/`:- `authentication_options.md`- `function_capabilities.md`- `phases.md`- `requirements.md`- `workflow.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -202,7 +145,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -221,7 +164,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -232,7 +175,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -265,6 +208,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -273,13 +217,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
 
 Same-family prompts:
 
 - [`typespec-api-operations.prompt.md`](typespec-api-operations.prompt.md)
 - [`typespec-create-agent.prompt.md`](typespec-create-agent.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

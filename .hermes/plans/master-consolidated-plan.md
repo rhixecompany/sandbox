@@ -2,6 +2,7 @@
 name: master-consolidated-plan
 description: "Consolidated master reference of all 50+ .hermes/plans/ fragments (verified inventory). No destructive deletions; serves as index."
 version: 1.0.0
+status: "in_progress"
 ---
 
 # Master Plan Index (verified inventory)

@@ -1,125 +1,52 @@
 ---
 name: create-architectural-decision-record
 title: Create Architectural Decision Record
-description: Author an MADR-formatted Architectural Decision Record capturing context, decision, and consequences.
-trigger: /create-architectural-decision-record
-category: architecture
+description: Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /create-architectural-decision-record
+toolsets:
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-architectural-decision-record
+    flags: {}
+    help: Create an Architectural Decision Record (ADR) document for AI-optimized decis...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- documentation
+- generator
+- ml
+- performance
+- prompts
+- specification
+- typescript
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Author an MADR-formatted Architectural Decision Record capturing context, decision, and consequences.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Prompt Variables](#prompt-variables)
-- [Input Validation](#input-validation)
-- [Requirements](#requirements)
-- [Required Documentation Structure](#required-documentation-structure)
-- [Status](#status)
-- [Decision](#decision)
-- [Consequences](#consequences)
-  - [Positive](#positive)
-  - [Negative](#negative)
-- [Alternatives Considered](#alternatives-considered)
-  - [[Alternative 1 Name]](#[alternative-1-name])
-  - [[Alternative 2 Name]](#[alternative-2-name])
-- [Implementation Notes](#implementation-notes)
-- [References](#references)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [Prompt Variables](#prompt-variables)
-- [Input Validation](#input-validation)
-- [Requirements](#requirements)
-- [Required Documentation Structure](#required-documentation-structure)
-- [Status](#status)
-- [Decision](#decision)
-- [Consequences](#consequences)
-- [Positive](#positive)
-- [Negative](#negative)
-- [Alternatives Considered](#alternatives-considered)
-- [[Alternative 1 Name]](#[alternative-1-name])
-- [[Alternative 2 Name]](#[alternative-2-name])
-- [Implementation Notes](#implementation-notes)
-- [References](#references)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.
 
+## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -136,13 +63,14 @@ Use when you need to work on the current workspace or task.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -161,7 +89,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Prompt Variables
@@ -186,9 +114,7 @@ If any of the required inputs are not provided or cannot be determined from the 
 
 ## Required Documentation Structure
 
-The documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:```md---
-title: "ADR-NNNN: [Decision Title]"status: "Proposed"date: "YYYY-MM-DD"authors: "[Stakeholder Names/Roles]"supersedes: ""superseded_by: ""---
-# ADR-NNNN: [Decision Title]
+The documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:```md---title: "ADR-NNNN: [Decision Title]"status: "Proposed"date: "YYYY-MM-DD"authors: "[Stakeholder Names/Roles]"supersedes: ""superseded_by: ""---# ADR-NNNN: [Decision Title]
 
 ## Status
 
@@ -234,11 +160,11 @@ title: "ADR-NNNN: [Decision Title]"status: "Proposed"date: "YYYY-MM-DD"authors: 
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`- `required_documentation_st.md`
+Templates in `templates/create-architectural-decision-record/`:- `phases.md`- `required_documentation_st.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -248,7 +174,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -257,7 +183,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -276,7 +202,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -287,7 +213,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -320,6 +246,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -328,11 +255,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -351,7 +275,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

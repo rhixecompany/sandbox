@@ -1,14 +1,11 @@
 ---
-name: run-all-goals-five-day-consolidated-spec
-title: "Run All Goals — Five-Day Session Consolidation Specification"
-description: "Evidence-backed local-only consolidation of all default-profile sessions and SandBox planning artifacts from Sep 6–10, 2026 WAT."
-version: 1.0.0
-author: Alexa
-license: MIT
-tags: [spec, consolidation, sessions, run-all-goals, local-only]
-status: approved
-linked_plan: ../plans/run-all-goals-five-day-consolidated-plan.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Run All Goals — Five-Day Consolidation Specification
 

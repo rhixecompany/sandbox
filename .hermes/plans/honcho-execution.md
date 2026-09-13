@@ -1,4 +1,7 @@
 ---
+status: "in_progress"
+---
+---
 server: honcho
 batch: B2
 phases: SP-A COMPLETE (spec verified), SP-B (this file), SP-C COMPLETE (script verified syntax), SP-D VERIFIED (config patch applied — .vscode/mcp.json 5071B / .opencode/opencode.json 4932B verified stat change), SP-E BLOCKED (real execution exit; output file .hermes/plans/honcho-test-output.md 321B verified content shows BLOCKED), SP-F N/A (no new skill needed — verified by no stub creation)

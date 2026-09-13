@@ -1,3 +1,9 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+---
+
 # Approval Gate — Run All Goals Implementation
 
 **Requestor**: Alexa

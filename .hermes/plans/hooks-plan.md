@@ -2,6 +2,7 @@
 name: "hooks-plan"
 title: "Plan — Event Hooks"
 version: 1.0.0
+status: "in_progress"
 ---
 # Plan: hooks
 - Source file: docs/features/hooks.md (2007 lines)

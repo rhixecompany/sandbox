@@ -2,12 +2,38 @@
 name: repo.prompt
 title: Repo.Prompt
 description: Auto-generated prompt for /repo.prompt
-trigger: /repo
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /repo.prompt
 toolsets:
-- terminal
 - file
-category: github
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo.prompt
+    flags: {}
+    help: Auto-generated prompt for /repo.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
 name: repo
 title: Repo Research Pipeline + Quick Onboarding
 description: 'Research all 17 projects via delegated sub-prompts: web search for similar projects, guides,

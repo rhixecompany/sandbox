@@ -2,14 +2,46 @@
 name: setup-component
 title: Setup Component
 description: Generate a new React/Next.js component.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /setup-component
 toolsets:
-- terminal
-- file
-category: general
-
----
-
+- web
+- browser
+- todo
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup-component
+    flags: {}
+    help: Generate a new React/Next.js component.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- generator
+- ml
+- nextjs
+- prompts
+- react
+- setup
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Generate a new React/Next.js component.
@@ -167,6 +199,3 @@ Same-family prompts:
 - [`setup-groq-cloud.prompt.md`](setup-groq-cloud.prompt.md)
 - [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
 - [`setup.prompt.md`](setup.prompt.md)
-## Workflow
-
-Description needed.

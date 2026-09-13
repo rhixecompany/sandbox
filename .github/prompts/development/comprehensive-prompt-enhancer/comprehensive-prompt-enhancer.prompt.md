@@ -1,14 +1,55 @@
----
+--- sidebar_position: 16 title: "Persistent Goals" description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop." ---
 name: comprehensive-prompt-enhancer
 title: Comprehensive Prompt Library Enhancer
-description: Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY principle, best practices, and all appropriate structural sections: personas, profiles, personalities, steps, rules, goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans, prompts, toolsets. Ensures each prompt and all its files are verified, validated.
+description: 'Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY principle, best
+  practices, and all appropriate structural sections: personas, profiles, personalities, steps, rules,
+  goals, phases, tasks, subtasks, subgoals, checklists, skills, MCP servers, tools, templates, plans,
+  prompts, toolsets. Ensures each prompt and all its files are verified, validated.'
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /comprehensive-prompt-enhancer
 toolsets:
-- terminal
 - file
-category: development
-
-
+- terminal
+skills: []
+dependencies:
+- skill:using-superpowers
+- skill:subagent-driven-development
+- skill:brainstorming
+- skill:prompt-engineering-patterns
+- skill:prompt-management
+- skill:skill-judge
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /comprehensive-prompt-enhancer
+    flags: {}
+    help: Enhances and updates all prompts at ./.github/prompts/*.prompt.md using DRY p...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- backend
+- git
+- mcp
+- ml
+- prompts
+- skills
+- typescript - prompts - enhancement - library
+scripts: []
 ---
 
 ## Goal

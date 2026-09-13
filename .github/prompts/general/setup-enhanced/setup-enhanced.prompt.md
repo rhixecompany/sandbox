@@ -2,12 +2,38 @@
 name: setup-enhanced.prompt
 title: Setup Enhanced.Prompt
 description: Auto-generated prompt for /setup-enhanced.prompt
-trigger: /setup-enhanced
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /setup-enhanced.prompt
 toolsets:
-- terminal
 - file
-category: general
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup-enhanced.prompt
+    flags: {}
+    help: Auto-generated prompt for /setup-enhanced.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
 name: setup-enhanced
 title: ComicWise — AI Agent Setup & Implementation Guide
 description: Enhanced ComicWise AI agent setup — workflow, implementation strategy, and DRY practices.
@@ -308,6 +334,3 @@ Same-family prompts:
 - [`setup-groq-cloud.prompt.md`](setup-groq-cloud.prompt.md)
 - [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
 - [`setup.prompt.md`](setup.prompt.md)
-## Workflow
-
-Description needed.

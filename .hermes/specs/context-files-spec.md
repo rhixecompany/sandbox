@@ -1,20 +1,11 @@
 ---
-name: context-files-spec
-title: "Context Files Specification"
-description: "Complete rewrite requirements for 7 context files with cross-reference consistency"
-version: 1.0.0
-author: Hermes Agent
-license: MIT
-tags:
-  - context-files
-  - soul-md
-  - user-md
-  - memory-md
-  - agents-md
-  - claude-md
-  - cursorrules
-  - hermes-md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Context Files Specification
 

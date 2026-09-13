@@ -1,12 +1,12 @@
 ---
-name: 30-hermes-mcp-servers-master-plan
-version: 1.0.0
-date: 2026-09-13
-author: Hermes Agent (default profile: adminbot + patient-tutor; model: nemotron-3-ultra-free/opencode-zen primary, deepseek-v4-flash-free fallback)
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it's done. Our take on the Ralph loop."
+status: "in_progress"
+---
 mode: hybrid — sequential outer phases (P1→P5) + parallel inner batches (B1..B5 of 6 servers each)
 destructive_approval: FULL — commit / push / config rewrites / file delete / branch rewrite all approved per user clarification 2026-09-13
 gate_policy: verify before claim; never synthetic results; honest blocker reporting after 2 failures (SOUL.md fallback rule)
----
 
 # Plan — 30 Hermes MCP Servers (Full Implementation)
 

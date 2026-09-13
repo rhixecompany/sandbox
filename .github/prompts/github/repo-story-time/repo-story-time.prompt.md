@@ -1,15 +1,55 @@
 ---
 name: repo-story-time
-title: Repository Analysis: Story from Git History
-description: Generate a comprehensive repository summary and narrative story from commit history. Produces REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
+title: 'Repository Analysis: Story from Git History'
+description: Generate a comprehensive repository summary and narrative story from commit history. Produces
+  REPOSITORY_SUMMARY.md and THE_STORY_OF_THIS_REPO.md.
+version: 2.2.0
+license: MIT
+author: Hermes Agent
 trigger: /repo-story-time
 toolsets:
-- terminal
 - file
-category: github
-
----
-
+- terminal
+skills: []
+dependencies:
+- prompt:repo
+- skill:code-wiki
+- skill:gh-cli
+- skill:git-commit
+- skill:writing-clearly-and-concisely
+- tool:mcp-tavily
+- tool:mcp-github
+- tool:mcp-sequential-thinking
+- skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo-story-time
+    flags: {}
+    help: Generate a comprehensive repository summary and narrative story from commit h...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- frontend
+- generator
+- git
+- go
+- prompts
+- workflow
+scripts: []
 ## Goal
 
 Transform any repository's git history into two deliverables:

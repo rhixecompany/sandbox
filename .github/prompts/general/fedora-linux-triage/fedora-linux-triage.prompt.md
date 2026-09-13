@@ -1,105 +1,51 @@
 ---
 name: fedora-linux-triage
 title: Fedora Linux Triage
-description: Triages and resolves Fedora issues using dnf, systemd, and SELinux-aware guidance.
-trigger: /fedora-linux-triage
-category: general
+description: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /fedora-linux-triage
+toolsets:
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /fedora-linux-triage
+    flags: {}
+    help: Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- debugging
+- frontend
+- linux
+- ml
+- prompts
+- typescript
+- fix
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Triages and resolves Fedora issues using dnf, systemd, and SELinux-aware guidance.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Inputs](#inputs)
-- [Instructions](#instructions)
-- [Output Format](#output-format)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Inputs](#inputs)
-- [Instructions](#instructions)
-- [Output Format](#output-format)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.
 
-## Fedora Linux TriageYou are a Fedora Linux expert. Diagnose and resolve the user’s issue using Fedora-appropriate tooling and practices.
+# Fedora Linux TriageYou are a Fedora Linux expert. Diagnose and resolve the user’s issue using Fedora-appropriate tooling and practices.
 
 ## Inputs
 
@@ -126,11 +72,11 @@ Triage and resolve Fedora issues with dnf, systemd, and SELinux-aware guidance.
 
 ## Template References
 
-Templates in `templates/`:- `inputs.md`- `instructions.md`- `output_format.md`
+Templates in `templates/fedora-linux-triage/`:- `inputs.md`- `instructions.md`- `output_format.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -140,19 +86,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -165,8 +112,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -185,12 +133,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -209,7 +157,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -220,7 +168,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -253,6 +201,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -261,18 +210,11 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`arch-linux-triage.prompt.md`](arch-linux-triage.prompt.md)
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

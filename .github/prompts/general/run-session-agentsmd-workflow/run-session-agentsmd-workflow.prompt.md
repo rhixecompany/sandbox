@@ -1,93 +1,48 @@
 ---
 name: run-session-agentsmd-workflow
-title: Run Session AGENTS.md Workflow
-description: Executes the AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting workflow for a single target directory or all projects.
-trigger: /run-session-agentsmd-workflow
-category: general
+title: Run Agents.md Workflow
+description: 'Execute the AGENTS.md session workflow: introspection, tool discovery, profile matching,
+  and reporting.'
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /run-session-agentsmd-workflow
+toolsets:
+- file
+- terminal
+skills:
+- subagent-driven-development
+dependencies:
+- skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /run-session-agentsmd-workflow
+    flags: {}
+    help: 'Execute the AGENTS.md session workflow: introspection, tool discovery, profil...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- git
+- prompts
+- specification
+- typescript
+- workflow
+scripts: []
 ## Goal
-Executes the AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting workflow for a single target directory or all projects.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Resolve Scope](#phase-1:-resolve-scope)
-  - [Phase 2: Generate AGENTS](#phase-2:-generate-agents)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Resolve Scope](#phase-1:-resolve-scope)
-- [Phase 2: Generate AGENTS](#phase-2:-generate-agents)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Use when "Execution prompt for AGENTS.md generation, per-repo git operations, branch reconciliation, and final repo-branch-SHA reporting" to accomplish the associated tasks and objectives.
 
@@ -97,6 +52,7 @@ Execute the full AGENTS.md workflow using one argument.Supported argument values
 
 - projects-all, meaning process every direct child directory under projects/.
 
+## Context
 
 Use this prompt when the user wants the workflow executed, not just designed.This prompt executes the implementation pattern defined in:- prompts/session-agentsmd-full-workflow.prompt.mdArgument contract:- If no argument is provided, default to projects-all.
 
@@ -105,12 +61,12 @@ Use this prompt when the user wants the workflow executed, not just designed.Thi
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Workspace discovery and path resolution.
 - AGENTS.md authoring from local evidence.
 - Nested git repository handling.
-- strong push/retry logic and fallback branch publishing.
+- Robust push/retry logic and fallback branch publishing.
 - Compact verification reporting.
 
 ## Subagents
@@ -126,18 +82,19 @@ Use this prompt when the user wants the workflow executed, not just designed.Thi
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Execute all phases unless genuinely blocked.
 - Resolve targets only from the provided argument and existing workspace paths.
-- For AGENTS.md generation: - use local manifest and README evidence. - include practical setup, workflow, testing, style, security, and troubleshooting sections.
-- For git operations: - stage only AGENTS.md. - commit message must be: docs: add or update AGENTS.md for agent guidance. - push to normalized PR branch names: - chore/agentsmd-YYYYMMDD-<repo>
+- For AGENTS.md generation:  - use local manifest and README evidence.  - include practical setup, workflow, testing, style, security, and troubleshooting sections.
+- For git operations:  - stage only AGENTS.md.  - commit message must be: docs: add or update AGENTS.md for agent guidance.  - push to normalized PR branch names:    - chore/agentsmd-YYYYMMDD-<repo>
 - If hooks fail due missing dependencies, retry commit with no-verify and record this.
 - If push fails because of remote divergence or oversized local history, use a clean-clone fallback and publish the branch.
 - Never force-push.
-- Always output a compact final table with: - repo | branch | commit SHA | status.
+- Always output a compact final table with:  - repo | branch | commit SHA | status.
 - Include explicit blocker notes for any failed repo.
 
+## Phases
 
 ### Phase 1: Resolve Scope
 
@@ -195,11 +152,11 @@ Use this prompt when the user wants the workflow executed, not just designed.Thi
 
 ## Template References
 
-Detailed templates in `templates/`:- `phases.md`
+Detailed templates in `templates/run-session-agentsmd-workflow/`:- `phases.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -208,7 +165,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -227,7 +184,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -251,18 +208,11 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

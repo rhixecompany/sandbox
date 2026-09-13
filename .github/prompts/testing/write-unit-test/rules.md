@@ -1,13 +1,8 @@
-# Rules for Create Feature
+# Rules
 
-## Invariants
-- Rule 1: Tests must exist before implementation
-- Rule 2: All tests must pass before commit
+> Extracted from `update-specification.prompt.md`.
 
-## Constraints
-- Constraint 1: Follow project coding standards
-- Constraint 2: No breaking changes without migration
-
-## Business Rules
-- Rule 1: Features require spec approval before implementation
-- Rule 2: Breaking changes require major version bump
+- Follow the prompt literally and prefer evidence from the current workspace.
+- Keep the response structured, deterministic, and easy to act on.
+- Avoid changing unrelated files or adding unnecessary scope.
+- If something is unclear, state the assumption instead of guessing.

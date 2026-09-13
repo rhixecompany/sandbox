@@ -1,3 +1,9 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+---
+
 # Plans Audit — 2026-09-10 17:30 UTC
 
 Dir: `C:\Users\Alexa\Desktop\SandBox\.hermes\plans` | Specs Dir: `C:\Users\Alexa\Desktop\SandBox\.hermes\specs` | Threshold: 50

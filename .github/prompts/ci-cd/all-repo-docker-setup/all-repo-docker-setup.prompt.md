@@ -1,146 +1,178 @@
 ---
 name: all-repo-docker-setup
-title: Bulk Docker Setup Across Repositories
-description: Iterate over a list of rhixecompany repositories, generate or repair Dockerfiles, build images, run security scans, and clean up unused Docker resources with a tracked plan.
-trigger: /all-repo-docker-setup
-category: ci-cd
-version: 1.0.0
-author: Hermes Agent
-tags: [docker, devops, automation, infrastructure, security, tooling]
-metadata: 
-hermes: 
-profile: devops
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
+title: All Repository Docker Setup and Cleanup
+description: No description
+version: 1.1.0
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /all-repo-docker-setup
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: alexa
+    mcp_servers:
+    - filesystem
+    - github
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /all-repo-docker-setup
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- domain:infra
+- domain:setup
+- tool:docker
+scripts: []
 ## Goal
-Iterate over a list of rhixecompany repositories, generate or repair Dockerfiles, build images, run security scans, and clean up unused Docker resources with a tracked plan.
+
+For **each repository in the rhixecompany org**, perform a complete Docker setup pass: clone the repo, ensure a working `Dockerfile` (create it if missing), build the image, run a security scan, suggest and implement a cleanup plan, fix all container errors, and finish by cleaning up unused Docker resources and reporting what was freed.
+
+## Subgoals
+
+1. **Clone** — Clone every rhixecompany repository into `./projects`.
+2. **Dockerfile** — Create, debug, fix, or optimize a `Dockerfile` in every repo (prefer smaller images).
+3. **Build** — Build the Docker image successfully (`docker build` or `docker-compose build`).
+4. **Secure** — Security-scan images and fix/flag findings.
+5. **Cleanup plan** — Suggest, create, and implement a cleanup plan for container errors and bloat.
+6. **Prune** — Remove unused containers, images, volumes, and build caches.
+7. **Report** — Log per-repo status and summarize what was freed.
+
+## Personas
+
+- **DevOps Engineer** — Performs the clone/build/scan/prune workflow on every repo.
+- **Security Reviewer** — Validates scan results and flags unresolved findings.
+- **Reporter** — Produces the final cleanup report (what was freed, image sizes, remaining risks).
+
+## Personality
+
+- **Tone**: Direct, methodical, safety-conscious.
+- **Style**: One repo at a time; record each result in `docker_setup.log`.
+- **Avoid**: Skipping repos, running scans on unverified images, silent failures.
+- **Encourage**: Distroless/multi-stage builds, `.dockerignore`, `docker scout`/`trivy` scans, pruning only after verification.
 
 ## Context
 
-## Phases
+The source is `all-repo-docker-setup.prompt.txt` — an operational runbook for applying a standardized Docker lifecycle across the org's repositories. It is authoritative for the work items and reporting format.
+
+## Rules
 
 
-# Bulk Docker Setup Across Repositories
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
 
-> Iterate over every rhixecompany repository, generate or repair Dockerfiles, build images, security-scan them, and clean up unused Docker resources.
+### Domain Rules
 
-
-Systematically process all repositories under `rhixecompany` to ensure each has a valid Dockerfile or `docker-compose.yml`, builds successfully, passes security scanning, and has a documented cleanup plan. Unused Docker resources are reclaimed with a tracked report.
-
-## Prerequisites
-
-- `gh` CLI authenticated and able to list `rhixecompany` repos
-- Docker daemon running and accessible
-- `trivy` installed for security scanning
-- `docker` CLI with `docker compose` plugin
-- Write access to `~/Desktop/SandBox/projects/`
-
-## Inputs
-
-- The list of repositories from `gh repo list rhixecompany --limit 100 --json name,url`
-- Existing Docker artifacts in each repo (Dockerfile, docker-compose.yml)
-- Docker images built during the process
-
-## Outputs
-
-- A valid Dockerfile or `docker-compose.yml` in each repository (created or repaired)
-- All images built successfully
-- Security scan report per repository (Trivy output)
-- A cleanup report listing freed disk space
+1. **One repo at a time** — Clone, build, scan, and report per repository before moving to the next.
+2. **Verify before destructive ops** — Never `docker system prune -a` without confirming the image list first.
+3. **Log everything** — Create/update `docker_setup.log` in the repo root with the exact message for repos with no Docker config.
+4. **DRY** — Reuse one logging and reporting format across all repos.
+5. **Small images** — Prefer multi-stage builds and minimal base images (e.g. `alpine`, `distroless`); justify every change.
+6. **Never skip** — If a repo has neither `Dockerfile` nor `docker-compose.yml`, record that explicitly (do not silently skip).
 
 ## Steps
 
-### 1. List repositories
+For each repo **in the list of repositories by rhixecompany**:
 
-1. List all rhixecompany repositories:
-   ```bash
-   gh repo list rhixecompany --limit 100 --json name,url
-   ```
-2. Clone each repository to `~/Desktop/SandBox/projects/`:
+1. Clone the repository to `./projects`:
+
    ```bash
    git clone <repository_url> ./projects/<repository_name>
    ```
 
-### 2. Generate or repair Docker configuration
+2. Navigate into the cloned repository:
 
-For each repository:
-1. Check for existing `Dockerfile` or `docker-compose.yml`
-2. If no Docker configuration exists, generate one based on the project's language (Node.js, Python, Go, Rust, etc.)
-3. If a Dockerfile exists but is broken, debug, fix, and update it to a smaller base image
-4. Build the image to verify it works:
    ```bash
-   docker build -t <image_name> .
+   cd ./projects/<repository_name>
    ```
-5. If only `docker-compose.yml` exists, build with:
+
+3. Check if a `Dockerfile` exists:
+   - **If it does not exist** — create a minimal, correct `Dockerfile` (multi-stage where possible; set a small base image).
+   - **If it does exist** — debug and fix it, update it to a smaller image where safe, then build:
+
+     ```bash
+     docker build -t <image_name> .
+     ```
+
+4. If no `Dockerfile` exists but `docker-compose.yml` does, build with:
+
    ```bash
    docker-compose build
    ```
 
-### 3. Security scan
+5. If neither `Dockerfile` nor `docker-compose.yml` exists, log the exact message and create the log file in the repo root:
 
-Run Trivy scan on each built image:
-```bash
-trivy image --severity HIGH,CRITICAL <image_name>
-```
-
-Record findings and fix critical vulnerabilities by updating base images or dependencies.
-
-### 4. Cleanup
-
-1. Remove unused containers:
    ```bash
-   docker container prune -f
-   ```
-2. Remove unused images:
-   ```bash
-   docker image prune -a -f
-   ```
-3. Remove unused volumes:
-   ```bash
-   docker volume prune -f
-   ```
-4. Remove build caches:
-   ```bash
-   docker buildx builder prune -f
-   ```
-5. Report freed space:
-   ```bash
-   docker system df
+   printf 'No Docker configuration found for this repository.\n' > docker_setup.log
    ```
 
-## Rules
-
-- **Scope discipline** — Only operate on rhixecompany repositories
-- **Minimal changes** — Fix the smallest issue needed to build successfully
-- **Track everything** — Log results to `docker_setup.log` in each repo root
-- **No Docker config found** — Log "No Docker configuration found for this repository" to `docker_setup.log` if neither file exists
+6. Security scan the built image (e.g. `trivy image`, `docker scout cves`, `grype`) and implement or suggest fixes for High/Critical findings.
+7. Suggest, create, and implement a cleanup plan for the repo's Docker assets (`.dockerignore`, removal of junk blobs, multi-stage consolidation, unused deps).
+8. Fix all container errors found during build/run verification.
+9. Clean up unused Docker resources with a **specific plan** (no blanket `prune -a` without review):
+   - Remove unused containers
+   - Remove unused images
+   - Remove unused volumes
+   - Remove unused build caches
+   - Report what was freed
 
 ## Verification
 
-- Each repository has either a `Dockerfile` or `docker-compose.yml`
-- All images build without errors
-- No HIGH/CRITICAL vulnerabilities remain (or documented rationale for exceptions)
-- Cleanup report is saved
+- Each repo has a working, successful `docker build` (or a recorded reason why not).
+- A `docker_setup.log` exists where required and states the exact message.
+- Every small-image/multistage change is justified and the image runs.
+- Final cleanup report lists containers/images/volumes/build cache removed and total bytes freed.
+- No `docker` errors remaining in the cloned repos.
 
-## Out of Scope
+## Output Format
 
-## Workflow
+Per repo, report:
 
-<content>
+```
+repo: <name>
+dockerfile: <created|fixed|optimized|missing>
+image: <name>:<tag>
+security: <scanner> — <high> high / <crit> critical
+cleanup: <items removed>
+```
 
-- Modifying application code beyond Docker-related config
-- Production deployment orchestration
+Then a global summary of all `docker system prune` results.
+
+## MCP Servers & Tools
+
+- **Docker MCP** — container/image/compose management across repos.
+- **Terminal** — docker CLI builds, scans, and logs.
+- **File tools** — Dockerfile/docker-compose.yml inspection and patches.
+- **GitHub MCP** — repo discovery and clone workflows.
+
+
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section
+
+

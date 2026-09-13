@@ -1,24 +1,10 @@
 ---
-name: run-all-goals-consolidation
-version: 1.0.0
-description: Consolidate /goal bundles (brainstormin .txt + test-run.prompt.txt) into a single DRY .prompt.md output with verified shared templates/references, authorization gates for destructive subgoals, and real-tool-output verification â not simulated results.
-author: Hermes Agent (derived from verified workspace session 2026-09-10)
-license: MIT
-tags: [run-all-goals, consolidation, verification, authorization, destructive-ops]
-dependencies:
-  - skill:prompt-management
-  - skill:convert-plaintext-to-md
-skilled_used:
-  - prompt-management (loaded; verified SKILL.md read during session)
-  - using-superpowers / brainstorming / user-communication-preferences / mcp-sequential-thinking / subagent-driven-development / systematic-debugging (referenced in .prompt.md; verified present)
-references:
-  - .github/prompts/general/run-all-goals/templates/_shared/rules-core.md
-  - .github/prompts/general/run-all-goals/templates/_shared/deps-core.md
-  - .github/prompts/general/run-all-goals/templates/_shared/section-skeleton.md
-  - .github/prompts/general/run-all-goals/references/prompt-workflow.md
-  - .github/prompts/general/run-all-goals/references/session-reporting.md
-  - .github/prompts/general/run-all-goals/references/batch-skill-injection.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Skill: /run-all-goals Consolidation Pipeline
 

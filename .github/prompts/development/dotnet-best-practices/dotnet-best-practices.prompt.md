@@ -1,121 +1,53 @@
 ---
 name: dotnet-best-practices
-title: .NET Best Practices
-description: Apply .NET / C# best practices across documentation, design patterns, dependency injection, async/await, configuration, error handling, and security.
-trigger: /dotnet-best-practices
-category: development
+title: .NET/C# Best Practices
+description: Ensure .NET/C# code meets best practices for the solution/project.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /dotnet-best-practices
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /dotnet-best-practices
+    flags: {}
+    help: Ensure .NET/C# code meets best practices for the solution/project.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- csharp
+- documentation
+- dotnet
+- ml
+- prompts
+- specification
+- typescript
+- architecture
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Apply .NET / C# best practices across documentation, design patterns, dependency injection, async/await, configuration, error handling, and security.
-
-## Context
-
-## Phases
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Documentation & Structure](#documentation-&-structure)
-- [Design Patterns & Architecture](#design-patterns-&-architecture)
-- [Dependency Injection & Services](#dependency-injection-&-services)
-- [Resource Management & Localization](#resource-management-&-localization)
-- [Async/Await Patterns](#async/await-patterns)
-- [Test](#test)
-- [Configuration & Settings](#configuration-&-settings)
-- [Semantic Kernel & AI Integration](#semantic-kernel-&-ai-integration)
-- [Error Handling & Logging](#error-handling-&-logging)
-- [Performance & Security](#performance-&-security)
-- [Code Quality](#code-quality)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Documentation & Structure](#documentation-&-structure)
-- [Design Patterns & Architecture](#design-patterns-&-architecture)
-- [Dependency Injection & Services](#dependency-injection-&-services)
-- [Resource Management & Localization](#resource-management-&-localization)
-- [Async/Await Patterns](#async/await-patterns)
-- [Test](#test)
-- [Configuration & Settings](#configuration-&-settings)
-- [Semantic Kernel & AI Integration](#semantic-kernel-&-ai-integration)
-- [Error Handling & Logging](#error-handling-&-logging)
-- [Performance & Security](#performance-&-security)
-- [Code Quality](#code-quality)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Ensure .NET/C# code meets best practices for the solution/project.
 
-## .NET/C# Best PracticesYour task is to ensure .NET/C# code in ${selection} meets the best practices specific to this solution/project. This includes:
+# .NET/C# Best PracticesYour task is to ensure .NET/C# code in ${selection} meets the best practices specific to this solution/project. This includes:
 
 ## Documentation & Structure
 
@@ -167,11 +99,11 @@ ing Standards- Use MSTest framework with FluentAssertions for assertions- Follow
 
 ## Template References
 
-Templates in `templates/`:- `asyncawait_patterns.md`- `code_quality.md`- `configuration__settings.md`- `dependency_injection__ser.md`- `design_patterns__architec.md`- `documentation__structure.md`- `error_handling__logging.md`- `performance__security.md`- `resource_management__loca.md`- `semantic_kernel__ai_integ.md`- `testing_standards.md`
+Templates in `templates/dotnet-best-practices/`:- `asyncawait_patterns.md`- `code_quality.md`- `configuration__settings.md`- `dependency_injection__ser.md`- `design_patterns__architec.md`- `documentation__structure.md`- `error_handling__logging.md`- `performance__security.md`- `resource_management__loca.md`- `semantic_kernel__ai_integ.md`- `testing_standards.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -181,19 +113,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -206,8 +139,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -226,12 +160,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -250,7 +184,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -261,7 +195,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -294,6 +228,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -302,17 +237,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`dotnet-design-pattern-review.prompt.md`](dotnet-design-pattern-review.prompt.md)
 - [`dotnet-upgrade.prompt.md`](dotnet-upgrade.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

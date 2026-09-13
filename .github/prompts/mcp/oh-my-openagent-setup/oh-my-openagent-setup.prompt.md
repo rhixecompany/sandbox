@@ -1,113 +1,69 @@
 ---
 name: oh-my-openagent-setup
 title: Oh My OpenAgent Setup
-description: Configures the Oh My OpenAgent orchestration stack over OpenCode CLI, including hooks, profiles, and verification of multi-agent workflows.
-trigger: /oh-my-openagent-setup
-category: mcp
+description: Provision and verify Oh My OpenAgent and the Oh My Hermes workflow layer on top of OpenCode
+  CLI + Hermes Agent with deterministic validation.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /oh-my-openagent-setup
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /oh-my-openagent-setup
+    flags: {}
+    help: Provision and verify Oh My OpenAgent and the Oh My Hermes workflow layer on t...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- documentation
+- ml
+- prompts
+- typescript
+- workflow
+scripts: []
 ## Goal
-Configures the Oh My OpenAgent orchestration stack over OpenCode CLI, including hooks, profiles, and verification of multi-agent workflows.
 
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Template Reference](#template-reference)
-- [Execution](#execution)
-- [Steps](#steps)
-- [Rules](#rules)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Template Reference](#template-reference)
-- [Execution](#execution)
-- [Steps](#steps)
-- [Rules](#rules)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
-
-Execute the `oh-my-openagent-setup` workflow. Full details: `templates/README.md`.
+Execute the `oh-my-openagent-setup` workflow. Full details: `templates/oh-my-openagent-setup/README.md`.
 
 ## Template Reference
 
-Detailed template in `templates/`:
+Detailed template in `templates/oh-my-openagent-setup/`:
 
 - `README.md`
 
 ## Execution
 
-See `templates/README.md` for phases/steps/workflow.
+See `templates/oh-my-openagent-setup/README.md` for phases/steps/workflow.
 
 ## Steps
 
-1. Read `templates/README.md`.
+1. Read `templates/oh-my-openagent-setup/README.md`.
 2. Execute the workflow.
 3. Verify outputs.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ## Subgoals
 
@@ -116,9 +72,10 @@ See `templates/README.md` for phases/steps/workflow.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
+
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -126,9 +83,10 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
+
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -136,8 +94,12 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 - **Encourage**: Evidence-based decisions, minimal changes
 
 
+## Context
+
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
+
+## Phases
 
 ### Phase 1: Intake
 
@@ -156,17 +118,19 @@ Use when implementing, modifying, or debugging code. Read the codebase first, un
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
+
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
+
 
 ## Verification Checklist
 
@@ -178,9 +142,10 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
+
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -190,6 +155,7 @@ See [`templates/skills-table-core.md`](templates/skills-table-core.md) for share
 | `systematic-debugging` | Debugging and root cause analysis |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
+
 
 ## MCP Servers & Tools
 
@@ -203,6 +169,8 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
+
+
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -211,26 +179,21 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
 
+
+
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

@@ -1,96 +1,50 @@
 ---
 name: update-docs-on-code-change
-title: Update Documentation on Code Change
-description: Synchronize documentation whenever code changes modify behavior, APIs, or workflows, with trigger detection and alignment to repository standards.
-trigger: /update-docs-on-code-change
-category: documentation
+title: Update Docs on Code Change
+description: Comprehensive prompt for synchronizing documentation whenever code changes modify behavior,
+  APIs, or workflows.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /update-docs-on-code-change
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-docs-on-code-change
+    flags: {}
+    help: Comprehensive prompt for synchronizing documentation whenever code changes mo...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- configuration
+- documentation
+- frontend
+- maintenance
+- ml
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ## Goal
-Synchronize documentation whenever code changes modify behavior, APIs, or workflows, with trigger detection and alignment to repository standards.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Trigger and Scope Detection](#phase-1:-trigger-and-scope-detection)
-  - [Phase 2: Documentation Synchronization](#phase-2:-documentation-synchronization)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Trigger and Scope Detection](#phase-1:-trigger-and-scope-detection)
-- [Phase 2: Documentation Synchronization](#phase-2:-documentation-synchronization)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Use when "Comprehensive prompt for synchronizing documentation whenever code changes modify behavior, APIs, or workflows." to accomplish the associated tasks and objectives.
 
@@ -98,13 +52,14 @@ Use when "Comprehensive prompt for synchronizing documentation whenever code cha
 
 Detect when code changes require documentation updates and ensure README, API docs, config docs, changelogs, and examples remain synchronized.
 
+## Context
 
 Use this prompt whenever application code, scripts, APIs, configuration, or public interfaces are changed.
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Change-impact analysis across code and documentation
 - Documentation synchronization and migration guide authoring
@@ -124,7 +79,7 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Update docs in the same change as code whenever behavior or interfaces change.
 - Always evaluate README impact for new features, setup, config, and CLI changes.
@@ -132,6 +87,7 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 - Update examples and migration guidance for breaking or deprecated behavior.
 - Keep changelog entries structured and user-focused.
 
+## Phases
 
 ### Phase 1: Trigger and Scope Detection
 
@@ -170,11 +126,11 @@ Use this prompt whenever application code, scripts, APIs, configuration, or publ
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`
+Templates in `templates/update-docs-on-code-change/`:- `phases.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -183,7 +139,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -202,7 +158,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -226,6 +182,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -234,11 +191,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -248,7 +202,3 @@ Same-family prompts:
 - [`update-markdown-file-index.prompt.md`](update-markdown-file-index.prompt.md)
 - [`update-oo-component-documentation.prompt.md`](update-oo-component-documentation.prompt.md)
 - [`update-specification.prompt.md`](update-specification.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

@@ -1,14 +1,46 @@
 ---
 name: create-tldr-page
 title: Create TLDR Page
-description: Create a tldr page from documentation URLs and command examples, requiring both URL and command name.
+description: Create a tldr page from documentation URLs and command examples, requiring both URL and command
+  name.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /create-tldr-page
 toolsets:
 - terminal
 - file
-category: web
-
-
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-tldr-page
+    flags: {}
+    help: Create a tldr page from documentation URLs and command examples, requiring bo...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- documentation
+- frontend
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ---
 
 ## Goal
@@ -240,6 +272,3 @@ Same-family prompts:
 - [`create-spring-boot-java-project.prompt.md`](create-spring-boot-java-project.prompt.md)
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
-## Workflow
-
-Description needed.

@@ -1,146 +1,57 @@
 ---
 name: generate-custom-instructions-from-codebase
-title: Generate Copilot Instructions From Codebase
-description: Analyzes differences between two project versions (branches, commits, or releases) and produces migration/refactor instructions for GitHub Copilot to maintain consistency during upgrades.
-trigger: /generate-custom-instructions-from-codebase
-category: productivity
+title: Migration and Code Evolution Instructions Generator
+description: Migration and code evolution instructions generator for GitHub Copilot. Analyzes differences
+  between two project versions (branches, commits, or releases) to create precise instructions allowing
+  Copilot to maintain consistency during technology migrations, major refactoring, or framework version
+  upgrades.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /generate-custom-instructions-from-codebase
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /generate-custom-instructions-from-codebase
+    flags: {}
+    help: Migration and code evolution instructions generator for GitHub Copilot. Analy...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- generator
+- git
+- migration
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Analyzes differences between two project versions (branches, commits, or releases) and produces migration/refactor instructions for GitHub Copilot to maintain consistency during upgrades.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Configuration Variables](#configuration-variables)
-- [Generated Prompt](#generated-prompt)
-  - [Phase 1: Comparative State Analysis](#phase-1:-comparative-state-analysis)
-- [Migration Context](#migration-context)
-- [Automatic Transformation Rules](#automatic-transformation-rules)
-  - [1. Mandatory Transformations](#1-mandatory-transformations)
-- [File Type Specific Instructions$](#file-type-specific-instructions$)
-  - [Configuration Files](#configuration-files)
-  - [Main Source Files](#main-source-files)
-  - [Test Files](#test-files)
-- [Validation and Security](#validation-and-security)
-  - [Automatic Control Points](#automatic-control-points)
-  - [Manual Escalation](#manual-escalation)
-- [Migration Monitoring](#migration-monitoring)
-- [Typical Use Cases](#typical-use-cases)
-  - [Framework Version Migration](#framework-version-migration)
-  - [Technology Stack Evolution](#technology-stack-evolution)
-  - [Architecture Refactoring](#architecture-refactoring)
-  - [Design Pattern Modernization](#design-pattern-modernization)
-- [Unique Benefits](#unique-benefits)
-  - [🧠 **Artificial Intelligence Enhancement**](#🧠-**artificial-intelligence-enhancement**)
-  - [🔄 **Knowledge Capitalization**](#🔄-**knowledge-capitalization**)
-  - [🎯 **Context-Aware Precision**](#🎯-**context-aware-precision**)
-  - [⚡ **Automated Consistency**](#⚡-**automated-consistency**)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [Configuration Variables](#configuration-variables)
-- [Generated Prompt](#generated-prompt)
-- [Phase 1: Comparative State Analysis](#phase-1:-comparative-state-analysis)
-- [Migration Context](#migration-context)
-- [Automatic Transformation Rules](#automatic-transformation-rules)
-- [1. Mandatory Transformations](#1-mandatory-transformations)
-- [File Type Specific Instructions$](#file-type-specific-instructions$)
-- [Configuration Files](#configuration-files)
-- [Main Source Files](#main-source-files)
-- [Test Files](#test-files)
-- [Validation and Security](#validation-and-security)
-- [Automatic Control Points](#automatic-control-points)
-- [Manual Escalation](#manual-escalation)
-- [Migration Monitoring](#migration-monitoring)
-- [Typical Use Cases](#typical-use-cases)
-- [Framework Version Migration](#framework-version-migration)
-- [Technology Stack Evolution](#technology-stack-evolution)
-- [Architecture Refactoring](#architecture-refactoring)
-- [Design Pattern Modernization](#design-pattern-modernization)
-- [Unique Benefits](#unique-benefits)
-- [🧠 **Artificial Intelligence Enhancement**](#🧠-**artificial-intelligence-enhancement**)
-- [🔄 **Knowledge Capitalization**](#🔄-**knowledge-capitalization**)
-- [🎯 **Context-Aware Precision**](#🎯-**context-aware-precision**)
-- [⚡ **Automated Consistency**](#⚡-**automated-consistency**)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Migration and code evolution instructions generator for GitHub Copilot. Analyzes differences between two project versions (branches, commits, or releases) to create precise instructions allowing Copilot to maintain consistency during technology migrations, major refactoring, or framework version upgrades.
 
+## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -157,13 +68,14 @@ Use when you need to work on the current workspace or task.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -182,7 +94,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Configuration Variables
@@ -212,7 +124,7 @@ ${MIGRATION_TYPE="Framework Version|Architecture Refactoring|Technology Migratio
 
 ## File Type Specific Instructions$
 
-GENERATE_EXAMPLES == "true" ? "
+GENERATE_EXAMPLES == "true" ?  "
 
 ### Configuration Files
 
@@ -255,7 +167,7 @@ Perfect for documenting the transition from Angular 14 to Angular 17, React Clas
 
 ### Technology Stack Evolution
 
-Essential when replacing a technology entirely: jQuery to React, REST to GraphQL, SQL to NoSQL. Creates a complete migration guide with pattern mappings.
+Essential when replacing a technology entirely: jQuery to React, REST to GraphQL, SQL to NoSQL. Creates a comprehensive migration guide with pattern mappings.
 
 ### Architecture Refactoring
 
@@ -285,11 +197,11 @@ Ensures that new code additions automatically follow the new conventions, preven
 
 ## Template References
 
-Detailed templates in `templates/`:- `automatic_transformation_rules.md`- `generated_prompt.md`- `migration_monitoring.md`
+Detailed templates in `templates/generate-custom-instructions-from-codebase/`:- `automatic_transformation_rules.md`- `generated_prompt.md`- `migration_monitoring.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -299,7 +211,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -308,7 +220,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -327,7 +239,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -338,7 +250,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -371,6 +283,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -379,11 +292,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 

@@ -1,95 +1,69 @@
 ---
 name: sync-hermes-opencode
 title: Sync Hermes OpenCode Codex
-description: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments, with verification of parity after each sync.
-trigger: /sync-hermes-opencode
-category: general
+description: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes,
+  OpenAI Codex, and OpenCode environments with verification.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /sync-hermes-opencode
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:multi-agent-sync
+- skill:hermes-profiles
+- skill:opencode
+- skill:verification-before-completion
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /sync-hermes-opencode
+    flags: {}
+    help: Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructio...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- data
+- ml
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ## Goal
-Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments, with verification of parity after each sync.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Verification Checklist](#verification-checklist)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Workflow](#workflow)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Verification Checklist](#verification-checklist)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Workflow](#workflow)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions across Hermes, OpenAI Codex, and OpenCode environments with verification.
 
+## Context
 
 - **Hermes root:** `C:\Users\Alexa\AppData\Local\hermes`
 - **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
 - **Progress artifact:** `docs/orchestrator-progress.md`
 - **Verification artifact:** `docs/orchestrator-verification.md`
 - **Agent roots:**
-- Hermes → `~/AppData/Local/hermes/` (skills/, plugins/, hooks/, profiles/)
-- OpenAI Codex → `~/.codex/` (agents/*.toml, skills/)
-- OpenCode → `~/.opencode/` (config) and workspace `opencode.json`
+  - Hermes → `~/AppData/Local/hermes/` (skills/, plugins/, hooks/, profiles/)
+  - OpenAI Codex → `~/.codex/` (agents/*.toml, skills/)
+  - OpenCode → `~/.opencode/` (config) and workspace `opencode.json`
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. Execute phases in order; do not reorder.
 2. Each phase must pass its gate before advancing.
@@ -97,8 +71,9 @@ Bidirectional sync of skills, plugins, hooks, prompts, agents, and instructions 
 4. **One platform at a time** — sync Hermes, Codex, and OpenCode sequentially, verifying each before the next.
 5. **No backup files** — use git history for rollback; never create `.bak`, `.old`, or timestamped copies.
 
+## Phases
 
-Full phase instructions live in `templates/phases.md`.
+Full phase instructions live in `templates/sync-hermes-opencode/phases.md`.
 
 | Order | Phase | Gate |
 | --- | --- | --- |
@@ -118,7 +93,7 @@ Full phase instructions live in `templates/phases.md`.
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -128,7 +103,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -137,7 +112,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Workflow
 
-See [`templates/section-skeleton.md`](templates/section-skeleton.md) for workflow structure.
+See [`templates/_shared/section-skeleton.md`](templates/_shared/section-skeleton.md) for workflow structure.
 
 1. **Diagnose** — Run diagnostics on all 3 agent roots.
 2. **Plan** — Determine minimal changes; map per-platform asset formats.
@@ -147,7 +122,7 @@ See [`templates/section-skeleton.md`](templates/section-skeleton.md) for workflo
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -156,7 +131,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -167,7 +142,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -204,6 +179,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -211,7 +187,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

@@ -1,6 +1,6 @@
 ---
 title: Goal 3 — Skills Dedupe + Judge ≥90 + Debug Ascending-Modified
-status: ready
+status: "in_progress"
 created: 2026-09-11
 applies_to: ~/AppData/Local/hermes/skills/
 trigger_threshold: >6 file changes → load multi-file-change-protocol (this plan)

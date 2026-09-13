@@ -1,126 +1,47 @@
 ---
 name: az-cost-optimize
-title: Azure Cost Optimization
-description: Analyze Azure IaC and live resources, identify savings opportunities, and create prioritized GitHub issues for each optimization recommendation.
-trigger: /az-cost-optimize
-category: finance
+title: Azure Cost Optimize
+description: No description
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /az-cost-optimize
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: default
+    mcp_servers:
+    - filesystem
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /az-cost-optimize
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- tool:azure
+scripts: []
 ## Goal
-Analyze Azure IaC and live resources, identify savings opportunities, and create prioritized GitHub issues for each optimization recommendation.
 
-## Context
+Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and optimize costs - creating GitHub issues for identified optimizations.
 
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Workflow Steps](#workflow-steps)
-  - [Step 1: Get Azure Best Practices](#step-1:-get-azure-best-practices)
-- [💰 Cost Optimization: [Brief Title]](#💰-cost-optimization:-[brief-title])
-- [📊 Executive Summary](#📊-executive-summary)
-- [🏗️ Current Architecture Overview](#🏗️-current-architecture-overview)
-- [📋 Implementation Tracking](#📋-implementation-tracking)
-  - [🚀 High Priority (Implement First)](#🚀-high-priority-implement-first)
-  - [⚡ Medium Priority](#⚡-medium-priority)
-  - [🔄 Low Priority (Nice to Have)](#🔄-low-priority-nice-to-have)
-- [📈 Progress Tracking](#📈-progress-tracking)
-- [🎯 Success Criteria](#🎯-success-criteria)
-- [📝 Notes](#📝-notes)
-- [Error Handling](#error-handling)
-- [Success Criteria](#success-criteria)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Workflow Steps](#workflow-steps)
-- [Step 1: Get Azure Best Practices](#step-1:-get-azure-best-practices)
-- [💰 Cost Optimization: [Brief Title]](#💰-cost-optimization:-[brief-title])
-- [📊 Executive Summary](#📊-executive-summary)
-- [🏗️ Current Architecture Overview](#🏗️-current-architecture-overview)
-- [📋 Implementation Tracking](#📋-implementation-tracking)
-- [🚀 High Priority (Implement First)](#🚀-high-priority-implement-first)
-- [⚡ Medium Priority](#⚡-medium-priority)
-- [🔄 Low Priority (Nice to Have)](#🔄-low-priority-nice-to-have)
-- [📈 Progress Tracking](#📈-progress-tracking)
-- [🎯 Success Criteria](#🎯-success-criteria)
-- [📝 Notes](#📝-notes)
-- [Error Handling](#error-handling)
-- [Success Criteria](#success-criteria)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
-
-Analyze Azure resources used in the app (IaC files and/or resources in a target rg) and improve costs - creating GitHub issues for identified optimizations.
-
-## Azure Cost OptimizeThis workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to generate cost optimization recommendations. It creates individual GitHub issues for each optimization opportunity plus one EPIC issue to coordinate implementation, enabling efficient tracking and execution of cost savings initiatives.
+# Azure Cost OptimizeThis workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to generate cost optimization recommendations. It creates individual GitHub issues for each optimization opportunity plus one EPIC issue to coordinate implementation, enabling efficient tracking and execution of cost savings initiatives.
 
 ## Prerequisites
 
@@ -149,7 +70,7 @@ Analyze Azure resources used in the app (IaC files and/or resources in a target 
 ## 🏗️ Current Architecture Overview
 
 ```mermaid
-graph TB subgraph "Resource Group: [name]" [Generated architecture diagram showing current resources and costs] end``````
+   graph TB       subgraph "Resource Group: [name]"           [Generated architecture diagram showing current resources and costs]       end```   ````
 
 ```
 
@@ -157,11 +78,11 @@ graph TB subgraph "Resource Group: [name]" [Generated architecture diagram showi
 
 ### 🚀 High Priority (Implement First)
 
-- [ ] # [issue-number]: [Title] - $X/month savings - [ ] # [issue-number]: [Title] - $X/month savings
+- [ ] # [issue-number]: [Title] - $X/month savings   - [ ] # [issue-number]: [Title] - $X/month savings
 
 ### ⚡ Medium Priority
 
-- [ ] # [issue-number]: [Title] - $X/month savings - [ ] # [issue-number]: [Title] - $X/month savings
+- [ ] # [issue-number]: [Title] - $X/month savings   - [ ] # [issue-number]: [Title] - $X/month savings
 
 ### 🔄 Low Priority (Nice to Have)
 
@@ -169,17 +90,17 @@ graph TB subgraph "Resource Group: [name]" [Generated architecture diagram showi
 
 ## 📈 Progress Tracking
 
-- **Completed**: 0 of Y optimizations - **Savings Realized**: $0 of $X/month - **Implementation Status**: Not Started
+- **Completed**: 0 of Y optimizations   - **Savings Realized**: $0 of $X/month   - **Implementation Status**: Not Started
 
 ## 🎯 Success Criteria
 
-- [ ] All high-priority optimizations implemented - [ ]
+- [ ] All high-priority optimizations implemented   - [ ]
 
-> 80% of estimated savings realized - [ ] No performance degradation observed - [ ] Cost monitoring dashboard updated
+> 80% of estimated savings realized   - [ ] No performance degradation observed   - [ ] Cost monitoring dashboard updated
 
 ## 📝 Notes
 
-- Review and update this EPIC as issues are completed - Monitor actual vs. estimated savings - Consider scheduling regular cost optimization reviews `````
+- Review and update this EPIC as issues are completed   - Monitor actual vs. estimated savings   - Consider scheduling regular cost optimization reviews   ```   ```
 
 ## Error Handling
 
@@ -195,11 +116,11 @@ graph TB subgraph "Resource Group: [name]" [Generated architecture diagram showi
 
 ## Template References
 
-Detailed templates in `templates/`:- `cost_optimization_brief_title.md`- `workflow_steps.md`
+Detailed templates in `templates/az-cost-optimize/`:- `cost_optimization_brief_title.md`- `workflow_steps.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -209,19 +130,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -234,8 +156,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -254,12 +177,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -278,7 +201,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -289,7 +212,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -322,6 +245,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -329,4 +253,5 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+
 

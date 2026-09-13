@@ -2,6 +2,7 @@
 name: "mcp-plan"
 title: "Plan — MCP (Model Context Protocol)"
 version: 1.0.0
+status: "in_progress"
 ---
 # Plan: mcp
 - Source file: docs/features/mcp.md (941 lines)

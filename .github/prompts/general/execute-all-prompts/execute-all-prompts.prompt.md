@@ -1,102 +1,66 @@
 ---
 name: execute-all-prompts
-title: Execute All Workspace Prompts
-description: Orchestrates sequential execution of four workspace prompt workflows (audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, test-providers-models) to completion before the next begins.
-trigger: /execute-all-prompts
-category: general
+title: Execute All Prompts Orchestrator
+description: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix,
+  agents-system-prompt-context-fix, sync-hermes-opencode, and test-providers-models. Each prompt runs
+  to completion before the next begins.'
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: high
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /execute-all-prompts
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:verification-before-completion
+- skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /execute-all-prompts
+    flags: {}
+    help: 'Orchestrates sequential execution of 4 workspace prompt workflows: audit-skil...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- audit
+- data
+- execution
+- fix
+- prompts
+- skills
+- testing
+- typescript
+- workflow
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Orchestrates sequential execution of four workspace prompt workflows (audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, test-providers-models) to completion before the next begins.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Execution Rule](#execution-rule)
-- [Rules](#rules)
-- [Phase Contents](#phase-contents)
-- [Verification Checklist (Orchestrator Level)](#verification-checklist-orchestrator-level)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Execution Rule](#execution-rule)
-- [Rules](#rules)
-- [Phase Contents](#phase-contents)
-- [Verification Checklist (Orchestrator Level)](#verification-checklist-orchestrator-level)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-copilot-codex, and test-providers-models. Each prompt runs to completion before the next begins.
 
-## Execute All Prompts Orchestrator
+# Execute All Prompts Orchestrator
 
 > Strict sequential execution. Phase N+1 begins only after Phase N is fully verified complete.
 
+## Context
 
 - **Workspace root:** `C:\Users\Alexa\Desktop\SandBox`
 - **Hermes prompts root:** `C:\Users\Alexa\AppData\Local\hermes\prompts`
@@ -111,7 +75,7 @@ Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. Execute prompts in order. Do not reorder.
 2. Each prompt must pass its own verification before advancing.
@@ -121,7 +85,7 @@ Orchestrates sequential execution of 4 workspace prompt workflows: audit-skills-
 
 ## Phase Contents
 
-Full phase instructions live in `templates/phases.md`.
+Full phase instructions live in `templates/execute-all-prompts/phases.md`.
 
 | Order | Phase | Prompt File |
 | ------ | ------- | ----------- |
@@ -141,7 +105,7 @@ Full phase instructions live in `templates/phases.md`.
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -151,13 +115,14 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -176,12 +141,12 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -200,7 +165,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -211,7 +176,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -244,6 +209,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -252,16 +218,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`execute-plan.prompt.md`](execute-plan.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

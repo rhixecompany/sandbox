@@ -228,6 +228,7 @@ gates:
 dependencies:
   - skill-enhancement-spec.md
   - prompt-skill-spec-plan-management-system.md
+status: "in_progress"
 ---
 
 # Skill Enhancement Implementation Plan

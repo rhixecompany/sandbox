@@ -1,11 +1,10 @@
 ---
-name: rules-core
-category: templates/_shared
-version: 2.0.0
-license: MIT
-author: derived from SOUL.md + USER.md + tree.prompt.txt (verified workspace rules)
-description: Shared core execution rules for all run-all-goals artifacts. DRY reference — not duplicated in prompt bodies. tree.prompt.txt is PRIMARY source.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Core Rules — Shared Template
 

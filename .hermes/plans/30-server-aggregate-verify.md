@@ -3,6 +3,7 @@ name: 30-server-aggregate-verify
 version: 1.0
 batch: aggregate (P5 GATE — final verification before "done" claim)
 verified_by: terminal file stat (not synthetic); created 2026-09-13
+status: "in_progress"
 ---
 
 # Aggregate Verification — 30 Hermes MCP Servers (GATE, P5)

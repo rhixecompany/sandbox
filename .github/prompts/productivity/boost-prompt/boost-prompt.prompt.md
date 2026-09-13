@@ -1,97 +1,49 @@
 ---
 name: boost-prompt
-title: Prompt Refinement Interrogation
-description: Interactively interrogate a prompt's scope, deliverables, and constraints, then copy the refined markdown to the clipboard via Joyride.
-trigger: /boost-prompt
-category: productivity
+title: Boost Prompt
+description: No description
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /boost-prompt
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: default
+    mcp_servers:
+    - filesystem
+    - github
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /boost-prompt
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+scripts: []
 ## Goal
-Interactively interrogate a prompt's scope, deliverables, and constraints, then copy the refined markdown to the clipboard via Joyride.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Tools Required](#tools-required)
-- [Phases](#phases)
-  - [Phase 1: Interrogate](#phase-1:-interrogate)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Tools Required](#tools-required)
-- [Phases](#phases)
-- [Phase 1: Interrogate](#phase-1:-interrogate)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Interactive prompt refinement workflow: interrogates scope, deliverables, and constraints, then copies final markdown to clipboard using Joyride.
 
-## boost-prompt> Interactive prompt refinement workflow: interrogates scope, deliverables, constraints; copies final markdown to clipboard; never writes code.
+# boost-prompt> Interactive prompt refinement workflow: interrogates scope, deliverables, constraints; copies final markdown to clipboard; never writes code.
 
+## Context
 
 Use when you need to improve a draft prompt before submitting it to an AI system. Requires the Joyride VS Code extension for clipboard operations. This prompt does NOT write code - it only refines prompts.**Critical rules (must appear within the first 15% of execution):**- DO NOT WRITE ANY CODE - this is a prompt refinement workflow only- Always ask clarifying questions before finalizing the prompt- Copy the final markdown to clipboard using Joyride after each revision
 
@@ -109,7 +61,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. **No code** - DO NOT write any code; this workflow is for prompt refinement only
 2. **Interrogate first** - Ask specific questions to understand scope, objectives, deliverables, and constraints before refining
@@ -122,7 +74,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)| Skill | Purpose |
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
 | --- | --- |
 | `context-map` | Preflight map of relevant files and references before refinement |
 | `writing-skills` | Crafting and optimizing prompts and instructions |
@@ -135,6 +87,7 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 > - Install from VS Code Extensions marketplace: search "Joyride"
 > **Full content:**
 
+## Phases
 
 ### Phase 1: Interrogate
 
@@ -151,11 +104,11 @@ Use when you need to improve a draft prompt before submitting it to an AI system
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`- `tools_required.md`
+Templates in `templates/boost-prompt/`:- `phases.md`- `tools_required.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -165,7 +118,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -174,7 +127,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -193,7 +146,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -225,6 +178,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -233,11 +187,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -245,7 +196,5 @@ Same-family prompts:
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```
+
+

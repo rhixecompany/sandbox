@@ -1,99 +1,49 @@
 ---
 name: development
-title: Comprehensive Setup Guide
-description: Comprehensive development setup guide — prerequisites and end-to-end project bootstrap (e.g. ComicWise-style full-stack projects).
-trigger: /development
-category: development
+title: Development
+description: 🚀 ComicWise - Complete Project Setup & Scaffolding Guide.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /development
+toolsets:
+- web
+- todo
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /development
+    flags: {}
+    help: 🚀 ComicWise - Complete Project Setup & Scaffolding Guide.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- database
+- frontend
+- javascript
+- ml
+- nextjs
+- prompts
+- specification
+- sql
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Comprehensive development setup guide — prerequisites and end-to-end project bootstrap (e.g. ComicWise-style full-stack projects).
-
-## Context
-
-## Phases
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Comprehensive setup guide for ComicWise](#comprehensive-setup-guide-for-comicwise)
-- [Prerequisites](#prerequisites)
-- [**Comprehensive setup guide for ComicWise](#**comprehensive-setup-guide-for-comicwise)
-- [Tasks](#tasks)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Comprehensive setup guide for ComicWise](#comprehensive-setup-guide-for-comicwise)
-- [Prerequisites](#prerequisites)
-- [**Comprehensive setup guide for ComicWise](#**comprehensive-setup-guide-for-comicwise)
-- [Tasks](#tasks)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 🚀 ComicWise - Complete Project Setup & Scaffolding Guide.
 
@@ -103,7 +53,7 @@ Comprehensive development setup guide — prerequisites and end-to-end project b
 
 > Personality: Expert Software Engineer, DevOps Specialist, Technical Writer
 > Project: ComicWise - Web Comic Platform
-> **Full content:** `templates/comprehensive_setup_guide_for_.md`
+> **Full content:** `templates/development/comprehensive_setup_guide_for_.md`
 
 ## Prerequisites
 
@@ -119,15 +69,15 @@ Comprehensive development setup guide — prerequisites and end-to-end project b
 
 > 1 - Setup the project by installing all dependencies using pnpm, setting up the
 > 2 - Create, Optimize and Validate if exists copy file to end with .backup and Cr
-> **Full content:** `templates/tasks.md`
+> **Full content:** `templates/development/tasks.md`
 
 ## Template References
 
-Detailed templates in `templates/`:- `comprehensive_setup_guide_for_.md`- `tasks.md`- `tasks_.md`
+Detailed templates in `templates/development/`:- `comprehensive_setup_guide_for_.md`- `tasks.md`- `tasks_.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -137,19 +87,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -162,8 +113,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -182,12 +134,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -206,7 +158,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -217,7 +169,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -242,18 +194,11 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

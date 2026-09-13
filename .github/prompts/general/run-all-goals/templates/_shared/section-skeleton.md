@@ -1,11 +1,10 @@
 ---
-name: section-skeleton
-category: templates/_shared
-version: 2.0.0
-license: MIT
-author: derived from .github/prompts/*.prompt.md structure + tree.prompt.txt (verified across 27 SKILL.md + 215 prompt files)
-description: Shared section skeleton for all run-all-goals artifacts. Defines required sections and order. tree.prompt.txt is PRIMARY source.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Section Skeleton — Shared Template
 

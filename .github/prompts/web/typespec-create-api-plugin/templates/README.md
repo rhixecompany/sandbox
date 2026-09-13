@@ -1,13 +1,19 @@
-# typespec-create-api-plugin Template
+---
+name: shared-template
+title: Shared Template
+description: Shared template materials used by multiple prompts under prompts/templates/_shared.
+version: 1.0.0
+tags: [template, prompts]
+---
 
-Prompt: typespec-create-api-plugin.prompt.md
-Lines: 224
-Templates: 5
+# Shared Template
 
-## Templates
+Location: `prompts/templates/_shared/`
 
-- `authentication_options.md`
-- `function_capabilities.md`
-- `phases.md`
-- `requirements.md`
-- `workflow.md`
+## Purpose
+
+Host reusable markdown fragments referenced by prompt files, including core rules and skills tables.
+
+## TODO
+
+Author: add section inventory and usage notes.

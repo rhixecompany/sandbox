@@ -1,15 +1,43 @@
 ---
 name: aspnet-minimal-api-openapi
 title: ASP.NET Minimal API with OpenAPI
-description: Create ASP.NET Minimal API endpoints with proper OpenAPI documentation.
+description: No description
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /aspnet-minimal-api-openapi
 toolsets:
-- terminal
 - file
-category: web
-
----
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: default
+    mcp_servers:
+    - filesystem
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /aspnet-minimal-api-openapi
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- framework:aspnet
+- framework:dotnet
+scripts: []
 ## Goal
 
 Create ASP.NET Minimal API endpoints with proper OpenAPI documentation.
@@ -175,7 +203,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 
-
-## Workflow
-
-Description needed.

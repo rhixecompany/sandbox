@@ -334,6 +334,7 @@ dependencies:
   - skill-enhancement-spec.md
   - context-files-spec.md
   - multi-file-protocol-spec.md
+status: "in_progress"
 ---
 
 # Prompt/Skill/Spec/Plan Management System Plan

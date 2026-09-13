@@ -1,15 +1,44 @@
 ---
 name: pytest-coverage
 title: Pytest Coverage
-description: Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%.
+description: Run pytest tests with coverage, discover lines missing coverage, and increase coverage to
+  100%.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /pytest-coverage
 toolsets:
-- terminal
 - file
-category: testing
-
----
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /pytest-coverage
+    flags: {}
+    help: Run pytest tests with coverage, discover lines missing coverage, and increase...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- specification
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Run pytest tests with coverage, discover lines missing coverage, and increase coverage to 100%.
@@ -156,6 +185,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-## Workflow
-
-Description needed.

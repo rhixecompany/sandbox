@@ -163,6 +163,7 @@ dependencies:
   - multi-file-protocol-spec.md
   - prompt-skill-spec-plan-management-system.md
   - context-files-plan.md (for SOUL.md/USER.md/AGENTS.md updates)
+status: "in_progress"
 ---
 
 # Multi-File Protocol Implementation Plan

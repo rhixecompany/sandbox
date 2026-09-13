@@ -1,78 +1,53 @@
 ---
 name: playwright-automation-fill-in-form
-title: Playwright Form Fill Automation
-description: Fills a form field by field using Playwright MCP, uploads an image if requested, then stops before submit and asks for human review.
-trigger: /playwright-automation-fill-in-form
-category: qa
+title: Playwright Automation Fill In Form
+description: Fill a form with Playwright MCP, stop before submission, and ask for a human review.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Alexa
+trigger: /playwright-automation-fill-in-form
+toolsets:
+- file
+- terminal
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /playwright-automation-fill-in-form
+    flags: {}
+    help: Fill a form with Playwright MCP, stop before submission, and ask for a human ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- mcp
+- ml
+- playwright
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
-Fills a form field by field using Playwright MCP, uploads an image if requested, then stops before submit and asks for human review.
-
-## Context
-
-## Phases
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [Description](#description)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [@browserA careful browser operator who fills the form field by field.](#@browsera-careful-browser-operator-who-fills-the-form-field-by-field)
-- [@checkerA reviewer who verifies the form is ready but not submitted.](#@checkera-reviewer-who-verifies-the-form-is-ready-but-not-submitted)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Fill a form with Playwright MCP, stop before submission, and ask for a human review.
 
+## Context
 
-Use when filling web forms field by field with Playwright, stopping before submission for human review.
+Use when you need to playwright form fill automation for the current workspace or task.
 
 ## Inputs
 
@@ -87,13 +62,14 @@ Use when filling web forms field by field with Playwright, stopping before submi
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -112,7 +88,7 @@ Use when filling web forms field by field with Playwright, stopping before submi
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Description
@@ -122,7 +98,7 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - `webapp-testing` — use browser automation to interact with the live form
 - `systematic-debugging` — resolve selector and filling issues methodically
@@ -170,11 +146,11 @@ Fill a form with Playwright MCP, stop before submission, and ask for a human rev
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`
+Templates in `templates/playwright-automation-fill-in-form/`:- `phases.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -183,7 +159,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -202,7 +178,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -226,6 +202,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -234,18 +211,11 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`playwright-explore-website.prompt.md`](playwright-explore-website.prompt.md)
 - [`playwright-generate-test.prompt.md`](playwright-generate-test.prompt.md)
 - [`playwright-typescript.prompt.md`](playwright-typescript.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

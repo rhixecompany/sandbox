@@ -1,3 +1,6 @@
+---
+status: "in_progress"
+---
 # Implementation Plan — All Profile SOUL.md Refactor + Model Set
 
 Task: For every Hermes profile (15 profiles), refactor/enhance/verify SOUL.md, add description/alias, create missing files, and set model to `inkling:free` via openrouter.

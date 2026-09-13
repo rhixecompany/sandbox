@@ -1,12 +1,10 @@
 ---
-name: session-reporting
-category: references
-version: 2.0.0
-license: MIT
-author: derived from session-audit-report skill + tree.prompt.txt execution + verified session replay
-source: .hermes/plans/ + .github/prompts/general/run-all-goals/results/execution-summary.md (verified) + tree.prompt.txt (PRIMARY source)
-description: Session reporting reference — verified from actual workspace session data + tree.prompt.txt execution. tree.prompt.txt is PRIMARY source.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Session Reporting — Reference (tree-Primary)
 

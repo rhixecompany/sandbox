@@ -1,96 +1,48 @@
 ---
 name: typescript
-title: TypeScript and Next.js Code Quality
-description: Produce strict, maintainable TypeScript and Next.js code using server-first patterns, safe configuration access, and validated external input handling.
-trigger: /typescript
-category: development
+title: TypeScript & Next.js
+description: Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /typescript
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /typescript
+    flags: {}
+    help: Comprehensive TypeScript and Next.js code quality prompt aligned to repositor...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- backend
+- configuration
+- frontend
+- ml
+- nextjs
+- prompts
+- skills
+- typescript
+scripts: []
 ## Goal
-Produce strict, maintainable TypeScript and Next.js code using server-first patterns, safe configuration access, and validated external input handling.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Type and Boundary Design](#phase-1:-type-and-boundary-design)
-  - [Phase 2: Implementation with Strict Safety](#phase-2:-implementation-with-strict-safety)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Type and Boundary Design](#phase-1:-type-and-boundary-design)
-- [Phase 2: Implementation with Strict Safety](#phase-2:-implementation-with-strict-safety)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to repository standards." to accomplish the associated tasks and objectives.
 
@@ -98,13 +50,14 @@ Use when "Comprehensive TypeScript and Next.js code quality prompt aligned to re
 
 Produce strict, maintainable TypeScript and Next.js code using server-first patterns, safe configuration access, and validated external input handling.
 
+## Context
 
 Use this prompt for .ts and .tsx updates where code quality, correctness, and architectural consistency are required.
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Advanced TypeScript typing and API design
 - Next.js server/client boundary management
@@ -124,7 +77,7 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Use strict TypeScript patterns and avoid unsafe typing shortcuts.
 - Prefer server components and add use client only when justified.
@@ -132,6 +85,7 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 - Validate external inputs with Zod and consistent error handling.
 - Avoid direct process.env access in app logic; use centralized app config.
 
+## Phases
 
 ### Phase 1: Type and Boundary Design
 
@@ -148,7 +102,7 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 ## Tasks
 
 - Task 1.1 — Design strict interfaces and data flow contracts.
-- Task 1.2 — Implement runtime validation and strong error paths.
+- Task 1.2 — Implement runtime validation and robust error paths.
 - Task 1.3 — Enforce server/client boundaries and DAL usage patterns.
 - Task 1.4 — Eliminate unsafe environment-access and typing patterns.
 - Task 1.5 — Add documentation for complex types and assumptions.
@@ -170,11 +124,11 @@ Use this prompt for .ts and .tsx updates where code quality, correctness, and ar
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`
+Templates in `templates/typescript/`:- `phases.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -183,7 +137,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -202,7 +156,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -226,6 +180,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -234,16 +189,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`typescript-mcp-server-generator.prompt.md`](typescript-mcp-server-generator.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

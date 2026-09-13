@@ -1,113 +1,57 @@
 ---
 name: parallel-mcp-install
-title: Parallel MCP Installation and Validation
-description: Registers Parallel Search and Parallel Task MCP servers in the active Hermes harness using the official CLI, with security gates, runtime-reload validation, and credential-safety checks.
-trigger: /parallel-mcp-install
-category: mcp
+title: Install and Validate Parallel MCP Servers in Hermes
+description: Register Parallel Search and Parallel Task Streamable HTTP MCP servers in the active Hermes
+  Agent harness, preserve credential boundaries, validate discovered tools, and begin implementation only
+  after all gates pass.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: high
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
+author: Alexa
+trigger: /parallel-mcp-install
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:hermes-mcp
+- skill:smithery-ai-cli
+- skill:verification-before-completion
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /parallel-mcp-install
+    flags: {}
+    help: Register Parallel Search and Parallel Task Streamable HTTP MCP servers in the...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- api
+- backend
+- frontend
+- mcp
+- ml
+- prompts
+- workflow
+scripts: []
+# Parallel MCP Installation and Validation Workflow
 
 ## Goal
-Registers Parallel Search and Parallel Task MCP servers in the active Hermes harness using the official CLI, with security gates, runtime-reload validation, and credential-safety checks.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Source References](#source-references)
-- [Non-Negotiable Security Rules](#non-negotiable-security-rules)
-- [Phase 1 — Identify the Active Harness](#phase-1-—-identify-the-active-harness)
-- [Phase 2 — Register Parallel Search](#phase-2-—-register-parallel-search)
-- [Phase 3 — Register Parallel Task](#phase-3-—-register-parallel-task)
-- [Phase 4 — Validate Configuration and Connectivity](#phase-4-—-validate-configuration-and-connectivity)
-- [Phase 5 — Runtime Reload Gate](#phase-5-—-runtime-reload-gate)
-- [Phase 6 — Begin Implementation](#phase-6-—-begin-implementation)
-- [Failure Handling](#failure-handling)
-- [Completion Checklist](#completion-checklist)
-- [Completion Report](#completion-report)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Source References](#source-references)
-- [Non-Negotiable Security Rules](#non-negotiable-security-rules)
-- [Phase 1 — Identify the Active Harness](#phase-1-—-identify-the-active-harness)
-- [Phase 2 — Register Parallel Search](#phase-2-—-register-parallel-search)
-- [Phase 3 — Register Parallel Task](#phase-3-—-register-parallel-task)
-- [Phase 4 — Validate Configuration and Connectivity](#phase-4-—-validate-configuration-and-connectivity)
-- [Phase 5 — Runtime Reload Gate](#phase-5-—-runtime-reload-gate)
-- [Phase 6 — Begin Implementation](#phase-6-—-begin-implementation)
-- [Failure Handling](#failure-handling)
-- [Completion Checklist](#completion-checklist)
-- [Completion Report](#completion-report)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Install and validate these two remote Streamable HTTP MCP servers in the MCP client harness that is actually running the agent:
 
@@ -171,8 +115,8 @@ Use the Hermes CLI, not direct YAML editing:
 
 ```bash
 hermes mcp add parallel-search \
---url https://search.parallel.ai/mcp \
---connect-timeout 45
+  --url https://search.parallel.ai/mcp \
+  --connect-timeout 45
 ```
 
 When prompted whether auth is required, select no auth. Enable every discovered Search tool. If the endpoint returns a connection error, capture the status and stop before changing auth settings.
@@ -189,9 +133,9 @@ Prefer the Hermes OAuth path:
 
 ```bash
 hermes mcp add parallel-task \
---url https://task-mcp.parallel.ai/mcp \
---auth oauth \
---connect-timeout 45
+  --url https://task-mcp.parallel.ai/mcp \
+  --auth oauth \
+  --connect-timeout 45
 ```
 
 If Hermes prints an authorization URL:
@@ -221,7 +165,7 @@ hermes config check
 Verify without displaying credentials:
 
 ```bash
-grep -n -A 12 -E '^ parallel-(search|task):' "$(hermes config path)"
+grep -n -A 12 -E '^  parallel-(search|task):' "$(hermes config path)"
 ```
 
 Required assertions:
@@ -301,7 +245,7 @@ Return a compact table:
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -311,19 +255,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -336,8 +281,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -356,12 +302,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -380,7 +326,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -391,7 +337,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -424,6 +370,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -432,11 +379,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 

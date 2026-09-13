@@ -1,16 +1,11 @@
 ---
-name: prompt-library-spec
-title: "Prompt Library Specification"
-description: "Structured prompt library with category/trigger organization and companion files"
-version: 1.0.0
-author: Hermes Agent
-license: MIT
-tags:
-  - prompt-library
-  - prompt-management
-  - structure
-  - organization
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Prompt Library Specification
 

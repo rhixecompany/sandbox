@@ -1,3 +1,11 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
+---
+
+
 # Webhook Implementation Spec — Hermes Agent
 
 > Status: DRAFT | Version: 1.0.0 | Profile: adminbot | Date: 2026-09-13

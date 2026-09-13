@@ -3,7 +3,7 @@ title: OpenRouter SDK Integration — Implementation Plan
 description: Phased task breakdown for building TypeScript + Python OpenRouter client packages
 date: 2026-08-15
 author: Hermes Agent
-status: draft
+status: "in_progress"
 profile: model
 model: default
 ---

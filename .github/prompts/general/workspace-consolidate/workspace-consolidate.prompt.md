@@ -1,54 +1,115 @@
 ---
-name: workspace-consolidate
-title: Workspace Consolidate
-description: Consolidate scripts, patches, and documentation across the workspace with bash migration, audit workflows, and canonical layout enforcement.
-trigger: /workspace-consolidate
-category: general
+name: workspace-consolidate.prompt
+title: Workspace Consolidate.Prompt
+description: Auto-generated prompt for /workspace-consolidate.prompt
 version: 1.0.0
-author: Hermes Agent
-tags: [consolidation, scripts, patches, documentation, workspace]
-profile: code-architect
-priority: medium
-date: 2026-09-08
-enabled: true
-model_required: sonnet
-skills:
-  - using-superpowers
-  - systematic-debugging
-  - git-patch-management
-  - executing-plans
-  - verification-before-completion
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /workspace-consolidate.prompt
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /workspace-consolidate.prompt
+    flags: {}
+    help: Auto-generated prompt for /workspace-consolidate.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
 ---
-
-## Table of Contents
-
-- [Goal](#goal)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-  - [Phase 1: Verify Canonical Script Layout (LIGHT)](#phase-1-verify-canonical-script-layout-light)
-  - [Phase 2: Debug All Patches](#phase-2-debug-all-patches)
-  - [Phase 3: Enhance All Patches](#phase-3-enhance-all-patches)
-  - [Phase 4: Create Missing Patches](#phase-4-create-missing-patches)
-  - [Phase 5: Document Organization & Optimization](#phase-5-document-organization--optimization)
-  - [Phase 6: Final Verification](#phase-6-final-verification)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Actions](#actions)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers--tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
+name: workspace-consolidate
+title: Workspace Consolidation — Scripts, Patches, Docs
+description: Consolidate scripts, patches, and documentation across the workspace with bash migration
+  and audit workflows.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /workspace-consolidate
+toolsets:
+- file
+- terminal
+skills:
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- context-map
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- acpx-executor
+- git-patch-management
+- project-consolidation
+dependencies:
+- prompt:context-map
+- prompt:update-implementation-plan
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:acpx-executor
+- skill:git-patch-management
+- skill:project-consolidation
+- tool:terminal
+- tool:search_files
+- skill:introspection-only-general
+- skill:no-git-delete
+- skill:no-net-fetch
+- skill:skills-tools-preflight-check
+- skill:context-map
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /workspace-consolidate
+    flags: {}
+    help: Consolidate scripts, patches, and documentation across the workspace with bas...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- documentation
+- frontend
+- ml
+- prompts
+- skills
+- typescript
+- workflow
+- agents
+scripts: []
 
 ## Goal
 
@@ -57,7 +118,7 @@ Consolidate scripts, patches, and documentation across the workspace with bash m
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)---
 
 ## Phases
 
@@ -68,57 +129,16 @@ All 54 operational scripts must live under `projects/Bash/` in organized subdire
 ### Target Structure
 
 ```
-Bash/
-├── Banking/ # 34 scripts
-│ ├── install.sh
-│ ├── install-agents.sh
-│ ├── install/lib/00-config.sh → 08-install.sh
-│ └── scripts/ # 23 files (.sh, .ps1, .bat)
-├── rhixecompany-comics/ # 0 scripts (pending — new Django + Next.js project)
-├── rhixe_scans/ # 7 scripts
-│ ├── docker-clean.sh, git-setup.sh
-│ ├── install_chrome.sh, install_firefox.sh
-│ ├── prod-dev.sh, prod.sh, setup.sh
-├── ecom/ # 1 script
-│ └── install.sh
-├── root/ # 2 scripts
-│ ├── analyze-scripts.sh
-│ └── sandbox-runtime-commands.ps1
-├── src/ # TypeScript core migration targets
-│ ├── cache-clean.ts
-│ ├── clean-dep.ts
-│ ├── upgrade.ts
-│ ├── git-commit-batches.ts
-│ ├── core/ (ast-transformer, behavior-test, dry-run, script-runner)
-│ ├── lib/ (cli, colors, errors, logging)
-│ └── migration/ (templates, ts-morph-helper)
-├── docs/ # Moved from Bash/ root below
-│ ├── AGENTS.md
-│ ├── ARCHITECTURE.md
-│ ├── CODE_STYLE.md
-│ ├── README.md
-│ ├── bash-scripts-safety-audit.md
-│ ├── FINAL-SUMMARY.md
-│ ├── MIGRATION-GUIDE.md
-│ └── phase5-verification-report.md
-├── archive/skills-commit-batches/ # 52 archived batch files (keep as dead code reference)
-├── lib/ # log-rotate.sh, log-rotate.ps1
-├── scripts/ # Auditing/orchestration scripts
-├── edits/run-audit.sh.patch # Patch for run-audit.sh
-├── tsconfig.json, package.json, bun.lock, bunfig.toml
-└── README.md # STUB — links to docs/README.md
+
+treeBash/├── Banking/                          # 34 scripts│   ├── install.sh│   ├── install-agents.sh│   ├── install/lib/00-config.sh → 08-install.sh│   └── scripts/                      # 23 files (.sh, .ps1, .bat)├── rhixecompany-comics/               # 0 scripts (pending — new Django + Next.js project)├── rhixe_scans/                      # 7 scripts│   ├── docker-clean.sh, git-setup.sh│   ├── install_chrome.sh, install_firefox.sh│   ├── prod-dev.sh, prod.sh, setup.sh├── ecom/                             # 1 script│   └── install.sh├── root/                             # 2 scripts│   ├── analyze-scripts.sh│   └── sandbox-runtime-commands.ps1├── src/                              # TypeScript core migration targets│   ├── cache-clean.ts│   ├── clean-dep.ts│   ├── upgrade.ts│   ├── git-commit-batches.ts│   ├── core/ (ast-transformer, behavior-test, dry-run, script-runner)│   ├── lib/ (cli, colors, errors, logging)│   └── migration/ (templates, ts-morph-helper)├── docs/                             # Moved from Bash/ root below│   ├── AGENTS.md│   ├── ARCHITECTURE.md│   ├── CODE_STYLE.md│   ├── README.md│   ├── bash-scripts-safety-audit.md│   ├── FINAL-SUMMARY.md│   ├── MIGRATION-GUIDE.md│   └── phase5-verification-report.md├── archive/skills-commit-batches/    # 52 archived batch files (keep as dead code reference)├── lib/                              # log-rotate.sh, log-rotate.ps1├── scripts/                          # Auditing/orchestration scripts├── edits/run-audit.sh.patch          # Patch for run-audit.sh├── tsconfig.json, package.json, bun.lock, bunfig.toml├── README.md                         # STUB — links to docs/README.md
 ```
 
 ### Phase 1 Steps
 
-1. **Scan** for any remaining operational scripts outside `projects/projects/Bash/` (exclude framework seeds, `.husky/`, `.devcontainer/`, `.claude/`)
-2. **Move** misplaced project docs into `projects/Bash/docs/`:
-   - `Bash/AGENTS.md` → `Bash/docs/AGENTS.md` (update internal references)
-   - `Bash/ARCHITECTURE.md` → `Bash/docs/ARCHITECTURE.md`
-   - `Bash/CODE_STYLE.md` → `Bash/docs/CODE_STYLE.md`
-   - `Bash/README.md` → `Bash/docs/README.md` (replace root README with stub)
+1. **Scan** for any remaining operational scripts outside `projects/projects/Bash/` (exclude   framework seeds, `.husky/`, `.devcontainer/`, `.claude/`)
+2. **Move** misplaced project docs into `projects/Bash/docs/`:    - `Bash/AGENTS.md` → `Bash/docs/AGENTS.md` (update internal references)    - `Bash/ARCHITECTURE.md` → `Bash/docs/ARCHITECTURE.md`    - `Bash/CODE_STYLE.md` → `Bash/docs/CODE_STYLE.md`    - `Bash/README.md` → `Bash/docs/README.md` (replace root README with stub)
 3. **Create** `Bash/README.md` stub that links to `docs/README.md`
-4. **Verify** `docs/bash-migration-final-report.md` counts against actual file listing
+4. **Verify** `docs/bash-migration-final-report.md` counts against actual file   listing
 5. **Save** verification report to `docs/bash-canonical-layout-report.md`
 
 ### Phase 2: Debug All Patches
@@ -126,44 +146,15 @@ Bash/
 ### Patch Inventory
 
 ```
-Active:
-  xamehi.patch (6 commits, 32K lines, Django app)
-  rhixe-company.patch (3 commits, 1.7K lines, corporate site)
-  python-projects.patch (6 commits, 3.3K lines, Python scripts)
-  youtube-downloader.patch (23 commits, 5K lines, yt-dlp app)
-  projects/Bash/edits/run-audit.sh.patch (local patch for run-audit.sh)
 
-Obsolete (patches/obsolete/):
-  django-scrapy-selenium.patch (10 commits, 633K lines, cookiecutter template — LIKELY DEAD)
-  xamehi-tv.patch (5 commits, 117K lines, React frontend — LIKELY DEAD)
-  cookiecutter-django-tailwind.patch (4 commits, 54K lines, cookiecutter template — LIKELY DEAD)
+textActive:  xamehi.patch                   (6 commits, 32K lines, Django app)  rhixe-company.patch            (3 commits, 1.7K lines, corporate site)  python-projects.patch          (6 commits, 3.3K lines, Python scripts)  youtube-downloader.patch       (23 commits, 5K lines, yt-dlp app)  projects/Bash/edits/run-audit.sh.patch  (local patch for run-audit.sh)Obsolete (patches/obsolete/):  django-scrapy-selenium.patch   (10 commits, 633K lines, cookiecutter template — LIKELY DEAD)  xamehi-tv.patch                (5 commits, 117K lines, React frontend — LIKELY DEAD)  cookiecutter-django-tailwind.patch (4 commits, 54K lines, cookiecutter template — LIKELY DEAD)
 ```
 
 ### Debug Workflow
 
-For EACH patch (skip obsolete unless reclassifying):
-1. **Identify target project** via prefix match or README inspection
-2. Run `git apply --check <patch>` in target project directory
-3. **Diagnose failures**:
-   - If `patch does not apply`: check line endings, whitespace, already-applied commits
-   - If `already applied`: flag as `pre-applied`, skip with note
-   - If `corrupt`: inspect binary sections, check diff line format
-4. **Reclassify** obsolete patches if they actually apply to an existing project
-5. **Fix corruption** — repair broken hunks, trailing whitespace, encoding issues
-6. **Split multi-patch files** — each logical commit becomes its own `.patch` file
-7. **Validate isolated patches** — verify each applies independently
-8. **Dead patch auto-detection** — for each patch classified as `obsolete`:
-   - Run `git apply --check` against EVERY project directory (not just prefix-matched)
-   - If a supposedly-obsolete patch applies cleanly to a live project, **promote it** with corrected target
-   - If truly dead (no project found, cookiecutter template, abandoned framework), leave in `patches/obsolete/` with documented reason
-   - Flag false-obsolete patches in the debug report with action: `promoted`
-9. **Save patch debug report** to `docs/patch-debug-report.md` with table:
-```json
-[
-  { "patch": "xamehi.patch", "target": "projects/xamehi", "commits": 6, "applyable": true, "issues": [], "action": "ready" },
-  { "patch": "django-scrapy-selenium.patch", "target": null, "commits": 10, "applyable": false, "issues": ["no matching project", "obsolete cookiecutter template"], "action": "archive-only" }
-]
-```
+For EACH patch (skip obsolete unless reclassifying):1. **Identify target project** via prefix match or README inspection2. Run `git apply --check <patch
+
+> ` in target project directory3. **Diagnose failures**:    - If `patch does not apply`: check line endings, whitespace, already-applied      commits    - If`already applied`: flag as`pre-applied`, skip with note    - If`corrupt`: inspect binary sections, check diff line format4. **Reclassify** obsolete patches if they actually apply to an existing project5. **Fix corruption** — repair broken hunks, trailing whitespace, encoding   issues6. **Split multi-patch files** — each logical commit becomes its own`.patch` file7. **Validate isolated patches** — verify each applies independently8. **Dead patch auto-detection** — for each patch classified as `obsolete`:    - Run`git apply --check` against EVERY project directory (not just      prefix-matched)    - If a supposedly-obsolete patch applies cleanly to a live project, **promote      it** with corrected target    - If truly dead (no project found, cookiecutter template, abandoned      framework), leave in `patches/obsolete/` with documented reason    - Flag false-obsolete patches in the debug report with action: `promoted`9. **Save patch debug report** to`docs/patch-debug-report.md` with table:    ```json    [        {            "patch": "xamehi.patch",            "target": "projects/xamehi",            "commits": 6,            "applyable": true,            "issues": [],            "action": "ready"        },        {            "patch": "django-scrapy-selenium.patch",            "target": null,            "commits": 10,            "applyable": false,            "issues": ["no matching project", "obsolete cookiecutter template"],            "action": "archive-only"        }    ]```
 
 ### Phase 3: Enhance All Patches
 
@@ -176,14 +167,14 @@ For each patch that passed debug:
 
 2. **Add metadata headers** to each commit:
 
-```
-From: <original-author>
-Date: <original-date>
-Subject: feat(xamehi): add user authentication module
-References: docs/project-docs/xamehi/architecture.md
-Related: #42, #87
----
-```
+   ```text
+   From: <original-author>
+   Date: <original-date>
+   Subject: feat(xamehi): add user authentication module
+   References: docs/project-docs/xamehi/architecture.md
+   Related: #42, #87
+   ---
+   ```
 
 3. **Ensure portability** — use relative paths, no absolute `C:\...` references
 4. **Normalize line endings** — LF only (no CRLF)
@@ -191,7 +182,7 @@ Related: #42, #87
 6. **Record rollback tags**: `git tag PATCH-<name>-<date>` for each applied patch
 7. **Patch content integrity check** — verify structural integrity beyond `--check`:
    - No binary blob >1MB (flag for git bloat reduction)
-   - No absolute Windows paths (`C:\Users\...`, `D:\...`) — use `$HOME` or relative paths
+   - No absolute Windows paths (`C:\Users\...`,`D:\...`) — use `$HOME` or relative paths
    - All author emails have valid format (`<user@domain.tld>`)
    - No duplicate commits across patches (detect via commit hash)
    - No trailing whitespace on diff context lines
@@ -225,19 +216,19 @@ Create patches for any gaps found:
 4. **Consistency patches** — normalize existing files to match `CODE_STYLE.md` conventions
 5. **Known bugfix patches** — fix bugs found during Phase 2's `git apply --check` diagnostics
 
-### Patch Generation
+### Patch Patch Generation
 
-```
+```plaintext
 patches/
-├── enhanced/ # Enhanced versions of original patches
-│ ├── xamehi.patch
-│ ├── rhixe-company.patch
-│ ├── python-projects.patch
-│ └── youtube-downloader.patch
-├── new/ # Newly created patches
-│ ├── <project-name>-docs.patch
-│ └── <project-name>-config.patch
-└── obsolete/ # Unchanged archive
+├── enhanced/                     # Enhanced versions of original patches
+│   ├── xamehi.patch
+│   ├── rhixe-company.patch
+│   ├── python-projects.patch
+│   └── youtube-downloader.patch
+├── new/                          # Newly created patches
+│   ├── <project-name>-docs.patch
+│   └── <project-name>-config.patch
+└── obsolete/                     # Unchanged archive
     ├── django-scrapy-selenium.patch
     ├── xamehi-tv.patch
     └── cookiecutter-django-tailwind.patch
@@ -270,24 +261,16 @@ updated: YYYY-MM-DD
 
 ### Content Standards
 
-| Requirement | Why | Check |
-| ------------------------------------- | ------------------------------- | ------------------------------------------------------ |
-| Clear H1 title | Navigation, AI retrieval | Document starts with `# Title` |
-| 2-3 sentence summary after H1 | Quick human scan, AI snippet | First paragraph is a summary |
-| Section headings (H2/H3) | Scannability, TOC generation | No walls of text |
-| Code blocks with language tags | Syntax highlighting, AI context | Every code block has ` ```lang ` |
-| Table of Contents for docs > 300 lines | Navigation | Use `<!-- TOC -->` comment |
-| Cross-references with paths | Discoverability | `See [projects/Bash/docs/AGENTS.md](../../Bash/docs/AGENTS.md)` |
-| Machine-parseable metadata | AI ingestion | YAML frontmatter present |
-| One concept per file | Modularity, git diff clarity | No megadocs |
-| Active voice | Readability | "The script cleans caches" not "Caches are cleaned" |
+| Requirement                           | Why                             | Check                                                  || ------------------------------------- | ------------------------------- | ------------------------------------------------------ || Clear H1 title                        | Navigation, AI retrieval        | Document starts with `# Title`                         || 2-3 sentence summary after H1         | Quick human scan, AI snippet    | First paragraph is a summary                           || Section headings (H2/H3)              | Scannability, TOC generation    | No walls of text                                       || Code blocks with language tags        | Syntax highlighting, AI context | Every code block has ` ```lang`                        || Table of Contents for docs
+
+> 300 lines | Navigation                      | Use `<!-- TOC -->` comment                             || Cross-references with paths           | Discoverability                 | `See [projects/Bash/docs/AGENTS.md](../../Bash/docs/AGENTS.md)` || Machine-parseable metadata            | AI ingestion                    | YAML frontmatter present                               || One concept per file                  | Modularity, git diff clarity    | No megadocs                                            || Active voice                          | Readability                     | "The script cleans caches" not "Caches are cleaned"    |#
 
 ### Optimization Checklist per Document
 
 - [ ] Frontmatter exists with title, description, status, tags, dates
 - [ ] First paragraph is a summary (for both humans and AI snippets)
 - [ ] Headers use consistent nesting (H1 → H2 → H3, never skip levels)
-- [ ] All code blocks specify language (`sh`, `json`, `ts`, `python`)
+- [ ] All code blocks specify language (`sh,`json, `ts,`python)
 - [ ] External links use full URLs, internal links use relative paths
 - [ ] No broken cross-references (validate each relative path)
 - [ ] Tables have aligned columns and no empty required cells
@@ -297,42 +280,30 @@ updated: YYYY-MM-DD
 
 ### Files to Optimize
 
-```
-docs/ # Workspace-level reports
-├── bash-migration-final-report.md → verify frontmatter, add tags
-├── bash-scripts-audit-results.md → verify frontmatter, add tags
-├── bash-scripts-list-context.md → verify frontmatter, add tags
-├── bash-fix-implementation-plan.md → verify frontmatter, add tags
-├── project-docs/<project>/*.md → verify each has frontmatter
-
-projects/Bash/docs/ # Bash project-specific docs
-├── AGENTS.md → add frontmatter, optimize
-├── ARCHITECTURE.md → add frontmatter, optimize
-├── CODE_STYLE.md → add frontmatter, optimize
-├── README.md → add frontmatter, optimize
-├── bash-scripts-safety-audit.md → add frontmatter, optimize
-├── FINAL-SUMMARY.md → add frontmatter, optimize
-├── MIGRATION-GUIDE.md → add frontmatter, optimize
-└── phase5-verification-report.md → add frontmatter, optimize
+```text
+docs/                                         # Workspace-level reports
+├── bash-migration-final-report.md            → verify frontmatter, add tags
+├── bash-scripts-audit-results.md             → verify frontmatter, add tags
+├── bash-scripts-list-context.md              → verify frontmatter, add tags
+├── bash-fix-implementation-plan.md           → verify frontmatter, add tags
+├── project-docs/<project>/*.md               → verify each has frontmatter
+projects/Bash/docs/                           # Bash project-specific docs
+├── AGENTS.md                                 → add frontmatter, optimize
+├── ARCHITECTURE.md                           → add frontmatter, optimize
+├── CODE_STYLE.md                             → add frontmatter, optimize
+├── README.md                                 → add frontmatter, optimize
+├── bash-scripts-safety-audit.md              → add frontmatter, optimize
+├── FINAL-SUMMARY.md                          → add frontmatter, optimize
+├── MIGRATION-GUIDE.md                        → add frontmatter, optimize
+└── phase5-verification-report.md             → add frontmatter, optimize
 ```
 
 ### AI-Readiness Scoring Script
 
 Create `projects/Bash/scripts/score-docs.sh` that scores every `.md` file on AI-readiness:
 
-| Condition | Score | Reason |
-| --------- | ----- | ------ |
-| Has frontmatter | +10 | machine-parseable |
-| Has summary paragraph | +10 | AI snippet |
-| Has H2/H3 sections | +10 | structure |
-| Code blocks have language tags | +5 | syntax highlighting |
-| Has TOC (if >300 lines) | +5 | navigation |
-| Cross-references present | +5 | discoverability |
-| Active voice | +5 | readability |
-| < 500 lines | +5 | modularity |
 | > 500 lines with no H2/H3 | −20 | wall-of-text detection |
-
-Score threshold: **≥70** = AI-ready, **40–69** = needs work, **<40** = rewrite required. Output `docs/ai-readiness-report.md` with per-file scores and specific remediation per file.
+Score threshold: **≥70** = AI-ready, **40–69** = needs work, **<40** = Score threshold: **≥70** = AI-ready, **40–69** = needs work, **<40** = rewrite required.Output `docs/ai-readiness-report.md` with per-file scores and specific remediation per file.
 
 ### Doc Symmetry Validator
 
@@ -340,10 +311,10 @@ Cross-reference Phase 5 output against the generator-orchestrator manifest expec
 
 ```yaml
 Required artifacts per project (11 files):
-technology-stack.md, folder-structure.md, architecture.md,
-project-workflow.md, code-exemplars.md, copilot-instructions.md, readme.md,
-artifact-manifest.json, cross-linking-report.md, validation-report.md,
-execution-summary.md
+    technology-stack.md, folder-structure.md, architecture.md,
+    project-workflow.md, code-exemplars.md, copilot-instructions.md, readme.md,
+    artifact-manifest.json, cross-linking-report.md, validation-report.md,
+    execution-summary.md
 ```
 
 For each project under `docs/project-docs/<name>`:
@@ -363,48 +334,23 @@ For each project under `docs/project-docs/<name>`:
 - [ ] All active patches pass `git apply --check`
 - [ ] All active patches have enhanced versions in `patches/enhanced/`
 - [ ] All missing patches created in `patches/new/`
-- [ ] All docs in folders: workspace reports in `docs/`, project docs in `docs/project-docs/`, Bash docs in `Bash/docs/`
+- [ ] All docs in folders: workspace reports in `docs/`, project docs in      `docs/project-docs/`, Bash docs in `Bash/docs/`
 - [ ] Every `.md` file has YAML frontmatter and summary paragraph
 - [ ] No dead or misplaced documentation files
-- [ ] `git status` clean
-
-Generate `/workspace-consolidation-summary.md` with counts:
-
-```
-========================================
-WORKSPACE CONSOLIDATION COMPLETE
-========================================
-Scripts under Bash: 54/54
-Patches active: 4 (enhanced in patches/enhanced/)
-Patches new: N (in patches/new/)
-Patches obsolete: 3 (in patches/obsolete/)
-Docs in proper folders: N/N
-Docs with frontmatter: N/N
-AI-readiness score >=70: N/N
-Projects with full 11 docs: N/N
-========================================
-```
-
----
+- [ ] `git status` cleanGenerate `/workspace-consolidation-summary.md` with counts:```text========================================WORKSPACE CONSOLIDATION COMPLETE========================================Scripts under Bash:             54/54Patches active:                 4 (enhanced in patches/enhanced/)Patches new:                    N (in patches/new/)Patches obsolete:               3 (in patches/obsolete/)Docs in proper folders:         N/NDocs with frontmatter:          N/NAI-readiness score >=70:        N/NProjects with full 11 docs:     N/N========================================```---
 
 ## Steps
 
 1. **Phase 1**: Verify canonical script layout — scan for scripts outside `projects/projects/Bash/`, move misplaced docs, verify counts
 2. **Phase 2**: Debug all patches — `git apply --check` each, diagnose failures, reclassify obsolete
-3. **Phase 3**: Enhance all active patches + build dependency graph
-4. **Phase 4**: Create missing patches (docs, config, consistency)
-5. **Phase 5**: Organize all docs + add frontmatter + AI-readiness scoring
-6. **Phase 6**: Final verification (all checks pass)
+3. **Phase 3**: Enhance all patches — enrich commit messages, add metadata, normalize line endings, build dependency graph
+4. **Phase 4**: Create missing patches — gap analysis, create docs/config/consistency/bugfix patches
+5. **Phase 5**: Document organization — move all reports to `docs/`, add YAML frontmatter, optimize for AI-readiness
+6. **Phase 6**: Final verification — all scripts under Bash/, all patches enhanced, all docs scored
 
 ## Tasks
 
-- [ ] Phase 1: Verify canonical script layout (54 scripts under projects/Bash/)
-- [ ] Phase 2: Debug all patches (active + obsolete)
-- [ ] Phase 3: Enhance all active patches + build dependency graph
-- [ ] Phase 4: Create missing patches (docs, config, consistency)
-- [ ] Phase 5: Organize all docs + add frontmatter + AI-readiness scoring
-- [ ] Phase 6: Final verification (all checks pass)
-- [ ] Generate workspace-consolidation-summary.md
+- [ ] Phase 1: Verify canonical script layout (54 scripts under projects/Bash/)- [ ] Phase 2: Debug all patches (active + obsolete)- [ ] Phase 3: Enhance all active patches + build dependency graph- [ ] Phase 4: Create missing patches (docs, config, consistency)- [ ] Phase 5: Organize all docs + add frontmatter + AI-readiness scoring- [ ] Phase 6: Final verification (all checks pass)- [ ] Generate workspace-consolidation-summary.md
 
 ## Actions
 
@@ -419,7 +365,7 @@ Projects with full 11 docs: N/N
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -429,16 +375,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
+
+Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
+
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -451,11 +401,11 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -474,7 +424,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -487,8 +437,6 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server | Purpose |
-| --------------------- | ------------------------------------------------------ |
 | `ast-grep` | AST-based code search and replace |
 | `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
@@ -499,6 +447,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
 
 ## Scripts
 

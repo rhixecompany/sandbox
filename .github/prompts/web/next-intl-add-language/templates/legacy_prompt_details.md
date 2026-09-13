@@ -1,18 +1,9 @@
 # Legacy Prompt Details
 
-> Extracted from `next-intl-add-language.prompt.md`.
+> Extracted from `update-specification.prompt.md`.
 
-This is a guide to add a new language to a Next.js project using next-intl for internationalization,
+# Update Specification
 
-- For i18n, the application uses next-intl.
-- All translations are in the directory `./messages`.
-- The UI component is `src/components/language-toggle.tsx`.
-- Routing and middleware configuration are handled in:
-  - `src/i18n/routing.ts`
-  - `src/middleware.ts`
+Your goal is to update the existing specification file `${file}` based on new requirements or updates to any existing code.
 
-When adding a new language:
-
-- Translate all the content of `en.json` to the new language. The goal is to have all the JSON entries in the new language for a complete translation.
-- Add the path in `routing.ts` and `middleware.ts`.
-- Add the language to `language-toggle.tsx`.
+The specification file must define the requirements, constraints, and interfaces for the solution components in a manner that is clear, unambiguous, and structured for effective use by Generative AIs. Follow established documentation standards and ensure the content is machine-readable and self-contained.

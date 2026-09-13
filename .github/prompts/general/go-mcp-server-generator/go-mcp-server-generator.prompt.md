@@ -1,135 +1,54 @@
 ---
 name: go-mcp-server-generator
-title: Go MCP Server Generator
-description: Generates a complete Go MCP server project (structure, dependencies, implementation) using the official github.com/modelcontextprotocol/go-sdk.
-trigger: /go-mcp-server-generator
-category: general
+title: Go MCP Server Project Generator
+description: Generate a complete Go MCP server project with proper structure, dependencies, and implementation
+  using the official github.com/modelcontextprotocol/go-sdk.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /go-mcp-server-generator
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /go-mcp-server-generator
+    flags: {}
+    help: Generate a complete Go MCP server project with proper structure, dependencies...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- backend
+- configuration
+- frontend
+- generator
+- git
+- go
+- mcp
+- prompts
+- typescript
+- documentation
+scripts: []
 ## Goal
-Generates a complete Go MCP server project (structure, dependencies, implementation) using the official github.com/modelcontextprotocol/go-sdk.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Project Requirements](#project-requirements)
-- [Template Structure](#template-structure)
-- [go.mod Template](#gomod-template)
-- [main.go Template](#maingo-template)
-- [tools/tool1.go Template](#tools/tool1go-template)
-- [tools/registry.go Template](#tools/registrygo-template)
-- [config/config.go Template](#config/configgo-template)
-- [main_test.go Template](#main_testgo-template)
-- [README.md Template](#readmemd-template)
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Available Tools](#available-tools)
-  - [tool1](#tool1)
-- [Development](#development)
-- [License](#license)
-- [Generation Instructions](#generation-instructions)
-- [Best Practices](#best-practices)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Project Requirements](#project-requirements)
-- [Template Structure](#template-structure)
-- [go.mod Template](#gomod-template)
-- [main.go Template](#maingo-template)
-- [tools/tool1.go Template](#tools/tool1go-template)
-- [tools/registry.go Template](#tools/registrygo-template)
-- [config/config.go Template](#config/configgo-template)
-- [main_test.go Template](#main_testgo-template)
-- [README.md Template](#readmemd-template)
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Available Tools](#available-tools)
-- [tool1](#tool1)
-- [Development](#development)
-- [License](#license)
-- [Generation Instructions](#generation-instructions)
-- [Best Practices](#best-practices)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Generate a complete Go MCP server project with proper structure, dependencies, and implementation using the official github.com/modelcontextprotocol/go-sdk.
 
-## Go MCP Server Project GeneratorGenerate a complete, production-ready Model Context Protocol (MCP) server project in Go.
+# Go MCP Server Project GeneratorGenerate a complete, production-ready Model Context Protocol (MCP) server project in Go.
 
 ## Project Requirements
 
@@ -138,7 +57,7 @@ You will create a Go MCP server with:1. **Project Structure**: Proper Go module 
 ## Template Structure
 
 ```
-myserver/├── go.mod├── go.sum├── main.go├── tools/│ ├── tool1.go│ └── tool2.go├── resources/│ └── resource1.go├── config/│ └── config.go├── README.md└── main_test.go
+myserver/├── go.mod├── go.sum├── main.go├── tools/│   ├── tool1.go│   └── tool2.go├── resources/│   └── resource1.go├── config/│   └── config.go├── README.md└── main_test.go
 ```
 
 ## go.mod Template
@@ -146,7 +65,7 @@ myserver/├── go.mod├── go.sum├── main.go├── tools/│ �
 ```go
 module github.com/yourusername/
 
-{PROJECT_NAME}}go 1.23require ( github.com/modelcontextprotocol/go-sdk v1.0.0)
+{PROJECT_NAME}}go 1.23require (    github.com/modelcontextprotocol/go-sdk v1.0.0)
 ```
 
 ## main.go Template
@@ -164,15 +83,15 @@ module github.com/yourusername/
 ## tools/registry.go Template
 
 ```go
-package toolsimport "github.com/modelcontextprotocol/go-sdk/mcp"func RegisterTools(server *mcp.Server) { RegisterTool1(server) RegisterTool2(server) // Register additional tools here}
+package toolsimport "github.com/modelcontextprotocol/go-sdk/mcp"func RegisterTools(server *mcp.Server) {    RegisterTool1(server)    RegisterTool2(server)    // Register additional tools here}
 ```
 
 ## config/config.go Template
 
 ```go
-package configimport "os"type Config struct { ServerName string Version string LogLevel string}func Load() *Config { return &Config{ ServerName: getEnv("SERVER_NAME", "
+package configimport "os"type Config struct {    ServerName string    Version    string    LogLevel   string}func Load() *Config {    return &Config{        ServerName: getEnv("SERVER_NAME", "
 
-{PROJECT_NAME}}"), Version: getEnv("VERSION", "v1.0.0"), LogLevel: getEnv("LOG_LEVEL", "info"), }}func getEnv(key, defaultValue string) string { if value := os.Getenv(key); value != "" { return value } return defaultValue}
+{PROJECT_NAME}}"),        Version:    getEnv("VERSION", "v1.0.0"),        LogLevel:   getEnv("LOG_LEVEL", "info"),    }}func getEnv(key, defaultValue string) string {    if value := os.Getenv(key); value != "" {        return value    }    return defaultValue}
 ```
 
 ## main_test.go Template
@@ -244,11 +163,11 @@ When generating a Go MCP server:1. **Initialize Module**: Create `go.mod` with p
 
 ## Template References
 
-Detailed templates in `templates/`:- `main_testgo_template.md`- `maingo_template.md`- `toolstool1go_template.md`
+Detailed templates in `templates/go-mcp-server-generator/`:- `main_testgo_template.md`- `maingo_template.md`- `toolstool1go_template.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -258,19 +177,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -283,8 +203,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -303,7 +224,7 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Verification Checklist
@@ -318,7 +239,7 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -329,7 +250,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -378,11 +299,8 @@ Other language variants of this MCP server generator:
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 

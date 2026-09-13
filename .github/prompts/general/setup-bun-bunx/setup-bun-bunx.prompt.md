@@ -1,15 +1,52 @@
 ---
 name: setup-bun-bunx
 title: Migrate npm/npx to Bun/Bunx Across Repos
-description: Replace every npm/npx usage with bun/bunx in this repo, all sub-repos, and the Hermes root. Trim package.json/toml/.npmrc dependencies, uninstall unused deps, set bun as the default package manager, then commit and push.
+description: Replace every npm/npx usage with bun/bunx in this repo, all sub-repos, and the Hermes root.
+  Trim package.json/toml/.npmrc dependencies, uninstall unused deps, set bun as the default package manager,
+  then commit and push.
+version: 1.1.0
+license: MIT
+author: Hermes Agent
 trigger: /setup-bun-bunx
 toolsets:
-- terminal
 - file
-category: general
-
----
-
+- terminal
+skills: []
+dependencies:
+- skill:bun-nextjs
+- skill:bun-shell
+- skill:pnpm-package-manager
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup-bun-bunx
+    flags: {}
+    help: Replace every npm/npx usage with bun/bunx in this repo, all sub-repos, and th...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- audit
+- data
+- migration
+- ml
+- prompts
+- setup
+- testing
+- typescript
+scripts: []
 ## Goal
 
 First **clean up npm/bun remnants and upgrade bun to the latest version** (`bun upgrade`), then update **all usage of `npm` → `bun` and `npx` → `bunx`** in three scopes: this repository, all sub-repositories under it, and the Hermes root (`~/AppData/Local/hermes`). Audit every `package.json`, `*.toml`, and `.npmrc` file, use smaller/leaner dependencies and dev dependencies, uninstall all unused dependencies and dev dependencies, set **bun as the default package manager**, then commit and push in this repo and all sub-repos — debugging and fixing every issue encountered.
@@ -180,6 +217,3 @@ Same-family prompts:
 - [`setup-groq-cloud.prompt.md`](setup-groq-cloud.prompt.md)
 - [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
 - [`setup.prompt.md`](setup.prompt.md)
-## Workflow
-
-Description needed.

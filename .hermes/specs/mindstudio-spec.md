@@ -1,9 +1,11 @@
 ---
-name: mindstudio-server-spec
-version: 1.0.0
-batch: B2 (4/6 — SP-A sequential, user choice A)
-related_plan: .hermes/plans/30-hermes-mcp-servers-master-plan.md (SP-A, SP-B)
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Spec — mindstudio MCP Server (B1 / 1 of 30)
 

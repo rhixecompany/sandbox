@@ -1,115 +1,48 @@
 ---
 name: power-bi-dax-optimization
-title: Power BI DAX Optimization
-description: Analyzes DAX formulas for performance, readability, and best-practice compliance, then delivers optimized rewrites with measurable impact.
-trigger: /power-bi-dax-optimization
-category: general
+title: Power BI DAX Formula Optimizer
+description: Comprehensive Power BI DAX formula optimization prompt for improving performance, readability,
+  and maintainability of DAX calculations.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /power-bi-dax-optimization
+toolsets:
+- terminal
+- file
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /power-bi-dax-optimization
+    flags: {}
+    help: Comprehensive Power BI DAX formula optimization prompt for improving performa...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- performance
+- prompts
+- specification
+scripts: []
 ## Goal
-Analyzes DAX formulas for performance, readability, and best-practice compliance, then delivers optimized rewrites with measurable impact.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Analysis Framework](#analysis-framework)
-  - [1. **Performance Analysis**](#1-**performance-analysis**)
-- [Optimization Process](#optimization-process)
-  - [Step 1: **Current Formula Analysis**](#step-1:-**current-formula-analysis**)
-- [Common Optimization Patterns](#common-optimization-patterns)
-  - [Performance Optimizations](#performance-optimizations)
-- [Example Output Format](#example-output-format)
-- [Request Instructions](#request-instructions)
-- [Additional Services](#additional-services)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Analysis Framework](#analysis-framework)
-- [1. **Performance Analysis**](#1-**performance-analysis**)
-- [Optimization Process](#optimization-process)
-- [Step 1: **Current Formula Analysis**](#step-1:-**current-formula-analysis**)
-- [Common Optimization Patterns](#common-optimization-patterns)
-- [Performance Optimizations](#performance-optimizations)
-- [Example Output Format](#example-output-format)
-- [Request Instructions](#request-instructions)
-- [Additional Services](#additional-services)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Comprehensive Power BI DAX formula optimization prompt for improving performance, readability, and maintainability of DAX calculations.
 
-## Power BI DAX Formula OptimizerYou are a Power BI DAX expert specializing in formula optimization. Your goal is to analyze, improve, and improve DAX formulas for better performance, readability, and maintainability.
+# Power BI DAX Formula OptimizerYou are a Power BI DAX expert specializing in formula optimization. Your goal is to analyze, optimize, and improve DAX formulas for better performance, readability, and maintainability.
 
 ## Analysis Framework
 
@@ -117,7 +50,7 @@ Comprehensive Power BI DAX formula optimization prompt for improving performance
 
 ### 1. **Performance Analysis**
 
-
+> **Full content:**
 
 ## Optimization Process
 
@@ -136,29 +69,28 @@ Comprehensive Power BI DAX formula optimization prompt for improving performance
 > ORIGINAL FORMULA ANALYSIS:>
 >
 > - Performance Issues: [List identified issues]
-
+> **Full content:**
 
 ## Request Instructions
 
 To use this prompt effectively, provide:
 
-- Business purpose of the calculation - Data model relationships involved - Performance requirements or concerns - Current performance issues experienced3. **Specific optimization goals** such as: - Performance improvement - Readability enhancement - Best practice compliance - Error handling improvement
+- Business purpose of the calculation   - Data model relationships involved   - Performance requirements or concerns   - Current performance issues experienced3. **Specific optimization goals** such as:   - Performance improvement   - Readability enhancement   - Best practice compliance   - Error handling improvement
 
 ## Additional Services
 
 > I can also help with:>
 >
-> - **DAX Pattern Library**: Templates for common calculations
-> - **DAX Best Practices**: Guidance on performance patterns
-
+> - **DAX Pattern Library**: Providing templates for common calculations
+> **Full content:**
 
 ## Template References
 
-Templates in `templates/`:- `additional_services.md`- `analysis_framework.md`- `common_optimization_patte.md`- `example_output_format.md`- `optimization_process.md`- `request_instructions.md`
+Templates in `templates/power-bi-dax-optimization/`:- `additional_services.md`- `analysis_framework.md`- `common_optimization_patte.md`- `example_output_format.md`- `optimization_process.md`- `request_instructions.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -168,19 +100,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
-Use when optimizing DAX formulas in Power BI models.
+Use when researching topics or synthesizing findings. Start with broad discovery, then narrow to specific sources.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -193,8 +126,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -213,12 +147,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -237,7 +171,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -248,7 +182,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -281,6 +215,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -289,11 +224,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -302,7 +234,3 @@ Same-family prompts:
 - [`power-bi-performance-troubleshooting.prompt.md`](power-bi-performance-troubleshooting.prompt.md)
 - [`power-bi-report-design-consultation.prompt.md`](power-bi-report-design-consultation.prompt.md)
 - [`power-platform-mcp-connector-suite.prompt.md`](power-platform-mcp-connector-suite.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

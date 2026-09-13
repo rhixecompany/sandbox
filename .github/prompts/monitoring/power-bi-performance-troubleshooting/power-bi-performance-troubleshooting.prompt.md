@@ -1,129 +1,55 @@
 ---
 name: power-bi-performance-troubleshooting
-title: Power BI Performance Troubleshooting
-description: Systematic Power BI performance troubleshooting — identifies, diagnoses, and resolves performance issues in models, reports, and queries with actionable solutions.
-trigger: /power-bi-performance-troubleshooting
-category: monitoring
+title: Power BI Performance Troubleshooting Guide
+description: Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving
+  performance issues in Power BI models, reports, and queries.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /power-bi-performance-troubleshooting
+toolsets:
+- terminal
+- file
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /power-bi-performance-troubleshooting
+    flags: {}
+    help: Systematic Power BI performance troubleshooting prompt for identifying, diagn...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- performance
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
-Systematic Power BI performance troubleshooting — identifies, diagnoses, and resolves performance issues in models, reports, and queries with actionable solutions.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Troubleshooting Methodology](#troubleshooting-methodology)
-  - [Step 1: **Problem Definition and Scope**](#step-1:-**problem-definition-and-scope**)
-- [Diagnostic Tools and Techniques](#diagnostic-tools-and-techniques)
-  - [**Power BI Desktop Tools**](#**power-bi-desktop-tools**)
-- [Solution Framework](#solution-framework)
-  - [**Immediate Performance Fixes**](#**immediate-performance-fixes**)
-  - [Model Optimization](#model-optimization)
-- [Troubleshooting Workflows](#troubleshooting-workflows)
-  - [**Quick Win Checklist** (30 minutes)](#**quick-win-checklist**-30-minutes)
-- [Performance Monitoring Setup](#performance-monitoring-setup)
-  - [**Proactive Monitoring**](#**proactive-monitoring**)
-- [Communication and Documentation](#communication-and-documentation)
-  - [**Issue Reporting Template**](#**issue-reporting-template**)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Troubleshooting Methodology](#troubleshooting-methodology)
-- [Step 1: **Problem Definition and Scope**](#step-1:-**problem-definition-and-scope**)
-- [Diagnostic Tools and Techniques](#diagnostic-tools-and-techniques)
-- [**Power BI Desktop Tools**](#**power-bi-desktop-tools**)
-- [Solution Framework](#solution-framework)
-- [**Immediate Performance Fixes**](#**immediate-performance-fixes**)
-- [Model Optimization](#model-optimization)
-- [Troubleshooting Workflows](#troubleshooting-workflows)
-- [**Quick Win Checklist** (30 minutes)](#**quick-win-checklist**-30-minutes)
-- [Performance Monitoring Setup](#performance-monitoring-setup)
-- [**Proactive Monitoring**](#**proactive-monitoring**)
-- [Communication and Documentation](#communication-and-documentation)
-- [**Issue Reporting Template**](#**issue-reporting-template**)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Systematic Power BI performance troubleshooting prompt for identifying, diagnosing, and resolving performance issues in Power BI models, reports, and queries.
 
-You are a Power BI performance expert. Diagnose and resolve performance issues across models, reports, and queries.
+# Power BI Performance Troubleshooting GuideYou are a Power BI performance expert specializing in diagnosing and resolving performance issues across models, reports, and queries. Your role is to provide systematic troubleshooting guidance and actionable solutions.
 
 ## Troubleshooting Methodology
 
 ### Step 1: **Problem Definition and Scope**
 
-> Begin by defining the performance issue:
+> Begin by clearly defining the performance issue:
 
 ## Diagnostic Tools and Techniques
 
@@ -131,8 +57,7 @@ You are a Power BI performance expert. Diagnose and resolve performance issues a
 
 >
 > Performance Analyzer:
-
-
+> **Full content:**
 
 ## Solution Framework
 
@@ -146,7 +71,7 @@ You are a Power BI performance expert. Diagnose and resolve performance issues a
 
 >
 > □ Check Performance Analyzer for obvious bottlenecks
-
+> **Full content:**
 
 ## Performance Monitoring Setup
 
@@ -154,7 +79,7 @@ You are a Power BI performance expert. Diagnose and resolve performance issues a
 
 >
 > Key Performance Indicators:
-
+> **Full content:**
 
 ## Communication and Documentation
 
@@ -162,15 +87,15 @@ You are a Power BI performance expert. Diagnose and resolve performance issues a
 
 >
 > Performance Issue Report:
-
+> **Full content:**
 
 ## Template References
 
-Detailed templates in `templates/`:- `communication_and_documentatio.md`- `diagnostic_tools_and_technique.md`- `performance_monitoring_setup.md`- `solution_framework.md`- `troubleshooting_methodology.md`- `troubleshooting_workflows.md`
+Detailed templates in `templates/power-bi-performance-troubleshooting/`:- `communication_and_documentatio.md`- `diagnostic_tools_and_technique.md`- `performance_monitoring_setup.md`- `solution_framework.md`- `troubleshooting_methodology.md`- `troubleshooting_workflows.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -180,19 +105,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
-Use when diagnosing and resolving Power BI performance issues.
+Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -205,8 +131,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -225,12 +152,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -249,7 +176,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -260,7 +187,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -293,6 +220,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -301,11 +229,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -314,7 +239,3 @@ Same-family prompts:
 - [`power-bi-model-design-review.prompt.md`](power-bi-model-design-review.prompt.md)
 - [`power-bi-report-design-consultation.prompt.md`](power-bi-report-design-consultation.prompt.md)
 - [`power-platform-mcp-connector-suite.prompt.md`](power-platform-mcp-connector-suite.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

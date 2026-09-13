@@ -1,14 +1,44 @@
 ---
 name: devops-rollout-plan
 title: DevOps Rollout Plan Generator
-description: Generate comprehensive rollout plans with preflight checks, step-by-step deployment, verification signals, rollback procedures, and communication plans for infrastructure and application changes.
+description: Generate comprehensive rollout plans with preflight checks, step-by-step deployment, verification
+  signals, rollback procedures, and communication plans for infrastructure and application changes.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /devops-rollout-plan
 toolsets:
-- terminal
-- file
-category: development
-
-
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /devops-rollout-plan
+    flags: {}
+    help: Generate comprehensive rollout plans with preflight checks, step-by-step depl...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- deployment
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ---
 
 ## Goal
@@ -181,6 +211,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-## Workflow
-
-Description needed.

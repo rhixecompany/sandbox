@@ -1,101 +1,63 @@
 ---
 name: git-multi-repo-orchestration
 title: Git Multi-Repo Orchestration
-description: Runs the full git lifecycle across all repos under `./projects` (commit, push, submodule sync, PR create/merge, dev→prod sync) using GitHub CLI and conventional commits.
-trigger: /git-multi-repo-orchestration
-category: github
+description: Load and use all git skills to run add/commit/push, submodule sync, create/update/open/close
+  PRs (gh pr create, review-then-merge), merge directly into development, and sync to production across
+  all repos in ./projects.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: high
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Alexa
+trigger: /git-multi-repo-orchestration
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:gh-cli
+- skill:git-commit
+- skill:git-helper
+- skill:git-submodule-workflow
+- skill:github-pr-workflow
+- skill:github-repo-management
+- skill:github-code-review
+- skill:finishing-a-development-branch
+- skill:git-history-preserving-migration
+- skill:workspace-audit
+- skill:repo-management
+- tool:mcp-github
+formatter: default
+plan: plans/git-multi-repo-orchestration.md
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /git-multi-repo-orchestration
+    flags: {}
+    help: Load and use all git skills to run add/commit/push, submodule sync, create/up...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- frontend
+- git
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Runs the full git lifecycle across all repos under `./projects` (commit, push, submodule sync, PR create/merge, dev→prod sync) using GitHub CLI and conventional commits.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Skill Bundle](#skill-bundle)
-- [Workflow](#workflow)
-  - [Phase 0: Inventory](#phase-0:-inventory)
-  - [Phase 1: Commit & Push to Development](#phase-1:-commit-&-push-to-development)
-  - [Phase 2: Submodule Sync](#phase-2:-submodule-sync)
-- [Phase 3: PR Lifecycle — Review-Then-Merge](#phase-3:-pr-lifecycle-—-review-then-merge)
-- [Test Plan](#test-plan)
-  - [Phase 4: Development → Production Sync](#phase-4:-development-→-production-sync)
-  - [Phase 5: Verification](#phase-5:-verification)
-- [Rules](#rules)
-- [Verification](#verification)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Skill Bundle](#skill-bundle)
-- [Workflow](#workflow)
-- [Phase 0: Inventory](#phase-0:-inventory)
-- [Phase 1: Commit & Push to Development](#phase-1:-commit-&-push-to-development)
-- [Phase 2: Submodule Sync](#phase-2:-submodule-sync)
-- [Phase 3: PR Lifecycle — Review-Then-Merge](#phase-3:-pr-lifecycle-—-review-then-merge)
-- [Test Plan](#test-plan)
-- [Phase 4: Development → Production Sync](#phase-4:-development-→-production-sync)
-- [Phase 5: Verification](#phase-5:-verification)
-- [Rules](#rules)
-- [Verification](#verification)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Load and use all git skills to run the full git lifecycle across **all repos in `./projects`**:
 
@@ -152,28 +114,28 @@ git push origin development
 git submodule foreach 'git status --short && git fetch origin'
 git submodule update --remote development
 git submodule sync
-## From SandBox root, AFTER child pushes:
+# From SandBox root, AFTER child pushes:
 git add projects/* && git commit -m "chore(submodules): bump project pointers"
 git push origin development
 ```
 
-## Phase 3: PR Lifecycle — Review-Then-Merge
+### Phase 3: PR Lifecycle — Review-Then-Merge
 
 ```bash
 git checkout -b feat/<description> development
-## make changes, commit, push
+# make changes, commit, push
 git push -u origin HEAD
 
 gh pr create \
---title "feat: <description>" \
---body "## Summary
+  --title "feat: <description>" \
+  --body "## Summary
 - <change 1>
 - <change 2>
 
 ## Test Plan
 - [ ] CI green
 - [ ] Reviewed" \
---base development
+  --base development
 ```
 
 - **Update:** `gh pr edit <N> --title ... --body ...`
@@ -199,9 +161,9 @@ git checkout development
 
 ```bash
 for d in projects/*/; do
-[ -d "$d/.git" ] || continue
-cd "$d" && echo "== ${d#projects/}: $(git branch --show-current) | $(git status --short | wc -l) dirty"
-cd ~/Desktop/SandBox
+  [ -d "$d/.git" ] || continue
+  cd "$d" && echo "== ${d#projects/}: $(git branch --show-current) | $(git status --short | wc -l) dirty"
+  cd ~/Desktop/SandBox
 done
 git submodule status | grep -v '^ ' && echo "SUBMODULES DIRTY" || echo "SUBMODULES CLEAN"
 gh pr list --state open --limit 50
@@ -209,7 +171,7 @@ gh pr list --state open --limit 50
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - **No commit/push unless asked** — approval per repo batch.
 - **No force-push** to `production` without explicit user consent (log it).
@@ -249,7 +211,7 @@ Prefer MCP-first per tooling policy: `github` (repo/PR API), `filesystem` (file 
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -259,19 +221,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -290,7 +253,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -302,11 +265,12 @@ See [`templates/skills-table-core.md`](templates/skills-table-core.md) for share
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
 
 ## Scripts
 
@@ -315,6 +279,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
+
 
 ## Related Prompts
 

@@ -1,6 +1,6 @@
 ---
 title: Goal 1 — Refactor context files + extract multi-file-change-protocol skill
-status: ready
+status: "in_progress"
 created: 2026-09-11
 applies_to: SandBox root + ~/AppData/Local/hermes (SOUL/USER/MEMORY + skills/)
 trigger_threshold: >6 file changes → load 14-skill stack

@@ -1,12 +1,10 @@
 ---
-name: run-all-goals-five-day
-title: "Run All Goals Five-Day Consolidation"
-description: "Use when consolidating a fixed five-day default-profile session corpus into local specs, plans, prompts, and verified execution results."
-version: 1.0.0
-author: Alexa
-license: MIT
-tags: [consolidation, sessions, plans, specs, verification]
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Run All Goals Five-Day Consolidation
 

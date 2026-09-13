@@ -2,14 +2,45 @@
 name: task-implementation
 title: Task Implementation
 description: Comprehensive prompt for implementing tasks with clear phases, goals, and verification.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /task-implementation
 toolsets:
-- terminal
 - file
-category: productivity
-
----
-
+- terminal
+skills:
+- subagent-driven-development
+dependencies:
+- skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /task-implementation
+    flags: {}
+    help: Comprehensive prompt for implementing tasks with clear phases, goals, and ver...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- ml
+- prompts
+- specification
+- workflow
+- skills
+scripts: []
 ## Goal
 
 Use when "Comprehensive prompt for implementing tracked task plans with progressive change logging." to accomplish the associated tasks and objectives.
@@ -165,6 +196,3 @@ Same-family prompts:
 - [`create-implementation-plan.prompt.md`](create-implementation-plan.prompt.md)
 - [`tooling-implementation.prompt.md`](tooling-implementation.prompt.md)
 - [`update-implementation-plan.prompt.md`](update-implementation-plan.prompt.md)
-## Workflow
-
-Description needed.

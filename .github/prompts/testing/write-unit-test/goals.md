@@ -1,12 +1,11 @@
-# Goals for Create Feature
+---
+name: shared-goals
+title: Shared Template — Goals
+description: Standard goals section for prompt files
+version: 1.0.0
+tags: [template, shared, goals]
+---
 
-## Primary Goal
-Deliver a complete, tested, documented feature matching specifications
+# Goals
 
-## Success Metrics
-- Metric 1: 100% test coverage on new code
-- Metric 2: Zero critical/major code review issues
-
-## Secondary Goals
-- Goal 1: Feature integrates cleanly with existing codebase
-- Goal 2: Documentation enables future maintenance
+<!-- Shared goals section for prompts. Populate with the project‑specific goal statement when needed. -->

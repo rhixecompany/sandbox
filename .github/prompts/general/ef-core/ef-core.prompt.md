@@ -2,13 +2,41 @@
 name: ef-core
 title: Entity Framework Core Best Practices
 description: Get best practices for Entity Framework Core.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /ef-core
 toolsets:
 - terminal
 - file
-category: general
-
-
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /ef-core
+    flags: {}
+    help: Get best practices for Entity Framework Core.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ---
 
 ## Goal
@@ -204,6 +232,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-## Workflow
-
-Description needed.

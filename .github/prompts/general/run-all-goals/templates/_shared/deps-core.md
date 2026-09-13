@@ -1,11 +1,10 @@
 ---
-name: deps-core
-category: templates/_shared
-version: 2.0.0
-license: MIT
-author: derived from verified prompt references (.github/prompts/*/*.prompt.md) + tree.prompt.txt
-description: Shared dependency reference pattern. Used by all run-all-goals artifacts for DRY dependency declaration. tree.prompt.txt is PRIMARY source.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Dependency Patterns — Shared Template
 

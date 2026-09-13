@@ -1,81 +1,60 @@
 ---
 name: playwright-typescript
-title: Playwright TypeScript Test Authoring
-description: Designs scenarios, implements stable @playwright/test suites with role/label-based locators and web-first assertions, then runs and stabilizes them.
-trigger: /playwright-typescript
-category: general
+title: Playwright Typescript
+description: Comprehensive Playwright TypeScript prompt aligned to repository testing standards.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /playwright-typescript
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /playwright-typescript
+    flags: {}
+    help: Comprehensive Playwright TypeScript prompt aligned to repository testing stan...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- playwright
+- prompts
+- skills
+- testing
+- typescript
+- frontend
+scripts: []
 ## Goal
-Designs scenarios, implements stable @playwright/test suites with role/label-based locators and web-first assertions, then runs and stabilizes them.
 
-## Context
-
-## Phases
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Scenario and Test Design](#phase-1:-scenario-and-test-design)
-- [Phase 2: Test Implementation](#phase-2:-test-implementation)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
-
-Author and refine Playwright TypeScript tests with role/label-based locators and web-first assertions.
+Use when "Comprehensive Playwright TypeScript prompt aligned to repository testing standards." to accomplish the associated tasks and objectives.
 
 ## Description
 
 Author and refine Playwright TypeScript tests that are resilient, readable, and aligned with accessibility-first locator and assertion practices.
 
+## Context
 
-Use when creating or updating Playwright TypeScript tests with accessibility-first locators and web-first assertions.
+Use this prompt when creating or updating Playwright tests in the tests directory for user flows, regression scenarios, and end-to-end behavior validation.
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Playwright test design and isolation
 - Accessibility-first locator strategy
@@ -85,7 +64,7 @@ Use when creating or updating Playwright TypeScript tests with accessibility-fir
 
 | Subagent | Role | When to Use || --
 
-- | --- | --- || Test Author | Writes structured Playwright tests | Always || Locator Auditor | Ensures strong user-facing locator choices | Locator-heavy tests || Stability Checker | Identifies flake and timing anti-patterns | Failing or intermittent tests |
+- | --- | --- || Test Author | Writes structured Playwright tests | Always || Locator Auditor | Ensures robust user-facing locator choices | Locator-heavy tests || Stability Checker | Identifies flake and timing anti-patterns | Failing or intermittent tests |
 
 ## Personas
 
@@ -95,7 +74,7 @@ Use when creating or updating Playwright TypeScript tests with accessibility-fir
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Use @playwright/test with clear test.describe and test.step grouping.
 - Prefer getByRole, getByLabel, and user-visible locators.
@@ -103,6 +82,7 @@ Use when creating or updating Playwright TypeScript tests with accessibility-fir
 - Keep tests feature-focused and stored under tests/ with clear names.
 - Verify navigation with URL assertions and structure with accessibility snapshots when applicable.
 
+## Phases
 
 ### Phase 1: Scenario and Test Design
 
@@ -111,7 +91,7 @@ Use when creating or updating Playwright TypeScript tests with accessibility-fir
 ## Steps
 
 1. Define scenario and expected outcomes.
-2. Choose strong, accessible locators.
+2. Choose robust, accessible locators.
 3. Implement tests with explicit action/assertion steps.
 4. Run tests and inspect failures.
 5. Iterate to stable green execution.
@@ -135,17 +115,17 @@ Use when creating or updating Playwright TypeScript tests with accessibility-fir
 ## Actions Summary
 
 1. Design behavior-driven scenarios.
-2. Implement strong Playwright tests.
+2. Implement robust Playwright tests.
 3. Run and stabilize.
 4. Deliver passing tests with clear intent.
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`
+Templates in `templates/playwright-typescript/`:- `phases.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -154,7 +134,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -173,7 +153,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -197,6 +177,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -205,18 +186,11 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`playwright-automation-fill-in-form.prompt.md`](playwright-automation-fill-in-form.prompt.md)
 - [`playwright-explore-website.prompt.md`](playwright-explore-website.prompt.md)
 - [`playwright-generate-test.prompt.md`](playwright-generate-test.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

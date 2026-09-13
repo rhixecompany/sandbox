@@ -1,95 +1,60 @@
 ---
 name: update-implementation-plan
 title: Update Implementation Plan
-description: Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure work.
-trigger: /update-implementation-plan
-category: planning
-version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
+description: Create or update an implementation plan with new or updated requirements for features, refactoring,
+  package upgrades, design, or infrastructure.
+version: 2.0.0
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /update-implementation-plan
+toolsets:
+- file
+- terminal
+skills:
+- writing-plans
+- plans-and-specs
+- context-map
+dependencies:
+- skill:writing-plans
+- skill:plans-and-specs
+- skill:context-map
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /update-implementation-plan
+    flags: {}
+    help: Create or update an implementation plan with new or updated requirements for ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- frontend
+- maintenance
+- migration
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ## Goal
-Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure work.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Template Variables](#template-variables)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Template Variables](#template-variables)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Create or update an implementation plan with new or updated requirements for features, refactoring, package upgrades, design, or infrastructure.
 
-## update-implementation-plan> Create or update an implementation plan file with new or updated requirements for features, refactoring, package upgrades, design, architecture, or infrastructure.
+# update-implementation-plan> Create or update an implementation plan file with new or updated requirements for features, refactoring, package upgrades, design, architecture, or infrastructure.
 
+## Context
 
 Use when you need to create or update an implementation plan for the current workspace or task. The output implementation plan follows a standard section template with status badges.
 
@@ -114,7 +79,7 @@ Template variables used in this prompt follow this convention:| Variable | Scope
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 >
 > 1. Use only evidence from the current workspace and the user request
 > 2. Change only the implementation plan sections directly affected by new require
@@ -122,12 +87,13 @@ Template variables used in this prompt follow this convention:| Variable | Scope
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)The skills listed below in the "Skills Required" section mirror the YAML front-matter `skills` declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.| Skill | Purpose |
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)The skills listed below in the "Skills Required" section mirror the YAML front-matter `skills` declaration and indicate which Hermes skills must be available for this prompt to execute successfully. The Hermes agent will verify skill availability before running this prompt.| Skill | Purpose |
 | --- | --- |
 | `context-map` | Pre-change map of plan-related files and dependencies |
 | `writing-plans` | Author structured implementation plans |
 | `plans-and-specs` | Plan and spec namespace management |
 
+## Phases
 
 > **Goal:** Read the current workspace state and determine whether to create or up
 >
@@ -143,11 +109,11 @@ Template variables used in this prompt follow this convention:| Variable | Scope
 
 ## Template References
 
-Detailed templates in `templates/`:- `phases.md`- `rules.md`
+Detailed templates in `templates/update-implementation-plan/`:- `phases.md`- `rules.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -157,7 +123,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -166,7 +132,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -185,7 +151,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -217,6 +183,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -225,11 +192,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -239,7 +203,3 @@ Same-family prompts:
 - [`update-markdown-file-index.prompt.md`](update-markdown-file-index.prompt.md)
 - [`update-oo-component-documentation.prompt.md`](update-oo-component-documentation.prompt.md)
 - [`update-specification.prompt.md`](update-specification.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

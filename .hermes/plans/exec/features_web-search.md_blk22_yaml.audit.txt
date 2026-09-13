@@ -1,0 +1,19 @@
+# SKIPPED — destructive command audit
+# Source: features/web-search.md
+# Block index: 22
+# Language: yaml
+# Dangerous pattern: format
+---
+# Read the documentation before extending the defaults:
+# https://docs.searxng.org/admin/settings/
+
+use_default_settings: true
+
+server:
+  secret_key: "abcdef12345678"
+  image_proxy: true
+
+search:
+  formats:
+    - html
+    - json

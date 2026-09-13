@@ -1,115 +1,48 @@
 ---
 name: mkdocs-translations
-title: MkDocs Translations
-description: Generates a language translation for an MkDocs documentation stack, preserving structure and Markdown semantics.
-trigger: /mkdocs-translations
-category: general
+title: MkDocs AI Translator
+description: Generate a language translation for a mkdocs documentation stack.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /mkdocs-translations
+toolsets:
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /mkdocs-translations
+    flags: {}
+    help: Generate a language translation for a mkdocs documentation stack.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- documentation
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
-Generates a language translation for an MkDocs documentation stack, preserving structure and Markdown semantics.
-
-## Context
-
-## Phases
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Role](#role)
-- [Required Input](#required-input)
-- [Objective](#objective)
-- [File Listing and Translation Order](#file-listing-and-translation-order)
-- [Folder Structure and Output](#folder-structure-and-output)
-- [Include Path Updates](#include-path-updates)
-- [MkDocs Configuration Update](#mkdocs-configuration-update)
-- [Translation Rules](#translation-rules)
-- [Translating Includes (`docs/docs/includes/en`)](#translating-includes-`docs/docs/includes/en`)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [Role](#role)
-- [Required Input](#required-input)
-- [Objective](#objective)
-- [File Listing and Translation Order](#file-listing-and-translation-order)
-- [Folder Structure and Output](#folder-structure-and-output)
-- [Include Path Updates](#include-path-updates)
-- [MkDocs Configuration Update](#mkdocs-configuration-update)
-- [Translation Rules](#translation-rules)
-- [Translating Includes (`docs/docs/includes/en`)](#translating-includes-`docs/docs/includes/en`)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Generate a language translation for a mkdocs documentation stack.
 
+## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -126,13 +59,14 @@ Use when you need to work on the current workspace or task.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -151,7 +85,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Role
@@ -160,7 +94,7 @@ You are a professional technical writer and translator.
 
 ## Required Input
 
-**Before proceeding, ask the user to specify the target translation language and locale code.** Examples:
+**Before proceeding, ask the user to specify the target translation language and locale code.**  Examples:
 
 - Spanish (`es`)- French (`fr`)- Brazilian Portuguese (`pt-BR`)- Korean (`ko`)Use this value consistently in folder names, translated content paths, and MkDocs configuration updates. Once confirmed, proceed with the instructions below.---
 
@@ -181,22 +115,22 @@ The following is the task list you must complete. Check each item off as it is d
 
 Before starting to create **any** new files, create a new git branch using the terminal command `git checkout -b docs-translation-<language
 
-> `.- Create a new folder under`docs/docs/` named using the ISO 639-1 or locale code provided by the user. Examples: - `es` for Spanish - `fr` for French - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.
+> `.- Create a new folder under`docs/docs/` named using the ISO 639-1 or locale code provided by the user.    Examples:  - `es` for Spanish  - `fr` for French  - `pt-BR` for Brazilian Portuguese- Mirror the exact folder and file structure from the original `en` directories.
 
-- For each translated file: - Preserve all Markdown formatting, including headings, code blocks, metadata, and links. - Maintain the original filename. - Do **not** wrap the translated content in Markdown code blocks. - Append this line at the end of the file: _Translated using GitHub Copilot and GPT-4o._ - Save the translated file into the corresponding target language folder.---
+- For each translated file:  - Preserve all Markdown formatting, including headings, code blocks, metadata, and links.  - Maintain the original filename.  - Do **not** wrap the translated content in Markdown code blocks.  - Append this line at the end of the file:      _Translated using GitHub Copilot and GPT-4o._  - Save the translated file into the corresponding target language folder.---
 
 ## Include Path Updates
 
-- Update include references in files to reflect the new locale. Example: `includes/en/introduction-event.md` → `includes/es/introduction-event.md` Replace `es` with the actual locale code provided by the user.---
+- Update include references in files to reflect the new locale.    Example:     `includes/en/introduction-event.md` → `includes/es/introduction-event.md`    Replace `es` with the actual locale code provided by the user.---
 
 ## MkDocs Configuration Update
 
-- [ ] Modify the `mkdocs.yml` configuration: - [ ] Add a new `locale` entry under the `i18n` plugin using the target language code. - [ ] Provide appropriate translations for: - [ ] `nav_translations` - [ ] `admonition_translations`---
+- [ ] Modify the `mkdocs.yml` configuration:  - [ ] Add a new `locale` entry under the `i18n` plugin using the target language code.  - [ ] Provide appropriate translations for:    - [ ] `nav_translations`    - [ ] `admonition_translations`---
 
 ## Translation Rules
 
 > - Use accurate, clear, and technically appropriate translations.
-> - Always use computer standard terminology.
+> - Always use computer industry-standard terminology.
 > **Full content:**
 
 ## Translating Includes (`docs/docs/includes/en`)
@@ -208,11 +142,11 @@ Before starting to create **any** new files, create a new git branch using the t
 
 ## Template References
 
-Templates in `templates/`:- `folder_structure_and_outp.md`- `phases.md`- `translation_rules.md`
+Templates in `templates/mkdocs-translations/`:- `folder_structure_and_outp.md`- `phases.md`- `translation_rules.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -222,7 +156,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -231,7 +165,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -250,7 +184,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -261,7 +195,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -294,18 +228,11 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

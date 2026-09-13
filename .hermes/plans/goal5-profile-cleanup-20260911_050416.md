@@ -1,6 +1,6 @@
 ---
 title: Goal 5 — Profile Cleanup + Root Mirror
-status: ready
+status: "in_progress"
 created: 2026-09-11
 applies_to: ~/AppData/Local/hermes/profiles/*
 trigger_threshold: >6 file changes → load multi-file-change-protocol

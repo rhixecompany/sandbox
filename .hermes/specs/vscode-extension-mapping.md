@@ -1,3 +1,11 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
+---
+
+
 # Extension-to-Filetype Mapping — Code-Insiders
 
 Generated: 2026-09-10

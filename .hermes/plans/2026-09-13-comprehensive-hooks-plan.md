@@ -1,3 +1,6 @@
+---
+status: "in_progress"
+---
 # Implementation Plan — Hooks Comprehensive Implementation + Artifact Stack
 
 Plan id: hook-comprehensive-2026-09-13

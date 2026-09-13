@@ -1,4 +1,4 @@
----
+--- sidebar_position: 16 title: "Persistent Goals" description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop." ---
 name: run-all-goals-verified-pattern
 version: 2.0.0
 source: verified session execution with tree.prompt.txt as PRIMARY source; tree-cleanup-first execution; verified artifacts (ls -l) and real CLI outputs; authorization FULL; no synthetic session IDs/capabilities/quality/ranking/PASS.

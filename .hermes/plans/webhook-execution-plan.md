@@ -1,3 +1,6 @@
+---
+status: "in_progress"
+---
 # Implementation Plan — Webhooks (Hermes Agent)
 
 > Protocol: multi-file-change-protocol (14 skills loaded; sequential execution; >6 files expected).

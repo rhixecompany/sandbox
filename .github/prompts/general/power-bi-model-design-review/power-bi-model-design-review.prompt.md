@@ -1,119 +1,49 @@
 ---
 name: power-bi-model-design-review
-title: Power BI Model Design Review
-description: Comprehensive Power BI data model design review covering model architecture, relationships, and optimization opportunities for scalable, maintainable models.
-trigger: /power-bi-model-design-review
-category: general
+title: Power BI Data Model Design Review
+description: Comprehensive Power BI data model design review prompt for evaluating model architecture,
+  relationships, and optimization opportunities.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /power-bi-model-design-review
+toolsets:
+- terminal
+- file
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: creative-director
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /power-bi-model-design-review
+    flags: {}
+    help: Comprehensive Power BI data model design review prompt for evaluating model a...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- audit
+- data
+- ml
+- prompts
+scripts: []
 ## Goal
-Comprehensive Power BI data model design review covering model architecture, relationships, and optimization opportunities for scalable, maintainable models.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Review Framework](#review-framework)
-  - [**Comprehensive Model Assessment**](#**comprehensive-model-assessment**)
-- [Detailed Review Process](#detailed-review-process)
-  - [**Phase 1: Model Architecture Analysis**](#**phase-1:-model-architecture-analysis**)
-  - [A. **Schema Design Assessment**](#a-**schema-design-assessment**)
-- [Review Output Structure](#review-output-structure)
-  - [**Executive Summary Template**](#**executive-summary-template**)
-- [Review Checklist Templates](#review-checklist-templates)
-  - [**Quick Assessment Checklist** (30-minute review)](#**quick-assessment-checklist**-30-minute-review)
-- [Specialized Review Types](#specialized-review-types)
-  - [**Pre-Production Review**](#**pre-production-review**)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Review Framework](#review-framework)
-- [**Comprehensive Model Assessment**](#**comprehensive-model-assessment**)
-- [Detailed Review Process](#detailed-review-process)
-- [**Phase 1: Model Architecture Analysis**](#**phase-1:-model-architecture-analysis**)
-- [A. **Schema Design Assessment**](#a-**schema-design-assessment**)
-- [Review Output Structure](#review-output-structure)
-- [**Executive Summary Template**](#**executive-summary-template**)
-- [Review Checklist Templates](#review-checklist-templates)
-- [**Quick Assessment Checklist** (30-minute review)](#**quick-assessment-checklist**-30-minute-review)
-- [Specialized Review Types](#specialized-review-types)
-- [**Pre-Production Review**](#**pre-production-review**)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Comprehensive Power BI data model design review prompt for evaluating model architecture, relationships, and optimization opportunities.
 
-You are a Power BI data modeling expert. Evaluate model architecture, identify optimization opportunities, and ensure best practices for scalable, maintainable, and performant data models.
+# Power BI Data Model Design ReviewYou are a Power BI data modeling expert conducting comprehensive design reviews. Your role is to evaluate model architecture, identify optimization opportunities, and ensure adherence to best practices for scalable, maintainable, and performant data models.
 
 ## Review Framework
 
@@ -121,8 +51,7 @@ You are a Power BI data modeling expert. Evaluate model architecture, identify o
 
 >
 > When reviewing a Power BI data model, conduct analysis across these key dimensio
-
-
+> **Full content:**
 
 ## Detailed Review Process
 
@@ -136,7 +65,7 @@ You are a Power BI data modeling expert. Evaluate model architecture, identify o
 
 >
 > Data Model Review Summary
-
+> **Full content:**
 
 ## Review Checklist Templates
 
@@ -144,7 +73,7 @@ You are a Power BI data modeling expert. Evaluate model architecture, identify o
 
 >
 > □ Model follows star schema principles
-
+> **Full content:**
 
 ## Specialized Review Types
 
@@ -152,15 +81,15 @@ You are a Power BI data modeling expert. Evaluate model architecture, identify o
 
 >
 > - Functionality completeness
-
+> **Full content:**
 
 ## Template References
 
-Detailed templates in `templates/`:- `detailed_review_process.md`- `review_checklist_templates.md`- `review_framework.md`- `review_output_structure.md`- `specialized_review_types.md`
+Detailed templates in `templates/power-bi-model-design-review/`:- `detailed_review_process.md`- `review_checklist_templates.md`- `review_framework.md`- `review_output_structure.md`- `specialized_review_types.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -170,19 +99,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
-Use when reviewing Power BI data model design for architecture and optimization.
+Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -195,8 +125,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -215,12 +146,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -239,7 +170,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -250,7 +181,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -283,6 +214,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -291,11 +223,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -304,7 +233,3 @@ Same-family prompts:
 - [`power-bi-performance-troubleshooting.prompt.md`](power-bi-performance-troubleshooting.prompt.md)
 - [`power-bi-report-design-consultation.prompt.md`](power-bi-report-design-consultation.prompt.md)
 - [`power-platform-mcp-connector-suite.prompt.md`](power-platform-mcp-connector-suite.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

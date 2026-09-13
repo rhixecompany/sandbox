@@ -1,93 +1,56 @@
 ---
 name: context-map
 title: Context Map
-description: Document the boundaries, contracts, and dependencies between bounded contexts in a system architecture.
-trigger: /context-map
-category: general
-version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
+description: Build a dependency and reference map before making changes so implementation starts from
+  the right files.
+version: 2.0.0
 license: MIT
+author: Hermes Agent
+trigger: /context-map
+toolsets:
+- file
+- terminal
+skills:
+- codemap
+dependencies:
+- skill:codemap
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /context-map
+    flags: {}
+    help: Build a dependency and reference map before making changes so implementation ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- frontend
+- prompts
+- specification
+- testing
+- typescript
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Document the boundaries, contracts, and dependencies between bounded contexts in a system architecture.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-  - [Phase 1: Discover the scope](#phase-1:-discover-the-scope)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-- [Phase 1: Discover the scope](#phase-1:-discover-the-scope)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Build a dependency and reference map before making changes so implementation starts from the right files.
 
-## context-map> Build a dependency-aware context map before implementation begins.
+# context-map> Build a dependency-aware context map before implementation begins.
 
+## Context
 
 - Use when the task needs a safe pre-change inventory
 - Focus on direct dependencies, related tests, and nearby patterns
@@ -109,7 +72,7 @@ Build a dependency and reference map before making changes so implementation sta
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. If the task description is too vague to identify specific files, stop and ask the user to clarify the target area before proceeding to Phase 1
 2. Search for the files directly related to the task
@@ -117,16 +80,17 @@ Build a dependency and reference map before making changes so implementation sta
 4. Identify the likely test files
 5. If no related test files are found, explicitly state "No related tests identified" in the map and flag it as a risk item
 6. Find 2-3 existing code examples in the codebase that demonstrate the same pattern (for example, same hook usage, same module export style) that the new change should follow
-7. Call out breaking-change risks
+7. Call out breaking-change risks clearly
 8. Stop after mapping; do not implement yet
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)| Skill | Purpose |
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
 | --- | --- |
 | `codemap` | Codebase discovery and dependency mapping (loads symbol tables, dependency trees, and cross-file references) |
 
+## Phases
 
 ### Phase 1: Discover the scope
 
@@ -141,11 +105,11 @@ Build a dependency and reference map before making changes so implementation sta
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`
+Templates in `templates/context-map/`:- `phases.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -155,7 +119,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -164,7 +128,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -183,7 +147,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -215,18 +179,11 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

@@ -1,135 +1,54 @@
 ---
 name: create-implementation-plan
 title: Create Implementation Plan
-description: Produce a phased, bite-sized implementation plan from a specification with clear tasks, paths, and verification steps.
-trigger: /create-implementation-plan
-category: planning
+description: Create a new implementation plan file for new features, refactoring existing code or upgrading
+  packages, design, architecture or infrastructure.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /create-implementation-plan
+toolsets:
+- web
+- browser
+- todo
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-implementation-plan
+    flags: {}
+    help: Create a new implementation plan file for new features, refactoring existing ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- generator
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Produce a phased, bite-sized implementation plan from a specification with clear tasks, paths, and verification steps.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Primary Directive](#primary-directive)
-- [Execution Context](#execution-context)
-- [Core Requirements](#core-requirements)
-- [Plan Structure Requirements](#plan-structure-requirements)
-- [Phase Architecture](#phase-architecture)
-- [AI-Optimized Implementation Standards](#ai-optimized-implementation-standards)
-- [Output File Specifications](#output-file-specifications)
-- [Mandatory Template Structure](#mandatory-template-structure)
-- [Template Validation Rules](#template-validation-rules)
-- [Status](#status)
-- [1. Requirements & Constraints](#1-requirements-&-constraints)
-- [2. Implementation Steps](#2-implementation-steps)
-  - [Implementation Phase 1](#implementation-phase-1)
-- [3. Alternatives](#3-alternatives)
-- [4. Dependencies](#4-dependencies)
-- [5. Files](#5-files)
-- [6. Testing](#6-testing)
-- [7. Risks & Assumptions](#7-risks-&-assumptions)
-- [8. Related Specifications / Further Reading](#8-related-specifications-/-further-reading)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [Primary Directive](#primary-directive)
-- [Execution Context](#execution-context)
-- [Core Requirements](#core-requirements)
-- [Plan Structure Requirements](#plan-structure-requirements)
-- [Phase Architecture](#phase-architecture)
-- [AI-Optimized Implementation Standards](#ai-optimized-implementation-standards)
-- [Output File Specifications](#output-file-specifications)
-- [Mandatory Template Structure](#mandatory-template-structure)
-- [Template Validation Rules](#template-validation-rules)
-- [Status](#status)
-- [1. Requirements & Constraints](#1-requirements-&-constraints)
-- [2. Implementation Steps](#2-implementation-steps)
-- [Implementation Phase 1](#implementation-phase-1)
-- [3. Alternatives](#3-alternatives)
-- [4. Dependencies](#4-dependencies)
-- [5. Files](#5-files)
-- [6. Testing](#6-testing)
-- [7. Risks & Assumptions](#7-risks-&-assumptions)
-- [8. Related Specifications / Further Reading](#8-related-specifications-/-further-reading)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.
 
+## Context
 
 Use when you need to update or create a plan for the current workspace or task.
 
@@ -146,13 +65,14 @@ Use when you need to update or create a plan for the current workspace or task.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -171,7 +91,7 @@ Use when you need to update or create a plan for the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Primary Directive
@@ -217,7 +137,7 @@ All implementation plans must strictly adhere to the following template. Each se
 
 ## Status
 
-> The status of the implementation plan must be defined in the front matte
+> The status of the implementation plan must be clearly defined in the front matte
 > goal: [Concise Title Describing the Package Implementation Plan's Goal]
 > **Full content:**
 
@@ -247,7 +167,7 @@ All implementation plans must strictly adhere to the following template. Each se
 
 ## 5. Files
 
-[List the files that affected the feature or refactoring task.]
+[List the files that will be affected by the feature or refactoring task.]
 
 - **FILE-001**: Description of file 1- **FILE-002**: Description of file 2
 
@@ -269,11 +189,11 @@ All implementation plans must strictly adhere to the following template. Each se
 
 ## Template References
 
-Detailed templates in `templates/`:
+Detailed templates in `templates/create-implementation-plan/`:
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -283,7 +203,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -292,7 +212,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -311,7 +231,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -322,7 +242,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -355,6 +275,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -363,11 +284,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -386,7 +304,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

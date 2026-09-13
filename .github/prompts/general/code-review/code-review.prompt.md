@@ -1,96 +1,45 @@
 ---
 name: code-review
-title: Comprehensive Code Review
-description: Run a structured code review for correctness, security, and testing risk — mapping scope, deep-reviewing changes, and producing an actionable report.
-trigger: /code-review
-category: general
+title: Code Review
+description: No description
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /code-review
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers:
+    - ast-grep
+    - filesystem
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /code-review
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- domain:code-quality
+- domain:dev
+scripts: []
 ## Goal
-Run a structured code review for correctness, security, and testing risk — mapping scope, deep-reviewing changes, and producing an actionable report.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Scope and Risk Mapping](#phase-1:-scope-and-risk-mapping)
-  - [Phase 2: Deep Review](#phase-2:-deep-review)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Scope and Risk Mapping](#phase-1:-scope-and-risk-mapping)
-- [Phase 2: Deep Review](#phase-2:-deep-review)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Use when "Comprehensive code review prompt for correctness, security, and testing risk." to accomplish the associated tasks and objectives.
 
@@ -98,13 +47,14 @@ Use when "Comprehensive code review prompt for correctness, security, and testin
 
 Perform high-signal code reviews that prioritize correctness, security, and high-risk logic such as authentication, payments, and data operations.
 
+## Context
 
 Use this prompt when reviewing diffs, pull requests, or selected files and when the user asks for a review. Focus on actionable findings with evidence.
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Risk-based review and severity ranking
 - Security threat spotting and input-validation analysis
@@ -120,11 +70,11 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 
 - Reviewer: Treats correctness and regressions as first priority, style as secondary.
 - Security Checker: Looks for unsafe trust boundaries, privilege mistakes, and missing validation.
-- Test Checker: Ensures new and changed behavior covered deterministic tests.
+- Test Checker: Ensures new and changed behavior is covered by deterministic tests.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Lead with findings ordered by severity.
 - Include concrete evidence with file paths and line references when possible.
@@ -132,6 +82,7 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 - Request clarification instead of guessing when intent is ambiguous.
 - Keep summary concise after findings.
 
+## Phases
 
 ### Phase 1: Scope and Risk Mapping
 
@@ -170,11 +121,11 @@ Use this prompt when reviewing diffs, pull requests, or selected files and when 
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`
+Templates in `templates/code-review/`:- `phases.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -183,7 +134,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -202,7 +153,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -226,6 +177,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -234,16 +186,11 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`code-exemplars-blueprint-generator.prompt.md`](code-exemplars-blueprint-generator.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```
+
+

@@ -1,8 +1,11 @@
 ---
-name: "skills-spec"
-title: "Spec — Skills System"
-version: 1.0.0
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 # Implementation Spec: skills
 ## Source
 - File: docs/features/skills.md (1063 lines, real content verified via head check)

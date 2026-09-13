@@ -1,7 +1,10 @@
 ---
-name: workspace-references
-description: "Verified pointers to workspace reference/template files. tree.prompt.txt is PRIMARY source."
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Workspace References
 

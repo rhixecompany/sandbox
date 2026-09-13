@@ -1,20 +1,8 @@
 ---
-name: run-all-goals-implementation
-title: "Run All Goals — Implementation Plan (Tree-Primary v3.0)"
-description: >
-  Tree-primary unified implementation plan. Primary source: tree.prompt.txt
-  (cleanup, config, mjs->mts). tree.prompt.txt defines the cleanup-first
-  execution pipeline. Secondary: goal-using-superpowers-brainstormin.txt,
-  test-run.prompt.txt. Implements all goals/subgoals with specs, plans,
-  scripts, skills, templates, gates, checklists, rules, and verification
-  at score >= 99.
-version: 3.0.0
-author: Alexa
-license: MIT
-tags: [implementation, execution, unified, tree-primary, score-99, cleanup-first]
-status: in_progress
-phases: 11
-subgoals: 26
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it's done. Our take on the Ralph loop."
+status: "in_progress"
 ---
 
 # Run All Goals — Implementation Plan

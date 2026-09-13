@@ -1,15 +1,44 @@
 ---
 name: bash-scripts-fix
 title: Bash Scripts Modernization and Consolidation
-description: Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.
+description: No description
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /bash-scripts-fix
 toolsets:
-- terminal
 - file
-category: tooling
-
----
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: default
+    mcp_servers:
+    - filesystem
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /bash-scripts-fix
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- language:bash
+- language:typescript
+scripts: []
 ## Goal
 
 Audit, modernize, and consolidate bash, PowerShell, BAT, and TypeScript scripts across the workspace.
@@ -177,7 +206,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
 
-
-## Workflow
-
-Description needed.

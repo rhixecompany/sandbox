@@ -1,3 +1,6 @@
+---
+status: "in_progress"
+---
 # VS Code Stable Uninstall + Code-Insiders Full Configuration
 
 ## Overview

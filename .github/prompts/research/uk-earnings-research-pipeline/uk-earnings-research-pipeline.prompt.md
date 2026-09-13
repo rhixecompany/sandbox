@@ -1,99 +1,58 @@
 ---
 name: uk-earnings-research-pipeline
-title: UK Earnings Research Pipeline
-description: Comprehensive stacked-skills pipeline to discover, filter, validate, and rank superior UK earning platforms, leveraging prior session data and MCP tools.
-trigger: /uk-earnings-research-pipeline
-category: research
+title: UK Earnings Research Pipeline — Better Than Outlier & Attapoll
+description: Comprehensive research pipeline using stacked skills to identify superior UK earning platforms,
+  leveraging all prior session data and MCP tools.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /uk-earnings-research-pipeline
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:using-superpowers
+- skill:user-communication-preferences
+- skill:brainstorming
+- skill:subagent-driven-development
+- skill:plan
+- skill:plans-and-specs
+- skill:web-research-pipeline
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /uk-earnings-research-pipeline
+    flags: {}
+    help: Comprehensive research pipeline using stacked skills to identify superior UK ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- data
+- frontend
+- mcp
+- prompts
+- skills
+- specification
+- typescript
+scripts: []
 ## Goal
-Comprehensive stacked-skills pipeline to discover, filter, validate, and rank superior UK earning platforms, leveraging prior session data and MCP tools.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 0: Context Recovery & Inventory (MANDATORY FIRST)](#phase-0:-context-recovery-&-inventory-mandatory-first)
-  - [Phase 1: Systematic Platform Discovery](#phase-1:-systematic-platform-discovery)
-  - [Phase 2: Rigorous Filtering & Scoring](#phase-2:-rigorous-filtering-&-scoring)
-  - [Phase 3: Deep Validation (Top 20 Platforms)](#phase-3:-deep-validation-top-20-platforms)
-  - [Phase 4: Output Generation — Complete Execution Kit](#phase-4:-output-generation-—-complete-execution-kit)
-  - [Phase 5: Verification & Handoff](#phase-5:-verification-&-handoff)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Subgoals](#subgoals)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 0: Context Recovery & Inventory (MANDATORY FIRST)](#phase-0:-context-recovery-&-inventory-mandatory-first)
-- [Phase 1: Systematic Platform Discovery](#phase-1:-systematic-platform-discovery)
-- [Phase 2: Rigorous Filtering & Scoring](#phase-2:-rigorous-filtering-&-scoring)
-- [Phase 3: Deep Validation (Top 20 Platforms)](#phase-3:-deep-validation-top-20-platforms)
-- [Phase 4: Output Generation — Complete Execution Kit](#phase-4:-output-generation-—-complete-execution-kit)
-- [Phase 5: Verification & Handoff](#phase-5:-verification-&-handoff)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Subgoals](#subgoals)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 **Identify and validate UK earning platforms that are genuinely better than Outlier and Attapoll** — higher pay, better reliability, UK-specific opportunities, lower barrier to entry, faster payouts. Create all necessary files, trackers, and samples for immediate execution.
 
+## Context
 
 - **User**: Alexa (UK-based, Site Supervisor/Manager background, Rexos Properties May 2025–June 2026)
 - **Workspace**: `C:\Users\Alexa\Desktop\SandBox\`
@@ -102,7 +61,7 @@ Comprehensive stacked-skills pipeline to discover, filter, validate, and rank su
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -112,7 +71,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -121,7 +80,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -137,8 +96,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 2. **Parallel first** — Dispatch subagents for independent categories simultaneously
 3. **Smallest safe change** — Update files incrementally, verify each write
 4. **Verify before claim** — Test trackers open in Excel, validate links resolve
-5. **Report blockers** — State when a platform lacks verifiable data
+5. **Report blockers** — State clearly when a platform lacks verifiable data
 
+## Phases
 
 ### Phase 0: Context Recovery & Inventory (MANDATORY FIRST)
 
@@ -197,7 +157,8 @@ Create folder structure at `uk-earnings-kit/` with:
 - `platforms/` — per-category deep-dives
 - `references/` — master CSV, scoring XLSX, links, tax guidance, scam warnings
 - `trackers/` — earnings XLSX, tax tracker, bank switch log, weekly planner, referral tracker
-- `templates/` — sample earnings week, tax return snippet, referral messages
+- `templates/` — platform evaluation, weekly routine, expense log, signup checklist
+- `samples/` — sample earnings week, tax return snippet, referral messages
 - `RESEARCH_REPORT.md` — executive summary, top 5 recommendations, 30-day action plan
 
 ### Phase 5: Verification & Handoff
@@ -212,7 +173,7 @@ Create folder structure at `uk-earnings-kit/` with:
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content
 2. **Structured output** — Use clear sections with consistent heading levels
@@ -234,11 +195,11 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -284,6 +245,7 @@ The following MCP servers and tools are available. Use them in preference to nat
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -292,16 +254,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`uk-earnings-research.prompt.md`](uk-earnings-research.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

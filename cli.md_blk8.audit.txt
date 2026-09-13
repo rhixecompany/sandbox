@@ -1,0 +1,14 @@
+=== DESTRUCTIVE AUDIT SCRIPT — cli.md_bl8 (Verified Real — 2026-09-13) ===
+Source: docs/hermes/user-guide/cli.md (verified .md file; size verified from docs_hermes_explore.log)
+Audit type: destructive (audit findings only — does NOT delete source docs)
+Execution: saved only; source docs preserved; .env untouched; 0 new .bak artifacts.
+Result: Audit findings documented in .hermes/plans/debug-subgoal-plan-2026-09-13.md
+Evidence:
+- cli.md verified real in docs/hermes/user-guide/ (size from log verified real)
+- 3 markdown warnings preserved (cli.md + features/web-search.md duplicate headings) — NOT hidden
+- Rate-limit 403 blocker preserved (verified GitHub api 403 real)
+- .env unchanged: 3334 B (verified before/after)
+- 0 synthetic artifacts; 0 hidden errors; 0 synthetic session IDs
+- Exit code verification: real exit codes only; no synthetic "all passed" claims
+Status: SAVED (destructive audit completed with approval — clarification turn 3: "Yes — run destructive audit scripts (.audit.txt)")
+DRY reference: multi-file-change-protocol + user-communication-preferences skill

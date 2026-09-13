@@ -1,15 +1,43 @@
 ---
 name: ai-prompt-engineering-safety-review
 title: AI Prompt Engineering Safety Review
-description: Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
+description: No description
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /ai-prompt-engineering-safety-review
 toolsets:
-- terminal
 - file
-category: development
-
----
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers:
+    - filesystem
+    - github
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /ai-prompt-engineering-safety-review
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- domain:code-quality
+scripts: []
 ## Goal
 
 Review a prompt for safety, bias, security, clarity, and effectiveness, then produce a safer improved version.
@@ -166,7 +194,3 @@ Same-family prompts:
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
 
 
-
-## Workflow
-
-Description needed.

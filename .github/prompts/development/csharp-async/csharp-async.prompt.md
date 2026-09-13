@@ -1,137 +1,66 @@
 ---
 name: csharp-async
-title: C# Async Programming
-description: Apply C# asynchronous programming best practices for async/await, Task, ValueTask, cancellation tokens, and ConfigureAwait usage in modern .NET applications.
-trigger: /csharp-async
-category: development
+title: C# Async Programming Best Practices
+description: Get best practices for C# async programming.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /csharp-async
+toolsets:
+- terminal
+- file
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /csharp-async
+    flags: {}
+    help: Get best practices for C# async programming.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- csharp
+- data
+- dotnet
+- fix
+- prompts
+- typescript
+- performance
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Apply C# asynchronous programming best practices for async/await, Task, ValueTask, cancellation tokens, and ConfigureAwait usage in modern .NET applications.
 
-## Context
+Get best practices for C# async programming.
 
-## Phases
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Naming Conventions](#naming-conventions)
-- [Return Types](#return-types)
-- [Exception Handling](#exception-handling)
-- [Performance](#performance)
-- [Common Pitfalls](#common-pitfalls)
-- [Implementation Patterns](#implementation-patterns)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Naming Conventions](#naming-conventions)
-- [Return Types](#return-types)
-- [Exception Handling](#exception-handling)
-- [Performance](#performance)
-- [Common Pitfalls](#common-pitfalls)
-- [Implementation Patterns](#implementation-patterns)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
-
-Review C# code for async/await violations and suggest corrections that follow .NET conventions.
-
-## Prerequisites
-
-- A C# project using .NET 8 or later
-- The code to review
-
-## C# Async Programming — Review Checklist
+# C# Async Programming Best PracticesYour goal is to help me follow best practices for asynchronous programming in C#.
 
 ## Naming Conventions
 
-- Use the `Async` suffix on all async method names
-- Match method names with their synchronous counterparts when applicable (e.g., `GetDataAsync` for `GetData`)
+- Use the 'Async' suffix for all async methods- Match method names with their synchronous counterparts when applicable (e.g., `GetDataAsync()` for `GetData()`)
 
 ## Return Types
 
-- Return `Task<T>` when the method returns a value
-- Return `Task` when the method does not return a value
-- Consider `ValueTask<T>` for high-performance scenarios to reduce allocations
-- Avoid returning `void` for async methods except for event handlers
+- Return `Task<T
+
+> ` when the method returns a value- Return `Task` when the method doesn't return a value- Consider `ValueTask<T>` for high-performance scenarios to reduce allocations- Avoid returning `void` for async methods except for event handlers
 
 ## Exception Handling
 
-- Wrap `await` expressions in `try`/`catch` blocks
-- Do not swallow exceptions in async methods
-- Use `ConfigureAwait(false)` to prevent deadlocks in library code
-- Propagate exceptions with `Task.FromException()` instead of throwing in `Task`-returning methods
+- Use try/catch blocks around await expressions- Avoid swallowing exceptions in async methods- Use `ConfigureAwait(false)` when appropriate to prevent deadlocks in library code- Propagate exceptions with `Task.FromException()` instead of throwing in async Task returning methods
 
 ## Performance
 
@@ -142,26 +71,21 @@ Review C# code for async/await violations and suggest corrections that follow .N
 
 ## Common Pitfalls
 
-- Never use `.Wait()`, `.Result`, or `.GetAwaiter().GetResult()` in async code
-- Avoid mixing blocking and async code
-- Do not create `async void` methods (except for event handlers)
-- Always `await` `Task`-returning methods
+- Never use `.Wait()`, `.Result`, or `.GetAwaiter().GetResult()` in async code- Avoid mixing blocking and async code- Don't create async void methods (except for event handlers)- Always await Task-returning methods
 
 ## Implementation Patterns
 
-- Implement the async command pattern for long-running operations
-- Use async streams (`IAsyncEnumerable<T>`) for processing sequences asynchronously
-- Consider the task-based asynchronous pattern (TAP) for public APIs
+- Implement the async command pattern for long-running operations- Use async streams (IAsyncEnumerable<T
 
-When reviewing C# code, flag these issues and suggest corrections that follow these conventions.
+> ) for processing sequences asynchronously- Consider the task-based asynchronous pattern (TAP) for public APIsWhen reviewing my C# code, identify these issues and suggest improvements that follow these best practices.
 
 ## Template References
 
-Templates in `templates/`:- `common_pitfalls.md`- `exception_handling.md`- `implementation_patterns.md`- `performance.md`- `return_types.md`
+Templates in `templates/csharp-async/`:- `common_pitfalls.md`- `exception_handling.md`- `implementation_patterns.md`- `performance.md`- `return_types.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -171,19 +95,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -196,8 +121,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -216,12 +142,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -240,7 +166,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -251,7 +177,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -284,6 +210,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -292,11 +219,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -306,7 +230,3 @@ Same-family prompts:
 - [`csharp-nunit.prompt.md`](csharp-nunit.prompt.md)
 - [`csharp-tunit.prompt.md`](csharp-tunit.prompt.md)
 - [`csharp-xunit.prompt.md`](csharp-xunit.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

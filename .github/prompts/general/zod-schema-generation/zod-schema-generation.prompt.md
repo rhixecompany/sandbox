@@ -1,15 +1,48 @@
 ---
 name: zod-schema-generation
 title: Zod Schema Generation
-description: Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples with full type safety.
+description: Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples
+  with full type safety.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /zod-schema-generation
 toolsets:
-- terminal
 - file
-category: general
-
----
-
+- terminal
+skills:
+- prompt-engineering
+dependencies:
+- skill:prompt-engineering
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /zod-schema-generation
+    flags: {}
+    help: Generate Zod validation schemas from TypeScript types, database schemas, or J...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- data
+- database
+- generator
+- prompts
+- security
+- sql
+- typescript
+scripts: []
 ## Goal
 
 Generate Zod validation schemas from TypeScript types, database schemas, or JSON samples.
@@ -145,6 +178,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-## Workflow
-
-Description needed.

@@ -1,14 +1,45 @@
 ---
 name: gen-specs-as-issues
-title: Product Manager Assistant: Feature Identification and Specification
-description: This workflow guides you through a systematic approach to identify missing features, prioritize them, and create detailed specifications for implementation.
+title: 'Product Manager Assistant: Feature Identification and Specification'
+description: This workflow guides you through a systematic approach to identify missing features, prioritize
+  them, and create detailed specifications for implementation.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /gen-specs-as-issues
 toolsets:
-- terminal
 - file
-category: github
-
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /gen-specs-as-issues
+    flags: {}
+    help: This workflow guides you through a systematic approach to identify missing fe...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- ml
+- prompts
+- specification
+- typescript
+- workflow
+scripts: []
 ---
 
 ## Goal
@@ -220,6 +251,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-## Workflow
-
-Description needed.

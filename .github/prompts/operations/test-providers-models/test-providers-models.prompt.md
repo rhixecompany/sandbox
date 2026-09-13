@@ -1,362 +1,240 @@
 ---
 name: test-providers-models
-title: "Test Providers Models"
-description: "Comprehensive workflow for testing, ranking, and configuring Hermes LLM providers and models. Use when adding new providers, auditing model performance, or configuring fallback chains."
-version: 3.0.0
-author: Alexa
+title: Test Providers & Models — Benchmark, Delegate, and Configure Fallback Chain
+description: Inventory all authorized LLM providers, delegate live capability probes to subagents with
+  full context, rank working free models by vision → reasoning → context size, and configure the Hermes
+  primary model + fallback chain from proven working models per authorized provider.
+version: 1.0.0
 license: MIT
+author: Hermes Agent
 trigger: /test-providers-models
-toolsets: [terminal, file, web, memory, skills, delegation]
-category: operations
-tags: [providers, models, testing, configuration, hermes, llm]
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- skill:test-providers-models
+formatter: default
 metadata:
   hermes:
-    tags: [providers, models, testing, configuration]
-    related_skills: [web-research-pipeline, executing-plans, subagent-driven-development]
----
-
-# Test Providers Models — Comprehensive Implementation Prompt
-
-## Overview
-
-Automated reasoning and workflow tool for `test-providers-models`. Execute multi-step provider testing with deterministic quality controls and structured outputs.
-
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /test-providers-models
+    flags: {}
+    help: Inventory all authorized LLM providers, delegate live capability probes to su...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- configuration
+- ml
+- prompts
+- testing
+- typescript
+scripts: []
 ## Goal
 
-Discover, test, rank, and configure the best free LLM providers and models for Hermes Agent. Produce a ranked top-5 model list, configure Hermes with the primary model, and set up fallback chains with remaining models.
+Produce a **verified, ordered fallback chain** across all authorized Hermes providers, using only models that *actually work* (probed live, not assumed), and configure Hermes (`model` + `fallback_providers`) accordingly. The ordering rule is deterministic:
+
+**vision access → reasoning capability → large context size** (each tier breaks ties by the next tier; models lacking a higher tier fall below those that have it).
+
+The heavy lifting (live provider probing) is **delegated to subagents** so the main session is not blocked by rate limits or long background calls, and so each provider cluster is worked in isolation with full context.
+
+## Rules
+
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
+> Domain-specific additions below.
+
+### Domain Rules
+
+1. **Inventory from authority** — Enumerate providers/models from `hermes auth list`; never invent a provider or model ID.
+2. **Probe, don't assume** — A model counts as working only after a live capability probe succeeds; no fabricated results.
+3. **Deterministic ordering** — Rank by the fixed rule: vision → reasoning → context size; document every override.
+4. **Free-tier only** — Only models usable on the free tier are candidates for the fallback chain.
+5. **Verify before claiming** — Run the Verification section gates before reporting the chain complete.
 
 ## Subgoals
 
-1. **Inventory** — Capture current Hermes config, auth providers, status, and fallback state
-2. **Research** — Web-search all authorized providers for free models (`:free`, `-free` suffixes)
-3. **Consolidate** — Deduplicate and migrate all test-providers-models files to canonical location
-4. **Test** — Execute standardized test prompts against each discovered model
-5. **Rank** — Audit test results and rank top 5 by quality, speed, reliability
-6. **Configure** — Set primary model and fallback chain via `hermes config set` / `hermes fallback add`
-7. **Verify** — Validate all configuration changes and run prompts-judge on this prompt
+1. **Inventory** — Enumerate every authorized provider from `hermes auth list` + `hermes config show`.
+2. **Delegate probes** — Dispatch one subagent per provider cluster; each carries the full context block + a fixed probe script; each returns structured capability data (working?, vision, reasoning, context_size).
+3. **Rank** — Merge subagent results, drop non-working providers, sort by the vision → reasoning → context rule.
+4. **Configure** — Set `model.provider` / `model.default` (primary = proven working model) and `fallback_providers` (ordered list) via `hermes config set`; fix any string-encoded list artifacts.
+5. **Verify** — `hermes config check` + YAML inspection; update `docs/free-model-selection.md` and `*_models.json` artifacts.
 
-## Context
+## Personas
 
-This prompt lives at `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` with co-located templates and scripts. It is invoked when the user needs to discover, test, or configure LLM providers and models for Hermes Agent.
+- **Operator** — Runs the delegation, applies config, verifies.
+- **Benchmark Subagent** — Probes one provider cluster, returns structured capability JSON.
+- **Reviewer** — Checks ordering rule compliance and config validity.
 
-### Current State (September 2026)
+## Profiles
 
-- **Primary model**: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
-- **Free models available**: 19 on OpenRouter (verified via API)
-- **Tested models**: 10 (results in `test-providers-models-results.json`)
-- **Hermes profiles**: 15 configured
-- **MCP servers**: 16 active
+Use profile `exec-assistant` (ops) for the orchestration; subagents inherit the default toolset. Run from the SandBox workspace root.
 
-### Authorized Providers
+## Context Block (hand to every subagent verbatim)
 
-| Provider | Auth | Status |
-|----------|------|--------|
-| openrouter | API Key | Active |
-| nous | OAuth (device_code) | Active |
-| opencode-zen | API Key + OAuth | Active |
-| deepseek | API Key | Active |
-| gemini | API Key | Rate-limited |
-| huggingface | API Key | Active |
-| ollama-cloud | API Key | Active |
-| minimax | API Key | Insufficient balance |
-| openai-api | API Key | Active |
-| openai-codex | OAuth | Rate-limited |
+```text
+WORKSPACE = C:\Users\Alexa\Desktop\SandBox
+HERMES_HOME = C:\Users\Alexa\AppData\Local\hermes
+AUTHORIZED PROVIDERS (hermes auth list, 2026-08-08):
+  copilot, deepseek, gemini, huggingface, nous, ollama-cloud,
+  openai-codex, openrouter, xai-oauth
+ROOT CONFIG (hermes config show):
+  model.provider = nous
+  model.default   = tencent/hy3:free
+  fallback_providers = []
+PROBE METHOD:
+  hermes chat --provider <provider> --model <model> -q "reply with only:
+  vision=<yes|no> reasoning=<yes|no> ctx=<tokens>"  (run background, no timeout)
+  OR web_extract the provider /v1/models catalog and filter free (pricing 0 / ':free').
+RETURN FORMAT (one line per model):
+  provider | model | working=<bool> | vision=<bool> | reasoning=<bool> | ctx=<int>
+KNOWN BASELINE (probed 2026-08-07, for cross-check only — re-verify live):
+  opencode-zen: deepseek-v4-flash-free (128K, reasoning✓, WORKING), nemotron-3-ultra-free (1M, ✓, WORKING)
+  openrouter: nvidia/nemotron-3-ultra-550b-a55b:free (1M, ✓, WORKING),
+              nvidia/nemotron-3-super-120b-a12b:free (1M, ✓, WORKING),
+              nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free (256K, ✓, WORKING),
+              google/gemma-4-31b-it:free (262K, ✗, WORKING),
+              google/gemma-4-26b-a4b-it:free (262K, ✗, WORKING),
+              openai/gpt-oss-20b:free (131K, ✗, WORKING)
+  gemini: gemini-2.5-flash (1M, reasoning✓, WORKING)
+  ollama-cloud: nemotron-3-ultra (1M, ✓, WORKING)
+  NOT WORKING (2026-08-07): deepseek (402), huggingface (400), nous (403),
+              xai-oauth (402), openai-codex (429), copilot (n/a)
+NOTE: No working free model in the verified set has vision. The rule therefore
+      degrades to reasoning → context for the current free-tier landscape.
+```
 
-## Specs
+## Delegation Plan (subagents)
 
-### specs.md
+Dispatch in parallel (3 clusters). Each subagent gets the full Context Block above.
 
-| Spec ID | Requirement | Acceptance Criteria |
-|---------|-------------|---------------------|
-| S1 | Capture all authorized providers | `hermes auth list` output parsed, all providers enumerated |
-| S2 | Web-research each provider for free models | Documentation URLs extracted, model lists compiled |
-| S3 | Consolidate all test-providers-models files | Single canonical location: `.github/prompts/operations/test-providers-models/` |
-| S4 | Test up to 10 free models | Each model receives standardized test prompt, results logged |
-| S5 | Rank top 5 models | Ranking based on: response quality, latency, context window, capabilities |
-| S6 | Configure Hermes primary model | `hermes config set model <provider/model>` |
-| S7 | Configure fallback chain | `hermes fallback clear` + `hermes fallback add` for remaining 4 |
-| S8 | All artifacts on disk | No duplicates, all files in correct paths |
-| S9 | prompts-judge score ≥ 98 | Run `/prompts-judge` on this prompt, fix all issues |
+| Subagent | Cluster | Providers |
+| -------- | ------- | --------- |
+| A | Zen/router/deepseek | opencode-zen, openrouter, deepseek |
+| B | Google/cloud/nous/hf | gemini, ollama-cloud, nous, huggingface |
+| C | OAuth/codex/copilot/xai | openai-codex, copilot, xai-oauth |
 
-### plans.md
+Each subagent:
 
-| Phase | Task | Dependencies | Est. Time |
-|-------|------|--------------|-----------|
-| P1 | Inventory & Research | None | 10 min |
-| P2 | Consolidate & Deduplicate | P1 | 5 min |
-| P3 | Test Models | P2 | 20 min |
-| P4 | Rank & Configure | P3 | 10 min |
-| P5 | Verify & Judge | P4 | 5 min |
+- Runs the probe for every candidate free model of its cluster.
+- If a provider is rate-limited (429) or blocked (403), reports `working=false` with the error and falls back to the baseline entry in the Context Block.
+- Returns ONLY the structured `provider | model | working | vision | reasoning | ctx` lines.
+- Does NOT edit any config or write files (read-only probe).
 
-### goals.md
+## Ranking Algorithm (applied after merge)
 
-- **G1**: Comprehensive implementation prompt with all required sections
-- **G2**: All test-providers-models files consolidated to canonical location
-- **G3**: Top 5 free models identified and ranked
-- **G4**: Hermes configured with primary model + 4 fallback models
-- **G5**: All judge scores ≥ 98
+```python
+def sort_key(m):
+    # Higher tier wins. vision(2) > reasoning(1) > context(0)
+    vision = 2 if m.vision else 0
+    reason = 1 if m.reasoning else 0
+    ctx = min(m.ctx, 2_000_000) / 2_000_000   # normalized 0..1
+    return (vision, reason, ctx)   # descending
+chain = sorted(working_models, key=sort_key, reverse=True)
+```
 
-### subgoals.md
+Result for the 2026-08-07 verified set (no vision anywhere → reasoning then context):
 
-- **SG1**: Execute `hermes config show && hermes auth list && hermes status && hermes insights && hermes fallback list`
-- **SG2**: Web-research each provider for free models
-- **SG3**: Create test prompts (Provider, Context, max-output, capabilities)
-- **SG4**: Execute `hermes chat --provider "X" --model "Y" -q "test" --oneshot` for each model
-- **SG5**: Audit all test sessions, rank top 5
-- **SG6**: Configure Hermes model and fallback chain
-- **SG7**: Run prompts-judge, fix issues, achieve score ≥ 98
+1. `nemotron-3-ultra-free` (opencode-zen, 1M, reasoning✓)
+2. `nvidia/nemotron-3-ultra-550b-a55b:free` (openrouter, 1M, ✓)
+3. `nvidia/nemotron-3-super-120b-a12b:free` (openrouter, 1M, ✓)
+4. `gemini-2.5-flash` (gemini, 1M, ✓)
+5. `nemotron-3-ultra` (ollama-cloud, 1M, ✓)
+6. `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` (openrouter, 256K, ✓)
+7. `deepseek-v4-flash-free` (opencode-zen, 128K, ✓) — **PRIMARY**
+8. `google/gemma-4-31b-it:free` (openrouter, 262K, ✗)
+9. `google/gemma-4-26b-a4b-it:free` (openrouter, 262K, ✗)
+10. `openai/gpt-oss-20b:free` (openrouter, 131K, ✗)
 
-### rules.md
+## Configure (orchestrator only)
 
-1. **MCP-first**: Use MCP servers (fetch, web-search) before native tools
-2. **No destructive without approval**: User pre-approved all destructive ops
-3. **DRY**: Each fact in one location, cross-reference don't duplicate
-4. **Verify before claim**: Test, check, confirm before reporting
-5. **Hermes config via CLI**: Always use `hermes config set`, never direct YAML edits
-6. **Background execution**: Long commands run in background without timeout
-7. **Subagent delegation**: Parallel work via `delegate_task` subagents
-8. **Judge threshold**: All artifacts must score ≥ 98 on respective judge skills
-
-### phases.md
-
-#### Phase 1: Inventory & Research
-- Execute Hermes diagnostic commands in background
-- Parse authorized providers from auth list
-- Web-research each provider for free models
-- Extract documentation URLs and model specifications
-
-#### Phase 2: Consolidate & Deduplicate
-- Find all test-providers-models files across filesystem
-- Migrate to `.github/prompts/operations/test-providers-models/`
-- Delete duplicates and stale copies
-- Verify single canonical location
-
-#### Phase 3: Test Models
-- Create standardized test prompts
-- Execute `hermes chat` for each discovered model
-- Log all results with Provider, Context, max-output, capabilities
-- Handle rate limits and retries
-
-#### Phase 4: Rank & Configure
-- Audit all test sessions
-- Score and rank top 5 models
-- Configure primary model via `hermes config set`
-- Configure fallback chain via `hermes fallback add`
-
-#### Phase 5: Verify & Judge
-- Validate Hermes configuration
-- Run `/prompts-judge` on this prompt
-- Fix all issues, warnings, errors
-- Achieve score ≥ 98
-
-### steps.md
-
-| Step | Action | Command/Tool | Output |
-|------|--------|--------------|--------|
-| 1 | Get Hermes config | `hermes config show` | Config state |
-| 2 | Get auth providers | `hermes auth list` | Provider list |
-| 3 | Get system status | `hermes status` | Status info |
-| 4 | Get usage insights | `hermes insights` | Model usage |
-| 5 | Get fallback config | `hermes fallback list` | Fallback state |
-| 6 | Web-research providers | `web_search` + `web_extract` | Free model lists |
-| 7 | Consolidate files | `search_files` + `terminal` | Single location |
-| 8 | Create test prompts | `write_file` | Test prompt files |
-| 9 | Execute model tests | `hermes chat --oneshot` | Test results |
-| 10 | Rank results | Subagent analysis | Top 5 ranking |
-| 11 | Configure primary | `hermes config set model` | Config updated |
-| 12 | Configure fallbacks | `hermes fallback add` | Fallback set |
-| 13 | Verify config | `hermes config show` | Validation |
-| 14 | Run prompts-judge | `/prompts-judge` | Score report |
-| 15 | Fix and re-judge | Patch + re-run | Score ≥ 98 |
-
-### tasks.md
-
-- [ ] Execute all Hermes diagnostic commands
-- [ ] Parse and enumerate all authorized providers
-- [ ] Web-research each provider for free models
-- [ ] Extract documentation URLs for all free models
-- [ ] Create free-suffix-catalog markdown file
-- [ ] Find all test-providers-models files across filesystem
-- [ ] Consolidate to `.github/prompts/operations/test-providers-models/`
-- [ ] Delete all duplicate/stale copies
-- [ ] Create standardized test prompts
-- [ ] Execute `hermes chat` for each model (up to 10)
-- [ ] Log all test results
-- [ ] Audit and rank top 5 models
-- [ ] Create ranking markdown file
-- [ ] Configure Hermes primary model
-- [ ] Clear existing fallback chain
-- [ ] Add 4 fallback models
-- [ ] Verify final configuration
-- [ ] Run prompts-judge on this prompt
-- [ ] Fix all issues to achieve score ≥ 98
-
-### actions.md
-
-| Action | Trigger | Tool | Expected Result |
-|--------|---------|------|-----------------|
-| Run diagnostics | Phase 1 | `terminal` (background) | All config/state captured |
-| Web research | Phase 1 | `web_search` + `web_extract` | Free model lists per provider |
-| Consolidate files | Phase 2 | `search_files` + `terminal` | Single canonical location |
-| Test model | Phase 3 | `hermes chat --provider X --model Y -q "..." --oneshot` | Model response logged |
-| Rank models | Phase 4 | Subagent analysis | Top 5 ranked list |
-| Set primary | Phase 4 | `hermes config set model provider/model` | Config updated |
-| Add fallback | Phase 4 | `hermes fallback add provider/model` | Fallback configured |
-| Verify | Phase 5 | `hermes config show` | Config validated |
-| Judge | Phase 5 | `/prompts-judge` | Score ≥ 98 |
-
-### gates.md
-
-| Gate | Check | Pass Criteria |
-|------|-------|---------------|
-| G1 | All diagnostics executed | All 5 commands completed |
-| G2 | All providers researched | ≥1 free model per authorized provider |
-| G3 | Files consolidated | Single location, zero duplicates |
-| G4 | Models tested | ≥5 models tested successfully |
-| G5 | Ranking complete | Top 5 models identified |
-| G6 | Config updated | Primary model set correctly |
-| G7 | Fallback configured | 4 fallback models added |
-| G8 | Judge score | prompts-judge ≥ 98 |
-
-## Workflow
-
-### Phase 1: Inventory & Research
+Primary model = the proven-working model that has accomplished prior requests:
+`deepseek-v4-flash-free` via `opencode-zen` (set on all 13 named profiles already;
+root currently diverges as `nous` / `tencent/hy3:free` and is aligned here).
 
 ```bash
-# Execute in background without timeout
-hermes config show && hermes auth list && hermes status && hermes insights && hermes fallback list
+# 1. Primary model
+hermes config set model.provider opencode-zen
+hermes config set model.default  deepseek-v4-flash-free
+
+# 2. Fallback chain — provider names in capability order.
+#    Each provider uses its own working free default_model (set in providers: block).
+hermes config set fallback_providers '["opencode-zen","openrouter","gemini","ollama-cloud"]'
+
+# 3. Ensure each fallback provider resolves to a working free model
+hermes config set providers.opencode-zen.default_model  deepseek-v4-flash-free
+hermes config set providers.openrouter.default_model   "nvidia/nemotron-3-ultra-550b-a55b:free"
+hermes config set providers.gemini.default_model        "gemini-2.5-flash"
+hermes config set providers.ollama-cloud.default_model  "nemotron-3-ultra"
 ```
 
-Parse output for:
-- Authorized providers (from auth list)
-- Current model configuration
-- Existing fallback chain
-- Rate limit status per provider
+> Config guard: `write_file`/`patch` refuse to edit `config.yaml`. Use `hermes config set`
+> (CLI) or terminal Python (`yaml` + `open()`). If `fallback_providers` is stored as a
+> string instead of a list, fix it with a terminal Python one-liner before verifying.
 
-Then web-research each provider:
-```
-web_search: "<provider name> free models API documentation 2026"
-web_extract: <documentation_urls>
-```
+## Phases
 
-### Phase 2: Consolidate & Deduplicate
-
-```bash
-# Find all test-providers-models files
-find . -name "*test-providers*" -type f 2>/dev/null
-find . -name "*free-suffix-catalog*" -type f 2>/dev/null
-```
-
-Migrate all to: `.github/prompts/operations/test-providers-models/`
-
-Delete duplicates in:
-- `.github/prompts/development/test-providers-models/`
-- `.github/prompts/testing/test-providers-models/`
-- `.github/prompts/test-providers-models-free-suffix-catalog.md`
-- `.github/prompts/operations/test-providers-models-free-suffix-catalog.md`
-- `.hermes/plans/*test-providers*`
-- `.hermes/specs/*test-providers*`
-- `.hermes/reports/*test-providers*`
-
-### Phase 3: Test Models
-
-Create standardized test prompts covering:
-- Provider identification
-- Context window capabilities
-- Max output length
-- Reasoning capabilities
-- Instruction following
-
-Execute for each model:
-```bash
-hermes chat --provider "<provider>" --model "<model>" -q "<test_prompt>" --oneshot
-```
-
-### Phase 4: Rank & Configure
-
-Rank by:
-1. Response quality (accuracy, coherence)
-2. Latency (response time)
-3. Context window size
-4. Max output tokens
-5. Instruction following
-
-Configure:
-```bash
-hermes config set model <top_provider>/<top_model>
-hermes fallback clear
-yes | hermes fallback add <provider2>/<model2>
-yes | hermes fallback add <provider3>/<model3>
-yes | hermes fallback add <provider4>/<model4>
-yes | hermes fallback add <provider5>/<model5>
-```
-
-### Phase 5: Verify & Judge
-
-```bash
-hermes config show
-hermes fallback list
-```
-
-Then run:
-```
-/prompts-judge .github/prompts/operations/test-providers-models/test-providers-models.prompt.md
-```
-
-Fix all issues and re-run until score ≥ 98.
+1. **Phase 1 — Inventory** — `hermes auth list` all authorized providers; collect each provider's working free `default_model` and capabilities.
+2. **Phase 2 — Probe** — Delegate live capability probes to subagents with the full Context Block; each probe returns actual availability, vision/reasoning support, and context size.
+3. **Phase 3 — Rank** — Merge probe results and apply the Ranking Algorithm (vision → reasoning → context size) to produce the ordered candidate list.
+4. **Phase 4 — Configure** — Set the primary model and fallback chain in Hermes config per the Configure section.
+5. **Phase 5 — Verify** — Confirm `fallback_providers` is a real YAML list and every entry resolves to a working free model; fix and re-verify if not.
 
 ## Verification
 
-- [ ] All Hermes diagnostics executed
-- [ ] All authorized providers enumerated
-- [ ] Web research completed for each provider
-- [ ] Free model catalog created
-- [ ] All files consolidated to canonical location
-- [ ] No duplicate files remain
-- [ ] Test prompts created and executed
-- [ ] All test results logged
-- [ ] Top 5 models ranked
-- [ ] Hermes primary model configured
-- [ ] Fallback chain configured (4 models)
-- [ ] Configuration verified
-- [ ] prompts-judge score ≥ 98
+```bash
+hermes config check
+# YAML inspect
+grep -nE "^(model|fallback_providers|providers):" "$LOCALAPPDATA/hermes/config.yaml"
+# Confirm fallback_providers is a real YAML list, not a string
+python -c "import yaml,os; c=yaml.safe_load(open(os.environ['LOCALAPPDATA']+'/hermes/config.yaml')); print(type(c['fallback_providers']), c['fallback_providers'])"
+```
 
-## Tools & References
-
-| Tool | Purpose |
-|------|---------|
-| `terminal` | Execute Hermes CLI commands |
-| `web_search` | Research provider free models |
-| `web_extract` | Extract documentation content |
-| `search_files` | Find and consolidate files |
-| `delegate_task` | Parallel model testing |
-| `write_file` | Create/update artifacts |
-| `patch` | Targeted edits to files |
+- [ ] `hermes config check` passes
+- [ ] `model.provider` = opencode-zen, `model.default` = deepseek-v4-flash-free
+- [ ] `fallback_providers` is a YAML list (not a string) ordered by capability
+- [ ] Each listed provider has a working free `default_model`
+- [ ] `docs/free-model-selection.md` updated with the new chain
+- [ ] Non-working providers (deepseek, huggingface, nous, xai-oauth, openai-codex, copilot) excluded
 
 ## Pitfalls
 
-- **Rate limits**: Many free models have strict rate limits; space requests
-- **Provider auth**: Some providers may have expired or rate-limited credentials
-- **Model availability**: Free models may be deprecated; verify before testing
-- **Config corruption**: Always use `hermes config set`, never edit YAML directly
-- **Duplicate files**: Stale copies in prompts_backup, .hermes/plans, .hermes/specs
-- **Timeout**: Long-running `hermes chat` commands need background execution
+1. **Vision gap** — No verified working free model has vision. Do not promote a paid/vision model into the free fallback chain.
+2. **429 storms** — Live `hermes chat` probes rate-limit fast. Delegate to subagents (parallel, isolated) and let each fall back to the baseline on error.
+3. **String-encoded lists** — `hermes config set fallback_providers '[...]'` may serialize as a string; verify and repair via terminal Python.
+4. **Provider alias mismatch** — `fallback_providers` uses provider *names* (opencode-zen, openrouter, …), not the `providers:` dict keys (e.g. `ollama-launch`). Set each provider's `default_model` so the right free model is used.
+5. **Root vs profiles drift** — Root config diverged (`nous`/`tencent/hy3:free`); named profiles use `opencode-zen`/`deepseek-v4-flash-free`. Align root, then propagate with `scripts/sync_profile_configs.py`.
+6. **Stale `:free` promotions** — Models expire; always re-probe before presenting as working.
 
-## Best Practices
+## MCP Servers & Tools
 
-1. **Background execution**: Run long commands in background without timeout
-2. **Subagent parallelism**: Delegate model testing to subagents
-3. **Incremental verification**: Check each phase before proceeding
-4. **CLI-only config**: Never edit Hermes YAML directly
-5. **DRY artifacts**: Single source of truth for each file
-6. **Judge-driven quality**: Run judge skills early and often
+- **Terminal** — `hermes auth list` and provider/model configuration.
+- **Delegation** — `delegate_task` parallel capability probes.
+- **Web tools** — provider documentation lookups.
+- **Skills** — `test-providers-models` skill (this prompt's engine).
 
-## Output Artifacts
 
-| Artifact | Path |
-|----------|------|
-| Main prompt | `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` |
-| Free model catalog | `.github/prompts/operations/test-providers-models/test-providers-models-free-suffix-catalog.md` |
-| Ranking results | `.github/prompts/operations/test-providers-models/test-providers-models-ranking.md` |
-| Test probe script | `.github/prompts/operations/test-providers-models/scripts/test-providers-probe.py` |
-| Test results | `.github/prompts/operations/test-providers-models/test-providers-models-results.json` |
+## Hooks
+
+Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
+
+## Scripts
+
+Prompt-library tooling (see `.enhance/`):
+
+- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
+- `.github/hooks/*` — hook implementations referenced in the Hooks section

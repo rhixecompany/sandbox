@@ -1,16 +1,11 @@
 ---
-name: skill-remediation-spec
-title: "Full Skill Library Remediation — Specification (Phases S1-S7)"
-description: |
-  Detailed specification for full skill library remediation to 99+ on all judge skills.
-  Covers 1,278 active skills across 37 categories.
-version: 1.0.0
-author: Alexa
-license: MIT
-tags: [spec, skills, remediation, audit, judge, score-99]
-status: approved
-linked_plan: master-skill-library-remediation
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Full Skill Library Remediation — Specification (Phases S1-S7)
 

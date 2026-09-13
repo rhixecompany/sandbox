@@ -2,14 +2,43 @@
 name: review-and-refactor
 title: Review And Refactor
 description: Review and refactor code in your project according to defined instructions.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /review-and-refactor
 toolsets:
-- terminal
 - file
-category: qa
-
----
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /review-and-refactor
+    flags: {}
+    help: Review and refactor code in your project according to defined instructions.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- audit
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Review and refactor code in your project according to defined instructions.
@@ -164,6 +193,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-## Workflow
-
-Description needed.

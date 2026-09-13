@@ -1,13 +1,11 @@
 ---
-name: dependency-ecosystem-audit
-title: Dependency Ecosystem Audit Spec
-description: Spec for the SandBox monorepo dependency audit — tech-stacks, node/python dependency reports, per-package research, audit tooling, requirements.txt reconciliation.
-author: Hermes Agent
-version: 1.0.0
-date: 2026-09-11
-status: approved
-tags: [audit, dependencies, research, node, python, requirements]
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Dependency Ecosystem Audit — Specification
 

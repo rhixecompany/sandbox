@@ -1,15 +1,11 @@
 ---
-name: hermes-ecosystem-reliability-spec
-title: Hermes Ecosystem Reliability Specification
-description: Define verifiable lifecycle, MCP, quick-command, memory, and provider-resilience invariants.
-version: 1.0.0
-author: Alexa
-owner: Alexa
-license: MIT
-tags: [hermes, lifecycle, mcp, quick-commands, reliability, security]
-status: implemented-with-verification
-plan: .hermes/plans/2026-09-05_084556-hermes-ecosystem-reliability.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Hermes Ecosystem Reliability Specification
 

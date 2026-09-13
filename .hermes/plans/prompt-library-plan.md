@@ -359,6 +359,7 @@ gates:
 dependencies:
   - prompt-library-spec.md
   - prompt-skill-spec-plan-management-system.md
+status: "in_progress"
 ---
 
 # Prompt Library Implementation Plan

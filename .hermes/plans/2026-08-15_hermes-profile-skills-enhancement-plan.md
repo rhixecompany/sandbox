@@ -3,7 +3,7 @@ title: Hermes Profile Skills Enhancement — Implementation Plan
 description: Phased task breakdown for enhancing existing and creating missing Hermes profile management skills
 date: 2026-08-15
 author: Hermes Agent
-status: draft
+status: "in_progress"
 profile: model
 model: default
 ---

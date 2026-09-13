@@ -1,7 +1,10 @@
 ---
-name: verification-checklist
-description: "Verified gate checklist — tree-primary with cleanup-first phases."
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 - [PASS] tree.prompt.txt verified as PRIMARY source
 - [PASS] Input files verified (tree.prompt.txt: 3,020 B; run-all-goals.prompt.md: 10,383 B)

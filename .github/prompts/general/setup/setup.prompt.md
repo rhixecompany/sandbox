@@ -2,12 +2,38 @@
 name: setup.prompt
 title: Setup.Prompt
 description: Auto-generated prompt for /setup.prompt
-trigger: /setup
+version: 1.0.0
+license: MIT
+author: Hermes Agent
+trigger: /setup.prompt
 toolsets:
-- terminal
 - file
-category: general
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /setup.prompt
+    flags: {}
+    help: Auto-generated prompt for /setup.prompt
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+scripts: []
+---
 name: setup
 title: ComicWise — AI Agent Setup & Onboarding
 description: Comprehensive AI agent onboarding prompt for ComicWise — architecture, workflows, real code
@@ -385,6 +411,3 @@ Same-family prompts:
 - [`setup-enhanced.prompt.md`](setup-enhanced.prompt.md)
 - [`setup-groq-cloud.prompt.md`](setup-groq-cloud.prompt.md)
 - [`setup-nextjs-frontend-stack.prompt.md`](setup-nextjs-frontend-stack.prompt.md)
-## Workflow
-
-Description needed.

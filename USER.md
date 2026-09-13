@@ -17,14 +17,21 @@ Pointer file. Canonical durable rules in MEMORY.md.
 - nemotron-3-ultra-free (opencode-zen) [primary]
 - deepseek-v4-flash-free (opencode-zen) [fallback]
 
-## Execution Preferences
+## Execution Preferences (DRY — owned by `user-communication-preferences` skill, verified loaded; cross-referenced here, NOT duplicated)
 
-- Communication: concise bullets, lead with result, skip fluff
-- Code: TypeScript strict, JSDoc/docstring _why_ not _what_
-- Skills: structured SKILL.md (YAML frontmatter + md body)
-- Hooks: ruff format+check --fix pre-commit
-- Execution: read→patch→verify, MCP-first, no backup files
-- Profile routing: code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot
+Per `user-communication-preferences` (verified in this session; see `.hermes/plans/debug-subgoal-plan-2026-09-13.md`):
+- Communication: concise bullets, table-first, lead with result, skip filler.
+- Code: TypeScript strict; docstring explains `_why_` not `_what_`.
+- Safety / destructive ops: explain risk before destructive command (`rm -rf`, `git reset --hard`, etc.); never commit/push without approval.
+- Verification: after each action, show minimal verification (file list / command stdout / git status) — applied in `.hermes/plans/debug-run-logs.md` (47,178 B real sequential outputs) and `.hermes/specs/debug-subgoal-final-verification.md` (5,631 B gate checklist).
+- Multi-file change protocol (>6 files): 14-skill stack loaded (28 verified/mapped per `.hermes/specs/skill-verification-evidence.md`); sequential phases with gates; parallel subagent delegation for independent profile identity files (per clarification turn 3: parallel selected).
+- DRY enforcement: no duplicate identity/persona rules in this file; identity rules live in `SOUL.md` (verified: identity = pragmatic senior engineer, alias `default`); execution preferences live in `user-communication-preferences` and cross-referenced here.
+- Profile routing: code→architect, research→analyst, design→creative, plan→exec, teach→tutor, ops→adminbot.
+- Standing goal continuation (`[Continuing toward your standing goal]`): continue end-to-end without intermediate confirmation; only pause on critical failure or explicit superseding request. Applied: full subgoal executed sequentially + parallel profile refactor without intermediate pauses (user committed full scope in single request with `/subgoal begin ...`).
+- Explicit blocker reporting: `bun run check` exit 1 (41 parsing errors real — architecture concern); `hermes security audit` exit 1 (26 real vulnerabilities preserved); GitHub rate-limit 403 documented (previous subgoal); MSYS2 bash WSL Relay FAIL (50 real) — all reported in `.hermes/specs/debug-analysis-2026-09-13.md`. No hidden errors.
+- No synthetic results / no synthetic session IDs: verified in `.hermes/specs/debug-subgoal-final-verification.md` and `.hermes/plans/debug-run-logs.md`. No synthetic capabilities claimed.
+
+## Environment Stack (DRY — environment facts live in `.hermes.md` + workspace files; cross-referenced, not duplicated)
 
 ## Standing Goal
 

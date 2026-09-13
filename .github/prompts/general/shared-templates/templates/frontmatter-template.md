@@ -111,22 +111,6 @@ tags:
 # Scripts to run before/after prompt execution (optional)
 scripts: []
 ---
-## Goal
-
-<!-- Shared template — see file body for goal content -->
-
-## Context
-
-<!-- Shared template — see file body for context content -->
-
-## Workflow
-
-<!-- Shared template — see file body for workflow content -->
-
-## Verification
-
-<!-- Shared template — see file body for verification content -->
-
 ```
 
 ## Field Descriptions
@@ -284,3 +268,4 @@ The `metadata` section controls how different agents discover and execute this p
 | **Copilot** | VS Code command palette | `metadata.copilot.extensions` | Requires `GitHub.copilot` extension |
 | **OpenCode CLI** | `opencode /trigger` | `metadata.opencode.command` | Parses CLI flags and arguments |
 | **Codex AI** | Model selection | `metadata.codex.model_override` | Forces specific LLM (claude, gpt, deepseek) |
+

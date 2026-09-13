@@ -1,130 +1,51 @@
 ---
 name: create-spring-boot-java-project
-title: Create Spring Boot Java Project
-description: Bootstrap a Spring Boot Java project with the correct template, dependencies, and initial structure.
-trigger: /create-spring-boot-java-project
-category: general
+title: Create Spring Boot Java project prompt
+description: Create Spring Boot Java Project Skeleton.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /create-spring-boot-java-project
+toolsets:
+- file
+- terminal
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-spring-boot-java-project
+    flags: {}
+    help: Create Spring Boot Java Project Skeleton.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- docker
+- generator
+- java
+- prompts
+- spring
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Bootstrap a Spring Boot Java project with the correct template, dependencies, and initial structure.
 
-## Context
+Create Spring Boot Java Project Skeleton.
 
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Check Java version](#check-java-version)
-- [Download Spring Boot project template](#download-spring-boot-project-template)
-- [Unzip the downloaded file](#unzip-the-downloaded-file)
-- [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
-- [Change directory to the project root](#change-directory-to-the-project-root)
-- [TODO: additional dependencies](#add-additional-dependencies)
-- [TODO: SpringDoc, Redis, JPA and MongoDB configurations](#add-springdoc-redis-jpa-and-mongodb-configurations)
-- [TODO: `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services](#add-`docker-composeyaml`-with-redis-postgresql-and-mongodb-services)
-- [TODO: `.gitignore` file](#add-`gitignore`-file)
-- [Run Maven test command](#run-maven-test-command)
-- [Run Maven run command (Optional)](#run-maven-run-command-optional)
-- [Pitfalls](#pitfalls)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Prerequisites](#prerequisites)
-- [Check Java version](#check-java-version)
-- [Download Spring Boot project template](#download-spring-boot-project-template)
-- [Unzip the downloaded file](#unzip-the-downloaded-file)
-- [Remove the downloaded zip file](#remove-the-downloaded-zip-file)
-- [Change directory to the project root](#change-directory-to-the-project-root)
-- [TODO: additional dependencies](#add-additional-dependencies)
-- [TODO: SpringDoc, Redis, JPA and MongoDB configurations](#add-springdoc-redis-jpa-and-mongodb-configurations)
-- [TODO: `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services](#add-`docker-composeyaml`-with-redis-postgresql-and-mongodb-services)
-- [TODO: `.gitignore` file](#add-`gitignore`-file)
-- [Run Maven test command](#run-maven-test-command)
-- [Run Maven run command (Optional)](#run-maven-run-command-optional)
-- [Pitfalls](#pitfalls)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
-
-Bootstrap a Spring Boot Java project with Maven, Java 21, and Docker Compose.
-
-## Prerequisites
-
-- Java 21 JDK
-- Docker and Docker Compose
-- A project name (defaults to `demo-java`)
-
-If you need to change the project name, update `artifactId` and `packageName` in the [download-spring-boot-project-template](#download-spring-boot-project-template) section. To update the Spring Boot version, change `bootVersion` there.
+# Create Spring Boot Java project prompt- Please make sure you have the following software installed on your system:  - Java 21  - Docker  - Docker Compose- If you need to custom the project name, please change the `artifactId` and the `packageName` in [download-spring-boot-project-template](./create-spring-boot-java-project.prompt.md)- If you need to update the Spring Boot version, please change the `bootVersion` in [download-spring-boot-project-template](./create-spring-boot-java-project.prompt.md#download-spring-boot-project-template)
 
 ## Check Java version
 
@@ -140,14 +61,14 @@ java -version
 
 ```shell
 curl https://start.spring.io/starter.zip \
--d artifactId=${input:projectName:demo-java} \
--d bootVersion=3.4.5 \
--d dependencies=lombok,configuration-processor,web,data-jpa,postgresql,data-redis,data-mongodb,validation,cache,testcontainers \
--d javaVersion=21 \
--d packageName=com.example \
--d packaging=jar \
--d type=maven-project \
--o starter.zip
+  -d artifactId=${input:projectName:demo-java} \
+  -d bootVersion=3.4.5 \
+  -d dependencies=lombok,configuration-processor,web,data-jpa,postgresql,data-redis,data-mongodb,validation,cache,testcontainers \
+  -d javaVersion=21 \
+  -d packageName=com.example \
+  -d packaging=jar \
+  -d type=maven-project \
+  -o starter.zip
 ```
 
 ## Unzip the downloaded file
@@ -176,7 +97,7 @@ cd ${input:projectName:demo-java}
 
 ## Add additional dependencies
 
-- Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency into `pom.xml` file```xml<dependency> <groupId
+- Insert `springdoc-openapi-starter-webmvc-ui` and `archunit-junit5` dependency into `pom.xml` file```xml<dependency>  <groupId
 
 > org.springdoc</groupId
 > <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId
@@ -196,7 +117,7 @@ cd ${input:projectName:demo-java}
 
 ## Add `docker-compose.yaml` with Redis, PostgreSQL and MongoDB services
 
-- Create `docker-compose.yaml` at project root and add following services: `redis:6`, `postgresql:17` and `mongo:8`. - redis service should have - password `rootroot` - mapping port 6379 to 6379 - mounting volume `./redis_data` to `/data` - postgresql service should have - password `rootroot` - mapping port 5432 to 5432 - mounting volume `./postgres_data` to `/var/lib/postgresql/data` - mongo service should have - initdb root username `root` - initdb root password `rootroot` - mapping port 27017 to 27017 - mounting volume `./mongo_data` to `/data/db`
+- Create `docker-compose.yaml` at project root and add following services: `redis:6`, `postgresql:17` and `mongo:8`.  - redis service should have    - password `rootroot`    - mapping port 6379 to 6379    - mounting volume `./redis_data` to `/data`  - postgresql service should have    - password `rootroot`    - mapping port 5432 to 5432    - mounting volume `./postgres_data` to `/var/lib/postgresql/data`  - mongo service should have    - initdb root username `root`    - initdb root password `rootroot`    - mapping port 27017 to 27017    - mounting volume `./mongo_data` to `/data/db`
 
 ## Add `.gitignore` file
 
@@ -214,20 +135,15 @@ cd ${input:projectName:demo-java}
 
 - (Optional) `docker-compose up -d` to start the services, `./mvnw spring-boot:run` to run the Spring Boot project, `docker-compose rm -sf` to stop the services.
 
-## Pitfalls
-
-- Downloading with an unsupported Java version causes a build failure — verify `java -version` outputs Java 21 before starting.
-- Omitting `archunit-junit5` skips architecture enforcement — add it to the test scope in `pom.xml`.
-- Forgetting `redis_data`, `postgres_data`, and `mongo_data` in `.gitignore` commits container state to the repository.
-- Running `./mvnw spring-boot:run` without `docker-compose up -d` first causes startup failures.
+## Let's do this step by step
 
 ## Template References
 
-Templates in `templates/`:- `add_additional_dependenci.md`- `add_docker-composeyaml_wi.md`- `add_springdoc_redis_jpa_a.md`- `download_spring_boot_proj.md`
+Templates in `templates/create-spring-boot-java-project/`:- `add_additional_dependenci.md`- `add_docker-composeyaml_wi.md`- `add_springdoc_redis_jpa_a.md`- `download_spring_boot_proj.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -237,19 +153,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -262,8 +179,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -282,12 +200,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -306,7 +224,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -317,7 +235,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -350,6 +268,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -358,11 +277,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 

@@ -1,3 +1,9 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it's done. Our take on the Ralph loop."
+---
+
 /goal | /using-superpowers | /user-communication-preferences | /systematic-debugging — EXECUTION COMPLETE
 Profile: adminbot (system ops/debug). Direct, no filler. DRY: single evidence file + this summary.
 

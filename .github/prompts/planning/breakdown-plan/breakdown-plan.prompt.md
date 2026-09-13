@@ -1,195 +1,49 @@
 ---
 name: breakdown-plan
-title: Project Plan Breakdown
-description: Generate a comprehensive project plan with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
-trigger: /breakdown-plan
-category: planning
+title: GitHub Issue Planning & Project Automation Prompt
+description: No description
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /breakdown-plan
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: default
+    mcp_servers:
+    - filesystem
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /breakdown-plan
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- domain:debug
+- domain:planning
+- tool:github
+scripts: []
 ## Goal
-Generate a comprehensive project plan with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [GitHub Project Management Best Practices](#github-project-management-best-practices)
-  - [Agile Work Item Hierarchy](#agile-work-item-hierarchy)
-  - [Project Management Principles](#project-management-principles)
-- [Input Requirements](#input-requirements)
-  - [Core Feature Documents](#core-feature-documents)
-  - [Related Planning Prompts](#related-planning-prompts)
-- [Output Format](#output-format)
-- [Epic Description](#epic-description)
-- [Business Value](#business-value)
-- [Epic Acceptance Criteria](#epic-acceptance-criteria)
-- [Feature](#feature)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Milestone](#milestone)
-- [Estimate](#estimate)
-  - [Feature Issue Template](#feature-issue-template)
-- [Feature Description](#feature-description)
-- [User Stories in this Feature](#user-stories-in-this-feature)
-- [Technical Enablers](#technical-enablers)
-- [Dependencies](#dependencies)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Epic#](#epic#)
-- [Estimate](#estimate)
-  - [User Story Issue Template](#user-story-issue-template)
-- [Story Statement](#story-statement)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Technical Tasks](#technical-tasks)
-- [Test](#test)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Feature](#feature)
-- [Estimate](#estimate)
-  - [Technical Enabler Issue Template](#technical-enabler-issue-template)
-- [Enabler Description](#enabler-description)
-- [Technical Requirements](#technical-requirements)
-- [Implementation Tasks](#implementation-tasks)
-- [User Stories Enabled](#user-stories-enabled)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Feature](#feature)
-- [Estimate](#estimate)
-  - [4. Priority and Value Matrix](#4-priority-and-value-matrix)
-- [Sprint](#sprint)
-- [Success Metrics](#success-metrics)
-  - [Project Management KPIs](#project-management-kpis)
-  - [Process Efficiency Metrics](#process-efficiency-metrics)
-  - [Project Delivery Metrics](#project-delivery-metrics)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [GitHub Project Management Best Practices](#github-project-management-best-practices)
-- [Agile Work Item Hierarchy](#agile-work-item-hierarchy)
-- [Project Management Principles](#project-management-principles)
-- [Input Requirements](#input-requirements)
-- [Core Feature Documents](#core-feature-documents)
-- [Related Planning Prompts](#related-planning-prompts)
-- [Output Format](#output-format)
-- [Epic Description](#epic-description)
-- [Business Value](#business-value)
-- [Epic Acceptance Criteria](#epic-acceptance-criteria)
-- [Feature](#feature)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Milestone](#milestone)
-- [Estimate](#estimate)
-- [Feature Issue Template](#feature-issue-template)
-- [Feature Description](#feature-description)
-- [User Stories in this Feature](#user-stories-in-this-feature)
-- [Technical Enablers](#technical-enablers)
-- [Dependencies](#dependencies)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Epic#](#epic#)
-- [Estimate](#estimate)
-- [User Story Issue Template](#user-story-issue-template)
-- [Story Statement](#story-statement)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Technical Tasks](#technical-tasks)
-- [Test](#test)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Feature](#feature)
-- [Estimate](#estimate)
-- [Technical Enabler Issue Template](#technical-enabler-issue-template)
-- [Enabler Description](#enabler-description)
-- [Technical Requirements](#technical-requirements)
-- [Implementation Tasks](#implementation-tasks)
-- [User Stories Enabled](#user-stories-enabled)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Definition of Done](#definition-of-done)
-- [Labels](#labels)
-- [Feature](#feature)
-- [Estimate](#estimate)
-- [4. Priority and Value Matrix](#4-priority-and-value-matrix)
-- [Sprint](#sprint)
-- [Success Metrics](#success-metrics)
-- [Project Management KPIs](#project-management-kpis)
-- [Process Efficiency Metrics](#process-efficiency-metrics)
-- [Project Delivery Metrics](#project-delivery-metrics)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Issue Planning and Automation prompt that generates comprehensive project plans with Epic > Feature > Story/Enabler > Test hierarchy, dependencies, priorities, and automated tracking.
 
+## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -206,13 +60,14 @@ Use when you need to work on the current workspace or task.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -231,7 +86,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## GitHub Project Management Best Practices
@@ -274,7 +129,7 @@ Before using this prompt, ensure you have the complete testing workflow artifact
 > Create two primary deliverables:>
 >
 > 1. **Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project
-> **Full content:**`templates/output_format.md`
+> **Full content:**`templates/breakdown-plan/output_format.md`
 
 ## Epic Description
 
@@ -451,7 +306,7 @@ priority-level}`, `infrastructure/api/database`, `{component-name}`
 
 ### 4. Priority and Value Matrix
 
-> **Full content:** `templates/estimate.md`
+> **Full content:** `templates/breakdown-plan/estimate.md`
 
 ## Sprint
 
@@ -459,7 +314,7 @@ N} Goal
 
 > **Primary Objective**: {Main deliverable for this sprint}
 > **Stories in Sprint**:
-> **Full content:** `templates/sprint_n_goal.md`
+> **Full content:** `templates/breakdown-plan/sprint_n_goal.md`
 
 ## Success Metrics
 
@@ -489,11 +344,11 @@ N} Goal
 
 ## Template References
 
-Detailed templates in `templates/`:- `estimate.md`- `output_format.md`- `sprint_n_goal.md`
+Detailed templates in `templates/breakdown-plan/`:- `estimate.md`- `output_format.md`- `sprint_n_goal.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -503,7 +358,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -512,7 +367,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -538,7 +393,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -571,6 +426,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -579,11 +435,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -592,4 +445,5 @@ Same-family prompts:
 - [`breakdown-feature-implementation.prompt.md`](breakdown-feature-implementation.prompt.md)
 - [`breakdown-feature-prd.prompt.md`](breakdown-feature-prd.prompt.md)
 - [`breakdown-test.prompt.md`](breakdown-test.prompt.md)
+
 

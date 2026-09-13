@@ -2,14 +2,44 @@
 name: structured-autonomy-plan
 title: Sa Plan
 description: Structured Autonomy Planning Prompt.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /structured-autonomy-plan
 toolsets:
-- terminal
 - file
-category: planning
-
----
-
+- terminal
+skills:
+- subagent-driven-development
+dependencies:
+- skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /structured-autonomy-plan
+    flags: {}
+    help: Structured Autonomy Planning Prompt.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- planning
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Structured Autonomy Planning Prompt.
@@ -191,6 +221,3 @@ Same-family prompts:
 
 - [`structured-autonomy-generate.prompt.md`](structured-autonomy-generate.prompt.md)
 - [`structured-autonomy-implement.prompt.md`](structured-autonomy-implement.prompt.md)
-## Workflow
-
-Description needed.

@@ -3,7 +3,7 @@ title: OpenRouter SDK Integration — Specification
 description: Specification for TypeScript + Python packages wrapping OpenRouter's chat completions API via official Client SDKs
 date: 2026-08-15
 author: Hermes Agent
-status: draft
+status: "in_progress"
 profile: model
 model: default
 ---

@@ -1,18 +1,11 @@
 ---
-name: prompt-skill-spec-plan-management-system
-title: "Prompt/Skill/Spec/Plan Management System"
-description: "Complete prompt, skill, spec, and plan management system with multi-file protocol, structured prompt library, and skill enhancement"
-version: 1.0.0
-author: Hermes Agent
-license: MIT
-tags:
-  - prompt-management
-  - skill-management
-  - spec-management
-  - plan-management
-  - multi-file-protocol
-  - automation
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Prompt/Skill/Spec/Plan Management System Specification
 

@@ -184,6 +184,7 @@ gates:
 dependencies:
   - context-files-spec.md
   - prompt-skill-spec-plan-management-system.md
+status: "in_progress"
 ---
 
 # Context Files Rewrite Implementation Plan

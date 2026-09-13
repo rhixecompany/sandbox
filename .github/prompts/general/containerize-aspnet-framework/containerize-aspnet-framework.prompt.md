@@ -1,14 +1,47 @@
 ---
 name: containerize-aspnet-framework
 title: ASP.NET .NET Framework Containerization Prompt
-description: Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files customized for the project.
+description: Containerize an ASP.NET .NET Framework project by creating Dockerfile and .dockerfile files
+  customized for the project.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /containerize-aspnet-framework
 toolsets:
 - terminal
 - file
-category: general
-
-
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /containerize-aspnet-framework
+    flags: {}
+    help: Containerize an ASP.NET .NET Framework project by creating Dockerfile and .do...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- docker
+- frontend
+- ml
+- prompts
+- specification
+- windows
+- csharp
+- dotnet
+scripts: []
 ---
 
 ## Goal
@@ -220,6 +253,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`containerize-aspnetcore.prompt.md`](containerize-aspnetcore.prompt.md)
-## Workflow
-
-Description needed.

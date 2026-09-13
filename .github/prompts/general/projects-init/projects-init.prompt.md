@@ -1,97 +1,58 @@
 ---
 name: projects-init
 title: Projects Init
-description: Run a three-phase workspace initialization that triages markdown documentation, migrates prompt files into .github/prompts/, and creates needed skills/scripts while deduplicating.
-trigger: /projects-init
-category: general
+description: 'Three-phase workspace initialization: triage MD documentation files, migrate prompt files
+  to prompts/, then create skills/scripts and update prompts. Eliminates duplicates and consolidates documentation.'
 version: 1.0.0
-author: Hermes Agent
-tags: [workspace, initialization, documentation, prompts, skills, migration, dedupe]
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-date: 2026-08-25
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /projects-init
+toolsets:
+- file
+- terminal
+skills:
+- enhance-markdown
+- hermes-skills
+- skill-creator
+dependencies:
+- skill:enhance-markdown
+- skill:hermes-skills
+- skill:skill-creator
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /projects-init
+    flags: {}
+    help: 'Three-phase workspace initialization: triage MD documentation files, migrate ...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- debugging
+- documentation
+- migration
+- prompts
+- skills
+- typescript
+- git
+- markdown
+scripts: []
 ## Goal
-Run a three-phase workspace initialization that triages markdown documentation, migrates prompt files into .github/prompts/, and creates needed skills/scripts while deduplicating.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Triage Documentation](#phase-1:-triage-documentation)
-- [Phase 2: Migrate Prompts](#phase-2:-migrate-prompts)
-- [Phase 3: Create Skills & Update](#phase-3:-create-skills-&-update)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Triage Documentation](#phase-1:-triage-documentation)
-- [Phase 2: Migrate Prompts](#phase-2:-migrate-prompts)
-- [Phase 3: Create Skills & Update](#phase-3:-create-skills-&-update)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Three-phase workspace initialization: triage MD documentation files, migrate prompt files to prompts/, then create skills/scripts and update prompts. Eliminates duplicates and consolidates documentation.
 
-## Projects Init> Initialize a workspace: triage docs, migrate prompts, create skills. Three sequential phases — each must finish before the next begins.
+# Projects Init> Initialize a workspace: triage docs, migrate prompts, create skills. Three sequential phases — each must finish before the next begins.
 
 ## Description
 
@@ -100,6 +61,7 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 - **Delete only after verification** — Before deleting any file, confirm the canonical copy exists in the target location.
 - **Count before and after** — Record file counts at each phase start and end; report deltas.
 
+## Context
 
 - **Source reference:** `projects-init.prompt.txt` (raw specification)
 - **Target scope:** `pwd` (workspace root), `docs/`, `.github/prompts/`
@@ -111,21 +73,22 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)| Skill | Purpose |
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill              | Purpose                                                 |
 | ------------------ | ------------------------------------------------------- |
 | `enhance-markdown` | Audit, enhance, convert, and consolidate markdown files |
-| `hermes-skills` | List, create, install, and manage skills |
-| `skill-creator` | Scaffold new skills with validated frontmatter |
+| `hermes-skills`    | List, create, install, and manage skills                |
+| `skill-creator`    | Scaffold new skills with validated frontmatter          |
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. **Strict sequential execution** — Phase 1 → Phase 2 → Phase 3. Each phase must complete (including verification) before the next starts.
 2. **Verify before delete** — Always confirm the canonical copy exists at the target path before removing a source file.
 3. **Count and report** — Log file counts before and after each phase. Report deltas in the phase summary.
 4. **No destructive operations without confirmation** — For `rm` operations over 3+ files, show the list and ask before executing.
 
+## Phases
 
 ## Phase 1: Triage Documentation
 
@@ -153,11 +116,11 @@ This prompt initialises a new or stale workspace by running a three-phase cleanu
 
 ## Template References
 
-Detailed templates in `templates/`:
+Detailed templates in `templates/projects-init/`:
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -167,7 +130,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -176,7 +139,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -195,7 +158,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -227,6 +190,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -235,17 +199,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`dev-init.prompt.md`](dev-init.prompt.md)
 - [`repo-init.prompt.md`](repo-init.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

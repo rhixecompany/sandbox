@@ -1,15 +1,47 @@
 ---
 name: power-platform-mcp-connector-suite
 title: Power Platform MCP Connector Suite
-description: Generate complete Power Platform custom connector with MCP integration for Copilot Studio - includes schema generation, troubleshooting, and validation.
+description: Generate complete Power Platform custom connector with MCP integration for Copilot Studio
+  - includes schema generation, troubleshooting, and validation.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /power-platform-mcp-connector-suite
 toolsets:
-- terminal
 - file
-category: mcp
-
----
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /power-platform-mcp-connector-suite
+    flags: {}
+    help: Generate complete Power Platform custom connector with MCP integration for Co...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- frontend
+- generator
+- mcp
+- prompts
+- agents
+- data
+- typescript
+scripts: []
 ## Goal
 
 Generate complete Power Platform custom connector with MCP integration for Copilot Studio - includes schema generation, troubleshooting, and validation.
@@ -235,6 +267,3 @@ Same-family prompts:
 - [`power-bi-model-design-review.prompt.md`](power-bi-model-design-review.prompt.md)
 - [`power-bi-performance-troubleshooting.prompt.md`](power-bi-performance-troubleshooting.prompt.md)
 - [`power-bi-report-design-consultation.prompt.md`](power-bi-report-design-consultation.prompt.md)
-## Workflow
-
-Description needed.

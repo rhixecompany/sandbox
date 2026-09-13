@@ -1,93 +1,49 @@
 ---
 name: security
-title: Security Hardening Prompt
-description: Applies secure-by-default engineering practices to code and documentation updates with explicit handling for secrets, input validation, threat surface, and least-privilege design.
-trigger: /security
-category: security
+title: Security Review
+description: Comprehensive prompt for security review, vulnerability assessment, and secure coding practices.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /security
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /security
+    flags: {}
+    help: Comprehensive prompt for security review, vulnerability assessment, and secur...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- architecture
+- audit
+- data
+- documentation
+- frontend
+- prompts
+- security
+- skills
+- typescript
+scripts: []
 ## Goal
-Applies secure-by-default engineering practices to code and documentation updates with explicit handling for secrets, input validation, threat surface, and least-privilege design.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Threat Surface Identification](#phase-1:-threat-surface-identification)
-  - [Phase 2: Security Control Implementation](#phase-2:-security-control-implementation)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Context](#context)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Threat Surface Identification](#phase-1:-threat-surface-identification)
-- [Phase 2: Security Control Implementation](#phase-2:-security-control-implementation)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Use when "Comprehensive security prompt aligned to repository secure development requirements." to accomplish the associated tasks and objectives.
 
@@ -95,13 +51,14 @@ Use when "Comprehensive security prompt aligned to repository secure development
 
 Apply secure-by-default engineering practices to code and documentation updates, with explicit handling for secrets, input validation, and least-privilege design.
 
+## Context
 
 Use this prompt for any change that handles external input, authentication, authorization, secrets, APIs, or data persistence.
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Threat modeling and trust-boundary analysis
 - Input validation and secure coding patterns
@@ -121,7 +78,7 @@ Use this prompt for any change that handles external input, authentication, auth
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Never commit secrets or sensitive values in code, docs, or examples.
 - Validate and sanitize all external inputs.
@@ -129,6 +86,7 @@ Use this prompt for any change that handles external input, authentication, auth
 - Add logging and monitoring guidance for suspicious or failed auth events.
 - Keep dependencies current and note known CVE implications.
 
+## Phases
 
 ### Phase 1: Threat Surface Identification
 
@@ -167,11 +125,11 @@ Use this prompt for any change that handles external input, authentication, auth
 
 ## Template References
 
-Templates in `templates/`:- `phases.md`
+Templates in `templates/security/`:- `phases.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -180,7 +138,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -199,7 +157,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -223,18 +181,11 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

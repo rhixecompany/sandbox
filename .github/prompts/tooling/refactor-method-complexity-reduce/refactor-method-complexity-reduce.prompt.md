@@ -1,15 +1,44 @@
 ---
 name: refactor-method-complexity-reduce
 title: Refactor Method Complexity Reduce
-description: Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.
+description: Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}`
+  or below, by extracting helper methods.
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /refactor-method-complexity-reduce
 toolsets:
 - terminal
 - file
-category: tooling
-
----
-
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /refactor-method-complexity-reduce
+    flags: {}
+    help: Refactor given method `${input:methodName}` to reduce its cognitive complexit...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- prompts
+- refactoring
+- specification
+- typescript
+scripts: []
 ## Goal
 
 Refactor given method `${input:methodName}` to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting helper methods.
@@ -195,6 +224,3 @@ Same-family prompts:
 - [`refactor-code.prompt.md`](refactor-code.prompt.md)
 - [`refactor-mardown-files.prompt.md`](refactor-mardown-files.prompt.md)
 - [`refactor-plan.prompt.md`](refactor-plan.prompt.md)
-## Workflow
-
-Description needed.

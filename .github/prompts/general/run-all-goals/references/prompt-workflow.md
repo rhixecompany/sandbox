@@ -1,11 +1,10 @@
 ---
-name: prompt-workflow
-category: references
-version: 2.0.0
-license: MIT
-author: derived from prompt-management skill + tree.prompt.txt (PRIMARY source)
-description: Prompt workflow reference for run-all-goals execution phases. tree-cleanup-first approach per tree.prompt.txt.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Prompt Workflow — Reference (tree-Primary)
 

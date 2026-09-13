@@ -1,118 +1,74 @@
 ---
 name: hermes-comprehensive-setup
-title: Hermes Comprehensive Setup
-description: Executes the hermes-comprehensive-setup workflow to install, configure, and verify all Hermes Agent components end-to-end.
-trigger: /hermes-comprehensive-setup
-category: general
+title: Comprehensive Hermes and OpenCode Setup, Migration, and Validation
+description: 'Configure Hermes and OpenCode using best practices: load all prompts, plans, markdown files,
+  skills, MCP servers, hooks, and templates. Run enhancement, validation, and dry-run verification end
+  to end.'
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /hermes-comprehensive-setup
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /hermes-comprehensive-setup
+    flags: {}
+    help: 'Configure Hermes and OpenCode using best practices: load all prompts, plans, ...'
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- backend
+- configuration
+- documentation
+- markdown
+- mcp
+- ml
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ## Goal
-Executes the hermes-comprehensive-setup workflow to install, configure, and verify all Hermes Agent components end-to-end.
 
-## Context
-
-## Phases
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Template Reference](#template-reference)
-- [Execution](#execution)
-- [Steps](#steps)
-- [Rules](#rules)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Template Reference](#template-reference)
-- [Execution](#execution)
-- [Steps](#steps)
-- [Rules](#rules)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
-
-Execute the `hermes-comprehensive-setup` workflow. Full details: `templates/README.md`.
+Execute the `hermes-comprehensive-setup` workflow. Full details: `templates/hermes-comprehensive-setup/README.md`.
 
 ## Template Reference
 
-Detailed template in `templates/`:
+Detailed template in `templates/hermes-comprehensive-setup/`:
 
 - `README.md`
 
 ## Execution
 
-See `templates/README.md` for phases/steps/workflow.
+See `templates/hermes-comprehensive-setup/README.md` for phases/steps/workflow.
 
 ## Steps
 
-1. Read `templates/README.md`.
+1. Read `templates/hermes-comprehensive-setup/README.md`.
 2. Execute the workflow.
 3. Verify outputs.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ## Subgoals
 
@@ -121,9 +77,10 @@ See `templates/README.md` for phases/steps/workflow.
 3. **Verify** — Confirm output meets requirements and standards.
 4. **Document** — Record results, decisions, and lessons learned.
 
+
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -131,9 +88,10 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 | **Reviewer** | Code review, quality assurance |
 | **User** | General purpose, operations |
 
+
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -141,8 +99,12 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 - **Encourage**: Evidence-based decisions, minimal changes
 
 
+## Context
+
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
+
+## Phases
 
 ### Phase 1: Intake
 
@@ -161,17 +123,19 @@ Use when implementing, modifying, or debugging code. Read the codebase first, un
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
+
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
 3. **Verification gates** — Always verify before claiming completion.
 4. **Minimal changes** — Fix root cause, not symptoms.
+
 
 ## Verification Checklist
 
@@ -183,9 +147,10 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 | 4 | Regression | No unintended side effects |
 | 5 | Docs | Changes documented if needed |
 
+
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -195,6 +160,7 @@ See [`templates/skills-table-core.md`](templates/skills-table-core.md) for share
 | `systematic-debugging` | Debugging and root cause analysis |
 | `executing-plans` | Execute plans step by step |
 | `verification-before-completion` | Validate before claiming done |
+
 
 ## MCP Servers & Tools
 
@@ -208,6 +174,8 @@ The following MCP servers and tools are available for this task. Use them in pre
 | `playwright` | Browser automation for interactive pages |
 | `github` | GitHub API operations |
 
+
+
 ## Tasks
 
 - [ ] Understand requirements and scope
@@ -216,13 +184,16 @@ The following MCP servers and tools are available for this task. Use them in pre
 - [ ] Verify against acceptance criteria
 - [ ] Document results and decisions
 
+
+
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
 
 ## Scripts
 
@@ -232,11 +203,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
@@ -247,7 +215,3 @@ Same-family prompts:
 - [`hermes-breakdown-plan.prompt.md`](hermes-breakdown-plan.prompt.md)
 - [`hermes-breakdown-test.prompt.md`](hermes-breakdown-test.prompt.md)
 - [`hermes-doctor-systematic-debugging.prompt.md`](hermes-doctor-systematic-debugging.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

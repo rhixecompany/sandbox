@@ -1,54 +1,62 @@
 ---
 name: repo-research-pipeline
-title: Repo Research Pipeline
-description: Run research across all project repos and produce RESEARCH_REPORT.md files with verified sources using the Tavily-first research pipeline and symmetric cross-references.
-trigger: /repo-research-pipeline
-category: research
-version: 1.0.0
-author: Hermes Agent
-tags: [research, web-search, tavily, report, pipeline, automation]
-profile: code-architect
-priority: medium
-date: 2026-09-08
-enabled: true
-model_required: sonnet
-skills:
-  - using-superpowers
-  - systematic-debugging
-  - git-patch-management
-  - executing-plans
-  - verification-before-completion
-dependencies: []
-formatter: markdown
+title: Repo Research Pipeline (MCP-Enhanced)
+description: Structured workflow for executing web research across multiple projects and writing actionable
+  RESEARCH_REPORT.md files. Delegates to the repo-research-pipeline skill and web-research-pipeline skill.
+version: 2.2.0
 license: MIT
----
-
-## Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Workflow](#workflow)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers--tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Tasks](#tasks)
-- [Related Prompts](#related-prompts)
-
+author: Hermes Agent
+trigger: /repo-research-pipeline
+toolsets:
+- file
+- terminal
+skills: []
+dependencies:
+- prompt:web-research-pipeline
+- skill:domain-intel
+- skill:gh-cli
+- tool:mcp-tavily
+- tool:mcp-fetch
+- tool:mcp-filesystem
+- tool:mcp-github
+- tool:mcp-memory
+- tool:mcp-playwright
+- tool:mcp-sequential-thinking
+- skill:subagent-driven-development
+- skill:web-research-pipeline
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /repo-research-pipeline
+    flags: {}
+    help: Structured workflow for executing web research across multiple projects and w...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- backend
+- generator
+- mcp
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ## Goal
 
-Run research across all project repos and produce `RESEARCH_REPORT.md` files with verified sources. Use the Tavily-first research pipeline and maintain symmetric cross-references between reports that share technology.
-
-## Context
-
-A multi-project workspace needs per-project research artifacts so engineers can find best practices, similar projects, common pitfalls, and security considerations for each stack. This prompt is the orchestrator that drives the per-project work — it does not perform web search inline. Instead, it delegates each project's research to the `web-research-pipeline` sub-prompt and aggregates the results into `RESEARCH_REPORT.md` files and a top-level `RESEARCH_INDEX.md`.
+Run research across all project repos and produce RESEARCH_REPORT.md files
+with verified sources. **Tavily-first:** use `mcp__tavily__tavily_search` → `mcp__tavily__tavily_extract` before other backends.
 
 ## Workflow
 
@@ -62,11 +70,11 @@ Load the `repo-research-pipeline` skill (primary implementation) plus
 5. **Phase 5: Index & Cross-Reference** — Verify cross-ref symmetry
 6. **Phase 6: Verification** — Count, size gate, URL spot-checks
 7. **Phase 7: Quick Onboarding** — For ad-hoc questions, delegate to `repo.prompt.md`'s
-**Quick Repo Onboarding** section (Q1–Q4: summarize, entrypoint, PR workflow, disk usage).
+   **Quick Repo Onboarding** section (Q1–Q4: summarize, entrypoint, PR workflow, disk usage).
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. **NO FABRICATION** — Every finding must trace to real search or extraction.
 2. **VERIFY BEFORE CLAIMING** — Never report without running the command.
@@ -77,26 +85,30 @@ Load the `repo-research-pipeline` skill (primary implementation) plus
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
-| Persona | When to Use |
+| Persona       | When to Use                            |
 | ------------- | -------------------------------------- |
 | **Developer** | Implementation, debugging, refactoring |
-| **Reviewer** | Code review, quality assurance |
-| **User** | General purpose, operations |
+| **Reviewer**  | Code review, quality assurance         |
+| **User**      | General purpose, operations            |
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
+
+Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
+
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -105,17 +117,17 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Verification Checklist
 
-| # | Gate | Criterion |
+| # | Gate       | Criterion                           |
 | - | ---------- | ----------------------------------- |
-| 1 | Scope | Change matches the original request |
-| 2 | Quality | Meets project standards |
-| 3 | Tests | Tests pass (if applicable) |
-| 4 | Regression | No unintended side effects |
-| 5 | Docs | Changes documented if needed |
+| 1 | Scope      | Change matches the original request |
+| 2 | Quality    | Meets project standards             |
+| 3 | Tests      | Tests pass (if applicable)          |
+| 4 | Regression | No unintended side effects          |
+| 5 | Docs       | Changes documented if needed        |
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -126,42 +138,42 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
-| Skill | Purpose |
+| Skill                            | Purpose                       |
 | -------------------------------- | ----------------------------- |
-| `using-superpowers` | Foundational skill workflow |
-| `systematic-debugging` | Root cause analysis and fix |
-| `git-patch-management` | Patch creation and management |
-| `executing-plans` | Execute plans step by step |
+| `using-superpowers`              | Foundational skill workflow   |
+| `systematic-debugging`           | Root cause analysis and fix   |
+| `git-patch-management`           | Patch creation and management |
+| `executing-plans`                | Execute plans step by step    |
 | `verification-before-completion` | Validate before claiming done |
 
 ## MCP Servers & Tools
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server | Purpose |
+| Server                | Purpose                                                |
 | --------------------- | ------------------------------------------------------ |
-| `tavily` | Web search + URL extraction (primary research backend) |
-| `fetch` | Web page content extraction fallback |
-| `filesystem` | File read/write operations |
-| `github` | GitHub API operations |
-| `memory` | Persistent memory operations |
-| `playwright` | Browser automation for interactive pages |
-| `sequential-thinking` | Structured reasoning for complex problems |
-| `ast-grep` | AST-based code search and replace |
+| `tavily`              | Web search + URL extraction (primary research backend) |
+| `fetch`               | Web page content extraction fallback                   |
+| `filesystem`          | File read/write operations                             |
+| `github`              | GitHub API operations                                  |
+| `memory`              | Persistent memory operations                           |
+| `playwright`          | Browser automation for interactive pages               |
+| `sequential-thinking` | Structured reasoning for complex problems              |
+| `ast-grep`            | AST-based code search and replace                      |
 
 ## Hooks
 
 The following workspace hooks run around this prompt's execution (see `.github/hooks/README.md`):
 
-| Hook | When | Behavior |
+| Hook                     | When              | Behavior                     |
 | ------------------------ | ----------------- | ---------------------------- |
-| `session-logger` | session start/end | Logs session metadata |
-| `governance-audit` | session events | Audits governance compliance |
-| `session-auto-commit` | session end | Auto-commits session state |
-| `pre-exec-validate.sh` | before commands | Validates command execution |
-| `post-exec-state-log.py` | after commands | Appends state log |
+| `session-logger`         | session start/end | Logs session metadata        |
+| `governance-audit`       | session events    | Audits governance compliance |
+| `session-auto-commit`    | session end       | Auto-commits session state   |
+| `pre-exec-validate.sh`   | before commands   | Validates command execution  |
+| `post-exec-state-log.py` | after commands    | Appends state log            |
 
 ## Scripts
 
@@ -185,9 +197,3 @@ Same-family prompts:
 - [`repo-story-time.prompt.md`](repo-story-time.prompt.md)
 - [`repo-tooling-implementation.prompt.md`](repo-tooling-implementation.prompt.md)
 - [`repo.prompt.md`](repo.prompt.md)
-
----
-
-# Prompt template
-
-Execute the workflow defined in this file.

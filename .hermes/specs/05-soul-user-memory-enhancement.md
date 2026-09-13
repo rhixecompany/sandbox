@@ -1,10 +1,11 @@
 ---
-name: 05-soul-user-memory-enhancement
-title: SOUL/USER/MEMORY Enhancement with Git History
-status: in_progress
-owner: Alexa
-version: 1.0.0
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 ## Goal
 

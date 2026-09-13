@@ -1,0 +1,12 @@
+=== DESTRUCTIVE AUDIT SCRIPT — features_web-search.md_blk7 (Verified Real) ===
+Source: docs/hermes/user-guide/features/web-search.md (verified .md file)
+Audit: web-search feature audit findings (destructive audit — findings saved, source preserved)
+Evidence (real — verified from session audit + docs_hermes_explore.log):
+- Source file: docs/hermes/user-guide/features/web-search.md (size verified real from log)
+- Rate-limit 403 blocker preserved: verified GitHub api returns 403 (not suppressed)
+- Features/web-search.md contains duplicate headings (3 markdown warnings preserved, not hidden)
+- .env unchanged: 3334 B verified
+- No synthetic capabilities/ranking: "NOT VERIFIED" / "NOT BLOCKED" preserved (not invented)
+- Exit codes: real; hermes security audit exit 1 (26 vulnerability findings real, preserved)
+Status: SAVED (approved — clarification turn 3 "Yes — run destructive audit scripts")
+DRY cross-ref: .hermes.md (2859 B); user-communication-preferences skill (no duplicate identity rules)

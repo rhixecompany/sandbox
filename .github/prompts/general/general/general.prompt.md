@@ -1,100 +1,90 @@
 ---
 name: general
 title: General Development Workflow
-description: General-purpose development workflow covering analysis, planning, implementation, and verification with context mapping and AI-assisted execution.
-trigger: /general
-category: general
+description: General development workflow for analysis, planning, implementation, and verification with
+  context mapping and AI-assisted execution.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /general
+toolsets:
+- file
+- terminal
+skills:
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- context-map
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- subagent-driven-development
+- systematic-debugging
+- simplify
+- context7
+- plan
+- writing-skills
+- acpx-executor
+dependencies:
+- prompt:context-map.prompt.md
+- prompt:update-implementation-plan.prompt.md
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:context7
+- skill:plan
+- skill:writing-skills
+- skill:acpx-executor
+- tool:terminal
+- tool:search_files
+- tool:web_search
+- tool:delegate_task
+- skill:introspection-only-general
+- skill:no-git-delete
+- skill:no-net-fetch
+- skill:skills-tools-preflight-check
+- skill:context-map
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /general
+    flags: {}
+    help: General development workflow for analysis, planning, implementation, and veri...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ml
+- planning
+- prompts
+- typescript
+- workflow
+- documentation
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-General-purpose development workflow covering analysis, planning, implementation, and verification with context mapping and AI-assisted execution.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-  - [Phase 1: Analyze](#phase-1:-analyze)
-  - [Phase 2: Plan](#phase-2:-plan)
-  - [Phase 3: Execute](#phase-3:-execute)
-  - [Phase 4: Verify](#phase-4:-verify)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Actions](#actions)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-- [Phase 1: Analyze](#phase-1:-analyze)
-- [Phase 2: Plan](#phase-2:-plan)
-- [Phase 3: Execute](#phase-3:-execute)
-- [Phase 4: Verify](#phase-4:-verify)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Actions](#actions)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 General development workflow for analysis, planning, implementation, and verification with context mapping and AI-assisted execution.
 
 > General development workflow with planning, automation, and verification.
 
+## Context
 
 Use this prompt when a task spans more than one step or needs explicit fileimpact analysis before coding. It combines file mapping, planning, direct CLIexecution, and validation.
 
@@ -114,7 +104,7 @@ Use this prompt when a task spans more than one step or needs explicit fileimpac
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
 1. Use Context7 or equivalent docs before changing code.
@@ -126,8 +116,9 @@ Use this prompt when a task spans more than one step or needs explicit fileimpac
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
+## Phases
 
 ### Phase 1: Analyze
 
@@ -168,7 +159,7 @@ Test changes, validate outputs, and confirm the task is complete.
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -178,7 +169,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -187,7 +178,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -206,7 +197,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -230,18 +221,11 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

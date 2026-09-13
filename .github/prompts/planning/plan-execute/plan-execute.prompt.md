@@ -1,109 +1,59 @@
 ---
 name: plan-execute
-title: Plan Execute
-description: Loads an existing plan, runs each phase in strict order with verification gates and git checkpoints, then summarizes with phase SHAs and outputs.
-trigger: /plan-execute
-category: planning
+title: Execute Implementation Plan
+description: Load and execute any implementation plan step-by-step. Reads the plan from a `.prompt.md`
+  or `.md` file, runs each phase sequentially with verification gates. Replaces all ad-hoc execute-plan-*
+  prompts with a single generic executor.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent (consolidated)
+trigger: /plan-execute
+toolsets:
+- file
+- terminal
+skills:
+- plans-and-specs
+- subagent-driven-development
+- verification-before-completion
+- writing-plans
+dependencies:
+- skill:plans-and-specs
+- skill:subagent-driven-development
+- skill:verification-before-completion
+- skill:writing-plans
+- tool:terminal
+- tool:search_files
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /plan-execute
+    flags: {}
+    help: Load and execute any implementation plan step-by-step. Reads the plan from a ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- planning
+- prompts
+- typescript
+- debugging
+scripts: []
 ## Goal
-Loads an existing plan, runs each phase in strict order with verification gates and git checkpoints, then summarizes with phase SHAs and outputs.
-
-## Context
-
-## Phases
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Input](#input)
-- [Core Rules](#core-rules)
-- [Workflow](#workflow)
-  - [Phase 1: Load plan](#phase-1:-load-plan)
-  - [Phase 2: Execute phases](#phase-2:-execute-phases)
-  - [Phase 3: Final verification](#phase-3:-final-verification)
-  - [Phase 4: Report](#phase-4:-report)
-- [Verification Checklist](#verification-checklist)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Input](#input)
-- [Core Rules](#core-rules)
-- [Workflow](#workflow)
-- [Phase 1: Load plan](#phase-1:-load-plan)
-- [Phase 2: Execute phases](#phase-2:-execute-phases)
-- [Phase 3: Final verification](#phase-3:-final-verification)
-- [Phase 4: Report](#phase-4:-report)
-- [Verification Checklist](#verification-checklist)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Load and execute any implementation plan step-by-step. Reads the plan from a `.prompt.md` or `.md` file, runs each phase sequentially with verification gates. Replaces all ad-hoc execute-plan-* prompts with a single generic executor.
 
-> **Shared template references:**>> - [Core rules](templates/rules-core.md)> - [Section skeleton](templates/section-skeleton.md)> - [Verification checklist](templates/verification-checklist.md)
+> **Shared template references:**>> - [Core rules](templates/_shared/rules-core.md)> - [Section skeleton](templates/_shared/section-skeleton.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
 ## Input
 
@@ -112,7 +62,7 @@ Load and execute any implementation plan step-by-step. Reads the plan from a `.p
 
 ## Core Rules
 
-See [`templates/rules-core.md`](templates/rules-core.md).Additional execution-specific rules:1. **Strict sequential** — Never skip ahead. Complete each phase, verify its gate, then proceed.2. **No silent failures** — If a phase fails, stop and report before retrying or continuing.3. **Git checkpoint per phase** — After each successful phase, `git add && git commit` with descriptive message.4. **Idempotent phases** — Each phase should be safe to re-run if it fails mid-way.5. **Plan is read-only** — Never modify the plan file during execution; log progress separately.
+See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).Additional execution-specific rules:1. **Strict sequential** — Never skip ahead. Complete each phase, verify its gate, then proceed.2. **No silent failures** — If a phase fails, stop and report before retrying or continuing.3. **Git checkpoint per phase** — After each successful phase, `git add && git commit` with descriptive message.4. **Idempotent phases** — Each phase should be safe to re-run if it fails mid-way.5. **Plan is read-only** — Never modify the plan file during execution; log progress separately.
 
 ## Workflow
 
@@ -154,7 +104,7 @@ Summarise:
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -164,19 +114,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -189,8 +140,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -209,12 +161,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -223,7 +175,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -234,7 +186,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -267,6 +219,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -275,6 +228,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
 
 Same-family prompts:
@@ -282,7 +236,3 @@ Same-family prompts:
 - [`plan-audit.prompt.md`](plan-audit.prompt.md)
 - [`plan-batch-fix.prompt.md`](plan-batch-fix.prompt.md)
 - [`plan-generate.prompt.md`](plan-generate.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

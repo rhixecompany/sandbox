@@ -1,11 +1,10 @@
 ---
-name: best-practices
-category: templates/_shared
-version: 2.0.0
-license: MIT
-author: derived from user-communication-preferences + writing-clearly-and-concisely + prompt-management + tree.prompt.txt best practices
-description: Cross-cutting best practices shared across all run-all-goals artifacts. tree.prompt.txt is PRIMARY source.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Best Practices — Shared Template
 

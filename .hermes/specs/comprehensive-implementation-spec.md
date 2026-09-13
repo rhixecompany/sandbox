@@ -1,16 +1,11 @@
 ---
-name: comprehensive-implementation-spec
-title: "Comprehensive Implementation Spec — Detailed Requirements & Acceptance Criteria"
-description: "Detailed specifications for the comprehensive implementation plan. Defines requirements, acceptance criteria, interfaces, and constraints."
-version: 1.1.0
-author: Alexa
-license: MIT
-tags: [spec, requirements, acceptance-criteria, interfaces]
-status: approved
-owner: Alexa
-created: 2026-09-04
-plan: .hermes/plans/comprehensive-implementation-plan.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Comprehensive Implementation Spec
 

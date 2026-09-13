@@ -1,78 +1,71 @@
 ---
 name: plan-generate
-title: Plan Generate
-description: Generates a structured implementation plan (inputs, outputs, phases with verification gates) at .github/prompts/<name>.prompt.md or .hermes/plans/<name>.md.
-trigger: /plan-generate
-category: planning
+title: Generate Implementation Plan
+description: Generate a detailed, structured implementation plan from a goal or specification. Produces
+  a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts
+  (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent (consolidated)
+trigger: /plan-generate
+toolsets:
+- file
+- terminal
+skills:
+- plans-and-specs
+- writing-plans
+- simplify
+- brainstorming
+- systematic-debugging
+- verification-before-completion
+dependencies:
+- skill:plans-and-specs
+- skill:writing-plans
+- skill:simplify
+- skill:brainstorming
+- skill:systematic-debugging
+- skill:verification-before-completion
+- prompt:context-map.prompt.md
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /plan-generate
+    flags: {}
+    help: Generate a detailed, structured implementation plan from a goal or specificat...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- debugging
+- generator
+- ml
+- planning
+- prompts
+- specification
+- typescript
+- ai-assistant
+scripts: []
 ## Goal
-Generates a structured implementation plan (inputs, outputs, phases with verification gates) at .github/prompts/<name>.prompt.md or .hermes/plans/<name>.md.
 
-## Context
+Generate a detailed, structured implementation plan from a goal or specification. Produces a phased plan with dependencies, references, and verification gates. Replaces ad-hoc plan-* prompts (debugger, features-seed, updateAiAgentSetupPrompt, etc.) with a single reusable generator.
 
-## Phases
-
-
-- [Goal](#goal)
-- [Core Rules](#core-rules)
-- [Workflow](#workflow)
-- [Phase 1: Context gathering](#phase-1:-context-gathering)
-- [Phase 2: Plan structure](#phase-2:-plan-structure)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Phases](#phases)
-- [Phase N: <Name](#phase-n:-<name)
-- [Verification Checklist](#verification-checklist)
-- [Phase 3: Write](#phase-3:-write)
-- [Phase 4: Verify](#phase-4:-verify)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
-
-Generate a structured implementation plan from a goal or specification. The plan includes phased execution, dependencies, and verification gates.
-
-> **Shared template references:**>> - [Frontmatter patterns](templates/frontmatter.md)> - [Core rules](templates/rules-core.md)> - [Section skeleton](templates/section-skeleton.md)> - [Verification checklist](templates/verification-checklist.md)
+> **Shared template references:**>> - [Frontmatter patterns](templates/_shared/frontmatter.md)> - [Core rules](templates/_shared/rules-core.md)> - [Section skeleton](templates/_shared/section-skeleton.md)> - [Verification checklist](templates/_shared/verification-checklist.md)
 
 ## Core Rules
 
-See [`templates/rules-core.md`](templates/rules-core.md).Additional plan-specific rules:1. **Phases must be sequential** — Each phase must complete before the next begins.2. **Each phase has a verification gate** — Explicit checks that phase is done.3. **Dependencies are explicit** — Every skill, prompt, and tool referenced must exist.4. **DRY output** — Generated plans reference shared templates where possible.5. **One plan = one goal** — Never combine unrelated goals into a single plan.
+See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).Additional plan-specific rules:1. **Phases must be sequential** — Each phase must complete before the next begins.2. **Each phase has a verification gate** — Explicit checks that phase is done.3. **Dependencies are explicit** — Every skill, prompt, and tool referenced must exist.4. **DRY output** — Generated plans reference shared templates where possible.5. **One plan = one goal** — Never combine unrelated goals into a single plan.
 
 ## Workflow
 
@@ -95,6 +88,7 @@ Generate a plan with these sections:```markdown
 
 - Files, reports, artifacts the plan produces
 
+## Phases
 
 ### Phase N: <Name
 
@@ -121,7 +115,7 @@ Generate a plan with these sections:```markdown
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -131,19 +125,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
-Use when creating an implementation plan from a goal, specification, or feature request.
+Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -156,11 +151,11 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -169,7 +164,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -180,7 +175,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -213,6 +208,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -221,6 +217,7 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
 
 Same-family prompts:
@@ -228,7 +225,3 @@ Same-family prompts:
 - [`plan-audit.prompt.md`](plan-audit.prompt.md)
 - [`plan-batch-fix.prompt.md`](plan-batch-fix.prompt.md)
 - [`plan-execute.prompt.md`](plan-execute.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

@@ -1,137 +1,51 @@
 ---
 name: create-agentsmd
-title: Create AGENTS.md
-description: Generate a project-specific AGENTS.md that codifies architecture, conventions, and operating rules for AI coding agents.
-trigger: /create-agentsmd
-category: productivity
+title: Create high‑quality AGENTS.md file
+description: Prompt for generating an AGENTS.md file for a repository.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /create-agentsmd
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /create-agentsmd
+    flags: {}
+    help: Prompt for generating an AGENTS.md file for a repository.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- generator
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Generate a project-specific AGENTS.md that codifies architecture, conventions, and operating rules for AI coding agents.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [What is AGENTS.md?AGENTS.md is a Markdown file that serves as a "README for agents"](#what-is-agentsmd?agentsmd-is-a-markdown-file-that-serves-as-a-"readme-for-agents")
-- [Key Principles](#key-principles)
-- [File Structure and Content Guidelines](#file-structure-and-content-guidelines)
-  - [1. Required Setup](#1-required-setup)
-- [Example Template](#example-template)
-- [Project Overview](#project-overview)
-- [Setup Commands](#setup-commands)
-- [Development Workflow](#development-workflow)
-- [Test](#test)
-- [Code Style](#code-style)
-- [Build and Deployment](#build-and-deployment)
-- [Pull Request Guidelines](#pull-request-guidelines)
-- [Additional Notes](#additional-notes)
-- [Working Example from agents.md](#working-example-from-agentsmd)
-- [Dev environment tips](#dev-environment-tips)
-- [Test](#test)
-- [PR instructions](#pr-instructions)
-- [Implementation Steps](#implementation-steps)
-- [Best Practices](#best-practices)
-- [Monorepo Considerations](#monorepo-considerations)
-- [Final Notes](#final-notes)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [What is AGENTS.md?AGENTS.md is a Markdown file that serves as a "README for agents"](#what-is-agentsmd?agentsmd-is-a-markdown-file-that-serves-as-a-"readme-for-agents")
-- [Key Principles](#key-principles)
-- [File Structure and Content Guidelines](#file-structure-and-content-guidelines)
-- [1. Required Setup](#1-required-setup)
-- [Example Template](#example-template)
-- [Project Overview](#project-overview)
-- [Setup Commands](#setup-commands)
-- [Development Workflow](#development-workflow)
-- [Test](#test)
-- [Code Style](#code-style)
-- [Build and Deployment](#build-and-deployment)
-- [Pull Request Guidelines](#pull-request-guidelines)
-- [Additional Notes](#additional-notes)
-- [Working Example from agents.md](#working-example-from-agentsmd)
-- [Dev environment tips](#dev-environment-tips)
-- [Test](#test)
-- [PR instructions](#pr-instructions)
-- [Implementation Steps](#implementation-steps)
-- [Best Practices](#best-practices)
-- [Monorepo Considerations](#monorepo-considerations)
-- [Final Notes](#final-notes)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Prompt for generating an AGENTS.md file for a repository.
 
+## Context
 
 Use when you need to work on the current workspace or task.
 
@@ -148,13 +62,14 @@ Use when you need to work on the current workspace or task.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -173,7 +88,7 @@ Use when you need to work on the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## What is AGENTS.md?AGENTS.md is a Markdown file that serves as a "README for agents"
@@ -197,7 +112,7 @@ Use when you need to work on the current workspace or task.
 Use this as a starting template and customize based on the specific project:
 
 ```markdown
-## AGENTS.md
+# AGENTS.md
 
 ## Project Overview
 [Brief description of the project, its purpose, and key technologies]
@@ -238,7 +153,7 @@ ing Instructions- Run all tests: `[command]`- Run unit tests: `[command]`- Run i
 Here's a real example from the agents.md website:
 
 ```markdown
-## Sample AGENTS.md file
+# Sample AGENTS.md file
 
 ## Dev environment tips
 
@@ -273,7 +188,7 @@ ing instructions- Find the CI plan in the .github/workflows folder.
 
 1. **Analyze the project structure** to understand:
 
-- Programming languages and frameworks used - Package managers and build tools - Testing frameworks - Project architecture (monorepo, single package, etc.)2. **Identify key workflows** by examining: - package.json scripts - Makefile or other build files - CI/CD configuration files - Documentation files3. **Create comprehensive sections** covering: - All essential setup and development commands - Testing strategies and commands - Code style and conventions - Build and deployment processes4. **Include specific, actionable commands** that agents can execute directly5. **Test the instructions** by ensuring all commands work as documented6. **Keep it focused** on what agents need to know, not general project information
+- Programming languages and frameworks used   - Package managers and build tools   - Testing frameworks   - Project architecture (monorepo, single package, etc.)2. **Identify key workflows** by examining:   - package.json scripts   - Makefile or other build files   - CI/CD configuration files   - Documentation files3. **Create comprehensive sections** covering:   - All essential setup and development commands   - Testing strategies and commands   - Code style and conventions   - Build and deployment processes4. **Include specific, actionable commands** that agents can execute directly5. **Test the instructions** by ensuring all commands work as documented6. **Keep it focused** on what agents need to know, not general project information
 
 ## Best Practices
 
@@ -296,11 +211,11 @@ For large monorepos:
 
 ## Template References
 
-Detailed templates in `templates/`:- `file_structure_and_content_gui.md`
+Detailed templates in `templates/create-agentsmd/`:- `file_structure_and_content_gui.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -310,7 +225,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -329,7 +244,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -340,7 +255,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -373,6 +288,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -381,11 +297,8 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 

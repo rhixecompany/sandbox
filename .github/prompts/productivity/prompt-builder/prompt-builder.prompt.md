@@ -1,102 +1,53 @@
 ---
 name: prompt-builder
 title: Prompt Builder
-description: Guide users through creating high-quality .prompt.md files via a nine-area discovery questionnaire and pattern-driven assembly aligned with the repository's reference prompts.
-trigger: /prompt-builder
-category: productivity
+description: Guide users through creating high-quality .prompt.md files with proper structure, tools,
+  and best practices.
 version: 1.0.0
-author: Hermes Agent
-tags: [prompts, authoring, discovery, template, documentation, automation]
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-date: 2026-08-25
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /prompt-builder
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /prompt-builder
+    flags: {}
+    help: Guide users through creating high-quality .prompt.md files with proper struct...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- frontend
+- git
+- prompts
+- typescript
+- workflow
+scripts: []
 ## Goal
-Guide users through creating high-quality .prompt.md files via a nine-area discovery questionnaire and pattern-driven assembly aligned with the repository's reference prompts.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Modes](#modes)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-  - [Phase 1: Discovery](#phase-1:-discovery)
-- [Best Practices Integration](#best-practices-integration)
-- [Reference Patterns](#reference-patterns)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Modes](#modes)
-- [Skills Required](#skills-required)
-- [Phases](#phases)
-- [Phase 1: Discovery](#phase-1:-discovery)
-- [Best Practices Integration](#best-practices-integration)
-- [Reference Patterns](#reference-patterns)
-- [Actions Summary](#actions-summary)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Guide users through creating high-quality .prompt.md files with proper structure, tools, and best practices.
 
-## prompt-builder> Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices.
+# prompt-builder> Guide users through creating high-quality GitHub Copilot prompts with proper structure, tools, and best practices.
 
+## Context
 
 Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask` and `agent` modes, the workflow asks exactly one focused question for each of the 9 topic areas (9 questions total) across identity, persona, task, context, instructions, output, tools, configuration, and validation. In `edit` mode, use the existing draft as the primary source and ask only targeted gap questions where needed.**Critical rules (must appear within the first 15% of execution):**- Never overwrite existing `.prompt.md` files without user confirmation- Always follow patterns from the 4 reference prompts listed in the Reference Patterns section of this prompt- Generate prompts optimized for AI consumption (token-efficient, structured)
 
@@ -113,13 +64,13 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. **Discovery first** — Gather all requirements through the 9-area questionnaire before generating
 2. **Pattern-driven** — Follow patterns from the 4 reference prompts listed in the Reference Patterns section
 3. **Context preflight** — Run `/context-map` before generation to map inputs, dependencies, and affected files
 4. **Persona-specific** — Define a clear role with expertise level, domain knowledge, and qualifications
-5. **Tool-aware** — Select appropriate tools based on the task: - **Code analysis/reading:** `codebase`, `search` - **File modification:** `editFiles` - **External APIs:** `fetch` - **Command execution:** `runCommands` - **Testing:** `runCommands` (test runner) + `editFiles` - **Documentation:** `codebase`, `search`, `editFiles`
+5. **Tool-aware** — Select appropriate tools based on the task:   - **Code analysis/reading:** `codebase`, `search`   - **File modification:** `editFiles`   - **External APIs:** `fetch`   - **Command execution:** `runCommands`   - **Testing:** `runCommands` (test runner) + `editFiles`   - **Documentation:** `codebase`, `search`, `editFiles`
 6. **Validation included** — Every generated prompt must include success criteria and validation steps
 7. **Never overwrite** — Do not overwrite existing `.prompt.md` files without user confirmation
 8. **Discovery gap handling** — If a user's answer to any topic is missing, contradictory, or insufficient, ask a single targeted follow-up question before proceeding to Phase 2. Do not proceed to generation with unresolved gaps.
@@ -133,13 +84,14 @@ Use when the user wants to create or improve a `.prompt.md` prompt file. In `ask
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)| Skill | Purpose |
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
 | --- | --- |
 | `context-map` | Preflight mapping of reference prompts and affected files |
 | `writing-plans` | Structured prompt authoring and section organization |
 | `writing-skills` | Crafting and optimizing prompts and instructions |
 | `prompt-engineering` | Research-backed prompt optimization before handoff |
 
+## Phases
 
 ### Phase 1: Discovery
 
@@ -171,11 +123,11 @@ Generated prompts follow patterns from existing high-quality prompts:
 
 ## Template References
 
-Detailed templates in `templates/`:- `phases.md`
+Detailed templates in `templates/prompt-builder/`:- `phases.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -185,7 +137,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -194,7 +146,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -213,7 +165,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -245,6 +197,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -253,16 +206,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`prompt-management.prompt.md`](prompt-management.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

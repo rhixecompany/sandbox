@@ -1,15 +1,11 @@
 ---
-name: hermes-root-scripts-quick-commands-spec
-title: "Hermes Root Scripts Quick-Command Coverage"
-description: "Specify safe, deterministic quick-command coverage and configuration drift checks for Hermes root scripts."
-version: 1.1.0
-author: Alexa
-license: MIT
-tags: [hermes, scripts, quick-commands, config, security, verification]
-status: approved
-owner: Alexa
-plan: .hermes/plans/hermes-root-scripts-quick-commands-plan.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Hermes Root Scripts Quick-Command Coverage
 

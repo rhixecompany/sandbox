@@ -1,15 +1,42 @@
 ---
 name: add-educational-comments
 title: Add Educational Comments
-description: Add educational comments to the file specified, or prompt asking for file to comment if one is not provided.
+description: No description
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /add-educational-comments
 toolsets:
-- terminal
 - file
-category: documentation
-
----
-
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: default
+    mcp_servers:
+    - filesystem
+    - terminal
+    context_size: medium
+  copilot:
+    context_size: medium
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /add-educational-comments
+    flags: {}
+    help: No description
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- complexity:intermediate
+- language:typescript
+scripts: []
 ## Goal
 
 Add educational comments to the file specified, or prompt asking for file to comment if one is not provided.

@@ -1,9 +1,11 @@
 ---
-name: code-sandbox-server-spec
-version: 1.0.0
-batch: B1 (verified batch — sequential per clarification A; SP-A verified real for this spec)
-related_plan: .hermes/plans/30-hermes-mcp-servers-master-plan.md (SP-A, SP-B)
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Spec — code-sandbox MCP Server (B1 / 1 of 30)
 

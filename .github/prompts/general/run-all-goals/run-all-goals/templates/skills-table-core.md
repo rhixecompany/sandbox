@@ -1,11 +1,10 @@
 ---
-name: skills-table-core
-category: templates/_shared
-version: 2.0.0
-license: MIT
-author: derived from verified workspace skills inventory (85 workspace skills + 27 .github/skills/ SKILL.md + 275 category skills) + tree.prompt.txt
-description: Shared skills reference table format for run-all-goals artifacts. tree.prompt.txt is PRIMARY source.
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Skills Table — Shared Template
 

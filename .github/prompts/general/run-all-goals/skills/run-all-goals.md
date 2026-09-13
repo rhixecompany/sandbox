@@ -1,4 +1,4 @@
----
+--- sidebar_position: 16 title: "Persistent Goals" description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop." ---
 name: run-all-goals
 title: "Run All Goals — Unified Pipeline Skill (Tree-Primary)"
 description: >

@@ -1,105 +1,53 @@
 ---
 name: generator-orchestrator
 title: Generator Orchestrator
-description: Dependency-aware orchestrator for root blueprint and MCP generator prompts, enforcing strict stage gates and consistency validation across the generation pipeline.
-trigger: /generator-orchestrator
-category: general
+description: Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict
+  stage gates and consistency validation.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: high
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
+author: Hermes Agent
+trigger: /generator-orchestrator
+toolsets:
+- file
+- terminal
+skills:
+- subagent-driven-development
+dependencies:
+- skill:subagent-driven-development
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /generator-orchestrator
+    flags: {}
+    help: Dependency-aware orchestrator prompt for root blueprint and MCP generator pro...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- backend
+- generator
+- mcp
+- prompts
+- typescript
+- workflow
+- documentation
+- git
+scripts: []
 ---
 
-## Table of Contents
-
 ## Goal
-Dependency-aware orchestrator for root blueprint and MCP generator prompts, enforcing strict stage gates and consistency validation across the generation pipeline.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Description](#description)
-  - [Goal](#goal)
-- [Context](#context)
-  - [Scope](#scope)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Discovery](#phase-1:-discovery)
-  - [Phase 2: Contract Design](#phase-2:-contract-design)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-  - [Invocation Order and Branching](#invocation-order-and-branching)
-  - [Failure Handling Policy](#failure-handling-policy)
-  - [Verification Checklist](#verification-checklist)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Description](#description)
-- [Goal](#goal)
-- [Context](#context)
-- [Scope](#scope)
-- [Skills Required](#skills-required)
-- [Subagents](#subagents)
-- [Personas](#personas)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Discovery](#phase-1:-discovery)
-- [Phase 2: Contract Design](#phase-2:-contract-design)
-- [Steps](#steps)
-- [Tasks](#tasks)
-- [Subtasks](#subtasks)
-- [Actions Summary](#actions-summary)
-- [Invocation Order and Branching](#invocation-order-and-branching)
-- [Failure Handling Policy](#failure-handling-policy)
-- [Verification Checklist](#verification-checklist)
-- [Template References](#template-references)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Dependency-aware orchestrator prompt for root blueprint and MCP generator prompts with strict stage gates and consistency validation.
 
@@ -109,6 +57,7 @@ Dependency-aware orchestrator prompt for root blueprint and MCP generator prompt
 
 Create one orchestrator prompt that coordinates only the 11 root generator prompts in `prompts` with dependency-aware ordering, conditional MCP/server branching, deterministic execution modes, and strict validation gates.
 
+## Context
 
 Use this prompt when you need one runbook to generate aligned architecture, workflow, documentation, and optional MCP/server outputs.
 
@@ -121,7 +70,7 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)
 
 - Dependency graph design for staged orchestration.
 - Prompt-composition and deterministic branching.
@@ -131,33 +80,34 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 ## Subagents
 
 - No external subagents are required.
-- Invoke only the following root generator prompts as sub-prompts: - `technology-stack-blueprint-generator.prompt.md` - `folder-structure-blueprint-generator.prompt.md` - `architecture-blueprint-generator.prompt.md` - `project-workflow-analysis-blueprint-generator.prompt.md` - `code-exemplars-blueprint-generator.prompt.md` - `copilot-instructions-blueprint-generator.prompt.md` - `readme-blueprint-generator.prompt.md` - `typescript-mcp-server-generator.prompt.md` - `python-mcp-server-generator.prompt.md` - `swift-mcp-server-generator.prompt.md` - `mcp-copilot-studio-server-generator.prompt.md`
+- Invoke only the following root generator prompts as sub-prompts:  - `technology-stack-blueprint-generator.prompt.md`  - `folder-structure-blueprint-generator.prompt.md`  - `architecture-blueprint-generator.prompt.md`  - `project-workflow-analysis-blueprint-generator.prompt.md`  - `code-exemplars-blueprint-generator.prompt.md`  - `copilot-instructions-blueprint-generator.prompt.md`  - `readme-blueprint-generator.prompt.md`  - `typescript-mcp-server-generator.prompt.md`  - `python-mcp-server-generator.prompt.md`  - `swift-mcp-server-generator.prompt.md`  - `mcp-copilot-studio-server-generator.prompt.md`
 
 ## Personas
 
 - Primary persona: Blueprint Orchestrator.
-- Behavioral expectations: - deterministic and stage-gated - strict on dependencies - explicit about degraded modes and failures
+- Behavioral expectations:  - deterministic and stage-gated  - strict on dependencies  - explicit about degraded modes and failures
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Accept these unified inputs:>
 >
 > - `mode`: `full | quick | custom`
-> **Full content:** `templates/rules.md`
+> **Full content:** `templates/generator-orchestrator/rules.md`
 
+## Phases
 
 ### Phase 1: Discovery
 
 ### Phase 2: Contract Design
 
-> **Full content:** `templates/phases.md`
+> **Full content:** `templates/generator-orchestrator/phases.md`
 
 ## Steps
 
 > 1. Build inventory and role classification for the 11 root generators.
 > 2. Normalize inputs using deterministic defaults.
-> **Full content:** `templates/steps.md`
+> **Full content:** `templates/generator-orchestrator/steps.md`
 
 ## Tasks
 
@@ -222,11 +172,11 @@ Use this prompt when you need one runbook to generate aligned architecture, work
 
 ## Template References
 
-Detailed templates in `templates/`:- `phases.md`- `rules.md`- `steps.md`
+Detailed templates in `templates/generator-orchestrator/`:- `phases.md`- `rules.md`- `steps.md`
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -235,7 +185,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -254,7 +204,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -278,18 +228,11 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
-
-## Workflow
-
-<content>
 
 Prompt-library tooling (see `.enhance/`):
 
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

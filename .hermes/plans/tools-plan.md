@@ -2,6 +2,7 @@
 name: "tools-plan"
 title: "Plan — Tools & Toolsets"
 version: 1.0.0
+status: "in_progress"
 ---
 # Plan: tools
 - Source file: docs/features/tools.md (261 lines)

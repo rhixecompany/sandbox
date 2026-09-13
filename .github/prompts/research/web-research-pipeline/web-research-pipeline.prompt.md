@@ -1,46 +1,53 @@
 ---
 name: web-research-pipeline
-title: Web Research Pipeline
-description: Run a web search → extract full content → save as formatted markdown pipeline using a Tavily-first approach with fetch MCP fallback for robust research capture.
-trigger: /web-research-pipeline
-category: research
-version: 1.0.0
-author: Hermes Agent
-tags: [research, web-search, tavily, pipeline, automation]
-profile: code-architect
-priority: medium
-date: 2026-09-08
-enabled: true
-model_required: sonnet
-skills:
-  - using-superpowers
-  - systematic-debugging
-  - git-patch-management
-  - executing-plans
-  - verification-before-completion
-dependencies: []
-formatter: markdown
+title: Web Research Pipeline (Tavily-First)
+description: Search the web, extract full content from discovered pages, and save crisply formatted markdown
+  files — one per source. Uses Tavily MCP as primary search/extract backend.
+version: 2.1.0
 license: MIT
----
-
-## Table of Contents
-
-- [Goal](#goal)
-- [Workflow](#workflow)
-- [Rules](#rules)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers--tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
+author: Hermes Agent
+trigger: /web-research-pipeline
+toolsets:
+- file
+- terminal
+- web
+- mcp
+skills:
+- domain-intel
+dependencies:
+- tool:mcp-tavily
+- tool:mcp-fetch
+- skill:domain-intel
+formatter: default
+metadata:
+  hermes:
+    profile: research-analyst
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /web-research-pipeline
+    flags: {}
+    help: Search the web, extract full content from discovered pages, and save crisply ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- backend
+- markdown
+- mcp
+- prompts
+- skills
+- workflow
+- tavily
+- workflows
+scripts: []
 ## Goal
 
 Web search → extract full content → save as formatted markdown. **Tavily-first approach:** prefer `mcp__tavily__tavily_search` + `mcp__tavily__tavily_extract`, fall back to `mcp__fetch__get_markdown`, then `web_extract`.
@@ -57,8 +64,8 @@ Load the `web-research-pipeline` skill (this is a delegation prompt):
 6. **Phase 6: Report** — Summary table
 
 ## Rules
-
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+>
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 1. **Tavily-first** — Prefer `mcp__tavily__tavily_search` over other backends.
 2. **Multi-backend fallback** — Try all backends before declaring a URL failed.
@@ -68,7 +75,7 @@ Load the `web-research-pipeline` skill (this is a delegation prompt):
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -78,16 +85,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
+
+Use when researching topics or synthesizing findings. Start with broad discovery, then narrow to specific sources.
+
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -106,7 +117,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -117,7 +128,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -131,8 +142,6 @@ See [`templates/skills-table-core.md`](templates/skills-table-core.md) for share
 
 The following MCP servers and tools are available for this task. Use them in preference to native equivalents per MCP-first tooling policy.
 
-| Server | Purpose |
-| --------------------- | ------------------------------------------------------ |
 | `ast-grep` | AST-based code search and replace |
 | `filesystem` | File read/write operations |
 | `sequential-thinking` | Structured reasoning for complex problems |
@@ -152,6 +161,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -160,14 +170,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
 
 Same-family prompts:
 
 - [`repo-research-pipeline.prompt.md`](repo-research-pipeline.prompt.md)
-
----
-
-# Prompt template
-
-Execute the workflow defined in this file.

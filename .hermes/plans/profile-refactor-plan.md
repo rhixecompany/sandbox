@@ -10,6 +10,7 @@ metadata:
     profiles_targeted: 15 (default, alexa, code-architect, creative-director, cto, designer, dev, exec-assistant, ops, patient-tutor, pm, qa, research-analyst, security, skills)
     skills_loaded: [multi-file-change-protocol, subagent-driven-development, writing-clearly-and-concisely]
     skills_unavailable_flagged: 11 (plan, using-superpowers, brainstorming, user-communication-preferences, mcp-sequential-thinking, mcp-filesystem, mcp-ast-grep, mcp-memory, plans-and-specs, create/update-implementation-plan, create/update-implementation-spec, create/update-implementation-prompt, implementing-plan, implementing-spec, implementing-prompt, executing-plans, executing-specs, executing-prompts)
+status: "in_progress"
 ---
 
 # Profile Refactor Implementation Plan

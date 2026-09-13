@@ -1,131 +1,49 @@
 ---
 name: typespec-api-operations
-title: TypeSpec API Operations
-description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards for Microsoft 365 Copilot.
-trigger: /typespec-api-operations
-category: web
+title: Add TypeSpec API Operations
+description: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing,
+  parameters, and adaptive cards.
 version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /typespec-api-operations
+toolsets:
+- terminal
+- file
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /typespec-api-operations
+    flags: {}
+    help: Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with pro...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- api
+- ml
+- prompts
+- specification
+- typescript
+scripts: []
 ## Goal
-Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards for Microsoft 365 Copilot.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand off](#phase-4:-hand-off)
-- [Adding GET Operations](#adding-get-operations)
-  - [Simple GET](#simple-get)
-- [Adding POST Operations](#adding-post-operations)
-  - [Simple POST](#simple-post)
-- [Adding PATCH Operations](#adding-patch-operations)
-  - [Simple PATCH](#simple-patch)
-- [Adding DELETE Operations](#adding-delete-operations)
-- [Complete CRUD Example](#complete-crud-example)
-  - [Define the Service and Models](#define-the-service-and-models)
-- [Advanced Features](#advanced-features)
-  - [Multiple Query Parameters](#multiple-query-parameters)
-- [Test](#test)
-- [Best Practices](#best-practices)
-- [Common Issues](#common-issues)
-  - [Issue: Parameter not showing in Copilot](#issue:-parameter-not-showing-in-copilot)
-  - [Issue: Adaptive card not rendering](#issue:-adaptive-card-not-rendering)
-  - [Issue: Confirmation not appearing](#issue:-confirmation-not-appearing)
-  - [Issue: Model property not appearing in response](#issue:-model-property-not-appearing-in-response)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Context](#context)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Rules](#rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand off](#phase-4:-hand-off)
-- [Adding GET Operations](#adding-get-operations)
-- [Simple GET](#simple-get)
-- [Adding POST Operations](#adding-post-operations)
-- [Simple POST](#simple-post)
-- [Adding PATCH Operations](#adding-patch-operations)
-- [Simple PATCH](#simple-patch)
-- [Adding DELETE Operations](#adding-delete-operations)
-- [Complete CRUD Example](#complete-crud-example)
-- [Define the Service and Models](#define-the-service-and-models)
-- [Advanced Features](#advanced-features)
-- [Multiple Query Parameters](#multiple-query-parameters)
-- [Test](#test)
-- [Best Practices](#best-practices)
-- [Common Issues](#common-issues)
-- [Issue: Parameter not showing in Copilot](#issue:-parameter-not-showing-in-copilot)
-- [Issue: Adaptive card not rendering](#issue:-adaptive-card-not-rendering)
-- [Issue: Confirmation not appearing](#issue:-confirmation-not-appearing)
-- [Issue: Model property not appearing in response](#issue:-model-property-not-appearing-in-response)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Add GET, POST, PATCH, and DELETE operations to a TypeSpec API plugin with proper routing, parameters, and adaptive cards.
 
+## Context
 
 Use when you need to typespec api operations for the current workspace or task.
 
@@ -142,13 +60,14 @@ Use when you need to typespec api operations for the current workspace or task.
 
 ## Rules
 
-> Core rules: [`templates/rules-core.md`](templates/rules-core.md)
+> Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 - Follow the prompt literally and prefer evidence from the current workspace.
 - Keep the response structured, deterministic, and easy to act on.
 - Avoid changing unrelated files or adding unnecessary scope.
 - If something is unclear, state the assumption instead of guessing.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -167,7 +86,7 @@ Use when you need to typespec api operations for the current workspace or task.
 
 ### Phase 4: Hand off
 
-- Return the final artifact or findings .
+- Return the final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Adding GET Operations
@@ -247,11 +166,11 @@ ing PromptsAfter adding operations, test with these prompts:**GET Operations:**-
 
 ## Template References
 
-Detailed templates in `templates/`:- `adding_delete_operations.md`- `adding_get_operations.md`- `adding_patch_operations.md`- `adding_post_operations.md`- `advanced_features.md`- `best_practices.md`- `complete_crud_example.md`
+Detailed templates in `templates/typespec-api-operations/`:- `adding_delete_operations.md`- `adding_get_operations.md`- `adding_patch_operations.md`- `adding_post_operations.md`- `advanced_features.md`- `best_practices.md`- `complete_crud_example.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -261,7 +180,7 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
@@ -280,7 +199,7 @@ See [`templates/personality.md`](templates/personality.md) for shared personalit
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -291,7 +210,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -324,6 +243,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -332,17 +252,10 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`typespec-create-agent.prompt.md`](typespec-create-agent.prompt.md)
 - [`typespec-create-api-plugin.prompt.md`](typespec-create-api-plugin.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

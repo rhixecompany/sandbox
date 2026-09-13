@@ -1,16 +1,11 @@
 ---
-name: run-all-goals-spec
-title: "Run All Goals — Specification (Phases 5-11)"
-description: |
-  Detailed specification for run-all-goals phases 5-11: diagnostic repair, model tests,
-  agent sync, cleanup, config sync, git push, judge verification.
-version: 1.0.0
-author: Alexa
-license: MIT
-tags: [spec, run-all-goals, diagnostic, model-test, agent-sync, cleanup, git]
-status: approved
-linked_plan: master-skill-library-remediation
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Run All Goals — Specification (Phases 5-11)
 

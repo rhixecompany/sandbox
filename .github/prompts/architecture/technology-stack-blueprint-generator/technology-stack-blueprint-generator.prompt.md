@@ -1,98 +1,49 @@
 ---
 name: technology-stack-blueprint-generator
 title: Technology Stack Blueprint Generator
-description: Generate per-project technology stack documentation plus a workspace-level master blueprint covering languages, frameworks, runtimes, dependencies, conventions, and CI/CD.
-trigger: /technology-stack-blueprint-generator
-category: architecture
-version: 1.0.0
-author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
+description: Generates comprehensive technology stack documentation for all projects in the workspace.
+  Each project gets its own TECHNOLOGY_STACK.md in its root directory, plus a master Technology_Stack_Blueprint.md
+  at the workspace root.
+version: 2.0.0
 license: MIT
----
-
-## Table of Contents
+author: Hermes Agent
+trigger: /technology-stack-blueprint-generator
+toolsets:
+- file
+- terminal
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /technology-stack-blueprint-generator
+    flags: {}
+    help: Generates comprehensive technology stack documentation for all projects in th...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- architecture
+- documentation
+- frontend
+- generator
+- prompts
+- typescript
+scripts: []
+# Technology Stack Blueprint Generator
 
 ## Goal
-Generate per-project technology stack documentation plus a workspace-level master blueprint covering languages, frameworks, runtimes, dependencies, conventions, and CI/CD.
-
-## Context
-
-## Phases
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Core Requirements](#core-requirements)
-  - [Output Locations](#output-locations)
-  - [Documentation Depth](#documentation-depth)
-  - [Master Blueprint Must Include](#master-blueprint-must-include)
-- [Workflow](#workflow)
-  - [Phase 1: Discovery](#phase-1:-discovery)
-  - [Phase 2: Analysis (Per Project)](#phase-2:-analysis-per-project)
-  - [Phase 3: Generation (Per Project)](#phase-3:-generation-per-project)
-  - [Phase 4: Master Blueprint Generation](#phase-4:-master-blueprint-generation)
-- [Rules (from shared-rules-core)](#rules-from-shared-rules-core)
-- [Anti-Patterns to Avoid](#anti-patterns-to-avoid)
-- [Success Criteria](#success-criteria)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-- [Goal](#goal)
-- [Core Requirements](#core-requirements)
-- [Output Locations](#output-locations)
-- [Documentation Depth](#documentation-depth)
-- [Master Blueprint Must Include](#master-blueprint-must-include)
-- [Workflow](#workflow)
-- [Phase 1: Discovery](#phase-1:-discovery)
-- [Phase 2: Analysis (Per Project)](#phase-2:-analysis-per-project)
-- [Phase 3: Generation (Per Project)](#phase-3:-generation-per-project)
-- [Phase 4: Master Blueprint Generation](#phase-4:-master-blueprint-generation)
-- [Rules (from shared-rules-core)](#rules-from-shared-rules-core)
-- [Anti-Patterns to Avoid](#anti-patterns-to-avoid)
-- [Success Criteria](#success-criteria)
-- [Subgoals](#subgoals)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Dependencies](#dependencies)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-
-
-
-
 
 Generate comprehensive technology stack documentation for every project in the workspace, placing each project's documentation directly inside its own directory (not in a centralized docs/ folder), plus a master workspace-level blueprint.
 
@@ -130,16 +81,16 @@ Each TECHNOLOGY_STACK.md must include:
 
 1. Scan workspace for all project directories containing build manifests
 2. Identify project types by manifest files:
-- `package.json` → Node.js/TypeScript/Bun
-- `requirements.txt` / `pyproject.toml` / `Pipfile` → Python
-- `Cargo.toml` → Rust
-- `go.mod` → Go
-- `pom.xml` → Java/Maven
-- `build.gradle.kts` / `settings.gradle.kts` → Kotlin/Gradle
-- `composer.json` → PHP
-- `Package.swift` → Swift
-- `*.csproj` → C#/.NET
-- `Gemfile` → Ruby
+   - `package.json` → Node.js/TypeScript/Bun
+   - `requirements.txt` / `pyproject.toml` / `Pipfile` → Python
+   - `Cargo.toml` → Rust
+   - `go.mod` → Go
+   - `pom.xml` → Java/Maven
+   - `build.gradle.kts` / `settings.gradle.kts` → Kotlin/Gradle
+   - `composer.json` → PHP
+   - `Package.swift` → Swift
+   - `*.csproj` → C#/.NET
+   - `Gemfile` → Ruby
 3. Build project inventory with paths
 
 ### Phase 2: Analysis (Per Project)
@@ -211,7 +162,7 @@ Write `Technology_Stack_Blueprint.md` at workspace root with:
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -221,19 +172,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when implementing, modifying, or debugging code. Read the codebase first, understand patterns, then apply changes with tests.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -252,7 +204,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -285,11 +237,12 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
+
 
 ## Scripts
 
@@ -298,7 +251,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

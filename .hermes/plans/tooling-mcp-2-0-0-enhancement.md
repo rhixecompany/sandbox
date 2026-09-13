@@ -1,3 +1,6 @@
+---
+status: "in_progress"
+---
 # Plan: Enhance Tooling MCP Servers → mcp==2.0.0 + uv/uvx/uvm
 
 Profile: adminbot | Workspace: ~/Desktop/SandBox | Date: 2026-09-10

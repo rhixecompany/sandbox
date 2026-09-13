@@ -1,15 +1,85 @@
 ---
 name: skills-fix
 title: Skills Audit and Remediation
-description: Audit, debug, deduplicate, and enhance Hermes skills in the default profile. Runs hermes skills list → reorganizes misplaced skills → deduplicates → batch-audits all SKILL.md files in groups of 7 → generates per-skill reports and a master index → creates a remediation plan and execution prompt → applies fixes in priority order (F → C → B → A-).
+description: Audit, debug, deduplicate, and enhance Hermes skills in the default profile. Runs hermes
+  skills list → reorganizes misplaced skills → deduplicates → batch-audits all SKILL.md files in groups
+  of 7 → generates per-skill reports and a master index → creates a remediation plan and execution prompt
+  → applies fixes in priority order (F → C → B → A-).
+version: 1.0.0
+license: MIT
+author: Hermes Agent
 trigger: /skills-fix
 toolsets:
-- terminal
+- code_execution
 - file
-category: tooling
-
----
-
+- terminal
+- web
+skills:
+- introspection-only-general
+- no-git-delete
+- no-net-fetch
+- skills-tools-preflight-check
+- subagent-driven-development
+- using-superpowers
+- brainstorming
+- plans-and-specs
+- dispatching-parallel-agents
+- systematic-debugging
+- simplify
+- skill-judge
+- skill-creator
+dependencies:
+- prompt:context-map
+- prompt:update-implementation-plan
+- prompt:skills-debug-prompt
+- skill:using-superpowers
+- skill:brainstorming
+- skill:plans-and-specs
+- skill:dispatching-parallel-agents
+- skill:subagent-driven-development
+- skill:systematic-debugging
+- skill:simplify
+- skill:skill-judge
+- skill:skill-creator
+- tool:terminal
+- tool:patch
+- tool:write_file
+- tool:execute_code
+- skill:introspection-only-general
+- skill:no-git-delete
+- skill:no-net-fetch
+- skill:skills-tools-preflight-check
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /skills-fix
+    flags: {}
+    help: Audit, debug, deduplicate, and enhance Hermes skills in the default profile. ...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- ai-assistant
+- audit
+- data
+- debugging
+- fix
+- generator
+- prompts
+- skills
+- typescript
+scripts: []
 ## Goal
 
 Full lifecycle audit and remediation of the Hermes default skill library.Discovers all SKILL.md files, reorganizes misplaced skills, deduplicatescross-category copies, audits every skill for quality issues, generatesreports, plans fixes, and applies them in priority order.

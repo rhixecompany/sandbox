@@ -2,14 +2,45 @@
 name: playwright-explore-website
 title: Playwright Explore Website
 description: Explore a website with Playwright MCP, document core flows, and propose tests from the findings.
+version: 1.0.0
+license: MIT
+author: Alexa
 trigger: /playwright-explore-website
 toolsets:
-- terminal
 - file
-category: github
-
----
-
+- terminal
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /playwright-explore-website
+    flags: {}
+    help: Explore a website with Playwright MCP, document core flows, and propose tests...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- mcp
+- ml
+- playwright
+- prompts
+- specification
+- testing
+- typescript
+scripts: []
 ## Goal
 
 Explore a website with Playwright MCP, document core flows, and propose tests from the findings.
@@ -194,6 +225,3 @@ Same-family prompts:
 - [`playwright-automation-fill-in-form.prompt.md`](playwright-automation-fill-in-form.prompt.md)
 - [`playwright-generate-test.prompt.md`](playwright-generate-test.prompt.md)
 - [`playwright-typescript.prompt.md`](playwright-typescript.prompt.md)
-## Workflow
-
-Description needed.

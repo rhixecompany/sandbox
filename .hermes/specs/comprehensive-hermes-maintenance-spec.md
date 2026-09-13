@@ -1,17 +1,11 @@
 ---
-name: comprehensive-hermes-maintenance-spec
-title: Comprehensive Hermes Maintenance Specification
-description: "Define testable safety, synchronization, remediation, cleanup, and release requirements for the SandBox and Hermes installation."
-version: 2.1.0
-author: Alexa
-license: MIT
-tags: [hermes, maintenance, scripts, config, mcp, hooks, plugins, agents, docker, git, security]
-status: approved
-owner: Alexa
-plan: .hermes/plans/comprehensive-hermes-maintenance-plan.md
-prompt: .github/prompts/comprehensive-hermes-maintenance.prompt.md
-approval: .hermes/approvals/2026-09-05-comprehensive-hermes-maintenance.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Comprehensive Hermes Maintenance Specification
 

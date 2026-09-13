@@ -2,6 +2,7 @@
 name: "tool-gateway-plan"
 title: "Plan — Nous Tool Gateway"
 version: 1.0.0
+status: "in_progress"
 ---
 # Plan: tool-gateway
 - Source file: docs/features/tool-gateway.md (223 lines)

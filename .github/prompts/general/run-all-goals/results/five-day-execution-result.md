@@ -1,3 +1,9 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+---
+
 # Five-Day Consolidation — Execution Result
 
 Status: **PASS WITH CAVEATS**

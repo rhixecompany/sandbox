@@ -1,3 +1,6 @@
+---
+status: "in_progress"
+---
 # Plan: All-Profile SOUL.md + MCP Servers
 Status: in-progress | 2026-09-13
 Subgoal A: all profile SOUL.md enhanced + description/alias + model=inkling:free/openrouter + plan check+implement

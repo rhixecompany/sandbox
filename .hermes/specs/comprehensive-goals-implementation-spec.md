@@ -1,15 +1,11 @@
 ---
-name: comprehensive-goals-implementation-spec
-title: Comprehensive Goals Implementation Specification
-description: "Define requirements for Hermes Agent configuration, debugging, sync, cleanup, and release across SandBox and Hermes root."
-version: 2.1.0
-author: Alexa
-license: MIT
-tags: [hermes, config, debugging, sync, cleanup, docker, git, mcp, hooks, plugins, agents]
-status: approved
-owner: Alexa
-plan: .hermes/plans/comprehensive-goals-implementation-plan.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Comprehensive Goals Implementation Specification
 

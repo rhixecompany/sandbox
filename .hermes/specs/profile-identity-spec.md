@@ -1,3 +1,11 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
+---
+
+
 # Profile Identity & Model Refactor — Implementation Spec Update
 
 > Updated: 2026-09-13 | Protocol: multi-file-change-protocol (sequential inspection; parallel updates applied; sequential verification). Profile: adminbot (execution + verification). User clarification applied: all profile dirs; global `inkling:free` by openrouter; descriptions + aliases globally; config.yaml + identity files.

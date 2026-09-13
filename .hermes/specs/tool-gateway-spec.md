@@ -1,8 +1,11 @@
 ---
-name: "tool-gateway-spec"
-title: "Spec — Nous Tool Gateway"
-version: 1.0.0
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 # Implementation Spec: tool-gateway
 ## Source
 - File: docs/features/tool-gateway.md (223 lines, real content verified via head check)

@@ -1,19 +1,10 @@
 ---
-name: run-all-goals-five-day
-title: "Run All Goals — Five-Day Local Consolidation"
-description: "Inventory, consolidate, verify, and execute the Sep 6–10 default-profile session-derived workflow locally."
-version: 1.0.0
-author: Alexa
-license: MIT
-tags: [run-all-goals, consolidation, sessions, local-only, verification]
-trigger: /run-all-goals-five-day
-category: general
-toolsets: [terminal, filesystem, session_search]
-skills: [using-superpowers, user-communication-preferences, plans-and-specs, executing-plans, executing-prompt-workflows]
-references:
-  - ../../../../.hermes/specs/run-all-goals-five-day-consolidated-spec.md
-  - ../../../../.hermes/plans/run-all-goals-five-day-consolidated-plan.md
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
 ---
+
+
 
 # Goal
 

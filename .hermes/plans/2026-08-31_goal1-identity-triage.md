@@ -1,12 +1,11 @@
 ---
-title: 2026 08 31 Goal1 Identity Triage
-description: Plan for 2026 08 31 Goal1 Identity Triage
-date: 2026-08-31
-author: Hermes Agent
-status: in_progress
-profile: model
-model: default
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # 2026 08 31 Goal1 Identity Triage
 

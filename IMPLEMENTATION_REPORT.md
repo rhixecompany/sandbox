@@ -1,3 +1,9 @@
+---
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it's done. Our take on the Ralph loop."
+---
+
 # Hermes Ecosystem Master Implementation Report — COMPLETE
 
 **Date:** 2026-09-07  

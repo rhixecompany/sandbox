@@ -1,12 +1,11 @@
 ---
-title: Master Spec — SandBox Plan Ecosystem
-description: Master specification linking all 51 plan files for cross-validation
-date: 2026-09-07
-author: Alexa
-status: in_progress
-profile: default
-model: inclusionai/ling-3.0-flash
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 ## Goal
 

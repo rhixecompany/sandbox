@@ -1,118 +1,46 @@
 ---
 name: kotlin-springboot
-title: Kotlin Spring Boot Best Practices
-description: Provides best practices for developing applications with Spring Boot and Kotlin, including idiomatic patterns and configuration.
-trigger: /kotlin-springboot
-category: development
+title: Spring Boot with Kotlin Best Practices
+description: Get best practices for developing applications with Spring Boot and Kotlin.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /kotlin-springboot
+toolsets:
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: exec-assistant
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /kotlin-springboot
+    flags: {}
+    help: Get best practices for developing applications with Spring Boot and Kotlin.
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- frontend
+- ml
+- prompts
+- spring
+scripts: []
 ## Goal
-Provides best practices for developing applications with Spring Boot and Kotlin, including idiomatic patterns and configuration.
-
-## Context
-
-## Phases
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Project Setup & Structure](#project-setup-&-structure)
-- [Dependency Injection & Components](#dependency-injection-&-components)
-- [Configuration](#configuration)
-- [Web Layer (Controllers)](#web-layer-controllers)
-- [Service Layer](#service-layer)
-- [Data Layer (Repositories)](#data-layer-repositories)
-- [Logging](#logging)
-- [Test](#test)
-- [Coroutines & Asynchronous Programming](#coroutines-&-asynchronous-programming)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Project Setup & Structure](#project-setup-&-structure)
-- [Dependency Injection & Components](#dependency-injection-&-components)
-- [Configuration](#configuration)
-- [Web Layer (Controllers)](#web-layer-controllers)
-- [Service Layer](#service-layer)
-- [Data Layer (Repositories)](#data-layer-repositories)
-- [Logging](#logging)
-- [Test](#test)
-- [Coroutines & Asynchronous Programming](#coroutines-&-asynchronous-programming)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Verification Checklist](#verification-checklist)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [Skills Required](#skills-required)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Get best practices for developing applications with Spring Boot and Kotlin.
 
-## Spring Boot with Kotlin Best PracticesYour goal is to help me write high-quality, idiomatic Spring Boot applications using Kotlin.
+# Spring Boot with Kotlin Best PracticesYour goal is to help me write high-quality, idiomatic Spring Boot applications using Kotlin.
 
 ## Project Setup & Structure
 
@@ -149,18 +77,18 @@ Get best practices for developing applications with Spring Boot and Kotlin.
 ## Data Layer (Repositories)
 
 - **JPA Entities:** Define entities as classes. Remember they must be `open`. It's highly recommended to use the `kotlin-jpa` compiler plugin to handle this automatically.
-- **Null Safety:** use Kotlin's null-safety (`?`) to define which entity fields are optional or required at the type level.
-- **Spring Data JPA:** Use Spring Data JPA repositories by extending `JpaRepository` or `CrudRepository`.- **Coroutines:** For reactive applications, use Spring Boot's support for Kotlin Coroutines in the data layer.
+- **Null Safety:** Leverage Kotlin's null-safety (`?`) to clearly define which entity fields are optional or required at the type level.
+- **Spring Data JPA:** Use Spring Data JPA repositories by extending `JpaRepository` or `CrudRepository`.- **Coroutines:** For reactive applications, leverage Spring Boot's support for Kotlin Coroutines in the data layer.
 
 ## Logging
 
-- **Companion Object Logger:** The idiomatic way to declare a logger is in a companion object. ```kotlin companion object { private val logger = LoggerFactory.getLogger(MyClass::class.java) }```- **Parameterized Logging:** Use parameterized messages (`logger.info("Processing user {}...", userId)`) for performance and clarity.
+- **Companion Object Logger:** The idiomatic way to declare a logger is in a companion object.  ```kotlin  companion object {      private val logger = LoggerFactory.getLogger(MyClass::class.java)  }```- **Parameterized Logging:** Use parameterized messages (`logger.info("Processing user {}...", userId)`) for performance and clarity.
 
 ## Test
 
 ing
 
-- **JUnit 5:** JUnit 5 is the default and works smoothly with Kotlin.
+- **JUnit 5:** JUnit 5 is the default and works seamlessly with Kotlin.
 - **Idiomatic Testing Libraries:** For more fluent and idiomatic tests, consider using **Kotest** for assertions and **MockK** for mocking. They are designed for Kotlin and offer a more expressive syntax.
 - **Test Slices:** Use test slice annotations like `@WebMvcTest` or `@DataJpaTest` to test specific parts of the application.
 - **Testcontainers:** Use Testcontainers for reliable integration tests with real databases, message brokers, etc.
@@ -172,11 +100,11 @@ ing
 
 ## Template References
 
-Templates in `templates/`:- `configuration.md`- `data_layer_repositories.md`- `dependency_injection__com.md`- `logging.md`- `project_setup__structure.md`- `service_layer.md`- `testing.md`- `web_layer_controllers.md`
+Templates in `templates/kotlin-springboot/`:- `configuration.md`- `data_layer_repositories.md`- `dependency_injection__com.md`- `logging.md`- `project_setup__structure.md`- `service_layer.md`- `testing.md`- `web_layer_controllers.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -186,19 +114,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -211,8 +140,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -231,12 +161,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -255,7 +185,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -266,7 +196,7 @@ See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency pat
 
 ## Skills Required
 
-See [`templates/skills-table-core.md`](templates/skills-table-core.md) for shared skills table.
+See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md) for shared skills table.
 
 | Skill | Purpose |
 | ------- | --------- |
@@ -299,6 +229,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -307,16 +238,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`kotlin-mcp-server-generator.prompt.md`](kotlin-mcp-server-generator.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

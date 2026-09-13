@@ -1,4 +1,4 @@
----
+--- sidebar_position: 16 title: "Persistent Goals" description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop." ---
 name: comprehensive-prompt-enhancer
 title: Comprehensive Prompt Enhancer
 description: Audit and enhance a prompt's structure, clarity, personality, and tool usage to produce a polished, AI-ready specification.

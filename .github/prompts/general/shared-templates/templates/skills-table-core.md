@@ -5,22 +5,6 @@ description: Per-domain skills reference table used by prompt files for discover
 version: 1.0.0
 tags: [template, shared, skills, table, prompts]
 ---
-## Goal
-
-<!-- Shared template — see file body for goal content -->
-
-## Context
-
-<!-- Shared template — see file body for context content -->
-
-## Workflow
-
-<!-- Shared template — see file body for workflow content -->
-
-## Verification
-
-<!-- Shared template — see file body for verification content -->
-
 
 # Skills Table (Core)
 

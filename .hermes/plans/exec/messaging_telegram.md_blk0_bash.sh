@@ -1,0 +1,6 @@
+#!/bin/bash
+# Auto-extracted from: messaging/telegram.md
+# Source block language: bash
+TELEGRAM_ALLOWED_CHATS=-1001234567890
+TELEGRAM_GROUP_ALLOWED_CHATS=-1001234567890
+TELEGRAM_OBSERVE_UNMENTIONED_GROUP_MESSAGES=true

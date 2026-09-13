@@ -69,11 +69,3 @@ Mapping of phases to tasks for delegation.
 ## Actions
 
 Explicit action items with clear owners.
-
-## Workflow
-
-<!-- Shared template — see file body for workflow content -->
-
-## Verification
-
-<!-- Shared template — see file body for verification content -->

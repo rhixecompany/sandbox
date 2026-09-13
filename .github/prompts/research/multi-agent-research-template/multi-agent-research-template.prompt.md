@@ -1,129 +1,57 @@
 ---
 name: multi-agent-research-template
-title: Multi-Agent Research Template
-description: Reusable prompt template for Codex, Copilot, and Hermes that orchestrates parallel research agents with shared rules and outputs.
-trigger: /multi-agent-research-template
-category: research
+title: Multi-Agent Research and Implementation Template
+description: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets
+  while factoring out the shared workflow.
 version: 1.0.0
-author: Hermes Agent
-date: 2026-08-25
-tags: 
-metadata: 
-hermes: 
-profile: code-architect
-priority: medium
-copilot: 
-model_required: sonnet
-opencode: 
-enabled: true
-codex: 
-toolsets: 
-skills: 
-- skill: using-superpowers
-dependencies: []
-formatter: markdown
 license: MIT
----
-
-## Table of Contents
-
+author: Hermes Agent
+trigger: /multi-agent-research-template
+toolsets:
+- file
+- terminal
+- web
+skills: []
+dependencies: []
+formatter: default
+metadata:
+  hermes:
+    profile: code-architect
+    mcp_servers: []
+    context_size: large
+  copilot:
+    context_size: large
+    extensions: []
+    keybinding: null
+  opencode:
+    command: opencode /multi-agent-research-template
+    flags: {}
+    help: Reusable prompt for Codex, Copilot, and Hermes. It preserves the current rese...
+  codex:
+    model_override: null
+    system_prompt_id: null
+    temperature: null
+    max_tokens: null
+tags:
+- agent-type:hermes
+- agents
+- ai-assistant
+- frontend
+- ml
+- planning
+- prompts
+- skills
+- typescript
+- workflow
+scripts: []
 ## Goal
-Reusable prompt template for Codex, Copilot, and Hermes that orchestrates parallel research agents with shared rules and outputs.
-
-## Context
-
-## Phases
-
-
-
-# Table of Contents
-
-- [Goal](#goal)
-- [Skills Required](#skills-required)
-- [Template Variables](#template-variables)
-- [Agent Mapping](#agent-mapping)
-- [Shared Rules](#shared-rules)
-- [Core Workflow](#core-workflow)
-- [Default Research Targets](#default-research-targets)
-- [Phase 1: Skills Discovery and Audit](#phase-1:-skills-discovery-and-audit)
-- [Phase 2: MCP Server and Tool Research](#phase-2:-mcp-server-and-tool-research)
-- [Phase 3: Hermes Docs and Ecosystem](#phase-3:-hermes-docs-and-ecosystem)
-- [Phase 4: Profiles and Workspace Markdown](#phase-4:-profiles-and-workspace-markdown)
-- [Phase 5: Docs Inventory](#phase-5:-docs-inventory)
-- [Phase 6: Configuration Hierarchy Audit](#phase-6:-configuration-hierarchy-audit)
-- [Output Requirements](#output-requirements)
-- [Verification Gates](#verification-gates)
-- [Verification Checklist](#verification-checklist)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-  - [Domain Rules](#domain-rules)
-  - [Standing Rules](#standing-rules)
-- [Phases](#phases)
-  - [Phase 1: Intake](#phase-1:-intake)
-  - [Phase 2: Execute](#phase-2:-execute)
-  - [Phase 3: Verify](#phase-3:-verify)
-  - [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-- [Goal](#goal)
-- [Skills Required](#skills-required)
-- [Template Variables](#template-variables)
-- [Agent Mapping](#agent-mapping)
-- [Shared Rules](#shared-rules)
-- [Core Workflow](#core-workflow)
-- [Default Research Targets](#default-research-targets)
-- [Phase 1: Skills Discovery and Audit](#phase-1:-skills-discovery-and-audit)
-- [Phase 2: MCP Server and Tool Research](#phase-2:-mcp-server-and-tool-research)
-- [Phase 3: Hermes Docs and Ecosystem](#phase-3:-hermes-docs-and-ecosystem)
-- [Phase 4: Profiles and Workspace Markdown](#phase-4:-profiles-and-workspace-markdown)
-- [Phase 5: Docs Inventory](#phase-5:-docs-inventory)
-- [Phase 6: Configuration Hierarchy Audit](#phase-6:-configuration-hierarchy-audit)
-- [Output Requirements](#output-requirements)
-- [Verification Gates](#verification-gates)
-- [Verification Checklist](#verification-checklist)
-- [Template References](#template-references)
-- [Personas](#personas)
-- [Personality](#personality)
-- [Context](#context)
-- [Rules](#rules)
-- [Domain Rules](#domain-rules)
-- [Standing Rules](#standing-rules)
-- [Phases](#phases)
-- [Phase 1: Intake](#phase-1:-intake)
-- [Phase 2: Execute](#phase-2:-execute)
-- [Phase 3: Verify](#phase-3:-verify)
-- [Phase 4: Hand Off](#phase-4:-hand-off)
-- [Best Practices](#best-practices)
-- [Dependencies](#dependencies)
-- [Subgoals](#subgoals)
-- [MCP Servers & Tools](#mcp-servers-&-tools)
-- [Tasks](#tasks)
-- [Hooks](#hooks)
-- [Scripts](#scripts)
-- [Related Prompts](#related-prompts)
-
-
-
-
 
 Reusable prompt for Codex, Copilot, and Hermes. It preserves the current research targets while factoring out the shared workflow.
 
 ## Skills Required
 
 > See full table with per-domain purposes:
-> [`templates/skills-table-core.md`](templates/skills-table-core.md)| Skill | Purpose |
+> [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-core.md)| Skill | Purpose |
 | ------- | --------- |
 | codex | Codex agent execution |
 | copilot | Copilot agent execution |
@@ -136,7 +64,7 @@ Reusable prompt for Codex, Copilot, and Hermes. It preserves the current researc
 
 <!-- Template variables use Jinja2-style {{var}} syntax --
 
-> | Variable | Value || ---------- | ------- || `{{workspace_root}}` | ``$HOME/Desktop/SandBox`` (resolves to `C:\Users\Alexa\Desktop\SandBox`) || `{{docs_root}}` | ``docs/`` || `{{agent_name}}` | `Codex` \| `Copilot` \| `Hermes` || `{{native_plan}}` | the active agent's planning or update command || `{{native_search}}` | the active agent's search command || `{{native_extract}}` | the active agent's content extraction command || `{{native_files}}` | the active agent's file read/write command |
+> | Variable | Value || ---------- | ------- || `{{workspace_root}}` | `` `$HOME/Desktop/SandBox` `` (resolves to `C:\Users\Alexa\Desktop\SandBox`) || `{{docs_root}}` | `` `docs/` `` || `{{agent_name}}` | `Codex` \| `Copilot` \| `Hermes` || `{{native_plan}}` | the active agent's planning or update command || `{{native_search}}` | the active agent's search command || `{{native_extract}}` | the active agent's content extraction command || `{{native_files}}` | the active agent's file read/write command |
 
 ## Agent Mapping
 
@@ -212,7 +140,7 @@ Research these sources and extract each page into Markdown:
 - [ ] List all plugin hooks, tools, and skills.
 - [ ] Create missing items when needed.
 - [ ] Verify and enhance existing items when they are already present.
-- [ ] Validate the configuration hierarchy in this order: `.hermes.md` -
+- [ ] Validate the configuration hierarchy in this order:  `.hermes.md` -
 
 > `AGENTS.md` -
 > `CLAUDE.md` -
@@ -222,7 +150,7 @@ Research these sources and extract each page into Markdown:
 
 | # | Requirement | Description || --
 
-- | ------------- | ------------- || 1 | Preserve targets | Preserve the current research targets. || 2 | Reusable workflow | Keep the workflow reusable by changing only the template variables. || 3 | Markdown output | Use Markdown for extracted docs, indexes, and notes. || 4 | Strict sequence | Keep the sequence strict: plan → research → extract → plan update → implement → verify. || 5 | Report blockers | Report blockers if any native capability is unavailable. |
+- | ------------- | ------------- || 1 | Preserve targets | Preserve the current research targets. || 2 | Reusable workflow | Keep the workflow reusable by changing only the template variables. || 3 | Markdown output | Use Markdown for extracted docs, indexes, and notes. || 4 | Strict sequence | Keep the sequence strict: plan → research → extract → plan update → implement → verify. || 5 | Report blockers | Report blockers clearly if any native capability is unavailable. |
 
 ## Verification Gates
 
@@ -240,11 +168,11 @@ Research these sources and extract each page into Markdown:
 
 ## Template References
 
-Detailed templates in `templates/`:- `phase_2_mcp_server_and_tool_re.md`
+Detailed templates in `templates/multi-agent-research-template/`:- `phase_2_mcp_server_and_tool_re.md`
 
 ## Personas
 
-See [`templates/personas.md`](templates/personas.md) for shared persona templates.
+See [`templates/_shared/personas.md`](templates/_shared/personas.md) for shared persona templates.
 
 | Persona | When to Use |
 | ------- | ----------- |
@@ -254,19 +182,20 @@ See [`templates/personas.md`](templates/personas.md) for shared persona template
 
 ## Personality
 
-See [`templates/personality.md`](templates/personality.md) for shared personality guidelines.
+See [`templates/_shared/personality.md`](templates/_shared/personality.md) for shared personality guidelines.
 
 - **Tone**: Direct, practical, actionable
 - **Style**: Structured with clear steps and verification
 - **Avoid**: Ambiguity, assumptions, scope creep
 - **Encourage**: Evidence-based decisions, minimal changes
 
+## Context
 
 Use when fixing, repairing, or synchronizing files or configs. Diagnose first, apply minimal changes, verify each fix.
 
 ## Rules
 
-See core rules: [`templates/rules-core.md`](templates/rules-core.md)
+See core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 
 ### Domain Rules
 
@@ -279,8 +208,9 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 1. **Map before touch** — Understand before making changes.
 2. **Smallest safe change** — Minimal change that achieves the goal.
 3. **Verify before claim** — Test before reporting complete.
-4. **Report blockers** — State when something fails.
+4. **Report blockers** — State clearly when something fails.
 
+## Phases
 
 ### Phase 1: Intake
 
@@ -299,12 +229,12 @@ See core rules: [`templates/rules-core.md`](templates/rules-core.md)
 
 ### Phase 4: Hand Off
 
-- Return final artifact or findings .
+- Return final artifact or findings clearly.
 - Stop once the requested result is delivered.
 
 ## Best Practices
 
-See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutting best practices.
+See [`templates/_shared/best-practices.md`](templates/_shared/best-practices.md) for cross-cutting best practices.
 
 1. **DRY** — Reference shared templates instead of duplicating content.
 2. **Structured output** — Use clear sections with consistent heading levels.
@@ -313,7 +243,7 @@ See [`templates/best-practices.md`](templates/best-practices.md) for cross-cutti
 
 ## Dependencies
 
-See [`templates/deps-core.md`](templates/deps-core.md) for shared dependency patterns.
+See [`templates/_shared/deps-core.md`](templates/_shared/deps-core.md) for shared dependency patterns.
 
 ## Subgoals
 
@@ -345,6 +275,7 @@ The following MCP servers and tools are available for this task. Use them in pre
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
+
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
@@ -353,16 +284,9 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
 
+
 ## Related Prompts
-
-## Workflow
-
-<content>
 
 Same-family prompts:
 
 - [`multi-stage-dockerfile.prompt.md`](multi-stage-dockerfile.prompt.md)
-```
-# Prompt template
-Execute the workflow defined in this file.
-```

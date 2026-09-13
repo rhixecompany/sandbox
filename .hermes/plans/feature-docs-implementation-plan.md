@@ -1,22 +1,11 @@
 ---
-name: feature-docs-implementation-plan
-title: "Implementation Plan — Feature Docs Download + Bundle Implementation"
-version: 1.0.0
-author: Hermes Agent
-category: default
-metadata:
-  hermes:
-    tags: [plan, multi-file, feature-bundle, subagent-parallel]
-    protocol: multi-file-change-protocol (>6 files triggered)
-    skills_loaded: [
-      multi-file-change-protocol, using-superpowers, brainstorming,
-      user-communication-preferences, mcp-sequential-thinking,
-      subagent-driven-development, writing-clearly-and-concisely,
-      create-implementation-plan, plans-and-specs, executing-plans
-    ]
-    skills_unavailable_flagged: [plan (skill name not found in profile), mcp-filesystem, mcp-ast-grep, mcp-memory]
-    profile_routing: [plan-writing=exec-assistant, code=code-architect, verification=code-architect]
+sidebar_position: 16
+title: "Persistent Goals"
+description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+status: "in_progress"
 ---
+
+
 
 # Goal
 Download all `.md` files from `https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/*.md` → `docs/features/`. Read + understand each. Implement subgoal (`/subgoal implement, execute each .md`) by generating per-feature artifact bundles.

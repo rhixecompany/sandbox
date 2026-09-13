@@ -3,7 +3,7 @@ title: Hermes Profile Skills Enhancement — Specification
 description: Specification for enhancing existing and creating missing Hermes profile management skills with DRY principles, best practices, tools, hooks, and quick commands
 date: 2026-08-15
 author: Hermes Agent
-status: draft
+status: "in_progress"
 profile: model
 model: default
 ---
