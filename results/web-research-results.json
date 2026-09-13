@@ -96,5 +96,157 @@
         "url": "https://realpython.com/python-requests"
       }
     ]
+  },
+  {
+    "batch": 4,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 4,
+        "query": "celery python best practices cheatsheet production",
+        "package": "celery",
+        "title": "5 tips for writing production-ready Celery tasks",
+        "url": "https://careers.wolt.com/en/blog/tech/5-tips-for-writing-production-ready-celery-tasks"
+      },
+      {
+        "batch": 4,
+        "query": "celery python best practices cheatsheet production",
+        "package": "celery",
+        "title": "Intro to Celery (Python): Development and Productionizing",
+        "url": "https://www.youtube.com/watch?v=CytOAWprs1c"
+      },
+      {
+        "batch": 4,
+        "query": "pytest fixtures best practices cheatsheet 2026",
+        "package": "pytest",
+        "title": "Pytest Best Practices 2026: Fixtures, Markers, Config",
+        "url": "https://qaskills.sh/blog/pytest-best-practices-2026"
+      },
+      {
+        "batch": 4,
+        "query": "pytest fixtures best practices cheatsheet 2026",
+        "package": "pytest",
+        "title": "Pytest Cheat Sheet · Ankur Rathore",
+        "url": "https://ankurrathore.net.in/posts/pytest_cheat_sheet"
+      },
+      {
+        "batch": 4,
+        "query": "python requests session best practices cheatsheet",
+        "package": "python",
+        "title": "The Ultimate Cheatsheet for Python's requests Library",
+        "url": "https://medium.com/@kode-n-rolla/the-ultimate-cheatsheet-for-pythons-requests-library-f78b5e95ef60"
+      },
+      {
+        "batch": 4,
+        "query": "python requests session best practices cheatsheet",
+        "package": "python",
+        "title": "Ultimate Python Cheat Sheet: Practical Python For ...",
+        "url": "https://blog.stackademic.com/ultimate-python-cheat-sheet-practical-python-for-everyday-tasks-c267c1394ee8"
+      },
+      {
+        "batch": 4,
+        "query": "pydantic v2 validation patterns best practices",
+        "package": "pydantic",
+        "title": "Pydantic for AI Validation - Type Safety for LLM Applications",
+        "url": "https://zenvanriel.com/ai-engineer-blog/pydantic-ai-validation"
+      },
+      {
+        "batch": 4,
+        "query": "pydantic v2 validation patterns best practices",
+        "package": "pydantic",
+        "title": "Best Practices for Using Pydantic in Python - DEV Community",
+        "url": "https://dev.to/devasservice/best-practices-for-using-pydantic-in-python-2021"
+      },
+      {
+        "batch": 4,
+        "query": "django storages S3 best practices cheatsheet",
+        "package": "django",
+        "title": "Implement Amazon S3 Storage for Static and Media files in Django",
+        "url": "https://www.youtube.com/watch?v=JQVQcNN0cXE"
+      },
+      {
+        "batch": 4,
+        "query": "django storages S3 best practices cheatsheet",
+        "package": "django",
+        "title": "Using Amazon S3 to Store your Django Site's Static and Media Files | Caktus Group",
+        "url": "https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files"
+      }
+    ]
+  },
+  {
+    "batch": 5,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 5,
+        "query": "react testing library best practices cheatsheet 2026",
+        "package": "react",
+        "title": "Testing in 2026: Jest, React Testing Library, and Full Stack ...",
+        "url": "https://www.nucamp.co/blog/testing-in-2026-jest-react-testing-library-and-full-stack-testing-strategies"
+      },
+      {
+        "batch": 5,
+        "query": "react testing library best practices cheatsheet 2026",
+        "package": "react",
+        "title": "17 Best React Testing Libraries, Tools and Frameworks [2026] | TestMu AI (Formerly LambdaTest)",
+        "url": "https://www.testmuai.com/blog/react-testing-libraries"
+      },
+      {
+        "batch": 5,
+        "query": "tailwind css v4 utility patterns cheatsheet",
+        "package": "tailwind",
+        "title": "Tailwind CSS Cheat Sheet",
+        "url": "https://kombai.com/tailwind/cheat-sheet"
+      },
+      {
+        "batch": 5,
+        "query": "tailwind css v4 utility patterns cheatsheet",
+        "package": "tailwind",
+        "title": "Tailwind CSS v4 Cheat Sheet https://lexingtonthemes.com/ ...",
+        "url": "https://www.facebook.com/groups/445937076705551/posts/1385935162705733"
+      },
+      {
+        "batch": 5,
+        "query": "zod schema inference best practices typescript",
+        "package": "zod",
+        "title": "9 Best Practices for Using Zod in 2025 - LinkedIn",
+        "url": "https://www.linkedin.com/pulse/9-best-practices-using-zod-2025-joodi--lqnff"
+      },
+      {
+        "batch": 5,
+        "query": "zod schema inference best practices typescript",
+        "package": "zod",
+        "title": "zod-best-practices.md - full-stack-typescript - GitHub",
+        "url": "https://github.com/stevekinney/stevekinney.net/blob/main/courses/full-stack-typescript/zod-best-practices.md"
+      },
+      {
+        "batch": 5,
+        "query": "nextjs 15 app router best practices cheatsheet",
+        "package": "nextjs",
+        "title": "Next.js Cheatsheet - CodedThemes",
+        "url": "https://blog.codedthemes.com/nextjs-cheatsheet"
+      },
+      {
+        "batch": 5,
+        "query": "nextjs 15 app router best practices cheatsheet",
+        "package": "nextjs",
+        "title": "Medium",
+        "url": "https://thiraphat-ps-dev.medium.com/mastering-next-js-app-router-best-practices-for-structuring-your-application-3f8cf0c76580"
+      },
+      {
+        "batch": 5,
+        "query": "bun package manager best practices cheatsheet",
+        "package": "bun",
+        "title": "How to Use Bun as a Package Manager",
+        "url": "https://oneuptime.com/blog/post/2026-01-31-bun-package-manager/view"
+      },
+      {
+        "batch": 5,
+        "query": "bun package manager best practices cheatsheet",
+        "package": "bun",
+        "title": "Collection of npm package manager Security Best Practices",
+        "url": "https://github.com/lirantal/npm-security-best-practices"
+      }
+    ]
   }
 ]
