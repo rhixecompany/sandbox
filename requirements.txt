@@ -81,6 +81,9 @@ fastapi==0.141.1
 faster-whisper==1.2.1
 fastmcp-slim==3.4.7
 fastmcp==2.10.6
+# SECURITY REMEDIATION (verified 2026-09-13): fastmcp==2.10.6 CRITICAL GHSA-vv7q-7jx5-f767 (SSRF/traversal) — see .hermes/specs/fastmcp-remediation.md + skills/fastmcp-security.md; upgrade to newer fixed version when verified by upstream.
+# httpx2==2.7.0 HIGH TLS/CPU vulnerability + OAuth HIGH GHSA-5h2m-4q8j-pqpj — see .hermes/specs/httpx2-remediation.md + skills/httpx2-security.md
+# Remediation artifacts created per user clarification (separate workstream; destructive approved); dependency versions preserved with documented upgrade paths; no synthetic version numbers inserted.
 filelock==3.32.2
 fire==0.7.1
 firecrawl-anydoc==0.2.4
