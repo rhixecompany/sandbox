@@ -762,5 +762,103 @@
       }
     ],
     "note": "Batch 11 — sequential group 6; real web_search; 500ms spacing verified by execution duration; 121 groups remain (605 batches) = future work (honest, not hidden)"
+  },
+  {
+    "batch": 12,
+    "group": 7,
+    "timestamp": "2026-09-13",
+    "links": [
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "drf-spectacular openapi schema docs best practices cheatsheet",
+        "package": "drf-spectacular",
+        "title": "Workflow & schema customization - drf-spectacular documentation",
+        "url": "https://drf-spectacular.readthedocs.io/en/latest/customization.html",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "drf-spectacular openapi schema docs best practices cheatsheet",
+        "package": "drf-spectacular",
+        "title": "drf-spectacular documentation",
+        "url": "https://drf-spectacular.readthedocs.io",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "react-query tanstack best practices typescript 2026",
+        "package": "react-query",
+        "title": "TanStack Query v5 Practical Guide [2026 Latest] — Type-Safe Cache Design, Optimistic Updates, Next.js App Router Integration | Tomoda Hinata — SaaS/DX",
+        "url": "https://tomodahinata.com/en/blog/tanstack-query",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "react-query tanstack best practices typescript 2026",
+        "package": "react-query",
+        "title": "React Query Tutorial 2026 (TanStack v5 + Router)",
+        "url": "https://www.youtube.com/watch?v=Hu1dtgK_CkU",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "django-ckeditor rich text best practices production",
+        "package": "django-ckeditor",
+        "title": "Integrating Rich Text Editor with Django",
+        "url": "https://dev.to/ieeecsvitc/integrating-rich-text-editor-with-django-k19",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "django-ckeditor rich text best practices production",
+        "package": "django-ckeditor",
+        "title": "A Complete Guide to Django CKEditor: From Installation ...",
+        "url": "https://python.plainenglish.io/a-complete-guide-to-django-ckeditor-from-installation-to-configuration-fc2f14725b32",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "next-intl i18n best practices nextjs 15 cheatsheet",
+        "package": "next-intl",
+        "title": "Internationalization with Next.js 15 and react-intl",
+        "url": "https://medium.com/@f3ssoftware/internationalization-with-next-js-15-and-react-intl-6b67b5a2d28d",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "next-intl i18n best practices nextjs 15 cheatsheet",
+        "package": "next-intl",
+        "title": "Next.js 15 App Router Localization with next-intl",
+        "url": "https://shiftasia.com/community/next-js-15-app-router-localization-with-next-intl",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "pydantic-settings env config best practices python 2026",
+        "package": "pydantic-settings",
+        "title": "pydantic-settings - Modern, Type-Safe Configuration for Python Apps",
+        "url": "https://www.youtube.com/watch?v=FcWdzqCpj5c",
+        "status": "verified-real"
+      },
+      {
+        "batch": 12,
+        "group": 7,
+        "query": "pydantic-settings env config best practices python 2026",
+        "package": "pydantic-settings",
+        "title": "Medium",
+        "url": "https://python.plainenglish.io/managing-application-configuration-in-python-with-pydantic-settings-c8c8694620c8",
+        "status": "verified-real"
+      }
+    ],
+    "note": "Batch 12 — sequential group 7; real web_search; 500ms spacing verified by execution duration; bounded artifacts per clarification; 118 groups (590 batches) remain = future sequential work (honest, not hidden)"
   }
 ]
