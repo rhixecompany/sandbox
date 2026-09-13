@@ -1,0 +1,121 @@
+
+=== alexa ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== code-architect ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== creative-director ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== cto ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== default ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== designer ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== dev ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== exec-assistant ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185736 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== ops ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (184196 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== patient-tutor ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== pm ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== qa ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== research-analyst ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== security ===
+  skills/: EXISTS (101 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (11 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28636 bytes)
+
+=== skills ===
+  skills/: EXISTS (102 entries)
+  hooks/: EXISTS (10 entries)
+  plugins/: EXISTS (16 entries)
+  scripts/: MISSING
+  config.yaml: EXISTS (185722 bytes)
+  .env: EXISTS (28690 bytes)
+

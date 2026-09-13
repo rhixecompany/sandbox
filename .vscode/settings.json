@@ -244,7 +244,9 @@
 		"typescript",
 		"typescriptreact"
 	],
-	"typescript.tsdk": "C:\\Users\\Alexa\\myvenv\\node_modules\\typescript\\lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true
+	"js/ts.tsdk": "C:\\Users\\Alexa\\myvenv\\node_modules\\typescript\\lib",
+	"js/ts.enablePromptUseWorkspaceTsdk": true,
+	"githubPullRequests.ignoredPullRequestBranches": [
+		"clean-development"
+	]
 }
-

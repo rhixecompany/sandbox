@@ -2,6 +2,7 @@
 
 **Canonical**: `/c/Users/Alexa/AppData/Local/hermes/profiles/default/SOUL.md`
 **This file**: Pointer/mirror copy for workspace reference.
+**Active model**: `inkling:free` via `openrouter` (default profile) — propagated to all 15 profiles.
 
 For full content, rules, and authority, see the canonical SOUL.md in the profile directory.
 

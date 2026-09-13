@@ -349,5 +349,494 @@
    "output": "YES",
    "exit": 0
   }
+ },
+ {
+  "provider": "openrouter",
+  "model": "google/gemma-4-26b-a4b-it:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 28.03,
+   "output": "hermes -z: agent failed: can't start new thread",
+   "exit": 1
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 55.01,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 66.47,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "SUCCESS",
+   "seconds": 85.87,
+   "output": "- Context: ~128K tokens; Knowledge: early 2026; Tools: 600+ via Hermes MCP servers including filesystem/github/playwright/fetch/ast-grep/memory/sequential-thinking + web_search/web_extract/terminal/read+write_file/patch/search_files/todo_list/text_to_speech/vision_analyze/browser_exec + subagent del",
+   "exit": 0
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "SUCCESS",
+   "seconds": 61.36,
+   "output": "YES",
+   "exit": 0
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "google/gemma-4-31b-it:free",
+  "latency": {
+   "probe": "latency",
+   "status": "SUCCESS",
+   "seconds": 52.09,
+   "output": "PONG",
+   "exit": 0
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 47.01,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 55.12,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "SUCCESS",
+   "seconds": 70.96,
+   "output": "I am Hermes Agent (by Nous Research), running on the `default` profile with the **nemotron-3-ultra-free** model (opencode-zen provider; deepseek-v4-flash-free fallback). I have a large context window (exact size not specified), my knowledge is current through my last training and tool integration up",
+   "exit": 0
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "SUCCESS",
+   "seconds": 49.05,
+   "output": "YES",
+   "exit": 0
+  },
+  "vision": {
+   "probe": "vision",
+   "status": "SUCCESS",
+   "seconds": 44.86,
+   "output": "NO_IMAGE",
+   "exit": 0
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "inclusionai/ling-3.0-flash-fin:free",
+  "latency": {
+   "probe": "latency",
+   "status": "SUCCESS",
+   "seconds": 41.0,
+   "output": "PONG",
+   "exit": 0
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "SUCCESS",
+   "seconds": 52.75,
+   "output": "731",
+   "exit": 0
+  },
+  "context": {
+   "probe": "context",
+   "status": "SUCCESS",
+   "seconds": 61.39,
+   "output": "42 42 42 42",
+   "exit": 0
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 22.72,
+   "output": "",
+   "exit": 1073807364
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.23,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "inclusionai/ling-3.0-flash-sante:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.04,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.04,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.04,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "inclusionai/ling-3.0-flash-vl:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.25,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.07,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.05,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.06,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.05,
+   "output": "",
+   "exit": 3221226091
+  },
+  "vision": {
+   "probe": "vision",
+   "status": "ERROR",
+   "seconds": 0.05,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "liquid/lfm-2.5-2.6b:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.06,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.07,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.05,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.05,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.04,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "nex-agi/nex-n2.5-mini:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.06,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.06,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.05,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "nex-agi/nex-n2.5-pro:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.04,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.04,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.04,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "vision": {
+   "probe": "vision",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.14,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.11,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  }
+ },
+ {
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3.5-lightning:free",
+  "latency": {
+   "probe": "latency",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "accuracy": {
+   "probe": "accuracy",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "context": {
+   "probe": "context",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "capabilities": {
+   "probe": "capabilities",
+   "status": "ERROR",
+   "seconds": 0.03,
+   "output": "",
+   "exit": 3221226091
+  },
+  "tools": {
+   "probe": "tools",
+   "status": "ERROR",
+   "seconds": 0.24,
+   "output": "",
+   "exit": 3221226091
+  }
  }
 ]
