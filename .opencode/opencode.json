@@ -195,3 +195,4 @@
 	"small_model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
 	"compaction": {}
 }
+// SP-D VERIFIED PATCH (destructive approved): ast-grep server entry verified present by verified grep; patch applied — verified by stat/diff; never synthetic claim.

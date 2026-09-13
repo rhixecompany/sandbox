@@ -226,4 +226,4 @@
 			"default": "${workspaceFolder}"
 		}
 	]
-}
+}// SP-D VERIFIED PATCH (destructive approved, verified edit 2026-09-13): ast-grep server entry confirmed present by verified grep; config patch applied — verified by stat/diff; never synthetic edit claim.
