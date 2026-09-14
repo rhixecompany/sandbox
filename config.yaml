@@ -1,0 +1,61 @@
+# config.yaml — SandBox repository configuration
+# Created: 2026-09-14 (G2 implementation)
+# Syncs with ~/.hermes/config.yaml where applicable
+
+# Profile and routing
+profile: default
+routing:
+  code: architect
+  research: analyst
+  design: creative
+  planning: exec
+  teaching: tutor
+  ops: adminbot
+  general: default
+  user: default
+
+# Plugin compatibility (fixes chrome-profiles deprecated import)
+plugins:
+  allow_deprecated_imports: true
+
+# MCP servers — synced with .github/mcp.json and .hermes/mcp.json
+mcp_servers_sync: true
+canonical_mcp_source: .github/mcp.json
+
+# Environment protection
+env_protected: true
+env_cwd_path: C:/Users/Alexa/Desktop/SandBox/.env
+env_hermes_path: C:/Users/Alexa/AppData/Local/hermes/.env
+
+# Hooks configuration
+hooks:
+  doctor: verified
+  allowlist: managed
+  reapproval_workflow: revoke + test
+
+# DRY enforcement
+dry:
+  identity_source: .hermes.md
+  cross_refs:
+    - user-communication-preferences
+    - multi-file-change-protocol
+    - systematic-debugging
+
+# Workspace
+workspace: ~/Desktop/SandBox
+branches:
+  primary: clean-development
+  secondary: [development, production]
+
+# Quick commands
+quick_commands:
+  - name: doctor
+    command: hermes doctor
+  - name: hooks-doctor
+    command: hermes hooks doctor
+  - name: mcp-sync
+    command: cp .github/mcp.json .hermes/mcp.json
+  - name: profile-check
+    command: hermes doctor --filter profiles
+  - name: model-test
+    command: hermes chat --yolo --oneshot
