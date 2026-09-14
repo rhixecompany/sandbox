@@ -1,8 +1,8 @@
 # docs — Technology Stack Blueprint
 
-> **Generated:** 2026-07-24  
-> **Generator:** technology-stack-blueprint-generator  
-> **Project:** projects/docs/  
+> **Generated:** 2026-07-24
+> **Generator:** technology-stack-blueprint-generator
+> **Project:** projects/docs/
 > **Analysis Depth:** Comprehensive
 
 ---
@@ -11,8 +11,8 @@
 
 A documentation-only repository containing architectural blueprints, dependency audits, research appendices, and shared VS Code configuration — serving as a centralized reference across the SandBox workspace.
 
-**Project Type:** Documentation Repository  
-**Stack Type:** Documentation (Markdown)  
+**Project Type:** Documentation Repository
+**Stack Type:** Documentation (Markdown)
 **Stack Maturity:** Static / No Runtime
 
 ---

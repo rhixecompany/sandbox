@@ -1,7 +1,7 @@
 # ecom Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Python/Django (Backend)  
+**Generated:** 2026-07-28
+**Project Type:** Python/Django (Backend)
 **Architecture Pattern:** Django REST Framework + React frontend
 
 ## Overview

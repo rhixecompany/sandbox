@@ -1,6 +1,6 @@
 # SandBox Cleanup & Migration — Final Summary
 
-**Completed:** 2026-07-10  
+**Completed:** 2026-07-10
 **Plan:** `plan/sandbox-cleanup-migration-plan-v2.md`
 
 ---

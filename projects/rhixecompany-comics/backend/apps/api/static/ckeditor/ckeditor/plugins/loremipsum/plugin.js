@@ -1,8 +1,8 @@
 (function() {
 	var pluginName = 'loremipsum';
-	
+
 	var LOREM_TEXT_TYPE = {PARAGRAPH: 1, SENTENCE: 2, WORD: 3 };
-	
+
     var LOREM_WORDS = [
         "lorem", "ipsum", "dolor", "sit", "amet,", "consectetur", "adipiscing", "elit", "ut", "aliquam,", "purus", "sit", "amet", "luctus", "venenatis,", "lectus", "magna", "fringilla", "urna,", "porttitor", "rhoncus", "dolor", "purus", "non", "enim", "praesent", "elementum", "facilisis", "leo,", "vel", "fringilla", "est", "ullamcorper", "eget", "nulla", "facilisi", "etiam", "dignissim", "diam", "quis", "enim", "lobortis", "scelerisque", "fermentum", "dui", "faucibus", "in", "ornare", "quam", "viverra", "orci", "sagittis", "eu", "volutpat", "odio", "facilisis", "mauris", "sit", "amet", "massa", "vitae", "tortor", "condimentum", "lacinia", "quis", "vel", "eros", "donec", "ac", "odio", "tempor", "orci", "dapibus", "ultrices", "in", "iaculis", "nunc", "sed", "augue", "lacus,", "viverra", "vitae", "congue", "eu,", "consequat", "ac", "felis", "donec", "et", "odio", "pellentesque", "diam", "volutpat", "commodo", "sed", "egestas", "egestas", "fringilla", "phasellus", "faucibus", "scelerisque", "eleifend", "donec", "pretium", "vulputate", "sapien", "nec", "sagittis", "aliquam", "malesuada", "bibendum", "arcu", "vitae", "elementum",
         "curabitur", "vitae", "nunc", "sed", "velit", "dignissim", "sodales", "ut", "eu", "sem", "integer", "vitae", "justo", "eget", "magna", "fermentum", "iaculis", "eu", "non", "diam", "phasellus", "vestibulum", "lorem", "sed", "risus", "ultricies", "tristique", "nulla", "aliquet", "enim", "tortor,", "at", "auctor", "urna", "nunc", "id", "cursus", "metus", "aliquam", "eleifend", "mi", "in", "nulla", "posuere", "sollicitudin", "aliquam", "ultrices", "sagittis", "orci,", "a", "scelerisque", "purus", "semper", "eget", "duis", "at", "tellus", "at", "urna", "condimentum", "mattis", "pellentesque", "id", "nibh", "tortor,", "id", "aliquet", "lectus", "proin", "nibh", "nisl,", "condimentum", "id", "venenatis", "a,", "condimentum", "vitae", "sapien", "pellentesque", "habitant", "morbi", "tristique", "senectus", "et", "netus", "et", "malesuada", "fames", "ac", "turpis", "egestas", "sed", "tempus,", "urna", "et", "pharetra", "pharetra,", "massa", "massa", "ultricies", "mi,", "quis", "hendrerit", "dolor", "magna", "eget", "est", "lorem", "ipsum", "dolor", "sit", "amet,", "consectetur", "adipiscing", "elit", "pellentesque", "habitant", "morbi", "tristique", "senectus", "et", "netus", "et", "malesuada", "fames", "ac", "turpis", "egestas", "integer", "eget", "aliquet", "nibh", "praesent", "tristique", "magna", "sit", "amet", "purus", "gravida", "quis", "blandit", "turpis", "cursus", "in", "hac", "habitasse", "platea", "dictumst", "quisque", "sagittis,", "purus", "sit", "amet", "volutpat", "consequat,", "mauris", "nunc", "congue", "nisi,", "vitae", "suscipit", "tellus", "mauris", "a", "diam",
@@ -15,28 +15,28 @@
         "pellentesque", "adipiscing", "commodo", "elit,", "at", "imperdiet", "dui", "accumsan", "sit", "amet", "nulla", "facilisi", "morbi", "tempus", "iaculis", "urna,", "id", "volutpat", "lacus", "laoreet", "non", "curabitur", "gravida", "arcu", "ac", "tortor", "dignissim", "convallis", "aenean", "et", "tortor", "at", "risus", "viverra", "adipiscing", "at", "in", "tellus", "integer", "feugiat", "scelerisque", "varius", "morbi", "enim", "nunc,", "faucibus", "a", "pellentesque", "sit", "amet,", "porttitor", "eget", "dolor", "morbi", "non", "arcu", "risus,", "quis", "varius", "quam", "quisque", "id", "diam", "vel", "quam", "elementum", "pulvinar", "etiam", "non", "quam", "lacus", "suspendisse", "faucibus", "interdum", "posuere", "lorem", "ipsum", "dolor", "sit", "amet,", "consectetur", "adipiscing", "elit", "duis", "tristique", "sollicitudin", "nibh", "sit", "amet", "commodo", "nulla", "facilisi",
         "nullam", "vehicula", "ipsum", "a", "arcu", "cursus", "vitae", "congue", "mauris", "rhoncus", "aenean", "vel", "elit", "scelerisque", "mauris", "pellentesque", "pulvinar", "pellentesque", "habitant", "morbi", "tristique", "senectus", "et", "netus", "et", "malesuada", "fames", "ac", "turpis", "egestas", "maecenas", "pharetra", "convallis", "posuere", "morbi", "leo", "urna,", "molestie", "at", "elementum", "eu,", "facilisis", "sed", "odio", "morbi", "quis", "commodo", "odio", "aenean", "sed", "adipiscing", "diam", "donec", "adipiscing", "tristique", "risus", "nec", "feugiat", "in", "fermentum", "posuere", "urna", "nec", "tincidunt", "praesent", "semper", "feugiat", "nibh", "sed", "pulvinar", "proin", "gravida", "hendrerit", "lectus", "a", "molestie"
     ];
-    
+
     function generateLoremText(count, type) {
-    	
+
         switch (type) {
-        
+
             case LOREM_TEXT_TYPE.PARAGRAPH:
-            	
+
                 var paragraphsArray = [];
-                
+
                 for (var i = 0; i < count; i++) {
                 	// random number between 10 and 20
                     paragraphsArray.push('<p>' + generateLoremText(Math.floor((Math.random() * 10) + 10), LOREM_TEXT_TYPE.SENTENCE) + '</p>');
                 }
-                
+
                 return paragraphsArray.join('\n');
-                
+
                 break;
-                
+
             case LOREM_TEXT_TYPE.SENTENCE:
-            	
+
                 var sentencesArray = [];
-                
+
                 for (var i = 0; i < count; i++) {
                 	// random number between 5 and 10
                     var words = generateLoremText(Math.floor((Math.random() * 5) + 5), LOREM_TEXT_TYPE.WORD).split(' ');
@@ -46,21 +46,21 @@
 
                     sentencesArray.push(sentences);
                 }
-                
+
                 return (sentencesArray.join('. ') + '.').replace(/(\.\,|\,\.)/g, '.');
-                
+
                 break;
-                
+
             case LOREM_TEXT_TYPE.WORD:
             	// random integer between 1 et LOREM_WORDS.length
                 var randomWordIndex = Math.floor((Math.random() * (LOREM_WORDS.length - 1)) + 1);
 
                 return LOREM_WORDS.slice(randomWordIndex, randomWordIndex + count).join(' ');
-                
+
                 break;
         }
     };
-	
+
 	CKEDITOR.plugins.add( pluginName, {
 		icons: 'loremipsum',
 		requires: 'richcombo',
@@ -73,21 +73,21 @@
 			paragraphOptionsList = [],
 			sentenceOptionsList = [],
 			allowedContent = [];
-			
+
 			paragraphOptionsList[0]=["1p", "1 " + lang.paragraph, "1 " + lang.paragraph];
 			paragraphOptionsList[1]=["2p", "2 " + lang.paragraphs, "2 " + lang.paragraphs];
 			paragraphOptionsList[2]=["3p", "3 " + lang.paragraphs, "3 " + lang.paragraphs];
 			paragraphOptionsList[3]=["4p", "4 " + lang.paragraphs, "4 " + lang.paragraphs];
 			paragraphOptionsList[4]=["5p", "5 " + lang.paragraphs, "5 " + lang.paragraphs];
 			paragraphOptionsList[5]=["6p", "6 " + lang.paragraphs, "6 " + lang.paragraphs];
-			
+
 			sentenceOptionsList[0]=["1s", "1 " + lang.sentence, "1 " + lang.sentence];
 			sentenceOptionsList[1]=["2s", "2 " + lang.sentences, "2 " + lang.sentences];
 			sentenceOptionsList[2]=["3s", "3 " + lang.sentences, "3 " + lang.sentences];
 			sentenceOptionsList[3]=["4s", "4 " + lang.sentences, "4 " + lang.sentences];
 			sentenceOptionsList[4]=["5s", "5 " + lang.sentences, "5 " + lang.sentences];
 			sentenceOptionsList[5]=["6s", "6 " + lang.sentences, "6 " + lang.sentences];
-			
+
 			editor.ui.addRichCombo( 'Loremipsum', {
 				label: 'Loremipsum',
 				title: 'Loremipsum',
@@ -100,13 +100,13 @@
 					attributes: { 'aria-label': 'Loremipsum' }
 				},
 				init: function() {
-					
+
 					this.startGroup( lang.paragraphs );
 
 					for (var paragraphOption in paragraphOptionsList){
 						this.add(paragraphOptionsList[paragraphOption][0], paragraphOptionsList[paragraphOption][1], paragraphOptionsList[paragraphOption][2]);
 					}
-					
+
 					this.startGroup( lang.sentences );
 
 					for (var sentenceOption in sentenceOptionsList){
@@ -116,7 +116,7 @@
 					this.commit();
 				},
 				onClick: function( value ) {
-					
+
 					editor.focus();
 					editor.fire( 'saveSnapshot' );
 					var type = value.charAt(1) == 'p' ? LOREM_TEXT_TYPE.PARAGRAPH : LOREM_TEXT_TYPE.SENTENCE;
@@ -127,5 +127,5 @@
 			});
 		}
 	});
-	
+
 })();

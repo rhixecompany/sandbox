@@ -41,7 +41,7 @@ kept = []
 for name, paths in all_skills.items():
     categorized = [p for p in paths if '\\' in p and not p.startswith('.archive')]
     flat = [p for p in paths if '\\' not in p and not p.startswith('.archive')]
-    
+
     if flat and categorized:
         # Keep the first categorized version, remove flat copies
         for f in flat:

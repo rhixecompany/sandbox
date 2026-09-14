@@ -2,8 +2,8 @@
 
 ## Project: Resume_maker — Job Docs Generator
 
-> **Generated:** 2026-06-25  
-> **Generator:** technology-stack-blueprint-generator  
+> **Generated:** 2026-06-25
+> **Generator:** technology-stack-blueprint-generator
 > **Analysis Depth:** Comprehensive
 
 ---
@@ -12,7 +12,7 @@
 
 CLI tool that generates job-hunting documents (resume, cover letter, LinkedIn guide, interview prep) from structured JSON input to Markdown and PDF formats.
 
-**Project Type:** CLI Tool (Document Generator)  
+**Project Type:** CLI Tool (Document Generator)
 **Stack Type:** Bun/TypeScript
 
 ---

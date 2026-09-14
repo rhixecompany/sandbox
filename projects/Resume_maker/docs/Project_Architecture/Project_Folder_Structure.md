@@ -2,8 +2,8 @@
 
 ## Project: Resume_maker — Bun/TypeScript Job Documents Generator
 
-**Generated:** 2026-06-25  
-**Project Type:** Bun/TypeScript CLI Application  
+**Generated:** 2026-06-25
+**Project Type:** Bun/TypeScript CLI Application
 **Auto-detected:** Yes (Bun project — `bun.lock`, `package.json`, `tsconfig.json`, `eslint.config.js`)
 
 ---

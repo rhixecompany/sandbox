@@ -53,15 +53,15 @@ Write-Host "=== Cleanup Verification ===" -ForegroundColor Cyan
 foreach ($base in $Paths) {
     Write-Host ""
     Write-Host "=== $base ===" -ForegroundColor Cyan
-    
+
     if (-not (Test-Path -LiteralPath $base)) {
         Write-Host "PATH NOT FOUND: $base" -ForegroundColor Red
         continue
     }
-    
+
     $result = Get-ChildItem -LiteralPath $base -Directory -Recurse -Depth $Depth -ErrorAction SilentlyContinue |
         Where-Object { $_.Name -in $Targets }
-    
+
     if ($result) {
         Write-Host "FOUND: $($result.Count) remaining folders" -ForegroundColor Yellow
         $result | ForEach-Object { Write-Host "  $($_.FullName)" }

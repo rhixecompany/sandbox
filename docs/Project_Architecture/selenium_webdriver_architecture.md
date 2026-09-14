@@ -1,7 +1,7 @@
 # selenium_webdriver Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** TypeScript/Bun (Utility)  
+**Generated:** 2026-07-28
+**Project Type:** TypeScript/Bun (Utility)
 **Architecture Pattern:** Selenium WebDriver browser automation
 
 ## Overview

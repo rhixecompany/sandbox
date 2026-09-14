@@ -128,7 +128,7 @@ class GreetTool implements ToolInterface
     public function execute(array $arguments): array
     {
         $name = $arguments['name'] ?? 'World';
-        
+
         return [
             'content' => [
                 [

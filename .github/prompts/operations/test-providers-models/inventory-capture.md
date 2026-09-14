@@ -96,7 +96,7 @@ xai-oauth (1 credentials):
 
 ◆ Terminal
   Backend:      local
-  Working dir:  
+  Working dir:
   Timeout:      360s
 
 ◆ Timezone
@@ -383,4 +383,3 @@ xai-oauth (1 credentials):
 # exit=0
 
 ---
-

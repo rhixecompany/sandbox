@@ -1,0 +1,1 @@
+make-fetch-happen:request-cache:https://registry.npmjs.org/node-code-sandbox-mcp

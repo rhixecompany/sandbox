@@ -10,9 +10,9 @@ then
 fi
 
 if [ -f /etc/systemd/system/ecom.socket ]
-then  
+then
     mv ./ecom.service /etc/systemd/system ; sudo systemctl enable ecom.service ; sudo systemctl start ecom.service
-    
+
 else
     echo "Ecom utility is not present"
 fi

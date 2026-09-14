@@ -7,18 +7,18 @@ category: development
 version: 1.0.0
 author: Hermes Agent
 tags: [review, refactor, code-quality, coding-standards, maintainability]
-metadata: 
-hermes: 
+metadata:
+hermes:
 profile: code-architect
 priority: medium
-copilot: 
+copilot:
 model_required: sonnet
-opencode: 
+opencode:
 enabled: true
-codex: 
+codex:
 date: 2026-08-25
-toolsets: 
-skills: 
+toolsets:
+skills:
 - skill: using-superpowers
 dependencies: []
 formatter: markdown

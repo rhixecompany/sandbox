@@ -1,0 +1,5 @@
+f67b6bfb 2026-09-05 01:32:14 +0100 updates
+41a50d90 2026-09-04 22:03:28 +0100 docs: final scripts remediation report + SESSION_REPORT updates
+06ee0312 2026-09-04 21:49:07 +0100 docs: 2026-09-04 comprehensive Hermes health sweep session record
+0a2ab7ae 2026-09-04 21:46:08 +0100 updates
+97b4300f 2026-09-04 20:34:12 +0100 docs(2026-09-04): add Docker MCP image re-pull observation to SESSION_REPORT

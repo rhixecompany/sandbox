@@ -1,0 +1,12 @@
+opencode: /c/nvm4w/nodejs/opencode
+1.18.13
+opencode.cmd: /c/nvm4w/nodejs/opencode.cmd
+1.18.13
+code: /c/Users/Alexa/AppData/Local/Programs/Microsoft VS Code/bin/code
+1.136.1
+a44adf7f53e00964ab890f9f8758a334f1fc15bc
+codex: /c/Users/Alexa/AppData/Local/Microsoft/WinGet/Links/codex
+codex-cli 0.146.1
+copilot: /c/Users/Alexa/AppData/Local/Microsoft/WinGet/Links/copilot
+GitHub Copilot CLI 1.0.83.
+Run 'copilot update' to check for updates.

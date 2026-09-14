@@ -1,6 +1,6 @@
 # VSCode Config Audit — Final Report
 
-**Scope:** `.vscode/` (workspace) + `Code\User\` (user)  
+**Scope:** `.vscode/` (workspace) + `Code\User\` (user)
 **Goal:** Use WezTerm as the default terminal
 
 ## Terminal Configuration

@@ -8,10 +8,10 @@ version: 1.0.0
 author: OWL
 license: MIT
 tags: [instruction-files, audit, prompt]
-metadata: 
-hermes: 
-toolsets: 
-skills: 
+metadata:
+hermes:
+toolsets:
+skills:
 - skill: using-superpowers
 dependencies: []
 formatter: markdown

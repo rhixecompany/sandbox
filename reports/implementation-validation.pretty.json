@@ -1,0 +1,1483 @@
+{
+    "plans": [
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+                "Missing 'version' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+                "Missing 'license' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+                "Missing 'tags' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+                "Missing section '## Milestones': 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+                "Missing section '## Timeline': 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+                "No task tables found: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md"
+            ],
+            "size_bytes": 700
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-23-comprehensive-github-prompts-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+                "Missing 'version' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+                "Missing 'license' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+                "Missing 'tags' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+                "Missing section '## Milestones': 2026-07-23-comprehensive-github-prompts-plan.md",
+                "Missing section '## Timeline': 2026-07-23-comprehensive-github-prompts-plan.md",
+                "No task tables found: 2026-07-23-comprehensive-github-prompts-plan.md"
+            ],
+            "size_bytes": 655
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+                "Missing 'version' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+                "Missing 'license' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+                "Missing 'tags' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+                "Missing section '## Milestones': 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+                "Missing section '## Timeline': 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+                "No task tables found: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md"
+            ],
+            "size_bytes": 676
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-25-yaml-workflows-audit-fix-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+                "Missing 'version' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+                "Missing 'license' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+                "Missing 'tags' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+                "Missing section '## Milestones': 2026-07-25-yaml-workflows-audit-fix-plan.md",
+                "Missing section '## Timeline': 2026-07-25-yaml-workflows-audit-fix-plan.md",
+                "No task tables found: 2026-07-25-yaml-workflows-audit-fix-plan.md"
+            ],
+            "size_bytes": 643
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-31-workspace-cleanup.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-07-31-workspace-cleanup.md",
+                "Missing 'version' in frontmatter: 2026-07-31-workspace-cleanup.md",
+                "Missing 'license' in frontmatter: 2026-07-31-workspace-cleanup.md",
+                "Missing 'tags' in frontmatter: 2026-07-31-workspace-cleanup.md",
+                "Missing section '## Milestones': 2026-07-31-workspace-cleanup.md",
+                "Missing section '## Timeline': 2026-07-31-workspace-cleanup.md",
+                "No task tables found: 2026-07-31-workspace-cleanup.md"
+            ],
+            "size_bytes": 607
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_async-script-tooling-master.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+                "Missing 'version' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+                "Missing 'license' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+                "Missing 'tags' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+                "Missing section '## Milestones': 2026-08-01_async-script-tooling-master.md",
+                "Missing section '## Timeline': 2026-08-01_async-script-tooling-master.md",
+                "No task tables found: 2026-08-01_async-script-tooling-master.md"
+            ],
+            "size_bytes": 871
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_consolidated-goal-tooling-cleanup.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+                "Missing 'version' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+                "Missing 'license' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+                "Missing 'tags' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+                "Missing section '## Milestones': 2026-08-01_consolidated-goal-tooling-cleanup.md",
+                "Missing section '## Timeline': 2026-08-01_consolidated-goal-tooling-cleanup.md",
+                "No task tables found: 2026-08-01_consolidated-goal-tooling-cleanup.md"
+            ],
+            "size_bytes": 965
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_repo-tooling.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-01_repo-tooling.md",
+                "Missing 'version' in frontmatter: 2026-08-01_repo-tooling.md",
+                "Missing 'license' in frontmatter: 2026-08-01_repo-tooling.md",
+                "Missing 'tags' in frontmatter: 2026-08-01_repo-tooling.md",
+                "Missing section '## Milestones': 2026-08-01_repo-tooling.md",
+                "Missing section '## Timeline': 2026-08-01_repo-tooling.md",
+                "No task tables found: 2026-08-01_repo-tooling.md"
+            ],
+            "size_bytes": 776
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_tooling-implementation.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-01_tooling-implementation.md",
+                "Missing 'version' in frontmatter: 2026-08-01_tooling-implementation.md",
+                "Missing 'license' in frontmatter: 2026-08-01_tooling-implementation.md",
+                "Missing 'tags' in frontmatter: 2026-08-01_tooling-implementation.md",
+                "Missing section '## Milestones': 2026-08-01_tooling-implementation.md",
+                "Missing section '## Timeline': 2026-08-01_tooling-implementation.md",
+                "No task tables found: 2026-08-01_tooling-implementation.md"
+            ],
+            "size_bytes": 868
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_213801-prompt-library-maintenance.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+                "Missing 'version' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+                "Missing 'license' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+                "Missing 'tags' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+                "Missing section '## Milestones': 2026-08-11_213801-prompt-library-maintenance.md",
+                "Missing section '## Timeline': 2026-08-11_213801-prompt-library-maintenance.md",
+                "No task tables found: 2026-08-11_213801-prompt-library-maintenance.md"
+            ],
+            "size_bytes": 657
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_214500-repo-init-all-agents.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+                "Missing 'version' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+                "Missing 'license' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+                "Missing 'tags' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+                "Missing section '## Milestones': 2026-08-11_214500-repo-init-all-agents.md",
+                "Missing section '## Timeline': 2026-08-11_214500-repo-init-all-agents.md",
+                "No task tables found: 2026-08-11_214500-repo-init-all-agents.md"
+            ],
+            "size_bytes": 795
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_hermes-platform-diagnostics-debug.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+                "Missing 'version' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+                "Missing 'license' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+                "Missing 'tags' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+                "Missing section '## Milestones': 2026-08-11_hermes-platform-diagnostics-debug.md",
+                "Missing section '## Timeline': 2026-08-11_hermes-platform-diagnostics-debug.md",
+                "No task tables found: 2026-08-11_hermes-platform-diagnostics-debug.md"
+            ],
+            "size_bytes": 643
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+                "Missing 'version' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+                "Missing 'license' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+                "Missing 'tags' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+                "Missing section '## Milestones': 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+                "Missing section '## Timeline': 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+                "No task tables found: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md"
+            ],
+            "size_bytes": 773
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+                "Missing 'version' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+                "Missing 'license' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+                "Missing 'tags' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+                "Missing section '## Milestones': 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+                "Missing section '## Timeline': 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+                "No task tables found: 2026-08-12_012441-prompts-library-debug-fix-enhance.md"
+            ],
+            "size_bytes": 920
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+                "Missing 'version' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+                "Missing 'license' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+                "Missing 'tags' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+                "Missing section '## Milestones': 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+                "Missing section '## Timeline': 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+                "No task tables found: 2026-08-12_043000-terminal-agent-ecosystem-sync.md"
+            ],
+            "size_bytes": 666
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+                "Missing 'version' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+                "Missing 'license' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+                "Missing 'tags' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+                "Missing section '## Milestones': 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+                "Missing section '## Timeline': 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+                "No task tables found: 2026-08-15_202608_four-agent-prompt-audit-plan.md"
+            ],
+            "size_bytes": 663
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-spec.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+                "Missing 'version' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+                "Missing 'license' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+                "Missing 'tags' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+                "Missing section '## Milestones': 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+                "Missing section '## Timeline': 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+                "No task tables found: 2026-08-15_202608_four-agent-prompt-audit-spec.md"
+            ],
+            "size_bytes": 663
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+                "Missing 'version' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+                "Missing 'license' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+                "Missing 'tags' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+                "Missing section '## Milestones': 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+                "Missing section '## Timeline': 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+                "No task tables found: 2026-08-15_202608_openrouter-sdk-integration-plan.md"
+            ],
+            "size_bytes": 691
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-spec.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+                "Missing 'version' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+                "Missing 'license' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+                "Missing 'tags' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+                "Missing section '## Milestones': 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+                "Missing section '## Timeline': 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+                "No task tables found: 2026-08-15_202608_openrouter-sdk-integration-spec.md"
+            ],
+            "size_bytes": 712
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+                "Missing 'version' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+                "Missing 'license' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+                "Missing 'tags' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+                "Missing section '## Milestones': 2026-08-15_202608_openrouter-sdk-integration.md",
+                "Missing section '## Timeline': 2026-08-15_202608_openrouter-sdk-integration.md",
+                "No task tables found: 2026-08-15_202608_openrouter-sdk-integration.md"
+            ],
+            "size_bytes": 674
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+                "Missing 'version' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+                "Missing 'license' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+                "Missing 'tags' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+                "Missing section '## Milestones': 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+                "Missing section '## Timeline': 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+                "No task tables found: 2026-08-15_hermes-profile-skills-enhancement-plan.md"
+            ],
+            "size_bytes": 722
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-spec.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+                "Missing 'version' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+                "Missing 'license' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+                "Missing 'tags' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+                "Missing section '## Milestones': 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+                "Missing section '## Timeline': 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+                "No task tables found: 2026-08-15_hermes-profile-skills-enhancement-spec.md"
+            ],
+            "size_bytes": 772
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-16_142300_cross-platform-agent-sync-spec.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+                "Missing 'version' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+                "Missing 'license' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+                "Missing 'tags' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+                "Missing section '## Milestones': 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+                "Missing section '## Timeline': 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+                "No task tables found: 2026-08-16_142300_cross-platform-agent-sync-spec.md"
+            ],
+            "size_bytes": 669
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+                "Missing 'version' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+                "Missing 'license' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+                "Missing 'tags' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+                "Missing section '## Milestones': 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+                "Missing section '## Timeline': 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+                "No task tables found: 2026-08-16_142300_mcp-sync-all-agents-implementation.md"
+            ],
+            "size_bytes": 681
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+                "Missing 'version' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+                "Missing 'license' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+                "Missing 'tags' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+                "Missing section '## Milestones': 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+                "Missing section '## Timeline': 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+                "No task tables found: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md"
+            ],
+            "size_bytes": 705
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+                "Missing 'version' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+                "Missing 'license' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+                "Missing 'tags' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+                "Missing section '## Milestones': 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+                "Missing section '## Timeline': 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+                "No task tables found: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md"
+            ],
+            "size_bytes": 720
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_235900-subagent-driven-development-full-implementation.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+                "Missing 'version' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+                "Missing 'license' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+                "Missing 'tags' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+                "Missing section '## Milestones': 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+                "Missing section '## Timeline': 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+                "No task tables found: 2026-08-19_235900-subagent-driven-development-full-implementation.md"
+            ],
+            "size_bytes": 720
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+                "Missing 'version' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+                "Missing 'license' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+                "Missing 'tags' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+                "Missing section '## Milestones': 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+                "Missing section '## Timeline': 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+                "No task tables found: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md"
+            ],
+            "size_bytes": 681
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+                "Missing 'version' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+                "Missing 'license' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+                "Missing 'tags' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+                "Missing section '## Milestones': 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+                "Missing section '## Timeline': 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+                "No task tables found: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md"
+            ],
+            "size_bytes": 699
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-context-and-model-sync.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+                "Missing 'version' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+                "Missing 'license' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+                "Missing 'tags' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+                "Missing section '## Milestones': 2026-08-24_comprehensive-context-and-model-sync.md",
+                "Missing section '## Timeline': 2026-08-24_comprehensive-context-and-model-sync.md",
+                "No task tables found: 2026-08-24_comprehensive-context-and-model-sync.md"
+            ],
+            "size_bytes": 666
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-platform-remediation-spec.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+                "Missing 'version' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+                "Missing 'license' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+                "Missing 'tags' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+                "Missing section '## Milestones': 2026-08-24_comprehensive-platform-remediation-spec.md",
+                "Missing section '## Timeline': 2026-08-24_comprehensive-platform-remediation-spec.md",
+                "No task tables found: 2026-08-24_comprehensive-platform-remediation-spec.md"
+            ],
+            "size_bytes": 675
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-platform-remediation.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+                "Missing 'version' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+                "Missing 'license' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+                "Missing 'tags' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+                "Missing section '## Milestones': 2026-08-24_comprehensive-platform-remediation.md",
+                "Missing section '## Timeline': 2026-08-24_comprehensive-platform-remediation.md",
+                "No task tables found: 2026-08-24_comprehensive-platform-remediation.md"
+            ],
+            "size_bytes": 660
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_hermes-full-diagnostic-repair.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+                "Missing 'version' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+                "Missing 'license' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+                "Missing 'tags' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+                "Missing section '## Milestones': 2026-08-24_hermes-full-diagnostic-repair.md",
+                "Missing section '## Timeline': 2026-08-24_hermes-full-diagnostic-repair.md",
+                "No task tables found: 2026-08-24_hermes-full-diagnostic-repair.md"
+            ],
+            "size_bytes": 645
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_update-enhance-verify-context-files.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+                "Missing 'version' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+                "Missing 'license' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+                "Missing 'tags' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+                "Missing section '## Milestones': 2026-08-24_update-enhance-verify-context-files.md",
+                "Missing section '## Timeline': 2026-08-24_update-enhance-verify-context-files.md",
+                "No task tables found: 2026-08-24_update-enhance-verify-context-files.md"
+            ],
+            "size_bytes": 663
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-25_015239-dependency-toolchain-update.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+                "Missing 'version' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+                "Missing 'license' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+                "Missing 'tags' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+                "Missing section '## Milestones': 2026-08-25_015239-dependency-toolchain-update.md",
+                "Missing section '## Timeline': 2026-08-25_015239-dependency-toolchain-update.md",
+                "No task tables found: 2026-08-25_015239-dependency-toolchain-update.md"
+            ],
+            "size_bytes": 726
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-28_phase-b-prompt-enhancement.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+                "Missing 'version' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+                "Missing 'license' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+                "Missing 'tags' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+                "Missing section '## Milestones': 2026-08-28_phase-b-prompt-enhancement.md",
+                "Missing section '## Timeline': 2026-08-28_phase-b-prompt-enhancement.md",
+                "No task tables found: 2026-08-28_phase-b-prompt-enhancement.md"
+            ],
+            "size_bytes": 680
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-28_prompt-corpus-enhance.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+                "Missing 'version' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+                "Missing 'license' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+                "Missing 'tags' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+                "Missing section '## Milestones': 2026-08-28_prompt-corpus-enhance.md",
+                "Missing section '## Timeline': 2026-08-28_prompt-corpus-enhance.md",
+                "No task tables found: 2026-08-28_prompt-corpus-enhance.md"
+            ],
+            "size_bytes": 690
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-29-master-consolidated-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+                "Missing 'version' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+                "Missing 'license' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+                "Missing 'tags' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+                "Missing section '## Milestones': 2026-08-29-master-consolidated-plan.md",
+                "Missing section '## Timeline': 2026-08-29-master-consolidated-plan.md",
+                "No task tables found: 2026-08-29-master-consolidated-plan.md"
+            ],
+            "size_bytes": 762
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-29_full-audit-remediation.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-29_full-audit-remediation.md",
+                "Missing 'version' in frontmatter: 2026-08-29_full-audit-remediation.md",
+                "Missing 'license' in frontmatter: 2026-08-29_full-audit-remediation.md",
+                "Missing 'tags' in frontmatter: 2026-08-29_full-audit-remediation.md",
+                "Missing section '## Milestones': 2026-08-29_full-audit-remediation.md",
+                "Missing section '## Timeline': 2026-08-29_full-audit-remediation.md",
+                "No task tables found: 2026-08-29_full-audit-remediation.md"
+            ],
+            "size_bytes": 790
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_152242-comprehensive-reimplementation-master.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+                "Missing 'version' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+                "Missing 'license' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+                "Missing 'tags' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+                "Missing section '## Milestones': 2026-08-31_152242-comprehensive-reimplementation-master.md",
+                "Missing section '## Timeline': 2026-08-31_152242-comprehensive-reimplementation-master.md",
+                "No task tables found: 2026-08-31_152242-comprehensive-reimplementation-master.md"
+            ],
+            "size_bytes": 950
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_180000-comprehensive-reimplementation-master.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+                "Missing 'version' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+                "Missing 'license' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+                "Missing 'tags' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+                "Missing section '## Milestones': 2026-08-31_180000-comprehensive-reimplementation-master.md",
+                "Missing section '## Timeline': 2026-08-31_180000-comprehensive-reimplementation-master.md",
+                "No task tables found: 2026-08-31_180000-comprehensive-reimplementation-master.md"
+            ],
+            "size_bytes": 989
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_goal1-identity-triage.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+                "Missing 'version' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+                "Missing 'license' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+                "Missing 'tags' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+                "Missing section '## Milestones': 2026-08-31_goal1-identity-triage.md",
+                "Missing section '## Timeline': 2026-08-31_goal1-identity-triage.md",
+                "No task tables found: 2026-08-31_goal1-identity-triage.md"
+            ],
+            "size_bytes": 621
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_goal2-plugins-hooks.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+                "Missing 'version' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+                "Missing 'license' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+                "Missing 'tags' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+                "Missing section '## Milestones': 2026-08-31_goal2-plugins-hooks.md",
+                "Missing section '## Timeline': 2026-08-31_goal2-plugins-hooks.md",
+                "No task tables found: 2026-08-31_goal2-plugins-hooks.md"
+            ],
+            "size_bytes": 615
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_six-judge-skills.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: 2026-08-31_six-judge-skills.md",
+                "Missing 'version' in frontmatter: 2026-08-31_six-judge-skills.md",
+                "Missing 'license' in frontmatter: 2026-08-31_six-judge-skills.md",
+                "Missing 'tags' in frontmatter: 2026-08-31_six-judge-skills.md",
+                "Missing section '## Milestones': 2026-08-31_six-judge-skills.md",
+                "Missing section '## Timeline': 2026-08-31_six-judge-skills.md",
+                "No task tables found: 2026-08-31_six-judge-skills.md"
+            ],
+            "size_bytes": 750
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-09-04-dedupe-triage-report.md",
+            "valid": false,
+            "issues": [
+                "Missing YAML frontmatter: 2026-09-04-dedupe-triage-report.md",
+                "Missing section '## Phases': 2026-09-04-dedupe-triage-report.md",
+                "Missing section '## Milestones': 2026-09-04-dedupe-triage-report.md",
+                "Missing section '## Timeline': 2026-09-04-dedupe-triage-report.md",
+                "No task tables found: 2026-09-04-dedupe-triage-report.md"
+            ],
+            "size_bytes": 18831
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\agent-provider-matrix.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: agent-provider-matrix.md",
+                "Missing 'version' in frontmatter: agent-provider-matrix.md",
+                "Missing 'license' in frontmatter: agent-provider-matrix.md",
+                "Missing 'tags' in frontmatter: agent-provider-matrix.md",
+                "Missing section '## Milestones': agent-provider-matrix.md",
+                "Missing section '## Timeline': agent-provider-matrix.md",
+                "No task tables found: agent-provider-matrix.md"
+            ],
+            "size_bytes": 588
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\audit-report.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: audit-report.md",
+                "Missing 'version' in frontmatter: audit-report.md",
+                "Missing 'license' in frontmatter: audit-report.md",
+                "Missing 'tags' in frontmatter: audit-report.md",
+                "Missing section '## Milestones': audit-report.md",
+                "Missing section '## Timeline': audit-report.md",
+                "No task tables found: audit-report.md"
+            ],
+            "size_bytes": 561
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\comprehensive-implementation-plan.md",
+            "valid": true,
+            "issues": [],
+            "size_bytes": 10321
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\deepseek-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: deepseek-workflow.md",
+                "Missing 'version' in frontmatter: deepseek-workflow.md",
+                "Missing 'license' in frontmatter: deepseek-workflow.md",
+                "Missing 'tags' in frontmatter: deepseek-workflow.md",
+                "Missing section '## Milestones': deepseek-workflow.md",
+                "Missing section '## Timeline': deepseek-workflow.md",
+                "No task tables found: deepseek-workflow.md"
+            ],
+            "size_bytes": 576
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\disk-cleanup-skill-implementation.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: disk-cleanup-skill-implementation.md",
+                "Missing 'version' in frontmatter: disk-cleanup-skill-implementation.md",
+                "Missing 'license' in frontmatter: disk-cleanup-skill-implementation.md",
+                "Missing 'tags' in frontmatter: disk-cleanup-skill-implementation.md",
+                "Missing section '## Milestones': disk-cleanup-skill-implementation.md",
+                "Missing section '## Timeline': disk-cleanup-skill-implementation.md",
+                "No task tables found: disk-cleanup-skill-implementation.md"
+            ],
+            "size_bytes": 624
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\disk-cleanup-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: disk-cleanup-workflow.md",
+                "Missing 'version' in frontmatter: disk-cleanup-workflow.md",
+                "Missing 'license' in frontmatter: disk-cleanup-workflow.md",
+                "Missing 'tags' in frontmatter: disk-cleanup-workflow.md",
+                "Missing section '## Milestones': disk-cleanup-workflow.md",
+                "Missing section '## Timeline': disk-cleanup-workflow.md",
+                "No task tables found: disk-cleanup-workflow.md"
+            ],
+            "size_bytes": 588
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\example-subagent-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: example-subagent-plan.md",
+                "Missing 'version' in frontmatter: example-subagent-plan.md",
+                "Missing 'license' in frontmatter: example-subagent-plan.md",
+                "Missing 'tags' in frontmatter: example-subagent-plan.md",
+                "Missing section '## Milestones': example-subagent-plan.md",
+                "Missing section '## Timeline': example-subagent-plan.md",
+                "No task tables found: example-subagent-plan.md"
+            ],
+            "size_bytes": 588
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\execution-summary.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: execution-summary.md",
+                "Missing 'version' in frontmatter: execution-summary.md",
+                "Missing 'license' in frontmatter: execution-summary.md",
+                "Missing 'tags' in frontmatter: execution-summary.md",
+                "Missing section '## Milestones': execution-summary.md",
+                "Missing section '## Timeline': execution-summary.md",
+                "No task tables found: execution-summary.md"
+            ],
+            "size_bytes": 576
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\gemini-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: gemini-workflow.md",
+                "Missing 'version' in frontmatter: gemini-workflow.md",
+                "Missing 'license' in frontmatter: gemini-workflow.md",
+                "Missing 'tags' in frontmatter: gemini-workflow.md",
+                "Missing section '## Milestones': gemini-workflow.md",
+                "Missing section '## Timeline': gemini-workflow.md",
+                "No task tables found: gemini-workflow.md"
+            ],
+            "size_bytes": 570
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\hermes-root-scripts-quick-commands-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing section '## Milestones': hermes-root-scripts-quick-commands-plan.md"
+            ],
+            "size_bytes": 5711
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\honcho-hermes-integration-implementation.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: honcho-hermes-integration-implementation.md",
+                "Missing 'version' in frontmatter: honcho-hermes-integration-implementation.md",
+                "Missing 'license' in frontmatter: honcho-hermes-integration-implementation.md",
+                "Missing 'tags' in frontmatter: honcho-hermes-integration-implementation.md",
+                "Missing section '## Milestones': honcho-hermes-integration-implementation.md",
+                "Missing section '## Timeline': honcho-hermes-integration-implementation.md",
+                "No task tables found: honcho-hermes-integration-implementation.md"
+            ],
+            "size_bytes": 787
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\honcho-hermes-integration-spec.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: honcho-hermes-integration-spec.md",
+                "Missing 'version' in frontmatter: honcho-hermes-integration-spec.md",
+                "Missing 'license' in frontmatter: honcho-hermes-integration-spec.md",
+                "Missing 'tags' in frontmatter: honcho-hermes-integration-spec.md",
+                "Missing section '## Milestones': honcho-hermes-integration-spec.md",
+                "Missing section '## Timeline': honcho-hermes-integration-spec.md",
+                "No task tables found: honcho-hermes-integration-spec.md"
+            ],
+            "size_bytes": 716
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\huggingface-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: huggingface-workflow.md",
+                "Missing 'version' in frontmatter: huggingface-workflow.md",
+                "Missing 'license' in frontmatter: huggingface-workflow.md",
+                "Missing 'tags' in frontmatter: huggingface-workflow.md",
+                "Missing section '## Milestones': huggingface-workflow.md",
+                "Missing section '## Timeline': huggingface-workflow.md",
+                "No task tables found: huggingface-workflow.md"
+            ],
+            "size_bytes": 585
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\judge-qa-rerun.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: judge-qa-rerun.md",
+                "Missing 'version' in frontmatter: judge-qa-rerun.md",
+                "Missing 'license' in frontmatter: judge-qa-rerun.md",
+                "Missing 'tags' in frontmatter: judge-qa-rerun.md",
+                "Missing section '## Milestones': judge-qa-rerun.md",
+                "Missing section '## Timeline': judge-qa-rerun.md",
+                "No task tables found: judge-qa-rerun.md"
+            ],
+            "size_bytes": 967
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\next-steps-implementation-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: next-steps-implementation-plan.md",
+                "Missing 'version' in frontmatter: next-steps-implementation-plan.md",
+                "Missing 'license' in frontmatter: next-steps-implementation-plan.md",
+                "Missing 'tags' in frontmatter: next-steps-implementation-plan.md",
+                "Missing section '## Milestones': next-steps-implementation-plan.md",
+                "Missing section '## Timeline': next-steps-implementation-plan.md",
+                "No task tables found: next-steps-implementation-plan.md"
+            ],
+            "size_bytes": 615
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\next-steps-specs.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: next-steps-specs.md",
+                "Missing 'version' in frontmatter: next-steps-specs.md",
+                "Missing 'license' in frontmatter: next-steps-specs.md",
+                "Missing 'tags' in frontmatter: next-steps-specs.md",
+                "Missing section '## Milestones': next-steps-specs.md",
+                "Missing section '## Timeline': next-steps-specs.md",
+                "No task tables found: next-steps-specs.md"
+            ],
+            "size_bytes": 573
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\nous-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: nous-workflow.md",
+                "Missing 'version' in frontmatter: nous-workflow.md",
+                "Missing 'license' in frontmatter: nous-workflow.md",
+                "Missing 'tags' in frontmatter: nous-workflow.md",
+                "Missing section '## Milestones': nous-workflow.md",
+                "Missing section '## Timeline': nous-workflow.md",
+                "No task tables found: nous-workflow.md"
+            ],
+            "size_bytes": 564
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\ollama-cloud-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: ollama-cloud-workflow.md",
+                "Missing 'version' in frontmatter: ollama-cloud-workflow.md",
+                "Missing 'license' in frontmatter: ollama-cloud-workflow.md",
+                "Missing 'tags' in frontmatter: ollama-cloud-workflow.md",
+                "Missing section '## Milestones': ollama-cloud-workflow.md",
+                "Missing section '## Timeline': ollama-cloud-workflow.md",
+                "No task tables found: ollama-cloud-workflow.md"
+            ],
+            "size_bytes": 588
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\opencode-zen-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: opencode-zen-workflow.md",
+                "Missing 'version' in frontmatter: opencode-zen-workflow.md",
+                "Missing 'license' in frontmatter: opencode-zen-workflow.md",
+                "Missing 'tags' in frontmatter: opencode-zen-workflow.md",
+                "Missing section '## Milestones': opencode-zen-workflow.md",
+                "Missing section '## Timeline': opencode-zen-workflow.md",
+                "No task tables found: opencode-zen-workflow.md"
+            ],
+            "size_bytes": 588
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\openrouter-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: openrouter-workflow.md",
+                "Missing 'version' in frontmatter: openrouter-workflow.md",
+                "Missing 'license' in frontmatter: openrouter-workflow.md",
+                "Missing 'tags' in frontmatter: openrouter-workflow.md",
+                "Missing section '## Milestones': openrouter-workflow.md",
+                "Missing section '## Timeline': openrouter-workflow.md",
+                "No task tables found: openrouter-workflow.md"
+            ],
+            "size_bytes": 582
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\phase-10-ollama-docker-blocked.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: phase-10-ollama-docker-blocked.md",
+                "Missing 'version' in frontmatter: phase-10-ollama-docker-blocked.md",
+                "Missing 'license' in frontmatter: phase-10-ollama-docker-blocked.md",
+                "Missing 'tags' in frontmatter: phase-10-ollama-docker-blocked.md",
+                "Missing section '## Milestones': phase-10-ollama-docker-blocked.md",
+                "Missing section '## Timeline': phase-10-ollama-docker-blocked.md",
+                "No task tables found: phase-10-ollama-docker-blocked.md"
+            ],
+            "size_bytes": 615
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\provider-workflow-master-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: provider-workflow-master-plan.md",
+                "Missing 'version' in frontmatter: provider-workflow-master-plan.md",
+                "Missing 'license' in frontmatter: provider-workflow-master-plan.md",
+                "Missing 'tags' in frontmatter: provider-workflow-master-plan.md",
+                "Missing section '## Milestones': provider-workflow-master-plan.md",
+                "Missing section '## Timeline': provider-workflow-master-plan.md",
+                "No task tables found: provider-workflow-master-plan.md"
+            ],
+            "size_bytes": 612
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\provider-workflow-strategy.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: provider-workflow-strategy.md",
+                "Missing 'version' in frontmatter: provider-workflow-strategy.md",
+                "Missing 'license' in frontmatter: provider-workflow-strategy.md",
+                "Missing 'tags' in frontmatter: provider-workflow-strategy.md",
+                "Missing section '## Milestones': provider-workflow-strategy.md",
+                "Missing section '## Timeline': provider-workflow-strategy.md",
+                "No task tables found: provider-workflow-strategy.md"
+            ],
+            "size_bytes": 603
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\release-notes-profile-sync-2026-08-24.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+                "Missing 'version' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+                "Missing 'license' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+                "Missing 'tags' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+                "Missing section '## Milestones': release-notes-profile-sync-2026-08-24.md",
+                "Missing section '## Timeline': release-notes-profile-sync-2026-08-24.md",
+                "No task tables found: release-notes-profile-sync-2026-08-24.md"
+            ],
+            "size_bytes": 636
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\skill-implementation-master-plan.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: skill-implementation-master-plan.md",
+                "Missing 'version' in frontmatter: skill-implementation-master-plan.md",
+                "Missing 'license' in frontmatter: skill-implementation-master-plan.md",
+                "Missing 'tags' in frontmatter: skill-implementation-master-plan.md",
+                "Missing section '## Milestones': skill-implementation-master-plan.md",
+                "Missing section '## Timeline': skill-implementation-master-plan.md",
+                "No task tables found: skill-implementation-master-plan.md"
+            ],
+            "size_bytes": 621
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\xai-workflow.md",
+            "valid": false,
+            "issues": [
+                "Missing 'name' in frontmatter: xai-workflow.md",
+                "Missing 'version' in frontmatter: xai-workflow.md",
+                "Missing 'license' in frontmatter: xai-workflow.md",
+                "Missing 'tags' in frontmatter: xai-workflow.md",
+                "Missing section '## Milestones': xai-workflow.md",
+                "Missing section '## Timeline': xai-workflow.md",
+                "No task tables found: xai-workflow.md"
+            ],
+            "size_bytes": 561
+        }
+    ],
+    "specs": [
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-implementation-spec.md",
+            "valid": true,
+            "issues": [],
+            "size_bytes": 7892
+        },
+        {
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\hermes-root-scripts-quick-commands-spec.md",
+            "valid": false,
+            "issues": [
+                "No acceptance criteria: hermes-root-scripts-quick-commands-spec.md"
+            ],
+            "size_bytes": 4364
+        }
+    ],
+    "issues": [
+        "Missing 'name' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+        "Missing 'version' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+        "Missing 'license' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+        "Missing 'tags' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+        "Missing section '## Milestones': 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+        "Missing section '## Timeline': 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+        "No task tables found: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+        "Missing 'name' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+        "Missing 'version' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+        "Missing 'license' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+        "Missing 'tags' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
+        "Missing section '## Milestones': 2026-07-23-comprehensive-github-prompts-plan.md",
+        "Missing section '## Timeline': 2026-07-23-comprehensive-github-prompts-plan.md",
+        "No task tables found: 2026-07-23-comprehensive-github-prompts-plan.md",
+        "Missing 'name' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+        "Missing 'version' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+        "Missing 'license' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+        "Missing 'tags' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+        "Missing section '## Milestones': 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+        "Missing section '## Timeline': 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+        "No task tables found: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+        "Missing 'name' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+        "Missing 'version' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+        "Missing 'license' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+        "Missing 'tags' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+        "Missing section '## Milestones': 2026-07-25-yaml-workflows-audit-fix-plan.md",
+        "Missing section '## Timeline': 2026-07-25-yaml-workflows-audit-fix-plan.md",
+        "No task tables found: 2026-07-25-yaml-workflows-audit-fix-plan.md",
+        "Missing 'name' in frontmatter: 2026-07-31-workspace-cleanup.md",
+        "Missing 'version' in frontmatter: 2026-07-31-workspace-cleanup.md",
+        "Missing 'license' in frontmatter: 2026-07-31-workspace-cleanup.md",
+        "Missing 'tags' in frontmatter: 2026-07-31-workspace-cleanup.md",
+        "Missing section '## Milestones': 2026-07-31-workspace-cleanup.md",
+        "Missing section '## Timeline': 2026-07-31-workspace-cleanup.md",
+        "No task tables found: 2026-07-31-workspace-cleanup.md",
+        "Missing 'name' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+        "Missing 'version' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+        "Missing 'license' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+        "Missing 'tags' in frontmatter: 2026-08-01_async-script-tooling-master.md",
+        "Missing section '## Milestones': 2026-08-01_async-script-tooling-master.md",
+        "Missing section '## Timeline': 2026-08-01_async-script-tooling-master.md",
+        "No task tables found: 2026-08-01_async-script-tooling-master.md",
+        "Missing 'name' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+        "Missing 'version' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+        "Missing 'license' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+        "Missing 'tags' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+        "Missing section '## Milestones': 2026-08-01_consolidated-goal-tooling-cleanup.md",
+        "Missing section '## Timeline': 2026-08-01_consolidated-goal-tooling-cleanup.md",
+        "No task tables found: 2026-08-01_consolidated-goal-tooling-cleanup.md",
+        "Missing 'name' in frontmatter: 2026-08-01_repo-tooling.md",
+        "Missing 'version' in frontmatter: 2026-08-01_repo-tooling.md",
+        "Missing 'license' in frontmatter: 2026-08-01_repo-tooling.md",
+        "Missing 'tags' in frontmatter: 2026-08-01_repo-tooling.md",
+        "Missing section '## Milestones': 2026-08-01_repo-tooling.md",
+        "Missing section '## Timeline': 2026-08-01_repo-tooling.md",
+        "No task tables found: 2026-08-01_repo-tooling.md",
+        "Missing 'name' in frontmatter: 2026-08-01_tooling-implementation.md",
+        "Missing 'version' in frontmatter: 2026-08-01_tooling-implementation.md",
+        "Missing 'license' in frontmatter: 2026-08-01_tooling-implementation.md",
+        "Missing 'tags' in frontmatter: 2026-08-01_tooling-implementation.md",
+        "Missing section '## Milestones': 2026-08-01_tooling-implementation.md",
+        "Missing section '## Timeline': 2026-08-01_tooling-implementation.md",
+        "No task tables found: 2026-08-01_tooling-implementation.md",
+        "Missing 'name' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+        "Missing 'version' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+        "Missing 'license' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+        "Missing 'tags' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
+        "Missing section '## Milestones': 2026-08-11_213801-prompt-library-maintenance.md",
+        "Missing section '## Timeline': 2026-08-11_213801-prompt-library-maintenance.md",
+        "No task tables found: 2026-08-11_213801-prompt-library-maintenance.md",
+        "Missing 'name' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+        "Missing 'version' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+        "Missing 'license' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+        "Missing 'tags' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
+        "Missing section '## Milestones': 2026-08-11_214500-repo-init-all-agents.md",
+        "Missing section '## Timeline': 2026-08-11_214500-repo-init-all-agents.md",
+        "No task tables found: 2026-08-11_214500-repo-init-all-agents.md",
+        "Missing 'name' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+        "Missing 'version' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+        "Missing 'license' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+        "Missing 'tags' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
+        "Missing section '## Milestones': 2026-08-11_hermes-platform-diagnostics-debug.md",
+        "Missing section '## Timeline': 2026-08-11_hermes-platform-diagnostics-debug.md",
+        "No task tables found: 2026-08-11_hermes-platform-diagnostics-debug.md",
+        "Missing 'name' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+        "Missing 'version' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+        "Missing 'license' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+        "Missing 'tags' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+        "Missing section '## Milestones': 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+        "Missing section '## Timeline': 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+        "No task tables found: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+        "Missing 'name' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+        "Missing 'version' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+        "Missing 'license' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+        "Missing 'tags' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+        "Missing section '## Milestones': 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+        "Missing section '## Timeline': 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+        "No task tables found: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+        "Missing 'name' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+        "Missing 'version' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+        "Missing 'license' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+        "Missing 'tags' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+        "Missing section '## Milestones': 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+        "Missing section '## Timeline': 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+        "No task tables found: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+        "Missing 'name' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+        "Missing 'version' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+        "Missing 'license' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+        "Missing 'tags' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+        "Missing section '## Milestones': 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+        "Missing section '## Timeline': 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+        "No task tables found: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
+        "Missing 'name' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+        "Missing 'version' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+        "Missing 'license' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+        "Missing 'tags' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+        "Missing section '## Milestones': 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+        "Missing section '## Timeline': 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+        "No task tables found: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
+        "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+        "Missing 'version' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+        "Missing 'license' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+        "Missing 'tags' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+        "Missing section '## Milestones': 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+        "Missing section '## Timeline': 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+        "No task tables found: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
+        "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+        "Missing 'version' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+        "Missing 'license' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+        "Missing 'tags' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+        "Missing section '## Milestones': 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+        "Missing section '## Timeline': 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+        "No task tables found: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
+        "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+        "Missing 'version' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+        "Missing 'license' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+        "Missing 'tags' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
+        "Missing section '## Milestones': 2026-08-15_202608_openrouter-sdk-integration.md",
+        "Missing section '## Timeline': 2026-08-15_202608_openrouter-sdk-integration.md",
+        "No task tables found: 2026-08-15_202608_openrouter-sdk-integration.md",
+        "Missing 'name' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+        "Missing 'version' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+        "Missing 'license' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+        "Missing 'tags' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+        "Missing section '## Milestones': 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+        "Missing section '## Timeline': 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+        "No task tables found: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
+        "Missing 'name' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+        "Missing 'version' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+        "Missing 'license' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+        "Missing 'tags' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+        "Missing section '## Milestones': 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+        "Missing section '## Timeline': 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+        "No task tables found: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
+        "Missing 'name' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+        "Missing 'version' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+        "Missing 'license' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+        "Missing 'tags' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+        "Missing section '## Milestones': 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+        "Missing section '## Timeline': 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+        "No task tables found: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
+        "Missing 'name' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+        "Missing 'version' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+        "Missing 'license' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+        "Missing 'tags' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+        "Missing section '## Milestones': 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+        "Missing section '## Timeline': 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+        "No task tables found: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+        "Missing 'name' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+        "Missing 'version' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+        "Missing 'license' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+        "Missing 'tags' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+        "Missing section '## Milestones': 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+        "Missing section '## Timeline': 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+        "No task tables found: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+        "Missing 'name' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+        "Missing 'version' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+        "Missing 'license' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+        "Missing 'tags' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+        "Missing section '## Milestones': 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+        "Missing section '## Timeline': 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+        "No task tables found: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+        "Missing 'name' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+        "Missing 'version' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+        "Missing 'license' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+        "Missing 'tags' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+        "Missing section '## Milestones': 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+        "Missing section '## Timeline': 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+        "No task tables found: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
+        "Missing 'name' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+        "Missing 'version' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+        "Missing 'license' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+        "Missing 'tags' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+        "Missing section '## Milestones': 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+        "Missing section '## Timeline': 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+        "No task tables found: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+        "Missing 'name' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+        "Missing 'version' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+        "Missing 'license' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+        "Missing 'tags' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+        "Missing section '## Milestones': 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+        "Missing section '## Timeline': 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+        "No task tables found: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+        "Missing 'name' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+        "Missing 'version' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+        "Missing 'license' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+        "Missing 'tags' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
+        "Missing section '## Milestones': 2026-08-24_comprehensive-context-and-model-sync.md",
+        "Missing section '## Timeline': 2026-08-24_comprehensive-context-and-model-sync.md",
+        "No task tables found: 2026-08-24_comprehensive-context-and-model-sync.md",
+        "Missing 'name' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+        "Missing 'version' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+        "Missing 'license' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+        "Missing 'tags' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
+        "Missing section '## Milestones': 2026-08-24_comprehensive-platform-remediation-spec.md",
+        "Missing section '## Timeline': 2026-08-24_comprehensive-platform-remediation-spec.md",
+        "No task tables found: 2026-08-24_comprehensive-platform-remediation-spec.md",
+        "Missing 'name' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+        "Missing 'version' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+        "Missing 'license' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+        "Missing 'tags' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
+        "Missing section '## Milestones': 2026-08-24_comprehensive-platform-remediation.md",
+        "Missing section '## Timeline': 2026-08-24_comprehensive-platform-remediation.md",
+        "No task tables found: 2026-08-24_comprehensive-platform-remediation.md",
+        "Missing 'name' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+        "Missing 'version' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+        "Missing 'license' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+        "Missing 'tags' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
+        "Missing section '## Milestones': 2026-08-24_hermes-full-diagnostic-repair.md",
+        "Missing section '## Timeline': 2026-08-24_hermes-full-diagnostic-repair.md",
+        "No task tables found: 2026-08-24_hermes-full-diagnostic-repair.md",
+        "Missing 'name' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+        "Missing 'version' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+        "Missing 'license' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+        "Missing 'tags' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
+        "Missing section '## Milestones': 2026-08-24_update-enhance-verify-context-files.md",
+        "Missing section '## Timeline': 2026-08-24_update-enhance-verify-context-files.md",
+        "No task tables found: 2026-08-24_update-enhance-verify-context-files.md",
+        "Missing 'name' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+        "Missing 'version' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+        "Missing 'license' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+        "Missing 'tags' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
+        "Missing section '## Milestones': 2026-08-25_015239-dependency-toolchain-update.md",
+        "Missing section '## Timeline': 2026-08-25_015239-dependency-toolchain-update.md",
+        "No task tables found: 2026-08-25_015239-dependency-toolchain-update.md",
+        "Missing 'name' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+        "Missing 'version' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+        "Missing 'license' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+        "Missing 'tags' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
+        "Missing section '## Milestones': 2026-08-28_phase-b-prompt-enhancement.md",
+        "Missing section '## Timeline': 2026-08-28_phase-b-prompt-enhancement.md",
+        "No task tables found: 2026-08-28_phase-b-prompt-enhancement.md",
+        "Missing 'name' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+        "Missing 'version' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+        "Missing 'license' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+        "Missing 'tags' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
+        "Missing section '## Milestones': 2026-08-28_prompt-corpus-enhance.md",
+        "Missing section '## Timeline': 2026-08-28_prompt-corpus-enhance.md",
+        "No task tables found: 2026-08-28_prompt-corpus-enhance.md",
+        "Missing 'name' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+        "Missing 'version' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+        "Missing 'license' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+        "Missing 'tags' in frontmatter: 2026-08-29-master-consolidated-plan.md",
+        "Missing section '## Milestones': 2026-08-29-master-consolidated-plan.md",
+        "Missing section '## Timeline': 2026-08-29-master-consolidated-plan.md",
+        "No task tables found: 2026-08-29-master-consolidated-plan.md",
+        "Missing 'name' in frontmatter: 2026-08-29_full-audit-remediation.md",
+        "Missing 'version' in frontmatter: 2026-08-29_full-audit-remediation.md",
+        "Missing 'license' in frontmatter: 2026-08-29_full-audit-remediation.md",
+        "Missing 'tags' in frontmatter: 2026-08-29_full-audit-remediation.md",
+        "Missing section '## Milestones': 2026-08-29_full-audit-remediation.md",
+        "Missing section '## Timeline': 2026-08-29_full-audit-remediation.md",
+        "No task tables found: 2026-08-29_full-audit-remediation.md",
+        "Missing 'name' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+        "Missing 'version' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+        "Missing 'license' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+        "Missing 'tags' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+        "Missing section '## Milestones': 2026-08-31_152242-comprehensive-reimplementation-master.md",
+        "Missing section '## Timeline': 2026-08-31_152242-comprehensive-reimplementation-master.md",
+        "No task tables found: 2026-08-31_152242-comprehensive-reimplementation-master.md",
+        "Missing 'name' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+        "Missing 'version' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+        "Missing 'license' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+        "Missing 'tags' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+        "Missing section '## Milestones': 2026-08-31_180000-comprehensive-reimplementation-master.md",
+        "Missing section '## Timeline': 2026-08-31_180000-comprehensive-reimplementation-master.md",
+        "No task tables found: 2026-08-31_180000-comprehensive-reimplementation-master.md",
+        "Missing 'name' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+        "Missing 'version' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+        "Missing 'license' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+        "Missing 'tags' in frontmatter: 2026-08-31_goal1-identity-triage.md",
+        "Missing section '## Milestones': 2026-08-31_goal1-identity-triage.md",
+        "Missing section '## Timeline': 2026-08-31_goal1-identity-triage.md",
+        "No task tables found: 2026-08-31_goal1-identity-triage.md",
+        "Missing 'name' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+        "Missing 'version' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+        "Missing 'license' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+        "Missing 'tags' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
+        "Missing section '## Milestones': 2026-08-31_goal2-plugins-hooks.md",
+        "Missing section '## Timeline': 2026-08-31_goal2-plugins-hooks.md",
+        "No task tables found: 2026-08-31_goal2-plugins-hooks.md",
+        "Missing 'name' in frontmatter: 2026-08-31_six-judge-skills.md",
+        "Missing 'version' in frontmatter: 2026-08-31_six-judge-skills.md",
+        "Missing 'license' in frontmatter: 2026-08-31_six-judge-skills.md",
+        "Missing 'tags' in frontmatter: 2026-08-31_six-judge-skills.md",
+        "Missing section '## Milestones': 2026-08-31_six-judge-skills.md",
+        "Missing section '## Timeline': 2026-08-31_six-judge-skills.md",
+        "No task tables found: 2026-08-31_six-judge-skills.md",
+        "Missing YAML frontmatter: 2026-09-04-dedupe-triage-report.md",
+        "Missing section '## Phases': 2026-09-04-dedupe-triage-report.md",
+        "Missing section '## Milestones': 2026-09-04-dedupe-triage-report.md",
+        "Missing section '## Timeline': 2026-09-04-dedupe-triage-report.md",
+        "No task tables found: 2026-09-04-dedupe-triage-report.md",
+        "Missing 'name' in frontmatter: agent-provider-matrix.md",
+        "Missing 'version' in frontmatter: agent-provider-matrix.md",
+        "Missing 'license' in frontmatter: agent-provider-matrix.md",
+        "Missing 'tags' in frontmatter: agent-provider-matrix.md",
+        "Missing section '## Milestones': agent-provider-matrix.md",
+        "Missing section '## Timeline': agent-provider-matrix.md",
+        "No task tables found: agent-provider-matrix.md",
+        "Missing 'name' in frontmatter: audit-report.md",
+        "Missing 'version' in frontmatter: audit-report.md",
+        "Missing 'license' in frontmatter: audit-report.md",
+        "Missing 'tags' in frontmatter: audit-report.md",
+        "Missing section '## Milestones': audit-report.md",
+        "Missing section '## Timeline': audit-report.md",
+        "No task tables found: audit-report.md",
+        "Missing 'name' in frontmatter: deepseek-workflow.md",
+        "Missing 'version' in frontmatter: deepseek-workflow.md",
+        "Missing 'license' in frontmatter: deepseek-workflow.md",
+        "Missing 'tags' in frontmatter: deepseek-workflow.md",
+        "Missing section '## Milestones': deepseek-workflow.md",
+        "Missing section '## Timeline': deepseek-workflow.md",
+        "No task tables found: deepseek-workflow.md",
+        "Missing 'name' in frontmatter: disk-cleanup-skill-implementation.md",
+        "Missing 'version' in frontmatter: disk-cleanup-skill-implementation.md",
+        "Missing 'license' in frontmatter: disk-cleanup-skill-implementation.md",
+        "Missing 'tags' in frontmatter: disk-cleanup-skill-implementation.md",
+        "Missing section '## Milestones': disk-cleanup-skill-implementation.md",
+        "Missing section '## Timeline': disk-cleanup-skill-implementation.md",
+        "No task tables found: disk-cleanup-skill-implementation.md",
+        "Missing 'name' in frontmatter: disk-cleanup-workflow.md",
+        "Missing 'version' in frontmatter: disk-cleanup-workflow.md",
+        "Missing 'license' in frontmatter: disk-cleanup-workflow.md",
+        "Missing 'tags' in frontmatter: disk-cleanup-workflow.md",
+        "Missing section '## Milestones': disk-cleanup-workflow.md",
+        "Missing section '## Timeline': disk-cleanup-workflow.md",
+        "No task tables found: disk-cleanup-workflow.md",
+        "Missing 'name' in frontmatter: example-subagent-plan.md",
+        "Missing 'version' in frontmatter: example-subagent-plan.md",
+        "Missing 'license' in frontmatter: example-subagent-plan.md",
+        "Missing 'tags' in frontmatter: example-subagent-plan.md",
+        "Missing section '## Milestones': example-subagent-plan.md",
+        "Missing section '## Timeline': example-subagent-plan.md",
+        "No task tables found: example-subagent-plan.md",
+        "Missing 'name' in frontmatter: execution-summary.md",
+        "Missing 'version' in frontmatter: execution-summary.md",
+        "Missing 'license' in frontmatter: execution-summary.md",
+        "Missing 'tags' in frontmatter: execution-summary.md",
+        "Missing section '## Milestones': execution-summary.md",
+        "Missing section '## Timeline': execution-summary.md",
+        "No task tables found: execution-summary.md",
+        "Missing 'name' in frontmatter: gemini-workflow.md",
+        "Missing 'version' in frontmatter: gemini-workflow.md",
+        "Missing 'license' in frontmatter: gemini-workflow.md",
+        "Missing 'tags' in frontmatter: gemini-workflow.md",
+        "Missing section '## Milestones': gemini-workflow.md",
+        "Missing section '## Timeline': gemini-workflow.md",
+        "No task tables found: gemini-workflow.md",
+        "Missing section '## Milestones': hermes-root-scripts-quick-commands-plan.md",
+        "Missing 'name' in frontmatter: honcho-hermes-integration-implementation.md",
+        "Missing 'version' in frontmatter: honcho-hermes-integration-implementation.md",
+        "Missing 'license' in frontmatter: honcho-hermes-integration-implementation.md",
+        "Missing 'tags' in frontmatter: honcho-hermes-integration-implementation.md",
+        "Missing section '## Milestones': honcho-hermes-integration-implementation.md",
+        "Missing section '## Timeline': honcho-hermes-integration-implementation.md",
+        "No task tables found: honcho-hermes-integration-implementation.md",
+        "Missing 'name' in frontmatter: honcho-hermes-integration-spec.md",
+        "Missing 'version' in frontmatter: honcho-hermes-integration-spec.md",
+        "Missing 'license' in frontmatter: honcho-hermes-integration-spec.md",
+        "Missing 'tags' in frontmatter: honcho-hermes-integration-spec.md",
+        "Missing section '## Milestones': honcho-hermes-integration-spec.md",
+        "Missing section '## Timeline': honcho-hermes-integration-spec.md",
+        "No task tables found: honcho-hermes-integration-spec.md",
+        "Missing 'name' in frontmatter: huggingface-workflow.md",
+        "Missing 'version' in frontmatter: huggingface-workflow.md",
+        "Missing 'license' in frontmatter: huggingface-workflow.md",
+        "Missing 'tags' in frontmatter: huggingface-workflow.md",
+        "Missing section '## Milestones': huggingface-workflow.md",
+        "Missing section '## Timeline': huggingface-workflow.md",
+        "No task tables found: huggingface-workflow.md",
+        "Missing 'name' in frontmatter: judge-qa-rerun.md",
+        "Missing 'version' in frontmatter: judge-qa-rerun.md",
+        "Missing 'license' in frontmatter: judge-qa-rerun.md",
+        "Missing 'tags' in frontmatter: judge-qa-rerun.md",
+        "Missing section '## Milestones': judge-qa-rerun.md",
+        "Missing section '## Timeline': judge-qa-rerun.md",
+        "No task tables found: judge-qa-rerun.md",
+        "Missing 'name' in frontmatter: next-steps-implementation-plan.md",
+        "Missing 'version' in frontmatter: next-steps-implementation-plan.md",
+        "Missing 'license' in frontmatter: next-steps-implementation-plan.md",
+        "Missing 'tags' in frontmatter: next-steps-implementation-plan.md",
+        "Missing section '## Milestones': next-steps-implementation-plan.md",
+        "Missing section '## Timeline': next-steps-implementation-plan.md",
+        "No task tables found: next-steps-implementation-plan.md",
+        "Missing 'name' in frontmatter: next-steps-specs.md",
+        "Missing 'version' in frontmatter: next-steps-specs.md",
+        "Missing 'license' in frontmatter: next-steps-specs.md",
+        "Missing 'tags' in frontmatter: next-steps-specs.md",
+        "Missing section '## Milestones': next-steps-specs.md",
+        "Missing section '## Timeline': next-steps-specs.md",
+        "No task tables found: next-steps-specs.md",
+        "Missing 'name' in frontmatter: nous-workflow.md",
+        "Missing 'version' in frontmatter: nous-workflow.md",
+        "Missing 'license' in frontmatter: nous-workflow.md",
+        "Missing 'tags' in frontmatter: nous-workflow.md",
+        "Missing section '## Milestones': nous-workflow.md",
+        "Missing section '## Timeline': nous-workflow.md",
+        "No task tables found: nous-workflow.md",
+        "Missing 'name' in frontmatter: ollama-cloud-workflow.md",
+        "Missing 'version' in frontmatter: ollama-cloud-workflow.md",
+        "Missing 'license' in frontmatter: ollama-cloud-workflow.md",
+        "Missing 'tags' in frontmatter: ollama-cloud-workflow.md",
+        "Missing section '## Milestones': ollama-cloud-workflow.md",
+        "Missing section '## Timeline': ollama-cloud-workflow.md",
+        "No task tables found: ollama-cloud-workflow.md",
+        "Missing 'name' in frontmatter: opencode-zen-workflow.md",
+        "Missing 'version' in frontmatter: opencode-zen-workflow.md",
+        "Missing 'license' in frontmatter: opencode-zen-workflow.md",
+        "Missing 'tags' in frontmatter: opencode-zen-workflow.md",
+        "Missing section '## Milestones': opencode-zen-workflow.md",
+        "Missing section '## Timeline': opencode-zen-workflow.md",
+        "No task tables found: opencode-zen-workflow.md",
+        "Missing 'name' in frontmatter: openrouter-workflow.md",
+        "Missing 'version' in frontmatter: openrouter-workflow.md",
+        "Missing 'license' in frontmatter: openrouter-workflow.md",
+        "Missing 'tags' in frontmatter: openrouter-workflow.md",
+        "Missing section '## Milestones': openrouter-workflow.md",
+        "Missing section '## Timeline': openrouter-workflow.md",
+        "No task tables found: openrouter-workflow.md",
+        "Missing 'name' in frontmatter: phase-10-ollama-docker-blocked.md",
+        "Missing 'version' in frontmatter: phase-10-ollama-docker-blocked.md",
+        "Missing 'license' in frontmatter: phase-10-ollama-docker-blocked.md",
+        "Missing 'tags' in frontmatter: phase-10-ollama-docker-blocked.md",
+        "Missing section '## Milestones': phase-10-ollama-docker-blocked.md",
+        "Missing section '## Timeline': phase-10-ollama-docker-blocked.md",
+        "No task tables found: phase-10-ollama-docker-blocked.md",
+        "Missing 'name' in frontmatter: provider-workflow-master-plan.md",
+        "Missing 'version' in frontmatter: provider-workflow-master-plan.md",
+        "Missing 'license' in frontmatter: provider-workflow-master-plan.md",
+        "Missing 'tags' in frontmatter: provider-workflow-master-plan.md",
+        "Missing section '## Milestones': provider-workflow-master-plan.md",
+        "Missing section '## Timeline': provider-workflow-master-plan.md",
+        "No task tables found: provider-workflow-master-plan.md",
+        "Missing 'name' in frontmatter: provider-workflow-strategy.md",
+        "Missing 'version' in frontmatter: provider-workflow-strategy.md",
+        "Missing 'license' in frontmatter: provider-workflow-strategy.md",
+        "Missing 'tags' in frontmatter: provider-workflow-strategy.md",
+        "Missing section '## Milestones': provider-workflow-strategy.md",
+        "Missing section '## Timeline': provider-workflow-strategy.md",
+        "No task tables found: provider-workflow-strategy.md",
+        "Missing 'name' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+        "Missing 'version' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+        "Missing 'license' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+        "Missing 'tags' in frontmatter: release-notes-profile-sync-2026-08-24.md",
+        "Missing section '## Milestones': release-notes-profile-sync-2026-08-24.md",
+        "Missing section '## Timeline': release-notes-profile-sync-2026-08-24.md",
+        "No task tables found: release-notes-profile-sync-2026-08-24.md",
+        "Missing 'name' in frontmatter: skill-implementation-master-plan.md",
+        "Missing 'version' in frontmatter: skill-implementation-master-plan.md",
+        "Missing 'license' in frontmatter: skill-implementation-master-plan.md",
+        "Missing 'tags' in frontmatter: skill-implementation-master-plan.md",
+        "Missing section '## Milestones': skill-implementation-master-plan.md",
+        "Missing section '## Timeline': skill-implementation-master-plan.md",
+        "No task tables found: skill-implementation-master-plan.md",
+        "Missing 'name' in frontmatter: xai-workflow.md",
+        "Missing 'version' in frontmatter: xai-workflow.md",
+        "Missing 'license' in frontmatter: xai-workflow.md",
+        "Missing 'tags' in frontmatter: xai-workflow.md",
+        "Missing section '## Milestones': xai-workflow.md",
+        "Missing section '## Timeline': xai-workflow.md",
+        "No task tables found: xai-workflow.md",
+        "No acceptance criteria: hermes-root-scripts-quick-commands-spec.md"
+    ]
+}

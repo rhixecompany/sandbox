@@ -25,7 +25,7 @@
 
 A Node.js browser-automation tool using **Selenium WebDriver 4.x** to scrape JavaScript-rendered comic/manga content from Asura Scans (`asuracomic.net`). The scraper navigates multi-page listings, extracts comic metadata (title, author, artist, rating, genres, description, cover images), drills into individual chapter pages, and persists structured JSON output to disk.
 
-**Target Site:** `https://asuracomic.net/series?page=1`  
+**Target Site:** `https://asuracomic.net/series?page=1`
 **Output:** `comics.json`, `chapters.json`
 
 ---

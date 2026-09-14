@@ -66,7 +66,7 @@ def redact_excerpt(text: str, limit: int = 900) -> str:
 
 def evidence_for_sessions(conn: sqlite3.Connection, sessions: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
     """Collect bounded, redacted goal/task evidence from default-profile messages."""
-    if not sessions or "messages" not in {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}: 
+    if not sessions or "messages" not in {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}:
         return {}
     columns = table_schema(conn, "messages")
     required = {"session_id", "role", "content"}

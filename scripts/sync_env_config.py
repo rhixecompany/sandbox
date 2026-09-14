@@ -16,7 +16,7 @@ def find_env_files(root: Path, exclude_dirs: set[str] | None = None) -> list[Pat
     """Find all .env files under root."""
     if exclude_dirs is None:
         exclude_dirs = {"node_modules", ".git", "__pycache__", ".ruff_cache", ".venv", "venv", "env"}
-    
+
     env_files = []
     for path in root.rglob(".env*"):
         if path.is_file():
@@ -30,7 +30,7 @@ def find_config_files(root: Path, exclude_dirs: set[str] | None = None) -> list[
     """Find all config.yaml files under root."""
     if exclude_dirs is None:
         exclude_dirs = {"node_modules", ".git", "__pycache__", ".ruff_cache", ".venv", "venv", "env", "state-snapshots"}
-    
+
     config_files = []
     for path in root.rglob("config.yaml"):
         if path.is_file():
@@ -67,7 +67,7 @@ def inventory_env(sandbox_root: Path, hermes_root: Path) -> dict[str, Any]:
     """Inventory all .env files."""
     sandbox_envs = find_env_files(sandbox_root)
     hermes_envs = find_env_files(hermes_root)
-    
+
     return {
         "sandbox": [
             {
@@ -98,7 +98,7 @@ def inventory_config(sandbox_root: Path, hermes_root: Path) -> dict[str, Any]:
     # SandBox doesn't typically have config.yaml, but check anyway
     sandbox_configs = find_config_files(sandbox_root)
     hermes_configs = find_config_files(hermes_root)
-    
+
     return {
         "sandbox": [
             {
@@ -127,26 +127,26 @@ def inventory_config(sandbox_root: Path, hermes_root: Path) -> dict[str, Any]:
 def sync_configs(source: Path, targets: list[Path], dry_run: bool = False) -> dict[str, Any]:
     """Sync config.yaml from source to targets."""
     results = {"synced": [], "failed": [], "skipped": []}
-    
+
     if not source.exists():
         results["failed"].append({"target": str(source), "error": "Source not found"})
         return results
-    
+
     source_content = source.read_text(encoding="utf-8")
     source_hash = hash(source_content)
-    
+
     for target in targets:
         if target == source:
             results["skipped"].append({"target": str(target), "reason": "Is source"})
             continue
-        
+
         try:
             if target.exists():
                 target_content = target.read_text(encoding="utf-8")
                 if hash(target_content) == source_hash:
                     results["skipped"].append({"target": str(target), "reason": "Already in sync"})
                     continue
-            
+
             if not dry_run:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 # Backup existing
@@ -154,11 +154,11 @@ def sync_configs(source: Path, targets: list[Path], dry_run: bool = False) -> di
                     backup = target.with_suffix(target.suffix + ".bak")
                     shutil.copy2(target, backup)
                 shutil.copy2(source, target)
-            
+
             results["synced"].append({"target": str(target)})
         except Exception as e:
             results["failed"].append({"target": str(target), "error": str(e)})
-    
+
     return results
 
 
@@ -170,25 +170,25 @@ def main():
     parser.add_argument("--sync-config", action="store_true", help="Sync config.yaml from root to profiles")
     parser.add_argument("--dry-run", action="store_true", help="Dry run for sync")
     parser.add_argument("--output", type=Path, help="Output JSON file")
-    
+
     args = parser.parse_args()
-    
+
     sandbox_root = args.sandbox_root.resolve()
     hermes_root = args.hermes_root.resolve()
-    
+
     result = {}
-    
+
     if args.inventory:
         print("Inventorying .env files...")
         result["env"] = inventory_env(sandbox_root, hermes_root)
         print(f"  SandBox: {result['env']['summary']['sandbox_count']} files")
         print(f"  Hermes: {result['env']['summary']['hermes_count']} files")
-        
+
         print("Inventorying config.yaml files...")
         result["config"] = inventory_config(sandbox_root, hermes_root)
         print(f"  SandBox: {result['config']['summary']['sandbox_count']} files")
         print(f"  Hermes: {result['config']['summary']['hermes_count']} files")
-    
+
     if args.sync_config:
         print("Syncing config.yaml from root to profiles...")
         source = hermes_root / "config.yaml"
@@ -200,7 +200,7 @@ def main():
                     config_file = profile_dir / "config.yaml"
                     if config_file.exists():
                         profile_configs.append(config_file)
-        
+
         sync_result = sync_configs(source, profile_configs, dry_run=args.dry_run)
         result["sync"] = sync_result
         print(f"  Synced: {len(sync_result['synced'])}")
@@ -208,13 +208,13 @@ def main():
         print(f"  Failed: {len(sync_result['failed'])}")
         for f in sync_result["failed"]:
             print(f"    FAILED: {f['target']} - {f['error']}")
-    
+
     if args.output:
         args.output.write_text(json.dumps(result, indent=2), encoding="utf-8")
         print(f"Output written to {args.output}")
     else:
         print(json.dumps(result, indent=2))
-    
+
     return 0
 
 

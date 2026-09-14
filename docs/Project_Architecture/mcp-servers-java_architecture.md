@@ -1,7 +1,7 @@
 # mcp-servers/java Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Java/Maven (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** Java/Maven (MCP)
 **Architecture Pattern:** Java MCP server with Maven build
 
 ## Overview

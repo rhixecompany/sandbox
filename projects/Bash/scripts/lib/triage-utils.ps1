@@ -8,17 +8,17 @@ function Calculate-HealthScore {
         [int]$VulnerabilityCount = 0,
         [int]$DaysSinceLastCommit = -1
     )
-    
+
     $score = 100
-    
+
     # Deduct points for issues (max 30 points)
     $issueDeduction = [Math]::Min($IssueCount * 2, 30)
     $score -= $issueDeduction
-    
+
     # Deduct points for vulnerabilities (max 40 points)
     $vulnDeduction = [Math]::Min($VulnerabilityCount * 5, 40)
     $score -= $vulnDeduction
-    
+
     # Deduct points for stale commits (max 30 points)
     if ($DaysSinceLastCommit -gt 0) {
         if ($DaysSinceLastCommit -gt 365) {
@@ -31,7 +31,7 @@ function Calculate-HealthScore {
             $score -= 5
         }
     }
-    
+
     return [Math]::Max($score, 0)
 }
 
@@ -40,7 +40,7 @@ function Get-HealthCategory {
     param(
         [int]$HealthScore
     )
-    
+
     if ($HealthScore -ge 80) {
         return "Healthy"
     } elseif ($HealthScore -ge 60) {
@@ -57,9 +57,9 @@ function Format-TriageReport {
     param(
         [array]$TriageResults
     )
-    
+
     $Timestamp = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"
-    
+
     # Verify input
     if (-not $TriageResults -or $TriageResults.Count -eq 0) {
         return @{
@@ -77,26 +77,26 @@ function Format-TriageReport {
             repos = @()
         }
     }
-    
+
     # Convert to array if single object
     if ($TriageResults -isnot [array]) {
         $TriageResults = @($TriageResults)
     }
-    
+
     $healthSummary = @{
         healthy = ($TriageResults | Where-Object { $_.health_category -eq "Healthy" }).Count
         caution = ($TriageResults | Where-Object { $_.health_category -eq "Caution" }).Count
         warning = ($TriageResults | Where-Object { $_.health_category -eq "Warning" }).Count
         critical = ($TriageResults | Where-Object { $_.health_category -eq "Critical" }).Count
     }
-    
+
     $avgHealthScore = if ($TriageResults.Count -gt 0) {
         $scores = @($TriageResults | ForEach-Object { [double]$_.health_score })
         [math]::Round(($scores | Measure-Object -Average).Average, 2)
     } else {
         0
     }
-    
+
     return @{
         timestamp = $Timestamp
         summary = @{
@@ -113,7 +113,7 @@ function Format-CatalogMarkdown {
     param(
         [hashtable]$TriageReport
     )
-    
+
     $markdown = @"
 # Repository Catalog
 
@@ -131,7 +131,7 @@ function Format-CatalogMarkdown {
 ## Repositories
 
 "@
-    
+
     foreach ($repo in $TriageReport.repos) {
         $markdown += @"
 
@@ -147,7 +147,7 @@ function Format-CatalogMarkdown {
 
 "@
     }
-    
+
     return $markdown
 }
 Set-StrictMode -Version Latest

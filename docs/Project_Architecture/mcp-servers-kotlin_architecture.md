@@ -1,7 +1,7 @@
 # mcp-servers/kotlin Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Kotlin/Gradle (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** Kotlin/Gradle (MCP)
 **Architecture Pattern:** Kotlin MCP server with Gradle build
 
 ## Overview

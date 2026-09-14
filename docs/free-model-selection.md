@@ -1,6 +1,6 @@
 # Free Model Selection — Verified Fallback Chain
 
-**Generated:** 2026-08-24T17:20:00Z  
+**Generated:** 2026-08-24T17:20:00Z
 **Status:** ✅ All verification gates passed
 
 ---

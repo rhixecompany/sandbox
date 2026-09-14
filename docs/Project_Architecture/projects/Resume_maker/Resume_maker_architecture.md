@@ -1,9 +1,9 @@
 # Resume_maker Architecture Blueprint
 
-> **Project:** Resume_maker  
-> **Type:** CLI Document Generator  
-> **Architecture Pattern:** Pipeline Processing  
-> **Entry Point:** `index.ts`  
+> **Project:** Resume_maker
+> **Type:** CLI Document Generator
+> **Architecture Pattern:** Pipeline Processing
+> **Entry Point:** `index.ts`
 > **Generated:** 2026-07-24
 
 ---

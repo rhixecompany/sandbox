@@ -190,7 +190,7 @@ export async function handleCreateComic(formData: FormData) {
 
 ## Prerequisites
 
-- Node.js 20+ 
+- Node.js 20+
 - pnpm 9+
 - PostgreSQL 16+
 - Redis 7+ (optional but recommended)
@@ -413,7 +413,7 @@ comicwise/
 # Run unit tests
 pnpm test:unit
 
-# Run e2e tests  
+# Run e2e tests
 pnpm test
 
 # Run with coverage

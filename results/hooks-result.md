@@ -1,4 +1,5 @@
 # Execution Result: hooks
+
 - Feature: hooks
 - Source file (docs/features/hooks.md): present=True, size=108621 bytes
 - Bundle artifacts verified (5 items): True

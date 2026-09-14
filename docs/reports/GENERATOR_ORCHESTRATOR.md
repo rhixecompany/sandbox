@@ -282,10 +282,10 @@ def normalize_inputs(raw: dict) -> dict:
 def select_mcp_generators(stack_blueprint: dict, include_code_gen: bool) -> list:
     if not include_code_gen:
         return []
-    
+
     detected = []
     languages = stack_blueprint.get("languages", [])
-    
+
     if "typescript" in languages or "javascript" in languages:
         detected.append("typescript-mcp-server-generator")
     if "python" in languages:
@@ -295,10 +295,10 @@ def select_mcp_generators(stack_blueprint: dict, include_code_gen: bool) -> list
     if "power-platform" in stack_blueprint.get("frameworks", []) or \
        "copilot-studio" in stack_blueprint.get("tools", []):
         detected.append("mcp-copilot-studio-server-generator")
-    
+
     if not detected:
         detected.append("typescript-mcp-server-generator")  # safe default
-    
+
     return detected
 ```
 

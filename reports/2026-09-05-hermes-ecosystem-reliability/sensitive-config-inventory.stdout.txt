@@ -1,0 +1,1 @@
+{"counts": {"env": 76, "config": 156}, "scopes": {"repository": 20, "hermes": 212}, "output": ".hermes\\reports\\2026-09-05-hermes-ecosystem-reliability\\sensitive-config-inventory.json"}

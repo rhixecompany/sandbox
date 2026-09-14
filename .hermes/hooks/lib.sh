@@ -29,7 +29,7 @@ json_get() {
     local json="$1"
     local key="$2"
     local default="${3:-}"
-    
+
     echo "$json" | jq -r "${key} // \"${default}\"" 2>/dev/null || echo "${default}"
 }
 
@@ -42,7 +42,7 @@ ensure_dir() {
 write_jsonl() {
     local file="$1"
     local json="$2"
-    
+
     ensure_dir "$(dirname "$file")"
     echo "$json" >> "$file"
 }

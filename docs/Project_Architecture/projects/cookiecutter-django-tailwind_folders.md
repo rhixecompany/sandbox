@@ -1,7 +1,7 @@
 # cookiecutter-django-tailwind — Folder Structure
 
-> **Stack:** Django 5.x + Tailwind CSS  
-> **Type:** Project Generator / Cookiecutter Template  
+> **Stack:** Django 5.x + Tailwind CSS
+> **Type:** Project Generator / Cookiecutter Template
 > **Status:** Active
 
 ## Directory Tree

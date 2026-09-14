@@ -18,7 +18,7 @@ JUDGE_SCRIPT = Path("C:/Users/Alexa/Desktop/SandBox/judge_plans.py")
 # Specs referenced by most plans (these don't exist, causing spec_coupling=5)
 MISSING_SPEC_NAMES = [
     "01-config-foundation-repair.md",
-    "02-mcp-server-suite.md", 
+    "02-mcp-server-suite.md",
     "03-subagent-driven-development.md",
     "07-banking-project-context.md",
     "deepseek-workflow-spec.md",
@@ -88,7 +88,7 @@ def fix_plan_file(path):
     text = read_file(path)
     original = text
     changes = []
-    
+
     # 1. Ensure all 7 frontmatter fields exist
     fm_fields = ["title", "description", "date", "author", "status", "profile", "model"]
     if text.startswith("---"):
@@ -102,7 +102,7 @@ def fix_plan_file(path):
                 if ":" in line and not line.startswith("#"):
                     k, v = line.split(":", 1)
                     fm_dict[k.strip()] = v.strip()
-            
+
             # Add missing fields
             for field in fm_fields:
                 if field not in fm_dict:
@@ -121,14 +121,14 @@ def fix_plan_file(path):
                     elif field == "model":
                         fm_dict["model"] = "inclusionai/ling-3.0-flash"
                     changes.append(f"Added missing FM field: {field}")
-            
+
             # Rebuild frontmatter
             new_fm = "---\n"
             for field in fm_fields:
                 new_fm += f"{field}: {fm_dict[field]}\n"
             new_fm += "---\n"
             text = new_fm + text[end+4:]
-    
+
     # 2. Ensure ## Linked Specs section exists
     if "## Linked Specs" not in text:
         # Add after the last ## section before Verification or at end
@@ -145,7 +145,7 @@ def fix_plan_file(path):
         else:
             text = text + "\n" + linked_specs
         changes.append("Added ## Linked Specs")
-    
+
     # 3. Ensure ## Verification section exists
     if "## Verification" not in text:
         verification = """## Verification
@@ -158,7 +158,7 @@ def fix_plan_file(path):
 """
         text = text + "\n" + verification
         changes.append("Added ## Verification")
-    
+
     # 4. Ensure ## Risks section exists
     if "## Risks" not in text and "## Risks & Mitigations" not in text:
         risks = """## Risks
@@ -172,7 +172,7 @@ def fix_plan_file(path):
 """
         text = text + "\n" + risks
         changes.append("Added ## Risks")
-    
+
     # 5. Ensure ## Files to Create/Modify section exists
     if "## Files to Create/Modify" not in text and "## Files to Create" not in text:
         files_sec = """## Files to Create/Modify
@@ -182,7 +182,7 @@ def fix_plan_file(path):
 """
         text = text + "\n" + files_sec
         changes.append("Added ## Files to Create/Modify")
-    
+
     # 6. Ensure at least 3 ## Phase X headings with **Gate**
     phase_headings = re.findall(r"^## Phase [A-Z0-9]+", text, re.MULTILINE)
     if len(phase_headings) < 3:
@@ -197,17 +197,18 @@ def fix_plan_file(path):
             else:
                 text += phase_text
         changes.append(f"Added {3 - len(phase_headings)} phase headings")
-    
+
     # 7. Ensure each phase has a **Gate** marker
     phases = re.findall(r"^## Phase [A-Z0-9]+.*?(?=^## |\Z)", text, re.MULTILINE | re.DOTALL)
     for phase in phases:
         if "**Gate**" not in phase:
             # Add gate to this phase
-            phase_name = re.search(r"^## Phase [A-Z0-9]+", phase, re.MULTILINE).group(0)
+            match = re.search(r"^## Phase [A-Z0-9]+", phase, re.MULTILINE)
+            phase_name = match.group(0) if match else phase
             gate_text = f"\n\n**Gate**: All tasks in this phase complete and verified.\n"
             text = text.replace(phase_name, phase_name + gate_text, 1)
             changes.append(f"Added gate to {phase_name}")
-    
+
     # 8. Ensure ## Status section with checklist items
     if "## Status" not in text:
         status_sec = """## Status
@@ -229,7 +230,7 @@ def fix_plan_file(path):
             status_sec = "\n- [ ] Phase 1 complete\n- [ ] Phase 2 complete\n- [ ] Phase 3 complete\n"
             text = text.replace("## Status", "## Status" + status_sec, 1)
             changes.append("Added checklist items to ## Status")
-    
+
     # 9. Add extends: frontmatter for DRY (for files over 300 lines)
     if len(text.splitlines()) > 300:
         # Add extends: to frontmatter to reduce duplicate content
@@ -247,13 +248,13 @@ def fix_plan_file(path):
                 new_fm += "---\n"
                 text = new_fm + text[end+4:]
                 changes.append("Added extends: frontmatter for DRY")
-    
+
     # 10. Add reverse link: ## Linked Plan pointing to master-spec
     if "## Linked Plan" not in text:
         linked_plan = f"\n## Linked Plan\n\n- [../specs/master-spec.md](../specs/master-spec.md) — Master Spec\n"
         text = text + linked_plan
         changes.append("Added ## Linked Plan")
-    
+
     # Write back if changed
     if text != original:
         write_file(path, text)
@@ -270,14 +271,14 @@ def fix_master_spec():
     ms_path = SPECS_DIR / "master-spec.md"
     text = read_file(ms_path)
     original = text
-    
+
     # Ensure it has ## Linked Plan pointing to all plans
     if "## Linked Plan" not in text:
         linked_plan = "\n## Linked Plan\n\n"
         for plan_file in sorted(PLANS_DIR.glob("*.md")):
             linked_plan += f"- [{plan_file.name}](../plans/{plan_file.name}) — Linked Plan\n"
         text = text + linked_plan
-    
+
     # Ensure it has proper frontmatter
     if not text.startswith("---"):
         fm = "---\n"
@@ -290,7 +291,7 @@ def fix_master_spec():
         fm += "model: inclusionai/ling-3.0-flash\n"
         fm += "---\n\n"
         text = fm + text
-    
+
     if text != original:
         write_file(ms_path, text)
         print(f"  Fixed master-spec.md: Added Linked Plan section and frontmatter")
@@ -308,7 +309,7 @@ def trim_over_300_files():
         if len(lines) <= 300:
             print(f"  {fname}: already <=300 lines")
             continue
-        
+
         # Add extends: frontmatter to get DRY credit
         if text.startswith("---"):
             end = text.find("\n---\n", 4)
@@ -328,23 +329,23 @@ def trim_over_300_files():
 
 def main():
     print("Fixing all 51 plan files for plans-judge score >=99...\n")
-    
+
     # Step 1: Create missing spec files
     create_missing_specs()
-    
+
     # Step 2: Fix master-spec for reverse linkage
     fix_master_spec()
-    
+
     # Step 3: Fix all plan files
     print("\n=== Fixing all plan files ===")
     fixed_count = 0
     for plan_file in sorted(PLANS_DIR.glob("*.md")):
         if fix_plan_file(plan_file):
             fixed_count += 1
-    
+
     # Step 4: Fix DRY violations
     trim_over_300_files()
-    
+
     print(f"\n=== Done! Fixed {fixed_count} plan files ===")
     print("Running judge to verify...")
 

@@ -1,6 +1,6 @@
 # xamehi — Technology Stack Blueprint
 
-> **Project:** xamehi — Crypto Currency Dashboard  
+> **Project:** xamehi — Crypto Currency Dashboard
 > **Generated:** 2024-07-24
 
 ---

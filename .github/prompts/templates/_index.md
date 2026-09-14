@@ -8,7 +8,7 @@ tags: [templates, index, prompts]
 
 # Prompt Templates Index
 
-> Generated: 2026-06-22  
+> Generated: 2026-06-22
 > Location: `prompts/templates/`
 
 This directory contains extracted template files for each prompt in `prompts/`. Each subdirectory follows the prompt name (stem of `.prompt.md`).

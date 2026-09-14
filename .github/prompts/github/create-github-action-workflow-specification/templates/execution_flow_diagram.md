@@ -15,4 +15,3 @@ graph TD
     style A fill:#e1f5fe
     style E fill:#e8f5e8
 ```
-

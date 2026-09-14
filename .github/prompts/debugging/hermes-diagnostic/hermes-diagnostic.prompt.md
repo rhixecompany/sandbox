@@ -6,11 +6,11 @@ category: debugging
 version: 1.0.0
 author: Hermes Agent
 license: MIT
-tags: 
-metadata: 
-hermes: 
-toolsets: 
-skills: 
+tags:
+metadata:
+hermes:
+toolsets:
+skills:
 - skill: using-superpowers
 dependencies: []
 formatter: markdown

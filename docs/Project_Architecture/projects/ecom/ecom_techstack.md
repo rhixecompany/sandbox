@@ -1,7 +1,7 @@
 # Ecom — Technology Stack Blueprint
 
-> **Project:** ecom — Django + React Ecommerce Platform  
-> **Generated:** 2026-07-24  
+> **Project:** ecom — Django + React Ecommerce Platform
+> **Generated:** 2026-07-24
 > **Source:** Code analysis of `requirements.txt`, `Pipfile`, `frontend/package.json`, `Procfile`, `runtime.txt`, and source code imports
 
 ---

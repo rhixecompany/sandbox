@@ -1,7 +1,7 @@
 # Python-projects — Folder Structure
 
-> **Stack:** Python 3.x  
-> **Type:** Script Collection (Educational/Utility)  
+> **Stack:** Python 3.x
+> **Type:** Script Collection (Educational/Utility)
 > **Status:** Active
 
 ## Directory Tree

@@ -1,7 +1,7 @@
 # Best Free Models — Ranked by Vision → Reasoning → Context Size
 
-**Generated:** 2026-08-24T17:15:00Z  
-**Method:** Live catalog discovery + benchmark verification  
+**Generated:** 2026-08-24T17:15:00Z
+**Method:** Live catalog discovery + benchmark verification
 **Ranking Rule:** vision (tier 2) → reasoning (tier 1) → context size (tier 0, normalized)
 
 ---

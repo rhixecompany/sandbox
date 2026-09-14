@@ -154,7 +154,7 @@ projects/mcp-server-typescript/
 
    ```typescript
    import { myTool, MyToolArgsSchema } from "./tools/my-tool.js";
-   
+
    const tools: ToolEntry[] = [
      // ...existing tools
      {
@@ -172,7 +172,7 @@ projects/mcp-server-typescript/
 
    ```typescript
    import { myResourceRead, myResource } from "./resources/my-resource.js";
-   
+
    const resources: ResourceEntry[] = [
      // ...existing resources
      { definition: myResource, handler: myResourceRead },

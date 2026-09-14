@@ -246,4 +246,3 @@ Same-family prompts:
 - [`create-spring-boot-kotlin-project.prompt.md`](create-spring-boot-kotlin-project.prompt.md)
 - [`create-technical-spike.prompt.md`](create-technical-spike.prompt.md)
 - [`create-tldr-page.prompt.md`](create-tldr-page.prompt.md)
-

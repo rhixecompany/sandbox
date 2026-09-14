@@ -1,6 +1,6 @@
 # UK Survey & Micro-task Platforms — Comparison Table
 
-**Research date:** July 2026  
+**Research date:** July 2026
 **Context:** Alexa, UK-based. Existing kit already covers: Prolific, Freecash, Qmee, Branded Surveys, YouGov, Panelbase, Valued Opinions, Pureprofile, Opinion Outpost, Viewsbank, Toluna, LifePoints, Triaba, PopulusLive, Attapoll, Outlier.
 
 ---

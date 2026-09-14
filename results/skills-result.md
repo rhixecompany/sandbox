@@ -1,4 +1,5 @@
 # Execution Result: skills
+
 - Feature: skills
 - Source file (docs/features/skills.md): present=True, size=52828 bytes
 - Bundle artifacts verified (5 items): True

@@ -1,0 +1,78 @@
+Checking 14 configured shell hook(s)...
+
+  [on_session_end] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [on_session_end] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-auto-commit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T13:53:09.082932Z)
+      ⚠ script modified since approval (was 2026-08-01T01:42:07.609892Z, now 2026-08-31T18:59:17.040101Z) — review changes, then `hermes hooks revoke` + re-approve to refresh
+      ✓ ran clean with empty stdout (exit=1, 0.381s) — hook is observer-only
+
+  [on_session_end] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T13:53:10.025047Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=1, 0.374s) — hook is observer-only
+
+  [on_session_start] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [on_session_start] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T13:53:11.854582Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=1, 0.396s) — hook is observer-only
+
+  [post_tool_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [post_tool_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [pre_llm_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [pre_llm_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T13:53:13.741952Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=1, 0.375s) — hook is observer-only
+
+  [pre_llm_call] "C:/Program Files/Git/usr/bin/bash.exe" -c "python C:/Users/Alexa/AppData/Local/hermes/skills/devops/mcp-server-health/scripts/mcp_preflight_check.py --hook --critical ast-grep,github,fetch,sequential-thinking"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T13:53:14.730862Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=0, 1.595s) — hook is observer-only
+
+  [pre_tool_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [pre_tool_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [subagent_stop] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+  [subagent_stop] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✗ not allowlisted — hook will NOT fire at runtime (run with --accept-hooks once, or confirm at the TTY prompt)
+      ℹ skipped JSON smoke test — not allowlisted yet. Approve the hook first (via TTY prompt or --accept-hooks), then re-run `hermes hooks doctor`.
+
+10 issue(s) found.  Fix before relying on these hooks.

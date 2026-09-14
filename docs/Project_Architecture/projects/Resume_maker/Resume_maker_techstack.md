@@ -1,9 +1,9 @@
 # Resume_maker Technology Stack Blueprint
 
-> **Project:** Resume_maker  
-> **Type:** CLI Document Generator  
-> **Stack Type:** Bun/TypeScript  
-> **Generated:** 2026-07-24  
+> **Project:** Resume_maker
+> **Type:** CLI Document Generator
+> **Stack Type:** Bun/TypeScript
+> **Generated:** 2026-07-24
 
 ---
 

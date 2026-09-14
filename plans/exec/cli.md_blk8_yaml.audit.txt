@@ -1,0 +1,17 @@
+# SKIPPED — destructive command audit
+# Source: cli.md
+# Block index: 8
+# Language: yaml
+# Dangerous pattern: format
+---
+# ~/.hermes/config.yaml
+quick_commands:
+  status:
+    type: exec
+    command: systemctl status hermes-agent
+  gpu:
+    type: exec
+    command: nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader
+  restart:
+    type: alias
+    target: /gateway restart

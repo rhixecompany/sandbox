@@ -1,7 +1,7 @@
 # UK Bank Switching & Financial Incentives — July 2026
 
-> **Research date:** 28 July 2026  
-> **Data sources:** MoneySavingExpert, BeSwitchReady, Finder UK, MoneyWeek, Co-operative Bank, Barclays MSE, MoneySuperMarket  
+> **Research date:** 28 July 2026
+> **Data sources:** MoneySavingExpert, BeSwitchReady, Finder UK, MoneyWeek, Co-operative Bank, Barclays MSE, MoneySuperMarket
 > **Verified as of:** 27–28 July 2026
 
 ---

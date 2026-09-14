@@ -4,9 +4,9 @@ status: completed
 
 # SandBox Aggressive Cleanup & Consolidation Plan
 
-> **Created:** 2026-06-28  
-> **Completed:** 2026-06-28  
-> **Scope:** tool/, thoughts/, judge_results/, .github/scripts/, .agents/, .hermes/, docs/, root .md files  
+> **Created:** 2026-06-28
+> **Completed:** 2026-06-28
+> **Scope:** tool/, thoughts/, judge_results/, .github/scripts/, .agents/, .hermes/, docs/, root .md files
 > **Rule:** Strict sequential — each phase completes and is verified before next begins
 
 ---

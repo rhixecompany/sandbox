@@ -177,5 +177,3 @@ Same-family prompts:
 
 - [`agents-fix.prompt.md`](agents-fix.prompt.md)
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
-
-

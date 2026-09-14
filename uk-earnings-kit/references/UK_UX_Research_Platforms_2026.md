@@ -1,6 +1,6 @@
 # UK-Based User Testing / UX Research Platforms — 2026 Comparison
 
-**Researched:** July 2026 | **For:** Alexa (UK-based, existing kit: UserTesting ~£30/hr)  
+**Researched:** July 2026 | **For:** Alexa (UK-based, existing kit: UserTesting ~£30/hr)
 **Goal:** Identify 10-15 additional platforms with pay rates, UK availability, test frequency, and entry requirements.
 
 ---

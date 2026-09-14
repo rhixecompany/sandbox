@@ -117,4 +117,3 @@
 ────────────────────────────────────────────────────────────
   Run 'hermes doctor' for detailed diagnostics
   Run 'hermes setup' to configure
-

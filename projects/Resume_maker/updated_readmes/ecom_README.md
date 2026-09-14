@@ -319,5 +319,5 @@ MIT License - see LICENSE file.
 
 ---
 
-_Built with ❤️ by Alexander Iseghohi_  
+_Built with ❤️ by Alexander Iseghohi_
 _Part of the rhixecompany portfolio - Building e-commerce solutions_

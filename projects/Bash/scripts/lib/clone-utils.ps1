@@ -16,16 +16,16 @@ function ConvertTo-CloneReport {
     param(
         [Parameter(Mandatory=$true)]
         [array]$CloneResults,
-        
+
         [Parameter(Mandatory=$false)]
         [string]$ReportPath
     )
-    
+
     $totalRepos = $CloneResults.Count
     $successCount = ($CloneResults | Where-Object { $_.success } | Measure-Object).Count
     $failureCount = $totalRepos - $successCount
     $successRate = if ($totalRepos -gt 0) { [math]::Round(($successCount / $totalRepos) * 100, 2) } else { 0 }
-    
+
     $report = @{
         timestamp = Get-Date -Format "O"
         summary = @{
@@ -36,7 +36,7 @@ function ConvertTo-CloneReport {
         }
         details = @()
     }
-    
+
     foreach ($result in $CloneResults) {
         $report.details += @{
             name = $result.name
@@ -48,7 +48,7 @@ function ConvertTo-CloneReport {
             duration_seconds = $result.duration_seconds
         }
     }
-    
+
     if ($ReportPath) {
         $json = $report | ConvertTo-Json -Depth 10
         Set-Content -Path $ReportPath -Value $json -Encoding UTF8
@@ -58,7 +58,7 @@ function ConvertTo-CloneReport {
             Write-Host "Clone report saved to: $ReportPath" -ForegroundColor Green
         }
     }
-    
+
     return $report
 }
 
@@ -67,10 +67,10 @@ function Get-DuplicateRepositories {
         [Parameter(Mandatory=$true)]
         [array]$Repositories
     )
-    
+
     $urlMap = @{}
     $duplicates = @()
-    
+
     foreach ($repo in $Repositories) {
         if ($urlMap.ContainsKey($repo.clone_url)) {
             $duplicates += @{
@@ -81,7 +81,7 @@ function Get-DuplicateRepositories {
             $urlMap[$repo.clone_url] = $repo.name
         }
     }
-    
+
     return $duplicates
 }
 
@@ -90,24 +90,24 @@ function Invoke-CloneValidation {
         [Parameter(Mandatory=$true)]
         [string]$RepoPath
     )
-    
+
     if (-not (Test-Path $RepoPath)) {
         return @{ valid = $false; reason = "Repository path does not exist" }
     }
-    
+
     $gitDir = Join-Path $RepoPath ".git"
     if (-not (Test-Path $gitDir)) {
         return @{ valid = $false; reason = "Not a valid git repository (.git directory missing)" }
     }
-    
+
     $hasObjects = Test-Path (Join-Path $gitDir "objects")
     $hasRefs = Test-Path (Join-Path $gitDir "refs")
     $hasConfig = Test-Path (Join-Path $gitDir "config")
-    
+
     if (-not ($hasObjects -and $hasRefs -and $hasConfig)) {
         return @{ valid = $false; reason = "Corrupted git repository (missing essential directories)" }
     }
-    
+
     return @{ valid = $true; reason = "Repository is valid" }
 }
 
@@ -116,7 +116,7 @@ function Get-CloneStatistics {
         [Parameter(Mandatory=$true)]
         [array]$CloneResults
     )
-    
+
     $stats = @{
         total = $CloneResults.Count
         successful = ($CloneResults | Where-Object { $_.success } | Measure-Object).Count
@@ -124,7 +124,7 @@ function Get-CloneStatistics {
         average_attempts = [math]::Round(($CloneResults.attempt | Measure-Object -Average).Average, 2)
         by_attempt = @{}
     }
-    
+
     foreach ($result in $CloneResults) {
         $attemptKey = "attempt_$($result.attempt)"
         if (-not $stats.by_attempt.ContainsKey($attemptKey)) {
@@ -132,6 +132,6 @@ function Get-CloneStatistics {
         }
         $stats.by_attempt[$attemptKey]++
     }
-    
+
     return $stats
 }

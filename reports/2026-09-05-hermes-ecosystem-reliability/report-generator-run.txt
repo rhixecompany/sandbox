@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "C:\Users\Alexa\AppData\Local\hermes\scripts\generate_session_report.py", line 404, in <module>
+    raise SystemExit(asyncio.run(main()))
+                     ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Alexa\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\asyncio\runners.py", line 196, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\Alexa\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\asyncio\runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Alexa\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Alexa\AppData\Local\hermes\scripts\generate_session_report.py", line 359, in main
+    _md_table(
+    ~~~~~~~~~^
+        ["Field", "Value"],
+        ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        ],
+        ^^
+    ),
+    ^
+  File "C:\Users\Alexa\AppData\Local\hermes\scripts\generate_session_report.py", line 138, in _md_table
+    lines.append("| " + " | ".join(row) + " |")
+                        ~~~~~~~~~~^^^^^
+TypeError: sequence item 1: expected str instance, float found

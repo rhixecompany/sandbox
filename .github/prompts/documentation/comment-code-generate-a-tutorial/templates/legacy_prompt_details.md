@@ -15,7 +15,7 @@ Transform this Python script into a polished, beginner-friendly project by refac
    - Focus on the logic and reasoning, not just syntax
    - Avoid redundant or superficial comments
 
-1. **Generate a tutorial as a `README.md` file**  
+1. **Generate a tutorial as a `README.md` file**
    Include the following sections:
    - **Project Overview:** What the script does and why it's useful
    - **Setup Instructions:** Prerequisites, dependencies, and how to run the script

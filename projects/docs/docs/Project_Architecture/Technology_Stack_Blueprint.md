@@ -2,8 +2,8 @@
 
 ## Project: docs (Documentation Only)
 
-> **Generated:** 2026-06-25  
-> **Generator:** technology-stack-blueprint-generator  
+> **Generated:** 2026-06-25
+> **Generator:** technology-stack-blueprint-generator
 > **Analysis Depth:** Comprehensive
 
 ---
@@ -12,7 +12,7 @@
 
 A documentation-only project containing architectural blueprints, dependency audits, and research appendices for reference across the SandBox workspace.
 
-**Project Type:** Documentation Repository  
+**Project Type:** Documentation Repository
 **Stack Type:** Documentation (Markdown)
 
 ---

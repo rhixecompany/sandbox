@@ -1,7 +1,7 @@
 # mcp-servers/go Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Go (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** Go (MCP)
 **Architecture Pattern:** Go MCP server with tool registry
 
 ## Overview

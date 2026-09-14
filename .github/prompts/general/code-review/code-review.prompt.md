@@ -192,5 +192,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`code-exemplars-blueprint-generator.prompt.md`](code-exemplars-blueprint-generator.prompt.md)
-
-

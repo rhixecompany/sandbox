@@ -2,8 +2,8 @@
 
 ## Project: rhixecompany-comics — Comics Project (Django + React)
 
-**Generated:** 2026-06-25  
-**Project Type:** Django Python (Backend) + React (Frontend)  
+**Generated:** 2026-06-25
+**Project Type:** Django Python (Backend) + React (Frontend)
 **Auto-detected:** Yes (Django — `backend/apps/`, `backend/config/`; React — `frontend/`)
 
 ---

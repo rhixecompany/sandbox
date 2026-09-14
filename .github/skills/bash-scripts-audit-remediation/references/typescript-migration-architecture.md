@@ -1,6 +1,6 @@
 # TypeScript Migration Architecture
 
-> **Session:** 2026-05-27 bash-scripts-fix modernization project  
+> **Session:** 2026-05-27 bash-scripts-fix modernization project
 > **Pattern:** AST-safe migration framework for Bash/PowerShell/BAT → TypeScript with behavior preservation
 
 ## Overview
@@ -233,10 +233,10 @@ import { parseArgs } from '@/lib/cli';
 async function main() {
   const { dryRun, ...options } = parseArgs(process.argv.slice(2));
   const executor = new DryRunExecutor(dryRun);
-  
+
   // Business logic here
   await executor.removeFile('temp.log');
-  
+
   process.exit(0);
 }
 
@@ -338,11 +338,11 @@ import { DryRunExecutor } from '@/core/dry-run';
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
   const executor = new DryRunExecutor(dryRun);
-  
+
   // Original bash logic converted to TypeScript
   await executor.removeFile('~/.cache/bun');
   await executor.removeFile('~/.npm');
-  
+
   console.log('Cache cleaned successfully');
 }
 ```

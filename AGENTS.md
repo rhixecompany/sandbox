@@ -7,18 +7,19 @@ Subagent identity: ops/adminbot. Plan: `.hermes/plans/multi-goal-execution-plan-
 
 ## Verified Honcho Peer Card (Real — Not Synthetic)
 
-| Field                  | Verified Value                                  |
-|------------------------|-------------------------------------------------|
-| User                   | Alexa                                           |
-| Active profile(s)      | adminbot + patient-tutor                        |
-| Workspace              | `~/Desktop/SandBox` (CWD verified `/c/Users/Alexa/Desktop/SandBox`) |
-| Authorization          | FULL (per clarification turns 1-4)              |
-| Model (primary)        | `nemotron-3-ultra-free` (opencode-zen / openrouter) |
-| Fallback               | `deepseek-v4-flash-free` (verified in config.yaml) |
-| Workspace branch       | clean-development (ahead 4 behind 0)            |
-| Repo                   | rhixecompany/sandbox                            |
+| Field             | Verified Value                                                      |
+| ----------------- | ------------------------------------------------------------------- |
+| User              | Alexa                                                               |
+| Active profile(s) | adminbot + patient-tutor                                            |
+| Workspace         | `~/Desktop/SandBox` (CWD verified `/c/Users/Alexa/Desktop/SandBox`) |
+| Authorization     | FULL (per clarification turns 1-4)                                  |
+| Model (primary)   | `nemotron-3-ultra-free` (opencode-zen / openrouter)                 |
+| Fallback          | `deepseek-v4-flash-free` (verified in config.yaml)                  |
+| Workspace branch  | clean-development (ahead 4 behind 0)                                |
+| Repo              | rhixecompany/sandbox                                                |
 
 Preferences (DRY — reference, do not duplicate):
+
 - Concise / direct / table-first / action-first — see `/user-communication-preferences` SKILL.md.
 - DRY enforcement — see `.hermes.md` + `/multi-file-change-protocol` SKILL.md.
 - Verification-first — see `/systematic-debugging` SKILL.md (4-phase: understand/fix/verify/document).
@@ -26,18 +27,18 @@ Preferences (DRY — reference, do not duplicate):
 
 ## Session Evidence (Verified — Preserved Honestly)
 
-| Evidence                 | Value / Status                                  |
-|--------------------------|-------------------------------------------------|
-| Skills verified          | 28 (plan verified 11673 B)                       |
-| Vulnerability findings   | 26 (preserved, not hidden)                      |
-| Parsing errors (arch)    | 41 (`DEBUG_FIX_EVIDENCE_2026-09-13.md` verified) |
-| `.eslintrc.json`         | 69 B verified (not 197609 B as mis-stated)      |
-| Rate limit 403           | Preserved (real session evidence)               |
-| MSYS2 FAIL               | Preserved (environment blocker, not resolved)   |
-| adminbot MISSING         | Preserved (missing profile directory)           |
-| `.env` size (CWD)        | 5274 B (verified unchanged — protected)         |
-| `.env` size (hermes)     | 30269 B (verified unchanged — protected)        |
-| Profile routing          | 14 verified / 16 expected (3 MISSING)          |
+| Evidence               | Value / Status                                   |
+| ---------------------- | ------------------------------------------------ |
+| Skills verified        | 28 (plan verified 11673 B)                       |
+| Vulnerability findings | 26 (preserved, not hidden)                       |
+| Parsing errors (arch)  | 41 (`DEBUG_FIX_EVIDENCE_2026-09-13.md` verified) |
+| `.eslintrc.json`       | 69 B verified (not 197609 B as mis-stated)       |
+| Rate limit 403         | Preserved (real session evidence)                |
+| MSYS2 FAIL             | Preserved (environment blocker, not resolved)    |
+| adminbot MISSING       | Preserved (missing profile directory)            |
+| `.env` size (CWD)      | 5274 B (verified unchanged — protected)          |
+| `.env` size (hermes)   | 30269 B (verified unchanged — protected)         |
+| Profile routing        | 14 verified / 16 expected (3 MISSING)            |
 
 ## DRY References (Cross-Reference — Not Duplication)
 

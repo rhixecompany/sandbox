@@ -1,0 +1,7 @@
+usage: hermes_quick_commands.py generate [-h] [--existing-file EXISTING_FILE]
+                                         [--wrapper WRAPPER]
+
+options:
+  -h, --help            show this help message and exit
+  --existing-file EXISTING_FILE
+  --wrapper WRAPPER

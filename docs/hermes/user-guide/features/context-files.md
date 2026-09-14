@@ -11,7 +11,7 @@ Hermes Agent automatically discovers and loads context files that shape how it b
 ## Supported Context Files
 
 | File | Purpose | Discovery |
-|------|---------|-----------| 
+|------|---------|-----------|
 | **.hermes.md** / **HERMES.md** | Project instructions (highest priority) | Walks to git root |
 | **AGENTS.override.md** | Personal, per-directory override of AGENTS.md (typically gitignored) | CWD at startup + subdirectories progressively |
 | **AGENTS.md** | Project instructions, conventions, architecture | CWD at startup + subdirectories progressively |

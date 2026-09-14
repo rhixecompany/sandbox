@@ -8,10 +8,10 @@ description: "Set a standing goal and let Hermes keep working across turns until
 Profile: adminbot (system ops/debug). Direct, no filler. DRY: single evidence file + this summary.
 
 === PHASE SEQUENCE (systematic-debugging: 4 phases) ===
-Phase 1 Root Cause  — doctor/status/insights/security audit + 6 log streams -> root causes identified
-Phase 2 Pattern     — compare package versions + hook source patterns -> patterns confirmed
+Phase 1 Root Cause — doctor/status/insights/security audit + 6 log streams -> root causes identified
+Phase 2 Pattern — compare package versions + hook source patterns -> patterns confirmed
 Phase 3 Hypothesis — single hypothesis per component -> tested minimally
-Phase 4 Fix        — one change per component -> verify syntax/import/state after each
+Phase 4 Fix — one change per component -> verify syntax/import/state after each
 
 === FIXES APPLIED (verified via py_compile + import test) ===
 hooks/session_start_capture.py: sys.excepthook deferred (line 82); bare 'os' -> '_os'; syntax PASS
@@ -23,6 +23,7 @@ Verification result: import session_start_capture -> safe=True, excepthook prese
 C:\Users\Alexa\Desktop\SandBox\debug_fix_evidence_2026-09-13.md (386 bytes; all phases + unfixed blockers)
 
 === HONEST BLOCKERS (no hidden errors; never synthetic results) ===
+
 - npm vulns (agent-browser 2, web 6): build-time advisory; requires npm audit fix (destructive; not executed)
 - Desktop SDK TypeErrors (4 plugins): SDK-level; not user-source fixable
 - Gateway/GUI GIL stalls (7.5s/107s/15.6s) + ws disconnects + Telegram degraded: runtime/network-level

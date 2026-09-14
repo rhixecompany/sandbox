@@ -2,7 +2,7 @@
 ﻿<#
 .SYNOPSIS
     Phase 2: Clone & Deduplicate - Main script
-    
+
 .DESCRIPTION
     Reads DISCOVERY_REPORT.json from Phase 1, clones all repositories,
     handles retries, deduplicates by URL, and generates CLONE_REPORT.json
@@ -11,10 +11,10 @@
 param(
     [Parameter(Mandatory=$false)]
     [string]$DiscoveryReportPath = "REPO_AUDIT/DISCOVERY_REPORT.json",
-    
+
     [Parameter(Mandatory=$false)]
     [string]$ConfigPath = "scripts/config/clone-config.json",
-    
+
     [Parameter(Mandatory=$false)]
     [switch]$DryRun
 )

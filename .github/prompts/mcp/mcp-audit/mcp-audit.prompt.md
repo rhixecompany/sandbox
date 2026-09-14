@@ -7,11 +7,11 @@ category: mcp
 agent: adminbot
 model: minimax/minimax-m3:free
 tools: [terminal, read_file, write_file, patch, search_files, skill_view]
-metadata: 
-hermes: 
+metadata:
+hermes:
 tags: [mcp, audit, sync, devops]
-toolsets: 
-skills: 
+toolsets:
+skills:
 - skill: using-superpowers
 dependencies: []
 formatter: markdown

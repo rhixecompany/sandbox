@@ -1,7 +1,7 @@
 # Configuration Consolidation Summary
 
-**Date:** 2026-08-24  
-**Agent:** Sisyphus (Hermes Agent)  
+**Date:** 2026-08-24
+**Agent:** Sisyphus (Hermes Agent)
 **Scope:** SandBox monorepo workspace
 
 ---

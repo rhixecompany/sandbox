@@ -1,7 +1,7 @@
 # VS Code Config Audit Report
 
-**Generated:** 2026-07-24  
-**Scope:** User config + workspace `.vscode/`  
+**Generated:** 2026-07-24
+**Scope:** User config + workspace `.vscode/`
 **Auditor:** vscode-config-audit skill
 
 ---
@@ -42,7 +42,7 @@ All paths in `settings.json` use `${workspaceFolder}` variable. No hardcoded `C:
 
 ## 4. Formatters — ✅ Clean
 
-Single formatter per language. `editor.formatOnSave: true` globally.  
+Single formatter per language. `editor.formatOnSave: true` globally.
 `ms-python.python` for Python, `esbenp.prettier-vscode` for JS/TS/CSS/SCSS, `vscode.html-language-features` for HTML, `foxundermoon.shell-format` for shell.
 
 ## 5. Tasks — ⚠️ 2 Issues

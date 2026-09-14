@@ -1,4 +1,5 @@
 # Execution Result: mcp
+
 - Feature: mcp
 - Source file (docs/features/mcp.md): present=True, size=39403 bytes
 - Bundle artifacts verified (5 items): True

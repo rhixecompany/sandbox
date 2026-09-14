@@ -8,4 +8,3 @@
 
   Tried in order when the primary fails (rate-limit, 5xx, connection errors).
   Docs: https://hermes-agent.nousresearch.com/docs/user-guide/features/fallback-providers
-

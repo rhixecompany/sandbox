@@ -5,12 +5,12 @@ Zero HIGH/CRITICAL findings across all skills.
 
 ## Triage of the 40 MEDIUM findings (all in drawio-skill scripts)
 
-| Category | Count | Verdict | Evidence |
-|---|---|---|---|
-| execution (`subprocess.run([...])`) | 33 | ✅ BENIGN — list-arg form, no `shell=True`, no string interpolation into shell | pyimports.py:97, raster2drawio.py:140, svgflow.py:38, timelapse.py:46-108, tfimports.py:184, rustimports.py:150 |
-| obfuscation (binary bytes) | 3 | ✅ BENIGN — PNG chunk magic constants (`IEND`, `\xaeB\x82`) | repair_png.py:17,25 |
-| supply_chain (`pip install` mentions) | 2 | ✅ BENIGN — documentation of install commands, not executed | ATTRIBUTION.md:31, SKILL.md:202 |
-| network (curl localhost / ws://127.0.0.1) | 2 | ✅ BENIGN — tool docs referencing local services | neuroskill-bci references/api.md (separate skill, still ALLOWED) |
+| Category                                  | Count | Verdict                                                                        | Evidence                                                                                                        |
+| ----------------------------------------- | ----- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| execution (`subprocess.run([...])`)       | 33    | ✅ BENIGN — list-arg form, no `shell=True`, no string interpolation into shell | pyimports.py:97, raster2drawio.py:140, svgflow.py:38, timelapse.py:46-108, tfimports.py:184, rustimports.py:150 |
+| obfuscation (binary bytes)                | 3     | ✅ BENIGN — PNG chunk magic constants (`IEND`, `\xaeB\x82`)                    | repair_png.py:17,25                                                                                             |
+| supply_chain (`pip install` mentions)     | 2     | ✅ BENIGN — documentation of install commands, not executed                    | ATTRIBUTION.md:31, SKILL.md:202                                                                                 |
+| network (curl localhost / ws://127.0.0.1) | 2     | ✅ BENIGN — tool docs referencing local services                               | neuroskill-bci references/api.md (separate skill, still ALLOWED)                                                |
 
 ## Decision
 

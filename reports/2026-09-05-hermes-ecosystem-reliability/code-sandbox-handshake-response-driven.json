@@ -1,0 +1,14 @@
+[
+  {
+    "server": "code-sandbox",
+    "status": "PASS",
+    "server_info": "node-code-sandbox-mcp v1.3.0",
+    "protocol": "2024-11-05",
+    "capabilities": [
+      "logging",
+      "tools",
+      "resources",
+      "prompts"
+    ]
+  }
+]

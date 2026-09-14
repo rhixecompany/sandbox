@@ -7,9 +7,9 @@ category: general
 version: 1.0.0
 author: Hermes Agent
 tags: [templates, profiles, hermes]
-metadata: 
-hermes: 
-toolsets: 
+metadata:
+hermes:
+toolsets:
 skills: []
 dependencies: []
 formatter: markdown

@@ -1,7 +1,7 @@
 # youtube-downloader Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Python (Scripts)  
+**Generated:** 2026-07-28
+**Project Type:** Python (Scripts)
 **Architecture Pattern:** YouTube download utility scripts
 
 ## Overview

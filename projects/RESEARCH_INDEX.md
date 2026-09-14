@@ -24,9 +24,9 @@ Auto-generated index of workspace project research reports. Updated 2026-09-08.
 
 ---
 
-**Total Reports:** 17  
-**Total Size:** ~79 KB  
-**Method:** Tavily MCP + web_search + delegate_task parallel subagents  
-**All pass section gate (≥9) ✅**  
-**All pass size gate (1KB-5KB) ✅**  
+**Total Reports:** 17
+**Total Size:** ~79 KB
+**Method:** Tavily MCP + web_search + delegate_task parallel subagents
+**All pass section gate (≥9) ✅**
+**All pass size gate (1KB-5KB) ✅**
 **All cross-references symmetric ✅**

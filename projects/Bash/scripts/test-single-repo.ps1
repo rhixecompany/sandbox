@@ -115,7 +115,7 @@ $diagnosticsOutput = @{
 
 if (-not $SkipDiagnostics) {
     Write-Info "Running diagnostics for $detectedStack..."
-    
+
     switch ($detectedStack) {
         "javascript" {
             Write-Info "Checking for npm..."
@@ -167,7 +167,7 @@ $findings = @()
 
 if (-not $SkipParsing) {
     Write-Info "Parsing diagnostics into findings..."
-    
+
     foreach ($diag in $diagnosticsOutput.diagnostics) {
         switch ($diag.type) {
             "npm-audit" {
@@ -205,7 +205,7 @@ if (-not $SkipParsing) {
             }
         }
     }
-    
+
     Write-Success "Parsed $($findings.Count) findings"
 } else {
     Write-Info "Skipping parsing (--SkipParsing)"
@@ -221,7 +221,7 @@ Write-Phase "Step 5: Consolidate into Batch"
 
 if (-not $SkipConsolidation) {
     Write-Info "Creating batch from findings..."
-    
+
     $batch = @{
         id = "BATCH-TEST-001"
         repoId = $RepoId
@@ -231,10 +231,10 @@ if (-not $SkipConsolidation) {
         estimatedRisk = "medium"
         createdAt = Get-Date -Format "o"
     }
-    
+
     Write-Success "Batch created: $($batch.id)"
     Write-Info "Findings in batch: $($batch.findings.Count)"
-    
+
     # Save batch
     $batchPath = Join-Path $TEST_OUTPUT_DIR "${RepoId}_batch.json"
     $batch | ConvertTo-Json -Depth 10 | Set-Content $batchPath

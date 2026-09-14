@@ -1,7 +1,7 @@
 # rhixecompany-comics/frontend Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** TypeScript/Bun (Next.js)  
+**Generated:** 2026-07-28
+**Project Type:** TypeScript/Bun (Next.js)
 **Architecture Pattern:** Next.js frontend for comics platform
 
 ## Overview

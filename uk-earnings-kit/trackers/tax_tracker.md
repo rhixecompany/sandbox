@@ -1,8 +1,8 @@
 # UK Tax Tracker for Side Earnings (2026/27 Tax Year)
 
-> **Tax Year:** 6 April 2026 – 5 April 2027  
-> **Deadline to register:** 5 October 2027  
-> **Deadline to file & pay:** 31 January 2028  
+> **Tax Year:** 6 April 2026 – 5 April 2027
+> **Deadline to register:** 5 October 2027
+> **Deadline to file & pay:** 31 January 2028
 > **Records retention:** 6 years (until 31 January 2033)
 
 ---

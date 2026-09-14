@@ -1,7 +1,7 @@
 # mcp-servers/python Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Python (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** Python (MCP)
 **Architecture Pattern:** Python MCP server
 
 ## Overview

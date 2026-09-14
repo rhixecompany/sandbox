@@ -48,10 +48,10 @@ mcp-servers/swift/
 dependencies: [
     // MCP Swift SDK
     .package(url: "https://github.com/swift-server/swift-mcp.git", branch: "main"),
-    
+
     // Service lifecycle management
     .package(url: "https://github.com/swift-server/swift-service-lifecycle.git", from: "2.0.0"),
-    
+
     // Logging
     .package(url: "https://github.com/apple/swift-log.git", from: "1.5.0"),
 ]

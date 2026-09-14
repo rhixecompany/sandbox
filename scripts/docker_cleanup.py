@@ -37,13 +37,13 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true", help="Show what would be deleted")
     parser.add_argument("--help", action="help", help="Show help")
     args = parser.parse_args()
-    
+
     if args.dry_run or args.all:
         results = cleanup_all()
         print(json.dumps(results, indent=2))
     else:
         parser.print_help()
-    
+
     sys.exit(0)
 
 if __name__ == "__main__":

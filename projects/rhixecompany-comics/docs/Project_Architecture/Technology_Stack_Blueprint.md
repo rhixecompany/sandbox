@@ -2,8 +2,8 @@
 
 ## Project: rhixecompany-comics — Dual-Stack Platform
 
-> **Generated:** 2026-06-25  
-> **Generator:** technology-stack-blueprint-generator  
+> **Generated:** 2026-06-25
+> **Generator:** technology-stack-blueprint-generator
 > **Analysis Depth:** Comprehensive
 
 ---
@@ -12,7 +12,7 @@
 
 A dual-stack comic platform combining a Django REST Framework backend (API, admin, async tasks) with a Next.js 16 frontend (modern App Router, TypeScript). Uses Celery + Redis for asynchronous task processing.
 
-**Project Type:** Full-Stack Web Application (Dual-Stack)  
+**Project Type:** Full-Stack Web Application (Dual-Stack)
 **Stack Type:** Dual-stack (Django + Next.js)
 
 ---

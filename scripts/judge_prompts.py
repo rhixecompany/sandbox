@@ -159,7 +159,7 @@ def check_structure(prompt_paths: list[Path], pdir: Path) -> dict:
         # Expected: .github/prompts/<category>/<trigger>/<trigger>.prompt.md
         relative = pp.relative_to(pdir)
         parts = relative.parts
-        
+
         if len(parts) < 3:
             prompt_info.append({
                 "prompt": str(pp),
@@ -169,48 +169,48 @@ def check_structure(prompt_paths: list[Path], pdir: Path) -> dict:
                 "error": f"Wrong depth: {len(parts)} parts, need 3+ (category/trigger/file)",
             })
             continue
-        
+
         category = parts[0]
         trigger_dir = parts[1]
         filename = parts[2]
-        
+
         trigger = extract_trigger(pp)
         text = pp.read_text(encoding="utf-8", errors="ignore")
         fm = parse_frontmatter(text)
         fm_category = fm.get("category", "")
-        
+
         # Validate structure
         structure_valid = True
         errors = []
-        
+
         # 1. Category must be valid
         if category not in VALID_CATEGORIES:
             structure_valid = False
             errors.append(f"Invalid category: {category}")
-        
+
         # 2. Trigger dir must match trigger field
         if trigger != trigger_dir:
             structure_valid = False
             errors.append(f"Trigger mismatch: dir={trigger_dir}, fm={trigger}")
-        
+
         # 3. Filename must be <trigger>.prompt.md
         expected_filename = f"{trigger}.prompt.md"
         if filename != expected_filename:
             structure_valid = False
             errors.append(f"Filename mismatch: got={filename}, expected={expected_filename}")
-        
+
         # 4. Frontmatter category must match directory category
         if fm_category != category:
             structure_valid = False
             errors.append(f"Category mismatch: fm={fm_category}, dir={category}")
-        
+
         # 5. Check templates dir exists with .md files
         templates_dir = pdir / category / trigger / "templates"
         has_templates = templates_dir.is_dir() and len(list(templates_dir.glob("*.md"))) > 0
         if not has_templates:
             structure_valid = False
             errors.append(f"Missing templates dir or no .md files: {templates_dir}")
-        
+
         # 6. Check scripts dir exists if scripts referenced
         scripts_dir = pdir / category / trigger / "scripts"
         refs = extract_references(text)
@@ -218,7 +218,7 @@ def check_structure(prompt_paths: list[Path], pdir: Path) -> dict:
         if has_script_refs and not scripts_dir.is_dir():
             structure_valid = False
             errors.append(f"Scripts referenced but no scripts dir: {scripts_dir}")
-        
+
         info = {
             "prompt": str(pp),
             "trigger": trigger,
@@ -270,12 +270,12 @@ def score_one(path: Path, pdir: Path, run_cross_judges: bool = True) -> dict:
     fm_category = fm.get("category", "")
     if fm_category == category:
         structure_pts += 5
-    
+
     # Check templates dir
     templates_dir = pdir / category / trigger / "templates"
     if templates_dir.is_dir() and len(list(templates_dir.glob("*.md"))) > 0:
         structure_pts += 5
-    
+
     # Check scripts dir if needed
     refs = extract_references(text)
     has_script_refs = len(refs["scripts"]) > 0
@@ -308,20 +308,20 @@ def score_one(path: Path, pdir: Path, run_cross_judges: bool = True) -> dict:
 
     # Asset Co-location (15 pts) — templates/scripts in correct trigger dir
     colocation_pts = 15
-    
+
     # Check templates refs point to templates/ (local to trigger dir)
     template_refs = re.findall(r'templates/([\w\-/]+)', text)
     for tref in template_refs:
         # Should be templates/... (relative to trigger dir)
         if tref.startswith("../") or tref.startswith(".."):
             colocation_pts -= 5
-    
+
     # Check scripts refs point to scripts/ (local to trigger dir)
     script_refs = re.findall(r'scripts/([\w\-/]+\.?(?:py|sh|js|ts)?)', text)
     for sref in script_refs:
         if sref.startswith("../") or sref.startswith(".."):
             colocation_pts -= 5
-    
+
     colocation_pts = max(colocation_pts, 0)
 
     # Asset Verification (15 pts) — all referenced assets exist
@@ -375,7 +375,7 @@ def score_one(path: Path, pdir: Path, run_cross_judges: bool = True) -> dict:
         dry_pts = 0
 
     total = fm_pts + structure_pts + struct_pts + content_pts + cq_pts + colocation_pts + verification_pts + cross_judge_pts + dry_pts
-    
+
     # HARD FAIL: If structure < 25, cap at 50
     if structure_pts < 25:
         total = min(total, 50)
@@ -473,7 +473,7 @@ def main() -> int:
 
     if args.migration_plan or not prompt_paths:
         structure = check_structure(prompt_paths, pdir)
-        
+
         if args.migration_plan:
             plan = generate_migration_plan(structure, pdir)
             plan_path = out.with_suffix(".migration.md")

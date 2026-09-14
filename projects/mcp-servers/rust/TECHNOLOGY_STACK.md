@@ -68,10 +68,10 @@ opt-level = 3
 
 ```rust
 use rmcp::{
-    ServerHandler, 
-    model::*, 
+    ServerHandler,
+    model::*,
     service::RequestContext,
-    tool, 
+    tool,
     transport::stdio::stdio_server,
 };
 use std::sync::Arc;
@@ -136,11 +136,11 @@ impl ServerHandler for MyMcpServer {
                 .required(vec!["name"])
         )]
     }
-    
+
     async fn call_tool(
-        &self, 
-        name: &str, 
-        arguments: serde_json::Value, 
+        &self,
+        name: &str,
+        arguments: serde_json::Value,
         _context: RequestContext
     ) -> Result<CallToolResult, anyhow::Error> {
         match name {

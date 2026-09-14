@@ -182,9 +182,9 @@ export function registerCalculatorTool(server: McpServer) {
         case "add": result = a + b; break;
         case "subtract": result = a - b; break;
         case "multiply": result = a * b; break;
-        case "divide": 
+        case "divide":
           if (b === 0) throw new Error("Division by zero");
-          result = a / b; 
+          result = a / b;
           break;
       }
       return {

@@ -408,7 +408,7 @@ bash cache-clean.sh --all --debug
 
 ---
 
-**Status**: ✓ COMPLETE  
-**Date**: 2026-05-27  
-**Owner**: Alexa  
+**Status**: ✓ COMPLETE
+**Date**: 2026-05-27
+**Owner**: Alexa
 **Next Review**: As needed

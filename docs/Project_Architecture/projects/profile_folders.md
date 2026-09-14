@@ -1,7 +1,7 @@
 # profile — Folder Structure
 
-> **Stack:** Django  
-> **Type:** Profile/Portfolio Application  
+> **Stack:** Django
+> **Type:** Profile/Portfolio Application
 > **Status:** Active
 
 ## Directory Tree

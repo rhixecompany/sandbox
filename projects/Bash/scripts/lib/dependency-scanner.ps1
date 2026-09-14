@@ -11,18 +11,18 @@ function Invoke-NpmAudit {
         [Parameter(Mandatory=$true)]
         [string]$RepoPath
     )
-    
+
     if (-not (Test-Path (Join-Path $RepoPath "package.json"))) {
         return $null
     }
-    
+
     try {
         Push-Location $RepoPath
-        
+
         $auditOutput = bun audit --json 2>$null | ConvertFrom-Json
-        
+
         Pop-Location
-        
+
         return @{
             vulnerabilities = $auditOutput.metadata.vulnerabilities
             audited = $auditOutput.metadata.audited
@@ -41,22 +41,22 @@ function Invoke-PipCheck {
         [Parameter(Mandatory=$true)]
         [string]$RepoPath
     )
-    
-    if (-not (Test-Path (Join-Path $RepoPath "requirements.txt")) -and 
+
+    if (-not (Test-Path (Join-Path $RepoPath "requirements.txt")) -and
         -not (Test-Path (Join-Path $RepoPath "setup.py")) -and
         -not (Test-Path (Join-Path $RepoPath "pyproject.toml"))) {
         return $null
     }
-    
+
     try {
         Push-Location $RepoPath
-        
+
         $pipOutput = pip check 2>$null
-        
+
         Pop-Location
-        
+
         $vulnCount = if ($pipOutput) { ($pipOutput | Measure-Object -Line).Lines } else { 0 }
-        
+
         return @{
             vulnerabilities = $vulnCount
             output = $pipOutput
@@ -74,18 +74,18 @@ function Invoke-CargoAudit {
         [Parameter(Mandatory=$true)]
         [string]$RepoPath
     )
-    
+
     if (-not (Test-Path (Join-Path $RepoPath "Cargo.toml"))) {
         return $null
     }
-    
+
     try {
         Push-Location $RepoPath
-        
+
         $auditOutput = cargo audit --json 2>$null | ConvertFrom-Json
-        
+
         Pop-Location
-        
+
         return @{
             vulnerabilities = $auditOutput.vulnerabilities.Count
             advisories = $auditOutput.advisories
@@ -103,13 +103,13 @@ function Get-DependencyVulnerabilities {
         [Parameter(Mandatory=$true)]
         [string]$RepoPath
     )
-    
+
     $vulnerabilities = @{
         npm = Invoke-NpmAudit -RepoPath $RepoPath
         pip = Invoke-PipCheck -RepoPath $RepoPath
         cargo = Invoke-CargoAudit -RepoPath $RepoPath
     }
-    
+
     return $vulnerabilities
 }
 
@@ -135,36 +135,36 @@ function Invoke-AllScanners {
     param(
         [Parameter(Mandatory=$true)]
         [string]$RepoPath,
-        
+
         [Parameter(Mandatory=$false)]
         [bool]$IncludeStdout = $false
     )
-    
+
     # Validate repository path
     if (-not (Test-Path $RepoPath)) {
         throw "Repository path does not exist: $RepoPath"
     }
-    
+
     try {
          # Load helper libraries
          $libPath = $PSScriptRoot
          $packageManagersPath = Join-Path $libPath "package-managers.ps1"
          $scannerPath = Join-Path $libPath "package-manager-scanners.ps1"
-        
+
         if (-not (Test-Path $packageManagersPath)) {
             throw "Required library not found: $packageManagersPath"
         }
-        
+
         if (-not (Test-Path $scannerPath)) {
             throw "Required library not found: $scannerPath"
         }
-        
+
         . $packageManagersPath
         . $scannerPath
-        
+
         # Detect available package managers
         $detectedManagers = Detect-PackageManagers -RepoPath $RepoPath
-        
+
         if ($detectedManagers.Count -eq 0) {
             return @{
                 repo_path = $RepoPath
@@ -175,7 +175,7 @@ function Invoke-AllScanners {
                 note = "No package managers detected"
             }
         }
-        
+
         # Initialize results structure
         $results = @{
             repo_path = $RepoPath
@@ -184,12 +184,12 @@ function Invoke-AllScanners {
             managers = @{}
             scan_timestamp = (Get-Date -Format "o")
         }
-        
+
         # Run scanner for each detected manager
         foreach ($manager in $detectedManagers) {
             try {
                 $managerObj = Get-ManagerByName -ManagerName $manager
-                
+
                 if ($null -eq $managerObj) {
                     $results.managers[$manager] = @{
                         status = "unknown"
@@ -197,10 +197,10 @@ function Invoke-AllScanners {
                     }
                     continue
                 }
-                
+
                 # Get scanner function name (e.g., "Invoke-NpmAudit")
                 $functionName = $managerObj.scanner
-                
+
                 if (-not (Get-Command $functionName -ErrorAction SilentlyContinue)) {
                     $results.managers[$manager] = @{
                         status = "error"
@@ -208,10 +208,10 @@ function Invoke-AllScanners {
                     }
                     continue
                 }
-                
+
                 # Execute scanner
                 $scanResult = & $functionName -RepoPath $RepoPath
-                
+
                 if ($null -eq $scanResult) {
                     $results.managers[$manager] = @{
                         status = "skipped"
@@ -220,7 +220,7 @@ function Invoke-AllScanners {
                     }
                     continue
                 }
-                
+
                 if ($scanResult.ContainsKey("error")) {
                     $results.managers[$manager] = @{
                         status = "error"
@@ -229,25 +229,25 @@ function Invoke-AllScanners {
                     }
                     continue
                 }
-                
+
                 # Add scanner result
                 $vulnCount = $scanResult.vulnerabilities
                 if ($null -eq $vulnCount) { $vulnCount = 0 }
-                
+
                 $results.managers[$manager] = @{
                     status = "success"
                     vulnerabilities = $vulnCount
                     timestamp = (Get-Date -Format "o")
                 }
-                
+
                 # Include full output if requested
                 if ($IncludeStdout) {
                     $results.managers[$manager].output = $scanResult
                 }
-                
+
                 # Aggregate vulnerability count
                 $results.total_vulnerabilities += $vulnCount
-                
+
             } catch {
                 $results.managers[$manager] = @{
                     status = "error"
@@ -256,9 +256,9 @@ function Invoke-AllScanners {
                 }
             }
         }
-        
+
         return $results
-        
+
     } catch {
         return @{
             repo_path = $RepoPath

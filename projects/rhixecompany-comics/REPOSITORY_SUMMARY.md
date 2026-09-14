@@ -2,8 +2,8 @@
 
 # rhixecompany-comics — Dual-Stack Comics Platform
 
-**Generated:** 2026-07-25  
-**Status:** Active  
+**Generated:** 2026-07-25
+**Status:** Active
 **Path:** `projects/rhixecompany-comics/`
 
 ---
@@ -122,5 +122,5 @@ Receives scraping logic from:
 
 ## CI/CD
 
-**Workflow:** `.github/workflows/rhixecompany-comics-ci.yml`  
+**Workflow:** `.github/workflows/rhixecompany-comics-ci.yml`
 **Jobs:** Backend (Python: ruff, mypy, pytest) + Frontend (TypeScript, ESLint, Next.js build)

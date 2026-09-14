@@ -1,0 +1,48 @@
+{
+  "webhooks": [
+    {
+      "name": "code-rabbit-pr-review",
+      "events": ["pull_request.review_requested", "pull_request.review_submitted"],
+      "url": "http://localhost:8080/webhooks/code-rabbit/review",
+      "method": "POST",
+      "content_type": "application/json",
+      "secret": "${CODE_RABBIT_WEBHOOK_SECRET}",
+      "actions": ["review", "notify"],
+      "description": "Trigger CodeRabbit review when PR review is requested or submitted"
+    },
+    {
+      "name": "code-rabbit-pr-sync",
+      "events": ["pull_request.synchronize"],
+      "url": "http://localhost:8080/webhooks/code-rabbit/sync",
+      "method": "POST",
+      "content_type": "application/json",
+      "secret": "${CODE_RABBIT_WEBHOOK_SECRET}",
+      "actions": ["re-review", "notify"],
+      "description": "Re-run CodeRabbit review on new commits to PR"
+    },
+    {
+      "name": "code-rabbit-pr-open",
+      "events": ["pull_request.opened"],
+      "url": "http://localhost:8080/webhooks/code-rabbit/opened",
+      "method": "POST",
+      "content_type": "application/json",
+      "secret": "${CODE_RABBIT_WEBHOOK_SECRET}",
+      "actions": ["initial-review", "notify"],
+      "description": "Initial CodeRabbit review when PR is opened"
+    }
+  ],
+  "settings": {
+    "timeout": 30,
+    "retry_count": 3,
+    "retry_delay": 5,
+    "max_payload_size": "10MB",
+    "log_responses": true,
+    "verify_signatures": true
+  },
+  "notifications": {
+    "channel": "hermes",
+    "format": "json",
+    "include_findings": true,
+    "include_stats": true
+  }
+}

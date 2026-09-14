@@ -14,7 +14,7 @@ BASE_PATH = Path("/c/Users/Alexa/Desktop/SandBox/.github/prompts")
 PROMPTS = {
     "development": {
         "create-feature": "create-feature",
-        "refactor-code": "refactor-code", 
+        "refactor-code": "refactor-code",
         "fix-bug": "fix-bug",
         "write-test": "write-test"
     },
@@ -417,16 +417,16 @@ PROMPT_DATA = {
 
 def generate_prompt_files():
     """Generate all prompt files with companion files."""
-    
+
     for category, triggers in PROMPTS.items():
         for trigger, prompt_name in triggers.items():
             prompt_dir = BASE_PATH / category / trigger
             prompt_dir.mkdir(parents=True, exist_ok=True)
-            
+
             # Get prompt data (use create-feature as template for others)
             key = f"{category}/{trigger}"
             data = PROMPT_DATA.get(key, PROMPT_DATA["development/create-feature"])
-            
+
             # Customize for each prompt
             data = data.copy()
             data.update({
@@ -440,11 +440,11 @@ def generate_prompt_files():
                 "tools": data["tools"],
                 "role": "implementer",
             })
-            
+
             # Write main prompt file
             prompt_content = PROMPT_TEMPLATE.format(**data)
             (prompt_dir / f"{prompt_name}.prompt.md").write_text(prompt_content)
-            
+
             # Write companion files
             for comp_name, template in COMPANION_TEMPLATES.items():
                 comp_content = template.format(
@@ -523,7 +523,7 @@ def generate_prompt_files():
                     role=data.get("role", "implementer")
                 )
                 (prompt_dir / comp_name).write_text(comp_content)
-            
+
             print(f"Created: {category}/{trigger}/{prompt_name}.prompt.md + 10 companions")
 
 if __name__ == "__main__":

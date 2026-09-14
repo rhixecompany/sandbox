@@ -23,4 +23,3 @@ description: Single-table auth inventory across all Hermes providers, rendered f
 | `openrouter` | **valid** | ← | https://openrouter.ai/docs |
 | `xai` | **auth-failed-401/403** | auth failed (403) (re-auth may be required) ← | https://docs.x.ai/docs |
 | `xai-oauth` | **valid** | ← | https://docs.x.ai/ |
-

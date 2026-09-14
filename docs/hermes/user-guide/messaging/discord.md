@@ -134,7 +134,7 @@ This is the most critical step in the entire setup. Without the correct intents 
 On the **Bot** page, scroll down to **Privileged Gateway Intents**. You'll see three toggles:
 
 | Intent | Purpose | Required? |
-|--------|---------|-----------| 
+|--------|---------|-----------|
 | **Presence Intent** | See user online/offline status | Optional |
 | **Server Members Intent** | Access the member list, resolve usernames | **Required** |
 | **Message Content Intent** | Read the text content of messages | **Required** |
@@ -929,5 +929,3 @@ Leave `everyone` and `roles` at `false` unless you know exactly why you need the
 :::
 
 For more information on securing your Hermes Agent deployment, see the [Security Guide](../security.md).
-
-

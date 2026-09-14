@@ -39,9 +39,9 @@ TOTAL=0
 
 for SERVER in $SERVERS; do
     TOTAL=$((TOTAL + 1))
-    
+
     STATUS=$(hermes mcp list 2>/dev/null | grep -A1 "  $SERVER " | tail -1 | grep -o "✓ enabled\|✗ disabled" || echo "UNKNOWN")
-    
+
     if [ "$STATUS" = "✓ enabled" ]; then
         SUCCESS=$((SUCCESS + 1))
         log "  ✓ $SERVER: enabled"

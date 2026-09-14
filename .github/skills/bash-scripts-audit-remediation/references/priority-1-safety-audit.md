@@ -1,6 +1,6 @@
 # Priority 1 Safety Audit — Context-Dependent Risk Assessment
 
-**Created:** 2026-05-27  
+**Created:** 2026-05-27
 **Use case:** When auditing scripts with "CRITICAL" patterns that are actually safe in context
 
 **SAFETY NOTE:** This file documents DANGEROUS patterns for educational purposes. These are examples of what NOT to do, not executable code.
@@ -47,7 +47,7 @@ When automation flags scripts as CRITICAL, perform context-dependent analysis:
 
 ### Example: install.sh
 
-**Pattern:** `rm -rf $TEMP_DIR`  
+**Pattern:** `rm -rf $TEMP_DIR`
 **Context (Line 37):**
 ```bash
 trap 'rm -rf "$TEMP_DIR" 2>/dev/null || true' EXIT INT TERM
@@ -62,7 +62,7 @@ trap 'rm -rf "$TEMP_DIR" 2>/dev/null || true' EXIT INT TERM
 
 ### Example: diagnose-and-fix-git.sh
 
-**Pattern:** `rm -f $LOCK_PATH`  
+**Pattern:** `rm -f $LOCK_PATH`
 **Context (Line 26):**
 ```bash
 LOCK_PATH=".git/index.lock"
@@ -77,7 +77,7 @@ if rm -f "$LOCK_PATH"; then
 
 ### Example: delete-gone-branches.sh
 
-**Pattern:** `git branch -D`  
+**Pattern:** `git branch -D`
 **Context (Lines 12, 75):**
 ```bash
 --apply    Actually delete the branches with `git branch -D`

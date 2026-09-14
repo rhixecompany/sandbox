@@ -1,0 +1,17 @@
+{
+  "tool_resources": [
+    [
+      "ghcr.io/github/github-mcp-server:<none>",
+      "60.7MB",
+      "e3816a476a97"
+    ],
+    [
+      "mcp/time:<none>",
+      "341MB",
+      "9c46a918633f"
+    ]
+  ],
+  "unused_candidates": [],
+  "preserved_volumes": [],
+  "preserved_containers": []
+}

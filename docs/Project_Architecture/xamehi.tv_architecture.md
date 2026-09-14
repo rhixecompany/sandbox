@@ -1,7 +1,7 @@
 # xamehi.tv Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Python/Django (Backend)  
+**Generated:** 2026-07-28
+**Project Type:** Python/Django (Backend)
 **Architecture Pattern:** Django + Video streaming backend
 
 ## Overview

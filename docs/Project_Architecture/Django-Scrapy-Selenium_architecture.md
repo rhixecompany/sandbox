@@ -1,7 +1,7 @@
 # Django-Scrapy-Selenium Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Python/Django (Full Stack)  
+**Generated:** 2026-07-28
+**Project Type:** Python/Django (Full Stack)
 **Architecture Pattern:** Django MVT + Scrapy + Selenium + Next.js frontend
 
 ## Overview

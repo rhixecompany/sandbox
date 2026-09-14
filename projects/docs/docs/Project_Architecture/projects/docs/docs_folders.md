@@ -1,7 +1,7 @@
 # docs — Folder Structure Blueprint
 
-> **Generated:** 2026-07-24  
-> **Generator:** folder-structure-blueprint-generator  
+> **Generated:** 2026-07-24
+> **Generator:** folder-structure-blueprint-generator
 > **Project:** projects/docs/
 
 ---

@@ -1,8 +1,8 @@
 # Python Quality Pipeline Report
 
-**Date:** 2026-07-24  
-**Scope:** SandBox root `(.)` + 11 sub-repos with Python files + hermes-agent  
-**Tooling:** Ruff (lint+format) + Pyright (type check)  
+**Date:** 2026-07-24
+**Scope:** SandBox root `(.)` + 11 sub-repos with Python files + hermes-agent
+**Tooling:** Ruff (lint+format) + Pyright (type check)
 **Config:** `.ruff.toml` at root (select=E,F,I,N,W,UP,B,SIM,ARG,RUF; ignore=E501,N818); `pyrightconfig.json` at root
 
 ---
@@ -78,7 +78,7 @@
 
 - 37× **RUF012** — mutable defaults (Django model fields)
 - 24× **F403/F405** — wildcard imports
-- 17× naming: **N802/ARG001**  
+- 17× naming: **N802/ARG001**
 - 1× **E722** — bare except
 
 ### rhixe_scans (122 errors)
@@ -92,7 +92,7 @@
 
 ### xamehi.tv (115 errors)
 
-- 40× **F403/F405** — wildcard imports  
+- 40× **F403/F405** — wildcard imports
 - 31× **N802** — invalid function names (PEP 8 violations)
 - 23× **RUF012** — mutable defaults
 - 12× **ARG001** — unused args

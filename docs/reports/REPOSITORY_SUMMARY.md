@@ -2,8 +2,8 @@
 
 # SandBox Workspace — Technical Overview
 
-**Generated:** 2026-07-25  
-**Repository:** `C:\Users\Alexa\Desktop\SandBox`  
+**Generated:** 2026-07-25
+**Repository:** `C:\Users\Alexa\Desktop\SandBox`
 **Structure:** Monorepo with 17 projects under `projects/`
 
 ---

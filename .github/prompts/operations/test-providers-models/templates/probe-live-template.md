@@ -39,4 +39,3 @@ description: Live results from the most recent probe run, captured by `scripts/r
 | 26 | `openrouter` | `poolside/laguna-xs-2.1:free` | -1 | 55.3 |  | ? | ? | ? | ? |
 | 27 | `openrouter` | `thinkingmachines/inkling-small:free` | -1 | 55.2 |  | ? | ? | ? | ? |
 | 28 | `openrouter` | `thinkingmachines/inkling:free` | -1 | 55.2 |  | ? | ? | ? | ? |
-

@@ -26,28 +26,28 @@ providers:
       - "{{PROVIDER_1_MODEL}}"
       {{PROVIDER_1_EXTRA_MODELS}}
     base_url: "{{PROVIDER_1_BASE_URL}}"
-  
+
   {{PROVIDER_2}}:
     default_model: "{{PROVIDER_2_MODEL}}"
     models:
       - "{{PROVIDER_2_MODEL}}"
       {{PROVIDER_2_EXTRA_MODELS}}
     base_url: "{{PROVIDER_2_BASE_URL}}"
-  
+
   {{PROVIDER_3}}:
     default_model: "{{PROVIDER_3_MODEL}}"
     models:
       - "{{PROVIDER_3_MODEL}}"
       {{PROVIDER_3_EXTRA_MODELS}}
     base_url: "{{PROVIDER_3_BASE_URL}}"
-  
+
   {{PROVIDER_4}}:
     default_model: "{{PROVIDER_4_MODEL}}"
     models:
       - "{{PROVIDER_4_MODEL}}"
       {{PROVIDER_4_EXTRA_MODELS}}
     base_url: "{{PROVIDER_4_BASE_URL}}"
-  
+
   {{PROVIDER_5}}:
     default_model: "{{PROVIDER_5_MODEL}}"
     models:

@@ -1,4 +1,5 @@
 # Execution Result: tool-gateway
+
 - Feature: tool-gateway
 - Source file (docs/features/tool-gateway.md): present=True, size=12776 bytes
 - Bundle artifacts verified (5 items): True

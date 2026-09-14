@@ -1,7 +1,7 @@
 # Ecom — Project Folder Structure Blueprint
 
-> **Project:** ecom — Django + React Ecommerce Platform  
-> **Generated:** 2026-07-24  
+> **Project:** ecom — Django + React Ecommerce Platform
+> **Generated:** 2026-07-24
 > **Source:** On-disk directory tree analysis
 
 ---

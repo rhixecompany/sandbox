@@ -38,4 +38,3 @@ description: "Consolidated list of every model with a :free suffix (or zero pric
 | 26 | `openrouter` | `poolside/laguna-xs-2.1:free` | n/a | 262144 | 32768 | yes | https://openrouter.ai/api/v1/models |
 | 27 | `openrouter` | `thinkingmachines/inkling-small:free` | n/a | 1048576 | 262144 | yes | https://openrouter.ai/api/v1/models |
 | 28 | `openrouter` | `thinkingmachines/inkling:free` | n/a | 1048576 | 262144 | yes | https://openrouter.ai/api/v1/models |
-

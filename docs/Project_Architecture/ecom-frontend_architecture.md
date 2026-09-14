@@ -1,7 +1,7 @@
 # ecom/frontend Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** React/Bun (Frontend)  
+**Generated:** 2026-07-28
+**Project Type:** React/Bun (Frontend)
 **Architecture Pattern:** React frontend for ecom Django backend
 
 ## Overview

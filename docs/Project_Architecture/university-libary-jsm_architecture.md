@@ -1,7 +1,7 @@
 # university-libary-jsm Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** TypeScript/Bun (Next.js)  
+**Generated:** 2026-07-28
+**Project Type:** TypeScript/Bun (Next.js)
 **Architecture Pattern:** Next.js full-stack with NextAuth and Drizzle
 
 ## Overview

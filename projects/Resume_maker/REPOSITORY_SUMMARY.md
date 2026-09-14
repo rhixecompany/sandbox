@@ -2,8 +2,8 @@
 
 # Resume_maker — Job Documents Generator
 
-**Generated:** 2026-07-25  
-**Status:** Active  
+**Generated:** 2026-07-25
+**Status:** Active
 **Path:** `projects/Resume_maker/`
 
 ---
@@ -153,7 +153,7 @@ interface ResumeData {
 
 ## CI/CD
 
-**Workflow:** `.github/workflows/resume-maker-ci.yml`  
+**Workflow:** `.github/workflows/resume-maker-ci.yml`
 **Jobs:** TypeScript check → ESLint → Build test
 
 ---

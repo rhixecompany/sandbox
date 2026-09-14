@@ -303,8 +303,8 @@ Scans domain infrastructure scripts.
 
 ## Report Generated
 
-**Date**: 2026-05-27  
-**Total Scripts**: 177  
-**Total Size**: 0.46 MB  
-**Total Lines**: 14,839  
+**Date**: 2026-05-27
+**Total Scripts**: 177
+**Total Size**: 0.46 MB
+**Total Lines**: 14,839
 **Status**: ✓ Complete inventory with full categorization and recommendations

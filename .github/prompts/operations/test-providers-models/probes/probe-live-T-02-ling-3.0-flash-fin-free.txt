@@ -1,5 +1,5 @@
 Warning: Unknown toolsets: weather
-Query: Task: confirm identity; solve 14*23+100; state 
+Query: Task: confirm identity; solve 14*23+100; state
 vision/reasoning/context/max-output (~256K/32K est); note errors.
 [2;3mInitializing agent...[0m
 [38;2;255;191;0m────────────────────────────────────────[0m

@@ -17,5 +17,7 @@ references:
   security-evidence: .hermes/specs/fastmcp-remediation-spec.md (1276 B) + .hermes/plans/fastmcp-remediation-plan.md (1178 B) + skills/fastmcp-security.md (1402 B); same pattern for httpx2 (1256/1171/1389 B) and oauth (1264/1168/1390 B)
   dependency-fix: requirements.txt (6012 B verified — original pinned versions 82-85 fastmcp==2.10.6 / 113-115 httpx2==2.7.0 preserved; real remediation comments inserted; no synthetic version claims)
 ---
+
 # Subgoal Reference Artifacts (verified real — not synthetic placeholders)
+
 All referenced files verified by real file system checks (os.path.exists + os.path.getsize + content read verification). No synthetic placeholders; no fabricated session IDs; integrity assertions preserved; DRY cross-references enforced; verification before claim.

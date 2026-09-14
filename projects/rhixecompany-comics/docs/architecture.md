@@ -1,6 +1,6 @@
 # Architecture Decision Record
 
-> Consolidation status for rhixecompany-comics  
+> Consolidation status for rhixecompany-comics
 > Sources: comicwise, Django-Scrapy-Selenium, selenium_webdriver
 
 ## Current Architecture

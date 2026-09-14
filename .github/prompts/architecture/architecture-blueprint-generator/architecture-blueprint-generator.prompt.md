@@ -203,5 +203,3 @@ Prompt-library tooling (see `.enhance/`):
 Same-family prompts:
 
 - [`readme-blueprint-generator.prompt.md`](readme-blueprint-generator.prompt.md)
-
-

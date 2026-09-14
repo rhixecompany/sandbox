@@ -2,8 +2,8 @@
 
 ## Project: Bash — Bun/TypeScript Automation Toolkit
 
-**Generated:** 2026-06-25  
-**Project Type:** Bun/TypeScript CLI Automation Toolkit  
+**Generated:** 2026-06-25
+**Project Type:** Bun/TypeScript CLI Automation Toolkit
 **Auto-detected:** Yes (Bun/TypeScript project — `bun.lock`, `tsconfig.json`, `package.json`, `.lintstagedrc.ts`, `eslint.config.mts`)
 
 ---

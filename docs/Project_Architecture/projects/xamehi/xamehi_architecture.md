@@ -1,9 +1,9 @@
 # xamehi — System Architecture Blueprint
 
-> **Project:** xamehi — Crypto Currency Dashboard  
-> **Type:** Hybrid Dual-Backend Web Application  
-> **Status:** Legacy — Active Development  
-> **Created:** 2024-07-24  
+> **Project:** xamehi — Crypto Currency Dashboard
+> **Type:** Hybrid Dual-Backend Web Application
+> **Status:** Legacy — Active Development
+> **Created:** 2024-07-24
 > **Author:** Hermes Agent — Architecture Analysis
 
 ---
@@ -267,18 +267,18 @@ sequenceDiagram
 graph TD
     DNS[DNS / Domain] --> CDN[CDN / Static Hosting]
     CDN --> SPA[React SPA - Static Files]
-    
+
     SPA --> ExpressAPI[Express.js API - Node.js Host]
     ExpressAPI --> RapidAPI[RapidAPI External Services]
-    
+
     Django[Django Backend - Python Host] --> Admin[Django Admin Interface]
     Django --> DB[(SQLite Database)]
-    
+
     subgraph "Build Pipeline"
         Build[bun run build] --> Static[build/ directory]
         Collect[python manage.py collectstatic] --> DjangoStatic[Django Static Files]
     end
-    
+
     style SPA fill:#61DAFB,stroke:#333,color:#000
     style ExpressAPI fill:#68A063,stroke:#333,color:#fff
     style Django fill:#092E20,stroke:#333,color:#fff

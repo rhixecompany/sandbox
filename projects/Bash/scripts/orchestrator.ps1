@@ -73,16 +73,16 @@ function Run-Phase {
         [string]$ScriptName,
         [string]$Description
     )
-    
+
     Write-Phase "Phase ${PhaseNum}: $Description"
-    
+
     $scriptPath = Join-Path $SCRIPT_DIR $ScriptName
-    
+
     if (-not (Test-Path $scriptPath)) {
         Write-Error "Script not found: $scriptPath"
         return $false
     }
-    
+
     try {
         if ($scriptPath -match "\.sh$") {
             # Try bash, but fall back to PowerShell equivalent
@@ -113,29 +113,29 @@ function Run-Phase {
 
 function Run-AllPhases {
     Write-Header "Running All Phases (1-5)"
-    
+
     $results = @()
-    
+
     if (-not $SkipPhase1) {
         $results += @{ Phase = 1; Success = (Run-Phase 1 "phase-1-deep-triage.ps1" "Deep Triage") }
     }
-    
+
     if (-not $SkipPhase2) {
         $results += @{ Phase = 2; Success = (Run-Phase 2 "phase-2-light-inventory.ps1" "Light Inventory") }
     }
-    
+
     if (-not $SkipPhase3) {
         $results += @{ Phase = 3; Success = (Run-Phase 3 "phase-3-triage.ps1" "Consolidation") }
     }
-    
+
     if (-not $SkipPhase4) {
         $results += @{ Phase = 4; Success = (Run-Phase 4 "phase-4-debug.ps1" "Batch Executor") }
     }
-    
+
     if (-not $SkipPhase5) {
         $results += @{ Phase = 5; Success = (Run-Phase 5 "phase-5-remediation.ps1" "Final Summary") }
     }
-    
+
     Write-Header "Audit Summary"
     $results | ForEach-Object {
         $status = if ($_.Success) { "âœ“ PASS" } else { "âœ— FAIL" }
@@ -185,7 +185,7 @@ function Show-Outputs {
 
 function Clean-Logs {
     Write-Header "Cleaning Logs"
-    
+
     $confirm = Read-Host "Delete all batch logs and audit findings? (yes/no)"
     if ($confirm -eq "yes") {
         Remove-Item $BATCH_LOGS -Recurse -Force -ErrorAction SilentlyContinue
@@ -213,7 +213,7 @@ if ($AutoRun) {
     do {
         Show-Menu
         $choice = Read-Host "Select option"
-        
+
         switch ($choice) {
             "1" { Run-AllPhases }
             "2" { Run-Phase 1 "phase-1-deep-triage.sh" "Deep Triage" }
@@ -221,7 +221,7 @@ if ($AutoRun) {
             "4" { Run-Phase 3 "phase-3-triage.ps1" "Consolidation" }
             "5" { Run-Phase 4 "phase-4-debug.ps1" "Batch Executor" }
             "6" { Run-Phase 5 "phase-5-remediation.ps1" "Final Summary" }
-            "7" { 
+            "7" {
                 Write-Phase "Running Phases 3-5 (skipping diagnostics)"
                 Run-Phase 3 "phase-3-triage.ps1" "Consolidation"
                 Run-Phase 4 "phase-4-debug.ps1" "Batch Executor"
@@ -235,7 +235,7 @@ if ($AutoRun) {
             }
             default { Write-Error "Invalid option" }
         }
-        
+
         if ($choice -ne "0") {
             Read-Host "Press Enter to continue"
         }

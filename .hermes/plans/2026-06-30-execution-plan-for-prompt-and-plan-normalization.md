@@ -43,4 +43,3 @@ model: default
 ## Linked Specs
 
 - ../specs/comprehensive-goals-implementation-spec.md
-

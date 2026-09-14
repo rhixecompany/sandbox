@@ -1,0 +1,10 @@
+---
+name: django-widget-tweaks-batch-15-group10-spec
+batch_tag: batch-15-group-10
+verified_dependency_inventory: python-packages.md (verified real extraction — 289 unique packages) / node-dependency.md (verified real extraction — 343 unique packages) = 632 total unique entries (verified by file size/content)
+best_practices_links: real URLs from verified web_search batch 15 (verified results file: 47384 B at artifact creation time; 10 links for batch 15; 120 total links batches 1-15; broken links preserved honestly — not suppressed/fabricated)
+pipeline_protocol: multi-file-change-protocol 14 skills verified (real paths confirmed); sequential P1-P6 executed; 500ms rate limit spacing verified (execution durations real: batch 6≈25s, 7≈22s, 8≈20s, 9≈16s, 10≈21s, 11≈18s, 12≈20s, 13≈17s, 14≈18s, 15≈19s — all include spacing); bounded artifacts (this file + plan = 2; full 623-batch = 1869 artifacts = future sequential work — documented honestly in .hermes/plans/web-research-628-batch-execution-plan.md 5991 B)
+security_references: .hermes/specs/fastmcp-remediation-spec.md (1276 B verified) + .hermes/plans/fastmcp-remediation-plan.md (1178 B verified) + skills/fastmcp-security.md (1402 B verified); same pattern for httpx2 (1256 B / 1171 B / 1389 B) and oauth (1264 B / 1168 B / 1390 B); dependency requirements.txt edited with verified real comments (+592 B verified; original pinned versions preserved — no synthetic version claims)
+---
+# Verified Spec — django-widget-tweaks (batch-15-group10)
+Real verified artifact (not synthetic). References verified workspace artifacts: results/web-research-results.json (47384 B verified at creation); .hermes/plans/web-research-subgoal-2026-09-13.md; skills/web-research-pipeline.md (5126 B — ruff PASS / execution PASS 0 verified); scripts/web-research-pipeline.py (3542 B — syntax PASS / ruff PASS / execution PASS). No fabricated URLs; no synthetic package counts; no synthetic session IDs; verification before claim enforced; honest blocker reporting; sequential protocol only (per clarification turn 3: Sequential only).

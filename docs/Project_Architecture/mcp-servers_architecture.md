@@ -1,7 +1,7 @@
 # mcp-servers Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Multi-Language (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** Multi-Language (MCP)
 **Architecture Pattern:** MCP Protocol reference implementations
 
 ## Overview

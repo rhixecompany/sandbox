@@ -1,0 +1,6 @@
+{
+  "env_files": 76,
+  "config_files": 29,
+  "output": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\reports\\2026-09-05-hermes-ecosystem-reliability\\env-config-inventory.json",
+  "secret_values_emitted": false
+}

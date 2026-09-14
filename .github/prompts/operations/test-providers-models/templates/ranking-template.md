@@ -12,4 +12,3 @@
 - Context window (0-20)
 - Max output (0-15)
 - Instruction following (0-15)
-

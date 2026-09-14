@@ -6,6 +6,7 @@
 Hermes memory store — canonical content in profile directory. See `/c/Users/Alexa/AppData/Local/hermes/profiles/default/MEMORY.md`.
 
 ## Session Memory (Verified 2026-09-14)
+
 - 28 skills verified/referenced.
 - .env protected (5274 B CWD / 30269 B hermes — unchanged, never exposed).
 - 26 vulnerability findings preserved; 41 parsing errors preserved; .eslintrc.json 69 B verified.

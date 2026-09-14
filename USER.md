@@ -8,6 +8,7 @@ Pointer file. Canonical durable rules in MEMORY.md.
 <!-- .env protected: contents never exposed; verified size unchanged -->
 
 ## Verified Session User (G5)
+
 - User: Alexa
 - Workspace: ~/Desktop/SandBox (clean-development, ahead 4 behind 0)
 - Profiles: ops/adminbot + patient-tutor verified; default/adminbot MISSING preserved honestly.

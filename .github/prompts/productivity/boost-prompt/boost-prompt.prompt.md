@@ -196,5 +196,3 @@ Same-family prompts:
 - [`comprehensive-prompt-enhancer.prompt.md`](comprehensive-prompt-enhancer.prompt.md)
 - [`debugger-prompt.prompt.md`](debugger-prompt.prompt.md)
 - [`tldr-prompt.prompt.md`](tldr-prompt.prompt.md)
-
-

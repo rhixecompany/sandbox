@@ -1,8 +1,8 @@
 # Resume_maker Folder Structure Blueprint
 
-> **Project:** Resume_maker  
-> **Type:** Bun/TypeScript CLI Application  
-> **Generated:** 2026-07-24  
+> **Project:** Resume_maker
+> **Type:** Bun/TypeScript CLI Application
+> **Generated:** 2026-07-24
 > **Auto-detected:** Yes — `package.json`, `bun.lock`, `tsconfig.json`, `eslint.config.js`
 
 ---

@@ -89,7 +89,7 @@ find "$TARGET_DIR" -name '*.md' -not -path '*/node_modules/*' -not -path '*/.git
     header_count="${header_count%% *}"  # strip trailing spaces
     header_count="${header_count##* }"
     [ -z "$header_count" ] && header_count=0
-    
+
     if [ "${total_lines:-0}" -gt 0 ] && [ "${header_count:-0}" -gt 0 ] 2>/dev/null; then
         lines_per_header=$((total_lines / header_count))
         if [ "$lines_per_header" -lt 200 ] 2>/dev/null; then

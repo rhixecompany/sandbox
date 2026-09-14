@@ -1,8 +1,8 @@
 # SandBox Workspace — Folder Structure Blueprint
 
-> **Generated:** 2026-07-28  
-> **Workspace:** `C:\Users\Alexa\Desktop\SandBox`  
-> **Scope:** Root-level monorepo + 17 sub-projects under `projects/`  
+> **Generated:** 2026-07-28
+> **Workspace:** `C:\Users\Alexa\Desktop\SandBox`
+> **Scope:** Root-level monorepo + 17 sub-projects under `projects/`
 > **Organization:** Monorepo — root-level automation/config + isolated per-project directories
 
 ---

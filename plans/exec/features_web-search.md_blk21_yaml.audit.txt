@@ -1,0 +1,10 @@
+# SKIPPED — destructive command audit
+# Source: features/web-search.md
+# Block index: 21
+# Language: yaml
+# Dangerous pattern: format
+---
+search:
+  formats:
+    - html
+    - json

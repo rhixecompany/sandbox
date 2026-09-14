@@ -1,7 +1,7 @@
 # Orchestrator-Unified.ps1 — Debug & Fix Report
 
-**Date:** 2026-05-28  
-**Mode:** Debug & Fix All Issues  
+**Date:** 2026-05-28
+**Mode:** Debug & Fix All Issues
 **Status:** ✓ RESOLVED
 
 ---
@@ -10,7 +10,7 @@
 
 ### ISSUE #1: Auto Pipeline Timeout on upgrade.ps1
 
-**Symptom:** Script hung at "Upgrade packages" step for 180+ seconds  
+**Symptom:** Script hung at "Upgrade packages" step for 180+ seconds
 **Root Cause:**
 
 - `upgrade.ps1` → `bunx tsx src/upgrade.ts` → `winget upgrade --all`
@@ -31,7 +31,7 @@
 
 ### ISSUE #2: Job Error Detection Logic Broken
 
-**Symptom:** Script appeared to fail but actually succeeded (job state incorrect)  
+**Symptom:** Script appeared to fail but actually succeeded (job state incorrect)
 **Root Cause (line 365):**
 
 ```powershell
@@ -92,7 +92,7 @@ if ($exitCode -eq 'Completed') {
 
 ### ISSUE #4: Script Categorization Overcounting
 
-**Symptom:** Shows 180 scripts in "Core" category (expected: 64)  
+**Symptom:** Shows 180 scripts in "Core" category (expected: 64)
 **Root Cause:**
 
 - Search paths include: `'src'`, `'scripts'`, `.` (root)

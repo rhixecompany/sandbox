@@ -1,0 +1,34 @@
+$ bun run lint && bun run format:check && bun run markdownlint && bun run spellcheck
+$ eslint . --no-error-on-unmatched-pattern
+$ prettier --check --ignore-unknown .
+Checking formatting...
+[[33mwarn[39m] judge_results/hooks_audit.json
+[[33mwarn[39m] judge_results/hooks_audit.md
+[[33mwarn[39m] judge_results/hooks-judge_self_score.json
+[[33mwarn[39m] judge_results/hooks-judge_self_score.md
+[[33mwarn[39m] judge_results/plans_audit.json
+[[33mwarn[39m] judge_results/plans_audit.md
+[[33mwarn[39m] judge_results/plans-judge_self_score.json
+[[33mwarn[39m] judge_results/plans-judge_self_score.md
+[[33mwarn[39m] judge_results/plugins_audit.json
+[[33mwarn[39m] judge_results/plugins_audit.md
+[[33mwarn[39m] judge_results/plugins-judge_self_score.json
+[[33mwarn[39m] judge_results/plugins-judge_self_score.md
+[[33mwarn[39m] judge_results/prompts_audit.json
+[[33mwarn[39m] judge_results/prompts_audit.md
+[[33mwarn[39m] judge_results/prompts-judge_self_score.json
+[[33mwarn[39m] judge_results/prompts-judge_self_score.md
+[[33mwarn[39m] judge_results/scripts_audit.json
+[[33mwarn[39m] judge_results/scripts_audit.md
+[[33mwarn[39m] judge_results/scripts-judge_self_score.json
+[[33mwarn[39m] judge_results/scripts-judge_self_score.md
+[[33mwarn[39m] judge_results/skill_judge_self.json
+[[33mwarn[39m] judge_results/skill_judge_self.md
+[[33mwarn[39m] judge_results/specs_audit_smoke.json
+[[33mwarn[39m] judge_results/specs_audit_smoke.md
+[[33mwarn[39m] judge_results/specs-judge_self_score.json
+[[33mwarn[39m] judge_results/specs-judge_self_score.md
+[[33mwarn[39m] SESSION_REPORT.md
+[[33mwarn[39m] Code style issues found in 27 files. Run Prettier with --write to fix.
+error: script "format:check" exited with code 1
+error: script "check" exited with code 1

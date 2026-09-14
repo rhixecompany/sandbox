@@ -1,7 +1,7 @@
 # Python-projects Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Python (Scripts)  
+**Generated:** 2026-07-28
+**Project Type:** Python (Scripts)
 **Architecture Pattern:** Educational Python utility scripts
 
 ## Overview

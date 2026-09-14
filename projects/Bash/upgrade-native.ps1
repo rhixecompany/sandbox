@@ -270,19 +270,19 @@ function Main {
     Write-DebugMsg "Operating System: $([System.Environment]::OSVersion.VersionString)"
     Write-DebugMsg "PowerShell: $($PSVersionTable.PSVersion)"
     Write-DebugMsg "User: $env:USERNAME"
-    
+
     # Track success status
     $anySuccess = $false
-    
+
     $wingetUpdateResult = Invoke-WingetUpdate -Skip:$SkipWinget
     if ($wingetUpdateResult.Success) { $anySuccess = $true }
-    
+
     $wingetUpgradeResult = Invoke-WingetUpgrade -Skip:$SkipWinget
     if ($wingetUpgradeResult.Success) { $anySuccess = $true }
-    
+
     $chocoUpgradeResult = Invoke-ChocoUpgrade -Skip:$SkipChoco
     if ($chocoUpgradeResult.Success) { $anySuccess = $true }
-    
+
     Show-Summary
 
     # Clear old logs - keep last 10

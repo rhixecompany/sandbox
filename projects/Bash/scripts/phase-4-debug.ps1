@@ -35,10 +35,10 @@ function Get-GitAnalysis {
 
 function Get-DependencyAnalysis {
     param([string]$RepoPath)
-    
+
     $detectedManagers = @()
     $totalPackages = 0
-    
+
     if (Test-Path (Join-Path $RepoPath "package.json")) {
         $detectedManagers += "npm"
         try {
@@ -49,7 +49,7 @@ function Get-DependencyAnalysis {
             $totalPackages += $deps
         } catch { }
     }
-    
+
     if (Test-Path (Join-Path $RepoPath "requirements.txt")) {
         $detectedManagers += "pip"
         try {
@@ -57,15 +57,15 @@ function Get-DependencyAnalysis {
             $totalPackages += $reqs
         } catch { }
     }
-    
+
     if (Test-Path (Join-Path $RepoPath "pyproject.toml")) {
         $detectedManagers += "poetry"
     }
-    
+
     if (Test-Path (Join-Path $RepoPath "Cargo.toml")) {
         $detectedManagers += "cargo"
     }
-    
+
     return @{
         detected_managers = $detectedManagers
         total_packages = $totalPackages
@@ -75,14 +75,14 @@ function Get-DependencyAnalysis {
 
 function Get-CodeQualityAnalysis {
     param([string]$RepoPath)
-    
+
     $brokenImports = 0
     $missingFiles = 0
     $deadCodeCount = 0
-    
+
     try {
         $pyFiles = Get-ChildItem -Path $RepoPath -Filter "*.py" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch "node_modules|venv|\.venv|__pycache__" }
-        
+
         foreach ($file in $pyFiles) {
             try {
                 $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
@@ -92,7 +92,7 @@ function Get-CodeQualityAnalysis {
             } catch { }
         }
     } catch { }
-    
+
     return @{
         broken_imports = $brokenImports
         missing_files = $missingFiles
@@ -102,25 +102,25 @@ function Get-CodeQualityAnalysis {
 
 function Get-SecurityAnalysis {
     param([string]$RepoPath)
-    
+
     $secretsFound = 0
     $exposedEnvVars = 0
     $hardcodedCredentials = 0
-    
+
     try {
         $sourceFiles = Get-ChildItem -Path $RepoPath -Include "*.py", "*.js", "*.ts", "*.java", "*.go" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch "node_modules|venv|\.venv|dist|build" }
-        
+
         foreach ($file in $sourceFiles) {
             try {
                 $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
-                
+
                 if ($content -match "password") { $secretsFound++ }
                 if ($content -match "env") { $exposedEnvVars++ }
                 if ($content -match "username") { $hardcodedCredentials++ }
             } catch { }
         }
     } catch { }
-    
+
     return @{
         secrets_found = $secretsFound
         exposed_env_vars = $exposedEnvVars
@@ -130,15 +130,15 @@ function Get-SecurityAnalysis {
 
 function Get-DocumentationAnalysis {
     param([string]$RepoPath)
-    
+
     $hasReadme = Test-Path (Join-Path $RepoPath "README.md")
     $hasDocs = Test-Path (Join-Path $RepoPath "docs")
     $hasChangelog = Test-Path (Join-Path $RepoPath "CHANGELOG.md")
-    
+
     $completenessPercent = 0
     $foundSections = 0
     $totalSections = 5
-    
+
     if ($hasReadme) {
         try {
             $readmeContent = Get-Content (Join-Path $RepoPath "README.md") -Raw -ErrorAction SilentlyContinue
@@ -149,14 +149,14 @@ function Get-DocumentationAnalysis {
             if ($readmeContent -match "API") { $foundSections++ }
         } catch { }
     }
-    
+
     $completenessPercent = [Math]::Floor(($foundSections / $totalSections) * 100)
-    
+
     $missingSections = @()
     if (-not $hasReadme) { $missingSections += "README.md" }
     if (-not $hasDocs) { $missingSections += "docs/" }
     if (-not $hasChangelog) { $missingSections += "CHANGELOG.md" }
-    
+
     return @{
         has_readme = $hasReadme
         has_docs = $hasDocs
@@ -205,35 +205,35 @@ $debugResults = @()
 foreach ($repo in $clonedRepos) {
     $repoName = $repo.name
     $repoPath = $repo.target_path
-    
+
     if (-not (Test-Path $repoPath)) {
         Write-Warn "Repository path not found: $repoPath. Skipping."
         continue
     }
-    
+
     $isPriority = $priorityRepos -contains $repoName
     $priority = if ($isPriority) { "HIGH" } else { "NORMAL" }
-    
+
     Write-Phase "[$priority] Analyzing: $repoName"
-    
+
     try {
         $gitAnalysis = Get-GitAnalysis -RepoPath $repoPath
         Write-Info "  Git: $($gitAnalysis.total_commits) commits, Last: $($gitAnalysis.days_since_last_commit) days ago"
-        
+
         $depAnalysis = Get-DependencyAnalysis -RepoPath $repoPath
         Write-Info "  Dependencies: $($depAnalysis.total_packages) packages"
-        
+
         $codeAnalysis = Get-CodeQualityAnalysis -RepoPath $repoPath
         Write-Info "  Code: $($codeAnalysis.broken_imports) broken imports"
-        
+
         $securityAnalysis = Get-SecurityAnalysis -RepoPath $repoPath
         if ($securityAnalysis.secrets_found -gt 0) {
             Write-Err "  SECURITY: $($securityAnalysis.secrets_found) potential issues!"
         }
-        
+
         $docAnalysis = Get-DocumentationAnalysis -RepoPath $repoPath
         Write-Info "  Docs: $($docAnalysis.completeness_percent)% complete"
-        
+
         $debugResult = @{
             name = $repoName
             path = $repoPath
@@ -244,9 +244,9 @@ foreach ($repo in $clonedRepos) {
             security_analysis = $securityAnalysis
             documentation_analysis = $docAnalysis
         }
-        
+
         $debugResults += $debugResult
-        
+
     } catch {
         Write-Warn "Error analyzing $repoName : $_"
     }
@@ -291,7 +291,7 @@ foreach ($repo in $debugResults | Where-Object { $_.priority -eq "HIGH" }) {
     $completenessPercent = $repo.documentation_analysis.completeness_percent
     $hasReadme = $repo.documentation_analysis.has_readme
     $missingSections = $repo.documentation_analysis.missing_sections -join ", "
-    
+
     $markdownContent += "### $repoName`n`n"
     $markdownContent += "**Path**: ``$repoPath``  `n`n"
     $markdownContent += "#### Git Analysis`n"

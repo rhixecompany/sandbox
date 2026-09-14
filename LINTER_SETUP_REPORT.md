@@ -10,36 +10,36 @@ All 13 linters for known file types installed, configured, and verified. Real li
 
 ## Linters Installed & Configured
 
-| # | File Type | Linter | Version | Status | Config File |
-|---|-----------|--------|---------|--------|-------------|
-| 1 | Python (`.py`) | **Ruff** | 0.15.10 | ✅ Working | `.ruff.toml` |
-| 2 | Python type-check | **Pyright** | 1.1.411 | ✅ Working | `pyrightconfig.json` |
-| 3 | Python test | **Pytest** | 9.1.1 | ✅ Working | `pyproject.toml` |
-| 4 | TypeScript/JS | **ESLint** | v10.7.0 | ✅ Working | `.eslintrc.json` |
-| 5 | TypeScript compile | **TSC** | 6.0.2 | ✅ Working | `tsconfig.json` |
-| 6 | Formatting (all) | **Prettier** | 3.9.6 | ✅ Working | `.prettierrc` |
-| 7 | Markdown (`.md`) | **markdownlint-cli2** | v0.19.1 | ✅ Working | `.markdownlint-cli2.jsonc` |
-| 8 | Markdown (legacy) | **markdownlint** | v0.39.0 | ✅ Working | `.markdownlint.jsonc` |
-| 9 | Spell check | **cspell** | 10.0.1 | ✅ Working | `.cspell.json` |
-| 10 | YAML (`.yaml/.yml`) | **yamllint** | 1.38.0 | ✅ Working | `.yamllint.yaml` |
-| 11 | Shell (`.sh/.bash`) | **ShellCheck** | 0.11.0 | ✅ Working | (default) |
-| 12 | TOML (`.toml`) | **Ruff (TOML)** | 0.15.10 | ✅ Working | `.ruff.toml` |
-| 13 | Bun config | **Bun** | 1.3.14 | ✅ Working | `bunfig.toml` |
+| #   | File Type           | Linter                | Version | Status     | Config File                |
+| --- | ------------------- | --------------------- | ------- | ---------- | -------------------------- |
+| 1   | Python (`.py`)      | **Ruff**              | 0.15.10 | ✅ Working | `.ruff.toml`               |
+| 2   | Python type-check   | **Pyright**           | 1.1.411 | ✅ Working | `pyrightconfig.json`       |
+| 3   | Python test         | **Pytest**            | 9.1.1   | ✅ Working | `pyproject.toml`           |
+| 4   | TypeScript/JS       | **ESLint**            | v10.7.0 | ✅ Working | `.eslintrc.json`           |
+| 5   | TypeScript compile  | **TSC**               | 6.0.2   | ✅ Working | `tsconfig.json`            |
+| 6   | Formatting (all)    | **Prettier**          | 3.9.6   | ✅ Working | `.prettierrc`              |
+| 7   | Markdown (`.md`)    | **markdownlint-cli2** | v0.19.1 | ✅ Working | `.markdownlint-cli2.jsonc` |
+| 8   | Markdown (legacy)   | **markdownlint**      | v0.39.0 | ✅ Working | `.markdownlint.jsonc`      |
+| 9   | Spell check         | **cspell**            | 10.0.1  | ✅ Working | `.cspell.json`             |
+| 10  | YAML (`.yaml/.yml`) | **yamllint**          | 1.38.0  | ✅ Working | `.yamllint.yaml`           |
+| 11  | Shell (`.sh/.bash`) | **ShellCheck**        | 0.11.0  | ✅ Working | (default)                  |
+| 12  | TOML (`.toml`)      | **Ruff (TOML)**       | 0.15.10 | ✅ Working | `.ruff.toml`               |
+| 13  | Bun config          | **Bun**               | 1.3.14  | ✅ Working | `bunfig.toml`              |
 
 ## Configuration Files Created/Updated
 
-| File | Size | Purpose |
-|------|------|---------|
-| `.ruff.toml` | 464 B | Python linter config (line-length=120, LF, ruff selects) |
-| `pyrightconfig.json` | 383 B | Pyright config (pythonVersion=3.11, pythonPlatform=Windows) |
-| `.eslintrc.json` | 285 B | ESLint config (extends: recommended, @typescript-eslint, prettier) |
-| `tsconfig.json` | 873 B | TypeScript compiler config (ESNext, strict, bun types) |
-| `.prettierrc` | 155 B | Prettier config (semi, tabWidth=2, printWidth=120, LF) |
-| `.markdownlint-cli2.jsonc` | 748 B | markdownlint-cli2 config (MD022/032/007/031 enabled) |
-| `.markdownlint.jsonc` | 70 B | Legacy markdownlint config (preserved) |
-| `.cspell.json` | 694 B | cspell config (40+ project-specific words, node_modules ignored) |
-| `.yamllint.yaml` | 464 B | yamllint config (new-line=unix, line-length=400, excludes node_modules) |
-| `package.json` | 1836 B | Scripts: lint, format, markdownlint, spellcheck, typecheck, check |
+| File                       | Size   | Purpose                                                                 |
+| -------------------------- | ------ | ----------------------------------------------------------------------- |
+| `.ruff.toml`               | 464 B  | Python linter config (line-length=120, LF, ruff selects)                |
+| `pyrightconfig.json`       | 383 B  | Pyright config (pythonVersion=3.11, pythonPlatform=Windows)             |
+| `.eslintrc.json`           | 285 B  | ESLint config (extends: recommended, @typescript-eslint, prettier)      |
+| `tsconfig.json`            | 873 B  | TypeScript compiler config (ESNext, strict, bun types)                  |
+| `.prettierrc`              | 155 B  | Prettier config (semi, tabWidth=2, printWidth=120, LF)                  |
+| `.markdownlint-cli2.jsonc` | 748 B  | markdownlint-cli2 config (MD022/032/007/031 enabled)                    |
+| `.markdownlint.jsonc`      | 70 B   | Legacy markdownlint config (preserved)                                  |
+| `.cspell.json`             | 694 B  | cspell config (40+ project-specific words, node_modules ignored)        |
+| `.yamllint.yaml`           | 464 B  | yamllint config (new-line=unix, line-length=400, excludes node_modules) |
+| `package.json`             | 1836 B | Scripts: lint, format, markdownlint, spellcheck, typecheck, check       |
 
 ## Key Fixes Applied
 
@@ -54,12 +54,14 @@ All 13 linters for known file types installed, configured, and verified. Real li
 ## Verification Results
 
 ### ✅ Passing Linters
+
 - **ShellCheck**: No errors in `.hermes/hooks/pre-exec-validate.sh`, `01-session-logger-hook.sh`, `04-pre-exec-validate.sh`
 - **YAML lint**: No errors in `.pre-commit-config.yaml`, `.yamllint.yaml`, `.github/workflows/ci.yml`
 - **Ruff (TOML)**: `pyproject.toml` and `bunfig.toml` parse correctly
 - **Bun**: `bun --version` = 1.3.14; `bun run lint` executes; `bun run typecheck` executes
 
 ### ⚠️ Real Errors Found (NOT suppressed)
+
 - **Ruff**: `E401` (multiple imports on one line) in `scripts/.runtime_openrouter_runner.py`; `F401` (unused import `os`) in `scripts/agent_provider_matrix.py` — 5+ files need formatting
 - **ESLint**: `no-undef` errors in `.github/skills/algorithmic-art/templates/generator_template.js` (`randomSeed`, `noiseSeed`, `createCanvas` — globals not defined) — real code issue
 - **Pyright**: 1 error in `src/fix_plans.py:206:81` — `"group" is not a known attribute of "None"`
@@ -69,6 +71,7 @@ All 13 linters for known file types installed, configured, and verified. Real li
 - **cspell**: Unknown words in `bunfig.toml` (`smol`, `Turboloader`), `cliff.toml` (`endfor`) — added to `.cspell.json` words list
 
 ### 🛡️ Protected Files
+
 - **`.env`** (5274 B workspace, 30269 B Hermes): NEVER exposed in any lint output; never modified by linter; contents never shown
 - **`.git/index.lock`**: Cleared (stale lock removed)
 

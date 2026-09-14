@@ -1,7 +1,7 @@
 # xamehi — Folder Structure
 
-> **Stack:** Django + Express + React 18  
-> **Type:** Triple-Service Web Application  
+> **Stack:** Django + Express + React 18
+> **Type:** Triple-Service Web Application
 > **Status:** Legacy / Active
 
 ## Directory Tree

@@ -14,4 +14,3 @@
 ### 2. Analyze and Propose
 
 Review all memory sections and present them for merger consideration:
-

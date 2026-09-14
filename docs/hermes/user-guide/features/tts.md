@@ -138,7 +138,7 @@ tts:
   gemini:
     model: gemini-3.1-flash-tts-preview
     audio_tags: true
-  xai: 
+  xai:
     auto_speech_tags: true
 ```
 
@@ -460,7 +460,7 @@ See `agent/tts_provider.py` for the full ABC including docstrings.
 Voice messages sent on Telegram, Discord, WhatsApp, Slack, or Signal are automatically transcribed and injected as text into the conversation. The agent sees the transcript as normal text.
 
 | Provider | Quality | Cost | API Key |
-|----------|---------|------|---------| 
+|----------|---------|------|---------|
 | **Local Whisper** (default) | Good | Free | None needed |
 | **Groq Whisper API** | Good–Best | Free tier | `GROQ_API_KEY` |
 | **OpenAI Whisper API** | Good–Best | Paid | `VOICE_TOOLS_OPENAI_KEY` or `OPENAI_API_KEY` |

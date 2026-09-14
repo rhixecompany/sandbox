@@ -1,0 +1,2 @@
+Removed 3 allowlist entry/entries for: "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+Note: currently running CLI / gateway processes keep their already-registered callbacks until they restart.

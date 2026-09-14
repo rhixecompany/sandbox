@@ -1,7 +1,7 @@
 # rhixecompany-comics Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Full-Stack (Next.js + Django)  
+**Generated:** 2026-07-28
+**Project Type:** Full-Stack (Next.js + Django)
 **Architecture Pattern:** Next.js frontend + Django backend + Docker
 
 ## Overview

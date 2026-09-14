@@ -125,14 +125,14 @@ app.post("/mcp", async (req, res) => {
   const transport = new StreamableHTTPServerTransport({
     sessionIdGenerator: () => crypto.randomUUID(),
   });
-  
+
   const server = new McpServer({
     name: "copilot-studio-mcp-server",
     version: "1.0.0",
   });
-  
+
   registerDataverseTools(server);
-  
+
   await server.connect(transport);
   await transport.handleRequest(req, res);
 });
@@ -172,7 +172,7 @@ export function registerDataverseTools(server: McpServer) {
         },
         body: type === "fetchxml" ? JSON.stringify({ fetchXml: query }) : undefined,
       });
-      
+
       return { content: [{ type: "text", text: await response.text() }] };
     }
   );
@@ -204,12 +204,12 @@ export async function getAccessToken(): Promise<string> {
   if (tokenCache && tokenCache.expiresAt > Date.now() + 60000) {
     return tokenCache.token;
   }
-  
+
   // Azure Managed Identity (preferred in Azure)
   if (process.env.MSI_ENDPOINT) {
     return getManagedIdentityToken();
   }
-  
+
   // Client Credentials flow
   return getClientCredentialsToken();
 }
@@ -228,13 +228,13 @@ async function getClientCredentialsToken(): Promise<string> {
       }),
     }
   );
-  
+
   const data = await response.json();
-  tokenCache = { 
-    token: data.access_token, 
-    expiresAt: Date.now() + data.expires_in * 1000 
+  tokenCache = {
+    token: data.access_token,
+    expiresAt: Date.now() + data.expires_in * 1000
   };
-  
+
   return data.access_token;
 }
 ```

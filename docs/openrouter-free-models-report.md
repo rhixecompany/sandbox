@@ -1,7 +1,7 @@
 # OpenRouter Free Models Report
 
-Fetched: https://openrouter.ai/models?variant=free  
-Date: 2026-09-14  
+Fetched: https://openrouter.ai/models?variant=free
+Date: 2026-09-14
 Source: web_extract (full page, 20,411 chars, head+tail)
 
 ## Free Models (prompt $0/M, completion $0/M, or `:free` suffix)

@@ -1,7 +1,7 @@
 # university-libary-jsm — Folder Structure
 
-> **Stack:** Next.js 15 + Drizzle ORM + Neon  
-> **Type:** Full-Stack Library Management System  
+> **Stack:** Next.js 15 + Drizzle ORM + Neon
+> **Type:** Full-Stack Library Management System
 > **Status:** Active
 
 ## Directory Tree

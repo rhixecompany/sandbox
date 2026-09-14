@@ -17,14 +17,14 @@ class VerificationRunner:
         self.results: List[Dict] = []
         self.hermes_home = Path.home() / "AppData/Local/hermes"
         self.sandbox = Path.home() / "Desktop/SandBox"
-    
+
     def run_cmd(self, cmd: List[str], cwd: Path | None = None, timeout: int = 60) -> Tuple[int, str, str]:
         """Run command and return (exit_code, stdout, stderr)"""
         try:
             result = subprocess.run(
-                cmd, 
-                capture_output=True, 
-                text=True, 
+                cmd,
+                capture_output=True,
+                text=True,
                 timeout=timeout,
                 cwd=str(cwd) if cwd is not None else None
             )
@@ -33,21 +33,21 @@ class VerificationRunner:
             return -1, "", f"Timeout after {timeout}s"
         except Exception as e:
             return -1, "", str(e)
-    
-    def check(self, name: str, cmd: List[str], expected_code: int = 0, 
+
+    def check(self, name: str, cmd: List[str], expected_code: int = 0,
               cwd: Path | None = None, timeout: int = 60, contains: str | None = None) -> bool:
         """Run a verification check"""
         print(f"\n{'='*60}")
         print(f"GATE: {name}")
         print(f"CMD: {' '.join(cmd)}")
         print(f"{'='*60}")
-        
+
         code, stdout, stderr = self.run_cmd(cmd, cwd, timeout)
-        
+
         passed = code == expected_code
         if contains and passed:
             passed = contains in stdout
-        
+
         result = {
             "gate": name,
             "command": " ".join(cmd),
@@ -59,16 +59,16 @@ class VerificationRunner:
             "contains_check": contains
         }
         self.results.append(result)
-        
+
         status = "✅ PASS" if passed else "❌ FAIL"
         print(f"{status} (exit={code}, expected={expected_code})")
         if stdout:
             print(f"STDOUT: {stdout[:300]}")
         if stderr and not passed:
             print(f"STDERR: {stderr[:300]}")
-        
+
         return passed
-    
+
     def check_file(self, name: str, filepath: Path) -> bool:
         """Check if file exists"""
         exists = filepath.exists()
@@ -78,7 +78,7 @@ class VerificationRunner:
         print(f"FILE: {filepath}")
         print(f"{'='*60}")
         print(f"{status}")
-        
+
         result = {
             "gate": name,
             "command": f"file_exists({filepath})",
@@ -91,25 +91,25 @@ class VerificationRunner:
         }
         self.results.append(result)
         return exists
-    
+
     def run_all(self) -> bool:
         """Run all verification gates"""
         print("🚀 Starting Full Implementation Verification")
         print(f"Hermes Home: {self.hermes_home}")
         print(f"SandBox: {self.sandbox}")
-        
+
         all_passed = True
-        
+
         # G1: Config Valid
         all_passed &= self.check(
             "G1: Config Valid",
             ["hermes", "config", "check"],
             cwd=self.hermes_home
         )
-        
+
         # G2: MCP Servers (test key servers)
         mcp_servers = [
-            "github", "filesystem", "playwright", "fetch", 
+            "github", "filesystem", "playwright", "fetch",
             "neon", "mcp-docker", "memory", "honcho",
             "ast-grep", "code-sandbox", "context7", "sequential-thinking"
         ]
@@ -120,7 +120,7 @@ class VerificationRunner:
                 cwd=self.hermes_home,
                 timeout=30
             )
-        
+
         # G3: Skills Load (key skills) - verify skill files exist and have valid frontmatter
         key_skills = [
             ("subagent-driven-development", "software-development/subagent-driven-development"),
@@ -135,7 +135,7 @@ class VerificationRunner:
         for skill_name, skill_subpath in key_skills:
             skill_file = skills_dir / skill_subpath / "SKILL.md"
             all_passed &= self.check_file(f"G3: Skill {skill_name} exists", skill_file)
-        
+
         # G4: Skill Quality - would need skill-judge skill
         # G5: Profile Sync
         verify_sync = self.hermes_home / "scripts" / "verify_sync.py"
@@ -150,13 +150,13 @@ class VerificationRunner:
             )
         else:
             all_passed &= self.check_file("G5: verify_sync.py exists", verify_sync)
-        
+
         # G6: Memories Valid - check memory files exist
         all_passed &= self.check_file("G6: SOUL.md exists", self.hermes_home / "SOUL.md")
         all_passed &= self.check_file("G6: USER.md exists (root memories)", self.hermes_home / "memories" / "USER.md")
         all_passed &= self.check_file("G6: MEMORY.md exists (root memories)", self.hermes_home / "memories" / "MEMORY.md")
         all_passed &= self.check_file("G6: SESSION_REPORT.md exists", self.sandbox / "SESSION_REPORT.md")
-        
+
         # G7: Honcho Works - check if honcho MCP tools available
         # Honcho tools are MCP tools, not CLI commands. Test via MCP.
         all_passed &= self.check(
@@ -166,10 +166,10 @@ class VerificationRunner:
             timeout=15,
             contains="Connected"
         )
-        
+
         # G8: Banking Context
         all_passed &= self.check_file("G8: Banking AGENTS.md", self.sandbox / "projects" / "Banking" / "AGENTS.md")
-        
+
         # G9: Subagent Workflow - would need to run a test task
         # G10: Full Test Suite - check if tests exist first
         tests_dir = self.sandbox / "tests"
@@ -193,26 +193,26 @@ class VerificationRunner:
                 )
             else:
                 all_passed &= self.check_file("G10: tests/ directory exists", tests_dir)
-        
+
         # Summary
         print(f"\n{'='*60}")
         print("VERIFICATION SUMMARY")
         print(f"{'='*60}")
-        
+
         passed_count = sum(1 for r in self.results if r["passed"])
         total_count = len(self.results)
-        
+
         for r in self.results:
             status = "✅" if r["passed"] else "❌"
             print(f"  {status} {r['gate']}")
-        
+
         print(f"\nTotal: {passed_count}/{total_count} passed")
-        
+
         if all_passed:
             print("\n🎉 ALL GATES PASSED!")
         else:
             print(f"\n💥 {total_count - passed_count} GATE(S) FAILED")
-        
+
         # Save results
         results_file = self.sandbox / ".hermes/plans/verification-results.json"
         results_file.parent.mkdir(parents=True, exist_ok=True)
@@ -224,9 +224,9 @@ class VerificationRunner:
                 "total": total_count,
                 "results": self.results
             }, f, indent=2)
-        
+
         print(f"\nResults saved to: {results_file}")
-        
+
         return all_passed
 
 

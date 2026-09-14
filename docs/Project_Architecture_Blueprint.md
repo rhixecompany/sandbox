@@ -1,8 +1,8 @@
 # Project Architecture Blueprint
 
-**Generated:** 2026-07-28  
-**Workspace:** `C:\Users\Alexa\Desktop\SandBox`  
-**Architecture Pattern:** Multi-Project Monorepo with Heterogeneous Stacks  
+**Generated:** 2026-07-28
+**Workspace:** `C:\Users\Alexa\Desktop\SandBox`
+**Architecture Pattern:** Multi-Project Monorepo with Heterogeneous Stacks
 **Diagram Type:** Mermaid C4 + Component + Flow Diagrams
 
 ---

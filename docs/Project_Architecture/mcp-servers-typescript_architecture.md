@@ -1,7 +1,7 @@
 # mcp-servers/typescript Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** TypeScript/Bun (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** TypeScript/Bun (MCP)
 **Architecture Pattern:** TypeScript MCP server with Bun
 
 ## Overview

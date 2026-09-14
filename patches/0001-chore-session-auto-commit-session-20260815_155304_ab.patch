@@ -136,7 +136,7 @@ index 00000000..a87c0c15
 +
 +        for entry in display_changelog:
 +            report_lines.append(f"| {entry.get('path', '')} | {entry.get('action', '')} |")
-+        
++
 +        if len(changelog) > 10:
 +            report_lines.append(f"| [+{len(changelog) - 10} more files] | Full list in <session_id>.end.json |")
 +        report_lines.append("")
@@ -177,16 +177,16 @@ index a1b73c8a..5b4656ef 100644
 --- a/.github/hooks/session_end_capture.py
 +++ b/.github/hooks/session_end_capture.py
 @@ -322,26 +322,39 @@ def build_capture(session_id: str, payload: dict, end_iso: str) -> dict:
- 
+
      cwd = json_get(payload, "cwd") or json_get(payload, "working_dir") or row.get("cwd", "")
      started_at = row.get("started_at")
 +    ended_at = row.get("ended_at")
      changelog = capture_changelog(cwd, started_at)
- 
+
      status = _resolve_status(payload)
 -    duration_raw = json_get(payload, "duration_seconds", "")
 -    turns_raw = json_get(payload, "turns", "")
-+    
++
 +    # Compute duration from session row timestamps (epoch floats)
 +    duration_seconds = None
 +    if started_at is not None and ended_at is not None:
@@ -194,13 +194,13 @@ index a1b73c8a..5b4656ef 100644
 +            duration_seconds = int(float(ended_at) - float(started_at))
 +        except (ValueError, TypeError):
 +            pass
-+    
++
 +    # Compute turns from message count / 2 (rough estimate: user+assistant pairs)
 +    turns = None
 +    msg_count = row.get("message_count")
 +    if msg_count is not None and isinstance(msg_count, int):
 +        turns = max(1, msg_count // 2)
- 
+
      return {
          "event": "session_end_capture",
          "session_id": session_id,
@@ -227,12 +227,12 @@ index 322dc9f8..d793a38e 100644
 +++ b/SESSION_REPORT.md
 @@ -1,103 +1,64 @@
  # SESSION_REPORT.md
- 
+
 -> Generated: 2026-08-12T03:15+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
 +> Generated: 2026-08-15T15:32+00:00 | cwd: `C:\Users\Alexa\Desktop\SandBox`
- 
+
  ## Last Session Summary
- 
+
 -| Field      | Value                             |
 -| ---------- | --------------------------------- |
 -| Session ID | 20260812_013142_132880            |
@@ -247,9 +247,9 @@ index 322dc9f8..d793a38e 100644
 +| When | 2026-08-15 14:57 |
 +| Model | nemotron-3-ultra-free |
 +| Source | state.db:cli |
- 
+
  ## Tools Used
- 
+
 -| Tool                                  | Calls | Purpose |
 -| ------------------------------------- | ----- | ------- |
 -| terminal                              | 709   |         |
@@ -273,9 +273,9 @@ index 322dc9f8..d793a38e 100644
 +| search_files | 6 |  |
 +| write_file | 1 |  |
 +| skill_view | 1 |  |
- 
+
  ## Skills Loaded
- 
+
 -| Skill                          | Trigger |
 -| ------------------------------ | ------- |
 -| executing-plans                | Loaded  |
@@ -296,9 +296,9 @@ index 322dc9f8..d793a38e 100644
 +| validate-memories | Loaded |
 +| execute-all-prompts | Loaded |
 +| hermes | Loaded |
- 
+
  ## Key Insights & Corrections
- 
+
 -1. Session ended status=completed duration=?s turns=?
 -2. MCP path unavailable; used local session sources.
 -3. MCP session_search oldest fallback failed: 'NoneType' object is not callable
@@ -310,25 +310,25 @@ index 322dc9f8..d793a38e 100644
 +2. MCP session_search oldest fallback failed: 'NoneType' object is not callable
 +3. State-db source: 99 messages, 51 tool calls, profile=default
 +4. Session audit performed; roll forward only verified items.
- 
+
  ## Open Items
- 
+
 -| Item           | Status  |
 -| -------------- | ------- |
 +| Item | Status |
 +| --- | --- |
  | Session replay | Pending |
- 
+
  ## Errors Resolved
- 
+
 -| Error                 | Fix                         |
 -| --------------------- | --------------------------- |
 +| Error | Fix |
 +| --- | --- |
  | Placeholder generator | Delegated to full generator |
- 
+
  ## Session Changelog
- 
+
 -| File                                                          | Action                                |
 -| ------------------------------------------------------------- | ------------------------------------- |
 -| 20260812_013142_132880                                        | Selected as latest MCP session source |
@@ -368,6 +368,5 @@ index 322dc9f8..d793a38e 100644
 +| 20260815_155304_ab36b9 | Selected as latest MCP session source |
 +| C:\Users\Alexa\Desktop\SandBox | Session working directory |
 +
--- 
+--
 2.55.0.windows.3
-

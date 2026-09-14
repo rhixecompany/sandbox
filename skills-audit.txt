@@ -4,11 +4,11 @@ Auditing 29 skill(s)...
 Scan: evm (official/blockchain\evm/community)  Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: one-three-one-rule (official/communication\one-three-one-rule/community) 
+Scan: one-three-one-rule (official/communication\one-three-one-rule/community)
 Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: baoyu-article-illustrator 
+Scan: baoyu-article-illustrator
 (official/creative\baoyu-article-illustrator/community)  Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
@@ -18,14 +18,14 @@ Decision: ALLOWED — Allowed (community source, safe verdict)
 Scan: blender-mcp (official/creative\blender-mcp/community)  Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: creative-ideation (official/creative\creative-ideation/community)  
+Scan: creative-ideation (official/creative\creative-ideation/community)
 Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Scan: pixel-art (official/creative\pixel-art/community)  Verdict: SAFE
   MEDIUM   execution      ATTRIBUTION.md:31              "- `ffmpeg` invocation
 switched from `os.system` to `subproce"
-  MEDIUM   supply_chain   SKILL.md:202                   "- Pillow (`pip 
+  MEDIUM   supply_chain   SKILL.md:202                   "- Pillow (`pip
 install Pillow`)"
   MEDIUM   execution      scripts\pixel_art_video.py:297 "subprocess.run("
   MEDIUM   execution      scripts\pixel_art_video.py:309 "subprocess.run("
@@ -36,22 +36,22 @@ Scan: pokemon-player (official/gaming\pokemon-player/community)  Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Scan: neuroskill-bci (official/health\neuroskill-bci/community)  Verdict: SAFE
-  MEDIUM   network        references\api.md:28           "curl -s -X POST 
+  MEDIUM   network        references\api.md:28           "curl -s -X POST
 http://127.0.0.1:8375/ \"
-  MEDIUM   network        references\api.md:58           "Connect to 
+  MEDIUM   network        references\api.md:58           "Connect to
 `ws://127.0.0.1:8375/` to receive real-time event"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Scan: outlines (official/mlops\inference\outlines/community)  Verdict: SAFE
   MEDIUM   supply_chain   SKILL.md:44                    "pip install outlines"
-  MEDIUM   supply_chain   SKILL.md:47                    "pip install outlines 
+  MEDIUM   supply_chain   SKILL.md:47                    "pip install outlines
 transformers  # Hugging Face models"
-  MEDIUM   supply_chain   SKILL.md:48                    "pip install outlines 
+  MEDIUM   supply_chain   SKILL.md:48                    "pip install outlines
 llama-cpp-python  # llama.cpp"
-  MEDIUM   supply_chain   SKILL.md:49                    "pip install outlines 
+  MEDIUM   supply_chain   SKILL.md:49                    "pip install outlines
 vllm  # vLLM for high-throughput"
-  MEDIUM   supply_chain   references\backends.md:558     "RUN pip install 
+  MEDIUM   supply_chain   references\backends.md:558     "RUN pip install
 outlines"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
@@ -59,216 +59,215 @@ Decision: ALLOWED — Allowed (community source, safe verdict)
 Scan: obliteratus (official/mlops\obliteratus/community)  Verdict: SAFE
   MEDIUM   supply_chain   SKILL.md:56                    "pip install -e ."
   MEDIUM   supply_chain   SKILL.md:58                    "# pip install -e ".""
-  MEDIUM   supply_chain   SKILL.md:54                    "git clone 
+  MEDIUM   supply_chain   SKILL.md:54                    "git clone
 https://github.com/elder-plinius/OBLITERATUS.git"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Scan: dspy (official/mlops\research\dspy/community)  Verdict: SAFE
   MEDIUM   supply_chain   SKILL.md:36                    "pip install dspy"
-  MEDIUM   supply_chain   SKILL.md:39                    "pip install 
+  MEDIUM   supply_chain   SKILL.md:39                    "pip install
 git+https://github.com/stanfordnlp/dspy.git"
-  MEDIUM   supply_chain   SKILL.md:42                    "pip install dspy     
+  MEDIUM   supply_chain   SKILL.md:42                    "pip install dspy
 # OpenAI"
-  MEDIUM   supply_chain   SKILL.md:43                    "pip install dspy     
+  MEDIUM   supply_chain   SKILL.md:43                    "pip install dspy
 # Anthropic Claude"
-  MEDIUM   supply_chain   SKILL.md:44                    "pip install dspy     
+  MEDIUM   supply_chain   SKILL.md:44                    "pip install dspy
 # All providers"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: trl-fine-tuning (official/mlops\training\trl-fine-tuning/community)  
+Scan: trl-fine-tuning (official/mlops\training\trl-fine-tuning/community)
 Verdict: SAFE
-  MEDIUM   supply_chain   SKILL.md:26                    "pip install trl 
+  MEDIUM   supply_chain   SKILL.md:26                    "pip install trl
 transformers datasets peft accelerate"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Scan: mpp-agent (official/payments/mpp-agent/community)  Verdict: SAFE
-  MEDIUM   supply_chain   SKILL.md:38                    "| `mppx` | Dev + 
+  MEDIUM   supply_chain   SKILL.md:38                    "| `mppx` | Dev +
 debugging, smallest dep surface | `npm inst"
   MEDIUM   supply_chain   SKILL.md:60                    "npm install -g mppx"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: stripe-link-cli (official/payments/stripe-link-cli/community)  Verdict: 
+Scan: stripe-link-cli (official/payments/stripe-link-cli/community)  Verdict:
 SAFE
-  MEDIUM   supply_chain   SKILL.md:53                    "npm install -g 
+  MEDIUM   supply_chain   SKILL.md:53                    "npm install -g
 @stripe/link-cli"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: stripe-projects (official/payments/stripe-projects/community)  Verdict: 
+Scan: stripe-projects (official/payments/stripe-projects/community)  Verdict:
 SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: memento-flashcards (official/productivity\memento-flashcards/community)  
+Scan: memento-flashcards (official/productivity\memento-flashcards/community)
 Verdict: SAFE
-  MEDIUM   supply_chain   SKILL.md:208                   "pip install 
+  MEDIUM   supply_chain   SKILL.md:208                   "pip install
 youtube-transcript-api"
-  MEDIUM   supply_chain   SKILL.md:331                   "- **Optional 
+  MEDIUM   supply_chain   SKILL.md:331                   "- **Optional
 dependency** — `youtube_quiz.py` needs `youtube"
-  MEDIUM   supply_chain   scripts\youtube_quiz.py:35     ""message": "Run: pip 
+  MEDIUM   supply_chain   scripts\youtube_quiz.py:35     ""message": "Run: pip
 install youtube-transcript-api","
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: drug-discovery (official/research\drug-discovery/community)  Verdict: 
+Scan: drug-discovery (official/research\drug-discovery/community)  Verdict:
 SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: prompt-engineering 
-(skills-sh/sickn33/antigravity-awesome-skills/prompt-engineering/community)  
+Scan: prompt-engineering
+(skills-sh/sickn33/antigravity-awesome-skills/prompt-engineering/community)
 Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: search-skills-plugins-subagents 
-(browse-sh/agentpowers.ai/search-skills-plugins-subagents-1at6ii/community)  
+Scan: search-skills-plugins-subagents
+(browse-sh/agentpowers.ai/search-skills-plugins-subagents-1at6ii/community)
 Verdict: SAFE
-  MEDIUM   supply_chain   SKILL.md:89                    "npx @agentpowers/cli 
+  MEDIUM   supply_chain   SKILL.md:89                    "npx @agentpowers/cli
 setup        # one-time, or: pip instal"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: hooks-pattern (skills-sh/patternsdev/skills/hooks-pattern/community)  
+Scan: hooks-pattern (skills-sh/patternsdev/skills/hooks-pattern/community)
 Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: agentmemory-hooks 
+Scan: agentmemory-hooks
 (skills-sh/rohitg00/agentmemory/agentmemory-hooks/community)  Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: data-migration-scripts 
-(skills-sh/aj-geddes/useful-ai-prompts/data-migration-scripts/community)  
+Scan: data-migration-scripts
+(skills-sh/aj-geddes/useful-ai-prompts/data-migration-scripts/community)
 Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: authsome (skills-sh/manojbajaj95/authsome/authsome/community)  Verdict: 
+Scan: authsome (skills-sh/manojbajaj95/authsome/authsome/community)  Verdict:
 SAFE
-  MEDIUM   execution      evals\generate_report.py:274   
+  MEDIUM   execution      evals\generate_report.py:274
 "subprocess.run(["open", str(html_out)], check=False)"
-  MEDIUM   network        references\adding-provider.md:12 "- **OAuth app** — 
+  MEDIUM   network        references\adding-provider.md:12 "- **OAuth app** —
 guide the user to create an OAuth app (cli"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: agent-browser (skills-sh/nexu-io/open-design/agent-browser/community)  
+Scan: agent-browser (skills-sh/nexu-io/open-design/agent-browser/community)
 Verdict: SAFE
-  MEDIUM   network        SKILL.md:133                   "if ! curl -fsS 
+  MEDIUM   network        SKILL.md:133                   "if ! curl -fsS
 http://127.0.0.1:9223/json/version | rg -q we"
-  MEDIUM   network        SKILL.md:141                   "if curl -fsS 
+  MEDIUM   network        SKILL.md:141                   "if curl -fsS
 http://127.0.0.1:9223/json/version | rg -q webS"
-  MEDIUM   network        SKILL.md:148                   "curl -fsS 
+  MEDIUM   network        SKILL.md:148                   "curl -fsS
 http://127.0.0.1:9223/json/version | rg webSocketD"
   MEDIUM   network        SKILL.md:149                   "agent-browser connect
 http://127.0.0.1:9223"
-  MEDIUM   network        SKILL.md:190                   "With the OpenDesign 
+  MEDIUM   network        SKILL.md:190                   "With the OpenDesign
 preview at `http://127.0.0.1:17573/`, ru"
-  MEDIUM   network        SKILL.md:193                   "if ! curl -fsS 
+  MEDIUM   network        SKILL.md:193                   "if ! curl -fsS
 http://127.0.0.1:9223/json/version | rg -q we"
-  MEDIUM   network        SKILL.md:201                   "if curl -fsS 
+  MEDIUM   network        SKILL.md:201                   "if curl -fsS
 http://127.0.0.1:9223/json/version | rg -q webS"
-  MEDIUM   network        SKILL.md:208                   "curl -fsS 
+  MEDIUM   network        SKILL.md:208                   "curl -fsS
 http://127.0.0.1:9223/json/version | rg webSocketD"
   MEDIUM   network        SKILL.md:209                   "agent-browser connect
 http://127.0.0.1:9223"
-  MEDIUM   network        SKILL.md:210                   "agent-browser open 
+  MEDIUM   network        SKILL.md:210                   "agent-browser open
 http://127.0.0.1:17573/"
-  MEDIUM   network        SKILL.md:217                   "Expected success: 
+  MEDIUM   network        SKILL.md:217                   "Expected success:
 title `OpenDesign`, current URL under `127"
-  MEDIUM   network        SKILL.md:226                   "4. Connect with 
+  MEDIUM   network        SKILL.md:226                   "4. Connect with
 `agent-browser connect http://127.0.0.1:9223"
 
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: ad-creative (skills-sh/nexu-io/open-design/ad-creative/community)  
+Scan: ad-creative (skills-sh/nexu-io/open-design/ad-creative/community)
 Verdict: SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
-Scan: 8-bit-orbit-video-template 
-(skills-sh/nexu-io/open-design/8-bit-orbit-video-template/community)  Verdict: 
+Scan: 8-bit-orbit-video-template
+(skills-sh/nexu-io/open-design/8-bit-orbit-video-template/community)  Verdict:
 SAFE
 Decision: ALLOWED — Allowed (community source, safe verdict)
 
 Warning: youtube-full — path missing: youtube-full
-Scan: drawio-skill (skills-sh/agents365-ai/365-skills/drawio-skill/community)  
+Scan: drawio-skill (skills-sh/agents365-ai/365-skills/drawio-skill/community)
 Verdict: CAUTION
-  HIGH     privilege_escalation references\autolayout.md:17    "sudo apt 
+  HIGH     privilege_escalation references\autolayout.md:17    "sudo apt
 install graphviz"
   MEDIUM   structural     data\shape-index.json.gz:0     "425KB"
   MEDIUM   structural     (directory):0                  "61 files"
-  MEDIUM   execution      SKILL.md:56                    "| 
+  MEDIUM   execution      SKILL.md:56                    "|
 `scripts/tfstate.py` · `dockerimports.py` (+ `k8simports.p"
-  MEDIUM   execution      SKILL.md:131                   "3. **Generate** — 
+  MEDIUM   execution      SKILL.md:131                   "3. **Generate** —
 produce the `.drawio` file, choosing the a"
-  MEDIUM   supply_chain   SKILL.md:60                    "| 
+  MEDIUM   supply_chain   SKILL.md:60                    "|
 `scripts/drawio2pptx.py` | The user wants a **PowerPoint d"
   MEDIUM   execution      references\autolayout.md:104   "| Docker (**live**) |
 `docker inspect $(docker ps -q) \| scr"
-  MEDIUM   execution      references\toolbox.md:78       "- 
+  MEDIUM   execution      references\toolbox.md:78       "-
 **`dockerimports.py`** — `docker inspect $(docker ps -q) |"
-  MEDIUM   execution      references\troubleshooting.md:29 "| WSL2: opening an 
+  MEDIUM   execution      references\troubleshooting.md:29 "| WSL2: opening an
 exported file fails with a `/mnt/c/...`-s"
-  MEDIUM   execution      scripts\autolayout.py:159      "proc = 
+  MEDIUM   execution      scripts\autolayout.py:159      "proc =
 subprocess.run("
-  MEDIUM   execution      scripts\buildup.py:304         "r = 
+  MEDIUM   execution      scripts\buildup.py:304         "r =
 subprocess.run(["drawio", "-x", "-f", "png", "--page-ind"
-  MEDIUM   supply_chain   scripts\buildup.py:246         
+  MEDIUM   supply_chain   scripts\buildup.py:246
 "sys.stderr.write("warning: Pillow not installed, skipping --"
-  MEDIUM   supply_chain   scripts\ciimports.py:142       "sys.exit("error: 
+  MEDIUM   supply_chain   scripts\ciimports.py:142       "sys.exit("error:
 PyYAML is required (pip install pyyaml)")"
-  MEDIUM   supply_chain   scripts\composeimports.py:73   "sys.exit("error: 
+  MEDIUM   supply_chain   scripts\composeimports.py:73   "sys.exit("error:
 PyYAML is required (pip install pyyaml)")"
   MEDIUM   execution      scripts\compress.py:174        "r = subprocess.run("
-  MEDIUM   execution      scripts\dockerimports.py:80    "sys.exit("error: no 
+  MEDIUM   execution      scripts\dockerimports.py:80    "sys.exit("error: no
 containers found (feed `docker inspect $"
-  MEDIUM   execution      scripts\drawio2pptx.py:46      "r = 
+  MEDIUM   execution      scripts\drawio2pptx.py:46      "r =
 subprocess.run(["drawio", "-x", "-f", "png", "--page-ind"
-  MEDIUM   supply_chain   scripts\drawio2pptx.py:65      "sys.exit("error: 
+  MEDIUM   supply_chain   scripts\drawio2pptx.py:65      "sys.exit("error:
 python-pptx is required (pip install python"
-  MEDIUM   execution      scripts\drawiohtml.py:57       "r = 
+  MEDIUM   execution      scripts\drawiohtml.py:57       "r =
 subprocess.run(["drawio", "-x", "-f", "svg", "--page-ind"
-  MEDIUM   execution      scripts\goimports.py:82        "out = 
+  MEDIUM   execution      scripts\goimports.py:82        "out =
 subprocess.run(["tred"], input=dot, capture_output=Tru"
-  MEDIUM   execution      scripts\jsimports.py:96        "out = 
+  MEDIUM   execution      scripts\jsimports.py:96        "out =
 subprocess.run(["tred"], input=dot, capture_output=Tru"
   MEDIUM   supply_chain   scripts\k8simports.py:92       ""(pip install pyyaml)
 — or feed JSON from `kubectl get ... -"
   MEDIUM   supply_chain   scripts\openapiimports.py:48   ""(pip install pyyaml)
 — or convert the spec to JSON")"
   MEDIUM   execution      scripts\prdiff.py:37           "r = subprocess.run("
-  MEDIUM   execution      scripts\prdiff.py:57           "r = 
+  MEDIUM   execution      scripts\prdiff.py:57           "r =
 subprocess.run(["git", "-C", repo, "show", f"{ref}:{path"
-  MEDIUM   execution      scripts\prdiff.py:67           "r = 
+  MEDIUM   execution      scripts\prdiff.py:67           "r =
 subprocess.run(["drawio", "-x", "-f", "png", "--page-ind"
-  MEDIUM   execution      scripts\prdiff.py:76           "r1 = 
+  MEDIUM   execution      scripts\prdiff.py:76           "r1 =
 subprocess.run([sys.executable, os.path.join(HERE, "dra"
-  MEDIUM   execution      scripts\prdiff.py:80           "r2 = 
+  MEDIUM   execution      scripts\prdiff.py:80           "r2 =
 subprocess.run([sys.executable, os.path.join(HERE, "aut"
-  MEDIUM   execution      scripts\pyclasses.py:78        "out = 
+  MEDIUM   execution      scripts\pyclasses.py:78        "out =
 subprocess.run(["tred"], input=dot, capture_output=Tru"
-  MEDIUM   execution      scripts\pyimports.py:97        "out = 
+  MEDIUM   execution      scripts\pyimports.py:97        "out =
 subprocess.run(["tred"], input=dot, capture_output=Tru"
   MEDIUM   execution      scripts\raster2drawio.py:140   "r = subprocess.run(,"
-  MEDIUM   obfuscation    scripts\repair_png.py:17       "IEND = 
+  MEDIUM   obfuscation    scripts\repair_png.py:17       "IEND =
 b"\x00\x00\x00\x00IEND\xaeB`\x82""
-  MEDIUM   obfuscation    scripts\repair_png.py:25       "if 
+  MEDIUM   obfuscation    scripts\repair_png.py:25       "if
 data.endswith(b"\x00\x00\x00\x00"):"
-  MEDIUM   execution      scripts\rustimports.py:150     "out = 
+  MEDIUM   execution      scripts\rustimports.py:150     "out =
 subprocess.run(["tred"], input=dot, capture_output=Tru"
-  MEDIUM   execution      scripts\svgflow.py:38          "r = 
+  MEDIUM   execution      scripts\svgflow.py:38          "r =
 subprocess.run(["drawio", "-x", "-f", "svg", "-o", out, "
-  MEDIUM   execution      scripts\tfimports.py:184       "out = 
+  MEDIUM   execution      scripts\tfimports.py:184       "out =
 subprocess.run(["tred"], input=dot, capture_output=Tru"
-  MEDIUM   execution      scripts\timelapse.py:46        "p = 
+  MEDIUM   execution      scripts\timelapse.py:46        "p =
 subprocess.run(["git", "-C", root, *args], capture_outpu"
-  MEDIUM   execution      scripts\timelapse.py:90        "imp = 
+  MEDIUM   execution      scripts\timelapse.py:90        "imp =
 subprocess.run("
-  MEDIUM   execution      scripts\timelapse.py:102       "lay = 
+  MEDIUM   execution      scripts\timelapse.py:102       "lay =
 subprocess.run("
-  MEDIUM   execution      scripts\timelapse.py:108       "exp = 
+  MEDIUM   execution      scripts\timelapse.py:108       "exp =
 subprocess.run(["drawio", "-x", "-f", "png", "--width""
 
-Decision: BLOCKED — Blocked (community source + caution verdict, 40 findings). 
+Decision: BLOCKED — Blocked (community source + caution verdict, 40 findings).
 Use --force to override.
-

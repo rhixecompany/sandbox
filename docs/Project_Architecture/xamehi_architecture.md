@@ -1,7 +1,7 @@
 # xamehi Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Full-Stack (React + Django)  
+**Generated:** 2026-07-28
+**Project Type:** Full-Stack (React + Django)
 **Architecture Pattern:** React frontend + Django REST backend
 
 ## Overview

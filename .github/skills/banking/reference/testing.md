@@ -34,22 +34,22 @@ metadata:
     23|
     24|## NEVER Do: Testing Anti-Patterns
     25|
-    26|**NEVER run Playwright with `workers > 1`**  
+    26|**NEVER run Playwright with `workers > 1`**
     27|E2E tests are stateful (shared DB). Parallel execution corrupts data. Config specifies `workers: 1`. Changing this WILL break everything.
     28|
-    29|**NEVER skip port cleanup before E2E**  
+    29|**NEVER skip port cleanup before E2E**
     30|Port 3000 must be freed. If you skip, Playwright waits forever with no error message — just silent hang. Always run port guard first.
     31|
-    32|**NEVER mock Plaid/Dwolla at HTTP layer**  
+    32|**NEVER mock Plaid/Dwolla at HTTP layer**
     33|Use token detection instead. HTTP mocking breaks real integration testing. E2E's purpose: "does actual Plaid Link work?" Mocking HTTP invalidates that.
     34|
-    35|**NEVER mix live and mock tokens in same session**  
+    35|**NEVER mix live and mock tokens in same session**
     36|Pick one: all tests use `seed-*`/`mock-*` tokens OR all use live sandbox. Mixing confuses SDK state. Document which per test file.
     37|
-    38|**NEVER forget `ENCRYPTION_KEY` in `.env.local`**  
+    38|**NEVER forget `ENCRYPTION_KEY` in `.env.local`**
     39|Not in `.env.example` for security reasons. Add it manually. Tests silently fail without it — no error message. Required for E2E setup.
     40|
-    41|**NEVER seed DB inside individual tests**  
+    41|**NEVER seed DB inside individual tests**
     42|Seed once in `global-setup.ts`, reset in `global-teardown.ts`. Per-test seeding is slow and pollutes state. Use soft deletes instead.
     43|
     44|---

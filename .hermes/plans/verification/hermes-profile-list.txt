@@ -15,4 +15,3 @@
   qa              deepseek-v4-flash-free       running      qa           —
   research-analyst deepseek-v4-flash-free       running      research-analyst —
   security        deepseek-v4-flash-free       running      security     —
-

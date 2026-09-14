@@ -2,7 +2,7 @@
 ﻿<#
 .SYNOPSIS
     Phase 2: Clone & Deduplicate - Using Local Repos
-    
+
 .DESCRIPTION
     Reads DISCOVERY_REPORT.json from Phase 1, validates existing local repositories,
     deduplicates by URL, and generates CLONE_REPORT.json
@@ -72,7 +72,7 @@ foreach ($repo in $repositories) {
 
     $localPath = $repo.local_path
     Write-Info "Validating: $($repo.name) at $localPath"
-    
+
     if (-not (Test-Path $localPath)) {
         Write-Err "  ERROR: Path does not exist"
         $cloneResults += @{
@@ -87,7 +87,7 @@ foreach ($repo in $repositories) {
         $failed++
         continue
     }
-    
+
     if (-not (Test-IsGitRepo -Path $localPath)) {
         Write-Err "  ERROR: Not a git repository"
         $cloneResults += @{
@@ -102,7 +102,7 @@ foreach ($repo in $repositories) {
         $failed++
         continue
     }
-    
+
     Write-Success "Repository is valid"
     $cloneResults += @{
         name = $repo.name

@@ -73,7 +73,7 @@ cmd.exe /c "orchestrator.bat nonexistent; echo %ERRORLEVEL%"
 1. **Progress log entry** (append-only):
    ```markdown
    ### Batch N — <scope>
-   
+
    - Date: YYYY-MM-DD
    - Scope: <what was normalized>
    - Files changed:
@@ -101,7 +101,7 @@ cmd.exe /c "orchestrator.bat nonexistent; echo %ERRORLEVEL%"
 3. **Verification report log** (append batch summary):
    ```markdown
    ### Batch N — <scope>
-   
+
    - Files verified: [list]
    - Checks performed: [list]
    - Result: Pass | Fail

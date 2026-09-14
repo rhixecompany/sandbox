@@ -1,7 +1,7 @@
 # docs — Architecture Blueprint
 
-> **Generated:** 2026-07-24  
-> **Generator:** architecture-blueprint-generator  
+> **Generated:** 2026-07-24
+> **Generator:** architecture-blueprint-generator
 > **Project:** projects/docs/
 
 ---

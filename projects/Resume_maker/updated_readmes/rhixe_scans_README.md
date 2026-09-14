@@ -332,5 +332,5 @@ MIT License - see LICENSE for details.
 
 ---
 
-_Built with ❤️ by Alexander Iseghohi_  
+_Built with ❤️ by Alexander Iseghohi_
 _Part of the rhixecompany portfolio - Building digital experiences that matter_

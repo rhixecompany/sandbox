@@ -11,7 +11,7 @@
 
 A full-stack fintech application built with Next.js 16, featuring bank account integration via Plaid and Dwolla, real-time transaction management, and comprehensive authentication.
 
-**Project Type:** Full-Stack Web Application (Fintech)  
+**Project Type:** Full-Stack Web Application (Fintech)
 **Stack Type:** Next.js 16 + Drizzle ORM + PostgreSQL
 
 ---

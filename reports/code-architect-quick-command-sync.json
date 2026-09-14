@@ -1,0 +1,14 @@
+{
+  "profiles": [
+    {
+      "profile": "code-architect",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    }
+  ],
+  "all_passed": true
+}

@@ -1,7 +1,7 @@
 # Ecom — System Architecture Blueprint
 
-> **Project:** ecom — Django + React Ecommerce Platform  
-> **Generated:** 2026-07-24  
+> **Project:** ecom — Django + React Ecommerce Platform
+> **Generated:** 2026-07-24
 > **Source:** Code analysis of `base/`, `ecom/`, `frontend/`
 
 ---
@@ -199,10 +199,10 @@ graph TD
     App["App.js (HashRouter)"]
     Header["Header.js<br/>(Navbar, SearchBox, Cart link)"]
     Footer["Footer.js"]
-    
+
     App --> Header
     App --> Footer
-    
+
     subgraph "Screens (Page-level)"
         HomeScreen["HomeScreen<br/>(ProductCarousel + Product grid)"]
         ProductScreen["ProductScreen<br/>(Rating, Add to Cart, Reviews)"]
@@ -220,7 +220,7 @@ graph TD
         ProductEditScreen["ProductEditScreen (Admin)"]
         OrderListScreen["OrderListScreen (Admin)"]
     end
-    
+
     subgraph "Reusable Components"
         Product["Product.js<br/>(Card)"]
         Rating["Rating.js<br/>(Star display)"]
@@ -232,7 +232,7 @@ graph TD
         ProductCarousel["ProductCarousel.js<br/>(Top-rated)"]
         SearchBox["SearchBox.js"]
     end
-    
+
     HomeScreen --> Product
     HomeScreen --> ProductCarousel
     HomeScreen --> Paginate
@@ -329,7 +329,7 @@ graph LR
         Static["WhiteNoise<br/>Static file serving"]
         ReactBuild["React Build<br/>frontend/build/ → Django templates"]
     end
-    
+
     subgraph "CI/CD"
         GHA["GitHub Actions<br/>python manage.py check"]
     end

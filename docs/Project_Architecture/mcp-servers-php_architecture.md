@@ -1,7 +1,7 @@
 # mcp-servers/php Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** PHP/Composer (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** PHP/Composer (MCP)
 **Architecture Pattern:** PHP MCP server with Composer
 
 ## Overview

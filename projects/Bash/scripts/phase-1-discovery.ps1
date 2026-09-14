@@ -40,23 +40,23 @@ $allRepos = @()
 # Discover repos from local filesystem
 foreach ($org in $orgs) {
     Write-SubHeader "Querying org: $($org.name)"
-    
+
     $orgPath = Join-Path -Path $ProjectRoot -ChildPath $org.name
     if (-not (Test-Path -LiteralPath $orgPath -PathType Container)) {
         Write-Warn "Org directory not found: $orgPath"
         continue
     }
-    
+
     $repos = Get-ChildItem -LiteralPath $orgPath -Directory -ErrorAction SilentlyContinue
-    
+
     foreach ($repo in $repos) {
         Write-Info "Processing: $($repo.Name)"
-        
+
         $gitDir = Join-Path -Path $repo.FullName -ChildPath ".git"
         if (-not (Test-Path -LiteralPath $gitDir -PathType Container)) {
             continue
         }
-        
+
         # Get remote URL
         $remoteUrl = ""
         try {
@@ -64,7 +64,7 @@ foreach ($org in $orgs) {
         } catch {
             $remoteUrl = ""
         }
-        
+
         # Get HEAD ref
         $headRef = ""
         try {
@@ -72,7 +72,7 @@ foreach ($org in $orgs) {
         } catch {
             $headRef = "unknown"
         }
-        
+
         # Get commit count
         $commitCount = 0
         try {
@@ -80,7 +80,7 @@ foreach ($org in $orgs) {
         } catch {
             $commitCount = 0
         }
-        
+
         # Get last commit date
         $lastCommitDate = ""
         try {
@@ -88,7 +88,7 @@ foreach ($org in $orgs) {
         } catch {
             $lastCommitDate = "unknown"
         }
-        
+
         $repoData = @{
             name = $repo.Name
             org = $org.name
@@ -107,7 +107,7 @@ foreach ($org in $orgs) {
                 discovery_source = "local_filesystem"
             }
         }
-        
+
         # Validate repo metadata
         if ($discoveryConfig.validation.check_accessibility) {
             if (-not (Test-Path -LiteralPath "$($repo.FullName)\.git" -PathType Container)) {
@@ -115,10 +115,10 @@ foreach ($org in $orgs) {
                 $repoData.validation.errors += ".git directory not accessible"
             }
         }
-        
+
         $allRepos += $repoData
     }
-    
+
     Write-Success "Found $($repos.Count) repos"
 }
 
@@ -131,12 +131,12 @@ $seenUrls = @{}
 
 foreach ($repo in $allRepos) {
     $repoUrl = if ($repo.url) { $repo.url } else { $repo.name }
-    
+
     if ($seenUrls.ContainsKey($repoUrl)) {
         Write-Verbose "Duplicate repo found and skipped: $($repo.name)"
         continue
     }
-    
+
     $seenUrls[$repoUrl] = $true
     $deduplicatedRepos += $repo
 }

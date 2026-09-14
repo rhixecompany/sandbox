@@ -5,18 +5,18 @@ description: Define a time-boxed technical spike with research questions, invest
 trigger: /create-technical-spike
 version: 1.0.0
 author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
+tags:
+metadata:
+hermes:
 profile: code-architect
 priority: medium
-copilot: 
+copilot:
 model_required: sonnet
-opencode: 
+opencode:
 enabled: true
-codex: 
-toolsets: 
-skills: 
+codex:
+toolsets:
+skills:
 - skill: using-superpowers
 dependencies: []
 formatter: markdown

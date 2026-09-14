@@ -1,0 +1,53 @@
+APPLY registry reconciliation
+registry=.mcp\registry.json
+hermes_config=C:\Users\Alexa\AppData\Local\hermes\profiles\ops\config.yaml
+changed=True
+{
+  "added": [
+    "cloudinary",
+    "paypal",
+    "supabase",
+    "twilio-docs",
+    "vercel"
+  ],
+  "disabled": [
+    "anthropic-resources",
+    "django",
+    "docs",
+    "evals",
+    "everart",
+    "plaid",
+    "postgres",
+    "pytest",
+    "stripe",
+    "time"
+  ],
+  "enabled_existing": [
+    "ast-grep",
+    "atlassian",
+    "code-sandbox",
+    "context7",
+    "fetch",
+    "filesystem",
+    "github",
+    "honcho",
+    "mcp-docker",
+    "memory",
+    "mindstudio",
+    "neon",
+    "parallel-search",
+    "parallel-task",
+    "playwright",
+    "python-quality",
+    "sentry",
+    "sequential-thinking",
+    "smithery",
+    "tavily",
+    "tooling-config",
+    "tooling-lint"
+  ],
+  "hermes_enabled": 27,
+  "registry_enabled_after": 27,
+  "registry_enabled_before": 32
+}
+write=ok

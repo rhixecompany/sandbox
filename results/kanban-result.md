@@ -1,4 +1,5 @@
 # Execution Result: kanban
+
 - Feature: kanban
 - Source file (docs/features/kanban.md): present=True, size=100774 bytes
 - Bundle artifacts verified (5 items): True

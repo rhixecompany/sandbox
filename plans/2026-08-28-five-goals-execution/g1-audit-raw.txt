@@ -1,0 +1,114 @@
+Profile config audit complete.
+  Profiles scanned: 14
+  Files missing:    21
+  Frontmatter issues: 0
+  Total issues:     77
+  Drift issues:     1
+  Report written:   C:\Users\Alexa\Desktop\SandBox\.hermes\plans\2026-08-28-unified-platform-remediation\profile-config-audit.json
+
+  [alexa] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [code-architect] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [creative-director] issues:
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [cto] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [default] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [designer] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [dev] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [exec-assistant] issues:
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [ops] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [patient-tutor] issues:
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [pm] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [qa] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [research-analyst] issues:
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  [security] issues:
+    - USER.md: file_missing
+    - MEMORY.md: file_missing
+    - .hermes.md: file_missing
+    - AGENTS.md: file_missing
+    - CLAUDE.md: file_missing
+    - .cursorrules: file_missing
+
+  Cross-profile drift:
+    - Routing info present in ['creative-director', 'exec-assistant', 'patient-tutor', 'research-analyst'] but missing in ['alexa', 'code-architect', 'cto', 'default', 'designer', 'dev', 'ops', 'pm', 'qa', 'security']

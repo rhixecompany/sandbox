@@ -62,14 +62,14 @@ mcp-servers/java/
     <artifactId>java-mcp-server</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mcp.sdk.version>0.8.0</mcp.sdk.version>
     </properties>
-    
+
     <dependencies>
         <!-- MCP Java SDK -->
         <dependency>
@@ -77,7 +77,7 @@ mcp-servers/java/
             <artifactId>mcp</artifactId>
             <version>${mcp.sdk.version}</version>
         </dependency>
-        
+
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -85,7 +85,7 @@ mcp-servers/java/
             <version>2.0.16</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <finalName>java-mcp-server</finalName>
         <plugins>
@@ -148,7 +148,7 @@ public class McpServerApplication {
         McpServer server = McpServer.builder("java-mcp-server", "1.0.0")
             .addTool(new GreetTool())
             .build();
-        
+
         // Run with STDIO transport
         StdioServerTransport transport = new StdioServerTransport();
         server.run(transport);
@@ -168,17 +168,17 @@ import io.modelcontextprotocol.spec.McpSchema;
 import java.util.Map;
 
 public class GreetTool implements McpServerTool {
-    
+
     @Override
     public String getName() {
         return "greet";
     }
-    
+
     @Override
     public String getDescription() {
         return "Greet a person by name";
     }
-    
+
     @Override
     public McpSchema.Tool.InputSchema getInputSchema() {
         return McpSchema.Tool.InputSchema.builder()
@@ -192,7 +192,7 @@ public class GreetTool implements McpServerTool {
             .required(List.of("name"))
             .build();
     }
-    
+
     @Override
     public McpSchema.CallToolResult handle(Map<String, Object> arguments) {
         String name = (String) arguments.getOrDefault("name", "World");

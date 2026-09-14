@@ -5,7 +5,7 @@ description: "Use when installing or configuring asdf version manager, managing 
 version: 1.0.0
 author: "Hermes Agent"
 license: MIT
-tags: 
+tags:
 metadata:
   hermes:
     tags: [imported]

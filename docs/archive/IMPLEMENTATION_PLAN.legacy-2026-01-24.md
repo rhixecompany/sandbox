@@ -38,8 +38,8 @@ This plan outlines the systematic consolidation and optimization of configuratio
 
 ### Milestone 1.1: File Inventory & Categorization (Days 1-2)
 
-**Owner:** Configuration Engineer  
-**Resources:** 1 FTE  
+**Owner:** Configuration Engineer
+**Resources:** 1 FTE
 **Deliverable:** Complete inventory spreadsheet
 
 | Task  | Description                                                                        | Effort | Dependencies |
@@ -51,8 +51,8 @@ This plan outlines the systematic consolidation and optimization of configuratio
 
 ### Milestone 1.2: Diff Analysis (Days 2-3)
 
-**Owner:** Configuration Engineer  
-**Resources:** 1 FTE  
+**Owner:** Configuration Engineer
+**Resources:** 1 FTE
 **Deliverable:** Diff report with line-by-line comparisons
 
 | Task  | Description                                                                    | Effort | Dependencies |
@@ -68,8 +68,8 @@ This plan outlines the systematic consolidation and optimization of configuratio
 
 ### Milestone 2.1: Architecture Decision Records (Days 3-5)
 
-**Owner:** Lead Architect + Configuration Engineer  
-**Resources:** 1.5 FTE  
+**Owner:** Lead Architect + Configuration Engineer
+**Resources:** 1.5 FTE
 **Deliverable:** ADR documents for each consolidation decision
 
 | Decision                       | Options                                                                                           | Recommended         | Rationale                              |
@@ -81,8 +81,8 @@ This plan outlines the systematic consolidation and optimization of configuratio
 
 ### Milestone 2.2: Consolidation Plan (Days 5-7)
 
-**Owner:** Lead Architect  
-**Resources:** 1 FTE  
+**Owner:** Lead Architect
+**Resources:** 1 FTE
 **Deliverable:** Detailed consolidation specification
 
 **Target Architecture:**
@@ -108,8 +108,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 3.1: Root Configuration Canonicalization (Days 8-10)
 
-**Owner:** Configuration Engineer  
-**Resources:** 1 FTE  
+**Owner:** Configuration Engineer
+**Resources:** 1 FTE
 **Deliverable:** Validated root configs
 
 | Task  | Description                                        | Effort | Validation           |
@@ -122,8 +122,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 3.2: Project-Level Cleanup (Days 10-14)
 
-**Owner:** Configuration Engineer  
-**Resources:** 1 FTE  
+**Owner:** Configuration Engineer
+**Resources:** 1 FTE
 **Deliverable:** Clean project configs
 
 | Project                        | Action                               | Effort | Validation               |
@@ -143,8 +143,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 3.3: `.instructions.md` Verification (Days 12-14)
 
-**Owner:** Documentation Engineer  
-**Resources:** 1 FTE  
+**Owner:** Documentation Engineer
+**Resources:** 1 FTE
 **Deliverable:** Verified instruction library
 
 | Task  | Description                                                             | Effort | Validation                   |
@@ -161,8 +161,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 4.1: Automated Sync Scripts (Days 15-18)
 
-**Owner:** DevOps Engineer  
-**Resources:** 1 FTE  
+**Owner:** DevOps Engineer
+**Resources:** 1 FTE
 **Deliverable:** Production-ready sync automation
 
 | Script                                  | Purpose                                      | Location | Trigger        |
@@ -174,8 +174,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 4.2: Quality Gates (Days 18-20)
 
-**Owner:** DevOps Engineer  
-**Resources:** 1 FTE  
+**Owner:** DevOps Engineer
+**Resources:** 1 FTE
 **Deliverable:** CI pipeline integration
 
 | Gate                    | Tool                           | Config                     | Threshold          |
@@ -187,8 +187,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 4.3: Skill Development (Days 19-21)
 
-**Owner:** Configuration Engineer + AI Agent Specialist  
-**Resources:** 1.5 FTE  
+**Owner:** Configuration Engineer + AI Agent Specialist
+**Resources:** 1.5 FTE
 **Deliverable:** Reusable skills for ongoing maintenance
 
 | Skill                       | Purpose                            | Category |
@@ -204,8 +204,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 5.1: End-to-End Validation (Days 22-24)
 
-**Owner:** QA Engineer  
-**Resources:** 1 FTE  
+**Owner:** QA Engineer
+**Resources:** 1 FTE
 **Deliverable:** Validation report
 
 | Test  | Description                                  | Pass Criteria                       |
@@ -218,8 +218,8 @@ C:\Users\Alexa\Desktop\SandBox\
 
 ### Milestone 5.2: Documentation & Handoff (Days 24-26)
 
-**Owner:** Technical Writer + Lead Architect  
-**Resources:** 1.5 FTE  
+**Owner:** Technical Writer + Lead Architect
+**Resources:** 1.5 FTE
 **Deliverable:** Complete documentation package
 
 | Document                       | Audience      | Location                      |
@@ -332,6 +332,6 @@ Week 4: ░░░░░░░░░░░░░░░░░░██████
 | DevOps Lead            |      |           |      |
 | Documentation Lead     |      |           |      |
 
-**Plan Version:** 1.0  
-**Created:** 2026-01-24  
+**Plan Version:** 1.0
+**Created:** 2026-01-24
 **Target Completion:** 2026-02-21

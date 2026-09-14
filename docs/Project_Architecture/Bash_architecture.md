@@ -1,7 +1,7 @@
 # Bash Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** TypeScript/Bun (Automation)  
+**Generated:** 2026-07-28
+**Project Type:** TypeScript/Bun (Automation)
 **Architecture Pattern:** Modular TypeScript automation toolkit
 
 ## Overview

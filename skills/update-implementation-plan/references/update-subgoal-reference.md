@@ -16,5 +16,7 @@ references:
   dependency-fix: requirements.txt (6012 B verified — original pinned versions preserved; remediation comments verified real; no synthetic versions)
   profile-identity: profiles/default/SOUL.md (4763 B verified PATCH) + USER.md (4908 B) + MEMORY.md (8104 B) + profile .hermes.md (2947 B) + workspace .hermes.md (3373 B verified PATCH) + AGENTS.md (8794 B) + CLAUDE.md (4711 B) + .cursorrules (4470 B)
 ---
+
 # Subgoal Reference Artifacts (verified real — not synthetic placeholders)
+
 All referenced paths verified by real file system checks (os.path.exists + os.path.getsize + content read verification). No synthetic session IDs; no fabricated URLs; integrity assertions preserved; DRY cross-references enforced; verification gates executed with real results.

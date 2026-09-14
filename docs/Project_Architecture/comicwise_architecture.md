@@ -1,7 +1,7 @@
 # comicwise Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** TypeScript/Bun (Next.js)  
+**Generated:** 2026-07-28
+**Project Type:** TypeScript/Bun (Next.js)
 **Architecture Pattern:** Next.js App Router with Server Actions + Admin Panel
 
 ## Overview

@@ -1,0 +1,3 @@
+configured_hooks=14
+approved_or_registered=14
+events=on_session_end,on_session_start,post_tool_call,pre_llm_call,pre_tool_call,subagent_stop

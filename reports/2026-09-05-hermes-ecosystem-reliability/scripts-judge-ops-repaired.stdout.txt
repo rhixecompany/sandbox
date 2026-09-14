@@ -1,0 +1,2 @@
+Scripts Judge: 220 files, avg 80.8, passed 0/220
+Report: C:\Users\Alexa\Desktop\SandBox\.hermes\reports\2026-09-05-hermes-ecosystem-reliability\scripts-judge-ops-repaired.md

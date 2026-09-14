@@ -204,4 +204,3 @@ Use this skill when:
 - [ ] All references cited in SKILL.md body
 - [ ] SKILL.md is under 250 lines
 - [ ] No placeholder text
-

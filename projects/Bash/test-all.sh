@@ -27,9 +27,9 @@ test_script() {
     local name="$1"
     local cmd="$2"
     local desc="$3"
-    
+
     echo -n "Testing $name ... "
-    
+
     if timeout 10 $cmd >/dev/null 2>&1; then
         echo -e "${GREEN}✓ PASS${NC} ($desc)"
         ((pass++))

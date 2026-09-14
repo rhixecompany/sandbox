@@ -1,0 +1,131 @@
+{
+  "profiles": [
+    {
+      "profile": "default",
+      "passed": true,
+      "before": 221,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "alexa",
+      "passed": true,
+      "before": 34,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "code-architect",
+      "passed": true,
+      "before": 227,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "creative-director",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "cto",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "designer",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "dev",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "exec-assistant",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "ops",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "patient-tutor",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "pm",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "qa",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "research-analyst",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    },
+    {
+      "profile": "security",
+      "passed": true,
+      "before": 7,
+      "payload_bytes": 21867,
+      "after": 227,
+      "expected": 227,
+      "error": ""
+    }
+  ],
+  "all_passed": true
+}

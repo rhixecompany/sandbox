@@ -1,4 +1,4 @@
-                               Installed Skills                                
+                               Installed Skills
 ┌─────────────────────┬─────────────────────┬───────────┬───────────┬─────────┐
 │ Name                │ Category            │ Source    │ Trust     │ Status  │
 ├─────────────────────┼─────────────────────┼───────────┼───────────┼─────────┤
@@ -1125,4 +1125,3 @@
 │ page-agent          │ web-development     │ local     │ local     │ enabled │
 └─────────────────────┴─────────────────────┴───────────┴───────────┴─────────┘
 25 hub-installed, 31 builtin, 1065 local — 1121 enabled, 0 disabled
-

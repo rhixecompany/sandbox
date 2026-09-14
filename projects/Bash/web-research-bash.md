@@ -1,7 +1,7 @@
 # Web Research — Bash Project
 
-**Tech Stack:** TypeScript, Node, Bun, Vite  
-**Date:** 2026-07-16  
+**Tech Stack:** TypeScript, Node, Bun, Vite
+**Date:** 2026-07-16
 **Source:** Web research (5 targeted queries, multiple article extractions)
 
 ---

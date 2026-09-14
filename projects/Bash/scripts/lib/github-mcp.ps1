@@ -17,7 +17,7 @@ function Connect-GitHubMCP {
         [Parameter(Mandatory=$true)]
         [string]$MCPServerUrl = "http://localhost:3000"
     )
-    
+
     $script:MCPServerUrl = $MCPServerUrl
     if (Get-Command Write-Success -ErrorAction SilentlyContinue) {
         Write-Success "Connected to GitHub MCP server at $MCPServerUrl"
@@ -30,21 +30,21 @@ function Get-GitHubOrganizationRepos {
     param(
         [Parameter(Mandatory=$true)]
         [string]$OrgName,
-        
+
         [Parameter(Mandatory=$false)]
         [int]$PerPage = 100
     )
-    
+
     $repos = @()
     $page = 1
-    
+
     do {
         try {
             $response = Invoke-RestMethod `
                 -Uri "$script:MCPServerUrl/repos?org=$OrgName&page=$page&per_page=$PerPage" `
                 -Method Get `
                 -TimeoutSec 30
-            
+
             if ($response -is [array]) {
                 $repos += $response
                 $page++
@@ -56,7 +56,7 @@ function Get-GitHubOrganizationRepos {
             break
         }
     } while ($response.Count -eq $PerPage)
-    
+
     return $repos
 }
 
@@ -64,18 +64,18 @@ function Test-GitHubRepoAccessibility {
     param(
         [Parameter(Mandatory=$true)]
         [string]$RepoUrl,
-        
+
         [Parameter(Mandatory=$false)]
         [int]$TimeoutSec = 10
     )
-    
+
     try {
         $response = Invoke-WebRequest `
             -Uri $RepoUrl `
             -Method Head `
             -TimeoutSec $TimeoutSec `
             -ErrorAction Stop
-        
+
         return @{
             accessible = $true
             status_code = $response.StatusCode
@@ -94,17 +94,17 @@ function Get-GitHubRepoIssueCount {
     param(
         [Parameter(Mandatory=$true)]
         [string]$OrgName,
-        
+
         [Parameter(Mandatory=$true)]
         [string]$RepoName
     )
-    
+
     try {
         $response = Invoke-RestMethod `
             -Uri "$script:MCPServerUrl/repos/$OrgName/$RepoName/issues?state=all" `
             -Method Get `
             -TimeoutSec 30
-        
+
         return $response.Count
      } catch {
          Write-Warning "Failed to fetch issue count for $OrgName/${RepoName}: $_"

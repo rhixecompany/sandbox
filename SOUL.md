@@ -8,6 +8,7 @@ For full content, rules, and authority, see the canonical SOUL.md in the profile
 <!-- .env protected reference: protected, never expose -->
 
 ## Verified Soul / Session Achievements (G5)
+
 - Subagent identity: ops/adminbot (routing ops→adminbot verified; profile directory MISSING preserved honestly).
 - Session achievements 2026-09-13: 28 skills verified; 26 findings preserved; 41 parsing errors preserved; .eslintrc.json 69 B; rate-limit 403; MSYS2 FAIL; adminbot MISSING.
 - DRY enforcement: cross-reference `.hermes.md`, `user-communication-preferences`, `multi-file-change-protocol`, `systematic-debugging` — never duplicate identity rules.

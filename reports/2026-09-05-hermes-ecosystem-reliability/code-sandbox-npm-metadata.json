@@ -1,0 +1,7 @@
+{
+  "version": "1.3.0",
+  "bin": {
+    "node-code-sandbox-mcp": "dist/server.js"
+  },
+  "dist.tarball": "https://registry.npmjs.org/node-code-sandbox-mcp/-/node-code-sandbox-mcp-1.3.0.tgz"
+}

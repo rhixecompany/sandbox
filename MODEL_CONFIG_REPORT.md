@@ -1,7 +1,7 @@
 # 📊 Hermes Model Configuration Report
 
-**Workspace:** `C:\Users\Alexa\Desktop\SandBox`  
-**Generated:** 2026-09-10 01:37:59  
+**Workspace:** `C:\Users\Alexa\Desktop\SandBox`
+**Generated:** 2026-09-10 01:37:59
 **Status:** ✅ Complete
 
 ## 📋 Current Configuration

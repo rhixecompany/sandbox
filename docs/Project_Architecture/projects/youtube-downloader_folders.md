@@ -1,7 +1,7 @@
 # youtube-downloader — Folder Structure
 
-> **Stack:** Python 3.x + yt-dlp  
-> **Type:** CLI Utility Tool  
+> **Stack:** Python 3.x + yt-dlp
+> **Type:** CLI Utility Tool
 > **Status:** Active
 
 ## Directory Tree

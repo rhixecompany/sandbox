@@ -209,7 +209,7 @@ graph TD
         JS[JavaScript]
         CK[CKEditor 4]
     end
-    
+
     subgraph "Backend"
         PY[Python 3.11+]
         DJ[Django 3.0.x]
@@ -220,13 +220,13 @@ graph TD
         ENV[django-environ]
         GN[gunicorn]
     end
-    
+
     subgraph "Data"
         SQLITE[SQLite - Dev]
         PG[PostgreSQL - Prod]
         GCS[Google Cloud Storage]
     end
-    
+
     subgraph "Infra"
         GCR[Cloud Run]
         GCB[Cloud Build]
@@ -234,7 +234,7 @@ graph TD
         PROXY[Cloud SQL Auth Proxy]
         DOCKER[Docker]
     end
-    
+
     HTML --> DJ
     CSS --> CRISPY
     JS --> DJ

@@ -59,7 +59,7 @@ package main
 import (
     "context"
     "log"
-    
+
     "github.com/modelcontextprotocol/go-sdk/mcp"
     "go-mcp-server/server"
 )
@@ -67,7 +67,7 @@ import (
 func main() {
     // Create server with stdio transport
     srv := server.NewServer()
-    
+
     // Run with stdio transport
     if err := srv.Run(context.Background(), mcp.NewStdioTransport()); err != nil {
         log.Fatal(err)
@@ -92,10 +92,10 @@ func NewServer() *mcp.Server {
         Name:    "go-mcp-server",
         Version: "1.0.0",
     })
-    
+
     // Register tools
     srv.AddTool(tools.NewGreetTool())
-    
+
     return srv
 }
 ```
@@ -109,7 +109,7 @@ package tools
 
 import (
     "context"
-    
+
     "github.com/modelcontextprotocol/go-sdk/mcp"
 )
 
@@ -145,7 +145,7 @@ func (t *GreetTool) Handle(ctx context.Context, req *mcp.CallToolRequest) (*mcp.
     if !ok || name == "" {
         return nil, mcp.NewInvalidParamsError("Missing 'name' parameter")
     }
-    
+
     return &mcp.CallToolResult{
         Content: []mcp.Content{
             mcp.NewTextContent("Hello, " + name + "!"),

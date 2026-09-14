@@ -2,8 +2,8 @@
 
 ## Project: docs — Documentation Collection
 
-**Generated:** 2026-06-25  
-**Project Type:** Documentation-only Repository  
+**Generated:** 2026-06-25
+**Project Type:** Documentation-only Repository
 **Auto-detected:** Yes (No source code files — only `.md` files and documentation)
 
 ---

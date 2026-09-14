@@ -1,7 +1,7 @@
 # xamehi — Folder Structure Blueprint
 
-> **Project:** xamehi — Crypto Currency Dashboard  
-> **Type:** Hybrid Dual-Backend Web Application  
+> **Project:** xamehi — Crypto Currency Dashboard
+> **Type:** Hybrid Dual-Backend Web Application
 > **Generated:** 2024-07-24
 
 ---

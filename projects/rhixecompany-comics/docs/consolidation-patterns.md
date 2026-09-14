@@ -1,6 +1,6 @@
 # Consolidation Patterns
 
-> Extracted from comicwise, Django-Scrapy-Selenium, and selenium_webdriver  
+> Extracted from comicwise, Django-Scrapy-Selenium, and selenium_webdriver
 > Target: rhixecompany-comics (Django + Next.js 16 dual-stack)
 
 ## Table of Contents

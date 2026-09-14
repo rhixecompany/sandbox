@@ -33,7 +33,7 @@
 
 ◆ Terminal
   Backend:      local
-  Working dir:  
+  Working dir:
   Timeout:      360s
 
 ◆ Timezone
@@ -58,4 +58,3 @@
   hermes config edit     # Edit config file
   hermes config set <key> <value>
   hermes setup           # Run setup wizard
-

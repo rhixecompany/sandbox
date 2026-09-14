@@ -1,12 +1,12 @@
 # Hermes Hooks + Plugins Repair, Verification, and Maintenance Plan
 
-**Workspace:** `C:\Users\Alexa\Desktop\SandBox` (git repo)  
-**Hermes profile:** default  
-**Live hooks dir:** `C:\Users\Alexa\AppData\Local\hermes\hooks\`  
-**Config:** `C:\Users\Alexa\AppData\Local\hermes\config.yaml`  
-**Hook scripts:** `C:\Users\Alexa\AppData\Local\hermes\scripts\`  
-**Plugins dir:** `C:\Users\Alexa\AppData\Local\hermes\plugins\`  
-**Environment:** Windows 11, MSYS bash available, model `stepfun/step-3.7-flash:free` (nous)  
+**Workspace:** `C:\Users\Alexa\Desktop\SandBox` (git repo)
+**Hermes profile:** default
+**Live hooks dir:** `C:\Users\Alexa\AppData\Local\hermes\hooks\`
+**Config:** `C:\Users\Alexa\AppData\Local\hermes\config.yaml`
+**Hook scripts:** `C:\Users\Alexa\AppData\Local\hermes\scripts\`
+**Plugins dir:** `C:\Users\Alexa\AppData\Local\hermes\plugins\`
+**Environment:** Windows 11, MSYS bash available, model `stepfun/step-3.7-flash:free` (nous)
 
 ## Approval Gate Policy
 
@@ -281,7 +281,7 @@ cd /c/Users/Alexa/Desktop/SandBox \
   && git status -sb
 ```
 
-**Approval Gate 5:** "Contents to stage look correct — proceed with commit?"  
+**Approval Gate 5:** "Contents to stage look correct — proceed with commit?"
 
 - Only run `git commit` after explicit approval.
 

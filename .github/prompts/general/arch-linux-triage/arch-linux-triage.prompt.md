@@ -214,5 +214,3 @@ Same-family prompts:
 - [`centos-linux-triage.prompt.md`](centos-linux-triage.prompt.md)
 - [`debian-linux-triage.prompt.md`](debian-linux-triage.prompt.md)
 - [`fedora-linux-triage.prompt.md`](fedora-linux-triage.prompt.md)
-
-

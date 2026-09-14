@@ -11,7 +11,7 @@ Multi-phase projects like bash-scripts-fix are documented in complete detail (Ph
 - Phase 1-2 execute successfully (audit/plan existing scripts)
 - Phase 3-6 procedures are documented but can't run without source data
 
-**Option A (Old):** Generate theoretical Phase 3-6 reports with mock data (loses authenticity).  
+**Option A (Old):** Generate theoretical Phase 3-6 reports with mock data (loses authenticity).
 **Option B (New):** Create synthetic scripts from the spec → execute real Phases 3-6 → generate authentic reports.
 
 ## Solution: Synthetic Fixture Scaffolding

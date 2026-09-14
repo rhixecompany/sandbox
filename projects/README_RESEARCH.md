@@ -24,7 +24,7 @@ Each project root folder now contains:
 
 - 📊 **Banking/** - Plaid/Dwolla payment integration → `Banking/RESEARCH_REPORT.md`
 
-#### Media & Streaming  
+#### Media & Streaming
 
 - 🎨 **comicwise/** - React 19 Server Components → `comicwise/RESEARCH_REPORT.md`
 - 🎬 **xamehi.tv/** - HLS video streaming → `xamehi.tv/RESEARCH_REPORT.md`

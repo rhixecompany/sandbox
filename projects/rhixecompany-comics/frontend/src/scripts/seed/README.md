@@ -640,6 +640,6 @@ pnpm seed comics --force
 
 ---
 
-**Status**: Production Ready ✓  
-**Last Updated**: 2026-03-04  
+**Status**: Production Ready ✓
+**Last Updated**: 2026-03-04
 **Maintainer**: ComicWise Team

@@ -11,7 +11,7 @@
 
 This tutorial introduces **asyncio** for asynchronous programming in Python, focusing on I/O-bound tasks like API calls. It covers core concepts, practical examples, and best practices for writing concurrent code using coroutines, `async`/`await`, and tools like `gather()`, `as_completed()`, and `Semaphore`.
 
-> **Source**: [Patrick's Software Blog](https://www.patricksoftwareblog.com/introduction_to_asyncio_in_python.html)  
+> **Source**: [Patrick's Software Blog](https://www.patricksoftwareblog.com/introduction_to_asyncio_in_python.html)
 > **Code**: [GitLab Repository](https://gitlab.com/patkennedy79/asyncio_example)
 
 ---
@@ -177,7 +177,7 @@ async def main():
             print(result)
 ```
 
-✅ Prevents overwhelming external services  
+✅ Prevents overwhelming external services
 ✅ Maintains high performance while respecting limits
 
 ---

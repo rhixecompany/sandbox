@@ -11,13 +11,13 @@ function Test-RepoMetadata {
         [Parameter(Mandatory=$true)]
         [object]$Repo
     )
-    
+
     $errors = @()
-    
+
     if (-not $Repo.name) { $errors += "Missing repo name" }
     if (-not $Repo.url) { $errors += "Missing repo URL" }
     if (-not $Repo.owner) { $errors += "Missing repo owner" }
-    
+
     return @{
         valid = $errors.Count -eq 0
         errors = $errors
@@ -29,13 +29,13 @@ function Deduplicate-Repos {
         [Parameter(Mandatory=$true)]
         [object[]]$Repos
     )
-    
+
     $seen = @{}
     $deduplicated = @()
-    
+
     foreach ($repo in $Repos) {
         $key = "$($repo.owner)/$($repo.name)"
-        
+
         if (-not $seen.ContainsKey($key)) {
             $seen[$key] = $true
             $deduplicated += $repo
@@ -43,7 +43,7 @@ function Deduplicate-Repos {
             Write-Warning "Duplicate repo found: $key, skipping"
         }
     }
-    
+
     return $deduplicated
 }
 
@@ -51,11 +51,11 @@ function Format-DiscoveryReport {
     param(
         [Parameter(Mandatory=$true)]
         [object[]]$Repos,
-        
+
         [Parameter(Mandatory=$false)]
         [string]$Timestamp = (Get-Date -Format "o")
     )
-    
+
     return @{
         timestamp = $Timestamp
         total_repos = $Repos.Count

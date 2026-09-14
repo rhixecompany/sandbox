@@ -1,7 +1,7 @@
 # cookiecutter-django-tailwind Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Python/Django (Template)  
+**Generated:** 2026-07-28
+**Project Type:** Python/Django (Template)
 **Architecture Pattern:** Cookiecutter project template with Docker
 
 ## Overview

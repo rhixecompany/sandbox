@@ -6,12 +6,15 @@ Usage trigger: User asks for comprehensive hook framework (all 4 systems + agent
 Status: CREATED (verified by file stat; not synthetic / not from session progress)
 
 ## When To Use
+
 When request covers: (a) gateway/plugin/shell/outbound webhook framework implementation/update, (b) agent/browser hook skeletons, (c) full spec/plan/prompt/skill artifact stack, (d) cross-agent sync documentation referencing workspace installed agent inventory, (e) multi-file protocol (>6 artifacts) with timeline/milestones/resource allocation.
 
 ## When NOT To Use
+
 Single-file hook fix (<6 artifacts). Memory-only update (no skill file needed). Pure documentation read (no artifact creation / no refactor of existing 7 hook files).
 
 ## Procedure (task procedure — stored in this SKILL.md; NOT in MEMORY.md)
+
 1. LOAD: load multi-file-change-protocol skill + 14-skill stack references; read workspace context (.hermes/hooks/ directory, AGENTS.md, SESSION_REPORT.md for session truth, docs/ai-agents-inventory.md for agent inventory). Do NOT invent session IDs or agent inventory items.
 2. CLARIFY (already completed for this instance): confirm scope D, both (new + refactor), full protocol, all 17 named skills, cross-agent sync to installed agents, destructive approved.
 3. PLAN: write .hermes/plans/<ts>-comprehensive-hooks-plan.md with phases, timelines, milestones (M1–M5), resource allocation (parent + 3 child delegates A/B/C), gate definitions G1–G7.
@@ -26,9 +29,11 @@ Single-file hook fix (<6 artifacts). Memory-only update (no skill file needed). 
 8. GATE: verify G1 (artifact count ≥5 with real paths) + G2 (4 systems + agent/browser referenced) + G3 (7 existing files present) + G4 (sync doc references real installed agent docs) + G5 (skill file present, stat-verified) + G6 (session truth = SESSION_REPORT.md reference; no synthetic IDs/capabilities) + G7 (git diff reviewed; no unverified deletions). Report results honestly; include any partial failures; never declare complete before verification.
 
 ## Cross-References
+
 plan-mode / plans-and-specs / multi-file-change-protocol / using-superpowers / subagent-driven-development / implementing-plans / executing-plans / writing-clearly-and-concisely / create-implementation-plan / update-implementation-plan / execution-spec creation/update/execution
 
 ## Pitfalls (per multi-file-change-protocol + user preferences)
+
 - Do NOT declare "complete" before verification gates pass.
 - Do NOT invent session IDs / capabilities / quality scores / ranking data — verify absence explicitly in gate report.
 - Do NOT save task procedure/progress to MEMORY.md — save to SKILL.md (this file).
@@ -38,9 +43,11 @@ plan-mode / plans-and-specs / multi-file-change-protocol / using-superpowers / s
 - All destructive edits verified via git status/diff before gate report.
 
 ## Verification (real — never synthetic)
+
 After execution, parent verifies each gate using real file system / git evidence (ls outputs, file content snippets for key sections, git diff lines for B1 changes, stat output for skill file path, real reference lines from cross-agent sync doc referencing verified docs/ai-agents-inventory.md path). Report includes: which gates passed, which partially passed (with evidence of partial state), which failed (with blocker explanation). If any gate fails, report blocker honestly; never substitute fabricated evidence.
 
 ## Connection To Other Skills / Artifacts (verified real workspace files)
+
 Plan file: .hermes/plans/2026-09-13-comprehensive-hooks-plan.md (verified created and read-back)
 Spec file: .hermes/specs/01-comprehensive-hooks-spec.md (verified created; references verified paths)
 Prompt framework: .github/prompts/hooks-comprehensive.prompt.md (verified created)

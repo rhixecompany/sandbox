@@ -117,7 +117,7 @@ def generate_report_content(capture_data: dict) -> str:
 
         for entry in display_changelog:
             report_lines.append(f"| {entry.get('path', '')} | {entry.get('action', '')} |")
-        
+
         if len(changelog) > 10:
             report_lines.append(f"| [+{len(changelog) - 10} more files] | Full list in <session_id>.end.json |")
         report_lines.append("")

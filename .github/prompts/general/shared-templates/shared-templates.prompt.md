@@ -8,7 +8,7 @@ license: MIT
 tags: [templates, index, prompts, shared, DRY]
 trigger: /shared-templates
 category: general
-toolsets: 
+toolsets:
 formatter: markdown
 ---
 

@@ -1,7 +1,7 @@
 # mcp-servers/rust Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** Rust (MCP)  
+**Generated:** 2026-07-28
+**Project Type:** Rust (MCP)
 **Architecture Pattern:** Rust MCP server with Cargo
 
 ## Overview

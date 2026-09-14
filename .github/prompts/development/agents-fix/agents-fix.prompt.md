@@ -193,5 +193,3 @@ Same-family prompts:
 
 - [`agents-generator.prompt.md`](agents-generator.prompt.md)
 - [`agents-system-prompt-context-fix.prompt.md`](agents-system-prompt-context-fix.prompt.md)
-
-

@@ -1,0 +1,68 @@
+## Memory Validation Report
+
+### Profile: default
+- C:\Users\Alexa\AppData\Local\hermes\SOUL.md: ✅ (12272B)
+- C:\Users\Alexa\AppData\Local\hermes\memories\MEMORY.md: ✅ (4338B)
+- C:\Users\Alexa\AppData\Local\hermes\memories\USER.md: ✅ (1820B)
+### Profile: alexa
+- C:\Users\Alexa\AppData\Local\hermes\profiles\alexa\memories\USER.md: ✅ (1470B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\alexa\memories\MEMORY.md: ✅ (5123B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\alexa\SOUL.md: ✅ (2407B)
+### Profile: code-architect
+- C:\Users\Alexa\AppData\Local\hermes\profiles\code-architect\memories\USER.md: ✅ (1488B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\code-architect\memories\MEMORY.md: ✅ (5177B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\code-architect\SOUL.md: ✅ (2304B)
+### Profile: creative-director
+- C:\Users\Alexa\AppData\Local\hermes\profiles\creative-director\memories\USER.md: ✅ (1494B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\creative-director\memories\MEMORY.md: ✅ (5173B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\creative-director\SOUL.md: ✅ (2419B)
+### Profile: cto
+- C:\Users\Alexa\AppData\Local\hermes\profiles\cto\memories\USER.md: ✅ (1277B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\cto\memories\MEMORY.md: ✅ (4287B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\cto\SOUL.md: ✅ (879B)
+### Profile: default
+- C:\Users\Alexa\AppData\Local\hermes\SOUL.md: ✅ (12272B)
+- C:\Users\Alexa\AppData\Local\hermes\memories\MEMORY.md: ✅ (4338B)
+- C:\Users\Alexa\AppData\Local\hermes\memories\USER.md: ✅ (1820B)
+### Profile: designer
+- C:\Users\Alexa\AppData\Local\hermes\profiles\designer\memories\USER.md: ✅ (1267B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\designer\memories\MEMORY.md: ✅ (4287B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\designer\SOUL.md: ✅ (859B)
+### Profile: dev
+- C:\Users\Alexa\AppData\Local\hermes\profiles\dev\memories\USER.md: ✅ (1246B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\dev\memories\MEMORY.md: ✅ (4287B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\dev\SOUL.md: ✅ (842B)
+### Profile: exec-assistant
+- C:\Users\Alexa\AppData\Local\hermes\profiles\exec-assistant\memories\USER.md: ✅ (1488B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\exec-assistant\memories\MEMORY.md: ✅ (5247B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\exec-assistant\SOUL.md: ✅ (2547B)
+### Profile: ops
+- C:\Users\Alexa\AppData\Local\hermes\profiles\ops\memories\USER.md: ✅ (1256B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\ops\memories\MEMORY.md: ✅ (4287B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\ops\SOUL.md: ✅ (851B)
+### Profile: patient-tutor
+- C:\Users\Alexa\AppData\Local\hermes\profiles\patient-tutor\memories\USER.md: ✅ (1486B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\patient-tutor\memories\MEMORY.md: ✅ (5225B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\patient-tutor\SOUL.md: ✅ (2537B)
+### Profile: pm
+- C:\Users\Alexa\AppData\Local\hermes\profiles\pm\memories\USER.md: ✅ (1257B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\pm\memories\MEMORY.md: ✅ (4287B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\pm\SOUL.md: ✅ (848B)
+### Profile: qa
+- C:\Users\Alexa\AppData\Local\hermes\profiles\qa\memories\USER.md: ✅ (1256B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\qa\memories\MEMORY.md: ✅ (4287B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\qa\SOUL.md: ✅ (851B)
+### Profile: research-analyst
+- C:\Users\Alexa\AppData\Local\hermes\profiles\research-analyst\memories\USER.md: ✅ (1492B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\research-analyst\memories\MEMORY.md: ✅ (5208B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\research-analyst\SOUL.md: ✅ (2491B)
+### Profile: security
+- C:\Users\Alexa\AppData\Local\hermes\profiles\security\memories\USER.md: ✅ (1268B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\security\memories\MEMORY.md: ✅ (4287B)
+- C:\Users\Alexa\AppData\Local\hermes\profiles\security\SOUL.md: ✅ (851B)
+
+### Summary
+- Profiles checked: 14
+- Files passing: 45
+- Files failing: 0
+- Total issues: 0

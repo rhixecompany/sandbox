@@ -104,26 +104,26 @@ This is where Django shines.
 @shared_task(bind=True, max_retries=3, default_retry_delay=300)
 def scrape_comic_source(self, source_id: str):
     source = ScrapingSource.objects.get(id=source_id)
-    
+
     # Choose engine based on source type
     if source.requires_javascript:
         result = run_selenium_scraper(source)
     else:
         result = run_scrapy_spider(source)
-    
+
     # Normalize to internal format
     comics_data = normalize_result(result)
-    
+
     # Upsert to shared DB
     for comic_data in comics_data:
         comic, created = Comic.objects.update_or_create(
             slug=comic_data['slug'],
             defaults=comic_data
         )
-        
+
         # Trigger Next.js revalidation
         revalidate_comic(comic.slug)
-    
+
     return {'processed': len(comics_data)}
 ```
 
@@ -158,10 +158,10 @@ import { ChapterNavigator } from '@/components/ChapterNavigator'
 
 export default function Reader({ params }: { params: { slug: string } }) {
   const { chapter, nextChapter, prevChapter, goToPage } = useReader(params.slug)
-  
+
   return (
     <div className="reader-container">
-      <ChapterNavigator 
+      <ChapterNavigator
         current={chapter.number}
         total={chapter.comic.chapters.length}
         onNavigate={goToPage}
@@ -221,7 +221,7 @@ def generate_tokens(user):
 export async function getServerSession() {
   const token = cookies().get('access_token')?.value
   if (!token) return null
-  
+
   try {
     const payload = await verifyToken(token, DJANGO_JWT_PUBLIC_KEY)
     return { user: payload }
@@ -286,5 +286,5 @@ The database schema is the constitution. The ORMs are the interpreters. The API 
 
 ---
 
-*Written by the workspace chronicler, July 25, 2025.  
+*Written by the workspace chronicler, July 25, 2025.
 Filed at `projects/rhixecompany-comics/THE_STORY_OF_THIS_REPO.md`.*

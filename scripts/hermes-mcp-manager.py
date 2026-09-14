@@ -27,25 +27,25 @@ def load_mcp_servers_from_config():
     if not os.path.exists(CONFIG_PATH):
         print(f"ERROR: Config not found at {CONFIG_PATH}")
         return []
-    
+
     with open(CONFIG_PATH, "r") as f:
         lines = f.read().split("\n")
-    
+
     servers = []
     in_mcp_section = False
     current_server = None
-    
+
     for i, line in enumerate(lines):
         stripped = line.strip()
         indent = len(line) - len(line.lstrip())
-        
+
         if stripped == "mcp_servers:":
             in_mcp_section = True
             continue
-        
+
         if not in_mcp_section:
             continue
-        
+
         # Top-level server entry (indent 2)
         if stripped.endswith(":") and not stripped.startswith("#") and not stripped.startswith("-") and indent == 2:
             if current_server:
@@ -58,7 +58,7 @@ def load_mcp_servers_from_config():
                 "args": []
             }
             continue
-        
+
         # Sub-keys of current server (indent 4)
         if current_server and indent == 4:
             if stripped.startswith("command:"):
@@ -69,17 +69,17 @@ def load_mcp_servers_from_config():
                 current_server["enabled"] = "true" in stripped.lower()
             elif stripped.startswith("-") and current_server["command"] != "N/A":
                 current_server["args"].append(stripped.lstrip("- ").strip())
-    
+
     if current_server:
         servers.append(current_server)
-    
+
     return servers
 
 
 def load_mcp_from_repo_configs():
     """Load MCP servers from repo config files."""
     configs = {}
-    
+
     for cfg_file in [".mcp.json", ".vscode/mcp.json", ".codex/mcp.json", ".copilot/mcp.json"]:
         fp = SANDBOX / cfg_file
         if fp.exists():
@@ -87,7 +87,7 @@ def load_mcp_from_repo_configs():
                 data = json.load(f)
             servers = data.get("mcpServers", data.get("servers", {}))
             configs[cfg_file] = servers
-    
+
     # opencode.json has different structure
     oc_path = SANDBOX / "opencode.json"
     if oc_path.exists():
@@ -95,7 +95,7 @@ def load_mcp_from_repo_configs():
             data = json.load(f)
         mcp = data.get("mcp", {})
         configs["opencode.json"] = mcp
-    
+
     return configs
 
 
@@ -107,13 +107,13 @@ def cmd_list():
     for s in servers:
         status = "✓ enabled" if s["enabled"] else "✗ disabled"
         print(f"  {s['name']:20s} {s['command']:20s} {s['type']:6s} {status}")
-    
+
     # Also show repo configs
     print("\nRepo MCP Config Files:")
     repo_configs = load_mcp_from_repo_configs()
     for cfg_name, servers in repo_configs.items():
         print(f"  {cfg_name}: {len(servers)} servers")
-    
+
     print(f"\nTotal unique MCP servers across all configs: 25")
 
 
@@ -121,12 +121,12 @@ def cmd_test():
     """Test connectivity for each MCP server."""
     servers = load_mcp_servers_from_config()
     results = []
-    
+
     for s in servers:
         if not s["enabled"]:
             results.append((s["name"], "DISABLED", ""))
             continue
-        
+
         if s["type"] == "http":
             # Test HTTP endpoint
             try:
@@ -159,14 +159,14 @@ def cmd_test():
                 results.append((s["name"], "NOT FOUND", f"{s['command']} not in PATH"))
             except Exception as e:
                 results.append((s["name"], "ERROR", str(e)[:80]))
-    
+
     print(f" MCP Server Connectivity Test ({len(results)} servers):")
     print("-" * 60)
     ok_count = sum(1 for _, status, _ in results if status == "OK")
     for name, status, detail in results:
         icon = "✓" if status == "OK" else "✗" if status in ("FAIL", "NOT FOUND", "ERROR") else "⚠"
         print(f"  {icon} {name:20s} {status:10s} {detail}")
-    
+
     print(f"\n  Result: {ok_count}/{len(results)} servers OK")
 
 
@@ -174,7 +174,7 @@ def cmd_install():
     """Install/update global bunx dependencies for all MCP servers."""
     servers = load_mcp_servers_from_config()
     bunx_packages = set()
-    
+
     for s in servers:
         if s["command"] == "bunx" and s["args"]:
             # Collect package names from args
@@ -182,7 +182,7 @@ def cmd_install():
                 arg = arg.strip()
                 if arg.startswith("@") or arg.startswith("node-") or arg.startswith("mcp-") or arg.startswith("django-") or arg.startswith("docs-") or arg.startswith("postgres-") or arg.startswith("pytest-") or arg.startswith("pyright-") or arg == "pytest-mcp":
                     bunx_packages.add(arg)
-    
+
     print(f"Installing {len(bunx_packages)} bunx packages globally:")
     for pkg in sorted(bunx_packages):
         print(f"  bunx -y {pkg}")
@@ -194,7 +194,7 @@ def cmd_install():
                 print(f"    ✗ failed: {result.stderr[:100]}")
         except Exception as e:
             print(f"    ✗ error: {e}")
-    
+
     print("\nInstall complete.")
 
 
@@ -202,27 +202,27 @@ def cmd_skills(output_dir=None):
     """Generate SKILL.md stubs for all MCP servers."""
     if output_dir is None:
         output_dir = SANDBOX / ".github" / "skills"
-    
+
     servers = load_mcp_servers_from_config()
     os.makedirs(output_dir, exist_ok=True)
-    
+
     print(f"Generating MCP skills in {output_dir}:")
-    
+
     for s in servers:
         if not s["enabled"]:
             continue
-        
+
         skill_dir = output_dir / s["name"]
         skill_dir.mkdir(exist_ok=True)
-        
+
         skill_md = skill_dir / "SKILL.md"
-        
+
         # Build description based on server type and name
         name = s["name"]
         cmd = s["command"]
         stype = s["type"]
         args = s["args"]
-        
+
         if stype == "http":
             description = f"HTTP-based MCP server for {name}. Use when you need {name} capabilities via MCP."
         elif cmd == "bunx":
@@ -236,7 +236,7 @@ def cmd_skills(output_dir=None):
             description = f"MindStudio CLI MCP server. Provides AI agent project management capabilities."
         else:
             description = f"MCP server for {name}. Provides {name} capabilities."
-        
+
         # Build prerequisites
         prereqs = []
         if cmd == "bunx":
@@ -262,7 +262,7 @@ def cmd_skills(output_dir=None):
                 prereqs.append("- Neon API key configured")
             elif "context7" in name:
                 prereqs.append("- Context7 API key configured")
-        
+
         # Build workflow steps
         workflows = []
         if cmd == "bunx":
@@ -273,7 +273,7 @@ def cmd_skills(output_dir=None):
             workflows.append(f"1. Verify API key is set in environment")
             workflows.append(f"2. The MCP server connects via HTTP to {args[0] if args else 'endpoint'}")
             workflows.append(f"3. Use via Hermès: tools are available automatically when MCP is enabled")
-        
+
         # Build gotchas
         gotchas = []
         if "tavily" in name:
@@ -291,7 +291,7 @@ def cmd_skills(output_dir=None):
         if "ast-grep" in name:
             gotchas.append("- Pattern matching uses AST-based queries, not regex")
             gotchas.append("- Write patterns in const format for best results")
-        
+
         # Build troubleshooting
         troubleshooting = []
         if cmd == "bunx":
@@ -301,7 +301,7 @@ def cmd_skills(output_dir=None):
             troubleshooting.append("| 401 Unauthorized | Verify API key is correct and has required scopes |")
             troubleshooting.append("| 404 Not Found | Check endpoint URL is correct |")
             troubleshooting.append("| Timeout | Network connectivity or rate limiting — retry with delay |")
-        
+
         skill_content = f"""---
 name: {name}
 description: '{description} Use when you need {name} functionality via the Model Context Protocol. Provides {name} tools through Hermès or other MCP-compatible agents.'
@@ -374,12 +374,12 @@ bunx -y {' '.join(args) if args else name}
 - [agent-skills.instructions.md](../../../../Desktop/instructions/agent-skills.instructions.md) — SKILL.md format best practices
 - [agent-safety.instructions.md](../../../../Desktop/instructions/agent-safety.instructions.md) — governance and safety patterns
 """
-        
+
         with open(skill_md, "w") as f:
             f.write(skill_content)
-        
+
         print(f"  ✓ {skill_dir}")
-    
+
     print(f"\nGenerated {len([s for s in servers if s['enabled']])} MCP skills.")
     print(f"Run `hermes skills audit` to validate.")
 
@@ -399,9 +399,9 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         cmd_help()
         sys.exit(0)
-    
+
     command = sys.argv[1].lower()
-    
+
     if command == "list":
         cmd_list()
     elif command == "test":

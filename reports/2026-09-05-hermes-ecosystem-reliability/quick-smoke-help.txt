@@ -1,0 +1,5 @@
+usage: hermes_quick_commands.py smoke [-h] --registry REGISTRY
+
+options:
+  -h, --help           show this help message and exit
+  --registry REGISTRY

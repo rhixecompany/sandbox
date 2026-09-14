@@ -71,7 +71,7 @@ $triageResults = @()
 foreach ($repo in $clonedRepos) {
     $repoName = $repo.name
     $repoPath = $repo.target_path
-    
+
     Write-Info "Analyzing: $repoName"
 
     # Verify repo path exists
@@ -79,35 +79,35 @@ foreach ($repo in $clonedRepos) {
         Write-Warn "  Repository path not found: $repoPath. Skipping."
         continue
     }
-    
+
     # Get repo metadata
     $metadata = Get-RepositoryMetadata -RepoPath $repoPath -RepoName $repoName
-    
+
     # Get dependency vulnerabilities using shared scanning service
     $scanResult = Invoke-StackScan -RepoPath $repoPath -IncludeStdout $false
-    
+
     # Extract vulnerabilities and per-manager breakdown
     $vulnerabilities = $scanResult.managers
     $totalVulnerabilities = $scanResult.total_vulnerabilities
     $detectedManagers = $scanResult.detected_managers
-    
+
     # Get issue count from GitHub (placeholder - would use GitHub API in real implementation)
     $issueCount = 0
-    
+
     # Get days since last commit
     $daysSinceLastCommit = if ($metadata.commit_history) {
         $metadata.commit_history.days_since_last_commit
     } else {
         -1
     }
-    
+
     # Calculate health score using shared module
     $healthScore = Get-HealthScore -IssueCount $issueCount -VulnerabilityCount $totalVulnerabilities -DaysSinceLastCommit $daysSinceLastCommit -TriageConfig $triageConfig
 
     $healthCategory = Get-HealthCategory -HealthScore $healthScore
 
     Write-Info "  Health Score: $healthScore/100 ($healthCategory)"
-    
+
     $triageResults += @{
         name = $repoName
         org = if ($repo.org) { $repo.org } else { "unknown" }

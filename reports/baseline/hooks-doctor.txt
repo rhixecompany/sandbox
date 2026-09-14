@@ -1,0 +1,51 @@
+Checking 8 configured shell hook(s)...
+
+  [on_session_end] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:03.127229Z)
+      ⚠ script modified since approval (was 2026-08-01T01:41:56.729226Z, now 2026-08-31T18:59:16.929351Z) — review changes, then `hermes hooks revoke` + re-approve to refresh
+      ✓ ran clean with empty stdout (exit=1, 0.382s) — hook is observer-only
+
+  [on_session_end] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-auto-commit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:03.941745Z)
+      ⚠ script modified since approval (was 2026-08-01T01:42:07.609892Z, now 2026-08-31T18:59:17.040101Z) — review changes, then `hermes hooks revoke` + re-approve to refresh
+      ✓ ran clean with empty stdout (exit=1, 0.34s) — hook is observer-only
+
+  [on_session_end] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:04.598718Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=1, 0.337s) — hook is observer-only
+
+  [on_session_start] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:05.260579Z)
+      ⚠ script modified since approval (was 2026-08-01T01:41:56.729226Z, now 2026-08-31T18:59:16.929351Z) — review changes, then `hermes hooks revoke` + re-approve to refresh
+      ✓ ran clean with empty stdout (exit=1, 0.374s) — hook is observer-only
+
+  [on_session_start] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:05.911666Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=1, 0.351s) — hook is observer-only
+
+  [pre_llm_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/session-logger/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:06.951612Z)
+      ⚠ script modified since approval (was 2026-08-01T01:41:56.729226Z, now 2026-08-31T18:59:16.929351Z) — review changes, then `hermes hooks revoke` + re-approve to refresh
+      ✓ ran clean with empty stdout (exit=1, 0.346s) — hook is observer-only
+
+  [pre_llm_call] "C:/Program Files/Git/usr/bin/bash.exe" "C:/Users/Alexa/AppData/Local/hermes/hooks/governance-audit/hook.sh"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:07.600700Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=1, 0.366s) — hook is observer-only
+
+  [pre_llm_call] "C:/Program Files/Git/usr/bin/bash.exe" -c "python C:/Users/Alexa/AppData/Local/hermes/skills/devops/mcp-server-health/scripts/mcp_preflight_check.py --hook --critical ast-grep,github,fetch,sequential-thinking"
+      ✓ script exists and is executable
+      ✓ allowlisted (approved 2026-08-28T14:45:08.310598Z)
+      ✓ script unchanged since approval
+      ✓ ran clean with empty stdout (exit=0, 2.02s) — hook is observer-only
+
+4 issue(s) found.  Fix before relying on these hooks.

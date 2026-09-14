@@ -174,5 +174,5 @@ But v1 works. It got the job done. It got _a_ job done.
 
 ---
 
-_Written by the workspace chronicler, July 25, 2025.  
+_Written by the workspace chronicler, July 25, 2025.
 Filed at `projects/Resume_maker/THE_STORY_OF_THIS_REPO.md`._

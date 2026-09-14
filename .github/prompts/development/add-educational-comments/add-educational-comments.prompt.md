@@ -6,18 +6,18 @@ trigger: /add-educational-comments
 category: development
 version: 1.0.0
 author: Hermes Agent
-tags: 
-metadata: 
-hermes: 
+tags:
+metadata:
+hermes:
 profile: code-architect
 priority: medium
-copilot: 
+copilot:
 model_required: sonnet
-opencode: 
+opencode:
 enabled: true
-codex: 
-toolsets: 
-skills: 
+codex:
+toolsets:
+skills:
 - skill: using-superpowers
 dependencies: []
 formatter: markdown
@@ -338,4 +338,3 @@ Prompt-library tooling (see `.enhance/`):
 - `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section
-

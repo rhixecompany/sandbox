@@ -56,7 +56,7 @@ bun run build
 bun run start
 ```
 
-The server starts on **<http://localhost:3121>** by default.  
+The server starts on **<http://localhost:3121>** by default.
 Override with `PORT` and `HOST` environment variables:
 
 ```bash

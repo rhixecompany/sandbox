@@ -1,7 +1,7 @@
 # Resume_maker Architecture
 
-**Generated:** 2026-07-28  
-**Project Type:** TypeScript/Bun (Utility)  
+**Generated:** 2026-07-28
+**Project Type:** TypeScript/Bun (Utility)
 **Architecture Pattern:** PDF generation from structured JSON input
 
 ## Overview

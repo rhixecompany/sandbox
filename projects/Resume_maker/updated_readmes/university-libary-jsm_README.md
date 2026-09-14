@@ -298,5 +298,5 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-_Built with ❤️ by Alexander Iseghohi_  
+_Built with ❤️ by Alexander Iseghohi_
 _Part of the rhixecompany portfolio_

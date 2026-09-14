@@ -22,10 +22,10 @@ I am particularly interested in [Company Name] because [specific reason - e.g., 
 
 I would welcome the opportunity to discuss how my background and projects can add value to your team. Thank you for your time and consideration.
 
-Best regards,  
-**Alexander Iseghohi**  
-Phone: [Your Phone] | Email: [Your Email]  
-LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209  
+Best regards,
+**Alexander Iseghohi**
+Phone: [Your Phone] | Email: [Your Email]
+LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209
 GitHub: github.com/rhixecompany
 
 ---
@@ -51,10 +51,10 @@ I am drawn to [Company Name] because [specific reason]. I would love to discuss 
 
 Thank you for considering my application. I look forward to the opportunity to speak with you.
 
-Best regards,  
-**Alexander Iseghohi**  
-Phone: [Your Phone] | Email: [Your Email]  
-LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209  
+Best regards,
+**Alexander Iseghohi**
+Phone: [Your Phone] | Email: [Your Email]
+LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209
 GitHub: github.com/rhixecompany
 
 ---
@@ -84,10 +84,10 @@ I am excited about [Company Name]'s [specific project/tech/mission] and would we
 
 Thank you for your time and consideration.
 
-Best regards,  
-**Alexander Iseghohi**  
-Phone: [Your Phone] | Email: [Your Email]  
-LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209  
+Best regards,
+**Alexander Iseghohi**
+Phone: [Your Phone] | Email: [Your Email]
+LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209
 GitHub: github.com/rhixecompany
 
 ---
@@ -117,10 +117,10 @@ I am passionate about quality assurance and believe automation is crucial for ma
 
 Thank you for considering my application.
 
-Best regards,  
-**Alexander Iseghohi**  
-Phone: [Your Phone] | Email: [Your Email]  
-LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209  
+Best regards,
+**Alexander Iseghohi**
+Phone: [Your Phone] | Email: [Your Email]
+LinkedIn: linkedin.com/in/alexander-iseghohi-8a3a51209
 GitHub: github.com/rhixecompany
 
 ---

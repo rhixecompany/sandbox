@@ -1,0 +1,343 @@
+{
+  "generated_at": "2026-08-28T15:04:56+00:00",
+  "root": "C:/Users/Alexa/Desktop/SandBox",
+  "auth": [
+    {
+      "name": "copilot",
+      "credential_count": 3,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "GITHUB_TOKEN",
+          "kind": "api_key",
+          "detail": "env:GITHUB_TOKEN",
+          "active": false
+        },
+        {
+          "index": 2,
+          "name": "COPILOT_GITHUB_TOKEN",
+          "kind": "api_key",
+          "detail": "env:COPILOT_GITHUB_TOKEN",
+          "active": true
+        },
+        {
+          "index": 3,
+          "name": "api-key-3",
+          "kind": "api_key",
+          "detail": "manual",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "deepseek",
+      "credential_count": 1,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "DEEPSEEK_API_KEY",
+          "kind": "api_key",
+          "detail": "env:DEEPSEEK_API_KEY",
+          "active": true
+        }
+      ]
+    },
+    {
+      "name": "gemini",
+      "credential_count": 1,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "GOOGLE_API_KEY",
+          "kind": "api_key",
+          "detail": "env:GOOGLE_API_KEY",
+          "active": true
+        }
+      ]
+    },
+    {
+      "name": "huggingface",
+      "credential_count": 1,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "HF_TOKEN",
+          "kind": "api_key",
+          "detail": "env:HF_TOKEN",
+          "active": true
+        }
+      ]
+    },
+    {
+      "name": "ollama-cloud",
+      "credential_count": 1,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "OLLAMA_API_KEY",
+          "kind": "api_key",
+          "detail": "env:OLLAMA_API_KEY",
+          "active": true
+        }
+      ]
+    },
+    {
+      "name": "openai-codex",
+      "credential_count": 1,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "device_code",
+          "kind": "oauth",
+          "detail": "device_code",
+          "active": true
+        }
+      ]
+    },
+    {
+      "name": "opencode-zen",
+      "credential_count": 2,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "OPENCODE_ZEN_API_KEY",
+          "kind": "api_key",
+          "detail": "env:OPENCODE_ZEN_API_KEY",
+          "active": true
+        },
+        {
+          "index": 2,
+          "name": "zen-backup",
+          "kind": "api_key",
+          "detail": "manual",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "openrouter",
+      "credential_count": 1,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "OPENROUTER_API_KEY",
+          "kind": "api_key",
+          "detail": "env:OPENROUTER_API_KEY",
+          "active": true
+        }
+      ]
+    },
+    {
+      "name": "xai",
+      "credential_count": 2,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "api-key-1",
+          "kind": "api_key",
+          "detail": "manual auth failed (403) (re-auth may be required)",
+          "active": true
+        },
+        {
+          "index": 2,
+          "name": "XAI_API_KEY",
+          "kind": "api_key",
+          "detail": "env:XAI_API_KEY",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "xai-oauth",
+      "credential_count": 1,
+      "credentials": [
+        {
+          "index": 1,
+          "name": "xai-oauth-oauth-1",
+          "kind": "oauth",
+          "detail": "device_code",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "default",
+      "model": "gpt-5.4-mini",
+      "gateway": "running",
+      "alias": "—",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "alexa",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "alexa",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "code-architect",
+      "model": "gpt-5.4-mini",
+      "gateway": "stopped",
+      "alias": "code-architect",
+      "distribution": "—",
+      "selected": true
+    },
+    {
+      "name": "creative-director",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "creative-director",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "cto",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "cto",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "designer",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "designer",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "dev",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "dev",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "exec-assistant",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "exec-assistant",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "ops",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "ops",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "patient-tutor",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "patient-tutor",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "pm",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "pm",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "qa",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "qa",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "research-analyst",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "research-analyst",
+      "distribution": "—",
+      "selected": false
+    },
+    {
+      "name": "security",
+      "model": "deepseek-v4-flash-free",
+      "gateway": "stopped",
+      "alias": "security",
+      "distribution": "—",
+      "selected": false
+    }
+  ],
+  "packages": [
+    {
+      "name": "openrouter-client",
+      "path": "C:/Users/Alexa/Desktop/SandBox/packages/openrouter-client",
+      "language": "typescript",
+      "toolchain": "bun",
+      "manifest": "package.json",
+      "files": [
+        "PLAN.md",
+        "README.md",
+        "SPEC.md",
+        "package.json",
+        "src/chat.ts",
+        "src/client.ts",
+        "src/types.ts",
+        "test/chat.test.ts",
+        "tsconfig.json"
+      ],
+      "capabilities": [
+        "TypeScript wrapper",
+        "OpenRouter SDK client",
+        "chat completions",
+        "streaming",
+        "custom headers",
+        "max_tokens",
+        "temperature control",
+        "typed client"
+      ],
+      "summary": "TypeScript/Bun OpenRouter wrapper with TypeScript wrapper, OpenRouter SDK client, chat completions, streaming"
+    },
+    {
+      "name": "openrouter-client-py",
+      "path": "C:/Users/Alexa/Desktop/SandBox/packages/openrouter-client-py",
+      "language": "python",
+      "toolchain": "python",
+      "manifest": "pyproject.toml",
+      "files": [
+        ".pytest_cache/README.md",
+        "PLAN.md",
+        "README.md",
+        "SPEC.md",
+        "pyproject.toml",
+        "src/openrouter_client_py.egg-info/SOURCES.txt",
+        "src/openrouter_client_py.egg-info/dependency_links.txt",
+        "src/openrouter_client_py.egg-info/requires.txt",
+        "src/openrouter_client_py.egg-info/top_level.txt",
+        "src/openrouter_client_py/__init__.py",
+        "src/openrouter_client_py/chat.py",
+        "src/openrouter_client_py/client.py",
+        "src/openrouter_client_py/types.py",
+        "tests/test_client.py"
+      ],
+      "capabilities": [
+        "Python wrapper",
+        "OpenRouter client",
+        "chat completions",
+        "streaming",
+        "custom headers",
+        "max_tokens",
+        "temperature control",
+        "dataclasses"
+      ],
+      "summary": "Python OpenRouter wrapper with Python wrapper, OpenRouter client, chat completions, streaming"
+    }
+  ]
+}

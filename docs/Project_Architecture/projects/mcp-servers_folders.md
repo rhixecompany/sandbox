@@ -1,7 +1,7 @@
 # mcp-servers — Folder Structure
 
-> **Stack:** 10 Languages (TypeScript, Python, Go, Rust, Java, Kotlin, C#, PHP, Ruby, Swift)  
-> **Type:** Multi-Language MCP Server Collection  
+> **Stack:** 10 Languages (TypeScript, Python, Go, Rust, Java, Kotlin, C#, PHP, Ruby, Swift)
+> **Type:** Multi-Language MCP Server Collection
 > **Status:** Active
 
 ## Directory Tree

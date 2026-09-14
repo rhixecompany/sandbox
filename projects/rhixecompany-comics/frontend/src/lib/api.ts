@@ -74,4 +74,3 @@ export const api = {
     return request<T>(endpoint, { ...options, method: "DELETE" });
   },
 };
-

@@ -8,21 +8,21 @@ version: 1.0.0
 author: Hermes Agent
 license: MIT
 tags: [hermes, diagnostic, doctor, log-triage, verification]
-toolsets: 
-skills: 
+toolsets:
+skills:
 - skill: using-superpowers
 dependencies: []
 formatter: markdown
-metadata: 
-hermes: 
+metadata:
+hermes:
 profile: default
 context_size: medium
-copilot: 
+copilot:
 extensions: []
-opencode: 
+opencode:
 command: opencode //hermes-doctor
 flags: {{}}
-codex: 
+codex:
 model_override: null
 ---
 

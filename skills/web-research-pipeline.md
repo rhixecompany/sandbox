@@ -16,9 +16,11 @@ references:
 # Skill — Web Research Pipeline (Verified Real Artifacts)
 
 ## When to Use
+
 Load when running `/web-research-pipeline` or `/goal` subgoal on dependency inventories (`python-packages.md`, `node-dependency.md`) that requires best-practice + cheatsheet links and per-package artifacts (spec/plan/prompt/script/skill).
 
 ## 5-Step Protocol (Sequential — Data Dependency Enforced)
+
 Per clarification turn 3 (sequential phases selected): Phase N must have gate PASS before Phase N+1 begins.
 
 1. **LOAD** — Load 14 skills (`multi-file-change-protocol` stack). Verify `.hermes/plans/` exists; verify `python-packages.md` + `node-dependency.md` readable. Gate: all files present.
@@ -28,6 +30,7 @@ Per clarification turn 3 (sequential phases selected): Phase N must have gate PA
 5. **CREATE + EXECUTE** — Create per-package spec (`.hermes/specs/`), plan (`.hermes/plans/`), prompt (`.github/prompts/`), script (`scripts/`), skill (`skills/`). Execute scripts; verify skills loadable. Gate: exit codes 0; skills verified via `skill_view`.
 
 ## Verified Evidence (Real — Not Synthetic)
+
 - `.hermes/plans/web-research-subgoal-2026-09-13.md` — 3830 B (plan, verified).
 - `.hermes/specs/web-research-subgoal-2026-09-13.md` — 3395 B (spec, verified).
 - `results/web-research-results.json` — 4676 B (3 batches, 16 links recorded, verified by `os.path.getsize`).
@@ -38,27 +41,31 @@ Per clarification turn 3 (sequential phases selected): Phase N must have gate PA
 - `.env` 3334 B unchanged; 0 new `.bak` artifacts; 0 synthetic session IDs; 0 hidden errors.
 
 ## Per-Package Artifact Mapping (Both: skills + specs/plans per clarification turn 4)
-| Type | Path Pattern | Verified Example |
-|---|---|---|
-| Skill | `skills/web-research-<package>.md` | This file |
-| Plan | `.hermes/plans/web-research-subgoal-<ts>.md` | `.hermes/plans/web-research-subgoal-2026-09-13.md` |
-| Spec | `.hermes/specs/web-research-subgoal-<ts>.md` | `.hermes/specs/web-research-subgoal-2026-09-13.md` |
-| Script | `scripts/web-research-pipeline.py` | Created by this pipeline |
-| Prompt | `.github/prompts/web-research-subgoal.prompt.md` | To be generated in P5 |
-| Result | `results/web-research-results.json` | Verified 4676 B |
+
+| Type   | Path Pattern                                     | Verified Example                                   |
+| ------ | ------------------------------------------------ | -------------------------------------------------- |
+| Skill  | `skills/web-research-<package>.md`               | This file                                          |
+| Plan   | `.hermes/plans/web-research-subgoal-<ts>.md`     | `.hermes/plans/web-research-subgoal-2026-09-13.md` |
+| Spec   | `.hermes/specs/web-research-subgoal-<ts>.md`     | `.hermes/specs/web-research-subgoal-2026-09-13.md` |
+| Script | `scripts/web-research-pipeline.py`               | Created by this pipeline                           |
+| Prompt | `.github/prompts/web-research-subgoal.prompt.md` | To be generated in P5                              |
+| Result | `results/web-research-results.json`              | Verified 4676 B                                    |
 
 ## Rate-Limit Safeguard (Memory Reference)
+
 - `web_search` calls spaced ≥500ms apart.
 - If 403 rate-limit encountered: document honestly; do NOT fabricate results; do NOT suppress error.
 - `delegate_task` only after P3 gate (parallel artifact creation allowed for P5, since artifacts are independent per package once research is verified).
 
 ## Profile Routing (Per Phase)
+
 - P1-P2: `research-analyst` (web research links)
 - P3: `code-architect` (verification gate + architecture concern preservation)
 - P4: `code-architect` (artifact parsing)
 - P5: `code-architect` (spec/plan/script); `creative-director` (prompt formatting); `ops` (execution verification)
 
 ## Pitfalls (From Multi-File-Change-Protocol + Verified Session)
+
 - Never claim pipeline complete if only representative batches executed (honest blocker preservation required — `systematic-debugging` Phase 4.5).
 - Never suppress broken links (they are real evidence of rate/blocker state).
 - Never declare artifacts verified without `os.path.getsize` + file read confirmation.

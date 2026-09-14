@@ -2,8 +2,8 @@
 
 ## Project: Bash — Automation Toolkit
 
-> **Generated:** 2026-06-25  
-> **Generator:** technology-stack-blueprint-generator  
+> **Generated:** 2026-06-25
+> **Generator:** technology-stack-blueprint-generator
 > **Analysis Depth:** Comprehensive
 
 ---
@@ -12,7 +12,7 @@
 
 The Bash module is the primary automation toolkit for the SandBox workspace. It provides TypeScript-based utility scripts for cache cleaning, dependency management, git operations, cross-referencing, and orchestration.
 
-**Project Type:** Bun/TypeScript Automation Toolkit  
+**Project Type:** Bun/TypeScript Automation Toolkit
 **Stack Type:** Bun/TypeScript
 
 ---

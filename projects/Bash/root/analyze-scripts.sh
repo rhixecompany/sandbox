@@ -60,7 +60,7 @@ HEADER
 count_loc() {
     local file="$1"
     local ext="${file##*.}"
-    
+
     case "$ext" in
         sh)
             grep -v '^\s*#' "$file" | grep -v '^\s*$' | wc -l 2>/dev/null || echo "0"
@@ -90,7 +90,7 @@ analyze_purpose() {
 extract_dependencies() {
     local file="$1"
     local deps=""
-    
+
     # Look for common patterns: source, require, import, external commands
     local pattern="(source|require|import|from|using) +['\"]?[^'\"[:space:]]+"
     deps=$(grep -oE "$pattern" "$file" 2>/dev/null | awk '{print $2}' | tr -d "'\"" | sort -u | tr '\n' ', ' | sed 's/,$//')
@@ -98,7 +98,7 @@ extract_dependencies() {
     # Also check for external command calls
     local ext_pattern="(git|npm|node|bun|curl|wget|docker|kubectl) "
     local external=$(grep -oE "$ext_pattern" "$file" 2>/dev/null | sort -u | tr '\n' ', ' | sed 's/,$//')
-    
+
     if [ -n "$external" ]; then
         if [ -n "$deps" ]; then
             deps="$deps, $external"
@@ -106,7 +106,7 @@ extract_dependencies() {
             deps="$external"
         fi
     fi
-    
+
     [ -z "$deps" ] && deps="None detected"
     echo "$deps"
 }
@@ -116,7 +116,7 @@ assess_risk() {
     local file="$1"
     local risk="LOW"
     local notes=""
-    
+
     # Check for CRITICAL patterns
     local critical_pattern="(password|secret|token|api_key|credential).*="
     if grep -qE "$critical_pattern" "$file" 2>/dev/null; then
@@ -134,20 +134,20 @@ assess_risk() {
         risk="CRITICAL"
         notes="${notes}eval/exec usage detected; "
     fi
-    
+
     # Check for HIGH risk patterns
     if [ "$risk" != "CRITICAL" ]; then
         if grep -qE "sudo|runas|elevate" "$file" 2>/dev/null; then
             risk="HIGH"
             notes="${notes}Elevated privileges; "
         fi
-        
+
         if grep -qE "DROP|DELETE|TRUNCATE" "$file" 2>/dev/null; then
             risk="HIGH"
             notes="${notes}Database destructive ops; "
         fi
     fi
-    
+
     # Check for MEDIUM risk patterns
     if [ "$risk" = "LOW" ]; then
         local complexity=$(grep -cE "if|while|for|case" "$file" 2>/dev/null)
@@ -156,20 +156,20 @@ assess_risk() {
             notes="${notes}High cyclomatic complexity; "
         fi
     fi
-    
+
     # Check for dead code indicators (last modified >6 months and low git activity)
     local mod_time=$(stat -c %Y "$file" 2>/dev/null || stat -f %m "$file" 2>/dev/null || echo "0")
     local current_time=$(date +%s)
     local age_days=$(( (current_time - mod_time) / 86400 ))
-    
+
     if [ "$age_days" -gt 180 ]; then
         notes="${notes}Not modified >6mo; "
     fi
-    
+
     # Remove trailing semicolon and space
     notes=$(echo "$notes" | sed 's/; $//')
     [ -z "$notes" ] && notes="Standard script"
-    
+
     echo "$risk|$notes"
 }
 
@@ -180,31 +180,31 @@ for dir in "${TARGET_DIRS[@]}"; do
     if [ ! -d "$dir" ]; then
         continue
     fi
-    
+
     # Find all script files
     find "$dir" -type f \( -name "*.sh" -o -name "*.ps1" -o -name "*.bat" -o -name "*.ts" \) 2>/dev/null | while read -r script; do
         # Skip node_modules and .git directories
         if echo "$script" | grep -qE "node_modules|\.git/|archive/skills-commit-batches"; then
             continue
         fi
-        
+
         # Get file metadata
         file_path="$script"
         file_type="${script##*.}"
         file_size=$(stat -c %s "$script" 2>/dev/null || stat -f %z "$script" 2>/dev/null || echo "0")
         file_size_kb=$(( file_size / 1024 ))
         [ "$file_size_kb" -eq 0 ] && file_size_kb="<1"
-        
+
         last_modified=$(stat -c %y "$script" 2>/dev/null | cut -d' ' -f1 || stat -f %Sm -t "%Y-%m-%d" "$script" 2>/dev/null || echo "Unknown")
-        
+
         loc=$(count_loc "$script")
         purpose=$(analyze_purpose "$script" | sed 's/|/-/g' | tr '\n' ' ' | cut -c1-80)
         dependencies=$(extract_dependencies "$script" | sed 's/|/-/g' | cut -c1-60)
-        
+
         risk_data=$(assess_risk "$script")
         risk_level=$(echo "$risk_data" | cut -d'|' -f1)
         risk_notes=$(echo "$risk_data" | cut -d'|' -f2 | sed 's/|/-/g')
-        
+
         # Write to output file
         echo "| $file_path | $file_type | ${file_size_kb}KB | $loc | $last_modified | $purpose | $dependencies | **$risk_level** | $risk_notes |" >> "$OUTPUT_FILE"
     done
