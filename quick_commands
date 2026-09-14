@@ -1,0 +1,28 @@
+# quick_commands — SandBox repository quick commands
+# Created: 2026-09-14 (G2 implementation)
+# These are shorthand commands for common operations
+
+## Diagnostics
+- `qc doctor` → `hermes doctor`
+- `qc hooks` → `hermes hooks doctor`
+- `qc mcp-sync` → `cp .github/mcp.json .hermes/mcp.json && echo "MCP files synced"`
+- `qc profile` → `hermes doctor --filter profiles`
+- `qc env-check` → `ls -la .env && echo "Env protected"`
+
+## Hooks
+- `qc hooks-revoke` → `hermes hooks revoke session-logger && hermes hooks revoke session-auto-commit && hermes hooks revoke governance-audit`
+- `qc hooks-test` → `hermes hooks test on_session_end && hermes hooks test on_session_start && hermes hooks test pre_llm_call && hermes hooks test post_tool_call`
+- `qc hooks-fix` → `hermes hooks revoke session-logger && hermes hooks revoke session-auto-commit && hermes hooks revoke governance-audit && hermes hooks test on_session_end && hermes hooks test on_session_start && hermes hooks test pre_llm_call && hermes hooks test post_tool_call`
+
+## Git
+- `qc commit-all` → `git add -A && git commit -m "G2 comprehensive implementation pipeline"`
+- `qc push-all` → `git push origin clean-development && git push origin development && git push origin production`
+
+## Models
+- `qc model-test` → `hermes chat -q "What is 2+2?" --yolo --oneshot -Q --max-turns 1`
+- `qc model-openrouter` → `hermes chat -q "What is 2+2?" --yolo --oneshot -m openrouter -Q --max-turns 1`
+- `qc model-zen` → `hermes chat -q "Say hello" --yolo --oneshot -m opencode-zen -Q --max-turns 1`
+
+## Config
+- `qc config-verify` → `diff .github/mcp.json .hermes/mcp.json && echo "MCP files in sync"`
+- `qc config-sync` → `cp .github/mcp.json .hermes/mcp.json`

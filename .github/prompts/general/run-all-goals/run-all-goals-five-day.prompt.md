@@ -1,7 +1,33 @@
 ---
+name: run-all-goals-five-day
 sidebar_position: 16
-title: "Persistent Goals"
+title: "Run All Goals — Five-Day Consolidation"
 description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
+version: 1.0.0
+author: Alexa
+license: MIT
+tags: [prompt, consolidation, sessions, local-only, run-all-goals]
+trigger: /run-all-goals-five-day
+dependencies:
+  - skill:using-superpowers
+  - skill:plans-and-specs
+  - skill:executing-plans
+  - skill:executing-prompt-workflows
+  - skill:verification-before-completion
+skills:
+  - using-superpowers
+  - plans-and-specs
+  - executing-plans
+  - executing-prompt-workflows
+  - verification-before-completion
+references:
+  - ./specs/run-all-goals-five-day-consolidated-spec.md
+  - ./plans/run-all-goals-five-day-consolidated-plan.md
+  - ./scripts/audit_default_sessions_window.py
+  - ./scripts/summarize_run_all_goals_corpus.py
+  - ./.github/prompts/general/run-all-goals/scripts/verify_run_all_goals_five_day.py
+  - ./.github/prompts/general/run-all-goals/skills/run-all-goals-five-day.md
+  - ./.github/prompts/general/run-all-goals/results/five-day-artifact-inventory.md
 ---
 
 
@@ -41,22 +67,25 @@ Create a reproducible local evidence package from all default-profile sessions i
 1. Enumerate `./specs/`, `./plans/`, and this prompt package.
 2. Resolve all links from the consolidated spec and plan.
 3. Mark missing/stale references without fabricating replacements.
+4. Write `.github/prompts/general/run-all-goals/results/five-day-artifact-inventory.md` with the live counts and classifications.
 
 **Gate:** Inventory output exists and every required path is classified.
 
 ### Phase 3 — Verification
 
 1. Run `python .github/prompts/general/run-all-goals/scripts/verify_run_all_goals_five_day.py`.
-2. Run the existing run-all-goals verifier and test scripts.
-3. Check JSON/YAML/Markdown structure.
+2. Run `python .github/prompts/general/run-all-goals/scripts/verify_run_all_goals.py`.
+3. Run `python .github/prompts/general/run-all-goals/scripts/test_run_all_goals.py`.
+4. Check JSON/YAML/Markdown structure.
 
 **Gate:** All local checks pass or a blocker is written to results.
 
 ### Phase 4 — Execute
 
 1. Re-run the corpus and summary scripts.
-2. Run the deterministic local verification suite.
+2. Run the deterministic local verification suite and record every exit code.
 3. Write `results/five-day-execution-result.md` with command outputs, counts, and blockers.
+4. Re-run `python .github/prompts/general/run-all-goals/scripts/verify_run_all_goals_five_day.py --require-result` after the result exists.
 
 **Gate:** Result exists and contains fresh evidence.
 
@@ -77,6 +106,7 @@ Create a reproducible local evidence package from all default-profile sessions i
 - `.github/prompts/general/run-all-goals/run-all-goals-five-day.prompt.md`
 - `.github/prompts/general/run-all-goals/scripts/verify_run_all_goals_five_day.py`
 - `.github/prompts/general/run-all-goals/skills/run-all-goals-five-day.md`
+- `.github/prompts/general/run-all-goals/results/five-day-artifact-inventory.md`
 - `.github/prompts/general/run-all-goals/results/five-day-execution-result.md`
 
 ## Verification

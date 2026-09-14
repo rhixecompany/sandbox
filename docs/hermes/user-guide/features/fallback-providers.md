@@ -48,6 +48,36 @@ OpenAI-compatible base URL continues to use the compatible client instead.
 `fallback_providers` (plural, list) is the current config shape and supports multiple fallbacks tried in order. `fallback_model` (singular) is the legacy single-fallback key — Hermes still honors it for back-compat, but `hermes fallback` writes the current `fallback_providers` key and migrates legacy config on write. When both are set, `fallback_providers` takes priority.
 :::
 
+### Probe-time rate-limit filtering
+
+Provider/model probes use a stricter safety gate than live-session fallback:
+
+All probe runners use the same self-profile query so capability results remain
+comparable:
+
+```text
+hello whoami, who are u, what is ur providers,performance,uptime,apps,Modalities,Price,Context,Released
+```
+
+1. Run `hermes auth list` before starting probes.
+2. Normalize provider status text case-insensitively. `rate-limited`, `429`,
+   `too many requests`, `usage_limit_reached`, quota exhaustion, and throttling
+   markers all mark the provider as rate-limited.
+3. Skip **every model for that provider**. Do not invoke `hermes chat`, retry,
+   rank, or select any of its models during that probe run.
+4. Record each skipped model with `status: skipped` and
+   `skip_reason: provider_rate_limited` so the catalog remains auditable.
+
+This probe rule is provider-scoped because credentials for the same provider
+often share one quota. A catalog may still list the provider's models, but a
+rate-limited provider must not enter the generated primary or fallback chain.
+
+It does not replace live-session fallback. During a normal conversation, a
+configured primary can still fail over after Hermes exhausts its retry policy;
+see [When Fallback Triggers](#when-fallback-triggers). The probe runner's
+preflight prevents a known exhausted provider from being selected in the first
+place.
+
 ### Supported Providers
 
 | Provider | Value | Requirements |
@@ -126,6 +156,10 @@ When triggered, Hermes:
 4. Resets the retry counter and continues the conversation
 
 The switch is seamless — your conversation history, tool calls, and context are preserved. The agent continues from exactly where it left off, just using a different model.
+
+Probe-time skips are not counted as live fallback attempts: they are recorded
+before any model request and remain excluded until a later inventory shows the
+provider is eligible again.
 
 :::warning Fallback resets the prompt cache
 Prompt caches are keyed to the model (and on most providers, the account) serving the request. When fallback fires, the new provider:model has no cached prefix for your conversation, so the next request re-reads the entire history at full input-token price instead of the ~75–90% discounted cached rate. The same applies when the turn ends and the primary is restored — that first request back on the primary is a full re-read too (unless the primary's cache TTL hasn't expired). This is unavoidable — it's the cost of staying alive through an outage — but it's why a long session that bounces between providers can cost noticeably more than one that stays put.

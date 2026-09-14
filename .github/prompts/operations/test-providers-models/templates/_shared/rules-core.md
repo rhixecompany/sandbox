@@ -27,3 +27,8 @@ domain-specific rules on top.
    effects.
 8. **File-backed evidence** — Prefer file-backed evidence over inference
    or assumptions.
+9. **Provider-level rate-limit gate** — Parse `hermes auth list` before any
+   probe; if a provider is rate-limited, skip every model for that provider,
+   record `provider_rate_limited`, and exclude it from ranking/configuration.
+10. **Canonical probe prompt** — Use the shared self-profile prompt from
+    `scripts/provider_status.py`; do not create prompt variants.

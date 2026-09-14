@@ -10,7 +10,7 @@ routing:
   design: creative
   planning: exec
   teaching: tutor
-  ops: adminbot
+  ops: alexa
   general: default
   user: default
 

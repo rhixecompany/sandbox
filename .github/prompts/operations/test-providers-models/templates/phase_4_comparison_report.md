@@ -14,6 +14,11 @@ def sort_key(m):
 chain = sorted(working_models, key=sort_key, reverse=True)
 ```
 
+The input set must be `working_models` only: exclude rows with
+`status=skipped`, `provider_rate_limited=true`, or a `rate_limited*` failure.
+Also exclude any provider currently reported as rate-limited by `hermes auth
+list`, even if an older probe row succeeded.
+
 ## Expected Order (verified 2026-08-07)
 
 1. `nemotron-3-ultra-free` (opencode-zen, 1M, reasoning✓)
@@ -30,5 +35,6 @@ chain = sorted(working_models, key=sort_key, reverse=True)
 ## Verification Gate
 
 - [ ] Ordering is deterministic (vision > reasoning > context)
+- [ ] No rate-limited or provider-skipped row appears in the ranking or fallback chain
 - [ ] No vision-capable free models promoted (current verified set has none)
 - [ ] Primary model (`deepseek-v4-flash-free`) is the proven working model that has accomplished prior requests

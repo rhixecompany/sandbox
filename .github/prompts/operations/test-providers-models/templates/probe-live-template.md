@@ -6,7 +6,9 @@ description: Live results from the most recent probe run, captured by `scripts/r
 # Probe results -- live -- 2026-09-07 15:22 UTC
 
 > Source: `hermes chat --oneshot --yolo --run-budget 45` per `probes/probe-*.txt` task file.
+> New-run prompt: `hello whoami, who are u, what is ur providers,performance,uptime,apps,Modalities,Price,Context,Released`.
 > Exit 0 = model returned a response; Exit -2 = a known hermes failure marker was detected (see Failure column).
+> New runs use the canonical self-profile prompt and add `Status` / `Skip Reason` columns. `provider_rate_limited` means no request was made for the skipped model.
 > Knowledge cutoff / context / reasoning / max output are heuristically extracted from the model's free-form response; "?" means the model did not state a value.
 
 | # | Provider | Model | Exit | Elapsed (s) | Failure | Knowledge Cutoff | Context | Reasoning | Max Output |

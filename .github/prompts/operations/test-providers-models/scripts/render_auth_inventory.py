@@ -9,12 +9,15 @@ Outputs:
   - provider_docs/<provider>.md -- one rendered auth-inventory file per provider
   - provider_docs/_consolidated.md -- single table of all providers
 """
+
 from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
+
+from provider_status import is_rate_limit_text
 
 REPO_ROOT = Path(__file__).resolve().parents[5]
 PROBE_JSON = REPO_ROOT / "./reports/test-providers-probe.json"
@@ -144,7 +147,7 @@ def classify(creds: list[dict[str, str]]) -> tuple[str, str]:
         return "missing", "no credentials discovered"
     notes = " | ".join(c["note"] for c in creds if c.get("note"))
     text = " ".join(c["note"] for c in creds).lower()
-    if "rate-limited" in text or "429" in text:
+    if is_rate_limit_text(text):
         return "rate-limited-429", notes or "rate-limited"
     if "exhausted" in text or "402" in text:
         return "exhausted-402", notes or "exhausted"
@@ -156,11 +159,14 @@ def classify(creds: list[dict[str, str]]) -> tuple[str, str]:
 def render_one(provider: str, creds: list[dict[str, str]], meta: dict[str, str]) -> str:
     status, details = classify(creds)
     auth_file = f"~/AppData/Local/hermes/auth.json (provider={provider})"
-    cred_table = "\n".join(
-        f"| #{c['index']} | `{c['key_name']}` | {c['key_type']} | `{c['key_source']}` | {c['note'] or '_(no note)_'} |"
-        for c in creds
-    ) or "_(no credentials parsed)_"
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    cred_table = (
+        "\n".join(
+            f"| #{c['index']} | `{c['key_name']}` | {c['key_type']} | `{c['key_source']}` | {c['note'] or '_(no note)_'} |"
+            for c in creds
+        )
+        or "_(no credentials parsed)_"
+    )
+    now = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     return f"""---
 name: auth-inventory-{provider}
 description: Rendered per-provider auth inventory captured by test-providers-models on {now}.
@@ -174,13 +180,13 @@ description: Rendered per-provider auth inventory captured by test-providers-mod
 ## Summary
 
 - **Provider:** `{provider}`
-- **Key env:** `{meta['key_env']}`
+- **Key env:** `{meta["key_env"]}`
 - **Status:** **{status}**
 - **Rate / auth notes:** {details}
-- **Docs:** {meta['docs_url']}
+- **Docs:** {meta["docs_url"]}
 - **Auth file verified:** `{auth_file}`
-- **Auth mechanism:** {meta['auth_mechanism']}
-- **Inference endpoint:** `{meta['endpoint']}`
+- **Auth mechanism:** {meta["auth_mechanism"]}
+- **Inference endpoint:** `{meta["endpoint"]}`
 
 ## Credentials
 
@@ -202,7 +208,7 @@ description: Rendered per-provider auth inventory captured by test-providers-mod
 
 def render_consolidated(rows: list[tuple[str, str, str, dict[str, str]]]) -> str:
     """Render `_consolidated.md` -- one table for all 13 providers."""
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    now = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     body = "| Provider | Status | Rate / auth notes | Docs |\n|---|---|---|---|\n"
     for provider, status, details, meta in rows:
         body += f"| `{provider}` | **{status}** | {details or '_(none)_'} | {meta['docs_url']} |\n"

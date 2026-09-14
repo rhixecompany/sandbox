@@ -60,7 +60,7 @@ def test_artifacts_no_placeholders():
     """Check primary output artifacts for unresolved placeholder markers."""
     files = [
         os.path.join(PROMPTS_DIR, "run-all-goals.prompt.md"),
-        os.path.join(WORKSPACE, ".hermes", "plans", "run-all-goals-implementation.md"),
+        os.path.join(WORKSPACE, "plans", "run-all-goals-implementation.md"),
         os.path.join(PROMPTS_DIR, "skills", "run-all-goals.md"),
     ]
     markers = ("FIXME:", "TODO:", "PLACEHOLDER", "[SKILL_PRUNED]")

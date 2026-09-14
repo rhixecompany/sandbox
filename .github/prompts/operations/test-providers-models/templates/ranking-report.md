@@ -10,6 +10,8 @@ variables:
 
 > Primary model after this run: `{{ primary }}`
 > Source: probe results from `probes/probe-*.txt` and `templates/probe-live-template.md`.
+> Probe prompt: `hello whoami, who are u, what is ur providers,performance,uptime,apps,Modalities,Price,Context,Released`
+> Exclude `status=skipped`, `provider_rate_limited=true`, rate-limit failures, and every provider currently marked rate-limited by `hermes auth list`.
 
 | Rank | Score | Provider | Model ID | Knowledge cutoff | Context length | Reasoning | Max output | Latency (s) | Exit |
 |------|-------|----------|----------|------------------|----------------|-----------|------------|-------------|------|
@@ -39,4 +41,5 @@ hermes fallback add <top5.provider>:<top5.model>
 
 - [ ] `hermes config show | grep -E 'model|fallback'` matches the table above.
 - [ ] `hermes config check` exits 0.
+- [ ] No skipped or rate-limited provider/model appears in the ranking or fallback chain.
 - [ ] `hermes chat --provider <top1.provider> --model <top1.model> -q "ping" --oneshot` exits 0.

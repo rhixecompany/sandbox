@@ -24,6 +24,8 @@
 ## Phase 3: Provider-by-Provider Benchmarking
 
 - Delegate capability probes to 3 subagent clusters (A, B, C)
+- Use the exact self-profile prompt: `hello whoami, who are u, what is ur providers,performance,uptime,apps,Modalities,Price,Context,Released`
+- Run only for providers that pass the Phase 0 rate-limit gate; skip all remaining models for a provider after a `429` or equivalent runtime rate-limit error
 - Each subagent returns structured capability JSON
 - Gate: benchmark outputs saved; web community context appended
 

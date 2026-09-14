@@ -10,16 +10,15 @@ import subprocess
 import time
 from datetime import datetime
 
-TEST_PROMPT = """You are an AI assistant testing your own capabilities. Please respond with a JSON object containing:
-1. "provider": your provider name
-2. "model": your model name
-3. "context_window": your context window size in tokens
-4. "max_output": your max output tokens
-5. "capabilities": list of your capabilities (reasoning, tool_use, code, vision, etc.)
-6. "reasoning": boolean - do you support extended reasoning?
-7. "tool_use": boolean - do you support tool/function calling?
+from provider_status import (
+    SELF_PROFILE_PROMPT,
+    auth_rate_limited_providers,
+    is_rate_limit_error,
+    provider_is_rate_limited,
+    skipped_result,
+)
 
-Keep the response concise and valid JSON only."""
+TEST_PROMPT = SELF_PROFILE_PROMPT
 
 MODELS = [
     {"provider": "openrouter", "model": "nvidia/nemotron-3-ultra-550b-a55b:free"},
@@ -34,25 +33,34 @@ MODELS = [
     {"provider": "openrouter", "model": "meta-llama/llama-4-maverick-17b-128e-instruct:free"},
 ]
 
-def test_model(provider, model):
+
+def test_model(provider, model, rate_limited=None):
     """Test a single model via hermes chat"""
+    if rate_limited is None:
+        rate_limited, _ = auth_rate_limited_providers()
+    if provider_is_rate_limited(provider, rate_limited):
+        return {**skipped_result(provider, model), "timestamp": datetime.now().isoformat()}
+
     start = time.time()
     try:
         result = subprocess.run(
-            ["hermes", "chat", "--provider", provider, "--model", model,
-             "-q", TEST_PROMPT, "--oneshot"],
-            capture_output=True, text=True, timeout=120
+            ["hermes", "chat", "--provider", provider, "--model", model, "-q", TEST_PROMPT, "--oneshot"],
+            capture_output=True,
+            text=True,
+            timeout=120,
         )
         elapsed = time.time() - start
+        rate_limited = is_rate_limit_error(result.stdout, result.stderr, result.returncode)
         return {
             "provider": provider,
             "model": model,
-            "status": "success" if result.returncode == 0 else "error",
+            "status": "rate_limited" if rate_limited else ("success" if result.returncode == 0 else "error"),
             "stdout": result.stdout[:2000],
             "stderr": result.stderr[:1000],
             "returncode": result.returncode,
             "elapsed_seconds": round(elapsed, 2),
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now().isoformat(),
+            "provider_rate_limited": rate_limited,
         }
     except subprocess.TimeoutExpired:
         return {
@@ -60,7 +68,7 @@ def test_model(provider, model):
             "model": model,
             "status": "timeout",
             "elapsed_seconds": 120,
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now().isoformat(),
         }
     except Exception as e:
         return {
@@ -68,22 +76,49 @@ def test_model(provider, model):
             "model": model,
             "status": "exception",
             "error": str(e),
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now().isoformat(),
         }
+
 
 def main():
     results = []
-    for m in MODELS:
-        print(f"Testing {m['provider']}/{m['model']}...", flush=True)
-        r = test_model(m["provider"], m["model"])
-        results.append(r)
-        print(f"  -> {r['status']} ({r.get('elapsed_seconds', '?')}s)", flush=True)
-        time.sleep(2)  # Rate limit spacing
+    rate_limited, inventory_error = auth_rate_limited_providers()
+    if inventory_error:
+        print(f"WARNING: {inventory_error}; runtime rate-limit detection remains enabled", flush=True)
+    if rate_limited:
+        print(f"Skipping providers from auth preflight: {', '.join(sorted(rate_limited))}", flush=True)
+
+    grouped = {}
+    for model in MODELS:
+        grouped.setdefault(model["provider"], []).append(model)
+
+    for provider, provider_models in grouped.items():
+        if provider_is_rate_limited(provider, rate_limited):
+            for model in provider_models:
+                results.append({**skipped_result(provider, model["model"]), "timestamp": datetime.now().isoformat()})
+            continue
+
+        for position, model in enumerate(provider_models):
+            print(f"Testing {provider}/{model['model']}...", flush=True)
+            result = test_model(provider, model["model"], rate_limited)
+            results.append(result)
+            print(f"  -> {result['status']} ({result.get('elapsed_seconds', '?')}s)", flush=True)
+            if result.get("provider_rate_limited") or result["status"] == "rate_limited":
+                for skipped_model in provider_models[position + 1 :]:
+                    results.append(
+                        {
+                            **skipped_result(provider, skipped_model["model"]),
+                            "timestamp": datetime.now().isoformat(),
+                        }
+                    )
+                break
+            time.sleep(2)  # Space healthy requests without retrying a 429.
 
     out_path = os.path.join(os.path.dirname(__file__), "..", "test-providers-models-results.json")
     with open(out_path, "w") as f:
         json.dump(results, f, indent=2)
     print(f"\nResults written to {out_path}")
+
 
 if __name__ == "__main__":
     main()

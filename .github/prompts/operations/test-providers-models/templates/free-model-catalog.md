@@ -6,7 +6,7 @@ description: "Consolidated list of every model with a :free suffix (or zero pric
 # Free-model catalog -- 2026-09-07 15:09 UTC
 
 > Source: live `/v1/models` endpoint per provider. Filter: `':free' in model id` OR `pricing.prompt == 0 && pricing.completion == 0`.
-> Probe-eligibility is also gated by the per-provider status in `provider_docs/<provider>.md`; only `valid` providers should be probed in Phase 3.
+> Probe-eligibility is gated by the per-provider status in `provider_docs/<provider>.md`; only eligible providers should be probed in Phase 3. A provider marked `rate-limited`, `429`, quota-exhausted, or throttled is skipped as a whole, while its catalog rows remain for audit history.
 
 | # | Provider | Model ID | Knowledge Cutoff | Context | Max Output | Reasoning | Source |
 |---|----------|----------|------------------|---------|------------|-----------|--------|

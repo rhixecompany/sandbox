@@ -11,7 +11,7 @@ auth_gated: true
 Execute the same test tasks across all `:free` models to benchmark capabilities, latency, and quality.
 
 ## Test Query
-`tasks` - A comprehensive prompt covering reasoning, code, and analysis capabilities.
+`hello whoami, who are u, what is ur providers,performance,uptime,apps,Modalities,Price,Context,Released`
 
 ## Per-Model Test Structure
 
@@ -19,7 +19,7 @@ Execute the same test tasks across all `:free` models to benchmark capabilities,
 - **Provider**: `<provider_name>`
 - **Model ID**: `<model_id>:free` or `<provider>:<model_slug>`
 - **Auth Status**: Valid / Rate-limited / Auth-failed / Exhausted (from catalog)
-- **Probe Eligibility**: Only run if probe? = valid (not 429/401)
+- **Probe Eligibility**: Only run if auth preflight is valid; skip the whole provider on `rate-limited`, `429`, quota exhaustion, or throttling evidence
 
 ### Test Tasks (same for all models)
 
@@ -47,6 +47,7 @@ For each model, capture:
 - **Vision Support**: ✅/❌ (if applicable)
 - **Reasoning Support**: ✅/❌ (if applicable)
 - **Error Type**: none / rate_limit / auth_error / timeout / other
+- **Provider Skip**: `provider_rate_limited` when no request was made for this model
 - **Full Response**: The model's complete output
 
 ## Ranking Criteria (Phase 4)
@@ -68,3 +69,6 @@ Max = 5. Tiebreak by lowest latency.
 3. Configure primary model via `hermes config set model.default`
 4. Configure fallback chain via `hermes fallback clear` + `hermes fallback add`
 5. Verify with `hermes config check` and `hermes fallback list`
+
+Rate-limited providers are excluded from ranking and fallback configuration even
+when their catalog still contains free models.

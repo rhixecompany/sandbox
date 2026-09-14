@@ -32,13 +32,15 @@ Dead:        openai-codex                         → 28d 20h cooldown
 ## Chain Logic
 
 1. Start with primary — fastest + correct, no observed limits.
-2. Failover on 429/error — switch to next in chain.
-3. Track per-provider cooldown — don't hammer rate-limited providers.
-4. Re-evaluate chain hourly — rate limits are volatile.
-5. Log all fallbacks — for analysis and optimization.
+2. During probe runs, skip every model for a provider whose auth inventory is rate-limited; never add it to the primary or fallback chain.
+3. During live sessions, fail over on 429/error — switch to the next eligible provider/model in the configured chain.
+4. Track per-provider cooldown — don't hammer rate-limited providers.
+5. Re-evaluate chain hourly — rate limits are volatile.
+6. Log all fallbacks — for analysis and optimization.
 
 ## Verification Gate
 
 - [ ] Fallback chain configured via `hermes config set fallback_providers`
 - [ ] `fallback_providers` is a YAML list (verified via Python yaml inspection)
 - [ ] Each provider in chain has working `default_model` set
+- [ ] No provider with a current `rate-limited`/`429` auth status appears in the chain

@@ -12,11 +12,15 @@
 - Provider inventory table (provider | auth status | notes)
 - Credential status per provider
 - List of authorized providers for probe clusters
+- Normalized set of providers with rate-limit evidence (`rate-limited`, `429`,
+  `too many requests`, `usage_limit_reached`, quota exhaustion, or throttling)
 
 ## Verification Gate
 
 - [ ] All 9 authorized providers captured (copilot, deepseek, gemini, huggingface, nous, ollama-cloud, openai-codex, openrouter, xai-oauth)
 - [ ] At least one provider has rate-limit warning noted
+- [ ] Rate-limited providers are marked probe-ineligible before any `hermes chat` call
+- [ ] The normalized rate-limited provider set is passed to every probe runner
 - [ ] Credential source documented (key file / OAuth / device code)
 
 ## Reference

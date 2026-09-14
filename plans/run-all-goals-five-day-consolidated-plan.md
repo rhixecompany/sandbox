@@ -22,8 +22,9 @@ Turn the verified five-day session corpus and workspace inventory into a linked,
 
 - Window: Sep 6–10, 2026 WAT inclusive; exclusive end Sep 11.
 - Default profile source: `C:/Users/Alexa/AppData/Local/hermes/state.db`.
-- Corpus: 136 sessions, 742 bounded redacted evidence excerpts.
-- Workspace inventory: 31 specs, 126 plan entries/dirs, existing run-all-goals prompt package.
+- Historical creation baseline: 136 sessions, 742 bounded redacted evidence excerpts.
+- Fresh execution baseline (2026-09-14): 17 sessions, 133 bounded redacted evidence excerpts.
+- Workspace inventory: 124 specs, 1,156 plan files, and the existing run-all-goals prompt package.
 - Scope exclusion: no remote writes, provider probes, commits, pushes, `.env` copying, or profile fan-out.
 
 ## Dependencies
@@ -130,5 +131,6 @@ Turn the verified five-day session corpus and workspace inventory into a linked,
 - [x] Five-day corpus inventoried
 - [x] Workspace spec/plan/prompt inventory completed
 - [x] Consolidated artifact package created and verified
-- [x] Local execution completed
-- [x] End capture completed — `C:/Users/Alexa/AppData/Local/hermes/logs/sessions/20260910_230758_d40589.end.json`
+- [x] Artifact inventory generated and stale references classified — `../.github/prompts/general/run-all-goals/results/five-day-artifact-inventory.md`
+- [x] Local execution completed — fresh corpus 17 sessions / 133 evidence excerpts
+- [x] End capture completed — `C:/Users/Alexa/AppData/Local/hermes/logs/sessions/20260914_124104_e989e5.end.json`

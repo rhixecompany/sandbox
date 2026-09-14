@@ -1,8 +1,13 @@
 ---
+name: run-all-goals-five-day-consolidated-spec
 sidebar_position: 16
 title: "Persistent Goals"
 description: "Set a standing goal and let Hermes keep working across turns until it is done. Our take on the Ralph loop."
-status: "in_progress"
+version: 1.0.0
+author: Alexa
+license: MIT
+tags: [spec, consolidation, sessions, local-only, run-all-goals]
+status: "completed"
 ---
 
 
@@ -19,7 +24,8 @@ Create an auditable, local-only execution package from the default-profile Herme
 - **Workspace scope:** `C:/Users/Alexa/Desktop/SandBox`, `./`, `.github/`.
 - **Output roots:** `./specs/`, `./plans/`, `.github/prompts/general/run-all-goals/`.
 - **Side effects:** local files and tests only. No provider probes, external sync, commit, push, or remote writes.
-- **Current evidence baseline:** 136 sessions, 742 bounded redacted excerpts, 31 specs, 126 plan entries/dirs, and the existing `/run-all-goals` artifact tree.
+- **Historical creation baseline:** 136 sessions, 742 bounded redacted excerpts, 31 specs, 126 plan entries/dirs, and the existing `/run-all-goals` artifact tree.
+- **Fresh execution baseline (2026-09-14):** 17 sessions and 133 bounded redacted excerpts from the current default-root `state.db`; the delta is recorded in the execution result rather than treated as a failure.
 
 ## Requirements
 
@@ -62,7 +68,7 @@ Create an auditable, local-only execution package from the default-profile Herme
 
 ## Acceptance criteria
 
-- **AC-001:** Corpus JSON exists and declares `start_wat=2026-09-06`, `end_wat_exclusive=2026-09-11`, default root `state.db`, and `session_count=136` or a fresh, explained delta.
+- **AC-001:** Corpus JSON exists and declares `start_wat=2026-09-06`, `end_wat_exclusive=2026-09-11`, default root `state.db`, and the fresh `session_count=17` with the historical 136-session delta explained.
 - **AC-002:** Corpus summary exists with per-day/source counts and bounded redacted evidence.
 - **AC-003:** This spec, the linked plan, and the executable prompt exist and parse.
 - **AC-004:** Every referenced artifact path exists or is explicitly marked missing/blocking.

@@ -58,6 +58,30 @@ hermes -w                         # Interactive mode in worktree
 hermes -w -z "Fix issue #123"     # Single query in worktree
 ```
 
+### Provider self-profile probes
+
+For a one-shot provider/model capability check, use the canonical self-profile
+prompt:
+
+```bash
+hermes auth list
+hermes chat --provider <provider> --model <model> --oneshot \
+  -q "hello whoami, who are u, what is ur providers,performance,uptime,apps,Modalities,Price,Context,Released"
+```
+
+Before running a probe batch, treat any provider whose `hermes auth list`
+output contains `rate-limited`, `429`, `too many requests`, `usage_limit_reached`,
+quota exhaustion, or throttling markers as ineligible. Skip **all models for that provider** —
+do not call `hermes chat`, retry, rank, or add them to `fallback_providers`.
+Record `status: skipped` with `skip_reason: provider_rate_limited` in the
+probe report. If a 429 appears during a batch, stop that provider's remaining
+models and continue only with other eligible providers.
+
+This is probe-time filtering. Live sessions use the configured
+[`fallback_providers`](features/fallback-providers.md) chain after the normal
+retry policy; a probe skip does not silently rewrite the user's runtime
+configuration.
+
 ### Worktree cleanup
 
 `hermes -w` sessions create disposable worktrees under `<repo>/.worktrees/`.
