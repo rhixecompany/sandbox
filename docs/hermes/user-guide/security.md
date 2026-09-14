@@ -27,7 +27,7 @@ Before executing any command, Hermes checks it against a curated list of dangero
 
 ### Approval Modes
 
-The approval system supports three modes, configured via `approvals.mode` in `~/.hermes/config.yaml`:
+The approval system supports three modes, configured via `approvals.mode` in `~/./config.yaml`:
 
 ```yaml
 approvals:
@@ -173,7 +173,7 @@ Deny rules are a shell-command policy, not a complete shell interpreter or an OS
 
 When a dangerous command prompt appears, the user has a configurable amount of time to respond. If no response is given within the timeout, the command is **denied** by default (fail-closed).
 
-Configure the timeout in `~/.hermes/config.yaml`:
+Configure the timeout in `~/./config.yaml`:
 
 ```yaml
 approvals:
@@ -206,8 +206,8 @@ The following patterns trigger approval prompts (defined in `tools/approval.py`)
 | `python -e` / `perl -e` / `ruby -e` / `node -c` | Script execution via `-e`/`-c` flag |
 | `curl ... \| sh` / `wget ... \| sh` | Pipe remote content to shell |
 | `bash <(curl ...)` / `sh <(wget ...)` | Execute remote script via process substitution |
-| `tee` to `/etc/`, `~/.ssh/`, `~/.hermes/.env` | Overwrite sensitive file via tee |
-| `>` / `>>` to `/etc/`, `~/.ssh/`, `~/.hermes/.env` | Overwrite sensitive file via redirection |
+| `tee` to `/etc/`, `~/.ssh/`, `~/./.env` | Overwrite sensitive file via tee |
+| `>` / `>>` to `/etc/`, `~/.ssh/`, `~/./.env` | Overwrite sensitive file via redirection |
 | `xargs rm` | xargs with rm |
 | `find -exec rm` / `find -delete` | Find with destructive actions |
 | `cp`/`mv`/`install` to `/etc/` | Copy/move file into system config |
@@ -254,7 +254,7 @@ The `HERMES_EXEC_ASK=1` environment variable is automatically set when running t
 
 ### Permanent Allowlist
 
-Commands approved with "always" are saved to `~/.hermes/config.yaml`:
+Commands approved with "always" are saved to `~/./config.yaml`:
 
 ```yaml
 # Permanently allowed dangerous command patterns
@@ -293,7 +293,7 @@ hermes approvals suggest --apply 1,3  # merge picks into command_allowlist
 hermes approvals suggest --json     # machine-readable output
 ```
 
-The command scans the session database (`~/.hermes/state.db`) for
+The command scans the session database (`~/./state.db`) for
 dangerous-classified commands that actually executed — i.e. commands you
 approved — aggregates them into patterns (`git push *`, or the dangerous-class
 key for compound commands), and ranks them by approval frequency:
@@ -353,7 +353,7 @@ When set, `write_file` and `patch` may only target paths inside the listed direc
 
 - Set automatically in the [official Docker image](https://github.com/NousResearch/hermes-agent) (`HERMES_WRITE_SAFE_ROOT=/opt/data`)
 - Supports multiple roots separated by `:` on Unix or `;` on Windows
-- **Do not add to `~/.hermes/.env` casually.** If you set it to a project directory, the agent cannot write to `~/.hermes/cron/jobs.json`, profile skills, or other Hermes state outside that prefix
+- **Do not add to `~/./.env` casually.** If you set it to a project directory, the agent cannot write to `~/./cron/jobs.json`, profile skills, or other Hermes state outside that prefix
 
 To allow both a workspace and Hermes home:
 
@@ -365,7 +365,7 @@ Unset the variable to restore unrestricted writes (subject to the protected-path
 
 ### Cron and other Hermes state
 
-Do not ask the agent to `patch` `~/.hermes/cron/jobs.json` directly. Use the `cronjob` tool, [`hermes cron`](./features/cron.md), or `/cron` — they update the job store through the supported API. The same applies to other Hermes control files when write safety blocks direct edits.
+Do not ask the agent to `patch` `~/./cron/jobs.json` directly. Use the `cronjob` tool, [`hermes cron`](./features/cron.md), or `/cron` — they update the job store through the supported API. The same applies to other Hermes control files when write safety blocks direct edits.
 
 :::note Defense-in-depth, not a hard boundary
 Write guards apply to `write_file` and `patch` only. The `terminal` tool runs as the same OS user and can still `cat` or overwrite denied paths via shell commands. The denylist reduces accidental damage and gives models a clear stop signal; it does not sandbox a hostile or compromised agent.
@@ -388,7 +388,7 @@ The `_is_user_authorized()` method checks in this order:
 
 ### Platform Allowlists
 
-Set allowed user IDs as comma-separated values in `~/.hermes/.env`:
+Set allowed user IDs as comma-separated values in `~/./.env`:
 
 ```bash
 # Platform-specific allowlists
@@ -412,7 +412,7 @@ If **no allowlists are configured** and `GATEWAY_ALLOW_ALL_USERS` is not set, **
 
 ```
 No user allowlists configured. All unauthorized users will be denied.
-Set GATEWAY_ALLOW_ALL_USERS=true in ~/.hermes/.env to allow open access,
+Set GATEWAY_ALLOW_ALL_USERS=true in ~/./.env to allow open access,
 or configure platform allowlists (e.g., TELEGRAM_ALLOWED_USERS=your_id).
 ```
 :::
@@ -428,7 +428,7 @@ For more flexible authorization, Hermes includes a code-based pairing system. In
 3. The bot owner runs `hermes pairing approve <platform> <code>` on the CLI
 4. The user is permanently approved for that platform
 
-Control how unauthorized direct messages are handled in `~/.hermes/config.yaml`:
+Control how unauthorized direct messages are handled in `~/./config.yaml`:
 
 ```yaml
 unauthorized_dm_behavior: pair
@@ -489,7 +489,7 @@ restart the container — the entrypoint will fix ownership on the next start.
 [i10270]: https://github.com/NousResearch/hermes-agent/issues/10270
 :::
 
-**Storage:** Pairing data is stored in `~/.hermes/pairing/` with per-platform JSON files:
+**Storage:** Pairing data is stored in `~/./pairing/` with per-platform JSON files:
 - `{platform}-pending.json` — pending pairing requests
 - `{platform}-approved.json` — approved users
 - `_rate_limits.json` — rate limit and lockout tracking
@@ -519,7 +519,7 @@ _BASE_SECURITY_ARGS = [
 
 ### Resource Limits
 
-Container resources are configurable in `~/.hermes/config.yaml`:
+Container resources are configurable in `~/./config.yaml`:
 
 ```yaml
 terminal:
@@ -534,7 +534,7 @@ terminal:
 
 ### Filesystem Persistence
 
-- **Persistent mode** (`container_persistent: true`): Bind-mounts `/workspace` and `/root` from `~/.hermes/sandboxes/docker/<task_id>/`
+- **Persistent mode** (`container_persistent: true`): Bind-mounts `/workspace` and `/root` from `~/./sandboxes/docker/<task_id>/`
 - **Ephemeral mode** (`container_persistent: false`): Uses tmpfs for workspace — everything is lost on cleanup
 
 :::tip
@@ -623,7 +623,7 @@ terminal:
     - my_custom_oauth_token.json
 ```
 
-Paths are relative to `~/.hermes/`. Files are mounted to `/root/.hermes/` inside the container. This list is read by `tools/credential_files.py` (`terminal.credential_files`) — it lives under the `terminal:` block but is loaded by the credential-files module, not the core terminal backend, so it isn't part of the bundled `DEFAULT_CONFIG` snapshot.
+Paths are relative to `~/./`. Files are mounted to `/root/./` inside the container. This list is read by `tools/credential_files.py` (`terminal.credential_files`) — it lives under the `terminal:` block but is loaded by the credential-files module, not the core terminal backend, so it isn't part of the bundled `DEFAULT_CONFIG` snapshot.
 
 ### What Each Sandbox Filters
 
@@ -683,7 +683,7 @@ Error messages from MCP tools are sanitized before being returned to the LLM. Th
 You can restrict which websites the agent can access through its web and browser tools. This is useful for preventing the agent from accessing internal services, admin panels, or other sensitive URLs.
 
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 security:
   website_blocklist:
     enabled: true
@@ -735,7 +735,7 @@ Hermes integrates [tirith](https://github.com/sheeki03/tirith) for content-level
 Tirith auto-installs from GitHub releases on first use with SHA-256 checksum verification (and cosign provenance verification if cosign is available).
 
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 security:
   tirith_enabled: true       # Enable/disable tirith scanning (default: true)
   tirith_path: "tirith"      # Path to tirith binary (default: PATH lookup)
@@ -777,19 +777,19 @@ Blocked files show a warning:
 1. **Set explicit allowlists** — never use `GATEWAY_ALLOW_ALL_USERS=true` in production
 2. **Use container backend** — set `terminal.backend: docker` in config.yaml
 3. **Restrict resource limits** — set appropriate CPU, memory, and disk limits
-4. **Store secrets securely** — keep API keys in `~/.hermes/.env` with proper file permissions
+4. **Store secrets securely** — keep API keys in `~/./.env` with proper file permissions
 5. **Enable DM pairing** — use pairing codes instead of hardcoding user IDs when possible
 6. **Review command allowlist** — periodically audit `command_allowlist` in config.yaml
 7. **Set `terminal.cwd`** — don't let the agent operate from sensitive directories
 8. **Run as non-root** — never run the gateway as root
-9. **Monitor logs** — check `~/.hermes/logs/` for unauthorized access attempts
+9. **Monitor logs** — check `~/./logs/` for unauthorized access attempts
 10. **Keep updated** — run `hermes update` regularly for security patches
 
 ### Securing API Keys
 
 ```bash
 # Set proper permissions on the .env file
-chmod 600 ~/.hermes/.env
+chmod 600 ~/./.env
 
 # Keep separate keys for different services
 # Never commit .env files to version control
@@ -797,16 +797,16 @@ chmod 600 ~/.hermes/.env
 
 ### Network Isolation
 
-For maximum security, run the gateway on a separate machine or VM. Set `terminal.backend: ssh` in `config.yaml`, then provide host details via environment variables in `~/.hermes/.env`:
+For maximum security, run the gateway on a separate machine or VM. Set `terminal.backend: ssh` in `config.yaml`, then provide host details via environment variables in `~/./.env`:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 terminal:
   backend: ssh
 ```
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 TERMINAL_SSH_HOST=agent-worker.local
 TERMINAL_SSH_USER=hermes
 TERMINAL_SSH_KEY=~/.ssh/hermes_agent_key
@@ -862,7 +862,7 @@ Security guarantees enforced by `tools/lazy_deps.py`:
 To disable runtime installs:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 security:
   allow_lazy_installs: false
 ```

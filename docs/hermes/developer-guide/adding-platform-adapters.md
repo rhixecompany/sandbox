@@ -8,7 +8,7 @@ This guide covers adding a new messaging platform to the Hermes gateway. A platf
 
 :::tip
 There are two ways to add a platform:
-- **Plugin** (recommended for community/third-party): Drop a plugin directory into `~/.hermes/plugins/` — zero core code changes needed. See [Plugin Path](#plugin-path-recommended) below.
+- **Plugin** (recommended for community/third-party): Drop a plugin directory into `~/./plugins/` — zero core code changes needed. See [Plugin Path](#plugin-path-recommended) below.
 - **Built-in**: Modify 20+ files across code, config, and docs. Use the [Built-in Checklist](#step-by-step-checklist-built-in-path) below.
 :::
 
@@ -33,7 +33,7 @@ Inbound messages are received by the adapter and forwarded via `self.handle_mess
 The plugin system lets you add a platform adapter without modifying any core Hermes code. Your plugin is a directory with two files:
 
 ```
-~/.hermes/plugins/my-platform/
+~/./plugins/my-platform/
   plugin.yaml      # Plugin metadata
   adapter.py       # Adapter class + register() entry point
 ```
@@ -289,7 +289,7 @@ the next profile.
 
 ## Env-Driven Auto-Configuration
 
-Most users set up a platform by dropping env vars into `~/.hermes/.env` rather than editing `config.yaml`. The `env_enablement_fn` hook lets your plugin pick those env vars up **before** the adapter is constructed, so `hermes gateway status`, `get_connected_platforms()`, and cron delivery see the correct state without instantiating the platform SDK.
+Most users set up a platform by dropping env vars into `~/./.env` rather than editing `config.yaml`. The `env_enablement_fn` hook lets your plugin pick those env vars up **before** the adapter is constructed, so `hermes gateway status`, `get_connected_platforms()`, and cron delivery see the correct state without instantiating the platform SDK.
 
 Read env through `gateway.platforms._shared.get_scoped_secret` — never `os.getenv`. Under `gateway.multiplex_profiles` the process env holds the DEFAULT profile's values; a secondary profile's `.env` exists only in its secret scope, and a raw read would enable your platform for the wrong profile with the wrong credentials. `seed_extra_from_env` builds the seed dict from a `(ENV_VAR, extra_key, conv)` table through that reader.
 

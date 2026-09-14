@@ -107,12 +107,12 @@ def extract_references(text: str) -> dict:
     script_matches = re.findall(r'scripts/([\w\-/]+\.?(?:py|sh|js|ts)?)', text)
     refs["scripts"] = [s for s in script_matches if s]
 
-    # Spec references: .hermes/specs/name.md or ../specs/name.md
-    spec_matches = re.findall(r'(?:\.hermes/specs/|\.\./specs/)([\w\-]+\.md)', text)
+    # Spec references: ./specs/name.md or ../specs/name.md
+    spec_matches = re.findall(r'(?:\./specs/|\.\./specs/)([\w\-]+\.md)', text)
     refs["specs"] = [s for s in spec_matches if s]
 
-    # Plan references: .hermes/plans/name.md or ../plans/name.md
-    plan_matches = re.findall(r'(?:\.hermes/plans/|\.\./plans/)([\w\-]+\.md)', text)
+    # Plan references: ./plans/name.md or ../plans/name.md
+    plan_matches = re.findall(r'(?:\./plans/|\.\./plans/)([\w\-]+\.md)', text)
     refs["plans"] = [p for p in plan_matches if p]
 
     # Template references: templates/name

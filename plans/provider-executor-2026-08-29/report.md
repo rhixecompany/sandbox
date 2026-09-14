@@ -11,12 +11,12 @@
 
 | Provider | Model | Result | Duration | Per-provider report |
 | --- | --- | --- | --- | --- |
-| deepseek | deepseek-v4-flash-free | **FAIL** | 100.82s | `.hermes/plans/provider-executor-2026-08-29/deepseek/report.md` |
-| gemini | gemini-2.5-flash | **FAIL** | 142.37s | `.hermes/plans/provider-executor-2026-08-29/gemini/report.md` |
-| openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | **FAIL** | 122.68s | `.hermes/plans/provider-executor-2026-08-29/openrouter/report.md` |
-| ollama-cloud | nemotron-3-ultra | **FAIL** | 139.0s | `.hermes/plans/provider-executor-2026-08-29/ollama-cloud/report.md` |
-| ollama-launch | gemma4:12b | **FAIL** | 105.59s | `.hermes/plans/provider-executor-2026-08-29/ollama-launch/report.md` |
-| opencode-zen | nemotron-3-ultra-free | **FAIL** | 127.59s | `.hermes/plans/provider-executor-2026-08-29/opencode-zen/report.md` |
+| deepseek | deepseek-v4-flash-free | **FAIL** | 100.82s | `./plans/provider-executor-2026-08-29/deepseek/report.md` |
+| gemini | gemini-2.5-flash | **FAIL** | 142.37s | `./plans/provider-executor-2026-08-29/gemini/report.md` |
+| openrouter | nvidia/nemotron-3-ultra-550b-a55b:free | **FAIL** | 122.68s | `./plans/provider-executor-2026-08-29/openrouter/report.md` |
+| ollama-cloud | nemotron-3-ultra | **FAIL** | 139.0s | `./plans/provider-executor-2026-08-29/ollama-cloud/report.md` |
+| ollama-launch | gemma4:12b | **FAIL** | 105.59s | `./plans/provider-executor-2026-08-29/ollama-launch/report.md` |
+| opencode-zen | nemotron-3-ultra-free | **FAIL** | 127.59s | `./plans/provider-executor-2026-08-29/opencode-zen/report.md` |
 
 **Tally:** OK 0 / FAIL 6
 
@@ -29,21 +29,21 @@
 
 ## Per-provider report locations
 
-- `.hermes/plans/provider-executor-2026-08-29/deepseek/report.md`
-- `.hermes/plans/provider-executor-2026-08-29/gemini/report.md`
-- `.hermes/plans/provider-executor-2026-08-29/openrouter/report.md`
-- `.hermes/plans/provider-executor-2026-08-29/ollama-cloud/report.md`
-- `.hermes/plans/provider-executor-2026-08-29/ollama-launch/report.md`
-- `.hermes/plans/provider-executor-2026-08-29/opencode-zen/report.md`
+- `./plans/provider-executor-2026-08-29/deepseek/report.md`
+- `./plans/provider-executor-2026-08-29/gemini/report.md`
+- `./plans/provider-executor-2026-08-29/openrouter/report.md`
+- `./plans/provider-executor-2026-08-29/ollama-cloud/report.md`
+- `./plans/provider-executor-2026-08-29/ollama-launch/report.md`
+- `./plans/provider-executor-2026-08-29/opencode-zen/report.md`
 
 ## Per-provider stdout/stderr logs
 
-- `.hermes/plans/provider-executor-2026-08-29/deepseek.log`
-- `.hermes/plans/provider-executor-2026-08-29/gemini.log`
-- `.hermes/plans/provider-executor-2026-08-29/openrouter.log`
-- `.hermes/plans/provider-executor-2026-08-29/ollama-cloud.log`
-- `.hermes/plans/provider-executor-2026-08-29/ollama-launch.log`
-- `.hermes/plans/provider-executor-2026-08-29/opencode-zen.log`
+- `./plans/provider-executor-2026-08-29/deepseek.log`
+- `./plans/provider-executor-2026-08-29/gemini.log`
+- `./plans/provider-executor-2026-08-29/openrouter.log`
+- `./plans/provider-executor-2026-08-29/ollama-cloud.log`
+- `./plans/provider-executor-2026-08-29/ollama-launch.log`
+- `./plans/provider-executor-2026-08-29/opencode-zen.log`
 
 ## Notes for the parent
 

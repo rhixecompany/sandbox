@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Augment every plan in .hermes/plans/ with the bits the plans-judge rubric
+"""Augment every plan in ./plans/ with the bits the plans-judge rubric
 checks for, without destroying the existing body.
 
 The judge (plans-judge/scripts/judge.py) scores on:
@@ -34,8 +34,8 @@ import re
 from datetime import UTC, datetime
 from pathlib import Path
 
-PLANS_DIR = Path(".hermes/plans")
-SPECS_DIR = Path(".hermes/specs")
+PLANS_DIR = Path("./plans")
+SPECS_DIR = Path("./specs")
 SPECS_GLOB = list(SPECS_DIR.glob("*.md")) if SPECS_DIR.is_dir() else []
 
 FM_FIELDS = ["title", "description", "date", "author", "status", "profile", "model"]
@@ -103,7 +103,7 @@ def append_gate_to_phase(plan_text: str) -> str:
             "\n\n## Verification\n\n"
             "**Gate**: All listed tasks complete and a fresh run of "
             '`python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" '
-            "--plans-dir .hermes/plans` reports this plan at score >= 95.\n"
+            "--plans-dir ./plans` reports this plan at score >= 95.\n"
         )
     out_chunks: list[str] = []
     last_end = 0
@@ -120,7 +120,7 @@ def append_gate_to_phase(plan_text: str) -> str:
             # Insert a Gate line at the end of the phase body
             new_body = (
                 phase_body.rstrip()
-                + '\n\n**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.\n'
+                + '\n\n**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.\n'
             )
             out_chunks.append(plan_text[m.start() : heading_end] + new_body)
         last_end = body_end
@@ -147,9 +147,9 @@ def append_risks(plan_text: str) -> str:
 def append_files_section(plan_text: str) -> str:
     body = (
         "\n## Files to Create or Modify\n\n"
-        "- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.\n"
+        "- `./plans/<this-plan>.md` — this plan, augmented with the required sections.\n"
         "- `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.\n"
-        "- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.\n"
+        "- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.\n"
         "- `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.\n"
         "\n"
     )

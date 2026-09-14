@@ -194,7 +194,7 @@ def main() -> int:
     parser.add_argument("--hermes-home", default="C:/Users/Alexa/AppData/Local/hermes")
     parser.add_argument("--start", default="2026-09-06")
     parser.add_argument("--end", default="2026-09-11", help="exclusive end date in WAT")
-    parser.add_argument("--output", default=".hermes/plans/run-all-goals-five-day-session-corpus.json")
+    parser.add_argument("--output", default="./plans/run-all-goals-five-day-session-corpus.json")
     args = parser.parse_args()
 
     home = Path(args.hermes_home)

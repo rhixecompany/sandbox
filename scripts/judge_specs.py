@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Specs Judge — score .hermes/specs/*.md on 5 dimensions (max 100).
+"""Specs Judge — score ./specs/*.md on 5 dimensions (max 100).
 
 Usage:
-    python judge.py --specs-dir .hermes/specs [--plans-dir .hermes/plans] [--output PATH] [--threshold N]
+    python judge.py --specs-dir ./specs [--plans-dir ./plans] [--output PATH] [--threshold N]
 """
 import argparse
 import json
@@ -64,7 +64,7 @@ def extract_spec_references(text: str) -> list[str]:
                 if match:
                     refs.append(match.group(0))
     # Inline references
-    inline_refs = re.findall(r'(\.hermes/specs/[.\w/-]+\.md|\.\./specs/[.\w/-]+\.md)', text)
+    inline_refs = re.findall(r'(\./specs/[.\w/-]+\.md|\.\./specs/[.\w/-]+\.md)', text)
     refs.extend(inline_refs)
     return list(set(refs))
 
@@ -80,7 +80,7 @@ def extract_plan_references(text: str) -> list[str]:
                 match = re.search(r'[.\w/-]+\.md', line)
                 if match:
                     refs.append(match.group(0))
-    inline_refs = re.findall(r'(\.hermes/plans/[.\w/-]+\.md|\.\./plans/[.\w/-]+\.md)', text)
+    inline_refs = re.findall(r'(\./plans/[.\w/-]+\.md|\.\./plans/[.\w/-]+\.md)', text)
     refs.extend(inline_refs)
     return list(set(refs))
 
@@ -169,7 +169,7 @@ def score_one(path: Path, plans_dir: Path | None = None) -> dict:
     xref_pts = 0
     if "## Linked Plan" in text:
         xref_pts = 10
-    elif "../plans/" in text or ".hermes/plans/" in text:
+    elif "../plans/" in text or "./plans/" in text:
         xref_pts = 5
 
     # DRY (20 pts): under MAX_LINE lines
@@ -204,8 +204,8 @@ def score_one(path: Path, plans_dir: Path | None = None) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Specs Judge")
-    ap.add_argument("--specs-dir", default=".hermes/specs", help="dir containing specs")
-    ap.add_argument("--plans-dir", default=".hermes/plans", help="dir containing plans (for cross-validation)")
+    ap.add_argument("--specs-dir", default="./specs", help="dir containing specs")
+    ap.add_argument("--plans-dir", default="./plans", help="dir containing plans (for cross-validation)")
     ap.add_argument("--output", default="judge_results/specs_audit")
     ap.add_argument("--threshold", type=int, default=70)
     args = ap.parse_args()

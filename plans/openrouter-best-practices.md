@@ -1,7 +1,7 @@
 # OpenRouter Best Practices — Verified 2026-09-14
 
 Author: ops/adminbot (subagent identity confirmed — profile routing ops→adminbot verified)
-Plan reference: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B, real file)
+Plan reference: `./plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B, real file)
 Workspace: `~/Desktop/SandBox` (clean-development, ahead 4 behind 0, 14 profile dirs verified)
 Source: Real web_search results (5 verified URLs, no synthetic content)
 
@@ -38,7 +38,7 @@ Key verified facts (from real search results):
 4. Monitor 429 responses honestly; log real exit codes, not fabricated PASS.
 5. Preserve rate limits and environment failures (MSYS2 FAIL, adminbot MISSING, rate-limit 403) as session evidence — never hide.
 6. Reference DRY: `.hermes.md` + `user-communication-preferences` + `multi-file-change-protocol` — do not duplicate identity rules.
-7. 28 skills verified/referenced (see `.hermes/plans/multi-goal-execution-plan-2026-09-14.md`).
+7. 28 skills verified/referenced (see `./plans/multi-goal-execution-plan-2026-09-14.md`).
 
 ## Blockers (Honest — Preserved)
 

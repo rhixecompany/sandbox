@@ -324,4 +324,4 @@ _All phases completed per plan. Goal achieved._
 
 ---
 
-_Plan saved to: `.hermes/plans/2026-07-10_143000-comprehensive-soul-skill-research-plan.md`_
+_Plan saved to: `./plans/2026-07-10_143000-comprehensive-soul-skill-research-plan.md`_

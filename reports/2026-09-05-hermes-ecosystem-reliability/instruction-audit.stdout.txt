@@ -2537,4 +2537,4 @@
     "Classification order: conflicting > stale > bloat > duplicate > canonical > unknown"
   ]
 }
-Wrote: .hermes\reports\2026-09-05-hermes-ecosystem-reliability\instruction-audit.json
+Wrote: ./reports\2026-09-05-hermes-ecosystem-reliability\instruction-audit.json

@@ -15,7 +15,7 @@ Per batch group of 5 (5 web_search queries, 500ms spacing, real calls — not sy
 2. RESEARCH — Execute 5 web_search calls with 500ms spacing. Save results to results/web-research-results.json (verified file exists, grows per group; broken links preserved honestly).
 3. VERIFY — Read saved results; HEAD-check URLs; document broken (not fabricated); record exit codes (real ruff/script checks if artifacts generated).
 4. READ — Read results (only after P3 gate pass per user's instruction). Index best-practices links.
-5. CREATE ARTIFACTS — Per batch result: create spec (.hermes/specs/<package>-best-practices.md), plan (.hermes/plans/<package>-best-practices.md), prompt (.github/prompts/web-research-<package>.prompt.md). Note: this creates up to 3 files per package; over 628 batches this exceeds >6 file threshold massively — handled by sequential batch groups (not parallel explosion), with multi-file-change-protocol 14-skill load before each group.
+5. CREATE ARTIFACTS — Per batch result: create spec (./specs/<package>-best-practices.md), plan (./plans/<package>-best-practices.md), prompt (.github/prompts/web-research-<package>.prompt.md). Note: this creates up to 3 files per package; over 628 batches this exceeds >6 file threshold massively — handled by sequential batch groups (not parallel explosion), with multi-file-change-protocol 14-skill load before each group.
 6. EXECUTE + VERIFY GATES — Verify script syntax (py_compile PASS), ruff PASS (verified in prior turn: exit 0), execution exit verified (PASS 0 when results file present). No synthetic verification.
 
 ## Rules (Per Batch Group)
@@ -39,12 +39,12 @@ Resource allocation per group:
 - Group 1-5: batches 6-10 (continuation of verified batches 1-5) — verified in session.
 - Group 6-126: batches 11-628 — sequential, 500ms spacing enforced.
 - Final verification: after group 126, verify all artifacts + results JSON + script execution + integrity check.
-- Report: final verification report saved (.hermes/plans/web-research-subgoal-final-verify-<final-group>.md) — real file, verified.
+- Report: final verification report saved (./plans/web-research-subgoal-final-verify-<final-group>.md) — real file, verified.
 
 ## Blockers / Risk
 - Rate-limit 403: preserved (not hidden) — some batches may return 0 results; documented.
 - Execution timeout: each turn has bounded execution time; 5 queries per turn fits within limits.
-- File explosion: 126 groups × ~15 files ≈ ~1890 artifacts; workspace verified capable (existing .hermes/plans/ has 173 files; .github/prompts/ has many subdirs). Multi-file-change-protocol 14-skill load runs before each group.
+- File explosion: 126 groups × ~15 files ≈ ~1890 artifacts; workspace verified capable (existing ./plans/ has 173 files; .github/prompts/ has many subdirs). Multi-file-change-protocol 14-skill load runs before each group.
 - Pipeline never fully "complete" for 628 batches in practical session time (~63 min continuous); user can stop at any milestone and declare partial complete with verified artifacts (honest — not hidden).
 
 ## Verification Gates (Per Group, Real — Not Fabricated)

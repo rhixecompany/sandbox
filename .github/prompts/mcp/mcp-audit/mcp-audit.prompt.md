@@ -66,7 +66,7 @@ Hermes config.yaml is NOT auto-edited. For Hermes, use `hermes mcp add/remove` o
 python scripts/mcp_audit.py --registry .mcp/registry.json
 ```
 
-Output: `.hermes/plans/mcp-audit-<date>/audit-report.{json,md}`
+Output: `./plans/mcp-audit-<date>/audit-report.{json,md}`
 
 Parse the report. Any **FAIL** status means a real problem; **WARN** is usually benign (DNS or env).
 
@@ -97,8 +97,8 @@ Summarize in 5-10 lines:
 ## Reference
 
 - Skill: `mcp-audit-orchestrator` (load with `skill_view name="mcp\mcp-audit-orchestrator"`)
-- Plan: `.hermes/plans/mcp-audit-<date>/`
-- Spec: `.hermes/plans/mcp-audit-<date>/SPEC.md`
+- Plan: `./plans/mcp-audit-<date>/`
+- Spec: `./plans/mcp-audit-<date>/SPEC.md`
 
 ## Verification Checklist
 
@@ -107,5 +107,5 @@ Summarize in 5-10 lines:
 - [ ] `hermes mcp list` shows same enabled count as registry
 - [ ] `hermes doctor` shows no new MCP warnings vs baseline
 - [ ] All 4 disk configs pass `json.load()` (valid JSON)
-- [ ] Report written to `.hermes/plans/mcp-audit-*/`
+- [ ] Report written to `./plans/mcp-audit-*/`
 - [ ] SESSION_REPORT.md updated

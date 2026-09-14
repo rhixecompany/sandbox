@@ -1,6 +1,6 @@
 # Env Update Report — G3 — Verified 2026-09-14
 
-Subagent: ops/adminbot (confirmed identity). Plan: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B).
+Subagent: ops/adminbot (confirmed identity). Plan: `./plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B).
 
 ## .env Status (Protected — Never Modified, Never Exposed)
 

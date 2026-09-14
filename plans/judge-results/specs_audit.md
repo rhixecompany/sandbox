@@ -1,6 +1,6 @@
 # Specs Audit — 2026-09-07 16:52 UTC
 
-Dir: `.hermes\specs` | Plans Dir: `.hermes\plans` | Threshold: 99
+Dir: `./specs` | Plans Dir: `./plans` | Threshold: 99
 Count: 6 | Avg: 103.8 | Passed: 6
 
 | File | Score | Rating | FM | Struct | Content | Coupling | XRef | DRY | Lines |

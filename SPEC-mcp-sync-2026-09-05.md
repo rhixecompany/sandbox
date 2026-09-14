@@ -12,13 +12,13 @@ MCP servers give LLM agents standardized access to tools, resources, and prompts
 
 | Platform | Config Path(s) | Schema Root |
 |----------|----------------|-------------|
-| **Hermes Agent** (default profile) | `~/.hermes/...` (managed by `hermes mcp` CLI; canonical source = `hermes mcp list`) | hermes-internal store |
+| **Hermes Agent** (default profile) | `~/./...` (managed by `hermes mcp` CLI; canonical source = `hermes mcp list`) | hermes-internal store |
 | **OpenCode** | workspace `opencode.json` (root `mcp.*` block) + user `~/.config/opencode/opencode.json` (merged at runtime) | `https://opencode.ai/config.json` |
 | **GitHub Copilot CLI** | workspace `.github/mcp.json` (`mcpServers.*` block) | copilot-internal |
 | **Codex CLI** | workspace `.codex/mcp.json` (`mcpServers.*` block) + global OpenAI-managed | codex-internal |
 | **VS Code MCP** | `.vscode/mcp.json` (`servers.*` block, schema is identical to Copilot's) | vscode-internal |
 
-Hermes MCP servers are configured by `hermes mcp add` and stored in the hermes install directory (`~/.hermes/...`). They are NOT read from any workspace file. OpenCode uses `opencode.json`, and `~/.config/opencode/opencode.json` (user-global) is merged into the workspace config at runtime.
+Hermes MCP servers are configured by `hermes mcp add` and stored in the hermes install directory (`~/./...`). They are NOT read from any workspace file. OpenCode uses `opencode.json`, and `~/.config/opencode/opencode.json` (user-global) is merged into the workspace config at runtime.
 
 ### 1.1 Schema Translation Matrix
 
@@ -98,7 +98,7 @@ The canonical workspace source of truth is `opencode.json` (per the existing aud
 
 ### 3.4 Hermes Workspace Coupling Gap
 
-Hermes Agent reads MCP servers from its own internal store (`~/.hermes/...`), not from any workspace file. This means:
+Hermes Agent reads MCP servers from its own internal store (`~/./...`), not from any workspace file. This means:
 - The workspace `opencode.json` is the canonical source for **OpenCode only**.
 - Hermes must be configured separately via `hermes mcp add` (it is).
 - A workspace change to `opencode.json` does NOT auto-propagate to Hermes.
@@ -158,5 +158,5 @@ The goal is complete when:
 - [ ] A live hermes session can call at least 3 currently-loaded MCP tools without error (proof of runtime).
 - [ ] A new `hermes-mcp-sync` SKILL.md exists in `~/.opencode/skills/` (or workspace equivalent) documenting the workflow.
 - [ ] A `PLAN.md` file exists at workspace root documenting the implementation steps.
-- [ ] The updated `.hermes/mcp-validation-report.md` reflects the new state.
+- [ ] The updated `./mcp-validation-report.md` reflects the new state.
 - [ ] No new secrets are introduced; existing env-var indirection (`${env:KEY}`) is preserved.

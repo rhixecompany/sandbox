@@ -57,7 +57,7 @@ hermes setup
 hermes --tui
 ```
 
-After `nix profile install`, `hermes`, `hermes-agent`, and `hermes-acp` are on your PATH. From here, the workflow is identical to the [standard installation](./installation.md) — `hermes setup` walks you through provider selection, `hermes gateway install` sets up a launchd (macOS) or systemd user service, and config lives in `~/.hermes/`.
+After `nix profile install`, `hermes`, `hermes-agent`, and `hermes-acp` are on your PATH. From here, the workflow is identical to the [standard installation](./installation.md) — `hermes setup` walks you through provider selection, `hermes gateway install` sets up a launchd (macOS) or systemd user service, and config lives in `~/./`.
 
 :::warning Messaging platforms (Discord, Telegram, Slack)
 The default package includes ALL libraries hermes-agent might need. if you want a smaller variant, check the other flake outputs.
@@ -139,7 +139,7 @@ services.hermes-agent.environmentFiles = [ "/var/lib/hermes/env" ];
 :::
 
 :::tip addToSystemPackages
-Setting `addToSystemPackages = true` does two things: puts the `hermes` CLI on your system PATH **and** sets `HERMES_HOME` system-wide so the interactive CLI shares state (sessions, skills, cron) with the gateway service. Without it, running `hermes` in your shell creates a separate `~/.hermes/` directory.
+Setting `addToSystemPackages = true` does two things: puts the `hermes` CLI on your system PATH **and** sets `HERMES_HOME` system-wide so the interactive CLI shares state (sessions, skills, cron) with the gateway service. Without it, running `hermes` in your shell creates a separate `~/./` directory.
 :::
 
 ### Container-aware CLI
@@ -539,8 +539,8 @@ The container uses `--network=host`, so the OAuth callback listener on `127.0.0.
 
 ```bash
 hermes mcp add my-oauth-server --url https://mcp.example.com/mcp --auth oauth
-scp ~/.hermes/mcp-tokens/my-oauth-server{,.client}.json \
-    server:/var/lib/hermes/.hermes/mcp-tokens/
+scp ~/./mcp-tokens/my-oauth-server{,.client}.json \
+    server:/var/lib/hermes/./mcp-tokens/
 # Ensure: chown hermes:hermes, chmod 0600
 ```
 
@@ -705,7 +705,7 @@ Host                                    Container
   ├── current-package -> /nix/store/...    (symlink, updated each rebuild)
   ├── .gc-root -> /nix/store/...           (prevents nix-collect-garbage)
   ├── .container-identity                  (sha256 hash, triggers recreation)
-  ├── .hermes/                             (HERMES_HOME)
+  ├── ./                             (HERMES_HOME)
   │   ├── .env                             (merged from environment + environmentFiles)
   │   ├── config.yaml                      (Nix-generated, deep-merged by activation)
   │   ├── .managed                         (marker file)
@@ -1095,7 +1095,7 @@ replacement.
 
 ```
 /var/lib/hermes/                     # stateDir (owned by hermes:hermes, 0750)
-├── .hermes/                         # HERMES_HOME
+├── ./                         # HERMES_HOME
 │   ├── SOUL.md                      # from hermesHomeFiles: the agent identity
 │   ├── config.yaml                  # Nix-generated (deep-merged each rebuild)
 │   ├── .managed                     # Marker: CLI config mutation blocked
@@ -1118,7 +1118,7 @@ replacement.
 ### Home Manager
 
 ```
-~/.hermes/                           # hermesHome (HERMES_HOME), 0700
+~/./                           # hermesHome (HERMES_HOME), 0700
 ├── SOUL.md                          # from hermesHomeFiles
 ├── config.yaml                      # written by Nix, merged at each activation
 ├── .managed                         # marker: names the system that manages this
@@ -1203,10 +1203,10 @@ If the agent starts but can't authenticate with the LLM provider, check that the
 
 ```bash
 # Native mode
-sudo -u hermes cat /var/lib/hermes/.hermes/.env
+sudo -u hermes cat /var/lib/hermes/./.env
 
 # Container mode
-docker exec hermes-agent cat /data/.hermes/.env
+docker exec hermes-agent cat /data/./.env
 ```
 
 ### GC Root Verification

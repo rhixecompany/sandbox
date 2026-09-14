@@ -18,7 +18,7 @@
 | **Total**               |         |        | **3.00 GB** |
 
 Command: `python scripts/disk_cleanup.py`
-Report: `.hermes/plans/2026-08-28-unified-platform-remediation/disk-cleanup-20260828T194524.json`
+Report: `./plans/2026-08-28-unified-platform-remediation/disk-cleanup-20260828T194524.json`
 
 App uninstalls (winget/choco) were NOT performed in this pass; user
 authorization is required before any application removal.

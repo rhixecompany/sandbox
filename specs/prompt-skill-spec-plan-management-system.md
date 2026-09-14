@@ -28,13 +28,13 @@ This specification defines a comprehensive system for managing prompts, skills, 
 - **Categories**: development, planning, creative, testing, documentation, debugging, security, devops, mcp, research, productivity, github, qa
 
 ### REQ-003: Spec Management
-- **Location**: `/.hermes/specs/`
+- **Location**: `/./specs/`
 - **Format**: YAML frontmatter + markdown body
 - **Fields**: name, title, description, version, author, license, tags, requirements[], acceptance_criteria[]
 - **Naming**: `{feature-name}-spec.md`
 
 ### REQ-004: Plan Management
-- **Location**: `/.hermes/plans/`
+- **Location**: `/./plans/`
 - **Format**: YAML frontmatter + markdown body
 - **Fields**: name, title, description, version, author, license, tags, phases[], tasks[], gates[], dependencies[]
 - **Naming**: `{feature-name}-plan.md`
@@ -96,8 +96,8 @@ This specification defines a comprehensive system for managing prompts, skills, 
 - [ ] No duplicate or orphaned files
 
 ### AC-003: Specs/Plans Functional
-- [ ] Specs in .hermes/specs/ are valid and complete
-- [ ] Plans in .hermes/plans/ are executable
+- [ ] Specs in ./specs/ are valid and complete
+- [ ] Plans in ./plans/ are executable
 - [ ] Spec-to-plan traceability exists
 - [ ] Verification gates pass
 
@@ -150,7 +150,7 @@ This specification defines a comprehensive system for managing prompts, skills, 
 ├── github/
 └── qa/
 
-.hermes/
+./
 ├── specs/
 │   ├── prompt-skill-spec-plan-management-system.md
 │   ├── prompt-library-spec.md
@@ -244,8 +244,8 @@ companion_files:
 #### Companion File Purposes
 | File | Purpose |
 |------|---------|
-| specs.md | Links to .hermes/specs/ specification |
-| plans.md | Links to .hermes/plans/ implementation plan |
+| specs.md | Links to ./specs/ specification |
+| plans.md | Links to ./plans/ implementation plan |
 | goals.md | High-level goals and success metrics |
 | subgoals.md | Decomposed sub-goals with owners |
 | rules.md | Business rules, constraints, invariants |

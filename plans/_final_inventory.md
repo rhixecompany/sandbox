@@ -27,9 +27,9 @@ date: 2026-09-14
 
 ## Bundle Generation (Phase 3 — 5 artifacts per feature = 40 artifacts)
 Per feature (independent, parallel-ready):
-- .hermes/plans/<feat>-plan.md (YAML frontmatter + phases/gates)
-- .hermes/specs/<feat>-spec.md (YAML frontmatter + requirements/acceptance criteria)
-- .hermes/prompts/<feat>-prompt.md (YAML frontmatter + implementation prompt)
+- ./plans/<feat>-plan.md (YAML frontmatter + phases/gates)
+- ./specs/<feat>-spec.md (YAML frontmatter + requirements/acceptance criteria)
+- ./prompts/<feat>-prompt.md (YAML frontmatter + implementation prompt)
 - skills/<feat>-bundle/SKILL.md (YAML frontmatter + ≥10 line body — verified: 30 lines for overview; all ≥10)
 - scripts/<feat>-execute.py (Python verification script, executable)
 
@@ -42,7 +42,7 @@ Total artifacts (excluding results): 8*5 = 40 (verified via ls counts: plan 41 i
 ## Verification Gate (Phase 5 — sequential final audit)
 - File count confirmed >6 (trigger met): 8 feature docs + 40 bundle artifacts + 8 scripts + 8 results + plans/specs/prompts/master files = well over 6.
 - All available 14-stack skills verified (those unavailable explicitly flagged): multi-file-change-protocol loaded and followed; others (plan/mcp-filesystem/mcp-ast-grep/mcp-memory/using-superpowers/etc.) not found in profile — flagged honestly; native equivalents used.
-- Plan written to .hermes/plans/feature-docs-implementation-plan.md (verified present, 3566 bytes, YAML frontmatter).
+- Plan written to ./plans/feature-docs-implementation-plan.md (verified present, 3566 bytes, YAML frontmatter).
 - Ambiguities clarified via clarify (8 questions across 4 turns, 2 per turn): download path, subgoal definition, bundle structure, parallel vs sequential execution.
 - Execution path: sequential download (phase 1) → parallel-ready bundle generation (phases 2-4 independent per feature) → sequential verification gate (phase 5).
 - Each phase has verifiable gate (gate 1: downloads; gate 2: read; gate 3: artifacts; gate 4: results; gate 5: final inventory).
@@ -59,10 +59,10 @@ Total artifacts (excluding results): 8*5 = 40 (verified via ls counts: plan 41 i
 - Per-feature execution: handled sequentially by master agent using bash + python (equivalent to 8 parallel subagent results, without spawning 8 concurrent processes that could exhaust session limits).
 
 ## Artifacts Listing (verified paths — absolute)
-- Plan master: C:\Users\Alexa\Desktop\SandBox\.hermes\plans\feature-docs-implementation-plan.md
-- Plan per feature: 8 files (.hermes/plans/*-plan.md)
-- Spec per feature: 8 files (.hermes/specs/*-spec.md)
-- Prompt per feature: 8 files (.hermes/prompts/*-prompt.md)
+- Plan master: C:\Users\Alexa\Desktop\SandBox\./plans/feature-docs-implementation-plan.md
+- Plan per feature: 8 files (./plans/*-plan.md)
+- Spec per feature: 8 files (./specs/*-spec.md)
+- Prompt per feature: 8 files (./prompts/*-prompt.md)
 - Skill per feature: 8 files (skills/*-bundle/SKILL.md)
 - Script per feature: 8 files (scripts/*-execute.py)
 - Results per feature: 8 files (results/*-result.md)

@@ -1,6 +1,6 @@
 ---
 title: Multi-Agent / Multi-Provider Fanout — Specification
-plan: .hermes/plans/multi-agent-fanout-2026-08-28/PLAN.md
+plan: ./plans/multi-agent-fanout-2026-08-28/PLAN.md
 generated: 2026-08-28
 profile: adminbot
 model: minimax/minimax-m3:free
@@ -139,9 +139,9 @@ Where providers overlap, the matrix generates multiple cells: e.g. `openrouter` 
 
 | Path | Purpose |
 |------|---------|
-| `.hermes/plans/multi-agent-fanout-2026-08-28/SPEC.md` | This file |
-| `.hermes/plans/multi-agent-fanout-2026-08-28/PLAN.md` | Sequencing + task breakdown |
-| `.hermes/plans/multi-agent-fanout-2026-08-28/implementation-plan.md` | Step-by-step |
+| `./plans/multi-agent-fanout-2026-08-28/SPEC.md` | This file |
+| `./plans/multi-agent-fanout-2026-08-28/PLAN.md` | Sequencing + task breakdown |
+| `./plans/multi-agent-fanout-2026-08-28/implementation-plan.md` | Step-by-step |
 | `scripts/auth_inventory.py` | Provider inventory from `hermes auth list` |
 | `scripts/package_inspector.py` | Reads packages/**/* → package docs |
 | `scripts/fanout.py` | Run prompt non-interactively across cells |

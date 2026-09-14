@@ -23,16 +23,16 @@ Load when running `/web-research-pipeline` or `/goal` subgoal on dependency inve
 
 Per clarification turn 3 (sequential phases selected): Phase N must have gate PASS before Phase N+1 begins.
 
-1. **LOAD** — Load 14 skills (`multi-file-change-protocol` stack). Verify `.hermes/plans/` exists; verify `python-packages.md` + `node-dependency.md` readable. Gate: all files present.
+1. **LOAD** — Load 14 skills (`multi-file-change-protocol` stack). Verify `./plans/` exists; verify `python-packages.md` + `node-dependency.md` readable. Gate: all files present.
 2. **RESEARCH** — Run `web_search` per package batch (≤5 per call; ≥500ms spacing). Save links to `results/web-research-results.json`. Gate: file exists, size >0 B, real URLs captured.
-3. **VERIFY** — Read saved JSON; HEAD-check URLs; document broken links honestly (no suppression). Gate: P3 report written (`.hermes/plans/web-research-verify-<ts>.md`); broken links listed explicitly.
+3. **VERIFY** — Read saved JSON; HEAD-check URLs; document broken links honestly (no suppression). Gate: P3 report written (`./plans/web-research-verify-<ts>.md`); broken links listed explicitly.
 4. **READ** — Read `results/web-research-results.json`. Only after P3 gate passes (user instruction: "only when pipeline is completed, read the new artifacts"). Gate: artifacts parsed; best-practice + cheatsheet URLs indexed.
-5. **CREATE + EXECUTE** — Create per-package spec (`.hermes/specs/`), plan (`.hermes/plans/`), prompt (`.github/prompts/`), script (`scripts/`), skill (`skills/`). Execute scripts; verify skills loadable. Gate: exit codes 0; skills verified via `skill_view`.
+5. **CREATE + EXECUTE** — Create per-package spec (`./specs/`), plan (`./plans/`), prompt (`.github/prompts/`), script (`scripts/`), skill (`skills/`). Execute scripts; verify skills loadable. Gate: exit codes 0; skills verified via `skill_view`.
 
 ## Verified Evidence (Real — Not Synthetic)
 
-- `.hermes/plans/web-research-subgoal-2026-09-13.md` — 3830 B (plan, verified).
-- `.hermes/specs/web-research-subgoal-2026-09-13.md` — 3395 B (spec, verified).
+- `./plans/web-research-subgoal-2026-09-13.md` — 3830 B (plan, verified).
+- `./specs/web-research-subgoal-2026-09-13.md` — 3395 B (spec, verified).
 - `results/web-research-results.json` — 4676 B (3 batches, 16 links recorded, verified by `os.path.getsize`).
 - 12 valid links; 4 broken links documented (403/405 preserved — not hidden): `javascript.plainenglish.io` (403), `stackademic.com` (403), `news.ycombinator.com` (405), `realpython.com/python-requests` (403 blocked by HEAD).
 - Rate-limit 403 blocker confirmed (preserved from session audit).
@@ -45,8 +45,8 @@ Per clarification turn 3 (sequential phases selected): Phase N must have gate PA
 | Type   | Path Pattern                                     | Verified Example                                   |
 | ------ | ------------------------------------------------ | -------------------------------------------------- |
 | Skill  | `skills/web-research-<package>.md`               | This file                                          |
-| Plan   | `.hermes/plans/web-research-subgoal-<ts>.md`     | `.hermes/plans/web-research-subgoal-2026-09-13.md` |
-| Spec   | `.hermes/specs/web-research-subgoal-<ts>.md`     | `.hermes/specs/web-research-subgoal-2026-09-13.md` |
+| Plan   | `./plans/web-research-subgoal-<ts>.md`     | `./plans/web-research-subgoal-2026-09-13.md` |
+| Spec   | `./specs/web-research-subgoal-<ts>.md`     | `./specs/web-research-subgoal-2026-09-13.md` |
 | Script | `scripts/web-research-pipeline.py`               | Created by this pipeline                           |
 | Prompt | `.github/prompts/web-research-subgoal.prompt.md` | To be generated in P5                              |
 | Result | `results/web-research-results.json`              | Verified 4676 B                                    |

@@ -11,7 +11,7 @@ status: "in_progress"
 > Updated: 2026-09-13 | Protocol: multi-file-change-protocol (sequential inspection; parallel updates applied; sequential verification). Profile: adminbot (execution + verification). User clarification applied: all profile dirs; global `inkling:free` by openrouter; descriptions + aliases globally; config.yaml + identity files.
 
 ## Verified Source (docs snippet — user-provided; original URL unreached due to previous session timeout — noted honestly)
-Title: "Personality & SOUL.md" (sidebar_position: 9) — docs verified sections 1-11 listed in `.hermes/specs/profile-identity-spec.md`.
+Title: "Personality & SOUL.md" (sidebar_position: 9) — docs verified sections 1-11 listed in `./specs/profile-identity-spec.md`.
 
 ## Profile Updates Completed (15 profiles — terminal verified, not Python cwd-dependent)
 

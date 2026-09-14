@@ -1,5 +1,5 @@
 markdownlint-cli2 v0.19.1 (markdownlint v0.39.0)
-Finding: .github/prompts/**/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !.hermes/archived-prompt-templates/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc
+Finding: .github/prompts/**/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !./archived-prompt-templates/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc
 Linting: 674 file(s)
 Summary: 607 error(s)
 .github/prompts/add-educational-comments.prompt.md:241:36 error MD047/single-trailing-newline Files should end with a single newline character

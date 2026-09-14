@@ -145,7 +145,7 @@ readback of generated evidence.
 
 ## 7. Required evidence files
 
-Evidence belongs under `.hermes/reports/2026-09-05-hermes-ecosystem-reliability/`
+Evidence belongs under `./reports/2026-09-05-hermes-ecosystem-reliability/`
 and must contain exit markers plus machine-readable output where applicable.
 No evidence file may contain credentials or token previews.
 
@@ -170,7 +170,7 @@ Drive `hermes-ecosystem-reliability-spec.md` to a verified passing state by anch
 
 ## Acceptance Criteria
 
-- Then `python scripts/specs_judge.py --specs-dir .hermes/specs` reports this spec at score >= 95 and rating PASS.
+- Then `python scripts/specs_judge.py --specs-dir ./specs` reports this spec at score >= 95 and rating PASS.
 - Then this file still parses as markdown and the frontmatter still validates against the 5-field rubric (name, title, status, owner, version).
 - Then every requirement in `## Requirements` above references a verification command, an exit code, or a numeric threshold.
 
@@ -182,7 +182,7 @@ Drive `hermes-ecosystem-reliability-spec.md` to a verified passing state by anch
 
 ## Verification
 
-- [ ] `python -c "import yaml; yaml.safe_load(open('.hermes/specs/hermes-ecosystem-reliability-spec.md').read().split('---',2)[1])"` exits 0.
-- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir .hermes/specs` reports the spec at score >= 95.
-- [ ] Spec's `plan:` frontmatter field points to an existing file in `.hermes/plans/` (when present).
-- [ ] At least 1 plan in `.hermes/plans/` references this spec by filename.
+- [ ] `python -c "import yaml; yaml.safe_load(open('./specs/hermes-ecosystem-reliability-spec.md').read().split('---',2)[1])"` exits 0.
+- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir ./specs` reports the spec at score >= 95.
+- [ ] Spec's `plan:` frontmatter field points to an existing file in `./plans/` (when present).
+- [ ] At least 1 plan in `./plans/` references this spec by filename.

@@ -21,7 +21,7 @@ tool output, not aspiration.
 
 | # | Step | Before | After | Notes |
 |---|------|--------|-------|-------|
-| 1 | Specs baseline | — | avg 77.4, 4/5 PASS | `.hermes/plans/judge-reports/specs-baseline.md` |
+| 1 | Specs baseline | — | avg 77.4, 4/5 PASS | `./plans/judge-reports/specs-baseline.md` |
 | 2 | Specs after appendix augmentation | 77.4 | 87.8, 5/5 PASS | `scripts/augment_specs_with_required_sections.py` added 5 required sections to 3 specs |
 | 3 | Specs after judge bugfix | 87.8 | **99.8, 5/5 PASS** | Fixed `## Requirements` section split bug in `specs-judge/scripts/judge.py` |
 | 4 | Plans baseline | — | avg 82.4, 68/79 PASS | |
@@ -63,7 +63,7 @@ tool output, not aspiration.
 - [x] Run hooks-judge on Hermes root (8 files, avg 87.5, 7/8 PASS)
 - [x] Run plugins-judge on Hermes root (12 files, avg 95.3, 12/12 PASS)
 
-**Gate**: All six judges ran, baseline numbers recorded above, reports in `.hermes/plans/judge-reports/`.
+**Gate**: All six judges ran, baseline numbers recorded above, reports in `./plans/judge-reports/`.
 
 ## Phase B: Rubric bug fixes in canonical judges
 
@@ -100,7 +100,7 @@ tool output, not aspiration.
 
 **Status**: deferred to follow-up session
 
-The user asked to actually execute the live `hermes chat` probe loop across all `:free` models and rank them. That is a real 1-2 hour execution with background processes and requires a follow-up session, not this one. This plan captures the foundation; the execution plan is `.hermes/plans/2026-09-05_test-providers-models-rebuild.md` plus the prompt at `.github/prompts/operations/test-providers-models/`.
+The user asked to actually execute the live `hermes chat` probe loop across all `:free` models and rank them. That is a real 1-2 hour execution with background processes and requires a follow-up session, not this one. This plan captures the foundation; the execution plan is `./plans/2026-09-05_test-providers-models-rebuild.md` plus the prompt at `.github/prompts/operations/test-providers-models/`.
 
 **Gate**: A follow-up session re-executes Phases 1-5 of the prompt and updates `templates/ranking-report.md` with the verified top-5.
 
@@ -155,8 +155,8 @@ The user asked to actually execute the live `hermes chat` probe loop across all 
 - `.github/prompts/operations/test-providers-models/scripts/audit-sessions.py` — created
 - `~/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py` — rubric bug fix
 - `~/AppData/Local/hermes/skills/qa/prompts-judge/scripts/judge.py` — cross-judge + asset verification path fixes
-- 3 specs in `.hermes/specs/` — augmented with required sections
-- 79 plans in `.hermes/plans/` — augmented with required sections + gates + linked specs
+- 3 specs in `./specs/` — augmented with required sections
+- 79 plans in `./plans/` — augmented with required sections + gates + linked specs
 
 ## Linked Specs
 

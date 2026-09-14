@@ -3,9 +3,9 @@
 import os, sys
 repo = "/c/Users/Alexa/Desktop/SandBox"
 feat_file = os.path.join(repo, "docs/features", "kanban.md")
-plan = os.path.join(repo, ".hermes/plans", "kanban-plan.md")
-spec = os.path.join(repo, ".hermes/specs", "kanban-spec.md")
-prompt = os.path.join(repo, ".hermes/prompts", "kanban-prompt.md")
+plan = os.path.join(repo, "./plans", "kanban-plan.md")
+spec = os.path.join(repo, "./specs", "kanban-spec.md")
+prompt = os.path.join(repo, "./prompts", "kanban-prompt.md")
 skill = os.path.join(repo, "skills", "kanban-bundle", "SKILL.md")
 results_file = os.path.join(repo, "results", "kanban-result.md")
 verified = all(os.path.isfile(p) for p in [feat_file, plan, spec, prompt, skill])

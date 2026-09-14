@@ -29,7 +29,7 @@ Single-session build. The script is small (≤300 lines) and the patterns alread
 - `build_summary()` — aggregate counts + actionable findings
 - `render_markdown()` — human-readable table
 - `main()` — argparse, dispatch, exit code logic
-- Output: `.hermes/plans/diagnostic-<date>/report.{json,md}`
+- Output: `./plans/diagnostic-<date>/report.{json,md}`
 
 ### P3 — Write skill (~/AppData/Local/hermes/skills/devops/hermes-doctor-pipeline/SKILL.md)
 
@@ -42,7 +42,7 @@ Single-session build. The script is small (≤300 lines) and the patterns alread
 - Frontmatter: name, title, description, version, author, tags
 - Body: when to use, 4-step workflow, flags, pitfalls, verification, see also
 
-### P5 — Write plan trio (.hermes/plans/hermes-doctor-2026-08-28/{SPEC,PLAN,implementation-plan}.md)
+### P5 — Write plan trio (./plans/hermes-doctor-2026-08-28/{SPEC,PLAN,implementation-plan}.md)
 
 - SPEC.md — full design + schema + verification gates
 - PLAN.md — this file
@@ -84,4 +84,4 @@ Single-session build. The script is small (≤300 lines) and the patterns alread
 - `git checkout HEAD -- scripts/hermes_doctor.py`
 - `rm -rf ~/AppData/Local/hermes/skills/devops/hermes-doctor-pipeline/`
 - `rm .github/prompts/hermes-doctor.prompt.md`
-- `rm -rf .hermes/plans/hermes-doctor-2026-08-28/`
+- `rm -rf ./plans/hermes-doctor-2026-08-28/`

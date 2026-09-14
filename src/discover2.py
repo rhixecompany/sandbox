@@ -44,7 +44,7 @@ for r in [".github", ".copilot", ".codex"]:
     mp = os.path.join(base, r, "mcp.json")
     if os.path.exists(mp):
         print(f"{r}/mcp.json: {os.path.getsize(mp)} bytes")
-print("\n=== .hermes/hooks ===")
+print("\n=== ./hooks ===")
 hp = os.path.join(base, ".hermes", "hooks")
 if os.path.exists(hp):
     items = sorted(os.listdir(hp))

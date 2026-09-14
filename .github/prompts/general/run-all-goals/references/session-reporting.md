@@ -65,5 +65,5 @@ These IDs come from verified CLI output (`hermes chat --provider ... --model ...
 4. Run `hermes status` / `hermes insights` / `hermes auth list` / `hermes config show` (Phase E / F verified commands).
 5. Capture session IDs from CLI output (not estimated).
 6. Generate `execution-summary.md` or equivalent with real output lines.
-7. Update `.hermes/plans/` artifacts (plan doc) with verified status.
+7. Update `./plans/` artifacts (plan doc) with verified status.
 8. **tree-specific verification**: Confirm .enhance/.goals deleted, mjs->mts conversion complete, config files updated.

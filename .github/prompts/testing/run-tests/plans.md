@@ -1,7 +1,7 @@
 # Plans for Create Feature
 
 ## Linked Plan
-- **Plan File**: `.hermes/plans/create-feature-plan.md`
+- **Plan File**: `./plans/create-feature-plan.md`
 - **Plan Version**: 1.0.0
 - **Phases**: [Preparation, Execution, Verification, Completion]
 

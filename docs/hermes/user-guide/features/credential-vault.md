@@ -82,7 +82,7 @@ cannot spend. Address fills need no confirmation.
 - **CLI**: `hermes vault list`, `hermes vault add`, `hermes vault rm <handle>`,
   `hermes vault sources`.
 
-Items live encrypted under `~/.hermes/vault/` (Fernet key + vault file, both
+Items live encrypted under `~/./vault/` (Fernet key + vault file, both
 `0600`), scoped to the profile. Labels, site origins and login identifiers are
 visible metadata; passwords and card values never leave the vault except into
 the page.

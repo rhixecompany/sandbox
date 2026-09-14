@@ -6,7 +6,7 @@ status: completed
 
 > **Created:** 2026-06-28
 > **Completed:** 2026-06-28
-> **Scope:** tool/, thoughts/, judge_results/, .github/scripts/, .agents/, .hermes/, docs/, root .md files
+> **Scope:** tool/, thoughts/, judge_results/, .github/scripts/, .agents/, ./, docs/, root .md files
 > **Rule:** Strict sequential — each phase completes and is verified before next begins
 
 ---
@@ -214,11 +214,11 @@ rmdir ~/Desktop/SandBox/thoughts        # if empty
 
 ---
 
-## Phase 6: Clean Up `.hermes/` Plans & Scripts (10 min)
+## Phase 6: Clean Up `./` Plans & Scripts (10 min)
 
-**Objective:** Review `.hermes/` directory, consolidate/remove stale plans.
+**Objective:** Review `./` directory, consolidate/remove stale plans.
 
-### 6.1 Inventory `.hermes/` contents
+### 6.1 Inventory `./` contents
 
 - `approvals/` — 2 approval files (4KB total)
 - `plans/` — 8 plan files + 1 triage + 1 debugger (~90KB total)
@@ -406,7 +406,7 @@ Phase 0 → Phase 1 → Phase 2 → Phase 3 → Phase 4 → Phase 5 → Phase 6 
 | .agents/       | 4KB          | 0          | ~4KB       |
 | docs/          | ~5MB         | ~3MB       | ~2MB       |
 | Root .md files | ~70KB        | ~50KB      | ~20KB      |
-| .hermes/       | ~100KB       | ~50KB      | ~50KB      |
+| ./       | ~100KB       | ~50KB      | ~50KB      |
 | **Total**      | **~5.4MB**   | **~3.2MB** | **~2.2MB** |
 
 ---

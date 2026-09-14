@@ -71,12 +71,12 @@ New artifacts:
 - .github/prompts/ollama-wire.prompt.md
 - .github/prompts/plugins-hooks-audit.prompt.md
 - .github/prompts/provider-executor.prompt.md (via fanout)
-- .hermes/plans/2026-08-29_full-audit-remediation.md
-- .hermes/plans/disk-cleanup-2026-08-29/report.md
-- .hermes/plans/plugins-hooks-audit-2026-08-29/report.{json,md}
-- .hermes/plans/provider-executor-2026-08-29/ (per-provider reports)
-- .hermes/plans/prompt-dry-audit-2026-08-29/report.{json,md}
-- .hermes/plans/prompt-dry-2026-08-29/report.md
+- ./plans/2026-08-29_full-audit-remediation.md
+- ./plans/disk-cleanup-2026-08-29/report.md
+- ./plans/plugins-hooks-audit-2026-08-29/report.{json,md}
+- ./plans/provider-executor-2026-08-29/ (per-provider reports)
+- ./plans/prompt-dry-audit-2026-08-29/report.{json,md}
+- ./plans/prompt-dry-2026-08-29/report.md
 - ~/AppData/Local/hermes/skills/devops/{plugins-hooks-audit,ollama-wire}/SKILL.md
 
 Modified:

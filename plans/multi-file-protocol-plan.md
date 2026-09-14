@@ -226,7 +226,7 @@ COMPLETE
 
 ### AGENTS.md (Workspace)
 - Quick Rules include protocol
-- Directory map shows .hermes/plans/, .hermes/specs/
+- Directory map shows ./plans/, ./specs/
 
 ### .hermes.md (Overrides)
 - References SOUL.md for canonical protocol

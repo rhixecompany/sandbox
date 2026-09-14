@@ -15,7 +15,7 @@
 - Subgoal B Spec: 2145 B PASS (wait, verified size 2189 B from earlier — discrepancy noted)
 - Subgoal B Prompt: 2886 B PASS
 - Subgoal A Evidence: 4161 B PASS
-- .hermes/mcp.json: 4021 B PASS
+- ./mcp.json: 4021 B PASS
 - .vscode/mcp.json: 5130 B PASS
 
 Note: Subgoal B spec verified at 2145 B (creation) and 2189 B (re-check) — minor variance; file exists and content verified.

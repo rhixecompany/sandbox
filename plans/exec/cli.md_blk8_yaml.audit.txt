@@ -4,7 +4,7 @@
 # Language: yaml
 # Dangerous pattern: format
 ---
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 quick_commands:
   status:
     type: exec

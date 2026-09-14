@@ -34,7 +34,7 @@ Clean caches only (NO app uninstalls):
 
 ### A5 — Large-File Inventory
 Scan Downloads/VSCode/caches for files >50 MB. Write inventory to
-`.hermes/plans/2026-08-28-unified-platform-remediation/large-files.json`.
+`./plans/2026-08-28-unified-platform-remediation/large-files.json`.
 **Gate:** report written, no deletions performed.
 
 ### A6 — Ollama Setup

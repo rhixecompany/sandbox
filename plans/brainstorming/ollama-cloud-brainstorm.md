@@ -81,6 +81,6 @@ Adapting the 8-step template to Ollama-Cloud:
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/ollama-cloud-workflow-spec.md`
-- `.hermes/plans/ollama-cloud-workflow.md` (implementation plan)
-- `.hermes/plans/results/ollama-cloud-*.txt` (execution results)
+- `./plans/specs/ollama-cloud-workflow-spec.md`
+- `./plans/ollama-cloud-workflow.md` (implementation plan)
+- `./plans/results/ollama-cloud-*.txt` (execution results)

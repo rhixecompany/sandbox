@@ -1,6 +1,6 @@
 # Findings — Hermes Platform Diagnostics 2026-08-11
 
-Source: `.hermes/diagnostics-2026-08-11.log` (2173 lines, all 14 commands ran, CHAIN_EXIT=0).
+Source: `./diagnostics-2026-08-11.log` (2173 lines, all 14 commands ran, CHAIN_EXIT=0).
 
 ## Triage: Findings Table
 

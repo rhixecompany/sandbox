@@ -107,7 +107,7 @@ docs/
 ```text
 SandBox/
 ├── .github/           # Preserved (agents, instructions, skills, workflows)
-├── .hermes/           # Preserved (profiles, skills, plans)
+├── ./           # Preserved (profiles, skills, plans)
 ├── .vscode/           # Updated (cleaned configs)
 ├── Bash/              # NEW (was untracked)
 ├── Resume_maker/      # NEW (was untracked)

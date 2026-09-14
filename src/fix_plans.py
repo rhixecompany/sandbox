@@ -11,8 +11,8 @@ import re
 import sys
 from pathlib import Path
 
-PLANS_DIR = Path("C:/Users/Alexa/Desktop/SandBox/.hermes/plans")
-SPECS_DIR = Path("C:/Users/Alexa/Desktop/SandBox/.hermes/specs")
+PLANS_DIR = Path("C:/Users/Alexa/Desktop/SandBox/./plans")
+SPECS_DIR = Path("C:/Users/Alexa/Desktop/SandBox/./specs")
 JUDGE_SCRIPT = Path("C:/Users/Alexa/Desktop/SandBox/judge_plans.py")
 
 # Specs referenced by most plans (these don't exist, causing spec_coupling=5)

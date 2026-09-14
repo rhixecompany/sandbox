@@ -4,7 +4,7 @@
 - Agent-browser (`https://openrouter.ai/models?variant=free`) using `browser_exec` tool.
 - Convert HTML → markdown; generate markdown report.
 - Execute `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` per model.
-- Create/update artifacts: `.hermes/plans/subgoal-B-*`, `.hermes/specs/subgoal-B-*`, `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` (updated/executed), `results/web-research-subgoal-B-*.md`.
+- Create/update artifacts: `./plans/subgoal-B-*`, `./specs/subgoal-B-*`, `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` (updated/executed), `results/web-research-subgoal-B-*.md`.
 - Approved: all crud batches; best quality; subagent delegation; approvals requested.
 
 ## Evidence Requirements (real artifacts — no fabrication)

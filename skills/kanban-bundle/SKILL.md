@@ -31,4 +31,4 @@ Translate the feature documentation (kanban.md, 1276 lines) into executable arti
 - multi-file-change-protocol (loaded)
 - subagent-driven-development (load for parallel execution)
 - using-superpowers / brainstorming / user-communication-preferences
-- .hermes/plans/feature-docs-implementation-plan.md
+- ./plans/feature-docs-implementation-plan.md

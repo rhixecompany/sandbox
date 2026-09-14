@@ -1,5 +1,5 @@
 markdownlint-cli2 v0.19.1 (markdownlint v0.39.0)
-Finding: .github/prompts/**/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !.hermes/archived-prompt-templates/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc
+Finding: .github/prompts/**/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !./archived-prompt-templates/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc
 Linting: 674 file(s)
 Summary: 656 error(s)
 .github/prompts/breakdown-plan.prompt.md:359:1 error MD060/table-column-style Table column style [Table pipe is missing space to the right for style "compact"]

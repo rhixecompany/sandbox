@@ -23,7 +23,7 @@ Defines the complete enhancement requirements for 18 target skills to achieve sk
 5. **mcp-filesystem** - File operations
 6. **mcp-ast-grep** - Code search/replace
 7. **mcp-memory** - Persistent memory access
-8. **plan** - Write markdown plan to .hermes/plans/
+8. **plan** - Write markdown plan to ./plans/
 9. **plans-and-specs** - Draft implementation plans
 10. **create-implementation-plan** - Create detailed plans
 11. **implementation-plan** - Modify existing plans

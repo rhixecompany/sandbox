@@ -122,7 +122,7 @@ unreviewed name index. Install such plugins by `owner/repo` or Git URL instead
 The docs build publishes the catalog as one JSON document
 (`https://hermes-agent.nousresearch.com/docs/api/plugin-catalog.json`).
 `search`/`install`/`update` fetch it at most every six hours and cache it under
-`~/.hermes/cache/`, so new entries and removals reach installed clients without
+`~/./cache/`, so new entries and removals reach installed clients without
 updating Hermes. Offline, the copy shipped with your checkout is used. Removals
 from the in-tree list and the live list are always both enforced.
 

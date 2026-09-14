@@ -57,7 +57,7 @@ This master plan consolidates:
 - **3.3** Run full skill inventory (count, categories, duplicates)
 - **3.4** Scan `.archive` and `.restore-backups.DISABLED` for removal
 - **3.5** Identify flat-root vs categorized duplicates
-- **3.6** Create inventory artifact at `.hermes/plans/verification/skill-inventory.md`
+- **3.6** Create inventory artifact at `./plans/verification/skill-inventory.md`
 
 ### Phase 4: Specs/Plans Created
 - **4.1** This master plan created ✓
@@ -106,8 +106,8 @@ This master plan consolidates:
 - **10.5** Tag release
 
 ### Phase 11: Judge Scores ≥ 99 (Run-All-Goals)
-- **11.1** Run `plans-judge` on `.hermes/plans/*.md`
-- **11.2** Run `specs-judge` on `.hermes/specs/*.md`
+- **11.1** Run `plans-judge` on `./plans/*.md`
+- **11.2** Run `specs-judge` on `./specs/*.md`
 - **11.3** Run `prompts-judge` on `.github/prompts/**/*.prompt.md`
 - **11.4** Run `skill-judge` on all skills
 - **11.5** Run `hooks-judge` on all hooks

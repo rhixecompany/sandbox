@@ -231,7 +231,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", type=Path, default=Path.home() / "Desktop" / "SandBox")
     parser.add_argument("--hermes-home", type=Path, default=Path.home() / "AppData" / "Local" / "hermes")
-    parser.add_argument("--output", type=Path, default=Path(".hermes/reports/env-config-inventory.json"))
+    parser.add_argument("--output", type=Path, default=Path("./reports/env-config-inventory.json"))
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args(argv)
     if args.self_test:

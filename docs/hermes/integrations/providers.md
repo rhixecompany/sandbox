@@ -20,45 +20,45 @@ You need at least one way to connect to an LLM. Use `hermes model` to switch pro
 | **GitHub Copilot** | `hermes model` (OAuth device code flow, `COPILOT_GITHUB_TOKEN`, `GH_TOKEN`, or `gh auth token`) |
 | **GitHub Copilot ACP** | `hermes model` (spawns local `copilot --acp --stdio`) |
 | **Anthropic** | `hermes model` (Claude Max + extra usage credits via OAuth; also supports Anthropic API key or manual setup-token — see note below) |
-| **OpenRouter** | `OPENROUTER_API_KEY` in `~/.hermes/.env`, or `hermes auth add openrouter --type oauth` (browser login via OpenRouter's PKCE flow; stores a key in the credential pool) |
-| **Ramp Router** | `RAMP_ROUTER_API_KEY` in `~/.hermes/.env` (provider: `router`; aliases: `ramp-router`, `ramp`, `router.com`; Responses-native gateway, live account-scoped catalog) |
-| **Fireworks AI** | `FIREWORKS_API_KEY` in `~/.hermes/.env` (provider: `fireworks`; aliases: `fireworks-ai`, `fw`) |
-| **NovitaAI** | `NOVITA_API_KEY` in `~/.hermes/.env` (provider: `novita`, 200+ models, Model API, Agent Sandbox, GPU Cloud) |
-| **AI Gateway** | `AI_GATEWAY_API_KEY` in `~/.hermes/.env` (provider: `ai-gateway`) |
-| **z.ai / GLM** | `GLM_API_KEY` in `~/.hermes/.env` (provider: `zai`) |
-| **Kimi / Moonshot** | `KIMI_API_KEY` in `~/.hermes/.env` (provider: `kimi-coding`) |
-| **Kimi / Moonshot (China)** | `KIMI_CN_API_KEY` in `~/.hermes/.env` (provider: `kimi-coding-cn`; aliases: `kimi-cn`, `moonshot-cn`) |
-| **Arcee AI** | `ARCEEAI_API_KEY` in `~/.hermes/.env` (provider: `arcee`; aliases: `arcee-ai`, `arceeai`) |
-| **GMI Cloud** | `GMI_API_KEY` in `~/.hermes/.env` (provider: `gmi`; aliases: `gmi-cloud`, `gmicloud`) |
-| **Nebius Token Factory** | `NEBIUS_API_KEY` in `~/.hermes/.env` (provider: `nebius-token-factory`; aliases: `nebius`, `nebius-tf`, `tokenfactory`) |
-| **Actual Computer** | `ACTUAL_API_KEY` in `~/.hermes/.env` for the hosted relay; set `model.base_url` in `config.yaml` for a local daemon (no key needed on loopback). Provider: `actual`; aliases: `actual-computer`, `actualcomputer`, `aci`. |
-| **MiniMax** | `MINIMAX_API_KEY` in `~/.hermes/.env` (provider: `minimax`) |
-| **MiniMax China** | `MINIMAX_CN_API_KEY` in `~/.hermes/.env` (provider: `minimax-cn`) |
-| **xAI (Grok) — Responses API** | `XAI_API_KEY` in `~/.hermes/.env` (provider: `xai`) |
+| **OpenRouter** | `OPENROUTER_API_KEY` in `~/./.env`, or `hermes auth add openrouter --type oauth` (browser login via OpenRouter's PKCE flow; stores a key in the credential pool) |
+| **Ramp Router** | `RAMP_ROUTER_API_KEY` in `~/./.env` (provider: `router`; aliases: `ramp-router`, `ramp`, `router.com`; Responses-native gateway, live account-scoped catalog) |
+| **Fireworks AI** | `FIREWORKS_API_KEY` in `~/./.env` (provider: `fireworks`; aliases: `fireworks-ai`, `fw`) |
+| **NovitaAI** | `NOVITA_API_KEY` in `~/./.env` (provider: `novita`, 200+ models, Model API, Agent Sandbox, GPU Cloud) |
+| **AI Gateway** | `AI_GATEWAY_API_KEY` in `~/./.env` (provider: `ai-gateway`) |
+| **z.ai / GLM** | `GLM_API_KEY` in `~/./.env` (provider: `zai`) |
+| **Kimi / Moonshot** | `KIMI_API_KEY` in `~/./.env` (provider: `kimi-coding`) |
+| **Kimi / Moonshot (China)** | `KIMI_CN_API_KEY` in `~/./.env` (provider: `kimi-coding-cn`; aliases: `kimi-cn`, `moonshot-cn`) |
+| **Arcee AI** | `ARCEEAI_API_KEY` in `~/./.env` (provider: `arcee`; aliases: `arcee-ai`, `arceeai`) |
+| **GMI Cloud** | `GMI_API_KEY` in `~/./.env` (provider: `gmi`; aliases: `gmi-cloud`, `gmicloud`) |
+| **Nebius Token Factory** | `NEBIUS_API_KEY` in `~/./.env` (provider: `nebius-token-factory`; aliases: `nebius`, `nebius-tf`, `tokenfactory`) |
+| **Actual Computer** | `ACTUAL_API_KEY` in `~/./.env` for the hosted relay; set `model.base_url` in `config.yaml` for a local daemon (no key needed on loopback). Provider: `actual`; aliases: `actual-computer`, `actualcomputer`, `aci`. |
+| **MiniMax** | `MINIMAX_API_KEY` in `~/./.env` (provider: `minimax`) |
+| **MiniMax China** | `MINIMAX_CN_API_KEY` in `~/./.env` (provider: `minimax-cn`) |
+| **xAI (Grok) — Responses API** | `XAI_API_KEY` in `~/./.env` (provider: `xai`) |
 | **xAI Grok OAuth (SuperGrok)** | `hermes model` → "xAI Grok OAuth (SuperGrok / Premium+)" — browser login, no API key. See [guide](../guides/xai-grok-oauth.md) |
-| **Qwen Cloud (Alibaba DashScope)** | `DASHSCOPE_API_KEY` in `~/.hermes/.env` (provider: `alibaba`; mainland-China endpoint: `alibaba-cn`) |
+| **Qwen Cloud (Alibaba DashScope)** | `DASHSCOPE_API_KEY` in `~/./.env` (provider: `alibaba`; mainland-China endpoint: `alibaba-cn`) |
 | **Alibaba Cloud (Coding Plan)** | `ALIBABA_CODING_PLAN_API_KEY` (falls back to `DASHSCOPE_API_KEY`) (provider: `alibaba-coding-plan`, alias: `alibaba_coding`; mainland-China endpoint: `alibaba-coding-plan-cn` with `ALIBABA_CODING_PLAN_CN_API_KEY`, falling back to the shared keys) — separate billing SKU, different endpoint |
-| **Alibaba Cloud (Token Plan)** | `ALIBABA_TOKEN_PLAN_API_KEY` in `~/.hermes/.env` (provider: `alibaba-token-plan`; mainland-China endpoint: `alibaba-token-plan-cn` with `ALIBABA_TOKEN_PLAN_CN_API_KEY`, falling back to the shared key) — Model Studio flat-token tier |
-| **Kilo Code** | `KILOCODE_API_KEY` in `~/.hermes/.env` (provider: `kilocode`) |
-| **Xiaomi MiMo** | `XIAOMI_API_KEY` in `~/.hermes/.env` (provider: `xiaomi`, aliases: `mimo`, `xiaomi-mimo`) |
-| **Tencent TokenHub** | `TOKENHUB_API_KEY` in `~/.hermes/.env` (provider: `tencent-tokenhub`, aliases: `tencent`, `tokenhub`, `tencentmaas`) |
-| **Tencent TokenPlan** | `TOKENPLAN_API_KEY` in `~/.hermes/.env` (provider: `tencent-tokenplan`, aliases: `tokenplan`, `tencent-lkeap`; Anthropic Messages endpoint) |
-| **OpenCode Zen** | `OPENCODE_ZEN_API_KEY` in `~/.hermes/.env` (provider: `opencode-zen`) |
-| **CommandCode** | `COMMANDCODE_API_KEY` in `~/.hermes/.env` (provider: `commandcode`, alias: `commandcode-chat`; Claude models via `commandcode-anthropic`, alias: `commandcode-claude`). Works with GOAT/Pro/Max/Provider plans (not the $1 Go plan — no API access). |
-| **OpenCode Go** | `OPENCODE_GO_API_KEY` in `~/.hermes/.env` (provider: `opencode-go`) |
+| **Alibaba Cloud (Token Plan)** | `ALIBABA_TOKEN_PLAN_API_KEY` in `~/./.env` (provider: `alibaba-token-plan`; mainland-China endpoint: `alibaba-token-plan-cn` with `ALIBABA_TOKEN_PLAN_CN_API_KEY`, falling back to the shared key) — Model Studio flat-token tier |
+| **Kilo Code** | `KILOCODE_API_KEY` in `~/./.env` (provider: `kilocode`) |
+| **Xiaomi MiMo** | `XIAOMI_API_KEY` in `~/./.env` (provider: `xiaomi`, aliases: `mimo`, `xiaomi-mimo`) |
+| **Tencent TokenHub** | `TOKENHUB_API_KEY` in `~/./.env` (provider: `tencent-tokenhub`, aliases: `tencent`, `tokenhub`, `tencentmaas`) |
+| **Tencent TokenPlan** | `TOKENPLAN_API_KEY` in `~/./.env` (provider: `tencent-tokenplan`, aliases: `tokenplan`, `tencent-lkeap`; Anthropic Messages endpoint) |
+| **OpenCode Zen** | `OPENCODE_ZEN_API_KEY` in `~/./.env` (provider: `opencode-zen`) |
+| **CommandCode** | `COMMANDCODE_API_KEY` in `~/./.env` (provider: `commandcode`, alias: `commandcode-chat`; Claude models via `commandcode-anthropic`, alias: `commandcode-claude`). Works with GOAT/Pro/Max/Provider plans (not the $1 Go plan — no API access). |
+| **OpenCode Go** | `OPENCODE_GO_API_KEY` in `~/./.env` (provider: `opencode-go`) |
 | **OpenCode Free** | Keyless — no API key or account needed (provider: `opencode-free`, aliases: `free`, `opencode_free`). Select via `hermes model` or `/model free`; requests are sent anonymously. The model list refreshes automatically from OpenCode's live catalog, so rotating free promotions appear (and delisted ones disappear) without a Hermes update |
-| **DeepSeek** | `DEEPSEEK_API_KEY` in `~/.hermes/.env` (provider: `deepseek`) |
-| **Hugging Face** | `HF_TOKEN` in `~/.hermes/.env` (provider: `huggingface`, aliases: `hf`) |
-| **Google / Gemini** | `GOOGLE_API_KEY` (or `GEMINI_API_KEY`) in `~/.hermes/.env` (provider: `gemini`) |
+| **DeepSeek** | `DEEPSEEK_API_KEY` in `~/./.env` (provider: `deepseek`) |
+| **Hugging Face** | `HF_TOKEN` in `~/./.env` (provider: `huggingface`, aliases: `hf`) |
+| **Google / Gemini** | `GOOGLE_API_KEY` (or `GEMINI_API_KEY`) in `~/./.env` (provider: `gemini`) |
 | **Google Vertex AI** | `hermes model` → "Google Vertex AI" (provider: `vertex`; OAuth2 via service-account JSON or ADC, GCP billing) |
-| **OpenAI API (direct)** | `OPENAI_API_KEY` in `~/.hermes/.env` (provider: `openai-api`, optional `OPENAI_BASE_URL`) |
+| **OpenAI API (direct)** | `OPENAI_API_KEY` in `~/./.env` (provider: `openai-api`, optional `OPENAI_BASE_URL`) |
 | **Azure AI Foundry** | `hermes model` → "Azure AI Foundry" (provider: `azure-foundry`; uses Azure OpenAI / Foundry endpoint and key) |
 | **AWS Bedrock** | `hermes model` → "AWS Bedrock" (provider: `bedrock`; standard AWS credentials chain via boto3) |
-| **NVIDIA Build** | `NVIDIA_API_KEY` in `~/.hermes/.env` (provider: `nvidia`; NIM-hosted models on build.nvidia.com) |
+| **NVIDIA Build** | `NVIDIA_API_KEY` in `~/./.env` (provider: `nvidia`; NIM-hosted models on build.nvidia.com) |
 | **Ollama Cloud** | `hermes model` → "Ollama Cloud" (provider: `ollama-cloud`; cloud-hosted Ollama API) |
 | **Qwen OAuth** | `hermes model` → "Qwen OAuth" (provider: `qwen-oauth`; browser PKCE login) |
 | **MiniMax OAuth** | `hermes model` → "MiniMax (OAuth)" (provider: `minimax-oauth`; browser PKCE login) |
-| **StepFun** | `STEPFUN_API_KEY` in `~/.hermes/.env` (provider: `stepfun`) |
+| **StepFun** | `STEPFUN_API_KEY` in `~/./.env` (provider: `stepfun`) |
 | **LM Studio** | `hermes model` → "LM Studio" (provider: `lmstudio`, optional `LM_API_KEY`) |
 | **Custom Endpoint** | `hermes model` → choose "Custom endpoint" (saved in `config.yaml`) |
 
@@ -91,7 +91,7 @@ Don't have a subscription yet? Get one at [portal.nousresearch.com/manage-subscr
 
 
 :::info Codex Note
-The OpenAI Codex provider authenticates via device code (open a URL, enter a code). Hermes stores the resulting credentials in its own auth store under `~/.hermes/auth.json` and can import existing Codex CLI credentials from `~/.codex/auth.json` when present. No Codex CLI installation is required.
+The OpenAI Codex provider authenticates via device code (open a URL, enter a code). Hermes stores the resulting credentials in its own auth store under `~/./auth.json` and can import existing Codex CLI credentials from `~/.codex/auth.json` when present. No Codex CLI installation is required.
 
 If a token refresh fails with a terminal error (HTTP 4xx, `invalid_grant`, revoked grant, etc.), Hermes marks the refresh token as dead and stops replaying it so you don't see a flood of identical auth failures. The next request surfaces a typed re-auth message instead. Run `hermes auth add openai-codex` (or `hermes model` → **ChatGPT or Codex Subscription**) to start a fresh device-code login; the quarantine clears on the next successful exchange.
 
@@ -147,7 +147,7 @@ Several providers let you sign in to Hermes with a **consumer subscription** (Cl
 
 **Anthropic.** The OAuth path routes as Claude Code against your Anthropic account and **only works on a Claude Max plan with purchased extra usage credits** — the base Max allowance is never consumed by Hermes, only the extra/overage credits on top. Claude Pro subscribers cannot use this path; the supported alternative is an `ANTHROPIC_API_KEY`, billed pay-per-token against that key's organization at standard API pricing. See [Anthropic (Native)](#anthropic-native) below.
 
-**OpenAI Codex.** Hermes authenticates via ChatGPT device-code OAuth, stores credentials in `~/.hermes/auth.json`, and can import existing Codex CLI credentials from `~/.codex/auth.json`. Which ChatGPT plan tiers are eligible, and how Hermes usage counts against your plan's Codex limits, are **not currently documented** — the Codex note under [Nous Portal](#nous-portal) covers authentication and token-refresh behavior only.
+**OpenAI Codex.** Hermes authenticates via ChatGPT device-code OAuth, stores credentials in `~/./auth.json`, and can import existing Codex CLI credentials from `~/.codex/auth.json`. Which ChatGPT plan tiers are eligible, and how Hermes usage counts against your plan's Codex limits, are **not currently documented** — the Codex note under [Nous Portal](#nous-portal) covers authentication and token-refresh behavior only.
 
 **xAI (SuperGrok / X Premium+).** Browser OAuth works with either an active SuperGrok subscription or an X Premium+ subscription on the linked X account, and the same bearer token is reused by direct-to-xAI tools (TTS, image gen, video gen, transcription, X Search). If inference returns `HTTP 403` after a successful login, that's a tier/entitlement restriction on xAI's side, not a stale token — the workaround is switching to an `XAI_API_KEY`. See [xAI (Grok)](#xai-grok--responses-api--prompt-caching) below and the [xAI Grok OAuth guide](../guides/xai-grok-oauth.md).
 
@@ -191,7 +191,7 @@ hermes chat --provider anthropic
 hermes chat --provider anthropic  # reads Claude Code credential files automatically
 ```
 
-When you choose Anthropic OAuth through `hermes model`, Hermes prefers Claude Code's own credential store over copying the token into `~/.hermes/.env`. That keeps refreshable Claude credentials refreshable.
+When you choose Anthropic OAuth through `hermes model`, Hermes prefers Claude Code's own credential store over copying the token into `~/./.env`. That keeps refreshable Claude credentials refreshable.
 
 Or set it permanently:
 ```yaml
@@ -276,68 +276,68 @@ These providers have built-in support with dedicated provider IDs. Set the API k
 ```bash
 # Fireworks AI
 hermes chat --provider fireworks --model accounts/fireworks/models/kimi-k2p6
-# Requires: FIREWORKS_API_KEY in ~/.hermes/.env
+# Requires: FIREWORKS_API_KEY in ~/./.env
 
 # NovitaAI Model API
 hermes chat --provider novita --model moonshotai/kimi-k2.5
-# Requires: NOVITA_API_KEY in ~/.hermes/.env
+# Requires: NOVITA_API_KEY in ~/./.env
 
 # Ramp Router (model IDs come from your account's live catalog)
 hermes chat --provider router --model gpt-5.4-mini
-# Requires: RAMP_ROUTER_API_KEY in ~/.hermes/.env
+# Requires: RAMP_ROUTER_API_KEY in ~/./.env
 
 # z.ai / ZhipuAI GLM
 hermes chat --provider zai --model glm-5
-# Requires: GLM_API_KEY in ~/.hermes/.env
+# Requires: GLM_API_KEY in ~/./.env
 
 # Kimi / Moonshot AI (international: api.moonshot.ai)
 hermes chat --provider kimi-coding --model kimi-for-coding
-# Requires: KIMI_API_KEY in ~/.hermes/.env
+# Requires: KIMI_API_KEY in ~/./.env
 
 # Kimi / Moonshot AI (China: api.moonshot.cn)
 hermes chat --provider kimi-coding-cn --model kimi-k2.5
-# Requires: KIMI_CN_API_KEY in ~/.hermes/.env
+# Requires: KIMI_CN_API_KEY in ~/./.env
 
 # MiniMax (global endpoint)
 hermes chat --provider minimax --model MiniMax-M2.7
-# Requires: MINIMAX_API_KEY in ~/.hermes/.env
+# Requires: MINIMAX_API_KEY in ~/./.env
 
 # MiniMax (China endpoint)
 hermes chat --provider minimax-cn --model MiniMax-M2.7
-# Requires: MINIMAX_CN_API_KEY in ~/.hermes/.env
+# Requires: MINIMAX_CN_API_KEY in ~/./.env
 
 # Qwen Cloud / DashScope (Qwen models)
 hermes chat --provider alibaba --model qwen3.5-plus
-# Requires: DASHSCOPE_API_KEY in ~/.hermes/.env
+# Requires: DASHSCOPE_API_KEY in ~/./.env
 
 # Xiaomi MiMo
 hermes chat --provider xiaomi --model mimo-v2-pro
-# Requires: XIAOMI_API_KEY in ~/.hermes/.env
+# Requires: XIAOMI_API_KEY in ~/./.env
 
 # Tencent TokenHub (Hy4 preview)
 hermes chat --provider tencent-tokenhub --model hy4-preview
-# Requires: TOKENHUB_API_KEY in ~/.hermes/.env
+# Requires: TOKENHUB_API_KEY in ~/./.env
 
 # Tencent TokenPlan (Hy4 preview via Anthropic Messages endpoint)
 hermes chat --provider tencent-tokenplan --model hy4-preview
-# Requires: TOKENPLAN_API_KEY in ~/.hermes/.env
+# Requires: TOKENPLAN_API_KEY in ~/./.env
 
 # Arcee AI (Trinity models)
 hermes chat --provider arcee --model trinity-large-thinking
-# Requires: ARCEEAI_API_KEY in ~/.hermes/.env
+# Requires: ARCEEAI_API_KEY in ~/./.env
 
 # Meta Model API (Muse Spark family)
 hermes chat --provider meta-ai --model muse-spark-1.2
-# Requires: MODEL_API_KEY in ~/.hermes/.env
+# Requires: MODEL_API_KEY in ~/./.env
 
 # GMI Cloud
 # Use the exact model ID returned by GMI's /v1/models endpoint.
 hermes chat --provider gmi --model zai-org/GLM-5.1-FP8
-# Requires: GMI_API_KEY in ~/.hermes/.env
+# Requires: GMI_API_KEY in ~/./.env
 
 # Nebius Token Factory
 hermes chat --provider nebius --model deepseek-ai/DeepSeek-V4-Pro
-# Requires: NEBIUS_API_KEY in ~/.hermes/.env
+# Requires: NEBIUS_API_KEY in ~/./.env
 ```
 
 Fireworks uses its native slash-form catalog IDs, such as `accounts/fireworks/models/kimi-k2p6`. Run `hermes model`, choose **Fireworks AI**, and select from the live catalog or enter another Fireworks model ID. The default endpoint is `https://api.fireworks.ai/inference/v1`; configure a different endpoint through `model.base_url` in `config.yaml`, not `.env`.
@@ -361,7 +361,7 @@ When using the Z.AI / GLM provider, Hermes automatically probes multiple endpoin
 
 ### xAI (Grok) — Responses API + Prompt Caching
 
-xAI is wired through the Responses API (`codex_responses` transport) for automatic reasoning support on Grok 4 models — no `reasoning_effort` parameter needed, the server reasons by default. Set `XAI_API_KEY` in `~/.hermes/.env` and pick xAI in `hermes model`, or drop `grok` as a shortcut into `/model grok-4-fast-reasoning`.
+xAI is wired through the Responses API (`codex_responses` transport) for automatic reasoning support on Grok 4 models — no `reasoning_effort` parameter needed, the server reasons by default. Set `XAI_API_KEY` in `~/./.env` and pick xAI in `hermes model`, or drop `grok` as a shortcut into `/model grok-4-fast-reasoning`.
 
 SuperGrok and X Premium+ subscribers can sign in with browser OAuth instead of using an API key — pick **xAI Grok OAuth (SuperGrok / Premium+)** in `hermes model`, or run `hermes auth add xai-oauth`. The same OAuth bearer token is automatically reused by direct-to-xAI tools (TTS, image gen, video gen, transcription). See the [xAI Grok OAuth guide](../guides/xai-grok-oauth.md) for the full flow — and if Hermes runs on a remote host, also see [OAuth over SSH / Remote Hosts](../guides/oauth-over-ssh.md) for the required `ssh -L` tunnel.
 
@@ -375,7 +375,7 @@ xAI also ships a dedicated TTS endpoint (`/v1/tts`). Select **xAI TTS** in `herm
 
 ```bash
 hermes migrate xai          # preview replacements
-hermes migrate xai --apply  # rewrite ~/.hermes/config.yaml in place
+hermes migrate xai --apply  # rewrite ~/./config.yaml in place
 ```
 
 **xAI Web Search backend.** When the [Web Search](../user-guide/features/web-search.md) toolset is enabled, `web.backend: xai` routes search through xAI's hosted search endpoint using the same `XAI_API_KEY` / OAuth credentials. No additional setup required if xAI is already configured as a provider.
@@ -387,7 +387,7 @@ hermes migrate xai --apply  # rewrite ~/.hermes/config.yaml in place
 ```bash
 # Use any available model
 hermes chat --provider novita --model moonshotai/kimi-k2.5
-# Requires: NOVITA_API_KEY in ~/.hermes/.env
+# Requires: NOVITA_API_KEY in ~/./.env
 
 # Short alias
 hermes chat --provider novita-ai --model deepseek/deepseek-v3-0324
@@ -465,7 +465,7 @@ Gemini models on Google Cloud Vertex AI via Vertex's OpenAI-compatible endpoint.
 
 ```bash
 # Service account JSON (recommended for servers / gateways)
-echo "VERTEX_CREDENTIALS_PATH=/path/to/service-account.json" >> ~/.hermes/.env
+echo "VERTEX_CREDENTIALS_PATH=/path/to/service-account.json" >> ~/./.env
 # or Application Default Credentials
 gcloud auth application-default login
 
@@ -492,7 +492,7 @@ Alibaba's Qwen Portal with browser-based OAuth login. Pick **Qwen OAuth (Portal)
 hermes model
 # → pick "Qwen OAuth (Portal)"
 # → browser opens; sign in with your Alibaba account
-# → confirm — credentials are saved to ~/.hermes/auth.json
+# → confirm — credentials are saved to ~/./auth.json
 
 hermes chat   # uses portal.qwen.ai/v1 endpoint
 ```
@@ -538,7 +538,7 @@ MiniMax-M2.7 via browser OAuth login — no API key needed. Pick **MiniMax (OAut
 hermes model
 # → pick "MiniMax (OAuth)"
 # → browser opens; sign in with your MiniMax account (global or CN region)
-# → confirm — credentials are saved to ~/.hermes/auth.json
+# → confirm — credentials are saved to ~/./auth.json
 
 hermes chat   # uses api.minimax.io/anthropic endpoint
 ```
@@ -563,7 +563,7 @@ Nemotron and other open source models via [build.nvidia.com](https://build.nvidi
 ```bash
 # Cloud (build.nvidia.com)
 hermes chat --provider nvidia --model nvidia/nemotron-3-super-120b-a12b
-# Requires: NVIDIA_API_KEY in ~/.hermes/.env
+# Requires: NVIDIA_API_KEY in ~/./.env
 
 # Local NIM endpoint — override base URL
 NVIDIA_BASE_URL=http://localhost:8000/v1 hermes chat --provider nvidia --model nvidia/nemotron-3-super-120b-a12b
@@ -589,7 +589,7 @@ Open and reasoning models via [GMI Cloud](https://www.gmicloud.ai/) — OpenAI-c
 ```bash
 # GMI Cloud
 hermes chat --provider gmi --model deepseek-ai/DeepSeek-V3.2
-# Requires: GMI_API_KEY in ~/.hermes/.env
+# Requires: GMI_API_KEY in ~/./.env
 ```
 
 Or set it permanently in `config.yaml`:
@@ -609,14 +609,14 @@ Your own hardware as a private inference cluster via [Actual Computer](https://a
 - **Local daemon** — on-device at `http://127.0.0.1:8080`, fully offline. No API key needed: Hermes detects the loopback base URL and authenticates with an internal placeholder automatically.
 
 ```bash
-# Hosted relay (ACTUAL_API_KEY in ~/.hermes/.env)
+# Hosted relay (ACTUAL_API_KEY in ~/./.env)
 hermes chat --provider actual --model <model-id-from-your-cluster>
 
-# Local daemon (model.base_url in ~/.hermes/config.yaml, no key)
+# Local daemon (model.base_url in ~/./config.yaml, no key)
 hermes chat --provider actual --model <installed-model-name>
 ```
 
-Store provider settings in `~/.hermes/config.yaml`; only the hosted API key belongs in `.env`:
+Store provider settings in `~/./config.yaml`; only the hosted API key belongs in `.env`:
 ```yaml
 model:
   provider: "actual"
@@ -639,7 +639,7 @@ Step-series models via [StepFun](https://platform.stepfun.com) — OpenAI-compat
 ```bash
 # StepFun
 hermes chat --provider stepfun --model step-3.5-flash
-# Requires: STEPFUN_API_KEY in ~/.hermes/.env
+# Requires: STEPFUN_API_KEY in ~/./.env
 ```
 
 Or set it permanently in `config.yaml`:
@@ -658,7 +658,7 @@ The base URL can be overridden with `STEPFUN_BASE_URL` (default: `https://api.st
 ```bash
 # Use any available model
 hermes chat --provider huggingface --model Qwen/Qwen3.5-397B-A17B
-# Requires: HF_TOKEN in ~/.hermes/.env
+# Requires: HF_TOKEN in ~/./.env
 
 # Short alias
 hermes chat --provider hf --model deepseek-ai/DeepSeek-V3.2
@@ -694,7 +694,7 @@ hermes model
 
 **Manual config (`config.yaml`):**
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 model:
   default: your-model-name
   provider: custom
@@ -1439,14 +1439,14 @@ You can also select named custom providers from the interactive `hermes model` m
 
 ### Cookbook: Together AI, Groq, Perplexity
 
-The cloud providers listed in [Other Compatible Providers](#other-compatible-providers) all speak OpenAI's REST dialect, so they wire up the same way under the `providers:` dict. Three worked recipes follow. Each drops into `~/.hermes/config.yaml` and the matching API key goes in `~/.hermes/.env`.
+The cloud providers listed in [Other Compatible Providers](#other-compatible-providers) all speak OpenAI's REST dialect, so they wire up the same way under the `providers:` dict. Three worked recipes follow. Each drops into `~/./config.yaml` and the matching API key goes in `~/./.env`.
 
 #### Together AI
 
 Hosts open-weight models (Llama, MiniMax, Gemma, DeepSeek, Qwen) at prices significantly below first-party APIs. Good default for multi-model fleets.
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 providers:
   together:
     api: https://api.together.xyz/v1
@@ -1459,7 +1459,7 @@ model:
 ```
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 TOGETHER_API_KEY=your-together-key
 ```
 
@@ -1478,7 +1478,7 @@ Together's `/v1/models` endpoint works, so `hermes model` can auto-discover avai
 Ultra-fast inference (~500 tok/s on Llama-3.3-70B). Small catalog but strong for latency-sensitive interactive use.
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 providers:
   groq:
     api: https://api.groq.com/openai/v1
@@ -1490,7 +1490,7 @@ model:
 ```
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 GROQ_API_KEY=your-groq-key
 ```
 
@@ -1499,7 +1499,7 @@ GROQ_API_KEY=your-groq-key
 Useful when you want a model that does live web search and citation automatically. Strict about which models are available — check [perplexity.ai/settings/api](https://www.perplexity.ai/settings/api) for the current list.
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 providers:
   perplexity:
     api: https://api.perplexity.ai
@@ -1511,7 +1511,7 @@ model:
 ```
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 PERPLEXITY_API_KEY=your-perplexity-key
 ```
 
@@ -1602,7 +1602,7 @@ You can also set both `FIRECRAWL_API_KEY` and `FIRECRAWL_API_URL` if your self-h
 
 ## OpenRouter Provider Routing
 
-When using OpenRouter, you can control how requests are routed across providers. Add a `provider_routing` section to `~/.hermes/config.yaml`:
+When using OpenRouter, you can control how requests are routed across providers. Add a `provider_routing` section to `~/./config.yaml`:
 
 ```yaml
 provider_routing:
@@ -1621,7 +1621,7 @@ provider_routing:
 
 ## OpenRouter Pareto Code Router
 
-OpenRouter ships an experimental coding-model router at `openrouter/pareto-code` that auto-routes requests to the cheapest model meeting a coding-quality bar (ranked by [Artificial Analysis](https://artificialanalysis.ai/)). Pick this model and tune the `min_coding_score` knob in `~/.hermes/config.yaml`:
+OpenRouter ships an experimental coding-model router at `openrouter/pareto-code` that auto-routes requests to the cheapest model meeting a coding-quality bar (ranked by [Artificial Analysis](https://artificialanalysis.ai/)). Pick this model and tune the `min_coding_score` knob in `~/./config.yaml`:
 
 ```yaml
 model:

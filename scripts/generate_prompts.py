@@ -85,7 +85,7 @@ COMPANION_TEMPLATES = {
     "specs.md": """# Specs for {prompt_title}
 
 ## Linked Specification
-- **Spec File**: `.hermes/specs/{spec_file}.md`
+- **Spec File**: `./specs/{spec_file}.md`
 - **Spec Version**: 1.0.0
 - **Requirements Covered**: [REQ-XXX, REQ-YYY]
 
@@ -97,7 +97,7 @@ COMPANION_TEMPLATES = {
     "plans.md": """# Plans for {prompt_title}
 
 ## Linked Plan
-- **Plan File**: `.hermes/plans/{plan_file}.md`
+- **Plan File**: `./plans/{plan_file}.md`
 - **Plan Version**: 1.0.0
 - **Phases**: [Preparation, Execution, Verification, Completion]
 
@@ -375,7 +375,7 @@ PROMPT_DATA = {
         "step_1_2_name": "Create Plan",
         "step_1_2_action": "Generate implementation plan with phases",
         "step_1_2_tool": "create-implementation-plan skill",
-        "step_1_2_output": "Plan file in .hermes/plans/",
+        "step_1_2_output": "Plan file in ./plans/",
         "step_2_1_name": "Write Tests",
         "step_2_1_action": "Create failing tests for each requirement",
         "step_2_1_tool": "write_file, terminal",
@@ -390,16 +390,16 @@ PROMPT_DATA = {
         "task_4_desc": "Implement feature code",
         "task_5_desc": "Run verification gates",
         "task_6_desc": "Finalize and commit",
-        "action_1_1_cmd": "read_file .hermes/specs/create-feature-spec.md",
+        "action_1_1_cmd": "read_file ./specs/create-feature-spec.md",
         "action_1_1_output": "Requirements extracted",
         "action_1_1_verify": "Requirements list matches spec",
-        "action_2_1_cmd": "hermes create-plan --spec .hermes/specs/create-feature-spec.md",
+        "action_2_1_cmd": "hermes create-plan --spec ./specs/create-feature-spec.md",
         "action_2_1_output": "Plan created",
         "action_2_1_verify": "Plan file exists with all phases",
         "action_3_1_cmd": "pytest tests/ -v --tb=short",
         "action_3_1_output": "Tests failing (RED)",
         "action_3_1_verify": "All new tests fail as expected",
-        "gate_1_check": "ls .hermes/plans/create-feature-plan.md && pytest tests/ -v",
+        "gate_1_check": "ls ./plans/create-feature-plan.md && pytest tests/ -v",
         "gate_1_pass": "Plan exists, tests failing (RED state)",
         "gate_1_fail": "Re-analyze requirements, recreate plan",
         "gate_2_check": "pytest tests/ -v && lint checks",

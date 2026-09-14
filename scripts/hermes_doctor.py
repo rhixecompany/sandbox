@@ -12,7 +12,7 @@ Usage:
     python scripts/hermes_doctor.py --logs-only      # only log triage
     python scripts/hermes_doctor.py --no-bun         # skip bun run check
     python scripts/hermes_doctor.py --json-only      # JSON output, no markdown
-    python scripts/hermes_doctor.py --output DIR     # custom output dir (default .hermes/plans/diagnostic-<date>/)
+    python scripts/hermes_doctor.py --output DIR     # custom output dir (default ./plans/diagnostic-<date>/)
 
 Exit codes:
     0  = all green / only intentional+advisory findings
@@ -258,7 +258,7 @@ def main() -> int:
     p.add_argument("--logs-only", action="store_true")
     p.add_argument("--no-bun", action="store_true")
     p.add_argument("--json-only", action="store_true")
-    p.add_argument("--output", help="Output directory (default .hermes/plans/diagnostic-<date>/)")
+    p.add_argument("--output", help="Output directory (default ./plans/diagnostic-<date>/)")
     p.add_argument("--timeout", type=int, default=120)
     args = p.parse_args()
 
@@ -267,7 +267,7 @@ def main() -> int:
         out_dir = Path(args.output)
     else:
         date = datetime.now().strftime("%Y-%m-%d")
-        out_dir = Path(f".hermes/plans/diagnostic-{date}")
+        out_dir = Path(f"./plans/diagnostic-{date}")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if args.doctor_only:

@@ -1,6 +1,6 @@
 # Profile Description Reference — G4 Verified 2026-09-14
 
-Subagent: ops/adminbot. Plan: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md` verified 11673 B.
+Subagent: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-09-14.md` verified 11673 B.
 
 ## All Profile Descriptions (Real — Read from `~/AppData/Local/Hermes/profiles/`)
 

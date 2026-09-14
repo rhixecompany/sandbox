@@ -31,7 +31,7 @@ H. Final artifact validation + approval
   hermes-update-autostash-20260828-151448
   hermes-update-autostash-20260804-191747
   hermes-update-autostash-20260728-015200
-- Apply all; fix conflicts with .hermes/mcp.json / config.yaml (destructive approved per clarification).
+- Apply all; fix conflicts with ./mcp.json / config.yaml (destructive approved per clarification).
 
 ## Rules Enforced
 - Valid subgoal: A (skills/stash/debug) — defined with steps, phases, rules, tasks.
@@ -44,5 +44,5 @@ H. Final artifact validation + approval
 ## Verification Gates
 - Gate A1: 14 skills referenced (verified list above).
 - Gate A2: 4 stashes applied (verified by git log/status).
-- Gate A3: .hermes/plans/subgoal-* created (verified by ls -la).
+- Gate A3: ./plans/subgoal-* created (verified by ls -la).
 - Gate A4: Approval requested (kanban_request_review / clarification) before execution continues.

@@ -16,8 +16,8 @@ Create an auditable, local-only execution package from the default-profile Herme
 
 - **Session scope:** root default-profile `C:/Users/Alexa/AppData/Local/hermes/state.db`; all sources, including cron.
 - **Session evidence:** `session_search` recall plus the generated metadata/evidence corpus.
-- **Workspace scope:** `C:/Users/Alexa/Desktop/SandBox`, `.hermes/`, `.github/`.
-- **Output roots:** `.hermes/specs/`, `.hermes/plans/`, `.github/prompts/general/run-all-goals/`.
+- **Workspace scope:** `C:/Users/Alexa/Desktop/SandBox`, `./`, `.github/`.
+- **Output roots:** `./specs/`, `./plans/`, `.github/prompts/general/run-all-goals/`.
 - **Side effects:** local files and tests only. No provider probes, external sync, commit, push, or remote writes.
 - **Current evidence baseline:** 136 sessions, 742 bounded redacted excerpts, 31 specs, 126 plan entries/dirs, and the existing `/run-all-goals` artifact tree.
 

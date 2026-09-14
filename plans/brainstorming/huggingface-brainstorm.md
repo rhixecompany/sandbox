@@ -88,6 +88,6 @@ Adapting the 8-step template to HuggingFace:
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/huggingface-workflow-spec.md`
-- `.hermes/plans/huggingface-workflow.md` (implementation plan)
-- `.hermes/plans/results/huggingface-*.txt` (execution results)
+- `./plans/specs/huggingface-workflow-spec.md`
+- `./plans/huggingface-workflow.md` (implementation plan)
+- `./plans/results/huggingface-*.txt` (execution results)

@@ -131,7 +131,7 @@ def main() -> int:
         return 2
 
     out_dir = Path(args.out) if args.out else (
-        Path(".hermes/plans") / f"provider-executor-{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S')}"
+        Path("./plans") / f"provider-executor-{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S')}"
     )
     out_dir.mkdir(parents=True, exist_ok=True)
 

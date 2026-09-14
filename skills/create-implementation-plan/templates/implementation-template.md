@@ -2,9 +2,9 @@
 name: create-implementation-plan-implementation-template
 description: Template for implementing create-implementation-plan workflows (verified reference to real subgoal artifacts; not synthetic placeholder).
 references:
-  subgoal-plan: .hermes/plans/web-research-subgoal-2026-09-13.md (3830 B verified)
-  subgoal-spec: .hermes/specs/web-research-subgoal-2026-09-13.md (3395 B verified real)
-  pipeline-plan: .hermes/plans/web-research-628-batch-execution-plan.md (5991 B verified)
+  subgoal-plan: ./plans/web-research-subgoal-2026-09-13.md (3830 B verified)
+  subgoal-spec: ./specs/web-research-subgoal-2026-09-13.md (3395 B verified real)
+  pipeline-plan: ./plans/web-research-628-batch-execution-plan.md (5991 B verified)
 ---
 
 # Implementation Template — create-implementation-plan

@@ -32,7 +32,7 @@
       {
         "name": "full_check",
         "passed": true,
-        "output": "ojects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !.hermes/archived-prompt-templates/** !.github/** !.hermes/** !judge_results/** !plans/** !research/** !ngn-earnings-kit/** !hermes-memory-safety/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc\nLinting: 486 file(s)\nSummary: 0 error(s)\n$ cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress\nCSpell: Files checked: 98, Issues found: 0 in 0 files."
+        "output": "ojects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !./archived-prompt-templates/** !.github/** !./** !judge_results/** !plans/** !research/** !ngn-earnings-kit/** !hermes-memory-safety/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc\nLinting: 486 file(s)\nSummary: 0 error(s)\n$ cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress\nCSpell: Files checked: 98, Issues found: 0 in 0 files."
       }
     ],
     "all_passed": true

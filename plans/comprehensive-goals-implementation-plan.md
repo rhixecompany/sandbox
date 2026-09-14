@@ -39,7 +39,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 2: Environment Sync (.env & config.yaml)
 **Status**: 🔄 In Progress
 **Duration**: 30 minutes
@@ -82,7 +82,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 3: Systematic Debugging - Hermes Desktop/Plugins/Hooks/Scripts/Agents
 **Status**: ⏳ Pending
 **Duration**: 2-3 hours
@@ -106,7 +106,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 4: Git Operations
 **Status**: ⏳ Pending
 **Duration**: 15 minutes
@@ -120,7 +120,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 5: File Triage & Deduplication
 **Status**: ⏳ Pending
 **Duration**: 45 minutes
@@ -135,7 +135,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 6: Cleanup Plan - AI Agents & Docker
 **Status**: ⏳ Pending
 **Duration**: 30 minutes
@@ -150,7 +150,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 7: MCP Server Debugging
 **Status**: ⏳ Pending
 **Duration**: 1 hour
@@ -170,7 +170,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 8: Session Startup/End Debugging
 **Status**: ⏳ Pending
 **Duration**: 45 minutes
@@ -184,7 +184,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 9: Doctor & Health Checks
 **Status**: ⏳ Pending
 **Duration**: 30 minutes
@@ -200,7 +200,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 10: MCP Skills Creation
 **Status**: ⏳ Pending
 **Duration**: 1 hour
@@ -213,7 +213,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 11: Rate Limit Bypass
 **Status**: ⏳ Pending
 **Duration**: 45 minutes
@@ -226,7 +226,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Phase 12: Final Verification & Documentation
 **Status**: ⏳ Pending
 **Duration**: 30 minutes
@@ -240,7 +240,7 @@ This plan addresses all goals from the user request, organized into phases with 
 
 ---
 
-**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
 ## Timeline Summary
 
 | Phase | Duration | Start | End |
@@ -337,9 +337,9 @@ Each phase must pass these gates before proceeding:
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs

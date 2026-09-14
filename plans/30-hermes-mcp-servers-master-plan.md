@@ -25,15 +25,15 @@ B5: vercel | doist/todoist-ai | basic-memory (io.github.basicmachines-co) | next
 
 ## Phase Map (sequential outer — each phase gates next)
 P1 LOAD    — Confirm skills, confirm server list, confirm workspace dirs (DONE in this session)
-P2 PLAN    — This file `.hermes/plans/30-hermes-mcp-servers-master-plan.md` + per-server spec skeletons `.hermes/specs/<server>-spec.md` (30 spec files — >6 file trigger satisfied, protocol active)
+P2 PLAN    — This file `./plans/30-hermes-mcp-servers-master-plan.md` + per-server spec skeletons `./specs/<server>-spec.md` (30 spec files — >6 file trigger satisfied, protocol active)
 P3 VERIFY  — Clarify completed (3 questions: scope=both, destructive=full, mode=hybrid); open items (see below) must be closed before execution
 P4 EXECUTE — Hybrid batches B1..B5 running SP-A→SP-F for each server (spec, script, config, test, fix/blocker, skill-if-needed)
 P5 GATE     — Aggregate verification: 30-row table saved; every server with real test result; no fabricated results; failed servers reported honestly
 
 ## Per-Server Sub-Phases (SP-A → SP-F) — executed in parallel within batch
-SP-A  Spec    → `.hermes/specs/<server>-spec.md` (exposed tools list, test targets, expected outputs, milestones)
-SP-B  Plan     → `.hermes/plans/<server>-execution.md` (phases, actions, resource, gate check)
-SP-C  Script   → `.hermes/scripts/<server>_test_all_tools.py` (calls real tool; captures output file; never synthetic)
+SP-A  Spec    → `./specs/<server>-spec.md` (exposed tools list, test targets, expected outputs, milestones)
+SP-B  Plan     → `./plans/<server>-execution.md` (phases, actions, resource, gate check)
+SP-C  Script   → `./scripts/<server>_test_all_tools.py` (calls real tool; captures output file; never synthetic)
 SP-D  Config   → Update `hermes config.yaml`, `.vscode/mcp.json`, `.opencode/opencode.json` (only when server missing/broken — verified by grep of config)
 SP-E  Execute  → Run SP-C script; save raw output; fix or report honest blocker (≤2 attempts; fallback = blocker message in aggregate table)
 SP-F  Skill    → Only if server genuinely needs new SKILL.md: search first (`dedupe-skills`), ≥10 lines, real description, no stub (SOUL.md skill pollution rule)
@@ -45,7 +45,7 @@ Day 3  B1: SP-E + SP-F (if needed) + GATE; B2: SP-C/D started
 Day 4  B2: SP-E + GATE; B3: SP-A/B/C started (parallel via delegate_task, 3 subagents: B3-A/B/C, B4-A/B/C, B5-A/B/C as needed)
 Day 5  B3 + B4: SP-D/E + GATE
 Day 6  B5: SP-A→SP-F + GATE
-Day 7  Final aggregate verification (30-row table file `.hermes/plans/30-server-aggregate-verify.md` saved; reported in final message)
+Day 7  Final aggregate verification (30-row table file `./plans/30-server-aggregate-verify.md` saved; reported in final message)
 
 ## Resource Allocation
 Main agent (this session): P-phase orchestration, gate verification, aggregate table, final report.
@@ -57,12 +57,12 @@ Subagents (delegate_task): per batch B1..B5, SP-A..SP-F parallel — each subage
 - [ ] Script executed — output file saved (verified by `cat` of saved output file; NEVER fabricated)
 - [ ] Config entry verified (verified by `grep` of `.vscode/mcp.json` / `hermes config.yaml` for server name)
 - [ ] Skill file (if new) ≥10 lines + real description (verified by `wc -l` + `grep`)
-- [ ] Aggregate table saved (file `.hermes/plans/30-server-aggregate-verify.md` with 30 rows: server | batch | spec_path | script_path | config_updated | test_result | fix_status | blocker_note — verified by `cat` of saved file; blocker_note non-empty for any server where fix failed after 2 attempts)
+- [ ] Aggregate table saved (file `./plans/30-server-aggregate-verify.md` with 30 rows: server | batch | spec_path | script_path | config_updated | test_result | fix_status | blocker_note — verified by `cat` of saved file; blocker_note non-empty for any server where fix failed after 2 attempts)
 - [ ] No synthetic results in any output file (verified by inspecting file contents — must match actual script stdout, not invented success strings)
 
 ## Open Items Before P4 Execution (must be closed; per plan-mode / verify step)
 1. Per-server tool-exposure spec: what exact tool names each of the 30 servers exposes (some servers have multiple tools — e.g., ast-grep has find_code, dump_syntax_tree, etc.). This determines SP-C script content. (Requires user input or web fetch of server docs — `no-net-fetch` skill may block; will report blocker honestly if unreachable.)
-2. Template script `.hermes/scripts/template_server_test_all_tools.py` must be written before batch parallel execution starts (P4 start gate).
+2. Template script `./scripts/template_server_test_all_tools.py` must be written before batch parallel execution starts (P4 start gate).
 3. Confirm each server's live status: already enabled / broken / missing in workspace `.vscode/mcp.json` / `.opencode/opencode.json` — verification before claiming "fix" vs. "not broken".
 4. Confirm subagent count: hybrid mode uses 1 main agent + up to 5 subagent batches (≤10 subagents max per delegation config); verify no resource over-subscription.
 5. Confirm workspace clean: `.git/index.lock` already removed; no stale locks will interrupt batch script executions (verified in this session).
@@ -73,14 +73,14 @@ Subagents (delegate_task): per batch B1..B5, SP-A..SP-F parallel — each subage
 - Honest blocker reporting: if server fix/test fails twice → blocker in aggregate table; never fabricate success.
 - No backup files: patch/edit; no `.bak` left.
 - Skill pollution: skill only when genuinely needed; ≥10 lines; real description; search `dedupe-skills` first.
-- Memory isolation: session/task progress saved in workspace files (`.hermes/plans/`, `.hermes/scripts/`), NOT MEMORY.md (only durable identity/environment facts saved there per user-MEMORY.md rules).
+- Memory isolation: session/task progress saved in workspace files (`./plans/`, `./scripts/`), NOT MEMORY.md (only durable identity/environment facts saved there per user-MEMORY.md rules).
 - Prompt inheritance preserved: SOUL.md → USER.md → this plan → subagent context prompts (not reordered).
 - Profile routing per protocol: plan/verification → exec-assistant / code-architect; parallel subagent batches → default profile (adminbot) with full context injection.
 
 ## Subgoal Coverage (verified mapping)
 For EACH server in B1..B5:
-  - Spec `.hermes/specs/<s>-spec.md` → exposes every tool (subgoal: "fully exposes")
-  - Script `.hermes/scripts/<s>_test_all_tools.py` + executed output file → runs + tests every tool (subgoal: "runs, tests")
+  - Spec `./specs/<s>-spec.md` → exposes every tool (subgoal: "fully exposes")
+  - Script `./scripts/<s>_test_all_tools.py` + executed output file → runs + tests every tool (subgoal: "runs, tests")
   - Config update + fix/blocker tracking → fixes failed servers (subgoal: "fix all failed server")
-  - Skill (if needed) `.hermes/skills/<s>-skill.md` → fully implements skill for server
-Aggregate table `.hermes/plans/30-server-aggregate-verify.md` proves all 30 covered.
+  - Skill (if needed) `./skills/<s>-skill.md` → fully implements skill for server
+Aggregate table `./plans/30-server-aggregate-verify.md` proves all 30 covered.

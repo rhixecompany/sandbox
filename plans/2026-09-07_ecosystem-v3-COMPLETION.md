@@ -71,18 +71,18 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 ### ✅ SUBGOAL 1: Install Plugins from GitHub Awesome Lists — COMPLETE
 - Fetched all 4 repos (github/awesome-copilot, awesome-opencode, awesome-codex-cli, awesome-hermes-agent)
 - Extracted ~489 total items
-- Reports saved to `.hermes/plans/awesome-extract-*.md`
+- Reports saved to `./plans/awesome-extract-*.md`
 - Hermes-compatible items identified and catalogued
 
 ### ✅ SUBGOAL 2: Install Code-Rabbit CLI — COMPLETE
 - `coderabbit` CLI v0.7.6 installed and verified
 - `coderabbitai-mcp` v1.1.1 installed globally via npm
 - MCP server `coderabbit-cli-mcp` enabled in config.yaml
-- SKILL.md created at `~/.hermes/skills/code-rabbit/SKILL.md`
-- Webhook configs created at `.hermes/webhooks/code-rabbit/`
+- SKILL.md created at `~/./skills/code-rabbit/SKILL.md`
+- Webhook configs created at `./webhooks/code-rabbit/`
 
 ### ✅ SUBGOAL 3: Create Skills for Every Hermes MCP Server — COMPLETE
-- 24 SKILL.md files created at `~/.hermes/skills/mcp/mcp-*/SKILL.md`
+- 24 SKILL.md files created at `~/./skills/mcp/mcp-*/SKILL.md`
 - All 24 enabled servers covered
 - Standard format with workflow, tools table, test cases
 
@@ -115,15 +115,15 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 
 | File | Action |
 |------|--------|
-| `~/.hermes/hooks/_pathutil.py` | Fixed print→stderr |
-| `~/.hermes/hooks/lib.py` | Fixed print→stderr |
-| `~/.hermes/skills/code-rabbit/SKILL.md` | Created |
-| `~/.hermes/skills/mcp/mcp-*/SKILL.md` | 24 files created |
+| `~/./hooks/_pathutil.py` | Fixed print→stderr |
+| `~/./hooks/lib.py` | Fixed print→stderr |
+| `~/./skills/code-rabbit/SKILL.md` | Created |
+| `~/./skills/mcp/mcp-*/SKILL.md` | 24 files created |
 | `~/Desktop/SandBox/requirements.txt` | Updated with 17 packages |
-| `.hermes/webhooks/code-rabbit/` | Created webhook configs |
-| `.hermes/specs/` | Created spec directory |
-| `.hermes/plans/audit-log.md` | Updated |
-| `.hermes/plans/2026-09-07_ecosystem-v3*.md` | Master plans |
+| `./webhooks/code-rabbit/` | Created webhook configs |
+| `./specs/` | Created spec directory |
+| `./plans/audit-log.md` | Updated |
+| `./plans/2026-09-07_ecosystem-v3*.md` | Master plans |
 | `SESSION_REPORT.md` | Updated |
 
 ## Background Subagents (10 active)

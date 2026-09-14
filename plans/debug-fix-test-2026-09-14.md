@@ -9,7 +9,7 @@ destructive_approval: FULL (per clarification 2026-09-13)
 > Patient-teacher mode: explain each concept clearly with examples before fixing.
 > Protocol: LOAD (skills verified) → PLAN (this file) → VERIFY (evidence review) → EXECUTE (fixes + tests) → GATE (honest results, no hidden errors).
 
-## Evidence (Real — from `.hermes/plans/debug-run-logs.md` 53152 B + session audit)
+## Evidence (Real — from `./plans/debug-run-logs.md` 53152 B + session audit)
 
 | Server | Config Command | Real Failure (exit stdout) | Category |
 |---|---|---|---|
@@ -38,17 +38,17 @@ destructive_approval: FULL (per clarification 2026-09-13)
 - Gate: Re-run `bun run check`; document exit 1 + 41 errors honestly; no synthetic PASS claimed.
 
 ## Verification Gates (Every claim backed by terminal/file evidence)
-- [ ] SP-A: `hermes mcp test playwright` executed; result saved to `.hermes/plans/playwright-test-result.md`
+- [ ] SP-A: `hermes mcp test playwright` executed; result saved to `./plans/playwright-test-result.md`
 - [ ] SP-B: `hermes mcp test doist/todoist-ai` executed; result saved; blocker or fix documented
-- [ ] SP-C: `hermes mcp test io.github.basicmachines-co/basic-memory` executed; `mcp-stderr.log` inspected; result saved to `.hermes/plans/basic-memory-test-result.md`
+- [ ] SP-C: `hermes mcp test io.github.basicmachines-co/basic-memory` executed; `mcp-stderr.log` inspected; result saved to `./plans/basic-memory-test-result.md`
 - [ ] SP-D: `bun run check` re-run; exit code + error count saved honestly
 - [ ] Integrity: `.env` 3334 B unchanged (verified); 0 synthetic artifacts; 0 hidden errors; identity/routing preserved
-- [ ] Aggregate table entry added to `.hermes/plans/30-server-aggregate-verify.md` (or equivalent) for these 3+ servers
+- [ ] Aggregate table entry added to `./plans/30-server-aggregate-verify.md` (or equivalent) for these 3+ servers
 
 ## Deliverables (Real files — verified by `ls -la` + `cat` before claiming)
-1. `.hermes/plans/debug-fix-test-2026-09-14.md` (this plan) — verified
-2. `.hermes/plans/playwright-test-result.md` — real stdout/exit
-3. `.hermes/plans/basic-memory-test-result.md` — real stdout + `mcp-stderr.log` reference
-4. `.hermes/plans/doist-todoist-test-result.md` — real result (success or blocker)
+1. `./plans/debug-fix-test-2026-09-14.md` (this plan) — verified
+2. `./plans/playwright-test-result.md` — real stdout/exit
+3. `./plans/basic-memory-test-result.md` — real stdout + `mcp-stderr.log` reference
+4. `./plans/doist-todoist-test-result.md` — real result (success or blocker)
 5. Updated `.vscode/mcp.json` (only if syntax/config change needed — verified by diff)
-6. `.hermes/specs/debug-subgoal-final-verification.md` (gate checklist with real file references)
+6. `./specs/debug-subgoal-final-verification.md` (gate checklist with real file references)

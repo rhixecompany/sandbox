@@ -61,7 +61,7 @@ positional arguments:
     dump                Dump setup summary for support/debugging
     debug               Debug tools — upload logs and system info for support
     backup              Back up Hermes home directory to a zip file
-    checkpoints         Inspect / prune / clear ~/.hermes/checkpoints/
+    checkpoints         Inspect / prune / clear ~/./checkpoints/
     import              Restore a Hermes backup from a zip file
     import-agent        Import a Claude Code or Codex CLI setup into Hermes
     config              View and edit configuration
@@ -156,7 +156,7 @@ options:
   --yolo                Bypass all dangerous command approval prompts (use at
                         your own risk)
   --pass-session-id     Include the session ID in the agent's system prompt
-  --ignore-user-config  Ignore ~/.hermes/config.yaml and fall back to built-in
+  --ignore-user-config  Ignore ~/./config.yaml and fall back to built-in
                         defaults (credentials in .env are still loaded)
   --ignore-rules        Skip auto-injection of AGENTS.md, SOUL.md,
                         .cursorrules, memory, and preloaded skills

@@ -1,6 +1,6 @@
 ---
 title: Master Consolidated Plan — 2026-08-29 Session
-description: Consolidated execution plan for the 7-goal + 1-subgoal stacked bundle. Supersedes 30+ fragmentary plans in .hermes/plans/. Strict-sequential phases A-G.
+description: Consolidated execution plan for the 7-goal + 1-subgoal stacked bundle. Supersedes 30+ fragmentary plans in ./plans/. Strict-sequential phases A-G.
 date: 2026-08-29
 author: Hermes Agent
 status: in_progress

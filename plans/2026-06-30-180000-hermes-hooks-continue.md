@@ -11,10 +11,10 @@ Phase-restart: complete hook remediation after the unconfigure/delete/recreate c
 
 ## Verified Current State
 
-- Plan: `.hermes/plans/2026-06-30-174800-hermes-hooks-discovery-summary.md`
+- Plan: `./plans/2026-06-30-174800-hermes-hooks-discovery-summary.md`
 - Summary: `docs/hermes-hooks-summary.md` exists
 - Config: `C:\Users\Alexa\AppData\Local\hermes\config.yaml` currently has 4 registered shell hooks under `hooks:`
-- Approval: `.hermes/approvals/2026-06-30-hermes-hooks-unconfigure.md` exists
+- Approval: `./approvals/2026-06-30-hermes-hooks-unconfigure.md` exists
 
 ## Open Blocker
 

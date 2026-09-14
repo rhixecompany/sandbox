@@ -90,6 +90,6 @@ From Hermes docs, OpenRouter provider routing supports:
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/openrouter-workflow-spec.md`
-- `.hermes/plans/openrouter-workflow.md` (implementation plan)
-- `.hermes/plans/results/openrouter-*.txt` (execution results)
+- `./plans/specs/openrouter-workflow-spec.md`
+- `./plans/openrouter-workflow.md` (implementation plan)
+- `./plans/results/openrouter-*.txt` (execution results)

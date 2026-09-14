@@ -17,7 +17,7 @@ File: `scripts/instruction_audit.py`
 
 ```bash
 python scripts/instruction_audit.py
-cp scripts/.runtime/instruction-audit.json .hermes/plans/instruction-file-triage-2026-08-28/audit-report.json
+cp scripts/.runtime/instruction-audit.json ./plans/instruction-file-triage-2026-08-28/audit-report.json
 ```
 
 ## Step 3: Generate human-readable report
@@ -65,7 +65,7 @@ python scripts/instruction_fix.py --dry-run
 python scripts/instruction_audit.py && echo "V1 PASS"
 
 # V2
-python -c "import json; d=json.load(open('.hermes/plans/instruction-file-triage-2026-08-28/audit-report.json')); assert 'totals' in d; assert 'files' in d" && echo "V2 PASS"
+python -c "import json; d=json.load(open('./plans/instruction-file-triage-2026-08-28/audit-report.json')); assert 'totals' in d; assert 'files' in d" && echo "V2 PASS"
 
 # V3
 python scripts/instruction_fix.py --dry-run | grep -q "0 files would change" && echo "V3 PASS"

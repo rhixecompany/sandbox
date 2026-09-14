@@ -9,7 +9,7 @@ status: "in_progress"
 
 ## Goal
 
-Master specification that couples all plan files in `.hermes/plans/` for cross-validation. Every plan references this spec, and this spec references every plan back.
+Master specification that couples all plan files in `./plans/` for cross-validation. Every plan references this spec, and this spec references every plan back.
 
 ## Linked Plans
 

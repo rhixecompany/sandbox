@@ -1,14 +1,14 @@
 {
   "ts": "2026-09-10T17:31:02.741662Z",
-  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs",
-  "plans_dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans",
+  "dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs",
+  "plans_dir": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans",
   "threshold": 50,
   "count": 29,
   "avg": 84.4,
   "passed": 27,
   "results": [
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\01-config-foundation-repair.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\01-config-foundation-repair.md",
       "score": 93,
       "rating": "PASS",
       "dims": {
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\02-mcp-server-suite.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\02-mcp-server-suite.md",
       "score": 95,
       "rating": "PASS",
       "dims": {
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\03-subagent-driven-development.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\03-subagent-driven-development.md",
       "score": 91,
       "rating": "PASS",
       "dims": {
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\04-profile-memory-sync-skills.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\04-profile-memory-sync-skills.md",
       "score": 100,
       "rating": "PASS",
       "dims": {
@@ -162,7 +162,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\05-soul-user-memory-enhancement.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\05-soul-user-memory-enhancement.md",
       "score": 96,
       "rating": "PASS",
       "dims": {
@@ -199,7 +199,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\06-honcho-integration.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\06-honcho-integration.md",
       "score": 82,
       "rating": "PASS",
       "dims": {
@@ -236,7 +236,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\07-banking-project-context.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\07-banking-project-context.md",
       "score": 84,
       "rating": "PASS",
       "dims": {
@@ -273,7 +273,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-goals-implementation-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\comprehensive-goals-implementation-spec.md",
       "score": 102,
       "rating": "PASS",
       "dims": {
@@ -306,15 +306,15 @@
         "## Linked Plan"
       ],
       "spec_refs": [
-        ".hermes/specs/comprehensive-goals-implementation-spec.md"
+        "./specs/comprehensive-goals-implementation-spec.md"
       ],
       "plan_refs": [
-        ".hermes/plans/comprehensive-goals-implementation-plan.md",
+        "./plans/comprehensive-goals-implementation-plan.md",
         "../plans/comprehensive-goals-implementation-plan.md"
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-hermes-maintenance-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\comprehensive-hermes-maintenance-spec.md",
       "score": 102,
       "rating": "PASS",
       "dims": {
@@ -349,15 +349,15 @@
         "## Linked Plan"
       ],
       "spec_refs": [
-        ".hermes/specs/comprehensive-hermes-maintenance-spec.md"
+        "./specs/comprehensive-hermes-maintenance-spec.md"
       ],
       "plan_refs": [
-        ".hermes/plans/comprehensive-hermes-maintenance-plan.md",
+        "./plans/comprehensive-hermes-maintenance-plan.md",
         "../plans/comprehensive-hermes-maintenance-plan.md"
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-implementation-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\comprehensive-implementation-spec.md",
       "score": 102,
       "rating": "PASS",
       "dims": {
@@ -391,15 +391,15 @@
         "## Linked Plan"
       ],
       "spec_refs": [
-        ".hermes/specs/comprehensive-implementation-spec.md"
+        "./specs/comprehensive-implementation-spec.md"
       ],
       "plan_refs": [
         "../plans/comprehensive-implementation-plan.md",
-        ".hermes/plans/comprehensive-implementation-plan.md"
+        "./plans/comprehensive-implementation-plan.md"
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\context-files-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\context-files-spec.md",
       "score": 46,
       "rating": "FAIL",
       "dims": {
@@ -429,7 +429,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\deepseek-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\deepseek-workflow-spec.md",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -466,7 +466,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\disk-cleanup-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\disk-cleanup-workflow-spec.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -503,7 +503,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\gemini-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\gemini-workflow-spec.md",
       "score": 94,
       "rating": "PASS",
       "dims": {
@@ -540,7 +540,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\hermes-ecosystem-reliability-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\hermes-ecosystem-reliability-spec.md",
       "score": 102,
       "rating": "PASS",
       "dims": {
@@ -573,16 +573,16 @@
         "## Linked Plan"
       ],
       "spec_refs": [
-        ".hermes/specs/hermes-ecosystem-reliability-spec.md",
+        "./specs/hermes-ecosystem-reliability-spec.md",
         "../plans/2026-09-05_084556-hermes-ecosystem-reliability.md"
       ],
       "plan_refs": [
-        ".hermes/plans/2026-09-05_084556-hermes-ecosystem-reliability.md",
+        "./plans/2026-09-05_084556-hermes-ecosystem-reliability.md",
         "../plans/2026-09-05_084556-hermes-ecosystem-reliability.md"
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\hermes-root-scripts-quick-commands-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\hermes-root-scripts-quick-commands-spec.md",
       "score": 110,
       "rating": "PASS",
       "dims": {
@@ -617,11 +617,11 @@
       "spec_refs": [],
       "plan_refs": [
         "../plans/hermes-root-scripts-quick-commands-plan.md",
-        ".hermes/plans/hermes-root-scripts-quick-commands-plan.md"
+        "./plans/hermes-root-scripts-quick-commands-plan.md"
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\huggingface-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\huggingface-workflow-spec.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -658,7 +658,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\master-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\master-spec.md",
       "score": 60,
       "rating": "WARN",
       "dims": {
@@ -689,7 +689,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\multi-file-protocol-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\multi-file-protocol-spec.md",
       "score": 45,
       "rating": "FAIL",
       "dims": {
@@ -718,7 +718,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\nous-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\nous-workflow-spec.md",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -755,7 +755,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\ollama-cloud-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\ollama-cloud-workflow-spec.md",
       "score": 92,
       "rating": "PASS",
       "dims": {
@@ -792,7 +792,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\opencode-zen-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\opencode-zen-workflow-spec.md",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -829,7 +829,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\openrouter-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\openrouter-workflow-spec.md",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -866,7 +866,7 @@
       ]
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\prompt-library-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\prompt-library-spec.md",
       "score": 68,
       "rating": "WARN",
       "dims": {
@@ -897,7 +897,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\prompt-skill-spec-plan-management-system.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\prompt-skill-spec-plan-management-system.md",
       "score": 61,
       "rating": "WARN",
       "dims": {
@@ -927,7 +927,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\run-all-goals-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\run-all-goals-spec.md",
       "score": 65,
       "rating": "WARN",
       "dims": {
@@ -960,7 +960,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\skill-enhancement-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\skill-enhancement-spec.md",
       "score": 69,
       "rating": "WARN",
       "dims": {
@@ -990,7 +990,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\skill-remediation-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\skill-remediation-spec.md",
       "score": 56,
       "rating": "WARN",
       "dims": {
@@ -1022,7 +1022,7 @@
       "plan_refs": []
     },
     {
-      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\xai-workflow-spec.md",
+      "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\xai-workflow-spec.md",
       "score": 90,
       "rating": "PASS",
       "dims": {

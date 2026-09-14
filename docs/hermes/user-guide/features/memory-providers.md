@@ -18,7 +18,7 @@ hermes memory off        # disable external provider
 
 You can also select the active memory provider via `hermes plugins` → Provider Plugins → Memory Provider.
 
-Or set manually in `~/.hermes/config.yaml`:
+Or set manually in `~/./config.yaml`:
 
 ```yaml
 memory:
@@ -72,7 +72,7 @@ The legacy `hermes honcho setup` command still works (it now redirects to `herme
 
 **Headless / remote machines:** for cloud auth on a box without a browser (SSH, remote VM), pick **device** at the wizard's auth-method prompt. The CLI prints a short code and a verification link; open the link in a browser on any other machine, approve, and setup completes — no API key copy-paste. The wizard defaults to this option automatically when it detects no usable local browser.
 
-**Config:** `$HERMES_HOME/honcho.json` (profile-local) or `~/.honcho/config.json` (global). Resolution order: `$HERMES_HOME/honcho.json` > `~/.hermes/honcho.json` > `~/.honcho/config.json`. See the [config reference](https://github.com/NousResearch/hermes-agent/blob/main/plugins/memory/honcho/README.md) and the [Honcho integration guide](https://docs.honcho.dev/v3/guides/integrations/hermes).
+**Config:** `$HERMES_HOME/honcho.json` (profile-local) or `~/.honcho/config.json` (global). Resolution order: `$HERMES_HOME/honcho.json` > `~/./honcho.json` > `~/.honcho/config.json`. See the [config reference](https://github.com/NousResearch/hermes-agent/blob/main/plugins/memory/honcho/README.md) and the [Honcho integration guide](https://docs.honcho.dev/v3/guides/integrations/hermes).
 
 <details>
 <summary>Full config reference</summary>
@@ -307,8 +307,8 @@ hermes config set memory.provider openviking
 
 `hermes memory setup` can reuse or copy connection values from
 `~/.openviking/ovcli.conf`. Manual setup uses the active profile's `.env` file;
-for the default profile that is `~/.hermes/.env`, and for named profiles use
-`~/.hermes/profiles/<profile>/.env`.
+for the default profile that is `~/./.env`, and for named profiles use
+`~/./profiles/<profile>/.env`.
 
 ```text
 OPENVIKING_ENDPOINT=http://127.0.0.1:1933
@@ -367,7 +367,7 @@ Server-side LLM fact extraction with semantic search, reranking, and automatic d
 hermes memory setup    # select "mem0" → "Platform"
 # Or manually:
 hermes config set memory.provider mem0
-echo "MEM0_API_KEY=your-key" >> ~/.hermes/.env
+echo "MEM0_API_KEY=your-key" >> ~/./.env
 ```
 
 **Setup (OSS):**
@@ -393,8 +393,8 @@ hermes memory setup mem0 --mode selfhosted --host http://localhost:8888 --api-ke
 Or configure manually — either as env vars:
 
 ```bash
-echo "MEM0_HOST=http://localhost:8888" >> ~/.hermes/.env
-echo "MEM0_API_KEY=your-admin-api-key" >> ~/.hermes/.env
+echo "MEM0_HOST=http://localhost:8888" >> ~/./.env
+echo "MEM0_API_KEY=your-admin-api-key" >> ~/./.env
 ```
 
 or in `mem0.json`:
@@ -405,7 +405,7 @@ or in `mem0.json`:
 
 The plugin authenticates with `X-API-Key` and uses the server's `/search` / `/memories` routes. `api_key` is optional (omit only for `AUTH_DISABLED` servers). Don't set `mode: oss` — it takes precedence over `host`.
 
-**Config:** `$HERMES_HOME/mem0.json` (behavioral settings). Only the secret `MEM0_API_KEY` belongs in `~/.hermes/.env`.
+**Config:** `$HERMES_HOME/mem0.json` (behavioral settings). Only the secret `MEM0_API_KEY` belongs in `~/./.env`.
 
 | Key | Default | Description |
 |-----|---------|-------------|
@@ -446,7 +446,7 @@ Long-term memory with knowledge graph, entity resolution, and multi-strategy ret
 hermes memory setup    # select "hindsight"
 # Or manually:
 hermes config set memory.provider hindsight
-echo "HINDSIGHT_API_KEY=your-key" >> ~/.hermes/.env
+echo "HINDSIGHT_API_KEY=your-key" >> ~/./.env
 ```
 
 The setup wizard installs dependencies automatically and only installs what's needed for the selected mode (`hindsight-client` for cloud, `hindsight-all` for local). Requires `hindsight-client >= 0.4.22` (auto-upgraded on session start if outdated).
@@ -529,7 +529,7 @@ Cloud memory API with hybrid search (Vector + BM25 + Reranking), 7 memory types,
 hermes memory setup    # select "retaindb"
 # Or manually:
 hermes config set memory.provider retaindb
-echo "RETAINDB_API_KEY=your-key" >> ~/.hermes/.env
+echo "RETAINDB_API_KEY=your-key" >> ~/./.env
 ```
 
 ---
@@ -583,7 +583,7 @@ Semantic long-term memory with profile recall, semantic search, explicit memory 
 hermes memory setup    # select "supermemory"
 # Or manually:
 hermes config set memory.provider supermemory
-echo 'SUPERMEMORY_API_KEY=***' >> ~/.hermes/.env
+echo 'SUPERMEMORY_API_KEY=***' >> ~/./.env
 ```
 
 Self-hosted setup:

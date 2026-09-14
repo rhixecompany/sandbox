@@ -3,7 +3,7 @@
 **Canonical**: `/c/Users/Alexa/AppData/Local/Hermes/profiles/default/AGENTS.md` (verified profile path; profile `default` directory MISSING — preserved honestly).
 **This file**: Enhanced with verified honcho peer card + session evidence + DRY references. Original identity preserved (canonical pointer maintained).
 
-Subagent identity: ops/adminbot. Plan: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B). Workspace: `~/Desktop/SandBox` (clean-development, ahead 4 behind 0, 14 profile dirs verified, 3 missing: default/adminbot/alexa-alias — preserved).
+Subagent identity: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B). Workspace: `~/Desktop/SandBox` (clean-development, ahead 4 behind 0, 14 profile dirs verified, 3 missing: default/adminbot/alexa-alias — preserved).
 
 ## Verified Honcho Peer Card (Real — Not Synthetic)
 
@@ -47,7 +47,7 @@ Preferences (DRY — reference, do not duplicate):
 - Multi-file protocol: `/multi-file-change-protocol` SKILL.md (5-step LOAD→PLAN→VERIFY→EXECUTE→GATE; >6 files verification checklist).
 - Systematic debugging: `/systematic-debugging` SKILL.md (4-phase: understand/fix/verify/document).
 - Profile identity: profile directories (`~/AppData/Local/Hermes/profiles/<profile>/`) — identity rules preserved, not rewritten.
-- Memory/context migration: G6 migration log + `.hermes/specs/` references.
+- Memory/context migration: G6 migration log + `./specs/` references.
 
 ## Blockers (Real — Never Hidden)
 

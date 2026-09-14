@@ -219,7 +219,7 @@ The continuation prompt is a plain user-role message appended to history. It doe
 
 ## Configuration
 
-Add to `~/.hermes/config.yaml`:
+Add to `~/./config.yaml`:
 
 ```yaml
 goals:

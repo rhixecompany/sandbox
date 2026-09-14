@@ -11,13 +11,13 @@ status: "in_progress"
 
 | # | Subgoal | Files (est.) | Gate |
 |---|---------|--------------|------|
-| SG1 | Spec: full webhook architecture (routes, filters, scripts, security) | `.hermes/specs/webhook-full.md` | File exists; sections verified |
-| SG2 | Plan: execution timeline + phases + milestones | `.hermes/plans/webhook-execution-plan.md` | Milestones listed |
+| SG1 | Spec: full webhook architecture (routes, filters, scripts, security) | `./specs/webhook-full.md` | File exists; sections verified |
+| SG2 | Plan: execution timeline + phases + milestones | `./plans/webhook-execution-plan.md` | Milestones listed |
 | SG3 | Prompt: webhook-template + direct-delivery templates | `.github/prompts/webhook/` (3 files) | All prompts render `{dot}` + `{__raw__}` |
 | SG4 | Scripts: filter script (`todoist-hermes-label.py`) + test payload script | `scripts/webhook_*.py` (2) | Scripts exit 0 with `[SILENT]` or JSON |
 | SG5 | Skills: webhook-subscriptions + per-route-toolsets + security | `skills/webhook-subscriptions.md`, `skills/per-route-toolsets.md` (2 SKILL.md) | Skill body ≥10 lines |
 | SG6 | Config + routes: `config.yaml` snippet + `.env` snippet + `webhook_subscriptions.json` (3 live routes: github-pr, deploy-notify, oom-emergency) | `docs/webhook-routes-config.md`, `.env.webhook-example`, `webhook_subscriptions-example.json` | All 3 routes have secret; none use `INSECURE_NO_AUTH`; `oom-emergency` has `toolsets` |
-| SG7 | Implementation prompt + spec update | `.github/prompts/webhook/implementation-prompt.md` + `.hermes/specs/webhook-implementation.md` | References SG1–SG6 |
+| SG7 | Implementation prompt + spec update | `.github/prompts/webhook/implementation-prompt.md` + `./specs/webhook-implementation.md` | References SG1–SG6 |
 | SG8 | Final verification checklist + session log append | `docs/webhook-implementation-report.md` | All 8 subgoals verified |
 
 ## Rules (per user / multi-file-change-protocol)

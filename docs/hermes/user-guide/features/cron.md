@@ -24,7 +24,7 @@ All of this is available to Hermes itself through the `cronjob` tool, so you can
 :::tip
 **Which model does a cron job run on?** Resolution at fire time is: per-job pin → `cron.model` in `config.yaml` → the global default from `hermes model`.
 
-- **Per-job pin** — set by *you* via the dashboard, `hermes cron create/edit --model … --provider …`, or by editing `~/.hermes/cron/jobs.json`. Once set, it sticks until you change it. The agent's `cronjob` tool cannot set or change per-job models — inference pins are user-owned.
+- **Per-job pin** — set by *you* via the dashboard, `hermes cron create/edit --model … --provider …`, or by editing `~/./cron/jobs.json`. Once set, it sticks until you change it. The agent's `cronjob` tool cannot set or change per-job models — inference pins are user-owned.
 - **`cron.model` / `cron.model_provider`** — a cron-fleet default: every unpinned job runs on this model, independent of your chat model. Set it once (`hermes config set cron.model <name>`) and switching your chat model with `hermes model` or `/model` never touches your cron fleet.
 - **Global default** — only when neither of the above is set does a job follow `hermes model`. Hermes **snapshots** the provider and model at creation, and that snapshot is the job's effective pin: if you later switch the global default (`hermes model`, `/model`, `hermes config set model.default …`), the job **keeps running on the model and provider it was created under** and logs one INFO line per run noting the difference. A global model change never stops a scheduled job, and an unattended job never silently inherits a switch to a paid provider/model (#44585). To move a job to the new default, **resnap** it (`hermes cron resnap <job_id>`, or `--all` for every unpinned job) so it adopts the current default while staying unpinned, pin it (`hermes cron edit <job_id> --provider <provider> --model <model>`), or set `cron.model` to move the whole fleet at once. Jobs created before snapshots existed keep following the live global default.
 
@@ -330,7 +330,7 @@ hermes cron status
 
 On each tick Hermes:
 
-1. loads jobs from `~/.hermes/cron/jobs.json`
+1. loads jobs from `~/./cron/jobs.json`
 2. checks `next_run_at` against the current time
 3. starts a fresh `AIAgent` session for each due job
 4. optionally injects one or more attached skills into that fresh session
@@ -338,7 +338,7 @@ On each tick Hermes:
 6. delivers the final response
 7. updates run metadata and the next scheduled time
 
-A file lock at `~/.hermes/cron/.tick.lock` prevents overlapping scheduler ticks from double-running the same job batch.
+A file lock at `~/./cron/.tick.lock` prevents overlapping scheduler ticks from double-running the same job batch.
 
 ### Restart-safe workers under systemd
 
@@ -356,7 +356,7 @@ The lasting fix is a user session for the gateway user: `sudo loginctl enable-li
 ### Execution history
 
 Hermes records each claimed cron attempt in the profile-local
-`~/.hermes/cron/executions.db` before executor or provider dispatch. Attempts
+`~/./cron/executions.db` before executor or provider dispatch. Attempts
 move through `claimed`, `running`, and one immutable terminal state:
 `completed`, `failed`, or `unknown`. After restart, Hermes marks an abandoned
 attempt `unknown` only when the original PID and process-start fingerprint prove
@@ -480,7 +480,7 @@ When scheduling jobs, you specify where the output goes:
 | Option | Description | Example |
 |--------|-------------|---------|
 | `"origin"` | Back to where the job was created | Default on messaging platforms |
-| `"local"` | Save to local files only (`~/.hermes/cron/output/`) | Default on CLI |
+| `"local"` | Save to local files only (`~/./cron/output/`) | Default on CLI |
 | `"telegram"` | Telegram home channel | Uses `TELEGRAM_HOME_CHANNEL` |
 | `"telegram:123456"` | Specific Telegram chat by ID | Direct delivery |
 | `"telegram:-100123:17585"` | Specific Telegram topic | `chat_id:thread_id` format |
@@ -568,7 +568,7 @@ Note: The agent cannot see this message, and therefore cannot respond to it.
 To deliver the raw agent output without the wrapper, set `cron.wrap_response` to `false`:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 cron:
   wrap_response: false
 ```
@@ -582,7 +582,7 @@ brief triggers a push even when the adapter's notification mode is `important`
 silent brief as "never delivered"). To restore silent deliveries:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 cron:
   delivery:
     notify: false   # default: true
@@ -622,7 +622,7 @@ Opt-in, **default off**. Enable globally in config, or per-job via the `cronjob`
 tool's `attach_to_session` (which overrides the global setting for that one job):
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 cron:
   mirror_delivery: false   # set true to make cron deliveries continuable
 ```
@@ -666,7 +666,7 @@ delivery. If you'd rather have a continuable job land **flat in the channel
 timeline** — no thread — set the Slack **continuable surface** to `in_channel`:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 slack:
   cron_continuable_surface: in_channel   # default: thread
   reply_in_thread: false                 # required pairing (see below)
@@ -718,7 +718,7 @@ not required (and is ignored) for DMs.
 
 ### Silent suppression
 
-If the agent's final response contains `[SILENT]`, delivery is suppressed entirely. The output is still saved locally for audit (in `~/.hermes/cron/output/`), but no message is sent to the delivery target.
+If the agent's final response contains `[SILENT]`, delivery is suppressed entirely. The output is still saved locally for audit (in `~/./cron/output/`), but no message is sent to the delivery target.
 
 This is useful for monitoring jobs that should only report when something is wrong:
 
@@ -734,7 +734,7 @@ Failed jobs always deliver regardless of the `[SILENT]` marker — only successf
 Pre-run scripts (attached via the `script` parameter) have a default timeout of 3600 seconds (1 hour). This bounds the **script only** — skill-based / LLM-driven jobs run on a separate inactivity budget and are not capped by this value. If your scripts need a different limit, you can change it:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 cron:
   script_timeout_seconds: 1800   # 30 minutes
 ```
@@ -744,7 +744,7 @@ Or set the `HERMES_CRON_SCRIPT_TIMEOUT` environment variable. The resolution ord
 Cron also bounds post-run session and agent-resource cleanup. This happens after the LLM turn returns, so it is separate from the inactivity timeout. The default is 10 seconds per cleanup operation. If a storage or client finalizer stops returning, the scheduler logs an error, releases the job's in-flight guard, and allows later runs to dispatch instead of skipping that job forever.
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 cron:
   cleanup_timeout_seconds: 10
 ```
@@ -756,7 +756,7 @@ Set `cleanup_timeout_seconds: 0` only to restore the legacy unbounded cleanup be
 When a cron delivery includes media attachments (a generated PDF, TTS audio, an exported report) sent through a live gateway adapter, each attachment upload is bounded by a timeout — 300 seconds by default. Large files on slow uplinks can need more:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 cron:
   media_send_timeout_seconds: 600   # 10 minutes per attachment
 ```
@@ -768,7 +768,7 @@ Or set the `HERMES_CRON_MEDIA_SEND_TIMEOUT` environment variable. The resolution
 A `bot-chat` delivery runs a full agent turn in the target bot's chat, so its bound is minutes, not seconds — 600s by default:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 cron:
   bot_chat_delivery_timeout_seconds: 900
 ```
@@ -805,7 +805,7 @@ The `cronjob` tool's schema exposes `no_agent` to Hermes directly, so you can de
 Ping me on Telegram if RAM is over 85%, every 5 minutes.
 ```
 
-Hermes will write the check script to `~/.hermes/scripts/` via `write_file`, then call:
+Hermes will write the check script to `~/./scripts/` via `write_file`, then call:
 
 ```python
 cronjob(action="create", schedule="every 5m",
@@ -825,7 +825,7 @@ Cron jobs run in isolated sessions with no memory of previous runs. But sometime
 # Job 1: Collect raw data
 cronjob(
     action="create",
-    prompt="Fetch the top 10 AI/ML stories from Hacker News. Save them to ~/.hermes/data/briefs/raw.md in markdown format with title, URL, and score.",
+    prompt="Fetch the top 10 AI/ML stories from Hacker News. Save them to ~/./data/briefs/raw.md in markdown format with title, URL, and score.",
     schedule="0 7 * * *",
     name="AI News Collector",
 )
@@ -834,7 +834,7 @@ cronjob(
 # Get Job 1's ID from: cronjob(action="list")
 cronjob(
     action="create",
-    prompt="Read ~/.hermes/data/briefs/raw.md. Score each story 1–10 for engagement potential and novelty. Output the top 5 to ~/.hermes/data/briefs/ranked.md.",
+    prompt="Read ~/./data/briefs/raw.md. Score each story 1–10 for engagement potential and novelty. Output the top 5 to ~/./data/briefs/ranked.md.",
     schedule="30 7 * * *",
     context_from="<job1_id>",
     name="AI News Triage",
@@ -843,7 +843,7 @@ cronjob(
 # Job 3: Ship — receives Job 2's output as context
 cronjob(
     action="create",
-    prompt="Read ~/.hermes/data/briefs/ranked.md. Write 3 tweet drafts (hook + body + hashtags). Deliver to telegram:7976161601.",
+    prompt="Read ~/./data/briefs/ranked.md. Write 3 tweet drafts (hook + body + hashtags). Deliver to telegram:7976161601.",
     schedule="0 8 * * *",
     context_from="<job2_id>",
     name="AI News Brief",
@@ -852,7 +852,7 @@ cronjob(
 
 **How it works:**
 
-- When Job 2 fires, Hermes reads Job 1's most recent output from `~/.hermes/cron/output/{job1_id}/*.md`
+- When Job 2 fires, Hermes reads Job 1's most recent output from `~/./cron/output/{job1_id}/*.md`
 - That output is prepended to Job 2's prompt automatically
 - Job 2 doesn't need to hardcode "read this file" — it receives the content as context
 - The chain can be any length: Job 1 → Job 2 → Job 3 → ...
@@ -1126,9 +1126,9 @@ The `wakeAgent` gate gives you a $0 way to decide whether a scheduled job should
 
 ```bash
 #!/bin/bash
-# ~/.hermes/scripts/feed-changed.sh
+# ~/./scripts/feed-changed.sh
 FEED="$HOME/data/feed.json"
-STATE="$HOME/.hermes/scripts/.feed-changed.last"
+STATE="$HOME/./scripts/.feed-changed.last"
 test -f "$FEED" || { echo '{"wakeAgent": false}'; exit 0; }
 mtime=$(stat -c %Y "$FEED")
 last=$(cat "$STATE" 2>/dev/null || echo 0)
@@ -1151,7 +1151,7 @@ cronjob(action="create", name="process-feed",
 
 ```bash
 #!/bin/bash
-# ~/.hermes/scripts/flag-ready.sh
+# ~/./scripts/flag-ready.sh
 if test -f /tmp/new-data-ready; then
   rm -f /tmp/new-data-ready
   echo '{"wakeAgent": true}'
@@ -1171,7 +1171,7 @@ cronjob(action="create", name="nightly-analysis",
 
 ```python
 #!/usr/bin/env python
-# ~/.hermes/scripts/new-rows.py
+# ~/./scripts/new-rows.py
 import json, sqlite3
 conn = sqlite3.connect("/home/me/data/app.db")
 n = conn.execute(
@@ -1193,7 +1193,7 @@ cronjob(action="create", name="summarize-new-msgs",
 The same pattern works for any data source you can query from a script — Postgres, an HTTP API, your own state store — without baking a SQL evaluator into the cron subsystem.
 
 :::tip
-Hermes's own `~/.hermes/state.db` is an internal schema that changes between releases. Don't query it from a pre-run gate — point at your own database or feed instead.
+Hermes's own `~/./state.db` is an internal schema that changes between releases. Don't query it from a pre-run gate — point at your own database or feed instead.
 :::
 
 Credit: this recipe set was prompted by @iankar8's exploration in [#2654](https://github.com/NousResearch/hermes-agent/pull/2654), which proposed adding sql/file/command triggers as a parallel mechanism. The `script` + `wakeAgent` gate already covers all three cases at $0, so the work landed as documentation instead.
@@ -1213,7 +1213,7 @@ The referenced jobs' most recent completed outputs are injected above the prompt
 
 ## Job storage
 
-Jobs are stored in `~/.hermes/cron/jobs.json`. Output from job runs is saved to `~/.hermes/cron/output/{job_id}/{timestamp}.md`.
+Jobs are stored in `~/./cron/jobs.json`. Output from job runs is saved to `~/./cron/output/{job_id}/{timestamp}.md`.
 
 Job definitions are plain JSON on disk: they survive `hermes update`, gateway restarts, and machine reboots. A job that was mid-run during a restart is marked `unknown` in the execution ledger — it is not automatically retried, but the job's next scheduled tick fires normally. See [Execution history](#execution-history) for details.
 

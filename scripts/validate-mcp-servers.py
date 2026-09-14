@@ -20,7 +20,7 @@ import argparse
 # Configuration
 WORKSPACE_ROOT = Path("C:/Users/Alexa/Desktop/SandBox")
 OPENCODE_JSON = WORKSPACE_ROOT / "opencode.json"
-REPORT_PATH = WORKSPACE_ROOT / ".hermes/mcp-validation-report.md"
+REPORT_PATH = WORKSPACE_ROOT / "./mcp-validation-report.md"
 
 # Ensure report directory exists
 REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)

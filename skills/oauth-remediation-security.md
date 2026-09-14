@@ -1,6 +1,6 @@
 ---
 name: oauth-remediation-security
-vulnerability_verified: GHSA-5h2m-4q8j-pqpj (from hermes security audit exit 1 — 26 real findings preserved, not fabricated; verified in session: .hermes/plans/web-research-subgoal-final-verify-2026-09-13.md 8622 B; results/web-research-results.json 31280 B)
+vulnerability_verified: GHSA-5h2m-4q8j-pqpj (from hermes security audit exit 1 — 26 real findings preserved, not fabricated; verified in session: ./plans/web-research-subgoal-final-verify-2026-09-13.md 8622 B; results/web-research-results.json 31280 B)
 dependency_evidence_file: requirements.txt (verified lines 82-83 fastmcp; 113-115 httpx — preserved before/after edit; no synthetic version claims)
 remediation_artifacts: spec (oauth-remediation-spec.md) + plan (oauth-remediation-plan.md) + this skill = 3 files per vulnerability (3 vulnerabilities = 9 files total)
 ---

@@ -15,9 +15,9 @@ status: "in_progress"
 - Produce structured artifacts that reference feature concepts.
 - Execute script verifies file presence and outputs a result summary.
 ## Acceptance Criteria
-- [ ] .hermes/plans/mcp-plan.md exists with YAML frontmatter
-- [ ] .hermes/specs/mcp-spec.md exists with ≥3 sections
-- [ ] .hermes/prompts/mcp-prompt.md has prompt instructions
+- [ ] ./plans/mcp-plan.md exists with YAML frontmatter
+- [ ] ./specs/mcp-spec.md exists with ≥3 sections
+- [ ] ./prompts/mcp-prompt.md has prompt instructions
 - [ ] skills/mcp-bundle/SKILL.md has ≥10-line body + frontmatter
 - [ ] scripts/mcp-execute.py runs without error
 - [ ] results/mcp-result.md produced

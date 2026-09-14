@@ -132,4 +132,4 @@
 - python: `uv venv` + `uv pip install -r requirements.txt` (or `uv sync`)
 
 > Gate: SAFE deletions require recorded approval (see executing-plans skill:
-> approval request in `.hermes/approvals/`). Nothing was deleted by this dry run.
+> approval request in `./approvals/`). Nothing was deleted by this dry run.

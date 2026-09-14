@@ -41,8 +41,8 @@ Defines the complete structure for the prompt library at `/.github/prompts/` wit
 ### REQ-PL-003: Prompt File Structure
 - **Main File**: `{prompt-name}.prompt.md`
 - **Companion Files** (10 required):
-  1. `specs.md` - Links to .hermes/specs/ specification
-  2. `plans.md` - Links to .hermes/plans/ implementation plan
+  1. `specs.md` - Links to ./specs/ specification
+  2. `plans.md` - Links to ./plans/ implementation plan
   3. `goals.md` - High-level goals and success metrics
   4. `subgoals.md` - Decomposed sub-goals with owners
   5. `rules.md` - Business rules, constraints, invariants
@@ -82,8 +82,8 @@ companion_files:
 ```
 
 ### REQ-PL-005: Cross-Reference Integrity
-- Each prompt's `specs.md` must reference valid spec in `.hermes/specs/`
-- Each prompt's `plans.md` must reference valid plan in `.hermes/plans/`
+- Each prompt's `specs.md` must reference valid spec in `./specs/`
+- Each prompt's `plans.md` must reference valid plan in `./plans/`
 - `goals.md` → `subgoals.md` → `tasks.md` traceability chain
 - `phases.md` → `steps.md` → `actions.md` execution chain
 - `rules.md` constrains all other files
@@ -118,7 +118,7 @@ companion_files:
 # Specs for {Prompt Name}
 
 ## Linked Specification
-- **Spec File**: `.hermes/specs/{spec-name}.md`
+- **Spec File**: `./specs/{spec-name}.md`
 - **Spec Version**: 1.0.0
 - **Requirements Covered**: [REQ-XXX, REQ-YYY]
 
@@ -133,7 +133,7 @@ companion_files:
 # Plans for {Prompt Name}
 
 ## Linked Plan
-- **Plan File**: `.hermes/plans/{plan-name}.md`
+- **Plan File**: `./plans/{plan-name}.md`
 - **Plan Version**: 1.0.0
 - **Phases**: [Preparation, Execution, Verification, Completion]
 
@@ -303,8 +303,8 @@ companion_files:
 - Consistent formatting
 
 ## Dependencies
-- .hermes/specs/ specifications exist
-- .hermes/plans/ plans exist
+- ./specs/ specifications exist
+- ./plans/ plans exist
 - Multi-file protocol (≥3 files) followed
 
 ## Risks & Mitigations

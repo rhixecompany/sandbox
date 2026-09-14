@@ -34,10 +34,10 @@ When the user asks to audit `.github/prompts` ↔ `.github/prompts_backup`, tria
 ## Protocol (audit-first sequential; then parallel artifacts if needed)
 
 1. **Audit** — filename match + MD5 hash (`execute_code` script or `scripts/prompt-library-de-dup-audit.sh`).
-2. **Triage** — EXACT_DUP / DIVERGENT / ONLY_PROMPTS / ONLY_BACKUP (see `.hermes/specs/`).
+2. **Triage** — EXACT_DUP / DIVERGENT / ONLY_PROMPTS / ONLY_BACKUP (see `./specs/`).
 3. **Action** — destructive only after audit: delete/update files; log every action (`prompt-library-de-dup-action-log.md`).
 4. **Verify gate** — `.github/prompts_backup` removed; audit logs exist; artifacts present.
-5. **Artifacts** — `.hermes/plans/*.md`, `.hermes/specs/*.md`, `scripts/*.sh`, `.hermes/prompts/*.prompt.md`, `skills/*/SKILL.md`.
+5. **Artifacts** — `./plans/*.md`, `./specs/*.md`, `scripts/*.sh`, `./prompts/*.prompt.md`, `skills/*/SKILL.md`.
 
 ## Skill Stack (14)
 
@@ -46,20 +46,20 @@ Load in order: multi-file-change-protocol → using-superpowers → brainstormin
 ## Verification Checklist
 
 - [ ] `.github/prompts_backup` not present (`not backup_exists`).
-- [ ] `.hermes/specs/prompt-library-de-dup-audit.md` exists.
-- [ ] `.hermes/plans/prompt-library-de-dup-and-backup-archive-plan.md` exists.
+- [ ] `./specs/prompt-library-de-dup-audit.md` exists.
+- [ ] `./plans/prompt-library-de-dup-and-backup-archive-plan.md` exists.
 - [ ] `scripts/prompt-library-de-dup-audit.sh` executable.
-- [ ] `.hermes/prompts/prompt-library-de-dup-and-backup-archive.prompt.md` exists.
-- [ ] Every destructive action logged in `.hermes/specs/prompt-library-de-dup-action-log.md`.
+- [ ] `./prompts/prompt-library-de-dup-and-backup-archive.prompt.md` exists.
+- [ ] Every destructive action logged in `./specs/prompt-library-de-dup-action-log.md`.
 - [ ] No placeholder text in artifacts; SKILL.md ≤250 lines; DRY cross-references enforced.
 
 ## Cross-References
 
-- Plan: `.hermes/plans/prompt-library-de-dup-and-backup-archive-plan.md`
-- Spec: `.hermes/specs/prompt-library-de-dup-and-backup-archive-spec.md`
+- Plan: `./plans/prompt-library-de-dup-and-backup-archive-plan.md`
+- Spec: `./specs/prompt-library-de-dup-and-backup-archive-spec.md`
 - Script: `scripts/prompt-library-de-dup-audit.sh`
-- Prompt: `.hermes/prompts/prompt-library-de-dup-and-backup-archive.prompt.md`
-- Audit data: `.hermes/specs/prompt-library-de-dup-audit.md` + `.json`
+- Prompt: `./prompts/prompt-library-de-dup-and-backup-archive.prompt.md`
+- Audit data: `./specs/prompt-library-de-dup-audit.md` + `.json`
 
 ## Pitfalls
 

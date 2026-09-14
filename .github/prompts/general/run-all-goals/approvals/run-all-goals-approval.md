@@ -8,7 +8,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 **Requestor**: Alexa
 **Owner(s)**: Alexa
-**Scope**: All files under `.github/prompts/general/run-all-goals/`, `.hermes/plans/`
+**Scope**: All files under `.github/prompts/general/run-all-goals/`, `./plans/`
 **PRIMARY SOURCE**: tree.prompt.txt (cleanup-first execution)
 
 ## Justification
@@ -32,8 +32,8 @@ User explicitly authorized "create and run everything including goals and subgoa
 
 ## Rollback Plan
 - `git checkout -- .github/prompts/general/run-all-goals/`
-- `git checkout -- .hermes/plans/run-all-goals-implementation.md`
-- `git checkout -- .hermes/scripts/`
+- `git checkout -- ./plans/run-all-goals-implementation.md`
+- `git checkout -- ./scripts/`
 
 ## Verification Steps
 1. Run `python scripts/verify_run_all_goals.py` — all checks PASS

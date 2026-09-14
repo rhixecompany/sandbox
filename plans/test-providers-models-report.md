@@ -1,7 +1,7 @@
 # Test Providers and Models Report — G7 — Verified 2026-09-14
 
 Subagent: ops/adminbot (confirmed identity — routing ops→adminbot verified; profile directory MISSING preserved honestly).
-Plan: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B).
+Plan: `./plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B).
 Prompt: `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` (verified 2840 B).
 Script: `.github/prompts/operations/test-providers-models/scripts/test-providers-probe.py` (verified 3341 B).
 Method: `/systematic-debugging` 4-phase (understand/test/verify/document) applied per model.
@@ -113,8 +113,8 @@ Method: `/systematic-debugging` 4-phase (understand/test/verify/document) applie
 
 ## Verification Gates (Post-G7)
 
-- Artifact `.hermes/plans/test-providers-models-report.md`: exists (verified size below).
+- Artifact `./plans/test-providers-models-report.md`: exists (verified size below).
 - Real exit codes: all documented from `.github/prompts/operations/test-providers-models/test-providers-models-results.json`.
 - No hidden errors: timeout and exceptions explicitly reported.
-- `.env` unchanged; memory migration verified (`.hermes/plans/memory-migration-log.md`); identity preserved (`.hermes.md` 4495 B).
+- `.env` unchanged; memory migration verified (`./plans/memory-migration-log.md`); identity preserved (`.hermes.md` 4495 B).
 - 28 skills referenced in plan; 0 synthetic artifacts produced.

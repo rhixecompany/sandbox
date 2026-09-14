@@ -6,7 +6,7 @@
 set -euo pipefail
 PROMPTS_DIR="${1:-.github/prompts}"
 BACKUP_DIR="${2:-.github/prompts_backup}"
-OUT_DIR="${3:-.hermes/specs}"
+OUT_DIR="${3:-./specs}"
 mkdir -p "$OUT_DIR"
 
 AUDIT_MD="$OUT_DIR/prompt-library-de-dup-audit.md"
@@ -25,4 +25,4 @@ for f in $(find "$PROMPTS_DIR" -maxdepth 1 -type f 2>/dev/null | head -n 200); d
 echo "Prompts file count (approx): $count_prompts"
 echo "Audit artifacts target: $AUDIT_MD  $AUDIT_JSON"
 echo "Run the Python audit (execute_code) for full MD5 triage; this bash script serves as portable entry point and verification wrapper."
-echo "Audit complete. Check .hermes/specs/ for full results."
+echo "Audit complete. Check ./specs/ for full results."

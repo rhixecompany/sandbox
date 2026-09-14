@@ -13,7 +13,7 @@ tags:
   - plan-management
 phases:
   - name: Phase 1 - Specifications
-    description: Create all specification files in .hermes/specs/
+    description: Create all specification files in ./specs/
     tasks:
       - id: T-1.1
         name: Create master system spec
@@ -51,7 +51,7 @@ phases:
         status: completed
         dependencies: []
   - name: Phase 2 - Plans
-    description: Create all plan files in .hermes/plans/
+    description: Create all plan files in ./plans/
     tasks:
       - id: T-2.1
         name: Create master system plan
@@ -268,7 +268,7 @@ gates:
       - All 5 spec files created
       - All frontmatter valid
       - Requirements traceable to acceptance criteria
-    check: "ls .hermes/specs/*.md | wc -l"
+    check: "ls ./specs/*.md | wc -l"
     pass_condition: "Count = 5"
     fail_action: "Re-create missing specs"
   - name: Gate 2 - Plans Complete
@@ -277,7 +277,7 @@ gates:
       - All 5 plan files created
       - All phases, tasks, gates defined
       - Dependencies resolved
-    check: "ls .hermes/plans/*.md | wc -l"
+    check: "ls ./plans/*.md | wc -l"
     pass_condition: "Count = 5"
     fail_action: "Re-create missing plans"
   - name: Gate 3 - Prompt Library Complete
@@ -346,7 +346,7 @@ This plan implements the complete prompt, skill, spec, and plan management syste
 ## Phase Details
 
 ### Phase 1: Specifications (COMPLETED)
-All 5 specification files created in `.hermes/specs/`:
+All 5 specification files created in `./specs/`:
 1. `prompt-skill-spec-plan-management-system.md` - Master system spec
 2. `prompt-library-spec.md` - Prompt library structure
 3. `skill-enhancement-spec.md` - 18 skill enhancement requirements
@@ -356,7 +356,7 @@ All 5 specification files created in `.hermes/specs/`:
 **Gate 1 Status**: ✅ PASSED - All 5 specs created and validated
 
 ### Phase 2: Plans (IN PROGRESS)
-Creating 5 plan files in `.hermes/plans/`:
+Creating 5 plan files in `./plans/`:
 1. `prompt-skill-spec-plan-management-plan.md` - This file (master plan)
 2. `prompt-library-plan.md` - Prompt library implementation
 3. `skill-enhancement-plan.md` - Skill enhancement implementation

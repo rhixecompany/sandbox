@@ -86,7 +86,7 @@ Provide a deterministic, DRY, MCP-first system for:
 - **Read-only**. Pure stdlib (`pathlib`, `re`, `json`).
 - Walks: `C:/Users/Alexa/Desktop/SandBox` + `C:/Users/Alexa/AppData/Local/hermes`
 - Skips: `node_modules`, `.git`, `cache`, `spawn-trees`, `pending`, `pastes`, `hermes-agent/` source, `.venv*`, `desktop/dist`
-- Emits: `scripts/.runtime/instruction-audit.json` + `.hermes/plans/instruction-file-triage-2026-08-28/audit-report.json` (copy)
+- Emits: `scripts/.runtime/instruction-audit.json` + `./plans/instruction-file-triage-2026-08-28/audit-report.json` (copy)
 - Exit codes: 0 = success, 2 = scan error
 
 ### 5.2 `scripts/instruction_fix.py`

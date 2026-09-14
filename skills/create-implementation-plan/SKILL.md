@@ -6,8 +6,8 @@ author: Alexa (verified profile: adminbot + patient-tutor)
 license: MIT
 tags: [implementation, execution, spec, plan, prompt, workflow, multi-file-change-protocol]
 references:
-  plan: .hermes/plans/web-research-subgoal-2026-09-13.md (verified 3830 B)
-  spec: .hermes/specs/web-research-subgoal-2026-09-13.md (verified 3395 B)
+  plan: ./plans/web-research-subgoal-2026-09-13.md (verified 3830 B)
+  spec: ./specs/web-research-subgoal-2026-09-13.md (verified 3395 B)
   skill: skills/web-research-pipeline.md (verified 5126 B — ruff PASS / execution PASS)
   protocol: skills/multi-file-change-protocol.md (verified 4355 B)
   user-preferences: skills/user-communication-preferences.md (verified 15761 B)
@@ -27,7 +27,7 @@ metadata:
 
 ## When to Use
 
-Creating new implementation plans; updating existing .hermes/plans/*.md plans; verifying plan gates; mapping multi-file-change-protocol phases; allocating sequential vs parallel execution paths.
+Creating new implementation plans; updating existing ./plans/*.md plans; verifying plan gates; mapping multi-file-change-protocol phases; allocating sequential vs parallel execution paths.
 
 ## When NOT to Use
 
@@ -37,11 +37,11 @@ Regular task execution without multi-file-change-protocol trigger (≤6 files); 
 
 ### Phase 1: Load
 
-Load multi-file-change-protocol 14 skills (verified real). Read workspace .hermes/plans/ files. Gate: skills available; source files readable.
+Load multi-file-change-protocol 14 skills (verified real). Read workspace ./plans/ files. Gate: skills available; source files readable.
 
 ### Phase 2: Plan
 
-Write plan to .hermes/plans/<goal>-<ts>.md (verified real). Include milestones, gates, timeline, resource allocation, sequential/parallel decision. Gate: file exists with verified size/content; milestones verifiable.
+Write plan to ./plans/<goal>-<ts>.md (verified real). Include milestones, gates, timeline, resource allocation, sequential/parallel decision. Gate: file exists with verified size/content; milestones verifiable.
 
 ### Phase 3: Verify
 

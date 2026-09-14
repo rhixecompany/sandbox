@@ -42,7 +42,7 @@ By the end, you'll have:
 Ollama runs on CPU-only servers. A 9B model on a modern 8-core CPU gives ~10 tokens/sec. A 31B model on CPU is slower (~2–5 tokens/sec) — each response takes 30–120 seconds, but it works. A GPU dramatically improves this. For CPU-only setups, widen the API timeout via the env var (it's not a `config.yaml` key):
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 HERMES_API_TIMEOUT=1800   # 30 minutes — generous for slow local models
 ```
 :::
@@ -113,7 +113,7 @@ When prompted for a provider, select **Custom Endpoint** and enter:
 - **API Key:** Leave empty or type `no-key` (Ollama doesn't need one)
 - **Model:** `gemma4:31b` (or whichever model you pulled)
 
-Alternatively, edit `~/.hermes/config.yaml` directly:
+Alternatively, edit `~/./config.yaml` directly:
 
 ```yaml
 model:
@@ -213,7 +213,7 @@ Once Hermes works locally in the CLI, you can expose it as a Telegram or Discord
 ### Telegram
 
 1. Create a bot via [@BotFather](https://t.me/BotFather) and get the token
-2. Add to your `~/.hermes/config.yaml`:
+2. Add to your `~/./config.yaml`:
 
 ```yaml
 model:
@@ -291,7 +291,7 @@ Hermes sends a fixed payload on every API call — the system prompt plus the to
 What helps:
 
 - **Keep the model loaded** — Ollama unloads idle models after 5 minutes, adding a full reload before the next prefill. Set `OLLAMA_KEEP_ALIVE=24h` (see [Step 6](#keep-the-model-loaded)).
-- **Widen the API timeout** — set `HERMES_API_TIMEOUT=1800` in `~/.hermes/.env` (see [What You Need](#what-you-need)).
+- **Widen the API timeout** — set `HERMES_API_TIMEOUT=1800` in `~/./.env` (see [What You Need](#what-you-need)).
 - **Measure and trim the fixed prompt** — run `hermes prompt-size` for a byte breakdown of the system prompt and tool schemas, then disable unused toolsets with `hermes tools` and uninstall skills you don't need with `hermes skills`.
 - **Use GPU offloading** — even a partial offload gives a significant speedup (see [Step 6](#use-gpu-offloading-if-available)).
 

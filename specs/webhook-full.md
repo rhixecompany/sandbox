@@ -15,7 +15,7 @@ status: "in_progress"
 
 The webhook adapter is an HTTP server (default port `8644`, bind `0.0.0.0` or loopback) that accepts `POST` requests, validates HMAC signatures, transforms payloads into agent prompts, runs agent loops (or direct delivery), and routes responses back to the source or to a configured messaging platform.
 
-Two config sources coexist; static routes in `platforms.webhook.extra.routes` (in `config.yaml`) take precedence over dynamic subscriptions in `~/.hermes/webhook_subscriptions.json` when names collide. Dynamic subscriptions are hot-reloaded (mtime-gated) per incoming request.
+Two config sources coexist; static routes in `platforms.webhook.extra.routes` (in `config.yaml`) take precedence over dynamic subscriptions in `~/./webhook_subscriptions.json` when names collide. Dynamic subscriptions are hot-reloaded (mtime-gated) per incoming request.
 
 ## 2. Route Schema (full, per docs)
 
@@ -26,7 +26,7 @@ Every route (static or dynamic) is a JSON/YAML object with these properties:
 - `profile`: `str` — profile binding for multiplex profiles; binds secret to `/p/<profile>/webhooks/<route>`.
 - `prompt`: `str` — dot-notation template. Missing keys kept literal (no error). Nested objects/lists JSON-serialized and truncated at 2000 chars. `{__raw__}` dumps full payload (indented JSON, truncated at 4000 chars). If omitted, full payload dumped at 4000.
 - `filters`: `List[dict]` — declarative payload filters. Operators: `exists`, `missing`, `equals`, `not_equals`, `contains`, `in`, `in_file`, `regex`, `all`, `any`, `not`. Field paths use dot notation (`payload.foo`, `event`, `headers.Name`). Non-match → `{"status":"ignored","reason":"filter"}` with HTTP 200.
-- `script`: `str` — path under `~/.hermes/scripts/` (relative resolves there; traversal blocked). `.sh`/`.bash` → bash; others → current Python interpreter. Payload sent as JSON stdin. JSON stdout replaces payload; text stdout added as `script_output`; empty/stdout=`[SILENT]`/`{"__hermes_ignore__":true}` or nonzero exit → `ignored` (HTTP 200, `reason: script`).
+- `script`: `str` — path under `~/./scripts/` (relative resolves there; traversal blocked). `.sh`/`.bash` → bash; others → current Python interpreter. Payload sent as JSON stdin. JSON stdout replaces payload; text stdout added as `script_output`; empty/stdout=`[SILENT]`/`{"__hermes_ignore__":true}` or nonzero exit → `ignored` (HTTP 200, `reason: script`).
 - `skills`: `List[str]` — skill names loaded for agent run.
 - `toolsets`: `List[str]` — replaces platform-level webhook toolset for this route only. Unknown/restricted names dropped. Manual config-file edit only — `hermes webhook subscribe` does NOT accept `toolsets` (agent cannot self-grant terminal/file/code_execution at runtime).
 - `deliver`: `str` — `github_comment`, `telegram`, `discord`, `slack`, `signal`, `sms`, `whatsapp`, `matrix`, `mattermost`, `homeassistant`, `email`, `dingtalk`, `feishu`, `wecom`, `weixin`, `bluebubbles`, `qqbot`, `log` (default). Must be real target (not `log`) when `deliver_only: true`; adapter refuses to start otherwise.
@@ -97,7 +97,7 @@ Validation: unknown/restricted names dropped; route-level list replaces (not mer
 ## 8. Dynamic Subscriptions (subgoal SG1/SG6)
 
 - CLI: `hermes webhook subscribe <route> --events ... --prompt ... --deliver ... --deliver-extra ... --description ...`
-- Storage: `~/.hermes/webhook_subscriptions.json` (hot-reloaded per request, mtime-gated).
+- Storage: `~/./webhook_subscriptions.json` (hot-reloaded per request, mtime-gated).
 - `hermes webhook list`, `hermes webhook remove <route>`, `hermes webhook test <route>`, `hermes webhook test --payload '{...}'`.
 - Agent-driven: `webhook-subscriptions` skill guides agent; agent runs `hermes webhook subscribe` via terminal tool.
 - Dynamic subscriptions CANNOT set `toolsets` (manual file edit only).
@@ -123,8 +123,8 @@ Supported `deliver` targets (must be enabled/connected in gateway): `github_comm
 
 | Subgoal | Deliverable file(s) | Section reference |
 |---|---|---|
-| SG1 (spec) | `.hermes/specs/webhook-full.md` (this file) | Sections 1–11 |
-| SG2 (plan) | `.hermes/plans/webhook-execution-plan.md` | Milestones M1–M4 |
+| SG1 (spec) | `./specs/webhook-full.md` (this file) | Sections 1–11 |
+| SG2 (plan) | `./plans/webhook-execution-plan.md` | Milestones M1–M4 |
 | SG3 (prompt) | `.github/prompts/webhook/webhook-template.md`, `.github/prompts/webhook/direct-delivery-template.md` | Section 5 |
 | SG4 (scripts) | `scripts/webhook_filter_todoist.py` (filter/transform), `scripts/webhook_test_payload.py` (test) | Section 2 (`script`) |
 | SG5 (skills) | `skills/webhook-subscriptions.md` (SKILL.md), `skills/per-route-toolsets.md` (SKILL.md) | Sections 7–8 |

@@ -44,7 +44,7 @@ For most contributors, the best development bootstrap is the same path users
 take: run the standard installer, then work inside the repository it cloned.
 The installer creates the Hermes venv, wires the `hermes` command, stamps the
 install method for `hermes update`, and clones the full git project into
-`$HERMES_HOME/hermes-agent` (usually `~/.hermes/hermes-agent`). That keeps your
+`$HERMES_HOME/hermes-agent` (usually `~/./hermes-agent`). That keeps your
 development environment on the same layout the CLI, updater, lazy dependency
 installer, gateway, and docs assume.
 
@@ -93,8 +93,8 @@ git clone https://github.com/NousResearch/hermes-agent.git
 cd hermes-agent
 
 # Create venv with Python 3.11, OUTSIDE the source tree
-uv venv ~/.hermes/venvs/hermes-dev --python 3.11
-export VIRTUAL_ENV="$HOME/.hermes/venvs/hermes-dev"
+uv venv ~/./venvs/hermes-dev --python 3.11
+export VIRTUAL_ENV="$HOME/./venvs/hermes-dev"
 export PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Install with all extras (messaging, cron, CLI menus, dev tools)
@@ -107,12 +107,12 @@ npm install
 ### Configure for Development
 
 ```bash
-mkdir -p ~/.hermes/{cron,sessions,logs,memories,skills}
-cp cli-config.yaml.example ~/.hermes/config.yaml
-touch ~/.hermes/.env
+mkdir -p ~/./{cron,sessions,logs,memories,skills}
+cp cli-config.yaml.example ~/./config.yaml
+touch ~/./.env
 
 # Add at minimum an LLM provider key:
-echo 'OPENROUTER_API_KEY=sk-or-v1-your-key' >> ~/.hermes/.env
+echo 'OPENROUTER_API_KEY=sk-or-v1-your-key' >> ~/./.env
 ```
 
 ### Run

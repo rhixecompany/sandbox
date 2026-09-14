@@ -5,7 +5,7 @@
 ### FR-1: Discovery Engine
 - Enumerate all assets across 6 target categories (desktop, desktop-plugins, plugins, hooks, scripts, agents)
 - For each asset, identify audit status (file exists, syntax, registration, score)
-- Produce structured inventory at `~/.hermes/cache/sweep/<timestamp>/inventory.json`
+- Produce structured inventory at `~/./cache/sweep/<timestamp>/inventory.json`
 
 ### FR-2: Audit Pipeline
 - Run `hermes doctor` → report status
@@ -30,7 +30,7 @@
 ### FR-4: Verification Engine
 - Re-run all judges after remediation
 - Verify thresholds: hooks ≥95, plugins ≥95, scripts ≥70 (relaxed; baseline), agents ≥95
-- Produce final score report at `~/.hermes/cache/sweep/<timestamp>/final.md`
+- Produce final score report at `~/./cache/sweep/<timestamp>/final.md`
 - Update SESSION_REPORT.md with deltas
 
 ### FR-5: Reusable Skill Artifact
@@ -56,7 +56,7 @@
 - config.yaml edits use `hermes config set` not direct YAML
 
 ### NFR-4: Observability
-- Each phase produces log file at `~/.hermes/cache/sweep/<timestamp>/phase-N.log`
+- Each phase produces log file at `~/./cache/sweep/<timestamp>/phase-N.log`
 - Final report includes: counts, scores, deltas, timestamps, exit codes
 
 ### NFR-5: Rollback
@@ -74,7 +74,7 @@
 | AC-4 | Plugins maintain ≥95 | plugins-judge reports 12/12 ≥95 |
 | AC-5 | Desktop-plugins have only runtime-valid plugins | All dirs contain plugin.js or are quarantined |
 | AC-6 | All agents ≥95 | agents-audit reports 7/7 ≥95 |
-| AC-7 | Skill artifact exists | `~/.hermes/skills/devops/hermes-health-sweep/SKILL.md` readable |
+| AC-7 | Skill artifact exists | `~/./skills/devops/hermes-health-sweep/SKILL.md` readable |
 | AC-8 | SESSION_REPORT.md updated | File at SandBox root with session record |
 
 ## Out of Scope

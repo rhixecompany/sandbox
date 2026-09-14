@@ -53,8 +53,8 @@ Turn the verified five-day session corpus and workspace inventory into a linked,
 
 **Tasks**
 
-- T2.1: Enumerate `.hermes/specs/` files and sizes.
-- T2.2: Enumerate `.hermes/plans/` files/dirs and sizes.
+- T2.1: Enumerate `./specs/` files and sizes.
+- T2.2: Enumerate `./plans/` files/dirs and sizes.
 - T2.3: Enumerate `/run-all-goals` prompt package files.
 - T2.4: Resolve references and classify missing/stale/generated artifacts.
 

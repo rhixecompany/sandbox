@@ -1,7 +1,7 @@
 {
     "plans": [
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-06-30-execution-plan-for-prompt-and-plan-normalization.md",
@@ -15,7 +15,7 @@
             "size_bytes": 700
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-23-comprehensive-github-prompts-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-07-23-comprehensive-github-prompts-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-07-23-comprehensive-github-prompts-plan.md",
@@ -29,7 +29,7 @@
             "size_bytes": 655
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-07-23-migrate-hermes-prompts-to-github-prompts.md",
@@ -43,7 +43,7 @@
             "size_bytes": 676
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-25-yaml-workflows-audit-fix-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-07-25-yaml-workflows-audit-fix-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-07-25-yaml-workflows-audit-fix-plan.md",
@@ -57,7 +57,7 @@
             "size_bytes": 643
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-07-31-workspace-cleanup.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-07-31-workspace-cleanup.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-07-31-workspace-cleanup.md",
@@ -71,7 +71,7 @@
             "size_bytes": 607
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_async-script-tooling-master.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-01_async-script-tooling-master.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-01_async-script-tooling-master.md",
@@ -85,7 +85,7 @@
             "size_bytes": 871
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_consolidated-goal-tooling-cleanup.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-01_consolidated-goal-tooling-cleanup.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-01_consolidated-goal-tooling-cleanup.md",
@@ -99,7 +99,7 @@
             "size_bytes": 965
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_repo-tooling.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-01_repo-tooling.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-01_repo-tooling.md",
@@ -113,7 +113,7 @@
             "size_bytes": 776
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-01_tooling-implementation.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-01_tooling-implementation.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-01_tooling-implementation.md",
@@ -127,7 +127,7 @@
             "size_bytes": 868
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_213801-prompt-library-maintenance.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-11_213801-prompt-library-maintenance.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-11_213801-prompt-library-maintenance.md",
@@ -141,7 +141,7 @@
             "size_bytes": 657
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_214500-repo-init-all-agents.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-11_214500-repo-init-all-agents.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-11_214500-repo-init-all-agents.md",
@@ -155,7 +155,7 @@
             "size_bytes": 795
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-11_hermes-platform-diagnostics-debug.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-11_hermes-platform-diagnostics-debug.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-11_hermes-platform-diagnostics-debug.md",
@@ -169,7 +169,7 @@
             "size_bytes": 643
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-12_010844-repo-prompts-debug-fix-enhance.md",
@@ -183,7 +183,7 @@
             "size_bytes": 773
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_012441-prompts-library-debug-fix-enhance.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-12_012441-prompts-library-debug-fix-enhance.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-12_012441-prompts-library-debug-fix-enhance.md",
@@ -197,7 +197,7 @@
             "size_bytes": 920
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-12_043000-terminal-agent-ecosystem-sync.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-12_043000-terminal-agent-ecosystem-sync.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-12_043000-terminal-agent-ecosystem-sync.md",
@@ -211,7 +211,7 @@
             "size_bytes": 666
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-15_202608_four-agent-prompt-audit-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-plan.md",
@@ -225,7 +225,7 @@
             "size_bytes": 663
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_four-agent-prompt-audit-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-15_202608_four-agent-prompt-audit-spec.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-15_202608_four-agent-prompt-audit-spec.md",
@@ -239,7 +239,7 @@
             "size_bytes": 663
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-15_202608_openrouter-sdk-integration-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-plan.md",
@@ -253,7 +253,7 @@
             "size_bytes": 691
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-15_202608_openrouter-sdk-integration-spec.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration-spec.md",
@@ -267,7 +267,7 @@
             "size_bytes": 712
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_202608_openrouter-sdk-integration.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-15_202608_openrouter-sdk-integration.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-15_202608_openrouter-sdk-integration.md",
@@ -281,7 +281,7 @@
             "size_bytes": 674
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-15_hermes-profile-skills-enhancement-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-plan.md",
@@ -295,7 +295,7 @@
             "size_bytes": 722
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-15_hermes-profile-skills-enhancement-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-15_hermes-profile-skills-enhancement-spec.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-15_hermes-profile-skills-enhancement-spec.md",
@@ -309,7 +309,7 @@
             "size_bytes": 772
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-16_142300_cross-platform-agent-sync-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-16_142300_cross-platform-agent-sync-spec.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-16_142300_cross-platform-agent-sync-spec.md",
@@ -323,7 +323,7 @@
             "size_bytes": 669
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-16_142300_mcp-sync-all-agents-implementation.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-16_142300_mcp-sync-all-agents-implementation.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-16_142300_mcp-sync-all-agents-implementation.md",
@@ -337,7 +337,7 @@
             "size_bytes": 681
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-19_224500-subagent-driven-dev-prompt-lib-maintenance.md",
@@ -351,7 +351,7 @@
             "size_bytes": 705
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-19_224600-subagent-driven-dev-prompt-lib-maintenance-spec.md",
@@ -365,7 +365,7 @@
             "size_bytes": 720
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-19_235900-subagent-driven-development-full-implementation.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-19_235900-subagent-driven-development-full-implementation.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-19_235900-subagent-driven-development-full-implementation.md",
@@ -379,7 +379,7 @@
             "size_bytes": 720
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-24_072315-comprehensive-hermes-debugging-fix.md",
@@ -393,7 +393,7 @@
             "size_bytes": 681
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-24_235959-update-hermes-profiles-and-agent-configs.md",
@@ -407,7 +407,7 @@
             "size_bytes": 699
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-context-and-model-sync.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-24_comprehensive-context-and-model-sync.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-24_comprehensive-context-and-model-sync.md",
@@ -421,7 +421,7 @@
             "size_bytes": 666
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-platform-remediation-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-24_comprehensive-platform-remediation-spec.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-24_comprehensive-platform-remediation-spec.md",
@@ -435,7 +435,7 @@
             "size_bytes": 675
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_comprehensive-platform-remediation.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-24_comprehensive-platform-remediation.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-24_comprehensive-platform-remediation.md",
@@ -449,7 +449,7 @@
             "size_bytes": 660
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_hermes-full-diagnostic-repair.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-24_hermes-full-diagnostic-repair.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-24_hermes-full-diagnostic-repair.md",
@@ -463,7 +463,7 @@
             "size_bytes": 645
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-24_update-enhance-verify-context-files.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-24_update-enhance-verify-context-files.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-24_update-enhance-verify-context-files.md",
@@ -477,7 +477,7 @@
             "size_bytes": 663
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-25_015239-dependency-toolchain-update.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-25_015239-dependency-toolchain-update.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-25_015239-dependency-toolchain-update.md",
@@ -491,7 +491,7 @@
             "size_bytes": 726
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-28_phase-b-prompt-enhancement.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-28_phase-b-prompt-enhancement.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-28_phase-b-prompt-enhancement.md",
@@ -505,7 +505,7 @@
             "size_bytes": 680
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-28_prompt-corpus-enhance.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-28_prompt-corpus-enhance.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-28_prompt-corpus-enhance.md",
@@ -519,7 +519,7 @@
             "size_bytes": 690
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-29-master-consolidated-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-29-master-consolidated-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-29-master-consolidated-plan.md",
@@ -533,7 +533,7 @@
             "size_bytes": 762
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-29_full-audit-remediation.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-29_full-audit-remediation.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-29_full-audit-remediation.md",
@@ -547,7 +547,7 @@
             "size_bytes": 790
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_152242-comprehensive-reimplementation-master.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-31_152242-comprehensive-reimplementation-master.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-31_152242-comprehensive-reimplementation-master.md",
@@ -561,7 +561,7 @@
             "size_bytes": 950
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_180000-comprehensive-reimplementation-master.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-31_180000-comprehensive-reimplementation-master.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-31_180000-comprehensive-reimplementation-master.md",
@@ -575,7 +575,7 @@
             "size_bytes": 989
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_goal1-identity-triage.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-31_goal1-identity-triage.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-31_goal1-identity-triage.md",
@@ -589,7 +589,7 @@
             "size_bytes": 621
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_goal2-plugins-hooks.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-31_goal2-plugins-hooks.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-31_goal2-plugins-hooks.md",
@@ -603,7 +603,7 @@
             "size_bytes": 615
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-08-31_six-judge-skills.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-08-31_six-judge-skills.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: 2026-08-31_six-judge-skills.md",
@@ -617,7 +617,7 @@
             "size_bytes": 750
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\2026-09-04-dedupe-triage-report.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\2026-09-04-dedupe-triage-report.md",
             "valid": false,
             "issues": [
                 "Missing YAML frontmatter: 2026-09-04-dedupe-triage-report.md",
@@ -629,7 +629,7 @@
             "size_bytes": 18831
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\agent-provider-matrix.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\agent-provider-matrix.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: agent-provider-matrix.md",
@@ -643,7 +643,7 @@
             "size_bytes": 588
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\audit-report.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\audit-report.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: audit-report.md",
@@ -657,13 +657,13 @@
             "size_bytes": 561
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\comprehensive-implementation-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\comprehensive-implementation-plan.md",
             "valid": true,
             "issues": [],
             "size_bytes": 10321
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\deepseek-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\deepseek-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: deepseek-workflow.md",
@@ -677,7 +677,7 @@
             "size_bytes": 576
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\disk-cleanup-skill-implementation.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\disk-cleanup-skill-implementation.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: disk-cleanup-skill-implementation.md",
@@ -691,7 +691,7 @@
             "size_bytes": 624
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\disk-cleanup-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\disk-cleanup-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: disk-cleanup-workflow.md",
@@ -705,7 +705,7 @@
             "size_bytes": 588
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\example-subagent-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\example-subagent-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: example-subagent-plan.md",
@@ -719,7 +719,7 @@
             "size_bytes": 588
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\execution-summary.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\execution-summary.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: execution-summary.md",
@@ -733,7 +733,7 @@
             "size_bytes": 576
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\gemini-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\gemini-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: gemini-workflow.md",
@@ -747,7 +747,7 @@
             "size_bytes": 570
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\hermes-root-scripts-quick-commands-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\hermes-root-scripts-quick-commands-plan.md",
             "valid": false,
             "issues": [
                 "Missing section '## Milestones': hermes-root-scripts-quick-commands-plan.md"
@@ -755,7 +755,7 @@
             "size_bytes": 5711
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\honcho-hermes-integration-implementation.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\honcho-hermes-integration-implementation.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: honcho-hermes-integration-implementation.md",
@@ -769,7 +769,7 @@
             "size_bytes": 787
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\honcho-hermes-integration-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\honcho-hermes-integration-spec.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: honcho-hermes-integration-spec.md",
@@ -783,7 +783,7 @@
             "size_bytes": 716
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\huggingface-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\huggingface-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: huggingface-workflow.md",
@@ -797,7 +797,7 @@
             "size_bytes": 585
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\judge-qa-rerun.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\judge-qa-rerun.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: judge-qa-rerun.md",
@@ -811,7 +811,7 @@
             "size_bytes": 967
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\next-steps-implementation-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\next-steps-implementation-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: next-steps-implementation-plan.md",
@@ -825,7 +825,7 @@
             "size_bytes": 615
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\next-steps-specs.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\next-steps-specs.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: next-steps-specs.md",
@@ -839,7 +839,7 @@
             "size_bytes": 573
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\nous-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\nous-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: nous-workflow.md",
@@ -853,7 +853,7 @@
             "size_bytes": 564
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\ollama-cloud-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\ollama-cloud-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: ollama-cloud-workflow.md",
@@ -867,7 +867,7 @@
             "size_bytes": 588
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\opencode-zen-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\opencode-zen-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: opencode-zen-workflow.md",
@@ -881,7 +881,7 @@
             "size_bytes": 588
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\openrouter-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\openrouter-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: openrouter-workflow.md",
@@ -895,7 +895,7 @@
             "size_bytes": 582
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\phase-10-ollama-docker-blocked.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\phase-10-ollama-docker-blocked.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: phase-10-ollama-docker-blocked.md",
@@ -909,7 +909,7 @@
             "size_bytes": 615
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\provider-workflow-master-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\provider-workflow-master-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: provider-workflow-master-plan.md",
@@ -923,7 +923,7 @@
             "size_bytes": 612
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\provider-workflow-strategy.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\provider-workflow-strategy.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: provider-workflow-strategy.md",
@@ -937,7 +937,7 @@
             "size_bytes": 603
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\release-notes-profile-sync-2026-08-24.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\release-notes-profile-sync-2026-08-24.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: release-notes-profile-sync-2026-08-24.md",
@@ -951,7 +951,7 @@
             "size_bytes": 636
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\skill-implementation-master-plan.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\skill-implementation-master-plan.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: skill-implementation-master-plan.md",
@@ -965,7 +965,7 @@
             "size_bytes": 621
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\xai-workflow.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\xai-workflow.md",
             "valid": false,
             "issues": [
                 "Missing 'name' in frontmatter: xai-workflow.md",
@@ -981,13 +981,13 @@
     ],
     "specs": [
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\comprehensive-implementation-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\comprehensive-implementation-spec.md",
             "valid": true,
             "issues": [],
             "size_bytes": 7892
         },
         {
-            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\specs\\hermes-root-scripts-quick-commands-spec.md",
+            "file": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\specs\\hermes-root-scripts-quick-commands-spec.md",
             "valid": false,
             "issues": [
                 "No acceptance criteria: hermes-root-scripts-quick-commands-spec.md"

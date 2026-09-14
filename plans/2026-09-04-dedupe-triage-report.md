@@ -51,27 +51,27 @@ All four are intentionally distinct, layered per `.hermes.md` hierarchy (`SOUL.m
 
 Note on the task wording "SOUL.md vs SOUL.md" — there is only one `SOUL.md` in the repo (one match from `search_files`). No self-duplicate.
 
-### 2b. Plan Triad: IMPLEMENTATION_PLAN.md vs PLAN.md vs SPEC.md vs .hermes/plans/comprehensive-implementation-plan.md
+### 2b. Plan Triad: IMPLEMENTATION_PLAN.md vs PLAN.md vs SPEC.md vs ./plans/comprehensive-implementation-plan.md
 
 | Path | Size (B) | SHA-256 (first 12) | Lines | Modified | Role | Recommendation |
 |---|---|---|---|---|---|---|
 | `IMPLEMENTATION_PLAN.md` | 19,940 | `cac579494b25` | 337 | 2026-09-04 19:30:26 | canonical (workspace-level "Configuration File Consolidation & Optimization" plan) | **keep** (canonical per task context) |
 | `PLAN.md` | 5,035 | `d0d27ff7a12d` | 147 | 2026-09-04 19:30:29 | legacy (YAML-frontmatter MCP-skills install plan: "SandBox-root — Plan: MCP Server Install & Skills Creation") | **consolidate** — superseded by IMPLEMENTATION_PLAN.md; consider merging or symlinking once verification confirms parity |
 | `SPEC.md` | 4,928 | `96f0944ceb3e` | 102 | 2026-09-04 19:30:35 | companion spec to PLAN.md (per task context: "PLAN.md and SPEC.md are MCP-skills plan/spec") | **keep** as SPEC companion, or merge with PLAN.md |
-| `.hermes/plans/comprehensive-implementation-plan.md` | 10,321 | `36c230ce3e84` | 252 | 2026-09-04 19:26:57 | master plan (YAML frontmatter, "Multi-Phase Delivery Framework", 6-phase) | **keep** (master per task context) |
+| `./plans/comprehensive-implementation-plan.md` | 10,321 | `36c230ce3e84` | 252 | 2026-09-04 19:26:57 | master plan (YAML frontmatter, "Multi-Phase Delivery Framework", 6-phase) | **keep** (master per task context) |
 
 Content sanity check (different headers):
 - `IMPLEMENTATION_PLAN.md` → `# Comprehensive Implementation Plan: Configuration File Consolidation & Optimization`
 - `PLAN.md` → frontmatter `name: SandBox-root / title: "SandBox-root — Plan: MCP Server Install & Skills Creation"`
 - `SPEC.md` → companion spec (see `.hermes.md` reference)
-- `.hermes/plans/comprehensive-implementation-plan.md` → frontmatter `name: comprehensive-implementation-plan / title: "Comprehensive Implementation Plan — Multi-Phase Delivery Framework"`
+- `./plans/comprehensive-implementation-plan.md` → frontmatter `name: comprehensive-implementation-plan / title: "Comprehensive Implementation Plan — Multi-Phase Delivery Framework"`
 
 All four have distinct SHA-256 hashes — none are byte-duplicates. **Overlapping scopes, not duplicates**:
 - `IMPLEMENTATION_PLAN.md` (root) is the active workspace consolidation plan.
 - `PLAN.md` is the older MCP-skills install plan; its content is largely subsumed by the newer comprehensive plans.
-- `.hermes/plans/comprehensive-implementation-plan.md` is the master 6-phase delivery framework.
+- `./plans/comprehensive-implementation-plan.md` is the master 6-phase delivery framework.
 
-Recommendation: **keep** `IMPLEMENTATION_PLAN.md` + `.hermes/plans/comprehensive-implementation-plan.md` as the two-canonical pair; **consolidate** `PLAN.md` into one of them and convert to either a symlink or delete after a content-diff review (do not delete in this pass).
+Recommendation: **keep** `IMPLEMENTATION_PLAN.md` + `./plans/comprehensive-implementation-plan.md` as the two-canonical pair; **consolidate** `PLAN.md` into one of them and convert to either a symlink or delete after a content-diff review (do not delete in this pass).
 
 ### 2c. SESSION_REPORT.md / README.md / CONSOLIDATION_SUMMARY.md / exemplars.md
 
@@ -149,7 +149,7 @@ No `*.tmp` files in the root or anywhere outside the Hermes tmp pattern.
 | `IMPLEMENTATION_PLAN.md` | `cac579494b25bb3bd0d175a87fda96c8ccd0dd5cb9292985fcb0bcbd15eb23bb` | 19,940 | 2026-09-04 19:30:26 | canonical (consolidation plan) | keep |
 | `PLAN.md` | `d0d27ff7a12d61bc768cafb3eb78b18e2596585b4435b4327e841dddce2ccb8d` | 5,035 | 2026-09-04 19:30:29 | legacy (MCP-skills install plan, largely superseded) | consolidate |
 | `SPEC.md` | `96f0944ceb3e5ec9357bff401e4766514dbc60626e2f507443ccd3c8c2273e23` | 4,928 | 2026-09-04 19:30:35 | unique (companion spec to PLAN.md) | keep (paired with PLAN.md) |
-| `.hermes/plans/comprehensive-implementation-plan.md` | `36c230ce3e84e26922665debfd66bed1702ade5101ba8006fc41ca70202e6e0c` | 10,321 | 2026-09-04 19:26:57 | canonical (master 6-phase delivery framework) | keep |
+| `./plans/comprehensive-implementation-plan.md` | `36c230ce3e84e26922665debfd66bed1702ade5101ba8006fc41ca70202e6e0c` | 10,321 | 2026-09-04 19:26:57 | canonical (master 6-phase delivery framework) | keep |
 | `SESSION_REPORT.md` | `5039babbeabe21d6fce202ed6055f971e4e5927fcc02dbd0ca92ed6a7e0a5469` | 13,800 | 2026-09-04 19:30:34 | canonical | keep |
 | `README.md` | `a9dc385aa1bf569d2f9d33156bc0be336b53b3f40c6919addcb9a8666f0f944f` | 25,122 | 2026-09-04 19:30:32 | canonical | keep |
 | `CONSOLIDATION_SUMMARY.md` | `41c49fbf24f777d574ed2b55807251e746df0fd9fce3af308a0b121c49526488` | 8,292 | 2026-09-04 19:30:25 | legacy (Aug-24 retrospective) | keep (historical artifact) |
@@ -193,7 +193,7 @@ No `*.tmp` files in the root or anywhere outside the Hermes tmp pattern.
 1. **One true duplicate confirmed (Category A):** `.codex/mcp.json` ⇄ `.copilot/mcp.json` are JSON-equivalent (same 30 servers, same fields). The only difference is whitespace/indent. `.copilot/mcp.json` is older (Aug 29) and stale.
 2. **One legacy/duplicate-of-run pair (Category D):** `skill_judge_results_95.json` and `skill_judge_report_95.txt` come from the same underlying 752-skill judge run; the `.txt` is older (Aug 20) and redundant.
 3. **Two stale 0-byte scratch files (Category E):** both `.hermes-tmp.*` files share the canonical empty-file hash and are safe to delete.
-4. **No false duplicates in the plan triad (Category B):** `IMPLEMENTATION_PLAN.md`, `PLAN.md`, `SPEC.md`, `.hermes/plans/comprehensive-implementation-plan.md` are all distinct content with distinct SHAs — overlapping scopes, not duplicates.
+4. **No false duplicates in the plan triad (Category B):** `IMPLEMENTATION_PLAN.md`, `PLAN.md`, `SPEC.md`, `./plans/comprehensive-implementation-plan.md` are all distinct content with distinct SHAs — overlapping scopes, not duplicates.
 5. **No self-duplicates:** `SOUL.md` vs `SOUL.md` resolves to a single file in the tree.
 6. **All 12 `uk-earnings-kit/references/*.md` are unique** (different content, no overlap detected at the file-name pair level — one possible superset relationship between `ai_training_platforms.md` and `uk-ai-training-platforms-2026.md` flagged for manual review).
 
@@ -210,7 +210,7 @@ No `*.tmp` files in the root or anywhere outside the Hermes tmp pattern.
 
 ## Report-Only Confirmation
 
-No files were deleted. No commits were made. The only file written during this audit is this report itself: `.hermes/plans/2026-09-04-dedupe-triage-report.md`.
+No files were deleted. No commits were made. The only file written during this audit is this report itself: `./plans/2026-09-04-dedupe-triage-report.md`.
 
 ## Risks
 
@@ -223,9 +223,9 @@ No files were deleted. No commits were made. The only file written during this a
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs
@@ -234,4 +234,4 @@ No files were deleted. No commits were made. The only file written during this a
 
 ## Verification
 
-**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.

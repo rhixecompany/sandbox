@@ -56,7 +56,7 @@ You can also set or auto-generate the description later with `hermes profile des
 hermes profile create work --clone
 ```
 
-Copies your current profile's `config.yaml`, `.env`, `SOUL.md`, skills, and the curated memory files `memories/MEMORY.md` and `memories/USER.md` into the new profile — memory is treated as part of the agent's identity, like `SOUL.md`. Sessions, `state.db`, cron jobs and everything else start empty. For a blank memory as well, create the profile without `--clone` or delete the two files afterwards; the agent never falls back to another profile's memory when they are absent. Edit `~/.hermes/profiles/work/.env` for different API keys, or `~/.hermes/profiles/work/SOUL.md` for a different personality.
+Copies your current profile's `config.yaml`, `.env`, `SOUL.md`, skills, and the curated memory files `memories/MEMORY.md` and `memories/USER.md` into the new profile — memory is treated as part of the agent's identity, like `SOUL.md`. Sessions, `state.db`, cron jobs and everything else start empty. For a blank memory as well, create the profile without `--clone` or delete the two files afterwards; the agent never falls back to another profile's memory when they are absent. Edit `~/./profiles/work/.env` for different API keys, or `~/./profiles/work/SOUL.md` for a different personality.
 
 ### Clone everything (`--clone-all`)
 
@@ -67,7 +67,7 @@ hermes profile create backup --clone-all
 Copies **everything** — config, API keys, personality, all memories, skills, plugins. A complete working snapshot. Per-profile history is excluded (session history, `state.db`, `backups/`, `state-snapshots/`, `checkpoints/`) — these belong to the source profile and can reach tens of GB. **Cron jobs are not cloned** either: they are scheduled work bound to the source profile and its delivery channel, and a clone that inherited them would run every job twice (two gateways, same job ids). The new profile starts with an empty `cron/`. For a full backup including history and cron jobs, use `hermes profile export` or `hermes backup` instead.
 
 :::note OAuth logins are shared, not copied
-Anthropic (Claude Pro/Max), OpenAI Codex, and xAI OAuth logins use **single-use refresh tokens** — a copy of one is not a second credential, it is the same credential with two owners, and the first profile to refresh it revokes it for every other copy. `--clone-all` (and the dashboard's credential mirroring) therefore drops those OAuth rows from the clone. The new profile keeps reading the login from the root `~/.hermes/auth.json`, and a token refresh performed inside any profile is written back to root, so all profiles stay signed in. Static API keys are copied as usual. To give a profile its own separate OAuth login, run `hermes -p <name> auth add <provider>` inside it.
+Anthropic (Claude Pro/Max), OpenAI Codex, and xAI OAuth logins use **single-use refresh tokens** — a copy of one is not a second credential, it is the same credential with two owners, and the first profile to refresh it revokes it for every other copy. `--clone-all` (and the dashboard's credential mirroring) therefore drops those OAuth rows from the clone. The new profile keeps reading the login from the root `~/./auth.json`, and a token refresh performed inside any profile is written back to root, so all profiles stay signed in. Static API keys are copied as usual. To give a profile its own separate OAuth login, run `hermes -p <name> auth add <provider>` inside it.
 :::
 
 ### Clone from a specific profile
@@ -201,10 +201,10 @@ Each profile has its own `.env` file. Configure a different Telegram/Discord/Sla
 
 ```bash
 # Edit coder's tokens
-nano ~/.hermes/profiles/coder/.env
+nano ~/./profiles/coder/.env
 
 # Edit assistant's tokens
-nano ~/.hermes/profiles/assistant/.env
+nano ~/./profiles/assistant/.env
 ```
 
 ### Safety: token locks
@@ -234,7 +234,7 @@ Each profile has its own:
 
 ```bash
 coder config set model.default anthropic/claude-sonnet-4
-echo "You are a focused coding assistant." > ~/.hermes/profiles/coder/SOUL.md
+echo "You are a focused coding assistant." > ~/./profiles/coder/SOUL.md
 ```
 
 If you want this profile to work in a specific project by default, also set its own `terminal.cwd`:
@@ -295,7 +295,7 @@ The display name appears in `hermes profile list`/`show`, the `/profile`
 chat command, the dashboard, and the desktop app (including the Bot Mode
 roster). It is presentation-only: `-p default`, service names, cron jobs,
 and every other reference keep using the canonical `default` ID. It is
-stored as `display_name` in `~/.hermes/profile.yaml`; remove that line to
+stored as `display_name` in `~/./profile.yaml`; remove that line to
 revert. Named profiles can carry a `display_name` too (it survives a real
 rename), but `rename` for them still renames the profile itself.
 
@@ -327,7 +327,7 @@ Add the line to your `~/.bashrc` or `~/.zshrc` for persistent completion. Comple
 
 ## How it works
 
-Profiles use the `HERMES_HOME` environment variable. When you run `coder chat`, the wrapper script sets `HERMES_HOME=~/.hermes/profiles/coder` before launching hermes. Since 119+ files in the codebase resolve paths via `get_hermes_home()`, Hermes state automatically scopes to the profile's directory — config, sessions, memory, skills, state database, gateway PID, logs, and cron jobs.
+Profiles use the `HERMES_HOME` environment variable. When you run `coder chat`, the wrapper script sets `HERMES_HOME=~/./profiles/coder` before launching hermes. Since 119+ files in the codebase resolve paths via `get_hermes_home()`, Hermes state automatically scopes to the profile's directory — config, sessions, memory, skills, state database, gateway PID, logs, and cron jobs.
 
 This is separate from terminal working directory. Tool execution starts from `terminal.cwd` (or the launch directory when `cwd: "."` on the local backend), not automatically from `HERMES_HOME`.
 

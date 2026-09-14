@@ -35,27 +35,27 @@ owner: HermesAgent
 
 ## Deliverables
 
-1. **Folder/subfolder creation:** `.hermes/plans/`, `.hermes/specs/`, `docs/user-guide/` + all subdirectories matching source tree (verified by script).
+1. **Folder/subfolder creation:** `./plans/`, `./specs/`, `docs/user-guide/` + all subdirectories matching source tree (verified by script).
 2. **File downloads:** 344 `.md` files saved to corresponding `docs/user-guide/` paths.
 3. **Verification (per file):**
    - File exists on disk (`os.path.isfile`).
    - Non-empty (len > 0).
    - Contains `markdown` indicators (has `# ` heading OR `---` frontmatter OR `[` links).
-   - Log any `warnings` (missing headings, empty files) or `errors` (download failed / parse error) per file into `.hermes/specs/download-log.md`.
+   - Log any `warnings` (missing headings, empty files) or `errors` (download failed / parse error) per file into `./specs/download-log.md`.
 4. **Markdown issue scan:** Search for malformed YAML frontmatter (unclosed `---`), broken links (`[]()` missing URL), duplicate headings (`# ` same text), code fences missing closing ```. Record per file.
 5. **Code-block extraction + execution:** For every file:
    - Find all fenced code blocks (language tag + content).
-   - If language is `python`, `bash`, `shell`, `sh`, `python3`, create a temporary execution script in `.hermes/plans/exec/` named `<relative_path_slug>.py` or `.sh`.
-   - Execute with `python3` (or `bash`) and capture stdout/stderr. Log results (PASS / FAIL / SKIPPED) to `.hermes/specs/code-block-results.md`.
+   - If language is `python`, `bash`, `shell`, `sh`, `python3`, create a temporary execution script in `./plans/exec/` named `<relative_path_slug>.py` or `.sh`.
+   - Execute with `python3` (or `bash`) and capture stdout/stderr. Log results (PASS / FAIL / SKIPPED) to `./specs/code-block-results.md`.
    - **Safety:** Any destructive commands (`rm -rf`, `git reset --hard`, `chmod -R`, `pip uninstall`) are SKIPPED (not executed) but logged with reason.
 6. **Output artifacts (verified files):**
-   - `.hermes/plans/download-hermes-user-guide-docs-2026-09-13.md` (plan)
-   - `.hermes/specs/download-hermes-user-guide-docs.md` (this file)
+   - `./plans/download-hermes-user-guide-docs-2026-09-13.md` (plan)
+   - `./specs/download-hermes-user-guide-docs.md` (this file)
    - `docs/user-guide/` ... (344 files + subfolders)
-   - `.hermes/specs/download-log.md`
-   - `.hermes/specs/code-block-results.md`
-   - `.hermes/specs/markdown-issues.md`
-   - `.hermes/plans/exec/` (executed scripts + logs)
+   - `./specs/download-log.md`
+   - `./specs/code-block-results.md`
+   - `./specs/markdown-issues.md`
+   - `./plans/exec/` (executed scripts + logs)
 
 ## Acceptance Criteria / Verification Gates
 

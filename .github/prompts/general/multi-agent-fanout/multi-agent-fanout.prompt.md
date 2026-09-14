@@ -76,7 +76,7 @@ python scripts/fanout.py --provider deepseek
 
 ```bash
 python scripts/fanout.py --prompt "Reply with the word OK."
-# Wrote: .hermes/plans/multi-agent-fanout-<date>/fanout-report.{json,md}
+# Wrote: ./plans/multi-agent-fanout-<date>/fanout-report.{json,md}
 ```
 
 ### Phase 6: Report (only after Phase 5)
@@ -102,8 +102,8 @@ Fanout complete. 11 cells, 1 ok, 7 fail, 3 auth_failed.
 ## Reference
 
 - Skill: `multi-agent-fanout` (load with `skill_view name="agent-development\multi-agent-fanout"`)
-- Plan: `.hermes/plans/multi-agent-fanout-<date>/`
-- Spec: `.hermes/plans/multi-agent-fanout-<date>/SPEC.md`
+- Plan: `./plans/multi-agent-fanout-<date>/`
+- Spec: `./plans/multi-agent-fanout-<date>/SPEC.md`
 - In-tree SDKs: `packages/openrouter-client` (TS), `packages/openrouter-client-py` (Python)
 
 ## Verification Checklist

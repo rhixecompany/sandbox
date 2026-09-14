@@ -64,7 +64,7 @@ subcommand. Rules:
 Built-in skins (`_BUILTIN_SKINS` in `hermes_cli/skin_engine.py`): `default` (classic gold/kawaii),
 `ares` (crimson/bronze with custom spinner wings), `mono` (grayscale), `slate` (cool blue). Add a
 built-in as a dict entry `{"name", "description", "colors", "spinner", "branding", "tool_prefix"}`.
-User skins are `~/.hermes/skins/<name>.yaml` with the same keys, activated with `/skin <name>` or
+User skins are `~/./skins/<name>.yaml` with the same keys, activated with `/skin <name>` or
 `display.skin: <name>`; the full YAML template is in the
 [Skins & Themes](../user-guide/features/skins.md) user guide.
 

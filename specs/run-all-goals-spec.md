@@ -132,8 +132,8 @@ Delete/clean:
 
 ### Requirements
 Run all 7 judges on relevant artifacts:
-- `plans-judge` on `.hermes/plans/*.md`
-- `specs-judge` on `.hermes/specs/*.md`
+- `plans-judge` on `./plans/*.md`
+- `specs-judge` on `./specs/*.md`
 - `prompts-judge` on `.github/prompts/**/*.prompt.md`
 - `skill-judge` on all skills
 - `hooks-judge` on hooks

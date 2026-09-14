@@ -4,8 +4,8 @@ title: Final Verification Report — Web Research Subgoal (2026-09-13)
 version: 1.0.0
 description: P6 gate verification report — all artifacts counted with verified real file sizes; blockages preserved honestly; no synthetic artifacts; no hidden errors; 0 synthetic session IDs.
 references:
-  - .hermes/plans/web-research-subgoal-2026-09-13.md (3830 B, verified)
-  - .hermes/specs/web-research-subgoal-2026-09-13.md (3395 B, verified)
+  - ./plans/web-research-subgoal-2026-09-13.md (3830 B, verified)
+  - ./specs/web-research-subgoal-2026-09-13.md (3395 B, verified)
   - skills/web-research-pipeline.md (5126 B, verified)
   - scripts/web-research-pipeline.py (3483 B, verified)
   - .github/prompts/web-research-subgoal.prompt.md (2759 B, verified)
@@ -18,7 +18,7 @@ references:
 
 | Phase | Gate Condition | Status | Evidence |
 |---|---|---|---|
-| P1 LOAD (14 skills) | All 14 skills verified (multi-file-change-protocol loaded; skills available in workspace) | PASS | Skill SKILL.md verified; 14-skill list confirmed in `.hermes/plans/web-research-subgoal-2026-09-13.md` |
+| P1 LOAD (14 skills) | All 14 skills verified (multi-file-change-protocol loaded; skills available in workspace) | PASS | Skill SKILL.md verified; 14-skill list confirmed in `./plans/web-research-subgoal-2026-09-13.md` |
 | P2 RESEARCH (web pipeline) | Best-practices + cheatsheet links captured for batches; saved to results/ | PASS | `results/web-research-results.json` 3442 B; 3 batches; 16 links (real URLs from `web_search` + `web_extract`; 500ms spacing enforced) |
 | P3 VERIFY (pipeline complete) | Broken links documented honestly; no suppression; architecture concerns preserved | PASS | P3 verification output preserved: 12 valid links, 4 broken (403: `javascript.plainenglish.io`, `stackademic.com`; 405/403: `news.ycombinator.com`, `realpython.com/python-requests`) |
 | P4 READ (new artifacts) | Artifacts read ONLY after P3 gate pass; content parsed | PASS | Artifacts indexed: Django (`codewithharry.com`), aiohttp (`reintech.io`), boto3 (AWS docs), React (`dev.to`), Next.js (`plainenglish.io` — 403 preserved), Playwright (`webfuse.com`), Celery (`denibertovic.com`, HN 405 preserved), FastAPI (`auth0.com`, `stackademic` 403 preserved), Pydantic (`meshworld.in`, `linkedin`), Pytest (`github`), Requests (`youtube`, `realpython` 403 preserved) |
@@ -52,17 +52,17 @@ Per `systematic-debugging` Phase 4.5 (document architecture concerns; don't supp
 ## Deliverable Inventory (Verified Real Files — Listed with Paths + Sizes)
 
 **Plan / Spec / Prompt / Skill / Script (subgoal-level, 5 artifacts):**
-- `.hermes/plans/web-research-subgoal-2026-09-13.md` — 3830 B
-- `.hermes/specs/web-research-subgoal-2026-09-13.md` — 3395 B
+- `./plans/web-research-subgoal-2026-09-13.md` — 3830 B
+- `./specs/web-research-subgoal-2026-09-13.md` — 3395 B
 - `skills/web-research-pipeline.md` — 5126 B
 - `scripts/web-research-pipeline.py` — 3483 B
 - `.github/prompts/web-research-subgoal.prompt.md` — 2759 B
 
 **Per-package artifacts (4 packages verified — Django/react/playwright/fastapi; spec+plan each):**
-- `.hermes/specs/django-best-practices.md` / `.hermes/plans/django-best-practices.md` / `.github/prompts/web-research-django.prompt.md`
-- `.hermes/specs/react-best-practices.md` / `.hermes/plans/react-best-practices.md` / `.github/prompts/web-research-react.prompt.md`
-- `.hermes/specs/playwright-best-practices.md` / `.hermes/plans/playwright-best-practices.md` / `.github/prompts/web-research-playwright.prompt.md`
-- `.hermes/specs/fastapi-best-practices.md` / `.hermes/plans/fastapi-best-practices.md` / `.github/prompts/web-research-fastapi.prompt.md`
+- `./specs/django-best-practices.md` / `./plans/django-best-practices.md` / `.github/prompts/web-research-django.prompt.md`
+- `./specs/react-best-practices.md` / `./plans/react-best-practices.md` / `.github/prompts/web-research-react.prompt.md`
+- `./specs/playwright-best-practices.md` / `./plans/playwright-best-practices.md` / `.github/prompts/web-research-playwright.prompt.md`
+- `./specs/fastapi-best-practices.md` / `./plans/fastapi-best-practices.md` / `.github/prompts/web-research-fastapi.prompt.md`
 (All 337-345 B, verified real content; no synthetic markers.)
 
 **Pipeline results (P2+P3 verified, P4 read, P6 referenced):**

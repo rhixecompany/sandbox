@@ -92,14 +92,14 @@ def main(argv: list[str] | None = None) -> int:
     """Run validation and emit JSON evidence."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--output", type=Path, default=Path(".hermes/reports/maintenance-artifact-validation.json"))
+    parser.add_argument("--output", type=Path, default=Path("./reports/maintenance-artifact-validation.json"))
     args = parser.parse_args(argv)
     repo = args.repo.resolve()
     targets = {
         "prompt": repo / ".github/prompts/comprehensive-hermes-maintenance.prompt.md",
-        "spec": repo / ".hermes/specs/comprehensive-hermes-maintenance-spec.md",
-        "plan": repo / ".hermes/plans/comprehensive-hermes-maintenance-plan.md",
-        "approval": repo / ".hermes/approvals/2026-09-05-comprehensive-hermes-maintenance.md",
+        "spec": repo / "./specs/comprehensive-hermes-maintenance-spec.md",
+        "plan": repo / "./plans/comprehensive-hermes-maintenance-plan.md",
+        "approval": repo / "./approvals/2026-09-05-comprehensive-hermes-maintenance.md",
     }
     issues = [issue for kind, path in targets.items() for issue in validate_file(path, kind, repo)]
     result = {"repo": str(repo), "files": {kind: str(path) for kind, path in targets.items()}, "issues": issues, "passed": not issues}

@@ -15,9 +15,9 @@ status: "in_progress"
 - Produce structured artifacts that reference feature concepts.
 - Execute script verifies file presence and outputs a result summary.
 ## Acceptance Criteria
-- [ ] .hermes/plans/hooks-plan.md exists with YAML frontmatter
-- [ ] .hermes/specs/hooks-spec.md exists with ≥3 sections
-- [ ] .hermes/prompts/hooks-prompt.md has prompt instructions
+- [ ] ./plans/hooks-plan.md exists with YAML frontmatter
+- [ ] ./specs/hooks-spec.md exists with ≥3 sections
+- [ ] ./prompts/hooks-prompt.md has prompt instructions
 - [ ] skills/hooks-bundle/SKILL.md has ≥10-line body + frontmatter
 - [ ] scripts/hooks-execute.py runs without error
 - [ ] results/hooks-result.md produced

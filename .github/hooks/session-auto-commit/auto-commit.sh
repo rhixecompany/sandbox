@@ -16,7 +16,7 @@ if [[ -n "${working_dir}" ]]; then
     repo_root="${working_dir}"
 elif [[ -d "C:/Users/Alexa/Desktop/SandBox/.git" ]]; then
     repo_root="C:/Users/Alexa/Desktop/SandBox"
-elif [[ -d "${HOME}/.hermes/.git" ]]; then
+elif [[ -d "${HOME}/./.git" ]]; then
     repo_root="${HOME}/.hermes"
 else
     log_info "No git repository found for auto-commit; skipping"

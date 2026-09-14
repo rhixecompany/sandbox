@@ -4,7 +4,7 @@ title: Web Research Pipeline — Implementation Specification
 version: 1.0.0
 description: Spec defining per-package artifacts (best-practices + cheatsheet links → spec → plan → prompt → script → skill) with sequential-phase gates (load → research → verify → read → create → execute).
 references:
-  plan: .hermes/plans/web-research-subgoal-2026-09-13.md
+  plan: ./plans/web-research-subgoal-2026-09-13.md
   skill: skills/web-research-pipeline.md
   prompt: .github/prompts/web-research-subgoal.prompt.md
   script: scripts/web-research-pipeline.py
@@ -23,8 +23,8 @@ For each verified package (example: Django, React, Playwright, Celery, FastAPI, 
 
 | Artifact | Path | Content Requirement | Source (P4) |
 |---|---|---|---|
-| Spec | `.hermes/specs/<package>-best-practices.md` | Best-practice rules + cheatsheet links + notes on broken/valid links | P4 artifact read |
-| Plan | `.hermes/plans/<package>-best-practices.md` | Milestones + verification gate per package | Derives from this spec |
+| Spec | `./specs/<package>-best-practices.md` | Best-practice rules + cheatsheet links + notes on broken/valid links | P4 artifact read |
+| Plan | `./plans/<package>-best-practices.md` | Milestones + verification gate per package | Derives from this spec |
 | Prompt | `.github/prompts/web-research-<package>.prompt.md` | Prompt template referencing the best-practice links | P4 URLs |
 | Script | `scripts/web-research-<package>.py` | Fetch + validate + save links script (reusable pattern) | P2 script pattern |
 | Skill | `skills/web-research-<package>.md` | Skill card with best practices, links, pitfall notes | P4 content |
@@ -42,6 +42,6 @@ For each verified package (example: Django, React, Playwright, Celery, FastAPI, 
 ## Verification Gates (per package artifact set)
 1. Skill loadable (`skill_view` confirms SKILL.md exists).
 2. Script runs (`python scripts/web-research-<package>.py` returns exit 0, no hidden errors).
-3. Plan has verifiable milestone line (grep `.hermes/plans/*.md` for milestone reference).
+3. Plan has verifiable milestone line (grep `./plans/*.md` for milestone reference).
 4. Prompts parse (YAML frontmatter valid; no syntax errors).
 5. Links validated (HEAD check; broken links documented, not suppressed).

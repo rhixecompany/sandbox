@@ -18,7 +18,7 @@ Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 │   ├── workflows/
 │   ├── copilot-instructions.md
 │   └── pull_request_template.md
-├── .hermes/
+├── ./
 │   ├── approvals/
 │   ├── archived-plan-templates/
 │   ├── archived-prompt-templates/

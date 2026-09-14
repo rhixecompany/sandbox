@@ -1,6 +1,6 @@
 # Webhook Routes Config — Reference (verified from docs)
 
-> This file is a reference document, not an active `config.yaml`. It documents the 3 live routes configured for this repo: `github-pr`, `deploy-notify`, `oom-emergency`. The user applies these to `~/.hermes/config.yaml` manually; secrets are configured in `~/.hermes/.env`.
+> This file is a reference document, not an active `config.yaml`. It documents the 3 live routes configured for this repo: `github-pr`, `deploy-notify`, `oom-emergency`. The user applies these to `~/./config.yaml` manually; secrets are configured in `~/./.env`.
 
 ## Environment Variables (`.env` snippet — see `.env.webhook-example`)
 
@@ -79,6 +79,6 @@ Notes:
 - Route sends to `telegram`; if `chat_id` missing in `deliver_extra`, falls back to platform home channel.
 - Secret is real HMAC; never `"INSECURE_NO_AUTH"`; adapter binds to loopback by default but refuses non-loopback + no-auth combo.
 
-## Dynamic Subscriptions File Example (`~/.hermes/webhook_subscriptions.json`)
+## Dynamic Subscriptions File Example (`~/./webhook_subscriptions.json`)
 
 See `.env.webhook-example` and `webhook_subscriptions-example.json` for live dynamic subscriptions matching these routes.

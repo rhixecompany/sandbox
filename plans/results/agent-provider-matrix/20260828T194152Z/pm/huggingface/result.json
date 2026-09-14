@@ -24,7 +24,7 @@
     "pm",
     "chat",
     "--query-file",
-    "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\results\\agent-provider-matrix\\20260828T194152Z\\pm\\huggingface\\request.md",
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T194152Z\\pm\\huggingface\\request.md",
     "--provider",
     "huggingface",
     "--quiet",

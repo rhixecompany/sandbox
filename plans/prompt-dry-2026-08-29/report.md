@@ -8,7 +8,7 @@
 ## Audit Script Built
 - `scripts/prompt_dry_audit.py` — validates each prompt against the canonical frontmatter schema
 - Checks: required FM fields, required sections (## Goal, ## Verification), broken fences, missing _shared/ refs
-- Outputs: `.hermes/plans/prompt-dry-audit-YYYY-MM-DD/report.{json,md}`
+- Outputs: `./plans/prompt-dry-audit-YYYY-MM-DD/report.{json,md}`
 
 ## Fix Script Built
 - `scripts/prompt_dry_fix.py` — adds missing `trigger:` field, derived from filename

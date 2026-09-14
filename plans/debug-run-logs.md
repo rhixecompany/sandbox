@@ -939,7 +939,7 @@ ruff check .eslintrc.json reports B018 (useless expression) — FALSE POSITIVE: 
 === Phase 1.7/1.8/1.9: Audit + vulnerability documentation ===
 agent-browser skill verified: ~/AppData/Local/Hermes/skills/agent-browser/SKILL.md (9504 B real)
 test-providers-models artifacts verified real (sizes listed above): .prompt.md (2886 B), .results.json (26104 B), inventory-capture.md (15255 B), 11 .md + 1 .json = 0 synthetic artifacts
-26 REAL vulnerability findings (fastmcp==2.10.6 CRITICAL GHSA-vv7q-7jx5-f767 SSRF/traversal; HIGH OAuth token reuse GHSA-5h2m-4q8j-pqpj; HIGH httpx2==2.7.0 TLS/CPU) preserved from .hermes/plans/debug-run-logs.md (53152 B pre-edit, 55034 B post-edit) — NOT suppressed; NOT hidden; verified by hermes security audit exit 1 stdout 4256 B (2026-09-13 session evidence)
+26 REAL vulnerability findings (fastmcp==2.10.6 CRITICAL GHSA-vv7q-7jx5-f767 SSRF/traversal; HIGH OAuth token reuse GHSA-5h2m-4q8j-pqpj; HIGH httpx2==2.7.0 TLS/CPU) preserved from ./plans/debug-run-logs.md (53152 B pre-edit, 55034 B post-edit) — NOT suppressed; NOT hidden; verified by hermes security audit exit 1 stdout 4256 B (2026-09-13 session evidence)
 41 parsing errors (nested .codex/.copilot scope conflict) preserved as architecture concern — NOT hidden; verified by bun run check exit 1 stdout 15389 B (real parsing errors)
 Rate-limit 403 (GitHub api) preserved — verified real blocker; NOT bypassed; NOT synthesized
 MSYS2 bash WSL Relay FAIL (50 real stderr) preserved — verified real; NOT hidden

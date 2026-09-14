@@ -63,8 +63,8 @@ Attempt session-end capture using a verified local mechanism. Report unavailable
 
 ## References
 
-- `.hermes/specs/run-all-goals-five-day-consolidated-spec.md`
-- `.hermes/plans/run-all-goals-five-day-consolidated-plan.md`
+- `./specs/run-all-goals-five-day-consolidated-spec.md`
+- `./plans/run-all-goals-five-day-consolidated-plan.md`
 - `scripts/audit_default_sessions_window.py`
 - `scripts/summarize_run_all_goals_corpus.py`
 - `scripts/verify_run_all_goals_five_day.py`

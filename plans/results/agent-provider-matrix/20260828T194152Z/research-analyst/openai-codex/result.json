@@ -24,7 +24,7 @@
     "research-analyst",
     "chat",
     "--query-file",
-    "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\results\\agent-provider-matrix\\20260828T194152Z\\research-analyst\\openai-codex\\request.md",
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T194152Z\\research-analyst\\openai-codex\\request.md",
     "--provider",
     "openai-codex",
     "--quiet",

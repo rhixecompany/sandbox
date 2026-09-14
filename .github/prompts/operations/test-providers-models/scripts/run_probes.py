@@ -10,7 +10,7 @@ Run:
 
 Outputs:
     templates/probe-live-template.md (one row per probed model)
-    .hermes/reports/test-providers-probe-results.json (full transcript)
+    ./reports/test-providers-probe-results.json (full transcript)
 """
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ REPO_ROOT = Path(__file__).resolve().parents[5]
 PROBES_DIR = REPO_ROOT / ".github/prompts/operations/test-providers-models/probes"
 CATALOG = REPO_ROOT / ".github/prompts/operations/test-providers-models/templates/free-model-catalog.md"
 TEMPLATE = REPO_ROOT / ".github/prompts/operations/test-providers-models/templates/probe-live-template.md"
-RESULTS_JSON = REPO_ROOT / ".hermes/reports/test-providers-probe-results.json"
+RESULTS_JSON = REPO_ROOT / "./reports/test-providers-probe-results.json"
 HERMES_BIN = "hermes"
 
 PROBE_QUESTION = (
@@ -203,7 +203,7 @@ def main() -> int:
     parser.add_argument("--probe", type=int, default=None, help="Run only the Nth probe (1-indexed)")
     parser.add_argument("--budget", type=int, default=45, help="Per-probe run budget in seconds")
     parser.add_argument("--concurrency", type=int, default=4, help="Number of concurrent probes")
-    parser.add_argument("--tmp-dir", type=Path, default=REPO_ROOT / ".hermes/reports/probe-logs", help="Per-probe stdout/stderr capture dir")
+    parser.add_argument("--tmp-dir", type=Path, default=REPO_ROOT / "./reports/probe-logs", help="Per-probe stdout/stderr capture dir")
     args = parser.parse_args()
 
     args.tmp_dir.mkdir(parents=True, exist_ok=True)

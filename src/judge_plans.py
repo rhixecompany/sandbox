@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Plans Judge — score .hermes/plans/*.md on 6 dimensions (max 100).
+"""Plans Judge — score ./plans/*.md on 6 dimensions (max 100).
 
 Usage:
-    python judge.py --plans-dir .hermes/plans [--specs-dir .hermes/specs] [--output PATH] [--threshold N]
+    python judge.py --plans-dir ./plans [--specs-dir ./specs] [--output PATH] [--threshold N]
 """
 import argparse
 import json
@@ -57,7 +57,7 @@ def extract_spec_references(text: str) -> list[str]:
                 if match:
                     refs.append(match.group(0))
     # Inline references
-    inline_refs = re.findall(r'(\.hermes/specs/[.\w/-]+\.md|\.\./specs/[.\w/-]+\.md)', text)
+    inline_refs = re.findall(r'(\./specs/[.\w/-]+\.md|\.\./specs/[.\w/-]+\.md)', text)
     refs.extend(inline_refs)
     return list(set(refs))
 
@@ -140,7 +140,7 @@ def score_one(path: Path, specs_dir: Path | None = None) -> dict:
                         if match:
                             spec_plan_refs.append(match.group(0))
             # Also check inline
-            inline_refs = re.findall(r'(\.hermes/plans/[.\w/-]+\.md|\.\./plans/[.\w/-]+\.md)', spec_text)
+            inline_refs = re.findall(r'(\./plans/[.\w/-]+\.md|\.\./plans/[.\w/-]+\.md)', spec_text)
             spec_plan_refs.extend(inline_refs)
 
             plan_name = path.name
@@ -210,8 +210,8 @@ def score_one(path: Path, specs_dir: Path | None = None) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Plans Judge")
-    ap.add_argument("--plans-dir", default=".hermes/plans")
-    ap.add_argument("--specs-dir", default=".hermes/specs", help="dir containing specs (for cross-validation)")
+    ap.add_argument("--plans-dir", default="./plans")
+    ap.add_argument("--specs-dir", default="./specs", help="dir containing specs (for cross-validation)")
     ap.add_argument("--output", default="judge_results/plans_audit")
     ap.add_argument("--threshold", type=int, default=70)
     args = ap.parse_args()

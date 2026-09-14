@@ -8,7 +8,7 @@ description: "On-demand knowledge documents — progressive disclosure, agent-ma
 
 Skills are on-demand knowledge documents the agent can load when needed. They follow a **progressive disclosure** pattern to minimize token usage and are compatible with the [agentskills.io](https://agentskills.io/specification) open standard.
 
-All skills live in **`~/.hermes/skills/`** — the primary directory and source of truth. On fresh install, bundled skills are copied from the repo. Hub-installed and agent-created skills also go here. The agent can modify or delete any skill.
+All skills live in **`~/./skills/`** — the primary directory and source of truth. On fresh install, bundled skills are copied from the repo. Hub-installed and agent-created skills also go here. The agent can modify or delete any skill.
 
 You can also point Hermes at **external skill directories** — additional folders scanned alongside the local one. See [External Skill Directories](#external-skill-directories) below.
 
@@ -82,7 +82,7 @@ that happen to start with `/` (like file paths) are never swallowed:
 For combinations you use repeatedly, prefer a [skill bundle](#skill-bundles) —
 same effect under one short command.
 
-(Plan mode works the same way but is a built-in command now: `/plan [request]` tells Hermes to inspect context if needed, write a markdown implementation plan instead of executing the task, and save the result under `.hermes/plans/` relative to the active workspace/backend working directory.)
+(Plan mode works the same way but is a built-in command now: `/plan [request]` tells Hermes to inspect context if needed, write a markdown implementation plan instead of executing the task, and save the result under `./plans/` relative to the active workspace/backend working directory.)
 
 You can also interact with skills through natural conversation:
 
@@ -227,7 +227,7 @@ If a response (or any text inside it — typically the last line) contains the l
 ```
 Here is your rendered chart:
 
-/home/user/.hermes/cache/chart-q4-2025.png
+/home/user/./cache/chart-q4-2025.png
 
 [[as_document]]
 ```
@@ -277,7 +277,7 @@ required_environment_variables:
     required_for: full functionality
 ```
 
-When a missing value is encountered, Hermes asks for it securely only when the skill is actually loaded in the local CLI. You can skip setup and keep using the skill. Messaging surfaces never ask for secrets in chat — they tell you to use `hermes setup` or `~/.hermes/.env` locally instead.
+When a missing value is encountered, Hermes asks for it securely only when the skill is actually loaded in the local CLI. You can skip setup and keep using the skill. Messaging surfaces never ask for secrets in chat — they tell you to use `hermes setup` or `~/./.env` locally instead.
 
 Once set, declared env vars are **automatically passed through** to `execute_code` and `terminal` sandboxes — the skill's scripts can use `$TENOR_API_KEY` directly. For non-skill env vars, use the `terminal.env_passthrough` config option. See [Environment Variable Passthrough](/user-guide/security#environment-variable-passthrough) for details.
 
@@ -302,7 +302,7 @@ See [Skill Settings](/user-guide/configuration#skill-settings) and [Creating Ski
 ## Skill Directory Structure
 
 ```text
-~/.hermes/skills/                  # Single source of truth
+~/./skills/                  # Single source of truth
 ├── mlops/                         # Category directory
 │   ├── axolotl/
 │   │   ├── SKILL.md               # Main instructions (required)
@@ -374,7 +374,7 @@ its response (`tier1` field) alongside the built-in scanner's verdict.
 
 If you maintain skills outside of Hermes — for example, a shared `~/.agents/skills/` directory used by multiple AI tools — you can tell Hermes to scan those directories too.
 
-Add `external_dirs` under the `skills` section in `~/.hermes/config.yaml`:
+Add `external_dirs` under the `skills` section in `~/./config.yaml`:
 
 ```yaml
 skills:
@@ -388,7 +388,7 @@ Paths support `~` expansion and `${VAR}` environment variable substitution.
 
 ### How it works
 
-- **Create locally, update in place**: New agent-created skills are written to `~/.hermes/skills/` (or `skills.create_dir` when configured — see below). Existing skills are modified where they are found, including skills under `external_dirs`, when the agent uses `skill_manage` actions such as `patch`, `edit`, `write_file`, `remove_file`, or `delete`.
+- **Create locally, update in place**: New agent-created skills are written to `~/./skills/` (or `skills.create_dir` when configured — see below). Existing skills are modified where they are found, including skills under `external_dirs`, when the agent uses `skill_manage` actions such as `patch`, `edit`, `write_file`, `remove_file`, or `delete`.
 - **External dirs are not a write-protection boundary**: If an external skill directory is writable by the Hermes process, agent-managed skill updates can change files in that directory. Use filesystem permissions or a separate profile/toolset setup if shared external skills must stay read-only.
 - **Local precedence**: If the same skill name exists in both the local dir and an external dir, the local version wins.
 - **Full integration**: External skills appear in the system prompt index, `skills_list`, `skill_view`, and as `/skill-name` slash commands — no different from local skills.
@@ -397,7 +397,7 @@ Paths support `~` expansion and `${VAR}` environment variable substitution.
 ### Example
 
 ```text
-~/.hermes/skills/               # Local (primary, read-write)
+~/./skills/               # Local (primary, read-write)
 ├── devops/deploy-k8s/
 │   └── SKILL.md
 └── mlops/axolotl/
@@ -414,7 +414,7 @@ All four skills appear in your skill index. If you create a new skill called `my
 
 ## Redirecting Skill Creation (`skills.create_dir`)
 
-By default the agent writes new skills to the profile-local `~/.hermes/skills/`. If you want agent-created skills to land somewhere else — a shared "brain" directory, a git-tracked repo, or a fleet-wide skills volume — set `create_dir` under the `skills` section:
+By default the agent writes new skills to the profile-local `~/./skills/`. If you want agent-created skills to land somewhere else — a shared "brain" directory, a git-tracked repo, or a fleet-wide skills volume — set `create_dir` under the `skills` section:
 
 ```yaml
 skills:
@@ -436,7 +436,7 @@ Paths support `~` expansion and `${VAR}` substitution; relative paths resolve ag
 Repos can carry their own skills, active only for sessions started inside that project — the same pattern other agent harnesses use for repo-local configuration. When you launch Hermes inside a git checkout, it looks for skills in:
 
 ```text
-<project-root>/.hermes/skills/    # Hermes-native location
+<project-root>/./skills/    # Hermes-native location
 <project-root>/.agents/skills/    # cross-tool convention (shared with other agent CLIs)
 ```
 
@@ -458,17 +458,17 @@ hermes skills trust ~/myproject # or explicitly
 hermes skills untrust           # revoke
 ```
 
-Trusted roots are stored in `skills.trusted_project_dirs` in `~/.hermes/config.yaml`. Set `skills.project_discovery: false` to turn the feature off entirely (no scanning, no notices).
+Trusted roots are stored in `skills.trusted_project_dirs` in `~/./config.yaml`. Set `skills.project_discovery: false` to turn the feature off entirely (no scanning, no notices).
 
 ### Precedence
 
-Project skills are the **highest-precedence tier**: `project → local (~/.hermes/skills/) → external_dirs`. A project skill named `deploy` overrides a same-named profile or bundled skill for sessions inside that repo — that's the point: vendored repo skills win on their home turf, without touching your global profile. Project skills are tagged `[project]` in the agent's skill index so provenance stays visible.
+Project skills are the **highest-precedence tier**: `project → local (~/./skills/) → external_dirs`. A project skill named `deploy` overrides a same-named profile or bundled skill for sessions inside that repo — that's the point: vendored repo skills win on their home turf, without touching your global profile. Project skills are tagged `[project]` in the agent's skill index so provenance stays visible.
 
-Like external dirs, project skill directories are treated as repo-owned: autonomous skill maintenance (the curator) never modifies them, and new agent-created skills always go to `~/.hermes/skills/`.
+Like external dirs, project skill directories are treated as repo-owned: autonomous skill maintenance (the curator) never modifies them, and new agent-created skills always go to `~/./skills/`.
 
 ### Scan-time quarantine
 
-Trust is a repo-level decision, but a repo's skill content changes with every `git pull`. To close that gap, every project skill is scanned with the same security scanner used for Skills Hub installs before it enters the index. A skill whose scan verdict is **dangerous** (prompt-injection directives, credential-exfiltration commands, hidden-text tricks) is quarantined: it does not appear in the skill index, `skills_list`, slash commands, and refuses to load by name with an explanatory error. Scans are content-hash cached under `~/.hermes/cache/project_skill_scans/` (never inside your repo) and re-run automatically when the skill's content changes.
+Trust is a repo-level decision, but a repo's skill content changes with every `git pull`. To close that gap, every project skill is scanned with the same security scanner used for Skills Hub installs before it enters the index. A skill whose scan verdict is **dangerous** (prompt-injection directives, credential-exfiltration commands, hidden-text tricks) is quarantined: it does not appear in the skill index, `skills_list`, slash commands, and refuses to load by name with an explanatory error. Scans are content-hash cached under `~/./cache/project_skill_scans/` (never inside your repo) and re-run automatically when the skill's content changes.
 
 ### Non-interactive surfaces (cron, API, ACP)
 
@@ -499,7 +499,7 @@ The agent receives all three skills loaded into one user message, with any text 
 
 ### YAML schema
 
-Bundles live in **`~/.hermes/skill-bundles/<slug>.yaml`** and look like this:
+Bundles live in **`~/./skill-bundles/<slug>.yaml`** and look like this:
 
 ```yaml
 name: backend-dev
@@ -537,7 +537,7 @@ hermes bundles create backend-dev --skill ... --force
 # Delete a bundle
 hermes bundles delete backend-dev
 
-# Re-scan ~/.hermes/skill-bundles/ and report changes
+# Re-scan ~/./skill-bundles/ and report changes
 hermes bundles reload
 ```
 
@@ -555,9 +555,9 @@ From inside a chat session, `/bundles` lists every installed bundle and its skil
 Use a bundle when:
 - You always pair the same skills for a recurring task (`/backend-dev`, `/release-prep`, `/incident-response`).
 - You want a one-character-shorter mental model than typing several `/skill` invocations in a row.
-- You want to ship a team-wide "task profile" by checking the bundle YAML into a shared dotfiles repo and symlinking it into `~/.hermes/skill-bundles/`.
+- You want to ship a team-wide "task profile" by checking the bundle YAML into a shared dotfiles repo and symlinking it into `~/./skill-bundles/`.
 
-A bundle is just a YAML alias — it doesn't install skills for you. The skills themselves must already be present (in `~/.hermes/skills/` or an external skill directory). Otherwise the bundle invocation just skips the missing ones.
+A bundle is just a YAML alias — it doesn't install skills for you. The skills themselves must already be present (in `~/./skills/` or an external skill directory). Otherwise the bundle invocation just skips the missing ones.
 
 ## Agent-Managed Skills (skill_manage tool)
 
@@ -629,7 +629,7 @@ When `write_approval: true`, every `skill_manage` write (create / edit /
 patch / delete / write_file / remove_file) is **staged** instead of committed —
 a SKILL.md is too large to review inline, so staging applies regardless of
 whether the write came from a foreground turn or the background review.
-Staged writes survive restarts under `~/.hermes/pending/skills/` and are
+Staged writes survive restarts under `~/./pending/skills/` and are
 reviewed with the same familiar approve/deny flow as dangerous commands:
 
 ```
@@ -961,7 +961,7 @@ hermes skills install my-org/hermes-skills/deploy-runbook
 
 #### Non-default paths
 
-If your skills don't live under `skills/` (common when you're adding a `skills/` subtree to an existing project), edit the tap entry in `~/.hermes/skills/.hub/taps.json`:
+If your skills don't live under `skills/` (common when you're adding a `skills/` subtree to an existing project), edit the tap entry in `~/./skills/.hub/taps.json`:
 
 ```json
 {
@@ -1003,11 +1003,11 @@ Inside a running session:
 /skills tap remove myorg/skills-repo
 ```
 
-Taps are stored in `~/.hermes/skills/.hub/taps.json` (created on demand).
+Taps are stored in `~/./skills/.hub/taps.json` (created on demand).
 
 ## Bundled skill updates (`hermes skills reset`)
 
-Hermes ships with a set of bundled skills in `skills/` inside the repo. On install and on every `hermes update`, a sync pass copies those into `~/.hermes/skills/` and records a manifest at `~/.hermes/skills/.bundled_manifest` mapping each skill name to the content hash at the time it was synced (the **origin hash**).
+Hermes ships with a set of bundled skills in `skills/` inside the repo. On install and on every `hermes update`, a sync pass copies those into `~/./skills/` and records a manifest at `~/./skills/.bundled_manifest` mapping each skill name to the content hash at the time it was synced (the **origin hash**).
 
 On each sync, Hermes recomputes the hash of your local copy and compares it to the origin hash:
 
@@ -1016,7 +1016,7 @@ On each sync, Hermes recomputes the hash of your local copy and compares it to t
 
 Generated runtime caches inside a skill (`__pycache__/`, `.pytest_cache/`, `.mypy_cache/`, `.ruff_cache/`, and a `.pyc` sitting next to its `.py`) are not part of the hash, so running a skill's helper script never marks it user-modified or hides it from `hermes skills list-modified` / `diff`.
 
-The protection is good, but it has one sharp edge. If you edit a bundled skill and then later want to abandon your changes and go back to the bundled version by just copy-pasting from `~/.hermes/hermes-agent/skills/`, the manifest still holds the *old* origin hash from whenever the last successful sync ran. Your fresh copy-paste contents (current bundled hash) won't match that stale origin hash, so sync keeps flagging it as user-modified.
+The protection is good, but it has one sharp edge. If you edit a bundled skill and then later want to abandon your changes and go back to the bundled version by just copy-pasting from `~/./hermes-agent/skills/`, the manifest still holds the *old* origin hash from whenever the last successful sync ran. Your fresh copy-paste contents (current bundled hash) won't match that stale origin hash, so sync keeps flagging it as user-modified.
 
 `hermes skills reset` is the escape hatch:
 

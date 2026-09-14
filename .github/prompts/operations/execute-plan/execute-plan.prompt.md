@@ -1,7 +1,7 @@
 ---
 name: execute-plan
 title: Execute Plan
-description: Load and execute any plan document from .hermes/plans/ by specifying its filename.
+description: Load and execute any plan document from ./plans/ by specifying its filename.
 version: 1.0.0
 license: MIT
 author: Hermes Agent
@@ -26,7 +26,7 @@ metadata:
   opencode:
     command: opencode /execute-plan
     flags: {}
-    help: Load and execute any plan document from .hermes/plans/ by specifying its file...
+    help: Load and execute any plan document from ./plans/ by specifying its file...
   codex:
     model_override: null
     system_prompt_id: null
@@ -48,7 +48,7 @@ scripts: []
 
 ## Goal
 
-Execute the specified plan from `.hermes/plans/`.**Parameter** — set `plan` to the plan filename (e.g., `acpx-agents-feature-specs.md`).
+Execute the specified plan from `./plans/`.**Parameter** — set `plan` to the plan filename (e.g., `acpx-agents-feature-specs.md`).
 
 ## Context
 
@@ -56,7 +56,7 @@ Loads a target plan document and follows its phases, steps, and requirementssequ
 
 ## Inputs
 
-- `plan` — plan filename under `.hermes/plans/` (required).
+- `plan` — plan filename under `./plans/` (required).
 
 ## Outputs
 
@@ -77,7 +77,7 @@ Loads a target plan document and follows its phases, steps, and requirementssequ
 
 ### Phase 1: Load Plan
 
-1. Read `.hermes/plans/{plan}`.
+1. Read `./plans/{plan}`.
 2. Parse the plan's phases, rules, and verification steps.
 3. Report the plan title and total number of phases.
 
@@ -98,7 +98,7 @@ Summarise what was done, what was verified, and any deviations from the plan.
 
 ## Verification Checklist
 
-- [ ] `plan` parameter is provided and points to an existing file under `.hermes/plans/`.
+- [ ] `plan` parameter is provided and points to an existing file under `./plans/`.
 - [ ] Plan loaded and understood before execution.
 - [ ] Every phase completed before advancing to the next.
 - [ ] Blockers reported honestly (never fabricated).

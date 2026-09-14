@@ -53,7 +53,7 @@ def main() -> int:
             errors.append(f"too small: {path}")
     if PROMPT.is_file():
         prompt = PROMPT.read_text(encoding="utf-8")
-        for reference in (".hermes/specs/run-all-goals-five-day-consolidated-spec.md", ".hermes/plans/run-all-goals-five-day-consolidated-plan.md"):
+        for reference in ("./specs/run-all-goals-five-day-consolidated-spec.md", "./plans/run-all-goals-five-day-consolidated-plan.md"):
             if reference not in prompt:
                 errors.append(f"prompt missing reference: {reference}")
             elif not (ROOT / reference).is_file():

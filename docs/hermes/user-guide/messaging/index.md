@@ -182,7 +182,7 @@ A systemd-managed gateway can opt into process recovery when Python's asyncio
 event loop stops receiving scheduling time. This covers whole-process stalls
 that also prevent platform-specific liveness tasks from running:
 
-```yaml title="~/.hermes/config.yaml"
+```yaml title="~/./config.yaml"
 gateway:
   systemd_watchdog_seconds: 120
 ```
@@ -284,7 +284,7 @@ continuation, not the history loaded when you send a message.
 
 ## Per-Channel Model & System Prompt Overrides
 
-Different channels can run different models and personas from a **single gateway** — e.g. a cheap fast model in `#daily` and a frontier model with a specialist prompt in `#dev`. Configure `channel_overrides` under the platform in `~/.hermes/config.yaml`:
+Different channels can run different models and personas from a **single gateway** — e.g. a cheap fast model in `#daily` and a frontier model with a specialist prompt in `#dev`. Configure `channel_overrides` under the platform in `~/./config.yaml`:
 
 ```yaml
 platforms:
@@ -423,7 +423,7 @@ Single-select prompts behave as before: pick one option by number, button, or te
 
 ## Tool Progress Notifications
 
-Control how much tool activity is displayed in `~/.hermes/config.yaml`:
+Control how much tool activity is displayed in `~/./config.yaml`:
 
 ```yaml
 display:
@@ -438,13 +438,13 @@ display:
 
 ### `log` mode — audit file instead of chat messages
 
-Setting `display.tool_progress: log` sends **no** progress bubbles to chat. Instead, each tool call is appended as a line to `~/.hermes/logs/tool_calls.log` — a rotating audit file (5 MB × 3 backups) run through the same secret-redacting formatter as regular logs, so credentials never land on disk. Use it when you want a full tool-call trail without any chat noise.
+Setting `display.tool_progress: log` sends **no** progress bubbles to chat. Instead, each tool call is appended as a line to `~/./logs/tool_calls.log` — a rotating audit file (5 MB × 3 backups) run through the same secret-redacting formatter as regular logs, so credentials never land on disk. Use it when you want a full tool-call trail without any chat noise.
 
 ### Configurable status phrases
 
 Long-running gateway status lines ("still working…"-style heartbeats) draw from a phrase catalog. Built-in defaults ship in `gateway/assets/status_phrases.yaml`; you can add your own with profile-portable files under `HERMES_HOME`:
 
-- `~/.hermes/status_phrases.yaml` or any `*.yaml` in `~/.hermes/status_phrases/` (conventional paths, auto-loaded), or
+- `~/./status_phrases.yaml` or any `*.yaml` in `~/./status_phrases/` (conventional paths, auto-loaded), or
 - point config at a relative path:
 
 ```yaml
@@ -509,7 +509,7 @@ Each `/bg` prompt spawns a **separate agent instance** that runs asynchronously:
 
 ### Background Process Notifications
 
-When the agent running a background session uses `terminal(background=true)` to start long-running processes (servers, builds, etc.), the gateway can push status updates to your chat. Control this with `display.background_process_notifications` in `~/.hermes/config.yaml`:
+When the agent running a background session uses `terminal(background=true)` to start long-running processes (servers, builds, etc.), the gateway can push status updates to your chat. Control this with `display.background_process_notifications` in `~/./config.yaml`:
 
 ```yaml
 display:
@@ -598,7 +598,7 @@ hermes gateway install               # Install as launchd agent
 hermes gateway start                 # Start the service
 hermes gateway stop                  # Stop the service
 hermes gateway status                # Check status
-tail -f ~/.hermes/logs/gateway.log   # View logs
+tail -f ~/./logs/gateway.log   # View logs
 ```
 
 The generated plist lives at `~/Library/LaunchAgents/ai.hermes.gateway.plist`. It includes three environment variables:
@@ -667,13 +667,13 @@ See also the broader status summary command [`/platforms`](../../reference/slash
 
 ### Disabling a platform whose credentials are still in `.env`
 
-`platforms.<name>.enabled: false` in `~/.hermes/config.yaml` is authoritative.
+`platforms.<name>.enabled: false` in `~/./config.yaml` is authoritative.
 Credentials for that platform left in the environment (`TELEGRAM_BOT_TOKEN`,
 `WEIXIN_TOKEN`, `HASS_TOKEN`, `EMAIL_*`, `TWILIO_ACCOUNT_SID`, ...) are still
 wired into the platform's config so send-only tooling keeps working, but they
 no longer start the adapter:
 
-```yaml title="~/.hermes/config.yaml"
+```yaml title="~/./config.yaml"
 platforms:
   weixin:
     enabled: false   # wins over WEIXIN_TOKEN in .env
@@ -705,7 +705,7 @@ sees — a local Clash/V2Ray listener that isn't running yet — and log
 `Cannot connect to host 127.0.0.1:7890` on every poll. Turn the inherited
 proxy off for all adapters at once:
 
-```yaml title="~/.hermes/config.yaml"
+```yaml title="~/./config.yaml"
 gateway:
   trust_env: false
 ```
@@ -723,7 +723,7 @@ The breaker does **not** auto-resume — it stays open until you run `/platform 
 
 When an adapter is paused, check:
 
-1. **Gateway log** (`~/.hermes/logs/gateway.log` or the systemd / launchd unit log). Search for the platform name and `circuit breaker`, `paused`, or `disabled`. The trip event includes the failure count and the last error.
+1. **Gateway log** (`~/./logs/gateway.log` or the systemd / launchd unit log). Search for the platform name and `circuit breaker`, `paused`, or `disabled`. The trip event includes the failure count and the last error.
 2. **`/platform list`** output — shows the current state and last reason.
 3. **The provider's status page** (Telegram bot API status, Discord status, etc.). The breaker tripped because the platform was unhealthy; don't try to resume until it's back.
 

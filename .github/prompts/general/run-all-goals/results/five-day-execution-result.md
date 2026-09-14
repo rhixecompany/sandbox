@@ -13,7 +13,7 @@ Status: **PASS WITH CAVEATS**
 - Window: Sep 6–10, 2026 WAT inclusive
 - Profile: default only
 - Source DB: `C:/Users/Alexa/AppData/Local/hermes/state.db`
-- Roots: SandBox, `.hermes/`, `.github/`
+- Roots: SandBox, `./`, `.github/`
 - Side effects: local files/tests only
 
 ## Fresh evidence

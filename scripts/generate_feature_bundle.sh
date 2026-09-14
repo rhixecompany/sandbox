@@ -3,9 +3,9 @@
 # Usage: ./scripts/generate_feature_bundle.sh <feature_name_without_.md>
 # Example: ./scripts/generate_feature_bundle.sh overview
 # Produces:
-#   .hermes/plans/<feat>-plan.md
-#   .hermes/specs/<feat>-spec.md
-#   .hermes/prompts/<feat>-prompt.md
+#   ./plans/<feat>-plan.md
+#   ./specs/<feat>-spec.md
+#   ./prompts/<feat>-prompt.md
 #   skills/<feat>-bundle/SKILL.md
 #   scripts/<feat>-execute.py
 #   results/<feat>-result.md (after execution)
@@ -15,13 +15,13 @@ if [[ -z "$FEAT" ]]; then echo "Usage: $0 <feature_basename>"; exit 1; fi
 REPO="/c/Users/Alexa/Desktop/SandBox"
 FEAT_FILE="$REPO/docs/features/${FEAT}.md"
 if [[ ! -f "$FEAT_FILE" ]]; then echo "MISSING $FEAT_FILE"; exit 1; fi
-mkdir -p "$REPO/.hermes/plans" "$REPO/.hermes/specs" "$REPO/.hermes/prompts" \
+mkdir -p "$REPO/./plans" "$REPO/./specs" "$REPO/./prompts" \
          "$REPO/skills/${FEAT}-bundle" "$REPO/scripts" "$REPO/results"
 TITLE=$(head -n 3 "$FEAT_FILE" | grep 'title:' | sed 's/title: //' | sed 's/"//g; s/:.*//')
 [[ -z "$TITLE" ]] && TITLE="$FEAT"
 LNS=$(wc -l < "$FEAT_FILE" | tr -d ' ')
 # PLAN
-cat > "$REPO/.hermes/plans/${FEAT}-plan.md" <<EOF
+cat > "$REPO/./plans/${FEAT}-plan.md" <<EOF
 ---
 name: "${FEAT}-plan"
 title: "Plan — ${TITLE}"
@@ -35,7 +35,7 @@ version: 1.0.0
 - Gate: bundle artifacts exist; result file produced.
 EOF
 # SPEC
-cat > "$REPO/.hermes/specs/${FEAT}-spec.md" <<EOF
+cat > "$REPO/./specs/${FEAT}-spec.md" <<EOF
 ---
 name: "${FEAT}-spec"
 title: "Spec — ${TITLE}"
@@ -50,15 +50,15 @@ version: 1.0.0
 - Produce structured artifacts that reference feature concepts.
 - Execute script verifies file presence and outputs a result summary.
 ## Acceptance Criteria
-- [ ] .hermes/plans/${FEAT}-plan.md exists with YAML frontmatter
-- [ ] .hermes/specs/${FEAT}-spec.md exists with ≥3 sections
-- [ ] .hermes/prompts/${FEAT}-prompt.md has prompt instructions
+- [ ] ./plans/${FEAT}-plan.md exists with YAML frontmatter
+- [ ] ./specs/${FEAT}-spec.md exists with ≥3 sections
+- [ ] ./prompts/${FEAT}-prompt.md has prompt instructions
 - [ ] skills/${FEAT}-bundle/SKILL.md has ≥10-line body + frontmatter
 - [ ] scripts/${FEAT}-execute.py runs without error
 - [ ] results/${FEAT}-result.md produced
 EOF
 # PROMPT
-cat > "$REPO/.hermes/prompts/${FEAT}-prompt.md" <<EOF
+cat > "$REPO/./prompts/${FEAT}-prompt.md" <<EOF
 ---
 name: "${FEAT}-prompt"
 title: "Prompt — Implement ${TITLE} Feature"
@@ -105,7 +105,7 @@ Translate the feature documentation (${FEAT}.md, ${LNS} lines) into executable a
 - multi-file-change-protocol (loaded)
 - subagent-driven-development (load for parallel execution)
 - using-superpowers / brainstorming / user-communication-preferences
-- .hermes/plans/feature-docs-implementation-plan.md
+- ./plans/feature-docs-implementation-plan.md
 EOF
 # EXECUTION SCRIPT (Python — writes result after running a simulated verification)
 cat > "$REPO/scripts/${FEAT}-execute.py" <<EOF
@@ -114,9 +114,9 @@ cat > "$REPO/scripts/${FEAT}-execute.py" <<EOF
 import os, sys
 repo = "/c/Users/Alexa/Desktop/SandBox"
 feat_file = os.path.join(repo, "docs/features", "${FEAT}.md")
-plan = os.path.join(repo, ".hermes/plans", "${FEAT}-plan.md")
-spec = os.path.join(repo, ".hermes/specs", "${FEAT}-spec.md")
-prompt = os.path.join(repo, ".hermes/prompts", "${FEAT}-prompt.md")
+plan = os.path.join(repo, "./plans", "${FEAT}-plan.md")
+spec = os.path.join(repo, "./specs", "${FEAT}-spec.md")
+prompt = os.path.join(repo, "./prompts", "${FEAT}-prompt.md")
 skill = os.path.join(repo, "skills", "${FEAT}-bundle", "SKILL.md")
 results_file = os.path.join(repo, "results", "${FEAT}-result.md")
 verified = all(os.path.isfile(p) for p in [feat_file, plan, spec, prompt, skill])
@@ -132,8 +132,8 @@ print(f"[{FEAT}] verification complete -> {results_file}")
 EOF
 chmod +x "$REPO/scripts/${FEAT}-execute.py"
 echo "Bundle generated for: $FEAT (title: $TITLE, lines: $LNS)"
-echo "  plan=$REPO/.hermes/plans/${FEAT}-plan.md"
-echo "  spec=$REPO/.hermes/specs/${FEAT}-spec.md"
-echo "  prompt=$REPO/.hermes/prompts/${FEAT}-prompt.md"
+echo "  plan=$REPO/./plans/${FEAT}-plan.md"
+echo "  spec=$REPO/./specs/${FEAT}-spec.md"
+echo "  prompt=$REPO/./prompts/${FEAT}-prompt.md"
 echo "  skill=$REPO/skills/${FEAT}-bundle/SKILL.md"
 echo "  script=$REPO/scripts/${FEAT}-execute.py"

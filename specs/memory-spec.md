@@ -15,9 +15,9 @@ status: "in_progress"
 - Produce structured artifacts that reference feature concepts.
 - Execute script verifies file presence and outputs a result summary.
 ## Acceptance Criteria
-- [ ] .hermes/plans/memory-plan.md exists with YAML frontmatter
-- [ ] .hermes/specs/memory-spec.md exists with ≥3 sections
-- [ ] .hermes/prompts/memory-prompt.md has prompt instructions
+- [ ] ./plans/memory-plan.md exists with YAML frontmatter
+- [ ] ./specs/memory-spec.md exists with ≥3 sections
+- [ ] ./prompts/memory-prompt.md has prompt instructions
 - [ ] skills/memory-bundle/SKILL.md has ≥10-line body + frontmatter
 - [ ] scripts/memory-execute.py runs without error
 - [ ] results/memory-result.md produced

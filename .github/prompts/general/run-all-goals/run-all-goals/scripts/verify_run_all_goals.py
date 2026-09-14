@@ -7,7 +7,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # BASE = run-all-goals/; tree.prompt.txt and .enhance/.goals are at SandBox/ root (4 levels up from scripts/)
 WORKSPACE = os.path.abspath(os.path.join(BASE, '..', '..', '..', '..'))
 PROMPT_FILE = os.path.join(BASE, "run-all-goals.prompt.md")
-PLAN_FILE = os.path.join(WORKSPACE, ".hermes/plans/run-all-goals-implementation.md")
+PLAN_FILE = os.path.join(WORKSPACE, "./plans/run-all-goals-implementation.md")
 TREE_PROMPT = os.path.join(WORKSPACE, "tree.prompt.txt")
 
 def verify_tree_prompt():

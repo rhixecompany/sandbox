@@ -150,7 +150,7 @@
       ],
       "exit": 0,
       "elapsed_s": 18.71,
-      "stdout_tail": "Checking formatting...\nAll matched files use Prettier code style!\nmarkdownlint-cli2 v0.19.1 (markdownlint v0.39.0)\nFinding: **/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !.hermes/archived-prompt-templates/** !.github/** !.hermes/** !plans/** !research/** !ngn-earnings-kit/** !hermes-memory-safety/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc\nLinting: 486 file(s)\nSummary: 0 error(s)\n",
+      "stdout_tail": "Checking formatting...\nAll matched files use Prettier code style!\nmarkdownlint-cli2 v0.19.1 (markdownlint v0.39.0)\nFinding: **/*.md !**/node_modules/** !projects/** !hermes-profiles/** !.venv/** !myvenv/** !docs/reports/** !./archived-prompt-templates/** !.github/** !./** !plans/** !research/** !ngn-earnings-kit/** !hermes-memory-safety/** !.vscode/** !**/__pycache__/** !**/dist/** !**/build/** !**/.next/** !**/.git/** !.markdownlint.jsonc\nLinting: 486 file(s)\nSummary: 0 error(s)\n",
       "stderr_tail": "$ bun run lint && bun run format:check && bun run markdownlint && bun run spellcheck\n$ eslint . --no-error-on-unmatched-pattern\n$ prettier --check --ignore-unknown .\n$ markdownlint-cli2 --config .markdownlint.jsonc \"**/*.md\"\n$ cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress\nCSpell: Files checked: 91, Issues found: 0 in 0 files.\n",
       "ok": true,
       "label": "bun-run-check",

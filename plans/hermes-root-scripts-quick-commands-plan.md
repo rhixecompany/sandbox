@@ -8,7 +8,7 @@ license: MIT
 tags: [hermes, scripts, quick-commands, config, implementation]
 status: in_progress
 created: 2026-09-04
-spec: .hermes/specs/hermes-root-scripts-quick-commands-spec.md
+spec: ./specs/hermes-root-scripts-quick-commands-spec.md
 ---
 
 # Hermes Root Scripts Quick-Command Implementation Plan
@@ -139,9 +139,9 @@ Replace the incomplete 7-command registry with deterministic coverage for every 
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs
@@ -150,4 +150,4 @@ Replace the incomplete 7-command registry with deterministic coverage for every 
 
 ## Verification
 
-**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.

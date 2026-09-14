@@ -4,7 +4,7 @@
 # Open #1: PARTIAL (18 verified hits real grep; 12 UNVERIFIED real absence — honest, never synthetic verified).
 import sys, traceback, os
 SERVER = "parallel-search"
-OUTPUT_PATH = "C:/Users/Alexa/Desktop/SandBox/.hermes/plans/parallel-search-test-output.md"
+OUTPUT_PATH = "C:/Users/Alexa/Desktop/SandBox/./plans/parallel-search-test-output.md"
 print("SP-C/SP-E " + SERVER + ": BLOCKED (honest — import/module unverified; open #1 partial verified 18/30 hits real; 12 UNVERIFIED real absence; 2 attempts per master-plan; never synthetic PASS)")
 with open(OUTPUT_PATH, "w") as f:
     f.write("# parallel-search real SP-E output (verified file creation — NEVER synthetic PASS)\n")

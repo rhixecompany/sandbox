@@ -75,17 +75,17 @@ docs/.vscode/
 hermes-profiles/
 
 # Auth result files (contain tokens — do not commit)
-.hermes/plans/results/
+./plans/results/
 
 # Session token files (contain GitHub PATs — do not commit)
 /mytoken.txt
 
 # Plugin directories (embedded git repos — do not commit)
-.hermes/plugins/
-.hermes/profiles/*/plugins/
+./plugins/
+./profiles/*/plugins/
 
 # Skill directories with embedded git repos (do not commit)
-.hermes/skills/
+./skills/
 
 # Local git-filter-repo replacement patterns (do not commit - contains redacted API key values)
 filter-replacements.txt

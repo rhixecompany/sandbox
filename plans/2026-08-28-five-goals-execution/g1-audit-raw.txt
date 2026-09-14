@@ -4,7 +4,7 @@ Profile config audit complete.
   Frontmatter issues: 0
   Total issues:     77
   Drift issues:     1
-  Report written:   C:\Users\Alexa\Desktop\SandBox\.hermes\plans\2026-08-28-unified-platform-remediation\profile-config-audit.json
+  Report written:   C:\Users\Alexa\Desktop\SandBox\./plans/2026-08-28-unified-platform-remediation\profile-config-audit.json
 
   [alexa] issues:
     - USER.md: file_missing

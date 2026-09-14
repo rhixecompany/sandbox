@@ -32,17 +32,17 @@ Batch 3 — Logs inspection:
 
 ## Evidence Requirements (Real Only)
 
-- Each command's REAL stdout/stderr/exit code must be captured in `.hermes/plans/debug-run-logs.md`.
+- Each command's REAL stdout/stderr/exit code must be captured in `./plans/debug-run-logs.md`.
 - No fabricated `hermes` output. If `hermes` binary is unavailable or a subcommand (e.g., `hermes mcp test doist/todoist-ai`) doesn't exist, the real error (`command not found`, `unknown server`, `exit 1`) is logged.
 - No synthetic `session_id` or synthetic `user-communication-preferences` capability claims inserted into logs.
 
 ## Deliverables
 
-- `.hermes/plans/debug-subgoal-plan-2026-09-13.md` (plan)
-- `.hermes/plans/debug-run-logs.md` (real command outputs — sequential batches)
-- `.hermes/specs/debug-analysis-2026-09-13.md` (analysis of real evidence)
-- `.hermes/plans/` (any minimal fixes applied with verification)
-- `.hermes/specs/debug-subgoal-final-verification.md` (final gate)
+- `./plans/debug-subgoal-plan-2026-09-13.md` (plan)
+- `./plans/debug-run-logs.md` (real command outputs — sequential batches)
+- `./specs/debug-analysis-2026-09-13.md` (analysis of real evidence)
+- `./plans/` (any minimal fixes applied with verification)
+- `./specs/debug-subgoal-final-verification.md` (final gate)
 
 ## Constraints
 - `systematic-debugging` Phase 1 gate: NO fix applied until evidence confirms root cause.

@@ -85,7 +85,7 @@ def test_artifacts_no_placeholders():
 def main():
     tests = []
     tests.append(("Unified Prompt Exists", "test -f " + PROMPTS_DIR + "/run-all-goals.prompt.md"))
-    tests.append(("Implementation Plan Exists", "test -f .hermes/plans/run-all-goals-implementation.md"))
+    tests.append(("Implementation Plan Exists", "test -f ./plans/run-all-goals-implementation.md"))
     tests.append(("Rules Core Exists", "test -f " + PROMPTS_DIR + "/templates/_shared/rules-core.md"))
     tests.append(("Deps Core Exists", "test -f " + PROMPTS_DIR + "/templates/_shared/deps-core.md"))
     tests.append(("Verify Script Exists", "test -f " + PROMPTS_DIR + "/scripts/verify_run_all_goals.py"))

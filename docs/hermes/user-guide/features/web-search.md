@@ -72,7 +72,7 @@ Repeat web calls within a short window are served from cache instead of the paid
 | Call | Cache | Scope |
 |------|-------|-------|
 | `web_search` — same query (case/whitespace-insensitive), same provider | In-memory memo | Per process |
-| `web_extract` — same URL, same format, same provider | Full text stored under `~/.hermes/cache/web/` | Shared across CLI, gateway, cron, and subagent processes |
+| `web_extract` — same URL, same format, same provider | Full text stored under `~/./cache/web/` | Shared across CLI, gateway, cron, and subagent processes |
 
 Concurrent identical searches (a parallel subagent fan-out firing the same query at once) are **coalesced into a single backend request** — the first caller pays; the rest share the response. Requested search limits are bucketed up to 10/20/50/100 so near-identical requests (`limit=5` vs `limit=8`) share one entry, with each caller receiving its requested count.
 
@@ -83,7 +83,7 @@ Only successful responses are cached. Failures always retry the backend, respons
 **Testing over the public internet?** Staging deploys and tunnel URLs are public DNS, so the local-dev rule can't catch them — list them in `web.cache_exempt_hosts` and they're always fetched live too. Entries match exactly, as a `*.` wildcard, or as a domain suffix (`mysite.dev` also covers `preview.mysite.dev`):
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 web:
   cache_exempt_hosts:
     - mysite.vercel.app
@@ -91,7 +91,7 @@ web:
 ```
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 web:
   cache_enabled: true      # default; set false to disable both caches
   cache_ttl_minutes: 20    # freshness window, clamped 1–1440
@@ -118,7 +118,7 @@ hermes tools
 Full-featured search and extract. Recommended for most users.
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 FIRECRAWL_API_KEY=fc-your-key-here
 ```
 
@@ -127,7 +127,7 @@ Get a key at [firecrawl.dev](https://firecrawl.dev). The free tier includes 500 
 **Self-hosted Firecrawl:** Point at your own instance instead of the cloud API:
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 FIRECRAWL_API_URL=http://localhost:3002
 ```
 
@@ -232,11 +232,11 @@ You should see something like `10 results`. If you get a `403 Forbidden`, JSON f
 **7. Configure Hermes:**
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 SEARXNG_URL=http://localhost:8888
 ```
 
-Then select SearXNG as the search backend in `~/.hermes/config.yaml`:
+Then select SearXNG as the search backend in `~/./config.yaml`:
 
 ```yaml
 web:
@@ -252,7 +252,7 @@ Or set via `hermes tools` → Web Search & Extract → SearXNG.
 Public SearXNG instances are listed at [searx.space](https://searx.space/). Filter by instances that have **JSON format enabled** (shown in the table).
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 SEARXNG_URL=https://searx.example.com
 ```
 
@@ -267,7 +267,7 @@ Public instances have rate limits, variable uptime, and may disable JSON format 
 SearXNG handles search; you need a separate provider for `web_extract`. Use the per-capability keys:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 web:
   search_backend: "searxng"
   extract_backend: "firecrawl"   # or tavily, perplexity, keenable, exa, parallel
@@ -283,7 +283,7 @@ AI-optimised search and extract. Select Tavily in `hermes tools` (or set `web.ba
 
 ```bash
 # optional — skip this for keyless access after selecting Tavily
-# ~/.hermes/.env
+# ~/./.env
 TAVILY_API_KEY=tvly-your-key-here
 ```
 
@@ -296,7 +296,7 @@ Get a key at [app.tavily.com](https://app.tavily.com/home). See [Tavily keyless]
 [Perplexity's Search API](https://docs.perplexity.ai/docs/search/quickstart) returns ranked, date-stamped results from Perplexity's own index (`web_search`). For `web_extract` it uses the same query-relevant *snippets* route as the official `pplx` CLI: you get the passages of each page that matter, with elisions marked `…`, rather than a verbatim full-page dump — pick Firecrawl / Exa / Parallel as `web.extract_backend` when you need the whole page. Keyed only; there is no anonymous tier.
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 PERPLEXITY_API_KEY=pplx-your-key-here
 ```
 
@@ -309,7 +309,7 @@ Get a key at [perplexity.ai/account/api](https://www.perplexity.ai/account/api).
 Neural search with semantic understanding. Good for research and finding conceptually related content.
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 EXA_API_KEY=your-exa-key-here
 ```
 
@@ -322,7 +322,7 @@ Get a key at [exa.ai](https://exa.ai). The free tier includes 1 000 searches/mon
 AI-native search and extraction with deep research capabilities.
 
 ```bash
-# ~/.hermes/.env
+# ~/./.env
 PARALLEL_API_KEY=your-parallel-key-here
 ```
 
@@ -337,7 +337,7 @@ Routes `web_search` through Grok's server-side [web_search tool](https://docs.x.
 Works with either credential path — no new env vars, no new setup wizard:
 
 ```bash
-# ~/.hermes/.env (env-var path)
+# ~/./.env (env-var path)
 XAI_API_KEY=sk-xai-your-key-here
 ```
 
@@ -350,7 +350,7 @@ hermes auth add xai-oauth
 Then select xAI as the search backend:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 web:
   backend: "xai"
 ```
@@ -384,7 +384,7 @@ Unlike index-backed providers (Brave, Tavily, Exa) which return verbatim search-
 Set one provider for all web capabilities:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 web:
   backend: "searxng"   # firecrawl | searxng | brave-free | ddgs | tavily | perplexity | keenable | exa | parallel | xai
 ```
@@ -394,7 +394,7 @@ web:
 Use different providers for search vs extract. This lets you combine free search (SearXNG) with a paid extract provider, or vice versa:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 web:
   search_backend: "searxng"     # used by web_search
   extract_backend: "firecrawl"  # used by web_extract
@@ -443,7 +443,7 @@ Or check via the CLI:
 
 ```bash
 # Activate the venv and run the web tools module directly
-source ~/.hermes/hermes-agent/.venv/bin/activate
+source ~/./hermes-agent/.venv/bin/activate
 python -m tools.web_tools
 ```
 

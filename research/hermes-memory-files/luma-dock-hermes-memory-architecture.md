@@ -14,23 +14,23 @@ This article walks through what each layer does, when each one fires, what it co
 
 Hermes splits memory across three places, each with a different lifetime, granularity and intended purpose.
 
-**Layer 1: persona and frozen facts.** Markdown files at `~/.hermes/SOUL.md` and `~/.hermes/memories/MEMORY.md` and `~/.hermes/memories/USER.md`. These get loaded into the system prompt at the start of every session. Stable, slow-changing, hand-curated. The agent doesn't write to these by default; you do.
+**Layer 1: persona and frozen facts.** Markdown files at `~/./SOUL.md` and `~/./memories/MEMORY.md` and `~/./memories/USER.md`. These get loaded into the system prompt at the start of every session. Stable, slow-changing, hand-curated. The agent doesn't write to these by default; you do.
 
-`~/.hermes/SOUL.md`
-`~/.hermes/memories/MEMORY.md`
-`~/.hermes/memories/USER.md`
+`~/./SOUL.md`
+`~/./memories/MEMORY.md`
+`~/./memories/USER.md`
 
 Tokens spent: typically 1500 to 5000 tokens, depending on how much you've put in. Worth being judicious because every session pays this cost.
 
-**Layer 2: skills.** The `~/.hermes/skills/` directory. Each skill is a folder with a SKILL.md file describing when to invoke it and what to do. Hermes auto-creates skills via the learning loop (after a few successful runs of similar tasks) and the skills then get used automatically when the agent encounters similar tasks again.
+**Layer 2: skills.** The `~/./skills/` directory. Each skill is a folder with a SKILL.md file describing when to invoke it and what to do. Hermes auto-creates skills via the learning loop (after a few successful runs of similar tasks) and the skills then get used automatically when the agent encounters similar tasks again.
 
-`~/.hermes/skills/`
+`~/./skills/`
 
 Tokens spent: zero per session unless the skill is invoked, in which case you pay for the SKILL.md content as part of the active context for the duration of that skill's task.
 
-**Layer 3: session search.** A SQLite database at `~/.hermes/state.db` holding every message ever sent in any session, with FTS5 full-text search on top. The agent can call a `session_search` tool to find relevant past conversations.
+**Layer 3: session search.** A SQLite database at `~/./state.db` holding every message ever sent in any session, with FTS5 full-text search on top. The agent can call a `session_search` tool to find relevant past conversations.
 
-`~/.hermes/state.db`
+`~/./state.db`
 `session_search`
 
 Tokens spent: zero per session unless the agent decides to query it. Typical queries pull a few hundred to a few thousand tokens of relevant past context.
@@ -106,9 +106,9 @@ If the agent writes too much (you turn around and the file has grown 100 lines i
 
 Skills are the mid-grained memory layer. They capture procedures, not facts. "How do I deploy a Next.js app to Coolify" is a skill; "BrightCart deploys to Coolify" is a memory.
 
-The `~/.hermes/skills/` directory has one folder per skill, each containing a SKILL.md plus optional supporting files (templates, scripts, lookup tables). The SKILL.md frontmatter declares when the skill applies; the body describes what to do.
+The `~/./skills/` directory has one folder per skill, each containing a SKILL.md plus optional supporting files (templates, scripts, lookup tables). The SKILL.md frontmatter declares when the skill applies; the body describes what to do.
 
-`~/.hermes/skills/`
+`~/./skills/`
 
 The learning loop generates skills automatically from successful task patterns. After three or four successful runs of similar work, Hermes generates a skill that captures the procedure. You can read it, edit it, delete it. Editing a generated skill is fine, but Hermes may regenerate over your edits if it sees similar successful runs again. To prevent that, mark the skill as user-locked in the frontmatter; the skills article covers the lock pattern in detail.
 
@@ -125,7 +125,7 @@ The agent doesn't load any of this by default. It queries when it decides search
 You can query state.db directly with sqlite3:
 
 ```bash
-sqlite3 ~/.hermes/state.db "SELECT created_at, channel, content FROM messages WHERE content MATCH 'BrightCart' ORDER BY created_at DESC LIMIT 10"
+sqlite3 ~/./state.db "SELECT created_at, channel, content FROM messages WHERE content MATCH 'BrightCart' ORDER BY created_at DESC LIMIT 10"
 ```
 
 This returns the last ten messages mentioning BrightCart, regardless of which channel they came in on. Useful when you're trying to remember what you previously told the agent about a project.
@@ -200,10 +200,10 @@ Inside an active Hermes session, the slash command `/context` dumps the current 
 
 ### How do I make the agent forget a specific embarrassing thing it remembers?
 
-Find the entry in MEMORY.md or USER.md, delete it, save the file. The agent forgets it on the next session start. If the entry is also reflected in skills (rare; reflection mostly writes to memory files, not skills), delete the relevant skill too. If you're worried it might be in past session messages too, query state.db to see if it's there and delete those rows if needed: `sqlite3 ~/.hermes/state.db "DELETE FROM messages WHERE content LIKE '%embarrassing thing%'; VACUUM;"`. The agent then has no record of the thing across any layer.
+Find the entry in MEMORY.md or USER.md, delete it, save the file. The agent forgets it on the next session start. If the entry is also reflected in skills (rare; reflection mostly writes to memory files, not skills), delete the relevant skill too. If you're worried it might be in past session messages too, query state.db to see if it's there and delete those rows if needed: `sqlite3 ~/./state.db "DELETE FROM messages WHERE content LIKE '%embarrassing thing%'; VACUUM;"`. The agent then has no record of the thing across any layer.
 
 ```bash
-sqlite3 ~/.hermes/state.db "DELETE FROM messages WHERE content LIKE '%embarrassing thing%'; VACUUM;"
+sqlite3 ~/./state.db "DELETE FROM messages WHERE content LIKE '%embarrassing thing%'; VACUUM;"
 ```
 
 ### How do I share memory between two Hermes installs without making one a clone of the other?

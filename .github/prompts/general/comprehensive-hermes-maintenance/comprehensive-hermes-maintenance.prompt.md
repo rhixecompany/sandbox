@@ -54,7 +54,7 @@ The workflow is sequential. A phase cannot start until its entry state is captur
 1. Read `SESSION_REPORT.md`, repo guidance, the linked spec, and the linked plan.
 2. Select the `code-architect` profile for implementation/debugging work; record actual profile/model.
 3. Inventory root and nested Git repositories, Hermes profiles, scripts, `.env*` paths, `config.yaml` paths, MCP clients, hooks, plugins, desktop assets, agents, Docker, and current processes.
-4. Capture branch/HEAD/status for every repository and preserve the baseline in `.hermes/reports/` or the Hermes cache.
+4. Capture branch/HEAD/status for every repository and preserve the baseline in `./reports/` or the Hermes cache.
 
 Gate: inventory is deterministic, path-scoped, and contains no secret values.
 
@@ -66,7 +66,7 @@ Gate: inventory is deterministic, path-scoped, and contains no secret values.
    - per-platform native command registration.
 2. Choose the wrapper projection because it avoids running destructive target scripts and gives one testable contract.
 3. Update the prompt, spec, master plan, and scripts-judge policy.
-4. Record the owner approval and rollback commands in `.hermes/approvals/`.
+4. Record the owner approval and rollback commands in `./approvals/`.
 
 Gate: requirements, outputs, ownership, timeline, resource allocation, rollback, and acceptance tests agree.
 
@@ -161,10 +161,10 @@ Gate: every acceptance criterion is PASS or has a precise blocker with command, 
 ## Required deliverables
 
 - `.github/prompts/comprehensive-hermes-maintenance.prompt.md`
-- `.hermes/specs/comprehensive-hermes-maintenance-spec.md`
-- `.hermes/plans/comprehensive-hermes-maintenance-plan.md`
-- `.hermes/approvals/2026-09-05-comprehensive-hermes-maintenance.md`
-- Secret-safe inventory, validation, cleanup, and release reports under `.hermes/reports/`
+- `./specs/comprehensive-hermes-maintenance-spec.md`
+- `./plans/comprehensive-hermes-maintenance-plan.md`
+- `./approvals/2026-09-05-comprehensive-hermes-maintenance.md`
+- Secret-safe inventory, validation, cleanup, and release reports under `./reports/`
 - Updated Hermes workspace scripts and installed maintenance/QA skills
 
 ## Output contract

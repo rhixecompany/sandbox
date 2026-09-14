@@ -1,6 +1,6 @@
 # Context Files Ownership + Change Matrix
 **Date:** 2026-08-24
-**Plan:** `.hermes/plans/2026-08-24_update-enhance-verify-context-files.md`
+**Plan:** `./plans/2026-08-24_update-enhance-verify-context-files.md`
 
 ## Canonical Ownership
 | Concern | Canonical File | Secondary References |

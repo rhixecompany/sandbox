@@ -8,10 +8,10 @@ status: completed
 >
 > **Supersedes for this scope:**
 >
-> - `.hermes/plans/2026-06-30_171919-prompt-orchestration-comprehensive-plan.md`
-> - `.hermes/plans/2026-06-30-execution-plan-for-prompt-and-plan-normalization.md`
-> - `.hermes/plans/2026-06-30_enhance-markdown-full-pass.md`
-> - `.hermes/plans/2026-06-30_171919-sandbox-aggressive-cleanup-plan.md`
+> - `./plans/2026-06-30_171919-prompt-orchestration-comprehensive-plan.md`
+> - `./plans/2026-06-30-execution-plan-for-prompt-and-plan-normalization.md`
+> - `./plans/2026-06-30_enhance-markdown-full-pass.md`
+> - `./plans/2026-06-30_171919-sandbox-aggressive-cleanup-plan.md`
 >
 > **Current inventory snapshot (2026-07-10):**
 >

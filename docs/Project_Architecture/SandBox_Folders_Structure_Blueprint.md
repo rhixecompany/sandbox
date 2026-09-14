@@ -39,7 +39,7 @@ SandBox/
 │   └── ...                     # CI/workflows
 ├── .gitignore
 ├── .gitmodules
-├── .hermes/                    # Hermes agent config
+├── ./                    # Hermes agent config
 ├── .hermes.md
 ├── .mcp.json                   # MCP server registrations
 ├── .vscode/                    # VS Code workspace settings

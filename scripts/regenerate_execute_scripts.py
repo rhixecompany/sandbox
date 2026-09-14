@@ -3,7 +3,7 @@
 import os
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEATS = ["overview","mcp","memory","skills","tools","tool-gateway","kanban","hooks"]
-T = "features/{feat}.md", ".hermes/plans/{feat}-plan.md", ".hermes/specs/{feat}-spec.md", ".hermes/prompts/{feat}-prompt.md", "skills/{feat}-bundle/SKILL.md"
+T = "features/{feat}.md", "./plans/{feat}-plan.md", "./specs/{feat}-spec.md", "./prompts/{feat}-prompt.md", "skills/{feat}-bundle/SKILL.md"
 for feat in FEATS:
     paths = [os.path.join(REPO, p.format(feat=feat)) for p in T]
     out = os.path.join(REPO, "results", f"{feat}-result.md")

@@ -1,7 +1,7 @@
 # OpenCode (opencode-zen / opencode-free) Best Practices — Verified 2026-09-14
 
 Author: ops/adminbot (subagent identity confirmed)
-Plan reference: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B)
+Plan reference: `./plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B)
 Workspace: `~/Desktop/SandBox` (clean-development, 14 profile dirs verified, 3 profile dirs MISSING: default/adminbot/alexa-alias — preserved honestly)
 
 ## Verified Provider Docs / Config (Real URLs)

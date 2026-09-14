@@ -24,7 +24,7 @@
     "patient-tutor",
     "chat",
     "--query-file",
-    "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\results\\agent-provider-matrix\\20260828T194152Z\\patient-tutor\\opencode-zen\\request.md",
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T194152Z\\patient-tutor\\opencode-zen\\request.md",
     "--provider",
     "opencode-zen",
     "--quiet",

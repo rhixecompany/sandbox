@@ -24,7 +24,7 @@
     "code-architect",
     "chat",
     "--query-file",
-    "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\results\\agent-provider-matrix\\20260828T194152Z\\code-architect\\ollama-cloud\\request.md",
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T194152Z\\code-architect\\ollama-cloud\\request.md",
     "--provider",
     "ollama-cloud",
     "--quiet",

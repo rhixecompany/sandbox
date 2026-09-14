@@ -87,12 +87,12 @@ Phase 6: Judge all specs/plans/prompts/scripts → raise scores to ≥99
 ```
 
 ## Files to Create/Modify
-- `~/.hermes/skills/` — new skills from awesome lists
-- `~/.hermes/plugins/` — new plugin configurations
-- `~/.hermes/config.yaml` — updated MCP server configs
+- `~/./skills/` — new skills from awesome lists
+- `~/./plugins/` — new plugin configurations
+- `~/./config.yaml` — updated MCP server configs
 - `~/Desktop/SandBox/requirements.txt` — updated Python deps
-- `.hermes/plans/` — this plan
-- Profile config files in `~/.hermes/profiles/`
+- `./plans/` — this plan
+- Profile config files in `~/./profiles/`
 
 
 ## Phase 1
@@ -111,7 +111,7 @@ Phase 6: Judge all specs/plans/prompts/scripts → raise scores to ≥99
 
 
 ## Linked Specs
-- .hermes/specs/master-spec.md
+- ./specs/master-spec.md
 
 ## Risks
 
@@ -132,20 +132,20 @@ Phase 6: Judge all specs/plans/prompts/scripts → raise scores to ≥99
 ## Progress Update (2026-09-07 19:48 UTC)
 
 ### Completed:
-1. ✅ SG1: Extracted all 4 awesome lists (~489 items) — reports saved to .hermes/plans/
+1. ✅ SG1: Extracted all 4 awesome lists (~489 items) — reports saved to ./plans/
    - github/awesome-copilot: 87 skills, 23 agents, 8 hooks, 75 plugins = 193 items
    - awesome-opencode: 44+ plugins
    - awesome-codex-cli: 9 subagents, 13 skills, 25 skills, 5 plugins, 5 hooks, 14 MCP servers
    - awesome-hermes-agent: 49 skills, 48 plugins, 21 memory providers, 30 tools, 26 agents
 2. ✅ SG2: Code-Rabbit CLI installed (v0.7.6), coderabbitai-mcp v1.1.1, MCP configured, SKILL.md created, webhooks set up
-3. ✅ SG3: All 24 MCP server SKILL.md files created at ~/.hermes/skills/mcp/
+3. ✅ SG3: All 24 MCP server SKILL.md files created at ~/./skills/mcp/
 4. ⏳ SG4: Judge scores running — plans=32.3, prompts=46.3, scripts=70.4, specs=N/A
 5. ⏳ SG5: Profile diff in progress
 
 ### Currently Fixing (5 parallel subagents):
 6. ⏳ SG6-fix-plans: Fix 50 plan files → ≥99
 7. ⏳ SG6-fix-prompts: Fix 226 prompt files → ≥99
-8. ⏳ SG6-fix-specs: Create .hermes/specs/ → ≥99
+8. ⏳ SG6-fix-specs: Create ./specs/ → ≥99
 9. ⏳ SG6-fix-scripts: Fix 5 scripts → ≥99
 10. ⏳ SG6-profile-sync: Sync 14 profiles
 
@@ -201,9 +201,9 @@ Phase 6: Judge all specs/plans/prompts/scripts → raise scores to ≥99
 
 | Subgoal | Status | Evidence |
 |---------|--------|----------|
-| SG1: Awesome Lists | ✅ COMPLETE | 4 extract reports in .hermes/plans/ |
+| SG1: Awesome Lists | ✅ COMPLETE | 4 extract reports in ./plans/ |
 | SG2: Code-Rabbit | ✅ COMPLETE | CLI v0.7.6, MCP, SKILL.md, webhooks |
-| SG3: MCP Skills | ✅ COMPLETE | 24 SKILL.md files in ~/.hermes/skills/mcp/ |
+| SG3: MCP Skills | ✅ COMPLETE | 24 SKILL.md files in ~/./skills/mcp/ |
 | SG4: Doctor/Audit/Deps | ✅ COMPLETE | hooks doctor PASS, requirements.txt updated |
 | SG5: Profile Sync | ⏳ RUNNING | Background subagent collecting data |
 | SG6: Judge Scores | ⏳ RUNNING | Background subagents pushing to ≥99 |
@@ -235,14 +235,14 @@ Phase 6: Judge all specs/plans/prompts/scripts → raise scores to ≥99
 - sg6-fix-plans-retry → Retry after rate limit
 
 ### Files Created/Modified Summary:
-- `~/.hermes/hooks/_pathutil.py` — Fixed stdout JSON
-- `~/.hermes/hooks/lib.py` — Fixed stdout JSON
-- `~/.hermes/skills/code-rabbit/SKILL.md` — Created
-- `~/.hermes/skills/mcp/mcp-*/SKILL.md` — 24 files created
+- `~/./hooks/_pathutil.py` — Fixed stdout JSON
+- `~/./hooks/lib.py` — Fixed stdout JSON
+- `~/./skills/code-rabbit/SKILL.md` — Created
+- `~/./skills/mcp/mcp-*/SKILL.md` — 24 files created
 - `~/Desktop/SandBox/requirements.txt` — Updated with 17 packages
-- `.hermes/webhooks/code-rabbit/` — Webhook configs
-- `.hermes/specs/` — Spec directory created
-- `.hermes/plans/audit-log.md` — Updated
+- `./webhooks/code-rabbit/` — Webhook configs
+- `./specs/` — Spec directory created
+- `./plans/audit-log.md` — Updated
 - `SESSION_REPORT.md` — Updated with v3 progress
 
 ---

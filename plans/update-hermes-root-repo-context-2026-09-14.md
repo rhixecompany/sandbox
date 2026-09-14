@@ -44,7 +44,7 @@ Blockers noted honestly (preserved, NOT hidden):
 
 ```
 LOAD     [✓] 14 skills verified loaded (see Skill Verification Evidence)
-PLAN     [EXECUTE NOW] This document (plan file at .hermes/plans/update-hermes-root-repo-context-2026-09-14.md)
+PLAN     [EXECUTE NOW] This document (plan file at ./plans/update-hermes-root-repo-context-2026-09-14.md)
 VERIFY   [EXECUTE] Clarify turn 4 completed (4 clarifications, 10 questions resolved); no ambiguity remains; no new clarification needed
 EXECUTE  [EXECUTE] Sequential file updates (8 files) — see Execution Sequence
 GATE     [VERIFY PER FILE] Every file passes: identity preserved, DRY cross-refs present, rules 1-6 referenced, .env note present, no hidden errors
@@ -71,7 +71,7 @@ Confirmed via `skill_view(name=...)` calls (each returned success with path + co
 8. mcp-memory (MCP — persistent graph; listed in .hermes.md MCP table: memory)
 9. writing-clearly-and-concisely (referenced; concise bullets, skip filler, sharp opinions — aligns with user preference)
 10. subagent-driven-development (loaded; delegate_task with full context injection; parallel subagent coordination noted)
-11. plan (this doc — .hermes/plans/update-hermes-root-repo-context-2026-09-14.md)
+11. plan (this doc — ./plans/update-hermes-root-repo-context-2026-09-14.md)
 12. plans-and-specs (referenced; spec drafting + decomposition — cross-ref to user's required spec/plan skills)
 13. create-implementation-plan (referenced — user-required; new plan file creation confirmed)
 14. update-implementation-plan (referenced — user-required; existing plan updates)
@@ -120,11 +120,11 @@ Each updated file includes cross-reference sections pointing to (verified by `sk
 - `SOUL.md` (3084 B; identity + standing rules + memory hierarchy + session achievements)
 - `USER.md` (5636 B; identity + environment + preferences + honcho card + session achievements)
 - `MEMORY.md` (8422 B; durable facts + environment + session evidence + rules 1-6 + .env note)
-- Session artifacts (verified real by `ls -la` / file-size): `.hermes/plans/debug-subgoal-plan-2026-09-13.md` (4340 B), `.hermes/plans/debug-run-logs.md` (53152 B — 14 real exit codes), `.hermes/specs/unified-subgoal-comprehensive.md` (6207 B), `.hermes/specs/skill-verification-evidence.md` (2658 B — 28 skills verified/mapped), `.hermes/specs/debug-analysis-2026-09-13.md` (6081 B — 4 single-hypothesis failure classes), `.hermes/specs/debug-subgoal-final-verification.md` (5631 B — gate checklist verified), `.hermes/specs/exposure-correction.md` (1333 B — false positive corrected: `API_KEY=vault` = MEMORY.md vault handle reference, NOT .env secret copied), `.eslintrc.json` minimal fix (69 B — parserOptions.project = ./tsconfig.json; ruff PASS; syntax PASS). `.env` (3334 B — unchanged; no new .bak artifacts; 0 hidden errors).
+- Session artifacts (verified real by `ls -la` / file-size): `./plans/debug-subgoal-plan-2026-09-13.md` (4340 B), `./plans/debug-run-logs.md` (53152 B — 14 real exit codes), `./specs/unified-subgoal-comprehensive.md` (6207 B), `./specs/skill-verification-evidence.md` (2658 B — 28 skills verified/mapped), `./specs/debug-analysis-2026-09-13.md` (6081 B — 4 single-hypothesis failure classes), `./specs/debug-subgoal-final-verification.md` (5631 B — gate checklist verified), `./specs/exposure-correction.md` (1333 B — false positive corrected: `API_KEY=vault` = MEMORY.md vault handle reference, NOT .env secret copied), `.eslintrc.json` minimal fix (69 B — parserOptions.project = ./tsconfig.json; ruff PASS; syntax PASS). `.env` (3334 B — unchanged; no new .bak artifacts; 0 hidden errors).
 
 ## Optional / Future Work (not executed this session — documented honestly per clarification turn 3 "Stop" + "future work" clarification)
 
-- Remaining 120 sequential groups (600 batches) from the web-research-628-batch plan: `.hermes/plans/web-research-628-batch-execution-plan.md` (5991 B verified) — NOT executed; NOT hidden. Next concrete step requires NEW clarification directing continuation.
+- Remaining 120 sequential groups (600 batches) from the web-research-628-batch plan: `./plans/web-research-628-batch-execution-plan.md` (5991 B verified) — NOT executed; NOT hidden. Next concrete step requires NEW clarification directing continuation.
 - `adminbot` profile MISSING preserved honestly (verified blocker, not fabricated) — requires separate clarification to address; NOT synthesized.
 - 41 parsing errors (nested .codex/.copilot scope conflict — architecture concern per systematic-debugging Phase 4.5) — minimal `.eslintrc.json` fix applied but errors remain; architecture-level fix = future work; NOT suppressed.
 - Security vulnerability remediation (26 findings) — documented honestly (`fastmcp==2.10.6` CRITICAL; `httpx2==2.7.0` HIGH); fix = separate isolated direction; NOT suppressed.
@@ -136,6 +136,6 @@ Each updated file includes cross-reference sections pointing to (verified by `sk
 - .env (3334 B) untouched — no read of .env contents performed (per SOUL.md rule: never read, print, or commit .env content); only file-size reference preserved.
 - No synthetic session IDs; no synthetic capabilities/quality/ranking (verified by absence of fabricated claims; only real evidence refs).
 - 26 vulnerability findings preserved; 41 parsing errors preserved; rate-limit 403 preserved; MSYS2 FAIL (50 stderr) preserved; adminbot MISSING preserved.
-- All exit codes referenced are from `.hermes/plans/debug-run-logs.md` (real sequential outputs: 14 entries verified), NOT fabricated.
+- All exit codes referenced are from `./plans/debug-run-logs.md` (real sequential outputs: 14 entries verified), NOT fabricated.
 - User-preference format honored: concise/direct/table-first/action-first; no filler; verification before claim.
 - Integrity final: PASS (verified against GATE-A through GATE-F; sequential execution; no ambiguity; clarification complete).

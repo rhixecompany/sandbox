@@ -2,7 +2,7 @@
 
 ## Gate 1: Preparation Complete
 - **Criteria**: All Phase 1 tasks verified
-- **Check**: ls .hermes/plans/create-feature-plan.md && pytest tests/ -v
+- **Check**: ls ./plans/create-feature-plan.md && pytest tests/ -v
 - **Pass Condition**: Plan exists, tests failing (RED state)
 - **Fail Action**: Re-analyze requirements, recreate plan
 

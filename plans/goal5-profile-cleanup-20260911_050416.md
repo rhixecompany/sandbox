@@ -52,7 +52,7 @@ for prof in ~/AppData/Local/hermes/profiles/*/; do
   echo "=== $name ==="
   diff -rq ~/AppData/Local/hermes/skills "$prof/skills" 2>&1 | head -3
   # ... hooks, plugins, scripts, config.yaml, .env
-done > .hermes/scratch/profile-diff-pre.txt
+done > ./scratch/profile-diff-pre.txt
 ```
 
 **Gate 3.1:** `profile-diff-pre.txt` exists, shows profile-vs-root deltas.

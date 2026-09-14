@@ -10,12 +10,12 @@ Bring every Hermes-managed asset (desktop, desktop-plugins, plugins, hooks, scri
 
 | Target | Path | Items | Current | Target |
 |---|---|---|---|---|
-| Desktop | `~/.hermes/desktop/` | 1 (state) | n/a | n/a |
-| Desktop-plugins | `~/.hermes/desktop-plugins/` | 8 dirs | mixed (5 valid, 3 broken) | 5 valid + 3 classified |
-| Plugins | `~/.hermes/plugins/` | 12 dirs | 12/12 ≥95 | maintain |
-| Hooks | `~/.hermes/hooks/` | 7 files | 7/7 ≥95 + 4 warnings | 7/7 + 0 warnings |
-| Scripts | `~/.hermes/scripts/` | 217 files | 169/217 ≥95 (77.9 avg) | ≥200/217 ≥95 (≥85 avg) |
-| Agents | `~/.hermes/agents/` | 7 files | unknown | ≥95 each |
+| Desktop | `~/./desktop/` | 1 (state) | n/a | n/a |
+| Desktop-plugins | `~/./desktop-plugins/` | 8 dirs | mixed (5 valid, 3 broken) | 5 valid + 3 classified |
+| Plugins | `~/./plugins/` | 12 dirs | 12/12 ≥95 | maintain |
+| Hooks | `~/./hooks/` | 7 files | 7/7 ≥95 + 4 warnings | 7/7 + 0 warnings |
+| Scripts | `~/./scripts/` | 217 files | 169/217 ≥95 (77.9 avg) | ≥200/217 ≥95 (≥85 avg) |
+| Agents | `~/./agents/` | 7 files | unknown | ≥95 each |
 
 ## Phases
 
@@ -39,8 +39,8 @@ Bring every Hermes-managed asset (desktop, desktop-plugins, plugins, hooks, scri
 
 ### Phase 5: Skill Artifact ⏳ PENDING
 - Create `hermes-health-sweep` skill that automates this entire pipeline
-- Place at `~/.hermes/skills/devops/hermes-health-sweep/SKILL.md`
-- Provide re-runnable scripts at `~/.hermes/skills/devops/hermes-health-sweep/scripts/`
+- Place at `~/./skills/devops/hermes-health-sweep/SKILL.md`
+- Provide re-runnable scripts at `~/./skills/devops/hermes-health-sweep/scripts/`
 
 ## Milestones
 
@@ -51,7 +51,7 @@ Bring every Hermes-managed asset (desktop, desktop-plugins, plugins, hooks, scri
 | M3 | Scripts ≥85 avg | `scripts-judge` ≥85 avg, ≥200/217 PASS |
 | M4 | Desktop-plugins cleaned | 5 valid + 3 classified/removed |
 | M5 | Agents audited | All ≥95 |
-| M6 | Skill artifact created | `~/.hermes/skills/devops/hermes-health-sweep/` on disk |
+| M6 | Skill artifact created | `~/./skills/devops/hermes-health-sweep/` on disk |
 | M7 | SESSION_REPORT.md updated | Full session record committed |
 
 ## Resource Allocation

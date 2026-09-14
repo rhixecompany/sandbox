@@ -721,8 +721,8 @@
         "2026-09-10 17:34:07,869 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded",
         "openai.APIError: Streaming response failed: [502] Upstream error from Nvidia: Service temporarily overloaded",
         "  CRITICAL supply_chain   computer-use\\SKILL.md:315      \"| `blocked pattern in type text` | You tried to `type` a she\"",
-        "  CRITICAL exfiltration   hermes-agent\\SKILL.md:375      \"~/.hermes/.env              API keys and secrets (under $HER\"",
-        "  CRITICAL exfiltration   hermes-agent\\SKILL.md:1018     \"Config: `~/.hermes/config.yaml` (settings), `~/.hermes/.env`\"",
+        "  CRITICAL exfiltration   hermes-agent\\SKILL.md:375      \"~/./.env              API keys and secrets (under $HER\"",
+        "  CRITICAL exfiltration   hermes-agent\\SKILL.md:1018     \"Config: `~/./config.yaml` (settings), `~/./.env`\"",
         "  CRITICAL supply_chain   hermes-agent\\SKILL.md:53       \"curl -fsSL https://hermes-agent.nousresearch.com/install.sh \"",
         "  CRITICAL credential_exposure hermes-agent\\references\\native-mcp.md:266 \"GITHUB_PERSONAL_ACCESS_TOKEN: \"ghp_xx...xxxx\"\"",
         "  CRITICAL credential_exposure hermes-agent\\references\\native-mcp.md:301 \"GITHUB_PERSONAL_ACCESS_TOKEN: \"ghp_xx...xxxx\"\""

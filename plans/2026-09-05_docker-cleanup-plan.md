@@ -48,9 +48,9 @@ This deletes ALL unused Docker resources. Confirmed authorized by user (`Full ex
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs
@@ -59,4 +59,4 @@ This deletes ALL unused Docker resources. Confirmed authorized by user (`Full ex
 
 ## Verification
 
-**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.

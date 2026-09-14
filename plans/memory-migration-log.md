@@ -1,6 +1,6 @@
 # Memory Migration Log — G6 — Verified 2026-09-14
 
-Subagent: ops/adminbot. Plan: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B). Authorization: FULL; 5 destructive CRUD operations approved (delete originals after verified copy).
+Subagent: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-09-14.md` (verified 11673 B). Authorization: FULL; 5 destructive CRUD operations approved (delete originals after verified copy).
 
 ## Migration Executed
 

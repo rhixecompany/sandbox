@@ -19,7 +19,7 @@
     },
     "audit_plans": {
       "status": "completed",
-      "plans_dir": ".hermes/plans/",
+      "plans_dir": "./plans/",
       "plans_initialized": 1
     },
     "prompts_repair": {

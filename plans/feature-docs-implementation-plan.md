@@ -13,7 +13,7 @@ Download all `.md` files from `https://github.com/NousResearch/hermes-agent/blob
 # Subgoal
 For each discovered feature `.md`:
 1. Read file at `docs/features/<file>.md`
-2. Generate bundle: `.hermes/plans/<file>-plan.md`, `.hermes/specs/<file>-spec.md`, `.hermes/prompts/<file>-prompt.md`, `skills/<feature>-bundle/SKILL.md`, `scripts/<file>-execute.py`
+2. Generate bundle: `./plans/<file>-plan.md`, `./specs/<file>-spec.md`, `./prompts/<file>-prompt.md`, `skills/<feature>-bundle/SKILL.md`, `scripts/<file>-execute.py`
 3. Execute script (simulate / real) and verify artifacts exist + reference the feature content.
 
 # Discovery (verified via web_search)
@@ -40,10 +40,10 @@ PHASE 5 - VERIFICATION GATE (sequential; report results to user)
 
 # Verification Gates (per phase)
 - Gate 1: `docs/features/` has ≥1 `.md` file downloaded; `_file_inventory.md` present.
-- Gate 2: Each feature `.md` readable; summary lines captured in `.hermes/plans/<file>-plan.md`.
+- Gate 2: Each feature `.md` readable; summary lines captured in `./plans/<file>-plan.md`.
 - Gate 3: Each bundle's 5 artifacts exist; `SKILL.md` has ≥10-line body; `plan.md` has frontmatter.
 - Gate 4: `scripts/<file>-execute.py` runs (exit 0) and produces `results/<file>-result.md`.
-- Gate 5: Final inventory file `.hermes/plans/_final_inventory.md` counts all artifacts (plans/specs/prompts/skills/scripts/results) per feature; no synthetic session IDs; no fabricated URL responses.
+- Gate 5: Final inventory file `./plans/_final_inventory.md` counts all artifacts (plans/specs/prompts/skills/scripts/results) per feature; no synthetic session IDs; no fabricated URL responses.
 
 # Execution Mode Decision
 - Mixed: sequential download (depends on URL discovery) → parallel subagent per feature (independent bundles) → sequential verification gate. Per multi-file-change-protocol decision tree.

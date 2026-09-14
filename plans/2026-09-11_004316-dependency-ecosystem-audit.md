@@ -135,7 +135,7 @@ Audit every repository in the SandBox monorepo (root + `packages/` + all 23 `pro
 - **FILE-008**: `scripts/research-doc-verify.py` (new)
 - **FILE-009**: `hooks/node-dep-audit.sh`, `hooks/python-dep-audit.sh`, `hooks/research-doc-verify.sh` (new)
 - **FILE-010**: `requirements.txt` (modified — organized sections)
-- **FILE-011**: `.hermes/specs/dependency-ecosystem-audit-spec.md` (new)
+- **FILE-011**: `./specs/dependency-ecosystem-audit-spec.md` (new)
 - **FILE-012**: `.github/prompts/development/dependency-ecosystem-audit.prompt.md` (new)
 - **FILE-013**: Skills: `node-dep-audit`, `python-dep-audit`, `research-doc-verify` (new)
 

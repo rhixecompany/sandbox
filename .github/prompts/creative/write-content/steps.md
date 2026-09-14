@@ -9,7 +9,7 @@
 ### Step 1.2: Create Plan
 - **Action**: Generate implementation plan with phases
 - **Tool**: create-implementation-plan skill
-- **Output**: Plan file in .hermes/plans/
+- **Output**: Plan file in ./plans/
 
 ## Phase 2: Execution
 ### Step 2.1: Write Tests

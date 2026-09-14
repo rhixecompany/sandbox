@@ -10,8 +10,8 @@
 | Category | Count |
 |----------|-------|
 | SandBox `.github/prompts/` files | ~150+ (across 23 category directories + templates) |
-| SandBox `.hermes/plans/` files | ~140+ (including subdirectories) |
-| SandBox `.hermes/specs/` files | 6 |
+| SandBox `./plans/` files | ~140+ (including subdirectories) |
+| SandBox `./specs/` files | 6 |
 | Hermes `scripts/` files | ~250+ |
 | SandBox `scripts/` files | ~90+ (+ 50+ __pycache__ entries) |
 | `.env` files found | 2 |
@@ -58,7 +58,7 @@ Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50
 
 ---
 
-## 3. SandBox `.hermes/plans/` Files
+## 3. SandBox `./plans/` Files
 
 **Total plan files:** ~140+
 
@@ -113,7 +113,7 @@ Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50
 
 ---
 
-## 4. SandBox `.hermes/specs/` Files
+## 4. SandBox `./specs/` Files
 
 **Total spec files:** 6
 
@@ -286,7 +286,7 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 
 2. **`.enhance/` directory** in `.github/prompts/` — cached analysis (`analysis_report.json`)
 
-3. **Old completed plan directories** in `.hermes/plans/`:
+3. **Old completed plan directories** in `./plans/`:
    - `2026-08-28-five-goals-execution/`
    - `2026-08-28-unified-platform-remediation/`
    - `2026-08-31-10subgoal/`
@@ -317,7 +317,7 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 
 5. **`SandBox/scripts/.runtime/`** directory — contains runtime artifacts (`_openrouter_runner.py`, `instruction-audit.json`, `provider_inventory.json`, `v1.json`) that may be transient
 
-6. **Old JSON data files** in `.hermes/plans/`:
+6. **Old JSON data files** in `./plans/`:
    - `env-config-inventory.json` (160,731 bytes)
    - `audit-inventory.json` (22,446 bytes)
    - `workspace-inventory.json` (32,406 bytes)
@@ -338,7 +338,7 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 - All stale plan subdirectories listed in Section 9 (~15-20 directories)
 - Duplicate JSON registry files in hermes/scripts/ (6-8 files)
 - `SandBox/scripts/.runtime/` directory
-- Old `.json` data files in `.hermes/plans/` that are superseded by `.md` versions
+- Old `.json` data files in `./plans/` that are superseded by `.md` versions
 
 ### CONSOLIDATE:
 - **Quick commands JSON registries:** Reduce 14+ JSON files to 2-3 canonical versions (latest, unified, backup)
@@ -347,7 +347,7 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 
 ### KEEP:
 - All `.github/prompts/` prompt definitions — active skill content
-- All `.hermes/specs/` files — 6 spec documents, all relevant
+- All `./specs/` files — 6 spec documents, all relevant
 - Core `.py`, `.sh`, `.ps1` scripts in both directories
 - `.env` and `config.yaml` configuration files
 - `README.md` and top-level documentation

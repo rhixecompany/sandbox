@@ -28,7 +28,7 @@ Status badge: ![In progress](https://img.shields.io/badge/status-in%20progress-y
 
 ### Phase 1 — Audit & Triage (COMPLETE — verified via execute_code)
 - GOAL-P1: Build full audit (filename + MD5) of both directories.
-- TASK-P1-1: Run audit script → `.hermes/specs/prompt-library-de-dup-audit.md` + `.json`.
+- TASK-P1-1: Run audit script → `./specs/prompt-library-de-dup-audit.md` + `.json`.
 - TASK-P1-2: Triage results saved (373 filename duplicates found across 1550 prompts / 676 backups; 29 exact + 21 divergent in first-50 sample).
 - GATE-P1: Audit artifacts exist and contain filename-match list.
 
@@ -41,12 +41,12 @@ Status badge: ![In progress](https://img.shields.io/badge/status-in%20progress-y
 - GATE-P2: .github/prompts_backup directory removed or empty; audit log shows each action; no backup file remains unprocessed.
 
 ### Phase 3 — Artifact Creation (parallel subagent-capable phases)
-- GOAL-P3-A: `.hermes/plans/prompt-library-de-dup-and-backup-archive-plan.md` (this file) — complete.
-- GOAL-P3-B: `.hermes/specs/prompt-library-de-dup-and-backup-archive-spec.md` — spec document with architecture, acceptance criteria, file list.
+- GOAL-P3-A: `./plans/prompt-library-de-dup-and-backup-archive-plan.md` (this file) — complete.
+- GOAL-P3-B: `./specs/prompt-library-de-dup-and-backup-archive-spec.md` — spec document with architecture, acceptance criteria, file list.
 - GOAL-P3-C: `.github/prompts/` updates — merged/refactored versions (already done by Phase 2 script actions).
 - GOAL-P3-D: `scripts/prompt-library-de-dup-audit.sh` — portable audit script.
 - GOAL-P3-E: `skills/prompt-library-de-dup-and-backup-archive/` — SKILL.md (new skill for future reuse).
-- GOAL-P3-F: `.hermes/prompts/prompt-library-de-dup-and-backup-archive.prompt.md` — implementation prompt (execution commands) for this subgoal.
+- GOAL-P3-F: `./prompts/prompt-library-de-dup-and-backup-archive.prompt.md` — implementation prompt (execution commands) for this subgoal.
 - GATE-P3: All artifacts present; cross-references verified; no placeholder text; SKILL.md ≤250 lines; script executable.
 
 ### Phase 4 — Final Gate & Verification
@@ -64,12 +64,12 @@ Status badge: ![In progress](https://img.shields.io/badge/status-in%20progress-y
 ## 5. Files Affected
 - FILE-001: `.github/prompts/*` (updated by Phase 2; some overwritten by backup content).
 - FILE-002: `.github/prompts_backup/*` (deleted by Phase 2 after audit).
-- FILE-003: `.hermes/plans/prompt-library-de-dup-and-backup-archive-plan.md` (this file).
-- FILE-004: `.hermes/specs/prompt-library-de-dup-and-backup-archive-spec.md`.
-- FILE-005: `.hermes/specs/prompt-library-de-dup-audit.md` + `.json`.
+- FILE-003: `./plans/prompt-library-de-dup-and-backup-archive-plan.md` (this file).
+- FILE-004: `./specs/prompt-library-de-dup-and-backup-archive-spec.md`.
+- FILE-005: `./specs/prompt-library-de-dup-audit.md` + `.json`.
 - FILE-006: `scripts/prompt-library-de-dup-audit.sh`.
 - FILE-007: `skills/prompt-library-de-dup-and-backup-archive/SKILL.md`.
-- FILE-008: `.hermes/prompts/prompt-library-de-dup-and-backup-archive.prompt.md`.
+- FILE-008: `./prompts/prompt-library-de-dup-and-backup-archive.prompt.md`.
 
 ## 6. Testing / Verification Gates
 - TEST-001: Audit artifacts exist (`os.path.isfile` verified).

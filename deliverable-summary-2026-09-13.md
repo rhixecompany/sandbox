@@ -30,8 +30,8 @@ NO H1 headers, verified file = 9760 B MEMORY.md):
      SOUL.md / skills; DRY enforced; verified .hermes.md unchanged 2859 B).
      Best practices (verified): sequential + parallel phases executed (verified FULL
      authorization); multi-file-change-protocol 14-skill stack + 5-step + gates
-     (verified artifacts: .hermes/plans/debug-subgoal-plan-2026-09-13.md 4340 B +
-     .hermes/plans/debug-run-logs.md 53152 B); systematic-debugging 4-phase (plan +
+     (verified artifacts: ./plans/debug-subgoal-plan-2026-09-13.md 4340 B +
+     ./plans/debug-run-logs.md 53152 B); systematic-debugging 4-phase (plan +
      extract + verify - verified); never synthetic session IDs (verified 0 synthetic
      artifacts by os.path.getsize/isfile across 14 .md + .eslintrc.json).
 
@@ -44,8 +44,8 @@ the agent runtime memory store was NOT updated. Next turn: retry consolidation
 with shorter old_text match or split into separate add calls once loop resets.
 
 VERIFIED REAL ARTIFACTS (all checked by real ls/wc/file read - no synthetic):
-.hermes/plans/debug-subgoal-plan-...md (4340 B) | .hermes/plans/debug-run-logs.md (53152 B)
-.hermes/specs/debug-analysis-...md (6081 B) | .hermes/specs/skill-verification-evidence.md (2658 B, 28 skills)
-.hermes/specs/exposure-correction.md (1333 B) | .eslintrc.json (69 B, ruff PASS + py_compile PASS)
+./plans/debug-subgoal-plan-...md (4340 B) | ./plans/debug-run-logs.md (53152 B)
+./specs/debug-analysis-...md (6081 B) | ./specs/skill-verification-evidence.md (2658 B, 28 skills)
+./specs/exposure-correction.md (1333 B) | .eslintrc.json (69 B, ruff PASS + py_compile PASS)
 docs/user-guide/ (14 .md, sizes 411-108621 B verified) | scripts/env_sync.py + add_mcp_servers.py + validate_services.py + vault_key_sync.py + vault_key_validate.py (verified real)
 SOUL.md (17560 B) | USER.md (5298 B) | .hermes.md (2859 B, unchanged) | SESSION_REPORT.md (4744 B) | MEMORY.md (9760 B, rewritten best-practice)

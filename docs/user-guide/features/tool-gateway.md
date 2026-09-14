@@ -181,7 +181,7 @@ Older Hermes versions used a per-tool `use_gateway: true` boolean to route throu
 
 ### Self-hosted gateway (advanced)
 
-Running your own Nous-compatible gateway? Override endpoints in `~/.hermes/.env`:
+Running your own Nous-compatible gateway? Override endpoints in `~/./.env`:
 
 ```bash
 TOOL_GATEWAY_DOMAIN=your-domain.example.com

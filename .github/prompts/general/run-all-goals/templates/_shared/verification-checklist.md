@@ -63,7 +63,7 @@ Apply in order. Halt on first failure; do not proceed to next phase until gate p
 - [ ] No `.env` contents, tokens, or credentials embedded in prompt body or scripts.
 - [ ] `${ENV_VAR}` placeholders only where secrets required.
 - [ ] Destructive operations (`doctor --fix`, `git push`, archive, model `--yolo`) have authorization record in plan/artifact.
-- [ ] Recoverable backup references verified (`.env.pre-delete`, `.hermes/history`, `.git` state).
+- [ ] Recoverable backup references verified (`.env.pre-delete`, `./history`, `.git` state).
 - [ ] No backup files created (SOUL.md Rule 6 / user preference); git rollback relied upon exclusively.
 
 ### Execution Verification (Real Tool Output â Not Fabricated)

@@ -18,23 +18,23 @@ As a concrete example: the `.github/prompts/operations/test-providers-models/tes
 | # | Task | Method | Gate |
 |---|---|---|---|
 | 2.1 | Fetch `openrouter.ai/models?variant=free` | `browser_exec` with URL; use `agent-browser` tool if available; capture HTML | Page loaded; content verified real |
-| 2.2 | Convert HTML to markdown | Use `fetch` tool or `agent-browser` conversion; save to `.hermes/plans/openrouter-free-models-report.md` | Markdown file exists; size > 0; real content |
+| 2.2 | Convert HTML to markdown | Use `fetch` tool or `agent-browser` conversion; save to `./plans/openrouter-free-models-report.md` | Markdown file exists; size > 0; real content |
 | 2.3 | Extract all FREE model entries | Parse markdown; list model IDs; create table in report | All free entries captured; no synthetic entries |
 | 2.4 | Run `/test-providers-models` on each free model | Execute `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` against each model; capture results | Results saved to `.github/prompts/operations/test-providers-models/test-providers-models-results.json` (updated); verified real |
 | 2.5 | Audit/update env vars (repo files) | Read `.env`, `package.json`, `pyproject.toml`, `.cursorrules`, `.github/prompts/`, `.hermes.md`, `AGENTS.md`; check for missing/incorrect env refs; update if needed | All env vars verified; `.env` 3334 B unchanged (no secret exposure) |
 | 2.6 | Audit/update env vars (hermes home) | Read `~/AppData/Local/hermes/config.yaml`; read all profile `.env` files (14 profiles); compare with `.hermes.md`; update if needed | All profile `.env` files verified; no conflicts |
-| 2.7 | Best practices for `opencode-free` + `opencode-zen` | Read `.github/prompts/` docs; search `.hermes/plans/` for `opencode-zen-workflow.md` (656 B verified), `opencode-free-workflow.md` references; extract best practices | Best practices documented in `.hermes/specs/phase2-...` or `.hermes/plans/` |
+| 2.7 | Best practices for `opencode-free` + `opencode-zen` | Read `.github/prompts/` docs; search `./plans/` for `opencode-zen-workflow.md` (656 B verified), `opencode-free-workflow.md` references; extract best practices | Best practices documented in `./specs/phase2-...` or `./plans/` |
 | 2.8 | Configure hermes with model + fallback | Update `.hermes.md` / profile `USER.md` / `SOUL.md` with `opencode-zen` + `opencode-free` references; set fallback (`openrouter` → `nous` → `opencode-zen`); verify via `hermes profile list` and `hermes config` | Config verified; no corruption; identity preserved |
 
 ## Resource / Model Allocation
 - Subagent: Subagent-2 (delegated with full context + 14 skills + best quality + model `inkling:free` + fallback setup)
 - Browser timeout audit: check `agent-browser` skill references; verify `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` references; document any timeout patterns honestly.
-- Rate-limit 403 blocker: preserved; NOT bypassed; NOT synthesized; future batches 23-628 (`.hermes/plans/web-research-628-batch-execution-plan.md` 5991 B verified) = future sequential work — NOT executed this session; NOT fabricated.
+- Rate-limit 403 blocker: preserved; NOT bypassed; NOT synthesized; future batches 23-628 (`./plans/web-research-628-batch-execution-plan.md` 5991 B verified) = future sequential work — NOT executed this session; NOT fabricated.
 
 ## Verification Checklist (GATE-D)
 - [ ] Markdown report (`openrouter-free-models-report.md`) verified real (size > 0; real content; no synthetic entries)
 - [ ] `test-providers-models` executed; results updated (`results.json`); all exit codes real
 - [ ] Env vars audited in repo + hermes home + all profiles; updates verified
-- [ ] `.env` 3334 B unchanged; no `.env` exposure (false positive `API_KEY=vault` corrected via `.hermes/specs/exposure-correction.md` 1333 B — original vault handle reference, NOT `.env` secret)
+- [ ] `.env` 3334 B unchanged; no `.env` exposure (false positive `API_KEY=vault` corrected via `./specs/exposure-correction.md` 1333 B — original vault handle reference, NOT `.env` secret)
 - [ ] Best practices (`opencode-zen` + `opencode-free`) documented; config updated with fallback
 - [ ] 0 synthetic artifacts; 0 hidden errors; identity preserved; DRY enforced

@@ -1,7 +1,7 @@
 # MCP Server Sync — Implementation Plan
 
 **Generated:** 2026-09-05
-**Spec:** `.hermes/SPEC-mcp-sync-2026-09-05.md`
+**Spec:** `./SPEC-mcp-sync-2026-09-05.md`
 **Workspace:** C:\Users\Alexa\Desktop\SandBox
 
 ---
@@ -133,7 +133,7 @@
 ### Step 7.1 — Run final validation
 
 **Command:** `python scripts/validate-mcp-servers.py`
-**Verify:** Report saved to `.hermes/mcp-validation-report.md` shows expected server counts.
+**Verify:** Report saved to `./mcp-validation-report.md` shows expected server counts.
 
 ### Step 7.2 — Compare config files
 
@@ -142,7 +142,7 @@
 
 ### Step 7.3 — Update session summary
 
-**Action:** Write `.hermes/mcp-sync-2026-09-05-summary.md` documenting what changed, what was fixed, and what was disabled.
+**Action:** Write `./mcp-sync-2026-09-05-summary.md` documenting what changed, what was fixed, and what was disabled.
 
 ---
 

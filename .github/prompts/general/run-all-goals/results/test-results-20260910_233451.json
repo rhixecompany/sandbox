@@ -7,7 +7,7 @@
   },
   {
     "name": "Implementation Plan Exists",
-    "command": "test -f .hermes/plans/run-all-goals-implementation.md",
+    "command": "test -f ./plans/run-all-goals-implementation.md",
     "returncode": 0,
     "status": "PASS"
   },

@@ -33,7 +33,7 @@ If you're paying Portal for an xAI model anyway, Live Search calls bill against 
 | Credential | Source | Setup |
 |------------|--------|-------|
 | **SuperGrok / X Premium+ OAuth** | Browser login at `accounts.x.ai`, refreshed automatically | `hermes auth add xai-oauth` — see [xAI Grok OAuth (SuperGrok / X Premium+)](../../guides/xai-grok-oauth.md) |
-| **`XAI_API_KEY`** (preferred) | Paid xAI API key | Set in `~/.hermes/.env` |
+| **`XAI_API_KEY`** (preferred) | Paid xAI API key | Set in `~/./.env` |
 
 Both hit the same endpoint with the same payload — the only difference is the bearer token. **When both are configured, the explicit `XAI_API_KEY` wins** — the subscription OAuth bearer authorizes `/v1/responses` but answers x_search in a degraded Grok explanatory mode with no citations, while the API key returns real posts. Note this means x_search runs against metered API billing when a key is set; remove `XAI_API_KEY` to fall back to your subscription quota (with the degraded-answer caveat).
 
@@ -58,7 +58,7 @@ Either choice satisfies the gating. You can pick whichever credentials you alrea
 ## Configuration
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 x_search:
   # xAI model used for the Responses call.
   # grok-4.5 is the recommended default; any Grok model
@@ -136,7 +136,7 @@ If the next user request is "reply to the best one" or "like that post", the age
 
 ### "No xAI credentials available"
 
-The tool surfaces this when both auth paths fail. Either set `XAI_API_KEY` in `~/.hermes/.env` or run `hermes auth add xai-oauth` and complete the browser login. Then restart your session so the agent re-reads the tool registry.
+The tool surfaces this when both auth paths fail. Either set `XAI_API_KEY` in `~/./.env` or run `hermes auth add xai-oauth` and complete the browser login. Then restart your session so the agent re-reads the tool registry.
 
 ### "`x_search` is not enabled for this model"
 

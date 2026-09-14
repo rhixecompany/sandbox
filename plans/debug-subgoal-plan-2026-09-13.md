@@ -11,7 +11,7 @@ owner: HermesAgent (default profile / patient-tutor for explanations)
 
 > Per `/multi-file-change-protocol` (14 skills loaded; >6 file modifications expected from fixes). Per `systematic-debugging`: Phase 1 (reproduce/evidence) before Phase 4 (fix). Per `user-communication-preferences`: DRY, concise bullets + table-first, action-first, no filler; never synthetic session IDs; never synthetic capabilities/rankings. Per `SOUL.md`: no hidden errors; honest blocker reporting.
 
-## Commands to Execute (Background, Output to `.hermes/plans/debug-run-logs.md`)
+## Commands to Execute (Background, Output to `./plans/debug-run-logs.md`)
 
 Batch 1 (MCP test + build check):
 - `hermes mcp test doist/todoist-ai`
@@ -36,21 +36,21 @@ Batch 3 (Logs inspection):
 ## Plan Phases (Sequential, with Gates)
 
 ### Phase -1: Setup (Plan + Spec + Log file init)
-- Create `.hermes/plans/` entry (this file).
-- Create log file `.hermes/plans/debug-run-logs.md`.
+- Create `./plans/` entry (this file).
+- Create log file `./plans/debug-run-logs.md`.
 - Confirm previous multi-file results intact (verified: 6 real `.md`, no `.bak` from session).
 
 ### Phase 0: Evidence Gathering (Run commands; capture real stdout/stderr)
 - Execute Batch 1, 2, 3 sequentially (not parallel — `systematic-debugging` requires ordered reproduction).
-- Capture each command's stdout + stderr + exit code + timestamp into `.hermes/plans/debug-run-logs.md`.
+- Capture each command's stdout + stderr + exit code + timestamp into `./plans/debug-run-logs.md`.
 - Do NOT invent/fabricate any command output. If a command fails (e.g., `hermes mcp test doist/todoist-ai` returns non-zero), log the REAL output including the error message.
 - Gate: At least one log entry exists per command; zero synthetic entries.
 
 ### Phase 1: Read All Log Files + Analyze
-- Read `.hermes/plans/debug-run-logs.md`.
+- Read `./plans/debug-run-logs.md`.
 - Also read any existing `hermes` log files referenced by `hermes logs ...` (if they exist on disk under workspace or `~/AppData/Local/hermes/` paths — check without inventing paths).
 - Identify: errors, warnings, failed tests, security audit findings, doctor fix attempts, status discrepancies.
-- Log analysis written to `.hermes/specs/debug-analysis-2026-09-13.md`.
+- Log analysis written to `./specs/debug-analysis-2026-09-13.md`.
 
 ### Phase 2: Pattern Analysis + Hypothesis (Systematic Debug Phase 2/3)
 - Compare working patterns vs broken patterns from logs.
@@ -68,7 +68,7 @@ Batch 3 (Logs inspection):
 - Confirm no `.bak` artifacts.
 - Confirm all errors are documented honestly (none hidden).
 - Confirm no synthetic session IDs or synthetic capabilities.
-- Write `.hermes/specs/debug-subgoal-final-verification.md`.
+- Write `./specs/debug-subgoal-final-verification.md`.
 
 ## Safety / Integrity Constraints
 - No destructive `git` operations without user confirmation (`SOUL.md` destructive-op approval rule).
@@ -78,6 +78,6 @@ Batch 3 (Logs inspection):
 - `hermes security audit` may reveal real security issues; report honestly, do not suppress.
 
 ## References
-- `.hermes/md` docs (plan reference) — `.hermes/plans/download-hermes-user-guide-docs-2026-09-13.md` (previous subgoal verified; 6 real `.md` files)
-- `.hermes/specs/` — `.hermes/specs/download-hermes-user-guide-docs.md` (previous subgoal spec)
+- `./md` docs (plan reference) — `./plans/download-hermes-user-guide-docs-2026-09-13.md` (previous subgoal verified; 6 real `.md` files)
+- `./specs/` — `./specs/download-hermes-user-guide-docs.md` (previous subgoal spec)
 - Skill references: `systematic-debugging` (4-phase), `multi-file-change-protocol` (>6 trigger), `user-communication-preferences` (execution style), `using-superpowers` (advanced execution)

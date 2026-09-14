@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-08-28T19:41:52+00:00",
+  "profile": "qa",
+  "provider": "openai-codex",
+  "package_context": "- openrouter-client (typescript, bun)\n  summary: TypeScript/Bun OpenRouter wrapper with TypeScript wrapper, OpenRouter SDK client, chat completions, streaming\n  capabilities: TypeScript wrapper, OpenRouter SDK client, chat completions, streaming, custom headers, max_tokens, temperature control, typed client\n  files: PLAN.md, README.md, SPEC.md, package.json, src/chat.ts, src/client.ts, src/types.ts, test/chat.test.ts … (+1 more)\n- openrouter-client-py (python, python)\n  summary: Python OpenRouter wrapper with Python wrapper, OpenRouter client, chat completions, streaming\n  capabilities: Python wrapper, OpenRouter client, chat completions, streaming, custom headers, max_tokens, temperature control, dataclasses\n  files: .pytest_cache/README.md, PLAN.md, README.md, SPEC.md, pyproject.toml, src/openrouter_client_py.egg-info/SOURCES.txt, src/openrouter_client_py.egg-info/dependency_links.txt, src/openrouter_client_py.egg-info/requires.txt … (+6 more)",
+  "max_output": 1200,
+  "capabilities": [
+    "TypeScript wrapper",
+    "OpenRouter SDK client",
+    "chat completions",
+    "streaming",
+    "custom headers",
+    "max_tokens",
+    "temperature control",
+    "typed client",
+    "Python wrapper",
+    "OpenRouter client",
+    "dataclasses"
+  ],
+  "model": "deepseek-v4-flash-free",
+  "command": [
+    "hermes",
+    "-p",
+    "qa",
+    "chat",
+    "--query-file",
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\results\\agent-provider-matrix\\20260828T194152Z\\qa\\openai-codex\\request.md",
+    "--provider",
+    "openai-codex",
+    "--quiet",
+    "--pass-session-id",
+    "--source",
+    "agent-provider-matrix",
+    "--max-turns",
+    "20",
+    "--run-budget",
+    "300"
+  ],
+  "exit_code": 0,
+  "duration_ms": 0,
+  "status": "dry-run",
+  "response_excerpt": "",
+  "notes": "Dry run: command not executed.",
+  "assumptions": [
+    "provider/model defaults are selected by Hermes unless an explicit override is supplied",
+    "package capability extraction is heuristic and based on files under packages/**/*"
+  ],
+  "inventory": {
+    "profiles": 14,
+    "providers": 11,
+    "packages": 2
+  }
+}

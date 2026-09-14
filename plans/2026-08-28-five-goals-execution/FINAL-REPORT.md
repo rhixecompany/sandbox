@@ -2,8 +2,8 @@
 
 > Date: 2026-08-28
 > Workspace: C:\Users\Alexa\Desktop\SandBox
-> Plan: `.hermes/plans/2026-08-28-five-goals-execution/PLAN.md`
-> Spec: `.hermes/plans/2026-08-28-five-goals-execution/SPEC.md`
+> Plan: `./plans/2026-08-28-five-goals-execution/PLAN.md`
+> Spec: `./plans/2026-08-28-five-goals-execution/SPEC.md`
 
 ## Summary
 
@@ -141,13 +141,13 @@ green across all hermes verification commands.
 | `scripts/profile_config_fix.py` | Generate thin pointer files for missing context files |
 | `skills/.../agent-provider-matrix-runner/SKILL.md` | Reusable workflow for provider matrix |
 | `skills/.../agent-provider-matrix-runner/references/output-schema.md` | Result row schema |
-| `.hermes/plans/2026-08-28-five-goals-execution/SPEC.md` | Five-goal specification |
-| `.hermes/plans/2026-08-28-five-goals-execution/PLAN.md` | Five-goal implementation plan |
-| `.hermes/plans/2026-08-28-five-goals-execution/g1-audit-raw.txt` | Goal 1 audit baseline |
-| `.hermes/plans/2026-08-28-five-goals-execution/g1-fix-applied.json` | Goal 1 fix report |
-| `.hermes/plans/2026-08-28-five-goals-execution/g3-summary.md` | Goal 3 summary |
-| `.hermes/plans/2026-08-28-five-goals-execution/g4-summary.md` | Goal 4 summary |
-| `.hermes/plans/2026-08-28-five-goals-execution/FINAL-REPORT.md` | This file |
+| `./plans/2026-08-28-five-goals-execution/SPEC.md` | Five-goal specification |
+| `./plans/2026-08-28-five-goals-execution/PLAN.md` | Five-goal implementation plan |
+| `./plans/2026-08-28-five-goals-execution/g1-audit-raw.txt` | Goal 1 audit baseline |
+| `./plans/2026-08-28-five-goals-execution/g1-fix-applied.json` | Goal 1 fix report |
+| `./plans/2026-08-28-five-goals-execution/g3-summary.md` | Goal 3 summary |
+| `./plans/2026-08-28-five-goals-execution/g4-summary.md` | Goal 4 summary |
+| `./plans/2026-08-28-five-goals-execution/FINAL-REPORT.md` | This file |
 | `opencode.json` | + provider.ollama block |
 | `cspell.json` | + 158 words, + 31 ignore paths |
 | 76 context-file pointers | Across 14 profiles |

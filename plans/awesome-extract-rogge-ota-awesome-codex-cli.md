@@ -136,7 +136,7 @@ Complete all phases and pass verification gates.
 
 
 ## Linked Specs
-- .hermes/specs/master-spec.md
+- ./specs/master-spec.md
 
 ## Risks
 
@@ -156,7 +156,7 @@ Complete all phases and pass verification gates.
 - All phase gates pass
 - All tasks completed with dependencies satisfied
 - Spec coupling verified via ## Linked Specs
-- .hermes/specs/master-spec.md
+- ./specs/master-spec.md
 
 ## Status
 

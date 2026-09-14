@@ -35,10 +35,10 @@ status: In progress
 
 | Task | Description | Completed | Date |
 |---|---|---|---|
-| TASK-001 | Create `.hermes/plans/download-hermes-user-guide-docs-2026-09-13.md` (this file) | ✅ | 2026-09-13 |
-| TASK-002 | Create `.hermes/specs/download-hermes-user-guide-docs.md` (spec) | ✅ | 2026-09-13 |
+| TASK-001 | Create `./plans/download-hermes-user-guide-docs-2026-09-13.md` (this file) | ✅ | 2026-09-13 |
+| TASK-002 | Create `./specs/download-hermes-user-guide-docs.md` (spec) | ✅ | 2026-09-13 |
 | TASK-003 | Verify `docs/user-guide/` does NOT exist yet; prepare to create it | ✅ | 2026-09-13 |
-| TASK-004 | Write Python download script `.hermes/plans/exec/download_guide_docs.py` | ⬜ | 2026-09-13 |
+| TASK-004 | Write Python download script `./plans/exec/download_guide_docs.py` | ⬜ | 2026-09-13 |
 
 ### Phase 2 — Download (Bounded Batches ≤ 7)
 
@@ -49,7 +49,7 @@ Method (derived from session-verified `urllib` discovery):
 2. Recurse directories (`egress/`, `features/`, `messaging/`, `secrets/`, `skills/` subdirs).
 3. For each `.md`: construct `https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide/<rel_path>`.
 4. Download via `urllib.request.urlopen`; write to `docs/user-guide/<rel_path>`.
-5. Log to `.hermes/specs/download-log.md` per file.
+5. Log to `./specs/download-log.md` per file.
 
 Batch groups (≤ 7 files each): we'll process sequential batches; progress logged.
 
@@ -74,7 +74,7 @@ Checks per file:
 - Code fences: opening ` ```python ` / ` ```bash ` has matching closing ` ``` ` within file.
 - No duplicate `# ` headings (same exact text) in same file.
 
-Results saved to `.hermes/specs/markdown-issues.md` (table: file | issue_type | detail | severity: warning/error).
+Results saved to `./specs/markdown-issues.md` (table: file | issue_type | detail | severity: warning/error).
 
 ### Phase 5 — Extract + Execute Code Blocks
 
@@ -82,11 +82,11 @@ Results saved to `.hermes/specs/markdown-issues.md` (table: file | issue_type | 
 
 Rules:
 - Extract all ` ```python ` / ` ```bash ` / ` ```shell ` / ` ```sh ` / ` ```python3 ` blocks.
-- For each block: save to `.hermes/plans/exec/<slug>.py` (or `.sh`); execute; capture stdout + stderr + exit code.
+- For each block: save to `./plans/exec/<slug>.py` (or `.sh`); execute; capture stdout + stderr + exit code.
 - **SKIPPED** if block contains: `rm -rf`, `git reset --hard`, `chmod -R`, `pip uninstall`, `del /F /Q`, `format`, `drop table`, `DROP DATABASE`.
 - **FAIL** if execution raises exception (captured, not propagated); log full traceback excerpt.
 - **PASS** if exit code == 0 and no exception.
-- Log to `.hermes/specs/code-block-results.md`: file | block_index | language | command | exit_code | status (PASS/FAIL/SKIPPED) | note.
+- Log to `./specs/code-block-results.md`: file | block_index | language | command | exit_code | status (PASS/FAIL/SKIPPED) | note.
 
 ### Phase 6 — Final Gate
 
@@ -98,7 +98,7 @@ Verification gates (per `executing-plans` Phase 3):
 - [ ] `download-log.md` has zero `error` rows (only potential `warning` for any non-.md artifacts like `_category_.json`, which are intentionally excluded)
 - [ ] `markdown-issues.md` created and lists any issues (or states "No structural issues found" if none)
 - [ ] `code-block-results.md` exists and lists results for executed blocks
-- [ ] `.hermes/plans/exec/` contains executed scripts (only for safe blocks executed; destructive blocks produce `.sh` / `.py` script but are NOT run — script exists for audit only)
+- [ ] `./plans/exec/` contains executed scripts (only for safe blocks executed; destructive blocks produce `.sh` / `.py` script but are NOT run — script exists for audit only)
 - [ ] No `.bak` / `.old` artifacts created in workspace (verified by `find . -name '*.bak' -o -name '*.old' | wc -l` == 0)
 
 ## 3. Alternatives
@@ -116,18 +116,18 @@ Verification gates (per `executing-plans` Phase 3):
 
 ## 5. Files Affected
 
-- **Created (plan/spec):** `.hermes/plans/download-hermes-user-guide-docs-2026-09-13.md`, `.hermes/specs/download-hermes-user-guide-docs.md`
+- **Created (plan/spec):** `./plans/download-hermes-user-guide-docs-2026-09-13.md`, `./specs/download-hermes-user-guide-docs.md`
 - **Created (folders):** `docs/user-guide/` + `egress/`, `features/`, `messaging/`, `secrets/`, `skills/` (with `bundled/` and `optional/` sub-trees) — all verified by script.
 - **Created (downloads):** 344 `.md` files under `docs/user-guide/`
-- **Created (execution artifacts):** `.hermes/plans/exec/*.py`, `.hermes/plans/exec/*.sh` (only safe blocks executed; destructive ones produce script for audit but are not run)
-- **Created (logs/reports):** `.hermes/specs/download-log.md`, `.hermes/specs/markdown-issues.md`, `.hermes/specs/code-block-results.md`
+- **Created (execution artifacts):** `./plans/exec/*.py`, `./plans/exec/*.sh` (only safe blocks executed; destructive ones produce script for audit but are not run)
+- **Created (logs/reports):** `./specs/download-log.md`, `./specs/markdown-issues.md`, `./specs/code-block-results.md`
 - **Modified/updated (none destructive):** No git history rewritten; no branches deleted.
 
 ## 6. Testing (Plan Gate Verification)
 
-- **TEST-001:** After Phase 2, run `python3 .hermes/plans/exec/verify_download.py` (checks file count + sizes). Expected: PASS (count ≥ 344; zero zero-byte `.md` files).
-- **TEST-002:** After Phase 4, inspect `.hermes/specs/markdown-issues.md`. Expected: either `No structural issues found.` or a table of warnings (no errors blocking delivery).
-- **TEST-003:** After Phase 5, inspect `.hermes/specs/code-block-results.md`. Expected: at least some PASS entries; any FAIL entries have exception excerpts captured (not propagated); any destructive commands have SKIPPED entries with reason.
+- **TEST-001:** After Phase 2, run `python3 ./plans/exec/verify_download.py` (checks file count + sizes). Expected: PASS (count ≥ 344; zero zero-byte `.md` files).
+- **TEST-002:** After Phase 4, inspect `./specs/markdown-issues.md`. Expected: either `No structural issues found.` or a table of warnings (no errors blocking delivery).
+- **TEST-003:** After Phase 5, inspect `./specs/code-block-results.md`. Expected: at least some PASS entries; any FAIL entries have exception excerpts captured (not propagated); any destructive commands have SKIPPED entries with reason.
 
 ## 7. Risks & Assumptions
 
@@ -139,6 +139,6 @@ Verification gates (per `executing-plans` Phase 3):
 
 ## 8. Related Specifications / Further Reading
 
-- `.hermes/specs/download-hermes-user-guide-docs.md` (this spec's source reference; links to `references/` of `multi-file-change-protocol` and `plans-and-specs` skills).
+- `./specs/download-hermes-user-guide-docs.md` (this spec's source reference; links to `references/` of `multi-file-change-protocol` and `plans-and-specs` skills).
 - Source docs URL (verified reachable): `https://github.com/NousResearch/hermes-agent/tree/main/website/docs/user-guide`
 - Raw endpoint (verified reachable): `https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide/<path>`

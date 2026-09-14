@@ -16,7 +16,7 @@ Orchestrates the full hermes diagnostic sweep:
   bun run check  (if package.json exists)
 
 Each command runs with a timeout; failures are recorded in the report (not raised).
-Outputs JSON + markdown to .hermes/plans/hermes-diagnostic-<date>/.
+Outputs JSON + markdown to ./plans/hermes-diagnostic-<date>/.
 
 Usage:
   python scripts/hermes_diagnostic.py [--out DIR] [--timeout 60] [--skip-fix]
@@ -79,7 +79,7 @@ def main() -> int:
     args = p.parse_args()
 
     out_dir = Path(args.out) if args.out else (
-        Path(".hermes/plans") / f"hermes-diagnostic-{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S')}"
+        Path("./plans") / f"hermes-diagnostic-{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S')}"
     )
     out_dir.mkdir(parents=True, exist_ok=True)
 

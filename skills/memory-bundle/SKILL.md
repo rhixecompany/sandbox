@@ -31,4 +31,4 @@ Translate the feature documentation (memory.md, 464 lines) into executable artif
 - multi-file-change-protocol (loaded)
 - subagent-driven-development (load for parallel execution)
 - using-superpowers / brainstorming / user-communication-preferences
-- .hermes/plans/feature-docs-implementation-plan.md
+- ./plans/feature-docs-implementation-plan.md

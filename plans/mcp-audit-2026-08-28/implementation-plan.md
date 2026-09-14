@@ -1,7 +1,7 @@
 ---
 title: MCP Audit — Implementation Plan
-plan: .hermes/plans/mcp-audit-2026-08-28/PLAN.md
-spec: .hermes/plans/mcp-audit-2026-08-28/SPEC.md
+plan: ./plans/mcp-audit-2026-08-28/PLAN.md
+spec: ./plans/mcp-audit-2026-08-28/SPEC.md
 status: ready
 ---
 
@@ -39,7 +39,7 @@ status: ready
 ## T5 · Write `scripts/mcp_audit.py`
 
 **Path:** `C:\Users\Alexa\Desktop\SandBox\scripts\mcp_audit.py`
-**Args:** `--registry .mcp/registry.json --output .hermes/plans/mcp-audit-2026-08-28/audit-report.{json,md}`
+**Args:** `--registry .mcp/registry.json --output ./plans/mcp-audit-2026-08-28/audit-report.{json,md}`
 **Verify:** Exits 0; report has 25 rows; counts sum to total
 
 ## T6 · Write `scripts/mcp_sync.py`

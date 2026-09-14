@@ -385,11 +385,11 @@ The rest of this section shows the username/password path because it's the quick
 
 ### On the backend (the remote machine)
 
-Set a username and password, then start the backend bound to a reachable address. The credentials live in `~/.hermes/.env` (the secrets file, mode 0600):
+Set a username and password, then start the backend bound to a reachable address. The credentials live in `~/./.env` (the secrets file, mode 0600):
 
 ```bash
 # 1. Set the dashboard login credentials.
-cat >> ~/.hermes/.env <<'EOF'
+cat >> ~/./.env <<'EOF'
 HERMES_DASHBOARD_BASIC_AUTH_USERNAME=admin
 HERMES_DASHBOARD_BASIC_AUTH_PASSWORD=choose-a-strong-password
 # Recommended: a stable signing secret so sessions survive restarts.
@@ -397,7 +397,7 @@ HERMES_DASHBOARD_BASIC_AUTH_PASSWORD=choose-a-strong-password
 # on every restart.
 HERMES_DASHBOARD_BASIC_AUTH_SECRET=$(openssl rand -base64 32)
 EOF
-chmod 600 ~/.hermes/.env
+chmod 600 ~/./.env
 
 # 2. Run the backend bound to a reachable address. The non-loopback bind
 #    engages the auth gate; the username/password provider handles login.
@@ -410,7 +410,7 @@ Separately, make sure the **gateway is running** on the remote host if you rely 
 
 Prefer not to keep a plaintext password at rest? Set `HERMES_DASHBOARD_BASIC_AUTH_PASSWORD_HASH` to a scrypt hash instead — compute it with `python -c "from plugins.dashboard_auth.basic import hash_password; print(hash_password('PW'))"`. Full configuration surface (config.yaml keys, every env var, the rate limiter): [Web Dashboard → Username/password provider](./features/web-dashboard.md#usernamepassword-provider-no-oauth-idp).
 
-Running the backend as a systemd service? Give the unit `EnvironmentFile=%h/.hermes/.env` so the credentials are in the environment at boot.
+Running the backend as a systemd service? Give the unit `EnvironmentFile=%h/./.env` so the credentials are in the environment at boot.
 
 :::warning
 The backend reads and writes your `.env` (API keys, secrets) and can run agent commands. The **username/password** setup shown above is for a trusted network — never expose a password-protected backend directly to the open internet; put it behind a VPN. [Tailscale](https://tailscale.com/) is the clean option: bind to the machine's tailscale IP (`--host <tailscale-ip>`) and use `http://<tailscale-ip>:9119` as the Remote URL so only your tailnet can reach it. To reach a backend over the public internet, use the **OAuth (Nous Portal)** provider instead.
@@ -433,7 +433,7 @@ The remote gateway host is configured per [profile](./profiles.md), so each prof
 ### Troubleshooting
 
 - **Sign-in fails with 401 / "Invalid credentials"** — the username or password doesn't match the backend's `HERMES_DASHBOARD_BASIC_AUTH_USERNAME` / `HERMES_DASHBOARD_BASIC_AUTH_PASSWORD`. The backend returns the same generic error for an unknown user and a wrong password (no enumeration oracle), so double-check both. Confirm the gate is on with `curl -s http://<host>:9119/api/status | jq '.auth_required, .auth_providers'` — it should report `true` and include `"basic"`.
-- **No "Sign in" button — it asks for a session token instead** — the backend's username/password provider isn't active. `/api/status` won't list `"basic"` in `auth_providers`. Make sure both the username and a password (or password hash) are set in `~/.hermes/.env` and that the dashboard process actually loaded them.
+- **No "Sign in" button — it asks for a session token instead** — the backend's username/password provider isn't active. `/api/status` won't list `"basic"` in `auth_providers`. Make sure both the username and a password (or password hash) are set in `~/./.env` and that the dashboard process actually loaded them.
 - **Signed out on every restart** — set `HERMES_DASHBOARD_BASIC_AUTH_SECRET` to a stable value. Without it the token-signing key is regenerated per boot, invalidating all sessions.
 - **Connection refused / times out** — the backend bound to `127.0.0.1` (the default) or a firewall/VPN is blocking the port. Bind to `0.0.0.0` or the tailscale IP and open the port to your trusted network.
 
@@ -460,7 +460,7 @@ Hermes: **one row per plugin**, with two switch columns.
 - **Desktop column** — the half loaded into this app. It is app-level: the
   same switch, the same value, whichever profile, gateway, or remote machine
   the window is looking at. Desktop code loads from exactly one place,
-  `~/.hermes/desktop-plugins/`; the desktop half of a unified agent+desktop
+  `~/./desktop-plugins/`; the desktop half of a unified agent+desktop
   package is copied there by the app when the package is installed (and
   follows its updates and uninstall), so switching profiles never loads,
   unloads, or re-scopes a pane. Toggles apply live.
@@ -533,10 +533,10 @@ Common resets:
 
 ```bash
 # Force a clean first-launch setup (macOS/Linux)
-rm "$HOME/.hermes/hermes-agent/.hermes-bootstrap-complete"
+rm "$HOME/./hermes-agent/.hermes-bootstrap-complete"
 
 # Rebuild a broken Python venv (macOS/Linux)
-rm -rf "$HOME/.hermes/hermes-agent/venv"
+rm -rf "$HOME/./hermes-agent/venv"
 
 # Reset a stuck macOS microphone prompt
 tccutil reset Microphone com.nousresearch.hermes
@@ -566,10 +566,10 @@ To **choose your own mirror** (e.g. a corporate/trusted one), set `ELECTRON_MIRR
 
 ```bash
 ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ \
-  bash -c 'cd "$HOME/.hermes/hermes-agent/apps/desktop" && CSC_IDENTITY_AUTO_DISCOVERY=false npm run pack'
+  bash -c 'cd "$HOME/./hermes-agent/apps/desktop" && CSC_IDENTITY_AUTO_DISCOVERY=false npm run pack'
 ```
 
-**Other native downloads (e.g. the `get-windows` prebuilt on Windows) that need a mirror:** put the npm keys in `$HERMES_HOME/npmrc` (`%LOCALAPPDATA%\hermes\npmrc` on Windows, `~/.hermes/npmrc` elsewhere) — for example `node_get_windows_binary_host_mirror=https://<mirror>/sindresorhus/get-windows/releases/download/`. Every `npm ci`/`npm run` the updater spawns (desktop, web and TUI builds) points `NPM_CONFIG_USERCONFIG` at that file when it exists, so the config survives `hermes update`; the repo-root `.npmrc` is git-tracked and gets autostashed on every update, and `~/.npmrc` may be missed because the desktop hand-off inherits the GUI's environment. An `NPM_CONFIG_USERCONFIG` you set yourself is never overridden.
+**Other native downloads (e.g. the `get-windows` prebuilt on Windows) that need a mirror:** put the npm keys in `$HERMES_HOME/npmrc` (`%LOCALAPPDATA%\hermes\npmrc` on Windows, `~/./npmrc` elsewhere) — for example `node_get_windows_binary_host_mirror=https://<mirror>/sindresorhus/get-windows/releases/download/`. Every `npm ci`/`npm run` the updater spawns (desktop, web and TUI builds) points `NPM_CONFIG_USERCONFIG` at that file when it exists, so the config survives `hermes update`; the repo-root `.npmrc` is git-tracked and gets autostashed on every update, and `~/.npmrc` may be missed because the desktop hand-off inherits the GUI's environment. An `NPM_CONFIG_USERCONFIG` you set yourself is never overridden.
 
 To clear a corrupt cached zip by hand:
 

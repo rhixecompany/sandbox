@@ -55,7 +55,7 @@ Use one canonical registry plus generated projections and secret-safe validators
 
 - Capture baseline status, branch, profile/model, Hermes version/config status, MCP list, hooks list/doctor, plugins, and client executable availability.
 - Inventory all `SESSION_REPORT.md`, `SOUL.md`, `USER.md`, `MEMORY.md`, `.hermes.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, Copilot instructions, OpenCode/Codex/Copilot/VS Code configs, `.env*` names, and `config.yaml` paths under the repo and Hermes home without emitting values.
-- Audit existing `.hermes/plans/` and `.hermes/specs/` and identify superseded/duplicate fragments without deleting them.
+- Audit existing `./plans/` and `./specs/` and identify superseded/duplicate fragments without deleting them.
 - Run the existing safe audits in report-only mode and save evidence under a new dated report directory; do not overwrite unrelated reports.
 - Verify the live MCP server exposes the required filesystem, ast-grep, memory, sequential-thinking, and code-sandbox tools.
 
@@ -67,7 +67,7 @@ Use one canonical registry plus generated projections and secret-safe validators
 
 **Tasks**
 
-- Create `.hermes/specs/hermes-ecosystem-reliability-spec.md` with requirements, invariants, failure taxonomy, acceptance criteria, ownership per file, and explicit non-goals.
+- Create `./specs/hermes-ecosystem-reliability-spec.md` with requirements, invariants, failure taxonomy, acceptance criteria, ownership per file, and explicit non-goals.
 - Link this master plan to the spec and list all historical source plans.
 - Define machine-checkable assertions for: lifecycle report fields, context consistency, client projection equality, Hermes/registry server-set reconciliation, quick-command coverage, rate-limit behavior, and no-secret output.
 
@@ -162,7 +162,7 @@ Use one canonical registry plus generated projections and secret-safe validators
 
 **Repository**
 
-- `.hermes/specs/hermes-ecosystem-reliability-spec.md` (new)
+- `./specs/hermes-ecosystem-reliability-spec.md` (new)
 - This plan (new)
 - `scripts/mcp_sync.py`
 - `scripts/validate-mcp-servers.py` or a replacement with a safe name
@@ -225,9 +225,9 @@ Use one canonical registry plus generated projections and secret-safe validators
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs

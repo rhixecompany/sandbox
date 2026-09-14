@@ -14,7 +14,7 @@ Hermes Agent automatically saves every conversation as a session. Sessions enabl
 
 Every conversation — whether from the CLI, Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Teams, or any other messaging platform — is stored as a session with full message history. Sessions are tracked in:
 
-1. **SQLite database** (`~/.hermes/state.db`) — structured session metadata with FTS5 full-text search, plus full message history
+1. **SQLite database** (`~/./state.db`) — structured session metadata with FTS5 full-text search, plus full message history
 
 The SQLite database stores:
 - Session ID, source platform, user ID
@@ -117,7 +117,7 @@ This looks up the most recent `cli` session from the SQLite database and loads i
 
 #### Per-Terminal Continue
 
-A bare `-c` is terminal-aware: each CLI session drops a small breadcrumb file under `~/.hermes/terminal-sessions/` keyed by the terminal it runs in (tty device, tmux pane, kitty window, wezterm pane, Zellij pane, Windows Terminal session, ...). When you run `hermes -c` again in the *same* terminal, Hermes resumes that terminal's own session — so two panes side by side each continue their own conversation instead of both grabbing the globally most-recent one. If there's no breadcrumb for the terminal (first use, deleted session, or a stale breadcrumb older than 30 days), `-c` falls back to the most-recent-session behavior. `-c "name"` and `--resume` are unaffected. Disable with `session.terminal_continue: false` in `config.yaml`.
+A bare `-c` is terminal-aware: each CLI session drops a small breadcrumb file under `~/./terminal-sessions/` keyed by the terminal it runs in (tty device, tmux pane, kitty window, wezterm pane, Zellij pane, Windows Terminal session, ...). When you run `hermes -c` again in the *same* terminal, Hermes resumes that terminal's own session — so two panes side by side each continue their own conversation instead of both grabbing the globally most-recent one. If there's no breadcrumb for the terminal (first use, deleted session, or a stale breadcrumb older than 30 days), `-c` falls back to the most-recent-session behavior. `-c "name"` and `--resume` are unaffected. Disable with `session.terminal_continue: false` in `config.yaml`.
 
 ### Resume by Name
 
@@ -203,7 +203,7 @@ The recap:
 - **Caps** at the last 10 exchanges with a "... N earlier messages ..." indicator
 - Uses **dim styling** to distinguish from the active conversation
 
-To disable the recap and keep the minimal one-liner behavior, set in `~/.hermes/config.yaml`:
+To disable the recap and keep the minimal one-liner behavior, set in `~/./config.yaml`:
 
 ```yaml
 display:
@@ -417,7 +417,7 @@ Trace exports are secret-redacted by default (they're meant to leave the machine
 
 #### Markdown / QMD
 
-Pass `--format md` or `--format qmd` when you want a readable, file-based archive before hiding or deleting old sessions. Markdown/QMD exports write one file per session into a directory (default: `~/.hermes/session-exports`).
+Pass `--format md` or `--format qmd` when you want a readable, file-based archive before hiding or deleting old sessions. Markdown/QMD exports write one file per session into a directory (default: `~/./session-exports`).
 
 ```bash
 # Export one session to Markdown
@@ -634,7 +634,7 @@ Repair is deliberately **not automatic**: if the chat has since built up a
 second history, choosing which thread it continues is your call. The stranded
 conversation stays readable via `/resume` and session search either way —
 routing is the only thing the repair changes. Back up first
-(`cp ~/.hermes/state.db ~/.hermes/state.db.bak`).
+(`cp ~/./state.db ~/./state.db.bak`).
 
 
 ## Importing Sessions from Claude Code and Codex CLI
@@ -851,16 +851,16 @@ holds across gateway crashes, restarts, and updates:
 
 | What | Path | Description |
 |------|------|-------------|
-| SQLite database | `~/.hermes/state.db` | All session metadata + messages with FTS5 |
-| Gateway messages    | `~/.hermes/state.db`   | SQLite — canonical store for all session messages |
-| Gateway routing index | `gateway_routing` table in `~/.hermes/state.db` | Maps session keys to active session IDs (origin metadata, expiry flags) |
-| Legacy routing mirror | `~/.hermes/sessions/sessions.json` | Backward-compat mirror of the routing index, written when `gateway.write_sessions_json: true` (the default) |
+| SQLite database | `~/./state.db` | All session metadata + messages with FTS5 |
+| Gateway messages    | `~/./state.db`   | SQLite — canonical store for all session messages |
+| Gateway routing index | `gateway_routing` table in `~/./state.db` | Maps session keys to active session IDs (origin metadata, expiry flags) |
+| Legacy routing mirror | `~/./sessions/sessions.json` | Backward-compat mirror of the routing index, written when `gateway.write_sessions_json: true` (the default) |
 
 The SQLite database uses WAL mode for concurrent readers and a single writer, which suits the gateway's multi-platform architecture well.
 
 :::warning `sessions.json` is not the session list
 The gateway routing index lives in the `gateway_routing` table inside
-`state.db`; `~/.hermes/sessions/sessions.json` is a **legacy mirror** of it,
+`state.db`; `~/./sessions/sessions.json` is a **legacy mirror** of it,
 kept for backward compatibility (disable with
 `gateway.write_sessions_json: false`). It maps messaging session keys
 (`agent:main:<platform>:...`) to active session IDs.
@@ -870,7 +870,7 @@ platform you'll see only those (e.g. `agent:main:whatsapp:dm:...`).
 This is **expected** and does **not** mean your CLI sessions are missing.
 `hermes sessions list`, `/sessions`, and the dashboard all read `state.db`,
 which holds **every** session (CLI, TUI, and gateway). The `/save` snapshots
-under `~/.hermes/sessions/saved/*.json` are convenience exports, not the index.
+under `~/./sessions/saved/*.json` are convenience exports, not the index.
 
 If CLI sessions genuinely don't appear in `hermes sessions list`, the cause is
 `state.db` not receiving them — run `hermes sessions repair` and watch for a
@@ -880,7 +880,7 @@ persistence failed for that run.
 
 :::note Legacy JSONL transcripts
 Sessions created before state.db became canonical may have leftover
-`*.jsonl` files in `~/.hermes/sessions/`. They are no longer written or
+`*.jsonl` files in `~/./sessions/`. They are no longer written or
 read by Hermes. Safe to delete after verifying the corresponding session
 exists in state.db.
 :::
@@ -903,7 +903,7 @@ Key tables in `state.db`:
 - After a prune that actually removed rows, `state.db` is `VACUUM`ed to reclaim disk space only when **both** gates pass: at least `sessions.min_vacuum_interval_days` (default 30) have elapsed since the last successful `VACUUM`, **and** more than 25% of the file's pages are reclaimable (`PRAGMA freelist_count / page_count`). A dense database never pays for a full rewrite to reclaim a few MB (SQLite does not shrink the file on plain DELETE)
 - Pruning runs at most once per `sessions.min_interval_hours` (default 24); the last-run timestamp is tracked inside `state.db` itself so it's shared across every Hermes process in the same `HERMES_HOME`
 
-Without pruning, `state.db` grows without bound — multi-GB files within weeks were reported on gateway + cron installs. If you would rather keep every ended session forever (the pre-#54189 behavior), turn it off in `~/.hermes/config.yaml`:
+Without pruning, `state.db` grows without bound — multi-GB files within weeks were reported on gateway + cron installs. If you would rather keep every ended session forever (the pre-#54189 behavior), turn it off in `~/./config.yaml`:
 
 ```yaml
 sessions:

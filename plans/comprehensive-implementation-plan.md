@@ -70,8 +70,8 @@ Multi-phase delivery framework that transforms high-level objectives into verifi
 | Task | Deliverable | Owner | Duration |
 |------|-------------|-------|----------|
 | Architecture design | Architecture doc | Agent | 3h |
-| Spec documents | `.hermes/specs/*.md` | Agent | 4h |
-| Implementation plan | `.hermes/plans/*.md` | Agent | 3h |
+| Spec documents | `./specs/*.md` | Agent | 4h |
+| Implementation plan | `./plans/*.md` | Agent | 3h |
 | Test strategy | Test plan | Agent | 2h |
 | Resource schedule | Timeline + milestones | Agent | 1h |
 
@@ -265,9 +265,9 @@ Week 2
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs
@@ -276,4 +276,4 @@ Week 2
 
 ## Verification
 
-**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.

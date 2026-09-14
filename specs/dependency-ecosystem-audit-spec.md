@@ -59,7 +59,7 @@ Audit all 26 repos in the SandBox monorepo (root, `packages/` Ã—2, `projects/` Ã
 - **AC-6.3**: Cross-checked against `~/myvenv` live freeze; differences reported, not silently dropped.
 
 ### 3.7 Governance docs
-- **AC-7.1**: Plan at `.hermes/plans/2026-09-11_004316-dependency-ecosystem-audit.md` (status updated on completion).
+- **AC-7.1**: Plan at `./plans/2026-09-11_004316-dependency-ecosystem-audit.md` (status updated on completion).
 - **AC-7.2**: Prompt at `.github/prompts/development/dependency-ecosystem-audit.prompt.md`.
 
 ## 4. Execution Order (fastest/parallel)

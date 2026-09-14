@@ -90,6 +90,6 @@ Adapting the 8-step template to xAI:
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/xai-workflow-spec.md`
-- `.hermes/plans/xai-workflow.md` (implementation plan)
-- `.hermes/plans/results/xai-*.txt` (execution results)
+- `./plans/specs/xai-workflow-spec.md`
+- `./plans/xai-workflow.md` (implementation plan)
+- `./plans/results/xai-*.txt` (execution results)

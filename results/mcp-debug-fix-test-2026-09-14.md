@@ -12,12 +12,12 @@
 
 ### Problem Found
 
-- `.hermes/mcp.json` used `@latest` version (`npx.cmd` command).
+- `./mcp.json` used `@latest` version (`npx.cmd` command).
 - Manual init test showed server responds correctly, but `hermes mcp test` failed.
 
 ### Fix Applied
 
-- `.hermes/mcp.json`: pinned to `@0.0.78`, switched command to `bunx` (matches `.vscode/mcp.json` and `.opencode.json`).
+- `./mcp.json`: pinned to `@0.0.78`, switched command to `bunx` (matches `.vscode/mcp.json` and `.opencode.json`).
 
 ### Verification
 
@@ -30,13 +30,13 @@
 
 ### Problem Found
 
-- No `auth` configured in `.hermes/mcp.json` or `.vscode/mcp.json`.
+- No `auth` configured in `./mcp.json` or `.vscode/mcp.json`.
 - Endpoint returns `401 Unauthorized` with `WWW-Authenticate: Bearer resource_metadata="https://ai.todoist.net/.well-known/oauth-protected-resource/mcp"`.
 - Resource metadata (`https://ai.todoist.net/.well-known/oauth-protected-resource/mcp`) specifies `authorization_servers: ["https://todoist.com"]`, `bearer_methods_supported: ["header"]`, `scopes_supported: ["data:read_write"]`.
 
 ### Fix Applied
 
-- `.hermes/mcp.json`: added entry with `url: https://ai.todoist.net/mcp`, `auth: oauth`, `enabled: true`.
+- `./mcp.json`: added entry with `url: https://ai.todoist.net/mcp`, `auth: oauth`, `enabled: true`.
 - `.vscode/mcp.json`: added `auth: "oauth"`.
 
 ### Verification
@@ -50,16 +50,16 @@
 
 ### Problem Found
 
-- Not present in `.hermes/mcp.json` (only in `.vscode/mcp.json`).
+- Not present in `./mcp.json` (only in `.vscode/mcp.json`).
 - `.vscode/mcp.json` args were broken: `"args": ["basic-memory", "mcp", "basic-memory@0.23.2"]` — version string was wrongly placed as subcommand arg.
-- `.hermes/opencode.json` had invalid JSON (`"compaction": {},` trailing comma before closing brace) — fixed as side-effect.
+- `./opencode.json` had invalid JSON (`"compaction": {},` trailing comma before closing brace) — fixed as side-effect.
 - Server starts (FastMCP banner) but outputs banners to stdout; stdio connection times out.
 
 ### Fix Applied
 
-- `.hermes/mcp.json`: added server with `command: uvx`, `args: ["--from", "basic-memory@0.23.2", "basic-memory", "mcp"]`.
+- `./mcp.json`: added server with `command: uvx`, `args: ["--from", "basic-memory@0.23.2", "basic-memory", "mcp"]`.
 - `.vscode/mcp.json`: fixed args to same correct form; removed broken JSON comment.
-- `.hermes/opencode.json`: removed trailing comma (`"compaction": {},` → `"compaction": {}`).
+- `./opencode.json`: removed trailing comma (`"compaction": {},` → `"compaction": {}`).
 
 ### Verification
 
@@ -69,7 +69,7 @@
 
 ---
 
-## Additional Fix: `.hermes/opencode.json`
+## Additional Fix: `./opencode.json`
 
 - Invalid JSON (`"compaction": {},` trailing comma at line 259) — repaired.
 
@@ -77,9 +77,9 @@
 
 ## Files Modified
 
-- `.hermes/mcp.json` (playwright pinned, basic-memory added, doist auth added)
+- `./mcp.json` (playwright pinned, basic-memory added, doist auth added)
 - `.vscode/mcp.json` (basic-memory args fixed, doist auth added)
-- `.hermes/opencode.json` (JSON syntax repaired)
+- `./opencode.json` (JSON syntax repaired)
 
 ---
 

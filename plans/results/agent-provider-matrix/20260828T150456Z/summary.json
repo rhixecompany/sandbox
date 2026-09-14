@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-08-28T15:04:56+00:00",
   "root": "C:/Users/Alexa/Desktop/SandBox",
-  "results_root": "C:/Users/Alexa/Desktop/SandBox/.hermes/plans/results/agent-provider-matrix/20260828T150456Z",
+  "results_root": "C:/Users/Alexa/Desktop/SandBox/./plans/results/agent-provider-matrix/20260828T150456Z",
   "providers": [
     "copilot",
     "deepseek",
@@ -61,7 +61,7 @@
         "default",
         "chat",
         "--query-file",
-        "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\results\\agent-provider-matrix\\20260828T150456Z\\default\\copilot\\request.md",
+        "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T150456Z\\default\\copilot\\request.md",
         "--provider",
         "copilot",
         "--quiet",
@@ -77,7 +77,7 @@
       "duration_ms": 0,
       "status": "dry-run",
       "response_excerpt": "",
-      "result_path": "C:/Users/Alexa/Desktop/SandBox/.hermes/plans/results/agent-provider-matrix/20260828T150456Z/default/copilot/result.json",
+      "result_path": "C:/Users/Alexa/Desktop/SandBox/./plans/results/agent-provider-matrix/20260828T150456Z/default/copilot/result.json",
       "notes": "Dry run: command not executed.",
       "assumptions": [
         "provider/model defaults are selected by Hermes unless an explicit override is supplied",

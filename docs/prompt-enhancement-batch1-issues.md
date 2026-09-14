@@ -90,7 +90,7 @@
 - Skills: 7 skills (all valid category/skill paths)
 - Scripts array with valid path
 - Dependencies: 2 skills (valid)
-- References .hermes/plans/2026-08-01_tooling-implementation.md
+- References ./plans/2026-08-01_tooling-implementation.md
 - `.prompt.md` extension used
 
 **Minor Notes**:

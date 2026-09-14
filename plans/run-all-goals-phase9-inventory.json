@@ -101,8 +101,8 @@
         ]
       },
       {
-        "path": ".hermes\\.env",
-        "absolute_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\.env",
+        "path": "./\.env",
+        "absolute_path": "C:\\Users\\Alexa\\Desktop\\SandBox\\./\.env",
         "variables": [
           "OPENAI_API_KEY",
           "OPENAI_API_KEY_OLD",

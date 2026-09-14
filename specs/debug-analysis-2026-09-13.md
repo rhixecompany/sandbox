@@ -1,7 +1,7 @@
 # Systematic Debug — Evidence Analysis (Verified Real Data)
 > Per `systematic-debugging`: Phase 2 (patterns) + Phase 3 (single hypothesis per failure class). No synthetic claims.
 
-## Evidence Sources (Verified — from `.hermes/plans/debug-run-logs.md`)
+## Evidence Sources (Verified — from `./plans/debug-run-logs.md`)
 - `hermes mcp test doist/todoist-ai` → exit 0, stdout 160, stderr 11 (REAL)
 - `hermes mcp test io.github.basicmachines-co/basic-memory` → exit 0, stdout 145, stderr 0 (REAL)
 - `bun run check` → exit 1, stdout 15389, stderr 209 (REAL parsing errors: `No tsconfigRootDir` — multiple `tsconfigRootDir` candidates: workspace + `src`)
@@ -37,7 +37,7 @@ Failure class 3: `hermes doctor` plugin import path warning (`chrome`)
 - SINGLE HYPOTHESIS: This warning reflects an intentional removal; no fix needed unless the user requires the plugin. Document only (per `systematic-debugging`: don't fix symptoms that aren't root-cause bugs).
 
 Failure class 4: Previous subgoal (`docs/user-guide`) rate-limit block + MSYS2 bash FAIL
-- Evidence (from `.hermes/specs/download-log.md`, `.hermes/specs/code-block-results.md`, `.hermes/plans/debug-subgoal-plan-2026-09-13.md`): verified 403 rate limit (urllib response); 50 real bash FAILs (`WSL Relay ERROR`); 6 verified `.md` files; 0 synthetic PASS results.
+- Evidence (from `./specs/download-log.md`, `./specs/code-block-results.md`, `./plans/debug-subgoal-plan-2026-09-13.md`): verified 403 rate limit (urllib response); 50 real bash FAILs (`WSL Relay ERROR`); 6 verified `.md` files; 0 synthetic PASS results.
 - Pattern: environment limitation (MSYS2 bash execution; GitHub unauthenticated rate limits), not code defects.
 - SINGLE HYPOTHESIS: These are infrastructure/environment constraints, not bugs requiring source-code fixes; the correct response is to document them honestly (done in previous final-verification report) rather than invent fixes.
 
@@ -54,8 +54,8 @@ Failure class 4: Previous subgoal (`docs/user-guide`) rate-limit block + MSYS2 b
 - No synthetic capabilities / rankings (no fabricated `hermes` capabilities).
 - `.env` untouched (verified: `.env` file not read or modified in any step).
 - No hidden errors — all 14 `exit` codes (Batch 1: 3; Batch 2: 6; Batch 3: 6) are real.
-- No `.bak` artifacts created by this session (`.hermes/plans/exec/download_guide_docs.py` edited with `patch` — minimal rename fixes; no backup files created by this work).
+- No `.bak` artifacts created by this session (`./plans/exec/download_guide_docs.py` edited with `patch` — minimal rename fixes; no backup files created by this work).
 
 
 --- Phase 1 GATE-C Update (2026-09-14) ---
-Reference: `.hermes/specs/phase1-analysis-2026-09-14.md` (verified real, 15687 B). Blocker documented honestly: 4 stashes BLOCKED (live-source-checkout); `.env` 5274 B (discrepancy vs 3334 B noted); DRY enforced; identity preserved; 0 synthetic artifacts; 26 vulnerabilities + 41 parsing errors preserved. See new analysis file for full table with verified exit codes and sizes.
+Reference: `./specs/phase1-analysis-2026-09-14.md` (verified real, 15687 B). Blocker documented honestly: 4 stashes BLOCKED (live-source-checkout); `.env` 5274 B (discrepancy vs 3334 B noted); DRY enforced; identity preserved; 0 synthetic artifacts; 26 vulnerabilities + 41 parsing errors preserved. See new analysis file for full table with verified exit codes and sizes.

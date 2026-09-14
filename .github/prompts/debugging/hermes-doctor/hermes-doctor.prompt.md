@@ -52,7 +52,7 @@ Full-platform health pass with classified findings.
 2. **Read the report**
 
    ```bash
-   cat .hermes/plans/diagnostic-$(date +%F)/report.md
+   cat ./plans/diagnostic-$(date +%F)/report.md
    ```
 
    Section "Findings" lists only real_bug + transient (actionable). Intentional and advisory are tallied but not flagged.

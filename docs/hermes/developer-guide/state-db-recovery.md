@@ -62,9 +62,9 @@ is still up. Next steps:
 
 ```bash
 hermes gateway stop
-HERMES_HOME="$HOME/.hermes" hermes sessions recover --source "$HOME/.hermes/state.db" --inspect-only
+HERMES_HOME="$HOME/.hermes" hermes sessions recover --source "$HOME/./state.db" --inspect-only
 # if recoverable:
-HERMES_HOME="$HOME/.hermes" hermes sessions recover --source "$HOME/.hermes/state.db" --output "$HOME/recovered-state.db"
+HERMES_HOME="$HOME/.hermes" hermes sessions recover --source "$HOME/./state.db" --output "$HOME/recovered-state.db"
 ```
 
 or restore the newest snapshot from `state-snapshots/`.
@@ -90,13 +90,13 @@ row counts before restarting the gateway:
 
 ```bash
 HERMES_HOME="$HOME/.hermes" hermes sessions repair --check-only
-sqlite3 "$HOME/.hermes/state.db" \
+sqlite3 "$HOME/./state.db" \
   "SELECT key, value FROM state_meta WHERE key = 'fts_stale';"
-sqlite3 "$HOME/.hermes/state.db" \
+sqlite3 "$HOME/./state.db" \
   "SELECT type, name FROM sqlite_master WHERE name IN
    ('messages_fts_insert','messages_fts_update','messages_fts_delete')
    ORDER BY name;"
-sqlite3 "$HOME/.hermes/state.db" \
+sqlite3 "$HOME/./state.db" \
   "SELECT 'sessions', COUNT(*) FROM sessions
    UNION ALL SELECT 'messages', COUNT(*) FROM messages;"
 ```

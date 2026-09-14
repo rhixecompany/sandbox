@@ -25,10 +25,10 @@ Run a comprehensive audit of Hermes Agent's plugin and hook coverage.
 
 1. **Run the audit script**:
    ```bash
-   python scripts/plugins_hooks_audit.py --out .hermes/plans/plugins-hooks-audit-$(date +%Y-%m-%d)
+   python scripts/plugins_hooks_audit.py --out ./plans/plugins-hooks-audit-$(date +%Y-%m-%d)
    ```
 
-2. **Review the report** at `.hermes/plans/plugins-hooks-audit-YYYY-MM-DD/report.md`:
+2. **Review the report** at `./plans/plugins-hooks-audit-YYYY-MM-DD/report.md`:
    - Plugin count + which have plugin.yaml
    - Possible events (from Hermes source) vs shell hooks registered (in config.yaml)
    - Missing event coverage (events that exist in code but have no shell hook)

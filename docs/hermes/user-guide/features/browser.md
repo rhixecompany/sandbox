@@ -45,7 +45,7 @@ If you have a paid [Nous Portal](https://portal.nousresearch.com) subscription, 
 To use Browser Use as your cloud browser provider, add:
 
 ```bash
-# Add to ~/.hermes/.env
+# Add to ~/./.env
 BROWSER_USE_API_KEY=***
 ```
 
@@ -58,7 +58,7 @@ Browser Use Cloud runs managed Chromium with [stealth](https://docs.browser-use.
 To use Browserbase-managed cloud browsers, add:
 
 ```bash
-# Add to ~/.hermes/.env
+# Add to ~/./.env
 BROWSERBASE_API_KEY=***
 BROWSERBASE_PROJECT_ID=your-project-id-here
 ```
@@ -84,7 +84,7 @@ The mode is a **driver** that composes with your configured browser backend: it 
 To opt out and force the built-in browser tools, use `/browser use off`, or:
 
 ```yaml
-# Add to ~/.hermes/config.yaml
+# Add to ~/./config.yaml
 browser:
   backend: "off"
 ```
@@ -105,7 +105,7 @@ messaging surface) keep the default browser tools instead.
 To use Firecrawl as your cloud browser provider, add:
 
 ```bash
-# Add to ~/.hermes/.env
+# Add to ~/./.env
 FIRECRAWL_API_KEY=fc-***
 ```
 
@@ -143,7 +143,7 @@ The feature is **on by default**. To disable it (all URLs go to the configured
 cloud provider, as before):
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 browser:
   cloud_provider: browserbase
   auto_local_for_private_urls: false
@@ -167,7 +167,7 @@ logged into nothing. Turn on **real profile browsing** to let the agent browse
 as *you*, with your existing logins and cookies:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 browser:
   use_real_profile: true
 ```
@@ -175,7 +175,7 @@ browser:
 When enabled, Hermes copies your default browser's **active** profile — the one
 you actually browse (`Local State → profile.last_used`), with its cookies, saved
 logins, and preferences — into a managed snapshot under
-`~/.hermes/browser-profile/<browser>/`, then launches your **real browser
+`~/./browser-profile/<browser>/`, then launches your **real browser
 binary** on that snapshot and attaches its browsing engine to it. Launching the
 real binary (instead of a bundled Chromium with mock-keychain switches) is what
 keeps OS-encrypted cookies decryptable — on macOS, Chrome cookies are encrypted
@@ -204,7 +204,7 @@ and you don't want "whichever profile you touched last" deciding the agent's
 identity, pin the snapshot source explicitly:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 browser:
   use_real_profile: true
   real_profile_pin: "Profile 2"   # directory name under the browser's user-data dir
@@ -214,7 +214,7 @@ A pin naming a profile directory that doesn't exist fails closed with a
 fixable message — it never silently falls back to the last-used profile.
 
 When you turn the toggle back off, Hermes deletes the snapshot store
-(`~/.hermes/browser-profile/`) on the next browser use, so the copied
+(`~/./browser-profile/`) on the next browser use, so the copied
 credentials don't linger after you revoke consent.
 
 :::note Windows: the browser must be fully closed
@@ -316,7 +316,7 @@ make down
 # then run the custom docker run command above
 ```
 
-Then set in `~/.hermes/.env`:
+Then set in `~/./.env`:
 
 ```bash
 CAMOFOX_URL=http://localhost:9377
@@ -325,7 +325,7 @@ CAMOFOX_URL=http://localhost:9377
 If Camofox is running in Docker and you want it to open web apps served from the host machine, enable loopback rewriting. `CAMOFOX_URL` should still point at the host-published control API, but page URLs such as `http://127.0.0.1:3000` must be opened from inside the container as `http://host.docker.internal:3000`:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 browser:
   camofox:
     rewrite_loopback_urls: true
@@ -347,7 +347,7 @@ Camofox is selected like any other browser backend: pick **Camofox** in `hermes 
 
 #### Persistent browser sessions
 
-By default, each Camofox session gets a random identity — cookies and logins don't survive across agent restarts. To enable persistent browser sessions, add the following to `~/.hermes/config.yaml`:
+By default, each Camofox session gets a random identity — cookies and logins don't survive across agent restarts. To enable persistent browser sessions, add the following to `~/./config.yaml`:
 
 ```yaml
 browser:
@@ -389,7 +389,7 @@ If step 5 logs you out, the Camofox server isn't honoring the stable `userId`. D
 
 ##### Where state lives
 
-Hermes derives the stable `userId` from the profile-scoped directory `~/.hermes/browser_auth/camofox/` (or the equivalent under `$HERMES_HOME` for non-default profiles). The actual browser profile data lives on the Camofox server side, keyed by that `userId`. To fully reset a persistent profile, clear it on the Camofox server and remove the corresponding Hermes profile's state directory.
+Hermes derives the stable `userId` from the profile-scoped directory `~/./browser_auth/camofox/` (or the equivalent under `$HERMES_HOME` for non-default profiles). The actual browser profile data lives on the Camofox server side, keyed by that `userId`. To fully reset a persistent profile, clear it on the Camofox server and remove the corresponding Hermes profile's state directory.
 
 #### Externally managed Camofox sessions
 
@@ -448,7 +448,7 @@ When Camofox runs in headed mode (with a visible browser window), it exposes a V
 Lightpanda is a **local engine** (a browser source, like "Local Browser"), not a cloud provider. Install the binary and put it on your `PATH` (see the [Lightpanda installation guide](https://lightpanda.io/docs/run-locally/installation/one-liner)), then pick **Lightpanda** in `hermes tools` → Browser Automation, or set:
 
 ```yaml
-# Add to ~/.hermes/config.yaml
+# Add to ~/./config.yaml
 browser:
   cloud_provider: local
   engine: lightpanda
@@ -465,7 +465,7 @@ The engine works with both browser drivers:
 - **Browser Use mode (the default).** Hermes launches `lightpanda serve --host 127.0.0.1 --port <free>` itself — one process per `browser_exec` session name (or per task) — and points the Browser Use CLI at it. No Chromium, Playwright or Node.js is needed. The process is reaped after `browser.inactivity_timeout`, on exit, and by the orphan sweep if Hermes crashes. All of these processes share one on-disk HTTP cache at `$HERMES_HOME/cache/browser-use/lightpanda/http-cache`, so repeat visits skip re-downloading assets. Hermes passes the cache flag only when the installed Lightpanda supports it (0.3.x+); older binaries simply run without a cache. To clear it, stop your Lightpanda sessions first, then delete that directory. Lightpanda has no graphical renderer, so `capture_screenshot()` is unavailable and the tool description tells the model to work text-first; it also holds one page per session, so the model is told to call `new_tab()` once and `goto_url()` afterwards (tracked upstream in [lightpanda-io/browser#1962](https://github.com/lightpanda-io/browser/issues/1962)).
 - **Built-in browser tools** (`/browser use off`). Hermes drives Lightpanda through `agent-browser --engine lightpanda` over CDP, the same way it drives local Chrome, with **automatic Chrome fallback**: Lightpanda handles the actions it supports (navigate, snapshot, click, type, scroll, back, press, eval) and Hermes transparently retries on Chrome for anything it doesn't. Screenshots and `browser_vision` are routed straight to Chrome.
 
-**When the engine is ignored.** `browser.engine` is the lowest-precedence browser setting: a cloud provider (including the Nous subscription browser — and on never-configured setups, any `BROWSERBASE_API_KEY` / `BROWSER_USE_API_KEY` in `~/.hermes/.env` auto-selects one), Camofox, a `browser.cdp_url` / `/browser connect` override, or `browser.use_real_profile` all take precedence. Picking Lightpanda in `hermes tools` writes `cloud_provider: local` for you; `/browser status` and `hermes doctor` report when the engine is configured but shadowed, and by what.
+**When the engine is ignored.** `browser.engine` is the lowest-precedence browser setting: a cloud provider (including the Nous subscription browser — and on never-configured setups, any `BROWSERBASE_API_KEY` / `BROWSER_USE_API_KEY` in `~/./.env` auto-selects one), Camofox, a `browser.cdp_url` / `/browser connect` override, or `browser.use_real_profile` all take precedence. Picking Lightpanda in `hermes tools` writes `cloud_provider: local` for you; `/browser status` and `hermes doctor` report when the engine is configured but shadowed, and by what.
 
 ### Local Chromium-family browser via CDP (`/browser connect`)
 
@@ -493,28 +493,28 @@ To start a Chromium-family browser manually with CDP enabled, use a dedicated us
 # Linux — Brave
 brave-browser \
   --remote-debugging-port=9222 \
-  --user-data-dir=$HOME/.hermes/chrome-debug \
+  --user-data-dir=$HOME/./chrome-debug \
   --no-first-run \
   --no-default-browser-check &
 
 # Linux — Google Chrome
 google-chrome \
   --remote-debugging-port=9222 \
-  --user-data-dir=$HOME/.hermes/chrome-debug \
+  --user-data-dir=$HOME/./chrome-debug \
   --no-first-run \
   --no-default-browser-check &
 
 # macOS — Brave
 "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser" \
   --remote-debugging-port=9222 \
-  --user-data-dir="$HOME/.hermes/chrome-debug" \
+  --user-data-dir="$HOME/./chrome-debug" \
   --no-first-run \
   --no-default-browser-check &
 
 # macOS — Google Chrome
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
   --remote-debugging-port=9222 \
-  --user-data-dir="$HOME/.hermes/chrome-debug" \
+  --user-data-dir="$HOME/./chrome-debug" \
   --no-first-run \
   --no-default-browser-check &
 ```
@@ -523,7 +523,7 @@ Then launch the Hermes CLI and run `/browser connect`.
 
 **Why `--user-data-dir`?** Without it, launching a Chromium-family browser while a regular instance is already running typically opens a new window on the existing process — and that existing process was not started with `--remote-debugging-port`, so port 9222 never opens. A dedicated user-data-dir forces a fresh browser process where the debug port actually listens. `--no-first-run --no-default-browser-check` skips the first-launch wizard for the fresh profile.
 
-**Chrome 136+ makes the dedicated profile mandatory.** Two separate mechanisms are in play, and neither applies once you pass a non-default `--user-data-dir`. First, since [Chrome 136](https://developer.chrome.com/blog/remote-debugging-port) `--remote-debugging-port` and `--remote-debugging-pipe` "will no longer be respected if attempting to debug the default Chrome data directory" — the flag is silently ignored, no dialog, and `/browser connect` (or `curl http://127.0.0.1:9222/json/version`) gets connection refused even from a cold start. Second, [Chrome 144+](https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session) adds an opt-in *approval* flow for debugging your real profile: you enable it under `chrome://inspect/#remote-debugging`, and Chrome then shows an **"Allow remote debugging?"** dialog for **every incoming connection** (not once per launch), with nothing listening until you press **Allow**. If you see that dialog, you are on the approval path, not the flag path. The fix is exactly the commands above: point `--user-data-dir` somewhere other than your default profile directory (e.g. `$HOME/.hermes/chrome-debug`), which needs neither the toggle nor the dialog. This applies to Chrome, Chromium, Edge, and Brave builds that have picked up the change.
+**Chrome 136+ makes the dedicated profile mandatory.** Two separate mechanisms are in play, and neither applies once you pass a non-default `--user-data-dir`. First, since [Chrome 136](https://developer.chrome.com/blog/remote-debugging-port) `--remote-debugging-port` and `--remote-debugging-pipe` "will no longer be respected if attempting to debug the default Chrome data directory" — the flag is silently ignored, no dialog, and `/browser connect` (or `curl http://127.0.0.1:9222/json/version`) gets connection refused even from a cold start. Second, [Chrome 144+](https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session) adds an opt-in *approval* flow for debugging your real profile: you enable it under `chrome://inspect/#remote-debugging`, and Chrome then shows an **"Allow remote debugging?"** dialog for **every incoming connection** (not once per launch), with nothing listening until you press **Allow**. If you see that dialog, you are on the approval path, not the flag path. The fix is exactly the commands above: point `--user-data-dir` somewhere other than your default profile directory (e.g. `$HOME/./chrome-debug`), which needs neither the toggle nor the dialog. This applies to Chrome, Chromium, Edge, and Brave builds that have picked up the change.
 
 A dedicated profile starts out signed out of everything. If you want the agent to browse with your existing logins *and* no approval dialog, use [`browser.use_real_profile`](#real-profile-browsing-use-your-own-logins) instead: it snapshots your active profile into a copy and drives that, which is a non-default user-data-dir and so never triggers either mechanism.
 :::
@@ -620,12 +620,12 @@ Get a text-based snapshot of the current page's accessibility tree. Returns inte
 - **`full=false`** (default): Compact view showing only interactive elements
 - **`full=true`**: Complete page content
 
-Snapshots larger than `browser.snapshot_threshold` (default 15,000 characters — the same per-page budget as `web_extract`) are automatically truncated at line boundaries; no LLM summarization is involved. When that happens, the complete snapshot is saved to `~/.hermes/cache/web/` and the tool output includes the file path plus a ready-to-use `read_file` call, so the agent can page through the full accessibility tree — including element refs beyond the cut — without re-snapshotting.
+Snapshots larger than `browser.snapshot_threshold` (default 15,000 characters — the same per-page budget as `web_extract`) are automatically truncated at line boundaries; no LLM summarization is involved. When that happens, the complete snapshot is saved to `~/./cache/web/` and the tool output includes the file path plus a ready-to-use `read_file` call, so the agent can page through the full accessibility tree — including element refs beyond the cut — without re-snapshotting.
 
 Increase the threshold for long pages where more source content should reach the agent inline:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 browser:
   snapshot_threshold: 30000
 ```
@@ -684,7 +684,7 @@ The screenshot is saved persistently and the file path is returned alongside the
 What does the chart on this page show?
 ```
 
-Screenshots are stored in `~/.hermes/cache/screenshots/` and automatically cleaned up after 24 hours.
+Screenshots are stored in `~/./cache/screenshots/` and automatically cleaned up after 24 hours.
 
 ### `browser_console`
 
@@ -816,7 +816,7 @@ browser:
   record_sessions: true  # default: false
 ```
 
-When enabled, recording starts automatically on the first `browser_navigate` and saves to `~/.hermes/browser_recordings/` when the session closes. Works in both local and cloud (Browserbase) modes. Recordings older than 72 hours are automatically cleaned up.
+When enabled, recording starts automatically on the first `browser_navigate` and saves to `~/./browser_recordings/` when the session closes. Works in both local and cloud (Browserbase) modes. Recordings older than 72 hours are automatically cleaned up.
 
 ## Headed Mode (Visible Browser Window)
 
@@ -862,7 +862,7 @@ If paid features aren't available on your plan, Hermes automatically falls back 
 ## Limitations
 
 - **Text-based interaction** — relies on accessibility tree, not pixel coordinates
-- **Snapshot size** — large pages are truncated at `browser.snapshot_threshold` (default 15,000 characters, matching `web_extract`; no LLM summarization); the complete snapshot is saved to `~/.hermes/cache/web/` and the output points at it for `read_file` paging
+- **Snapshot size** — large pages are truncated at `browser.snapshot_threshold` (default 15,000 characters, matching `web_extract`; no LLM summarization); the complete snapshot is saved to `~/./cache/web/` and the output points at it for `read_file` paging
 - **Session timeout** — cloud sessions expire based on your provider's plan settings
 - **Cost** — cloud sessions consume provider credits; sessions are automatically cleaned up when the conversation ends or after inactivity. Use `/browser connect` for free local browsing.
 - **No file downloads** — cannot download files from the browser

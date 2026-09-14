@@ -1,6 +1,6 @@
 ROOT_REPOSITORY
 ## clean-development...origin/clean-development
-?? .hermes/reports/baseline/
+?? ./reports/baseline/
   backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
   chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
   chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
@@ -41,23 +41,23 @@ origin	https://github.com/rhixecompany/banking.git (push)
 last=f69c259ede58d884ea930639ca19b815be4e1a70|2026-08-29 01:47:41 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
 === projects/Bash ===
 branch=clean-development
-?? ../../.hermes/reports/baseline/docker-df.txt
-?? ../../.hermes/reports/baseline/docker-images.txt
-?? ../../.hermes/reports/baseline/docker-info.txt
-?? ../../.hermes/reports/baseline/docker-ps.txt
-?? ../../.hermes/reports/baseline/docker-volumes.txt
-?? ../../.hermes/reports/baseline/hermes-doctor.txt
-?? ../../.hermes/reports/baseline/hermes-help.txt
-?? ../../.hermes/reports/baseline/hooks-doctor.txt
-?? ../../.hermes/reports/baseline/hooks-list.txt
-?? ../../.hermes/reports/baseline/mcp-list.txt
-?? ../../.hermes/reports/baseline/plugins-list.txt
-?? ../../.hermes/reports/baseline/process-list.csv
-?? ../../.hermes/reports/baseline/profile-list.txt
-?? ../../.hermes/reports/baseline/profile-use.txt
-?? ../../.hermes/reports/baseline/repositories.txt
-?? ../../.hermes/reports/baseline/root-log.txt
-?? ../../.hermes/reports/baseline/root-status.txt
+?? ../.././reports/baseline/docker-df.txt
+?? ../.././reports/baseline/docker-images.txt
+?? ../.././reports/baseline/docker-info.txt
+?? ../.././reports/baseline/docker-ps.txt
+?? ../.././reports/baseline/docker-volumes.txt
+?? ../.././reports/baseline/hermes-doctor.txt
+?? ../.././reports/baseline/hermes-help.txt
+?? ../.././reports/baseline/hooks-doctor.txt
+?? ../.././reports/baseline/hooks-list.txt
+?? ../.././reports/baseline/mcp-list.txt
+?? ../.././reports/baseline/plugins-list.txt
+?? ../.././reports/baseline/process-list.csv
+?? ../.././reports/baseline/profile-list.txt
+?? ../.././reports/baseline/profile-use.txt
+?? ../.././reports/baseline/repositories.txt
+?? ../.././reports/baseline/root-log.txt
+?? ../.././reports/baseline/root-status.txt
   backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
   chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
   chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
@@ -93,23 +93,23 @@ origin	https://github.com/rhixecompany/Django-Scrapy-Selenium.git (push)
 last=81811a4761c905a46e61993aa83014102f1ce31b|2026-08-29 01:47:45 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
 === projects/docs ===
 branch=clean-development
-?? ../../.hermes/reports/baseline/docker-df.txt
-?? ../../.hermes/reports/baseline/docker-images.txt
-?? ../../.hermes/reports/baseline/docker-info.txt
-?? ../../.hermes/reports/baseline/docker-ps.txt
-?? ../../.hermes/reports/baseline/docker-volumes.txt
-?? ../../.hermes/reports/baseline/hermes-doctor.txt
-?? ../../.hermes/reports/baseline/hermes-help.txt
-?? ../../.hermes/reports/baseline/hooks-doctor.txt
-?? ../../.hermes/reports/baseline/hooks-list.txt
-?? ../../.hermes/reports/baseline/mcp-list.txt
-?? ../../.hermes/reports/baseline/plugins-list.txt
-?? ../../.hermes/reports/baseline/process-list.csv
-?? ../../.hermes/reports/baseline/profile-list.txt
-?? ../../.hermes/reports/baseline/profile-use.txt
-?? ../../.hermes/reports/baseline/repositories.txt
-?? ../../.hermes/reports/baseline/root-log.txt
-?? ../../.hermes/reports/baseline/root-status.txt
+?? ../.././reports/baseline/docker-df.txt
+?? ../.././reports/baseline/docker-images.txt
+?? ../.././reports/baseline/docker-info.txt
+?? ../.././reports/baseline/docker-ps.txt
+?? ../.././reports/baseline/docker-volumes.txt
+?? ../.././reports/baseline/hermes-doctor.txt
+?? ../.././reports/baseline/hermes-help.txt
+?? ../.././reports/baseline/hooks-doctor.txt
+?? ../.././reports/baseline/hooks-list.txt
+?? ../.././reports/baseline/mcp-list.txt
+?? ../.././reports/baseline/plugins-list.txt
+?? ../.././reports/baseline/process-list.csv
+?? ../.././reports/baseline/profile-list.txt
+?? ../.././reports/baseline/profile-use.txt
+?? ../.././reports/baseline/repositories.txt
+?? ../.././reports/baseline/root-log.txt
+?? ../.././reports/baseline/root-status.txt
   backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
   chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
   chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
@@ -131,23 +131,23 @@ origin	https://github.com/rhixecompany/ecom.git (push)
 last=be8ea223327c680700ffed667e178bbc21309f3b|2026-08-29 01:47:46 +0100|rhixecompany|chore: sync agent instruction files from parent (auto-commit hook)
 === projects/mcp-servers ===
 branch=clean-development
-?? ../../.hermes/reports/baseline/docker-df.txt
-?? ../../.hermes/reports/baseline/docker-images.txt
-?? ../../.hermes/reports/baseline/docker-info.txt
-?? ../../.hermes/reports/baseline/docker-ps.txt
-?? ../../.hermes/reports/baseline/docker-volumes.txt
-?? ../../.hermes/reports/baseline/hermes-doctor.txt
-?? ../../.hermes/reports/baseline/hermes-help.txt
-?? ../../.hermes/reports/baseline/hooks-doctor.txt
-?? ../../.hermes/reports/baseline/hooks-list.txt
-?? ../../.hermes/reports/baseline/mcp-list.txt
-?? ../../.hermes/reports/baseline/plugins-list.txt
-?? ../../.hermes/reports/baseline/process-list.csv
-?? ../../.hermes/reports/baseline/profile-list.txt
-?? ../../.hermes/reports/baseline/profile-use.txt
-?? ../../.hermes/reports/baseline/repositories.txt
-?? ../../.hermes/reports/baseline/root-log.txt
-?? ../../.hermes/reports/baseline/root-status.txt
+?? ../.././reports/baseline/docker-df.txt
+?? ../.././reports/baseline/docker-images.txt
+?? ../.././reports/baseline/docker-info.txt
+?? ../.././reports/baseline/docker-ps.txt
+?? ../.././reports/baseline/docker-volumes.txt
+?? ../.././reports/baseline/hermes-doctor.txt
+?? ../.././reports/baseline/hermes-help.txt
+?? ../.././reports/baseline/hooks-doctor.txt
+?? ../.././reports/baseline/hooks-list.txt
+?? ../.././reports/baseline/mcp-list.txt
+?? ../.././reports/baseline/plugins-list.txt
+?? ../.././reports/baseline/process-list.csv
+?? ../.././reports/baseline/profile-list.txt
+?? ../.././reports/baseline/profile-use.txt
+?? ../.././reports/baseline/repositories.txt
+?? ../.././reports/baseline/root-log.txt
+?? ../.././reports/baseline/root-status.txt
   backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
   chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
   chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
@@ -162,23 +162,23 @@ origin	https://github.com/rhixecompany/sandbox.git (push)
 last=f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd|2026-09-05 01:32:14 +0100|rhixecompany|updates
 === projects/mcp-server-typescript ===
 branch=clean-development
-?? ../../.hermes/reports/baseline/docker-df.txt
-?? ../../.hermes/reports/baseline/docker-images.txt
-?? ../../.hermes/reports/baseline/docker-info.txt
-?? ../../.hermes/reports/baseline/docker-ps.txt
-?? ../../.hermes/reports/baseline/docker-volumes.txt
-?? ../../.hermes/reports/baseline/hermes-doctor.txt
-?? ../../.hermes/reports/baseline/hermes-help.txt
-?? ../../.hermes/reports/baseline/hooks-doctor.txt
-?? ../../.hermes/reports/baseline/hooks-list.txt
-?? ../../.hermes/reports/baseline/mcp-list.txt
-?? ../../.hermes/reports/baseline/plugins-list.txt
-?? ../../.hermes/reports/baseline/process-list.csv
-?? ../../.hermes/reports/baseline/profile-list.txt
-?? ../../.hermes/reports/baseline/profile-use.txt
-?? ../../.hermes/reports/baseline/repositories.txt
-?? ../../.hermes/reports/baseline/root-log.txt
-?? ../../.hermes/reports/baseline/root-status.txt
+?? ../.././reports/baseline/docker-df.txt
+?? ../.././reports/baseline/docker-images.txt
+?? ../.././reports/baseline/docker-info.txt
+?? ../.././reports/baseline/docker-ps.txt
+?? ../.././reports/baseline/docker-volumes.txt
+?? ../.././reports/baseline/hermes-doctor.txt
+?? ../.././reports/baseline/hermes-help.txt
+?? ../.././reports/baseline/hooks-doctor.txt
+?? ../.././reports/baseline/hooks-list.txt
+?? ../.././reports/baseline/mcp-list.txt
+?? ../.././reports/baseline/plugins-list.txt
+?? ../.././reports/baseline/process-list.csv
+?? ../.././reports/baseline/profile-list.txt
+?? ../.././reports/baseline/profile-use.txt
+?? ../.././reports/baseline/repositories.txt
+?? ../.././reports/baseline/root-log.txt
+?? ../.././reports/baseline/root-status.txt
   backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
   chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
   chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z
@@ -207,23 +207,23 @@ origin	https://github.com/rhixecompany/Python-projects.git (push)
 last=0248dd601bbb2c8e8777f232a406f388cdbfd267|2026-08-31 20:39:54 +0100|rhixecompany|chore: quality check script, MCP config, pre-commit hook, skill, fix email_sender/currency_converter/rock_paper_scissors
 === projects/Resume_maker ===
 branch=clean-development
-?? ../../.hermes/reports/baseline/docker-df.txt
-?? ../../.hermes/reports/baseline/docker-images.txt
-?? ../../.hermes/reports/baseline/docker-info.txt
-?? ../../.hermes/reports/baseline/docker-ps.txt
-?? ../../.hermes/reports/baseline/docker-volumes.txt
-?? ../../.hermes/reports/baseline/hermes-doctor.txt
-?? ../../.hermes/reports/baseline/hermes-help.txt
-?? ../../.hermes/reports/baseline/hooks-doctor.txt
-?? ../../.hermes/reports/baseline/hooks-list.txt
-?? ../../.hermes/reports/baseline/mcp-list.txt
-?? ../../.hermes/reports/baseline/plugins-list.txt
-?? ../../.hermes/reports/baseline/process-list.csv
-?? ../../.hermes/reports/baseline/profile-list.txt
-?? ../../.hermes/reports/baseline/profile-use.txt
-?? ../../.hermes/reports/baseline/repositories.txt
-?? ../../.hermes/reports/baseline/root-log.txt
-?? ../../.hermes/reports/baseline/root-status.txt
+?? ../.././reports/baseline/docker-df.txt
+?? ../.././reports/baseline/docker-images.txt
+?? ../.././reports/baseline/docker-info.txt
+?? ../.././reports/baseline/docker-ps.txt
+?? ../.././reports/baseline/docker-volumes.txt
+?? ../.././reports/baseline/hermes-doctor.txt
+?? ../.././reports/baseline/hermes-help.txt
+?? ../.././reports/baseline/hooks-doctor.txt
+?? ../.././reports/baseline/hooks-list.txt
+?? ../.././reports/baseline/mcp-list.txt
+?? ../.././reports/baseline/plugins-list.txt
+?? ../.././reports/baseline/process-list.csv
+?? ../.././reports/baseline/profile-list.txt
+?? ../.././reports/baseline/profile-use.txt
+?? ../.././reports/baseline/repositories.txt
+?? ../.././reports/baseline/root-log.txt
+?? ../.././reports/baseline/root-status.txt
   backup-pre-filter                          a96d7b00 chore: mark 10-subgoal master plan as completed
   chore/ci/instructions-validate             43f9dbc9 chore(session): auto-commit session 20260815_155304_ab36b9 at 2026-08-15T15:44:31Z
   chore/instructions-auto-fix                eecc777a chore(session): auto-commit session 20260815_180924_57fcee at 2026-08-15T17:43:19Z

@@ -10,8 +10,8 @@ description: "Implementation prompt that uses exact outputs of SG1-SG6 (spec, pl
 
 This prompt consumes the verified artifacts produced by the sequential multi-file-change-protocol for webhooks:
 
-- **SG1 (spec)** → `.hermes/specs/webhook-full.md` — full architecture (route schema §2, signature verification §3, rate/idempotency/body-size §4, prompt templates §5, security invariant §6, per-route toolsets §7, dynamic subscriptions §8, direct delivery §9, cross-platform delivery §10, verification gates §12).
-- **SG2 (plan)** → `.hermes/plans/webhook-execution-plan.md` — milestones M1–M4, sequential SG order, rules, resources.
+- **SG1 (spec)** → `./specs/webhook-full.md` — full architecture (route schema §2, signature verification §3, rate/idempotency/body-size §4, prompt templates §5, security invariant §6, per-route toolsets §7, dynamic subscriptions §8, direct delivery §9, cross-platform delivery §10, verification gates §12).
+- **SG2 (plan)** → `./plans/webhook-execution-plan.md` — milestones M1–M4, sequential SG order, rules, resources.
 - **SG3 (prompt templates)** → `.github/prompts/webhook/webhook-template.md` + `direct-delivery-template.md` — `{dot}` syntax, `{__raw__}`, response codes, security notes.
 - **SG4 (scripts)** → `scripts/webhook_filter_todoist.py` (filter/transform; `[SILENT]` + SystemExit(0) for no-match; JSON stdout replaces payload) + `scripts/webhook_test_payload.py` (test payload generator for `github-issues`, `deploy-notify`, `oom-emergency`).
 - **SG5 (skills)** → `skills/webhook-subscriptions.md` (SKILL.md: commands, constraints, agent-driven subscriptions) + `skills/per-route-toolsets.md` (SKILL.md: manual edit only; never via CLI; validation/drop rules; security warning).
@@ -29,7 +29,7 @@ Given the 6 artifacts above (SG1–SG6 verified; SG7 is this prompt; SG8 is the 
    - SG4: both scripts executable; filter produces `[SILENT]` or JSON stdout; test script builds payloads for 3 routes.
    - SG5: each SKILL.md ≥10 lines body; frontmatter (`name`, `title`, `version`, `tags`) present; no duplicate/stub skills.
    - SG6: 3 routes present (`github-pr` agent mode + `github_comment`; `deploy-notify` direct mode + `telegram` + `filters` + `deliver_only:true`; `oom-emergency` trusted + `toolsets` + `telegram`); no `INSECURE_NO_AUTH`; `.env` has placeholder secret (not real); JSON subscriptions have correct structure.
-3. Produce `.hermes/specs/webhook-implementation.md` (implementation spec update) summarizing verified state of SG1–SG7 and any adjustments needed.
+3. Produce `./specs/webhook-implementation.md` (implementation spec update) summarizing verified state of SG1–SG7 and any adjustments needed.
 4. Produce `docs/webhook-implementation-report.md` (SG8 final verification checklist + session log) with:
    - `current_state`: verified artifacts list + open items
    - `verified_items`: count of gates passed (expected 7 of 7 SG1–SG7 + SG8 gate = 8)

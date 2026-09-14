@@ -18,7 +18,7 @@ Load and execute any implementation plan step-by-step. Reads the plan from a `.p
 
 ## Input
 
-- **Plan file path** — e.g. `prompts/plan-xxx.prompt.md` or `.hermes/plans/xxx.md`
+- **Plan file path** — e.g. `prompts/plan-xxx.prompt.md` or `./plans/xxx.md`
 - **Optional overrides** — phase to start from, env vars, profile selections
 
 ## Core Rules
@@ -32,7 +32,7 @@ See [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md).Additio
 1. Read the plan file (`read_file`).
 2. Parse phases, gates, dependencies, and outputs.
 3. Verify all referenced skills/prompts/tools exist.
-4. Write session start marker to `.hermes/plans/docs/<plan-name>-progress.md`.
+4. Write session start marker to `./plans/docs/<plan-name>-progress.md`.
 
 ### Phase 2: Execute phases
 

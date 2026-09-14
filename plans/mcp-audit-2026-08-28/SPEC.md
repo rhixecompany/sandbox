@@ -1,6 +1,6 @@
 ---
 title: MCP Server Audit, Registry & Sync — Specification
-plan: .hermes/plans/mcp-audit-2026-08-28/PLAN.md
+plan: ./plans/mcp-audit-2026-08-28/PLAN.md
 generated: 2026-08-28
 profile: adminbot
 model: minimax/minimax-m3:free
@@ -100,7 +100,7 @@ For each server in registry:
 - **stdio**: spawn `bunx --version` (or check binary path exists), env-resolve `${env:...}` placeholders
 - **http/sse**: HEAD/GET to URL, expect 2xx/4xx (not 5xx, not network error)
 - **disabled**: skip, mark `⊘`
-- Emit `.hermes/plans/mcp-audit-2026-08-28/audit-report.json` + `.md`
+- Emit `./plans/mcp-audit-2026-08-28/audit-report.json` + `.md`
 
 ### 4.4 Skill Layout
 

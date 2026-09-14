@@ -5,8 +5,8 @@ Reads a markdown plan file, extracts tasks, and dispatches subagents
 with proper context for implementer, spec reviewer, and quality reviewer.
 
 Usage:
-    python3 subagent_dispatcher.py --plan .hermes/plans/example-subagent-plan.md
-    python3 subagent_dispatcher.py --plan .hermes/plans/example-subagent-plan.md --dry-run
+    python3 subagent_dispatcher.py --plan ./plans/example-subagent-plan.md
+    python3 subagent_dispatcher.py --plan ./plans/example-subagent-plan.md --dry-run
 """
 
 import argparse

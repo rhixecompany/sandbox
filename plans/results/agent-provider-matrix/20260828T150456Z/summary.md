@@ -1,7 +1,7 @@
 # Agent / Provider Matrix Report
 
         Generated: 2026-08-28T15:04:56+00:00
-        Results root: `C:/Users/Alexa/Desktop/SandBox/.hermes/plans/results/agent-provider-matrix/20260828T150456Z`
+        Results root: `C:/Users/Alexa/Desktop/SandBox/./plans/results/agent-provider-matrix/20260828T150456Z`
 
         ## Inventory
 

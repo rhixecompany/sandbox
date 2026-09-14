@@ -1,7 +1,7 @@
 # VERIFICATION REPORT — Repo Tooling Implementation (Prompt-Managed)
 
 **Date:** 2026-08-01
-**Plan:** `.hermes/plans/2026-08-01_repo-tooling.md`
+**Plan:** `./plans/2026-08-01_repo-tooling.md`
 **Prompt:** `.github/prompts/repo-tooling-implementation.prompt.md`
 **Verdict:** ✅ ALL GATES PASS — 20/20 repos, 0 tooling-level failures, 0 plan/spec failures
 
@@ -26,7 +26,7 @@
 
 | Artifact              | Path                                                                                         | Status                                  |
 | --------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------- |
-| Master plan           | `.hermes/plans/2026-08-01_repo-tooling.md`                                                   | ✅ v1.0.0 → completed                   |
+| Master plan           | `./plans/2026-08-01_repo-tooling.md`                                                   | ✅ v1.0.0 → completed                   |
 | Skill `repo-planning` | `~/AppData/Local/hermes/skills/planning/repo-planning/SKILL.md`                              | ✅ created, desc 56c                    |
 | Skill crosslink       | `tooling-implementation` Related Skills                                                      | ✅ patched                              |
 | Generator script      | `scripts/repo-plan-spec.py`                                                                  | ✅ ruff clean, dry-run + apply verified |

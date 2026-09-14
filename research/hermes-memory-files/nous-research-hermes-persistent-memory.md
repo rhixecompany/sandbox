@@ -17,7 +17,7 @@ Two files make up the agent's memory:
 | **MEMORY.md** | Agent's personal notes — environment facts, conventions, things learned | 2,200 chars (~800 tokens) |
 | **USER.md**   | User profile — your preferences, communication style, expectations      | 1,375 chars (~500 tokens) |
 
-Both are stored in `~/.hermes/memories/` and are injected into the system prompt as a frozen snapshot at session start. The agent manages its own memory via the `memory` tool — it can add, replace, or remove entries.
+Both are stored in `~/./memories/` and are injected into the system prompt as a frozen snapshot at session start. The agent manages its own memory via the `memory` tool — it can add, replace, or remove entries.
 
 **Character limits keep memory focused.** Memory does **not** auto-compact: when a write would exceed the limit, the `memory` tool returns an error instead of silently dropping entries. The agent then makes room itself — consolidating or removing entries in the same turn before retrying (see [What Happens When Memory is Full](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory#what-happens-when-memory-is-full)). Note that `replace` is also bound by the limit: swapping an entry for a longer one can still overflow, so the new content must be shortened (or another entry removed) to fit.
 
@@ -175,7 +175,7 @@ Both can be used in the same turn — the agent decides based on the question.
 
 ## Configuration
 
-Memory behavior is controlled via `~/.hermes/config.yaml`:
+Memory behavior is controlled via `~/./config.yaml`:
 
 ```yaml
 memory:
@@ -236,7 +236,7 @@ hermes config set skills.write_approval prompt
 
 ## External Memory Providers
 
-Hermes supports pluggable memory backends. The built-in provider uses the local `~/.hermes/memories/` files. Custom providers can store memory in databases, vector stores, or remote services. See the [Memory Providers](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers) page for implementation details.
+Hermes supports pluggable memory backends. The built-in provider uses the local `~/./memories/` files. Custom providers can store memory in databases, vector stores, or remote services. See the [Memory Providers](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers) page for implementation details.
 
 ---
 

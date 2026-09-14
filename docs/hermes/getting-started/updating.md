@@ -92,7 +92,7 @@ When you run `hermes update` in a terminal, Hermes stashes any uncommitted sourc
 When the update runs **without a terminal** — from the desktop/chat app's "Update" button or a gateway-triggered update — there's no prompt to answer. The `updates.non_interactive_local_changes` setting decides what happens to your stashed changes:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 updates:
   non_interactive_local_changes: stash   # default: keep + auto-restore
   # non_interactive_local_changes: discard  # throw local source edits away
@@ -106,7 +106,7 @@ In the desktop app this is **Settings → Advanced → In-App Update Local Chang
 **Desktop updates never auto-restore.** The desktop updater invokes `hermes update --keep-stash`: local source edits are still stashed so the update can proceed, but they are **not** re-applied afterward — they stay parked in `git stash` and the update log prints the exact `git stash apply <ref>` command to bring them back. This prevents local edits from silently riding along across desktop updates and breaking the freshly updated install. (`non_interactive_local_changes: discard` still wins if you've opted into discarding.) To restore parked changes manually:
 
 ```bash
-cd ~/.hermes/hermes-agent   # or your install root
+cd ~/./hermes-agent   # or your install root
 git stash list --format='%gd %H %s'   # find the hermes-update-autostash entry
 git stash apply stash@{0}
 ```
@@ -121,11 +121,11 @@ Want to know if an update is available before pulling? Run `hermes update --chec
 
 Before updating a machine that runs several profiles or services, `hermes update --plan` prints the full update plan without changing anything: the install kind (git checkout, Docker image, Nix/apt managed), every running Hermes service across all profiles with its supervisor (systemd, launchd, manual) and the code version it is actually serving, and the restart mechanism each one will get. Manually-launched `hermes serve` / `hermes dashboard` backends appear too (from the spawn ledger), with their recorded bind endpoint and a "stop before code swap, relaunch with recorded launch args" restart mechanism. On image- or package-managed installs the plan reports that the install is not updatable in place and names the right update command instead. Read-only and safe on a live fleet.
 
-The same inventory is embedded in every real update's receipt (`~/.hermes/logs/update_receipts/`), so after an update you can compare what the updater saw against what it did.
+The same inventory is embedded in every real update's receipt (`~/./logs/update_receipts/`), so after an update you can compare what the updater saw against what it did.
 
 ### Update receipts and the fleet version check
 
-Every `hermes update` run writes a machine-readable receipt to `~/.hermes/logs/update_receipts/` (last 20 kept, `latest.json` always points at the most recent): the pre-update fleet plan, each step taken, anything skipped and why, the gateway restart outcome, and the final fleet version matrix. After the restart phase the updater compares each live gateway's running code against the freshly updated checkout and prints a per-profile matrix — a gateway still serving pre-update code is reported loudly with the exact restart command, and the update exits non-zero so automation never treats a mixed-version fleet as healthy. Both `--plan` and the fleet check ask each running gateway directly over its local control socket (`gateway.sock` in the profile's data directory, a named pipe on Windows) when available, so version and supervisor information comes from the gateway itself; gateways from older versions are still discovered through their state files as before.
+Every `hermes update` run writes a machine-readable receipt to `~/./logs/update_receipts/` (last 20 kept, `latest.json` always points at the most recent): the pre-update fleet plan, each step taken, anything skipped and why, the gateway restart outcome, and the final fleet version matrix. After the restart phase the updater compares each live gateway's running code against the freshly updated checkout and prints a per-profile matrix — a gateway still serving pre-update code is reported loudly with the exact restart command, and the update exits non-zero so automation never treats a mixed-version fleet as healthy. Both `--plan` and the fleet check ask each running gateway directly over its local control socket (`gateway.sock` in the profile's data directory, a named pipe on Windows) when available, so version and supervisor information comes from the gateway itself; gateways from older versions are still discovered through their state files as before.
 
 ### Interrupted gateway restarts
 
@@ -150,7 +150,7 @@ hermes update --backup
 Or make it the default for every run:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 updates:
   pre_update_backup: full
 ```
@@ -226,10 +226,10 @@ If `git status --short` shows unexpected changes after `hermes update`, stop and
 `hermes update` protects itself against accidental terminal loss:
 
 - The update ignores `SIGHUP`, so closing your SSH session or terminal window no longer kills it mid-install. `pip` and `git` child processes inherit this protection, so the Python environment cannot be left half-installed by a dropped connection.
-- All output is mirrored to `~/.hermes/logs/update.log` while the update runs. If your terminal disappears, reconnect and inspect the log to see whether the update finished and whether the gateway restart succeeded:
+- All output is mirrored to `~/./logs/update.log` while the update runs. If your terminal disappears, reconnect and inspect the log to see whether the update finished and whether the gateway restart succeeded:
 
 ```bash
-tail -f ~/.hermes/logs/update.log
+tail -f ~/./logs/update.log
 ```
 
 - `Ctrl-C` (SIGINT) and system shutdown (SIGTERM) are still honored — those are deliberate cancellations, not accidents.
@@ -261,7 +261,7 @@ If you installed manually (not via the quick installer):
 ```bash
 cd /path/to/hermes-agent
 # Activate the venv you created during install (outside the source tree)
-export VIRTUAL_ENV="$HOME/.hermes/venvs/hermes-dev"
+export VIRTUAL_ENV="$HOME/./venvs/hermes-dev"
 export PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Pull latest code
@@ -336,7 +336,7 @@ See [Nix Setup](./nix-setup.md) for more details.
 hermes uninstall
 ```
 
-The uninstaller gives you the option to keep your configuration files (`~/.hermes/`) for a future reinstall.
+The uninstaller gives you the option to keep your configuration files (`~/./`) for a future reinstall.
 
 :::tip Moving to a new machine rather than leaving?
 Take your setup with you before removing anything: `hermes backup` captures the entire `~/.hermes` directory including credentials, while `hermes profile export` packs a single profile with credentials excluded by design (so an export alone is not a full backup). See [`hermes backup` vs `hermes profile export`](/reference/faq#hermes-backup-vs-hermes-profile-export).

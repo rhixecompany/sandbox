@@ -4,7 +4,7 @@ fanout.py — Multi-agent / multi-provider fanout orchestrator.
 
 Reads scripts/.runtime/provider_inventory.json, builds the (provider, agent)
 cell matrix, runs each cell non-interactively with a prompt, and writes a
-structured report to .hermes/plans/multi-agent-fanout-<date>/fanout-report.json.
+structured report to ./plans/multi-agent-fanout-<date>/fanout-report.json.
 
 Output schema (per cell):
     {

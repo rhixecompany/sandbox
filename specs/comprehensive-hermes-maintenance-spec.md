@@ -148,7 +148,7 @@ Every phase writes secret-safe JSON/Markdown evidence with timestamp, scope, com
 ### NFR3: Maintainability
 - All scripts must have quick_commands
 - All skills must follow SKILL.md format
-- All plans must follow .hermes/plans/ format
+- All plans must follow ./plans/ format
 - Documentation must be updated with changes
 
 ### NFR4: Security
@@ -157,8 +157,8 @@ Every phase writes secret-safe JSON/Markdown evidence with timestamp, scope, com
 - Credential pool strategies must be maintained
 
 ## Verification
-- Run specs-judge with threshold 98 on all specs in .hermes/specs/
-- Run plans-judge with threshold 98 on all plans in .hermes/plans/
+- Run specs-judge with threshold 98 on all specs in ./specs/
+- Run plans-judge with threshold 98 on all plans in ./plans/
 - Run prompts-judge with threshold 98 on all prompts in .github/prompts/
 - All judge skills must score ≥ 98
 - Run hermes doctor and confirm 0 issues
@@ -186,7 +186,7 @@ Drive `comprehensive-hermes-maintenance-spec.md` to a verified passing state by 
 
 ## Acceptance Criteria
 
-- Then `python scripts/specs_judge.py --specs-dir .hermes/specs` reports this spec at score >= 95 and rating PASS.
+- Then `python scripts/specs_judge.py --specs-dir ./specs` reports this spec at score >= 95 and rating PASS.
 - Then this file still parses as markdown and the frontmatter still validates against the 5-field rubric (name, title, status, owner, version).
 - Then every requirement in `## Requirements` above references a verification command, an exit code, or a numeric threshold.
 
@@ -198,7 +198,7 @@ Drive `comprehensive-hermes-maintenance-spec.md` to a verified passing state by 
 
 ## Verification
 
-- [ ] `python -c "import yaml; yaml.safe_load(open('.hermes/specs/comprehensive-hermes-maintenance-spec.md').read().split('---',2)[1])"` exits 0.
-- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir .hermes/specs` reports the spec at score >= 95.
-- [ ] Spec's `plan:` frontmatter field points to an existing file in `.hermes/plans/` (when present).
-- [ ] At least 1 plan in `.hermes/plans/` references this spec by filename.
+- [ ] `python -c "import yaml; yaml.safe_load(open('./specs/comprehensive-hermes-maintenance-spec.md').read().split('---',2)[1])"` exits 0.
+- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir ./specs` reports the spec at score >= 95.
+- [ ] Spec's `plan:` frontmatter field points to an existing file in `./plans/` (when present).
+- [ ] At least 1 plan in `./plans/` references this spec by filename.

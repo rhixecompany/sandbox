@@ -53,7 +53,7 @@ Most email providers support IMAP/SMTP. Check your provider's documentation for:
 Proton Mail Bridge (and similar local relays such as a self-hosted MTA) listen on
 loopback with **STARTTLS** and a self-signed certificate, so the defaults
 (implicit TLS on IMAP 993, verified certificates) won't connect. Override the
-transport in `~/.hermes/config.yaml`:
+transport in `~/./config.yaml`:
 
 ```yaml
 platforms:
@@ -69,7 +69,7 @@ platforms:
 ```
 
 and set `EMAIL_IMAP_PORT=1143` / `EMAIL_SMTP_PORT=1025` alongside your Bridge
-credentials in `~/.hermes/.env`. Unknown `*_security` values log a warning and
+credentials in `~/./.env`. Unknown `*_security` values log a warning and
 fall back to the secure default. Only disable `*_tls_verify` for loopback hosts —
 Hermes logs a warning when verification is off for any other host.
 
@@ -87,7 +87,7 @@ Select **Email** from the platform menu. The wizard prompts for your email addre
 
 ### Manual Configuration
 
-Add to `~/.hermes/.env`:
+Add to `~/./.env`:
 
 ```bash
 # Required
@@ -202,7 +202,7 @@ Email access is stricter by default than chat-style platforms:
 
 - Use **App Passwords** instead of your main password (required for Gmail with 2FA)
 - Set `EMAIL_ALLOWED_USERS` to restrict who can interact with the agent
-- The password is stored in `~/.hermes/.env` — protect this file (`chmod 600`)
+- The password is stored in `~/./.env` — protect this file (`chmod 600`)
 - IMAP uses SSL (port 993) and SMTP uses STARTTLS (port 587) by default — connections are encrypted
 
 ---

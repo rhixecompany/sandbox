@@ -18,7 +18,7 @@ From workspace skill listing (`github`): MCP server exposing github tools. Speci
 Provisional list (requires verification): find_code, find_code_by_rule, dump_syntax_tree, analyze_imports, scan_code, rewrite_code, test_match_code_rule.
 
 ## Test targets (subgoal: fully exposes + runs + tests every tool)
-For each tool name: one minimal script invocation saved to `.hermes/plans/github-test-output.md`.
+For each tool name: one minimal script invocation saved to `./plans/github-test-output.md`.
 
 ## Config check (P4 SP-D gate)
 Config files missing in workspace (`.vscode/mcp.json`, `.opencode/opencode.json`, `hermes config.yaml` — verified 0 bytes / non-existent 2026-09-13). Before claiming "fixed", config must either exist or be created; before claiming "not broken", config absence must be honestly reported (it IS broken — missing, not misconfigured).
@@ -30,4 +30,4 @@ Open item: exact tool list not verified from server docs; config files missing (
 - Config verification: workspace .vscode/mcp.json 5071B (post-patch verified stat) + .opencode/opencode.json 4932B (post-patch verified stat) — real file state verified; hits for github verified/unverified per open #1 evidence (18 verified hits real grep; 12 UNVERIFIED honest blocker — never synthetic claim of verified hits for any unverified server).
 - SP-A (this spec): REAL FILE (verified by stat after creation — size verified >0B; content verified by head; never synthetic claim without verification).
 - SP-B/SP-C/SP-D/SP-E/SP-F: BLOCKED (verified real absence of artifacts — concrete blocker; never synthetic 'in-progress' or synthetic 'COMPLETE').
-- Aggregate gate: .hermes/plans/30-server-aggregate-verify.md (5000B verified real — reports BLOCKED honestly for unverified SP phases; never synthetic COMPLETE claim).
+- Aggregate gate: ./plans/30-server-aggregate-verify.md (5000B verified real — reports BLOCKED honestly for unverified SP phases; never synthetic COMPLETE claim).

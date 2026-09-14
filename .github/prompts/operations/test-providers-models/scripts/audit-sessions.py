@@ -2,8 +2,8 @@
 """Audit Hermes probe sessions created by test-providers-models and rank them by score.
 
 Reads state.db (or any session_search-exported JSON) and joins each session against
-the probe results captured in `.hermes/reports/test-providers-probe.json`. Outputs
-`.hermes/reports/test-providers-ranking.{json,md}`.
+the probe results captured in `./reports/test-providers-probe.json`. Outputs
+`./reports/test-providers-ranking.{json,md}`.
 
 Run after Phase 5 of test-providers-models.prompt.md:
 
@@ -24,7 +24,7 @@ import sqlite3
 from datetime import UTC, datetime
 from pathlib import Path
 
-REPORT_DIR = Path(".hermes/reports")
+REPORT_DIR = Path("./reports")
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
 DEFAULT_STATE = Path.home() / "AppData" / "Local" / "hermes" / "state.db"
 

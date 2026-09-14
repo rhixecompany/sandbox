@@ -82,7 +82,7 @@ mcp_servers:
       GITHUB_PERSONAL_ACCESS_TOKEN: "${env:GITHUB_TOKEN}"   # same as "${GITHUB_TOKEN}"
 ```
 
-Values resolve from the active profile's secret scope (falling back to the process environment), so put the secret in `~/.hermes/.env`. An unset variable keeps its literal placeholder.
+Values resolve from the active profile's secret scope (falling back to the process environment), so put the secret in `~/./.env`. An unset variable keeps its literal placeholder.
 
 ### Context variables
 
@@ -333,7 +333,7 @@ mcp_servers:
 Behavior:
 - Hermes uses the MCP SDK's OAuth 2.1 PKCE flow (metadata discovery, client identification, token exchange, and refresh)
 - On first connect, a browser window opens for authorization
-- Tokens are persisted to `~/.hermes/mcp-tokens/<server>.json` and reused across sessions
+- Tokens are persisted to `~/./mcp-tokens/<server>.json` and reused across sessions
 - Token refresh is automatic; re-authorization only happens when refresh fails
 - Only applies to HTTP/StreamableHTTP transport (`url`-based servers)
 
@@ -390,7 +390,7 @@ Each pinned port is bound as soon as it is chosen and held until the browser red
 
 #### When a server rejects the document
 
-If a server fetches the document and refuses it at the *token* endpoint (`invalid_client`), Hermes logs the rejection, records it under `~/.hermes/mcp-tokens/<server>.cimd-off`, and uses DCR for that server from then on.
+If a server fetches the document and refuses it at the *token* endpoint (`invalid_client`), Hermes logs the rejection, records it under `~/./mcp-tokens/<server>.cimd-off`, and uses DCR for that server from then on.
 
 A server that cannot fetch or validate the document at all aborts at the *authorization* endpoint instead, before any redirect happens. There is no signal Hermes can observe there, so the browser shows an invalid-client error and the login times out after five minutes. The timeout message names the document and points at `cimd: false`. Running `hermes mcp login <server>` clears the recorded rejection, so a corrected document gets another chance.
 

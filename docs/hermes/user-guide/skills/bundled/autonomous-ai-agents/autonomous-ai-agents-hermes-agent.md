@@ -85,21 +85,21 @@ hermes proxy                   # OpenAI-compatible local proxy backed by your OA
 ## Key Paths
 
 ```
-~/.hermes/config.yaml       Main configuration (settings — never secrets)
-~/.hermes/.env              API keys and secrets ONLY (under $HERMES_HOME if set)
+~/./config.yaml       Main configuration (settings — never secrets)
+~/./.env              API keys and secrets ONLY (under $HERMES_HOME if set)
 $HERMES_HOME/skills/        Installed skills
-~/.hermes/skins/            Custom themes (see references/themes.md)
-~/.hermes/desktop-plugins/  Desktop app UI plugins (see references/desktop-plugins.md)
-~/.hermes/tui-widgets/      TUI widget apps (see references/tui-widgets.md)
-~/.hermes/pets/             Installed pet mascots (see references/petdex.md)
-~/.hermes/state.db          Canonical session store (SQLite + FTS5)
-~/.hermes/sessions/         Gateway routing index, request dumps, *.jsonl transcripts
-~/.hermes/logs/             Gateway and error logs
-~/.hermes/auth.json         OAuth tokens and credential pools
-~/.hermes/hermes-agent/     Source code (if git-installed)
+~/./skins/            Custom themes (see references/themes.md)
+~/./desktop-plugins/  Desktop app UI plugins (see references/desktop-plugins.md)
+~/./tui-widgets/      TUI widget apps (see references/tui-widgets.md)
+~/./pets/             Installed pet mascots (see references/petdex.md)
+~/./state.db          Canonical session store (SQLite + FTS5)
+~/./sessions/         Gateway routing index, request dumps, *.jsonl transcripts
+~/./logs/             Gateway and error logs
+~/./auth.json         OAuth tokens and credential pools
+~/./hermes-agent/     Source code (if git-installed)
 ```
 
-Profiles use `~/.hermes/profiles/<name>/` with the same layout. When a profile is active, resolve the real home from `$HERMES_HOME` — never hardcode `~/.hermes`.
+Profiles use `~/./profiles/<name>/` with the same layout. When a profile is active, resolve the real home from `$HERMES_HOME` — never hardcode `~/.hermes`.
 
 ## Routing Table — load the reference for the task
 

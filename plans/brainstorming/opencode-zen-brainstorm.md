@@ -73,6 +73,6 @@ The OpenRouter workflow template adapted for OpenCode-Zen:
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/opencode-zen-workflow-spec.md`
-- `.hermes/plans/opencode-zen-workflow.md` (implementation plan)
-- `.hermes/plans/results/opencode-zen-*.txt` (execution results)
+- `./plans/specs/opencode-zen-workflow-spec.md`
+- `./plans/opencode-zen-workflow.md` (implementation plan)
+- `./plans/results/opencode-zen-*.txt` (execution results)

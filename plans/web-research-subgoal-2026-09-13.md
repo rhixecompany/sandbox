@@ -20,19 +20,19 @@ metadata:
 | P2 | RESEARCH — Run pipeline per package | Best-practices + cheatsheet links captured for each package; saved to artifacts | T+0 → T+batch |
 | P3 | VERIFY — Pipeline complete check | Count verified == 289 Python + 343 Node (or subset if reduced); links validated; no missing entries | After P2 |
 | P4 | READ — Read new artifacts (research results) | Artifacts parsed; spec/plan/prompt/script generated per verified entry | After P3 |
-| P5 | CREATE — Specs, Plans, Prompts, Scripts, Skills | Each package has `.hermes/specs/`, `.hermes/plans/`, `.github/prompts/`, `scripts/`, `skills/` artifacts | After P4 |
+| P5 | CREATE — Specs, Plans, Prompts, Scripts, Skills | Each package has `./specs/`, `./plans/`, `.github/prompts/`, `scripts/`, `skills/` artifacts | After P4 |
 | P6 | EXECUTE — Verify artifacts + run scripts | Scripts executable; skills importable; plans have gates; verification reports saved | After P5 |
 
 ## Rules
 1. No Phase N+1 starts before Phase N gate passes (sequential dependency per clarification turn 3).
 2. All destructive ops approved — new files created; existing skills/plans/scripts NOT deleted unless explicitly overwritten (per clarification turn 4: restructuring allowed).
 3. Pipeline verified complete (P3 gate) BEFORE reading new artifacts (P4) — per user's instruction: "only when the pipeline is completed, read the new artifacts".
-4. Each package: best-practice + cheatsheet links (research) → spec (`.hermes/specs/`) → plan (`.hermes/plans/`) → prompt (`.github/prompts/`) → script (`scripts/`) → skill (`skills/`).
+4. Each package: best-practice + cheatsheet links (research) → spec (`./specs/`) → plan (`./plans/`) → prompt (`.github/prompts/`) → script (`scripts/`) → skill (`skills/`).
 5. Subagent-driven-parallel inside P5 (after P4 verified) — each package artifact set can be generated in parallel via `delegate_task`.
 
 ## Milestones
 - M1 (P2): 289 Python + 343 Node package research complete (links saved).
-- M2 (P3): Pipeline verification report written (`.hermes/plans/web-research-verify-<ts>.md`).
+- M2 (P3): Pipeline verification report written (`./plans/web-research-verify-<ts>.md`).
 - M3 (P4): All new artifacts read and indexed.
 - M4 (P5): Per-package artifacts created (spec/plan/prompt/script/skill count verified).
 - M5 (P6): Scripts executed, skills loaded, verification complete — "Goal complete" declared.

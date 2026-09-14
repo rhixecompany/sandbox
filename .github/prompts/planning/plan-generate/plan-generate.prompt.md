@@ -102,7 +102,7 @@ Generate a plan with these sections:```markdown
 
 ### Phase 3: Write
 
-1. Create the plan file at `.github/prompts/<name>.prompt.md` or `.hermes/plans/<name>.md`.
+1. Create the plan file at `.github/prompts/<name>.prompt.md` or `./plans/<name>.md`.
 2. Use `writing-plans` skill for structured plan writing.
 3. Apply `simplify` to remove redundancy.
 

@@ -437,7 +437,7 @@
     "has_refs": false,
     "has_templates": false,
     "has_scripts": false,
-    "description": "Consolidate and audit all project plans in .hermes/plans/ directory. Normalizes ..."
+    "description": "Consolidate and audit all project plans in ./plans/ directory. Normalizes ..."
   },
   {
     "folder": "authsome",
@@ -5123,7 +5123,7 @@
     "has_refs": false,
     "has_templates": false,
     "has_scripts": false,
-    "description": "'Plan mode: write markdown plan to .hermes/plans/, no exec.'"
+    "description": "'Plan mode: write markdown plan to ./plans/, no exec.'"
   },
   {
     "folder": "software-development/project-docs",
@@ -5849,7 +5849,7 @@
     "has_refs": true,
     "has_templates": false,
     "has_scripts": true,
-    "description": "\"Use when auditing .hermes/plans/*.md. Scores 0-100.\""
+    "description": "\"Use when auditing ./plans/*.md. Scores 0-100.\""
   },
   {
     "folder": "qa/playwright-automation-fill-in-form",
@@ -6003,7 +6003,7 @@
     "has_refs": true,
     "has_templates": false,
     "has_scripts": true,
-    "description": "\"Use when auditing .hermes/specs/*.md. Scores 0-100.\""
+    "description": "\"Use when auditing ./specs/*.md. Scores 0-100.\""
   },
   {
     "folder": "qa/test-skill",

@@ -19,7 +19,7 @@ Trigger: >6 files (this plan produces spec + plan + prompt + skill + 4 hook-syst
 
 ## Milestones + Timeline (sequential outer; parallel inner where independent)
 M1 (0-15m) LOAD — load + verify 14 skills + 3 of 17 named skill refs; read current hooks + workspace context.
-M2 (15-45m) PLAN — write this file + .hermes/specs/01-comprehensive-hooks-spec.md + .github/prompts/hooks-comprehensive.prompt.md framework.
+M2 (15-45m) PLAN — write this file + ./specs/01-comprehensive-hooks-spec.md + .github/prompts/hooks-comprehensive.prompt.md framework.
 M3 (45-90m) VERIFY — clarification answered; gates defined; resource allocation mapped.
 M4 (90-180m) EXECUTE — Phase A (spec/plan/prompt/skill artifacts) parallel; Phase B (hook refactor + new types) sequential; Phase C (cross-agent sync doc + verification) sequential.
 M5 (180-210m) GATE — verify all gates (artifact count ≥5, all 4 hook systems referenced, cross-agent sync doc present, no broken hooks, skill file saved, session truth = state.db not synthetic IDs).
@@ -27,7 +27,7 @@ M5 (180-210m) GATE — verify all gates (artifact count ≥5, all 4 hook systems
 ## Resource Allocation
 Parent (this agent): orchestration, spec/plan/prompt/skill writing, verification gates.
 Child A (delegate_task role=leaf if deep): hook code refactor (pre/post-exec, session-start/end, lib updates) — isolated terminal, inherit workspace, goal = refactor 7 existing files with tests passing.
-Child B (delegate_task role=leaf): new hook types (gateway/plugin/shell/outbound + agent/browser hooks spec) — isolated, produces new .hermes/hooks/ subdirs + handler skeletons.
+Child B (delegate_task role=leaf): new hook types (gateway/plugin/shell/outbound + agent/browser hooks spec) — isolated, produces new ./hooks/ subdirs + handler skeletons.
 Child C: cross-agent sync — reads docs/ai-agents-inventory.md + installed agent inventory, writes sync doc at docs/hooks-cross-agent-sync.md.
 Verification gate runs in parent only after all children consolidate.
 
@@ -64,5 +64,5 @@ G7 All destructive edits verified (git diff review) before gate report.
 17 /subagent-driven-development (subagent-driven-development; delegate_task verified available)
 Protocol: multi-file-change-protocol
 Context files: .hermes.md, AGENTS.md, SOUL.md (global at HERMES_HOME only), .cursorrules, CLAUDE.md
-Hook reference docs: .hermes/hooks/README.md; existing hooks at .hermes/hooks/
+Hook reference docs: ./hooks/README.md; existing hooks at ./hooks/
 Workspace docs: docs/ai-agents-inventory.md; docs/agent-provider-matrix.md; docs/folder-structure/ (audit reference)

@@ -51,7 +51,7 @@ uk-earnings-kit/
 ├── RESEARCH_REPORT.md              ✅ Updated — all categories populated
 ├── README.md
 ├── UK_EARNING_SITES_MASTER.md
-├── .hermes/plans/
+├── ./plans/
 ├── platforms/                      ✅ 8 files — AI, Surveys, UX, Banking, Mystery, Freelance, Cashback, Market
 ├── references/                     ✅ 12 files — incl. 8 fresh research outputs
 │   ├── scoring_matrix.csv          ✅ 40+ platforms scored

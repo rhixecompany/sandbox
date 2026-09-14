@@ -77,7 +77,7 @@ The terminal tool can execute commands in different environments:
 ### Configuration
 
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 terminal:
   backend: local    # or: docker, ssh, singularity, modal, daytona, vercel_sandbox
   cwd: "."          # Working directory
@@ -131,7 +131,7 @@ terminal:
   backend: ssh
 ```
 ```bash
-# Set credentials in ~/.hermes/.env
+# Set credentials in ~/./.env
 TERMINAL_SSH_HOST=my-server.example.com
 TERMINAL_SSH_USER=myuser
 TERMINAL_SSH_KEY=~/.ssh/id_rsa
@@ -257,5 +257,5 @@ Shell payloads such as `bash -c 'sudo id'`, `env -S` split strings, dynamic exec
 Delegated subagents cannot open a password prompt: their concurrent work does not have a serialized human password channel. Run the command in the parent session instead, or provision `SUDO_PASSWORD` locally. Messaging/headless sessions do not have a secure password reply channel; never send passwords in chat.
 
 :::warning
-On messaging platforms, if sudo fails, the output includes a tip to add `SUDO_PASSWORD` to `~/.hermes/.env`.
+On messaging platforms, if sudo fails, the output includes a tip to add `SUDO_PASSWORD` to `~/./.env`.
 :::

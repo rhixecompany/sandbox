@@ -40,9 +40,9 @@ status: ready → executing
 
 ### T1 — Plans (done in this turn)
 
-- `.hermes/plans/multi-agent-fanout-2026-08-28/SPEC.md` — design
-- `.hermes/plans/multi-agent-fanout-2026-08-28/PLAN.md` — sequencing (this file)
-- `.hermes/plans/multi-agent-fanout-2026-08-28/implementation-plan.md` — step-by-step
+- `./plans/multi-agent-fanout-2026-08-28/SPEC.md` — design
+- `./plans/multi-agent-fanout-2026-08-28/PLAN.md` — sequencing (this file)
+- `./plans/multi-agent-fanout-2026-08-28/implementation-plan.md` — step-by-step
 
 ### T2 — auth_inventory.py
 
@@ -141,7 +141,7 @@ async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--smoke", action="store_true", help="Run only 1-2 cells")
     parser.add_argument("--prompt", default="Reply with the word OK and your model name")
-    parser.add_argument("--output", default=".hermes/plans/multi-agent-fanout-<date>/fanout-report.json")
+    parser.add_argument("--output", default="./plans/multi-agent-fanout-<date>/fanout-report.json")
     args = parser.parse_args()
 
     inv = json.load(open("scripts/.runtime/provider_inventory.json"))

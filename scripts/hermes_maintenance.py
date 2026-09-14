@@ -200,7 +200,7 @@ def main(argv: list[str] | None = None) -> int:
 
     judge = sub.add_parser("scripts-judge")
     judge.add_argument("--registry", type=Path, required=True)
-    judge.add_argument("--output", type=Path, default=Path(".hermes/reports/scripts-judge-final.json"))
+    judge.add_argument("--output", type=Path, default=Path("./reports/scripts-judge-final.json"))
 
     args = ap.parse_args(argv)
     if args.command == "inventory":

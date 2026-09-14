@@ -169,7 +169,7 @@ See [`templates/_shared/skills-table-core.md`](templates/_shared/skills-table-co
 | `user-communication-preferences` | Concise, action-first, DRY output |
 | `brainstorming` | Structured idea generation for categories |
 | `subagent-driven-development` | Parallel leaf subagents for research |
-| `plan` | Markdown plan to `.hermes/plans/` |
+| `plan` | Markdown plan to `./plans/` |
 | `plans-and-specs` | Implementation plans, specs, decomposition |
 | `web-research-pipeline` | Web search → extract → scrape → save workflow |
 

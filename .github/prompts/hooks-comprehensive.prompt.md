@@ -14,7 +14,7 @@ Scope D (full framework + artifacts + cross-agent sync). Both: implement missing
 5 mcp-filesystem (MCP file ops for artifact creation)
 6 mcp-ast-grep (AST/code search for hook reference verification)
 7 mcp-memory (knowledge graph — NOT for task progress; for persistent cross-session facts only)
-8 plan / plan-mode (markdown plan at .hermes/plans/ — this framework)
+8 plan / plan-mode (markdown plan at ./plans/ — this framework)
 9 plans-and-specs (spec drafting + decomp)
 10 create-implementation-plan (new plan file creation — used for M1/M2/M3 milestones)
 11 update-implementation-plan (plan updates as verification passes/fails)
@@ -31,7 +31,7 @@ Scope D (full framework + artifacts + cross-agent sync). Both: implement missing
 
 Note: clarification requested all 17; above lists 21 distinct named skills/commands (count includes sub-commands / separate skill names). All referenced in this framework file.
 
-## 4 Hook System Definitions (framework reference — verified against docs context / .hermes/hooks/README.md / skills reference / workspace files)
+## 4 Hook System Definitions (framework reference — verified against docs context / ./hooks/README.md / skills reference / workspace files)
 Gateway: events list with payload shapes (agent:start/st/end, session:start/end/reset/compress, command:*, gateway:startup, reaction:added/removed).
 Plugin: register_hook event catalog (pre/post tool, pre/post llm, pre_verify, transform_llm_output, api_error_classification, streaming, session lifecycle, subagent, kanban, gateway_platform_event, transcription, pre_command, pre/post approval_request, room member activity, agent_loop_stopped).
 Shell: matcher/command/timeout/fail_closed; consent allowlist; safe-mode skip; CLI doctor/revoke/test.
@@ -54,7 +54,7 @@ M5 (180-210m) GATE: verify all G1–G7 with real evidence (file paths, git diff 
 
 ## Resource Allocation (verified from workspace / session state — not synthetic)
 Parent agent (this session): orchestration; artifact writing (plan/spec/prompt/skill); verification gates; cross-agent sync doc; final gate report.
-Child A (delegate_task leaf, isolated terminal, inherit workspace): hook code refactor (B1) — goal = refactor 7 existing .hermes/hooks/ artifacts without deletion; output = consolidated log of file modifications; verification = git diff review before consolidation.
+Child A (delegate_task leaf, isolated terminal, inherit workspace): hook code refactor (B1) — goal = refactor 7 existing ./hooks/ artifacts without deletion; output = consolidated log of file modifications; verification = git diff review before consolidation.
 Child B (delegate_task leaf, isolated): new framework skeletons (B2) — agent/browser skeleton directories + updated framework refs; output = new directory/file listing.
 Child C (delegate_task leaf, isolated): cross-agent sync — read docs/ai-agents-inventory.md; write docs/hooks-cross-agent-sync.md; output = document path + reference verification.
 Verification: parent only; after all 3 consolidate; using real evidence (ls paths, file content snippets for key sections, git diff lines for refactor changes, skill file stat, gate checklist results).

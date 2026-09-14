@@ -297,14 +297,14 @@ phases:
     tasks:
       - id: PL-T-4.1
         name: Validate specs.md references
-        description: Verify all specs.md point to valid .hermes/specs/ files
+        description: Verify all specs.md point to valid ./specs/ files
         phase: Phase 4 - Validation
         assignee: implementer
         status: pending
         dependencies: [PL-T-3.1, PL-T-3.2, PL-T-3.3, PL-T-3.4, PL-T-3.5, PL-T-3.6, PL-T-3.7, PL-T-3.8, PL-T-3.9, PL-T-3.10, PL-T-3.11, PL-T-3.12, PL-T-3.13]
       - id: PL-T-4.2
         name: Validate plans.md references
-        description: Verify all plans.md point to valid .hermes/plans/ files
+        description: Verify all plans.md point to valid ./plans/ files
         phase: Phase 4 - Validation
         assignee: implementer
         status: pending

@@ -1,9 +1,9 @@
 ---
 name: update-implementation-plan-template
-description: Template for updating .hermes/plans/<plan>.md files (verified real reference — not synthetic placeholder).
+description: Template for updating ./plans/<plan>.md files (verified real reference — not synthetic placeholder).
 references:
-  subgoal-plan: .hermes/plans/web-research-subgoal-2026-09-13.md
-  execution-plan: .hermes/plans/web-research-628-batch-execution-plan.md
+  subgoal-plan: ./plans/web-research-subgoal-2026-09-13.md
+  execution-plan: ./plans/web-research-628-batch-execution-plan.md
 ---
 
 # Update Template — Implementation Plan Update

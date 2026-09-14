@@ -31,4 +31,4 @@ Translate the feature documentation (tools.md, 261 lines) into executable artifa
 - multi-file-change-protocol (loaded)
 - subagent-driven-development (load for parallel execution)
 - using-superpowers / brainstorming / user-communication-preferences
-- .hermes/plans/feature-docs-implementation-plan.md
+- ./plans/feature-docs-implementation-plan.md

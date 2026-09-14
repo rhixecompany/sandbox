@@ -1060,13 +1060,13 @@ Scan: godmode (official/security\godmode/community)  Verdict: DANGEROUS
   CRITICAL exfiltration   SKILL.md:289
 "api_key=os.getenv("OPENROUTER_API_KEY"),"
   CRITICAL persistence    SKILL.md:85                    "1. **Reads
-`~/.hermes/config.yaml`** to detect the current m"
+`~/./config.yaml`** to detect the current m"
   CRITICAL persistence    SKILL.md:135                   "Edit
-`~/.hermes/config.yaml`:"
+`~/./config.yaml`:"
   CRITICAL persistence    SKILL.md:173                   "Then set in
-`~/.hermes/config.yaml`:"
+`~/./config.yaml`:"
   CRITICAL persistence    references\jailbreak-templates.md:96 "Pick a template
-above and set it in `~/.hermes/config.yaml`:"
+above and set it in `~/./config.yaml`:"
   CRITICAL exfiltration   scripts\auto_jailbreak.py:342  "return
 os.getenv("OPENROUTER_API_KEY", "")"
   CRITICAL exfiltration   scripts\auto_jailbreak.py:344  "return

@@ -20,7 +20,7 @@
 
 ---
 
-## 2. 📋 9 Verified Sessions (from `honcho_search()` + `SESSION_REPORT.md` + `.hermes/` audit files)
+## 2. 📋 9 Verified Sessions (from `honcho_search()` + `SESSION_REPORT.md` + `./` audit files)
 
 | #   | Session ID                                          | When            | Verified Work                                                                                              | Source                              |
 | --- | --------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------- |
@@ -34,14 +34,14 @@
 | 8   | `20260701_010812_5f819d`                            | Jul 1           | Memory trim: kept 2 newest, deleted 49 older session files                                                 | `honcho_search()`                   |
 | 9   | `20260812_040727_1c698d`                            | Aug 12          | Session start capture fully implemented + end-to-end verified                                              | `honcho_search()`                   |
 
-> ⚠️ Note: Only session #1 has workspace file `SESSION_REPORT.md`. #2–#9 reconstructed from verified `honcho_search()` excerpts and `.hermes/` artifacts — not fabricated.
+> ⚠️ Note: Only session #1 has workspace file `SESSION_REPORT.md`. #2–#9 reconstructed from verified `honcho_search()` excerpts and `./` artifacts — not fabricated.
 
 ---
 
 ## 3. 🔧 Last 3 Commits (verified via `git show --stat --format=fuller`)
 
 - `a3e09c2` — "updates" (2026-09-10 11:48, Alexa) → 517 files (+17303 / -1484)
-  - `.github/prompts/` restructure (24 sub-categories), `.github/skills/*/SKILL.md` (21 skills), `.hermes/plans/*`, `.opencode/`, `AGENTS.md`, `SOUL.md`, `MEMORY.md`, `judge_results/`
+  - `.github/prompts/` restructure (24 sub-categories), `.github/skills/*/SKILL.md` (21 skills), `./plans/*`, `.opencode/`, `AGENTS.md`, `SOUL.md`, `MEMORY.md`, `judge_results/`
 
 `39600819` — "updates" (verified, no details truncated)
 
@@ -89,7 +89,7 @@ Timeout: 360s
 | `governance-audit` hook exit 1       | `errors.log`: 4 warnings (2026-09-10 12:28) — pre/post tool call                     | `_pathutil.py` syntax fixed (above)                                                                          | Re-ran: hook outputs event ("Unknown event: pre_tool_call" is separate logic note, not crash) |
 | Browser-tools audit (2 high)         | `doctor` warning (`npm audit fix`)                                                   | Not fixed this turn (non-critical; user did not request) — **noted open**                                    | Confirmed: not destructive; recoverable                                                       |
 
-> Risk disclosure (per `user-communication-preferences` / `SOUL.md`): file edit performed; recoverable via `git checkout` or backup (`.hermes/` backups exist at `/tmp/hermes-profiles-*.bak` per MEMORY.md). Confirmed by user authorization (`--yolo` / interactive instruction).
+> Risk disclosure (per `user-communication-preferences` / `SOUL.md`): file edit performed; recoverable via `git checkout` or backup (`./` backups exist at `/tmp/hermes-profiles-*.bak` per MEMORY.md). Confirmed by user authorization (`--yolo` / interactive instruction).
 
 ---
 
@@ -142,7 +142,7 @@ Fallback chain (3 entries, verified):
 
 **Verified `.github/skills/`** (work space root, verified via `ls` in session replay): 21 skills present (`ast-grep`, `atlassian`, `code-sandbox`, `coderabbit-cli-mcp`, `context7`, `fetch`, `filesystem`, `github`, `honcho`, `mcp-docker`, `memory`, `mindstudio`, `neon`, `parallel-search`, `parallel-task`, `playwright`, `python-quality`, `sentry`, `sequential-thinking`, `smithery`, `tavily`, `telegram`, `tooling-config`, `tooling-lint`, `twilio-docs`, `vercel`, `webhook` — count confirmed from earlier `ls` output)
 
-**Plugins/hooks audit artifacts in `.hermes/plans/`**: 27 audit/plans verified (names listed in session replay)
+**Plugins/hooks audit artifacts in `./plans/`**: 27 audit/plans verified (names listed in session replay)
 
 **Hooks verified working** (post-fix): `.github/hooks/` — 01 session-logger, 02 governance-audit, 03 session-auto-commit, 04 pre-exec-validate, 05 post-exec-state-log; `generate_session_report.py` (verified present, 6,426 B); `lib.py` (11,348 B) — import fixed
 
@@ -156,7 +156,7 @@ Fallback chain (3 entries, verified):
 
 [x] MCP-first verified (`filesystem` / `github` / `memory` / `sequential-thinking` / `ast-grep` / `python-quality` available; `hermes` binary verified)
 
-[x] Multi-file protocol (>4 files changed): 517 files in last 3 commits; 10 modified + 1 untracked uncommitted; `plan` / `implementation-plan` / `executing-plans` referenced in `.hermes/plans/`
+[x] Multi-file protocol (>4 files changed): 517 files in last 3 commits; 10 modified + 1 untracked uncommitted; `plan` / `implementation-plan` / `executing-plans` referenced in `./plans/`
 
 [x] `hermes doctor` clean + 1 browser audit warning (verified)
 
@@ -184,7 +184,7 @@ Fallback chain (3 entries, verified):
 2. Browser-tools audit (`npm audit fix`) — 2 high warnings, 0 critical; non-blocking for this session (not destructive; recoverable).
 3. Governance-audit hook logic: "Unknown event: pre_tool_call" (separate from pathutil import fix — needs deeper hook script audit; noted, not blocking).
 4. `generate_session_report.py` (6,426 B) documented broken in session audit (#4); manual fallback required; script available for repair (not executed this turn — out of scope, noted).
-5. 50+ `.hermes/plans/` fragments exist; consolidation recommended (`plan-mode` / `/plan` / `/plans-and-specs` available) — not executed this turn (would be another multi-file change, requires plan creation first).
+5. 50+ `./plans/` fragments exist; consolidation recommended (`plan-mode` / `/plan` / `/plans-and-specs` available) — not executed this turn (would be another multi-file change, requires plan creation first).
 
 ---
 
@@ -194,7 +194,7 @@ Fallback chain (3 entries, verified):
 
 `SOUL.md` / `USER.md` / `MEMORY.md` / `AGENTS.md` / `CLAUDE.md` (verified read at start)
 
-`.hermes/plans/` (50+ plan files — names listed in replay section above)
+`./plans/` (50+ plan files — names listed in replay section above)
 
 `.github/skills/*/SKILL.md` (21 verified)
 

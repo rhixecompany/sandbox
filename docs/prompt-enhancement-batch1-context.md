@@ -55,7 +55,7 @@
 - **Toolsets**: file, terminal, skills, todo
 - **Scripts**: ~/AppData/Local/hermes/scripts/tooling_full_check.py
 - **Dependencies**: skill:using-superpowers, skill:verification-before-completion
-- **Forward Refs**: .hermes/plans/2026-08-01_tooling-implementation.md, templates/_shared/rules-core.md, templates/_shared/personas.md, templates/_shared/personality.md, templates/_shared/best-practices.md, templates/_shared/deps-core.md, templates/_shared/skills-table-core.md
+- **Forward Refs**: ./plans/2026-08-01_tooling-implementation.md, templates/_shared/rules-core.md, templates/_shared/personas.md, templates/_shared/personality.md, templates/_shared/best-practices.md, templates/_shared/deps-core.md, templates/_shared/skills-table-core.md
 - **Lines**: 167, Size: 8588 bytes
 
 ## Cross-Prompt Dependencies
@@ -64,7 +64,7 @@
 - **all-repo-docker-setup** → references enhance-markdown skill, multiple blueprint generators
 - **execute-all-prompts** → orchestrates audit-skills-judge-fix, agents-system-prompt-context-fix, sync-hermes-opencode, test-providers-models
 - **sync-hermes-opencode** → uses multi-agent-sync skill
-- **tooling-implementation** → references .hermes/plans/2026-08-01_tooling-implementation.md
+- **tooling-implementation** → references ./plans/2026-08-01_tooling-implementation.md
 
 ## Common Template References
 

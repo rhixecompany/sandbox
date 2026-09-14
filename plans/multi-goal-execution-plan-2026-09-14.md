@@ -25,13 +25,13 @@ Per `/user-communication-preferences`: DRY (references, not duplication); concis
 
 | # | Goal | Skill Stack | Output Artifact | Verification Gate |
 |---|---|---|---|---|
-| G1 | OpenRouter best practices (`https://openrouter.ai/models?variant=free` → markdown + web search) | `/agent-browser`, `/mcp-fetch`, `/mcp-parallel-search`, `/mcp-tavily`, `/web-research-pipeline` | `.hermes/plans/openrouter-best-practices.md` or `.github/prompts/` markdown | File exists + size > 0 + no synthetic content + real URLs referenced |
-| G2 | OpenCode-free + OpenCode-zen provider best practices + model config + hermes fallback | `/mcp-parallel-search`, `/repo-research-pipeline`, `/systematic-debugging` | `.hermes/plans/opencode-best-practices.md` + updated hermes config reference | Config updated with verified model names; no synthetic config |
-| G3 | Get all configured env vars; update files missing refs in repo + `~/AppData/Local/Hermes` | `/mcp-filesystem`, `/mcp-ast-grep` | Report file (`.hermes/plans/env-update-report.md`) + updated files list | `.env` 3334B unchanged; updated files verified with `ls -la`; no secrets exposed |
+| G1 | OpenRouter best practices (`https://openrouter.ai/models?variant=free` → markdown + web search) | `/agent-browser`, `/mcp-fetch`, `/mcp-parallel-search`, `/mcp-tavily`, `/web-research-pipeline` | `./plans/openrouter-best-practices.md` or `.github/prompts/` markdown | File exists + size > 0 + no synthetic content + real URLs referenced |
+| G2 | OpenCode-free + OpenCode-zen provider best practices + model config + hermes fallback | `/mcp-parallel-search`, `/repo-research-pipeline`, `/systematic-debugging` | `./plans/opencode-best-practices.md` + updated hermes config reference | Config updated with verified model names; no synthetic config |
+| G3 | Get all configured env vars; update files missing refs in repo + `~/AppData/Local/Hermes` | `/mcp-filesystem`, `/mcp-ast-grep` | Report file (`./plans/env-update-report.md`) + updated files list | `.env` 3334B unchanged; updated files verified with `ls -la`; no secrets exposed |
 | G4 | Profile descriptions (16 profiles) + task routing update/verify | `/honcho` (context/reasoning/search/profile) | Updated `.hermes.md` + profile descriptions verified | All 16 profiles routed (code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot) |
-| G5 | Root context files (AGENTS.md, CLAUDE.md, .cursorrules, .hermes.md, USER.md, MEMORY.md, SOUL.md) enhanced with full honcho data | `/mcp-memory`, `/multi-file-change-protocol`, `/user-communication-preferences` | Updated files (patch edits) + `.hermes/specs/context-enhancement-evidence.md` | DRY enforced (cross-references, not duplication); identity preserved; session achievements (26 findings, 41 errors, .eslintrc 69B, 28 skills) included |
+| G5 | Root context files (AGENTS.md, CLAUDE.md, .cursorrules, .hermes.md, USER.md, MEMORY.md, SOUL.md) enhanced with full honcho data | `/mcp-memory`, `/multi-file-change-protocol`, `/user-communication-preferences` | Updated files (patch edits) + `./specs/context-enhancement-evidence.md` | DRY enforced (cross-references, not duplication); identity preserved; session achievements (26 findings, 41 errors, .eslintrc 69B, 28 skills) included |
 | G6 | Migrate USER.md/MEMORY.md (16 profiles) from repo + hermes home → `~/AppData/Local/Hermes/memories/`; remove originals | `/mcp-filesystem`, `/multi-file-change-protocol` | `~/AppData/Local/Hermes/memories/` directory + verification log | All 16 profile memory pairs exist; originals removed; no identity broken (`.hermes.md` references preserved) |
-| G7 | Execute `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` on all models (openrouter + opencode + hermes fallback) | `/systematic-debugging`, `/skill-judge`, `/execute-implementation-prompt` | `.hermes/plans/test-providers-models-report.md` (PASS/FAIL per model + exit codes) | All real exit codes; no synthetic PASS; architecture concerns documented honestly |
+| G7 | Execute `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` on all models (openrouter + opencode + hermes fallback) | `/systematic-debugging`, `/skill-judge`, `/execute-implementation-prompt` | `./plans/test-providers-models-report.md` (PASS/FAIL per model + exit codes) | All real exit codes; no synthetic PASS; architecture concerns documented honestly |
 
 ## 28 Skills Verified/Mapped (14 direct + 14 mapped/referenced)
 
@@ -51,7 +51,7 @@ Available/referenced (verified by session evidence / name):
 - `/skill-creator`, `/skill-judge`
 - `/prompts-judge`, `/specs-judge`, `/scripts-judge`
 
-Evidence: `.hermes/specs/skill-verification-evidence.md` (2658 B verified) references 28 skills; no synthetic skills.
+Evidence: `./specs/skill-verification-evidence.md` (2658 B verified) references 28 skills; no synthetic skills.
 
 ## Subagent Delegation (per clarification turn 2: ops/adminbot)
 
@@ -68,11 +68,11 @@ Full context to pass (per user clarification):
 
 ### GATE-A (LOAD): Skills loaded and verified
 - [x] 14 core skills loaded (verified by skill_view or read_file SKILL.md)
-- [x] 28 skills mapped/referenced (evidence `.hermes/specs/skill-verification-evidence.md` 2658B)
+- [x] 28 skills mapped/referenced (evidence `./specs/skill-verification-evidence.md` 2658B)
 - [x] No synthetic skills; 0 missing critical skills flagged as blockers
 
 ### GATE-B (PLAN): Plan file exists and verified
-- [x] This file created: `.hermes/plans/multi-goal-execution-plan-2026-09-14.md`
+- [x] This file created: `./plans/multi-goal-execution-plan-2026-09-14.md`
 - [x] All 7 goals defined with artifact targets, verification criteria, skill stacks
 - [x] Subagent profile (ops/adminbot) specified with full context
 
@@ -97,21 +97,21 @@ Full context to pass (per user clarification):
 
 ### GATE-E (GATE): Final integrity verification
 - [x] Integrity verified: `.env` 3334B unchanged; no new `.bak` artifacts
-- [x] DRY enforced: identity/routing owned by `.hermes.md`; preferences by `user-communication-preferences`; protocol by `multi-file-change-protocol`; session artifacts by `.hermes/plans/` + `.hermes/specs/`
+- [x] DRY enforced: identity/routing owned by `.hermes.md`; preferences by `user-communication-preferences`; protocol by `multi-file-change-protocol`; session artifacts by `./plans/` + `./specs/`
 - [x] No synthetic artifacts; 0 hidden errors; 26 vulnerability findings preserved; 41 parsing errors documented; rate-limit 403 preserved; MSYS2 FAIL preserved; adminbot MISSING preserved honestly
-- [x] All exit codes real (verified by `.hermes/plans/debug-run-logs.md` 53152B reference)
+- [x] All exit codes real (verified by `./plans/debug-run-logs.md` 53152B reference)
 - [x] Profile identity preserved across all 16 profiles (`.hermes.md` verified 2859B + profile descriptions)
 
 ## References (DRY — verified real artifacts)
-- `.hermes/plans/debug-subgoal-plan-2026-09-13.md` (4340 B verified — 4-phase plan reference)
-- `.hermes/plans/update-hermes-root-repo-context-2026-09-14.md` (14601 B verified — session plan)
-- `.hermes/plans/debug-run-logs.md` (53152 B verified — 14 real sequential exit codes)
-- `.hermes/plans/unified-subgoal-plan-2026-09-13.md` (25351 B verified)
-- `.hermes/specs/debug-analysis-2026-09-13.md` (6081 B verified — 4 failure classes)
-- `.hermes/specs/debug-subgoal-final-verification.md` (5631 B verified — gate checklist)
-- `.hermes/specs/skill-verification-evidence.md` (2658 B verified — 28 skills)
-- `.hermes/specs/download-hermes-user-guide-docs.md` (7102 B verified)
-- `.hermes/specs/exposure-correction.md` (1333 B verified — false positive corrected: `API_KEY=vault` = vault handle reference, NOT `.env` secret)
+- `./plans/debug-subgoal-plan-2026-09-13.md` (4340 B verified — 4-phase plan reference)
+- `./plans/update-hermes-root-repo-context-2026-09-14.md` (14601 B verified — session plan)
+- `./plans/debug-run-logs.md` (53152 B verified — 14 real sequential exit codes)
+- `./plans/unified-subgoal-plan-2026-09-13.md` (25351 B verified)
+- `./specs/debug-analysis-2026-09-13.md` (6081 B verified — 4 failure classes)
+- `./specs/debug-subgoal-final-verification.md` (5631 B verified — gate checklist)
+- `./specs/skill-verification-evidence.md` (2658 B verified — 28 skills)
+- `./specs/download-hermes-user-guide-docs.md` (7102 B verified)
+- `./specs/exposure-correction.md` (1333 B verified — false positive corrected: `API_KEY=vault` = vault handle reference, NOT `.env` secret)
 - `MEMORY.md` (7626 B verified — durable facts, session achievements, DRY refs)
 - `USER.md` (5636 B verified — profile identity, preferences, session enhancements)
 - `SOUL.md` (17560 B verified — identity, cross-references, session evidence)

@@ -1,12 +1,12 @@
 ---
 name: master-consolidated-plan
-description: "Consolidated master reference of all 50+ .hermes/plans/ fragments (verified inventory). No destructive deletions; serves as index."
+description: "Consolidated master reference of all 50+ ./plans/ fragments (verified inventory). No destructive deletions; serves as index."
 version: 1.0.0
 status: "in_progress"
 ---
 
 # Master Plan Index (verified inventory)
-- Total fragments: 108 (verified from C:/Users/Alexa/Desktop/SandBox/.hermes/plans)
+- Total fragments: 108 (verified from C:/Users/Alexa/Desktop/SandBox/./plans)
 - Categories verified:
   - comprehensive/plans
   - ecosystem

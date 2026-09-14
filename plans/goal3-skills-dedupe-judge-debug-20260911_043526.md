@@ -48,7 +48,7 @@ Parse `initial-skills.txt`:
    - Intact linked files (references/, templates/, scripts/)
 5. Skip USER-OWNED skills (per MEMORY.md: `profile-directive-sync`, `convert-plaintext-to-md`, `enhance-markdown`)
 
-**Gate 2.1:** Duplicate groups logged to `.hermes/scratch/dup-groups.json`.
+**Gate 2.1:** Duplicate groups logged to `./scratch/dup-groups.json`.
 **Gate 2.2:** USER-OWNED skills excluded from deletion list.
 
 ## Phase 3 — Delete Duplicates
@@ -63,7 +63,7 @@ Rules:
 - If `[SKILL_PRUNED]` is in EVERY dup → restore from bundle before delete
 
 **Gate 3.1:** Losers deleted; winners remain.
-**Gate 3.2:** Log each delete to `.hermes/scratch/dedup-actions.log`.
+**Gate 3.2:** Log each delete to `./scratch/dedup-actions.log`.
 
 ## Phase 4 — Log Updated State
 
@@ -88,7 +88,7 @@ MSYS_NO_PATHCONV=1 ./batch_skill_judge.py --threshold 90
 Per MEMORY.md: `--threshold 100` is max-verify; we'll use `--threshold 90` per user request.
 
 **Gate 5.1:** Batch judge runs to completion without errors.
-**Gate 5.2:** Output log at `.hermes/scratch/skill-judge.log` shows pass/fail counts.
+**Gate 5.2:** Output log at `./scratch/skill-judge.log` shows pass/fail counts.
 
 ## Phase 6 — Debug/fix ascending-modified (≤5 skills/turn)
 

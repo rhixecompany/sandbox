@@ -18,9 +18,9 @@ status: completed
 | 6 | Re-run after type fix | n/a (terminal) | ✓ |
 | 7 | Write skill `hermes-doctor-pipeline` | `~/AppData/Local/hermes/skills/devops/hermes-doctor-pipeline/SKILL.md` | ✓ |
 | 8 | Write prompt `hermes-doctor` | `.github/prompts/hermes-doctor.prompt.md` | ✓ |
-| 9 | Write SPEC.md | `.hermes/plans/hermes-doctor-2026-08-28/SPEC.md` | ✓ |
-| 10 | Write PLAN.md | `.hermes/plans/hermes-doctor-2026-08-28/PLAN.md` | ✓ |
-| 11 | Write implementation-plan.md (this file) | `.hermes/plans/hermes-doctor-2026-08-28/implementation-plan.md` | ✓ |
+| 9 | Write SPEC.md | `./plans/hermes-doctor-2026-08-28/SPEC.md` | ✓ |
+| 10 | Write PLAN.md | `./plans/hermes-doctor-2026-08-28/PLAN.md` | ✓ |
+| 11 | Write implementation-plan.md (this file) | `./plans/hermes-doctor-2026-08-28/implementation-plan.md` | ✓ |
 | 12 | V1: `python -m py_compile scripts/hermes_doctor.py` | n/a | ✓ |
 | 13 | V2: full battery run (12 commands) | n/a | pending |
 | 14 | V3: report.json valid + schema=1 | n/a | pending |
@@ -40,11 +40,11 @@ python -m py_compile scripts/hermes_doctor.py
 python scripts/hermes_doctor.py --no-bun
 
 # V3
-python -c "import json; d=json.load(open('.hermes/plans/diagnostic-2026-08-28/report.json')); print(d['schema_version'])"
+python -c "import json; d=json.load(open('./plans/diagnostic-2026-08-28/report.json')); print(d['schema_version'])"
 
 # V4
-grep -c "## Summary" .hermes/plans/diagnostic-2026-08-28/report.md
-grep -c "## Per-command results" .hermes/plans/diagnostic-2026-08-28/report.md
+grep -c "## Summary" ./plans/diagnostic-2026-08-28/report.md
+grep -c "## Per-command results" ./plans/diagnostic-2026-08-28/report.md
 
 # V5
 ./node_modules/.bin/eslint scripts/hermes_doctor.py  # if eslint config covers .py, skip
@@ -57,7 +57,7 @@ hermes skills list | grep hermes-doctor
 test -f .github/prompts/hermes-doctor.prompt.md
 
 # V8
-python -c "import json; d=json.load(open('.hermes/plans/diagnostic-2026-08-28/report.json')); print(len(d['results']))"
+python -c "import json; d=json.load(open('./plans/diagnostic-2026-08-28/report.json')); print(len(d['results']))"
 ```
 
 ## Definition of Done

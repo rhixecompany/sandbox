@@ -15,9 +15,9 @@ status: "in_progress"
 - Produce structured artifacts that reference feature concepts.
 - Execute script verifies file presence and outputs a result summary.
 ## Acceptance Criteria
-- [ ] .hermes/plans/skills-plan.md exists with YAML frontmatter
-- [ ] .hermes/specs/skills-spec.md exists with ≥3 sections
-- [ ] .hermes/prompts/skills-prompt.md has prompt instructions
+- [ ] ./plans/skills-plan.md exists with YAML frontmatter
+- [ ] ./specs/skills-spec.md exists with ≥3 sections
+- [ ] ./prompts/skills-prompt.md has prompt instructions
 - [ ] skills/skills-bundle/SKILL.md has ≥10-line body + frontmatter
 - [ ] scripts/skills-execute.py runs without error
 - [ ] results/skills-result.md produced

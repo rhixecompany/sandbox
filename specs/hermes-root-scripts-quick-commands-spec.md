@@ -97,7 +97,7 @@ Make every first-party executable script directly under `C:/Users/Alexa/AppData/
 ### NFR4: Maintainability
 - All scripts must have quick_commands
 - All skills must follow SKILL.md format
-- All plans must follow .hermes/plans/ format
+- All plans must follow ./plans/ format
 - Documentation must be updated with changes
 
 ## Acceptance Criteria
@@ -140,8 +140,8 @@ Make every first-party executable script directly under `C:/Users/Alexa/AppData/
 | V6 | repo gates | `bun run lint`, `bun run typecheck`, `bun run check`, `bun run format` pass |
 
 ## Verification
-- Run specs-judge with threshold 98 on all specs in .hermes/specs/
-- Run plans-judge with threshold 98 on all plans in .hermes/plans/
+- Run specs-judge with threshold 98 on all specs in ./specs/
+- Run plans-judge with threshold 98 on all plans in ./plans/
 - Run prompts-judge with threshold 98 on all prompts in .github/prompts/
 - All judge skills must score ≥ 98
 - Run hermes doctor and confirm 0 issues

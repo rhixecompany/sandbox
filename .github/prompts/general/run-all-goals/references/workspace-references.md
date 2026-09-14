@@ -17,7 +17,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 ## Verified Pointer Files
 
 - `.github/prompts/test-providers-models.prompt.md` (verified input reference)
-- `.hermes/plans/comprehensive-implementation-plan.md` (verified plan)
+- `./plans/comprehensive-implementation-plan.md` (verified plan)
 - `references/prompt-workflow.md` (verified skill reference)
 - `.github/prompts/templates/_shared/rules-core.md` (verified workspace template)
 - `.github/prompts/general/run-all-goals/run-all-goals.prompt.md` (verified unified prompt)

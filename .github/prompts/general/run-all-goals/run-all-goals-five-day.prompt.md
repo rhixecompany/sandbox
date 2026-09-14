@@ -38,7 +38,7 @@ Create a reproducible local evidence package from all default-profile sessions i
 
 ### Phase 2 — Artifact inventory
 
-1. Enumerate `.hermes/specs/`, `.hermes/plans/`, and this prompt package.
+1. Enumerate `./specs/`, `./plans/`, and this prompt package.
 2. Resolve all links from the consolidated spec and plan.
 3. Mark missing/stale references without fabricating replacements.
 
@@ -70,10 +70,10 @@ Create a reproducible local evidence package from all default-profile sessions i
 
 ## Outputs
 
-- `.hermes/plans/run-all-goals-five-day-session-corpus.json`
-- `.hermes/plans/run-all-goals-five-day-session-summary.json`
-- `.hermes/specs/run-all-goals-five-day-consolidated-spec.md`
-- `.hermes/plans/run-all-goals-five-day-consolidated-plan.md`
+- `./plans/run-all-goals-five-day-session-corpus.json`
+- `./plans/run-all-goals-five-day-session-summary.json`
+- `./specs/run-all-goals-five-day-consolidated-spec.md`
+- `./plans/run-all-goals-five-day-consolidated-plan.md`
 - `.github/prompts/general/run-all-goals/run-all-goals-five-day.prompt.md`
 - `.github/prompts/general/run-all-goals/scripts/verify_run_all_goals_five_day.py`
 - `.github/prompts/general/run-all-goals/skills/run-all-goals-five-day.md`

@@ -13,12 +13,12 @@ dependencies: multi-file-change-protocol, user-communication-preferences, plans-
 Audit, triage (filename + content hash), merge/update, delete `.github/prompts_backup`, and produce full artifact bundle (plan, spec, script, skill, prompt).
 
 ## Acceptance Criteria
-1. `.hermes/specs/prompt-library-de-dup-audit.md` exists with filename-match count, exact/near/divergent counts, only-prompts / only-backups lists.
+1. `./specs/prompt-library-de-dup-audit.md` exists with filename-match count, exact/near/divergent counts, only-prompts / only-backups lists.
 2. `.github/prompts_backup/` removed; no file remains in it.
 3. Every deleted backup file is logged in audit JSON (basename, action `DELETED_BACKUP` or `MIGRATED_THEN_DELETED`).
 4. Every divergent file is overwritten in prompts (action `OVERWROTE_PROMPTS_WITH_BACKUP`) then deleted.
 5. Every only-backup unique file copied into `.github/prompts/` (action `MIGRATED_TO_PROMPTS`) then deleted.
-6. Artifacts: `.hermes/plans/*.md`, `.hermes/specs/*.md`, `scripts/*.sh`, `skills/*/SKILL.md`, `.hermes/prompts/*.prompt.md` all present and cross-referenced.
+6. Artifacts: `./plans/*.md`, `./specs/*.md`, `scripts/*.sh`, `skills/*/SKILL.md`, `./prompts/*.prompt.md` all present and cross-referenced.
 
 ## Architecture
 ```
@@ -36,16 +36,16 @@ Parallel phases (after audit): artifacts (plan/spec/prompt/script/skill) can be 
 | ONLY_BACKUP | No (in backup only) | N/A | Copy to prompts; delete backup | `MIGRATED_TO_PROMPTS` + `DELETED_BACKUP` |
 
 ## File List (Artfacts)
-- `.hermes/plans/prompt-library-de-dup-and-backup-archive-plan.md`
-- `.hermes/specs/prompt-library-de-dup-and-backup-archive-spec.md` (this file)
-- `.hermes/specs/prompt-library-de-dup-audit.md`
-- `.hermes/specs/prompt-library-de-dup-audit-data.json`
+- `./plans/prompt-library-de-dup-and-backup-archive-plan.md`
+- `./specs/prompt-library-de-dup-and-backup-archive-spec.md` (this file)
+- `./specs/prompt-library-de-dup-audit.md`
+- `./specs/prompt-library-de-dup-audit-data.json`
 - `scripts/prompt-library-de-dup-audit.sh`
 - `skills/prompt-library-de-dup-and-backup-archive/SKILL.md`
-- `.hermes/prompts/prompt-library-de-dup-and-backup-archive.prompt.md`
+- `./prompts/prompt-library-de-dup-and-backup-archive.prompt.md`
 
 ## Verification (final gate)
 - [ ] `.github/prompts_backup` not present (`os.path.exists` false)
-- [ ] `.hermes/specs/prompt-library-de-dup-audit.md` readable
+- [ ] `./specs/prompt-library-de-dup-audit.md` readable
 - [ ] Each artifact references subgoal name and cross-links to at least one other artifact.
 - [ ] No placeholder text in SKILL.md or spec.

@@ -2,7 +2,7 @@
 """Render one auth-inventory markdown per provider, plus a consolidated table.
 
 Inputs:
-  - .hermes/reports/test-providers-probe.json (from test-providers-probe.py)
+  - ./reports/test-providers-probe.json (from test-providers-probe.py)
   - Local known-good metadata for each provider (docs URL, env var, etc.)
 
 Outputs:
@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[5]
-PROBE_JSON = REPO_ROOT / ".hermes/reports/test-providers-probe.json"
+PROBE_JSON = REPO_ROOT / "./reports/test-providers-probe.json"
 PROVIDER_DOCS = REPO_ROOT / ".github/prompts/operations/test-providers-models/provider_docs"
 
 # Curated metadata table. Each value lists the canonical docs URL, the env var

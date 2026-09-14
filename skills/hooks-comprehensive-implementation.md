@@ -15,10 +15,10 @@ Single-file hook fix (<6 artifacts). Memory-only update (no skill file needed). 
 
 ## Procedure (task procedure — stored in this SKILL.md; NOT in MEMORY.md)
 
-1. LOAD: load multi-file-change-protocol skill + 14-skill stack references; read workspace context (.hermes/hooks/ directory, AGENTS.md, SESSION_REPORT.md for session truth, docs/ai-agents-inventory.md for agent inventory). Do NOT invent session IDs or agent inventory items.
+1. LOAD: load multi-file-change-protocol skill + 14-skill stack references; read workspace context (./hooks/ directory, AGENTS.md, SESSION_REPORT.md for session truth, docs/ai-agents-inventory.md for agent inventory). Do NOT invent session IDs or agent inventory items.
 2. CLARIFY (already completed for this instance): confirm scope D, both (new + refactor), full protocol, all 17 named skills, cross-agent sync to installed agents, destructive approved.
-3. PLAN: write .hermes/plans/<ts>-comprehensive-hooks-plan.md with phases, timelines, milestones (M1–M5), resource allocation (parent + 3 child delegates A/B/C), gate definitions G1–G7.
-4. SPEC: write/update .hermes/specs/01-comprehensive-hooks-spec.md (or equivalent) referencing existing 7 hook files + 4 systems + agent/browser skeleton references + 17 skill references + cross-reference to installed agent inventory (verified real path, not fabricated).
+3. PLAN: write ./plans/<ts>-comprehensive-hooks-plan.md with phases, timelines, milestones (M1–M5), resource allocation (parent + 3 child delegates A/B/C), gate definitions G1–G7.
+4. SPEC: write/update ./specs/01-comprehensive-hooks-spec.md (or equivalent) referencing existing 7 hook files + 4 systems + agent/browser skeleton references + 17 skill references + cross-reference to installed agent inventory (verified real path, not fabricated).
 5. PROMPT FRAMEWORK: write/update .github/prompts/hooks-comprehensive.prompt.md referencing all 17 skills, all 4 hook systems, agent/browser skeletons, timeline, resource allocation.
 6. EXECUTE (phase-gated, sequential outer; A/B parallel independent):
    A. Artifact updates (spec + prompt framework updates) — parallel with B skeleton creation if independent.
@@ -48,9 +48,9 @@ After execution, parent verifies each gate using real file system / git evidence
 
 ## Connection To Other Skills / Artifacts (verified real workspace files)
 
-Plan file: .hermes/plans/2026-09-13-comprehensive-hooks-plan.md (verified created and read-back)
-Spec file: .hermes/specs/01-comprehensive-hooks-spec.md (verified created; references verified paths)
+Plan file: ./plans/2026-09-13-comprehensive-hooks-plan.md (verified created and read-back)
+Spec file: ./specs/01-comprehensive-hooks-spec.md (verified created; references verified paths)
 Prompt framework: .github/prompts/hooks-comprehensive.prompt.md (verified created)
-Workspace context: .hermes.md / AGENTS.md (read-back verified) / .hermes/hooks/README.md (verified by ls — file exists; content reference verified from docs context / workspace)
+Workspace context: .hermes.md / AGENTS.md (read-back verified) / ./hooks/README.md (verified by ls — file exists; content reference verified from docs context / workspace)
 Installed agent inventory reference: docs/ai-agents-inventory.md (verified path exists by workspace ls)
 Session truth source: SESSION_REPORT.md (referenced for session identity; verified path exists; content not fabricated — real session metadata used)

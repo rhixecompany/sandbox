@@ -15,9 +15,9 @@ status: "in_progress"
 - Produce structured artifacts that reference feature concepts.
 - Execute script verifies file presence and outputs a result summary.
 ## Acceptance Criteria
-- [ ] .hermes/plans/tool-gateway-plan.md exists with YAML frontmatter
-- [ ] .hermes/specs/tool-gateway-spec.md exists with ≥3 sections
-- [ ] .hermes/prompts/tool-gateway-prompt.md has prompt instructions
+- [ ] ./plans/tool-gateway-plan.md exists with YAML frontmatter
+- [ ] ./specs/tool-gateway-spec.md exists with ≥3 sections
+- [ ] ./prompts/tool-gateway-prompt.md has prompt instructions
 - [ ] skills/tool-gateway-bundle/SKILL.md has ≥10-line body + frontmatter
 - [ ] scripts/tool-gateway-execute.py runs without error
 - [ ] results/tool-gateway-result.md produced

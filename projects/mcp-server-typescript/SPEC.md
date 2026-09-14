@@ -31,6 +31,6 @@ A production-ready [Model Context Protocol (MCP)](https://modelcontextprotocol.i
 
 ## Dependencies
 
-- Master plan: `.hermes/plans/2026-08-01_async-script-tooling-master.md`
+- Master plan: `./plans/2026-08-01_async-script-tooling-master.md`
 - Prompts: `.github/prompts/repo-*.prompt.md` family
 - Skills: repo-planning, prompt-management, tooling-implementation

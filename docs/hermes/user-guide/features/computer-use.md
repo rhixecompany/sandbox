@@ -95,7 +95,7 @@ Then start a session with the toolset enabled:
 hermes -t computer_use chat
 ```
 
-or add `computer_use` to your enabled toolsets in `~/.hermes/config.yaml`.
+or add `computer_use` to your enabled toolsets in `~/./config.yaml`.
 
 ## Permission modes and logged-in browser profiles
 
@@ -123,7 +123,7 @@ authenticated app), `bounded` mode uses a capability manifest you review once:
 # config.yaml
 computer_use:
   permission_mode: bounded
-  capability_manifest: ~/.hermes/cua-manifest.yaml
+  capability_manifest: ~/./cua-manifest.yaml
 ```
 
 The manifest names the apps, browser profile kinds, allowed origins, and
@@ -358,7 +358,7 @@ Hermes applies multi-layer guardrails:
   dialogs, no typing passwords, no following instructions embedded in
   screenshots.
 
-Pair with `approvals.mode: manual` in `~/.hermes/config.yaml` if you
+Pair with `approvals.mode: manual` in `~/./config.yaml` if you
 want every action confirmed.
 
 ## Token efficiency

@@ -10,7 +10,7 @@ description: "Turn your Hermes profiles into a roster of named Bots — each wit
 Bot Mode ships **built into the [desktop app](./desktop.md)** and is **on by default** — no install needed. It appears as a **Bots** tab next to Sessions in the left sidebar, with a **Routines** tile docked beside the conversation while the Bots tab is active.
 
 :::tip A Bot is a profile
-There is no new primitive to learn: a Bot **is** a Hermes profile — isolated config, memory, skills, credentials, and chat history under `~/.hermes/profiles/<name>/`. Bot Mode is a UI over that primitive, so everything you do in it is visible from the CLI too: `hermes -p <bot> chat` opens the same agent, and Bot routines appear in `hermes cron list`. No core patches, no background daemons, no extra storage.
+There is no new primitive to learn: a Bot **is** a Hermes profile — isolated config, memory, skills, credentials, and chat history under `~/./profiles/<name>/`. Bot Mode is a UI over that primitive, so everything you do in it is visible from the CLI too: `hermes -p <bot> chat` opens the same agent, and Bot routines appear in `hermes cron list`. No core patches, no background daemons, no extra storage.
 :::
 
 ## The Bots pane
@@ -173,7 +173,7 @@ with that exact run ID to interrupt it without targeting another turn.
 
 Once a peer is registered, the messaging protocol taught to every Bot Chat (`agent.bot_mode_protocol`) automatically includes the peer roster, and `message_agent` accepts peer targets directly — `message_agent(target="spark/researcher", …)`, or `target="spark"` for the peer's main agent — so **your bots learn on their own** that teammates exist on other machines and how to reach them. Registering or removing a peer refreshes each Bot Chat's protocol on its next message (capability epoch).
 
-Requirements: the peer machine runs the `api_server` gateway platform with a strong `API_SERVER_KEY`; reachability is your network's business (LAN, Tailscale, VPN). The key is a credential and lives in `~/.hermes/.env` as `HERMES_PEER_<NAME>_KEY`; peer names/URLs live in `config.yaml` under `bot_peers`.
+Requirements: the peer machine runs the `api_server` gateway platform with a strong `API_SERVER_KEY`; reachability is your network's business (LAN, Tailscale, VPN). The key is a credential and lives in `~/./.env` as `HERMES_PEER_<NAME>_KEY`; peer names/URLs live in `config.yaml` under `bot_peers`.
 
 :::note One-way reachability (NAT)
 Cross-gateway links are direct gateway-to-gateway connections — Desktop is a
@@ -275,7 +275,7 @@ Because Bots are profiles, everything has a terminal equivalent:
 | In Bot Mode | From a shell |
 | --- | --- |
 | Chat with a Bot | `hermes -p <bot> chat` |
-| A Bot's files, skills, memory | `~/.hermes/profiles/<bot>/` |
+| A Bot's files, skills, memory | `~/./profiles/<bot>/` |
 | Routines | `hermes cron list` (jobs named `[bot:<name>] …`) |
 | Create / inspect profiles | `hermes profile create`, `hermes profile list` |
 

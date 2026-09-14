@@ -27,7 +27,7 @@ Sequential execution of 4 goals, each gated by verification before the next star
 - **SEC-001**: Never print/commit secrets from `.env` or config.yaml contents — copy files, don't read contents into output
 - **SEC-002**: Git safety — SandBox repo untouched by G4 (targets only `~/AppData/Local/hermes/profiles/`, outside repo)
 - **CON-001**: Strict sequential: "only then" constraints are hard ordering gates
-- **CON-002**: All 4 goals execute inside one session; artifacts land in `.hermes/plans/`, `.hermes/specs/`, `prompts/`, `scripts/`, `skills/`, `hooks/`
+- **CON-002**: All 4 goals execute inside one session; artifacts land in `./plans/`, `./specs/`, `prompts/`, `scripts/`, `skills/`, `hooks/`
 - **CON-003**: Windows host; hermes home = `C:\Users\Alexa\AppData\Local\hermes`; bash (MSYS2) syntax for terminal
 - **GUD-001**: Verify before claim — every phase ends with tool-backed evidence (file counts, test pass, command exit 0)
 - **GUD-002**: DRY — cross-reference artifacts, never duplicate instructions across plan/spec/prompt
@@ -119,7 +119,7 @@ Sequential execution of 4 goals, each gated by verification before the next star
 - **FILE-006**: `initial-skills.txt` + `updated-skills.txt` (G2 evidence)
 - **FILE-007**: `results/models-benchmark-2026-09-11.md` (G3 output)
 - **FILE-008**: `~/AppData/Local/hermes/profiles/*` (G4 target, outside repo)
-- **FILE-009**: `.hermes/specs/2026-09-11-four-goal-execution-spec.md` (this plan's spec)
+- **FILE-009**: `./specs/2026-09-11-four-goal-execution-spec.md` (this plan's spec)
 - **FILE-010**: `prompts/2026-09-11-four-goal-execution.prompt.md` (executable prompt)
 
 ## 6. Testing
@@ -144,7 +144,7 @@ Sequential execution of 4 goals, each gated by verification before the next star
 
 ## 8. Related Specifications / Further Reading
 
-- [Execution spec](.hermes/specs/2026-09-11-four-goal-execution-spec.md)
+- [Execution spec](./specs/2026-09-11-four-goal-execution-spec.md)
 - [Executable prompt](prompts/2026-09-11-four-goal-execution.prompt.md)
 - [test-providers-models skill](skills/) — loaded at G3 start
 - [skill-judge skill](skills/qa/skill-judge) — loaded at G2 start

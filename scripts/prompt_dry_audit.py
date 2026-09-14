@@ -204,7 +204,7 @@ def main() -> int:
         print(f"Not found: {prompts_dir}", file=sys.stderr)
         return 2
     out_dir = Path(args.out) if args.out else (
-        Path(".hermes/plans") / f"prompt-dry-audit-{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
+        Path("./plans") / f"prompt-dry-audit-{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     report = audit(prompts_dir)

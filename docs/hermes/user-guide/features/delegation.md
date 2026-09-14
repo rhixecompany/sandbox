@@ -244,7 +244,7 @@ A process that finishes while the child is still running needs no handoff: the c
 You can configure a different model for subagents via `config.yaml` — useful for delegating simple tasks to cheaper/faster models:
 
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 delegation:
   model: "google/gemini-flash-2.0"    # Cheaper model for subagents
   provider: "openrouter"              # Optional: route subagents to a different provider
@@ -257,7 +257,7 @@ If omitted, subagents use the same model as the parent.
 Decomposing a problem into well-specified subtasks takes frontier-level judgment; executing a subtask that already comes with a clear goal, full context, and an output contract usually doesn't. Meanwhile the children are where the tokens go — a parallel batch of subagents typically burns the large majority of a run's total tokens, so the worker model is where the cost actually lives. Pinning `delegation.model` to an inexpensive model while your main session stays on a frontier model keeps the planning quality where it matters and cuts spend where the volume is:
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 model:
   default: "your-frontier-model"     # parent (planner) stays on the frontier model
 delegation:
@@ -322,7 +322,7 @@ Both roles retain `execute_code` (programmatic tool calling) so children can bat
 Each subagent has an iteration limit (default: 250) that controls how many tool-calling turns it can take. The limit is set globally in `config.yaml` and applies to every child; it is not a per-call parameter of `delegate_task`:
 
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 delegation:
   max_iterations: 60   # lower it for fleets of simple tasks, raise it for long investigations
 ```
@@ -364,7 +364,7 @@ A subagent that fails — non-retryable provider error (404/400), timeout, crash
 Error text is reduced to the single most informative line (the exception message, not a traceback wall) and capped in length.
 
 :::tip Diagnostic dump on zero-call timeout
-With a hard cap configured, if a subagent times out having made **zero** API calls (usually: provider unreachable, auth failure, or tool-schema rejection), `delegate_task` writes a structured diagnostic to `~/.hermes/logs/subagent-timeout-<session>-<timestamp>.log` containing the subagent's config snapshot, credential-resolution trace, any early error messages, and stack traces for **all** live threads (not just the child's own) — a child parked waiting on a nested helper thread is indistinguishable from a slow provider without the full picture.
+With a hard cap configured, if a subagent times out having made **zero** API calls (usually: provider unreachable, auth failure, or tool-schema rejection), `delegate_task` writes a structured diagnostic to `~/./logs/subagent-timeout-<session>-<timestamp>.log` containing the subagent's config snapshot, credential-resolution trace, any early error messages, and stack traces for **all** live threads (not just the child's own) — a child parked waiting on a nested helper thread is indistinguishable from a slow provider without the full picture.
 :::
 
 ## Stall Detection for Background Subagents
@@ -495,7 +495,7 @@ Every `delegate_task` dispatch also creates one **append-only, human-readable lo
 The dispatch response includes the paths as `live_transcripts`, and the files are pre-created at dispatch time, so this works immediately:
 
 ```bash
-tail -f ~/.hermes/cache/delegation/live/deleg_ab12cd34/task-0.log
+tail -f ~/./cache/delegation/live/deleg_ab12cd34/task-0.log
 ```
 
 Each line is timestamped and shows the child's assistant text, thinking snippets, tool calls (`-> tool_name({args})`), tool results, and a final status marker. A `manifest.json` in the same directory describes the batch (goals, task count, per-task status). The logs persist after completion — they double as the full-fidelity operational record alongside the summary — and directories older than 7 days are pruned automatically on new dispatches. Because they live under `cache/delegation`, they are also readable from remote terminal backends (Docker/Modal/SSH).
@@ -600,7 +600,7 @@ error.
 ## Configuration
 
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 delegation:
   max_iterations: 250                       # Max turns per child (default: 250)
   # max_concurrent_children: 10             # Parallel children per batch (default: 10)

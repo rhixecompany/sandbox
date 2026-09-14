@@ -1,6 +1,6 @@
 ---
 author: Alexa
-description: "Use when auditing plan files (.hermes/plans/*.md) for quality, completeness, and adherence to the implementation plan standard."
+description: "Use when auditing plan files (./plans/*.md) for quality, completeness, and adherence to the implementation plan standard."
 license: MIT
 metadata:
   hermes:
@@ -26,7 +26,7 @@ version: 1.0.0
 
 ## Description
 
-Audits plan files in `.hermes/plans/` for quality, completeness, and adherence to the implementation plan standard. Ensures all plans are actionable, well-structured, and contain necessary checkpoints.
+Audits plan files in `./plans/` for quality, completeness, and adherence to the implementation plan standard. Ensures all plans are actionable, well-structured, and contain necessary checkpoints.
 
 ## When to Use
 
@@ -71,7 +71,7 @@ Audits plan files in `.hermes/plans/` for quality, completeness, and adherence t
 
 ## Workflow
 
-1. Scan `.hermes/plans/` for all `.md` files
+1. Scan `./plans/` for all `.md` files
 2. Parse each file for YAML frontmatter validity
 3. Check for all required sections (Overview, Phases, Tasks, Verification)
 4. Verify each phase has explicit gates/checkpoints
@@ -84,7 +84,7 @@ Audits plan files in `.hermes/plans/` for quality, completeness, and adherence t
 ```bash
 hermes plans-judge
 # Or:
-hermes plans-judge --path .hermes/plans/
+hermes plans-judge --path ./plans/
 # Generates: .github/judge_results/plans_audit.md
 ```
 

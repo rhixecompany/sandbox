@@ -11,16 +11,16 @@
 ### View the Reports
 ```bash
 # Quick status (2-3 min read)
-cat .hermes/mcp-validation-report.md
+cat ./mcp-validation-report.md
 
 # Comprehensive guide (10+ min read)
-cat .hermes/mcp-validation-report-detailed.md
+cat ./mcp-validation-report-detailed.md
 
 # Session work summary
-cat .hermes/mcp-sync-session-summary.md
+cat ./mcp-sync-session-summary.md
 
 # Master index
-cat .hermes/mcp-server-audit-index.md
+cat ./mcp-server-audit-index.md
 ```
 
 ### Run Validation
@@ -71,10 +71,10 @@ powershell scripts/sync-mcp-configs.ps1
 Project Root: C:\Users\Alexa\Desktop\SandBox
 
 Reports (4):
-├── .hermes/mcp-validation-report.md              (Quick overview)
-├── .hermes/mcp-validation-report-detailed.md     (Comprehensive)
-├── .hermes/mcp-sync-session-summary.md           (Session work)
-└── .hermes/mcp-server-audit-index.md             (Master index)
+├── ./mcp-validation-report.md              (Quick overview)
+├── ./mcp-validation-report-detailed.md     (Comprehensive)
+├── ./mcp-sync-session-summary.md           (Session work)
+└── ./mcp-server-audit-index.md             (Master index)
 
 Scripts (2):
 ├── scripts/validate-mcp-servers.py               (Test all servers)
@@ -115,7 +115,7 @@ DATABASE_URL=postgresql://user:pass@host:5432/db
 cd C:\Users\Alexa\Desktop\SandBox
 python scripts/validate-mcp-servers.py
 
-# Output: .hermes/mcp-validation-report.md
+# Output: ./mcp-validation-report.md
 ```
 
 ### Sync After Adding New Server
@@ -131,7 +131,7 @@ python scripts/validate-mcp-servers.py
 ### Check Specific Server
 ```bash
 # See detailed report for per-server information
-type .hermes/mcp-validation-report-detailed.md | findstr "stripe"
+type ./mcp-validation-report-detailed.md | findstr "stripe"
 ```
 
 ---

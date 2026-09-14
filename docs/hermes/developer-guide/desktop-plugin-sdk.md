@@ -73,12 +73,12 @@ repo.
 
 ## Quick start — your first plugin
 
-Create `$HERMES_HOME/desktop-plugins/hello/plugin.js` (that's `~/.hermes/...`
+Create `$HERMES_HOME/desktop-plugins/hello/plugin.js` (that's `~/./...`
 by default). Desktop plugins are app-level — one root for every profile, gateway,
 or remote machine the window connects to. The folder name must equal the plugin `id`.
 
 ```javascript
-// ~/.hermes/desktop-plugins/hello/plugin.js
+// ~/./desktop-plugins/hello/plugin.js
 import { host, haptic, useValue } from '@hermes/plugin-sdk'
 import { jsx, jsxs } from 'react/jsx-runtime'
 
@@ -704,7 +704,7 @@ copies that half into `$HERMES_HOME/desktop-plugins/<id>/` beside a
 pipeline as the standalone disk door (hot reload included):
 
 ```
-~/.hermes/plugins/<id>/           # ONE installable folder
+~/./plugins/<id>/           # ONE installable folder
 ├── plugin.yaml                   # the agent half: tools, hooks, commands
 ├── skills/…
 ├── dashboard/
@@ -730,13 +730,13 @@ Two enable switches still apply, on purpose, and both default to **off**: the
 desktop half ships opt-in — it inventories in **Capabilities → Plugins** but stays
 disabled until the user toggles it — matching the Python half's
 `plugins.enabled` gate in `config.yaml` (the security boundary below). Dropping
-a package into `~/.hermes/plugins` is inert on every surface until the user
+a package into `~/./plugins` is inert on every surface until the user
 says otherwise. The desktop half degrades gracefully when the backend half is
 off — `ctx.rest` returns errors, not crashes.
 
 :::note
 The copy is local to the machine the desktop app runs on. Against a remote
-backend, the remote box's `~/.hermes/plugins` is not reachable as a filesystem —
+backend, the remote box's `~/./plugins` is not reachable as a filesystem —
 only locally installed packages contribute a desktop half this way. For a
 remote backend the install dialog clones the desktop half separately into
 `desktop-plugins/`, the same as a desktop-only repo.
@@ -764,7 +764,7 @@ Desktop plugins reuse the dashboard plugin backend mount. Put the backend in a
 `manifest.json`:
 
 ```
-~/.hermes/plugins/<id>/
+~/./plugins/<id>/
 └── dashboard/
     ├── manifest.json      # { "name": "<id>", "api": "plugin_api.py" }
     └── plugin_api.py      # exports `router = APIRouter()`
@@ -795,7 +795,7 @@ for the full backend reference — the mount is identical.
 Enabling a plugin in the desktop **Capabilities → Plugins** panel is a renderer-side
 choice; it does **not** import Python. A user plugin's `plugin_api.py` is
 imported only when the plugin is in the `plugins.enabled` allow-list in
-`config.yaml` (and not in `plugins.disabled`). Project plugins (`./.hermes/`)
+`config.yaml` (and not in `plugins.disabled`). Project plugins (`././`)
 never auto-import Python. This is a security boundary, not an oversight
 (GHSA-mcfc-hp25-cjv7).
 :::
@@ -939,9 +939,9 @@ toast naming the failure, and tail `hermes logs gui -f`.
 in a `jsx()` call isn't imported. Add it to the import line.
 
 **`ctx.rest` returns 404.** The backend isn't mounted: confirm
-`~/.hermes/plugins/<id>/dashboard/manifest.json` has `"api": "plugin_api.py"`,
+`~/./plugins/<id>/dashboard/manifest.json` has `"api": "plugin_api.py"`,
 that the plugin is in `plugins.enabled` in `config.yaml`, and restart the gateway
-(backend routes mount at startup). Tail `~/.hermes/logs/errors.log` for
+(backend routes mount at startup). Tail `~/./logs/errors.log` for
 `Failed to load plugin <id> API routes`.
 
 **`ctx.socket` never fires.** On an OAuth remote it's a no-op by design — use your

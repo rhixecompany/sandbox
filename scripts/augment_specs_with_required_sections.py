@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Augment every spec in .hermes/specs/ with the 5 REQUIRED_SECTIONS headings
+"""Augment every spec in ./specs/ with the 5 REQUIRED_SECTIONS headings
 that the specs-judge rubric checks for, without disturbing the existing body.
 
 The judge (specs-judge/scripts/judge.py) needs:
@@ -24,7 +24,7 @@ import argparse
 import re
 from pathlib import Path
 
-SPECS_DIR = Path(".hermes/specs")
+SPECS_DIR = Path("./specs")
 
 REQUIRED_SECTIONS = [
     "## Goal",
@@ -90,7 +90,7 @@ def build_appendix(spec_text: str, spec_name: str) -> str:
     appendix.append("## Acceptance Criteria")
     appendix.append("")
     appendix.append(
-        "- Then `python scripts/specs_judge.py --specs-dir .hermes/specs` "
+        "- Then `python scripts/specs_judge.py --specs-dir ./specs` "
         "reports this spec at score >= 95 and rating PASS."
     )
     appendix.append(
@@ -123,17 +123,17 @@ def build_appendix(spec_text: str, spec_name: str) -> str:
     appendix.append("## Verification")
     appendix.append("")
     appendix.append(
-        "- [ ] `python -c \"import yaml; yaml.safe_load(open('.hermes/specs/"
+        "- [ ] `python -c \"import yaml; yaml.safe_load(open('./specs/"
         + spec_name
         + "').read().split('---',2)[1])\"` exits 0."
     )
     appendix.append(
-        '- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir .hermes/specs` reports the spec at score >= 95.'
+        '- [ ] `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/specs-judge/scripts/judge.py" --specs-dir ./specs` reports the spec at score >= 95.'
     )
     appendix.append(
-        "- [ ] Spec's `plan:` frontmatter field points to an existing file in `.hermes/plans/` (when present)."
+        "- [ ] Spec's `plan:` frontmatter field points to an existing file in `./plans/` (when present)."
     )
-    appendix.append("- [ ] At least 1 plan in `.hermes/plans/` references this spec by filename.")
+    appendix.append("- [ ] At least 1 plan in `./plans/` references this spec by filename.")
     appendix.append("")
 
     return "\n".join(appendix)

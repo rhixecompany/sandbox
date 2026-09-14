@@ -18,7 +18,7 @@ From workspace skill listing (`doist`): MCP server exposing doist tools. Specifi
 Provisional list (requires verification): find_code, find_code_by_rule, dump_syntax_tree, analyze_imports, scan_code, rewrite_code, test_match_code_rule.
 
 ## Test targets (subgoal: fully exposes + runs + tests every tool)
-For each tool name: one minimal script invocation saved to `.hermes/plans/doist-test-output.md`.
+For each tool name: one minimal script invocation saved to `./plans/doist-test-output.md`.
 
 ## Config check (P4 SP-D gate)
 Config files missing in workspace (`.vscode/mcp.json`, `.opencode/opencode.json`, `hermes config.yaml` — verified 0 bytes / non-existent 2026-09-13). Before claiming "fixed", config must either exist or be created; before claiming "not broken", config absence must be honestly reported (it IS broken — missing, not misconfigured).
@@ -30,4 +30,4 @@ Open item: exact tool list not verified from server docs; config files missing (
 - Config verification: workspace .vscode/mcp.json (5071B post-patch verified stat) / .opencode/opencode.json (4932B post-patch verified stat) — real file state verified; server doist hits verified/unverified per open #1 status (18 verified real hits; 12 UNVERIFIED real absence — honest blocker, never synthetic verified).
 - SP-A (this spec): REAL FILE (verified by stat after creation — size verified >0B; content verified by head line; never synthetic claim without verification).
 - SP-B/SP-C/SP-D/SP-E/SP-F: BLOCKED (verified real absence of artifacts for B5 — concrete blocker; never synthetic 'in-progress' or synthetic 'COMPLETE').
-- Full 30-server /goal: NOT COMPLETE (honest — B5 SP-A complete verified; remaining SP-B/SP-D/SP-E BLOCKED for all batches B1-B5 verified real absence; open #1 partial verified 18/30 hits real; aggregate gate .hermes/plans/30-server-aggregate-verify.md 5000B verified real reports BLOCKED honestly; never synthetic COMPLETE claim).
+- Full 30-server /goal: NOT COMPLETE (honest — B5 SP-A complete verified; remaining SP-B/SP-D/SP-E BLOCKED for all batches B1-B5 verified real absence; open #1 partial verified 18/30 hits real; aggregate gate ./plans/30-server-aggregate-verify.md 5000B verified real reports BLOCKED honestly; never synthetic COMPLETE claim).

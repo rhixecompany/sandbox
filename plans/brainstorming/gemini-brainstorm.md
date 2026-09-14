@@ -81,6 +81,6 @@ Adapting the 8-step OpenRouter template to Gemini:
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/gemini-workflow-spec.md`
-- `.hermes/plans/gemini-workflow.md` (implementation plan)
-- `.hermes/plans/results/gemini-*.txt` (execution results)
+- `./plans/specs/gemini-workflow-spec.md`
+- `./plans/gemini-workflow.md` (implementation plan)
+- `./plans/results/gemini-*.txt` (execution results)

@@ -1,14 +1,14 @@
 {
   "ts": "2026-09-07T14:22:25.890652Z",
-  "dir": ".hermes\\specs",
-  "plans_dir": ".hermes\\plans",
+  "dir": "./\specs",
+  "plans_dir": "./\plans",
   "threshold": 70,
   "count": 5,
   "avg": 77.4,
   "passed": 4,
   "results": [
     {
-      "file": ".hermes\\specs\\comprehensive-goals-implementation-spec.md",
+      "file": "./\specs\\comprehensive-goals-implementation-spec.md",
       "score": 77,
       "rating": "PASS",
       "dims": {
@@ -41,15 +41,15 @@
         "## Linked Plan"
       ],
       "spec_refs": [
-        ".hermes/specs/comprehensive-goals-implementation-spec.md"
+        "./specs/comprehensive-goals-implementation-spec.md"
       ],
       "plan_refs": [
         "../plans/comprehensive-goals-implementation-plan.md",
-        ".hermes/plans/comprehensive-goals-implementation-plan.md"
+        "./plans/comprehensive-goals-implementation-plan.md"
       ]
     },
     {
-      "file": ".hermes\\specs\\comprehensive-hermes-maintenance-spec.md",
+      "file": "./\specs\\comprehensive-hermes-maintenance-spec.md",
       "score": 84,
       "rating": "PASS",
       "dims": {
@@ -83,12 +83,12 @@
       ],
       "spec_refs": [],
       "plan_refs": [
-        ".hermes/plans/comprehensive-hermes-maintenance-plan.md",
+        "./plans/comprehensive-hermes-maintenance-plan.md",
         "../plans/comprehensive-hermes-maintenance-plan.md"
       ]
     },
     {
-      "file": ".hermes\\specs\\comprehensive-implementation-spec.md",
+      "file": "./\specs\\comprehensive-implementation-spec.md",
       "score": 75,
       "rating": "PASS",
       "dims": {
@@ -122,12 +122,12 @@
       ],
       "spec_refs": [],
       "plan_refs": [
-        ".hermes/plans/comprehensive-implementation-plan.md",
+        "./plans/comprehensive-implementation-plan.md",
         "../plans/comprehensive-implementation-plan.md"
       ]
     },
     {
-      "file": ".hermes\\specs\\hermes-ecosystem-reliability-spec.md",
+      "file": "./\specs\\hermes-ecosystem-reliability-spec.md",
       "score": 61,
       "rating": "WARN",
       "dims": {
@@ -153,11 +153,11 @@
       "sections_found": [],
       "spec_refs": [],
       "plan_refs": [
-        ".hermes/plans/2026-09-05_084556-hermes-ecosystem-reliability.md"
+        "./plans/2026-09-05_084556-hermes-ecosystem-reliability.md"
       ]
     },
     {
-      "file": ".hermes\\specs\\hermes-root-scripts-quick-commands-spec.md",
+      "file": "./\specs\\hermes-root-scripts-quick-commands-spec.md",
       "score": 90,
       "rating": "PASS",
       "dims": {
@@ -192,7 +192,7 @@
       "spec_refs": [],
       "plan_refs": [
         "../plans/hermes-root-scripts-quick-commands-plan.md",
-        ".hermes/plans/hermes-root-scripts-quick-commands-plan.md"
+        "./plans/hermes-root-scripts-quick-commands-plan.md"
       ]
     }
   ]

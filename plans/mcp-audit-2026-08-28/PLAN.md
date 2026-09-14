@@ -80,7 +80,7 @@ Decision: Update default to `minimax/minimax-m3:free` via `hermes config set`.
 - Loads `.mcp/registry.json`
 - For each stdio: resolves `${env:...}`, checks `command` path, `bunx --version` smoke
 - For each http/sse: HEAD/GET, accepts 2xx/4xx
-- Emits JSON + Markdown report to `.hermes/plans/mcp-audit-2026-08-28/audit-report.{json,md}`
+- Emits JSON + Markdown report to `./plans/mcp-audit-2026-08-28/audit-report.{json,md}`
 
 ### T6 — `scripts/mcp_sync.py`
 

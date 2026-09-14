@@ -9,7 +9,7 @@ metadata:
   hermes:
     purpose: Structured prompt enforcing DRY, best practices, verification before claim, no synthetic results
     rules: [concise, table-first, direct, action-first, no-fluff, verify-then-claim, honest-blocker, no-synthetic-ids, no-synthetic-capabilities, no-hidden-errors, dry-cross-reference, .env-only, no-bak-artifacts]
-    cross_references: [".hermes.md", "SOUL.md", "USER.md", "MEMORY.md", ".hermes/plans/implementation-plan.md", ".hermes/specs/comprehensive-subgoal-spec.md"]
+    cross_references: [".hermes.md", "SOUL.md", "USER.md", "MEMORY.md", "./plans/implementation-plan.md", "./specs/comprehensive-subgoal-spec.md"]
 ---
 
 # Implementation Prompt — docs/hermes Subgoal + Profile DRY (Verified — v1.0.0)
@@ -54,7 +54,7 @@ metadata:
 hermes profile list          # default active
 hermes profile use default   # routing verified
 hermes mcp list              # 23 MCP servers verified
-ls .hermes/skills/            # 619 verified skills (verified real count from session audit)
+ls ./skills/            # 619 verified skills (verified real count from session audit)
 ```
 Gate: If profile list fails → STOP (honest blocker).
 
@@ -71,16 +71,16 @@ Gate: If log file <100KB → BLOCKER. (PASS — 7242840 B verified).
 ### Phase C — Spec (Parallel — Verified File Created)
 ```bash
 # Verified real (this prompt references verified spec):
-cat .hermes/specs/comprehensive-subgoal-spec.md  # verified 8696 B, verified:true
+cat ./specs/comprehensive-subgoal-spec.md  # verified 8696 B, verified:true
 ```
 Gate: If file missing / placeholders present → BLOCKER.
 
 ### Phase D — Prompt (Parallel — Verified File Created)
 ```bash
 # Verified real (this file):
-cat .hermes/prompts/implementation-prompt.md  # verified by write_file verified:true
+cat ./prompts/implementation-prompt.md  # verified by write_file verified:true
 ```
-Gate: `grep -q 'duplicate identity' .hermes/prompts/implementation-prompt.md` → must return 0 (DRY enforced); `grep -q '.env ONLY .hermes'` → 1.
+Gate: `grep -q 'duplicate identity' ./prompts/implementation-prompt.md` → must return 0 (DRY enforced); `grep -q '.env ONLY .hermes'` → 1.
 
 ### Phase E — Profiles (Parallel Batch — 14 Independent Tasks)
 ```bash
@@ -107,9 +107,9 @@ Gate: `.env` 3334 B unchanged; 5 `.audit.txt` exist; 0 `.bak`; vulnerability fin
 ```bash
 # Verified gate checks (all must PASS before declaring "Goal complete"):
 echo "=== FINAL GATE CHECKS ==="
-echo "Plan file: $(stat -c%s .hermes/plans/implementation-plan.md 2>/dev/null || echo 'MISSING')"
-echo "Spec file: $(stat -c%s .hermes/specs/comprehensive-subgoal-spec.md 2>/dev/null || echo 'MISSING')"
-echo "Prompt file: $(stat -c%s .hermes/prompts/implementation-prompt.md 2>/dev/null || echo 'MISSING')"
+echo "Plan file: $(stat -c%s ./plans/implementation-plan.md 2>/dev/null || echo 'MISSING')"
+echo "Spec file: $(stat -c%s ./specs/comprehensive-subgoal-spec.md 2>/dev/null || echo 'MISSING')"
+echo "Prompt file: $(stat -c%s ./prompts/implementation-prompt.md 2>/dev/null || echo 'MISSING')"
 echo "Profiles enhanced count: $(find ~/AppData/Local/hermes/profiles/ -maxdepth 1 -type d | grep -v 'profiles/$' | wc -l)"
 echo "Audit scripts: $(find . -maxdepth 1 -name '*.audit.txt' 2>/dev/null | wc -l)"
 echo ".env unchanged: $(stat -c%s .env 2>/dev/null || echo 'MISSING') B"
@@ -125,7 +125,7 @@ Only declare "Goal complete" when ALL outputs above confirm PASS.
 
 - [x] Load 14 skills (verified real — 13 confirmed + 1 resolved)
 - [x] Confirm >6 files (274 > 6 — verified by count: 256 + 14 + 3 + 1)
-- [x] Write plan (`.hermes/plans/implementation-plan.md` — verified 19760 B)
+- [x] Write plan (`./plans/implementation-plan.md` — verified 19760 B)
 - [x] Clarify ambiguities (4 turns, 6 questions ≤2/turn — all answered with real responses; no synthetic clarifications)
 - [x] Execute parallel phases (C/D/E/F — independent verified)
 - [x] Verify gate per phase (A→B→C/D/E/F→G — sequential gates; parallel inner verified)

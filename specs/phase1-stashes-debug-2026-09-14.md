@@ -21,8 +21,8 @@ Apply 4 stashes sequentially to `clean-development`; audit `config.yaml` for MCP
 | 1.5 | Audit `config.yaml` (MCP server args YAML list) | Read file; check args format; compare with `.hermes.md` references; check `.env` variables | Audit result: PASS or conflict documented with exact line reference |
 | 1.6 | Audit `.eslintrc.json` parser fix (69 B, verified) | Read file; verify `parserOptions.project` points to `./tsconfig.json`; verify `ruff` clean; verify syntax PASS | `ruff check` PASS; `python -m py_compile` PASS; no new hidden errors |
 | 1.7 | Audit browser/debug artifacts (`agent-browser` skill reference; `.github/prompts/operations/test-providers-models/`) | Read skill SKILL.md; read `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md`; verify real file sizes | All files verified real (os.path.getsize / ls); no synthetic content |
-| 1.8 | Systematic-debugging: capture sequential exit codes in `.hermes/plans/debug-run-logs.md` | Run `hermes mcp test`, `hermes doctor`, `hermes security audit`, `hermes status`, `hermes insights`, 6 `hermes logs` commands; capture stdout/stderr/exit code | All exit codes real (verified by terminal output); no fabricated results |
-| 1.9 | Document vulnerabilities (26 REAL findings) + parsing errors (41 remaining) + rate-limit 403 + MSYS2 FAIL | Read `.hermes/plans/debug-run-logs.md` (53152 B); read `.hermes/specs/debug-analysis-2026-09-13.md` (6081 B) | All findings preserved honestly; NOT suppressed; NOT hidden |
+| 1.8 | Systematic-debugging: capture sequential exit codes in `./plans/debug-run-logs.md` | Run `hermes mcp test`, `hermes doctor`, `hermes security audit`, `hermes status`, `hermes insights`, 6 `hermes logs` commands; capture stdout/stderr/exit code | All exit codes real (verified by terminal output); no fabricated results |
+| 1.9 | Document vulnerabilities (26 REAL findings) + parsing errors (41 remaining) + rate-limit 403 + MSYS2 FAIL | Read `./plans/debug-run-logs.md` (53152 B); read `./specs/debug-analysis-2026-09-13.md` (6081 B) | All findings preserved honestly; NOT suppressed; NOT hidden |
 
 ## Evidence Before Fix (Phase 1 of systematic-debugging)
 As your patient teacher: before touching anything, document what's broken. Example — the `.eslintrc.json` parser conflict shows `parserOptions.project` missing; the fix adds `parserOptions.project = "./tsconfig.json"` + `parserOptions.tsconfigRootDir = "."`. This is ONE minimal fix; 41 parsing errors remain → architecture concern (nested `.codex/.copilot` scope conflict) — NOT hidden; documented in analysis spec.
@@ -36,7 +36,7 @@ As your patient teacher: before touching anything, document what's broken. Examp
 
 ## Verification Checklist (GATE-C)
 - [ ] All 4 stashes applied (or conflicts documented honestly)
-- [ ] `.hermes/plans/debug-run-logs.md` updated with real sequential exit codes (new commands run this phase)
+- [ ] `./plans/debug-run-logs.md` updated with real sequential exit codes (new commands run this phase)
 - [ ] `config.yaml` audit completed; conflict documented with line reference if exists
 - [ ] `.eslintrc.json` fix verified (69 B; ruff clean; syntax PASS) — does NOT suppress remaining 41 errors (honest reporting)
 - [ ] `agent-browser` skill + `test-providers-models` artifacts verified real; 0 synthetic

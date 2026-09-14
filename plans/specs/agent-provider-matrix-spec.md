@@ -135,7 +135,7 @@ Each matrix result must contain:
 - AC-4: The runner supports `--dry-run` and produces no live provider calls.
 - AC-5: The runner can execute a live request for at least one profile/provider pair.
 - AC-6: The output includes provider, context, max-output, and capabilities for each result.
-- AC-7: The runner writes summary artifacts under `.hermes/plans/results/`.
+- AC-7: The runner writes summary artifacts under `./plans/results/`.
 - AC-8: The workflow does not depend on secrets in subprocess env vars.
 
 ---

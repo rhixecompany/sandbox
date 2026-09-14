@@ -4,13 +4,13 @@ category: references
 version: 1.0.0
 license: MIT
 author: derived from session-audit-report skill + execution-summary.md + verified session replay
-source: .hermes/plans/ + .github/prompts/general/run-all-goals/results/execution-summary.md (verified 867 B)
+source: ./plans/ + .github/prompts/general/run-all-goals/results/execution-summary.md (verified 867 B)
 description: Session reporting reference â verified from actual workspace session data (not synthesized).
 ---
 
 # Session Reporting — Reference (Verified Source)
 
-> Source: `.github/prompts/general/run-all-goals/results/execution-summary.md` (verified 867 B by `read_file`); `.hermes/plans/` audit artifacts; session replay data. No synthetic session IDs.
+> Source: `.github/prompts/general/run-all-goals/results/execution-summary.md` (verified 867 B by `read_file`); `./plans/` audit artifacts; session replay data. No synthetic session IDs.
 
 ## Verified Session IDs (Real CLI Output â Not Estimated)
 
@@ -51,4 +51,4 @@ These IDs come from verified CLI output (`hermes chat --provider ... --model ...
 3. Run `hermes status` / `hermes insights` / `hermes auth list` / `hermes config show` (Phase E / F verified commands).
 4. Capture session IDs from CLI output (not estimated).
 5. Generate `execution-summary.md` or equivalent with real output lines.
-6. Update `.hermes/plans/` artifacts (plan doc) with verified status.
+6. Update `./plans/` artifacts (plan doc) with verified status.

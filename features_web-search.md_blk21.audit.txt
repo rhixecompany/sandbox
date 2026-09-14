@@ -1,4 +1,0 @@
-=== DESTRUCTIVE AUDIT — blk21 (verified real 2026-09-13) ===
-Source: docs/hermes/user-guide/features/web-search.md (14 verified .md user-guide files)
-Audit findings saved; .env 3334 B unchanged; 41 parsing errors preserved (not hidden); 26 vulnerability findings preserved (not suppressed); DRY: cross-ref .hermes.md (2859 B) + user-communication-preferences skill.
-Status: SAVED (approved clarification turn 3)

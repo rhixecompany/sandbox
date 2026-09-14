@@ -29,7 +29,7 @@ Run a comprehensive health check on Hermes Agent.
    ```
    (Skip `--skip-fix` to also run `hermes doctor --fix` — only after committing current state.)
 
-2. **Check the report** at `.hermes/plans/hermes-diagnostic-YYYY-MM-DD_HHMMSS/report.md`:
+2. **Check the report** at `./plans/hermes-diagnostic-YYYY-MM-DD_HHMMSS/report.md`:
    - 12 commands total (11 if no `package.json` exists in SandBox)
    - Each shows: exit code, elapsed, OK/FAIL
    - FAIL section shows stderr tail

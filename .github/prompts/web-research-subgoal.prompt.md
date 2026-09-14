@@ -3,8 +3,8 @@ name: web-research-subgoal-prompt
 description: Prompt template for /goal web-research-pipeline subgoal — references all 14 skills, sequential phase gates, and verified artifacts.
 references:
   - multi-file-change-protocol (14 skills: using-superpowers, brainstorming, user-communication-preferences, mcp-sequential-thinking, mcp-filesystem, mcp-ast-grep, mcp-memory, plan, plans-and-specs, create-implementation-plan, implementation-plan, executing-plans, writing-clearly-and-concisely, subagent-driven-development)
-  - web-research-subgoal-plan (.hermes/plans/web-research-subgoal-<ts>.md)
-  - web-research-subgoal-spec (.hermes/specs/web-research-subgoal-<ts>.md)
+  - web-research-subgoal-plan (./plans/web-research-subgoal-<ts>.md)
+  - web-research-subgoal-spec (./specs/web-research-subgoal-<ts>.md)
   - web-research-pipeline skill (skills/web-research-pipeline.md)
   - results/web-research-results.json (verified artifacts)
 ---
@@ -18,11 +18,11 @@ Task: Execute `/goal /web-research-pipeline` subgoal on `python-packages.md` (28
 - Sequential phases only: P1(LOAD) → P2(RESEARCH) → P3(VERIFY) → P4(READ) ONLY after P3 gate passes → P5(CREATE) → P6(EXECUTE+VERIFY).
 - Destructive ops approved; don't suppress errors; don't invent artifacts; document broken links honestly.
 - Rate-limit safeguard: web_search calls ≥500ms apart; 403 rate-limit blocker preserved (not hidden).
-- Per-package artifacts: spec (`.hermes/specs/`), plan (`.hermes/plans/`), prompt (this file), script (`scripts/`), skill (`skills/`).
+- Per-package artifacts: spec (`./specs/`), plan (`./plans/`), prompt (this file), script (`scripts/`), skill (`skills/`).
 
 ## Verified References (Real, Not Synthetic)
-- `.hermes/plans/web-research-subgoal-2026-09-13.md` — 3830 B
-- `.hermes/specs/web-research-subgoal-2026-09-13.md` — 3395 B
+- `./plans/web-research-subgoal-2026-09-13.md` — 3830 B
+- `./specs/web-research-subgoal-2026-09-13.md` — 3395 B
 - `skills/web-research-pipeline.md` — 5126 B
 - `scripts/web-research-pipeline.py` — verified executable
 - `results/web-research-results.json` — 4676 B (3 batches; 12 valid links; 4 broken preserved)

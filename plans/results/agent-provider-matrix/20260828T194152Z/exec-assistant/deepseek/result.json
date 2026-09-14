@@ -24,7 +24,7 @@
     "exec-assistant",
     "chat",
     "--query-file",
-    "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\results\\agent-provider-matrix\\20260828T194152Z\\exec-assistant\\deepseek\\request.md",
+    "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T194152Z\\exec-assistant\\deepseek\\request.md",
     "--provider",
     "deepseek",
     "--quiet",

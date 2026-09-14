@@ -5,8 +5,8 @@ description: "Executable prompt: research artifacts, skills dedupe/judge/fix, mo
 version: 1.0
 author: Alexa
 tags: [execution, skills, models, research, sync]
-spec: .hermes/specs/2026-09-11-four-goal-execution-spec.md
-plan: .hermes/plans/2026-09-11-four-goal-execution-master-plan.md
+spec: ./specs/2026-09-11-four-goal-execution-spec.md
+plan: ./plans/2026-09-11-four-goal-execution-master-plan.md
 ---
 
 # GOAL: Execute 4 sequential goals per spec

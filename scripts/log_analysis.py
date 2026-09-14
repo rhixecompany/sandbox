@@ -98,7 +98,7 @@ def main() -> int:
         print(f"Not found: {logs_dir}", file=sys.stderr)
         return 2
     out_dir = Path(args.out) if args.out else (
-        Path(".hermes/plans") / f"log-analysis-{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S')}"
+        Path("./plans") / f"log-analysis-{datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S')}"
     )
     out_dir.mkdir(parents=True, exist_ok=True)
 

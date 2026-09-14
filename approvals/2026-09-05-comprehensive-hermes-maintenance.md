@@ -7,8 +7,8 @@ author: Alexa
 license: MIT
 tags: [approval, hermes, maintenance, safety]
 status: approved
-plan: .hermes/plans/comprehensive-hermes-maintenance-plan.md
-spec: .hermes/specs/comprehensive-hermes-maintenance-spec.md
+plan: ./plans/comprehensive-hermes-maintenance-plan.md
+spec: ./specs/comprehensive-hermes-maintenance-spec.md
 prompt: .github/prompts/comprehensive-hermes-maintenance.prompt.md
 ---
 
@@ -17,8 +17,8 @@ prompt: .github/prompts/comprehensive-hermes-maintenance.prompt.md
 - Approved: 2026-09-05 (initiating request)
 - Approval basis: the owner explicitly authorized destructive operations, fixes, creations, updates, enhancement, commit, and push in the initiating request.
 - Approval scope: `C:/Users/Alexa/Desktop/SandBox`, independently detected nested Git repositories, and `C:/Users/Alexa/AppData/Local/hermes`.
-- Plan: `.hermes/plans/comprehensive-hermes-maintenance-plan.md`
-- Spec: `.hermes/specs/comprehensive-hermes-maintenance-spec.md`
+- Plan: `./plans/comprehensive-hermes-maintenance-plan.md`
+- Spec: `./specs/comprehensive-hermes-maintenance-spec.md`
 - Prompt: `.github/prompts/comprehensive-hermes-maintenance.prompt.md`
 
 ## Owner decision
@@ -65,6 +65,6 @@ prompt: .github/prompts/comprehensive-hermes-maintenance.prompt.md
 
 ## Phase log
 
-- M0 baseline: complete before this approval record; evidence under `.hermes/reports/baseline/`.
+- M0 baseline: complete before this approval record; evidence under `./reports/baseline/`.
 - M1 plan/spec/prompt/approval: in progress at creation; verify after write.
 - M2–M8: pending sequential gates.

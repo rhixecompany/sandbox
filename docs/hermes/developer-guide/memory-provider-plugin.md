@@ -20,7 +20,7 @@ Hermes discovers memory providers from four sources, in this precedence order:
 |---|---|---|
 | Bundled | `plugins/memory/<name>/` | Ships with Hermes. Closed to new providers — see [CONTRIBUTING](https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md). |
 | User | `$HERMES_HOME/plugins/<name>/` | Dropped in by the user, per profile. |
-| Project | `./.hermes/plugins/<name>/` | Opt-in via `HERMES_ENABLE_PROJECT_PLUGINS=1`. |
+| Project | `././plugins/<name>/` | Opt-in via `HERMES_ENABLE_PROJECT_PLUGINS=1`. |
 | Package | `hermes_agent.memory_providers` entry point | `pip install`, nothing to copy. |
 
 Earlier sources win on a name collision, so a directory dropped into a working
@@ -39,7 +39,7 @@ Discovery only *enumerates* — it never imports a provider. Nothing runs until
 
 A directory provider lives in `plugins/memory/<name>/` when bundled with
 Hermes, in `$HERMES_HOME/plugins/<name>/` when installed by a user, or in
-`./.hermes/plugins/<name>/` for a project-local one:
+`././plugins/<name>/` for a project-local one:
 
 ```
 plugins/memory/my-provider/
@@ -337,7 +337,7 @@ from hermes_constants import get_hermes_home
 data_dir = get_hermes_home() / "my-provider"
 
 # WRONG — shared across all profiles
-data_dir = Path("~/.hermes/my-provider").expanduser()
+data_dir = Path("~/./my-provider").expanduser()
 ```
 
 ## Testing

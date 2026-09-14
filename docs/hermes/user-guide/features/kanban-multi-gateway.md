@@ -32,7 +32,7 @@ processes.
 ## Configuration
 
 On the dispatch-owning gateway (typically the `default` profile), no change is
-needed. On every other profile gateway, add to `~/.hermes/config.yaml`:
+needed. On every other profile gateway, add to `~/./config.yaml`:
 
 ```yaml
 kanban:

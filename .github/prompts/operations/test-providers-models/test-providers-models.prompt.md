@@ -23,7 +23,7 @@ tools: [terminal, web_search, web_extract, web_fetch, browser_exec, file_read, f
 2. Convert HTML response to markdown; extract model names/URLs/descriptions.
 3. For each free model in report: run provider test via `test-providers-models.prompt.md` execution (call openrouter endpoint with model parameter).
 4. Collect real responses (success/failure/status); verify by real file content/checksum.
-5. Generate `.hermes/plans/` + `.hermes/specs/` + `results/` artifacts with verified outputs.
+5. Generate `./plans/` + `./specs/` + `results/` artifacts with verified outputs.
 6. Request approvals for crud batches.
 
 ## Verification Gates

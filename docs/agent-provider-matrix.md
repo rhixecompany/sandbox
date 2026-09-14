@@ -44,7 +44,7 @@ python scripts/agent_provider_matrix.py --limit-cells 5
 | `--request-file` | — | Read request from a file |
 | `--prompt-template` | `prompts/agent-provider-matrix.prompt.md` | `{{ }}` placeholders: `REQUEST`, `PROFILE`, `PROVIDER`, `MAX_OUTPUT`, `PACKAGE_CONTEXT`, `PACKAGE_CAPABILITIES`, `MODEL_HINT` |
 | `--packages-root` | `packages/` | Root containing package manifests |
-| `--results-root` | `.hermes/plans/results/agent-provider-matrix` | Output directory (timestamped sub-run) |
+| `--results-root` | `./plans/results/agent-provider-matrix` | Output directory (timestamped sub-run) |
 | `--provider` | all | Repeatable or CSV |
 | `--profile` | all | Repeatable or CSV |
 | `--max-output` | 1200 | Response excerpt budget (chars) |
@@ -57,7 +57,7 @@ python scripts/agent_provider_matrix.py --limit-cells 5
 
 ## Output Artifacts
 
-Each run writes a timestamped directory under `.hermes/plans/results/agent-provider-matrix/<UTC>/`:
+Each run writes a timestamped directory under `./plans/results/agent-provider-matrix/<UTC>/`:
 
 ```
 inventory.json                       # profiles, providers, packages (snapshot at run time)
@@ -85,7 +85,7 @@ summary.json                         # machine-readable roll-up
   "duration_ms": 3421,
   "status": "ok",
   "response_excerpt": "…",
-  "result_path": ".hermes/…/result.json",
+  "result_path": "./…/result.json",
   "assumptions": ["…"]
 }
 ```

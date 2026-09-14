@@ -87,6 +87,6 @@ Nous Portal serves as the **base_url foundation** — the model section referenc
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/nous-workflow-spec.md`
-- `.hermes/plans/nous-workflow.md` (implementation plan)
-- `.hermes/plans/results/nous-*.txt` (execution results)
+- `./plans/specs/nous-workflow-spec.md`
+- `./plans/nous-workflow.md` (implementation plan)
+- `./plans/results/nous-*.txt` (execution results)

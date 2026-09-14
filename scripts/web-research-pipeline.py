@@ -11,8 +11,8 @@ import sys
 
 # P5 verification gate: confirm skill exists before execution
 SKILL_FILE = 'skills/web-research-pipeline.md'
-PLAN_FILE = '.hermes/plans/web-research-subgoal-2026-09-13.md'
-SPEC_FILE = '.hermes/specs/web-research-subgoal-2026-09-13.md'
+PLAN_FILE = './plans/web-research-subgoal-2026-09-13.md'
+SPEC_FILE = './specs/web-research-subgoal-2026-09-13.md'
 RESULT_FILE = 'results/web-research-results.json'
 
 def gate(name, condition, details=""):
@@ -44,8 +44,8 @@ packages = [
     {"name":"playwright","category":"node","links_ref":"Batch 2"},
 ]
 for pkg in packages:
-    spec_path = f".hermes/specs/{pkg['name']}-best-practices.md"
-    plan_path = f".hermes/plans/{pkg['name']}-best-practices.md"
+    spec_path = f"./specs/{pkg['name']}-best-practices.md"
+    plan_path = f"./plans/{pkg['name']}-best-practices.md"
     # Only create if not already present (destructive approved but not required for representatives)
     if not os.path.isfile(spec_path):
         with open(spec_path, 'w', encoding='utf-8') as f:

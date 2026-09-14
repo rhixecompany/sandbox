@@ -93,6 +93,6 @@ The deepseek provider in config.yaml may serve a different purpose than opencode
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/specs/deepseek-workflow-spec.md`
-- `.hermes/plans/deepseek-workflow.md` (implementation plan)
-- `.hermes/plans/results/deepseek-*.txt` (execution results)
+- `./plans/specs/deepseek-workflow-spec.md`
+- `./plans/deepseek-workflow.md` (implementation plan)
+- `./plans/results/deepseek-*.txt` (execution results)

@@ -18,7 +18,7 @@ From workspace skill listing (`ast-grep`): MCP server exposing ast-grep tools. S
 Provisional list (requires verification): find_code, find_code_by_rule, dump_syntax_tree, analyze_imports, scan_code, rewrite_code, test_match_code_rule.
 
 ## Test targets (subgoal: fully exposes + runs + tests every tool)
-For each tool name: one minimal script invocation saved to `.hermes/plans/ast-grep-test-output.md`.
+For each tool name: one minimal script invocation saved to `./plans/ast-grep-test-output.md`.
 
 ## Config check (P4 SP-D gate)
 Config files missing in workspace (`.vscode/mcp.json`, `.opencode/opencode.json`, `hermes config.yaml` — verified 0 bytes / non-existent 2026-09-13). Before claiming "fixed", config must either exist or be created; before claiming "not broken", config absence must be honestly reported (it IS broken — missing, not misconfigured).

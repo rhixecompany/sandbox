@@ -9,9 +9,9 @@ tags: [hermes, maintenance, implementation, mcp, scripts, hooks, plugins, agents
 status: in_progress
 created: 2026-09-05
 updated: 2026-09-05
-spec: .hermes/specs/comprehensive-hermes-maintenance-spec.md
+spec: ./specs/comprehensive-hermes-maintenance-spec.md
 prompt: .github/prompts/comprehensive-hermes-maintenance.prompt.md
-approval: .hermes/approvals/2026-09-05-comprehensive-hermes-maintenance.md
+approval: ./approvals/2026-09-05-comprehensive-hermes-maintenance.md
 baseline_head: f67b6bfb6281fc6bf77b3f3e37a47c26ea7233dd
 baseline_branch: clean-development
 ---
@@ -81,7 +81,7 @@ Estimates are elapsed work time for one primary agent plus up to three read-only
 - Capture live Git status/branches/remotes for root and independently detected subrepositories.
 - Capture Hermes profile, MCP, hook, plugin, agent, doctor, process, and Docker state.
 - Locate `.env*` and `config.yaml` under the two approved roots through MCP filesystem search.
-- Record all baseline output in `.hermes/reports/baseline/` or the Hermes cache without credential values.
+- Record all baseline output in `./reports/baseline/` or the Hermes cache without credential values.
 
 Gate: deterministic, secret-safe baseline exists. Completed for this run.
 
@@ -209,9 +209,9 @@ Gate: no criterion is marked complete from a stale report or an unverified subag
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs
@@ -220,4 +220,4 @@ Gate: no criterion is marked complete from a stale report or an unverified subag
 
 ## Verification
 
-**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.

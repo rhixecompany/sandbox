@@ -102,7 +102,7 @@ A real user message always wins over both — wakeups only fire while the sessio
 ## Configuration
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 loops:
   min_interval_seconds: 30       # floor for fixed intervals
   max_ticks: 100                 # backstop budget (0 = unlimited)

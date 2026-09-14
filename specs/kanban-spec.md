@@ -15,9 +15,9 @@ status: "in_progress"
 - Produce structured artifacts that reference feature concepts.
 - Execute script verifies file presence and outputs a result summary.
 ## Acceptance Criteria
-- [ ] .hermes/plans/kanban-plan.md exists with YAML frontmatter
-- [ ] .hermes/specs/kanban-spec.md exists with ≥3 sections
-- [ ] .hermes/prompts/kanban-prompt.md has prompt instructions
+- [ ] ./plans/kanban-plan.md exists with YAML frontmatter
+- [ ] ./specs/kanban-spec.md exists with ≥3 sections
+- [ ] ./prompts/kanban-prompt.md has prompt instructions
 - [ ] skills/kanban-bundle/SKILL.md has ≥10-line body + frontmatter
 - [ ] scripts/kanban-execute.py runs without error
 - [ ] results/kanban-result.md produced

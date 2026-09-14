@@ -30,8 +30,8 @@ def date_wat(value: Any) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("input", nargs="?", default=".hermes/plans/run-all-goals-five-day-session-corpus.json")
-    parser.add_argument("output", nargs="?", default=".hermes/plans/run-all-goals-five-day-session-summary.json")
+    parser.add_argument("input", nargs="?", default="./plans/run-all-goals-five-day-session-corpus.json")
+    parser.add_argument("output", nargs="?", default="./plans/run-all-goals-five-day-session-summary.json")
     args = parser.parse_args()
     data = json.loads(Path(args.input).read_text(encoding="utf-8"))
     sessions = data.get("sessions", [])

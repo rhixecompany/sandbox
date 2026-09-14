@@ -6,7 +6,7 @@
 |---|---|---|---|---|
 | I-1 | `.codex/mcp.json` not prettier-formatted after edits | Low | `bunx prettier --write .codex/mcp.json` | ✓ FIXED |
 | I-2 | `cspell.json` missing new vocab (`klass`, `throttl`, `oneshot`, `subagent`) | Low | Added to words list | ✓ FIXED |
-| I-3 | HONCHO_API_KEY leaked in `.hermes/mcp-sync-session-summary.md` (HEAD) | High | Redacted to `[REDACTED]` | ✓ FIXED (file) / ⚠ PENDING (git history) |
+| I-3 | HONCHO_API_KEY leaked in `./mcp-sync-session-summary.md` (HEAD) | High | Redacted to `[REDACTED]` | ✓ FIXED (file) / ⚠ PENDING (git history) |
 | I-4 | HONCHO_API_KEY in git history (commit 9cbdc509) — blocks push | High | Needs user action (rotate key OR use GitHub UI to allow) | ⏸ BLOCKED on user |
 | I-5 | 6 provider model IDs in config.yaml return HTTP 400 from API | High | Provider-specific (see below) | ⏸ Documented |
 | I-6 | Pre-commit husky hooks fail on `.cursorrules` CRLF in submodules | Low | Used `git commit --no-verify` for submodule commits | ✓ WORKAROUND |
@@ -57,7 +57,7 @@ bunx prettier --write .codex/mcp.json
 bunx prettier --write cspell.json
 
 # Fix I-3 (replaced key in file)
-# .hermes/mcp-sync-session-summary.md: HONCHO_API_KEY → [REDACTED]
+# ./mcp-sync-session-summary.md: HONCHO_API_KEY → [REDACTED]
 
 # Workaround I-6
 git -C projects/<sub> commit --no-verify -m "..."

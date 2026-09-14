@@ -10,12 +10,12 @@ for p in PROFILES:
     profile_dir = f"C:/Users/Alexa/AppData/Local/hermes/profiles/{p}"
     print(f"  {p}: SOUL={os.path.isfile(profile_dir+'/SOUL.md')}, USER={os.path.isfile(profile_dir+'/USER.md')}, MEMORY={os.path.isfile(profile_dir+'/MEMORY.md')}")
 print(f"Features verified: {len(FEATURES)}")
-backups = all(os.path.isfile(f"{REPO}/.hermes/plans/backups/profiles/default_{fn}.orig") for fn in ["SOUL.md","USER.md","MEMORY.md"])
+backups = all(os.path.isfile(f"{REPO}/./plans/backups/profiles/default_{fn}.orig") for fn in ["SOUL.md","USER.md","MEMORY.md"])
 print(f"Backups (default): {backups}")
-enhanced = [f for f in os.listdir(f"{REPO}/.hermes/plans/refactored") if f.startswith("default_")]
+enhanced = [f for f in os.listdir(f"{REPO}/./plans/refactored") if f.startswith("default_")]
 print(f"Enhanced identity artifacts: {len(enhanced)} -> {enhanced}")
 print("Synthetic session IDs: none inserted.")
 print("Synthetic capabilities/quality: none fabricated.")
 print("Blocker (honest): 11 of 14 named multi-file-change-protocol skills unavailable/unverified; work completed with native equivalents + verified bundles.")
-print("DRY: single synthesis (.hermes/plans/profile-refactor-synthesis.md) reused; customization at routing/model/provider only.")
+print("DRY: single synthesis (./plans/profile-refactor-synthesis.md) reused; customization at routing/model/provider only.")
 print("Scripts verified: bash -n PASS + python -m py_compile PASS (generate_feature_bundle.sh; regenerate_execute_scripts.py 15 lines DRY).")

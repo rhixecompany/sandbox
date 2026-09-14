@@ -135,7 +135,7 @@ Images are priced at the per-image cost **learned from the provider's usage**
 (`agent/image_token_cost.py`), not a vendor formula: on a response whose delta
 since the previous anchor introduced N images, the residual between the real
 `prompt_tokens` and the text-only projection is N × the provider's price. The
-value is kept per `model@host` in `~/.hermes/cache/image_token_costs.json` and
+value is kept per `model@host` in `~/./cache/image_token_costs.json` and
 bound per turn so the trigger estimator, the tail-budget walk and gateway
 hygiene all use the same figure. Before the first vision turn a flat 1,500
 default applies.

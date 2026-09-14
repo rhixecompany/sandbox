@@ -32,7 +32,7 @@ Before ANY response or action, load all 14 skills:
 5. `/mcp-filesystem` - File operations
 6. `/mcp-ast-grep` - Code search/replace
 7. `/mcp-memory` - Persistent memory access
-8. `/plan` - Write markdown plan to `.hermes/plans/`
+8. `/plan` - Write markdown plan to `./plans/`
 9. `/plans-and-specs` - Draft implementation plans
 10. `/create-implementation-plan` - Create detailed plans
 11. `/implementation-plan` - Modify existing plans
@@ -116,7 +116,7 @@ hermes skill load brainstorming
 ```
 
 ### Gate 2: Plan Validation
-- Plan file exists in `.hermes/plans/`
+- Plan file exists in `./plans/`
 - Frontmatter complete
 - Phases, tasks, gates defined
 - Dependencies resolved
@@ -140,13 +140,13 @@ hermes skill load brainstorming
 ## Integration Points
 
 ### With Specs
-- Plan references spec in `.hermes/specs/`
+- Plan references spec in `./specs/`
 - Spec requirements trace to plan tasks
 - Spec acceptance criteria = plan gates
 
 ### With Prompts
 - Prompt companion files reference plan
-- Prompt `plans.md` → `.hermes/plans/`
+- Prompt `plans.md` → `./plans/`
 - Prompt `gates.md` = plan gates
 
 ### With Skills

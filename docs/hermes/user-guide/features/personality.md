@@ -18,7 +18,7 @@ If you want to change who Hermes is — or replace it with an entirely different
 Hermes now seeds a default `SOUL.md` automatically in:
 
 ```text
-~/.hermes/SOUL.md
+~/./SOUL.md
 ```
 
 More precisely, it uses the current instance's `HERMES_HOME`, so if you run Hermes with a custom home directory, it will use:
@@ -47,14 +47,14 @@ This keeps personality predictable.
 If Hermes loaded `SOUL.md` from whatever directory you happened to launch it in, your personality could change unexpectedly between projects. By loading only from `HERMES_HOME`, the personality belongs to the Hermes instance itself.
 
 That also makes it easier to teach users:
-- "Edit `~/.hermes/SOUL.md` to change Hermes' default personality."
+- "Edit `~/./SOUL.md` to change Hermes' default personality."
 
 ## Where to edit it
 
 For most users:
 
 ```bash
-~/.hermes/SOUL.md
+~/./SOUL.md
 ```
 
 If you use a custom home:
@@ -211,7 +211,7 @@ These are convenient overlays, but your global `SOUL.md` still gives Hermes its 
 
 ## Custom personalities in config
 
-Built-in personalities are always available on every surface (CLI, messaging platforms, TUI, and the desktop app). You can add your own — or override a built-in by reusing its name — in `~/.hermes/config.yaml` under `agent.personalities` (a top-level `personalities:` block works too; `agent.personalities` wins if the same name appears in both).
+Built-in personalities are always available on every surface (CLI, messaging platforms, TUI, and the desktop app). You can add your own — or override a built-in by reusing its name — in `~/./config.yaml` under `agent.personalities` (a top-level `personalities:` block works too; `agent.personalities` wins if the same name appears in both).
 
 ```yaml
 agent:
@@ -249,7 +249,7 @@ Older Hermes versions saved personality state inconsistently across surfaces, wh
 
 A strong default setup is:
 
-1. Keep a thoughtful global `SOUL.md` in `~/.hermes/SOUL.md`
+1. Keep a thoughtful global `SOUL.md` in `~/./SOUL.md`
 2. Put project instructions in `AGENTS.md`
 3. Use `/personality` only when you want a temporary mode shift
 

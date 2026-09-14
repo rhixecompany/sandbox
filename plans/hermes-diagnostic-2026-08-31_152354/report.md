@@ -24,7 +24,7 @@
 | Issue | Root Cause | Fix |
 |---|---|---|
 | Prettier flagged 27 `judge_results/*.{md,json}` files | `judge_results/` was never excluded from Prettier — these are runtime judge-skill CLI outputs | Added `judge_results/` to `.prettierignore` |
-| markdownlint flagged same files | Same — `.markdownlint-cli2.jsonc` ignored `.hermes/**` but not root-level `judge_results/` | Added `judge_results/**` to markdownlint ignores |
+| markdownlint flagged same files | Same — `.markdownlint-cli2.jsonc` ignored `./**` but not root-level `judge_results/` | Added `judge_results/**` to markdownlint ignores |
 | cspell flagged 3 unknown words | Same — `cspell.json` had no ignore for `judge_results/` | Added `judge_results/**` to `ignorePaths` |
 | markdownlint flagged duplicate `## Artifacts (this turn)` | Previous 2026-08-29 superseded section reused the same heading as today's | Renamed to `## Artifacts (2026-08-29)` |
 | `bun run check` exit 1 (downstream of all above) | Cascade from Prettier failure | All 4 upstream fixes resolved |
@@ -50,7 +50,7 @@ SESSION_REPORT.md                   (prettier-formatted, heading rename)
 ## Artifacts
 
 ```
-.hermes/plans/hermes-diagnostic-2026-08-31_152354/
+./plans/hermes-diagnostic-2026-08-31_152354/
   diagnostic.txt     531 lines (hermes doctor/--fix/security/status/insights)
   logs.txt           279 lines (6 log streams)
   bun-check.txt      final pass output

@@ -45,7 +45,7 @@ C:\Users\Alexa\Desktop\SandBox\.github\skills\brainstorming\scripts\server.cjs
 C:\Users\Alexa\Desktop\SandBox\.github\skills\codemap\scripts\codemap.test.ts
   1:1  error  Do not use "@ts-nocheck" because it alters compilation errors  @typescript-eslint/ban-ts-comment
 
-C:\Users\Alexa\Desktop\SandBox\.hermes\skills\algorithmic-art\templates\generator_template.js
+C:\Users\Alexa\Desktop\SandBox\./skills/algorithmic-art\templates\generator_template.js
    44:3   error    'randomSeed' is not defined                   no-undef
    45:3   error    'noiseSeed' is not defined                    no-undef
    53:10  warning  'setup' is defined but never used             @typescript-eslint/no-unused-vars
@@ -74,7 +74,7 @@ C:\Users\Alexa\Desktop\SandBox\.hermes\skills\algorithmic-art\templates\generato
   203:10  warning  'exportImage' is defined but never used       @typescript-eslint/no-unused-vars
   204:3   error    'saveCanvas' is not defined                   no-undef
 
-C:\Users\Alexa\Desktop\SandBox\.hermes\skills\brainstorming\scripts\server.cjs
+C:\Users\Alexa\Desktop\SandBox\./skills/brainstorming\scripts\server.cjs
     1:16  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
     2:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
     3:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
@@ -82,7 +82,7 @@ C:\Users\Alexa\Desktop\SandBox\.hermes\skills\brainstorming\scripts\server.cjs
   216:16  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
   273:14  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
 
-C:\Users\Alexa\Desktop\SandBox\.hermes\skills\codemap\scripts\codemap.test.ts
+C:\Users\Alexa\Desktop\SandBox\./skills/codemap\scripts\codemap.test.ts
   1:1  error  Do not use "@ts-nocheck" because it alters compilation errors  @typescript-eslint/ban-ts-comment
 
 ✖ 68 problems (36 errors, 32 warnings)

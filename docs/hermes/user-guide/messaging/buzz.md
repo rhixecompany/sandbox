@@ -24,7 +24,7 @@ Inbound messages arrive over a persistent NIP-42-authenticated Nostr WebSocket s
 
 ## Configure Hermes
 
-You can configure Buzz two ways — the `gateway` block in `config.yaml` (canonical) or environment variables (which override it). The private key is a **secret** and always belongs in `~/.hermes/.env`.
+You can configure Buzz two ways — the `gateway` block in `config.yaml` (canonical) or environment variables (which override it). The private key is a **secret** and always belongs in `~/./.env`.
 
 ### Option A — config.yaml
 
@@ -45,7 +45,7 @@ gateway:
         allowed_users: []          # empty = allow all; hex pubkeys or npubs
 ```
 
-Plus, in `~/.hermes/.env`:
+Plus, in `~/./.env`:
 
 ```
 BUZZ_PRIVATE_KEY=nsec1...

@@ -3,9 +3,9 @@
 import os, sys
 repo = "/c/Users/Alexa/Desktop/SandBox"
 feat_file = os.path.join(repo, "docs/features", "hooks.md")
-plan = os.path.join(repo, ".hermes/plans", "hooks-plan.md")
-spec = os.path.join(repo, ".hermes/specs", "hooks-spec.md")
-prompt = os.path.join(repo, ".hermes/prompts", "hooks-prompt.md")
+plan = os.path.join(repo, "./plans", "hooks-plan.md")
+spec = os.path.join(repo, "./specs", "hooks-spec.md")
+prompt = os.path.join(repo, "./prompts", "hooks-prompt.md")
 skill = os.path.join(repo, "skills", "hooks-bundle", "SKILL.md")
 results_file = os.path.join(repo, "results", "hooks-result.md")
 verified = all(os.path.isfile(p) for p in [feat_file, plan, spec, prompt, skill])

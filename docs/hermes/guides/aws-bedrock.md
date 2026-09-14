@@ -25,7 +25,7 @@ All three routes share the same AWS credential chain and region resolution — n
   - `AWS_ACCESS_KEY_ID` + `AWS_SECRET_ACCESS_KEY` environment variables
   - `AWS_PROFILE` for SSO or named profiles
   - `aws configure` for local development
-- **boto3** — install with `cd ~/.hermes/hermes-agent && uv pip install -e ".[bedrock]"`
+- **boto3** — install with `cd ~/./hermes-agent && uv pip install -e ".[bedrock]"`
 - **IAM permissions** — at minimum:
   - `bedrock:InvokeModel` and `bedrock:InvokeModelWithResponseStream` (for inference)
   - `bedrock:ListFoundationModels` and `bedrock:ListInferenceProfiles` (for model discovery)
@@ -38,7 +38,7 @@ On AWS compute, attach an IAM role with `AmazonBedrockFullAccess` and you're don
 
 ```bash
 # Install with Bedrock support
-cd ~/.hermes/hermes-agent && uv pip install -e ".[bedrock]"
+cd ~/./hermes-agent && uv pip install -e ".[bedrock]"
 
 # Select Bedrock as your provider
 hermes model
@@ -51,7 +51,7 @@ hermes chat
 
 ## Configuration
 
-After running `hermes model`, your `~/.hermes/config.yaml` will contain:
+After running `hermes model`, your `~/./config.yaml` will contain:
 
 ```yaml
 model:

@@ -43,10 +43,10 @@ Build a one-command, end-to-end diagnostic pipeline for the Hermes platform. Run
 | `scripts/hermes_doctor.py` | ~13 KB | Stdlib-only Python orchestrator |
 | `~/AppData/Local/hermes/skills/devops/hermes-doctor-pipeline/SKILL.md` | 4.7 KB | Reusable skill (auto-discovered) |
 | `.github/prompts/hermes-doctor.prompt.md` | 3.0 KB | Reusable prompt |
-| `.hermes/plans/hermes-doctor-2026-08-28/SPEC.md` | this | Specification |
-| `.hermes/plans/hermes-doctor-2026-08-28/PLAN.md` | 6 KB | Sequencing |
-| `.hermes/plans/hermes-doctor-2026-08-28/implementation-plan.md` | 3 KB | Tasks |
-| `.hermes/plans/diagnostic-<date>/report.{json,md}` | generated | Per-run report |
+| `./plans/hermes-doctor-2026-08-28/SPEC.md` | this | Specification |
+| `./plans/hermes-doctor-2026-08-28/PLAN.md` | 6 KB | Sequencing |
+| `./plans/hermes-doctor-2026-08-28/implementation-plan.md` | 3 KB | Tasks |
+| `./plans/diagnostic-<date>/report.{json,md}` | generated | Per-run report |
 
 ## Output Schema (report.json)
 

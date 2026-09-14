@@ -40,16 +40,16 @@ Always-on rules for this class of task (the user's verified preferences embedded
 
 ### 5. Authorization gate (always-on for this user â embedded in SKILL.md, not just plan)
 Before destructive subgoals E (doctor --fix), F (`--yolo` model chat), G (`git push` to 3 branches), H (archive/delete):
-- Confirm user's authorization is recorded (`read_file` of `.hermes/plans/run-all-goals-implementation.md` authorization block or `.prompt.md` authorization appendix).
+- Confirm user's authorization is recorded (`read_file` of `./plans/run-all-goals-implementation.md` authorization block or `.prompt.md` authorization appendix).
 - If authorization missing: STOP; ask user (`clarify`) â do not proceed. Per SOUL.md Rule 11 (destructive ops need authorization + risk explanation).
-- Risk explanation must mention recoverability (`.env.pre-delete` if present; `.hermes/history` if present; git rollback; no backup files per user preference). Verify presence via `ls -1` (document absence honestly â do not claim present if `ls` shows MISSING).
+- Risk explanation must mention recoverability (`.env.pre-delete` if present; `./history` if present; git rollback; no backup files per user preference). Verify presence via `ls -1` (document absence honestly â do not claim present if `ls` shows MISSING).
 
 ### 6. Execution (sequential gates â per user preference: direct, not blind parallel)
 - Subgoals AâD: direct execution; verify outputs (`ls`, `grep`, `hermes status`, `hermes auth list`, `hermes config show`).
 - Subgoal E (`hermes doctor` â `doctor --fix`): document real CLI output (verified: 1 npm vulnerability for `agent-browser` found â reported honestly, not hidden). Do not fabricate "all fixed".
 - Subgoal F (`hermes chat --yolo --oneshot` for openrouter + opencode-zen free models): capture session IDs from real CLI output; reference verified IDs (`20260910_123224` / `123351` / `123542` from audit); set best model via `hermes config set` / `hermes fallback add`; create emoji-markdown report.
 - Subgoal G (`git add -A; git commit ...; git push ...`): if `.git/index.lock` exists (verified blocker in this session), report blocker honestly (`git status` shows staged files; commit blocked; push tracking set). Do not fabricate "commit succeeded".
-- Subgoal H (cleanup/archive): verify workspace inventory matches `.hermes/plans/`; archive orphan templates (`git mv` to `.hermes/archived-plan-templates/`); confirm zero duplicates remain (`find` / `git status`).
+- Subgoal H (cleanup/archive): verify workspace inventory matches `./plans/`; archive orphan templates (`git mv` to `./archived-plan-templates/`); confirm zero duplicates remain (`find` / `git status`).
 
 ## Pitfalls (imperative rules â mechanism + why â one clause)
 
@@ -58,7 +58,7 @@ Before destructive subgoals E (doctor --fix), F (`--yolo` model chat), G (`git p
 - When adding shared-template references: only wire when the target `references:` section exists; missing `templates/_shared/` files must be built from verified workspace rules (SOUL.md + `.github/prompts/*` dependency patterns â verified 29 matches) â never fabricated.
 - No synthetic session IDs: cite only IDs captured from real `hermes chat` CLI output (`execution-summary.md` verified IDs). Invented IDs become permanent false references that future audits trust.
 - `.git/index.lock` blocks commit â document honestly (verified blocker in this session); do not retry the same `git commit` 3 times without checking `ls -l .git/index.lock` first (SOUL.md Fallback Trigger).
-- When user approves destructive actions, the authorization must be visible in both `.hermes/plans/` (plan authorization block) AND `.prompt.md` appendix (artifact authorization table) â a single invisible authorization record fails verification on future audit.
+- When user approves destructive actions, the authorization must be visible in both `./plans/` (plan authorization block) AND `.prompt.md` appendix (artifact authorization table) â a single invisible authorization record fails verification on future audit.
 - Skill `references/` must be topical (`conversion-patterns.md`, not `2026-09-10-conversion.md`) and extendable â this session's `batch-skill-injection.md` reference was added to `references/` rather than a session file; extend it rather than creating `batch-injection-20260910.md`.
 
 ## References (within this skill)

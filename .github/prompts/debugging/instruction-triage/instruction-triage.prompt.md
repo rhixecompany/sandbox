@@ -31,7 +31,7 @@ formatter: markdown
 ### Phase 1: Audit (read-only)
 
 ```bash
-python scripts/instruction_audit.py --output .hermes/plans/instruction-file-triage/audit-report.json
+python scripts/instruction_audit.py --output ./plans/instruction-file-triage/audit-report.json
 ```
 
 Inspect `audit-report.md` for findings.
@@ -71,7 +71,7 @@ For bloat duplicates (e.g. mindstudio-agent CLAUDE.md × 6):
 ## Output
 
 - `scripts/.runtime/instruction-audit.json` — machine-readable
-- `.hermes/plans/instruction-file-triage/audit-report.md` — human-readable
+- `./plans/instruction-file-triage/audit-report.md` — human-readable
 - Console: classification summary + top findings
 
 ## Pitfalls

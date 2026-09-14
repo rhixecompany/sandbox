@@ -128,7 +128,7 @@ print(json.dumps(report, indent=2))
 
 ## Execution Mode
 
-`execute_code` has two execution modes controlled by `code_execution.mode` in `~/.hermes/config.yaml`:
+`execute_code` has two execution modes controlled by `code_execution.mode` in `~/./config.yaml`:
 
 | Mode | Working directory | Python interpreter |
 |------|-------------------|--------------------|
@@ -140,7 +140,7 @@ print(json.dumps(report, indent=2))
 **When to flip to `strict`:** you need maximum reproducibility — you want the same interpreter every session regardless of which venv the user activated, and you want scripts quarantined from the project tree (no risk of accidentally reading project files through a relative path).
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 code_execution:
   mode: project   # or "strict"
 ```
@@ -160,14 +160,14 @@ Switching mode changes where scripts run and which interpreter runs them, not wh
 | Resource | Limit | Notes |
 |----------|-------|-------|
 | **Timeout** | 5 minutes (300s) | Script is killed with SIGTERM, then SIGKILL after 5s grace |
-| **Stdout** | 50 KB | Shown head-and-tail inline; the full output is saved to `~/.hermes/cache/exec/` and the path is included in the result |
+| **Stdout** | 50 KB | Shown head-and-tail inline; the full output is saved to `~/./cache/exec/` and the path is included in the result |
 | **Stderr** | 10 KB | Included in output on non-zero exit for debugging |
 | **Tool calls** | 50 per execution | Error returned when limit reached |
 
 All limits are configurable via `config.yaml`:
 
 ```yaml
-# In ~/.hermes/config.yaml
+# In ~/./config.yaml
 code_execution:
   mode: project      # project (default) | strict
   timeout: 300       # Max seconds per script (default: 300)
@@ -187,7 +187,7 @@ What ends a kernel:
 The security envelope is the same as a one-shot script: environment scrubbing, the tool whitelist, and the per-call tool budget all apply to every cell, and tool-call authority (approvals, session, allow-list) is rebound on each cell.
 
 ```yaml
-# ~/.hermes/config.yaml
+# ~/./config.yaml
 code_execution:
   kernel_idle_timeout: 1800   # seconds a kernel may sit idle before it is reaped
   max_session_kernels: 4      # kernels kept alive at once; oldest is evicted past this
@@ -195,7 +195,7 @@ code_execution:
 
 **Remote backends** (Docker, SSH, Modal) run a remote session kernel with the same contract. If the kernel cannot be spawned on the backend, Hermes falls back to running each call as a standalone script and says so in the result.
 
-**Large output.** Stdout over 50 KB is shown head-and-tail inline, and the full text is saved under `~/.hermes/cache/exec/` with the path included in the result, so the agent can page through it with `read_file` instead of re-running the script.
+**Large output.** Stdout over 50 KB is shown head-and-tail inline, and the full text is saved under `~/./cache/exec/` with the path included in the result, so the agent can page through it with `read_file` instead of re-running the script.
 
 ## How Tool Calls Work Inside Scripts
 
@@ -294,7 +294,7 @@ be re-allowed this way):
 **Diagnosing it.** When the child drops one or more non-allowlisted `HERMES_*`
 variables, Hermes emits a one-line `debug` log naming them and pointing at the
 `env_passthrough` escape hatch. Run with debug logging (`hermes logs --level
-DEBUG`, or check `~/.hermes/logs/agent.log`) and look for
+DEBUG`, or check `~/./logs/agent.log`) and look for
 `execute_code: dropped N non-allowlisted HERMES_* var(s)` if a script behaves
 as though a `HERMES_*` variable is missing.
 

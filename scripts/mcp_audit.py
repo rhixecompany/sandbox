@@ -208,7 +208,7 @@ def write_markdown(report: dict[str, Any], path: Path, only_failures: bool) -> N
 def main() -> int:
     p = argparse.ArgumentParser(description="Audit MCP servers from a registry")
     p.add_argument("--registry", default=".mcp/registry.json", help="Path to registry JSON")
-    p.add_argument("--output", default=".hermes/plans/mcp-audit-2026-08-28", help="Output directory")
+    p.add_argument("--output", default="./plans/mcp-audit-2026-08-28", help="Output directory")
     p.add_argument("--json-only", action="store_true", help="Write JSON only (no Markdown)")
     p.add_argument("--only-failures", action="store_true", help="Markdown shows only WARN/FAIL")
     args = p.parse_args()

@@ -116,7 +116,7 @@ Scripts exist, are executable, and are allowlisted. The issue is stdout format.
 
 
 ## Linked Specs
-- .hermes/specs/master-spec.md
+- ./specs/master-spec.md
 
 ## Risks
 
@@ -136,7 +136,7 @@ Scripts exist, are executable, and are allowlisted. The issue is stdout format.
 - All phase gates pass
 - All tasks completed with dependencies satisfied
 - Spec coupling verified via ## Linked Specs
-- .hermes/specs/master-spec.md
+- ./specs/master-spec.md
 
 ## Status
 

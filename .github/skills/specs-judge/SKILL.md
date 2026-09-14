@@ -1,6 +1,6 @@
 ---
 author: Alexa
-description: "Use when auditing spec files (.hermes/specs/*.md) for quality, completeness, and adherence to the specification standard."
+description: "Use when auditing spec files (./specs/*.md) for quality, completeness, and adherence to the specification standard."
 license: MIT
 metadata:
   hermes:
@@ -26,7 +26,7 @@ version: 1.0.0
 
 ## Description
 
-Audits specification files in `.hermes/specs/` for quality, completeness, and adherence to the specification standard. Ensures all specs are precise, testable, and serve as a solid foundation for implementation.
+Audits specification files in `./specs/` for quality, completeness, and adherence to the specification standard. Ensures all specs are precise, testable, and serve as a solid foundation for implementation.
 
 ## When to Use
 
@@ -71,7 +71,7 @@ Audits specification files in `.hermes/specs/` for quality, completeness, and ad
 
 ## Workflow
 
-1. Scan `.hermes/specs/` for all `.md` files
+1. Scan `./specs/` for all `.md` files
 2. Parse each file for YAML frontmatter validity
 3. Check for all required sections (Overview, Requirements, Constraints, Acceptance Criteria)
 4. Verify each requirement has a testable acceptance criterion
@@ -85,7 +85,7 @@ Audits specification files in `.hermes/specs/` for quality, completeness, and ad
 ```bash
 hermes specs-judge
 # Or:
-hermes specs-judge --path .hermes/specs/
+hermes specs-judge --path ./specs/
 # Generates: .github/judge_results/specs_audit.md
 ```
 

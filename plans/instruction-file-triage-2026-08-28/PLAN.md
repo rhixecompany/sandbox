@@ -59,11 +59,11 @@ Common pathologies observed in inventory (sample read):
 | ---- | ------- |
 | `scripts/instruction_audit.py` | Triage script (stdlib only) — scans, classifies, reports |
 | `scripts/instruction_fix.py` | Auto-fix script with --dry-run default (whitelist only) |
-| `.hermes/plans/instruction-file-triage-2026-08-28/SPEC.md` | Full design |
-| `.hermes/plans/instruction-file-triage-2026-08-28/PLAN.md` | This file |
-| `.hermes/plans/instruction-file-triage-2026-08-28/implementation-plan.md` | Step-by-step |
-| `.hermes/plans/instruction-file-triage-2026-08-28/audit-report.json` | Machine-readable |
-| `.hermes/plans/instruction-file-triage-2026-08-28/audit-report.md` | Human-readable |
+| `./plans/instruction-file-triage-2026-08-28/SPEC.md` | Full design |
+| `./plans/instruction-file-triage-2026-08-28/PLAN.md` | This file |
+| `./plans/instruction-file-triage-2026-08-28/implementation-plan.md` | Step-by-step |
+| `./plans/instruction-file-triage-2026-08-28/audit-report.json` | Machine-readable |
+| `./plans/instruction-file-triage-2026-08-28/audit-report.md` | Human-readable |
 | `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/SKILL.md` | Umbrella skill |
 | `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/references/...` | Detail files |
 | `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/scripts/...` | Copy of audit/fix scripts |

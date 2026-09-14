@@ -3,7 +3,7 @@
 Fetches .md files from NousResearch/hermes-agent website/docs/user-guide
 using GitHub Contents API (discovery) + raw.githubusercontent.com (download).
 Batch size: 7 per batch (executing-plans Phase 4 rule).
-Outputs: docs/user-guide/ + .hermes/specs/download-log.md
+Outputs: docs/user-guide/ + ./specs/download-log.md
 """
 import json
 import os

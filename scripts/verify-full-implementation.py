@@ -214,7 +214,7 @@ class VerificationRunner:
             print(f"\n💥 {total_count - passed_count} GATE(S) FAILED")
 
         # Save results
-        results_file = self.sandbox / ".hermes/plans/verification-results.json"
+        results_file = self.sandbox / "./plans/verification-results.json"
         results_file.parent.mkdir(parents=True, exist_ok=True)
         with open(results_file, 'w') as f:
             json.dump({

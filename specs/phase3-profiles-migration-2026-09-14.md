@@ -39,4 +39,4 @@ Update all hermes profiles (14 verified) with honcho/user/card info; migrate `US
 - [ ] `multi-file-change-protocol` 14-skill stack + 5-step verified; NOT rewritten; identity preserved
 - [ ] `systematic-debugging` 4-phase verified; NOT rewritten; 26 vulnerability findings + 41 parsing errors preserved; NOT hidden
 - [ ] Integrity PASS: 0 synthetic artifacts; 0 hidden errors; `.env` 3334 B unchanged; 0 new `.bak`; identity preserved; profile routing preserved (`.hermes.md` verified enhanced; NOT rewritten to change routing)
-- [ ] All spec/plan artifacts (`.hermes/specs/phase*-...`, `.hermes/plans/phased-execution-...`) verified real; no phantom IDs; no fabricated results
+- [ ] All spec/plan artifacts (`./specs/phase*-...`, `./plans/phased-execution-...`) verified real; no phantom IDs; no fabricated results

@@ -4,7 +4,7 @@ Hermes runs shell commands through a pluggable set of **terminal backends**.
 The built-in backends (local, Docker, Singularity, Modal, Daytona, Vercel
 Sandbox, SSH) live in the core repo under `tools/environments/`. Third-party
 sandbox vendors integrate as **plugins** instead — a standalone plugin repo
-installed under `~/.hermes/plugins/`, registering a backend the user selects
+installed under `~/./plugins/`, registering a backend the user selects
 exactly like a built-in one via `terminal.backend` in `config.yaml`.
 
 This page mirrors the [Browser Provider Plugins](/developer-guide/browser-provider-plugin)
@@ -33,7 +33,7 @@ site instead of a hardcoded list of names.
 
 ## Minimal provider
 
-```python title="~/.hermes/plugins/acmebox/__init__.py"
+```python title="~/./plugins/acmebox/__init__.py"
 from agent.terminal_env_provider import TerminalEnvironmentProvider
 
 
@@ -85,7 +85,7 @@ def register(ctx):
     ctx.register_terminal_environment_provider(AcmeBoxProvider())
 ```
 
-```yaml title="~/.hermes/plugins/acmebox/plugin.yaml"
+```yaml title="~/./plugins/acmebox/plugin.yaml"
 name: acmebox
 version: 0.1.0
 description: AcmeBox cloud sandbox terminal backend

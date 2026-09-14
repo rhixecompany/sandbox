@@ -692,7 +692,7 @@
 │                     │             │         │ user setup. Runtime │         │
 │                     │             │         │ credentials are     │         │
 │                     │             │         │ written to          │         │
-│                     │             │         │ ``~/.hermes/.env``  │         │
+│                     │             │         │ ``~/./.env``  │         │
 │                     │             │         │ (``PHOTON_PROJECT_… │         │
 │                     │             │         │ = the Spectrum      │         │
 │                     │             │         │ project id,         │         │
@@ -703,7 +703,7 @@
 │                     │             │         │ (device token,      │         │
 │                     │             │         │ dashboard project   │         │
 │                     │             │         │ id) in              │         │
-│                     │             │         │ ``~/.hermes/auth.j… │         │
+│                     │             │         │ ``~/./auth.j… │         │
 │                     │             │         │ Photon's free       │         │
 │                     │             │         │ shared-line model   │         │
 │                     │             │         │ lets users get      │         │
@@ -907,7 +907,7 @@
 │                     │             │         │ Tools gate on       │         │
 │                     │             │         │ `providers.spotify` │         │
 │                     │             │         │ in                  │         │
-│                     │             │         │ ~/.hermes/auth.jso… │         │
+│                     │             │         │ ~/./auth.jso… │         │
 │ teams_pipeline      │ disabled    │ 0.1.0   │ Microsoft Teams     │ bundled │
 │                     │             │         │ meeting pipeline    │         │
 │                     │             │         │ plugin with durable │         │

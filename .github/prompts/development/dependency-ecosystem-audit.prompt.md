@@ -17,8 +17,8 @@ pre-approved; keep git traceability.
 
 ## Inputs (read first)
 
-- Plan: `.hermes/plans/2026-09-11_004316-dependency-ecosystem-audit.md`
-- Spec: `.hermes/specs/dependency-ecosystem-audit-spec.md`
+- Plan: `./plans/2026-09-11_004316-dependency-ecosystem-audit.md`
+- Spec: `./specs/dependency-ecosystem-audit-spec.md`
 - Skills: `executing-plans`, `subagent-driven-development`, `web-research-pipeline`, `node-dep-audit`, `python-dep-audit`, `research-doc-verify`
 
 ## Repos in scope (26)

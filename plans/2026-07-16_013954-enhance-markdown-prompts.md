@@ -109,7 +109,7 @@ For each prompt (including newly created canonical versions):
 - **Delete**: Exact duplicate prompt files (non‑canonical copies).
 - **Commit Message**: `feat: enhance prompts – dedup, consolidate, validate`
 - **Git Steps** (to be executed later):
-  1. `git add .hermes/plans/` (plan file itself)
+  1. `git add ./plans/` (plan file itself)
   2. `git add prompts/**/*.md`
   3. `git rm <duplicate‑files>`
   4. `git commit -m "feat: enhance prompts – dedup, consolidate, validate"`
@@ -130,7 +130,7 @@ For each prompt (including newly created canonical versions):
 
 **Deliverables**
 
-- The plan file saved at `.hermes/plans/2026-07-16_013954-enhance-markdown-prompts.md` (this file).
+- The plan file saved at `./plans/2026-07-16_013954-enhance-markdown-prompts.md` (this file).
 - A detailed _Change Log_ section (populated in the plan) for later execution.
 - No files have been modified yet; the plan is ready for implementation.
 

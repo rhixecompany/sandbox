@@ -7,7 +7,7 @@ Enumerates:
   - All hook events POSSIBLE (per Hermes source)
   - Missing event coverage (events that exist in code but have no hook)
 
-Outputs JSON + markdown reports to .hermes/plans/plugins-hooks-audit-<date>/.
+Outputs JSON + markdown reports to ./plans/plugins-hooks-audit-<date>/.
 Exits 0 if no missing event coverage; exits 1 otherwise (informational).
 
 Usage:
@@ -184,7 +184,7 @@ def main() -> int:
     p.add_argument("--out", default=None)
     args = p.parse_args()
     out_dir = Path(args.out) if args.out else (
-        Path(".hermes/plans") / f"plugins-hooks-audit-{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
+        Path("./plans") / f"plugins-hooks-audit-{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
     )
     out_dir.mkdir(parents=True, exist_ok=True)
 

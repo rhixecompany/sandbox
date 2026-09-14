@@ -89,7 +89,7 @@ installs made with `--include-desktop` pre-install them, so the ear works
 instantly). To install ahead of time:
 
 ```bash
-cd ~/.hermes/hermes-agent && uv pip install -e ".[wake]"
+cd ~/./hermes-agent && uv pip install -e ".[wake]"
 ```
 
 ## Quick start
@@ -104,7 +104,7 @@ cd ~/.hermes/hermes-agent && uv pip install -e ".[wake]"
 In the desktop app, click the ear icon in the composer.
 
 The toggle IS the setting: turning the wake word on or off — via `/wake` or the
-desktop ear button — also writes `wake_word.enabled` to `~/.hermes/config.yaml`,
+desktop ear button — also writes `wake_word.enabled` to `~/./config.yaml`,
 so your choice persists across sessions. You can also flip it by hand:
 
 ```yaml
@@ -249,7 +249,7 @@ wake_word:
   provider: openwakeword
   phrase: "computer"
   openwakeword:
-    model: ~/.hermes/wakewords/computer.onnx   # or a built-in name like hey_jarvis
+    model: ~/./wakewords/computer.onnx   # or a built-in name like hey_jarvis
 ```
 
 Training references:
@@ -274,10 +274,10 @@ wake_word:
   provider: porcupine
   phrase: "hey hermes"
   porcupine:
-    keyword: ~/.hermes/wakewords/hey_hermes.ppn
+    keyword: ~/./wakewords/hey_hermes.ppn
 ```
 
-Set your access key in `~/.hermes/.env`:
+Set your access key in `~/./.env`:
 
 ```bash
 PORCUPINE_ACCESS_KEY=your-key-here

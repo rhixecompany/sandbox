@@ -3,7 +3,7 @@ status: completed
 ---
 
 - Docs: `docs/01-MCP_BEST_PRACTICES_GUIDE.md`, `docs/02-HERMES_CONFIGURATION_GUIDE.md`, `docs/03-ENVIRONMENT_VARIABLES_REFERENCE.md`, `docs/04-DOCKER_MCP_SETUP_GUIDE.md`, `docs/05-COMPLETE_SETUP_VERIFICATION.md`, `docs/06-HERMES_AGENT_OFFICIAL_REFERENCE_2026.md`, `docs/07-MCP_SECURITY_BEST_PRACTICES.md` respectively
-- Hermes config directories: `C:\Users\Alexa\AppData\Local\hermes\`, `.hermes/plans/`
+- Hermes config directories: `C:\Users\Alexa\AppData\Local\hermes\`, `./plans/`
 - MCP servers list/output: from Hermes runtime/CLI
 - Request: infer current state, then produce a validation plan with the explicit completion criteria `created, verified, executed, completed without errors, warnings, issues`
 

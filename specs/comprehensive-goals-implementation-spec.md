@@ -101,7 +101,7 @@ Implement all user-requested goals for Hermes Agent configuration, systematic de
 #### NFR3: Maintainability
 - All scripts must have quick_commands
 - All skills must follow SKILL.md format
-- All plans must follow .hermes/plans/ format
+- All plans must follow ./plans/ format
 - Documentation must be updated with changes
 
 #### NFR4: Security
@@ -228,12 +228,12 @@ Each judge skill must score ≥ 99:
 
 ### Output Files
 - Updated Hermes/config.yaml (quick_commands)
-- .hermes/plans/comprehensive-goals-implementation-plan.md (this file)
-- .hermes/specs/comprehensive-goals-implementation-spec.md (this file)
+- ./plans/comprehensive-goals-implementation-plan.md (this file)
+- ./specs/comprehensive-goals-implementation-spec.md (this file)
 - Sync script: scripts/sync_env_config.py
 - Cleanup script: scripts/cleanup_agents_docker.py
-- Debug reports: .hermes/plans/debug-reports/
-- Judge reports: .hermes/plans/judge-reports/
+- Debug reports: ./plans/debug-reports/
+- Judge reports: ./plans/judge-reports/
 
 ### Modified Files
 - Hermes/config.yaml
@@ -273,8 +273,8 @@ Each judge skill must score ≥ 99:
 4. Re-run sync if needed
 
 ## Verification
-- Run specs-judge with threshold 98 on all specs in .hermes/specs/
-- Run plans-judge with threshold 98 on all plans in .hermes/plans/
+- Run specs-judge with threshold 98 on all specs in ./specs/
+- Run plans-judge with threshold 98 on all plans in ./plans/
 - Run prompts-judge with threshold 98 on all prompts in .github/prompts/
 - All judge skills must score ≥ 98
 - Verify all acceptance criteria are met with evidence

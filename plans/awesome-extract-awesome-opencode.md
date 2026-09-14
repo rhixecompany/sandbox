@@ -100,7 +100,7 @@ Opencode's plugin ecosystem uses its own extension format. While not natively He
 
 
 ## Linked Specs
-- .hermes/specs/master-spec.md
+- ./specs/master-spec.md
 
 ## Risks
 
@@ -120,7 +120,7 @@ Opencode's plugin ecosystem uses its own extension format. While not natively He
 - All phase gates pass
 - All tasks completed with dependencies satisfied
 - Spec coupling verified via ## Linked Specs
-- .hermes/specs/master-spec.md
+- ./specs/master-spec.md
 
 ## Status
 

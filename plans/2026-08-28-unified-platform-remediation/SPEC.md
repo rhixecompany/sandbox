@@ -49,14 +49,14 @@
 
 ## Output Artifacts
 
-- `.hermes/plans/2026-08-28-unified-platform-remediation/SPEC.md` (this file)
-- `.hermes/plans/2026-08-28-unified-platform-remediation/PLAN.md` (sequencing)
-- `.hermes/plans/2026-08-28-unified-platform-remediation/implementation-plan.md`
+- `./plans/2026-08-28-unified-platform-remediation/SPEC.md` (this file)
+- `./plans/2026-08-28-unified-platform-remediation/PLAN.md` (sequencing)
+- `./plans/2026-08-28-unified-platform-remediation/implementation-plan.md`
 - `scripts/profile_config_audit.py` — scans all 13 profiles, detects drift/corruption
 - `scripts/disk_cleanup.py` — cache cleanup + large-file inventory
 - `scripts/ollama_setup.py` — install + model pull + health check
 - `scripts/fanout_provider_audit.py` — re-run multi-agent fanout with fixes
-- `.hermes/plans/2026-08-28-unified-platform-remediation/RESULTS.md` — final report
+- `./plans/2026-08-28-unified-platform-remediation/RESULTS.md` — final report
 
 ## Verification Gates
 

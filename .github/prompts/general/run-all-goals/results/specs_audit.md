@@ -6,7 +6,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 # Specs Audit — 2026-09-10 17:31 UTC
 
-Dir: `C:\Users\Alexa\Desktop\SandBox\.hermes\specs` | Plans Dir: `C:\Users\Alexa\Desktop\SandBox\.hermes\plans` | Threshold: 50
+Dir: `C:\Users\Alexa\Desktop\SandBox\./specs` | Plans Dir: `C:\Users\Alexa\Desktop\SandBox\./plans` | Threshold: 50
 Count: 29 | Avg: 84.4 | Passed: 27
 
 | File | Score | Rating | FM | Struct | Content | Coupling | XRef | DRY | Lines |

@@ -73,5 +73,5 @@ C: drive is at 100% capacity (1.3GB free of 237GB). This is a critical blocker f
 
 ## Implementation Artifacts Needed
 
-- `.hermes/plans/disk-cleanup-implementation-plan.md`
-- Execution results in `.hermes/plans/results/disk-cleanup-*.txt`
+- `./plans/disk-cleanup-implementation-plan.md`
+- Execution results in `./plans/results/disk-cleanup-*.txt`

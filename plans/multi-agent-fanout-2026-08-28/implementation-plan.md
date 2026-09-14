@@ -1,7 +1,7 @@
 ---
 title: Multi-Agent Fanout — Implementation Plan
-plan: .hermes/plans/multi-agent-fanout-2026-08-28/PLAN.md
-spec: .hermes/plans/multi-agent-fanout-2026-08-28/SPEC.md
+plan: ./plans/multi-agent-fanout-2026-08-28/PLAN.md
+spec: ./plans/multi-agent-fanout-2026-08-28/SPEC.md
 status: ready
 ---
 
@@ -11,7 +11,7 @@ status: ready
 
 ## T1 · Create plans
 - SPEC.md, PLAN.md, implementation-plan.md (this file)
-- **Verify:** all 3 exist under `.hermes/plans/multi-agent-fanout-2026-08-28/`
+- **Verify:** all 3 exist under `./plans/multi-agent-fanout-2026-08-28/`
 
 ## T2 · scripts/auth_inventory.py
 - Parse `hermes auth list` text output

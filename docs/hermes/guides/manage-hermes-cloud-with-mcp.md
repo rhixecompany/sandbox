@@ -32,7 +32,7 @@ Every call runs against **your** org with your Portal identity, and membership i
 - MCP support installed. If you used the standard install script it's already there; otherwise:
 
   ```bash
-  cd ~/.hermes/hermes-agent
+  cd ~/./hermes-agent
   uv pip install -e ".[mcp]"
   ```
 
@@ -49,7 +49,7 @@ hermes mcp add --url https://portal.nousresearch.com/mcp --auth oauth hermes-clo
 1. Discovers the server's OAuth endpoints automatically (RFC 9728 / 8414 metadata).
 2. Registers itself as a client (RFC 7591 Dynamic Client Registration) — no secret to copy.
 3. Opens your browser to the Portal to sign in and authorize.
-4. Stores the resulting token under `~/.hermes/mcp-tokens/` and reuses it (refresh is automatic).
+4. Stores the resulting token under `~/./mcp-tokens/` and reuses it (refresh is automatic).
 
 ### Choosing an organization
 
@@ -103,7 +103,7 @@ Hermes reports what each tool returned — the instance list, the new status, th
 
 ## Configuration
 
-After `hermes mcp add`, the server lives in `~/.hermes/config.yaml`:
+After `hermes mcp add`, the server lives in `~/./config.yaml`:
 
 ```yaml
 mcp_servers:
@@ -112,7 +112,7 @@ mcp_servers:
     auth: oauth
 ```
 
-No credentials go in `config.yaml` — the OAuth token is kept separately under `~/.hermes/mcp-tokens/`, the same way the Portal refresh token stays out of your config.
+No credentials go in `config.yaml` — the OAuth token is kept separately under `~/./mcp-tokens/`, the same way the Portal refresh token stays out of your config.
 
 ### Limiting the tool surface
 
@@ -141,7 +141,7 @@ The stored client registration no longer matches the server (for example, you co
 
 ```bash
 hermes mcp remove hermes-cloud
-rm -f ~/.hermes/mcp-tokens/hermes-cloud.*
+rm -f ~/./mcp-tokens/hermes-cloud.*
 hermes mcp add --url https://portal.nousresearch.com/mcp --auth oauth hermes-cloud
 ```
 

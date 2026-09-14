@@ -41,7 +41,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 - **Atomic edits** — one `patch` per region; if region fails twice, rewrite enclosing function/file with `write_file` (do not retry same failing patch a 3rd time).
 - **Batch independent calls** — issue independent `read_file` / `search_files` / `terminal` calls in same turn; only serialize when a later call depends on earlier result.
 - **Verify gates** — never claim a phase complete without real tool output backing it (file read, git status, script PASS/FAIL line output).
-- **State alignment** — update `.hermes/plans/` (this file) and session artifacts (`start.json` / `end.json` / `generate_session_report.py` where available) after each phase.
+- **State alignment** — update `./plans/` (this file) and session artifacts (`start.json` / `end.json` / `generate_session_report.py` where available) after each phase.
 
 ## Skill / Template Safety (Verified From Skill-Safety Rules / Skill-Judge Patterns)
 

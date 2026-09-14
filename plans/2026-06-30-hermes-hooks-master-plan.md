@@ -10,8 +10,8 @@ Consolidate the overlapping hooks planning fragments into one executable plan be
 
 ## Source Plans
 
-- `.hermes/plans/2026-06-30-174800-hermes-hooks-discovery-summary.md`
-- `.hermes/plans/2026-06-30-180000-hermes-hooks-continue.md`
+- `./plans/2026-06-30-174800-hermes-hooks-discovery-summary.md`
+- `./plans/2026-06-30-180000-hermes-hooks-continue.md`
 
 ## Verified Current State
 
@@ -23,13 +23,13 @@ Consolidate the overlapping hooks planning fragments into one executable plan be
   - `session-auto-commit`
   - `governance-audit`
   - `docs-cleanup-verify.sh`
-- Approval file exists: `.hermes/approvals/2026-06-30-hermes-hooks-unconfigure.md`
+- Approval file exists: `./approvals/2026-06-30-hermes-hooks-unconfigure.md`
 
 ## Current Constraints
 
 - Hook registration/configuration must be done through Hermes config editing, not `hermes hooks` CLI.
 - Need to keep secrets untouched; only structural config and hook files are in scope.
-- Renewed unconfigure approval was recorded on 2026-07-09 at `.hermes/approvals/2026-07-09-hermes-hooks-unconfigure.md`.
+- Renewed unconfigure approval was recorded on 2026-07-09 at `./approvals/2026-07-09-hermes-hooks-unconfigure.md`.
 
 ## Execution Plan
 

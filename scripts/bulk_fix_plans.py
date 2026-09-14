@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Plans Judge — bulk fixer.
 
-Reads .hermes/plans/*.md and patches each to match the judge scoring criteria:
+Reads ./plans/*.md and patches each to match the judge scoring criteria:
 - Frontmatter: title, description, date, author, status, profile, model
 - Structure: ≥3 phases with **Gate** markers
 - Content: Risks section + Files section + task pattern
@@ -9,7 +9,7 @@ Reads .hermes/plans/*.md and patches each to match the judge scoring criteria:
 - DRY: removes duplicate content
 
 Usage:
-    python scripts/bulk_fix_plans.py [--plans-dir .hermes/plans] [--dry-run]
+    python scripts/bulk_fix_plans.py [--plans-dir ./plans] [--dry-run]
 """
 from __future__ import annotations
 
@@ -152,7 +152,7 @@ def fix_plan(path: Path) -> tuple[str, list[str]]:
 
 def main() -> int:
     p = argparse.ArgumentParser()
-    p.add_argument("--plans-dir", default=".hermes/plans")
+    p.add_argument("--plans-dir", default="./plans")
     p.add_argument("--dry-run", action="store_true")
     args = p.parse_args()
 

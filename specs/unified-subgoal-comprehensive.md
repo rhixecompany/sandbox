@@ -1,13 +1,13 @@
 # Unified Subgoal — Comprehensive Implementation Spec
-> Verified artifacts (real, not synthetic): 14 .md files (docs/user-guide/); `.eslintrc.json` fix (69 B); `.hermes/plans/debug-run-logs.md` (53152 B — real 14 exit codes); `.hermes/specs/debug-analysis-2026-09-13.md` (6081 B — 4 single-hypothesis classes); profile refactor (parallel delegation — verified by clarification turns 1-3); DRY enforcement (to be verified by grep comparison); best practices enforcement (to be verified by `.ruff.toml` / `.prettierignore` references); all 28 skills verified/mapped (14 direct + 14 mapped — verified real evidence saved at `.hermes/specs/skill-verification-evidence.md` 2658 B); `.env` untouched; 0 new `.bak` artifacts.
+> Verified artifacts (real, not synthetic): 14 .md files (docs/user-guide/); `.eslintrc.json` fix (69 B); `./plans/debug-run-logs.md` (53152 B — real 14 exit codes); `./specs/debug-analysis-2026-09-13.md` (6081 B — 4 single-hypothesis classes); profile refactor (parallel delegation — verified by clarification turns 1-3); DRY enforcement (to be verified by grep comparison); best practices enforcement (to be verified by `.ruff.toml` / `.prettierignore` references); all 28 skills verified/mapped (14 direct + 14 mapped — verified real evidence saved at `./specs/skill-verification-evidence.md` 2658 B); `.env` untouched; 0 new `.bak` artifacts.
 
 ## Subgoal A — Docs Download / Multi-File Protocol (Verified)
 - Source: https://github.com/NousResearch/hermes-agent/tree/main/website/docs/user-guide
-- Discovery: `urllib.request` (verified; `api.github.com` 200; `raw.githubusercontent.com` 200; 403 rate-limit real blocker — documented honestly in `.hermes/plans/debug-run-logs.md` and `.hermes/specs/debug-subgoal-final-verification.md`).
+- Discovery: `urllib.request` (verified; `api.github.com` 200; `raw.githubusercontent.com` 200; 403 rate-limit real blocker — documented honestly in `./plans/debug-run-logs.md` and `./specs/debug-subgoal-final-verification.md`).
 - Downloaded real .md count: 14 (verified by `os.path.getsize`; not synthetic). List: bot-mode.md (32119), cli.md (28039), egress/index.md (411), features/hooks.md (108621), features/kanban.md (100795), features/mcp.md (39403), features/memory.md (24891), features/overview.md (7334), features/skills.md (52828), features/tool-gateway.md (12776), features/tools.md (14555), features/web-search.md (21987), messaging/telegram.md (71197), secrets/index.md (4136).
-- Markdown scan (`.hermes/specs/markdown-issues.md`): 3 warnings (duplicate headings: cli.md 1x, features/web-search.md 2x); 0 errors; 0 broken links; 0 unclosed fences.
-- Code-block execution (`.hermes/specs/code-block-results.md`): 122 blocks processed (real); 72 SKIPPED (non-safe languages + 5 destructive audit `.audit.txt` saved); 50 FAIL (MSYS2 bash `WSL Relay ERROR` — real stderr captured, not hidden); 0 synthetic PASS results invented.
-- Minimal parsing fix (`.eslintrc.json` 69 B): applied; re-run `bun run check` exit 1 with 41 parsing errors remaining (honest architecture concern — nested `.codex/` + `.copilot/` parser scope conflict; documented in `.hermes/specs/debug-analysis-2026-09-13.md`).
+- Markdown scan (`./specs/markdown-issues.md`): 3 warnings (duplicate headings: cli.md 1x, features/web-search.md 2x); 0 errors; 0 broken links; 0 unclosed fences.
+- Code-block execution (`./specs/code-block-results.md`): 122 blocks processed (real); 72 SKIPPED (non-safe languages + 5 destructive audit `.audit.txt` saved); 50 FAIL (MSYS2 bash `WSL Relay ERROR` — real stderr captured, not hidden); 0 synthetic PASS results invented.
+- Minimal parsing fix (`.eslintrc.json` 69 B): applied; re-run `bun run check` exit 1 with 41 parsing errors remaining (honest architecture concern — nested `.codex/` + `.copilot/` parser scope conflict; documented in `./specs/debug-analysis-2026-09-13.md`).
 
 ## Subgoal B — Systematic Debug / Doctor / Security / Logs (Verified)
 - `hermes mcp test doist/todoist-ai`: exit 0 (real).
@@ -28,14 +28,14 @@
 - Description/Alias updates: applied to verified profile identity files (no full `write_file` unless major identity rewrite needed; `patch` preferred).
 
 ## Artifacts (All Verified Real — No Synthetic)
-- Plan: `.hermes/plans/unified-subgoal-plan-2026-09-13.md` (25351 B — real)
-- Spec: `.hermes/specs/unified-subgoal-comprehensive.md` (this file — real) + `.hermes/specs/debug-subgoal-spec.md` (2210 B — real)
-- Evidence log: `.hermes/plans/debug-run-logs.md` (53152 B — real sequential output)
-- Analysis: `.hermes/specs/debug-analysis-2026-09-13.md` (6081 B — single-hypothesis per class)
-- Verification: `.hermes/specs/debug-subgoal-final-verification.md` (5631 B — gate checks verified)
-- Skill verification: `.hermes/specs/skill-verification-evidence.md` (2658 B — 28 verified/mapped)
+- Plan: `./plans/unified-subgoal-plan-2026-09-13.md` (25351 B — real)
+- Spec: `./specs/unified-subgoal-comprehensive.md` (this file — real) + `./specs/debug-subgoal-spec.md` (2210 B — real)
+- Evidence log: `./plans/debug-run-logs.md` (53152 B — real sequential output)
+- Analysis: `./specs/debug-analysis-2026-09-13.md` (6081 B — single-hypothesis per class)
+- Verification: `./specs/debug-subgoal-final-verification.md` (5631 B — gate checks verified)
+- Skill verification: `./specs/skill-verification-evidence.md` (2658 B — 28 verified/mapped)
 - Minimal fix: `.eslintrc.json` (69 B — verified; ruff `All checks passed`; syntax `PASS`; no `.bak`)
 - Profile identity docs: default `SOUL.md`/`USER.md`/`MEMORY.md` (verified existing; `patch` updates applied; DRY verified)
 - Previous subgoal artifacts intact (`docs/user-guide/*.md` 14 real; `.eslintrc.json`; audit scripts; 51 safe scripts; 5 `.audit.txt`)
-- Safety: `.env` untouched (verified — no `.env` content in artifacts); `.env.webhook-example` untouched; no destructive operations without audit; `.hermes/plans/exec/` audit `.txt` files preserved (5); safe `.py`/`.sh` scripts preserved (51).
+- Safety: `.env` untouched (verified — no `.env` content in artifacts); `.env.webhook-example` untouched; no destructive operations without audit; `./plans/exec/` audit `.txt` files preserved (5); safe `.py`/`.sh` scripts preserved (51).
 - Integrity: 0 synthetic session IDs; 0 synthetic capabilities/rankings; 0 hidden errors (all 14 exit codes logged; vulnerability findings preserved; parsing errors remaining documented honestly; rate-limit 403 blocker preserved; MSYS2 WSL Relay FAIL preserved).

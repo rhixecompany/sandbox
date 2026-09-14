@@ -30,7 +30,7 @@ DRY: skeletons point to canonical sources, no duplication.
 
 ### Step 1.1 — Read full audit report
 ```bash
-python scripts/profile_config_audit.py > .hermes/plans/2026-08-28-five-goals-execution/g1-audit.json
+python scripts/profile_config_audit.py > ./plans/2026-08-28-five-goals-execution/g1-audit.json
 ```
 Inspect: which files are missing in which profiles.
 
@@ -85,7 +85,7 @@ python scripts/agent_provider_matrix.py --request "Reply with: PROVIDER OK" --li
 **Gate 2 → 3:**
 - Dry-run exits 0, full matrix enumerated
 - Live run produces ≥ 1 result row with all 8 fields populated
-- `agent-provider-matrix-results.json` exists in `.hermes/plans/results/`
+- `agent-provider-matrix-results.json` exists in `./plans/results/`
 
 ## Phase 3 — MCP Server Sync (Goal 3)
 
@@ -105,7 +105,7 @@ python scripts/mcp_audit.py           # re-verify
 ```
 
 ### Step 3.3 — Document disabled servers
-Append a section to `.hermes/plans/2026-08-28-five-goals-execution/g3-summary.md`:
+Append a section to `./plans/2026-08-28-five-goals-execution/g3-summary.md`:
 - atlassian (needs ATLASSIAN_TOKEN)
 - docs (disabled, not in registry)
 - postgres (disabled, replaced by neon)
@@ -129,7 +129,7 @@ Reports before/after MB for each cache.
 
 ### Step 4.2 — App inventory (no removal in this pass)
 ```bash
-python scripts/disk_cleanup.py --scan-large > .hermes/plans/2026-08-28-five-goals-execution/g4-large-files.json
+python scripts/disk_cleanup.py --scan-large > ./plans/2026-08-28-five-goals-execution/g4-large-files.json
 ```
 Capture `winget list` + `choco list` to `g4-installed-apps.txt` for user review.
 
@@ -189,7 +189,7 @@ For every FAIL or unaddressed WARN: apply 4-phase systematic-debugging
 (observe → hypothesize → test → confirm root cause → fix → verify).
 
 ### Step 5.4 — Final report
-`.hermes/plans/2026-08-28-five-goals-execution/FINAL-REPORT.md` with:
+`./plans/2026-08-28-five-goals-execution/FINAL-REPORT.md` with:
 - Phase-by-phase summary
 - All bugs found, root cause, fix, verification
 - Final hermes doctor + bun run check status

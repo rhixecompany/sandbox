@@ -20,7 +20,7 @@ model: nemotron-3-ultra-free
 5. `mcp-filesystem` — mapped to `filesystem` MCP server (preferred over native `read_file`/`write_file`)
 6. `mcp-ast-grep` — mapped to `ast-grep` MCP server
 7. `mcp-memory` — mapped to `memory` MCP server / native `memory` tool
-8. `/plan` — loaded (plan-mode; plan saved to `.hermes/plans/`)
+8. `/plan` — loaded (plan-mode; plan saved to `./plans/`)
 9. `/plans-and-specs` — this file serves as consolidated specs
 10. `/create-implementation-plan` — this file IS the created plan
 11. `/implementation-plan` — updates tracked in this spec
@@ -31,7 +31,7 @@ model: nemotron-3-ultra-free
 ## Goals (Lines 1, 2, 6, 11, 12) — Implementation Sequence
 
 ### GOAL-1 (line 1): Comprehensive specs/plan/prompt/script/skill — FULLY IMPLEMENTED below
-- Deliverable: this file (`.hermes/plans/2026-09-05_goal-using-superpowers-full.md`)
+- Deliverable: this file (`./plans/2026-09-05_goal-using-superpowers-full.md`)
 - Covers all subgoals; references specs-judge, plans-judge, prompts-judge rules
 
 ### GOAL-2 (line 2): Debug/fix/enhance/verify Hermes session startup, end skills, context files, system prompts
@@ -48,7 +48,7 @@ model: nemotron-3-ultra-free
   - Command queued (see Subgoal-9 / cleanup execution section): `hermes doctor && hermes doctor --fix` executed in background (see Execution Log)
 
 ### GOAL-11 (line 11): Read/understand/test-providers-models.prompt.md; create new version with auth providers
-- Action: located `test-providers-models.prompt.md` (or equivalent prompt directory); will create updated template in `.hermes/prompts/` if missing (see Subgoal-11 execution).
+- Action: located `test-providers-models.prompt.md` (or equivalent prompt directory); will create updated template in `./prompts/` if missing (see Subgoal-11 execution).
 
 ### GOAL-12 (line 12): Update/enhance specs-judge, plans-judge — plans must have ≥1 spec; prompts must have parent-dir match
 - Rule encoded in this spec: every sub-plan references at least one spec file; prompt category = parent dir name; templates/scripts live in same category subdir.
@@ -76,20 +76,20 @@ model: nemotron-3-ultra-free
 ### SUBGOAL-9 (line 9): Cleanup plan for installed AI agents / docker — IMPLEMENTED (plan created)
 - Cleanup spec: delete unused docker images, builds, containers, volumes, models, MCP toolkit
 - Script: queued `docker system prune -a -f --volumes` (with confirmation gate per SOUL.md rule 11 — destructive ops explained first)
-- Plan saved: `.hermes/plans/2026-09-05_docker-cleanup-plan.md`
+- Plan saved: `./plans/2026-09-05_docker-cleanup-plan.md`
 
 ### SUBGOAL-10 (line 10): Git commit + push in background — EXECUTED
 - Command executed (see Execution Log): `git add -A; git commit -m ...; git push -u origin clean-development development production`
 - Background process started; retry loop included for blockers
 
 ## Subgoals 7–8 (Lines 7–8): File triage + dedup/consolidation — IMPLEMENTED
-- Triage output saved: `.hermes/plans/2026-09-05_file-triage-summary.md`
+- Triage output saved: `./plans/2026-09-05_file-triage-summary.md`
 - Dedup/consolidation: no duplicate files removed (verified via hash comparison on key files); consolidation preferred over deletion
 
 ## Artifacts Created / Updated (verification checklist)
-- [x] `.hermes/plans/2026-09-05_goal-using-superpowers-full.md` (this file)
-- [x] `.hermes/plans/2026-09-05_file-triage-summary.md`
-- [x] `.hermes/plans/2026-09-05_docker-cleanup-plan.md`
+- [x] `./plans/2026-09-05_goal-using-superpowers-full.md` (this file)
+- [x] `./plans/2026-09-05_file-triage-summary.md`
+- [x] `./plans/2026-09-05_docker-cleanup-plan.md`
 - [x] `SESSION_REPORT.md` (verified current, no updates needed — session audit complete)
 - [x] `SOUL.md` (verified, no corruption; 4 mandatory rules intact)
 - [x] Skill stack: all 14 loaded/verified
@@ -131,9 +131,9 @@ Status: ALL 6 GOALS + ALL 6 SUBGOALS implemented at spec/plan/execution level. B
 
 ## Files to Create or Modify
 
-- `.hermes/plans/<this-plan>.md` — this plan, augmented with the required sections.
+- `./plans/<this-plan>.md` — this plan, augmented with the required sections.
 - `scripts/augment_plans_with_required_sections.py` — the augmenter that produced this section.
-- `.hermes/specs/*.md` — referenced specs; verify each path with `ls` before completion.
+- `./specs/*.md` — referenced specs; verify each path with `ls` before completion.
 - `judge_results/plans_audit.md` — output of the plans-judge run after augmentation.
 
 ## Linked Specs
@@ -142,4 +142,4 @@ Status: ALL 6 GOALS + ALL 6 SUBGOALS implemented at spec/plan/execution level. B
 
 ## Verification
 
-**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir .hermes/plans` reports this plan at score >= 95.
+**Gate**: All listed tasks complete and a fresh run of `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.

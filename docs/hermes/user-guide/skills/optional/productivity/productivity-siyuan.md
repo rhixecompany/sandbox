@@ -294,7 +294,7 @@ Common `type` values in SQL queries:
 If you prefer a native integration instead of curl, install the SiYuan MCP server:
 
 ```yaml
-# In ~/.hermes/config.yaml under mcp_servers:
+# In ~/./config.yaml under mcp_servers:
 mcp_servers:
   siyuan:
     command: npx
