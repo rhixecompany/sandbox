@@ -1,8 +1,0 @@
-# SKIPPED — destructive command audit
-# Source: features/web-search.md
-# Block index: 7
-# Language: bash
-# Dangerous pattern: format
----
-curl -s "http://localhost:8888/search?q=test&format=json" | python3 -c \
-  "import sys,json; d=json.load(sys.stdin); print(f'{len(d[\"results\"])} results')"

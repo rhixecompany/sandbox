@@ -1,7 +1,0 @@
-usage: hermes mcp test [-h] name
-
-positional arguments:
-  name        Server name to test
-
-options:
-  -h, --help  show this help message and exit

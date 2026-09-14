@@ -1,8 +1,25 @@
 {
 	"pythonVersion": "3.11",
 	"pythonPlatform": "Windows",
-	"include": ["src/**/*.ts", "src/**/*.tsx", "*.ts", "*.tsx"],
-	"exclude": ["node_modules", "projects", "hermes-profiles", "dist", "build", ".next", ".vscode", ".github", "docs"],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.mts",
+		"*.ts",
+		"*.tsx",
+		"*.mts"
+	],
+	"exclude": [
+		"node_modules",
+		"projects",
+		"hermes-profiles",
+		"dist",
+		"build",
+		".next",
+		".vscode",
+		".github",
+		"docs"
+	],
 	"typeCheckingMode": "basic",
 	"reportUnnecessaryTypeIgnoreComment": true,
 	"reportMissingImports": false,

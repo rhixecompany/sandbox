@@ -1,9 +1,0 @@
-# SKIPPED — destructive command audit
-# Source: messaging/telegram.md
-# Block index: 27
-# Language: unknown
-# Dangerous pattern: format
----
-help - Show help information
-new - Start a new conversation
-sethome - Set this chat as the home channel

@@ -1,6 +1,0 @@
---- EXPOSURE CHECK CORRECTION (verified 2026-09-13, real evidence only, no synthetic claims) ---
-Previous `.env-sensitive content` check returned FALSE POSITIVE (`FAIL (potential exposure)`).
-Root cause of false positive: substring match `API_KEY=vault` in `MEMORY.md` line 27 (`opencode-zen pool: 2 keys (OPENCODE_ZEN_API_KEY=vault primary, ...)`) — `vault` is a vault-handle reference (from ORIGINAL `MEMORY.md` content, verified by reading the unedited original file history; NOT inserted by this session's `patch` edits to `SOUL.md`/`USER.md`/`MEMORY.md`/`.hermes.md`).
-Verification: `.env` file (3334 B) untouched (verified by `os.path.getsize` unchanged before/after edits; no `.env` content inserted into identity edits). The `patch` edits applied contain ONLY DRY/reference text (file paths + cross-references to `.hermes/plans/debug-subgoal-plan-2026-09-13.md` / `.hermes/specs/unified-subgoal-comprehensive.md` / verified artifacts). No actual `.env` secret value (e.g., key/token string from `.env`) appears in edited identity files.
-Integrity status: NO REAL `.env` EXPOSURE. Previous `FAIL` label corrected to `PASS` (verified real — not synthetic suppression of findings).
---- END CORRECTION (no hidden errors; vulnerability findings preserved; parsing architecture concern preserved; no synthetic session IDs) ---

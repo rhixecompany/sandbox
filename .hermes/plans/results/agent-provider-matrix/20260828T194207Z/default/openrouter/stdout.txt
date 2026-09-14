@@ -1,2 +1,0 @@
-Warning: Unknown toolsets: a2a, opencode
-PROVIDER_OK openrouter

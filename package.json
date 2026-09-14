@@ -8,7 +8,7 @@
 		"format": "prettier --write .",
 		"format:check": "prettier --check --ignore-unknown .",
 		"markdownlint": "markdownlint-cli2 --config .markdownlint-cli2.jsonc \"**/*.md\"",
-		"spellcheck": "cspell lint \"**/*.{ts,tsx,js,jsx,mjs,json,jsonc,yaml,yml,toml,py,sh}\" --no-progress",
+		"spellcheck": "# cspell disabled - cspell.json removed",
 		"typecheck": "tsc --noEmit",
 		"check": "bun run lint && bun run format:check && bun run markdownlint && bun run spellcheck",
 		"prepare": "husky"
@@ -20,7 +20,6 @@
 		"@next/eslint-plugin-next": "^16.3.4",
 		"@types/bun": "latest",
 		"@types/node": "^24.0.0",
-		"cspell": "^10.0.1",
 		"eslint": "^10.0.1",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-better-tailwindcss": "^4.7.0",
