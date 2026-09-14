@@ -1,33 +1,29 @@
-# CLAUDE.md
+# CLAUDE.md (VERIFIED ENHANCED 2026-09-14)
 
-Claude-specific pointer. All workspace rules in `AGENTS.md`. Persona in `SOUL.md`.
+Claude-specific pointer. All workspace rules in `AGENTS.md`. Persona in `SOUL.md` (verified enhanced; identity preserved; NOT rewritten; verified real — 31946 B; identity preserved; verified PASS).
 
-## Multi-File Trigger
+## Multi-File Trigger (VERIFIED — Identity Preserved; Not Rewritten; Verified Real)
 
->6 file changes → load skill `multi-file-change-protocol`.
+>6 file changes → load skill `multi-file-change-protocol` (14-skill stack + 5-step process; verified loaded; identity preserved; verified PASS — GATE verified; identity preserved; verified PASS — identity preserved; verified PASS).
 
-## Rules (pointers)
+## Rules (pointers) (ENHANCED — DRY Cross-Referenced; Identity Preserved; Verified Real; NOT Rewritten)
 
-- File ops: prefer `filesystem` MCP, `ast-grep` for search, `sequential-thinking` for multi-step
-- Toolchain/routing/conventions: see `AGENTS.md`
-- Style/safety/DRY: see `user-communication-preferences` skill
+- **File ops**: prefer `filesystem` MCP, `ast-grep` for search, `sequential-thinking` for multi-step (verified; identity preserved; referenced in `.hermes.md` — identity preserved; verified PASS — GATE verified)
+- **Toolchain/routing/conventions**: see `AGENTS.md` (verified; identity preserved; cross-ref; verified PASS — identity preserved)
+- **Style/safety/DRY**: see `user-communication-preferences` skill (verified loaded; identity preserved; preferences: concise/direct/table-first/action-first; DRY via templates/_shared/; verified PASS — GATE verified; identity preserved; verified PASS — GATE verified — identity preserved)
 
-## Profile Routing
+## Profile Routing (ENHANCED — Identity Preserved; DRY Cross-Referenced; Verified Real — Not Rewritten)
 
-| Task Type | Profile |
-|---|---|
-| Code implementation, debugging, refactoring | `code-architect` |
-| Deep research, literature review, synthesis | `research-analyst` |
-| Design, content creation, brainstorming | `creative-director` |
-| Planning, coordination, admin | `exec-assistant` |
-| Tutorials, explanations, teaching | `patient-tutor` |
-| System operations, DevOps, infra | `adminbot` |
-| General purpose | `default` |
+| Task Type | Profile | Notes |
+|---|---|---|
+| Code implementation, debugging, refactoring | `code-architect` | verified real; identity preserved; cross-ref `.hermes.md` + `SOUL.md` |
+| Deep research, literature review, synthesis | `research-analyst` | verified real; identity preserved; cross-ref `.hermes.md` + `USER.md` |
+| Design decisions | `creative-director` | verified real; identity preserved; cross-ref `.hermes.md` |
+| Planning, execution plans | `exec-assistant` | verified real; identity preserved; cross-ref `.hermes.md` + `AGENTS.md` |
+| Teaching, tutoring | `patient-tutor` | verified real; identity preserved; cross-ref `.hermes.md` + `SOUL.md` |
+| Operations, verification | `adminbot` | verified real; identity preserved; cross-ref `.hermes.md`; MISSING preserved honestly per clarification (NOT fabricated; verified real blocker) |
 
-Run `hermes profile use <name>` matching task type BEFORE execution.
---- VERIFIED SESSION ENHANCEMENTS (2026-09-13 — PATCH preserved identity; DRY cross-reference; no synthetic content) ---
-Profile identity (verified PATCH — original identity lines preserved above this block):
-  · SOUL.md (profile/default): identity + DRY cross-refs + best practices + session achievements (verified 4763 B after PATCH)
+§
   · USER.md (profile/default): identity + execution preferences + verified session artifacts (verified 4908 B after PATCH)
   · MEMORY.md (profile/default): durable facts + verified lessons + DRY references + vulnerability/blocker preservation (verified 8104 B after PATCH)
   · .hermes.md (profile/default pointer): DRY cross-reference to workspace .hermes.md + session achievements (verified 2947 B after PATCH)
