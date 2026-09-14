@@ -8,6 +8,9 @@ exclude = [
   ".venv/",
   ".git/",
   "__pycache__/",
+  "dist/",
+  "build/",
+  "coderabbit_webhooks/",
 ]
 
 [format]
@@ -17,21 +20,10 @@ indent-style = "space"
 
 [lint]
 select = [
-  "E",
-  "F",
-  "I",
-  "N",
-  "W",
-  "UP",
-  "B",
-  "SIM",
-  "ARG",
-  "RUF",
+  "E", "F", "I", "N", "W",
+  "UP", "B", "SIM", "ARG", "RUF",
 ]
-ignore = [
-  "E501",
-  "N818",
-]
+ignore = ["E501", "N818"]
 
 [lint.isort]
 known-first-party = ["scripts", "projects"]

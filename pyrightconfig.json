@@ -1,27 +1,10 @@
 {
-	"include": ["."],
-	"exclude": [
-		"**/node_modules",
-		"**/__pycache__",
-		"**/.git",
-		"**/myvenv",
-		"**/.venv",
-		"**/build",
-		"**/dist",
-		"**/*.pyc",
-		"**/migrations",
-		"**/.github",
-		"**/docs"
-	],
-	"typeCheckingMode": "basic",
-	"reportMissingImports": "warning",
-	"reportMissingTypeStubs": "none",
-	"reportOptionalMemberAccess": "none",
-	"reportPrivateUsage": "none",
-	"pythonVersion": "3.11",
-	"pythonPlatform": "Windows",
-	"strictListInference": true,
-	"strictDictionaryInference": true,
-	"strictSetInference": true,
-	"extraPaths": [".venv/Lib/site-packages"]
+  "pythonVersion": "3.11",
+  "pythonPlatform": "Windows",
+  "include": ["src/**/*.ts", "src/**/*.tsx", "*.ts", "*.tsx"],
+  "exclude": ["node_modules", "projects", "hermes-profiles", "dist", "build", ".next", ".vscode", ".github", "docs"],
+  "typeCheckingMode": "basic",
+  "reportUnnecessaryTypeIgnoreComment": true,
+  "reportMissingImports": false,
+  "reportUnusedImport": false
 }

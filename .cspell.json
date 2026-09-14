@@ -1,0 +1,17 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "coderabbit", "testpaths", "addopts", "dups", "tvly", "napi", "Dedup",
+    "dedup", "sante", "esbuild", "nodemon", "uvicorn", "gunicorn", "celery",
+    "redis", "postgres", "psycopg", "sqlalchemy", "pydantic", "fastapi",
+    "httpx", "openrouter", "opencode", "nemotron", "deepseek", "hermes",
+    "adminbot", "patient-tutor", "claude", "cursor", "wezterm", "tailscale",
+    "wsl", "MSYS2", "mingw64", "nvm4w", "powerShell", "charsets", "extnames"
+  ],
+  "ignorePaths": [
+    "node_modules/**", ".venv/**", "myvenv/**", "projects/**",
+    "hermes-profiles/**", "**/*.lock", "**/*.json",
+    "coderabbit_webhooks/node_modules/**"
+  ]
+}
