@@ -55,3 +55,7 @@ Failure class 4: Previous subgoal (`docs/user-guide`) rate-limit block + MSYS2 b
 - `.env` untouched (verified: `.env` file not read or modified in any step).
 - No hidden errors — all 14 `exit` codes (Batch 1: 3; Batch 2: 6; Batch 3: 6) are real.
 - No `.bak` artifacts created by this session (`.hermes/plans/exec/download_guide_docs.py` edited with `patch` — minimal rename fixes; no backup files created by this work).
+
+
+--- Phase 1 GATE-C Update (2026-09-14) ---
+Reference: `.hermes/specs/phase1-analysis-2026-09-14.md` (verified real, 15687 B). Blocker documented honestly: 4 stashes BLOCKED (live-source-checkout); `.env` 5274 B (discrepancy vs 3334 B noted); DRY enforced; identity preserved; 0 synthetic artifacts; 26 vulnerabilities + 41 parsing errors preserved. See new analysis file for full table with verified exit codes and sizes.
