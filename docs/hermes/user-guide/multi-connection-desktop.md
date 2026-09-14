@@ -1,4 +1,6 @@
 ---
+title: "Connecting Desktop to Many Hermes Instances"
+description: "Documentation documentation"
 sidebar_position: 5
 ---
 

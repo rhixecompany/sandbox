@@ -1,4 +1,5 @@
 ---
+sidebar_position: 99
 title: "Bot Mode"
 description: "Turn your Hermes profiles into a roster of named Bots — each with its own chat, role, model, memory, skills, and avatar. Bots run routines, share group chats, and message each other."
 ---

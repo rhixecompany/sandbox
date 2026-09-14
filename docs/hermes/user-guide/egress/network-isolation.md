@@ -1,4 +1,5 @@
 ---
+sidebar_position: 99
 title: "Network Egress Isolation (Docker)"
 description: "Segment Docker networks so the agent sandbox can only reach allowlisted hosts"
 ---

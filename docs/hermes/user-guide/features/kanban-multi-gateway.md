@@ -1,4 +1,5 @@
 ---
+sidebar_position: 99
 title: "Kanban Multi-Gateway Deployment"
 description: "Running one kanban board across several per-profile gateways: single dispatcher, profile-owned delivery"
 ---

@@ -1,4 +1,5 @@
 ---
+description: "Documentation documentation"
 title: Tool Search
 sidebar_position: 95
 ---

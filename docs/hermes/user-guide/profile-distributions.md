@@ -1,4 +1,6 @@
 ---
+title: "Profile Distributions: Share a Whole Agent"
+description: "Documentation documentation"
 sidebar_position: 3
 ---
 

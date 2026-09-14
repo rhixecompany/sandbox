@@ -1,3 +1,9 @@
+---
+title: "A2A (Agent-to-Agent)"
+description: "A2A (Agent-to-Agent) documentation"
+sidebar_position: 99
+---
+
 # A2A (Agent-to-Agent)
 
 [A2A](https://a2a-protocol.org) is the open Agent2Agent protocol (v1.0, stewarded by the Linux Foundation) for communication between independent AI agents. The Hermes A2A plugin works in **both directions**: your agent can call other A2A agents as tools, and other agents can send tasks to your Hermes over HTTP.

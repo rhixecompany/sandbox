@@ -1,4 +1,5 @@
 ---
+description: "Features Overview documentation"
 title: "Features Overview"
 sidebar_label: "Overview"
 sidebar_position: 1

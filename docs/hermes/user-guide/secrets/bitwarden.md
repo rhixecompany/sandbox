@@ -1,3 +1,9 @@
+---
+title: "Bitwarden Secrets Manager"
+description: "Bitwarden Secrets Manager documentation"
+sidebar_position: 99
+---
+
 # Bitwarden Secrets Manager
 
 Pull API keys from [Bitwarden Secrets Manager](https://bitwarden.com/products/secrets-manager/) at process startup instead of storing them in plaintext inside `~/.hermes/.env`. One bootstrap secret (a machine-account access token) replaces N per-provider keys, and rotating a credential becomes a single change in the Bitwarden web app.

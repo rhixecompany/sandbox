@@ -1,3 +1,9 @@
+---
+title: "1Password"
+description: "1Password documentation"
+sidebar_position: 99
+---
+
 # 1Password
 
 Resolve provider API keys from [1Password](https://1password.com/) at process startup instead of storing them in plaintext inside `~/.hermes/.env`. You keep your keys as 1Password items and reference them by `op://vault/item/field`; rotating a credential becomes a single change in 1Password.

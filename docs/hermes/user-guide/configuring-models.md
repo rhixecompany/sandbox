@@ -1,4 +1,6 @@
 ---
+title: "Configuring Models"
+description: "Documentation documentation"
 sidebar_position: 3
 ---
 

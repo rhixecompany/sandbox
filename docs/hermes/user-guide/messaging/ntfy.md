@@ -1,3 +1,9 @@
+---
+title: "ntfy"
+description: "ntfy documentation"
+sidebar_position: 99
+---
+
 # ntfy
 
 [ntfy](https://ntfy.sh/) is a simple HTTP-based pub-sub notification service. It works with the free public server at `ntfy.sh` or any self-hosted instance, and supports any client that can make HTTP requests — phones, browsers, scripts, watches.

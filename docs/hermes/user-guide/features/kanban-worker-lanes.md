@@ -1,3 +1,9 @@
+---
+title: "Kanban worker lanes"
+description: "Kanban worker lanes documentation"
+sidebar_position: 99
+---
+
 # Kanban worker lanes
 
 A **worker lane** is a class of process that the kanban dispatcher can route tasks to. Each lane has an identity (the assignee string), a spawn mechanism, and a contract for what it must do with the task once spawned.

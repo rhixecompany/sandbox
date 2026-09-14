@@ -1,4 +1,5 @@
 ---
+sidebar_position: 99
 title: Passwords & Logins
 description: The agent signs into sites, pays and fills addresses for you without ever seeing a password.
 ---
