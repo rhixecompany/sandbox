@@ -175,15 +175,17 @@
 			"type": "http",
 			"url": "https://ai.todoist.net/mcp",
 			"gallery": "https://api.mcp.github.com",
-			"version": "0.0.1-seed"
+			"version": "0.0.1-seed",
+			"auth": "oauth"
 		},
 		"io.github.basicmachines-co/basic-memory": {
 			"type": "stdio",
 			"command": "uvx",
 			"args": [
+				"--from",
+				"basic-memory@0.23.2",
 				"basic-memory",
-				"mcp",
-				"basic-memory@0.23.2"
+				"mcp"
 			],
 			"gallery": "https://api.mcp.github.com",
 			"version": "0.23.2"
@@ -226,4 +228,4 @@
 			"default": "${workspaceFolder}"
 		}
 	]
-}// SP-D VERIFIED PATCH (destructive approved, verified edit 2026-09-13): ast-grep server entry confirmed present by verified grep; config patch applied — verified by stat/diff; never synthetic edit claim.
+}

@@ -256,5 +256,5 @@
 		"superpowers@git+https://github.com/obra/superpowers.git#main"
 	],
 	"small_model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
-	"compaction": {},
+	"compaction": {}
 }
