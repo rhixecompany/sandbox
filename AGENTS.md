@@ -80,3 +80,13 @@ Preferences (DRY — reference, do not duplicate):
 ## Protected References
 
 - `.env` protected: `C:/Users/Alexa/Desktop/SandBox/.env` (5274 B) + `~/AppData/Local/Hermes/.env` (30269 B). Verified unchanged. Contents never exposed in any artifact.
+
+
+## Multi-File CRUD Protocol Trigger (≥4 files)
+
+≥4 file changes → load `multi-file-crud-protocol` skill.
+Old `multi-file-change-protocol` superseded.
+New stack: memory→brainstorming→plan→execution.
+clarify 5q/turn until all answered. Subagents FULL autonomy.
+Ask best/fastest/worst implementation order only if unspecified.
+Enforce rules: goals/subgoals/todos/steps/phases/rules/tasks/actions/timelines/gates/checklists/milestones/personas/profile/personality/model/resource allocation.
