@@ -18,7 +18,7 @@ status: completed
 - Remove `## Code Quality` — covered by MASTER_RULES.md L3 rules 12-14
 - Remove `## Response Style` — covered by MASTER_RULES.md L4 rules 16-21
 - Remove `## Security` — covered by MASTER_RULES.md L5 rules 22-26
-- Remove `## Workspace` — paths are in USER.md + .hermes.md
+- Remove `## Workspace` — paths are in USER.md + $HERMES_HOME.md
 - Remove `## Environment Corrections` — lives in USER.md
 - Keep: Identity & Tone, 7 Core Non-Negotiables, See references
 
@@ -36,11 +36,11 @@ status: completed
 
 **Changes:**
 
-- Remove `## Active Model & Providers` — already in .hermes.md provider chain
+- Remove `## Active Model & Providers` — already in $HERMES_HOME.md provider chain
 - Remove `## Path Safety` — says "See SOUL.md" already; redundant
 - Condense execution preferences to one line
 
-## Phase 4 — Trim .hermes.md (12.3KB → ~6.0KB)
+## Phase 4 — Trim $HERMES_HOME.md (12.3KB → ~6.0KB)
 
 **Changes:**
 
@@ -55,15 +55,15 @@ status: completed
 
 **Changes:**
 
-- Remove `## Hermes Config` section (lines 62-88) — fully duplicated in .hermes.md
-- Remove `## Profile Inventory` section (lines 91-117) — duplicate of .hermes.md
+- Remove `## Hermes Config` section (lines 62-88) — fully duplicated in $HERMES_HOME.md
+- Remove `## Profile Inventory` section (lines 91-117) — duplicate of $HERMES_HOME.md
 - Keep: Structure, Conventions, Toolkit Validation, Quick Rule Summary (8 rules)
 
 ## Phase 6 — Trim PROJECT_RULES.md (7.1KB → ~3.0KB)
 
 **Changes:**
 
-- Remove `Level 3: Profile Routing` — fully duplicated in .hermes.md
+- Remove `Level 3: Profile Routing` — fully duplicated in $HERMES_HOME.md
 - Compact `Level 2: Environment Facts` — convert from table to flat list
 - Keep: Level 1 session lifecycle rules, compact env facts, see references
 
@@ -82,7 +82,7 @@ status: completed
 | MASTER_RULES.md  | 9.6KB      | 5.0KB      | 4.6KB                 |
 | USER.md          | 1.3KB      | 0.6KB      | 0.7KB                 |
 | MEMORY.md        | 2.1KB      | 1.5KB      | 0.6KB                 |
-| .hermes.md       | 12.3KB     | 6.0KB      | 6.3KB                 |
+| $HERMES_HOME.md       | 12.3KB     | 6.0KB      | 6.3KB                 |
 | AGENTS.md        | 9.5KB      | 4.0KB      | 5.5KB                 |
 | PROJECT_RULES.md | 7.1KB      | 3.0KB      | 4.1KB                 |
 | **Total**        | **47.4KB** | **22.1KB** | **~25KB (6,500 tok)** |

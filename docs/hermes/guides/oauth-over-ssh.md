@@ -160,7 +160,7 @@ Then retry the `ssh -L` command.
 
 The redirect never made it back to the remote listener. Check the tunnel is still alive (`ssh -N` doesn't show output, so look at the terminal you started it from), confirm you used the port from the latest `Waiting for callback on ...` line (Hermes may auto-bump if the preferred port is busy), restart the tunnel if needed, and re-run the auth command.
 
-### Tokens land in the wrong `~/.hermes`
+### Tokens land in the wrong `~/$HERMES_HOME`
 
 The tokens are written under the Linux user that ran `hermes auth add ...`. If your gateway / systemd service runs as a different user (e.g. `root` or a dedicated `hermes` user), authenticate as **that** user so the tokens land in their `~/./auth.json`. `sudo -u hermes -i` or equivalent.
 

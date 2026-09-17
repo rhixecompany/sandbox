@@ -58,7 +58,7 @@ Execution Environments (local/Docker/SSH/Modal)
 8. SESSION_SEARCH_GUIDANCE
 9. SKILLS_GUIDANCE
 10. AGENTS.md
-11. .hermes.md
+11. $HERMES_HOME.md
 12. TOOL_USE_ENFORCEMENT_GUIDANCE
 
 ---

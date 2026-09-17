@@ -9,7 +9,7 @@ Profile config audit complete.
   [alexa] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -17,13 +17,13 @@ Profile config audit complete.
   [code-architect] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
 
   [creative-director] issues:
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -31,7 +31,7 @@ Profile config audit complete.
   [cto] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -39,7 +39,7 @@ Profile config audit complete.
   [default] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -47,7 +47,7 @@ Profile config audit complete.
   [designer] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -55,13 +55,13 @@ Profile config audit complete.
   [dev] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
 
   [exec-assistant] issues:
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -69,13 +69,13 @@ Profile config audit complete.
   [ops] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
 
   [patient-tutor] issues:
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -83,7 +83,7 @@ Profile config audit complete.
   [pm] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -91,13 +91,13 @@ Profile config audit complete.
   [qa] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
 
   [research-analyst] issues:
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing
@@ -105,7 +105,7 @@ Profile config audit complete.
   [security] issues:
     - USER.md: file_missing
     - MEMORY.md: file_missing
-    - .hermes.md: file_missing
+    - $HERMES_HOME.md: file_missing
     - AGENTS.md: file_missing
     - CLAUDE.md: file_missing
     - .cursorrules: file_missing

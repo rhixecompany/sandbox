@@ -35,7 +35,7 @@ All goals, subgoals, phases derive from tree.prompt.txt.
 
 ### Phase 1: Cleanup
 Delete workspace clutter per tree.prompt.txt:
-- .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders
+- .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders
 - *.json (except package.json, pyrightconfig.json), *-report.md files
 - *.log, *.txt files (skip *.prompt.txt files)
 
@@ -57,7 +57,7 @@ Cleanup/update *.md files including PLAN.md, SOUL.md, SPEC.md, USER.md and all d
 Update/verify *.py, *.mjs, *.mts files; create src directory and migrate files into src
 
 ### Phase 6: Agent Sync
-Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, .hermes); ensure identical configs
+Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, $HERMES_HOME); ensure identical configs
 
 ### Phase 7: Config/scripts Sync
 Sync profiles; verify quick_commands; sync .env/config.yaml
@@ -92,7 +92,7 @@ Run judge skills; target score >= 99 on all
 
 ## Verification Checklist
 - [ ] tree.prompt.txt verified as primary source
-- [ ] Phase 1 Cleanup complete: .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts removed
+- [ ] Phase 1 Cleanup complete: .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts removed
 - [ ] Phase 2 Cleanup: *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt cleaned
 - [ ] Phase 3 Config files updated/verified (.editorconfig, .gitignore, etc.)
 - [ ] Phase 4 mjs->mts conversion complete (no .mjs remains)

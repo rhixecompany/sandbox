@@ -1,9 +1,9 @@
 # Hermes Agent Chat
 
-- **ID:** `poppywu124.hermes-chat`
+- **ID:** `poppywu124$HERMES_HOME-chat`
 - **Version:** 0.7.1
 - **Category:** Hermes/chat
-- **Marketplace:** [link](https://marketplace.visualstudio.com/items?itemName=poppywu124.hermes-chat)
+- **Marketplace:** [link](https://marketplace.visualstudio.com/items?itemName=poppywu124$HERMES_HOME-chat)
 
 ## Description
 

@@ -22,7 +22,7 @@
 - 28 skills verified/mapped (14 direct + 14 mapped — ./specs/skill-verification-evidence.md 2658 B verified real).
 - 5 destructive .audit.txt audit scripts + 51 safe .py/.sh scripts saved (verified by file existence/size — NOT synthetic).
 - 0 synthetic artifacts; 0 hidden errors; .env 3334 B unchanged; 0 new .bak artifacts; .env untouched.
-- DRY enforcement verified: identity/routing owned by .hermes.md (verified enhanced 2859 B); execution prefs owned by user-communication-preferences SKILL.md (verified loaded — preferences preserved); multi-file protocol owned by multi-file-change-protocol SKILL.md (verified loaded — 14-stack verified; 5-step verified; identity preserved); session achievements owned by ./plans/ + ./specs/ (verified real artifacts — file sizes verified; exit codes verified; NOT synthetic).
+- DRY enforcement verified: identity/routing owned by $HERMES_HOME.md (verified enhanced 2859 B); execution prefs owned by user-communication-preferences SKILL.md (verified loaded — preferences preserved); multi-file protocol owned by multi-file-change-protocol SKILL.md (verified loaded — 14-stack verified; 5-step verified; identity preserved); session achievements owned by ./plans/ + ./specs/ (verified real artifacts — file sizes verified; exit codes verified; NOT synthetic).
 
 ## Non-Functional Requirements
 - No synthetic session IDs / capabilities / ranking / quality scores / artifacts.

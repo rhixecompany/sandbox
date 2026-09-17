@@ -1,6 +1,6 @@
 # Copilot Instructions — SandBox Monorepo
 
-Canonical reference: `../../AGENTS.md`, `../../.hermes.md`, `../../CLAUDE.md`.
+Canonical reference: `../../AGENTS.md`, `../../$HERMES_HOME.md`, `../../CLAUDE.md`.
 
 This repo is a polyglot monorepo with several autonomous subprojects. Treat each `projects/*` directory as its own app unless the change is clearly root-level configuration, docs, or shared tooling.
 

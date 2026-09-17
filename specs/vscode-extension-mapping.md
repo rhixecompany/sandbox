@@ -333,7 +333,7 @@ Source: code-insiders --list-extensions --show-versions
 - Files: All
 - Config: (chat customizations)
 
-### Hermes Chat (poppywu124.hermes-chat)
+### Hermes Chat (poppywu124$HERMES_HOME-chat)
 - Files: All
 - Config: hermes-chat.*
 

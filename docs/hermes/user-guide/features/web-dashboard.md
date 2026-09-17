@@ -116,7 +116,7 @@ the dashboard (fed by the same status poll — no extra requests):
 - **"Your agent restarted unexpectedly, most likely because it ran out of
   memory"** — the lifecycle ledger recorded an unclean exit under memory
   pressure on the previous boot (a suspected OOM kill).
-- **Disk warnings** — the volume holding `~/.hermes` is nearly full
+- **Disk warnings** — the volume holding `~/$HERMES_HOME` is nearly full
   (*elevated* below 512 MB free, *critical* below 256 MB free).
 
 Only the most severe active warning shows at a time (disk critical > memory
@@ -449,7 +449,7 @@ The response also carries two advisory resource blocks (they never affect the
   numbers but degrade `pressure` to `unknown`, so a dead gateway's last
   sample can't masquerade as a live reading.
 - **`disk`** — a live `shutil.disk_usage()` sample of the volume holding
-  `~/.hermes`. Fields: `pressure`, `free_mb`, `total_mb`, `used_percent`,
+  `~/$HERMES_HOME`. Fields: `pressure`, `free_mb`, `total_mb`, `used_percent`,
   `sampled_at`. Pressure is `elevated` below 512 MB free (or ≥85% used with
   under 4 GB headroom) and `critical` below 256 MB free (or ≥95% used with
   under 1 GB headroom).

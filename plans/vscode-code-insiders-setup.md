@@ -98,7 +98,7 @@ Uninstall stable VS Code, keep Code-Insiders, configure all settings for every i
 | mtxr.sqltools | sql | SQL tools |
 | prisma.prisma | graphql, prisma | Prisma support |
 | quicktype.quicktype | json, typescript | QuickType |
-| poppywu124.hermes-chat | all | Hermes chat |
+| poppywu124$HERMES_HOME-chat | all | Hermes chat |
 | sst-dev.opencode | all | OpenCode |
 | oven.bun-vscode | javascript, typescript | Bun support |
 | bradlc.vscode-tailwindcss | css, scss, html | Tailwind CSS |

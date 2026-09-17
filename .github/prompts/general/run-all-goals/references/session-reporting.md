@@ -37,13 +37,13 @@ These IDs come from verified CLI output (`hermes chat --provider ... --model ...
 | Total subgoals | 17 (SG1.1-SG4.9) | tree.prompt.txt + derived |
 | Total phases | 11 (cleanup-first order) | tree.prompt.txt |
 
-## Verified Config / Model State (From `.hermes.md` / Config Verification)
+## Verified Config / Model State (From `$HERMES_HOME.md` / Config Verification)
 
 | Property | Verified Value | Source |
 |---|---|---|
-| Primary model | `thinkingmachines/inkling:free` | Config verification / `.hermes.md` |
+| Primary model | `thinkingmachines/inkling:free` | Config verification / `$HERMES_HOME.md` |
 | Fallback chain | 3 entries (openrouter -> nous -> opencode-zen) | Config verification |
-| Provider (primary) | `openrouter` | `.hermes.md` / session audit |
+| Provider (primary) | `openrouter` | `$HERMES_HOME.md` / session audit |
 | Provider (fallbacks verified) | `opencode-zen` (4 free models verified) | `test-providers-models` audit |
 
 ## Workspace Metrics (Verified — From Session Replay / `execution-summary.md`)

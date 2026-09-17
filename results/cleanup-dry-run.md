@@ -67,7 +67,7 @@
 | `C:\Users\Alexa\.vscode\extensions\mhutchie.git-graph-1.30.0\node_modules`                                      | node_modules | managed by tool/extension |
 | `C:\Users\Alexa\.vscode\extensions\ms-python.python-2026.4.0-win32-x64\out\client\node_modules`                 | node_modules | managed by tool/extension |
 | `C:\Users\Alexa\.vscode\extensions\naumovs.color-highlight-2.8.0\node_modules`                                  | node_modules | managed by tool/extension |
-| `C:\Users\Alexa\.vscode\extensions\poppywu124.hermes-chat-0.7.1\node_modules`                                   | node_modules | managed by tool/extension |
+| `C:\Users\Alexa\.vscode\extensions\poppywu124$HERMES_HOME-chat-0.7.1\node_modules`                                   | node_modules | managed by tool/extension |
 | `C:\Users\Alexa\.vscode\extensions\streetsidesoftware.code-spell-checker-4.5.6\node_modules`                    | node_modules | managed by tool/extension |
 | `C:\Users\Alexa\.vscode\extensions\yzhang.markdown-all-in-one-3.6.3\node_modules`                               | node_modules | managed by tool/extension |
 | `C:\Users\Alexa\AppData\Local\hermes\desktop-plugins\mindstudio-agent\node_modules`                             | node_modules | managed by tool/extension |

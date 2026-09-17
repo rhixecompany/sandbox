@@ -63,6 +63,6 @@ G7 All destructive edits verified (git diff review) before gate report.
 16 /writing-clearly-and-concisely
 17 /subagent-driven-development (subagent-driven-development; delegate_task verified available)
 Protocol: multi-file-change-protocol
-Context files: .hermes.md, AGENTS.md, SOUL.md (global at HERMES_HOME only), .cursorrules, CLAUDE.md
+Context files: $HERMES_HOME.md, AGENTS.md, SOUL.md (global at HERMES_HOME only), .cursorrules, CLAUDE.md
 Hook reference docs: ./hooks/README.md; existing hooks at ./hooks/
 Workspace docs: docs/ai-agents-inventory.md; docs/agent-provider-matrix.md; docs/folder-structure/ (audit reference)

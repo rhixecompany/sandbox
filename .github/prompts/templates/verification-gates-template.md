@@ -138,7 +138,7 @@ Primary model ({{PRIMARY_MODEL}}) shown for default profile and relevant aliases
 ### Files to Check
 | File | Expected Model Ref | Actual | Match |
 |---|---|---|---|
-| `.hermes.md` | {{PRIMARY_MODEL}} | {{GATE6_HERMES_ACTUAL}} | {{GATE6_HERMES_MATCH}} |
+| `$HERMES_HOME.md` | {{PRIMARY_MODEL}} | {{GATE6_HERMES_ACTUAL}} | {{GATE6_HERMES_MATCH}} |
 | `AGENTS.md` | {{PRIMARY_MODEL}} | {{GATE6_AGENTS_ACTUAL}} | {{GATE6_AGENTS_MATCH}} |
 | `.github/copilot-instructions.md` | {{PRIMARY_MODEL}} | {{GATE6_COPILOT_ACTUAL}} | {{GATE6_COPILOT_MATCH}} |
 | `CLAUDE.md` | {{PRIMARY_MODEL}} | {{GATE6_CLAUDE_ACTUAL}} | {{GATE6_CLAUDE_MATCH}} |
@@ -172,7 +172,7 @@ Search config.yaml and all propagated files for any model marked `working=false`
 ```bash
 grep -r "{{EXCLUDED_MODEL_1}}\|{{EXCLUDED_MODEL_2}}\|{{EXCLUDED_MODEL_3}}" \
   ~/AppData/Local/hermes/config.yaml \
-  C:\Users\Alexa\Desktop\SandBox\.hermes.md \
+  C:\Users\Alexa\Desktop\SandBox\$HERMES_HOME.md \
   C:\Users\Alexa\Desktop\SandBox\AGENTS.md \
   ~/AppData/Local/hermes/profiles/ 2>/dev/null || echo "None found"
 ```

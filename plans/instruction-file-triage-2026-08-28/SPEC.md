@@ -10,7 +10,7 @@ created: 2026-08-28T18:30+00:00
 ## 1. Purpose
 
 Provide a deterministic, DRY, MCP-first system for:
-- **Searching/identifying** all instruction-style files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) across the SandBox workspace and all Hermes profiles
+- **Searching/identifying** all instruction-style files (SOUL.md, USER.md, MEMORY.md, $HERMES_HOME.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) across the SandBox workspace and all Hermes profiles
 - **Listing** them with per-file metadata (path, size, line count, classification, last-modified)
 - **Triaging** each into a category: `canonical`, `duplicate`, `bloat`, `stale`, `conflicting`, `unknown`
 - **Debugging** common pathologies (frontmatter corruption, broken links, dead paths)
@@ -74,8 +74,8 @@ Provide a deterministic, DRY, MCP-first system for:
     }
   ],
   "cross_refs": {
-    "mcp_first_rule": ["SOUL.md", "USER.md", "AGENTS.md", ".hermes.md"],
-    "profile_routing_table": ["SOUL.md", "AGENTS.md", ".hermes.md"]
+    "mcp_first_rule": ["SOUL.md", "USER.md", "AGENTS.md", "$HERMES_HOME.md"],
+    "profile_routing_table": ["SOUL.md", "AGENTS.md", "$HERMES_HOME.md"]
   }
 }
 ```

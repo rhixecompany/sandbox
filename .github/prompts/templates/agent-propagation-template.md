@@ -33,7 +33,7 @@
 
 | File | Status | Current Model Ref | Target Model Ref | Command |
 |---|---|---|---|---|
-| `C:\Users\Alexa\Desktop\SandBox\.hermes.md` | {{HERMES_MD_STATUS}} | {{HERMES_MD_CURR}} | {{HERMES_MD_TARGET}} | {{HERMES_MD_CMD}} |
+| `C:\Users\Alexa\Desktop\SandBox\$HERMES_HOME.md` | {{HERMES_MD_STATUS}} | {{HERMES_MD_CURR}} | {{HERMES_MD_TARGET}} | {{HERMES_MD_CMD}} |
 | `C:\Users\Alexa\Desktop\SandBox\AGENTS.md` | {{AGENTS_MD_STATUS}} | {{AGENTS_MD_CURR}} | {{AGENTS_MD_TARGET}} | {{AGENTS_MD_CMD}} |
 | `C:\Users\Alexa\Desktop\SandBox\.github\copilot-instructions.md` | {{COPILOT_INST_STATUS}} | {{COPILOT_INST_CURR}} | {{COPILOT_INST_TARGET}} | {{COPILOT_INST_CMD}} |
 | `C:\Users\Alexa\Desktop\SandBox\CLAUDE.md` | {{CLAUDE_MD_STATUS}} | {{CLAUDE_MD_CURR}} | {{CLAUDE_MD_TARGET}} | {{CLAUDE_MD_CMD}} |
@@ -51,7 +51,7 @@
 - [ ] `hermes config set` CLI used for Hermes config (not raw YAML)
 - [ ] Profile SOUL.md files updated with new model references
 - [ ] Profile USER.md/MEMORY.md files updated if they contain model refs
-- [ ] Workspace context files (.hermes.md, AGENTS.md, etc.) updated
+- [ ] Workspace context files ($HERMES_HOME.md, AGENTS.md, etc.) updated
 - [ ] External agent configs updated if they reference models
 - [ ] No secrets/tokens introduced in any file
 - [ ] All changes recorded with file path and command used
@@ -73,7 +73,7 @@
 hermes profile list
 
 # Verify workspace files
-grep -r "{{PRIMARY_MODEL}}" C:\Users\Alexa\Desktop\SandBox\.hermes.md C:\Users\Alexa\Desktop\SandBox\AGENTS.md
+grep -r "{{PRIMARY_MODEL}}" C:\Users\Alexa\Desktop\SandBox\$HERMES_HOME.md C:\Users\Alexa\Desktop\SandBox\AGENTS.md
 
 # Verify external agents (if accessible)
 cat ~/.opencode/mcp.json | grep -i model

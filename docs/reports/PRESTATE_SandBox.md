@@ -35,7 +35,7 @@ Live API branch list (gh api repos/rhixecompany/sandbox/branches): development, 
 
 ## Working tree note
 
-Pre-existing uncommitted modifications to many files (.hermes, .vscode, prompts/, scripts/,
+Pre-existing uncommitted modifications to many files ($HERMES_HOME, .vscode, prompts/, scripts/,
 projects/*) were present before this task. This task commits ONLY the CI workflow change
 (.github/workflows/ci.yml). It does NOT stage or commit the unrelated prior modifications.
 

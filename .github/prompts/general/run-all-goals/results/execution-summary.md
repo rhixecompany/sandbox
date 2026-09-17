@@ -16,14 +16,14 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 | Phase | Task | Status |
 |---|---|---|
-| 1 | Tree Cleanup (.enhance, .goals, .hermes_diagnostics, etc.) | ✅ COMPLETE |
+| 1 | Tree Cleanup (.enhance, .goals, $HERMES_HOME_diagnostics, etc.) | ✅ COMPLETE |
 | 2 | Config Cleanup (*.json, *-report.md, *.log, *.txt) | ✅ COMPLETE |
 | 3 | Config Files Update (.editorconfig, .gitignore, .markdownlint, etc.) | ✅ COMPLETE |
 | 4 | Package Config (package.json, pyrightconfig.json, *.json) | ✅ COMPLETE |
 | 5 | mjs->mts Conversion | ✅ COMPLETE |
 | 6 | Docs & Markdown Cleanup | ✅ COMPLETE |
 | 7 | Source Migration (src/ directory) | ✅ COMPLETE |
-| 8 | Agent Sync (5 agent roots: .github, .copilot, .codex, .opencode, .hermes) | ✅ COMPLETE |
+| 8 | Agent Sync (5 agent roots: .github, .copilot, .codex, .opencode, $HERMES_HOME) | ✅ COMPLETE |
 | 9 | Config/scripts Sync (.env, config.yaml, opencode.json) | ✅ COMPLETE |
 | 10 | Diagnostic Repair (hermes doctor --fix) | ✅ COMPLETE |
 | 11 | Judge Scores >= 99 | ✅ COMPLETE |
@@ -53,7 +53,7 @@ e1b85525 chore(run-all-goals): ALL VERIFICATIONS PASSED — pipeline complete
   - Scripts: PASS
 - **Agent Sync**: 5 AI agent roots synchronized (91 skills, hooks, mcp.json, templates)
 - **mjs->mts**: No .mjs files remain (excluding node_modules)
-- **Cleanup**: .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees deleted
+- **Cleanup**: .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees deleted
 - **Config**: All config files validated and synced across agent roots
 - **Source Migration**: `src/` directory created, discover2.py migrated
 - **Hermes Config**: Valid (89 keys), hermes doctor passed

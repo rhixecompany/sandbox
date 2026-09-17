@@ -8,7 +8,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 # Core Rules — Shared Template
 
-> Sources: verified `SOUL.md` + `USER.md` + `.hermes.md` + **`tree.prompt.txt`** (PRIMARY source for cleanup goals, mjs->mts conversion, config validation). No fabricated rules.
+> Sources: verified `SOUL.md` + `USER.md` + `$HERMES_HOME.md` + **`tree.prompt.txt`** (PRIMARY source for cleanup goals, mjs->mts conversion, config validation). No fabricated rules.
 
 ## Non-Negotiable Rules (Verified)
 
@@ -27,7 +27,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 ## Tree-Primary Rules (From tree.prompt.txt)
 
-13. **Cleanup-First** — tree.prompt.txt defines cleanup-first execution. Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders before any construction work.
+13. **Cleanup-First** — tree.prompt.txt defines cleanup-first execution. Delete .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders before any construction work.
 14. **mjs->mts Conversion** — Per tree.prompt.txt: convert all *.mjs files to *.mts files. No .mjs files should remain without .mts counterparts.
 15. **Config Validation** — Per tree.prompt.txt: update/verify .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json, package.json, pyrightconfig.json.
 16. **Config Cleanup** — Per tree.prompt.txt: delete *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt files).
@@ -56,17 +56,17 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 | Property | Value | Source |
 |---|---|---|
-| Workspace root | `~/Desktop/SandBox` (`C:\Users\Alexa\Desktop\SandBox`) | `USER.md` + `.hermes.md` |
-| OS | Windows 11 (MSYS2/git-bash) | `.hermes.md` / SOUL.md |
-| Shell | bash (NOT PowerShell / cmd.exe) | `.hermes.md` runtime block |
-| Model (primary) | `nemotron-3-ultra-free` (opencode-zen) | `.hermes.md` live provider state |
-| Model (fallback) | `deepseek-v4-flash-free` (opencode-zen) | `.hermes.md` + USER.md |
-| Provider (primary) | `openrouter` (`thinkingmachines/inkling:free`) | `.hermes.md` / session audit |
+| Workspace root | `~/Desktop/SandBox` (`C:\Users\Alexa\Desktop\SandBox`) | `USER.md` + `$HERMES_HOME.md` |
+| OS | Windows 11 (MSYS2/git-bash) | `$HERMES_HOME.md` / SOUL.md |
+| Shell | bash (NOT PowerShell / cmd.exe) | `$HERMES_HOME.md` runtime block |
+| Model (primary) | `nemotron-3-ultra-free` (opencode-zen) | `$HERMES_HOME.md` live provider state |
+| Model (fallback) | `deepseek-v4-flash-free` (opencode-zen) | `$HERMES_HOME.md` + USER.md |
+| Provider (primary) | `openrouter` (`thinkingmachines/inkling:free`) | `$HERMES_HOME.md` / session audit |
 | Provider (fallback chain) | openrouter -> nous -> opencode-zen | `test-providers-models` session audit |
-| Active profile | `default` (user: Alexa; owner: Alexa) | `.hermes.md` header |
-| Git repo | `rhixecompany/sandbox` | `USER.md` / `.hermes.md` workspace block |
+| Active profile | `default` (user: Alexa; owner: Alexa) | `$HERMES_HOME.md` header |
+| Git repo | `rhixecompany/sandbox` | `USER.md` / `$HERMES_HOME.md` workspace block |
 | Branch | `clean-development` | `run-all-goals.prompt.md` context |
-| Recent commits (verified) | `0707a22d` / `f0e0f430` / `d2b0f58e` (3 verified) | `.hermes.md` workspace snapshot |
+| Recent commits (verified) | `0707a22d` / `f0e0f430` / `d2b0f58e` (3 verified) | `$HERMES_HOME.md` workspace snapshot |
 
 ## Verification Checklist Pattern
 

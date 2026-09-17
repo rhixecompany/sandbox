@@ -1,0 +1,13 @@
+{
+  "test-run.prompt.txt": 1823,
+  "tree.prompt.txt": 6165,
+  "conversion_output_sizes": {
+    ".github/prompts/general/init-run/test-run.md": 2328,
+    ".github/prompts/general/init-run/tree.md": 5154
+  },
+  "frontmatter_present": {
+    "test-run.md": true,
+    "tree.md": true
+  },
+  "no_env_exposure": true
+}

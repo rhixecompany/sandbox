@@ -29,7 +29,7 @@ be online at the same time. Common reasons:
   memory and skills
 
 Every profile already gets its own per-platform LaunchAgent
-(`ai.hermes.gateway-<name>.plist`) or systemd user service
+(`ai$HERMES_HOME.gateway-<name>.plist`) or systemd user service
 (`hermes-gateway-<name>.service`). This guide adds the patterns for managing
 them collectively.
 
@@ -636,10 +636,10 @@ never clash:
 
 | Platform | Path                                                              |
 | -------- | ----------------------------------------------------------------- |
-| macOS    | `~/Library/LaunchAgents/ai.hermes.gateway-<profile>.plist`        |
+| macOS    | `~/Library/LaunchAgents/ai$HERMES_HOME.gateway-<profile>.plist`        |
 | Linux    | `~/.config/systemd/user/hermes-gateway-<profile>.service`         |
 
-The default profile keeps the historical names: `ai.hermes.gateway.plist` /
+The default profile keeps the historical names: `ai$HERMES_HOME.gateway.plist` /
 `hermes-gateway.service`.
 
 ## Viewing logs
@@ -932,8 +932,8 @@ kill -KILL <pid>          # if that fails after a few seconds
 
 ```bash
 # macOS
-launchctl unload ~/Library/LaunchAgents/ai.hermes.gateway-<profile>.plist
-launchctl load   ~/Library/LaunchAgents/ai.hermes.gateway-<profile>.plist
+launchctl unload ~/Library/LaunchAgents/ai$HERMES_HOME.gateway-<profile>.plist
+launchctl load   ~/Library/LaunchAgents/ai$HERMES_HOME.gateway-<profile>.plist
 
 # Linux
 systemctl --user restart hermes-gateway-<profile>.service

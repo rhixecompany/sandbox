@@ -39,7 +39,7 @@ normalization) + Phase 3/4 (CI) for the `docs` tree.
 ## Working-tree warning
 
 - The working tree had a large volume of UNRELATED uncommitted changes (prompt
-  deletions, `.hermes` plan deletions, vscode edits, untracked audit scripts,
+  deletions, `$HERMES_HOME` plan deletions, vscode edits, untracked audit scripts,
   etc.). To honor "never commit unrelated work", only the CI workflow and this
   prestate file were staged — `git add -A` was deliberately NOT used.
 

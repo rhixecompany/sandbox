@@ -65,7 +65,7 @@ Migrate 1200+ `./**/*.md` files into the hermes root folder, consolidate and ded
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-012 | Update AGENTS.md, CLAUDE.md, .hermes.md, SOUL.md, USER.md, MEMORY.md | | 2026-09-14 |
+| TASK-012 | Update AGENTS.md, CLAUDE.md, $HERMES_HOME.md, SOUL.md, USER.md, MEMORY.md | | 2026-09-14 |
 | TASK-013 | Update all .prompt.md files referencing ./ paths | | 2026-09-14 |
 | TASK-014 | Update skill files and SKILL.md references | | 2026-09-14 |
 | TASK-015 | Verify no remaining `./` references in affected files | | 2026-09-14 |
@@ -106,7 +106,7 @@ Migrate 1200+ `./**/*.md` files into the hermes root folder, consolidate and ded
 - **FILE-001**: `./` directory (source — 1200+ .md files)
 - **FILE-002**: `hermes root/` directory (destination)
 - **FILE-003**: `.github/prompts/general/run-all-goals/run-all-goals.prompt.md` (target implementation)
-- **FILE-004**: `.hermes.md` (must be updated with new references)
+- **FILE-004**: `$HERMES_HOME.md` (must be updated with new references)
 - **FILE-005**: `AGENTS.md`, `CLAUDE.md`, `USER.md`, `MEMORY.md`, `SOUL.md` (must be updated)
 - **FILE-006**: All `.prompt.md` files referencing `./` paths
 

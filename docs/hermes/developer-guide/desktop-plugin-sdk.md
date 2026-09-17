@@ -437,7 +437,7 @@ classic preview card. Tell the agent about your directive in a skill (that's
 how it learns to emit it).
 
 Previewed widgets can also **talk back**. Inside the frame,
-`window.hermes.send('get-price eth')` (or a declarative
+`window$HERMES_HOME.send('get-price eth')` (or a declarative
 `<button data-hermes-send="get-price eth">` — no script needed) hands that
 prompt to the agent as a user turn, off-screen: no bubble takes up the
 transcript, the widget updating is the visible response. The turn is still
@@ -700,7 +700,7 @@ backend routes, skills) doesn't have to ship as two co-dependent installs. Put a
 `desktop/plugin.js` inside the agent package. When the package lands in any
 local `plugins/` root (default home or a profile), the Electron main process
 copies that half into `$HERMES_HOME/desktop-plugins/<id>/` beside a
-`.hermes-package.json` marker, and the renderer loads it through the exact same
+`$HERMES_HOME-package.json` marker, and the renderer loads it through the exact same
 pipeline as the standalone disk door (hot reload included):
 
 ```

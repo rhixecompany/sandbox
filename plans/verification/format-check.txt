@@ -1,7 +1,7 @@
 $ prettier --check --ignore-unknown .
 Checking formatting...
 [[33mwarn[39m] .codex/mcp.json
-[[33mwarn[39m] .hermes.md
+[[33mwarn[39m] $HERMES_HOME.md
 [[33mwarn[39m] .markdownlint-cli2.jsonc
 [[33mwarn[39m] .markdownlint.jsonc
 [[33mwarn[39m] .omo/run-continuation/ses_fcae1501dffe3RLRLAOPY4kh5v.json

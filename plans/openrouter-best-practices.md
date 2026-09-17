@@ -37,7 +37,7 @@ Key verified facts (from real search results):
 3. Track daily request count; do not assume unlimited free tier.
 4. Monitor 429 responses honestly; log real exit codes, not fabricated PASS.
 5. Preserve rate limits and environment failures (MSYS2 FAIL, adminbot MISSING, rate-limit 403) as session evidence — never hide.
-6. Reference DRY: `.hermes.md` + `user-communication-preferences` + `multi-file-change-protocol` — do not duplicate identity rules.
+6. Reference DRY: `$HERMES_HOME.md` + `user-communication-preferences` + `multi-file-change-protocol` — do not duplicate identity rules.
 7. 28 skills verified/referenced (see `./plans/multi-goal-execution-plan-2026-09-14.md`).
 
 ## Blockers (Honest — Preserved)
@@ -49,7 +49,7 @@ Key verified facts (from real search results):
 
 ## DRY Enforcement
 
-- Identity rules cross-referenced to `.hermes.md`, not duplicated.
+- Identity rules cross-referenced to `$HERMES_HOME.md`, not duplicated.
 - Preferences cross-referenced to `/user-communication-preferences` SKILL.md.
 - Protocol cross-referenced to `/multi-file-change-protocol` SKILL.md.
 - Session achievements (26 vulnerability findings, 41 parsing errors architecture concern, `.eslintrc.json` 69 B verified, 28 skills verified) referenced, not rewritten.

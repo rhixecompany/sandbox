@@ -346,7 +346,7 @@
 			"tracked": "no-repo"
 		},
 		{
-			"path": "C:\\Users\\Alexa\\.vscode\\extensions\\poppywu124.hermes-chat-0.7.1\\node_modules",
+			"path": "C:\\Users\\Alexa\\.vscode\\extensions\\poppywu124$HERMES_HOME-chat-0.7.1\\node_modules",
 			"kind": "node_modules",
 			"class": "SYSTEM",
 			"size": null,

@@ -189,8 +189,8 @@ phases:
         status: pending
         dependencies: [T-5.1]
       - id: T-5.6
-        name: Create .hermes.md
-        description: Create .hermes.md in workspace root
+        name: Create $HERMES_HOME.md
+        description: Create $HERMES_HOME.md in workspace root
         phase: Phase 5 - Context Files
         assignee: implementer
         status: pending
@@ -381,7 +381,7 @@ Rewriting 7 context files with authority hierarchy:
 2. USER.md (canonical in profile, pointer in workspace)
 3. MEMORY.md (canonical in profile, pointer in workspace)
 4. AGENTS.md (workspace root)
-5. .hermes.md (workspace root)
+5. $HERMES_HOME.md (workspace root)
 6. CLAUDE.md (workspace root - stub)
 7. .cursorrules (workspace root - stub)
 

@@ -11,7 +11,7 @@ source: verified session execution with tree.prompt.txt as PRIMARY source; tree-
 ## key_rules
 
 - **tree.prompt.txt PRIMARY**: All goals/subgoals derive from tree.prompt.txt directives (cleanup, config, mjs->mts, pipeline)
-- **Cleanup-first**: Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders BEFORE any construction work
+- **Cleanup-first**: Delete .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders BEFORE any construction work
 - **mjs->mts conversion**: All .mjs files must be converted to .mts before final verification
 - **Config validation**: All config files (.editorconfig, .gitignore, package.json, pyrightconfig.json, tsconfig.json, requirements.txt) must be updated/verified
 - **DRY**: Via templates/_shared/ (rules-core/deps-core/section-skeleton/skills-table-core/verification-checklist/best-practices)
@@ -24,13 +24,13 @@ source: verified session execution with tree.prompt.txt as PRIMARY source; tree-
 - **.git/index.lock**: Cleared
 - **git commit**: Verified
 - **push**: clean-development/development/production verified
-- **.env ONLY .hermes**: Confirmed
+- **.env ONLY $HERMES_HOME**: Confirmed
 - **.env.pre-delete MISSING**: Verified honest
 - **0 placeholders**: Verified grep
 
 ## tree-specific_checks
 
-1. .enhance/.goals/.hermes_diagnostics/.mcp directories deleted
+1. .enhance/.goals/$HERMES_HOME_diagnostics/.mcp directories deleted
 2. *.json (except package.json, pyrightconfig.json) cleaned
 3. *.log/*.txt (skip *.prompt.txt) cleaned
 4. .editorconfig/.gitignore/.markdownlint/.prettier files updated

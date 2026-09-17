@@ -301,7 +301,7 @@ Week 4: ░░░░░░░░░░░░░░░░░░██████
 | `opencode.json`    | OpenCode agent config  | OpenCode schema    | 21      | Canonical |
 | `.mcp.json`        | MCP server definitions | VS Code MCP schema | 26      | Canonical |
 | `.vscode/mcp.json` | VS Code MCP extension  | VS Code MCP schema | 27      | Generated |
-| `.hermes.md`       | Hermes agent profile   | Custom             | N/A     | Canonical |
+| `$HERMES_HOME.md`       | Hermes agent profile   | Custom             | N/A     | Canonical |
 
 ### Project Configuration Files (Post-Cleanup)
 

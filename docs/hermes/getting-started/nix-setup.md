@@ -115,7 +115,7 @@ This module needs NixOS. Hermes is an agent for one person. If you want an agent
 ```nix
 # configuration.nix
 { config, ... }: {
-  services.hermes-agent = {
+  services$HERMES_HOME-agent = {
     enable = true;
     settings.model.default = "anthropic/claude-sonnet-4";
     environmentFiles = [ config.sops.secrets."hermes-env".path ];
@@ -134,7 +134,7 @@ echo "OPENROUTER_API_KEY=sk-or-your-key" | sudo install -m 0600 -o hermes /dev/s
 ```
 
 ```nix
-services.hermes-agent.environmentFiles = [ "/var/lib/hermes/env" ];
+services$HERMES_HOME-agent.environmentFiles = [ "/var/lib/hermes/env" ];
 ```
 :::
 
@@ -152,10 +152,10 @@ When `container.enable = true` and `addToSystemPackages = true`, **every** `herm
 - If the container isn't running, the CLI retries briefly (5s with a spinner for interactive use, 10s silently for scripts) then fails with a clear error — no silent fallback
 - For developers working on the hermes codebase, set `HERMES_DEV=1` to bypass container routing and run the local checkout directly
 
-Set `container.hostUsers` to create a `~/.hermes` symlink to the service state directory, so the host CLI and the container share sessions, config, and memories:
+Set `container.hostUsers` to create a `~/$HERMES_HOME` symlink to the service state directory, so the host CLI and the container share sessions, config, and memories:
 
 ```nix
-services.hermes-agent = {
+services$HERMES_HOME-agent = {
   container.enable = true;
   container.hostUsers = [ "your-username" ];
   addToSystemPackages = true;
@@ -211,7 +211,7 @@ To enable container mode, add one line:
 
 ```nix
 {
-  services.hermes-agent = {
+  services$HERMES_HOME-agent = {
     enable = true;
     container.enable = true;
     # ... rest of config is identical
@@ -233,14 +233,14 @@ The `settings` option accepts an arbitrary attrset that is rendered as `config.y
 
 ```nix
 # base.nix
-services.hermes-agent.settings = {
+services$HERMES_HOME-agent.settings = {
   model.default = "anthropic/claude-sonnet-4";
   toolsets = [ "all" ];
   terminal = { backend = "local"; timeout = 180; };
 };
 
 # personality.nix
-services.hermes-agent.settings = {
+services$HERMES_HOME-agent.settings = {
   display = { compact = false; personality = "kawaii"; };
   memory = { memory_enabled = true; user_profile_enabled = true; };
 };
@@ -261,7 +261,7 @@ Run `nix build .#configKeys && cat result` to see every leaf config key extracte
 
 ```nix
 { config, ... }: {
-  services.hermes-agent = {
+  services$HERMES_HOME-agent = {
     enable = true;
     container.enable = true;
 
@@ -325,7 +325,7 @@ Run `nix build .#configKeys && cat result` to see every leaf config key extracte
 If you'd rather manage `config.yaml` entirely outside Nix, use `configFile`:
 
 ```nix
-services.hermes-agent.configFile = /etc/hermes/config.yaml;
+services$HERMES_HOME-agent.configFile = /etc/hermes/config.yaml;
 ```
 
 This bypasses `settings` entirely — no merge, no generation. The file is copied as-is to `$HERMES_HOME/config.yaml` on each activation.
@@ -350,7 +350,7 @@ Quick reference for the most common things Nix users want to customize:
 | Share state between host CLI and container | `container.hostUsers` | `[ "sidbin" ]` |
 | Make extra tools available to the agent | `extraPackages` | `[ pkgs.pandoc pkgs.imagemagick ]` |
 | Use a custom base image | `container.image` | `"ubuntu:24.04"` |
-| Override the hermes package | `package` | `inputs.hermes-agent.packages.${system}.default.override { ... }` |
+| Override the hermes package | `package` | `inputs$HERMES_HOME-agent.packages.${system}.default.override { ... }` |
 | Change state directory | `stateDir` | `"/opt/hermes"` |
 | Set the agent's working directory | `workingDirectory` | `"/home/user/projects"` |
 
@@ -374,7 +374,7 @@ Both `environment` (non-secret vars) and `environmentFiles` (secret files) are m
     secrets."hermes-env" = { format = "yaml"; };
   };
 
-  services.hermes-agent.environmentFiles = [
+  services$HERMES_HOME-agent.environmentFiles = [
     config.sops.secrets."hermes-env".path
   ];
 }
@@ -394,10 +394,10 @@ hermes-env: |
 
 ```nix
 {
-  age.secrets.hermes-env.file = ./secrets/hermes-env.age;
+  age.secrets$HERMES_HOME-env.file = ./secrets/hermes-env.age;
 
-  services.hermes-agent.environmentFiles = [
-    config.age.secrets.hermes-env.path
+  services$HERMES_HOME-agent.environmentFiles = [
+    config.age.secrets$HERMES_HOME-env.path
   ];
 }
 ```
@@ -408,7 +408,7 @@ For platforms requiring OAuth (e.g., Discord), use `authFile` to seed credential
 
 ```nix
 {
-  services.hermes-agent = {
+  services$HERMES_HOME-agent = {
     authFile = config.sops.secrets."hermes/auth.json".path;
     # authFileForceOverwrite = true;  # overwrite on every activation
   };
@@ -427,7 +427,7 @@ Hermes reads files from two directories. Thus there are two options. Use the opt
 
 ```nix
 {
-  services.hermes-agent = {
+  services$HERMES_HOME-agent = {
     # documents needs this option. Read the note below.
     workingDirectory = "/var/lib/hermes/workspace";
     documents = {
@@ -450,7 +450,7 @@ the default is a correct selection, and it satisfies the rule.
 
 ```nix
 {
-  services.hermes-agent.hermesHomeFiles = {
+  services$HERMES_HOME-agent$HERMES_HOMEHomeFiles = {
     "SOUL.md" = "You are a helpful AI assistant.";
     "memories/USER.md" = ./documents/USER.md;
   };
@@ -471,7 +471,7 @@ The `mcpServers` option declaratively configures [MCP (Model Context Protocol)](
 
 ```nix
 {
-  services.hermes-agent.mcpServers = {
+  services$HERMES_HOME-agent.mcpServers = {
     filesystem = {
       command = "npx";
       args = [ "-y" "@modelcontextprotocol/server-filesystem" "/data/workspace" ];
@@ -493,7 +493,7 @@ Environment variables in `env` values are resolved from `$HERMES_HOME/.env` at r
 
 ```nix
 {
-  services.hermes-agent.mcpServers.remote-api = {
+  services$HERMES_HOME-agent.mcpServers.remote-api = {
     url = "https://mcp.example.com/v1/mcp";
     headers.Authorization = "Bearer \${MCP_REMOTE_API_KEY}";
     timeout = 180;
@@ -507,7 +507,7 @@ Set `auth = "oauth"` for servers using OAuth 2.1. Hermes implements the full PKC
 
 ```nix
 {
-  services.hermes-agent.mcpServers.my-oauth-server = {
+  services$HERMES_HOME-agent.mcpServers.my-oauth-server = {
     url = "https://mcp.example.com/mcp";
     auth = "oauth";
   };
@@ -529,7 +529,7 @@ docker exec -it hermes-agent \
   hermes mcp add my-oauth-server --url https://mcp.example.com/mcp --auth oauth
 
 # Native mode
-sudo -u hermes HERMES_HOME=/var/lib/hermes/.hermes \
+sudo -u hermes HERMES_HOME=/var/lib/hermes/$HERMES_HOME \
   hermes mcp add my-oauth-server --url https://mcp.example.com/mcp --auth oauth
 ```
 
@@ -552,7 +552,7 @@ Some MCP servers can request LLM completions from the agent:
 
 ```nix
 {
-  services.hermes-agent.mcpServers.analysis = {
+  services$HERMES_HOME-agent.mcpServers.analysis = {
     command = "npx";
     args = [ "-y" "analysis-server" ];
     sampling = {
@@ -593,15 +593,15 @@ Both signals hold the name of the system that manages the install. Thus the refu
 
 The flake also exports `homeManagerModules.default`. Hermes is an agent for one person. The credentials, the memory, the sessions and the cron jobs all belong to that person. Thus a user service is the correct shape on a personal machine. It runs on each distribution that Home Manager supports, and not only on NixOS.
 
-The option set is the same set that the NixOS module uses. It is `services.hermes-agent`, with the same `settings`, `environmentFiles`, `documents`, `mcpServers`, `extraPlugins` and `backend` options. Each example above works here without a change. Only the necessary parts are different:
+The option set is the same set that the NixOS module uses. It is `services$HERMES_HOME-agent`, with the same `settings`, `environmentFiles`, `documents`, `mcpServers`, `extraPlugins` and `backend` options. Each example above works here without a change. Only the necessary parts are different:
 
 | | NixOS module | Home Manager module |
 |---|---|---|
 | Runs as | a system user that you declare, with `user`, `group` and `createUser` | you |
-| State directory | `stateDir` and `/.hermes` | `hermesHome`, set directly. The default is `~/.hermes`. |
+| State directory | `stateDir` and `/$HERMES_HOME` | `hermesHome`, set directly. The default is `~/$HERMES_HOME`. |
 | Service | `systemd.services` | `systemd.user.services` on Linux, `launchd.agents` on macOS |
-| CLI on the PATH | `addToSystemPackages`, which exports `HERMES_HOME` for the full system | `programs.hermes-agent.enable`, which exports it for your session only |
-| Desktop application | not supported, because a system service cannot own a user session | `programs.hermes-agent.desktop.enable` |
+| CLI on the PATH | `addToSystemPackages`, which exports `HERMES_HOME` for the full system | `programs$HERMES_HOME-agent.enable`, which exports it for your session only |
+| Desktop application | not supported, because a system service cannot own a user session | `programs$HERMES_HOME-agent.desktop.enable` |
 | Container mode | supported | not supported, because it needs root and the Docker socket |
 
 ### Add the Flake Input
@@ -623,7 +623,7 @@ Then import the module into your Home Manager configuration. The configuration c
 {
   imports = [ hermes-agent.homeManagerModules.default ];
 
-  services.hermes-agent = {
+  services$HERMES_HOME-agent = {
     enable = true;
     gateway.enable = true;
     settings.model.default = "anthropic/claude-sonnet-4";
@@ -632,7 +632,7 @@ Then import the module into your Home Manager configuration. The configuration c
 }
 ```
 
-`home-manager switch` makes `~/.hermes`, writes `config.yaml`, builds `.env` and starts the gateway as a user service.
+`home-manager switch` makes `~/$HERMES_HOME`, writes `config.yaml`, builds `.env` and starts the gateway as a user service.
 
 :::warning Enable linger, or the service stops at logout
 CAUTION: Enable linger for your account. Without linger, systemd stops the user manager when your last session ends, and the gateway stops with it. Home Manager cannot set linger, because linger is a property of the account:
@@ -656,7 +656,7 @@ macOS has no equivalent option. A `launchd` agent with `RunAtLoad` starts at log
 
 ```nix
 {
-  services.hermes-agent = {
+  services$HERMES_HOME-agent = {
     enable = true;
     gateway.enable = true;      # messaging platforms
     backend.mode = "dashboard"; # + the browser dashboard on 127.0.0.1:9119
@@ -700,7 +700,7 @@ When container mode is enabled, hermes runs inside a persistent Ubuntu container
 Host                                    Container
 ────                                    ─────────
 /nix/store/...-hermes-agent-0.1.0  ──►  /nix/store/... (ro)
-~/.hermes -> /var/lib/hermes/.hermes       (symlink bridge, per hostUsers)
+~/$HERMES_HOME -> /var/lib/hermes/$HERMES_HOME       (symlink bridge, per hostUsers)
 /var/lib/hermes/                    ──►  /data/          (rw)
   ├── current-package -> /nix/store/...    (symlink, updated each rebuild)
   ├── .gc-root -> /nix/store/...           (prevents nix-collect-garbage)
@@ -757,7 +757,7 @@ The NixOS module supports declarative plugin installation — no imperative `her
 For plugins that are just a source tree with `plugin.yaml` + `__init__.py` (e.g., [hermes-lcm](https://github.com/stephenschoettler/hermes-lcm)):
 
 ```nix
-services.hermes-agent.extraPlugins = [
+services$HERMES_HOME-agent.extraPlugins = [
   (pkgs.fetchFromGitHub {
     owner = "stephenschoettler";
     repo = "hermes-lcm";
@@ -774,7 +774,7 @@ Plugins are symlinked into `$HERMES_HOME/plugins/` at activation time. Hermes di
 For pip-packaged plugins that register via `[project.entry-points."hermes_agent.plugins"]` (e.g., [rtk-hermes](https://github.com/ogallotti/rtk-hermes)):
 
 ```nix
-services.hermes-agent.extraPythonPackages = [
+services$HERMES_HOME-agent.extraPythonPackages = [
   (pkgs.python312Packages.buildPythonPackage {
     pname = "rtk-hermes";
     version = "1.0.0";
@@ -798,12 +798,12 @@ For optional extras declared in hermes-agent's `pyproject.toml`, use `extraDepen
 
 ```nix
 # Enable Discord, Telegram, Slack
-services.hermes-agent.extraDependencyGroups = [ "messaging" ];
+services$HERMES_HOME-agent.extraDependencyGroups = [ "messaging" ];
 ```
 
 ```nix
 # Enable a memory provider
-services.hermes-agent = {
+services$HERMES_HOME-agent = {
   extraDependencyGroups = [ "hindsight" ];
   settings.memory.provider = "hindsight";
 };
@@ -847,7 +847,7 @@ Or use the pre-built `#messaging` or `#full` flake packages instead of per-extra
 A directory plugin with third-party Python dependencies needs both options:
 
 ```nix
-services.hermes-agent = {
+services$HERMES_HOME-agent = {
   extraPlugins = [ my-plugin-src ];          # plugin source
   extraPythonPackages = [ pkgs.python312Packages.redis ];  # its Python dep
   extraPackages = [ pkgs.redis ];            # system binary it needs
@@ -860,12 +860,12 @@ External flakes can override the package directly:
 
 ```nix
 {
-  inputs.hermes-agent.url = "github:NousResearch/hermes-agent";
+  inputs$HERMES_HOME-agent.url = "github:NousResearch/hermes-agent";
   outputs = { hermes-agent, nixpkgs, ... }: {
     nixpkgs.overlays = [ hermes-agent.overlays.default ];
     # Then:
-    #   pkgs.hermes-agent.override { extraPythonPackages = [...]; }
-    #   pkgs.hermes-agent.override { extraDependencyGroups = [ "hindsight" ]; }
+    #   pkgs$HERMES_HOME-agent.override { extraPythonPackages = [...]; }
+    #   pkgs$HERMES_HOME-agent.override { extraDependencyGroups = [ "hindsight" ]; }
   };
 }
 ```
@@ -875,7 +875,7 @@ External flakes can override the package directly:
 Plugins still need to be enabled in `config.yaml`. Add them via the declarative settings:
 
 ```nix
-services.hermes-agent.settings.plugins.enabled = [
+services$HERMES_HOME-agent.settings.plugins.enabled = [
   "hermes-lcm"
   "rtk-rewrite"
 ];
@@ -1031,30 +1031,30 @@ This option runs the process that Hermes Desktop and the web dashboard connect t
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `hermesHome` | `str` | `"${config.home.homeDirectory}/.hermes"` | `HERMES_HOME` directly. The NixOS module builds it from `stateDir`. |
+| `hermesHome` | `str` | `"${config.home.homeDirectory}/$HERMES_HOME"` | `HERMES_HOME` directly. The NixOS module builds it from `stateDir`. |
 | `gateway.enable` | `bool` | `false` | Run the messaging gateway. On the NixOS module the gateway is the service, so that module has no such option. |
 
-### `programs.hermes-agent` (Home Manager only)
+### `programs$HERMES_HOME-agent` (Home Manager only)
 
 Home Manager separates "install this application for me" from "run this
-daemon". `services.hermes-agent` keeps the state, the configuration and the
-daemons. `programs.hermes-agent` installs what you use, and reads
+daemon". `services$HERMES_HOME-agent` keeps the state, the configuration and the
+daemons. `programs$HERMES_HOME-agent` installs what you use, and reads
 `hermesHome` and the backend address from the services.
 
 | Option | Type | Default | Description |
 |---|---|---|---|
 | `enable` | `bool` | `false` | Add the `hermes` CLI to `home.packages`, and export `HERMES_HOME` for your shells |
-| `package` | `package` | `services.hermes-agent.package` | The package to install. The default applies `extraPythonPackages` and `extraDependencyGroups` from the services, so both are one build. |
+| `package` | `package` | `services$HERMES_HOME-agent.package` | The package to install. The default applies `extraPythonPackages` and `extraDependencyGroups` from the services, so both are one build. |
 | `desktop.enable` | `bool` | `false` | Add the Hermes Desktop application, with a launcher entry on Linux |
-| `desktop.package` | `package` | `package.hermesDesktop` | The desktop package. The default follows `package`, so the application and the services run one Hermes runtime. |
+| `desktop.package` | `package` | `package$HERMES_HOMEDesktop` | The desktop package. The default follows `package`, so the application and the services run one Hermes runtime. |
 
 ```nix
-programs.hermes-agent = {
+programs$HERMES_HOME-agent = {
   enable = true;
   desktop.enable = true;
 };
 
-services.hermes-agent = {
+services$HERMES_HOME-agent = {
   enable = true;
   backend.mode = "serve";
   backend.sessionTokenFile = config.sops.secrets."hermes/desktop-token".path;
@@ -1062,9 +1062,9 @@ services.hermes-agent = {
 ```
 
 The launcher carries `HERMES_HOME` itself. A desktop menu reads no shell
-profile, so the value that `programs.hermes-agent.enable` exports with
+profile, so the value that `programs$HERMES_HOME-agent.enable` exports with
 `home.sessionVariables` reaches an interactive shell only. Without the
-value in the launcher, the application opens `~/.hermes` while the
+value in the launcher, the application opens `~/$HERMES_HOME` while the
 services use `hermesHome`, and you see no sessions and no keys.
 
 With `backend.sessionTokenFile`, the application connects to the backend
@@ -1072,7 +1072,7 @@ of the service instead of starting one of its own. Both sides read the
 file at start time, so the token enters no Nix store path. Without the
 option, each side runs its own backend.
 
-`services.hermes-agent.installPackage` was removed by this split. A
+`services$HERMES_HOME-agent.installPackage` was removed by this split. A
 configuration that still sets it gets an error that names the
 replacement.
 
@@ -1085,7 +1085,7 @@ replacement.
 | `container.image` | `str` | `"ubuntu:24.04"` | Base image (pulled at runtime) |
 | `container.extraVolumes` | `listOf str` | `[]` | Extra volume mounts (`host:container:mode`) |
 | `container.extraOptions` | `listOf str` | `[]` | Extra args passed to `docker create` |
-| `container.hostUsers` | `listOf str` | `[]` | Interactive users who get a `~/.hermes` symlink to the service stateDir and are auto-added to the `hermes` group |
+| `container.hostUsers` | `listOf str` | `[]` | Interactive users who get a `~/$HERMES_HOME` symlink to the service stateDir and are auto-added to the `hermes` group |
 
 ---
 

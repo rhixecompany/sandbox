@@ -22,7 +22,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 ## Unified Goals & Subgoals
 
 ### GOAL 1 — Cleanup & Consolidation (PRIMARY)
-- SG1.1: Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts.
+- SG1.1: Delete .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts.
 - SG1.2: Delete *.json, *-report.md (except package.json, pyrightconfig.json).
 - SG1.3: Delete *.log, *.txt (skip *.prompt.txt).
 - SG1.4: Convert *.mjs to *.mts.
@@ -34,7 +34,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 ### GOAL 2 — Comprehensive Implementation Pipeline
 Create/update/refactor specs, plans, prompts, scripts, skills. Score >= 99 on all judge skills.
-- SG2.1: Audit SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules.
+- SG2.1: Audit SOUL.md, USER.md, MEMORY.md, $HERMES_HOME.md, AGENTS.md, CLAUDE.md, .cursorrules.
 - SG2.2: Verify/fix hermes plugins and hooks.
 - SG2.3: MCP servers sync.
 - SG2.4: Config/scripts sync (.env, config.yaml, quick_commands).
@@ -47,7 +47,7 @@ Create/update/refactor specs, plans, prompts, scripts, skills. Score >= 99 on al
 Test openrouter + opencode-zen free models; run hermes chat --yolo --oneshot; create emoji-markdown report; configure best model + fallback.
 
 ### GOAL 4 — Agent Sync
-Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, .hermes); ensure identical configs.
+Copy hooks, skills, plugins, instructions to ALL AI agent roots (.github, .copilot, .codex, .opencode, $HERMES_HOME); ensure identical configs.
 
 ### GOAL 5 — Skills Plan & Implementation
 Create/update/refactor/test/debug/fix/verify all listed skills. Ensure all files verified on disk and every gates, checklist, rules, styles, preferences passed.

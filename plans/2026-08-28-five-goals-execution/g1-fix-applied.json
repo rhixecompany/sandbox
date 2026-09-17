@@ -20,10 +20,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:alexa",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -62,10 +62,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:code-architect",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -90,10 +90,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:creative-director",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -132,10 +132,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:cto",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -174,10 +174,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:default",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -216,10 +216,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:designer",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -258,10 +258,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:dev",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -286,10 +286,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:exec-assistant",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -328,10 +328,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:ops",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -356,10 +356,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:patient-tutor",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -398,10 +398,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:pm",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -440,10 +440,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:qa",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -468,10 +468,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:research-analyst",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -510,10 +510,10 @@
       },
       {
         "action": "create",
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:security",
-        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md"
+        "canonical": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md"
       },
       {
         "action": "create",
@@ -539,8 +539,8 @@
     ],
     "skipped": [
       {
-        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "reason": "exists_non_pointer"
       },
       {
@@ -694,8 +694,8 @@
         "sha256_first16": "33c3a53ce2efe8bf"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:alexa",
         "bytes": 458,
         "sha256_first16": "c074813dbe2dadcb"
@@ -736,8 +736,8 @@
         "sha256_first16": "8e74c15dc149a256"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:code-architect",
         "bytes": 467,
         "sha256_first16": "099541332bec628a"
@@ -764,8 +764,8 @@
         "sha256_first16": "20453bd62d08e3f0"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:creative-director",
         "bytes": 470,
         "sha256_first16": "69835258b1c62416"
@@ -806,8 +806,8 @@
         "sha256_first16": "df0c87d88ad29901"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:cto",
         "bytes": 456,
         "sha256_first16": "c3dd2868f4bf35f6"
@@ -848,8 +848,8 @@
         "sha256_first16": "263cf2b85d26181d"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:default",
         "bytes": 460,
         "sha256_first16": "fa77ec1fa06add01"
@@ -890,8 +890,8 @@
         "sha256_first16": "66695697ada8a8f9"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:designer",
         "bytes": 461,
         "sha256_first16": "59aa207e82824763"
@@ -932,8 +932,8 @@
         "sha256_first16": "3339d6415abd871b"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:dev",
         "bytes": 456,
         "sha256_first16": "3cf82ab436430548"
@@ -960,8 +960,8 @@
         "sha256_first16": "fee4ce2f395c8cdf"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:exec-assistant",
         "bytes": 467,
         "sha256_first16": "d38d3e0fb7366170"
@@ -1002,8 +1002,8 @@
         "sha256_first16": "c199f603ff31628a"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:ops",
         "bytes": 456,
         "sha256_first16": "2f7dab1e2561b6ad"
@@ -1030,8 +1030,8 @@
         "sha256_first16": "38a73380f22f30d7"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:patient-tutor",
         "bytes": 466,
         "sha256_first16": "5eff0b570c854d73"
@@ -1072,8 +1072,8 @@
         "sha256_first16": "19c047cea7bf4d65"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:pm",
         "bytes": 455,
         "sha256_first16": "68ef822627c91772"
@@ -1114,8 +1114,8 @@
         "sha256_first16": "4bb3508f003386bc"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:qa",
         "bytes": 455,
         "sha256_first16": "99cd6d8dc751b27e"
@@ -1142,8 +1142,8 @@
         "sha256_first16": "27cb645f65b147a1"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:research-analyst",
         "bytes": 469,
         "sha256_first16": "9fa8a070cdd9dac0"
@@ -1184,8 +1184,8 @@
         "sha256_first16": "1875b3480b28d309"
       },
       {
-        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.hermes.md",
-        "fname": ".hermes.md",
+        "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\$HERMES_HOME.md",
+        "fname": "$HERMES_HOME.md",
         "scope": "profile:security",
         "bytes": 461,
         "sha256_first16": "577fe08fe99c779e"

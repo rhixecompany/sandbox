@@ -28,7 +28,7 @@ When configuring this workspace, read `.opencode/opencode.json` (canonical) and 
 - Compaction: `high` compression, `15000` line history, `500` line threshold
 - Model routing: Best accuracy (Nemotron-3 Ultra 550B), reasoning (Inkling), speed (DeepSeek Flash)
 - Plugins: superpowers, cli-enhancements, context-engineing, tui-enhancements enabled
-- DRY: `.omo/templates/` for reusable patterns; `.hermes.md` overrides highest
+- DRY: `.omo/templates/` for reusable patterns; `$HERMES_HOME.md` overrides highest
 
 ## Verification
 

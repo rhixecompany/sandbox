@@ -34,7 +34,7 @@ High-level phases:
 4. **Check dependents** — who requires the vulnerable package? If no one, upgrade freely
 5. **Check consumer constraints** — will the new version satisfy all importers? Hard `==` pins need --force-reinstall or deferral
 6. **Pin MCP server versions** — if `@latest` appears in `config.yaml` MCP server args, pin via `hermes config set mcp_servers.<name>.args` (covered in cross-project audit reference)
-7. **Rollback snapshot** — pip freeze before any change (no git on ~/.hermes)
+7. **Rollback snapshot** — pip freeze before any change (no git on ~/$HERMES_HOME)
 8. **Upgrade** — use `uv pip install` for PEP 668 (uv-managed) environments; `pip install --force-reinstall --no-deps` for hard-pinned packages
 9. **Verify** — pip show versions + runtime import of each upgraded package + import of its consumers + `pip-audit --strict --desc` for zero-finding confirmation
 10. **Report** — which CVEs closed, which deferred, and why

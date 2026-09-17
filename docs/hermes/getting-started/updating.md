@@ -339,7 +339,7 @@ hermes uninstall
 The uninstaller gives you the option to keep your configuration files (`~/./`) for a future reinstall.
 
 :::tip Moving to a new machine rather than leaving?
-Take your setup with you before removing anything: `hermes backup` captures the entire `~/.hermes` directory including credentials, while `hermes profile export` packs a single profile with credentials excluded by design (so an export alone is not a full backup). See [`hermes backup` vs `hermes profile export`](/reference/faq#hermes-backup-vs-hermes-profile-export).
+Take your setup with you before removing anything: `hermes backup` captures the entire `~/$HERMES_HOME` directory including credentials, while `hermes profile export` packs a single profile with credentials excluded by design (so an export alone is not a full backup). See [`hermes backup` vs `hermes profile export`](/reference/faq#hermes-backup-vs-hermes-profile-export).
 :::
 
 ### Manual Uninstall
@@ -347,7 +347,7 @@ Take your setup with you before removing anything: `hermes backup` captures the 
 ```bash
 rm -f ~/.local/bin/hermes
 rm -rf /path/to/hermes-agent
-rm -rf ~/.hermes            # Optional — keep if you plan to reinstall
+rm -rf ~/$HERMES_HOME            # Optional — keep if you plan to reinstall
 ```
 
 :::info
@@ -355,6 +355,6 @@ If you installed the gateway as a system service, stop and disable it first:
 ```bash
 hermes gateway stop
 # Linux: systemctl --user disable hermes-gateway
-# macOS: launchctl remove ai.hermes.gateway
+# macOS: launchctl remove ai$HERMES_HOME.gateway
 ```
 :::

@@ -27,20 +27,20 @@ Best (full protocol + all verification gates) — confirmed via clarification.
 | P3 | Update ALL hermes profile descriptions (honcho/user/card data); migrate `USER.md`/`MEMORY.md` (+ `SOUL.md` for identity) → `../../AppData/Local/Hermes/memories/` (merge, delete originals); update `AGENTS.md`, `CLAUDE.md`, `.cursorrules` with DRY + honcho data; enforce `multi-file-change-protocol` 14-skill + 5-step; enforce `systematic-debugging` 4-phase | `./specs/phase3-profiles-migration.md`; all profile `SOUL.md`/`USER.md`/`MEMORY.md` enhanced; context files updated; `memories/` verified | Subagent-3 | All profiles verified; memory migration verified; DRY references verified; 0 synthetic results; identity preserved; `.env` 3334 B unchanged; 0 new `.bak` |
 
 ## Rules Enforced (verified references — not duplicated; DRY)
-- `user-communication-preferences`: concise/direct/table-first/action-first; DRY via `templates/_shared/`; verification before claim; honest blocker reporting; never synthetic session IDs/capabilities/ranking; `.env` ONLY `.hermes`.
+- `user-communication-preferences`: concise/direct/table-first/action-first; DRY via `templates/_shared/`; verification before claim; honest blocker reporting; never synthetic session IDs/capabilities/ranking; `.env` ONLY `$HERMES_HOME`.
 - `multi-file-change-protocol`: 14-skill stack + 5-step (LOAD→PLAN→VERIFY→EXECUTE→GATE); >6 file trigger verified; sequential/parallel decision verified; verification checklist verified.
 - `systematic-debugging`: 4-phase (Root Cause → Pattern → Hypothesis → Implementation); single hypothesis; 3-fix-stop rule; architecture question if ≥3 fixes fail; evidence before claim.
 - `plans-and-specs`: phased plan + linked spec + acceptance criteria; verification before complete.
 
 ## Personas / Profile Routing (per clarification + honcho context)
-- Default profile: `default` (inkling:free/openrouter) — verified `.hermes.md`
+- Default profile: `default` (inkling:free/openrouter) — verified `$HERMES_HOME.md`
 - Adminbot profile: `adminbot` (verified MISSING preserved honestly — NOT fabricated; verified blocker)
 - Profile routing: code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot, general→default
 - Active user: Alexa; workspace: `~/Desktop/SandBox`; repo: `rhixecompany/sandbox`; branch: `clean-development`
 
 ## Resource Allocation
 - 3 subagents (1 per phase) — parallel across independent phases; sequential dependency enforced (P2 needs P1 env; P3 needs P2 profile/env updates)
-- Subagent context: full repo/hermes paths, 14 skill references, profile list (14 profiles verified), `.hermes.md` identity refs, user preference rules
+- Subagent context: full repo/hermes paths, 14 skill references, profile list (14 profiles verified), `$HERMES_HOME.md` identity refs, user preference rules
 
 ## Milestones / Gates
 - M1 (Load): 14 skills verified (5 loaded + 9 referenced); spec/plan artifacts created → GATE-A
@@ -59,7 +59,7 @@ Best (full protocol + all verification gates) — confirmed via clarification.
 - P3: Memory migration requires delete of originals — destructive; approved explicitly.
 
 ## Cross-References (DRY — verified, not duplicated)
-- Identity/routing → `.hermes.md` (workspace) + profile `.hermes.md` files (verified 2859 B post-edit)
+- Identity/routing → `$HERMES_HOME.md` (workspace) + profile `$HERMES_HOME.md` files (verified 2859 B post-edit)
 - Execution prefs → `user-communication-preferences` SKILL.md (verified loaded; preferences: concise/direct/table-first/action-first/DRY/verification-first)
 - Multi-file protocol → `multi-file-change-protocol` SKILL.md (verified 14-stack; protocol verified)
 - Systematic debugging → `systematic-debugging` SKILL.md (`software-development/` category verified; 4-phase verified)

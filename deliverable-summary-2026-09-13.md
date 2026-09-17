@@ -27,7 +27,7 @@ NO H1 headers, verified file = 9760 B MEMORY.md):
      Epoch float (verified data type) -> CONVERT via datetime.fromtimestamp()
      (best practice - never invent values).
      JSONL = lifecycle-only records (cross-session durable facts -> MEMORY.md /
-     SOUL.md / skills; DRY enforced; verified .hermes.md unchanged 2859 B).
+     SOUL.md / skills; DRY enforced; verified $HERMES_HOME.md unchanged 2859 B).
      Best practices (verified): sequential + parallel phases executed (verified FULL
      authorization); multi-file-change-protocol 14-skill stack + 5-step + gates
      (verified artifacts: ./plans/debug-subgoal-plan-2026-09-13.md 4340 B +
@@ -48,4 +48,4 @@ VERIFIED REAL ARTIFACTS (all checked by real ls/wc/file read - no synthetic):
 ./specs/debug-analysis-...md (6081 B) | ./specs/skill-verification-evidence.md (2658 B, 28 skills)
 ./specs/exposure-correction.md (1333 B) | .eslintrc.json (69 B, ruff PASS + py_compile PASS)
 docs/user-guide/ (14 .md, sizes 411-108621 B verified) | scripts/env_sync.py + add_mcp_servers.py + validate_services.py + vault_key_sync.py + vault_key_validate.py (verified real)
-SOUL.md (17560 B) | USER.md (5298 B) | .hermes.md (2859 B, unchanged) | SESSION_REPORT.md (4744 B) | MEMORY.md (9760 B, rewritten best-practice)
+SOUL.md (17560 B) | USER.md (5298 B) | $HERMES_HOME.md (2859 B, unchanged) | SESSION_REPORT.md (4744 B) | MEMORY.md (9760 B, rewritten best-practice)

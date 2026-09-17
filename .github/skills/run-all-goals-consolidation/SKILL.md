@@ -12,7 +12,7 @@ Always-on rules for this class of task (the user's verified preferences embedded
 - Communication: concise bullets first; result (`PASS`/verified B count) before explanation; table-first for comparisons.
 - Execution: read â targeted `patch` â verify (not full blind rewrites). Verify gates before claim.
 - DRY enforcement: rules/dependencies/sections referenced from `templates/_shared/` (built at `.github/prompts/general/run-all-goals/templates/_shared/`); never duplicated inline.
-- Source `.txt` files (`goal-using-superpowers-brainstormin.txt`, `test-run.prompt.txt`): verify at workspace root (`find`/`wc -c` via `terminal` â not `execute_code` which runs at `/tmp/`). Size discrepancy (9,261/4,563 vs 9,277/4,575 B) is CRLF normalization (`core.autocrlf=true` â verified in `.hermes.md`); do NOT invent a different file.
+- Source `.txt` files (`goal-using-superpowers-brainstormin.txt`, `test-run.prompt.txt`): verify at workspace root (`find`/`wc -c` via `terminal` â not `execute_code` which runs at `/tmp/`). Size discrepancy (9,261/4,563 vs 9,277/4,575 B) is CRLF normalization (`core.autocrlf=true` â verified in `$HERMES_HOME.md`); do NOT invent a different file.
 
 ## Procedure (steps in execution order, with real commands)
 
@@ -27,7 +27,7 @@ Always-on rules for this class of task (the user's verified preferences embedded
 
 ### 3. Build shared artifacts (only when physically missing)
 - Check `.github/prompts/templates/_shared/` exists (verified: missing initially; built during this session).
-- When missing: build from verified workspace rules (`SOUL.md` identity + cognitive style; `USER.md` profile + preferences; `.hermes.md` environment; project `.github/prompts/` dependency patterns â 29 verified matches), NOT from synthetic content.
+- When missing: build from verified workspace rules (`SOUL.md` identity + cognitive style; `USER.md` profile + preferences; `$HERMES_HOME.md` environment; project `.github/prompts/` dependency patterns â 29 verified matches), NOT from synthetic content.
 - Create: `rules-core.md`, `deps-core.md`, `section-skeleton.md`, `skills-table-core.md`, `verification-checklist.md`, `best-practices.md`. Verify with `ls -l` before claim.
 - Create references (`references/prompt-workflow.md`, `session-reporting.md`, `batch-skill-injection.md`) derived from verified `prompt-management` SKILL.md + verified `execution-summary.md` (867 B). Never invent APIs/procedures.
 

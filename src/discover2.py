@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os, hashlib
 base = r"C:\Users\Alexa\Desktop\SandBox"
-roots = [".github", ".copilot", ".codex", ".opencode", ".hermes"]
+roots = [".github", ".copilot", ".codex", ".opencode", "$HERMES_HOME"]
 print("=== AGENTS ===")
 for r in roots:
     ap = os.path.join(base, r, "agents")
@@ -45,7 +45,7 @@ for r in [".github", ".copilot", ".codex"]:
     if os.path.exists(mp):
         print(f"{r}/mcp.json: {os.path.getsize(mp)} bytes")
 print("\n=== ./hooks ===")
-hp = os.path.join(base, ".hermes", "hooks")
+hp = os.path.join(base, "$HERMES_HOME", "hooks")
 if os.path.exists(hp):
     items = sorted(os.listdir(hp))
     print(f"{len(items)} items: {items}")

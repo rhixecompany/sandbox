@@ -329,7 +329,7 @@ workspace data.
 
 ## Profile Isolation
 
-All storage paths **must** use the `hermes_home` kwarg from `initialize()`, not hardcoded `~/.hermes`:
+All storage paths **must** use the `hermes_home` kwarg from `initialize()`, not hardcoded `~/$HERMES_HOME`:
 
 ```python
 # CORRECT — profile-scoped

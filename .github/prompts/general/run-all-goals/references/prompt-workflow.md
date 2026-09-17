@@ -17,7 +17,7 @@ Per tree.prompt.txt directives, the execution pipeline follows this order:
 
 | Phase | tree.prompt.txt Goal | Description |
 |---|---|---|
-| 1 | Cleanup folders | Delete .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, etc. |
+| 1 | Cleanup folders | Delete .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, etc. |
 | 2 | Cleanup files | Delete *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt |
 | 3 | Config update | Update/verify .editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml |
 | 4 | Config update | Update/verify requirements.txt, tsconfig.json, package.json, pyrightconfig.json |
@@ -40,7 +40,7 @@ A prompt in Hermes packages all execution context for a reproducible task. Compo
 | Plans-and-Specs | `plans-and-specs` skill reference |
 | Scripts | `scripts/` directory (verified: `scripts/validate_prompt_frontmatter.py`, `scripts/dry_run_prompts.py`, etc.) |
 | Profiles | Hermes profile selection (`hermes profile use <name>`) |
-| Personalities | Personality settings (verified: `.hermes.md` profile table) |
+| Personalities | Personality settings (verified: `$HERMES_HOME.md` profile table) |
 | Skills | Skill references (`dependencies:` + `skills:`) |
 | Tools | Toolset declarations (`toolsets:`) |
 | Personas | Role-based behavior overrides (optional) |

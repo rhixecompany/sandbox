@@ -63,6 +63,7 @@ env/
 *.lockb
 bun.lockb
 
+.worktrees/
 # Worktrees
 
 # Project-specific

@@ -37,8 +37,8 @@ phases:
         status: pending
         dependencies: []
       - id: MP-T-1.4
-        name: Verify .hermes.md references protocol
-        description: Ensure .hermes.md references SOUL.md protocol
+        name: Verify $HERMES_HOME.md references protocol
+        description: Ensure $HERMES_HOME.md references SOUL.md protocol
         phase: Phase 1 - Protocol Encoding
         assignee: implementer
         status: pending
@@ -129,8 +129,8 @@ gates:
       - SOUL.md has complete 14-skill protocol
       - USER.md references protocol
       - AGENTS.md quick rules include protocol
-      - .hermes.md references protocol
-    check: "grep -r '14-skill\\|multi-file.*protocol' SOUL.md USER.md AGENTS.md .hermes.md"
+      - $HERMES_HOME.md references protocol
+    check: "grep -r '14-skill\\|multi-file.*protocol' SOUL.md USER.md AGENTS.md $HERMES_HOME.md"
     pass_condition: "All 4 files contain protocol references"
     fail_action: "Add missing protocol references"
   - name: Gate 2 - Skills Loadable
@@ -228,7 +228,7 @@ COMPLETE
 - Quick Rules include protocol
 - Directory map shows ./plans/, ./specs/
 
-### .hermes.md (Overrides)
+### $HERMES_HOME.md (Overrides)
 - References SOUL.md for canonical protocol
 - Multi-File Change Protocol section
 

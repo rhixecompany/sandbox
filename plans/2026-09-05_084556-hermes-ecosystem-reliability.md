@@ -54,7 +54,7 @@ Use one canonical registry plus generated projections and secret-safe validators
 **Tasks**
 
 - Capture baseline status, branch, profile/model, Hermes version/config status, MCP list, hooks list/doctor, plugins, and client executable availability.
-- Inventory all `SESSION_REPORT.md`, `SOUL.md`, `USER.md`, `MEMORY.md`, `.hermes.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, Copilot instructions, OpenCode/Codex/Copilot/VS Code configs, `.env*` names, and `config.yaml` paths under the repo and Hermes home without emitting values.
+- Inventory all `SESSION_REPORT.md`, `SOUL.md`, `USER.md`, `MEMORY.md`, `$HERMES_HOME.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, Copilot instructions, OpenCode/Codex/Copilot/VS Code configs, `.env*` names, and `config.yaml` paths under the repo and Hermes home without emitting values.
 - Audit existing `./plans/` and `./specs/` and identify superseded/duplicate fragments without deleting them.
 - Run the existing safe audits in report-only mode and save evidence under a new dated report directory; do not overwrite unrelated reports.
 - Verify the live MCP server exposes the required filesystem, ast-grep, memory, sequential-thinking, and code-sandbox tools.

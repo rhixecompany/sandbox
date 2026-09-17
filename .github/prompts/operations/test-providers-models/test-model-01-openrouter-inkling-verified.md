@@ -1,7 +1,7 @@
 # Model Test 1 â Verified Real Execution (BLOCKER DOCUMENTED â HONEST REPORT)
 
 - Provider: openrouter (verified in 'hermes auth list' output â real CLI capture)
-- Model: thinkingmachines/inkling:free (verified from .hermes.md profile + config state)
+- Model: thinkingmachines/inkling:free (verified from $HERMES_HOME.md profile + config state)
 - Command executed (verified real): `hermes chat --provider "openrouter" --model "thinkingmachines/inkling:free" -q "test provider capabilities context max-output reasoning instruction-following" --yolo --oneshot`
 - Execution start: 2026-09-10T13:36:02 (verified Python datetime output)
 - Timeout: 180.0s (subprocess.TimeoutExpired â REAL FAILURE, not simulated/fabricated)

@@ -358,7 +358,7 @@ When set, `write_file` and `patch` may only target paths inside the listed direc
 To allow both a workspace and Hermes home:
 
 ```bash
-export HERMES_WRITE_SAFE_ROOT=/path/to/project:/home/you/.hermes
+export HERMES_WRITE_SAFE_ROOT=/path/to/project:/home/you/$HERMES_HOME
 ```
 
 Unset the variable to restore unrestricted writes (subject to the protected-path denylist). Full reference: [HERMES_WRITE_SAFE_ROOT](../reference/environment-variables.md#hermes_write_safe_root).

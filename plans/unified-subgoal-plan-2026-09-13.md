@@ -63,7 +63,7 @@ This is the UNIFIED reimplementation — not inventing new artifacts but buildin
 
 | Task | Description | Completed / Verified |
 |---|---|---|
-| TASK-008 | Inspect default profile identity files (`SOUL.md`, `USER.md`, `MEMORY.md`, `.hermes.md`) at workspace root — verify real paths; list duplicates/issues | ⬜ |
+| TASK-008 | Inspect default profile identity files (`SOUL.md`, `USER.md`, `MEMORY.md`, `$HERMES_HOME.md`) at workspace root — verify real paths; list duplicates/issues | ⬜ |
 | TASK-009 | Inspect additional profile directories (`~/AppData/Local/hermes/profiles/`) — list real profiles (document honestly; none invented) | ⬜ |
 | TASK-010 | Create/refactor `SOUL.md` (default) — enforce DRY (remove duplicate persona/instruction text that exists in `USER.md` or `MEMORY.md`); retain only identity/persona/boundary content per `SOUL.md` contract | ⬜ |
 | TASK-011 | Create/update `USER.md` (default) — update description/alias; enforce DRY (reference `SOUL.md` for shared identity, don't duplicate); include best practices references (`user-communication-preferences`, `multi-file-change-protocol`) | ⬜ |
@@ -98,7 +98,7 @@ This is the UNIFIED reimplementation — not inventing new artifacts but buildin
 
 | Task | Description | Completed / Verified |
 |---|---|---|
-| TASK-022 | Delegate profile-refactor subagent for DEFAULT profile (`SOUL.md`, `USER.md`, `MEMORY.md`, `.hermes.md`) — DRY enforcement + description/alias updates + best practices (references `user-communication-preferences`, `multi-file-change-protocol`, `systematic-debugging`) | ⬜ |
+| TASK-022 | Delegate profile-refactor subagent for DEFAULT profile (`SOUL.md`, `USER.md`, `MEMORY.md`, `$HERMES_HOME.md`) — DRY enforcement + description/alias updates + best practices (references `user-communication-preferences`, `multi-file-change-protocol`, `systematic-debugging`) | ⬜ |
 | TASK-023 | Delegate profile-refactor subagent for ALL additional verified profiles (if any real profiles exist under `~/AppData/Local/hermes/profiles/` — verified by `os.listdir`; no synthetic profile names invented) | ⬜ |
 | TASK-024 | Aggregate subagent results; verify no `.bak` artifacts; verify `.env` untouched; verify no synthetic session IDs; consolidate `memory.md` updates referencing `SESSION_REPORT.md` truth (`state.db` source — verified in previous session audit) | ⬜ |
 

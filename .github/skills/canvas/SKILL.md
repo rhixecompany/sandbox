@@ -37,7 +37,7 @@ Automated reasoning and workflow tool for `canvas`. Execute multi-step tasks wit
 2. Go to **Account → Settings** (click your profile icon, then Settings)
 3. Scroll to **Approved Integrations** and click **+ New Access Token**
 4. Name the token (e.g., "Hermes Agent"), set an optional expiry, and click **Generate Token**
-5. Copy the token and add to `${HERMES_HOME:-~/.hermes}/.env`:
+5. Copy the token and add to `${HERMES_HOME:-~/$HERMES_HOME}/.env`:
 
 ```
 CANVAS_API_TOKEN=your_token_here

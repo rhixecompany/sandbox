@@ -22,8 +22,8 @@
       "last_modified": "2026-09-04T20:36:36.004277+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 5677,
       "line_count": 82,
       "classification": "canonical",
@@ -845,8 +845,8 @@
       "last_modified": "2026-08-28T19:40:51.391591+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\alexa\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 471,
       "line_count": 12,
       "classification": "unknown",
@@ -908,8 +908,8 @@
       "last_modified": "2026-08-28T19:40:51.399634+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\code-architect\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 480,
       "line_count": 12,
       "classification": "unknown",
@@ -971,8 +971,8 @@
       "last_modified": "2026-08-28T19:40:51.401655+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\creative-director\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 483,
       "line_count": 12,
       "classification": "unknown",
@@ -1034,8 +1034,8 @@
       "last_modified": "2026-08-28T19:40:51.405268+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\cto\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 469,
       "line_count": 12,
       "classification": "unknown",
@@ -1097,8 +1097,8 @@
       "last_modified": "2026-08-28T19:40:51.405268+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\default\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 473,
       "line_count": 12,
       "classification": "unknown",
@@ -1160,8 +1160,8 @@
       "last_modified": "2026-08-28T19:40:51.426784+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\designer\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 474,
       "line_count": 12,
       "classification": "unknown",
@@ -1223,8 +1223,8 @@
       "last_modified": "2026-08-28T19:40:51.433849+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\dev\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 469,
       "line_count": 12,
       "classification": "unknown",
@@ -1286,8 +1286,8 @@
       "last_modified": "2026-08-28T19:40:51.438888+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\exec-assistant\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 480,
       "line_count": 12,
       "classification": "unknown",
@@ -1349,8 +1349,8 @@
       "last_modified": "2026-08-28T19:40:51.447456+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\ops\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 469,
       "line_count": 12,
       "classification": "unknown",
@@ -1412,8 +1412,8 @@
       "last_modified": "2026-08-28T19:40:51.452994+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\patient-tutor\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 479,
       "line_count": 12,
       "classification": "unknown",
@@ -1475,8 +1475,8 @@
       "last_modified": "2026-08-28T19:40:51.459904+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\pm\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 468,
       "line_count": 12,
       "classification": "unknown",
@@ -1538,8 +1538,8 @@
       "last_modified": "2026-08-28T19:40:51.466857+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\qa\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 468,
       "line_count": 12,
       "classification": "unknown",
@@ -1601,8 +1601,8 @@
       "last_modified": "2026-08-28T19:40:51.468872+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\research-analyst\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 482,
       "line_count": 12,
       "classification": "unknown",
@@ -1664,8 +1664,8 @@
       "last_modified": "2026-08-28T19:40:51.468872+00:00"
     },
     {
-      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\.hermes.md",
-      "type": ".hermes.md",
+      "path": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\profiles\\security\\$HERMES_HOME.md",
+      "type": "$HERMES_HOME.md",
       "size_bytes": 474,
       "line_count": 12,
       "classification": "unknown",
@@ -2473,7 +2473,7 @@
       "USER.md"
     ],
     "profile_routing": [
-      ".hermes.md",
+      "$HERMES_HOME.md",
       "AGENTS.md",
       "MEMORY.md",
       "USER.md",

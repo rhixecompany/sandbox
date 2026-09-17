@@ -495,7 +495,7 @@ hermes memory setup    # select "holographic"
 hermes config set memory.provider holographic
 ```
 
-**Config:** `config.yaml` under `plugins.hermes-memory-store`
+**Config:** `config.yaml` under `plugins$HERMES_HOME-memory-store`
 
 | Key | Default | Description |
 |-----|---------|-------------|

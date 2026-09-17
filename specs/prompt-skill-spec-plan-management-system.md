@@ -70,7 +70,7 @@ This specification defines a comprehensive system for managing prompts, skills, 
   - No placeholder text
 
 ### REQ-006: Context File Updates
-- **Files to Update**: SOUL.md, USER.md, MEMORY.md, AGENTS.md, CLAUDE.md, .cursorrules, .hermes.md
+- **Files to Update**: SOUL.md, USER.md, MEMORY.md, AGENTS.md, CLAUDE.md, .cursorrules, $HERMES_HOME.md
 - **Update Type**: Full rewrite (delete artifacts, recreate fresh)
 - **Consistency**: All files must reference each other correctly
 - **Authority**: SOUL.md is the master for agent behavior

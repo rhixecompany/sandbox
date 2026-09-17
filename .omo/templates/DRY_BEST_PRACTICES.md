@@ -4,7 +4,7 @@
 - Don't Repeat Yourself: One source of truth for model config (`.opencode/opencode.json` + `.omo/config.json`)
 - Shared plugin array: Plugins listed in `.opencode/opencode.json` plugin array and `.omo/config.json` plugins.enabled must stay in sync
 - Use `.omo/templates/` for reusable patterns
-- Config inheritance: `.hermes.md` → `.opencode/opencode.json` → `.omo/config.json`
+- Config inheritance: `$HERMES_HOME.md` → `.opencode/opencode.json` → `.omo/config.json`
 
 ## Model Routing (DRY)
 Primary: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free (best for accuracy)

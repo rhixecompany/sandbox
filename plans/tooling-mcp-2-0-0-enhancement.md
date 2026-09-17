@@ -15,7 +15,7 @@ Root: SESSION_REPORT.md verified; 5 mandatory skills loaded; using-superpowers l
 ## Phase Checklist (Strict Sequential — "only then")
 
 Phase A: Discovery / State Audit (current)
-- [x] Read SESSION_REPORT.md, SOUL.md, USER.md, MEMORY.md, .hermes.md
+- [x] Read SESSION_REPORT.md, SOUL.md, USER.md, MEMORY.md, $HERMES_HOME.md
 - [x] Read current package versions (requirements.txt shows mcp==1.29.1, mcp-types==2.0.0)
 - [x] Inspect .mcp/, .opencode/, .copilot/, .vscode/mcp.json
 - [x] Inspect hermes profiles, scripts
@@ -31,7 +31,7 @@ Phase C: MCP Server Config Updates (all 4 profiles/tools)
 - [ ] Update .opencode/opencode.json (mcp server commands / PYTHONPATH / UV)
 - [ ] Update .vscode/mcp.json
 - [ ] Update hermes profile config.yaml MCP server args (YAML list format per MEMORY.md rule)
-- [ ] Update .hermes.md references
+- [ ] Update $HERMES_HOME.md references
 - [ ] Update .omo/templates/myvenv-reference.md
 
 Phase D: Cross-Profile Sync (hermes, copilot, codex, open/oh-my-opencode)
@@ -68,6 +68,6 @@ Phase F: Verification Gates (must pass before claim complete)
 - requirements.txt: mcp==1.29.1 (needs 2.0.0)
 - mcp-types==2.0.0 present but mcp package behind
 - Memory: `config.yaml mcp_servers args must be YAML list` — audit all mcp server arg lists
-- .hermes.md references `~/myvenv` but no verified ~/myvenv exists (check C:\Users\Alexa\myvenv)
+- $HERMES_HOME.md references `~/myvenv` but no verified ~/myvenv exists (check C:\Users\Alexa\myvenv)
 - OpenCode v4.19.4 / Zen pool references may need refresh
 - Hooks/plugins audit may reveal missing event coverage

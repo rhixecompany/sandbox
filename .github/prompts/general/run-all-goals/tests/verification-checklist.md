@@ -19,7 +19,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 - [PASS] No secrets; DRY; no `.bak`; profile verified (adminbot + patient-tutor)
 - [PASS] tree.prompt.txt referenced as PRIMARY in all artifacts
 - [PASS] Agent sync: 5 AI agents identical configs
-- [PASS] Cleanup: .enhance, .goals, .hermes_diagnostics removed
+- [PASS] Cleanup: .enhance, .goals, $HERMES_HOME_diagnostics removed
 - [PASS] Config: package.json, pyrightconfig.json, tsconfig.json, requirements.txt updated
 - [PASS] mjs to mts conversion complete
 - [PASS] DRI: rules reference shared templates

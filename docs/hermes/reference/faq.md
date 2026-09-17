@@ -496,7 +496,7 @@ hermes gateway start      # Detects the updated plist and reloads
 You can verify the plist has the correct PATH:
 ```bash
 /usr/libexec/PlistBuddy -c "Print :EnvironmentVariables:PATH" \
-  ~/Library/LaunchAgents/ai.hermes.gateway.plist
+  ~/Library/LaunchAgents/ai$HERMES_HOME.gateway.plist
 ```
 
 ---
@@ -802,7 +802,7 @@ The imported profile will have all config, memories, sessions, and skills from t
 | Feature | `hermes backup` | `hermes profile export` |
 | :--- | :--- | :--- |
 | **Use Case** | **Full machine migration** | **Porting/sharing a specific profile** |
-| **Scope** | Global (entire `~/.hermes` directory) | Local (single profile directory) |
+| **Scope** | Global (entire `~/$HERMES_HOME` directory) | Local (single profile directory) |
 | **Includes** | All profiles, global config, API keys, sessions | Single profile: SOUL.md, memories, sessions, skills |
 | **Credentials** | **Included** (`.env` and `auth.json`) | **Excluded** (stripped for safe sharing) |
 | **Format** | `.zip` | `.tar.gz` |

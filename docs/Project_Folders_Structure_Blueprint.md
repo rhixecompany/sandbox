@@ -80,7 +80,7 @@ Generated from workspace: `C:\Users\Alexa\Desktop\SandBox`
 ├── .editorconfig
 ├── .git-blame-ignore-revs
 ├── .gitmodules
-├── .hermes.md
+├── $HERMES_HOME.md
 ├── .markdownlintrc.json
 ├── 1614584020.txt
 ├── AGENTS.md

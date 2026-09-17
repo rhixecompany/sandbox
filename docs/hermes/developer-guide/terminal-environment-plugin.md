@@ -63,7 +63,7 @@ class AcmeBoxProvider(TerminalEnvironmentProvider):
 
     @property
     def cache_path_base(self):
-        return "~/.hermes"    # where synced cache files land, or None
+        return "~/$HERMES_HOME"    # where synced cache files land, or None
 
     @property
     def strip_env_keys(self):

@@ -38,6 +38,6 @@ tools: [terminal, web_search, web_extract, web_fetch, browser_exec, file_read, f
 
 ## Non-Functional Constraints
 - Communication: concise, table-first, direct, action-first, verification-first, no filler.
-- DRY: cross-reference provider/model info from `.hermes.md` / `.env` / `opencode.json` / `.vscode/mcp.json`; don't duplicate identity/routing.
+- DRY: cross-reference provider/model info from `$HERMES_HOME.md` / `.env` / `opencode.json` / `.vscode/mcp.json`; don't duplicate identity/routing.
 - Multi-file protocol: sequential execution after Subgoal A; approvals requested; subagent delegated.
 - Security: preserve vulnerability findings; don't suppress parsing errors; don't expose .env; don't fabricate artifacts.

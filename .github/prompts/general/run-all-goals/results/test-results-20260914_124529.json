@@ -46,7 +46,7 @@
     "command": "primary artifact marker scan",
     "returncode": 1,
     "status": "FAIL",
-    "detail": "missing: C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes\\plans\\run-all-goals-implementation.md"
+    "detail": "missing: C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME\\plans\\run-all-goals-implementation.md"
   },
   {
     "name": "Tree Prompt Exists (primary source)",

@@ -27,7 +27,7 @@
 
 | File | Status | Notes |
 | ------ | -------- | ------- |
-| `.hermes.md` | ✓ Present | 60 lines, valid |
+| `$HERMES_HOME.md` | ✓ Present | 60 lines, valid |
 | `AGENTS.md` | ✓ Present | 202 lines, valid |
 | `PROJECT_RULES.md` | ✓ Created | 176 lines |
 | `MASTER_RULES.md` | ✓ Created | 180 lines |

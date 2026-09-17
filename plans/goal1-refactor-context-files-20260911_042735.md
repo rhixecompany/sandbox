@@ -21,7 +21,7 @@ trigger_threshold: >6 file changes → load 14-skill stack
 
 | # | Path | Action | New line target |
 |---|---|---|---|
-| 1 | `SandBox/.hermes.md` | rewrite as pointer + add >6 trigger + reference new skill | ~50 |
+| 1 | `SandBox/$HERMES_HOME.md` | rewrite as pointer + add >6 trigger + reference new skill | ~50 |
 | 2 | `SandBox/AGENTS.md` | rewrite as pointer + add >6 trigger + reference new skill | ~40 |
 | 3 | `SandBox/CLAUDE.md` | rewrite as pointer | ~15 |
 | 4 | `SandBox/.cursorrules` | rewrite as pointer | ~15 |
@@ -55,16 +55,16 @@ trigger_threshold: >6 file changes → load 14-skill stack
 **Gate 2.1:** `grep -q "Multi-File Change Protocol" SOUL.md` returns non-empty (table of contents marker) but the inlined block is gone.
 **Gate 2.2:** line count ≤130.
 
-## Phase 3 — Slim `.hermes.md` + `AGENTS.md` (workspace-specific overrides)
+## Phase 3 — Slim `$HERMES_HOME.md` + `AGENTS.md` (workspace-specific overrides)
 
 1. Remove duplicate Profile table from both files (already in SOUL/USER).
 2. Replace inlined "Multi-File Change Protocol (≥5 files)" with: trigger + skill reference.
-3. `.hermes.md` keeps Hermes-specific paths (e.g. `~/myvenv`, MCP server list — workspace-only).
+3. `$HERMES_HOME.md` keeps Hermes-specific paths (e.g. `~/myvenv`, MCP server list — workspace-only).
 4. `AGENTS.md` keeps workspace layout, .github/prompts library map (workspace-only).
 5. Add `>6 file threshold` reminder to both (was `≥5`).
 
 **Gate 3.1:** both files reference `multi-file-change-protocol` skill instead of inlining the 14-skill list.
-**Gate 3.2:** `.hermes.md` ≤60 lines, `AGENTS.md` ≤60 lines.
+**Gate 3.2:** `$HERMES_HOME.md` ≤60 lines, `AGENTS.md` ≤60 lines.
 
 ## Phase 4 — Slim `CLAUDE.md` + `.cursorrules` (already thin stubs)
 
@@ -92,7 +92,7 @@ trigger_threshold: >6 file changes → load 14-skill stack
 ## Phase 7 — Verification
 
 1. `hermes profile list` (verify still works).
-2. `grep -L "multi-file-change-protocol" .hermes.md AGENTS.md CLAUDE.md .cursorrules SOUL.md` returns nothing (all reference the skill).
+2. `grep -L "multi-file-change-protocol" $HERMES_HOME.md AGENTS.md CLAUDE.md .cursorrules SOUL.md` returns nothing (all reference the skill).
 3. Total token count of 9 refactored files ≤ 3,500 lines (down from ~870 currently → save ~60%).
 4. `hermes skills list | grep -E "(multi-file-change-protocol|dedupe-skills)"` shows both.
 

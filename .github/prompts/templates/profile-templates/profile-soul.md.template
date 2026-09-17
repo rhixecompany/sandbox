@@ -38,7 +38,7 @@ When a user request will modify **more than 4 files**, the agent MUST invoke the
 - `/mcp-filesystem` — File operations
 - `/mcp-ast-grep` — Code search/replace
 - `/mcp-memory` — Persistent memory access
-- `/plan` — Write markdown plan to `.hermes/plans/`
+- `/plan` — Write markdown plan to `$HERMES_HOME/plans/`
 - `/plans-and-specs` — Draft implementation plans
 - `/create-implementation-plan` — Create detailed plans
 - `/implementation-plan` — Modify existing plans

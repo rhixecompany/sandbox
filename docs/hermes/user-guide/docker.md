@@ -22,7 +22,7 @@ Some VPS providers (Hetzner Cloud, and several others) offer a browser-based
 console for managing hosts. These consoles transmit special characters
 incorrectly — `:` may arrive as `;`, `@` may be mis-rendered, and non-English
 keyboard layouts fare worse — which silently corrupts `docker run` arguments
-like `-v ~/.hermes:/opt/data`, `-e KEY=value`, and pasted API keys / tokens.
+like `-v ~/$HERMES_HOME:/opt/data`, `-e KEY=value`, and pasted API keys / tokens.
 
 **Connect over SSH instead** (`ssh root@<host>`) for copy-paste-safe command
 entry. If you must use the browser console, type the commands manually
@@ -31,16 +31,16 @@ result before hitting Enter.
 :::
 
 ```sh
-mkdir -p ~/.hermes
+mkdir -p ~/$HERMES_HOME
 docker run -it --rm \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   nousresearch/hermes-agent setup
 ```
 
 This drops you into the setup wizard, which will prompt you for your API keys and write them to `~/./.env`. You only need to do this once. It is highly recommended to set up a chat system for the gateway to work with at this point.
 
 :::tip
-Inside the container, run `hermes setup --portal` once — the refresh token persists in the mounted `~/.hermes` volume. See [Nous Portal](/integrations/nous-portal).
+Inside the container, run `hermes setup --portal` once — the refresh token persists in the mounted `~/$HERMES_HOME` volume. See [Nous Portal](/integrations/nous-portal).
 :::
 
 ## Running in gateway mode
@@ -51,7 +51,7 @@ Once configured, run the container in the background as a persistent gateway (Te
 docker run -d \
   --name hermes \
   --restart unless-stopped \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   -p 8642:8642 \
   nousresearch/hermes-agent gateway run
 ```
@@ -85,7 +85,7 @@ Note: the API server is gated on `API_SERVER_ENABLED=true`. To expose it beyond 
 docker run -d \
   --name hermes \
   --restart unless-stopped \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   -p 8642:8642 \
   -e API_SERVER_ENABLED=true \
   -e API_SERVER_HOST=0.0.0.0 \
@@ -104,7 +104,7 @@ The built-in web dashboard runs as a supervised s6-rc service alongside the gate
 docker run -d \
   --name hermes \
   --restart unless-stopped \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   -p 8642:8642 \
   -p 9119:9119 \
   -e HERMES_DASHBOARD=1 \
@@ -167,7 +167,7 @@ To open an interactive chat session against a running data directory:
 
 ```sh
 docker run -it --rm \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   nousresearch/hermes-agent
 ```
 
@@ -276,7 +276,7 @@ Before the s6 migration, "one container per profile" was the recommended pattern
 | Profile creation | `docker exec ... hermes profile create <name>` (seconds) | New `docker run` invocation + port allocation + bind-mount config |
 | Per-profile crash recovery | `s6-supervise` auto-restart | Docker's `--restart unless-stopped` (slower, kills sibling work) |
 | Logs | Per-profile rotated file via `s6-log`, plus container-boot audit log | `docker logs <name>` per container — no built-in rotation |
-| Backup | One `~/.hermes` directory | N directories to coordinate |
+| Backup | One `~/$HERMES_HOME` directory | N directories to coordinate |
 
 The default profile (`default`) is always registered on first boot, so a fresh container ships with one supervised gateway out of the box. Additional profiles are pure runtime adds.
 
@@ -301,7 +301,7 @@ services:
     ports:
       - "8642:8642"
     volumes:
-      - ~/.hermes-work:/opt/data
+      - ~/$HERMES_HOME-work:/opt/data
 
   hermes-personal:
     image: nousresearch/hermes-agent:latest
@@ -311,10 +311,10 @@ services:
     ports:
       - "8643:8642"
     volumes:
-      - ~/.hermes-personal:/opt/data
+      - ~/$HERMES_HOME-personal:/opt/data
 ```
 
-The warning from [Persistent volumes](#persistent-volumes) still applies: never point two containers at the same `~/.hermes` directory simultaneously. The s6 supervisor inside each container manages its own profile set; cross-container sharing of a data volume corrupts session files and memory stores.
+The warning from [Persistent volumes](#persistent-volumes) still applies: never point two containers at the same `~/$HERMES_HOME` directory simultaneously. The s6 supervisor inside each container manages its own profile set; cross-container sharing of a data volume corrupts session files and memory stores.
 
 ## Where the logs go
 
@@ -338,7 +338,7 @@ API keys are read from `/opt/data/.env` inside the container. You can also pass 
 
 ```sh
 docker run -it --rm \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   -e ANTHROPIC_API_KEY="sk-ant-..." \
   -e OPENAI_API_KEY="sk-..." \
   nousresearch/hermes-agent
@@ -365,7 +365,7 @@ services:
       - "8642:8642"   # gateway API
       - "9119:9119"   # dashboard (only reached when HERMES_DASHBOARD=1)
     volumes:
-      - ~/.hermes:/opt/data
+      - ~/$HERMES_HOME:/opt/data
     environment:
       - HERMES_DASHBOARD=1
       # Uncomment to forward specific env vars instead of using .env file:
@@ -433,7 +433,7 @@ services:
     restart: unless-stopped
     command: gateway run
     volumes:
-      - ~/.hermes:/opt/data
+      - ~/$HERMES_HOME:/opt/data
       - /run/user/${HERMES_UID}/pulse:/run/user/${HERMES_UID}/pulse
       - ~/.config/pulse/cookie:/tmp/pulse-cookie:ro
       - ./asound.conf:/etc/asound.conf:ro
@@ -478,7 +478,7 @@ docker run -d \
   --name hermes \
   --restart unless-stopped \
   --memory=4g --cpus=2 \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   nousresearch/hermes-agent gateway run
 ```
 
@@ -556,7 +556,7 @@ docker rm -f hermes
 docker run -d \
   --name hermes \
   --restart unless-stopped \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   nousresearch/hermes-agent gateway run
 ```
 
@@ -613,7 +613,7 @@ docker build -t my-hermes:latest .
 docker run -d \
   --name hermes \
   --restart unless-stopped \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   -p 8642:8642 \
   my-hermes:latest gateway run
 ```
@@ -634,7 +634,7 @@ services:
     ports:
       - "8642:8642"
     volumes:
-      - ~/.hermes:/opt/data
+      - ~/$HERMES_HOME:/opt/data
     networks:
       - hermes-net
 
@@ -692,7 +692,7 @@ services:
     ports:
       - "8642:8642"
     volumes:
-      - ~/.hermes:/opt/data
+      - ~/$HERMES_HOME:/opt/data
     networks:
       - hermes-net
 
@@ -727,7 +727,7 @@ If your inference server runs directly on the host (not in Docker), use `host.do
 ```sh
 docker run -d \
   --name hermes \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   -p 8642:8642 \
   nousresearch/hermes-agent gateway run
 ```
@@ -747,7 +747,7 @@ model:
 docker run -d \
   --name hermes \
   --network host \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   nousresearch/hermes-agent gateway run
 ```
 
@@ -802,7 +802,7 @@ Check logs: `docker logs hermes`. Common causes:
 The container's stage2 hook drops privileges to the non-root `hermes` user (UID 10000) via `s6-setuidgid` inside each supervised service. If your host `~/./` is owned by a different UID, set `HERMES_UID`/`HERMES_GID` — or their `PUID`/`PGID` aliases, for parity with LinuxServer.io and NAS images — to match your host user, or ensure the data directory is writable:
 
 ```sh
-chmod -R 755 ~/.hermes
+chmod -R 755 ~/$HERMES_HOME
 ```
 
 On a NAS (UGOS, Synology, unRAID) the data directory is typically a **bind mount** owned by a host UID the container cannot `chown`. Set `PUID`/`PGID` (or `HERMES_UID`/`HERMES_GID`) to that host user so the runtime runs as the owner of the mount rather than UID 10000:
@@ -839,7 +839,7 @@ Playwright needs shared memory. Add `--shm-size=1g` to your Docker run command:
 docker run -d \
   --name hermes \
   --shm-size=1g \
-  -v ~/.hermes:/opt/data \
+  -v ~/$HERMES_HOME:/opt/data \
   nousresearch/hermes-agent gateway run
 ```
 

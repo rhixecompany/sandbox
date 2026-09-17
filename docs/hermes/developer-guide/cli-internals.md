@@ -74,7 +74,7 @@ Hermes supports profiles — fully isolated instances, each with its own `HERMES
 keys, memory, sessions, skills, gateway). `_apply_profile_override()` in `hermes_cli/main.py` sets
 `HERMES_HOME` before any module imports, so every `get_hermes_home()` reference scopes to the active
 profile. Profile operations are HOME-anchored (`_get_profiles_root()` returns
-`Path.home() / ".hermes" / "profiles"`, not `get_hermes_home() / "profiles"`) so
+`Path.home() / "$HERMES_HOME" / "profiles"`, not `get_hermes_home() / "profiles"`) so
 `hermes -p coder profile list` sees all profiles regardless of which one is active — intentional.
 Profile-safe coding rules are in the root `AGENTS.md`; multiplex secret-scope rules in
 `gateway/AGENTS.md`.

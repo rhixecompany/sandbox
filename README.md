@@ -164,7 +164,7 @@ SandBox/                              # Monorepo root
 │   ├── generate_skills.py/           # Skill generation
 │   └── ... (100+ automation scripts)
 ├── AGENTS.md                         # Canonical agent instructions
-├── .hermes.md                        # Hermes profile + MCP config
+├── $HERMES_HOME.md                        # Hermes profile + MCP config
 ├── .mcp.json                         # MCP server definitions
 ├── tsconfig.json                     # Root TypeScript config (strict)
 ├── package.json                      # Root Bun workspace
@@ -470,7 +470,7 @@ Every PR triggers the `pr-ci.yml` workflow which:
 | [`CLAUDE.md`](CLAUDE.md)               | Claude model guidance                            |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md)   | Git workflow, PR guidelines, branch naming       |
 | [`.cursorrules`](.cursorrules)         | Cursor IDE configuration                         |
-| [`.hermes.md`](.hermes.md)             | Hermes Agent profile & MCP config                |
+| [`$HERMES_HOME.md`]($HERMES_HOME.md)             | Hermes Agent profile & MCP config                |
 | [`docs/`](docs/)                       | Architecture docs, tech stack analysis           |
 | [`.github/prompts/`](.github/prompts/) | 200+ canonical MCP prompts                       |
 

@@ -4,13 +4,13 @@ Durable technique distilled from verified session 2026-09-10 (Alexa, profile=def
 
 ## Pattern: verify → patch → verify-gate → document
 
-Applicability: any multi-file enhancement task across `.hermes.md`, `.cursorrules`, `AGENTS.md`, `CLAUDE.md`, `.vscode/mcp.json`, `.opencode/opencode.json`, `.mcp/registry.json`, `.github/copilot-instructions.md`, `.github/instructions/*.md`, `.github/prompts/*.prompt.md`, workspace/skills/*, scripts/, requirements.txt.
+Applicability: any multi-file enhancement task across `$HERMES_HOME.md`, `.cursorrules`, `AGENTS.md`, `CLAUDE.md`, `.vscode/mcp.json`, `.opencode/opencode.json`, `.mcp/registry.json`, `.github/copilot-instructions.md`, `.github/instructions/*.md`, `.github/prompts/*.prompt.md`, workspace/skills/*, scripts/, requirements.txt.
 
 ## Verified command sequence (re-runnable)
 
 ```bash
 # 1. State audit
-cat .hermes.md | grep -i mcp
+cat $HERMES_HOME.md | grep -i mcp
 cat requirements.txt | grep '^mcp=='
 ls ~/myvenv/pyvenv.cfg
 ~/myvenv/Scripts/python.exe -c "import importlib.metadata; print('mcp:', importlib.metadata.version('mcp'))"

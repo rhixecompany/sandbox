@@ -35,7 +35,7 @@ Defines the complete rewrite requirements for all 7 context files to ensure cons
 - → USER.md (operator context)
 - → MEMORY.md (agent notes)
 - → AGENTS.md (workspace guidance)
-- → .hermes.md (project overrides)
+- → $HERMES_HOME.md (project overrides)
 - → CLAUDE.md (Claude-specific)
 - → .cursorrules (Cursor IDE)
 
@@ -56,7 +56,7 @@ Defines the complete rewrite requirements for all 7 context files to ensure cons
 **Cross-References**:
 - ← SOUL.md (inherits persona rules)
 - → MEMORY.md (companion store)
-- → .hermes.md (project overrides)
+- → $HERMES_HOME.md (project overrides)
 
 ### 3. MEMORY.md (Agent Notes & Environment Facts)
 **Location**: `/c/Users/Alexa/AppData/Local/hermes/profiles/default/MEMORY.md` (canonical)
@@ -94,11 +94,11 @@ Defines the complete rewrite requirements for all 7 context files to ensure cons
 
 **Cross-References**:
 - ← SOUL.md (behavioral authority)
-- → .hermes.md (project overrides)
+- → $HERMES_HOME.md (project overrides)
 - → CLAUDE.md / .cursorrules (thin stubs)
 
-### 5. .hermes.md (Hermes Project Overrides)
-**Location**: `/c/Users/Alexa/Desktop/SandBox/.hermes.md`
+### 5. $HERMES_HOME.md (Hermes Project Overrides)
+**Location**: `/c/Users/Alexa/Desktop/SandBox/$HERMES_HOME.md`
 
 **Required Content**:
 - [ ] Profile table with models/providers
@@ -150,7 +150,7 @@ MEMORY.md (session facts)
     ↓
 AGENTS.md (workspace guidance)
     ↓
-.hermes.md (project overrides)
+$HERMES_HOME.md (project overrides)
     ↓
 CLAUDE.md / .cursorrules (IDE-specific)
 ```
@@ -176,7 +176,7 @@ CLAUDE.md / .cursorrules (IDE-specific)
 - USER.md: YAML frontmatter + markdown sections
 - MEMORY.md: §-delimited, no headings
 - AGENTS.md: Markdown with directory map
-- .hermes.md: Markdown with tables
+- $HERMES_HOME.md: Markdown with tables
 - CLAUDE.md / .cursorrules: Minimal stubs
 
 ## Acceptance Criteria

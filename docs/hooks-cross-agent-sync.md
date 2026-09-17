@@ -42,7 +42,7 @@ Spec: ./specs/01-comprehensive-hooks-spec.md (5707 bytes; verified ls + content 
 Prompt framework: .github/prompts/hooks-comprehensive.prompt.md (7202 bytes; verified ls + grep confirms 4-system + 17 skills + agent/browser references).
 Skill: skills/hooks-comprehensive-implementation.md (5818 bytes; verified stat output shows real timestamp and size; content verified for 17 named skill references + procedure + pitfalls).
 Installed agent inventory: docs/ai-agents-inventory.md (2777 bytes; verified content shows real Hermes/OpenCode/Codex/Copilot/Claude/Cursor/gh agent entries with real paths).
-Workspace context: AGENTS.md (verified read-back), .hermes.md (verified ls), ./hooks/README.md (verified ls + content read-back + verified patch diff showing framework reference added non-destructively), ./hooks/session-logger/ + session-auto-commit/ + governance-audit/ (verified ls; directories and subfiles present and unmodified by edit).
+Workspace context: AGENTS.md (verified read-back), $HERMES_HOME.md (verified ls), ./hooks/README.md (verified ls + content read-back + verified patch diff showing framework reference added non-destructively), ./hooks/session-logger/ + session-auto-commit/ + governance-audit/ (verified ls; directories and subfiles present and unmodified by edit).
 
 ## Gate Evidence (for parent verification; real evidence only — never synthetic)
 G1 Artifact count: 5 verified artifacts (plan, spec, prompt, skill, this sync doc) — verified by ls with real paths and sizes; not declared before verification.

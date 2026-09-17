@@ -15,4 +15,4 @@ material-icon-theme.folders.associations, material-icon-theme.folders.color, mat
 
 ## Notes
 
-Custom folder associations (.hermes→config, .vscode→vscode, dist→dist). Active as icon theme.
+Custom folder associations ($HERMES_HOME→config, .vscode→vscode, dist→dist). Active as icon theme.

@@ -54,7 +54,7 @@ ls -la ~/Desktop/SandBox/projects/Banking/.github/instructions/
 
 # 3. Verify context loading mechanism
 # - Hermes should auto-load AGENTS.md when cwd is in Banking/
-# - Check .hermes.md at workspace root for project overrides
+# - Check $HERMES_HOME.md at workspace root for project overrides
 # - Check CLAUDE.md/.cursorrules are thin stubs deferring to AGENTS.md
 
 # 4. Test in new session context
@@ -83,8 +83,8 @@ read_file ~/Desktop/SandBox/projects/Banking/AGENTS.md | head -50
 # 2. Verify project structure
 find ~/Desktop/SandBox/projects/Banking -name "AGENTS.md" -o -name "*.prompt.md" | head -20
 
-# 3. Check workspace .hermes.md for Banking overrides
-read_file ~/Desktop/SandBox/.hermes.md
+# 3. Check workspace $HERMES_HOME.md for Banking overrides
+read_file ~/Desktop/SandBox/$HERMES_HOME.md
 
 # 4. Verify stubs defer to AGENTS.md
 read_file ~/Desktop/SandBox/projects/Banking/CLAUDE.md 2>/dev/null || echo "No CLAUDE.md"
@@ -94,7 +94,7 @@ read_file ~/Desktop/SandBox/projects/Banking/.cursorrules 2>/dev/null || echo "N
 ## Risks
 
 - **Context loading order** — AGENTS.md must load before prompts
-- **Workspace vs project context** — Root .hermes.md may override
+- **Workspace vs project context** — Root $HERMES_HOME.md may override
 - **Profile-specific context** — Different profiles may load different context
 - **Session continuity** — Context must persist across session restarts
 
@@ -102,5 +102,5 @@ read_file ~/Desktop/SandBox/projects/Banking/.cursorrules 2>/dev/null || echo "N
 
 - `~/Desktop/SandBox/AGENTS.md` — Workspace canonical guidance
 - `~/Desktop/SandBox/projects/Banking/AGENTS.md` — Banking project guidance
-- `~/Desktop/SandBox/.hermes.md` — Hermes-specific project overrides
+- `~/Desktop/SandBox/$HERMES_HOME.md` — Hermes-specific project overrides
 - MEMORY.md: "Directory Map: projects/Banking/ — Next.js 16, Drizzle ORM, Plaid, Dwolla"

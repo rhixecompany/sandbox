@@ -51,7 +51,7 @@ Enabled / Recommended:
 
 ### DRY Principle Applied
 
-- Config inheritance: `.hermes.md` > `.opencode/opencode.json` > `.omo/config.json`
+- Config inheritance: `$HERMES_HOME.md` > `.opencode/opencode.json` > `.omo/config.json`
 - Plugin arrays synchronized between `.opencode` and `.omo`
 - Model routing defined once (primary, reasoning, fast, vision)
 - Template references (`.omo/templates/`) instead of duplication

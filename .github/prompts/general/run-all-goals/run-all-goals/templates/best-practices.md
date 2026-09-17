@@ -8,7 +8,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 # Best Practices — Shared Template
 
-> Sources: derived from `USER.md` (execution preferences) + `.hermes.md` (project rules) + `prompt-management` skill best practices + `writing-clearly-and-concisely` skill + **`tree.prompt.txt`** (cleanup-first execution, mjs->mts conversion, config validation). Verified by reading source rules; not synthesized.
+> Sources: derived from `USER.md` (execution preferences) + `$HERMES_HOME.md` (project rules) + `prompt-management` skill best practices + `writing-clearly-and-concisely` skill + **`tree.prompt.txt`** (cleanup-first execution, mjs->mts conversion, config validation). Verified by reading source rules; not synthesized.
 
 ## Communication Style (Verified From USER.md / User-Communication-Preferences)
 
@@ -22,13 +22,13 @@ description: "Set a standing goal and let Hermes keep working across turns until
 
 - **TypeScript strict** — strict mode enabled; no implicit `any`.
 - **Python: PEP 8 / ruff** — `ruff format` + `ruff check --fix` before commit; `ruff` preferred over manual formatting.
-- **JSDoc / docstring: `why` not `what`** — document the reason (`/** Why we skip level 2 heading — user requires sequential ordering */`), not what the line does (verified from `.hermes.md` / user profile).
+- **JSDoc / docstring: `why` not `what`** — document the reason (`/** Why we skip level 2 heading — user requires sequential ordering */`), not what the line does (verified from `$HERMES_HOME.md` / user profile).
 - **No inline scripts** — `scripts/` directory only; scripts referenced by path, not pasted inline in prompt body.
 - **No backup artifacts** — rely on git for rollback; `.env` files untouched unless explicitly requested (SOUL.md Section 12).
 
 ## Tree-Primary Execution Practices (From tree.prompt.txt)
 
-- **Cleanup-First** — tree.prompt.txt defines cleanup-first execution. Always delete workspace clutter (.enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, logs, etc.) before any construction or modification work.
+- **Cleanup-First** — tree.prompt.txt defines cleanup-first execution. Always delete workspace clutter (.enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, logs, etc.) before any construction or modification work.
 - **mjs->mts Conversion** — Convert all *.mjs to *.mts as an early phase. No .mjs files should remain without .mts counterparts.
 - **Config Validation** — Validate and update all config files (.editorconfig, .gitignore, .markdownlint, .prettier, *.toml, *.yaml, requirements.txt, tsconfig.json, package.json, pyrightconfig.json) as a dedicated phase.
 - **Config Cleanup** — Delete *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt files) early in the pipeline.

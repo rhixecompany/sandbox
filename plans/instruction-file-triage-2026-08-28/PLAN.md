@@ -26,13 +26,13 @@ caches, spawn-trees, backups, node_modules, hermes-agent source) across:
 | Agent memory  | `MEMORY.md`                      | 30+            |
 | Agent rules   | `AGENTS.md`                      | 50+            |
 | Agent rules   | `CLAUDE.md`                      | 40+            |
-| Hermes root   | `.hermes.md`                     | 20+            |
+| Hermes root   | `$HERMES_HOME.md`                     | 20+            |
 | Cursor rules  | `.cursorrules`                   | 40+            |
 | Copilot rules | `copilot-instructions.md` + `.github/copilot-instructions.md` | 80+ |
 
 Common pathologies observed in inventory (sample read):
 - **Bloat**: SOUL.md 200+ lines, >10 KB → violates the 250-line cap rule
-- **Duplication**: Same rule in 3-5 files (e.g., MCP-first rule appears in SOUL.md, USER.md, AGENTS.md, .hermes.md)
+- **Duplication**: Same rule in 3-5 files (e.g., MCP-first rule appears in SOUL.md, USER.md, AGENTS.md, $HERMES_HOME.md)
 - **Stale content**: References to "minimax/minimax-m3:free" when it was the old default; now `nvidia/nemotron-3-ultra-550b-a55b:free`
 - **Embedded paths**: Old `Bash/` paths not yet migrated to `projects/Bash/`
 - **Conflicting rules**: Some files require hook approval, others say skip

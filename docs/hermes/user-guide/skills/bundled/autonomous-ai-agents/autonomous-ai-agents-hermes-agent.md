@@ -99,7 +99,7 @@ $HERMES_HOME/skills/        Installed skills
 ~/./hermes-agent/     Source code (if git-installed)
 ```
 
-Profiles use `~/./profiles/<name>/` with the same layout. When a profile is active, resolve the real home from `$HERMES_HOME` — never hardcode `~/.hermes`.
+Profiles use `~/./profiles/<name>/` with the same layout. When a profile is active, resolve the real home from `$HERMES_HOME` — never hardcode `~/$HERMES_HOME`.
 
 ## Routing Table — load the reference for the task
 
@@ -111,7 +111,7 @@ Profiles use `~/./profiles/<name>/` with the same layout. When a profile is acti
 | In-session slash commands | `references/slash-commands.md` |
 | Provider setup, API keys, OAuth | `references/providers-and-models.md` |
 | config.yaml sections, toolsets, voice/STT/TTS | `references/configuration.md` |
-| AGENTS.md / .hermes.md / CLAUDE.md project rules | `references/project-context-files.md` |
+| AGENTS.md / $HERMES_HOME.md / CLAUDE.md project rules | `references/project-context-files.md` |
 | Secret redaction, PII, approval modes, "reset permissions" | `references/security-privacy.md` |
 | Delegation, cron, curator, kanban | `references/background-systems.md` |
 | MCP servers (add, catalog, `hermes mcp`) | `references/native-mcp.md` |

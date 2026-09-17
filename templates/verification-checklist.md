@@ -37,7 +37,7 @@ Apply in order. Halt on first failure; do not proceed to next phase until gate p
 - [ ] Subgoals AâH mapped to real session work (verified from `goal-using-superpowers-brainstormin.txt` lines 1â14; not synthesized).
 - [ ] Phase gate table present with verified requirements and status column.
 - [ ] Metric values backed by verified terminal/git/file/session output (not estimated).
-- [ ] Agent identity block present; model/provider/workspace verified in live config (`hermes profile list`, `.hermes.md` state).
+- [ ] Agent identity block present; model/provider/workspace verified in live config (`hermes profile list`, `$HERMES_HOME.md` state).
 
 ### Security / Safety
 

@@ -1,7 +1,7 @@
 ---
 name: instruction-triage
 title: Instruction File Triage
-description: Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill.
+description: Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, $HERMES_HOME.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill.
 trigger: /instruction-triage
 category: debugging
 version: 1.0.0
@@ -84,7 +84,7 @@ For bloat duplicates (e.g. mindstudio-agent CLAUDE.md × 6):
 ## Reference
 
 ## Goal
-Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill.
+Audit, fix, and enhance instruction files (SOUL.md, USER.md, MEMORY.md, $HERMES_HOME.md, AGENTS.md, CLAUDE.md, .cursorrules, copilot-instructions.md) using the instruction-triage skill.
 
 ## Context
 

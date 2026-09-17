@@ -5,7 +5,7 @@
 
 ## Goals (in priority order)
 
-1. **Config integrity** — Audit + fix SOUL.md / USER.md / MEMORY.md / .hermes.md
+1. **Config integrity** — Audit + fix SOUL.md / USER.md / MEMORY.md / $HERMES_HOME.md
    / AGENTS.md / CLAUDE.md / .cursorrules across repo, hermes root, and all 13
    profiles. DRY, no frontmatter corruption, consistent inheritance chain.
 2. **Disk space** — Free space safely (currently 99% full, 2.7 GB free on 237 GB).

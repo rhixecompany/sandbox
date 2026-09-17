@@ -2,8 +2,8 @@
 # Runtime/agent artifacts that prettier should never touch
 .omo/
 .omo/**
-.hermes/plans/**/*.json
-.hermes/plans/**/*.jsonl
+$HERMES_HOME/plans/**/*.json
+$HERMES_HOME/plans/**/*.jsonl
 # Runtime-generated artifacts (auth_inventory, package_inspector, fanout reports)
 scripts/.runtime/
 # Judge-skill CLI output (regenerated each session)
@@ -13,7 +13,7 @@ judge_results/
 !packages/openrouter-client/**
 # Everything else is ignored by default
 .github/**
-.hermes/**
+$HERMES_HOME/**
 .vscode/**
 .copilot/**
 projects/**

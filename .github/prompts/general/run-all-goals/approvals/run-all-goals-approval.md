@@ -15,7 +15,7 @@ description: "Set a standing goal and let Hermes keep working across turns until
 User explicitly authorized "create and run everything including goals and subgoals" with all destructive operations approved. tree.prompt.txt defines the cleanup-first pipeline.
 
 ### tree.prompt.txt Authorization Items
-- `delete and cleanup .enhance,.goals,.hermes_diagnostics,.mcp,.*_cache,.worktrees,hermes-memory-safety,judge_results,logs,session-state,thoughts folders` (GOAL 1)
+- `delete and cleanup .enhance,.goals,$HERMES_HOME_diagnostics,.mcp,.*_cache,.worktrees,hermes-memory-safety,judge_results,logs,session-state,thoughts folders` (GOAL 1)
 - `search,delete and cleanup *.json,*-report.md files expect for package.json,pyrightconfig.json` (GOAL 1)
 - `update,refactor, and verify .editorconfig,.git-blame-ignore-revs,.gitattributes,.gitignore,.gitmodules,.markdownlint-cli2.jsonc,.markdownlint.jsonc,.pre-commit-config.yaml,.prettierignore,.prettierrc.json,*.toml,*.yaml` (GOAL 2)
 - `search,delete and cleanup *.log,*.txt skip *.prompt.txt files` (GOAL 1)
@@ -42,7 +42,7 @@ User explicitly authorized "create and run everything including goals and subgoa
 4. Verify agent sync — 5 AI agents identical configs
 5. Verify tree.prompt.txt as PRIMARY source in all artifacts
 6. Verify mjs->mts conversion complete
-7. Verify .enhance/.goals/.hermes_diagnostics deleted
+7. Verify .enhance/.goals/$HERMES_HOME_diagnostics deleted
 8. Verify config files updated
 
 ## Authorization

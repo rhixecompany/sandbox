@@ -50,7 +50,7 @@ Note: Skill count grew from 343→429 as `hermes skills update` installs fresh o
 | `dedupe_skills.py` | Find same-name skills across multiple paths |
 | `consolidate_skills.py` | Identify overlapping skills by keyword/tag |
 | `merge_skill.py` | Merge a thin skill into an umbrella |
-| `categorize_skills.py` | Add `metadata.hermes.category` to flat skills |
+| `categorize_skills.py` | Add `metadata$HERMES_HOME.category` to flat skills |
 | `fix_yaml_frontmatter.py` | Repair YAML description quoting issues |
 | `build_path_mapping.py` | Rebuild `skill_name_to_path.json` from disk |
 | `fix_fail_skills.py` | Add reference files + phased workflows to FAIL skills |
@@ -257,7 +257,7 @@ python3 $LOCALAPPDATA/hermes/scripts/consolidate_skills.py
 - **29 Python scripts** patched to derive paths from `$HOME`/`$USERPROFILE` env vars instead of hardcoded `C:\Users\Alexa\...`
 - Affected scripts: `batch_*.py` (4), `build_path_mapping.py`, `categorize_skills.py`, `consolidate_skills.py`, `create_missing_*.py` (2), `dedupe_skills.py`, `fix_*.py` (3), `generate_*.py` (3), `merge_*.py` (2), `apply_vscode_*.py`, `audit_*.py` (3), `configure_hermes.py`, `copilot_mcp_server.py`, `trim_*.py`, `update_*.py`, `validate_*.py` (3)
 - Fix pattern: `_HOME = os.environ.get("HOME", os.environ.get("USERPROFILE", "C:\\Users\\Alexa"))` + `os.path.join()`
-- Context files updated: `SOUL.md`, `MASTER_RULES.md`, `USER.md`, `.hermes.md`, `PROJECT_RULES.md` — all now enforce MSYS path safety
+- Context files updated: `SOUL.md`, `MASTER_RULES.md`, `USER.md`, `$HERMES_HOME.md`, `PROJECT_RULES.md` — all now enforce MSYS path safety
 
 ## Pitfalls
 - **CRLF line endings:** Files use `\r\n` on Windows. Regex patterns with `\n` must account for this.

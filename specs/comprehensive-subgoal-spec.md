@@ -27,7 +27,7 @@ metadata:
 | Implementation spec | `./specs/comprehensive-subgoal-spec.md` (this file) | `read_file()` verified (<250 lines equivalent; no placeholders) | Verified by `write_file()` + `verified:true` |
 | Implementation plan | `./plans/implementation-plan.md` | Verified (19760 B; 14-skill stack + 5-step) | `ls` + `stat` confirmed |
 | Implementation prompt | `./prompts/implementation-prompt.md` | Verified (DRY enforced; best practices cross-referenced) | `grep` for duplicate identity phrase = 0 (gate) |
-| 14-profile DRY identity | `~/AppData/Local/hermes/profiles/*/{SOUL.md,USER.md,MEMORY.md}` | Description + alias updated; `.hermes.md` cross-ref | `find` + `grep` verified |
+| 14-profile DRY identity | `~/AppData/Local/hermes/profiles/*/{SOUL.md,USER.md,MEMORY.md}` | Description + alias updated; `$HERMES_HOME.md` cross-ref | `find` + `grep` verified |
 | .eslintrc.json fix | `.eslintrc.json` | 69 B; `ruff` clean; syntax PASS; parserOptions verified | Real `ruff check` stdout |
 | Destructive audit scripts | `*.audit.txt` (5 files) | Saved; executed with approval; .env untouched | `find` + `.env` stat |
 | Vulnerability audit reports | Audit output files (26 findings preserved) | `hermes security audit` exit 1 (real); not suppressed | Real stdout (4256 B) |
@@ -39,7 +39,7 @@ metadata:
 3. **Verification before claim:** Each gate requires real tool output (`stat`, `grep`, `read_file`, `find`, `ruff`, `py_compile`). No synthetic results; no fabricated exit codes; no hidden errors.
 4. **Honest blocker reporting:** All real blockers preserved (nested `.codex/.copilot` scope conflict → 41 parsing errors; rate-limit 403; MSYS2 bash WSL Relay FAIL 50 stderr; `plan` skill missing → resolved by this file; `hermes security audit` exit 1 → 26 real vulnerability findings not suppressed).
 5. **No synthetic session IDs / capabilities / rankings / quality scores:** Verified absence (`NOT CAPTURED` / `NOT VERIFIED` / `NOT BLOCKED` marks preserved in profile docs, not invented).
-6. **Profile identity DRY (per `hermes-profile-sync` + `profile-directive-sync`):** SOUL.md owns identity rules; USER.md points to SOUL.md + MEMORY.md; MEMORY.md owns durable facts; descriptions/aliases point to `.hermes.md` + best practices references — never duplicate identity rules in descriptions/aliases.
+6. **Profile identity DRY (per `hermes-profile-sync` + `profile-directive-sync`):** SOUL.md owns identity rules; USER.md points to SOUL.md + MEMORY.md; MEMORY.md owns durable facts; descriptions/aliases point to `$HERMES_HOME.md` + best practices references — never duplicate identity rules in descriptions/aliases.
 
 ## C. Design — Parallel Phase Architecture
 
@@ -58,9 +58,9 @@ A (Load) → B (Explore/Log) → [C (Spec) || D (Prompt) || E (Profiles) || F (S
 |---|---|---|---|
 | Spec creation | `./specs/comprehensive-subgoal-spec.md` | `write_file()` (verified) | References `./plans/implementation-plan.md` |
 | Plan enhancement | `./plans/implementation-plan.md` | `patch()` or `write_file()` (verified 19760 B) | References `docs/user-guide/*.md` (14 real files) |
-| Prompt creation | `./prompts/implementation-prompt.md` | `write_file()` | References `SOUL.md`, `.hermes.md` |
-| Profile updates (14) | `~/AppData/Local/hermes/profiles/*/SOUL.md` + `USER.md` + `MEMORY.md` | `patch()` (targeted replace) — never `sed` bulk | Cross-ref `.hermes.md` (2859 B verified) + `references/hooks-contract.md` |
-| .eslintrc fix | `.eslintrc.json` | `patch()` (69 B: parserOptions.project=./tsconfig.json, tsconfigRootDir=.) | References `.hermes.md` tooling MCP (mcp==2.0.0, ~/myvenv) |
+| Prompt creation | `./prompts/implementation-prompt.md` | `write_file()` | References `SOUL.md`, `$HERMES_HOME.md` |
+| Profile updates (14) | `~/AppData/Local/hermes/profiles/*/SOUL.md` + `USER.md` + `MEMORY.md` | `patch()` (targeted replace) — never `sed` bulk | Cross-ref `$HERMES_HOME.md` (2859 B verified) + `references/hooks-contract.md` |
+| .eslintrc fix | `.eslintrc.json` | `patch()` (69 B: parserOptions.project=./tsconfig.json, tsconfigRootDir=.) | References `$HERMES_HOME.md` tooling MCP (mcp==2.0.0, ~/myvenv) |
 | Audit scripts (5 destructive) | `*.audit.txt` (new) | `write_file()` (new artifacts; executed with approval) | References `systematic-debugging` skill (4-phase verified) |
 | Vulnerability reports | Audit output saved (not overwritten) | `read_file()` + save | References `./plans/debug-subgoal-plan-2026-09-13.md` |
 
@@ -72,7 +72,7 @@ A (Load) → B (Explore/Log) → [C (Spec) || D (Prompt) || E (Profiles) || F (S
 - Audit scripts (`.audit.txt`): `find . -name '*.audit.txt' | wc -l` = 5 (verified real); content includes real audit findings from prior session (cli.md_blk8, features_web-search.md_blk7, messaging_telegram.md_blk27 — 5 destructive audit outputs saved).
 - Vulnerability audit: 26 real findings preserved (not suppressed). Evidence strings: `GHSA-vv7q-7jx5-f767` (fastmcp SSRF/traversal), `GHSA-5h2m-4q8j-pqpj` (OAuth), `GHSA-...` (httpx2 TLS/CPU). Verified by `grep -q` on audit output.
 - Parsing errors: 41 real `No tsconfigRootDir` errors preserved. Evidence: `.eslintrc.json` fix does NOT suppress; `bun run check` exit 1 verified; architecture concern documented honestly per `systematic-debugging` Phase 4.5.
-- Profile identity: 14 profiles enhanced; descriptions + aliases include best practices reference + `.hermes.md` cross-reference; no identity-rule duplication verified by `grep -R`.
+- Profile identity: 14 profiles enhanced; descriptions + aliases include best practices reference + `$HERMES_HOME.md` cross-reference; no identity-rule duplication verified by `grep -R`.
 - `.env`: 3334 B unchanged verified before/after destructive operations (not exposed in output; vault references handled as cross-links only).
 
 ## F. Risk + Blocker Notes (Verified Real — Not Hidden)

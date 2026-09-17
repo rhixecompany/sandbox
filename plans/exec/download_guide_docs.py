@@ -13,7 +13,7 @@ import urllib.request
 
 WORK = r"C:\Users\Alexa\Desktop\SandBox"
 TARGET_DIR = os.path.join(WORK, "docs", "user-guide")
-LOG_FILE = os.path.join(WORK, ".hermes", "specs", "download-log.md")
+LOG_FILE = os.path.join(WORK, "$HERMES_HOME", "specs", "download-log.md")
 BASE_RAW = "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide"
 API_ROOT = "https://api.github.com/repos/NousResearch/hermes-agent/contents/website/docs/user-guide"
 BATCH_SIZE = 7

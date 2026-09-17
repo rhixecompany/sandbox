@@ -40,13 +40,13 @@ Notes:
 
 ### 2a. SOUL.md / AGENTS.md / CLAUDE.md / copilot-instructions.md
 
-All four are intentionally distinct, layered per `.hermes.md` hierarchy (`SOUL.md` > `AGENTS.md` > `CLAUDE.md` > `.cursorrules`). No true duplicates — different content, different purposes.
+All four are intentionally distinct, layered per `$HERMES_HOME.md` hierarchy (`SOUL.md` > `AGENTS.md` > `CLAUDE.md` > `.cursorrules`). No true duplicates — different content, different purposes.
 
 | Path | Size (B) | SHA-256 (first 12) | Modified | Role | Recommendation |
 |---|---|---|---|---|---|
 | `SOUL.md` | 12,335 | `f8bf0a419f8b` | 2026-09-04 19:30:35 | canonical (persona + operating principles; ~255 lines) | **keep** |
 | `AGENTS.md` | 16,333 | `8ac5823c9e46` | 2026-09-04 19:30:25 | canonical (general agent guidance, ~highest layer below SOUL) | **keep** |
-| `CLAUDE.md` | 314 | `e82773fd7210` | 2026-09-04 19:30:25 | legacy stub (7 lines, only Claude-specific pointers, references AGENTS.md + SOUL.md) | **keep** — not a duplicate; intentionally thin per the hierarchy table in `.hermes.md` |
+| `CLAUDE.md` | 314 | `e82773fd7210` | 2026-09-04 19:30:25 | legacy stub (7 lines, only Claude-specific pointers, references AGENTS.md + SOUL.md) | **keep** — not a duplicate; intentionally thin per the hierarchy table in `$HERMES_HOME.md` |
 | `copilot-instructions.md` | 12,328 | `072896ff7498` | 2026-09-04 19:30:25 | canonical (GitHub Copilot Coding-Agent runtime instructions) | **keep** |
 
 Note on the task wording "SOUL.md vs SOUL.md" — there is only one `SOUL.md` in the repo (one match from `search_files`). No self-duplicate.
@@ -63,7 +63,7 @@ Note on the task wording "SOUL.md vs SOUL.md" — there is only one `SOUL.md` in
 Content sanity check (different headers):
 - `IMPLEMENTATION_PLAN.md` → `# Comprehensive Implementation Plan: Configuration File Consolidation & Optimization`
 - `PLAN.md` → frontmatter `name: SandBox-root / title: "SandBox-root — Plan: MCP Server Install & Skills Creation"`
-- `SPEC.md` → companion spec (see `.hermes.md` reference)
+- `SPEC.md` → companion spec (see `$HERMES_HOME.md` reference)
 - `./plans/comprehensive-implementation-plan.md` → frontmatter `name: comprehensive-implementation-plan / title: "Comprehensive Implementation Plan — Multi-Phase Delivery Framework"`
 
 All four have distinct SHA-256 hashes — none are byte-duplicates. **Overlapping scopes, not duplicates**:
@@ -114,12 +114,12 @@ Watch: `ai_training_platforms.md` vs `uk-ai-training-platforms-2026.md` — same
 
 ## 3. Stale / Tmp Files — Detailed Triage
 
-Two `.hermes-tmp.*` files; both **0 bytes**, both with the canonical empty-file SHA-256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` (= sha256 of nothing).
+Two `$HERMES_HOME-tmp.*` files; both **0 bytes**, both with the canonical empty-file SHA-256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` (= sha256 of nothing).
 
 | Path | Size (B) | SHA-256 | Modified | Role | Recommendation |
 |---|---|---|---|---|---|
-| `.hermes-tmp.A0Bzr5` | 0 | `e3b0c44298fc` | 2026-09-04 19:10:10 | stale (0-byte lock/scratch file at repo root; possibly from a crashed `hermes` invocation) | **delete** (low risk — 0 bytes, no content) |
-| `judge_results/.hermes-tmp.A3svhR` | 0 | `e3b0c44298fc` | 2026-09-04 19:10:10 | stale (0-byte lock/scratch file in `judge_results/`; same Hermes tmp pattern) | **delete** (low risk — 0 bytes, no content) |
+| `$HERMES_HOME-tmp.A0Bzr5` | 0 | `e3b0c44298fc` | 2026-09-04 19:10:10 | stale (0-byte lock/scratch file at repo root; possibly from a crashed `hermes` invocation) | **delete** (low risk — 0 bytes, no content) |
+| `judge_results/$HERMES_HOME-tmp.A3svhR` | 0 | `e3b0c44298fc` | 2026-09-04 19:10:10 | stale (0-byte lock/scratch file in `judge_results/`; same Hermes tmp pattern) | **delete** (low risk — 0 bytes, no content) |
 
 No `*.tmp` files in the root or anywhere outside the Hermes tmp pattern.
 
@@ -183,8 +183,8 @@ No `*.tmp` files in the root or anywhere outside the Hermes tmp pattern.
 
 | Path | SHA-256 (full) | Size (B) | Modified | Role | Recommendation |
 |---|---|---|---|---|---|
-| `.hermes-tmp.A0Bzr5` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 | 2026-09-04 19:10:10 | stale (0-byte Hermes scratch, repo root) | delete |
-| `judge_results/.hermes-tmp.A3svhR` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 | 2026-09-04 19:10:10 | stale (0-byte Hermes scratch, judge_results/) | delete |
+| `$HERMES_HOME-tmp.A0Bzr5` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 | 2026-09-04 19:10:10 | stale (0-byte Hermes scratch, repo root) | delete |
+| `judge_results/$HERMES_HOME-tmp.A3svhR` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 0 | 2026-09-04 19:10:10 | stale (0-byte Hermes scratch, judge_results/) | delete |
 
 ---
 
@@ -192,7 +192,7 @@ No `*.tmp` files in the root or anywhere outside the Hermes tmp pattern.
 
 1. **One true duplicate confirmed (Category A):** `.codex/mcp.json` ⇄ `.copilot/mcp.json` are JSON-equivalent (same 30 servers, same fields). The only difference is whitespace/indent. `.copilot/mcp.json` is older (Aug 29) and stale.
 2. **One legacy/duplicate-of-run pair (Category D):** `skill_judge_results_95.json` and `skill_judge_report_95.txt` come from the same underlying 752-skill judge run; the `.txt` is older (Aug 20) and redundant.
-3. **Two stale 0-byte scratch files (Category E):** both `.hermes-tmp.*` files share the canonical empty-file hash and are safe to delete.
+3. **Two stale 0-byte scratch files (Category E):** both `$HERMES_HOME-tmp.*` files share the canonical empty-file hash and are safe to delete.
 4. **No false duplicates in the plan triad (Category B):** `IMPLEMENTATION_PLAN.md`, `PLAN.md`, `SPEC.md`, `./plans/comprehensive-implementation-plan.md` are all distinct content with distinct SHAs — overlapping scopes, not duplicates.
 5. **No self-duplicates:** `SOUL.md` vs `SOUL.md` resolves to a single file in the tree.
 6. **All 12 `uk-earnings-kit/references/*.md` are unique** (different content, no overlap detected at the file-name pair level — one possible superset relationship between `ai_training_platforms.md` and `uk-ai-training-platforms-2026.md` flagged for manual review).
@@ -201,8 +201,8 @@ No `*.tmp` files in the root or anywhere outside the Hermes tmp pattern.
 
 | Action | Target | Risk | Notes |
 |---|---|---|---|
-| delete | `.hermes-tmp.A0Bzr5` | none | 0 bytes |
-| delete | `judge_results/.hermes-tmp.A3svhR` | none | 0 bytes |
+| delete | `$HERMES_HOME-tmp.A0Bzr5` | none | 0 bytes |
+| delete | `judge_results/$HERMES_HOME-tmp.A3svhR` | none | 0 bytes |
 | consolidate (symlink `.copilot/mcp.json` → `.codex/mcp.json`) | `.copilot/mcp.json` | low | After confirming no agent reads `.copilot/mcp.json` with whitespace-sensitive tooling |
 | consolidate (regenerate from JSON or symlink) | `skill_judge_report_95.txt` | low | Same source run; the JSON is canonical |
 | consolidate (merge into IMPLEMENTATION_PLAN.md or master plan) | `PLAN.md` | low | Largely superseded by newer plans |

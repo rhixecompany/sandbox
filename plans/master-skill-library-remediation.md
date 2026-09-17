@@ -79,14 +79,14 @@ This master plan consolidates:
 - **6.4** Configure best model + fallback chain in config.yaml
 
 ### Phase 7: Agent Sync (5 Agents)
-- **7.1** Sync hooks to `.github/copilot`, `.codex`, `.opencode`, `.hermes`
+- **7.1** Sync hooks to `.github/copilot`, `.codex`, `.opencode`, `$HERMES_HOME`
 - **7.2** Sync skills to all 5 agent roots
 - **7.3** Sync plugins to all 5 agent roots
 - **7.4** Sync instructions/context files
 - **7.5** Verify identical configs across all 5
 
 ### Phase 8: Cleanup & Consolidation
-- **8.1** Delete `.enhance`, `.goals`, `.hermes_diagnostics`, `.mcp`, `.*_cache`, `.worktrees`
+- **8.1** Delete `.enhance`, `.goals`, `$HERMES_HOME_diagnostics`, `.mcp`, `.*_cache`, `.worktrees`
 - **8.2** Cleanup `*.json`, `*.log`, `*.txt` temp files
 - **8.3** Convert `*.mjs` → `*.mts` (ESM modules)
 - **8.4** Update all config files (package.json, tsconfig, etc.)

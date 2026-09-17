@@ -129,7 +129,7 @@ scripts: []
 | `dependencies` | array | ✅ | Prompt/skill dependencies |
 | `formatter` | string | ✅ | Output format |
 | `plan` | string | ❌ | Path to phases breakdown |
-| `metadata.hermes` | object | ✅ | Hermes profile + MCP config |
+| `metadata$HERMES_HOME` | object | ✅ | Hermes profile + MCP config |
 | `metadata.copilot` | object | ✅ | VS Code Copilot config |
 | `metadata.opencode` | object | ✅ | OpenCode CLI config |
 | `metadata.codex` | object | ✅ | Codex AI model hints |
@@ -264,7 +264,7 @@ The `metadata` section controls how different agents discover and execute this p
 
 | Agent | Discovery Method | Routing Field | Example |
 |-------|------------------|---------------|---------|
-| **Hermes** | `hermes profile use <profile>` | `metadata.hermes.profile` | Routes to `code-architect`, `research-analyst`, etc. |
+| **Hermes** | `hermes profile use <profile>` | `metadata$HERMES_HOME.profile` | Routes to `code-architect`, `research-analyst`, etc. |
 | **Copilot** | VS Code command palette | `metadata.copilot.extensions` | Requires `GitHub.copilot` extension |
 | **OpenCode CLI** | `opencode /trigger` | `metadata.opencode.command` | Parses CLI flags and arguments |
 | **Codex AI** | Model selection | `metadata.codex.model_override` | Forces specific LLM (claude, gpt, deepseek) |

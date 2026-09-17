@@ -45,7 +45,7 @@ Automated reasoning and workflow tool for `1password`. Execute multi-step tasks 
 
 ### Service Account (recommended for Hermes)
 
-Set `OP_SERVICE_ACCOUNT_TOKEN` in `${HERMES_HOME:-~/.hermes}/.env` (the skill will prompt for this on first load).
+Set `OP_SERVICE_ACCOUNT_TOKEN` in `${HERMES_HOME:-~/$HERMES_HOME}/.env` (the skill will prompt for this on first load).
 No desktop app needed. Supports `op read`, `op inject`, `op run`.
 
 ```bash

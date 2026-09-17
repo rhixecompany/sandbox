@@ -32,8 +32,8 @@ Action: copy → verify → delete originals.
 
 ## Identity Preservation Check
 
-- `.hermes.md` exists: ✓ (4495 B verified, identity references intact, DRY enforced).
-- `.hermes.md` references profile directories: preserved (`~/AppData/Local/Hermes/profiles/` still referenced in `.hermes.md`).
+- `$HERMES_HOME.md` exists: ✓ (4495 B verified, identity references intact, DRY enforced).
+- `$HERMES_HOME.md` references profile directories: preserved (`~/AppData/Local/Hermes/profiles/` still referenced in `$HERMES_HOME.md`).
 - No identity rules duplicated or removed in AGENTS.md / CLAUDE.md / USER.md / MEMORY.md / SOUL.md / .cursorrules.
 - Memory migration does NOT break identity — profile descriptions (`description.md`) remain intact in profile directories.
 

@@ -1,6 +1,6 @@
 # Copilot Instructions — Bash
 
-**Canonical reference:** See `../../AGENTS.md` (general agent guidance), `../../.hermes.md` (Hermes-specific), `../../CLAUDE.md` (Claude-specific).
+**Canonical reference:** See `../../AGENTS.md` (general agent guidance), `../../$HERMES_HOME.md` (Hermes-specific), `../../CLAUDE.md` (Claude-specific).
 
 ## Quick Start
 

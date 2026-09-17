@@ -1,7 +1,7 @@
 ---
 name: update-hermes-root-and-repo-context-plan
 version: 1.0.1
-description: "Plan: sequential update/enhance/verify of 8 context files (SOUL.md, USER.md, MEMORY.md, AGENTS.md, CLAUDE.md, .cursorrules, .hermes.md, session_report.md) per multi-file-change-protocol (>5 file trigger) with 14-skill stack, DRY preservation, identity intact, doc-level only."
+description: "Plan: sequential update/enhance/verify of 8 context files (SOUL.md, USER.md, MEMORY.md, AGENTS.md, CLAUDE.md, .cursorrules, $HERMES_HOME.md, session_report.md) per multi-file-change-protocol (>5 file trigger) with 14-skill stack, DRY preservation, identity intact, doc-level only."
 author: Alexa
 license: MIT
 date: 2026-09-14
@@ -61,14 +61,14 @@ Gate definition (each file must satisfy):
 ## Skill Verification Evidence (14-stack loaded — sequential confirmations)
 
 Confirmed via `skill_view(name=...)` calls (each returned success with path + content):
-1. multi-file-change-protocol (this protocol's owner skill; .hermes.md confirmed)
+1. multi-file-change-protocol (this protocol's owner skill; $HERMES_HOME.md confirmed)
 2. using-superpowers (loaded; powers: delegation, planning, verification)
 3. brainstorming (loaded via `planning/brainstorming` qualified path; structured idea generation)
 4. user-communication-preferences (loaded; Alexa preferences: concise, table-first, direct, DRY, action-first, no filler, verification before claim)
 5. mcp-sequential-thinking (loaded; sequentialthinking tool params verified)
-6. mcp-filesystem (MCP — file ops via server; listed in .hermes.md MCP table: filesystem)
-7. mcp-ast-grep (MCP — AST-based code search; listed in .hermes.md MCP table: ast-grep)
-8. mcp-memory (MCP — persistent graph; listed in .hermes.md MCP table: memory)
+6. mcp-filesystem (MCP — file ops via server; listed in $HERMES_HOME.md MCP table: filesystem)
+7. mcp-ast-grep (MCP — AST-based code search; listed in $HERMES_HOME.md MCP table: ast-grep)
+8. mcp-memory (MCP — persistent graph; listed in $HERMES_HOME.md MCP table: memory)
 9. writing-clearly-and-concisely (referenced; concise bullets, skip filler, sharp opinions — aligns with user preference)
 10. subagent-driven-development (loaded; delegate_task with full context injection; parallel subagent coordination noted)
 11. plan (this doc — ./plans/update-hermes-root-repo-context-2026-09-14.md)
@@ -90,7 +90,7 @@ Order (logical dependency: root identity first, then derived docs, then workspac
 4. AGENTS.md → workspace layout + profile routing + multi-file-change-protocol reference + DRY refs + session evidence
 5. CLAUDE.md → Claude-specific pointer enhanced with DRY refs + rules 1-6 reference + session evidence
 6. .cursorrules → Cursor IDE pointer enhanced with DRY refs + rules 1-6 + session evidence + .env note
-7. .hermes.md → root overrides + profile identity + MCP table verified + 14-skill stack reference + session achievements + rules 1-6 + DRY refs + exposure-correction
+7. $HERMES_HOME.md → root overrides + profile identity + MCP table verified + 14-skill stack reference + session achievements + rules 1-6 + DRY refs + exposure-correction
 8. session_report.md → session history enhanced with verified real artifacts (no synthetic session IDs; all exit codes real; vulnerability findings preserved; parsing errors preserved; rate-limit 403 preserved; MSYS2 FAIL preserved)
 
 ## Verification Gates (per file — sequential, after each edit)
@@ -110,7 +110,7 @@ No synthetic outputs; no fabricated session IDs; no fabricated capabilities/qual
 ## Cross-References (for all 8 files)
 
 Each updated file includes cross-reference sections pointing to (verified by `skill_view` or file-read, not fabricated):
-- `.hermes.md` (this workspace; 3373 B verified at session start; profile identity + MCP table + 14-skill stack reference)
+- `$HERMES_HOME.md` (this workspace; 3373 B verified at session start; profile identity + MCP table + 14-skill stack reference)
 - `AGENTS.md` (workspace layout; 8794 B verified)
 - `CLAUDE.md` (4711 B verified)
 - `.cursorrules` (197609 B — verified real; note: size 197609 suggests binary/non-standard content; treat with care — enhanced sections only)

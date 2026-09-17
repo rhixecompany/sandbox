@@ -58,7 +58,7 @@ Sync hooks, skills, plugins, instructions to:
 1. `.github/copilot` (GitHub Copilot)
 2. `.codex` (OpenAI Codex)
 3. `.opencode` (OpenCode)
-4. `.hermes` (Hermes - current)
+4. `$HERMES_HOME` (Hermes - current)
 5. `.cursor` (Cursor IDE)
 
 ### Acceptance Criteria
@@ -76,7 +76,7 @@ Sync hooks, skills, plugins, instructions to:
 
 ### Requirements
 Delete/clean:
-- `.enhance/`, `.goals/`, `.hermes_diagnostics/`, `.mcp/`, `.*_cache/`, `.worktrees/`
+- `.enhance/`, `.goals/`, `$HERMES_HOME_diagnostics/`, `.mcp/`, `.*_cache/`, `.worktrees/`
 - `*.json`, `*.log`, `*.txt` temp files in root
 - Convert `*.mjs` → `*.mts`
 - Update `package.json`, `tsconfig.json`, `pyproject.toml`, `requirements.txt`

@@ -24,13 +24,13 @@ From verified `execution-summary.md` (line 5 â direct read):
 
 These IDs come from verified CLI output (`hermes chat --provider ... --model ... --oneshot` results recorded in workspace audit artifacts). Not invented.
 
-## Verified Config / Model State (From `.hermes.md` / Config Verification)
+## Verified Config / Model State (From `$HERMES_HOME.md` / Config Verification)
 
 | Property | Verified Value | Source |
 |---|---|---|
-| Primary model | `thinkingmachines/inkling:free` | Config verification / `.hermes.md` |
+| Primary model | `thinkingmachines/inkling:free` | Config verification / `$HERMES_HOME.md` |
 | Fallback chain | 3 entries (openrouter â nous â opencode-zen) | Config verification |
-| Provider (primary) | `openrouter` | `.hermes.md` / session audit |
+| Provider (primary) | `openrouter` | `$HERMES_HOME.md` / session audit |
 | Provider (fallbacks verified) | `opencode-zen` (4 free models verified) | `test-providers-models` audit |
 
 ## Workspace Metrics (Verified â From Session Replay / `execution-summary.md`)

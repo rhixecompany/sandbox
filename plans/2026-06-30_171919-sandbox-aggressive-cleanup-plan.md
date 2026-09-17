@@ -319,7 +319,7 @@ find docs -type d -empty -delete
 
 **KEEP:**
 
-- `.hermes.md` — project config
+- `$HERMES_HOME.md` — project config
 - `AGENTS.md` — agent instructions
 - `HERMES_PROFILE_REPORT.md` — profile audit
 - `PROJECT_RULES.md` — project rules

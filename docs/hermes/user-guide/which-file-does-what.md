@@ -16,10 +16,10 @@ description: "SOUL.md vs USER.md vs MEMORY.md vs AGENTS.md — a one-page map of
 | **USER.md** | User profile — your name, role, preferences, communication style, expectations | The agent, via the `memory` tool (you can gate saves with `write_approval`, or edit entries via `hermes journey edit`) | Injected into the system prompt as a frozen snapshot at session start | `~/./memories/` |
 | **MEMORY.md** | Agent's personal notes — environment facts, project conventions, tool quirks, things learned | The agent, via the `memory` tool (same gating and editing options as USER.md) | Injected into the system prompt as a frozen snapshot at session start | `~/./memories/` |
 | **AGENTS.md** | Project instructions, conventions, architecture — commands, ports, paths, repo-specific workflows | You (or whoever authors the project) | Loaded into the system prompt at startup from your working directory; nested copies are discovered progressively as the agent navigates subdirectories | Project working directory + subdirectories |
-| **.hermes.md** / **HERMES.md** | Project instructions, like AGENTS.md but Hermes-specific and highest priority | You | Loaded into the system prompt at startup (first match wins over AGENTS.md) | Your project — discovery walks up to the git root |
+| **$HERMES_HOME.md** / **HERMES.md** | Project instructions, like AGENTS.md but Hermes-specific and highest priority | You | Loaded into the system prompt at startup (first match wins over AGENTS.md) | Your project — discovery walks up to the git root |
 
 :::info One project context file per session
-Only **one** project context type is loaded per session, first match wins: `.hermes.md` → `AGENTS.md` → `CLAUDE.md` → `.cursorrules`. `SOUL.md` is always loaded independently as the agent identity — it is not part of that priority chain. See [Context Files](/user-guide/features/context-files) for the full list, including `CLAUDE.md` and `.cursorrules` compatibility.
+Only **one** project context type is loaded per session, first match wins: `$HERMES_HOME.md` → `AGENTS.md` → `CLAUDE.md` → `.cursorrules`. `SOUL.md` is always loaded independently as the agent identity — it is not part of that priority chain. See [Context Files](/user-guide/features/context-files) for the full list, including `CLAUDE.md` and `.cursorrules` compatibility.
 :::
 
 A useful shorthand:
@@ -27,7 +27,7 @@ A useful shorthand:
 - **SOUL.md** is who the agent *is* — if it should follow you everywhere, it belongs here.
 - **USER.md** is who *you* are — the agent maintains it for you.
 - **MEMORY.md** is what the agent has *learned* — it maintains this itself too.
-- **AGENTS.md** (or `.hermes.md`) is what the *project* needs — if it belongs to a project, it belongs here.
+- **AGENTS.md** (or `$HERMES_HOME.md`) is what the *project* needs — if it belongs to a project, it belongs here.
 
 ## "Why did it forget what I just said?"
 
@@ -46,7 +46,7 @@ If the agent saved your name to memory, the save worked — check with the `memo
 :::tip Quick decision guide
 - Want to change how the agent **talks**? Edit `~/./SOUL.md` — [Personality & SOUL.md](/user-guide/features/personality).
 - Want the agent to **remember a fact**? Just tell it — it saves to memory itself. [Persistent Memory](/user-guide/features/memory).
-- Want to set **project rules**? Put an `AGENTS.md` (or `.hermes.md`) in the project — [Context Files](/user-guide/features/context-files).
+- Want to set **project rules**? Put an `AGENTS.md` (or `$HERMES_HOME.md`) in the project — [Context Files](/user-guide/features/context-files).
 - Need a **temporary** personality change? Use `/personality` — it's a session-level overlay, no file edits needed.
 :::
 
@@ -54,4 +54,4 @@ If the agent saved your name to memory, the save worked — check with the `memo
 
 - [Persistent Memory](/user-guide/features/memory) — MEMORY.md, USER.md, the `memory` tool, capacity limits, `write_approval`
 - [Personality & SOUL.md](/user-guide/features/personality) — SOUL.md content guidance, `/personality` presets, the prompt stack
-- [Context Files](/user-guide/features/context-files) — AGENTS.md, `.hermes.md`, progressive discovery, security scanning
+- [Context Files](/user-guide/features/context-files) — AGENTS.md, `$HERMES_HOME.md`, progressive discovery, security scanning

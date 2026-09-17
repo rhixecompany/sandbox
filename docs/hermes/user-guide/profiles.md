@@ -284,7 +284,7 @@ In chat, the same two live as `/export` and `/import` — and in the desktop app
 ### Naming the default profile
 
 The default profile's internal ID is always `default` — it can't be truly
-renamed because `~/.hermes` is the installation root. Renaming it instead
+renamed because `~/$HERMES_HOME` is the installation root. Renaming it instead
 sets a **display name**, which UI surfaces show in place of the bare ID:
 
 ```bash
@@ -310,7 +310,7 @@ This stops the gateway, removes the systemd/launchd service, removes the command
 Use `--yes` to skip confirmation: `hermes profile delete coder --yes`
 
 :::note
-You cannot delete the default profile (`~/.hermes`). To remove everything, use `hermes uninstall`.
+You cannot delete the default profile (`~/$HERMES_HOME`). To remove everything, use `hermes uninstall`.
 :::
 
 ## Tab completion
@@ -357,7 +357,7 @@ Claude/Codex auth, npm state, and similar files inside that profile home.
 Hermes also exposes `HERMES_REAL_HOME` to subprocesses so scripts can still find
 the actual account home when `home_mode: profile` is active.
 
-The default profile is simply `~/.hermes` itself. No migration needed — existing installs work identically.
+The default profile is simply `~/$HERMES_HOME` itself. No migration needed — existing installs work identically.
 
 ## Sharing a profile
 

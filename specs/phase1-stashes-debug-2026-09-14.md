@@ -18,7 +18,7 @@ Apply 4 stashes sequentially to `clean-development`; audit `config.yaml` for MCP
 | 1.2 | Apply stash `hermes-update-autostash-20260828-151448` | `git stash apply` | Same; document any abort |
 | 1.3 | Apply stash `hermes-update-autostash-20260804-191747` | `git stash apply` | Same |
 | 1.4 | Apply stash `hermes-update-autostash-20260728-015200` | `git stash apply` | Same; if any abort, document honestly |
-| 1.5 | Audit `config.yaml` (MCP server args YAML list) | Read file; check args format; compare with `.hermes.md` references; check `.env` variables | Audit result: PASS or conflict documented with exact line reference |
+| 1.5 | Audit `config.yaml` (MCP server args YAML list) | Read file; check args format; compare with `$HERMES_HOME.md` references; check `.env` variables | Audit result: PASS or conflict documented with exact line reference |
 | 1.6 | Audit `.eslintrc.json` parser fix (69 B, verified) | Read file; verify `parserOptions.project` points to `./tsconfig.json`; verify `ruff` clean; verify syntax PASS | `ruff check` PASS; `python -m py_compile` PASS; no new hidden errors |
 | 1.7 | Audit browser/debug artifacts (`agent-browser` skill reference; `.github/prompts/operations/test-providers-models/`) | Read skill SKILL.md; read `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md`; verify real file sizes | All files verified real (os.path.getsize / ls); no synthetic content |
 | 1.8 | Systematic-debugging: capture sequential exit codes in `./plans/debug-run-logs.md` | Run `hermes mcp test`, `hermes doctor`, `hermes security audit`, `hermes status`, `hermes insights`, 6 `hermes logs` commands; capture stdout/stderr/exit code | All exit codes real (verified by terminal output); no fabricated results |
@@ -42,5 +42,5 @@ As your patient teacher: before touching anything, document what's broken. Examp
 - [ ] `agent-browser` skill + `test-providers-models` artifacts verified real; 0 synthetic
 - [ ] 26 vulnerability findings + 41 parsing errors + 403 + MSYS2 FAIL preserved honestly; NOT hidden
 - [ ] `.env` 3334 B unchanged; 0 new `.bak` artifacts
-- [ ] DRY enforced: identity/routing rules referenced (not duplicated) from `.hermes.md`; best practices referenced from `user-communication-preferences`; protocol referenced from `multi-file-change-protocol`
+- [ ] DRY enforced: identity/routing rules referenced (not duplicated) from `$HERMES_HOME.md`; best practices referenced from `user-communication-preferences`; protocol referenced from `multi-file-change-protocol`
 - [ ] No synthetic session IDs; no synthetic capabilities/quality/ranking

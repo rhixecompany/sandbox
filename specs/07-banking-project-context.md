@@ -51,8 +51,8 @@ read_file ~/Desktop/SandBox/projects/Banking/AGENTS.md | head -50
 find ~/Desktop/SandBox/projects/Banking -name "AGENTS.md" -o -name "*.prompt.md" | head -20
 # Expected: Files found
 
-# 3. Check workspace .hermes.md for Banking overrides
-read_file ~/Desktop/SandBox/.hermes.md
+# 3. Check workspace $HERMES_HOME.md for Banking overrides
+read_file ~/Desktop/SandBox/$HERMES_HOME.md
 # Expected: Banking overrides present
 
 # 4. Verify stubs defer to AGENTS.md

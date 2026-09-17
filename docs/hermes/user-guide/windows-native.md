@@ -12,7 +12,7 @@ Hermes runs natively on Windows 10 and Windows 11 — no WSL, no Cygwin, no Dock
 If you just want to install, the one-liner on the [landing page](/) or [Installation page](../getting-started/installation#windows-native) is all you need. Come back here when something surprises you.
 
 :::tip Want WSL instead?
-If you prefer a real POSIX environment (for the dashboard's embedded terminal, `fork` semantics, Linux-style file watchers, etc.), see the **[Windows (WSL2) Guide](./windows-wsl-quickstart.md)**. Both coexist cleanly: native data lives under `%LOCALAPPDATA%\hermes`, WSL data lives under `~/.hermes`.
+If you prefer a real POSIX environment (for the dashboard's embedded terminal, `fork` semantics, Linux-style file watchers, etc.), see the **[Windows (WSL2) Guide](./windows-wsl-quickstart.md)**. Both coexist cleanly: native data lives under `%LOCALAPPDATA%\hermes`, WSL data lives under `~/$HERMES_HOME`.
 :::
 
 ## Quick install
@@ -208,9 +208,9 @@ Services require admin rights to install and tie the gateway's lifecycle to mach
 | `%LOCALAPPDATA%\hermes\bin\` | The `hermes` / `hermes-acp` launchers and Hermes's managed `uv.exe` (the Python manager it uses for updates). |
 | `%LOCALAPPDATA%\hermes\` (root) | Your config, auth, skills, sessions, logs (`config.yaml`, `.env`, `skills\`, `sessions\`, `logs\`, …). **Survives reinstalls.** |
 
-On native Windows the installer sets `HERMES_HOME=%LOCALAPPDATA%\hermes`, so your data and the disposable install live under the **same** `%LOCALAPPDATA%\hermes` root: the install/runtime is the `hermes-agent\`, `git\`, `node\`, and `bin\` subdirectories, while your data files sit directly in `%LOCALAPPDATA%\hermes`. Reinstalling only replaces the `hermes-agent\` checkout, so your data survives — but because the two share a root, **don't** `Remove-Item -Recurse %LOCALAPPDATA%\hermes` if you want to keep your data; delete the `hermes-agent\` subdirectory instead. Your data directory is identical in shape to a Linux `~/.hermes`, so you can mirror it between machines.
+On native Windows the installer sets `HERMES_HOME=%LOCALAPPDATA%\hermes`, so your data and the disposable install live under the **same** `%LOCALAPPDATA%\hermes` root: the install/runtime is the `hermes-agent\`, `git\`, `node\`, and `bin\` subdirectories, while your data files sit directly in `%LOCALAPPDATA%\hermes`. Reinstalling only replaces the `hermes-agent\` checkout, so your data survives — but because the two share a root, **don't** `Remove-Item -Recurse %LOCALAPPDATA%\hermes` if you want to keep your data; delete the `hermes-agent\` subdirectory instead. Your data directory is identical in shape to a Linux `~/$HERMES_HOME`, so you can mirror it between machines.
 
-**Override `HERMES_HOME`:** set the environment variable to point at a different data dir (e.g. `%USERPROFILE%\.hermes` to match a Linux/WSL layout). Works the same as on Linux.
+**Override `HERMES_HOME`:** set the environment variable to point at a different data dir (e.g. `%USERPROFILE%\$HERMES_HOME` to match a Linux/WSL layout). Works the same as on Linux.
 
 ## Browser tool
 
@@ -270,7 +270,7 @@ To nuke everything:
 hermes uninstall
 Remove-Item -Recurse -Force "$env:LOCALAPPDATA\hermes"
 # Also remove a legacy CLI/WSL data dir if you ever used one:
-Remove-Item -Recurse -Force "$env:USERPROFILE\.hermes"
+Remove-Item -Recurse -Force "$env:USERPROFILE\$HERMES_HOME"
 ```
 
 The `hermes uninstall` CLI subcommand also handles the case where the schtasks entry was registered under a different task name (older installs) — it searches by install path rather than by hardcoded task name.

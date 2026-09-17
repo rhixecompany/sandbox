@@ -23,7 +23,7 @@ Apply in order. Halt on first failure; do not proceed to next phase until gate p
 
 ### Tree Cleanup Verification (tree.prompt.txt Goals 1-3)
 
-- [ ] **Phase 1 Cleanup:** .enhance, .goals, .hermes_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders deleted/verified.
+- [ ] **Phase 1 Cleanup:** .enhance, .goals, $HERMES_HOME_diagnostics, .mcp, .*_cache, .worktrees, hermes-memory-safety, judge_results, logs, session-state, thoughts folders deleted/verified.
 - [ ] **Phase 2 Cleanup:** *.json (except package.json, pyrightconfig.json), *-report.md, *.log, *.txt (skip *.prompt.txt) cleaned/verified.
 - [ ] **Phase 3 Config:** .editorconfig, .git-blame-ignore-revs, .gitattributes, .gitignore, .gitmodules, .markdownlint-cli2.jsonc, .markdownlint.jsonc, .pre-commit-config.yaml, .prettierignore, .prettierrc.json, *.toml, *.yaml updated/verified.
 - [ ] **Phase 4 Config:** requirements.txt, tsconfig.json, package.json, pyrightconfig.json updated/verified.
@@ -56,7 +56,7 @@ Apply in order. Halt on first failure; do not proceed to next phase until gate p
 - [ ] Subgoals AâH mapped to real session work (verified from `goal-using-superpowers-brainstormin.txt` lines 1â14; not synthesized).
 - [ ] Phase gate table present with verified requirements and status column.
 - [ ] Metric values backed by verified terminal/git/file/session output (not estimated).
-- [ ] Agent identity block present; model/provider/workspace verified in live config (`hermes profile list`, `.hermes.md` state).
+- [ ] Agent identity block present; model/provider/workspace verified in live config (`hermes profile list`, `$HERMES_HOME.md` state).
 
 ### Security / Safety
 

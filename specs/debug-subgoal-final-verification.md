@@ -52,7 +52,7 @@ protocol: multi-file-change-protocol (14 skills loaded); systematic-debugging (4
 ## Integrity Checklist (Verified Before Final Claim)
 - [x] `.env` (workspace: 5274 B; profile: 30269 B) unchanged — 0 `.env.bak` artifacts.
 - [x] `.env` secrets not exposed — no `API_KEY=vault` false-positive leaks; exposure-correction `./specs/exposure-correction.md` (1333 B) verified.
-- [x] Identity/routing preserved — `SOUL.md`, `USER.md`, `MEMORY.md`, `.hermes.md` not rewritten; only `config.yaml` and `.vscode/mcp.json` edited.
+- [x] Identity/routing preserved — `SOUL.md`, `USER.md`, `MEMORY.md`, `$HERMES_HOME.md` not rewritten; only `config.yaml` and `.vscode/mcp.json` edited.
 - [x] 0 new `.bak` artifacts — verified by `find . -name '*.bak'` (0 results).
 - [x] 0 synthetic artifacts — no fabricated session IDs; no synthetic capabilities; no synthetic ranking/quality claims.
 - [x] 26 vulnerability findings preserved — verified by `./plans/debug-run-logs.md` (53152 B) + re-run `hermes security audit` exit 1.

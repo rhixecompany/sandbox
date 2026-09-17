@@ -30,7 +30,7 @@ Note: `.env` contents never exposed. `.env` protected (5274 B in CWD, 30269 B in
 4. Fallback chain verified: `nous` → `openrouter` (from config). Never fabricate fallback order.
 5. Rate limits from openrouter apply to free variants (`:free`) regardless of provider wrapper.
 6. Preserve `MSYS2 FAIL` and `adminbot MISSING` honestly — do not claim environment is fully healthy.
-7. DRY: cross-reference `user-communication-preferences`, `.hermes.md`, `multi-file-change-protocol` — never duplicate identity rules.
+7. DRY: cross-reference `user-communication-preferences`, `$HERMES_HOME.md`, `multi-file-change-protocol` — never duplicate identity rules.
 8. 28 skills verified/referenced in plan; 0 synthetic skills added.
 
 ## Blockers (Honest Reporting)

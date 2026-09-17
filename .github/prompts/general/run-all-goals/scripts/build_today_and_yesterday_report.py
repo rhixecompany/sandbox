@@ -53,12 +53,12 @@ MEMORY_CONTEXT_RE = re.compile(r"(?is)<memory-context>.*?</memory-context>")
 CATEGORY_PATTERNS: dict[str, tuple[re.Pattern[str], ...]] = {
     "plans": (
         re.compile(r"(?i)\bplans?\b"),
-        re.compile(r"(?i)(?:\.hermes/)?plans?/"),
+        re.compile(r"(?i)(?:\$HERMES_HOME/)?plans?/"),
         re.compile(r"(?i)implementation plan"),
     ),
     "specs": (
         re.compile(r"(?i)\bspecs?\b"),
-        re.compile(r"(?i)(?:\.hermes/)?specs?/"),
+        re.compile(r"(?i)(?:\$HERMES_HOME/)?specs?/"),
         re.compile(r"(?i)requirements specification"),
     ),
     "prompts": (

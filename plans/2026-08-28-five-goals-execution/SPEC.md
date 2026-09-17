@@ -25,7 +25,7 @@ This spec covers the remaining surface area and tightens the existing assets.
 ## Goals (verbatim, numbered)
 
 1. **Context-file unification.** Search, identify, list, triage, debug, fix,
-   enhance, verify SOUL.md, USER.md, MEMORY.md, .hermes.md, AGENTS.md,
+   enhance, verify SOUL.md, USER.md, MEMORY.md, $HERMES_HOME.md, AGENTS.md,
    CLAUDE.md, .cursorrules in the repo, sub-repos, hermes root, and every
    hermes profile. Use best practices, DRY, and minimize token usage by
    preferring MCP server tools.

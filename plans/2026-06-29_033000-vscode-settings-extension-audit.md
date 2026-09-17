@@ -67,7 +67,7 @@ For each extension ID, fetch its VS Code marketplace page to extract settings/co
 7. **Testing:** vitest.explorer, ms-playwright.playwright
 8. **Visual:** aaron-bond.better-comments, usernamehw.errorlens, naumovs.color-highlight, bierner.color-info, kisstkondoros.vscode-gutter-preview
 9. **REST/SQL:** humao.rest-client, mtxr.sqltools
-10. **Misc:** ms-vscode.powershell, openai.chatgpt, poppywu124.hermes-chat, mechatroner.rainbow-csv, oven.bun-vscode, pflannery.vscode-versionlens, quicktype.quicktype, formulahendry.auto-rename-tag, batisteo.vscode-django, pkief.material-icon-theme
+10. **Misc:** ms-vscode.powershell, openai.chatgpt, poppywu124$HERMES_HOME-chat, mechatroner.rainbow-csv, oven.bun-vscode, pflannery.vscode-versionlens, quicktype.quicktype, formulahendry.auto-rename-tag, batisteo.vscode-django, pkief.material-icon-theme
 
 ### Phase 2: Generate Settings Config
 

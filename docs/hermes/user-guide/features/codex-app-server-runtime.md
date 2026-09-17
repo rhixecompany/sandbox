@@ -367,10 +367,10 @@ What's NOT migrated:
 Codex's built-in toolset covers shell/file ops/patches but doesn't have web search, browser automation, vision, image generation, etc. To keep those usable in a codex turn, Hermes registers itself as an MCP server in `~/.codex/config.toml`:
 
 ```toml
-[mcp_servers.hermes-tools]
+[mcp_servers$HERMES_HOME-tools]
 command = "/path/to/python"
-args = ["-m", "agent.transports.hermes_tools_mcp_server"]
-env = { HERMES_HOME = "/your/.hermes", PYTHONPATH = "...", HERMES_QUIET = "1" }
+args = ["-m", "agent.transports$HERMES_HOME_tools_mcp_server"]
+env = { HERMES_HOME = "/your/$HERMES_HOME", PYTHONPATH = "...", HERMES_QUIET = "1" }
 startup_timeout_sec = 30.0
 tool_timeout_sec = 600.0
 ```

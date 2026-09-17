@@ -9,7 +9,7 @@ Perform full Hermes/OpenCode workspace setup, prompt/template migration, MCP/ser
 - `.github/prompts/` — canonical prompt library
 - `.github/prompts/templates/` — extracted template bodies
 - `.github/prompts/.enhance/` — enhancement and validation scripts
-- `.hermes.md`, `AGENTS.md`, `CLAUDE.md`, `PROJECT_RULES.md`, `MASTER_RULES.md`
+- `$HERMES_HOME.md`, `AGENTS.md`, `CLAUDE.md`, `PROJECT_RULES.md`, `MASTER_RULES.md`
 - Hermes config at `~/AppData/Local/hermes/config.yaml`
 - OpenCode configs at `C:\Users\Alexa\Desktop\andBox\opencode.json` and `~/.config/opencode/opencode.json`
 - Hook directories at `~/AppData/Local/hermes/hooks/*`
@@ -35,7 +35,7 @@ Perform full Hermes/OpenCode workspace setup, prompt/template migration, MCP/ser
 3. **Hermes Configuration**
    - Validate Hermes config schema and required fields
    - Ensure `mcp_servers`, `hooks`, `skills`, and `plugins` match live environment
-   - Update `.hermes.md` to reflect actual prompt/template structure and MCP state
+   - Update `$HERMES_HOME.md` to reflect actual prompt/template structure and MCP state
    - Update `AGENTS.md` references if paths/counts change
    - Run hook scripts in dry-run mode where possible
 

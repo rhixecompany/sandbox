@@ -1,0 +1,53 @@
+{
+  "audit_lanes_complete": 6,
+  "audit_lane_cards": [
+    "t_3238680b",
+    "t_c9d6ab04",
+    "t_eca3c8dd",
+    "t_2a9bc078",
+    "t_8f6173a4",
+    "t_b5959700"
+  ],
+  "audit_artifacts_verified_real": [
+    "$HERMES_HOME/plans/audit-triage-2026-09-16.md (2345 B)",
+    "$HERMES_HOME/plans/debug-run-logs.md (1542 B)",
+    "scratch/lane4_judgment_gates.json (512 B)",
+    "$HERMES_HOME/plans/audit-final-verification.md (3343 B)",
+    "$HERMES_HOME/plans/audit-lane6-handoff.md (4467 B)",
+    "scratch/lane6_explicit_verification.json (230 B)"
+  ],
+  "prompt_conversion_cards_complete": [
+    "t_a57a44f3",
+    "t_bbf95544",
+    "t_c85ab51c",
+    "t_4ff2b855"
+  ],
+  "prompt_artifacts_real": [
+    ".github/prompts/general/init-run/test-run.md (2907 B)",
+    ".github/prompts/general/init-run/tree.md (5723 B)",
+    ".github/prompts/general/init-run/index.md (1097 B)"
+  ],
+  "workspace_copy_cards_complete": [
+    "t_4b44a96c",
+    "t_7689efea",
+    "t_9b77619c",
+    "t_a88b55bf"
+  ],
+  "env_bytes_unchanged": 5274,
+  "env_changed": false,
+  "identity_dry_preserved": true,
+  "hidden_errors_suppressed": false,
+  "vulnerability_findings_preserved": 26,
+  "architecture_errors_preserved": 41,
+  "rate_limit_403_preserved": true,
+  "msys2_fail_preserved": true,
+  "adminbot_default_missing_preserved": true,
+  "synthetic_artifacts": 0,
+  "all_ready_todo_done": true,
+  "remaining_blockers_honest": [
+    "Rate-limit 403 (future clarification needed)",
+    "MSYS2 bash WSL Relay FAIL (environment-level, not fixed)",
+    "Profile identity gaps (adminbot, alexa-alias, default MISSING verified real; not fabricated)",
+    "52 MISSING SKILL.md dirs (verified; repair out of audit scope)"
+  ]
+}

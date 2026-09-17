@@ -120,7 +120,7 @@ SandBox/
 ├── AGENTS.md          # Updated
 ├── SESSION_REPORT.md  # Updated
 ├── README.md          # Preserved
-├── .hermes.md         # Preserved
+├── $HERMES_HOME.md         # Preserved
 ├── requirements.txt   # Preserved
 ├── package.json       # Preserved
 ├── tsconfig.json      # Fixed (valid JSON)

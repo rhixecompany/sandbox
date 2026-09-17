@@ -21,7 +21,7 @@ See also:
 
 By default every profile is seeded with the bundled skill catalog, and each `hermes update` adds any newly bundled skills. If you want a profile with **no bundled skills** — and that stays empty across updates — you have two paths:
 
-**At install time** (applies to the default `~/.hermes` profile):
+**At install time** (applies to the default `~/$HERMES_HOME` profile):
 
 ```bash
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash -s -- --no-skills
@@ -918,7 +918,7 @@ owner/repo
 Rules:
 - Each skill lives in its own directory under the tap's root path (default `skills/`).
 - The directory name becomes the skill's install slug.
-- Each skill directory must contain a `SKILL.md` with standard [SKILL.md frontmatter](#skillmd-format) (`name`, `description`, plus optional `metadata.hermes.tags`, `version`, `author`, `platforms`, `metadata.hermes.config`).
+- Each skill directory must contain a `SKILL.md` with standard [SKILL.md frontmatter](#skillmd-format) (`name`, `description`, plus optional `metadata$HERMES_HOME.tags`, `version`, `author`, `platforms`, `metadata$HERMES_HOME.config`).
 - Subdirectories like `references/`, `templates/`, `scripts/`, `assets/` are downloaded alongside `SKILL.md` at install time.
 - Skills whose directory name starts with `.` or `_` are ignored.
 

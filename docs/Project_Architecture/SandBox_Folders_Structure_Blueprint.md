@@ -40,7 +40,7 @@ SandBox/
 ├── .gitignore
 ├── .gitmodules
 ├── ./                    # Hermes agent config
-├── .hermes.md
+├── $HERMES_HOME.md
 ├── .mcp.json                   # MCP server registrations
 ├── .vscode/                    # VS Code workspace settings
 ├── __pycache__/

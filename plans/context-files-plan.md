@@ -65,7 +65,7 @@ phases:
         status: pending
         dependencies: [CF-T-1.3]
   - name: Phase 3 - Workspace Root Files
-    description: Create AGENTS.md, .hermes.md, CLAUDE.md, .cursorrules
+    description: Create AGENTS.md, $HERMES_HOME.md, CLAUDE.md, .cursorrules
     tasks:
       - id: CF-T-3.1
         name: Create AGENTS.md
@@ -75,8 +75,8 @@ phases:
         status: pending
         dependencies: [CF-T-1.1]
       - id: CF-T-3.2
-        name: Create .hermes.md
-        description: Create .hermes.md in workspace root
+        name: Create $HERMES_HOME.md
+        description: Create $HERMES_HOME.md in workspace root
         phase: Phase 3 - Workspace Root Files
         assignee: implementer
         status: pending
@@ -163,10 +163,10 @@ gates:
     phase: Phase 3 - Workspace Root Files
     criteria:
       - AGENTS.md exists with directory map and quick rules
-      - .hermes.md exists with profile/MCP/hook tables
+      - $HERMES_HOME.md exists with profile/MCP/hook tables
       - CLAUDE.md exists as minimal stub
       - .cursorrules exists as minimal stub
-    check: "ls ~/Desktop/SandBox/AGENTS.md ~/Desktop/SandBox/.hermes.md ~/Desktop/SandBox/CLAUDE.md ~/Desktop/SandBox/.cursorrules"
+    check: "ls ~/Desktop/SandBox/AGENTS.md ~/Desktop/SandBox/$HERMES_HOME.md ~/Desktop/SandBox/CLAUDE.md ~/Desktop/SandBox/.cursorrules"
     pass_condition: "All 4 files present"
     fail_action: "Create missing files"
   - name: Gate 4 - Consistency Validated
@@ -204,7 +204,7 @@ MEMORY.md (Session Facts & Lessons)
     ↓
 AGENTS.md (Workspace Guidance)
     ↓
-.hermes.md (Project Overrides)
+$HERMES_HOME.md (Project Overrides)
     ↓
 CLAUDE.md / .cursorrules (IDE-Specific Stubs)
 ```
@@ -221,7 +221,7 @@ CLAUDE.md / .cursorrules (IDE-Specific Stubs)
 - `/c/Users/Alexa/Desktop/SandBox/USER.md` (pointer to canonical)
 - `/c/Users/Alexa/Desktop/SandBox/MEMORY.md` (pointer to canonical)
 - `/c/Users/Alexa/Desktop/SandBox/AGENTS.md` (master workspace guidance)
-- `/c/Users/Alexa/Desktop/SandBox/.hermes.md` (project overrides)
+- `/c/Users/Alexa/Desktop/SandBox/$HERMES_HOME.md` (project overrides)
 - `/c/Users/Alexa/Desktop/SandBox/CLAUDE.md` (Claude stub)
 - `/c/Users/Alexa/Desktop/SandBox/.cursorrules` (Cursor stub)
 
@@ -263,7 +263,7 @@ All sections from context-files-spec.md REQ-CF-001:
 - Subproject references
 - Deferral to SOUL.md
 
-### .hermes.md (Overrides)
+### $HERMES_HOME.md (Overrides)
 - Profile table
 - MCP/hook/plugin commands
 - Live provider/model commands

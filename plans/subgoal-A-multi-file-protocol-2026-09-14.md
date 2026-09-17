@@ -38,7 +38,7 @@ H. Final artifact validation + approval
 - Gate: All approvals requested (kanban_request_review / clarification) per clarification.
 - Timeline: Sequential execution; subagent delegation for execution phase.
 - Verification: Real artifacts only (no synthetic session IDs / capabilities / results).
-- DRY enforcement: Cross-reference identity/routing from .hermes.md; best practices from user-communication-preferences; multi-file protocol from multi-file-change-protocol.
+- DRY enforcement: Cross-reference identity/routing from $HERMES_HOME.md; best practices from user-communication-preferences; multi-file protocol from multi-file-change-protocol.
 - Security preservation: 26 vulnerability findings + 41 parsing errors + adminbot MISSING preserved honestly (not suppressed); .env protected (3334 B unchanged); no hidden errors.
 
 ## Verification Gates

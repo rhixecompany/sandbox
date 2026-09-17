@@ -10,11 +10,11 @@ status: pending-approval
 
 ## Context (passed to subagent)
 - Workspace: ~/Desktop/SandBox (verified pwd; git branch clean-development).
-- User identity: Alexa (profile default/adminbot; verified .hermes.md / USER.md).
+- User identity: Alexa (profile default/adminbot; verified $HERMES_HOME.md / USER.md).
 - Active model: nemotron-3-ultra-free (opencode-zen); fallback deepseek-v4-flash-free / openrouter.
 - Authorization: FULL (destructive ops approved per clarification turns; .git/index.lock cleared; git commit d56663c0; push verified).
 - Multi-file-change-protocol: LOAD 14 skills (reference list verified) → PLAN (spec/plan created) → VERIFY gates → EXECUTE (subagent delegation) → GATE verification.
-- DRY enforcement: identity/routing by .hermes.md; prefs by user-communication-preferences; protocol by multi-file-change-protocol; session achievements by ./plans/ + ./specs/; .env protection by .hermes.md + specs/exposure-correction.md; 0 duplication; identity preserved.
+- DRY enforcement: identity/routing by $HERMES_HOME.md; prefs by user-communication-preferences; protocol by multi-file-change-protocol; session achievements by ./plans/ + ./specs/; .env protection by $HERMES_HOME.md + specs/exposure-correction.md; 0 duplication; identity preserved.
 - Systematic-debugging 4-phase executed (understand/fix/verify/document); 26 vulnerability findings + 41 parsing errors + 403 rate-limit + MSYS2 FAIL + adminbot MISSING preserved; NOT hidden; .env 3334 B unchanged; 0 new .bak; 0 synthetic artifacts.
 - Security preservation: 26 real vulnerability findings preserved (fastmcp==2.10.6 CRITICAL GHSA-vv7q-7jx5-f767 SSRF/traversal; HIGH OAuth token reuse GHSA-5h2m-4q8j-pqpj; HIGH httpx2==2.7.0 TLS/CPU) — verified by `hermes security audit` exit 1 stdout 4256 B; NOT suppressed; NOT fabricated; NOT hidden.
 - Profile identity DRY enforced across 14 profiles; 28 skills verified/mapped; 14 verified real .md files (sizes 411-108621 B verified by `os.path.getsize`); `.eslintrc.json` minimal fix (69 B, ruff clean, syntax PASS); 14 real exit codes (53152 B); 0 hidden errors.

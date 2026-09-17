@@ -1,6 +1,6 @@
 # Copilot Instructions — SandBox Monorepo
 
-**Canonical reference:** See `AGENTS.md` (general agent guidance), `.hermes.md` (Hermes-specific), `CLAUDE.md` (Claude-specific).
+**Canonical reference:** See `AGENTS.md` (general agent guidance), `$HERMES_HOME.md` (Hermes-specific), `CLAUDE.md` (Claude-specific).
 
 ## Overview
 
@@ -193,7 +193,7 @@ SandBox/
 │   ├── copilot-instructions.md
 │   └── prompts/           # 190+ canonical prompts (single source of truth)
 ├── AGENTS.md              # Master agent guidance (read this first)
-├── .hermes.md             # Hermes-specific overrides
+├── $HERMES_HOME.md             # Hermes-specific overrides
 ├── CLAUDE.md              # Claude-specific stubs
 ├── package.json           # Root workspace (minimal)
 ├── tsconfig.json          # Root TypeScript (excludes projects/)
@@ -377,6 +377,6 @@ Check the project's `test:ui` (Playwright) or `test:browser` (Vitest) output for
 
 - **AGENTS.md** — Master agent guidance (conventions, MCP servers, workflows)
 - **CLAUDE.md** — Claude-specific behavior notes
-- **.hermes.md** — Hermes-specific project overrides
+- **$HERMES_HOME.md** — Hermes-specific project overrides
 - **CONTRIBUTING.md** — Branching model and workflow details
 - **projects/\*/AGENTS.md** — Subproject-specific guidance

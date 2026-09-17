@@ -341,7 +341,7 @@ If your skill is specialized, community-contributed, or niche, it's better suite
 
 ## Blueprints: skills that are also automations
 
-A **blueprint** is an ordinary skill that additionally declares a schedule in its frontmatter. Add a `metadata.hermes.blueprint` block and the skill becomes a shareable, runnable automation:
+A **blueprint** is an ordinary skill that additionally declares a schedule in its frontmatter. Add a `metadata$HERMES_HOME.blueprint` block and the skill becomes a shareable, runnable automation:
 
 ```yaml
 metadata:

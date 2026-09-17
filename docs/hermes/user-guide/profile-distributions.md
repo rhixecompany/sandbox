@@ -204,7 +204,7 @@ backups/
 
 # Logs
 errors.log
-.hermes_history
+$HERMES_HOME_history
 ```
 
 This mirrors the [hard-excluded paths](#whats-not-in-a-distribution-ever) that the installer strips on its end. Anything else you want to keep out of the repo (scratch files, large assets, local-only skills) should also go in here.
@@ -636,7 +636,7 @@ Without `-o`, the CLI and TUI place the archive in Hermes's managed
 working directory. This keeps routine exports out of source checkouts and
 prevents a generated profile snapshot from being mistaken for a repository
 source file. If the Hermes home itself lives inside a Git checkout (some
-Docker/custom deployments), the archive goes to `~/.hermes-profile-exports/`
+Docker/custom deployments), the archive goes to `~/$HERMES_HOME-profile-exports/`
 or, failing that, a per-user directory under the OS temp dir — never into
 the checkout. If no safe automatic location exists at all (every candidate
 is inside a Git checkout), the export refuses with "No safe automatic
@@ -676,14 +676,14 @@ The profile name is inferred from the archive unless you pass `--name`. Importin
 Importing in the desktop app also applies the `desktop.json` overlay and drops you into the new profile on a fresh chat. Importing a desktop-made archive from the CLI is fine — the overlay file rides along on disk and applies the next time you open that profile in the desktop.
 
 :::note
-You cannot import as `default` — that name is the built-in root profile (`~/.hermes`). Pass `--name something-else`.
+You cannot import as `default` — that name is the built-in root profile (`~/$HERMES_HOME`). Pass `--name something-else`.
 :::
 
 ### What an export file contains
 
 Always excluded, both profiles types: `auth.json` and `.env`. Your API keys never leave the machine.
 
-**The default profile** (`~/.hermes`) is exported through an allow-list — only known Hermes artifacts, so an unrelated file sitting in your home directory can't get swept in:
+**The default profile** (`~/$HERMES_HOME`) is exported through an allow-list — only known Hermes artifacts, so an unrelated file sitting in your home directory can't get swept in:
 
 `config.yaml`, `SOUL.md`, `MEMORY.md`, `USER.md`, `todo.json`, `system_prompt.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `skills/`, `plugins/`, `cron/`, `scripts/`, `sessions/`, `memories/`, `knowledge/`, `preferences/`, and `desktop.json` when the desktop staged one.
 

@@ -71,7 +71,7 @@ metadata:
 | 2 | brainstorming | ✅ Loaded | imported; references/ideation-techniques.md |
 | 3 | user-communication-preferences | ✅ Loaded | 14 preference rules + DRY enforcement |
 | 4 | mcp-sequential-thinking | ⚠ Not found (mcp server verified connected separately) | Reference kept |
-| 5 | mcp-filesystem | ✅ MCP server available | Verified in .hermes.md (23 MCP servers) |
+| 5 | mcp-filesystem | ✅ MCP server available | Verified in $HERMES_HOME.md (23 MCP servers) |
 | 6 | mcp-ast-grep | ✅ MCP server available | Verified |
 | 7 | mcp-memory | ✅ MCP server available | Verified |
 | 8 | plan | ❌ Not in skills_list (use planning skills) | Substituted by this plan file |
@@ -117,16 +117,16 @@ Sections (per plans-and-specs + writing-clearly-and-concisely):
 4. Implementation details (file paths, edit patterns, no backup artifacts)
 5. Testing / verification (log file, exit codes real, .env untouched)
 6. Risks (nested .codex/.copilot scope conflict = 41 parsing errors preserved honestly per systematic-debugging Phase 4.5)
-7. References (skills, docs, .hermes.md, SOUL.md, USER.md, MEMORY.md)
+7. References (skills, docs, $HERMES_HOME.md, SOUL.md, USER.md, MEMORY.md)
 
 ### Phase D — Implementation Prompt (Parallel — Independent of Profiles + Spec) [EXECUTE]
 Deliverable: `./prompts/implementation-prompt.md`
-Contents: structured prompt enforcing DRY, best practices, verification before claim, no synthetic results, honest blocker reporting (timeout 180.0s TimeoutExpired audit preserved), never synthetic session IDs (NOT CAPTURED verified), never synthetic capabilities (NOT VERIFIED/BLOCKED), .env ONLY .hermes.
+Contents: structured prompt enforcing DRY, best practices, verification before claim, no synthetic results, honest blocker reporting (timeout 180.0s TimeoutExpired audit preserved), never synthetic session IDs (NOT CAPTURED verified), never synthetic capabilities (NOT VERIFIED/BLOCKED), .env ONLY $HERMES_HOME.
 
 ### Phase E — Profile Identity DRY Enforcement (Parallel Batch — 14 Independent Profiles) [EXECUTE]
 Per profile (all 14 verified real):
 - Read `~/AppData/Local/hermes/profiles/<profile>/SOUL.md`, `USER.md`, `MEMORY.md`
-- Update description + alias with DRY cross-reference to `.hermes.md` + best practices
+- Update description + alias with DRY cross-reference to `$HERMES_HOME.md` + best practices
 - Update with today's verified evidence (honcho peer card: user=Alexa, model=nemotron-3-ultra-free, workspace=~/Desktop/SandBox, branch=clean-development, authorization=FULL, preference=concise/table-first/direct/no-fluff/DRY)
 - Cross-reference: never duplicate identity rules across SOUL.md/USER.md/MEMORY.md — use pointers + references
 - Verify `.env` untouched (3334 B unchanged verified before/after each profile)
@@ -165,7 +165,7 @@ Only declare "Goal complete" after ALL gates pass.
 | B (Explore) | Log file >1MB; file count >100 | `stat -c%s` = 7242840 B; `grep -c` = 256 files |
 | C (Spec) | File exists, <250 lines SKILL.md-style, no placeholder | read_file() on `./specs/comprehensive-subgoal-spec.md` |
 | D (Prompt) | DRY enforced (no duplicate identity rules); best practices referenced via cross-links | grep for duplicate identity phrases = 0 |
-| E (Profiles) | All 14 profiles: description + alias updated; SOUL.md/USER.md/MEMORY.md cross-reference `.hermes.md` | `find ~/AppData/Local/hermes/profiles/ -name '*.md' | wc -l` verified |
+| E (Profiles) | All 14 profiles: description + alias updated; SOUL.md/USER.md/MEMORY.md cross-reference `$HERMES_HOME.md` | `find ~/AppData/Local/hermes/profiles/ -name '*.md' | wc -l` verified |
 | F (Scripts) | `.audit.txt` 5 files exist; `.env` unchanged; 0 `.bak` | `find . -name '*.audit.txt' | wc -l`; `ls .env`; `find . -name '*.bak' | wc -l` |
 | G (Final) | All above PASS + vulnerability findings preserved (not suppressed) + 41 parsing errors documented honestly | read_file() on audit outputs; `grep -q 'GHSA-vv7q-7jx5-f767'` + `grep -q 'nested .codex/.copilot scope conflict'` |
 
@@ -184,7 +184,7 @@ Only declare "Goal complete" after ALL gates pass.
 | Synthetic artifacts claimed as real | Never claimed; every file verified by `read_file`/`stat`/`grep` | All 256 files counted from real `find` output; .audit.txt files saved; vulnerability reports from real `hermes security audit` exit 1 |
 | Hidden errors (exit code suppression) | All exit codes reported honestly: `hermes security audit` exit 1 (26 findings); `bun run check` exit 1 (41 errors); no "all passed" fake claim | Documented in `./plans/debug-subgoal-plan-2026-09-13.md` + `./plans/debug-run-logs.md` (53152 B, 14 real exit codes) |
 | .env exposure | False positive corrected: `API_KEY=vault` = original MEMORY.md vault handle reference (NOT .env secret); `./specs/exposure-correction.md` (1333 B) saved | `.env` 3334 B unchanged verified; `grep -i 'secret\|token\|password' workspace/docs_hermes_explore.log` = 0 leaks |
-| Profile identity duplication (DRY violation) | Cross-references enforced (`.hermes.md` pointer in each profile); no duplicate identity rules in SOUL.md/USER.md/MEMORY.md | Verified via `grep -R` for duplicated identity sentences across profiles = 0 |
+| Profile identity duplication (DRY violation) | Cross-references enforced (`$HERMES_HOME.md` pointer in each profile); no duplicate identity rules in SOUL.md/USER.md/MEMORY.md | Verified via `grep -R` for duplicated identity sentences across profiles = 0 |
 | Missing profile (not in profiles list) | All 14 found under `~/AppData/Local/hermes/profiles/` verified by `ls` + `find`; missing `plan` skill resolved by this file | Real `ls` output captured in session; no fabricated profile names |
 | Rate-limit 403 blocker preserved | GitHub api 403 preserved honestly (not suppressed) | Mentioned in `./plans/debug-subgoal-plan-2026-09-13.md`; MSYS2 bash WSL Relay FAIL (50 real stderr) preserved |
 | Nested .codex/.copilot scope conflict | 41 parsing errors preserved (not hidden) — `No tsconfigRootDir` from nested `.codex/.copilot` scope | `.eslintrc.json` minimal fix applied (69 B: parserOptions.project=./tsconfig.json, tsconfigRootDir=.) — does NOT suppress underlying scope conflict; architecture concern documented per systematic-debugging Phase 4.5 |
@@ -193,7 +193,7 @@ Only declare "Goal complete" after ALL gates pass.
 
 ## 9. References (DRY — Cross-Referenced, Not Duplicated)
 
-- `.hermes.md` — Hermes-specific overrides (verified 2859 B; identity refs + artifacts + profile routing)
+- `$HERMES_HOME.md` — Hermes-specific overrides (verified 2859 B; identity refs + artifacts + profile routing)
 - `AGENTS.md` — Workspace layout + `.github/prompts/` map
 - `SOUL.md` (root) — Identity + persona; enhanced 8319→17560 B with today's verified session evidence (honcho peer card, preferences, DRY refs)
 - `USER.md` (memories) — Profile; enhanced 1846→5298 B (verified)

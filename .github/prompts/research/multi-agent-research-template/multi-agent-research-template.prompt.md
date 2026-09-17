@@ -140,7 +140,7 @@ Research these sources and extract each page into Markdown:
 - [ ] List all plugin hooks, tools, and skills.
 - [ ] Create missing items when needed.
 - [ ] Verify and enhance existing items when they are already present.
-- [ ] Validate the configuration hierarchy in this order:  `.hermes.md` -
+- [ ] Validate the configuration hierarchy in this order:  `$HERMES_HOME.md` -
 
 > `AGENTS.md` -
 > `CLAUDE.md` -
@@ -161,7 +161,7 @@ Research these sources and extract each page into Markdown:
 ## Verification Checklist
 
 - [ ] Frontmatter has all required fields (`name`, `title`, `description`, `trigger`, `tags`)
-- [ ] Frontmatter has recommended fields (`version`, `author`, `license`, `metadata.hermes.related_skills`)
+- [ ] Frontmatter has recommended fields (`version`, `author`, `license`, `metadata$HERMES_HOME.related_skills`)
 - [ ] `Skills Required` table is present and populated
 - [ ] Phase headings use H2 (`## Phase N:`) not H3)
 - [ ] All phase task lists use `- [ ]` checkbox format- [ ] Phase 3 URLs are markdown links with descriptive titles- [ ] Phase 2 "After research" uses Steps/Tasks structure- [ ] Agent Mapping, Output Requirements, Verification Gates are markdown tables- [ ] Core Workflow references phases (no duplicate detail)- [ ] Template variables table uses inline code for paths- [ ] No `mode` field in frontmatter- [ ] Trigger matches filename stem convention- [ ] File uses `.prompt.md` extension ✅ (renamed from `.txt`)

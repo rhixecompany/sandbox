@@ -1,12 +1,12 @@
 {
   "root": {
-    ".hermes.md": {
-      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.hermes.md",
+    "$HERMES_HOME.md": {
+      "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\$HERMES_HOME.md",
       "size": 5336,
       "lines": 90,
       "modified": "2026-08-24T23:00:16.090284",
       "has_frontmatter": false,
-      "preview": "# Hermes Agent Project Overrides\n\nProject context overrides per hierarchy: `.hermes.md` \u2192 `AGENTS.md` \u2192 `CLAUDE.md` \u2192 `.cursorrules`\n\n## Profiles\n\n| Profile           | Model                      | Pr"
+      "preview": "# Hermes Agent Project Overrides\n\nProject context overrides per hierarchy: `$HERMES_HOME.md` \u2192 `AGENTS.md` \u2192 `CLAUDE.md` \u2192 `.cursorrules`\n\n## Profiles\n\n| Profile           | Model                      | Pr"
     },
     "AGENTS.md": {
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\AGENTS.md",
@@ -42,7 +42,7 @@
       "lines": 685,
       "modified": "2026-08-24T22:49:26.917104",
       "has_frontmatter": false,
-      "preview": "# Copilot Instructions \u2014 SandBox Monorepo\n\n**Canonical reference:** See `AGENTS.md` (general agent guidance), `.hermes.md` (Hermes-specific), `CLAUDE.md` (Claude-specific).\n\n## Quick Start\n\n```bash\n# "
+      "preview": "# Copilot Instructions \u2014 SandBox Monorepo\n\n**Canonical reference:** See `AGENTS.md` (general agent guidance), `$HERMES_HOME.md` (Hermes-specific), `CLAUDE.md` (Claude-specific).\n\n## Quick Start\n\n```bash\n# "
     }
   },
   "subprojects": {

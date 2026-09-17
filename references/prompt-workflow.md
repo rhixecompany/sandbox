@@ -20,7 +20,7 @@ A prompt in Hermes packages all execution context for a reproducible task. Compo
 | Plans-and-Specs | `plans-and-specs` skill reference |
 | Scripts | `scripts/` directory (verified: `scripts/validate_prompt_frontmatter.py`, `scripts/dry_run_prompts.py`, etc.) |
 | Profiles | Hermes profile selection (`hermes profile use <name>`) |
-| Personalities | Personality settings (verified: `.hermes.md` profile table) |
+| Personalities | Personality settings (verified: `$HERMES_HOME.md` profile table) |
 | Skills | Skill references (`dependencies:` + `skills:`) |
 | Tools | Toolset declarations (`toolsets:`) |
 | Personas | Role-based behavior overrides (optional) |

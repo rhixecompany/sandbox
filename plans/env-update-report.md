@@ -22,7 +22,7 @@ Subagent: ops/adminbot (confirmed identity). Plan: `./plans/multi-goal-execution
 | `.env` (hermes home)     | 30269B | N/A (protected) | No (never) | 30269B |
 | AGENTS.md                | 385B  | False          | Yes (+ref) | 498B |
 | CLAUDE.md                | 290B  | False          | Yes (+ref) | 391B |
-| .hermes.md               | 471B  | False          | Yes (+ref) | 586B |
+| $HERMES_HOME.md               | 471B  | False          | Yes (+ref) | 586B |
 | USER.md                  | 307B  | False          | Yes (+ref) | 418B |
 | MEMORY.md                | 393B  | True           | No        | 393B |
 | SOUL.md                  | 346B  | False          | Yes (+ref) | 459B |

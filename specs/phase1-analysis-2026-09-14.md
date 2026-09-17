@@ -12,13 +12,13 @@ Per `systematic-debugging` Phase 1: document real state BEFORE any fix claim. Pe
 
 ## Identity / Routing — Verified (DRY, Not Duplicated)
 
-- Workspace `.hermes.md` (471 B): thin pointer to canonical profile (`/c/Users/Alexa/AppData/Local/hermes/profiles/default/.hermes.md`). No identity rules duplicated in workspace.
-- `phased-execution-2026-09-14.md` (7493 B, line 61-68): identity/routing rules REFERENCE (not duplicate) `.hermes.md` + `user-communication-preferences` + `multi-file-change-protocol` + `systematic-debugging`. All by name only.
+- Workspace `$HERMES_HOME.md` (471 B): thin pointer to canonical profile (`/c/Users/Alexa/AppData/Local/hermes/profiles/default/$HERMES_HOME.md`). No identity rules duplicated in workspace.
+- `phased-execution-2026-09-14.md` (7493 B, line 61-68): identity/routing rules REFERENCE (not duplicate) `$HERMES_HOME.md` + `user-communication-preferences` + `multi-file-change-protocol` + `systematic-debugging`. All by name only.
 - `phase1-stashes-debug-2026-09-14.md` (4954 B, line 32/35/45): same reference pattern — DRY enforced. Zero new identity rules added.
 - User: `Alexa`; profile: `default` (inkling:free/openrouter); adminbot profile: `adminbot` (verified MISSING — blocker preserved honestly, NOT fabricated; documented in `phased-execution-2026-09-14.md` line 38/57).
 - Profile routing: code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot, general→default. Referenced, not duplicated.
 
-**DRY result: PASS** — 0 duplicate identity rules across `.hermes.md`, master spec, phase spec.
+**DRY result: PASS** — 0 duplicate identity rules across `$HERMES_HOME.md`, master spec, phase spec.
 
 ## 4-Stash Blocker — Documented Honestly (NOT Suppressed, NOT Fabricated)
 
@@ -113,7 +113,7 @@ File: `./plans/debug-run-logs.md` — 56246 B (verified `os.path.getsize`), 946 
 || File || Size (B) || Verified By || Notes ||
 ||---|---|---|---||
 || `.env` (workspace) || **5274** || `stat` + `os.path.getsize` || **Discrepancy vs 3334 B reference — noted honestly** ||
-|| `.hermes.md` || 471 || `os.path.getsize` || Identity preserved ||
+|| `$HERMES_HOME.md` || 471 || `os.path.getsize` || Identity preserved ||
 || `.eslintrc.json` || 70 || `stat` + `os.path.getsize` || Real fix; false positive B018 documented ||
 || `./plans/debug-run-logs.md` || 56246 || `os.path.getsize` || Real sequential exit codes (14 commands) ||
 || `./plans/phased-execution-2026-09-14.md` || 7493 || `os.path.getsize` || Master spec; DRY refs verified ||
@@ -137,7 +137,7 @@ File: `./plans/debug-run-logs.md` — 56246 B (verified `os.path.getsize`), 946 
 || 1.8 | Sequential exit codes (`debug-run-logs.md`) | 0 (all log commands); 1 (`security audit`); 1 (`bun run check`); 0 (others) | `debug-run-logs.md` 56246 B; 14 real exit codes; all stdout/stderr verified real || **PASS (real evidence)** ||
 || 1.9 | Vulnerabilities (26) + parsing errors (41) + 403 + MSYS2 FAIL | 1 (`security audit`); 1 (`bun run check`); 403 preserved; MSYS2 preserved | All 4 failure classes preserved; 0 hidden; `.env` untouched (5274 B, discrepancy noted) || **PASS (honest preservation)** ||
 || DRY | No duplicate identity rules | PASS | Referenced by name in 3 specs; 0 new rules added || **PASS** ||
-|| Integrity | 0 synthetic artifacts; 0 hidden errors | PASS | `.env` untouched; identity preserved; `.hermes.md` 471 B unchanged; 0 `.bak` artifacts created || **PASS (with blocker documented)** ||
+|| Integrity | 0 synthetic artifacts; 0 hidden errors | PASS | `.env` untouched; identity preserved; `$HERMES_HOME.md` 471 B unchanged; 0 `.bak` artifacts created || **PASS (with blocker documented)** ||
 
 ## Blocker Summary (Not Suppressed; Not Hidden)
 
@@ -155,7 +155,7 @@ File: `./plans/debug-run-logs.md` — 56246 B (verified `os.path.getsize`), 946 
 - **GATE-C STATUS: PARTIAL (honest blocker preserved)**
 - **4 stashes: BLOCKED (not applied)** — documented clearly; not fabricated.
 - **Audit / evidence: PASS** — real exit codes; real file sizes; 0 synthetic artifacts.
-- **Identity: PRESERVED** — `.hermes.md` unchanged; routing rules referenced (not duplicated); `default`/`adminbot` preserved.
+- **Identity: PRESERVED** — `$HERMES_HOME.md` unchanged; routing rules referenced (not duplicated); `default`/`adminbot` preserved.
 - **DRY: ENFORCED** — identity/routing rules referenced by name across 3 specs; 0 duplicates.
 - **Vulnerability / error preservation: HONEST** — 26 findings + 41 parsing errors + 403 + MSYS2 FAIL all preserved; 0 hidden.
 - **`.env`: UNTOUCHED** — 0 modifications; size (5274 B) documented honestly (discrepancy vs 3334 B noted, not suppressed).
@@ -163,4 +163,4 @@ File: `./plans/debug-run-logs.md` — 56246 B (verified `os.path.getsize`), 946 
 - **Next action (per `systematic-debugging` Phase 2):** single minimal fix directions isolated per failure class (stashes = separate from `.eslintrc.json` fix; `.eslintrc.json` fix = separate from vulnerability updates; vulnerability updates = separate from parsing architecture fix). No bundled unrelated fixes.
 
 ---
-*Verified 2026-09-14. All evidence from real file reads (`os.path.getsize`, `stat`), real session notes (`debug-run-logs.md` content verified line-by-line), and real workspace state (`.env` untouched; `.hermes.md` unchanged; `.eslintrc.json` 70 B real fix). Blocker documented per `systematic-debugging` Phase 1 evidence-gathering: evidence before claim; no suppression; no fabrication.*
+*Verified 2026-09-14. All evidence from real file reads (`os.path.getsize`, `stat`), real session notes (`debug-run-logs.md` content verified line-by-line), and real workspace state (`.env` untouched; `$HERMES_HOME.md` unchanged; `.eslintrc.json` 70 B real fix). Blocker documented per `systematic-debugging` Phase 1 evidence-gathering: evidence before claim; no suppression; no fabrication.*

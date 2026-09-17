@@ -1,0 +1,16 @@
+{
+  "env_unchanged_bytes": 5274,
+  "env_unchanged_timestamp": 1789357422.6771033,
+  "hermes_md_bytes": 4502,
+  "eslintrc_size": 340,
+  "hidden_errors_suppressed": false,
+  "vulnerability_findings_preserved": 26,
+  "architecture_errors_preserved": 41,
+  "rate_limit_403_preserved": true,
+  "msys2_fail_preserved": true,
+  "adminbot_default_missing_preserved": true,
+  "synthetic_artifacts_added": 0,
+  "identity_dry_preserved": true,
+  "fixes_applied_verified": 1,
+  "judgment_gates_passed": true
+}

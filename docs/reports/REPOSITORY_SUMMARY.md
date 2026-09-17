@@ -183,7 +183,7 @@ feature/* (short-lived, deleted after merge)
 | `AGENTS.md` | Root agent instructions |
 | `CLAUDE.md` | Claude Code guidance |
 | `.cursorrules` | Cursor IDE rules |
-| `.hermes.md` | Hermes Agent project overrides |
+| `$HERMES_HOME.md` | Hermes Agent project overrides |
 | `SESSION_REPORT.md` | Session history |
 | `projects/RESEARCH_INDEX.md` | 17-project research index |
 | `uk-earnings-kit/UK_EARNING_SITES_MASTER.md` | 346-line UK earning platforms guide |

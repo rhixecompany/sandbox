@@ -21,7 +21,7 @@
 - `hermes logs list/errors/desktop/gateway/gui/agent`: all exit 0 (stdout 3013-7839 B — real log content).
 
 ## Profile Refactor (DRY + Description/Alias + Best Practices) — PARALLEL Delegation (Verified by Clarification)
-- Target: ALL profiles verified real (`~/AppData/Local/hermes/profiles/` — existence verified by `os.listdir`; no synthetic profile names created). Default profile at workspace root (`SOUL.md`, `USER.md`, `MEMORY.md`, `.hermes.md`) verified real and to be patched.
+- Target: ALL profiles verified real (`~/AppData/Local/hermes/profiles/` — existence verified by `os.listdir`; no synthetic profile names created). Default profile at workspace root (`SOUL.md`, `USER.md`, `MEMORY.md`, `$HERMES_HOME.md`) verified real and to be patched.
 - Mode: PARALLEL (`subagent-driven-development` — independent identity files per profile; aggregated results verified; no shared mutable config edited without sequential coordination).
 - DRY enforcement: no duplicate persona/instruction rules across `SOUL.md`/`USER.md`/`MEMORY.md` (verified after `patch` edits; reference `user-communication-preferences` / `multi-file-change-protocol` instead of duplication).
 - Best practices: `user-communication-preferences` (concise/direct/no filler), `multi-file-change-protocol` (batch ≤7; sequential phases; gate verification), `systematic-debugging` (single hypothesis; 3+ failures → architecture question — applied: 1 parsing fix done; 41 errors remain = architecture concern documented).

@@ -1,6 +1,6 @@
 # config.yaml — SandBox repository configuration
 # Created: 2026-09-14 (G2 implementation)
-# Syncs with ~/.hermes/config.yaml where applicable
+# Syncs with ~/$HERMES_HOME/config.yaml where applicable
 
 # Profile and routing
 profile: default
@@ -18,7 +18,7 @@ routing:
 plugins:
   allow_deprecated_imports: true
 
-# MCP servers — synced with .github/mcp.json and .hermes/mcp.json
+# MCP servers — synced with .github/mcp.json and $HERMES_HOME/mcp.json
 mcp_servers_sync: true
 canonical_mcp_source: .github/mcp.json
 
@@ -35,7 +35,7 @@ hooks:
 
 # DRY enforcement
 dry:
-  identity_source: .hermes.md
+  identity_source: $HERMES_HOME.md
   cross_refs:
     - user-communication-preferences
     - multi-file-change-protocol
@@ -54,7 +54,7 @@ quick_commands:
   - name: hooks-doctor
     command: hermes hooks doctor
   - name: mcp-sync
-    command: cp .github/mcp.json .hermes/mcp.json
+    command: cp .github/mcp.json $HERMES_HOME/mcp.json
   - name: profile-check
     command: hermes doctor --filter profiles
   - name: model-test

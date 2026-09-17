@@ -10,7 +10,7 @@
 - Orphaned thin wrappers: body <20 lines AND references a file that no longer exists → High
 - Duplicate `toolsets:` entries in same frontmatter → Low
 - Frontmatter has `name`, `title`, `description`, `tags`, `version`, `author`, `license` → Required
-- `metadata.hermes.related_skills` matches prerequisite skills → Required
+- `metadata$HERMES_HOME.related_skills` matches prerequisite skills → Required
 - `.prompt.md` extension used → Required
 - Trigger matches filename stem → Required
 - No merged YAML close (`---##` / `|---##`) → Required
@@ -28,7 +28,7 @@
 - No merged YAML close
 - `.prompt.md` extension used
 - Trigger: None specified (but name matches filename)
-- Metadata.hermes present but empty (acceptable)
+- Metadata$HERMES_HOME present but empty (acceptable)
 
 **Minor Notes**:
 

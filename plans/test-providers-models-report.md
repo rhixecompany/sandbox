@@ -106,9 +106,9 @@ Method: `/systematic-debugging` 4-phase (understand/test/verify/document) applie
 
 ## DRY Enforcement
 
-- Provider/model info cross-referenced to `.hermes.md` / `.env` / `opencode.json` — not duplicated.
-- Identity/routing rules reference `.hermes.md` (4495 B verified) — not rewritten.
-- Session achievements (28 skills, 26 findings, 41 errors, rate-limit 403, MSYS2 FAIL, adminbot MISSING) referenced from `.hermes.md` / `DEBUG_FIX_EVIDENCE_2026-09-13.md` — never fabricated.
+- Provider/model info cross-referenced to `$HERMES_HOME.md` / `.env` / `opencode.json` — not duplicated.
+- Identity/routing rules reference `$HERMES_HOME.md` (4495 B verified) — not rewritten.
+- Session achievements (28 skills, 26 findings, 41 errors, rate-limit 403, MSYS2 FAIL, adminbot MISSING) referenced from `$HERMES_HOME.md` / `DEBUG_FIX_EVIDENCE_2026-09-13.md` — never fabricated.
 - No synthetic session IDs / capabilities / ranking / quality scores added.
 
 ## Verification Gates (Post-G7)
@@ -116,5 +116,5 @@ Method: `/systematic-debugging` 4-phase (understand/test/verify/document) applie
 - Artifact `./plans/test-providers-models-report.md`: exists (verified size below).
 - Real exit codes: all documented from `.github/prompts/operations/test-providers-models/test-providers-models-results.json`.
 - No hidden errors: timeout and exceptions explicitly reported.
-- `.env` unchanged; memory migration verified (`./plans/memory-migration-log.md`); identity preserved (`.hermes.md` 4495 B).
+- `.env` unchanged; memory migration verified (`./plans/memory-migration-log.md`); identity preserved (`$HERMES_HOME.md` 4495 B).
 - 28 skills referenced in plan; 0 synthetic artifacts produced.
