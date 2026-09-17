@@ -1,0 +1,177 @@
+You open your agent and start building.
+0:033But here's the thing that nobody tells you. Every feature you add makes the next one harder to build. Not easier,
+0:1010harder. Watch how it happens. You've got a plan in your head. You type out what you want and it builds it fast. The front end, the back end, the database.
+0:2020It feels great. Then you look closer.
+0:2424It's missing a few things you actually wanted and it added a couple of things that you never asked for. No big deal.
+0:3131You'll just fix those. So, you prompt again. You fix one thing and something else quietly breaks. A few prompts in,
+0:3939you've half forgotten what you originally set out to build, and you're going in circles reexplaining, refixing,
+0:4545and watching the hours and the tokens go just to get back to something you thought you already had. and say you
+0:5454push through and ship it. You ask for the next feature and instead of using what's already there, the AI writes a
+1:021 minute, 2whole new component, a new function, the same logic for the third time. Nothing
+1:091 minute, 9reused. The app gets slower. The code gets messier. And every now and then, a
+1:171 minute, 17new feature breaks an old one that was working perfectly fine. That's the decay. Building this way doesn't
+1:251 minute, 25compound. Every feature makes the next one harder because nothing is holding the project together. No plan the agent
+1:331 minute, 33remembers, no record of the decisions, nothing making it build with what already exists instead of just piling
+1:411 minute, 41more. And that was never something that a better prompt was going to fix. It's an engineering problem. So, let me show
+1:501 minute, 50you what changes when a real engineering workflow sits underneath the agent from the first prompt all the way through the
+1:591 minute, 5910th feature. And not just on a shiny new project. Later in this video, I'll run the whole thing on a codebase you
+7didn't write in a language nobody makes tutorials about because that's the job you actually have. It starts before you
+16type anything at all. That spiral that I just told you about, the missing features, the wrong guesses, the going
+24in circles, almost all of it traces back to one thing. You never gave the AI a
+32plan. You gave it a wish. And the funny thing is, we solved this decades ago. It just wasn't for AI. No serious engineering team opens the editor first.
+44They plan what are we building? What's in the first version? What's explicitly out and in what order? Requirements
+53before code. It's the oldest discipline in software and it exists for one boring
+3:003 minutesreason. Changing a line in a plan is free, but changing a decision that's already spread across your codebase is a
+8rewrite. And what happened is when we started building with AI, we quietly threw that step out and jumped straight
+16to just build it part. The scope skill puts that step back. You give scope your
+23idea and instead of jumping into code, it does what a senior engineer would do first. It interviews you. Who is this
+32for? What's in version one and what waits? What depends on what? It then recommends how to shape the build.
+40Whether you prove one thin slice through the whole system first or ship the smallest usable version or finish the
+48full journey at a time. These are real engineering strategies that have been used for decades. You choose the one that is right for you and it even
+56recommends which one should be right for you and tells you why. And scope never touches your tech. It doesn't touch your
+4database, framework, or libraries on purpose. It decides what you're building. But the how, such as the
+13stack, the database, and all of that, it comes right after as its own decision.
+18So your plan doesn't rot the day you change the tool. That's scope. It turns
+24a vague idea into a real ordered plan, one you made instead of the one that AI
+31just guessed in a hurry and then you start building. And that's where most AI projects quietly fall apart. Okay, so
+41now that you've got a detailed plan, but a plan isn't a design. You still have to decide how the system is actually built.
+50How do you design the database? What text stack do you choose? How do you handle the critical logic? How do you architect the thing so it holds up where
+59it's going? Because on day one, you won't have millions of users, but you have to build it in a way that could get
+8there without overbuilding for a scale you don't yet have. That balance is a real engineering decision, and it's
+16exactly the kind of thing that quietly goes wrong when you let the AI make it for you.
+22And it does make it for you. Every feature has decisions hiding inside it that you never specified. How the data
+30is stored, what happens on failure, and whether that list even pageionates, which provider you're using. The AI
+38doesn't stop and ask any of it. It picks whatever makes it run and buries your choice in the code. You don't decide.
+46You inherit those decisions and you also inherit the breaks that come with them.
+52And that's exactly why I built the architect skill before any code. It runs through the design conversation a senior
+6:006 minutesengineer would run with you. It thinks in patterns first. Does this even need to be complicated or is the boring
+8reliable choice the right one? It comes in with opinions that a good engineer already holds. Start with a monolith,
+17use a relational database by default, pageionate every list, rate limit every public endpoint, and never keep secrets
+25in your code. And for every real decision, it puts the options on the table, the one that it recommends and
+32the honest alternative with the actual reason it lost. That's not buried in code. It's written down right here where
+39you can see it and overrule it. And there's a specific check underneath all of this. That's the real safeguard. For
+48every single value the feature has to show or compute, a total, a date, a status, it names where that value comes
+57from. So anything without a real source is a decision that nobody made and it catches it right here at design time
+5instead of letting the AI invent it later midbu. Then when you go to actually build it, the develop skill
+13does something you don't expect. It stopped. Develop refused to keep building because building would have
+21meant inventing one of those decisions that nobody made. And here's the clever part, if I can say so myself. It doesn't
+30just decide that by feeling like it's inventing something. Because an AI will happily convince itself that a real
+37decision is just wiring and push right past it. So it does something mechanical instead. It lists every value the
+46feature has to produce and then checks the plan and says where each one comes from. Any value with no source is a
+54decision that's owed and that's where it stops and sends you back to make the call. an AI that turns down work. And
+3trust me, that's a genuinely different way to build. And you can still override it and build anyway because you're
+11always in charge. But the moment you do, the assumption gets written down and flagged on that feature until it's
+19properly decided. So even the corner you cut is visible, sitting in a file instead of it being lost in the chat forever. You are the decision maker.
+29Architect makes the decision on purpose and develop refuses to build on one that nobody made and tracks that if you push
+37past it. And it's not magic because no specific prompt catches a 100%. But catching almost all of them and giving
+45you a senior engineer's judgment on the rest is a completely different world from making all of them silently. So the
+53decisions are getting made properly. Now you're actually building and then you close your laptop for the night. Every
+2agentic setup runs on a context file, an agent's MD, a claude MD, or whatever your tool calls it. It's the file that
+11tells the agent how your project actually works. The stack, the commands, the conventions. And without it, every
+18new session opens blind and just guesses. And it guesses differently every time. So your codebase quietly
+26drifts into three different styles. So you need one and setting it up well is more work than it sounds. Especially
+35once your app isn't one simple project in a monor repo or a service split, one
+41giant file bloat every session with the rules that it doesn't need. You want the right context in the right place and it
+50needs to be lean. That's a bit fiddly to get right by hand. So, watch what the audit skill does instead.
+59Audit reads your actual project, its structure, its stack, and the decisions that architect already made and writes
+107the context for you from what's really there and not from what the AI assumes a project like yours would look like. A
+1015single app gets one clean agent MD. A motor repo gets context files placed
+1022where they belong. One lean root file for what's true everywhere and then separate ones next to the parts with
+1029their own rules. And it's safe on a real team's repo because it never overwrites what a person wrote. Your handwritten
+1038edits stay. It only fills the gaps. And when the code disapproves something the docs claim, it flags that conflict and
+1047lets you decide instead of just bulldozing it. And as you keep shipping, the sync skill will reconcile those
+1055files against what the repo actually shows now. So the context you read in month three still describes the app you
+114actually have. And here's what that buys you. Your project's knowledge no longer lives in a chat that vanishes when you
+1112close it. It lives in a file. A fresh session, a teammate, or a completely different AI tool just reads them and
+1121picks up where you left off so that nobody's reexplaining the project to the AI ever again. So, everything I've shown
+1129you so far started from a clean, fresh project. But let me be honest about the
+1135job you actually have most days. Most AI coding tutorials, mine included, build
+1142on a brand new project. It gives you a clean slate, nothing to fight, and easy to learn from. But that's not your
+1150typical Tuesday evening. Your Tuesday codebase is a codebase that somebody else wrote, most often years old. It has
+1159no documentation or it has some very outdated one. And there are conventions that you have to reverse engineer to
+126even figure out. And half the time it's not even in the stack that the tutorials that you've watched online use. So the real question isn't can AI read this?
+1218Because of course it can. The question is can a whole engineering workflow actually operate on a mess that you
+1226inherited. And this is where the audit pays off a second time. You point that
+1233same audit skill at a real project and instead of setting up something new, it reads something real, whatever it is, and writes down how it actually works.
+1245That's how the whole workflow gets into a codebase that you didn't start. And it does not care that it's not JavaScript.
+1253pointed at a 15-year-old PHP codebase, no JavaScript anywhere in sight, and it reads that and documents it just the
+132same. Because what it's capturing is engineering context, not a framework.
+137But here's the part that actually matters. And it's why this isn't just the AI can read old code. Once the
+1316project's understood, the rest of the workflow bends around it. The scope skill doesn't pretend that the project
+1323starts today. It enrolls what's already been built and then plans your next slice on top of reality. So when you
+1332design a new feature, it's designed against the constraint the existing system already imposes the data it has,
+1340the patterns it follows, not in a vacuum. The workflow works with the code that's there instead of fighting it,
+1349which is really the whole point. It's reusing instead of regenerating. And that's the whole difference. Plenty of tools can glance at a legacy codebase.
+141 secondThe point here is the entire discipline, plan, decide, build, all of it runs on
+148top of code you didn't write in whatever language it happens to be in. And that
+1415taking over real inherited messy codebase and moving it forward without breaking it is what you'll actually
+1422spend most of your career doing. And almost nobody teaches it. So, let's say you've built your feature on a real
+1431codebase with the decisions made on purpose. The AI says it's done. And this is the last place that it lies to you.
+1440I'm sure you've had this moment. The AI finishes, says done, it works, and it doesn't. The button doesn't do anything.
+1450the edge case crashes or have the thing the plan asked for was never actually built. And the trap that makes it worse
+15:0015 minutesis that the tests are green because green tests only prove the code that the AI thought to test. They never prove the
+159feature actually exists or that the screen it was supposed to build is even there. So our agentic engineering
+1516workflow doesn't just take the it works as an answer. There are really four jobs here and it keeps them separate on
+1525purpose. There's the check verify test check review and document. First check
+1532verify runs the real app not reads the codebase and nods but drives the actual
+1539feature clicks the flow hits the endpoint and watches what happens and checks it against the criteria that the
+1547plan set out everyone met every screen the plan promised actually built and that's the difference between the tests
+1555pass and I watched it work with my own eyes then there's the test skill which writes the test suite a senior
+164engineer would write tests for what a caller actually relies on and what would genuinely break something. That's what
+1612protects this feature 6 months from now when you or the AI decide to change something near it.
+1619The check review reads the code on a different model than the one that wrote it because a model reviewing its own
+1627work carries its own blind spots. But a fresh set of eyes reads the diff and ranks what it finds. And document writes
+1636the human record, the PR description, the change log from the actual diff, not from the AI's memory of what it thinks it changed. But that's four skills.
+1647Seems like a lot. But how much of that you actually run is up to you and the project. A throwaway prototype just
+1656self-checks. A payment system runs all four. You match the effort to the risk.
+173But the point is the same either way.
+175It's not done when it renders in the browser. This is the part that gets skipped because it isn't flashy. It's also the part that decides whether the
+1714feature you just added actually works and didn't quietly break the three before it. And when something does still
+1722slip through, because eventually it will. Here's the last one. Something's broken. You tell the AI to fix it and it
+1731starts trashing. Changes one thing, still broken. Changes three more, still broken. And then 20 minutes later,
+1739you've got five random edits, the original bug, and two brand new ones. It was a pattern matching try of a fix instead of finding the right cause.
+1751That's the decay in its purest form.
+1753trying to fix one thing and making three more. The workflow's debug skill doesn't guess, it investigates. The way that an
+183actual engineer debugs, it reproduces the bug reliably first because a bug you can't reproduce on command is a bug that
+1812you can't prove you fixed. So it narrows the smallest failing spot and then and this is the discipline that matters. It
+1821forms just one theory about the root cause and tests that one thing before it
+1828touches anything else. Once it's confirmed, it moves on. And if it's wrong, it throws that change away and
+1836learns from it. It doesn't have a dead edit lying around making things messier.
+1841It does one thing at a time where the result actually means something. And it fixes the cause, not just the symptom.
+1849It won't just clamp a null value to make the error disappear. It rather finds out why that value was null in the first
+1857place. Then it writes a test that fails without the fix and passes with it. So that exact bug can never quietly come
+196back. It'll even go hunting for the same mistake hiding somewhere else in code.
+1912And the mature part is if it turns out that the bug isn't a coding mistake at all, but rather a bad decision, which
+1919happens, it says so and sends you back to redesign it properly instead of papering over a bad call with a patch.
+1928That's the whole difference. An AI that reacts to a broken symptom versus the one that investigates a cause. And
+1936knowing how to run that, how to debug with discipline instead of vibes is exactly the kind of judgment this is all
+1944about. It's not just some rigid process where you follow the exact same steps every single time. Because a small app
+1953doesn't need the same workflow as a massive codebase. And working with a brand new project is very different than
+20:0020 minutesworking from something that's been around for years. The workflow looks at what you're actually building, how big
+207it is, where it's going, and adapts to it. It guides you the way that a senior engineer would instead of forcing every
+2015project into the same process. And that's really the difference between having a bunch of prompts and having an
+2023actual engineering system. So that's the whole thing. Plan it properly. Make the
+2030decisions on purpose. Keep the state in files. Work on real code. Prove it actually runs. And fix it with discipline when it breaks.
+2041That's the workflow that compounds instead of decays with every feature building on the last instead of fighting
+2048it. And the part that you might not expect is that everything I showed you.
+2055All of these skills, they're completely open source, free, one command, and they're in your editor right now. So, go
+214use them. And I really mean it. I'm not hiding the workflow behind anything, but use them for a week and you'll run
+2112straight into one honest thing. Running the skills is the easy part, but knowing
+2118when to run which one, what to decide when it puts a choice in front of you, and whether the AI's recommendation is
+2126actually right for your situation, what to do when the plan is wrong or a session goes sideways.
+2134That's the judgment. And you can't install judgment from a repo. which is exactly why I built a course around the
+2142workflow that I'm giving away. The tools are one piece, but the course is everything around them. How these agents
+2152actually work under the hood. How to run all of this as one system instead of a pile of separate commands. How to build
+22:0022 minutesyour own skills and how to take this into a real legacy codebase. and what to do when it all goes wrong, which is, if
+229I'm being honest, where the real engineering actually lives and where every free demo quietly stops. You can
+2218look at it this way. The repo gives you the tools, but the course gives you the mindset, the skills, and the judgment behind them. And the course is already
+2226fully done. It has been for some time. I first soft launched it to a weightless group and they've already logged over 3,000 lessons in the first two weeks.
+2238So, it's not a launch day experiment. Real developers are already deep in it.
+2243It's the Agentic Engineering course from JavaScript Mastery and it opens to everyone on September 22nd. So, mark
+2252your calendar. But take the real lesson with you either way, even if you never buy a thing. The difference between
+2259someone who prompts an AI and someone who engineers with it was never a better model or a smarter prompt. It's this.
+239Decide what to build first. Make the hard calls on purpose. Keep the state in
+2315files and never ever let the AI decide something important without telling you.
+2322Do that with my skills or your own and you're already ahead of almost everyone using these tools. So now go build something that lasts.
+
+Sync to video time
