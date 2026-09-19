@@ -1,0 +1,89 @@
+# Skills Dedupe + Migration Manifest (2026-09-19)
+
+- Start 1267 → End 1193 SKILL.md (delta 74)
+- DELETED flat duplicate copies (pre-existing categorized twin in inventory): 74
+- MOVED/MERGED into category folders: 500
+- Names lost: NONE (every deleted name retains its twin — verified against live tree)
+- Backup: skills-backup-2026-09-19.tar.gz (52 MB)
+
+## Deleted (74)
+
+- 1password: deleted `\1password\SKILL.md` — canonical twin `\security\1password\SKILL.md`
+- airtable: deleted `\airtable\SKILL.md` — canonical twin `\productivity\airtable\SKILL.md`
+- algorithmic-art: deleted `\algorithmic-art\SKILL.md` — canonical twin `\creative\algorithmic-art\SKILL.md`
+- appinsights-instrumentation: deleted `\appinsights-instrumentation\SKILL.md` — canonical twin `\devops\appinsights-instrumentation\SKILL.md`
+- architecture-diagram: deleted `\architecture-diagram\SKILL.md` — canonical twin `\creative\architecture-diagram\SKILL.md`
+- ascii-art: deleted `\ascii-art\SKILL.md` — canonical twin `\creative\ascii-art\SKILL.md`
+- asdf: deleted `\asdf\SKILL.md` — canonical twin `\devops\asdf\SKILL.md`
+- aspire: deleted `\aspire\SKILL.md` — canonical twin `\devops\aspire\SKILL.md`
+- audit-skills-judge-fix: deleted `\audit-skills-judge-fix\SKILL.md` — canonical twin `\qa\audit-skills-judge-fix\SKILL.md`
+- azure-deployment-preflight: deleted `\azure-deployment-preflight\SKILL.md` — canonical twin `\devops\azure-deployment-preflight\SKILL.md`
+- azure-devops-cli: deleted `\azure-devops-cli\SKILL.md` — canonical twin `\devops\azure-devops-cli\SKILL.md`
+- azure-resource-visualizer: deleted `\azure-resource-visualizer\SKILL.md` — canonical twin `\devops\azure-resource-visualizer\SKILL.md`
+- azure-role-selector: deleted `\azure-role-selector\SKILL.md` — canonical twin `\devops\azure-role-selector\SKILL.md`
+- azure-static-web-apps: deleted `\azure-static-web-apps\SKILL.md` — canonical twin `\devops\azure-static-web-apps\SKILL.md`
+- banking: deleted `\banking\SKILL.md` — canonical twin `\software-development\banking\SKILL.md`
+- baoyu-article-illustrator: deleted `\baoyu-article-illustrator\SKILL.md` — canonical twin `\creative\baoyu-article-illustrator\SKILL.md`
+- baoyu-comic: deleted `\baoyu-comic\SKILL.md` — canonical twin `\creative\baoyu-comic\SKILL.md`
+- baoyu-creative-suite: deleted `\baoyu-creative-suite\SKILL.md` — canonical twin `\creative\baoyu-creative-suite\SKILL.md`
+- baoyu-infographic: deleted `\baoyu-infographic\SKILL.md` — canonical twin `\creative\baoyu-infographic\SKILL.md`
+- bash-scripts-audit-remediation: deleted `\bash-scripts-audit-remediation\SKILL.md` — canonical twin `\software-development\bash-scripts-audit-remediation\SKILL.md`
+- batch-skills-remediation: deleted `\batch-skills-remediation\SKILL.md` — canonical twin `\qa\batch-skills-remediation\SKILL.md`
+- bioinformatics: deleted `\bioinformatics\SKILL.md` — canonical twin `\research\bioinformatics\SKILL.md`
+- blender-mcp: deleted `\blender-mcp\SKILL.md` — canonical twin `\creative\blender-mcp\SKILL.md`
+- boilerplate-stripper: deleted `\boilerplate-stripper\SKILL.md` — canonical twin `\qa\boilerplate-stripper\SKILL.md`
+- box: deleted `\box\SKILL.md` — canonical twin `\productivity\box\SKILL.md`
+- brainstorming: deleted `\brainstorming\SKILL.md` — canonical twin `\planning\brainstorming\SKILL.md`
+- brand-guidelines: deleted `\brand-guidelines\SKILL.md` — canonical twin `\creative\brand-guidelines\SKILL.md`
+- canvas: deleted `\canvas\SKILL.md` — canonical twin `\productivity\canvas\SKILL.md`
+- canvas-design: deleted `\canvas-design\SKILL.md` — canonical twin `\creative\canvas-design\SKILL.md`
+- caveman-unified: deleted `\caveman-unified\SKILL.md` — canonical twin `\software-development\caveman-unified\SKILL.md`
+- claude-api: deleted `\claude-api\SKILL.md` — canonical twin `\software-development\claude-api\SKILL.md`
+- claude-design: deleted `\claude-design\SKILL.md` — canonical twin `\creative\claude-design\SKILL.md`
+- clonedeps: deleted `\clonedeps\SKILL.md` — canonical twin `\software-development\clonedeps\SKILL.md`
+- cloudflare-temporary-deploy: deleted `\cloudflare-temporary-deploy\SKILL.md` — canonical twin `\web-development\cloudflare-temporary-deploy\SKILL.md`
+- code-docs: deleted `\code-docs\SKILL.md` — canonical twin `\software-development\code-docs\SKILL.md`
+- code-wiki: deleted `\code-wiki\SKILL.md` — canonical twin `\software-development\code-wiki\SKILL.md`
+- codemap: deleted `\codemap\SKILL.md` — canonical twin `\software-development\codemap\SKILL.md`
+- comfyui: deleted `\comfyui\SKILL.md` — canonical twin `\creative\comfyui\SKILL.md`
+- concept-diagrams: deleted `\concept-diagrams\SKILL.md` — canonical twin `\creative\concept-diagrams\SKILL.md`
+- content-research-writer: deleted `\content-research-writer\SKILL.md` — canonical twin `\creative\content-research-writer\SKILL.md`
+- context7: deleted `\context7\SKILL.md` — canonical twin `\software-development\context7\SKILL.md`
+- convert-plaintext-to-md: deleted `\convert-plaintext-to-md\SKILL.md` — canonical twin `\development\convert-plaintext-to-md\SKILL.md`
+- creative-ideation: deleted `\creative-ideation\SKILL.md` — canonical twin `\creative\creative-ideation\SKILL.md`
+- customization-audit: deleted `\customization-audit\SKILL.md` — canonical twin `\devops\customization-audit\SKILL.md`
+- darwinian-evolver: deleted `\darwinian-evolver\SKILL.md` — canonical twin `\research\darwinian-evolver\SKILL.md`
+- datadog: deleted `\datadog\SKILL.md` — canonical twin `\devops\datadog\SKILL.md`
+- debugging-hermes-tui-commands: deleted `\debugging-hermes-tui-commands\SKILL.md` — canonical twin `\software-development\debugging-hermes-tui-commands\SKILL.md`
+- dependabot: deleted `\dependabot\SKILL.md` — canonical twin `\devops\dependabot\SKILL.md`
+- deploy-to-vercel: deleted `\deploy-to-vercel\SKILL.md` — canonical twin `\oh-my-hermes\deploy-to-vercel\SKILL.md`
+- design-md: deleted `\design-md\SKILL.md` — canonical twin `\creative\design-md\SKILL.md`
+- disk-space-cleanup: deleted `\disk-space-cleanup\SKILL.md` — canonical twin `\devops\disk-space-cleanup\SKILL.md`
+- doc-coauthoring: deleted `\doc-coauthoring\SKILL.md` — canonical twin `\productivity\doc-coauthoring\SKILL.md`
+- docker-management: deleted `\docker-management\SKILL.md` — canonical twin `\devops\docker-management\SKILL.md`
+- documentation-writer: deleted `\documentation-writer\SKILL.md` — canonical twin `\productivity\documentation-writer\SKILL.md`
+- docx: deleted `\docx\SKILL.md` — canonical twin `\productivity\docx\SKILL.md`
+- github: deleted `\github\SKILL.md` — canonical twin `\software-development\github\SKILL.md`
+- hermes-diagnostic-repair: deleted `\hermes-diagnostic-repair\SKILL.md` — canonical twin `\devops\hermes-diagnostic-repair\SKILL.md`
+- hermes-system-maintenance: deleted `\hermes-system-maintenance\SKILL.md` — canonical twin `\devops\hermes-system-maintenance\SKILL.md`
+- inference-sh-cli: deleted `\cli\SKILL.md` — canonical twin `\devops\cli\SKILL.md`
+- mcp-docker: deleted `\mcp-docker\SKILL.md` — canonical twin `\mcp\mcp-docker\SKILL.md`
+- mcp-filesystem: deleted `\mcp-filesystem\SKILL.md` — canonical twin `\mcp\mcp-filesystem\SKILL.md`
+- plans-judge: deleted `\plans-judge\SKILL.md` — canonical twin `\qa\plans-judge\SKILL.md`
+- prompts-judge: deleted `\prompts-judge\SKILL.md` — canonical twin `\qa\prompts-judge\SKILL.md`
+- python-quality: deleted `\python-quality\SKILL.md` — canonical twin `\software-development\python-quality\SKILL.md`
+- skill-judge: deleted `\skill-judge\SKILL.md` — canonical twin `\qa\skill-judge\SKILL.md`
+- smithery-ai-cli: deleted `\smithery-ai-cli\SKILL.md` — canonical twin `\mcp\smithery-ai-cli\SKILL.md`
+- specs-judge: deleted `\specs-judge\SKILL.md` — canonical twin `\qa\specs-judge\SKILL.md`
+- subagent-driven-development: deleted `\subagent-driven-development\SKILL.md` — canonical twin `\software-development\subagent-driven-development\SKILL.md`
+- systematic-debugging: deleted `\systematic-debugging\SKILL.md` — canonical twin `\software-development\systematic-debugging\SKILL.md`
+- test: deleted `\test\SKILL.md` — canonical twin `\development\test\SKILL.md`
+- tooling-config: deleted `\tooling-config\SKILL.md` — canonical twin `\devops\tooling-config\SKILL.md`
+- tooling-lint: deleted `\tooling-lint\SKILL.md` — canonical twin `\software-development\tooling-lint\SKILL.md`
+- user-communication-preferences: deleted `\user-communication-preferences\SKILL.md` — canonical twin `\productivity\user-communication-preferences\SKILL.md`
+- writing-clearly-and-concisely: deleted `\writing-clearly-and-concisely\SKILL.md` — canonical twin `\creative\writing-clearly-and-concisely\SKILL.md`
+
+## Gates
+- [x] 1267 − 74 = 1193
+- [x] 0 names lost (twin-checked)
+- [x] flat=0 · no_category=0 · dup_names=NONE

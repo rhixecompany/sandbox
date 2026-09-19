@@ -1,0 +1,8353 @@
+[
+  {
+    "name": "asyncio",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015507999996771105
+  },
+  {
+    "name": "autonomous-ai-agents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018372999984421767
+  },
+  {
+    "name": "creative-design",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017408999992767349
+  },
+  {
+    "name": "hermes-platform-operations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002119600001606159
+  },
+  {
+    "name": "node-inspect-debugger",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018730000010691583
+  },
+  {
+    "name": "package-manager-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004216200002701953
+  },
+  {
+    "name": "repo-management",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023376000026473776
+  },
+  {
+    "name": "session-replay-and-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004205699995509349
+  },
+  {
+    "name": "subagent-dispatch-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033819000018411316
+  },
+  {
+    "name": "video-production",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021990999957779422
+  },
+  {
+    "name": "windows-dev-environment",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021649999980581924
+  },
+  {
+    "name": "instruction-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018964999981108122
+  },
+  {
+    "name": "acreadiness-policy",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012196000025141984
+  },
+  {
+    "name": "add-educational-comments",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004630600000382401
+  },
+  {
+    "name": "agent-browser",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004058200000145007
+  },
+  {
+    "name": "agent-core-architecture",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018550000022514723
+  },
+  {
+    "name": "agent-governance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002701800003706012
+  },
+  {
+    "name": "agent-orchestration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004604000001563691
+  },
+  {
+    "name": "agent-owasp-compliance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001817500000470318
+  },
+  {
+    "name": "agent-skill-stack",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001955600004293956
+  },
+  {
+    "name": "agent-supply-chain",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003455899997788947
+  },
+  {
+    "name": "agentic-eval",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035563999990699813
+  },
+  {
+    "name": "agentmemory-hooks",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005349099999875762
+  },
+  {
+    "name": "arize-ai-provider-integration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.03132999999797903
+  },
+  {
+    "name": "breakdown-epic-arch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.010185300001467112
+  },
+  {
+    "name": "breakdown-epic-pm",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033793999973568134
+  },
+  {
+    "name": "breakdown-feature-prd",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.023721400000795256
+  },
+  {
+    "name": "competitor-ad-intelligence",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.028486399998655543
+  },
+  {
+    "name": "copilot-cli-quickstart",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.025022800000442658
+  },
+  {
+    "name": "copilot-instructions-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.028289599998970516
+  },
+  {
+    "name": "copilot-pr-autopilot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.029593100000056438
+  },
+  {
+    "name": "copilot-sdk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.026523399996221997
+  },
+  {
+    "name": "copilot-spaces",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.025938099999621045
+  },
+  {
+    "name": "copilot-usage-metrics",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.022143300004245248
+  },
+  {
+    "name": "create-github-issue-feature-from-specification",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.017222499998752028
+  },
+  {
+    "name": "create-github-issues-feature-from-implementation-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.022437699997681193
+  },
+  {
+    "name": "create-github-issues-for-unmet-specification-requirements",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0185600999975577
+  },
+  {
+    "name": "daily-prep",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006155100003525149
+  },
+  {
+    "name": "datanalysis-credit-risk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002036400001088623
+  },
+  {
+    "name": "drawio",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035138000021106564
+  },
+  {
+    "name": "drawio-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005067499994765967
+  },
+  {
+    "name": "eyeball",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007494299999962095
+  },
+  {
+    "name": "finalize-agent-prompt",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004598399995302316
+  },
+  {
+    "name": "git-flow-branch-creator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007327399995119777
+  },
+  {
+    "name": "gtm-board-and-investor-communication",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003900499999872409
+  },
+  {
+    "name": "introspection-only-general",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0041846999956760556
+  },
+  {
+    "name": "multi-agent-fanout",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006238800000573974
+  },
+  {
+    "name": "phoenix-evals",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003948300000047311
+  },
+  {
+    "name": "phoenix-tracing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006233299995074049
+  },
+  {
+    "name": "power-bi-dax-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007514099997933954
+  },
+  {
+    "name": "premium-frontend-ui",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007096799999999348
+  },
+  {
+    "name": "signal-write",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019465000004856847
+  },
+  {
+    "name": "structured-autonomy-implement",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004548700002487749
+  },
+  {
+    "name": "structured-autonomy-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005953499996394385
+  },
+  {
+    "name": "tldr-prompt",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003938300003937911
+  },
+  {
+    "name": "tm7-threat-model",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020909999948344193
+  },
+  {
+    "name": "update-llms",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029711000024690293
+  },
+  {
+    "name": "using-superpowers",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004163600002357271
+  },
+  {
+    "name": "what-context-needed",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027703999949153513
+  },
+  {
+    "name": "architecture-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035033999956795014
+  },
+  {
+    "name": "folder-structure-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004831199999898672
+  },
+  {
+    "name": "technology-stack-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036822999973082915
+  },
+  {
+    "name": "acpx-executor",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004603800000040792
+  },
+  {
+    "name": "chainlink",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006103699997765943
+  },
+  {
+    "name": "evm",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00456740000663558
+  },
+  {
+    "name": "solana",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002892699994845316
+  },
+  {
+    "name": "from-the-other-side-anitta",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020098999957554042
+  },
+  {
+    "name": "one-three-one-rule",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007504000001063105
+  },
+  {
+    "name": "8-bit-orbit-video-template",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002026900001510512
+  },
+  {
+    "name": "adobe-illustrator-scripting",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004129699998884462
+  },
+  {
+    "name": "algorithmic-art",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024451999997836538
+  },
+  {
+    "name": "anti-ui-slop",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004628399998182431
+  },
+  {
+    "name": "architect",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026073000044561923
+  },
+  {
+    "name": "architecture-diagram",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007915499998489395
+  },
+  {
+    "name": "arduino-azure-iot-edge-integration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002648000001499895
+  },
+  {
+    "name": "ascii-art",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004510700004175305
+  },
+  {
+    "name": "automate-this",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004150000000663567
+  },
+  {
+    "name": "baoyu-article-illustrator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025661999970907345
+  },
+  {
+    "name": "baoyu-comic",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00339469999744324
+  },
+  {
+    "name": "baoyu-creative-suite",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001838899996073451
+  },
+  {
+    "name": "baoyu-infographic",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001629099999263417
+  },
+  {
+    "name": "blender-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028147999983048066
+  },
+  {
+    "name": "brand-guidelines",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031779000055394135
+  },
+  {
+    "name": "canvas-design",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004669900001317728
+  },
+  {
+    "name": "claude-design",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006088599999202415
+  },
+  {
+    "name": "cloud-design-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005448699994303752
+  },
+  {
+    "name": "comfyui",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023170999993453734
+  },
+  {
+    "name": "concept-diagrams",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001683700000285171
+  },
+  {
+    "name": "content-research-writer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023262999966391362
+  },
+  {
+    "name": "cosmosdb-datamodeling",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002613999997265637
+  },
+  {
+    "name": "create-implementation-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0041120999958366156
+  },
+  {
+    "name": "creative-artifact-production",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034028000009129755
+  },
+  {
+    "name": "creative-ideation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003110899997409433
+  },
+  {
+    "name": "daily-focus-board",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004731100001663435
+  },
+  {
+    "name": "design-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004692299997259397
+  },
+  {
+    "name": "develop",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003647500001534354
+  },
+  {
+    "name": "diagramming",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004285100003471598
+  },
+  {
+    "name": "efcore-d2-db-diagram",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003954400002839975
+  },
+  {
+    "name": "enhance-prompt",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004591899996739812
+  },
+  {
+    "name": "excalidraw",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003819000005023554
+  },
+  {
+    "name": "excalidraw-diagram-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002977399999508634
+  },
+  {
+    "name": "face-obscure-video-chat",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003143800000543706
+  },
+  {
+    "name": "freecad-scripts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003655699998489581
+  },
+  {
+    "name": "frontend-design",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038313000040943734
+  },
+  {
+    "name": "game-engine",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003722800000105053
+  },
+  {
+    "name": "gdpr-compliant",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036997999995946884
+  },
+  {
+    "name": "gem-devops-guidelines",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0042278999972040765
+  },
+  {
+    "name": "generate-image",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003512200004479382
+  },
+  {
+    "name": "gh-attach",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031033999985083938
+  },
+  {
+    "name": "gsap-framer-scroll-animation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005789099996036384
+  },
+  {
+    "name": "gtm-developer-ecosystem",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00424659999407595
+  },
+  {
+    "name": "gtm-operating-cadence",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004375399999844376
+  },
+  {
+    "name": "gtm-positioning-strategy",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0044602999987546355
+  },
+  {
+    "name": "gtm-technical-product-pricing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021491000006790273
+  },
+  {
+    "name": "html-artifact",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006099600002926309
+  },
+  {
+    "name": "humanizer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020330999977886677
+  },
+  {
+    "name": "hyperframes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00789700000314042
+  },
+  {
+    "name": "image-annotations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003715600003488362
+  },
+  {
+    "name": "image-manipulation-image-magick",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035095999992336147
+  },
+  {
+    "name": "kanban-video-orchestrator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0041263999955845065
+  },
+  {
+    "name": "legacy-circuit-mockups",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022410999954445288
+  },
+  {
+    "name": "linkedin-post-formatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003985800001828466
+  },
+  {
+    "name": "manim-video",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034505999938119203
+  },
+  {
+    "name": "marp-slide",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002367299995967187
+  },
+  {
+    "name": "md-to-docx",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033030000049620867
+  },
+  {
+    "name": "meme-generation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0046061000030022115
+  },
+  {
+    "name": "mermaid-diagrams",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00361509999493137
+  },
+  {
+    "name": "nano-banana-pro-openrouter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001995499995246064
+  },
+  {
+    "name": "napkin",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004261599999153987
+  },
+  {
+    "name": "p5js",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022134999962872826
+  },
+  {
+    "name": "penpot-uiux-design",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00485859999753302
+  },
+  {
+    "name": "pixel-art",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002819200002704747
+  },
+  {
+    "name": "plantuml-ascii",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003171499993186444
+  },
+  {
+    "name": "poka-yoke",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004153199995926116
+  },
+  {
+    "name": "popular-web-designs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027429999972810037
+  },
+  {
+    "name": "power-bi-model-design-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003910899999027606
+  },
+  {
+    "name": "power-bi-report-design-consultation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005312900000717491
+  },
+  {
+    "name": "pr-screenshots",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002559000000474043
+  },
+  {
+    "name": "pretext",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003936000000976492
+  },
+  {
+    "name": "resemble-detect",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0056578000003355555
+  },
+  {
+    "name": "resx-source-generator-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002561799999966752
+  },
+  {
+    "name": "salesforce-component-standards",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016971000004559755
+  },
+  {
+    "name": "salesforce-flow-design",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036917000034009106
+  },
+  {
+    "name": "scope",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038538000007974915
+  },
+  {
+    "name": "screen-recording",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004170199994405266
+  },
+  {
+    "name": "sketch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031416999991051853
+  },
+  {
+    "name": "songwriting-and-ai-music",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003319700001156889
+  },
+  {
+    "name": "speak-summary",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021783000047435053
+  },
+  {
+    "name": "theme-factory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003552200003468897
+  },
+  {
+    "name": "touchdesigner-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037089999968884513
+  },
+  {
+    "name": "update-implementation-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004886599999736063
+  },
+  {
+    "name": "vcpkg",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033855000001494773
+  },
+  {
+    "name": "vercel-react-view-transitions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0044169000029796734
+  },
+  {
+    "name": "vsdc-video-masking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004814499996427912
+  },
+  {
+    "name": "web-artifacts-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0067817000017385
+  },
+  {
+    "name": "web-design-guidelines",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002270899996801745
+  },
+  {
+    "name": "writing-clearly-and-concisely",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003906399993866216
+  },
+  {
+    "name": "jupyter-live-kernel",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0013336999982129782
+  },
+  {
+    "name": "-agents-fix-discover",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003950800004531629
+  },
+  {
+    "name": "-agents-fix-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003988699994806666
+  },
+  {
+    "name": "-pathutil",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038093000039225444
+  },
+  {
+    "name": "-pending-skills-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004182799995760433
+  },
+  {
+    "name": "-verify-and-dedupe",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00275800000235904
+  },
+  {
+    "name": "acquire-codebase-knowledge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002319599996553734
+  },
+  {
+    "name": "acreadiness-assess",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033281000069109723
+  },
+  {
+    "name": "acreadiness-generate-instructions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034817999985534698
+  },
+  {
+    "name": "ad-campaign-analyzer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003912199994374532
+  },
+  {
+    "name": "add-hooks-to-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002307700000528712
+  },
+  {
+    "name": "add-mcp-servers",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003913300002750475
+  },
+  {
+    "name": "agents-system-prompt-context-fix-runner",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034717000016826205
+  },
+  {
+    "name": "ai-prompt-engineering-safety-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003392600003280677
+  },
+  {
+    "name": "ai-ready",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004334699995524716
+  },
+  {
+    "name": "ai-team-orchestration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004800700000487268
+  },
+  {
+    "name": "align-tables",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002436800001305528
+  },
+  {
+    "name": "analyze-hf-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035846999962814152
+  },
+  {
+    "name": "analyze-prompt-library",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003695500003232155
+  },
+  {
+    "name": "analyze-prompt-library-v2",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001563599995279219
+  },
+  {
+    "name": "analyze-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002074299998639617
+  },
+  {
+    "name": "analyze-skill-codeblocks",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0040030000018305145
+  },
+  {
+    "name": "apple-appstore-reviewer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035229000059189275
+  },
+  {
+    "name": "apply-pending-memory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021635000011883676
+  },
+  {
+    "name": "apply-pending-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003568000000086613
+  },
+  {
+    "name": "apply-vscode-customizations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003310699998110067
+  },
+  {
+    "name": "arize-annotation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004550300000119023
+  },
+  {
+    "name": "arize-evaluator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004974400006176438
+  },
+  {
+    "name": "arize-instrumentation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003395300002011936
+  },
+  {
+    "name": "aspnet-minimal-api-openapi",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002100900004734285
+  },
+  {
+    "name": "audit-227",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004371299997728784
+  },
+  {
+    "name": "audit-227-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002949800000351388
+  },
+  {
+    "name": "audit-227-js",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004598600004101172
+  },
+  {
+    "name": "audit-agents-hashes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00389290000020992
+  },
+  {
+    "name": "audit-canonical",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004824800002097618
+  },
+  {
+    "name": "audit-fix-remediate-safe",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004709599998022895
+  },
+  {
+    "name": "audit-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021444000012706965
+  },
+  {
+    "name": "audit-prompts-script",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003636299996287562
+  },
+  {
+    "name": "audit-vscode-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002445300000545103
+  },
+  {
+    "name": "audit-vscode-config-v2",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029481999954441562
+  },
+  {
+    "name": "autoresearch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032107000006362796
+  },
+  {
+    "name": "batch-delete-profiles",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020101000045542605
+  },
+  {
+    "name": "batch-localappdata-skillcode",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028557999976328574
+  },
+  {
+    "name": "batch-remediate",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001142599998274818
+  },
+  {
+    "name": "batch-remediate-42-59",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028106999961892143
+  },
+  {
+    "name": "batch-rewrite-worst",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038962000035098754
+  },
+  {
+    "name": "batch-skill-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001971199999388773
+  },
+  {
+    "name": "batch-update-hermes-paths",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002756900001259055
+  },
+  {
+    "name": "batch-yaml-frontmatter-editing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003389099998457823
+  },
+  {
+    "name": "benchmark-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024465999958920293
+  },
+  {
+    "name": "benchmark-providers",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004968599998392165
+  },
+  {
+    "name": "benchmark-results",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0013061999998171814
+  },
+  {
+    "name": "benchmark-run-20260710",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029465000043273903
+  },
+  {
+    "name": "bigquery-pipeline-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019227000011596829
+  },
+  {
+    "name": "binance-api-reference",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005174999998416752
+  },
+  {
+    "name": "binance-python-api-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003375899999809917
+  },
+  {
+    "name": "boost-near-pass-refs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.000636800003121607
+  },
+  {
+    "name": "boost-prompt",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002235899999504909
+  },
+  {
+    "name": "bootstrap",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033643999995547347
+  },
+  {
+    "name": "breakdown-feature-implementation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035142999986419454
+  },
+  {
+    "name": "breakdown-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001795999996829778
+  },
+  {
+    "name": "breakdown-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033273000008193776
+  },
+  {
+    "name": "bug-reproduction-brief",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020058000009157695
+  },
+  {
+    "name": "build-env",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003813900002569426
+  },
+  {
+    "name": "build-evidence-map",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00166200000239769
+  },
+  {
+    "name": "build-path-mapping",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002039900005911477
+  },
+  {
+    "name": "build-registry",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031458999947062694
+  },
+  {
+    "name": "bulk-install-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038147999948705547
+  },
+  {
+    "name": "busha-api-quickstart",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024113999970722944
+  },
+  {
+    "name": "busha-business-api",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002146599996194709
+  },
+  {
+    "name": "busha-quick-start-guide",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004455800000869203
+  },
+  {
+    "name": "categorize-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023127999957068823
+  },
+  {
+    "name": "check-handle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025031999975908548
+  },
+  {
+    "name": "chrome-devtools",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036728000050061382
+  },
+  {
+    "name": "classify-fences",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016086999967228621
+  },
+  {
+    "name": "cleanup-disk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023578000036650337
+  },
+  {
+    "name": "cleanup-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002213800005847588
+  },
+  {
+    "name": "cleanup-placeholder-stubs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020939999958500266
+  },
+  {
+    "name": "code-exemplars-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00401889999920968
+  },
+  {
+    "name": "code-rabbit-mcp-setup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034691999971983023
+  },
+  {
+    "name": "code-sandbox",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003470800002105534
+  },
+  {
+    "name": "code-tour",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002566399998613633
+  },
+  {
+    "name": "codebase-inspection",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035819000040646642
+  },
+  {
+    "name": "codebase-memory-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003642499999841675
+  },
+  {
+    "name": "comment-code-generate-a-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001480200000514742
+  },
+  {
+    "name": "complete-issue-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002776499997708015
+  },
+  {
+    "name": "comprehensive-enhance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034875999990617856
+  },
+  {
+    "name": "configure-hermes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00404030000208877
+  },
+  {
+    "name": "consolidate-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023684999978286214
+  },
+  {
+    "name": "containerize-aspnet-framework",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025573999955668114
+  },
+  {
+    "name": "containerize-aspnetcore",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002887499998905696
+  },
+  {
+    "name": "content-management-systems",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004973700000846293
+  },
+  {
+    "name": "context-map",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032158999965758994
+  },
+  {
+    "name": "conventional-commit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019160999945597723
+  },
+  {
+    "name": "convert-groq-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00326879999920493
+  },
+  {
+    "name": "convert-pdf-to-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028964000011910684
+  },
+  {
+    "name": "convert-plaintext-to-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017569999981787987
+  },
+  {
+    "name": "copilot-mcp-server",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036107999985688366
+  },
+  {
+    "name": "create-agentsmd",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004321599997638259
+  },
+  {
+    "name": "create-llms",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030196000006981194
+  },
+  {
+    "name": "create-readme",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028782999943359755
+  },
+  {
+    "name": "create-spring-boot-java-project",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033929999990505166
+  },
+  {
+    "name": "create-spring-boot-kotlin-project",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0007036999959382229
+  },
+  {
+    "name": "creating-oracle-to-postgres-master-migration-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002521900001738686
+  },
+  {
+    "name": "creating-oracle-to-postgres-migration-bug-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023925999994389713
+  },
+  {
+    "name": "crypto-wallet-api-guide",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030576999997720122
+  },
+  {
+    "name": "crypto-wallet-quickstart",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002416299998003524
+  },
+  {
+    "name": "cryptoapis-wallet-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034900999962701462
+  },
+  {
+    "name": "csharp-async",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019320999999763444
+  },
+  {
+    "name": "csharp-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003917400004866067
+  },
+  {
+    "name": "csharp-mstest",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002289300005941186
+  },
+  {
+    "name": "csharp-nunit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004486699996050447
+  },
+  {
+    "name": "csharp-tunit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016491999995196238
+  },
+  {
+    "name": "csharp-xunit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031377999985124916
+  },
+  {
+    "name": "data-breach-blast-radius",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034860000014305115
+  },
+  {
+    "name": "data-migration-scripts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023058000006130897
+  },
+  {
+    "name": "dataverse-python-advanced-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002222700000857003
+  },
+  {
+    "name": "dataverse-python-production-code",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003125199997157324
+  },
+  {
+    "name": "dataverse-python-quickstart",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001451299998734612
+  },
+  {
+    "name": "dataverse-python-usecase-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00298800000018673
+  },
+  {
+    "name": "debug",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004925300003378652
+  },
+  {
+    "name": "declarative-agents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032045999978436157
+  },
+  {
+    "name": "dedupe-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003925299999536946
+  },
+  {
+    "name": "desk-journal",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004833400002098642
+  },
+  {
+    "name": "desk-open",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003732100005436223
+  },
+  {
+    "name": "dev-init-code-samples",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018400999979348853
+  },
+  {
+    "name": "doc-and-modernize",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002529500001401175
+  },
+  {
+    "name": "docs-inventory-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003863899997668341
+  },
+  {
+    "name": "document",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0039039000039338134
+  },
+  {
+    "name": "dotnet-best-practices",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028729000041494146
+  },
+  {
+    "name": "dotnet-design-pattern-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023644000029889867
+  },
+  {
+    "name": "dotnet-mcp-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004022200002509635
+  },
+  {
+    "name": "dotnet-timezone",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003812799994193483
+  },
+  {
+    "name": "dotnet-upgrade",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034993000008398667
+  },
+  {
+    "name": "doublecheck",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005083300005935598
+  },
+  {
+    "name": "draw-io-diagram-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025206999998772517
+  },
+  {
+    "name": "e2e-session-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023101999977370724
+  },
+  {
+    "name": "editorconfig",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034797999978763983
+  },
+  {
+    "name": "ef-core",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025872000041999854
+  },
+  {
+    "name": "em-dash",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028154000028735027
+  },
+  {
+    "name": "enhance-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035147999951732345
+  },
+  {
+    "name": "enhance-sections",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002226899996458087
+  },
+  {
+    "name": "env-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033793999973568134
+  },
+  {
+    "name": "eslint-count",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002779099995677825
+  },
+  {
+    "name": "execute-all-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004115000003366731
+  },
+  {
+    "name": "execute-workflow",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001905199998873286
+  },
+  {
+    "name": "face-detection-uv4l-pi",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0043774000005214475
+  },
+  {
+    "name": "fence-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002914299999247305
+  },
+  {
+    "name": "find-lock",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001972799997020047
+  },
+  {
+    "name": "find-locking-pid",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002428300002065953
+  },
+  {
+    "name": "first-ask",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002261599998746533
+  },
+  {
+    "name": "fix-blank-lines",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003500599996186793
+  },
+  {
+    "name": "fix-canonical",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001322999996773433
+  },
+  {
+    "name": "fix-class-e",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0009557000012136996
+  },
+  {
+    "name": "fix-collapsed-bullets",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002374199997575488
+  },
+  {
+    "name": "fix-collapsed-fences",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003777099998842459
+  },
+  {
+    "name": "fix-concatenated-headings",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002290199998242315
+  },
+  {
+    "name": "fix-copilot-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017599000057089143
+  },
+  {
+    "name": "fix-crlf-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021721999946748838
+  },
+  {
+    "name": "fix-duplicate-hooks",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002847199997631833
+  },
+  {
+    "name": "fix-eslint-mismatches",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001854900001490023
+  },
+  {
+    "name": "fix-fail-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020064999989699572
+  },
+  {
+    "name": "fix-fence-glue",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030661999990115874
+  },
+  {
+    "name": "fix-fence-lang",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028215999991516583
+  },
+  {
+    "name": "fix-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0013380000018514693
+  },
+  {
+    "name": "fix-frontmatter-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0007704000017838553
+  },
+  {
+    "name": "fix-frontmatter-yaml",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003224400003091432
+  },
+  {
+    "name": "fix-frontmatter-yaml-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037635000044247136
+  },
+  {
+    "name": "fix-github-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002989300002809614
+  },
+  {
+    "name": "fix-github-prompts-inline-lists",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014733999996678904
+  },
+  {
+    "name": "fix-github-prompts-remaining",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014574000015272759
+  },
+  {
+    "name": "fix-glued-headings",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018946999989566393
+  },
+  {
+    "name": "fix-glued-headings-batch2",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00173940000240691
+  },
+  {
+    "name": "fix-glued-headings-manual",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026217999984510243
+  },
+  {
+    "name": "fix-line-endings",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002771200001006946
+  },
+  {
+    "name": "fix-midline-collapses",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001759699996910058
+  },
+  {
+    "name": "fix-missing-closers",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015415000016218983
+  },
+  {
+    "name": "fix-orphaned-brackets",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027035000020987354
+  },
+  {
+    "name": "fix-prompt-artifacts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002089599998726044
+  },
+  {
+    "name": "fix-prompt-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020998000036343
+  },
+  {
+    "name": "fix-prompt-library",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024280999932670966
+  },
+  {
+    "name": "fix-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019885000001522712
+  },
+  {
+    "name": "fix-prompts-comprehensive",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024292000016430393
+  },
+  {
+    "name": "fix-repo-body",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019274000005680136
+  },
+  {
+    "name": "fix-repo-body2",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025205999991158023
+  },
+  {
+    "name": "fix-residual-glue",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025997999982791953
+  },
+  {
+    "name": "fix-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022558999989996664
+  },
+  {
+    "name": "fix-tail-generic",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003387600001587998
+  },
+  {
+    "name": "fix-tail-glue",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015980000025592744
+  },
+  {
+    "name": "fix-tail-glue2",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004660300000978168
+  },
+  {
+    "name": "fix-tail-manual",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018904999960795976
+  },
+  {
+    "name": "fix-yaml-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002862400004232768
+  },
+  {
+    "name": "flowstudio-power-automate-debug",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001675699997576885
+  },
+  {
+    "name": "flowstudio-power-automate-governance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019500999987940304
+  },
+  {
+    "name": "flowstudio-power-automate-monitoring",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003034599998500198
+  },
+  {
+    "name": "flutterwave-transfers-api",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028883999984827824
+  },
+  {
+    "name": "foundry-agent-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016823999976622872
+  },
+  {
+    "name": "foundry-hosted-agent-copilotkit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036953000017092563
+  },
+  {
+    "name": "full-health-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003922900003090035
+  },
+  {
+    "name": "gen-specs-as-issues",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003177200000209268
+  },
+  {
+    "name": "generate-context-files",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004707599997345824
+  },
+  {
+    "name": "generate-custom-instructions-from-codebase",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035886000041500665
+  },
+  {
+    "name": "generate-session-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030518000057782046
+  },
+  {
+    "name": "generate-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026317000010749325
+  },
+  {
+    "name": "generate-vscode-audit-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029837000038241968
+  },
+  {
+    "name": "generate-vscode-configs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0010765000042738393
+  },
+  {
+    "name": "geofeed-tuner",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026580000048852526
+  },
+  {
+    "name": "gh-hermes-scripts-migration-manifest",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028970000057597645
+  },
+  {
+    "name": "gh-hooks-plugins-audit-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029045999981462955
+  },
+  {
+    "name": "gh-path-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003467199996521231
+  },
+  {
+    "name": "gh-prompt-dedupe-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002544700000726152
+  },
+  {
+    "name": "gh-prompt-frontmatter-normalization-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035053000028710812
+  },
+  {
+    "name": "gh-prompt-frontmatter-normalization-verification",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034094000002369285
+  },
+  {
+    "name": "gh-prompt-migration-manifest",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003001699995365925
+  },
+  {
+    "name": "github-codespaces-efficiency",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003699699998833239
+  },
+  {
+    "name": "github-copilot-starter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003925299999536946
+  },
+  {
+    "name": "github-issues",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0013036000018473715
+  },
+  {
+    "name": "github-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021103999970364384
+  },
+  {
+    "name": "github-release",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001858900002844166
+  },
+  {
+    "name": "gitmoji",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003615500005253125
+  },
+  {
+    "name": "go-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025524000011500902
+  },
+  {
+    "name": "gtm-ai-gtm",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003535700001521036
+  },
+  {
+    "name": "gtm-product-led-growth",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0045148999997763894
+  },
+  {
+    "name": "harness-engineering",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003514500000164844
+  },
+  {
+    "name": "health-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004144099999393802
+  },
+  {
+    "name": "hello",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026331000044592656
+  },
+  {
+    "name": "hello-world",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029867999983252957
+  },
+  {
+    "name": "hermes-deep-dive-guide",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031942999994498678
+  },
+  {
+    "name": "hermes-luma-memory-arch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003934300002583768
+  },
+  {
+    "name": "hermes-networkchuck-course",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037745000008726493
+  },
+  {
+    "name": "hermes-persistent-memory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032558999955654144
+  },
+  {
+    "name": "hermes-profile-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026199999992968515
+  },
+  {
+    "name": "hermes-quickstart",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002893700002459809
+  },
+  {
+    "name": "hermes-runtime-operations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002351000002818182
+  },
+  {
+    "name": "hook-health-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003456200000073295
+  },
+  {
+    "name": "hooks-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005685200005245861
+  },
+  {
+    "name": "hooks-pattern",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022298000039882027
+  },
+  {
+    "name": "how-paypal-works",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022627999933320098
+  },
+  {
+    "name": "incident-postmortem",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001585400001204107
+  },
+  {
+    "name": "instruction-quick-commands",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032120000032591633
+  },
+  {
+    "name": "inventory-agents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002293400000780821
+  },
+  {
+    "name": "inventory-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002270899996801745
+  },
+  {
+    "name": "issue-fields-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025854999985313043
+  },
+  {
+    "name": "java-add-graalvm-native-image-support",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035172999996575527
+  },
+  {
+    "name": "java-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004233200001181103
+  },
+  {
+    "name": "java-helidon",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0039777999991201796
+  },
+  {
+    "name": "java-junit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005181500004255213
+  },
+  {
+    "name": "java-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020155999955022708
+  },
+  {
+    "name": "java-refactoring-extract-method",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030756000051042065
+  },
+  {
+    "name": "java-refactoring-remove-parameter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037389999997685663
+  },
+  {
+    "name": "java-springboot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00286950000008801
+  },
+  {
+    "name": "javascript-typescript-jest",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0049413000015192665
+  },
+  {
+    "name": "javax-to-jakarta-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004806000004464295
+  },
+  {
+    "name": "joyride",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002140500000678003
+  },
+  {
+    "name": "kanban-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022543000013683923
+  },
+  {
+    "name": "kotlin-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003063999996811617
+  },
+  {
+    "name": "kotlin-springboot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002195400003984105
+  },
+  {
+    "name": "lcs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033358000000589527
+  },
+  {
+    "name": "list-cli-tools",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002514699997846037
+  },
+  {
+    "name": "litprog-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004187999998976011
+  },
+  {
+    "name": "make-repo-contribution",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037823000020580366
+  },
+  {
+    "name": "make-skill-template",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038482000018120743
+  },
+  {
+    "name": "markstream-install",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002216799999587238
+  },
+  {
+    "name": "memory-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019269999975222163
+  },
+  {
+    "name": "memory-precompact",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00344510000286391
+  },
+  {
+    "name": "memory-repair",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00342619999719318
+  },
+  {
+    "name": "mentoring-juniors",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020291000037104823
+  },
+  {
+    "name": "merge-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032594000003882684
+  },
+  {
+    "name": "merge-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003716700004588347
+  },
+  {
+    "name": "microsoft-agent-framework",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004160099997534417
+  },
+  {
+    "name": "microsoft-code-reference",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018573000052128918
+  },
+  {
+    "name": "microsoft-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014204000035533682
+  },
+  {
+    "name": "microsoft-skill-creator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027964999972027726
+  },
+  {
+    "name": "migrating-oracle-to-postgres-stored-procedures",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002298999999766238
+  },
+  {
+    "name": "minecraft-plugin-development",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002425099999527447
+  },
+  {
+    "name": "model-discovery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004862100002355874
+  },
+  {
+    "name": "multi-file-change-protocol",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002906900001107715
+  },
+  {
+    "name": "multi-file-crud-protocol",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034326999957556836
+  },
+  {
+    "name": "mvvm-toolkit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029811999993398786
+  },
+  {
+    "name": "mvvm-toolkit-di",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028058000025339425
+  },
+  {
+    "name": "mvvm-toolkit-messenger",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002769599996099714
+  },
+  {
+    "name": "mypy",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004209099999570753
+  },
+  {
+    "name": "namecheap",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029393000004347414
+  },
+  {
+    "name": "next-intl-add-language",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003307999999378808
+  },
+  {
+    "name": "no-git-delete",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035025999968638644
+  },
+  {
+    "name": "normalize-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037563000005320646
+  },
+  {
+    "name": "normalize-lf",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022140000000945292
+  },
+  {
+    "name": "normalize-plan-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033321000009891577
+  },
+  {
+    "name": "normalize-plans",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00240019999910146
+  },
+  {
+    "name": "normalize-prompt-actions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002138399999239482
+  },
+  {
+    "name": "omo-doctor",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025359999999636784
+  },
+  {
+    "name": "onboard-context-matic",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029871000006096438
+  },
+  {
+    "name": "openapi-to-application-code",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004549899997073226
+  },
+  {
+    "name": "optimize-simplicite-logs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00401620000047842
+  },
+  {
+    "name": "overview-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024174999998649582
+  },
+  {
+    "name": "package",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020507999943220057
+  },
+  {
+    "name": "package-lock",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003507900000840891
+  },
+  {
+    "name": "patch-all-fail-sections",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026629999993019737
+  },
+  {
+    "name": "patch-fail-structure",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002238900000520516
+  },
+  {
+    "name": "paypal-getting-started",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004145700004301034
+  },
+  {
+    "name": "paystack-dev-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016060000052675605
+  },
+  {
+    "name": "paystack-getting-started",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037434999976539984
+  },
+  {
+    "name": "pester-should-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003082299997913651
+  },
+  {
+    "name": "phase1-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015343999984906986
+  },
+  {
+    "name": "phase2-analysis",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022838000004412606
+  },
+  {
+    "name": "phase3-changelog",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002825999996275641
+  },
+  {
+    "name": "phase3-gate-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024443000002065673
+  },
+  {
+    "name": "phase4-reconstruct",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002115900002536364
+  },
+  {
+    "name": "phase4-reconstruct-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005198899998504203
+  },
+  {
+    "name": "phase4-verify",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004658099998778198
+  },
+  {
+    "name": "phase5-postapply",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029943000045022927
+  },
+  {
+    "name": "php-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002795400003378745
+  },
+  {
+    "name": "planning-oracle-to-postgres-migration-integration-testing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015049000066937879
+  },
+  {
+    "name": "plugin-health-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032282000029226765
+  },
+  {
+    "name": "postgresql-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035750000024563633
+  },
+  {
+    "name": "prime-factors",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004716200004622806
+  },
+  {
+    "name": "profile-refactor-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003249000001233071
+  },
+  {
+    "name": "project",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019410000022617169
+  },
+  {
+    "name": "project-consolidation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00460179999936372
+  },
+  {
+    "name": "project-workflow-analysis-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004574799997499213
+  },
+  {
+    "name": "prompt-audit-all",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024757999999565072
+  },
+  {
+    "name": "prompt-audit-all-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024043000012170523
+  },
+  {
+    "name": "prompt-batch-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020905999990645796
+  },
+  {
+    "name": "prompt-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004318600003898609
+  },
+  {
+    "name": "prompt-engineering",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017579999985173345
+  },
+  {
+    "name": "writing-prompt",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027017000029445626
+  },
+  {
+    "name": "prompt-engineering-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029264999975566752
+  },
+  {
+    "name": "prompt-fix-metadata",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003268000000389293
+  },
+  {
+    "name": "prompt-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002246199997898657
+  },
+  {
+    "name": "prompt-library-consolidation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019090999994659796
+  },
+  {
+    "name": "prompt-library-de-dup-and-backup-archive",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003935799999453593
+  },
+  {
+    "name": "prompt-optimizer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035047999990638345
+  },
+  {
+    "name": "prompt-repair-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002072099996439647
+  },
+  {
+    "name": "provider-executor-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003239700003177859
+  },
+  {
+    "name": "publish-to-pages",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029309000019566156
+  },
+  {
+    "name": "purge-dead-keys",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029052999962004833
+  },
+  {
+    "name": "pytest-coverage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004648599999200087
+  },
+  {
+    "name": "python-azure-iot-edge-modules",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004318400002375711
+  },
+  {
+    "name": "python-concurrency",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034852000026148744
+  },
+  {
+    "name": "python-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007656900001165923
+  },
+  {
+    "name": "python-projects-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003597399998398032
+  },
+  {
+    "name": "python-pypi-package-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025070999981835485
+  },
+  {
+    "name": "python-quality-mcp-server",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007052200002362952
+  },
+  {
+    "name": "qdrant-deployment-options",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029317000007722527
+  },
+  {
+    "name": "qdrant-model-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003282300000137184
+  },
+  {
+    "name": "debugging",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019439000025158748
+  },
+  {
+    "name": "setup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032858000049600378
+  },
+  {
+    "name": "qdrant-monitoring",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00465960000292398
+  },
+  {
+    "name": "quality-playbook",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007680299997446127
+  },
+  {
+    "name": "quarantine-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004247799995937385
+  },
+  {
+    "name": "react-audit-grep-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018546999999671243
+  },
+  {
+    "name": "react-container-presentation-component",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007656800000404473
+  },
+  {
+    "name": "react18-batching-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007500400002754759
+  },
+  {
+    "name": "react18-dep-compatibility",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001883500000985805
+  },
+  {
+    "name": "react18-enzyme-to-rtl",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.010104399996635038
+  },
+  {
+    "name": "react18-legacy-context",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006795000001147855
+  },
+  {
+    "name": "react18-lifecycle-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005705900002794806
+  },
+  {
+    "name": "react18-string-refs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006911799995577894
+  },
+  {
+    "name": "react19-concurrent-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006819100002758205
+  },
+  {
+    "name": "react19-source-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00527680000232067
+  },
+  {
+    "name": "react19-test-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002735099995334167
+  },
+  {
+    "name": "readme-blueprint-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004463099998247344
+  },
+  {
+    "name": "refactor-method-complexity-reduce",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004615200006810483
+  },
+  {
+    "name": "refactor-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022969999990891665
+  },
+  {
+    "name": "register-command",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003906900004949421
+  },
+  {
+    "name": "register-instruction-personalities",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036309999995864928
+  },
+  {
+    "name": "remediate-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002176599999074824
+  },
+  {
+    "name": "remove-flat-duplicates",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025224999990314245
+  },
+  {
+    "name": "repair-codex-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002081599996017758
+  },
+  {
+    "name": "repair-doubled-pipes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002712599998631049
+  },
+  {
+    "name": "repair-frontmatter-closes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00554299999930663
+  },
+  {
+    "name": "repair-yaml",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004897200000414159
+  },
+  {
+    "name": "repair-yaml-v2",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026400999995530583
+  },
+  {
+    "name": "repo-plan-spec",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021197000023676082
+  },
+  {
+    "name": "repo-planning-quick-commands",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004197200003545731
+  },
+  {
+    "name": "repo-standardizer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002162299999326933
+  },
+  {
+    "name": "repo-story-time",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002867600000172388
+  },
+  {
+    "name": "repository-operations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005500600003870204
+  },
+  {
+    "name": "reset-runtime",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0006598999971174635
+  },
+  {
+    "name": "restore-repo-tables",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014510999972117133
+  },
+  {
+    "name": "review-and-refactor",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004559000000881497
+  },
+  {
+    "name": "review-pending-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020373000006657094
+  },
+  {
+    "name": "reviewing-oracle-to-postgres-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0011974999943049625
+  },
+  {
+    "name": "rhino3d-scripts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029200000062701292
+  },
+  {
+    "name": "roundup-setup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004629000002751127
+  },
+  {
+    "name": "ruby-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002338199999940116
+  },
+  {
+    "name": "run-cron-safe",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004340399995271582
+  },
+  {
+    "name": "rust-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002699700002267491
+  },
+  {
+    "name": "sandbox-npm-install",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004462000004423317
+  },
+  {
+    "name": "scaffolding-oracle-to-postgres-migration-test-project",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032231000004685484
+  },
+  {
+    "name": "score-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017442999960621819
+  },
+  {
+    "name": "search-skills-plugins-subagents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002725900005316362
+  },
+  {
+    "name": "semantic-kernel",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036121000011917204
+  },
+  {
+    "name": "server-bootstrap",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002372799994191155
+  },
+  {
+    "name": "session-audit-227-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037368999983300455
+  },
+  {
+    "name": "setup-cto",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024718999993638135
+  },
+  {
+    "name": "setup-integrations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004951100003381725
+  },
+  {
+    "name": "ship-this-idea",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0049626999971223995
+  },
+  {
+    "name": "simplify",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038765999997849576
+  },
+  {
+    "name": "skill-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001857800001744181
+  },
+  {
+    "name": "skill-creator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031568999984301627
+  },
+  {
+    "name": "skill-management",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038260999936028384
+  },
+  {
+    "name": "skills-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0005077000023447908
+  },
+  {
+    "name": "skills-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012397000027704053
+  },
+  {
+    "name": "slang-shader-engineer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032079999946290627
+  },
+  {
+    "name": "split-glued-headings",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001447599999664817
+  },
+  {
+    "name": "sponsor-finder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0011111000058008358
+  },
+  {
+    "name": "spring-boot-testing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018357000008109026
+  },
+  {
+    "name": "sql-code-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019020999970962293
+  },
+  {
+    "name": "sql-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003012799999851268
+  },
+  {
+    "name": "sql-server-table-reconciliation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003848400003334973
+  },
+  {
+    "name": "ssma-console",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004338599996117409
+  },
+  {
+    "name": "structured-autonomy-generate",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004063200001837686
+  },
+  {
+    "name": "suggest-awesome-github-copilot-agents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0042967999979737215
+  },
+  {
+    "name": "suggest-awesome-github-copilot-instructions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034831000011763535
+  },
+  {
+    "name": "suggest-awesome-github-copilot-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018588000020827167
+  },
+  {
+    "name": "supermemory-integration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029310999962035567
+  },
+  {
+    "name": "sweep-corruption",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002872899996873457
+  },
+  {
+    "name": "swift-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00204459999804385
+  },
+  {
+    "name": "sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037661000023945235
+  },
+  {
+    "name": "sync-profile-configs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002872400000342168
+  },
+  {
+    "name": "sync-profile-memories",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029884000032325275
+  },
+  {
+    "name": "system-status-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002932299998064991
+  },
+  {
+    "name": "technology-stack-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004587099996570032
+  },
+  {
+    "name": "test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021968000000924803
+  },
+  {
+    "name": "test-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022284000006038696
+  },
+  {
+    "name": "tiny-stepping",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034846999988076277
+  },
+  {
+    "name": "tool-gateway-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00513900000078138
+  },
+  {
+    "name": "tooling-config-mcp-server",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023259000008692965
+  },
+  {
+    "name": "tooling-full-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026683999967644922
+  },
+  {
+    "name": "tooling-lint-mcp-server",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002270099997986108
+  },
+  {
+    "name": "tooling-quick-commands",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0013385999991442077
+  },
+  {
+    "name": "tools-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002791899998555891
+  },
+  {
+    "name": "trim-banking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0011497000014060177
+  },
+  {
+    "name": "trim-remaining",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002403099999355618
+  },
+  {
+    "name": "trim-research-reports",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003074999993259553
+  },
+  {
+    "name": "trim-research-reports-final",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002584400004707277
+  },
+  {
+    "name": "tsconfig",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030543000029865652
+  },
+  {
+    "name": "typescript-mcp-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005063600001449231
+  },
+  {
+    "name": "typespec-create-agent",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001488200003223028
+  },
+  {
+    "name": "uninstall",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038274999969871715
+  },
+  {
+    "name": "update-agents-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001222599996253848
+  },
+  {
+    "name": "update-avm-modules-in-bicep",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028822999956901185
+  },
+  {
+    "name": "update-specification",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001247799998964183
+  },
+  {
+    "name": "user-precompact",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003262399994127918
+  },
+  {
+    "name": "using-git-worktrees",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024638000031700358
+  },
+  {
+    "name": "validate-prompt-inventory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002710499997192528
+  },
+  {
+    "name": "validate-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002837699998053722
+  },
+  {
+    "name": "validate-services",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002843300004315097
+  },
+  {
+    "name": "validate-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00324209999962477
+  },
+  {
+    "name": "validate-vscode-configs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0006713000038871542
+  },
+  {
+    "name": "validate-vscode-json",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028550999995786697
+  },
+  {
+    "name": "validate-yaml",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002496200002497062
+  },
+  {
+    "name": "vault-key-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029713999974774197
+  },
+  {
+    "name": "vault-key-validate",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019926000022678636
+  },
+  {
+    "name": "venv-freeze-before-security-fix",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033874000000650994
+  },
+  {
+    "name": "vercel-optimize",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002365199994528666
+  },
+  {
+    "name": "vercel-react-best-practices",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012820999982068315
+  },
+  {
+    "name": "vercel-react-native-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015778000015416183
+  },
+  {
+    "name": "verify",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025450000030105002
+  },
+  {
+    "name": "verify-canonical",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004093199997441843
+  },
+  {
+    "name": "verify-frontmatter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003273900001659058
+  },
+  {
+    "name": "verify-frontmatter-cjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034815000035450794
+  },
+  {
+    "name": "verify-frontmatter-normalization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014598999987356365
+  },
+  {
+    "name": "verify-phase3",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030406000005314127
+  },
+  {
+    "name": "verify-prompt-library",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001295499998377636
+  },
+  {
+    "name": "verify-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025712999995448627
+  },
+  {
+    "name": "verify-templates-after-create",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018679000058909878
+  },
+  {
+    "name": "vision-fallback",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014312999992398545
+  },
+  {
+    "name": "vscode-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002386200001637917
+  },
+  {
+    "name": "vscode-ext-commands",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002009399999224115
+  },
+  {
+    "name": "vscode-ext-localization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034252999976160936
+  },
+  {
+    "name": "vscode-extension-playbook",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023288000011234544
+  },
+  {
+    "name": "vscode-workspace-configurator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024778000006335787
+  },
+  {
+    "name": "webhook",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005710400000680238
+  },
+  {
+    "name": "webmcpify",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038215000022319146
+  },
+  {
+    "name": "win-ocr",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002386200001637917
+  },
+  {
+    "name": "workshop-create",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017216000051121227
+  },
+  {
+    "name": "write-coding-standards-from-file",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003128899996227119
+  },
+  {
+    "name": "writing-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004424500002642162
+  },
+  {
+    "name": "x-twitter-scraper",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029799000039929524
+  },
+  {
+    "name": "appinsights-instrumentation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00300950000382727
+  },
+  {
+    "name": "arch-linux-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028887000007671304
+  },
+  {
+    "name": "arize-dataset",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017033999974955805
+  },
+  {
+    "name": "arize-experiment",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004390699999930803
+  },
+  {
+    "name": "arize-link",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025430000023334287
+  },
+  {
+    "name": "arize-prompt-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005744599999161437
+  },
+  {
+    "name": "arize-trace",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005012200002965983
+  },
+  {
+    "name": "asdf",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004985899999155663
+  },
+  {
+    "name": "aspire",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024623999997857027
+  },
+  {
+    "name": "aws-cdk-python-setup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004156800001510419
+  },
+  {
+    "name": "aws-cloudwatch-investigation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002816799998981878
+  },
+  {
+    "name": "aws-cost-optimize",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0048937999963527545
+  },
+  {
+    "name": "aws-resource-health-diagnose",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002727200000663288
+  },
+  {
+    "name": "aws-resource-query",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030034000010346062
+  },
+  {
+    "name": "aws-well-architected-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003635999994003214
+  },
+  {
+    "name": "azure-architecture-autopilot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0049006999979610555
+  },
+  {
+    "name": "azure-container-registry-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0042325000031269155
+  },
+  {
+    "name": "azure-deployment-preflight",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003976400003011804
+  },
+  {
+    "name": "azure-developer-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005662399998982437
+  },
+  {
+    "name": "azure-devops-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017178000052808784
+  },
+  {
+    "name": "azure-pricing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004834099992876872
+  },
+  {
+    "name": "azure-resource-health-diagnose",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030981000018073246
+  },
+  {
+    "name": "azure-resource-visualizer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0010586999997030944
+  },
+  {
+    "name": "azure-role-selector",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002348000001802575
+  },
+  {
+    "name": "azure-smart-city-iot-solution-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034739999973680824
+  },
+  {
+    "name": "azure-static-web-apps",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032292000032612123
+  },
+  {
+    "name": "azure-well-architected-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004661600003601052
+  },
+  {
+    "name": "batch-files",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002589899995655287
+  },
+  {
+    "name": "bug-receipt",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001862799996160902
+  },
+  {
+    "name": "centos-linux-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004542299997410737
+  },
+  {
+    "name": "ci-cd-best-practices",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032998999959090725
+  },
+  {
+    "name": "ci-cd-pipeline-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035293999972054735
+  },
+  {
+    "name": "cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00534940000216011
+  },
+  {
+    "name": "cli-mastery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003509399997710716
+  },
+  {
+    "name": "code-rabbit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004442500001459848
+  },
+  {
+    "name": "codeql",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024990999954752624
+  },
+  {
+    "name": "coderabbit-cli-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024077999987639487
+  },
+  {
+    "name": "create-github-action-workflow-specification",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00321510000503622
+  },
+  {
+    "name": "creating-oracle-to-postgres-migration-integration-tests",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002100999998219777
+  },
+  {
+    "name": "cross-platform-development",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005237899997155182
+  },
+  {
+    "name": "customization-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037058999951113947
+  },
+  {
+    "name": "d365-solution-blueprint",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0040936000004876405
+  },
+  {
+    "name": "datadog",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036532000012812205
+  },
+  {
+    "name": "debian-linux-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032234000027528964
+  },
+  {
+    "name": "dependabot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002774100001261104
+  },
+  {
+    "name": "dependency-security-remediation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003071500002988614
+  },
+  {
+    "name": "diagnose",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014889000012772158
+  },
+  {
+    "name": "disk-space-cleanup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018756999998004176
+  },
+  {
+    "name": "docker-cleanup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002708599997276906
+  },
+  {
+    "name": "docker-management",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034700999967753887
+  },
+  {
+    "name": "docs-sync-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003497699995932635
+  },
+  {
+    "name": "entra-agent-user",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004252599996107165
+  },
+  {
+    "name": "fabric-lakehouse",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0041562000042176805
+  },
+  {
+    "name": "fedora-linux-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001770599999872502
+  },
+  {
+    "name": "git-history-preserving-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030880000049364753
+  },
+  {
+    "name": "git-patch-management",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025526999961584806
+  },
+  {
+    "name": "github-actions-efficiency",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003480799998214934
+  },
+  {
+    "name": "github-actions-hardening",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00458220000291476
+  },
+  {
+    "name": "github-actions-runtime-upgrade-conventions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005678099994838703
+  },
+  {
+    "name": "glab",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012408000038703904
+  },
+  {
+    "name": "gtm-0-to-1-launch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038711999950464815
+  },
+  {
+    "name": "gtm-enterprise-onboarding",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003802999999606982
+  },
+  {
+    "name": "hermes-comprehensive-maintenance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.02331209999829298
+  },
+  {
+    "name": "hermes-config-merge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002809600002365187
+  },
+  {
+    "name": "hermes-diagnostic-repair",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00399440000182949
+  },
+  {
+    "name": "hermes-doctor-pipeline",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004655899996578228
+  },
+  {
+    "name": "hermes-health-sweep",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004630399998859502
+  },
+  {
+    "name": "hermes-hook-cleanup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002572500001406297
+  },
+  {
+    "name": "hermes-hooks",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007932699998491444
+  },
+  {
+    "name": "hermes-memory-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004201900002954062
+  },
+  {
+    "name": "hermes-personality-soul",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00320099999953527
+  },
+  {
+    "name": "hermes-profiles",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015622999999322928
+  },
+  {
+    "name": "hermes-s6-container-supervision",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002686599997105077
+  },
+  {
+    "name": "hermes-script-audit-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003751099997316487
+  },
+  {
+    "name": "hermes-script-fix-prompt-library",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020487000001594424
+  },
+  {
+    "name": "hermes-script-vault-key-validate",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002409699998679571
+  },
+  {
+    "name": "hermes-script-verify-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0039029999970807694
+  },
+  {
+    "name": "hermes-setup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004763999997521751
+  },
+  {
+    "name": "hermes-skills",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0053450999985216185
+  },
+  {
+    "name": "hermes-system-maintenance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005973600003926549
+  },
+  {
+    "name": "hermes-themes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031493999995291233
+  },
+  {
+    "name": "impediment-prioritization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00460630000452511
+  },
+  {
+    "name": "import-infrastructure-as-code",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018543000041972846
+  },
+  {
+    "name": "integrate-context-matic",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00630749999982072
+  },
+  {
+    "name": "jira",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002067900000838563
+  },
+  {
+    "name": "kanban-orchestrator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0072393999944324605
+  },
+  {
+    "name": "kanban-worker",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005314399997587316
+  },
+  {
+    "name": "latchshot-page-capture",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00764319999871077
+  },
+  {
+    "name": "log-analysis-and-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003074799999012612
+  },
+  {
+    "name": "lsp-setup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019020000036107376
+  },
+  {
+    "name": "mcp-server-health",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032766000003903173
+  },
+  {
+    "name": "migrating-oracle-to-postgres-data-access-code",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.010929500000202097
+  },
+  {
+    "name": "mindstudio",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.008991899994725827
+  },
+  {
+    "name": "msgraph-sdk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.010644499998306856
+  },
+  {
+    "name": "msstore-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0064138000016100705
+  },
+  {
+    "name": "msys2-management",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0070613999996567145
+  },
+  {
+    "name": "multi-stage-dockerfile",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003278200005297549
+  },
+  {
+    "name": "noob-mode",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038204000011319295
+  },
+  {
+    "name": "ollama-wire",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004647599998861551
+  },
+  {
+    "name": "pester-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004657900004531257
+  },
+  {
+    "name": "phoenix-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027865000010933727
+  },
+  {
+    "name": "plugins-hooks-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006158899996080436
+  },
+  {
+    "name": "pnpm-package-manager",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037878000002820045
+  },
+  {
+    "name": "power-apps-code-app-scaffold",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0055728999941493385
+  },
+  {
+    "name": "power-bi-performance-troubleshooting",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002209199999924749
+  },
+  {
+    "name": "power-platform-mcp-connector-suite",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0047993000043788925
+  },
+  {
+    "name": "powerbi-modeling",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025686000008136034
+  },
+  {
+    "name": "profile-directive-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.008892400001059286
+  },
+  {
+    "name": "profile-maintenance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0060940000039408915
+  },
+  {
+    "name": "prompt-batch-fixer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00570710000465624
+  },
+  {
+    "name": "provider-model-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004652499999792781
+  },
+  {
+    "name": "provider-reliability-diagnostics",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003558399999747053
+  },
+  {
+    "name": "python-package-manager",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006100800004787743
+  },
+  {
+    "name": "qdrant-clients-sdk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037754999939352274
+  },
+  {
+    "name": "diagnosis",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003910400002496317
+  },
+  {
+    "name": "search-strategies",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016407000002800487
+  },
+  {
+    "name": "qdrant-search-quality",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006423300001188181
+  },
+  {
+    "name": "rate-limit-bypass",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004787899997609202
+  },
+  {
+    "name": "rbac-audit-logging",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003085899996221997
+  },
+  {
+    "name": "remember-interactive-programming",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030477000036626123
+  },
+  {
+    "name": "repo-init",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004680300000472926
+  },
+  {
+    "name": "roslyn-analyzers",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031573999949614517
+  },
+  {
+    "name": "salesforce-apex-quality",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005997199994453695
+  },
+  {
+    "name": "sdlc-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003518800003803335
+  },
+  {
+    "name": "secret-scanning",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00393630000326084
+  },
+  {
+    "name": "server-side-conversion-tracking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004107399996428285
+  },
+  {
+    "name": "service-integrations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012475999974412844
+  },
+  {
+    "name": "session-audit-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006258699999307282
+  },
+  {
+    "name": "snowflake-semanticview",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027742000020225532
+  },
+  {
+    "name": "soul-enhancer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.008512799999152776
+  },
+  {
+    "name": "system-commandline-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003598800001782365
+  },
+  {
+    "name": "tailscale",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006507399994006846
+  },
+  {
+    "name": "terraform-azurerm-set-diff-analyzer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036187000005156733
+  },
+  {
+    "name": "test-providers-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0057737999959499575
+  },
+  {
+    "name": "tmux-terminal-multiplexer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031091999990167096
+  },
+  {
+    "name": "tooling-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015981000033207238
+  },
+  {
+    "name": "tooling-implementation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036609000017051585
+  },
+  {
+    "name": "typespec-api-operations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004910399999062065
+  },
+  {
+    "name": "typespec-create-api-plugin",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002708899999561254
+  },
+  {
+    "name": "ui-screenshots",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003145599999697879
+  },
+  {
+    "name": "uv-package-manager",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004163400000834372
+  },
+  {
+    "name": "validate-memories",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004825600000913255
+  },
+  {
+    "name": "vardoger-analyze",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003949399993871339
+  },
+  {
+    "name": "vercel-cli-with-tokens",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025606999988667667
+  },
+  {
+    "name": "vscode-config-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035466999979689717
+  },
+  {
+    "name": "webhook-subscriptions",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00425139999424573
+  },
+  {
+    "name": "winmd-api-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004075800003192853
+  },
+  {
+    "name": "winui3-migration-guide",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028572000010171905
+  },
+  {
+    "name": "work-on-ticket",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00506630000018049
+  },
+  {
+    "name": "workiq-copilot",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004081199993379414
+  },
+  {
+    "name": "workspace-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003527200002281461
+  },
+  {
+    "name": "yaml-workflow-validation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003980599998612888
+  },
+  {
+    "name": "agentmail",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030258000042522326
+  },
+  {
+    "name": "himalaya",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017622999948798679
+  },
+  {
+    "name": "3-statement-model",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004585599999700207
+  },
+  {
+    "name": "boost-prompts",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003744300003745593
+  },
+  {
+    "name": "comps-analysis",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005315299997164402
+  },
+  {
+    "name": "dcf-model",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022918000031495467
+  },
+  {
+    "name": "excel-author",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004764299999806099
+  },
+  {
+    "name": "lbo-model",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028521999993245117
+  },
+  {
+    "name": "merger-model",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005902700002479833
+  },
+  {
+    "name": "pptx-author",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003797699995629955
+  },
+  {
+    "name": "minecraft-modpack-server",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034773000006680377
+  },
+  {
+    "name": "pokemon-player",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002031900003203191
+  },
+  {
+    "name": "neuroskill-bci",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0043917000002693385
+  },
+  {
+    "name": "joystick-controller",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032267000060528517
+  },
+  {
+    "name": "ad-creative",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004959499994583894
+  },
+  {
+    "name": "ast-grep",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027126999993924983
+  },
+  {
+    "name": "atlassian",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037034999986644834
+  },
+  {
+    "name": "fastmcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004489799997827504
+  },
+  {
+    "name": "fetch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036364999978104606
+  },
+  {
+    "name": "filesystem",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002547299998695962
+  },
+  {
+    "name": "filesystem-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0049450000005890615
+  },
+  {
+    "name": "flowstudio-power-automate-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004161600001680199
+  },
+  {
+    "name": "hermes-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032796000014059246
+  },
+  {
+    "name": "honcho",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022738999978173524
+  },
+  {
+    "name": "honcho-legacy",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003910400002496317
+  },
+  {
+    "name": "mcp-ast-grep",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001705399998172652
+  },
+  {
+    "name": "mcp-atlassian",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0011045999999623746
+  },
+  {
+    "name": "mcp-audit-orchestrator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004335400000854861
+  },
+  {
+    "name": "mcp-builder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003485100001853425
+  },
+  {
+    "name": "mcp-bundle",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002426999999443069
+  },
+  {
+    "name": "mcp-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003137200001219753
+  },
+  {
+    "name": "mcp-code-sandbox",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022748000046703964
+  },
+  {
+    "name": "mcp-coderabbit-cli-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003238799996324815
+  },
+  {
+    "name": "mcp-codex",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002330499999516178
+  },
+  {
+    "name": "mcp-coding-agent-setup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003139000000373926
+  },
+  {
+    "name": "mcp-context7",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002143999998224899
+  },
+  {
+    "name": "mcp-copilot-studio-server-generator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012936999992234632
+  },
+  {
+    "name": "mcp-create-adaptive-cards",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002489300000888761
+  },
+  {
+    "name": "mcp-create-declarative-agent",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0041584999999031425
+  },
+  {
+    "name": "mcp-deploy-manage-agents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003166599999531172
+  },
+  {
+    "name": "mcp-docker",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002168099999835249
+  },
+  {
+    "name": "mcp-fetch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002066700006253086
+  },
+  {
+    "name": "mcp-filesystem",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004444099999091122
+  },
+  {
+    "name": "mcp-github",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027866999953403138
+  },
+  {
+    "name": "mcp-honcho",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032381999990320764
+  },
+  {
+    "name": "mcp-implementation-security-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00481489999947371
+  },
+  {
+    "name": "mcp-mcp-docker",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004868000003625639
+  },
+  {
+    "name": "mcp-memory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022563000020454638
+  },
+  {
+    "name": "mcp-mindstudio",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027839000031235628
+  },
+  {
+    "name": "mcp-neon",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001626199999009259
+  },
+  {
+    "name": "mcp-parallel-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005279600001813378
+  },
+  {
+    "name": "mcp-parallel-task",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006509400001959875
+  },
+  {
+    "name": "mcp-playwright",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035633000006782822
+  },
+  {
+    "name": "mcp-python-quality",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005113800005347002
+  },
+  {
+    "name": "mcp-release-qa",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034005000052275136
+  },
+  {
+    "name": "mcp-security-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035505999985616654
+  },
+  {
+    "name": "mcp-sentry",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004859900000155903
+  },
+  {
+    "name": "mcp-sequential-thinking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004368599998997524
+  },
+  {
+    "name": "mcp-smithery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003807000000961125
+  },
+  {
+    "name": "mcp-tavily",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005102900002384558
+  },
+  {
+    "name": "mcp-tooling-config",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005484799999976531
+  },
+  {
+    "name": "mcp-tooling-lint",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003387800003110897
+  },
+  {
+    "name": "mcp-twilio-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026103999989572912
+  },
+  {
+    "name": "mcp-vercel",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00469409999641357
+  },
+  {
+    "name": "mcporter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029064999980619177
+  },
+  {
+    "name": "memory",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002449399995384738
+  },
+  {
+    "name": "native-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002862599998479709
+  },
+  {
+    "name": "neon",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001975999999558553
+  },
+  {
+    "name": "parallel-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002678800003195647
+  },
+  {
+    "name": "parallel-task",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035311000028741546
+  },
+  {
+    "name": "sentry",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036837000006926246
+  },
+  {
+    "name": "sequential-thinking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00234719999571098
+  },
+  {
+    "name": "smithery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036877000020467676
+  },
+  {
+    "name": "smithery-ai-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027816000001621433
+  },
+  {
+    "name": "tavily",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005262199993012473
+  },
+  {
+    "name": "telegram",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029901999951107427
+  },
+  {
+    "name": "twilio-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001683700000285171
+  },
+  {
+    "name": "vercel",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003777200006879866
+  },
+  {
+    "name": "gif-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0040646999987075105
+  },
+  {
+    "name": "slack-gif-creator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015007000038167462
+  },
+  {
+    "name": "songsee",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034777999971993268
+  },
+  {
+    "name": "spotify",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003362799994647503
+  },
+  {
+    "name": "transloadit-media-processing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004003900001407601
+  },
+  {
+    "name": "youtube-content",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012932999961776659
+  },
+  {
+    "name": "youtube-full",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004336800004239194
+  },
+  {
+    "name": "openclaw-migration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0014258000010158867
+  },
+  {
+    "name": "accelerate",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004676000004110392
+  },
+  {
+    "name": "chroma",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.010564600001089275
+  },
+  {
+    "name": "clip",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006659200000285637
+  },
+  {
+    "name": "evaluating-llms-harness",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004177399998297915
+  },
+  {
+    "name": "weights-and-biases",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.008578299995861016
+  },
+  {
+    "name": "faiss",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002663499995833263
+  },
+  {
+    "name": "flash-attention",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002824499999405816
+  },
+  {
+    "name": "guidance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005546200001845136
+  },
+  {
+    "name": "huggingface-hub",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0040929999959189445
+  },
+  {
+    "name": "huggingface-tokenizers",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032979999959934503
+  },
+  {
+    "name": "llama-cpp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031362000008812174
+  },
+  {
+    "name": "outlines",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005826499997056089
+  },
+  {
+    "name": "serving-llms-vllm",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036914000011165626
+  },
+  {
+    "name": "instructor",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006421099998988211
+  },
+  {
+    "name": "lambda-labs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004934899996442255
+  },
+  {
+    "name": "llava",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002423799996904563
+  },
+  {
+    "name": "llm-provider-benchmarking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00577530000009574
+  },
+  {
+    "name": "ml-models",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00936369999544695
+  },
+  {
+    "name": "modal",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.012613999999302905
+  },
+  {
+    "name": "audiocraft",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.010962100001052022
+  },
+  {
+    "name": "segment-anything",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005836600001202896
+  },
+  {
+    "name": "nemo-curator",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006422699996619485
+  },
+  {
+    "name": "obliteratus",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004753600005642511
+  },
+  {
+    "name": "peft",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.009033199996338226
+  },
+  {
+    "name": "pinecone",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0046432000017375685
+  },
+  {
+    "name": "pinecone-rag",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005112999999255408
+  },
+  {
+    "name": "pytorch-fsdp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006397000004653819
+  },
+  {
+    "name": "pytorch-lightning",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032480000008945353
+  },
+  {
+    "name": "qdrant",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.009270100003050175
+  },
+  {
+    "name": "indexing-performance-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007290300003660377
+  },
+  {
+    "name": "memory-usage-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006576700005098246
+  },
+  {
+    "name": "search-speed-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005486500005645212
+  },
+  {
+    "name": "qdrant-performance-optimization",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007098399997630622
+  },
+  {
+    "name": "dspy",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.011628499996731989
+  },
+  {
+    "name": "saelens",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.008581499998399522
+  },
+  {
+    "name": "simpo",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004695799994806293
+  },
+  {
+    "name": "slime",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006477000002632849
+  },
+  {
+    "name": "stable-diffusion",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003959099994972348
+  },
+  {
+    "name": "tensorrt-llm",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024369000020669773
+  },
+  {
+    "name": "torchtitan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005663699994329363
+  },
+  {
+    "name": "trl-fine-tuning",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.008954199998697732
+  },
+  {
+    "name": "upstash-redis",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003825300002063159
+  },
+  {
+    "name": "whisper",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004672300005040597
+  },
+  {
+    "name": "note-taking-apps",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003326099998957943
+  },
+  {
+    "name": "auto-issue-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004408300002978649
+  },
+  {
+    "name": "await-merge-approval",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006463700003223494
+  },
+  {
+    "name": "choose-engine",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004339899998740293
+  },
+  {
+    "name": "clarify-requirements",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006629999996221159
+  },
+  {
+    "name": "connect-supabase",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033306999976048246
+  },
+  {
+    "name": "create-github-pr",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.008379699997021817
+  },
+  {
+    "name": "create-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00453410000045551
+  },
+  {
+    "name": "creative-production",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029305999996722676
+  },
+  {
+    "name": "cto-status-report",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004767300000821706
+  },
+  {
+    "name": "deploy-to-vercel",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0069571000058203936
+  },
+  {
+    "name": "design-handoff",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029572000057669356
+  },
+  {
+    "name": "failure-recovery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007062200005748309
+  },
+  {
+    "name": "generate-with-seedance",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005997799999022391
+  },
+  {
+    "name": "implement-with-claude-code",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035480999940773472
+  },
+  {
+    "name": "implement-with-codex",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005197799997404218
+  },
+  {
+    "name": "kanban-task",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003137200001219753
+  },
+  {
+    "name": "manage-github-issues",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00176830000418704
+  },
+  {
+    "name": "observe-logs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00485849999677157
+  },
+  {
+    "name": "onboarding",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002751799998804927
+  },
+  {
+    "name": "post-deploy-followup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026320999968447722
+  },
+  {
+    "name": "product-brief",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004738900002848823
+  },
+  {
+    "name": "product-marketing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003726700000697747
+  },
+  {
+    "name": "profile-diff-sync",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004954299998644274
+  },
+  {
+    "name": "project-status",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0039413000049535185
+  },
+  {
+    "name": "project-switch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004373800002213102
+  },
+  {
+    "name": "publish-with-buffer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002729899999394547
+  },
+  {
+    "name": "review-github-pr",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003302999997686129
+  },
+  {
+    "name": "rollback-deploy-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025120999998762272
+  },
+  {
+    "name": "run-all-goals-consolidation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0068106999970041215
+  },
+  {
+    "name": "security-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0022031999978935346
+  },
+  {
+    "name": "send-notification",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005220400002144743
+  },
+  {
+    "name": "setup-monitoring",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035785000000032596
+  },
+  {
+    "name": "mpp-agent",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023079000020516105
+  },
+  {
+    "name": "paypal-how-it-works",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00371879999875091
+  },
+  {
+    "name": "stripe-link-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018694000027608126
+  },
+  {
+    "name": "stripe-projects",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023840000067139044
+  },
+  {
+    "name": "audit-plans",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006456200004322454
+  },
+  {
+    "name": "brainstorming",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029750999965472147
+  },
+  {
+    "name": "comprehensive-implementation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006140199999208562
+  },
+  {
+    "name": "conventional-branch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018902000010712072
+  },
+  {
+    "name": "create-architectural-decision-record",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025132000009762123
+  },
+  {
+    "name": "create-specification",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028708000027108938
+  },
+  {
+    "name": "devops-rollout-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00693459999456536
+  },
+  {
+    "name": "from-the-other-side-wiggins",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005705399998987559
+  },
+  {
+    "name": "implementation-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002802200004225597
+  },
+  {
+    "name": "notion-spec-to-implementation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005972099999780767
+  },
+  {
+    "name": "plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002900500003306661
+  },
+  {
+    "name": "plans-and-specs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030215000006137416
+  },
+  {
+    "name": "prompt-planning-orchestration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003524300002027303
+  },
+  {
+    "name": "repo-planning",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002697199997783173
+  },
+  {
+    "name": "steno-mode",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003915699999197386
+  },
+  {
+    "name": "tugboat",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012333999984548427
+  },
+  {
+    "name": "update-markdown-file-index",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006291500001680106
+  },
+  {
+    "name": "writing-plan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004838200002268422
+  },
+  {
+    "name": "prd",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0019361999948159792
+  },
+  {
+    "name": "airtable",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0040669999943929724
+  },
+  {
+    "name": "apple",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029059000007691793
+  },
+  {
+    "name": "bench-read",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002336300000024494
+  },
+  {
+    "name": "box",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017254999984288588
+  },
+  {
+    "name": "brag-sheet",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035963000045740046
+  },
+  {
+    "name": "canvas",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024182999986805953
+  },
+  {
+    "name": "doc-coauthoring",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003605799996876158
+  },
+  {
+    "name": "documentation-writer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003181100000801962
+  },
+  {
+    "name": "docx",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002803499999572523
+  },
+  {
+    "name": "exam-ready",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004449899999599438
+  },
+  {
+    "name": "file-organizer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003194099997926969
+  },
+  {
+    "name": "finnish-humanizer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004316700003982987
+  },
+  {
+    "name": "from-the-other-side-quinn",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003909300001396332
+  },
+  {
+    "name": "google-workspace",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029540999967139214
+  },
+  {
+    "name": "gtm-enterprise-account-planning",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003411400000914
+  },
+  {
+    "name": "gtm-partnership-architecture",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001934599997184705
+  },
+  {
+    "name": "here-now",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035425000023678876
+  },
+  {
+    "name": "hermes-desktop-plugins",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002331299998331815
+  },
+  {
+    "name": "internal-comms",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004330099996877834
+  },
+  {
+    "name": "linear",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016227000014623627
+  },
+  {
+    "name": "maps",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0041229999987990595
+  },
+  {
+    "name": "markdown-to-html",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005888799998501781
+  },
+  {
+    "name": "meeting-insights-analyzer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003095499996561557
+  },
+  {
+    "name": "meeting-minutes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031325000018114224
+  },
+  {
+    "name": "memento-flashcards",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012980000028619543
+  },
+  {
+    "name": "memory-merger",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020139999978709966
+  },
+  {
+    "name": "mkdocs-translations",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020790000053239055
+  },
+  {
+    "name": "nano-pdf",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002317799997399561
+  },
+  {
+    "name": "notion",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005622900003800169
+  },
+  {
+    "name": "ocr-and-documents",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015742999967187643
+  },
+  {
+    "name": "oo-component-documentation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026541999977780506
+  },
+  {
+    "name": "pdf",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030417000016313978
+  },
+  {
+    "name": "pdftk-server",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003945299999031704
+  },
+  {
+    "name": "petdex",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005217199999606237
+  },
+  {
+    "name": "power-platform-architect",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0024935999972512946
+  },
+  {
+    "name": "powerpoint",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003913200001989026
+  },
+  {
+    "name": "pptx",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003534100003889762
+  },
+  {
+    "name": "product-price-monitor",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004363200001535006
+  },
+  {
+    "name": "prompt-management",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002326300003915094
+  },
+  {
+    "name": "remember",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030399999959627166
+  },
+  {
+    "name": "session-librarian",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004115199997613672
+  },
+  {
+    "name": "shop-app",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005605500002275221
+  },
+  {
+    "name": "shopify",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004475299996556714
+  },
+  {
+    "name": "shopify-review-triage",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003078999994613696
+  },
+  {
+    "name": "siyuan",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0032432000007247552
+  },
+  {
+    "name": "task-management",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004593999998178333
+  },
+  {
+    "name": "teams-meeting-pipeline",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035760999962803908
+  },
+  {
+    "name": "telephony",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031941999986884184
+  },
+  {
+    "name": "tui-widgets",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0039770000003045425
+  },
+  {
+    "name": "user-communication-preferences",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012549000020953827
+  },
+  {
+    "name": "vercel-composition-patterns",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030696999965584837
+  },
+  {
+    "name": "weekly-review-planning",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027516999980434775
+  },
+  {
+    "name": "xlsx",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028011000031256117
+  },
+  {
+    "name": "yuanbao",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027769000007538125
+  },
+  {
+    "name": "create-missing-memories",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0042938999977195635
+  },
+  {
+    "name": "create-missing-souls",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002907699999923352
+  },
+  {
+    "name": "setup-my-iq",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021350999959395267
+  },
+  {
+    "name": "audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029561999981524423
+  },
+  {
+    "name": "audit-integrity",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004152699999394827
+  },
+  {
+    "name": "audit-judges-and-apply-rubric-fixes",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020035000052303076
+  },
+  {
+    "name": "audit-skills-judge-fix",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005975200001557823
+  },
+  {
+    "name": "batch-skills-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0052824999947915785
+  },
+  {
+    "name": "batch-skills-remediation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027009999976144172
+  },
+  {
+    "name": "boilerplate-stripper",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005045999998401385
+  },
+  {
+    "name": "check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021247999975457788
+  },
+  {
+    "name": "eval-driven-dev",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003297200004453771
+  },
+  {
+    "name": "hooks-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004742099998111371
+  },
+  {
+    "name": "landing-page-conversion-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016293000007863156
+  },
+  {
+    "name": "plans-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0015175000007729977
+  },
+  {
+    "name": "playwright",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016718000042601489
+  },
+  {
+    "name": "playwright-automation-fill-in-form",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002957199998490978
+  },
+  {
+    "name": "playwright-explore-website",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003791600000113249
+  },
+  {
+    "name": "playwright-generate-e2e-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034126000027754344
+  },
+  {
+    "name": "playwright-generate-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028072000059182756
+  },
+  {
+    "name": "playwright-mcp",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003085500000452157
+  },
+  {
+    "name": "plugins-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033798000004026107
+  },
+  {
+    "name": "polyglot-test-agent",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005204299995966721
+  },
+  {
+    "name": "postgresql-code-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029037999993306585
+  },
+  {
+    "name": "prompts-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002058400001260452
+  },
+  {
+    "name": "qa-judge-bugfixes-and-augmentation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033167000001412816
+  },
+  {
+    "name": "ruff-recursive-fix",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027526000048965216
+  },
+  {
+    "name": "scoutqa-test",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030497999978251755
+  },
+  {
+    "name": "scripts-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021014000012655742
+  },
+  {
+    "name": "session-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001756600002408959
+  },
+  {
+    "name": "skill-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003516600001603365
+  },
+  {
+    "name": "skill-judge-scoring",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002587900002254173
+  },
+  {
+    "name": "skill-library-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007758899999316782
+  },
+  {
+    "name": "skills-tools-preflight-check",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037755999946966767
+  },
+  {
+    "name": "specs-judge",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00327879999531433
+  },
+  {
+    "name": "test-gap-audit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038254000028246082
+  },
+  {
+    "name": "test-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0026151999991270714
+  },
+  {
+    "name": "verification-before-completion",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004836500003875699
+  },
+  {
+    "name": "verify-agent-action",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029510000022128224
+  },
+  {
+    "name": "web-design-reviewer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003972300000896212
+  },
+  {
+    "name": "webapp-testing",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033554000037838705
+  },
+  {
+    "name": "writing-guidelines",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001030300001730211
+  },
+  {
+    "name": "api-tutorial-catalog",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023197999980766326
+  },
+  {
+    "name": "discover-mcp-capabilities",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006508399994345382
+  },
+  {
+    "name": "mcp-server-catalog",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002379799996560905
+  },
+  {
+    "name": "mini-context-graph",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003620199997385498
+  },
+  {
+    "name": "project-architecture-index",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003630799998063594
+  },
+  {
+    "name": "az-cost-optimize",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007775600002787542
+  },
+  {
+    "name": "bioinformatics",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003402900001674425
+  },
+  {
+    "name": "commit-message-storyteller",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017888000002130866
+  },
+  {
+    "name": "convert-excel-to-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004619699997419957
+  },
+  {
+    "name": "convert-word-to-md",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031702999986009672
+  },
+  {
+    "name": "create-technical-spike",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002917399993748404
+  },
+  {
+    "name": "darwinian-evolver",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034632000024430454
+  },
+  {
+    "name": "domain-intel",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006741099998180289
+  },
+  {
+    "name": "drug-discovery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003005699996720068
+  },
+  {
+    "name": "duckduckgo-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0038000000058673322
+  },
+  {
+    "name": "email-drafter",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025468999956501648
+  },
+  {
+    "name": "from-the-other-side-vega",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028645999991567805
+  },
+  {
+    "name": "gitnexus-explorer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002918799997132737
+  },
+  {
+    "name": "llm-wiki",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003222999999707099
+  },
+  {
+    "name": "osint-investigation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0071116999970399775
+  },
+  {
+    "name": "parallel-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036896999954478815
+  },
+  {
+    "name": "parallel-cli-web-research",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005041100004746113
+  },
+  {
+    "name": "performance-review-writer",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037693000049330294
+  },
+  {
+    "name": "polymarket",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003438899999309797
+  },
+  {
+    "name": "minimize-latency",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006260099995415658
+  },
+  {
+    "name": "horizontal-scaling",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028542000000015832
+  },
+  {
+    "name": "scaling-data-volume",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0042527999976300634
+  },
+  {
+    "name": "sliding-time-window",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025639000014052726
+  },
+  {
+    "name": "tenant-scaling",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005767800001194701
+  },
+  {
+    "name": "vertical-scaling",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004194000001007225
+  },
+  {
+    "name": "scaling-qps",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017128000035881996
+  },
+  {
+    "name": "scaling-query-volume",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020281000033719465
+  },
+  {
+    "name": "qdrant-scaling",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025784000026760623
+  },
+  {
+    "name": "qdrant-version-upgrade",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005077900001197122
+  },
+  {
+    "name": "qmd",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029782999990857206
+  },
+  {
+    "name": "repo-research-pipeline",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030631000045104884
+  },
+  {
+    "name": "research-actionable-kit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037100999979884364
+  },
+  {
+    "name": "research-binance-api-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005606800004898105
+  },
+  {
+    "name": "research-busha-api-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002733999994234182
+  },
+  {
+    "name": "research-cryptocurrency-wallets-api-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003922699994291179
+  },
+  {
+    "name": "research-face-mask-video-call-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004218999994918704
+  },
+  {
+    "name": "research-flutterwave-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003478200000245124
+  },
+  {
+    "name": "research-hermes-agents-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036895000012009405
+  },
+  {
+    "name": "research-hermes-memory-files",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005139699998835567
+  },
+  {
+    "name": "research-paypal-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031890000027487986
+  },
+  {
+    "name": "research-paystack-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025748000043677166
+  },
+  {
+    "name": "research-python-asyncio-tutorial",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001498999998148065
+  },
+  {
+    "name": "research-toolkit",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004079500002262648
+  },
+  {
+    "name": "research-uk-earning-sites",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035200000056647696
+  },
+  {
+    "name": "roundup",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0031145000029937364
+  },
+  {
+    "name": "scrapling",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.001876900001661852
+  },
+  {
+    "name": "searxng-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0039023000063025393
+  },
+  {
+    "name": "shuffle-json-data",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003016100003151223
+  },
+  {
+    "name": "technical-job-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0057930000039050356
+  },
+  {
+    "name": "web-research-pipeline",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033364999981131405
+  },
+  {
+    "name": "1password",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027934000027016737
+  },
+  {
+    "name": "authsome",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006608800002140924
+  },
+  {
+    "name": "oss-forensics",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003101100002822932
+  },
+  {
+    "name": "sherlock",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00498150000203168
+  },
+  {
+    "name": "threat-model-analyst",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00382289999834029
+  },
+  {
+    "name": "web-pentest",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002398099997662939
+  },
+  {
+    "name": "openhue",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004007700001238845
+  },
+  {
+    "name": "xurl",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004286099996534176
+  },
+  {
+    "name": "banking",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005469800002174452
+  },
+  {
+    "name": "bash-scripts-audit-remediation",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025599000000511296
+  },
+  {
+    "name": "bun-shell",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004590399999869987
+  },
+  {
+    "name": "caveman-unified",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0012088000003132038
+  },
+  {
+    "name": "claude-api",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00596159999986412
+  },
+  {
+    "name": "clonedeps",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.007561300000816118
+  },
+  {
+    "name": "code-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0048034999999799766
+  },
+  {
+    "name": "code-wiki",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029922999965492636
+  },
+  {
+    "name": "codemap",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004056400000990834
+  },
+  {
+    "name": "context7",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005367199999454897
+  },
+  {
+    "name": "debugging-hermes-tui-commands",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002998600000864826
+  },
+  {
+    "name": "django-celery",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004113100003451109
+  },
+  {
+    "name": "executing-plans",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028844999978900887
+  },
+  {
+    "name": "executing-prompt-workflows",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003920399998605717
+  },
+  {
+    "name": "fluentui-blazor",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.006427199994504917
+  },
+  {
+    "name": "generator-first-doc-workflow",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004636700003175065
+  },
+  {
+    "name": "github",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0034306000015931204
+  },
+  {
+    "name": "hermes-agent-skill-authoring",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002593599994725082
+  },
+  {
+    "name": "httpie",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005854499999259133
+  },
+  {
+    "name": "inspecting-hermes-desktop-dom",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005018399999244139
+  },
+  {
+    "name": "mindstudio-wrapper",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030948999992688186
+  },
+  {
+    "name": "nuget-manager",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002150799999071751
+  },
+  {
+    "name": "opencode-driven-development",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037750999981653877
+  },
+  {
+    "name": "plan-mode-skill",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033173999981954694
+  },
+  {
+    "name": "project-docs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0029508999941754155
+  },
+  {
+    "name": "python-quality",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004476699999941047
+  },
+  {
+    "name": "quasi-coder",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0021079999933135696
+  },
+  {
+    "name": "receiving-code-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0047630000044591725
+  },
+  {
+    "name": "refactor",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003192000003764406
+  },
+  {
+    "name": "requesting-code-review",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0036070999994990416
+  },
+  {
+    "name": "sandbox",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0035227999978815205
+  },
+  {
+    "name": "script-orchestration",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037712999983341433
+  },
+  {
+    "name": "shadcn",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018562000041129068
+  },
+  {
+    "name": "simplify-code",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002333500000531785
+  },
+  {
+    "name": "spike",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.00309249999554595
+  },
+  {
+    "name": "subagent-driven-development",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0017836999977589585
+  },
+  {
+    "name": "systematic-debugging",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003484999993816018
+  },
+  {
+    "name": "test-driven-development",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004389000001538079
+  },
+  {
+    "name": "tooling-lint",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0027794999987236224
+  },
+  {
+    "name": "winapp-cli",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0037584000019705854
+  },
+  {
+    "name": "worktrunk",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0039550000001327135
+  },
+  {
+    "name": "writing-plans",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0018009999985224567
+  },
+  {
+    "name": "writing-spec",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025093000003835186
+  },
+  {
+    "name": "unit-test-vue-pinia",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002552900004957337
+  },
+  {
+    "name": "weather-plugin",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0020396999971126206
+  },
+  {
+    "name": "bun-nextjs",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.005687899996701162
+  },
+  {
+    "name": "cloudflare-temporary-deploy",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003174100005708169
+  },
+  {
+    "name": "create-tldr-page",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002544200004194863
+  },
+  {
+    "name": "django-application",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.003390500001842156
+  },
+  {
+    "name": "firecrawl-agent",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0028183000031276606
+  },
+  {
+    "name": "firecrawl-crawl",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002376900003582705
+  },
+  {
+    "name": "firecrawl-download",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0023265000054379925
+  },
+  {
+    "name": "firecrawl-map",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.004106799999135546
+  },
+  {
+    "name": "firecrawl-scrape",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0033057999971788377
+  },
+  {
+    "name": "firecrawl-search",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002176499998313375
+  },
+  {
+    "name": "flowstudio-power-automate-build",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0025358000057167374
+  },
+  {
+    "name": "no-net-fetch",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0016141000014613383
+  },
+  {
+    "name": "page-agent",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.002749200000835117
+  },
+  {
+    "name": "pr-dashboard",
+    "score": 100,
+    "passed": true,
+    "errors": [],
+    "duration": 0.0030416000008699484
+  }
+]
