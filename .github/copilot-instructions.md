@@ -1,16 +1,8 @@
 # Copilot Instructions — SandBox Monorepo
 
-Canonical reference: `../../AGENTS.md`, `../../$HERMES_HOME.md`, `../../CLAUDE.md`.
+**Canonical guidance:** [`../AGENTS.md`](../AGENTS.md). **Hermes overrides:** [`../.hermes.md`](../.hermes.md).
 
-This repo is a polyglot monorepo with several autonomous subprojects. Treat each `projects/*` directory as its own app unless the change is clearly root-level configuration, docs, or shared tooling.
-
-## Repository shape
-
-- Root workspace: shared config, GitHub automation, prompt library, linting, and repo-wide scripts.
-- `projects/`: self-contained apps and experiments. They usually have their own `AGENTS.md`, `package.json`, README, and CI workflow.
-- High-value directories: `.github/workflows/`, `.github/prompts/`, `projects/Banking/`, `projects/comicwise/`, `projects/Bash/`, `projects/ecom/`, `projects/mcp-servers/`.
-
-Read the relevant subproject’s `AGENTS.md` and `package.json` before editing there; don’t assume the root scripts apply directly.
+This file is a Copilot adapter, not a second rulebook. Read the canonical context first, then apply the nearest subproject instructions.
 
 ## Root-level commands
 
@@ -86,6 +78,32 @@ cd projects/Bash && bun run test -- src/cache-clean.test.ts
 cd projects/Banking && bunx playwright test tests/auth/login.spec.ts --project=chromium
 ```
 
+## High-value project commands
+
+Use the local project manifest as the source of truth. These are the confirmed entry points for the main stacks:
+
+| Project | Build / run | Lint or type-check | Single-test pattern |
+| --- | --- | --- | --- |
+| `projects/Banking` | `bun run dev`, `bun run build` | `bun run lint`, `bun run type-check` | `bunx playwright test tests/path/to/spec.ts --project=chromium` or `bun run test:browser -- src/path/to/test.ts` |
+| `projects/comicwise` | `bun run dev`, `bun run build` | `bun run lint`, `bun run type-check` | `bun run test -- src/path/to/test.ts` or `bunx playwright test tests/path/to/spec.ts` |
+| `projects/Bash` | project-local `bun run dev`/scripts as documented | `bun run lint:strict`, `bun run typecheck` | `bun run test -- src/path/to/test.ts` |
+| `projects/ecom` | Django backend plus `cd frontend && bun run dev` | `cd frontend && bun run lint`; backend `ruff check .` and `pyright .` | Run the relevant frontend test from `frontend/package.json` or the targeted backend pytest path |
+| `projects/mcp-servers` | use the language-specific package or README command | use the language-local lint/type-check command | run the language-local test selector |
+| `projects/Python-projects` | run the documented Python entry point | `ruff check .`, `pyright` | `pytest path/to/test_file.py -k test_name` |
+
+For any other project, read its nearest `AGENTS.md`, `README.md`, and manifest before choosing commands.
+
+## MCP server mapping
+
+The canonical workspace mapping is [`.github/mcp.json`](mcp.json), mirrored for editor use by [`.vscode/mcp.json`](../.vscode/mcp.json) and referenced by Hermes/OpenCode configuration. Relevant enabled servers include:
+
+- `playwright` for browser and UI validation across Next.js/React projects.
+- `tooling-lint` for ESLint, Prettier, and Markdown linting.
+- `python-quality` for Ruff and Pyright checks.
+- `github` for repository, issue, and pull-request operations.
+
+Use the existing mappings and credentials flow. Do not add duplicate servers, hardcode credentials, or read protected `.env` files. If the two mappings diverge, treat `.github/mcp.json` as the repository source and record the discrepancy before changing it.
+
 ## High-level architecture
 
 The repo follows a monorepo-with-autonomy model:
@@ -109,7 +127,7 @@ The most important app families currently in this repo are:
 - TypeScript naming: `kebab-case.ts` for scripts; `PascalCase.tsx` for components.
 - Python naming: `snake_case.py`.
 - Style: TS uses 2-space indent, single quotes, `strict` mode; Python uses 4-space indent and PEP 8.
-- Line endings: CRLF on this Windows-hosted repo.
+- Line endings: follow `.editorconfig` (`lf`); do not normalize unrelated files.
 - Keep changes project-scoped; avoid unrelated formatting churn or broad repo-wide edits in a feature PR.
 - Respect existing root and project DoD: check `AGENTS.md`, `.cursorrules`, and relevant package scripts before adding tooling or changing workflows.
 - Treat `.env` and secrets as protected; do not expose values in code, logs, or output.
@@ -120,17 +138,33 @@ The most important app families currently in this repo are:
 - Project CI is often more relevant than root CI for app work.
 - Before opening a PR, run the smallest checks that cover the modified behavior, then the relevant project-local validation if needed.
 
-## Working rules for Copilot
+## Copilot execution rules
 
 - Prefer the closest project directory over repo-root edits.
-- Use project-local scripts and config first.
-- If a task is within a subproject, validate there before broad repo checks.
-- Keep prompts and generated code consistent with the repo’s existing conventions and toolchain, especially for Next.js/TypeScript work.
+- Use project-local scripts, tests, and configuration first.
+- For multi-file changes, state the affected files and validation command before editing.
+- Preserve unrelated worktree changes and avoid broad formatting churn.
+- Verify the exact requested behavior; do not treat a green proxy check as proof.
+- Keep prompts and generated code consistent with the existing toolchain, especially for Next.js/TypeScript work.
+- For new or changed requests, clarify first when possible: ask up to three focused questions per turn and cover scope, remaining tasks, blockers, and approval gates.
+- Before implementation, maintain the current objective's spec, plan, and prompt under `ai-agent-home/{specs,plans,prompts}/<unique-timestamped-run>/`.
+- Update those artifacts as status changes and mark them complete only after the relevant validation passes.
+- Use the workflow examples below for new objectives; do not skip clarification, artifact initialization, or final evidence updates.
 
-See `../../README.md` and the relevant project README for broader project context when a task crosses multiple code paths.
+See [`../README.md`](../README.md) and the relevant project README for broader context.
 
 
-## Agentic Engineering Workflow Reference (Verified Skills)
-This workspace follows the workflow from Untitled-1.txt (verified, no synthetic artifacts). The 9 skills are installed at `~/.agents/skills/`: `scope` (plan to docs/scope/), `architect` (design/spec to docs/specs/), `develop` (build from spec, stops on unmade decision), `audit` (context/AGENTS.md), `check` (verify real app `/check verify` + review `/check review`), `test` (suite from real diff), `document` (human prose from commits), `debug` (root-cause loop with regression test), `sync` (reconcile state after merge; surgical edits only).
+## Agentic Engineering Workflow Reference
+
+Use the repository's agentic workflow when the task warrants it: `scope` (plan), `architect` (design/spec), `develop` (implementation), `audit` (context), `check` (real behavior and review), `test` (regression coverage), `document` (human record), `debug` (root cause), and `sync` (state reconciliation).
 Rules: No synthetic IDs/capabilities. Verify real behavior, not just green tests. Design decisions written down, never buried in code. Build only from approved specs (`/develop` routes back to `/architect` if a load-bearing decision is missing). Fix root cause (`/debug`), not symptoms. Document actual changes (`/document`), not AI memory. Keep durable state in files (AGENTS.md, docs/); never rely on chat context. Marketing/course reference from source file excluded per clarification.
 Blockers preserved honestly: adminbot/default profile MISSING; MSYS2 FAIL; rate-limit 403; `.env` protected.
+
+### Required objective workflow
+
+1. **Clarify:** ask up to three focused questions per turn until required, optional, recommended, blocker, and approval decisions are covered.
+2. **Record:** create `ai-agent-home/specs/<run>/`, `ai-agent-home/plans/<run>/`, and `ai-agent-home/prompts/<run>/` with `IN_PROGRESS` status.
+3. **Audit:** inspect the nearest instructions, manifests, tests, existing patterns, and relevant MCP mappings.
+4. **Implement:** make the smallest complete change and update the three artifacts after each material checkpoint.
+5. **Verify:** run the exact relevant project-local checks plus structure, reference, Markdown, and diff validation.
+6. **Close:** mark all three artifacts `COMPLETE` only after evidence is recorded; otherwise mark `BLOCKED` with the exact unresolved issue.

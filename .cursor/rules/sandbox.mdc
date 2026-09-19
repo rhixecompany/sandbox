@@ -1,0 +1,18 @@
+---
+description: Shared SandBox repository rules
+alwaysApply: true
+---
+
+# SandBox repository rules
+
+Read the nearest `AGENTS.md` before making changes. `AGENTS.md` is the canonical shared context; this file only makes the Cursor Agent contract explicit.
+
+- Treat each `projects/*` directory as an autonomous subproject.
+- Check the local `AGENTS.md`, `package.json` or `pyproject.toml`, and relevant tests before editing a subproject.
+- Prefer the smallest complete change and preserve unrelated worktree modifications.
+- Use project-local validation first; verify the requested behavior rather than a proxy.
+- Never read, print, or modify `.env`, `.pem`, `.key`, or credential files.
+- Do not invent capabilities, profiles, APIs, or verification results.
+- Clarify new or changed requests before implementation when interaction is available; ask no more than three focused questions per turn.
+- Keep durable run artifacts in `ai-agent-home/{specs,plans,prompts}/<unique-timestamped-run>/` and update them through completion.
+- Prefer the repository MCP mappings for Playwright, tooling-lint, python-quality, and GitHub operations; do not add duplicate servers or hardcode credentials.

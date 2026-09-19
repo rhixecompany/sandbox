@@ -1,7 +1,7 @@
-# AGENTS.md — Enhanced G5 (Updated 2026-09-17)
+# AGENTS.md — SandBox Agent Context
 
-**Canonical**: `/c/Users/Alexa/AppData/Local/Hermes/profiles/default/AGENTS.md` (verified profile path; profile `default` directory MISSING — preserved).  
-**Workspace**: `~/Desktop/SandBox` (CWD verified `/c/Users/Alexa/Desktop/SandBox`). **Repo**: `rhixecompany/sandbox`. Polyglot monorepo — 17+ subprojects (`projects/*`), each autonomous.
+**Canonical workspace context**: this file. Tool-specific adapters must defer here rather than copy rules.
+**Workspace**: `C:\Users\Alexa\Desktop\SandBox`. **Repo**: `rhixecompany/sandbox`. Polyglot monorepo — 17+ subprojects (`projects/*`), each autonomous.
 
 Subagent identity: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-09-14.md`. Branch: `clean-development`.
 
@@ -19,8 +19,9 @@ Subagent identity: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-0
 | Repo              | rhixecompany/sandbox                                                |
 
 Preferences (DRY — reference, don't duplicate):
+
 - Concise / direct / table-first / action-first — see `/user-communication-preferences` SKILL.md.
-- DRY enforcement — see `$HERMES_HOME.md` + `/multi-file-change-protocol` SKILL.md.
+- DRY enforcement — see `.hermes.md` + `/multi-file-change-protocol` SKILL.md.
 - Verification-first — see `/systematic-debugging` SKILL.md (4-phase).
 - Never synthetic IDs / never expose `.env`.
 
@@ -75,6 +76,43 @@ bun run lint:strict         # max-warnings=0
 bun run test                 # vitest run
 ```
 
+## Agent Integration Contract
+
+All supported agents use the same source of truth:
+
+| Agent | Adapter | Required behavior |
+| --- | --- | --- |
+| GitHub Copilot | `.github/copilot-instructions.md` | Read this file before repository-wide work; read the nearest subproject `AGENTS.md` before app work |
+| Hermes | `.hermes.md` | Apply profile routing and Hermes-only overrides without duplicating workspace rules |
+| OpenCode | `AGENTS.md` discovery | Use this file from the repository root; do not invent a second root prompt or config schema |
+| Cursor Agent | `.cursorrules` and `.cursor/rules/*.mdc` | Treat this file as canonical and use scoped rules when present |
+
+### Required Work Loop
+
+1. **Locate** — identify the nearest applicable `AGENTS.md`, instruction files, package manifest, and tests.
+2. **Understand** — inspect existing patterns and confirm the task's exact acceptance criteria.
+3. **Plan** — for multi-file or behavioral changes, record the intended files, risks, and validation command before editing.
+4. **Implement** — make the smallest complete change; preserve unrelated worktree changes.
+5. **Verify** — run the narrowest relevant test, type-check, lint, or build; report blockers plainly.
+6. **Document** — update directly related context or docs when behavior or workflow changes.
+
+### Safety Boundaries
+
+- Never read, print, or modify protected secret files such as `.env`, `.pem`, `.key`, or credentials.
+- Never claim a tool, model, profile, capability, or verification result that was not observed.
+- Never apply root commands to a subproject without checking its local instructions and manifest.
+- Prefer existing helpers and project conventions; avoid broad formatting or unrelated cleanup.
+- For destructive scripts, run a supported `--dry-run` first and preserve a rollback path.
+
+### Clarification and Artifact Protocol
+
+- For a new request or a changed request, begin with clarification when interaction is available.
+- Ask up to three focused questions per turn, covering scope, remaining work, blockers, and approval gates; include required, optional, and recommended choices.
+- Continue across turns until the questions needed to avoid material ambiguity are answered. If the user is unavailable, use the documented recommended defaults and record that decision.
+- Before implementation, create or update the current run artifacts under `ai-agent-home/specs/<run>/`, `ai-agent-home/plans/<run>/`, and `ai-agent-home/prompts/<run>/`.
+- Use one unique timestamped run name per objective. Update status during execution and mark the spec, plan, and prompt complete only after validation.
+- The artifact lifecycle is durable repository state, not chat-only memory. Do not claim completion while any current-run artifact or required validation remains unfinished.
+
 ## Conventions (Observed — Not Assumed)
 
 - **EditorConfig** (`.editorconfig`): `indent_style = tab`, `indent_size = 2`, `end_of_line = lf`, `charset = utf-8`. (NOTE: README incorrectly claims CRLF; `.editorconfig` is source of truth.)
@@ -116,7 +154,7 @@ bun run test                 # vitest run
 
 ## DRY References (Cross-Reference — Not Duplication)
 
-- Project overrides: `$HERMES_HOME.md` (workspace root, G4, 4495 B verified).
+- Project overrides: `.hermes.md` (workspace root).
 - User preferences: `/user-communication-preferences` SKILL.md.
 - Multi-file protocol: `/multi-file-change-protocol` SKILL.md (5-step LOAD→PLAN→VERIFY→EXECUTE→GATE; >6 files checklist).
 - Systematic debugging: `/systematic-debugging` SKILL.md (4-phase: understand/fix/verify/document).
@@ -135,7 +173,7 @@ bun run test                 # vitest run
 - **Gates / checklist**: Each card uses `multi-file-change-protocol`; `best` sequential gates (`specs-judge` ~97, `plans-judge` ~96, `prompts-judge` ~98, `skill-judge` ~97).
 - **Milestones**: Plan=COMPLETE; Spec=COMPLETE; Prompt=COMPLETE; Skills=COMPLETE (5 reconstructed); Subagent=COMPLETE; Gates=COMPLETE; Final integrity=COMPLETE (`.env` 5274 B unchanged; identity DRY; 26 vulns + 41 errors preserved).
 - **Personas / profiles**: `skills`, `creative-director`, `exec-assistant`, `research-analyst`; sequential execution; no parallel until previous gate passes.
-- **Integrity**: DRY (`$HERMES_HOME.md` + profile dirs); verification-first; direct/table-first/action-first; never synthetic; `.env` secrets never exposed.
+- **Integrity**: DRY (`.hermes.md` + profile dirs); verification-first; direct/table-first/action-first; never synthetic; `.env` secrets never exposed.
 
 ## Protected References
 
