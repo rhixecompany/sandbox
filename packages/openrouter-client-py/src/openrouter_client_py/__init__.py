@@ -1,23 +1,26 @@
 """openrouter_client_py - Python client wrapper for OpenRouter chat completions API."""
 
-from .client import OpenRouterClient
 from .chat import send_chat
+from .client import OpenRouterClient
+from .memory import SupermemoryMemory, is_available
 from .types import (
-    OpenRouterClientConfig,
     ChatCompletion,
     Message,
     ModelChoice,
-    Usage,
+    OpenRouterClientConfig,
     ToolCall,
+    Usage,
 )
 
 __all__ = [
-    "OpenRouterClient",
-    "send_chat",
-    "OpenRouterClientConfig",
     "ChatCompletion",
     "Message",
     "ModelChoice",
-    "Usage",
+    "OpenRouterClient",
+    "OpenRouterClientConfig",
+    "SupermemoryMemory",
     "ToolCall",
+    "Usage",
+    "is_available",
+    "send_chat",
 ]

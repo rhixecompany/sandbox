@@ -63,7 +63,7 @@ export class OpenRouterClient {
 	}): Promise<ChatCompletion> {
 		// Delegate to @openrouter/sdk
 		const sdk = await import("@openrouter/sdk");
-		const client = new sdk.OpenRouterClient(this.apiKey);
+		const client = new sdk.OpenRouter({ apiKey: this.apiKey });
 
 		const headers: Record<string, string> = {};
 		if (this.httpReferer) headers["HTTP-Referer"] = this.httpReferer;

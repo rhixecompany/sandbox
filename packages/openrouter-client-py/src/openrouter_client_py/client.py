@@ -1,15 +1,15 @@
 """openrouter_client_py - Python client wrapper for OpenRouter chat completions API."""
 
-from dataclasses import dataclass
-from typing import List, Optional
+
+import openrouter
 
 from .types import (
-    OpenRouterClientConfig,
-    Message,
-    ToolCall,
-    ModelChoice,
-    Usage,
     ChatCompletion,
+    Message,
+    ModelChoice,
+    OpenRouterClientConfig,
+    ToolCall,
+    Usage,
 )
 
 
@@ -22,13 +22,12 @@ class OpenRouterClient:
     async def chat_send(
         self,
         model: str,
-        messages: List[Message],
+        messages: list[Message],
         stream: bool = False,
-        max_tokens: Optional[int] = None,
-        temperature: Optional[float] = None,
+        max_tokens: int | None = None,
+        temperature: float | None = None,
     ) -> ChatCompletion:
         """Send a chat completion request to OpenRouter."""
-        import openrouter
 
         client = openrouter.OpenRouterClient(api_key=self._config.api_key)
 
