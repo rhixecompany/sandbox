@@ -144,3 +144,5 @@ bun run test                 # vitest run
 ## Multi-File Change Protocol (≥4 files)
 
 ≥4 file changes → load `multi-file-crud-protocol` skill. Old `multi-file-change-protocol` superseded. New stack: memory→brainstorming→plan→execution. `clarify` 5q/turn until all answered. Subagents FULL autonomy. Enforce: goals/subgoals/todos/steps/phases/rules/tasks/actions/timelines/gates/checklists/milestones/personas/profile/model/resource allocation.
+
+> Workflow reference: Agentic engineering workflow (scope→architect→develop→audit→check/test/review→document→debug→sync) verified from `Untitled-1.txt` and `~/.agents/skills/`. No synthetic artifacts. Real verification (`/check verify`). Design decisions in `docs/specs/`. Root-cause fixes (`/debug`). State reconciled (`/sync`). Marketing/course reference excluded.

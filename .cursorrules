@@ -18,3 +18,18 @@ Cursor IDE pointer. All workspace rules in `AGENTS.md`. Persona in `SOUL.md`.
 <!-- Honcho peer: Alexa | adminbot+patient-tutor | workspace ~/Desktop/SandBox | full auth | 28 skills verified | 26 findings + 41 errors preserved -->
 <!-- Blockers preserved honestly: adminbot MISSING, default MISSING, MSYS2 FAIL, rate-limit 403 -->
 <!-- .env protected: never expose (5274 B CWD / 30269 B hermes home — verified unchanged) -->
+
+# Workflow Reference (Updated — Agentic Engineering, Verified Skills)
+# Skills verified at ~/.agents/skills/: scope, architect, audit, check, debug, develop, test, document, sync.
+# Workflow discipline (no synthetic artifacts, real verification, state in files):
+# 1. Plan: /scope → docs/scope/
+# 2. Design: /architect → docs/specs/
+# 3. Build: /develop (reads spec + AGENTS.md; stops on missing decision → routes to architect)
+# 4. Verify: /check verify (drive real app; /check review reads diff with fresh model)
+# 5. Test: /test (tests for what a caller relies on; happy path + edge + error + accessibility)
+# 6. Document: /document (pr | changelog | release-note | postmortem from real diff)
+# 7. Fix root cause: /debug (reproduce → localize → one hypothesis → minimal fix → regression test)
+# 8. Reconcile state: /sync (update AGENTS.md, reconcile scope, flag stale specs; surgical edits only)
+# Marketing/course mention from Untitled-1.txt excluded per clarification (D: ignore).
+# Blockers preserved honestly: adminbot/default profile MISSING; MSYS2 FAIL; rate-limit 403; .env protected (5274 B CWD / 30269 B hermes).
+# No hidden errors; identity DRY preserved; verification-first enforced.

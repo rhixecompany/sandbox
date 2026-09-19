@@ -1,4 +1,11 @@
 {
+  "_workflow_reference": {
+    "note": "Agentic workflow verified: scope→architect→develop→audit→check→test→document→debug→sync. Skills at ~/.agents/skills/. Rules: real verification, state in files, no synthetic artifacts. Marketing/course ref excluded.",
+    "skills": ["scope", "architect", "develop", "audit", "check", "test", "document", "debug", "sync"],
+    "source_file": "Untitled-1.txt",
+    "course_ref_excluded": true,
+    "blockers_preserved": ["adminbot MISSING", "default MISSING", "MSYS2 FAIL", "rate-limit 403", ".env protected"]
+  },
   "mcpServers": {
     "ast-grep": {
       "command": "npx.cmd",

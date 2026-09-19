@@ -128,3 +128,9 @@ The most important app families currently in this repo are:
 - Keep prompts and generated code consistent with the repo’s existing conventions and toolchain, especially for Next.js/TypeScript work.
 
 See `../../README.md` and the relevant project README for broader project context when a task crosses multiple code paths.
+
+
+## Agentic Engineering Workflow Reference (Verified Skills)
+This workspace follows the workflow from Untitled-1.txt (verified, no synthetic artifacts). The 9 skills are installed at `~/.agents/skills/`: `scope` (plan to docs/scope/), `architect` (design/spec to docs/specs/), `develop` (build from spec, stops on unmade decision), `audit` (context/AGENTS.md), `check` (verify real app `/check verify` + review `/check review`), `test` (suite from real diff), `document` (human prose from commits), `debug` (root-cause loop with regression test), `sync` (reconcile state after merge; surgical edits only).
+Rules: No synthetic IDs/capabilities. Verify real behavior, not just green tests. Design decisions written down, never buried in code. Build only from approved specs (`/develop` routes back to `/architect` if a load-bearing decision is missing). Fix root cause (`/debug`), not symptoms. Document actual changes (`/document`), not AI memory. Keep durable state in files (AGENTS.md, docs/); never rely on chat context. Marketing/course reference from source file excluded per clarification.
+Blockers preserved honestly: adminbot/default profile MISSING; MSYS2 FAIL; rate-limit 403; `.env` protected.
