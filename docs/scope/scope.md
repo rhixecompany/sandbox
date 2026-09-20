@@ -62,6 +62,21 @@ Out of scope for the current pass, kept so the plan stays honest.
 - **Verification as its own feature**: gates stay folded into each feature's definition of done for now
 - **Per workspace scopes**: projects/* get their own docs/scope/<workspace> scopes only when needed
 - **Web verified reference links**: references stay out of the scope by choice
+- **Profile inventory and config update (this pass)**: list docs/hermes, instructions, agent files, update config.yaml with personality/instruction sources, create/recreate profiles (done)
+
+## New feature: Profile inventory and config reconciliation
+
+### 7. Profile inventory and config reconciliation · done
+
+List and triage docs/hermes files (462), instructions files (44), agent files (30). Find personality (agent) and instruction sources. Update hermes config.yaml with references. Create or recreate profile directories for agent roles (10 new profiles), skip default since it exists.
+
+Done when: triage report exists at docs/scope/hermes-docs-triage.md, config.yaml carries agent-personalities and instruction-sources, 10 new profiles exist in $HERMES_HOME/profiles/, default profile untouched.
+
+- [x] List and triage docs/hermes, instructions, agent files
+- [x] Find personality and instructions sources
+- [x] Update config.yaml with personality/instruction references
+- [x] Create profiles for agent roles (10 profiles created)
+- [x] Verify profiles exist and config reads clean
 
 ## Legend
 
@@ -83,3 +98,10 @@ Out of scope for the current pass, kept so the plan stays honest.
 - **Status** `planned` → `in progress` → `done`, plus `existing` (pre-workflow) and `dropped` (de-scoped, kept for history).
 - **Workflow** (header line) is the project default, what runs after /develop: **Alpha** = `/check verify`. It decides the feature's check boxes and each skill's next suggestion.
 - **Pointer line** (`spec <n> · code in <path>`): the spec link added by /architect, the code path by /develop.
+
+## /scope plan · Profile inventory and config reconciliation
+
+**1 new feature planned (Profile inventory and config reconciliation, feature 7, done), build approach Tracer Bullet, workflow Alpha.**
+Next: /clear, then verify the new profiles load correctly (run `hermes profile list` and confirm the 10 new profiles appear)
+Heads up: the default profile was left untouched as requested; 30 agent files identified; 462 docs/hermes files scanned; config.yaml updated with agent-personalities and instruction-sources.
+Scope written to docs/scope/scope.md; triage report at docs/scope/hermes-docs-triage.md; profiles created at $HERMES_HOME/profiles/; config updated at $HERMES_HOME/config.yaml.
