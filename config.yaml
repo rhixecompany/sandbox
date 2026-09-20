@@ -8,9 +8,9 @@ routing:
   code: architect
   research: analyst
   design: creative
-  planning: exec
+  planning: exec-assistant
   teaching: tutor
-  ops: alexa
+  ops: adminbot
   general: default
   user: default
 
@@ -21,6 +21,10 @@ plugins:
 # MCP servers — synced with .github/mcp.json and $HERMES_HOME/mcp.json
 mcp_servers_sync: true
 canonical_mcp_source: .github/mcp.json
+# Note: 5 heavy MCP servers replaced with Hermes native tools (2026-09-20):
+# playwright→browser_exec, code-sandbox→execute_code+terminal,
+# smithery→tool_search+tool_describe+tool_call, mcp-docker→docker CLI via terminal,
+# mindstudio→terminal. Preserves disk space and battery health.
 
 # Environment protection
 env_protected: true
@@ -35,7 +39,7 @@ hooks:
 
 # DRY enforcement
 dry:
-  identity_source: $HERMES_HOME.md
+  identity_source: .hermes.md
   cross_refs:
     - user-communication-preferences
     - multi-file-change-protocol
