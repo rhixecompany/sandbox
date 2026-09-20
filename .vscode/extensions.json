@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "charliermarsh.ruff",
+        "foxundermoon.shell-format",
+        "tamasfe.even-better-toml",
+        "vscode-icons-team.vscode-icons"
+    ]
+}

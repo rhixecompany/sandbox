@@ -5,17 +5,17 @@
 			"args": [
 				"-y",
 				"@notprolands/ast-grep-mcp"
-			],
+			]
 		},
 		"context7": {
-			"url": "https://mcp.context7.com/mcp",
+			"url": "https://mcp.context7.com/mcp"
 		},
 		"fetch": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"mcp-server-fetch-tools"
-			],
+			]
 		},
 		"filesystem": {
 			"command": "npx.cmd",
@@ -23,82 +23,82 @@
 				"-y",
 				"@modelcontextprotocol/server-filesystem",
 				"C:/Users/Alexa"
-			],
+			]
 		},
 		"github": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-github"
-			],
+			]
 		},
 		"honcho": {
-			"url": "https://mcp.honcho.dev/",
+			"url": "https://mcp.honcho.dev/"
 		},
 		"memory": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-memory"
-			],
+			]
 		},
 		"neon": {
-			"url": "https://mcp.neon.tech/mcp",
+			"url": "https://mcp.neon.tech/mcp"
 		},
 		"parallel-search": {
-			"url": "https://search.parallel.ai/mcp",
+			"url": "https://search.parallel.ai/mcp"
 		},
 		"parallel-task": {
-			"url": "https://task-mcp.parallel.ai/mcp",
+			"url": "https://task-mcp.parallel.ai/mcp"
 		},
 		"python-quality": {
 			"command": "C:/Users/Alexa/myvenv/Scripts/python",
 			"args": [
 				"C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_mcp_server.py"
-			],
+			]
 		},
 		"sequential-thinking": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-sequential-thinking"
-			],
+			]
 		},
 		"tavily": {
-			"url": "https://mcp.tavily.com/mcp",
+			"url": "https://mcp.tavily.com/mcp"
 		},
 		"tooling-config": {
 			"command": "C:/Users/Alexa/myvenv/Scripts/python",
 			"args": [
 				"C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_config_mcp_server.py"
-			],
+			]
 		},
 		"tooling-lint": {
 			"command": "C:/Users/Alexa/myvenv/Scripts/python",
 			"args": [
 				"C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py"
-			],
+			]
 		},
 		"sentry": {
-			"url": "https://mcp.sentry.dev/mcp",
+			"url": "https://mcp.sentry.dev/mcp"
 		},
 		"vercel": {
 			"url": "https://mcp.vercel.com",
-			"type": "sse",
+			"type": "sse"
 		},
 		"twilio-docs": {
-			"url": "https://mcp.twilio.com/docs",
+			"url": "https://mcp.twilio.com/docs"
 		},
 		"atlassian": {
 			"url": "https://mcp.atlassian.com/v1/mcp/authv2",
-			"type": "sse",
+			"type": "sse"
 		},
 		"django": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"django-mcp"
-			],
+			]
 		},
 		"docs": {
 			"command": "npx.cmd",
@@ -106,35 +106,35 @@
 				"-y",
 				"docs-mcp",
 				"docs/"
-			],
+			]
 		},
 		"evals": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-evals"
-			],
+			]
 		},
 		"postgres": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"postgres-mcp"
-			],
+			]
 		},
 		"pytest": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"pytest-mcp"
-			],
+			]
 		},
 		"time": {
 			"command": "npx.cmd",
 			"args": [
 				"-y",
 				"@modelcontextprotocol/server-time"
-			],
+			]
 		}
-	},
+	}
 }

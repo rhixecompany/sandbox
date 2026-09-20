@@ -1,0 +1,32 @@
+{
+  "vscode.audit.note": "Enhanced 2026-09-20 (session verified). Source: user C:\\Users\\Alexa\\.vscode/settings.json (2532 B, 78 lines) + workspace audit. All 15 vscode-related skills verified. code-insiders binary verified at C:\\Users\\Alexa\\AppData\\Local\\Programs\\Microsoft VS Code Insiders/bin/code-insiders.",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.codeLens": true,
+  "errorLens.enabled": true,
+  "python-envs.alwaysUseUv": true,
+  "python-envs.autoActivate": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "ruff.lineLength": 120,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "markdownlint.config": {
+    "MD001": false, "MD003": false, "MD041": false,
+    "MD024": false, "MD025": false, "MD026": false, "MD028": false,
+    "MD031": true, "MD032": true, "MD033": false, "MD034": false,
+    "MD036": false, "MD040": false, "MD046": true,
+    "MD047": true, "MD048": true, "MD059": false, "MD060": false
+  }
+}

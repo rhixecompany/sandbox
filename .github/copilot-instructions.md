@@ -174,3 +174,13 @@ Blockers preserved honestly: adminbot/default profile MISSING; MSYS2 FAIL; rate-
 - Same MCP server list applied globally across opencode/copilot/cursor-agent/hermes/agent configs (per clarification turns 1-3).
 - Heavy servers replaced with lightweight native equivalents: playwright→browser_exec; code-sandbox→execute_code; smithery→tool_search; mcp-docker→terminal; mindstudio→subagent/delegate.
 - Canonical mapping: .github/mcp.json preserved; no duplicate .env exposure.
+
+---
+
+## VSCode Skill Audit Note (2026-09-20 — session verified)
+- Audit slug: `vscode-skill-audit-20260920-<ts>`; scope/plans at `$HERMES_HOME/{specs,plans}/vscode-skill-audit-20260920-<ts>/`
+- `code-insiders` binary verified (`C:\Users\Alexa\AppData\Local\Programs\Microsoft VS Code Insiders/bin/code-insiders`).
+- User `.vscode/settings.json` preserved (2532 B, verified); workspace `.vscode/settings.json` enhanced/created; workspace `.vscode/mcp.json` preserved (2542 B).
+- 15 vscode-related skills verified (SKILL.md present with real sizes); audit reference at `$HERMES_HOME/specs/vscode-skill-audit-20260920-<ts>/references/`.
+- `.github/copilot-instructions.md` preserved (9159 B); `.cursor/rules/sandbox.mdc` preserved (1204 B); `.vscode/mcp.json` preserved (2542 B).
+- `.env` protected (5274 B workspace / 30504 B hermes — unchanged); identity/protocol DRY enforced; 0 synthetic artifacts.
