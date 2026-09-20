@@ -81,7 +81,7 @@ Merge the existing `/multi-file-change-protocol` (>5 file trigger) with the new 
 ## Needed Specs
 
 - `~/AppData/Local/hermes/skills/multi-file-change-protocol/SKILL.md` (read for merge)
-- `~/AppData/Local/hermes/profiles/default/MEMORY.md` (read for update)
+- `$HERMES_HOME/profiles/default/MEMORY.md` (read for update)
 
 ## Dependencies and Risks
 
