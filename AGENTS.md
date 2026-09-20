@@ -202,6 +202,8 @@ Gate rules for this run: plan approval required before implementation; commit/pu
 
 ## Init Run 2026-09-19 (init-20260919-212743)
 
+> **Identity / Protocol Reference (2026-09-20)** — This file references `identity-context-protocol` SKILL.md (`$HERMES_HOME/skills/development/identity-context-protocol/`, 6876 B). DRY enforced: do not duplicate identity/protocol/routing rules; reference skills/files instead. Protocol skills verified: `multi-file-change-protocol` + `multi-file-crud-protocol`. .env protection: 30501 B (hermes home); workspace `.env` MISSING. Security/blockers preserved honestly (26 vulns + 41 errors + 403 + MSYS2 FAIL + adminbot docs gap).
+
 Fresh-init enhancement for all 5 agents (Copilot, Hermes, OpenCode, Cursor Agent, Agent general). Clarified across 7 turns, 21/21 answered: scope = all 5 agents, fresh init, carryover = web-research-628 batches + adminbot profile MISSING, blockers documented as risks, full verify gate before implementation, YYYYMMDD-HHMMSS naming, STATUS.md per phase, approval before each file.
 
 Artifact pointers (unified shared set, published to `ai-agent-home/{specs,plans,prompts}/init-20260919-212743/`):

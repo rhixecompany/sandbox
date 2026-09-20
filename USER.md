@@ -83,3 +83,5 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 
 ---
 **Status**: ENHANCED / VERIFIED / PASS. Created from real profile identity (`~/AppData/Local/hermes/profiles/default/` + workspace identity framework + session evidence); identity preserved; NOT synthetic; verified by `ls -la` + `cat` + file size verification; `.env` protected; 0 hidden errors; identity preserved; verified PASS.
+
+> **Identity Protocol Reference (2026-09-20)** — References `identity-context-protocol` SKILL.md ($HERMES_HOME/skills/development/identity-context-protocol/, 6876 B). DRY enforced: identity/protocol rules owned by `SOUL.md` + `AGENTS.md` + `.hermes.md` + skills; preferences owned by `user-communication-preferences` SKILL.md; this file owns identity/profile content only. Protocol skills verified installed. `.env` protected (30501 B). Security/blockers preserved honestly.

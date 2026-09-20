@@ -11,6 +11,11 @@ dry_ref: .hermes.md (6691 B verified) / AGENTS.md (17041 B verified) / user-comm
 
 # SOUL.md — Workspace Mirror + Agent Catalog (Refactored 2026-09-20)
 
+> **Identity Protocol Ref** (verified 2026-09-20): This file references `identity-context-protocol` SKILL.md (created at $HERMES_HOME/skills/development/identity-context-protocol/SKILL.md, 6876 B). DRY enforced: do not duplicate identity/protocol/routing content; reference skills/files instead.
+> **Best practices applied**: concise bullets + table-first + emoji + direct; verification before claim; honest blocker reporting; no synthetic artifacts.
+> **.env protection**: 30501 B (verified); never read/printed/committed.
+> **Protocol skills verified**: `multi-file-change-protocol` + `multi-file-crud-protocol` (installed, SKILL.md present).
+
 **Canonical identity**: `C:\Users\Alexa\AppData\Local\hermes\SOUL.md` (refactored 2026-09-20: 35745 B → 12156 B, deduped; all rules + evidence preserved). This workspace file is a thin mirror + cross-agent catalog — DRY, no rule duplication.
 
 **Routing (live-verified 2026-09-20)**: code→architect | research→analyst | design→creative | planning→exec-assistant | teaching→tutor | ops→adminbot | general→default | user→default. (Fixed in `config.yaml` — dead refs `ops: alexa`, `planning: exec` removed.)

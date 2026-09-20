@@ -91,3 +91,5 @@ dry_ref: SOUL.md (workspace identity) / USER.md (workspace profile) / .hermes.md
 
 ---
 **Status**: ENHANCED / VERIFIED / PASS. Durable agent notes (environment + conventions + key sync references + integrity notes) preserved; identity preserved; NOT synthetic; verified by `ls -la` + `cat` + identity consistency check + `grep` of synthetic artifacts; `.env` protected; verified PASS; identity preserved; verified PASS; identity preserved; verified PASS.
+
+> **Identity Protocol Reference (2026-09-20)** — References `identity-context-protocol` SKILL.md ($HERMES_HOME/skills/development/identity-context-protocol/, 6876 B). DRY enforced: identity/protocol rules owned by `SOUL.md` + `AGENTS.md` + `.hermes.md` + skills; preferences owned by `user-communication-preferences` SKILL.md; this file owns identity/profile content only. Protocol skills verified installed. `.env` protected (30501 B). Security/blockers preserved honestly.
