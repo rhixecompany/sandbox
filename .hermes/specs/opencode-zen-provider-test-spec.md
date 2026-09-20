@@ -11,6 +11,7 @@ goal: Test opencode-zen models → identify working 3 → clear Hermes fallback 
 # OpenCode-Zen Provider Model Test Spec
 
 ## Goal
+
 Test all opencode-zen provider models via curl/python with API key + URL, log models that return valid responses, then clear and configure Hermes fallback with best 3 working models.
 
 ## Requirements
@@ -26,11 +27,11 @@ Test all opencode-zen provider models via curl/python with API key + URL, log mo
 
 ## Test Prompts
 
-| # | Type | Prompt |
-|---|------|--------|
-| 1 | Identity | "What is your model name and who created you? Respond in JSON: {model, creator, type}" |
-| 2 | Capabilities | "What are your top 3 capabilities? Respond in JSON: {capabilities: [c1, c2, c3]}" |
-| 3 | Reasoning | "Solve: If a train leaves station A at 60mph and another leaves station B at 80mph toward A 200 miles apart, when do they meet? Respond in JSON: {answer, reasoning, formula}" |
+| #   | Type         | Prompt                                                                                                                                                                         |
+| --- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | Identity     | "What is your model name and who created you? Respond in JSON: {model, creator, type}"                                                                                         |
+| 2   | Capabilities | "What are your top 3 capabilities? Respond in JSON: {capabilities: [c1, c2, c3]}"                                                                                              |
+| 3   | Reasoning    | "Solve: If a train leaves station A at 60mph and another leaves station B at 80mph toward A 200 miles apart, when do they meet? Respond in JSON: {answer, reasoning, formula}" |
 
 ## Valid Response Criteria
 

@@ -8,19 +8,19 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `openrouter` |
-| Default model | nvidia/nemotron-3-ultra-550b-a55b:free |
-| Auth type | API key |
-| Env var | `OPENROUTER_API_KEY` |
-| Base URL | `https://openrouter.ai/api/v1` |
-| Models available | 400+ across 70+ providers |
-| Credential pool | 1 key (OPENROUTER_API_KEY, env var) |
-| Pool strategy | fill_first |
-| Role | Primary fallback (2nd in chain after opencode-zen) |
-| Response cache | true, TTL: 300s |
-| min_coding_score | 0.65 |
+| Property         | Value                                              |
+| ---------------- | -------------------------------------------------- |
+| Config key       | `openrouter`                                       |
+| Default model    | nvidia/nemotron-3-ultra-550b-a55b:free             |
+| Auth type        | API key                                            |
+| Env var          | `OPENROUTER_API_KEY`                               |
+| Base URL         | `https://openrouter.ai/api/v1`                     |
+| Models available | 400+ across 70+ providers                          |
+| Credential pool  | 1 key (OPENROUTER_API_KEY, env var)                |
+| Pool strategy    | fill_first                                         |
+| Role             | Primary fallback (2nd in chain after opencode-zen) |
+| Response cache   | true, TTL: 300s                                    |
+| min_coding_score | 0.65                                               |
 
 ---
 
@@ -29,6 +29,7 @@
 ### Step 1: Credential Verification
 
 **Actions:**
+
 - [ ] Confirm `OPENROUTER_API_KEY` is set in `.env`
 - [ ] Run `hermes auth list openrouter` to verify credential
 - [ ] Run `hermes doctor` to validate connectivity
@@ -43,6 +44,7 @@
 ### Step 2: Model Selection & Validation
 
 **Actions:**
+
 - [ ] Run `hermes model` → select openrouter → list available models
 - [ ] Verify nvidia/nemotron-3-ultra-550b-a55b:free is available
 - [ ] Check alternative free models: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free, nvidia/nemotron-3-super-120b-a12b:free
@@ -57,6 +59,7 @@
 ### Step 3: Provider Routing Configuration
 
 **Actions:**
+
 - [ ] Review `provider_routing` section in config.yaml for openrouter
 - [ ] Check `sort`, `only`, `ignore`, `order`, `require_parameters`, `data_collection` settings
 - [ ] Test routing behavior with a model-specific query
@@ -70,6 +73,7 @@
 ### Step 4: Fallback Chain Verification
 
 **Actions:**
+
 - [ ] Confirm openrouter is 2nd in `fallback_providers` chain
 - [ ] Test fallback trigger: simulate opencode-zen failure, verify openrouter takes over
 - [ ] Document mid-session model swap behavior
@@ -83,6 +87,7 @@
 ### Step 5: Auxiliary Model Offload
 
 **Actions:**
+
 - [ ] Check if openrouter is configured for auxiliary tasks (vision, web extraction)
 - [ ] Recommendation: use cheapest trusted model for side tasks (e.g., Gemini Flash on OpenRouter)
 - [ ] Document cost optimization strategies
@@ -96,6 +101,7 @@
 ### Step 6: MCP Server Compatibility
 
 **Actions:**
+
 - [ ] Test all 21 MCP servers with openrouter as the backing model (sample at least 3)
 - [ ] Document any provider-specific MCP quirks
 - [ ] Pay special attention to MCP servers using npx (node CLI) — Windows quirks
@@ -109,6 +115,7 @@
 ### Step 7: Rate Limit & Quota Management
 
 **Actions:**
+
 - [ ] Document free tier rate limits for key models
 - [ ] Identify credential pooling strategy (single key — no backup)
 - [ ] Document retry behavior on 429 responses
@@ -123,6 +130,7 @@
 ### Step 8: Reference Models
 
 **Actions:**
+
 - [ ] Review `reference_models` config: opencode-zen/nemotron-3-ultra-free, openrouter/nemotron-3-ultra-550b-a55b:free, openrouter/nemotron-3-super-120b-a12b:free
 - [ ] Verify these are used for cost/quality comparison
 
@@ -134,14 +142,14 @@
 
 ## Provider Routing Details
 
-| Control | Description | Config Value |
-|---------|-------------|--------------|
-| `sort` | Throughput/price sorting (`:nitro`, `:floor`) | Not configured (defaults) |
-| `only` | Restrict to specific underlying providers | Not configured |
-| `ignore` | Exclude specific underlying providers | Not configured |
-| `order` | Priority order for provider selection | Not configured |
-| `require_parameters` | Require specific params | Not configured |
-| `data_collection` | Data sharing preferences | Not configured |
+| Control              | Description                                   | Config Value              |
+| -------------------- | --------------------------------------------- | ------------------------- |
+| `sort`               | Throughput/price sorting (`:nitro`, `:floor`) | Not configured (defaults) |
+| `only`               | Restrict to specific underlying providers     | Not configured            |
+| `ignore`             | Exclude specific underlying providers         | Not configured            |
+| `order`              | Priority order for provider selection         | Not configured            |
+| `require_parameters` | Require specific params                       | Not configured            |
+| `data_collection`    | Data sharing preferences                      | Not configured            |
 
 ---
 

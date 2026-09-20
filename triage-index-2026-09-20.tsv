@@ -1,0 +1,121 @@
+file	triage	first_line_summary
+paste_1_002817.txt	reference	## Comprehensive AI Agent Personas with Experiences & Roles
+paste_1_004044.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_011923.txt	actionable	/using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking
+paste_1_012149.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_012509.txt	reference	# Hermes Agent: Personality & SOUL.md â€” Comprehensive Summary
+paste_1_013034.txt	reference	curl "https://api.groq.com/openai/v1/chat/completions" \
+paste_1_014135.txt	actionable	/goal /using-superpowers /user-communication-preferences /brainstorming /plan /plans-and-s
+paste_1_025324.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_030319.txt	actionable	/goal /using-/uperpowers  /user-communication-preference**/braimstorming  /subagent-driven
+paste_1_031524.txt	unclear	Next Steps / Open Items
+paste_1_031649.txt	actionable	/using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking
+paste_1_034118.txt	unclear	• USER.md: 33,626 B ✓
+paste_1_035051.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /multi-file-change
+paste_1_042234.txt	reference	where is copilot system prompt located on windows
+paste_1_050742.txt	duplicate	Recommended changes
+paste_1_052144.txt	unclear	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀      delegation: delegate_task                             
+paste_1_055606.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_064535.txt	actionable	Restore Hermes to the pre-last-session state by reverting all copied and overwritten files
+paste_1_083742.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /multi-file-change
+paste_1_084213.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_091526.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_094751.txt	unclear	Ilechukwu Onyedika basil
+paste_1_121953.txt	unclear	Welcome back to Hermes agent master class module 8 sub aents and delegation
+paste_1_122726.txt	unclear	{
+paste_1_133309.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_135336.txt	actionable	“Load 5 skills before any response: …
+paste_1_144100.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_151157.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_152556.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_154612.txt	actionable	/goal
+paste_1_155112.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_160933.txt	unclear	error converting Lua table to Config (Config::from_dynamic: Error
+paste_1_161241.txt	reference	Set up supermemory in this project. Read https://supermemory.ai/docs/agents-and-mcp and fo
+paste_1_162224.txt	unclear	error converting Lua table to Config (Config::from_dynamic:
+paste_1_163123.txt	system/config	`Yank` is not a valid CopyModeAssignment variant.  There are too many
+paste_1_163805.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_163851.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_165145.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /sequential-thinki
+paste_1_171952.txt	actionable	
+paste_1_172458.txt	reference	2. Data Handling
+paste_1_174504.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_180422.txt	actionable	Act as a Hermes System Administrator. Execute the following sequence:
+paste_1_182833.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_184548.txt	actionable	Recommendations
+paste_1_185038.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_185108.txt	actionable	execute `hermes profile --help` for hermes profile command help message and only then
+paste_1_190038.txt	system/config	Traceback (most recent call last):
+paste_1_190351.txt	actionable	# Plan: Update 2026-06-16-multi-agent-research.md
+paste_1_190405.txt	unclear	Proposed Plan
+paste_1_190419.txt	system/config	
+paste_1_193231.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_193948.txt	actionable	e
+paste_1_194119.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_195449.txt	system/config	hermes skills audit && hermes skills check && hermes skills update
+paste_1_201819.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_204437.txt	unclear	create a plan for  install,configure,tests oh-my-hermes and oh-my-opencode
+paste_1_205325.txt	unclear	1.
+paste_1_205618.txt	actionable	# Goal: Comprehensive Audit & Enhancement of .github/prompts/*.md for Multi-Agent Support
+paste_1_211251.txt	unclear	# ~/.hermes/config.yaml
+paste_1_212419.txt	reference	/plan if a plan already exists update it  web_extract ["https://github.com/0xNyk/awesome-h
+paste_1_213652.txt	actionable	/goal /brainstorming /plan /plans-and-specs /mcp-sequential-thinking /create-implementatio
+paste_1_214013.txt	reference	/plan if a plan already exists update it  web_extract ["https://github.com/0xNyk/awesome-h
+paste_1_214256.txt	actionable	/goal /brainstorming /plan /plans-and-specs /mcp-sequential-thinking /create-implementatio
+paste_1_214321.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_214519.txt	system/config	install,configure,tests wezterm nightly windows 11
+paste_1_220056.txt	actionable	One thing worth your attention: your Git Bash is broken (ForceRelocateImages ASLR mitigati
+paste_1_220440.txt	actionable	/subgoal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential
+paste_1_221342.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_221526.txt	reference	- `docs/01-MCP_BEST_PRACTICES_GUIDE.md` — MCP theory and patterns
+paste_1_222157.txt	actionable	{
+paste_1_222803.txt	actionable	PS C:\Users\Alexa> hermes kanban list
+paste_1_232118.txt	system/config	d.
+paste_1_233149.txt	reference	comprehensive personas for ai-agents
+paste_1_234903.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_235541.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_1_235820.txt	actionable	/plan if a plan already exists update it  make comprehensive research for install,test,ver
+paste_2_002839.txt	reference	## Comprehensive AI Agent Personas with Experiences & Roles
+paste_2_011924.txt	actionable	/using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking
+paste_2_013515.txt	actionable	curl https://api.x.ai/v1/responses \
+paste_2_020421.txt	unclear	python joystick input
+paste_2_031706.txt	actionable	│  ⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀                                                         
+paste_2_064543.txt	actionable	Restore Hermes to the pre-last-session state by reverting all copied and overwritten files
+paste_2_094752.txt	unclear	Ilechukwu Onyedika basil
+paste_2_122812.txt	unclear	{
+paste_2_140715.txt	reference	---
+paste_2_151250.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_2_163411.txt	system/config	`ScrollToBottom` is not a valid CopyModeAssignment variant.  There are too
+paste_2_165146.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /sequential-thinki
+paste_2_181835.txt	actionable	Plan: Prompt management, de-duplication, enhancement, and validation
+paste_2_191725.txt	unclear	hermes mcp list
+paste_2_195933.txt	actionable	Rules for SOUL.md should define core persona, behavioral boundaries, and cognitive style r
+paste_2_200739.txt	unclear	install,configure,tests oh-my-hermes and oh-my-opencode
+paste_2_204440.txt	unclear	create a plan for  install,configure,tests oh-my-hermes and oh-my-opencode
+paste_2_212537.txt	actionable	terminal:
+paste_2_214621.txt	unclear	To set up WezTerm Nightly on Windows 11, use the **winget** package manager for the most e
+paste_2_220616.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_2_220920.txt	reference	## Installation and Configuration Guide (Updated 2026)
+paste_2_224619.txt	actionable	{
+paste_2_233208.txt	reference	An **AI agent persona** is a designed identity — name, traits, voice, boundaries — that ma
+paste_3_002950.txt	reference	An **AI agent persona** is a designed identity — name, traits, voice, boundaries — that ma
+paste_3_014926.txt	reference	curl "https://api.groq.com/openai/v1/chat/completions" \
+paste_3_020528.txt	unclear	To handle **joystick input in Python**, the most common approach is using the **`pygame`**
+paste_3_031716.txt	actionable	│  ⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀                                                         
+paste_3_143036.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_3_163411.txt	system/config	`ScrollToBottom` is not a valid CopyModeAssignment variant.  There are too
+paste_3_165938.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /sequential-thinki
+paste_3_200556.txt	actionable	A SOUL.md file (System Operation & User Logic) guides AI agents on how to execute tasks, m
+paste_3_200746.txt	reference	## Installation and Configuration Guide
+paste_3_204448.txt	unclear	create a plan for  install,configure,tests oh-my-hermes and oh-my-opencode
+paste_3_221237.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-th
+paste_3_233420.txt	reference	## Comprehensive AI Agent Personas with Experiences & Roles
+paste_4_003034.txt	reference	comprehensive personas for ai-agents
+paste_4_015513.txt	system/config	curl "https://api.groq.com/openai/v1/chat/completions" \
+paste_4_031748.txt	actionable	/using-superpowers /brainstorming /user-communication-preferences /mcp-sequential-thinking
+paste_4_172140.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /sequential-thinki
+paste_4_180003.txt	actionable	
+paste_4_210229.txt	actionable	Rule examples for core agent files (, , ) and operational mechanics (, , , ) establish cle
+paste_5_172140.txt	actionable	/goal /using-superpowers /brainstorming /user-communication-preferences /sequential-thinki
+paste_5_210927.txt	reference	In modern agent frameworks like OpenClaw, Hermes, and Claude Code, managing the interactio
+paste_6_211622.txt	actionable	Here is a breakdown of example rules and guidelines tailored for your **`SOUL.md`**, **`US

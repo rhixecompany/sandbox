@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 # Hermes Ecosystem Reliability Specification
 
 ## 1. Purpose
@@ -19,14 +17,14 @@ quota evasion.
 
 ## 2. Canonical sources and scopes
 
-| Area | Canonical source | Projection or evidence |
-|---|---|---|
-| Session lifecycle | Hermes state database + start/end capture hooks | `SESSION_REPORT.md`, capture regression |
-| Hermes MCP | active profile `ops/config.yaml` and root config | `.mcp/registry.json`, four client projections |
-| Client MCP | `.mcp/registry.json` | `opencode.json`, `.codex/mcp.json`, `.copilot/mcp.json`, `.vscode/mcp.json` |
-| Hermes root scripts | `C:/Users/Alexa/AppData/Local/hermes/scripts` | generated quick-command registry + live readback |
-| Memory | profile `USER.md`/`MEMORY.md` files | `validate_memories.py` |
-| Provider resilience | `scripts/rate_limit_bypass.py` | unified copy, self-test, redacted JSONL audit |
+| Area                | Canonical source                                 | Projection or evidence                                                      |
+| ------------------- | ------------------------------------------------ | --------------------------------------------------------------------------- |
+| Session lifecycle   | Hermes state database + start/end capture hooks  | `SESSION_REPORT.md`, capture regression                                     |
+| Hermes MCP          | active profile `ops/config.yaml` and root config | `.mcp/registry.json`, four client projections                               |
+| Client MCP          | `.mcp/registry.json`                             | `opencode.json`, `.codex/mcp.json`, `.copilot/mcp.json`, `.vscode/mcp.json` |
+| Hermes root scripts | `C:/Users/Alexa/AppData/Local/hermes/scripts`    | generated quick-command registry + live readback                            |
+| Memory              | profile `USER.md`/`MEMORY.md` files              | `validate_memories.py`                                                      |
+| Provider resilience | `scripts/rate_limit_bypass.py`                   | unified copy, self-test, redacted JSONL audit                               |
 
 Hermes YAML is edited only through supported CLI or purpose-built Python I/O;
 raw credentials are never emitted, copied into reports, or included in tests.
@@ -123,16 +121,16 @@ readback of generated evidence.
 
 ## 5. Acceptance matrix
 
-| Gate | Pass condition |
-|---|---|
-| Lifecycle | capture regression, report generation, and hooks doctor pass |
-| Memory | 14 profiles, 45 files, zero validator issues |
-| MCP projection | strict sync check exits 0; all four projection files read back |
-| MCP health | 28 ops records: 12 PASS, 16 explicit SKIP, 0 FAIL, exit 0 |
-| Quick commands | 220/220 scripts covered and smoke-tested; zero smoke failures |
-| Rate limit | workspace and unified self-tests exit 0; no secrets in audit output |
-| Syntax | root script judge reports zero syntax failures |
-| Repository | `git diff --check` and applicable project gates run; pre-existing dirty work remains distinguishable |
+| Gate           | Pass condition                                                                                       |
+| -------------- | ---------------------------------------------------------------------------------------------------- |
+| Lifecycle      | capture regression, report generation, and hooks doctor pass                                         |
+| Memory         | 14 profiles, 45 files, zero validator issues                                                         |
+| MCP projection | strict sync check exits 0; all four projection files read back                                       |
+| MCP health     | 28 ops records: 12 PASS, 16 explicit SKIP, 0 FAIL, exit 0                                            |
+| Quick commands | 220/220 scripts covered and smoke-tested; zero smoke failures                                        |
+| Rate limit     | workspace and unified self-tests exit 0; no secrets in audit output                                  |
+| Syntax         | root script judge reports zero syntax failures                                                       |
+| Repository     | `git diff --check` and applicable project gates run; pre-existing dirty work remains distinguishable |
 
 ## 6. Known limitations and blockers
 

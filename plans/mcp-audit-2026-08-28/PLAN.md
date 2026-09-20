@@ -51,10 +51,10 @@ status: ready → executing
 
 3 servers in `opencode.json` reference wrong filenames:
 
-| Server | Wrong | Right |
-|--------|-------|-------|
+| Server         | Wrong                      | Right                          |
+| -------------- | -------------------------- | ------------------------------ |
 | python-quality | `python_quality_server.py` | `python_quality_mcp_server.py` |
-| tooling-lint | `tooling_lint_server.py` | `tooling_lint_mcp_server.py` |
+| tooling-lint   | `tooling_lint_server.py`   | `tooling_lint_mcp_server.py`   |
 | tooling-config | `tooling_config_server.py` | `tooling_config_mcp_server.py` |
 
 After fix → `hermes mcp test` should connect to all 3.
@@ -70,6 +70,7 @@ After fix → `hermes mcp test` should connect to all 3.
 
 Current default: `nvidia/nemotron-3-ultra-550b-a55b:free` → 404 on OpenRouter.
 Candidates verified working this session:
+
 - `minimax/minimax-m3:free` — what just worked (current model)
 - `deepseek-v4-flash-free` — alternative
 
@@ -95,6 +96,7 @@ Decision: Update default to `minimax/minimax-m3:free` via `hermes config set`.
 ### T7 — Skill `mcp-audit-orchestrator`
 
 Path: `~/AppData/Local/hermes/skills/mcp/mcp-audit-orchestrator/`
+
 - SKILL.md ≤250 lines: workflow, when-to-use, verification checklist
 - references/registry-spec.md
 - references/sync-targets.md
@@ -124,19 +126,19 @@ Standard fields: session_id, timestamp, profile=adminbot, model=minimax/minimax-
 
 ## Effort Estimate
 
-| Task | Est |
-|------|-----|
-| T1 registry | 5 min |
-| T2 opencode patch | 2 min |
-| T3 prettierignore | 1 min |
-| T4 hermes model | 2 min |
-| T5 audit script | 10 min |
-| T6 sync script | 10 min |
-| T7 skill | 8 min |
-| T8 prompt | 3 min |
-| T9 verify | 5 min |
-| T10 report | 2 min |
-| **Total** | ~50 min |
+| Task              | Est     |
+| ----------------- | ------- |
+| T1 registry       | 5 min   |
+| T2 opencode patch | 2 min   |
+| T3 prettierignore | 1 min   |
+| T4 hermes model   | 2 min   |
+| T5 audit script   | 10 min  |
+| T6 sync script    | 10 min  |
+| T7 skill          | 8 min   |
+| T8 prompt         | 3 min   |
+| T9 verify         | 5 min   |
+| T10 report        | 2 min   |
+| **Total**         | ~50 min |
 
 ## Stop Conditions
 

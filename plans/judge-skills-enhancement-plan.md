@@ -11,17 +11,20 @@ model: nemotron-3-ultra-free
 # Judge Skills Enhancement Plan
 
 ## Overview
+
 Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural rules and achieve scores ≥98.
 
 ## Phase 1: specs-judge Enhancement
 
 ### New Requirements
+
 1. **Plan must have/use at least one spec** — Every plan in `./plans/` must reference at least one spec in `./specs/` via `## Linked Plan` section or inline reference
 2. **Multi-spec support** — Plans can reference multiple specs; specs can be linked to multiple plans
 3. **Enhanced cross-ref validation** — Verify that referenced spec files actually exist on disk
 4. **Scoring updates** — Increase cross-ref weight to enforce spec-plan coupling
 
 ### Changes to judge.py
+
 - Add `plans_dir` parameter to check plan↔spec linkage from both directions
 - New dimension: "Spec-Plan Coupling" (replaces or augments Cross-refs)
 - Verify every plan has ≥1 spec reference
@@ -30,36 +33,43 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 - Score 0 if spec has no plan reference
 
 ### Changes to rubric.md
+
 - New dimension: Spec-Plan Coupling (20 pts)
 - Plan has ≥1 `## Linked Spec` or spec reference: 20 pts
 - Spec has ≥1 `## Linked Plan` or plan reference: 20 pts
 - Missing both directions: 0 pts
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 2: plans-judge Enhancement
 
 ### New Requirements
+
 1. **Plan must have/use at least one spec** — Same as specs-judge but from plan perspective
 2. **Multi-spec support** — Plans can link to multiple specs
 3. **Enhanced spec reference validation** — Verify spec files exist
-3. **Phase gating on spec linkage** — Each phase should reference which spec(s) it implements
+4. **Phase gating on spec linkage** — Each phase should reference which spec(s) it implements
 
 ### Changes to judge.py
+
 - Add `specs_dir` parameter for cross-validation
 - Check for `## Linked Specs` section (plural) or multiple `## Linked Spec` entries
 - Validate each referenced spec file exists
 - New scoring dimension: "Spec Coupling" (20 pts)
 
 ### Changes to rubric.md
+
 - New dimension: Spec Coupling (20 pts)
 - `## Linked Specs` section with ≥1 valid spec path: 20 pts
 - Inline spec references to valid files: 15 pts
 - No spec references: 0 pts
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 3: prompts-judge Enhancement
 
 ### New Requirements
+
 1. **Prompt categorization** — Every `.prompt.md` must have a `category:` frontmatter field matching its parent directory structure
 2. **Parent directory exists** — Prompt must live in `.github/prompts/<category>/` subdirectory (not directly in `.github/prompts/`)
 3. **Template co-location** — All templates used by a prompt must be in `templates/<trigger>/` directory
@@ -69,6 +79,7 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 7. **Verification gates** — Only pass if all above checks pass AND plans-judge AND prompts-judge pass
 
 ### Changes to judge.py
+
 - Add category validation (frontmatter `category:` matches parent dir name)
 - Check prompt is in `.github/prompts/<category>/` not `.github/prompts/`
 - Verify all `templates/` references point to `templates/<trigger>/`
@@ -78,13 +89,16 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 - Score 0 if any hard requirement fails
 
 ### Changes to rubric.md
+
 - New dimensions: Category Enforcement, Asset Co-location, Asset Verification, Cross-judge Gates
 - Each dimension: PASS=20, FAIL=0 (hard gates)
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 4: Fix Issues & Achieve ≥98 Score
 
 ### For each judge:
+
 1. Run current judge on test data
 2. Identify all issues/warnings/errors
 3. Fix root causes in judge code and reference files
@@ -92,14 +106,18 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 5. Verify all three judges score ≥98 on their respective corpuses
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 5: Integration Testing
+
 - Run all three judges in sequence
 - Verify cross-validation works
 - Ensure no circular dependencies
 - Document any remaining edge cases
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Verification Gates
+
 - [ ] specs-judge scores ≥98 on `./specs/`
 - [ ] plans-judge scores ≥98 on `./plans/`
 - [ ] prompts-judge scores ≥98 on `.github/prompts/`
@@ -111,12 +129,12 @@ Enhance specs-judge, plans-judge, and prompts-judge to enforce new structural ru
 
 ## Risks
 
-| Risk | Impact | Likelihood | Mitigation |
-|------|--------|------------|------------|
-| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
-| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
-| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
-| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+| Risk                                               | Impact | Likelihood | Mitigation                                                                                     |
+| -------------------------------------------------- | ------ | ---------- | ---------------------------------------------------------------------------------------------- |
+| Judge subprocess timeout (>60s)                    | Low    | Medium     | Pre-warm: run plans-judge + specs-judge once before scoring                                    |
+| Cross-judge path resolution fails                  | Medium | Low        | Use project_root = pdir.parent.parent; verify with `echo`                                      |
+| Phase gate line missing                            | Low    | High       | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium     | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec                    |
 
 ## Files to Create or Modify
 

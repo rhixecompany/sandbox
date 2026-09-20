@@ -1,42 +1,36 @@
 {
-  "t_3238680b": {
-    "title": "Audit Lane 1: List all hermes home files",
-    "status": "verified_by_artifact",
-    "artifact_evidence_exists": true
-  },
-  "t_c9d6ab04": {
-    "title": "Audit Lane 2: Triage broken/missing files",
-    "status": "verified_by_artifact",
-    "artifact_evidence_exists": true
-  },
-  "t_eca3c8dd": {
-    "title": "Audit Lane 3: Repair/debug broken files",
-    "status": "verified_by_artifact",
-    "artifact_evidence_exists": true
-  },
-  "t_2a9bc078": {
-    "title": "Audit Lane 4: Apply verified fixes and pass judgment gates",
-    "status": "verified_by_artifact",
-    "artifact_evidence_exists": true
-  },
-  "t_8f6173a4": {
-    "title": "Audit Lane 5: Final verification of all artifacts",
-    "status": "verified_by_artifact",
-    "artifact_evidence_exists": true
-  },
-  "t_b5959700": {
-    "title": "Audit Lane 6: Final complete and structured handoff",
-    "status": "verified_by_artifact",
-    "artifact_evidence_exists": true
-  },
-  "env_bytes": 5274,
-  "kanban_complete_called": true,
-  "summary_and_metadata_confirmed": true,
-  "full_range_t3238680b_to_t8f6173a4": [
-    "t_3238680b",
-    "t_c9d6ab04",
-    "t_eca3c8dd",
-    "t_2a9bc078",
-    "t_8f6173a4"
-  ]
+	"t_3238680b": {
+		"title": "Audit Lane 1: List all hermes home files",
+		"status": "verified_by_artifact",
+		"artifact_evidence_exists": true
+	},
+	"t_c9d6ab04": {
+		"title": "Audit Lane 2: Triage broken/missing files",
+		"status": "verified_by_artifact",
+		"artifact_evidence_exists": true
+	},
+	"t_eca3c8dd": {
+		"title": "Audit Lane 3: Repair/debug broken files",
+		"status": "verified_by_artifact",
+		"artifact_evidence_exists": true
+	},
+	"t_2a9bc078": {
+		"title": "Audit Lane 4: Apply verified fixes and pass judgment gates",
+		"status": "verified_by_artifact",
+		"artifact_evidence_exists": true
+	},
+	"t_8f6173a4": {
+		"title": "Audit Lane 5: Final verification of all artifacts",
+		"status": "verified_by_artifact",
+		"artifact_evidence_exists": true
+	},
+	"t_b5959700": {
+		"title": "Audit Lane 6: Final complete and structured handoff",
+		"status": "verified_by_artifact",
+		"artifact_evidence_exists": true
+	},
+	"env_bytes": 5274,
+	"kanban_complete_called": true,
+	"summary_and_metadata_confirmed": true,
+	"full_range_t3238680b_to_t8f6173a4": ["t_3238680b", "t_c9d6ab04", "t_eca3c8dd", "t_2a9bc078", "t_8f6173a4"]
 }

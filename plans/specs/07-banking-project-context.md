@@ -21,6 +21,7 @@ Banking project (`projects/Banking/`) has AGENTS.md as canonical agent guidance,
 ## Requirements
 
 ### Functional
+
 - [ ] `projects/Banking/AGENTS.md` loads as project context in new Banking sessions
 - [ ] AGENTS.md recognized before .github/prompts/ (canonical guidance first)
 - [ ] Project-specific specs reference `.github/instructions/` templates
@@ -28,18 +29,19 @@ Banking project (`projects/Banking/`) has AGENTS.md as canonical agent guidance,
 - [ ] Banking project stack recognized: Next.js 16, Drizzle ORM, Plaid, Dwolla, TypeScript strict
 
 ### Non-Functional
+
 - [ ] Context load time < 3 seconds
 - [ ] No duplicate context loading
 - [ ] Works across profile switches
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| AGENTS.md readable | `read_file ~/Desktop/SandBox/projects/Banking/AGENTS.md` | Returns full content |
-| Context loads | New session in Banking dir → check loaded context | AGENTS.md referenced |
-| Prompts load | `ls ~/Desktop/SandBox/projects/Banking/.github/prompts/` | Project prompts listed |
-| Stack recognized | Context mentions Next.js 16, Drizzle, Plaid, Dwolla | Found |
+| Check              | Command                                                  | Expected               |
+| ------------------ | -------------------------------------------------------- | ---------------------- |
+| AGENTS.md readable | `read_file ~/Desktop/SandBox/projects/Banking/AGENTS.md` | Returns full content   |
+| Context loads      | New session in Banking dir → check loaded context        | AGENTS.md referenced   |
+| Prompts load       | `ls ~/Desktop/SandBox/projects/Banking/.github/prompts/` | Project prompts listed |
+| Stack recognized   | Context mentions Next.js 16, Drizzle, Plaid, Dwolla      | Found                  |
 
 ## Implementation Approach
 
@@ -63,16 +65,16 @@ ls -la ~/Desktop/SandBox/projects/Banking/.github/instructions/
 
 ## Banking Project Stack (from AGENTS.md)
 
-| Layer | Technology |
-|-------|------------|
-| Framework | Next.js 16 |
-| Database | Drizzle ORM |
-| Auth/Payments | Plaid, Dwolla |
-| Language | TypeScript strict |
-| Package Manager | Bun |
-| Testing | Vitest |
-| Linting | ESLint 10 flat config, Prettier 3 |
-| CI/CD | GitHub Actions |
+| Layer           | Technology                        |
+| --------------- | --------------------------------- |
+| Framework       | Next.js 16                        |
+| Database        | Drizzle ORM                       |
+| Auth/Payments   | Plaid, Dwolla                     |
+| Language        | TypeScript strict                 |
+| Package Manager | Bun                               |
+| Testing         | Vitest                            |
+| Linting         | ESLint 10 flat config, Prettier 3 |
+| CI/CD           | GitHub Actions                    |
 
 ## Verification Steps
 

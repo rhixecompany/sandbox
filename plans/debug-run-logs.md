@@ -3,7 +3,9 @@ name: debug-run-logs
 version: 1.0.0
 status: in-progress
 ---
+
 # Debug Subgoal — Real Command Output Log
+
 > Per `systematic-debugging` Phase 1: real evidence captured BEFORE any fix.
 > Per `user-communication-preferences`: no synthetic results; no hidden errors.
 > Per `SOUL.md`: honest blocker reporting; `.env` untouched.
@@ -20,10 +22,10 @@ Timestamp: 2026-09-13T17:54:19.388676
 Exit code: 0
 Stdout (first 3000 chars):
 
-  Testing 'doist/todoist-ai'...
-  Transport: HTTP → https://ai.todoist.net/mcp
-  Auth: none
-  ✗ Connection failed (13428ms): Server returned an error response
+Testing 'doist/todoist-ai'...
+Transport: HTTP → https://ai.todoist.net/mcp
+Auth: none
+✗ Connection failed (13428ms): Server returned an error response
 
 Stderr (first 3000 chars):
 (no stderr)
@@ -34,10 +36,10 @@ Timestamp: 2026-09-13T17:54:48.702702
 Exit code: 0
 Stdout (145 chars):
 
-  Testing 'io.github.basicmachines-co/basic-memory'...
-  Transport: stdio → uvx
-  Auth: none
-  ✗ Connection failed (21906ms): Connection closed
+Testing 'io.github.basicmachines-co/basic-memory'...
+Transport: stdio → uvx
+Auth: none
+✗ Connection failed (21906ms): Connection closed
 
 Stderr (0 chars):
 (empty stderr)
@@ -48,64 +50,72 @@ Exit code: 1
 Stdout (first 3000 chars):
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\algorithmic-art\templates\generator_template.js
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\brainstorming\scripts\helper.js
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\brainstorming\scripts\server.cjs
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\codemap\scripts\codemap.mts
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\codemap\scripts\codemap.test.ts
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.copilot\skills\algorithmic-art\templates\generator_template.js
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.copilot\skills\brainstorming\scripts\helper.js
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.copilot\skills\brainstorming\scripts\server.cjs
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in yo
-Stderr (first 3000 chars):
-$ bun run lint && bun run format:check && bun run markdownlint && bun run spellcheck
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in yo
+  Stderr (first 3000 chars):
+  $ bun run lint && bun run format:check && bun run markdownlint && bun run spellcheck
 $ eslint . --no-error-on-unmatched-pattern
-error: script "lint" exited with code 1
-error: script "check" exited with code 1
+  error: script "lint" exited with code 1
+  error: script "check" exited with code 1
 
 Note: Real `bun run check` result. If non-zero, errors/warnings are the actual state before any fix attempt.
 
@@ -115,87 +125,87 @@ Exit code: 0
 Stdout (first 3000 chars):
 
 ┌─────────────────────────────────────────────────────────┐
-│                 🩺 Hermes Doctor                        │
+│ 🩺 Hermes Doctor │
 └─────────────────────────────────────────────────────────┘
 
 ◆ Security Advisories
-  ✓ No active security advisories
+✓ No active security advisories
 
 ◆ MCP Server Security
-  ✓ No suspicious MCP stdio commands
+✓ No suspicious MCP stdio commands
 
 ◆ Python Environment
-  ✓ Python 3.13.14
-  ✓ SQLite 3.53.1
-    → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (429.7 MB)
-    → cron/executions.db: WAL journal mode (52.0 KB)
-    → projects.db: WAL journal mode (44.0 KB)
-    → verification_evidence.db: WAL journal mode (552.0 KB)
-    → kanban.db: WAL journal mode (112.0 KB)
-  ✓ Virtual environment active
-  ✓ Version files consistent (0.21.1)
+✓ Python 3.13.14
+✓ SQLite 3.53.1
+→ SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
+→ state.db: WAL journal mode (429.7 MB)
+→ cron/executions.db: WAL journal mode (52.0 KB)
+→ projects.db: WAL journal mode (44.0 KB)
+→ verification_evidence.db: WAL journal mode (552.0 KB)
+→ kanban.db: WAL journal mode (112.0 KB)
+✓ Virtual environment active
+✓ Version files consistent (0.21.1)
 
 ◆ SSL / CA Certificates
-  ✓ SSL CA certificate bundle is valid
+✓ SSL CA certificate bundle is valid
 
 ◆ Required Packages
-  ✓ OpenAI SDK
-  ✓ Rich (terminal UI)
-  ✓ python-dotenv
-  ✓ PyYAML
-  ✓ HTTPX
-  ✓ Croniter (cron expressions) (optional)
-  ✓ python-telegram-bot (optional)
-  ✓ discord.py (optional)
+✓ OpenAI SDK
+✓ Rich (terminal UI)
+✓ python-dotenv
+✓ PyYAML
+✓ HTTPX
+✓ Croniter (cron expressions) (optional)
+✓ python-telegram-bot (optional)
+✓ discord.py (optional)
 
 ◆ Configuration Files
-  ✓ ~/AppData/Local/hermes/.env file exists
-  ✓ API key or custom endpoint configured
-  ✓ ~/AppData/Local/hermes/config.yaml exists
-  ✓ Config version up to date (v42)
-  ✓ No deprecated config keys or env vars
+✓ ~/AppData/Local/hermes/.env file exists
+✓ API key or custom endpoint configured
+✓ ~/AppData/Local/hermes/config.yaml exists
+✓ Config version up to date (v42)
+✓ No deprecated config keys or env vars
 
 ◆ xAI Model Retirement (May 15, 2026)
-  ✓ No retired xAI models in config
+✓ No retired xAI models in config
 
 ◆ Plugin import paths (removed Sep 14, 2026)
-  ⚠ chrome-profiles: 1 import(s) of paths removed on 2026-09-14 tools.browser_tool.cleanup_all_browsers -> tools.browser_tool_lifecycle.cleanup_all_browsers
-    → Details: hermes plugins compat
+⚠ chrome-profiles: 1 import(s) of paths removed on 2026-09-14 tools.browser_tool.cleanup_all_browsers -> tools.browser_tool_lifecycle.cleanup_all_browsers
+→ Details: hermes plugins compat
 
 ◆ Auth Providers
-  ✓ Nous Portal auth (logged in)
-  ✓ OpenAI Codex auth (logged in)
-  ✓ MiniMax OAuth (logged in, region=global)
-  ✓ xAI OAuth (logged in)
+✓ Nous Portal auth (logged in)
+✓ OpenAI Codex auth (logged in)
+✓ MiniMax OAuth (logged in, region=global)
+✓ xAI OAuth (logged in)
 
 ◆ Directory Structure
-  ✓ ~/AppData/Local/hermes directory exists
-  ✓ ~/AppData/Local/hermes/cron/ exists
-  ✓ ~/AppData/Local/hermes/sessions/ exists
-  ✓ ~/AppData/Local/hermes/logs/ exists
-  ✓ ~/AppData/Local/hermes/skills/ exists
-  ✓ ~/AppData/Local/hermes/memories/ exists
-  ✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
-  ✓ ~/AppData/Local/hermes/memories/ directory exists
-  ✓ MEMORY.md exists (6876 chars)
-  ✓ USER.md exists (1764 chars)
-  ✓ ~/AppData/Local/hermes/state.db exists (55 sessions)
-    → state.db logical size 429.7 MB, 110,015 pages, 45,857 free, WAL 12.4 MB
-    → 4,967 messages, 55 sessions, journal_mode=wal
-    → FTS tables: messages_fts, messages_fts_trigram
-    → WAL file is 12 MB (normal for active sessions)
+✓ ~/AppData/Local/hermes directory exists
+✓ ~/AppData/Local/hermes/cron/ exists
+✓ ~/AppData/Local/hermes/sessions/ exists
+✓ ~/AppData/Local/hermes/logs/ exists
+✓ ~/AppData/Local/hermes/skills/ exists
+✓ ~/AppData/Local/hermes/memories/ exists
+✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
+✓ ~/AppData/Local/hermes/memories/ directory exists
+✓ MEMORY.md exists (6876 chars)
+✓ USER.md exists (1764 chars)
+✓ ~/AppData/Local/hermes/state.db exists (55 sessions)
+→ state.db logical size 429.7 MB, 110,015 pages, 45,857 free, WAL 12.4 MB
+→ 4,967 messages, 55 sessions, journal_mode=wal
+→ FTS tables: messages_fts, messages_fts_trigram
+→ WAL file is 12 MB (normal for active sessions)
 
 ◆ External Tools
-  ✓ git
-  ✓ ripgrep (rg) (faster file search)
-  ✓ docker (optional)
-  ✓ Node.js
-  ✓ agent-browser (browser automation)
-  ✓ Playwright Chromium (browser engine)
-  ⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 1 moderate — run: cd C:\Users\Alexa\AppData\Local\hermes\hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 1 high, 5 moderate — build-tool advisory; clears via lockfile bump)
-    →   ^ build-time tooling (not runtime); if manual npm remediation errors with
+✓ git
+✓ ripgrep (rg) (faster file search)
+✓ docker (optional)
+✓ Node.js
+✓ agent-browser (browser automation)
+✓ Playwright Chromium (browser engine)
+⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 1 moderate — run: cd C:\Users\Alexa\AppData\Local\hermes\hermes-agent && npm audit fix --workspaces=false)
+⚠ web workspace deps (0 critical, 1 high, 5 moderate — build-tool advisory; clears via lockfile bump)
+→ ^ build-time tooling (not runtime); if manual npm remediation errors with
 Stderr (first 3000 chars):
 (empty stderr)
 Note: Real `hermes doctor` result (before any `hermes doctor --fix` fix attempt).
@@ -206,87 +216,87 @@ Exit code: 0
 Stdout (first 3000 chars):
 
 ┌─────────────────────────────────────────────────────────┐
-│                 🩺 Hermes Doctor                        │
+│ 🩺 Hermes Doctor │
 └─────────────────────────────────────────────────────────┘
 
 ◆ Security Advisories
-  ✓ No active security advisories
+✓ No active security advisories
 
 ◆ MCP Server Security
-  ✓ No suspicious MCP stdio commands
+✓ No suspicious MCP stdio commands
 
 ◆ Python Environment
-  ✓ Python 3.13.14
-  ✓ SQLite 3.53.1
-    → SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
-    → state.db: WAL journal mode (429.7 MB)
-    → cron/executions.db: WAL journal mode (52.0 KB)
-    → projects.db: WAL journal mode (44.0 KB)
-    → verification_evidence.db: WAL journal mode (552.0 KB)
-    → kanban.db: WAL journal mode (112.0 KB)
-  ✓ Virtual environment active
-  ✓ Version files consistent (0.21.1)
+✓ Python 3.13.14
+✓ SQLite 3.53.1
+→ SQLite source id: 2026-05-05 10:34:17 c88b22011a54b4f6fbd149e9f8e4…
+→ state.db: WAL journal mode (429.7 MB)
+→ cron/executions.db: WAL journal mode (52.0 KB)
+→ projects.db: WAL journal mode (44.0 KB)
+→ verification_evidence.db: WAL journal mode (552.0 KB)
+→ kanban.db: WAL journal mode (112.0 KB)
+✓ Virtual environment active
+✓ Version files consistent (0.21.1)
 
 ◆ SSL / CA Certificates
-  ✓ SSL CA certificate bundle is valid
+✓ SSL CA certificate bundle is valid
 
 ◆ Required Packages
-  ✓ OpenAI SDK
-  ✓ Rich (terminal UI)
-  ✓ python-dotenv
-  ✓ PyYAML
-  ✓ HTTPX
-  ✓ Croniter (cron expressions) (optional)
-  ✓ python-telegram-bot (optional)
-  ✓ discord.py (optional)
+✓ OpenAI SDK
+✓ Rich (terminal UI)
+✓ python-dotenv
+✓ PyYAML
+✓ HTTPX
+✓ Croniter (cron expressions) (optional)
+✓ python-telegram-bot (optional)
+✓ discord.py (optional)
 
 ◆ Configuration Files
-  ✓ ~/AppData/Local/hermes/.env file exists
-  ✓ API key or custom endpoint configured
-  ✓ ~/AppData/Local/hermes/config.yaml exists
-  ✓ Config version up to date (v42)
-  ✓ No deprecated config keys or env vars
+✓ ~/AppData/Local/hermes/.env file exists
+✓ API key or custom endpoint configured
+✓ ~/AppData/Local/hermes/config.yaml exists
+✓ Config version up to date (v42)
+✓ No deprecated config keys or env vars
 
 ◆ xAI Model Retirement (May 15, 2026)
-  ✓ No retired xAI models in config
+✓ No retired xAI models in config
 
 ◆ Plugin import paths (removed Sep 14, 2026)
-  ⚠ chrome-profiles: 1 import(s) of paths removed on 2026-09-14 tools.browser_tool.cleanup_all_browsers -> tools.browser_tool_lifecycle.cleanup_all_browsers
-    → Details: hermes plugins compat
+⚠ chrome-profiles: 1 import(s) of paths removed on 2026-09-14 tools.browser_tool.cleanup_all_browsers -> tools.browser_tool_lifecycle.cleanup_all_browsers
+→ Details: hermes plugins compat
 
 ◆ Auth Providers
-  ✓ Nous Portal auth (logged in)
-  ✓ OpenAI Codex auth (logged in)
-  ✓ MiniMax OAuth (logged in, region=global)
-  ✓ xAI OAuth (logged in)
+✓ Nous Portal auth (logged in)
+✓ OpenAI Codex auth (logged in)
+✓ MiniMax OAuth (logged in, region=global)
+✓ xAI OAuth (logged in)
 
 ◆ Directory Structure
-  ✓ ~/AppData/Local/hermes directory exists
-  ✓ ~/AppData/Local/hermes/cron/ exists
-  ✓ ~/AppData/Local/hermes/sessions/ exists
-  ✓ ~/AppData/Local/hermes/logs/ exists
-  ✓ ~/AppData/Local/hermes/skills/ exists
-  ✓ ~/AppData/Local/hermes/memories/ exists
-  ✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
-  ✓ ~/AppData/Local/hermes/memories/ directory exists
-  ✓ MEMORY.md exists (6876 chars)
-  ✓ USER.md exists (1764 chars)
-  ✓ ~/AppData/Local/hermes/state.db exists (55 sessions)
-    → state.db logical size 429.7 MB, 110,015 pages, 45,850 free, WAL 12.4 MB
-    → 4,969 messages, 55 sessions, journal_mode=wal
-    → FTS tables: messages_fts, messages_fts_trigram
-    → WAL file is 12 MB (normal for active sessions)
+✓ ~/AppData/Local/hermes directory exists
+✓ ~/AppData/Local/hermes/cron/ exists
+✓ ~/AppData/Local/hermes/sessions/ exists
+✓ ~/AppData/Local/hermes/logs/ exists
+✓ ~/AppData/Local/hermes/skills/ exists
+✓ ~/AppData/Local/hermes/memories/ exists
+✓ ~/AppData/Local/hermes/SOUL.md exists (persona configured)
+✓ ~/AppData/Local/hermes/memories/ directory exists
+✓ MEMORY.md exists (6876 chars)
+✓ USER.md exists (1764 chars)
+✓ ~/AppData/Local/hermes/state.db exists (55 sessions)
+→ state.db logical size 429.7 MB, 110,015 pages, 45,850 free, WAL 12.4 MB
+→ 4,969 messages, 55 sessions, journal_mode=wal
+→ FTS tables: messages_fts, messages_fts_trigram
+→ WAL file is 12 MB (normal for active sessions)
 
 ◆ External Tools
-  ✓ git
-  ✓ ripgrep (rg) (faster file search)
-  ✓ docker (optional)
-  ✓ Node.js
-  ✓ agent-browser (browser automation)
-  ✓ Playwright Chromium (browser engine)
-  ⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 1 moderate — run: cd C:\Users\Alexa\AppData\Local\hermes\hermes-agent && npm audit fix --workspaces=false)
-  ⚠ web workspace deps (0 critical, 1 high, 5 moderate — build-tool advisory; clears via lockfile bump)
-    →   ^ build-time tooling (not runtime); if manual npm remediation errors with
+✓ git
+✓ ripgrep (rg) (faster file search)
+✓ docker (optional)
+✓ Node.js
+✓ agent-browser (browser automation)
+✓ Playwright Chromium (browser engine)
+⚠ Browser tools (agent-browser) deps (0 critical, 1 high, 1 moderate — run: cd C:\Users\Alexa\AppData\Local\hermes\hermes-agent && npm audit fix --workspaces=false)
+⚠ web workspace deps (0 critical, 1 high, 5 moderate — build-tool advisory; clears via lockfile bump)
+→ ^ build-time tooling (not runtime); if manual npm remediation errors with
 Stderr (first 3000 chars):
 (empty stderr)
 Note: This is the FIX phase. Any changes applied by `hermes doctor --fix` are real changes (not synthetic). Document exactly what was changed (if anything) — do NOT claim fixes for things not actually changed.
@@ -298,62 +308,62 @@ Stdout (first 3000 chars):
 Found 26 known vulnerability finding(s) across 211 component(s):
 
 [venv]
-  CRITICAL  fastmcp==2.10.6  GHSA-vv7q-7jx5-f767
-           FastMCP OpenAPI Provider has an SSRF & Path Traversal Vulnerability
-           fixed in: 3.2.0
-  HIGH      fastmcp==2.10.6  GHSA-5h2m-4q8j-pqpj
-           FastMCP OAuth Proxy token reuse across MCP servers
-           fixed in: 2.14.2
-  HIGH      fastmcp==2.10.6  GHSA-c2jp-c369-7pvx
-           FastMCP Auth Integration Allows for Confused Deputy Account Takeover
-           fixed in: 2.13.0
-  HIGH      fastmcp==2.10.6  GHSA-rcfx-77hg-w2wv
-           FastMCP updated to MCP 1.23+ due to CVE-2025-66416
-           fixed in: 2.14.0
-  HIGH      fastmcp==2.10.6  GHSA-rww4-4w9c-7733
-           FastMCP: Missing Consent Verification in OAuth Proxy Callback Facilitates Confused Deputy Vulnera...
-           fixed in: 3.2.0
-  HIGH      httpcore2==2.7.0  GHSA-7mj9-2mp8-4m2p
-           HTTPX2: Secure WebSocket traffic sent without TLS through SOCKS proxies
-           fixed in: 2.10.0
-  HIGH      httpx2==2.7.0  GHSA-7mj9-2mp8-4m2p
-           HTTPX2: Secure WebSocket traffic sent without TLS through SOCKS proxies
-           fixed in: 2.10.0
-  HIGH      httpx2==2.7.0  GHSA-8xx6-hgc6-gc2m
-           HTTPX2: Streaming response decompression does not bound peak memory (decompression amplification)
-           fixed in: 2.12.0
-  MODERATE  fastmcp==2.10.6  GHSA-m8x7-r2rg-vh5g
-           FastMCP has a Command Injection vulnerability - Gemini CLI
-           fixed in: 3.2.0
-  MODERATE  fastmcp==2.10.6  GHSA-mxxr-jv3v-6pgc
-           FastMCP vulnerable to reflected XSS in client's callback page
-           fixed in: 2.13.0
-  MODERATE  fastmcp==2.10.6  GHSA-rj5c-58rq-j5g5
-           FastMCP vulnerable to windows command injection in FastMCP Cursor installer via server_name
-           fixed in: 2.13.0
-  MODERATE  httpx2==2.7.0  GHSA-f2fp-rgf2-35cp
-           HTTPX2: Quadratic SSE line buffering can cause CPU denial of service
-           fixed in: 2.10.0
-  MODERATE  httpx2==2.7.0  GHSA-h4x7-gw46-3wm6
-           HTTPX2: Multipart part header injection via unvalidated file Content-Type and custom headers
-           fixed in: 2.11.0
-  MODERATE  httpx2==2.7.0  GHSA-pf96-p4fj-6566
-           HTTPX2: Conflicting Content-Length and Transfer-Encoding headers can be auto-generated
-           fixed in: 2.11.0
-  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-1364
-           FastMCP vulnerable to reflected XSS in client's callback page
-           fixed in: 2.13.0
-  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-1365
-           FastMCP vulnerable to windows command injection in FastMCP Cursor installer via server_name
-           fixed in: 2.13.0
-  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-2474
-           FastMCP OAuth Proxy token reuse across MCP servers
-           fixed in: 2.14.2
-  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-2475
-           FastMCP has a Command Injection vulnerability - Gemini CLI
-           fixed in: 3.2.0
-  UNKNOWN   fastmcp==2.10.6  PYSEC-2026-2476
-           FastMCP:
+CRITICAL fastmcp==2.10.6 GHSA-vv7q-7jx5-f767
+FastMCP OpenAPI Provider has an SSRF & Path Traversal Vulnerability
+fixed in: 3.2.0
+HIGH fastmcp==2.10.6 GHSA-5h2m-4q8j-pqpj
+FastMCP OAuth Proxy token reuse across MCP servers
+fixed in: 2.14.2
+HIGH fastmcp==2.10.6 GHSA-c2jp-c369-7pvx
+FastMCP Auth Integration Allows for Confused Deputy Account Takeover
+fixed in: 2.13.0
+HIGH fastmcp==2.10.6 GHSA-rcfx-77hg-w2wv
+FastMCP updated to MCP 1.23+ due to CVE-2025-66416
+fixed in: 2.14.0
+HIGH fastmcp==2.10.6 GHSA-rww4-4w9c-7733
+FastMCP: Missing Consent Verification in OAuth Proxy Callback Facilitates Confused Deputy Vulnera...
+fixed in: 3.2.0
+HIGH httpcore2==2.7.0 GHSA-7mj9-2mp8-4m2p
+HTTPX2: Secure WebSocket traffic sent without TLS through SOCKS proxies
+fixed in: 2.10.0
+HIGH httpx2==2.7.0 GHSA-7mj9-2mp8-4m2p
+HTTPX2: Secure WebSocket traffic sent without TLS through SOCKS proxies
+fixed in: 2.10.0
+HIGH httpx2==2.7.0 GHSA-8xx6-hgc6-gc2m
+HTTPX2: Streaming response decompression does not bound peak memory (decompression amplification)
+fixed in: 2.12.0
+MODERATE fastmcp==2.10.6 GHSA-m8x7-r2rg-vh5g
+FastMCP has a Command Injection vulnerability - Gemini CLI
+fixed in: 3.2.0
+MODERATE fastmcp==2.10.6 GHSA-mxxr-jv3v-6pgc
+FastMCP vulnerable to reflected XSS in client's callback page
+fixed in: 2.13.0
+MODERATE fastmcp==2.10.6 GHSA-rj5c-58rq-j5g5
+FastMCP vulnerable to windows command injection in FastMCP Cursor installer via server_name
+fixed in: 2.13.0
+MODERATE httpx2==2.7.0 GHSA-f2fp-rgf2-35cp
+HTTPX2: Quadratic SSE line buffering can cause CPU denial of service
+fixed in: 2.10.0
+MODERATE httpx2==2.7.0 GHSA-h4x7-gw46-3wm6
+HTTPX2: Multipart part header injection via unvalidated file Content-Type and custom headers
+fixed in: 2.11.0
+MODERATE httpx2==2.7.0 GHSA-pf96-p4fj-6566
+HTTPX2: Conflicting Content-Length and Transfer-Encoding headers can be auto-generated
+fixed in: 2.11.0
+UNKNOWN fastmcp==2.10.6 PYSEC-2026-1364
+FastMCP vulnerable to reflected XSS in client's callback page
+fixed in: 2.13.0
+UNKNOWN fastmcp==2.10.6 PYSEC-2026-1365
+FastMCP vulnerable to windows command injection in FastMCP Cursor installer via server_name
+fixed in: 2.13.0
+UNKNOWN fastmcp==2.10.6 PYSEC-2026-2474
+FastMCP OAuth Proxy token reuse across MCP servers
+fixed in: 2.14.2
+UNKNOWN fastmcp==2.10.6 PYSEC-2026-2475
+FastMCP has a Command Injection vulnerability - Gemini CLI
+fixed in: 3.2.0
+UNKNOWN fastmcp==2.10.6 PYSEC-2026-2476
+FastMCP:
 Stderr (first 3000 chars):
 (empty stderr)
 Note: Real audit result. Security findings (if any) reported honestly — not suppressed.
@@ -364,89 +374,89 @@ Exit code: 0
 Stdout (first 3000 chars):
 
 ┌─────────────────────────────────────────────────────────┐
-│                 ⚕ Hermes Agent Status                  │
+│ ⚕ Hermes Agent Status │
 └─────────────────────────────────────────────────────────┘
 
 ◆ Environment
-  Project:      C:\Users\Alexa\AppData\Local\hermes\hermes-agent
-  Python:       3.13.14
-  .env file:    ✓ exists
-  Model:        thinkingmachines/inkling:free
-  Provider:     Custom endpoint
+Project: C:\Users\Alexa\AppData\Local\hermes\hermes-agent
+Python: 3.13.14
+.env file: ✓ exists
+Model: thinkingmachines/inkling:free
+Provider: Custom endpoint
 
 ◆ API Keys
-  OpenRouter    ✓ sk-o...2eec
-  OpenAI        ✗ (not set)
-  Google / Gemini  ✓ AIza...9EfU
-  DeepSeek      ✓ sk-a...9f84
-  xAI / Grok    ✓ xai-...l0iu
-  NVIDIA NIM    ✗ (not set)
-  Z.AI / GLM    ✗ (not set)
-  Kimi          ✗ (not set)
-  StepFun Step Plan  ✗ (not set)
-  MiniMax       ✓ sk-a...10jQ
-  MiniMax-CN    ✗ (not set)
-  DeepInfra     ✗ (not set)
-  Firecrawl     ✗ (not set)
-  Tavily        ✓ tvly...V8Eu
-  Perplexity    ✗ (not set)
-  Keenable      ✗ (not set)
-  Browser Use   ✗ (not set)
-  Browserbase   ✗ (not set)
-  FAL           ✗ (not set)
-  ElevenLabs    ✗ (not set)
-  GitHub        ✓ gho_...5pZk
-  Anthropic     ✗ (not set)
+OpenRouter ✓ sk-o...2eec
+OpenAI ✗ (not set)
+Google / Gemini ✓ AIza...9EfU
+DeepSeek ✓ sk-a...9f84
+xAI / Grok ✓ xai-...l0iu
+NVIDIA NIM ✗ (not set)
+Z.AI / GLM ✗ (not set)
+Kimi ✗ (not set)
+StepFun Step Plan ✗ (not set)
+MiniMax ✓ sk-a...10jQ
+MiniMax-CN ✗ (not set)
+DeepInfra ✗ (not set)
+Firecrawl ✗ (not set)
+Tavily ✓ tvly...V8Eu
+Perplexity ✗ (not set)
+Keenable ✗ (not set)
+Browser Use ✗ (not set)
+Browserbase ✗ (not set)
+FAL ✗ (not set)
+ElevenLabs ✗ (not set)
+GitHub ✓ gho_...5pZk
+Anthropic ✗ (not set)
 
 ◆ Auth Providers
-  Nous Portal   ✓ logged in
-    Portal URL: https://portal.nousresearch.com
-    Inference:  https://inference-api.nousresearch.com/v1
-    Access exp: 2026-09-13 18:17:29 ica
-    Key exp:    2026-09-13 18:17:29 ica
-    Refresh:    yes
-  OpenAI Codex  ✓ logged in
-    Auth file:  C:\Users\Alexa\AppData\Local\hermes\auth.json
-    Refreshed:  2026-09-05 00:22:07 ica
-  Qwen OAuth    ✗ not logged in (run: qwen auth qwen-oauth)
-    Auth file:  C:\Users\Alexa\.qwen\oauth_creds.json
-    Error:      Qwen CLI credentials not found. Run 'qwen auth qwen-oauth' first.
-  MiniMax OAuth  ✓ logged in
-    Region:     global
-    Access exp: 2027-08-31T16:20:05.475000+00:00
-  xAI OAuth     ✓ logged in
-    Auth file:  C:\Users\Alexa\AppData\Local\hermes\auth.json
-    Refreshed:  2026-09-13 17:17:32 ica
+Nous Portal ✓ logged in
+Portal URL: https://portal.nousresearch.com
+Inference: https://inference-api.nousresearch.com/v1
+Access exp: 2026-09-13 18:17:29 ica
+Key exp: 2026-09-13 18:17:29 ica
+Refresh: yes
+OpenAI Codex ✓ logged in
+Auth file: C:\Users\Alexa\AppData\Local\hermes\auth.json
+Refreshed: 2026-09-05 00:22:07 ica
+Qwen OAuth ✗ not logged in (run: qwen auth qwen-oauth)
+Auth file: C:\Users\Alexa\.qwen\oauth_creds.json
+Error: Qwen CLI credentials not found. Run 'qwen auth qwen-oauth' first.
+MiniMax OAuth ✓ logged in
+Region: global
+Access exp: 2027-08-31T16:20:05.475000+00:00
+xAI OAuth ✓ logged in
+Auth file: C:\Users\Alexa\AppData\Local\hermes\auth.json
+Refreshed: 2026-09-13 17:17:32 ica
 
 ◆ Nous Tool Gateway
-  Your Nous Portal account has no usable paid credits, so managed web, image, TTS, STT, browser, and Modal tools is unavailable. Add credits or update billing at https://portal.nousresearch.com/billing. If you recently bought credits, run `hermes model` to refresh Hermes.
+Your Nous Portal account has no usable paid credits, so managed web, image, TTS, STT, browser, and Modal tools is unavailable. Add credits or update billing at https://portal.nousresearch.com/billing. If you recently bought credits, run `hermes model` to refresh Hermes.
 
 ◆ API-Key Providers
-  Z.AI / GLM       ✗ not configured (run: hermes model)
-  Kimi / Moonshot  ✗ not configured (run: hermes model)
-  StepFun Step Plan ✗ not configured (run: hermes model)
-  MiniMax          ✓ configured
-  MiniMax (China)  ✗ not configured (run: hermes model)
-  DeepInfra        ✗ not configured (run: hermes model)
+Z.AI / GLM ✗ not configured (run: hermes model)
+Kimi / Moonshot ✗ not configured (run: hermes model)
+StepFun Step Plan ✗ not configured (run: hermes model)
+MiniMax ✓ configured
+MiniMax (China) ✗ not configured (run: hermes model)
+DeepInfra ✗ not configured (run: hermes model)
 
 ◆ Terminal Backend
-  Backend:      local
-  Sudo:         ✓ enabled
+Backend: local
+Sudo: ✓ enabled
 
 ◆ Messaging Platforms
-  Telegram      ✓ configured (home: 7043401427)
-  Discord       ✗ not configured
-  WhatsApp      ✗ not configured
-  Signal        ✗ not configured
-  Slack         ✗ not configured
-  Email         ✗ not configured
-  SMS           ✗ not configured
-  DingTalk      ✗ not configured
-  Feishu        ✗ not configured
-  WeCom         ✗ not configured
-  WeCom Callback  ✗ not configured
-  Weixin        ✗ not configured
-  BlueBubbles   ✗ not
+Telegram ✓ configured (home: 7043401427)
+Discord ✗ not configured
+WhatsApp ✗ not configured
+Signal ✗ not configured
+Slack ✗ not configured
+Email ✗ not configured
+SMS ✗ not configured
+DingTalk ✗ not configured
+Feishu ✗ not configured
+WeCom ✗ not configured
+WeCom Callback ✗ not configured
+Weixin ✗ not configured
+BlueBubbles ✗ not
 Stderr (first 3000 chars):
 (empty stderr)
 Note: Real `hermes status` output — reflects actual system state after `hermes doctor --fix` (if any changes applied).
@@ -456,75 +466,75 @@ Timestamp: 2026-09-13T17:58:15.983103
 Exit code: 0
 Stdout (first 3000 chars):
 
-  ╔══════════════════════════════════════════════════════════╗
-  ║                    📊 Hermes Insights                    ║
-  ║                       Last 30 days                       ║
-  ╚══════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════╗
+║ 📊 Hermes Insights ║
+║ Last 30 days ║
+╚══════════════════════════════════════════════════════════╝
 
-  Period: Aug 24, 2026 — Sep 13, 2026
+Period: Aug 24, 2026 — Sep 13, 2026
 
-  📋 Overview
-  ────────────────────────────────────────────────────────
-  Sessions:          55            Messages:        4,975
-  Tool calls:        2,823         User messages:   126
-  Input tokens:      22,290,164    Output tokens:   1,099,211
-  Total tokens:      288,599,783
-  Active time:       ~78.2d        Avg session:     ~2.1d
-  Avg msgs/session:  90.5
+📋 Overview
+────────────────────────────────────────────────────────
+Sessions: 55 Messages: 4,975
+Tool calls: 2,823 User messages: 126
+Input tokens: 22,290,164 Output tokens: 1,099,211
+Total tokens: 288,599,783
+Active time: ~78.2d Avg session: ~2.1d
+Avg msgs/session: 90.5
 
-  💰 Cost
-  ────────────────────────────────────────────────────────
-  Estimated:          ~$2.62
-  Unknown:            31 session(s) (no pricing data)
+💰 Cost
+────────────────────────────────────────────────────────
+Estimated: ~$2.62
+Unknown: 31 session(s) (no pricing data)
 
-  🤖 Models Used
-  ────────────────────────────────────────────────────────
-  Model                          Sessions       Tokens
-  ling-3.0-flash-fin:free              14  129,513,988
-  inkling:free                         12   58,638,368
-  gpt-5.6-luna                          2   39,300,640
-  deepseek-v4-flash-0731                5   32,893,283
-  minimax-m3                            1   10,971,094
-  ling-3.0-flash-fin-free               1   10,512,930
-  nemotron-3.5-lightning-free           4    3,265,559
-  nemotron-3-ultra-free                 3    2,532,250
-  laguna-s-2.1:free                     6      826,789
-  nemotron-3-ultra-550b-a55b:f          1       48,034
-  nemotron-3.5-lightning:free           1       46,818
-  mimo-v2.5-free                        2       44,831
-  step-3.7-flash:free                   2        5,199
+🤖 Models Used
+────────────────────────────────────────────────────────
+Model Sessions Tokens
+ling-3.0-flash-fin:free 14 129,513,988
+inkling:free 12 58,638,368
+gpt-5.6-luna 2 39,300,640
+deepseek-v4-flash-0731 5 32,893,283
+minimax-m3 1 10,971,094
+ling-3.0-flash-fin-free 1 10,512,930
+nemotron-3.5-lightning-free 4 3,265,559
+nemotron-3-ultra-free 3 2,532,250
+laguna-s-2.1:free 6 826,789
+nemotron-3-ultra-550b-a55b:f 1 48,034
+nemotron-3.5-lightning:free 1 46,818
+mimo-v2.5-free 2 44,831
+step-3.7-flash:free 2 5,199
 
-  📱 Platforms
-  ────────────────────────────────────────────────────────
-  Platform       Sessions   Messages         Tokens
-  tui                  42      4,154    240,940,108
-  cli                   7        539     31,111,230
-  cron                  3         57      1,812,268
-  telegram              2         93      2,167,023
-  desktop               1        132      6,018,307
+📱 Platforms
+────────────────────────────────────────────────────────
+Platform Sessions Messages Tokens
+tui 42 4,154 240,940,108
+cli 7 539 31,111,230
+cron 3 57 1,812,268
+telegram 2 93 2,167,023
+desktop 1 132 6,018,307
 
-  🔧 Top Tools
-  ────────────────────────────────────────────────────────
-  Tool                            Calls        %
-  terminal                        1,573    55.0%
-  skill_view                        295    10.3%
-  read_file                         266     9.3%
-  execute_code                      250     8.7%
-  write_file                        155     5.4%
-  patch                              72     2.5%
-  search_files                       70     2.4%
-  tool_call                          47     1.6%
-  clarify                            37     1.3%
-  delegate_task                      17     0.6%
-  session_search                     10     0.3%
-  todo_list                           9     0.3%
-  skills_list                         8     0.3%
-  browser_exec                        7     0.2%
-  mcp__filesystem__get_file_info        6     0.2%
-  ... and 15 more tools
+🔧 Top Tools
+────────────────────────────────────────────────────────
+Tool Calls %
+terminal 1,573 55.0%
+skill_view 295 10.3%
+read_file 266 9.3%
+execute_code 250 8.7%
+write_file 155 5.4%
+patch 72 2.5%
+search_files 70 2.4%
+tool_call 47 1.6%
+clarify 37 1.3%
+delegate_task 17 0.6%
+session_search 10 0.3%
+todo_list 9 0.3%
+skills_list 8 0.3%
+browser_exec 7 0.2%
+mcp__filesystem__get_file_info 6 0.2%
+... and 15 more tools
 
-  🧠 Top Skills
-  ────────────────────────────────────────────────────────
+🧠 Top Skills
+────────────────────────────────────────────────────────
 
 Stderr (first 3000 chars):
 (empty stderr)
@@ -536,49 +546,49 @@ Exit code: 0
 Stdout (first 3000 chars):
 Log files in ~/AppData/Local/hermes/logs/:
 
-  action-curator-run.log        856B   2026-09-10
-  action-doctor.log           18.6KB   2026-09-04
-  action-security-audit.log    3.9KB   2026-09-04
-  action-skills-install-agent-hooks-21d3eec4.log    8.4KB   2026-08-11
-  action-skills-install-agentmemory-hooks-1da657c2.log    1.4KB   2026-08-11
-  action-skills-install-automation-scripts-87f17be5.log     394B   2026-08-11
-  action-skills-install-browse-sh-agent-email-get-email-inbox-5e963107.log     233B   2026-08-11
-  action-skills-install-browse-sh-agentpowers-ai-search-skills-plugins-s-422cdd19.log    1.1KB   2026-08-11
-  action-skills-install-bun-scripts-0188e601.log     196B   2026-08-11
-  action-skills-install-devops-scripts-224aaa27.log     211B   2026-08-11
-  action-skills-install-git-hooks-generator-d3ed007b.log     236B   2026-08-11
-  action-skills-install-git-hooks-manager-1acaec54.log     226B   2026-08-11
-  action-skills-install-git-hooks-toolkit-d1a18d38.log     226B   2026-08-11
-  action-skills-install-init-hooks-33601839.log     191B   2026-08-11
-  action-skills-install-live-qa-scripts-bef61c17.log     217B   2026-08-11
-  action-skills-install-milaex-crypto-api-61c38fe7.log     308B   2026-08-11
-  action-skills-install-official-autonomous-ai-agents-antigravity-cli-c50527af.log     286B   2026-08-11
-  action-skills-install-prompt-9c7e05e5.log     184B   2026-08-11
-  action-skills-install-react-game-loop-a621caf2.log     222B   2026-08-11
-  action-skills-install-realtime-react-hooks-3ca811ed.log     241B   2026-08-11
-  action-skills-install-senpub-124ab220.log     181B   2026-08-11
-  action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log    1.8KB   2026-08-11
-  action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log     967B   2026-08-11
-  action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log    1.4KB   2026-08-11
-  action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log    1.6KB   2026-08-11
-  action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log    1.5KB   2026-08-11
-  action-skills-install-solo-plan-14e77242.log     181B   2026-08-11
-  action-skills-install-trpg-data-context-hooks-24858dd4.log     259B   2026-08-11
-  action-skills-update.log   163.2KB   2026-09-07
-  agent.log                    2.0MB   just now
-  bootstrap-installer.log    337.9KB   2026-08-19
-  capture_common.log         258.9KB   just now
-  desktop.log                598.0KB   2026-09-10
-  errors.log                  69.8KB   just now
-  gateway-exit-diag.log       38.8KB   1h ago
-  gateway-restart.log           137B   2026-08-11
-  gateway-stdio.log            4.1MB   just now
-  gateway.log                  4.6MB   27m ago
-  gui.log                     26.0KB   1h ago
-  hooks.log                  647.2KB   1h ago
-  mcp-stderr.log              24.6MB   just now
-  tui_gateway_crash.log      260.2KB   21m ago
-  update.log                 393.1KB
+action-curator-run.log 856B 2026-09-10
+action-doctor.log 18.6KB 2026-09-04
+action-security-audit.log 3.9KB 2026-09-04
+action-skills-install-agent-hooks-21d3eec4.log 8.4KB 2026-08-11
+action-skills-install-agentmemory-hooks-1da657c2.log 1.4KB 2026-08-11
+action-skills-install-automation-scripts-87f17be5.log 394B 2026-08-11
+action-skills-install-browse-sh-agent-email-get-email-inbox-5e963107.log 233B 2026-08-11
+action-skills-install-browse-sh-agentpowers-ai-search-skills-plugins-s-422cdd19.log 1.1KB 2026-08-11
+action-skills-install-bun-scripts-0188e601.log 196B 2026-08-11
+action-skills-install-devops-scripts-224aaa27.log 211B 2026-08-11
+action-skills-install-git-hooks-generator-d3ed007b.log 236B 2026-08-11
+action-skills-install-git-hooks-manager-1acaec54.log 226B 2026-08-11
+action-skills-install-git-hooks-toolkit-d1a18d38.log 226B 2026-08-11
+action-skills-install-init-hooks-33601839.log 191B 2026-08-11
+action-skills-install-live-qa-scripts-bef61c17.log 217B 2026-08-11
+action-skills-install-milaex-crypto-api-61c38fe7.log 308B 2026-08-11
+action-skills-install-official-autonomous-ai-agents-antigravity-cli-c50527af.log 286B 2026-08-11
+action-skills-install-prompt-9c7e05e5.log 184B 2026-08-11
+action-skills-install-react-game-loop-a621caf2.log 222B 2026-08-11
+action-skills-install-realtime-react-hooks-3ca811ed.log 241B 2026-08-11
+action-skills-install-senpub-124ab220.log 181B 2026-08-11
+action-skills-install-skills-sh-aj-geddes-useful-ai-prompts-data-migra-5420a3a5.log 1.8KB 2026-08-11
+action-skills-install-skills-sh-parcadei-continuous-claude-v3-hooks-01054015.log 967B 2026-08-11
+action-skills-install-skills-sh-patternsdev-skills-hooks-pattern-04b883cf.log 1.4KB 2026-08-11
+action-skills-install-skills-sh-ruvnet-ruflo-hooks-automation-48b1a537.log 1.6KB 2026-08-11
+action-skills-install-skills-sh-sickn33-antigravity-awesome-skills-pro-f1b9ea0e.log 1.5KB 2026-08-11
+action-skills-install-solo-plan-14e77242.log 181B 2026-08-11
+action-skills-install-trpg-data-context-hooks-24858dd4.log 259B 2026-08-11
+action-skills-update.log 163.2KB 2026-09-07
+agent.log 2.0MB just now
+bootstrap-installer.log 337.9KB 2026-08-19
+capture_common.log 258.9KB just now
+desktop.log 598.0KB 2026-09-10
+errors.log 69.8KB just now
+gateway-exit-diag.log 38.8KB 1h ago
+gateway-restart.log 137B 2026-08-11
+gateway-stdio.log 4.1MB just now
+gateway.log 4.6MB 27m ago
+gui.log 26.0KB 1h ago
+hooks.log 647.2KB 1h ago
+mcp-stderr.log 24.6MB just now
+tui_gateway_crash.log 260.2KB 21m ago
+update.log 393.1KB
 Stderr (first 3000 chars):
 (empty stderr)
 Note: Real log command result — no synthetic session logs added.
@@ -605,12 +615,12 @@ session_start_capture initialized
 [0;34m[BLUE][0m governance-audit event='pre_tool_call' normalized=pre_tool_call session_id=20260913_173737_b35a75
 [0;31m[RED][0m Unknown event: pre_tool_call
 2026-09-13 17:58:00,401 WARNING hermes_cli.plugins: Failed to load plugin 'cli-enhancements': 'PluginContext' object has no attribute 'register_flask_app'
-2026-09-13 17:58:00,444 WARNING hermes_cli.plugins: Failed to load plugin 'eagle-eye': No __init__.py in c:\users\alexa\appdata\local\hermes\plugins\eagle-eye\src
-2026-09-13 17:58:00,487 WARNING hermes_cli.plugins: Failed to load plugin 'hermes-achievements': No __init__.py in c:\users\alexa\appdata\local\hermes\plugins\hermes-achievements
+2026-09-13 17:58:00,444 WARNING hermes_cli.plugins: Failed to load plugin 'eagle-eye': No **init**.py in c:\users\alexa\appdata\local\hermes\plugins\eagle-eye\src
+2026-09-13 17:58:00,487 WARNING hermes_cli.plugins: Failed to load plugin 'hermes-achievements': No **init**.py in c:\users\alexa\appdata\local\hermes\plugins\hermes-achievements
 2026-09-13 17:58:00,496 WARNING hermes_cli.plugins: Failed to load plugin 'hermes-payguard': No module named 'hermes_payguard'
-2026-09-13 17:58:00,502 WARNING hermes_cli.plugins: Failed to load plugin 'mindstudio-agent': No __init__.py in c:\users\alexa\appdata\local\hermes\plugins\mindstudio-agent
-2026-09-13 17:58:00,520 WARNING hermes_cli.plugins: Failed to load plugin 'oh-my-hermes': No __init__.py in c:\users\alexa\appdata\local\hermes\plugins\oh-my-hermes
-2026-09-13 17:58:00,545 WARNING hermes_cli.plugins: Failed to load plugin 'rate-limit-bypass': No __init__.py in c:\users\alexa\appdata\local\hermes\plugins\rate-limit-bypass
+2026-09-13 17:58:00,502 WARNING hermes_cli.plugins: Failed to load plugin 'mindstudio-agent': No **init**.py in c:\users\alexa\appdata\local\hermes\plugins\mindstudio-agent
+2026-09-13 17:58:00,520 WARNING hermes_cli.plugins: Failed to load plugin 'oh-my-hermes': No **init**.py in c:\users\alexa\appdata\local\hermes\plugins\oh-my-hermes
+2026-09-13 17:58:00,545 WARNING hermes_cli.plugins: Failed to load plugin 'rate-limit-bypass': No **init**.py in c:\users\alexa\appdata\local\hermes\plugins\rate-limit-bypass
 2026-09-13 17:58:00,606 WARNING hermes_cli.plugins: Failed to load plugin 'telegram-bot': 'PluginContext' object has no attribute 'register_flask_app'
 2026-
 Stderr (first 3000 chars):
@@ -788,12 +798,12 @@ Note: Real log command result — no synthetic session logs added.
 
 --- BATCH 3 SUMMARY ---
 Results (label, exit, stdout_len, stderr_len):
-  hermes logs list: exit=0 stdout=3013 stderr=0
-  hermes logs errors: exit=0 stdout=5822 stderr=0
-  hermes logs desktop: exit=0 stdout=7839 stderr=0
-  hermes logs gateway: exit=0 stdout=7749 stderr=0
-  hermes logs gui: exit=0 stdout=6519 stderr=0
-  hermes logs agent: exit=0 stdout=7778 stderr=0
+hermes logs list: exit=0 stdout=3013 stderr=0
+hermes logs errors: exit=0 stdout=5822 stderr=0
+hermes logs desktop: exit=0 stdout=7839 stderr=0
+hermes logs gateway: exit=0 stdout=7749 stderr=0
+hermes logs gui: exit=0 stdout=6519 stderr=0
+hermes logs agent: exit=0 stdout=7778 stderr=0
 Note: All 6 log commands executed sequentially with real outputs. No synthetic log entries.
 
 --- POST-FIX VERIFICATION — Re-run `bun run check` after `.eslintrc.json` parser clarification ---
@@ -803,39 +813,44 @@ Re-run exit code: 1
 Stdout (first 2000 chars):
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\algorithmic-art\templates\generator_template.js
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\brainstorming\scripts\helper.js
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\brainstorming\scripts\server.cjs
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\codemap\scripts\codemap.mts
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.codex\skills\codemap\scripts\codemap.test.ts
-  0:0  error  Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
- - C:\Users\Alexa\Desktop\SandBox
- - C:\Users\Alexa\Desktop\SandBox\src
-You'll need to explicitly set tsconfigRootDir in your parser options.
-See: https://tseslint.com/parser-tsconfigrootdir
+0:0 error Parsing error: No tsconfigRootDir was set, and multiple candidate TSConfigRootDirs are present:
+
+- C:\Users\Alexa\Desktop\SandBox
+- C:\Users\Alexa\Desktop\SandBox\src
+  You'll need to explicitly set tsconfigRootDir in your parser options.
+  See: https://tseslint.com/parser-tsconfigrootdir
 
 C:\Users\Alexa\Desktop\SandBox\.copilot\skills\algorithmic-art\templates\generator_template
 Stderr (first 2000 chars):
@@ -852,74 +867,74 @@ Note: Previous analysis noted 6 verified .md files; re-count via `os.walk` confi
 Started sequential file listing: 2026-09-13T18:06:23.525329
 Note: All 14 files verified by `os.path.getsize` in previous session; no synthetic listings inserted.
 File: docs/user-guide/bot-mode.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/cli.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/egress/index.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/web-search.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/messaging/telegram.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/secrets/index.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/hooks.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/kanban.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/mcp.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/memory.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/overview.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/skills.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/tool-gateway.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 File: docs/user-guide/features/tools.md
-  exit=-1
-  ls_output=
-  stderr=Exception: [WinError 2] The system cannot find the file specified
+exit=-1
+ls_output=
+stderr=Exception: [WinError 2] The system cannot find the file specified
 
 --- Sequential `cat` (first 120 chars of verified real .md files) ---
 File: docs/user-guide/bot-mode.md | size=32119 B | head_preview='--- title: "Bot Mode" description: "Turn your Hermes profiles into a roster of named Bots — each with its own chat, role'
 File: docs/user-guide/cli.md | size=28039 B | head_preview='--- sidebar_position: 1 title: "CLI Interface" description: "Master the Hermes Agent terminal interface — commands, keyb'
-File: docs/user-guide/egress/index.md | size=411 B | head_preview='--- title: Egress proxy sidebar_position: 1 ---  # Egress proxy  Optional outbound credential-injection firewall for rem'
+File: docs/user-guide/egress/index.md | size=411 B | head_preview='--- title: Egress proxy sidebar_position: 1 --- # Egress proxy Optional outbound credential-injection firewall for rem'
 File: docs/user-guide/features/web-search.md | size=21987 B | head_preview='--- title: Web Search & Extract description: Search the web and extract page content with multiple backend providers — i'
-File: docs/user-guide/messaging/telegram.md | size=71197 B | head_preview='--- sidebar_position: 1 title: "Telegram" description: "Set up Hermes Agent as a Telegram bot" ---  # Telegram Setup  He'
-File: docs/user-guide/secrets/index.md | size=4136 B | head_preview='# Secrets  Hermes can pull API keys from external secret managers at process startup instead of storing them in `~/.herm'
+File: docs/user-guide/messaging/telegram.md | size=71197 B | head_preview='--- sidebar_position: 1 title: "Telegram" description: "Set up Hermes Agent as a Telegram bot" --- # Telegram Setup He'
+File: docs/user-guide/secrets/index.md | size=4136 B | head_preview='# Secrets Hermes can pull API keys from external secret managers at process startup instead of storing them in `~/.herm'
 File: docs/user-guide/features/hooks.md | size=108621 B | head_preview='--- sidebar_position: 6 title: "Event Hooks" description: "Run custom code at key lifecycle points — log activity, send '
 File: docs/user-guide/features/kanban.md | size=100795 B | head_preview='--- sidebar_position: 16 title: "Persistent Goals" description: "Set a standing goal and let Hermes keep working across '
 File: docs/user-guide/features/mcp.md | size=39403 B | head_preview='--- sidebar_position: 4 title: "MCP (Model Context Protocol)" description: "Connect Hermes Agent to external tool server'
 File: docs/user-guide/features/memory.md | size=24891 B | head_preview='--- sidebar_position: 3 title: "Persistent Memory" description: "How Hermes Agent remembers across sessions — MEMORY.md,'
-File: docs/user-guide/features/overview.md | size=7334 B | head_preview='--- title: "Features Overview" sidebar_label: "Overview" sidebar_position: 1 ---  # Features Overview  Hermes Agent incl'
+File: docs/user-guide/features/overview.md | size=7334 B | head_preview='--- title: "Features Overview" sidebar_label: "Overview" sidebar_position: 1 --- # Features Overview Hermes Agent incl'
 File: docs/user-guide/features/skills.md | size=52828 B | head_preview='--- sidebar_position: 2 title: "Skills System" description: "On-demand knowledge documents — progressive disclosure, age'
 File: docs/user-guide/features/tool-gateway.md | size=12776 B | head_preview='--- title: "Nous Tool Gateway" description: "One subscription, every tool. Web search, image generation, TTS, and cloud '
 File: docs/user-guide/features/tools.md | size=14555 B | head_preview='--- sidebar_position: 1 title: "Tools & Toolsets" description: "Overview of Hermes Agent\'s tools — what\'s available, how'
@@ -927,8 +942,8 @@ File: docs/user-guide/features/tools.md | size=14555 B | head_preview='--- sideb
 Note: All file names and sizes verified by `os.path.getsize` / `os.path.isfile`; no synthetic file listings or synthetic content inserted. Previous rate-limit blocker (403) prevented full 344 download but does NOT affect verification of these 14 verified real files (content verified in previous subgoal).
 
 === 2026-09-14 Phase 1 Stash Evidence (Real, Verified) ===
-Stash refs verified real: git stash list (hermes-agent repo ~/AppData/Local/Hermes/hermes-agent/) shows 4 entries — stash@{0}: 20260905; stash@{1}: 20260828; stash@{2}: 20260804; stash@{3}: 20260728.
-Workspace repo (~/Desktop/SandBox) git stash list: empty — stashes do NOT exist here (verified exit 1 for all 4 apply attempts).
+Stash refs verified real: git stash list (hermes-agent repo ~~/AppData/Local/Hermes/hermes-agent/) shows 4 entries — stash@{0}: 20260905; stash@{1}: 20260828; stash@{2}: 20260804; stash@{3}: 20260728.
+Workspace repo (~~/Desktop/SandBox) git stash list: empty — stashes do NOT exist here (verified exit 1 for all 4 apply attempts).
 Stash apply from hermes-agent directory: BLOCKED by Hermes live-source-checkout protection (verified real terminal output — safety mechanism, not synthetic; not hidden).
 No synthetic artifacts; .env untouched; identity preserved; 0 new .bak artifacts. Blocker documented honestly per systematic-debugging Phase 1 (evidence before fix).
 === Config audit result ===

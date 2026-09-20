@@ -49,13 +49,13 @@ Multi-phase delivery framework that transforms high-level objectives into verifi
 
 **Objective:** Establish baseline state, identify constraints, and validate feasibility.
 
-| Task | Deliverable | Owner | Duration |
-|------|-------------|-------|----------|
-| Workspace inventory | `workspace-inventory.json` | Agent | 2h |
-| Dependency audit | `audit-inventory.json` | Agent | 2h |
-| Stakeholder requirements | Requirements doc | User + Agent | 4h |
-| Feasibility analysis | Go/No-Go decision | Agent | 1h |
-| Risk register | Risk matrix | Agent | 1h |
+| Task                     | Deliverable                | Owner        | Duration |
+| ------------------------ | -------------------------- | ------------ | -------- |
+| Workspace inventory      | `workspace-inventory.json` | Agent        | 2h       |
+| Dependency audit         | `audit-inventory.json`     | Agent        | 2h       |
+| Stakeholder requirements | Requirements doc           | User + Agent | 4h       |
+| Feasibility analysis     | Go/No-Go decision          | Agent        | 1h       |
+| Risk register            | Risk matrix                | Agent        | 1h       |
 
 **Milestone:** Requirements signed off, risks documented, go/no-go decided.
 
@@ -67,13 +67,13 @@ Multi-phase delivery framework that transforms high-level objectives into verifi
 
 **Objective:** Translate requirements into actionable, verifiable specifications.
 
-| Task | Deliverable | Owner | Duration |
-|------|-------------|-------|----------|
-| Architecture design | Architecture doc | Agent | 3h |
-| Spec documents | `./specs/*.md` | Agent | 4h |
-| Implementation plan | `./plans/*.md` | Agent | 3h |
-| Test strategy | Test plan | Agent | 2h |
-| Resource schedule | Timeline + milestones | Agent | 1h |
+| Task                | Deliverable           | Owner | Duration |
+| ------------------- | --------------------- | ----- | -------- |
+| Architecture design | Architecture doc      | Agent | 3h       |
+| Spec documents      | `./specs/*.md`        | Agent | 4h       |
+| Implementation plan | `./plans/*.md`        | Agent | 3h       |
+| Test strategy       | Test plan             | Agent | 2h       |
+| Resource schedule   | Timeline + milestones | Agent | 1h       |
 
 **Milestone:** All specs reviewed, plans approved, timelines committed.
 
@@ -85,13 +85,13 @@ Multi-phase delivery framework that transforms high-level objectives into verifi
 
 **Objective:** Implement the plan in bounded batches with continuous verification.
 
-| Task | Deliverable | Owner | Duration |
-|------|-------------|-------|----------|
-| Core infrastructure | Working skeleton | Subagent | 4h |
-| Feature implementation | Feature code | Subagent | 8h |
-| Configuration | Config files | Subagent | 2h |
-| Integration | End-to-end flow | Subagent | 4h |
-| Documentation | README + docs | Agent | 2h |
+| Task                   | Deliverable      | Owner    | Duration |
+| ---------------------- | ---------------- | -------- | -------- |
+| Core infrastructure    | Working skeleton | Subagent | 4h       |
+| Feature implementation | Feature code     | Subagent | 8h       |
+| Configuration          | Config files     | Subagent | 2h       |
+| Integration            | End-to-end flow  | Subagent | 4h       |
+| Documentation          | README + docs    | Agent    | 2h       |
 
 **Milestone:** All features implemented, integration tests passing, code reviewed.
 
@@ -103,13 +103,13 @@ Multi-phase delivery framework that transforms high-level objectives into verifi
 
 **Objective:** Validate correctness, performance, security, and compliance.
 
-| Task | Deliverable | Owner | Duration |
-|------|-------------|-------|----------|
-| Unit tests | Test suite | Subagent | 3h |
-| Integration tests | E2E tests | Subagent | 3h |
-| Code review | Review report | Reviewer | 2h |
-| Security scan | Security report | Agent | 1h |
-| Performance baseline | Perf metrics | Agent | 2h |
+| Task                 | Deliverable     | Owner    | Duration |
+| -------------------- | --------------- | -------- | -------- |
+| Unit tests           | Test suite      | Subagent | 3h       |
+| Integration tests    | E2E tests       | Subagent | 3h       |
+| Code review          | Review report   | Reviewer | 2h       |
+| Security scan        | Security report | Agent    | 1h       |
+| Performance baseline | Perf metrics    | Agent    | 2h       |
 
 **Milestone:** All tests passing, zero critical issues, performance within SLA.
 
@@ -121,13 +121,13 @@ Multi-phase delivery framework that transforms high-level objectives into verifi
 
 **Objective:** Release to production with observability and rollback capability.
 
-| Task | Deliverable | Owner | Duration |
-|------|-------------|-------|----------|
-| Release preparation | Release notes | Agent | 2h |
-| Deployment | Live system | Agent | 1h |
-| Health checks | Monitoring dash | Agent | 1h |
-| Rollback procedure | Runbook | Agent | 1h |
-| Post-deploy review | Lessons learned | User + Agent | 2h |
+| Task                | Deliverable     | Owner        | Duration |
+| ------------------- | --------------- | ------------ | -------- |
+| Release preparation | Release notes   | Agent        | 2h       |
+| Deployment          | Live system     | Agent        | 1h       |
+| Health checks       | Monitoring dash | Agent        | 1h       |
+| Rollback procedure  | Runbook         | Agent        | 1h       |
+| Post-deploy review  | Lessons learned | User + Agent | 2h       |
 
 **Milestone:** System live, monitoring green, rollback tested, retrospective complete.
 
@@ -170,64 +170,64 @@ Week 2
 
 ## Milestones
 
-| # | Milestone | Date | Success Criteria |
-|---|-----------|------|------------------|
-| M1 | Discovery complete | Day 2 | Inventory done, risks documented |
-| M2 | Specs approved | Day 4 | All specs reviewed and signed off |
-| M3 | Build complete | Day 8 | All features implemented, tests pass |
-| M4 | QA passed | Day 10 | Zero critical issues, perf within SLA |
-| M5 | Production live | Day 12 | System deployed, monitoring green |
+| #   | Milestone          | Date   | Success Criteria                      |
+| --- | ------------------ | ------ | ------------------------------------- |
+| M1  | Discovery complete | Day 2  | Inventory done, risks documented      |
+| M2  | Specs approved     | Day 4  | All specs reviewed and signed off     |
+| M3  | Build complete     | Day 8  | All features implemented, tests pass  |
+| M4  | QA passed          | Day 10 | Zero critical issues, perf within SLA |
+| M5  | Production live    | Day 12 | System deployed, monitoring green     |
 
 ## Resource Allocation
 
 ### Agent Resources
 
-| Resource | Allocation | Purpose |
-|----------|------------|---------|
-| Primary agent | 40h total | Planning, coordination, review |
-| Subagent (implementer) | 16h total | Code implementation |
-| Subagent (reviewer) | 8h total | Spec & quality review |
-| Subagent (tester) | 6h total | Test implementation |
+| Resource               | Allocation | Purpose                        |
+| ---------------------- | ---------- | ------------------------------ |
+| Primary agent          | 40h total  | Planning, coordination, review |
+| Subagent (implementer) | 16h total  | Code implementation            |
+| Subagent (reviewer)    | 8h total   | Spec & quality review          |
+| Subagent (tester)      | 6h total   | Test implementation            |
 
 ### Tooling
 
-| Tool | Purpose | Phase |
-|------|---------|-------|
-| Hermes terminal | Git, builds, tests | All |
-| MCP filesystem | File operations | All |
-| MCP ast-grep | Code search/refactor | Phase 3 |
-| MCP memory | Knowledge graph | All |
-| MCP github | PR, issue management | Phase 5 |
-| delegate_task | Parallel execution | Phase 3-4 |
+| Tool            | Purpose              | Phase     |
+| --------------- | -------------------- | --------- |
+| Hermes terminal | Git, builds, tests   | All       |
+| MCP filesystem  | File operations      | All       |
+| MCP ast-grep    | Code search/refactor | Phase 3   |
+| MCP memory      | Knowledge graph      | All       |
+| MCP github      | PR, issue management | Phase 5   |
+| delegate_task   | Parallel execution   | Phase 3-4 |
 
 ### Compute
 
-| Resource | Allocation | Notes |
-|----------|------------|-------|
-| CI/CD pipeline | Unlimited | Per-push triggers |
-| Test environment | 2 parallel | Integration tests |
-| Staging | 1 instance | Pre-prod validation |
-| Production | 1 instance | Live deployment |
+| Resource         | Allocation | Notes               |
+| ---------------- | ---------- | ------------------- |
+| CI/CD pipeline   | Unlimited  | Per-push triggers   |
+| Test environment | 2 parallel | Integration tests   |
+| Staging          | 1 instance | Pre-prod validation |
+| Production       | 1 instance | Live deployment     |
 
 ## Risk Management
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| Scope creep | High | Medium | Strict spec adherence, change control |
-| Integration failure | Medium | High | Early integration testing, mocks |
-| Resource contention | Medium | Medium | Bounded batches, sequential config edits |
-| Requirements ambiguity | Low | High | Clarify before planning, sign-off gate |
-| Tooling failure | Low | Medium | MCP-first with native fallback |
+| Risk                   | Likelihood | Impact | Mitigation                               |
+| ---------------------- | ---------- | ------ | ---------------------------------------- |
+| Scope creep            | High       | Medium | Strict spec adherence, change control    |
+| Integration failure    | Medium     | High   | Early integration testing, mocks         |
+| Resource contention    | Medium     | Medium | Bounded batches, sequential config edits |
+| Requirements ambiguity | Low        | High   | Clarify before planning, sign-off gate   |
+| Tooling failure        | Low        | Medium | MCP-first with native fallback           |
 
 ## Verification Gates
 
-| Gate | Location | Pass Criteria |
-|------|----------|---------------|
-| G1: Requirements | End Phase 1 | Signed-off requirements doc |
-| G2: Spec compliance | End Phase 2 | All specs pass checklist |
-| G3: Build complete | End Phase 3 | All tests pass, code reviewed |
-| G4: QA approval | End Phase 4 | Zero critical, perf within SLA |
-| G5: Deploy ready | End Phase 5 | Health checks green, rollback tested |
+| Gate                | Location    | Pass Criteria                        |
+| ------------------- | ----------- | ------------------------------------ |
+| G1: Requirements    | End Phase 1 | Signed-off requirements doc          |
+| G2: Spec compliance | End Phase 2 | All specs pass checklist             |
+| G3: Build complete  | End Phase 3 | All tests pass, code reviewed        |
+| G4: QA approval     | End Phase 4 | Zero critical, perf within SLA       |
+| G5: Deploy ready    | End Phase 5 | Health checks green, rollback tested |
 
 ## Rollback Procedure
 
@@ -239,13 +239,13 @@ Week 2
 
 ## Success Metrics
 
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| On-time delivery | 100% | Milestones hit on schedule |
-| Test coverage | ≥80% | Coverage report |
-| Zero critical bugs | 100% | Post-deploy bug count |
-| Documentation complete | 100% | All phases documented |
-| Stakeholder satisfaction | ≥4/5 | Retrospective feedback |
+| Metric                   | Target | Measurement                |
+| ------------------------ | ------ | -------------------------- |
+| On-time delivery         | 100%   | Milestones hit on schedule |
+| Test coverage            | ≥80%   | Coverage report            |
+| Zero critical bugs       | 100%   | Post-deploy bug count      |
+| Documentation complete   | 100%   | All phases documented      |
+| Stakeholder satisfaction | ≥4/5   | Retrospective feedback     |
 
 ## References
 
@@ -256,12 +256,12 @@ Week 2
 
 ## Risks
 
-| Risk | Impact | Likelihood | Mitigation |
-|------|--------|------------|------------|
-| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
-| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
-| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
-| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+| Risk                                               | Impact | Likelihood | Mitigation                                                                                     |
+| -------------------------------------------------- | ------ | ---------- | ---------------------------------------------------------------------------------------------- |
+| Judge subprocess timeout (>60s)                    | Low    | Medium     | Pre-warm: run plans-judge + specs-judge once before scoring                                    |
+| Cross-judge path resolution fails                  | Medium | Low        | Use project_root = pdir.parent.parent; verify with `echo`                                      |
+| Phase gate line missing                            | Low    | High       | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium     | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec                    |
 
 ## Files to Create or Modify
 

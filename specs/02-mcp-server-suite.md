@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 ## Goal
 
 Install, configure, test, and verify all 14+ MCP servers are operational for Hermes Agent. Ensure MCP-first tool precedence is working and credentials are managed via vault_key_sync without hardcoded secrets.
@@ -14,6 +12,7 @@ Install, configure, test, and verify all 14+ MCP servers are operational for Her
 ## Requirements
 
 ### Functional
+
 - [ ] All 14+ servers show as `enabled` in `hermes mcp list`
 - [ ] `hermes mcp test <server>` passes for each server (github, filesystem, playwright, fetch, tavily, neon, docker, memory, honcho, ast-grep, code-sandbox, sentry, context7, sequential-thinking, smithery)
 - [ ] Credentials configured via vault_key_sync (not hardcoded in config.yaml)
@@ -23,31 +22,32 @@ Install, configure, test, and verify all 14+ MCP servers are operational for Her
 - [ ] Neon MCP connects to remote https://mcp.neon.tech/mcp (Bearer auth)
 
 ### Non-Functional
+
 - [ ] Test each server in < 10 seconds
 - [ ] No hardcoded credentials in config.yaml
 - [ ] Windows npx path: `C:\nvm4w\nodejs\npx.cmd` (bare `npx` fails in Python subprocess)
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| List servers | `hermes mcp list` | 14+ enabled |
-| Test github | `hermes mcp test github` | ✓ Connected, tools discovered |
-| Test filesystem | `hermes mcp test filesystem` | ✓ Connected |
-| Test playwright | `hermes mcp test playwright` | ✓ Connected |
-| Test fetch | `hermes mcp test fetch` | ✓ Connected |
-| Test tavily | `hermes mcp test tavily` | ✓ Connected |
-| Test neon | `hermes mcp test neon` | ✓ Connected (remote) |
-| Test docker | `hermes mcp test docker` | ✓ Connected |
-| Test memory | `hermes mcp test memory` | ✓ Connected |
-| Test honcho | `hermes mcp test honcho` | ✓ Connected |
-| Test ast-grep | `hermes mcp test ast-grep` | ✓ Connected |
-| Test code-sandbox | `hermes mcp test code-sandbox` | ✓ Connected |
-| Test sentry | `hermes mcp test sentry` | ✓ Connected |
-| Test context7 | `hermes mcp test context7` | ✓ Connected |
-| Test sequential-thinking | `hermes mcp test sequential-thinking` | ✓ Connected |
-| Test smithery | `hermes mcp test smithery` | ✓ Connected |
-| Tools preferred | `hermes tools list \| grep mcp` | MCP tools listed |
+| Check                    | Command                               | Expected                      |
+| ------------------------ | ------------------------------------- | ----------------------------- |
+| List servers             | `hermes mcp list`                     | 14+ enabled                   |
+| Test github              | `hermes mcp test github`              | ✓ Connected, tools discovered |
+| Test filesystem          | `hermes mcp test filesystem`          | ✓ Connected                   |
+| Test playwright          | `hermes mcp test playwright`          | ✓ Connected                   |
+| Test fetch               | `hermes mcp test fetch`               | ✓ Connected                   |
+| Test tavily              | `hermes mcp test tavily`              | ✓ Connected                   |
+| Test neon                | `hermes mcp test neon`                | ✓ Connected (remote)          |
+| Test docker              | `hermes mcp test docker`              | ✓ Connected                   |
+| Test memory              | `hermes mcp test memory`              | ✓ Connected                   |
+| Test honcho              | `hermes mcp test honcho`              | ✓ Connected                   |
+| Test ast-grep            | `hermes mcp test ast-grep`            | ✓ Connected                   |
+| Test code-sandbox        | `hermes mcp test code-sandbox`        | ✓ Connected                   |
+| Test sentry              | `hermes mcp test sentry`              | ✓ Connected                   |
+| Test context7            | `hermes mcp test context7`            | ✓ Connected                   |
+| Test sequential-thinking | `hermes mcp test sequential-thinking` | ✓ Connected                   |
+| Test smithery            | `hermes mcp test smithery`            | ✓ Connected                   |
+| Tools preferred          | `hermes tools list \| grep mcp`       | MCP tools listed              |
 
 ## Non-Functional Requirements
 
@@ -72,8 +72,10 @@ hermes tools list | grep -i mcp
 ```
 
 ## Linked Specs
+
 - 02-mcp-server-suite.md
 
 ## Linked Plan
+
 - ../skill-implementation-master-plan.md
 - ../provider-workflow-master-plan.md

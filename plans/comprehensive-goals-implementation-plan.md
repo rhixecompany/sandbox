@@ -11,6 +11,7 @@ model: nemotron-3-ultra-free
 # Comprehensive Goals Implementation Plan
 
 ## Overview
+
 This plan addresses all goals from the user request, organized into phases with dependencies, timelines, and verification gates.
 
 ## Goals Summary
@@ -29,9 +30,11 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 ## Phase 1: Config & Quick Commands (COMPLETED)
+
 **Status**: ✅ Complete
 **Duration**: Completed
 **Tasks**:
+
 - [x] Generated unified quick_commands for both script directories (265 scripts)
 - [x] Updated config.yaml with 272 quick_commands (265 generated + 7 preserved)
 - [x] Verified all commands pass smoke test
@@ -40,17 +43,22 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 2: Environment Sync (.env & config.yaml)
+
 **Status**: 🔄 In Progress
 **Duration**: 30 minutes
 **Tasks**:
+
 - [ ] Inventory all .env files in SandBox and Hermes root
 - [ ] Inventory all config.yaml files in Hermes profiles
 - [ ] Create sync script to keep them consistent
 - [ ] Validate sync works
 
 ### .env Files Found:
+
 **SandBox**:
+
 - /c/Users/Alexa/Desktop/SandBox/.env
 - /c/Users/Alexa/Desktop/SandBox/projects/Banking/.env
 - /c/Users/Alexa/Desktop/SandBox/projects/Banking/.env.example
@@ -73,21 +81,26 @@ This plan addresses all goals from the user request, organized into phases with 
 - /c/Users/Alexa/Desktop/SandBox/projects/xamehi.tv/.env.example
 
 **Hermes Root**:
+
 - /c/Users/Alexa/AppData/Local/hermes/.env
 - /c/Users/Alexa/AppData/Local/hermes/.env.pre-delete
 
 ### config.yaml Files Found:
+
 - /c/Users/Alexa/AppData/Local/hermes/config.yaml (main)
 - /c/Users/Alexa/AppData/Local/hermes/profiles/*/config.yaml (13 profiles)
 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 3: Systematic Debugging - Hermes Desktop/Plugins/Hooks/Scripts/Agents
+
 **Status**: ⏳ Pending
 **Duration**: 2-3 hours
 **Dependencies**: Phase 2 complete
 **Tasks**:
+
 - [ ] Run `hermes doctor` and capture all issues
 - [ ] Run `hermes doctor --fix`
 - [ ] Run `hermes security audit`
@@ -98,6 +111,7 @@ This plan addresses all goals from the user request, organized into phases with 
 - [ ] Fix all identified issues systematically
 
 ### Sub-agents for parallel debugging:
+
 1. **Desktop Debugging** - Inspect Hermes TUI DOM/CSS via CDP
 2. **Plugin Debugging** - Audit plugins list, check disabled/enabled
 3. **Hook Debugging** - Check hook allowlist, fix hook config pitfalls
@@ -107,11 +121,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 4: Git Operations
+
 **Status**: ⏳ Pending
 **Duration**: 15 minutes
 **Dependencies**: Phase 3 complete (all fixes committed)
 **Tasks**:
+
 - [ ] `git add -A`
 - [ ] `git commit -m "chore: comprehensive fixes and enhancements"`
 - [ ] `git push -u origin clean-development development production`
@@ -121,11 +138,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 5: File Triage & Deduplication
+
 **Status**: ⏳ Pending
 **Duration**: 45 minutes
 **Dependencies**: Phase 2 complete
 **Tasks**:
+
 - [ ] List all files in SandBox repo with purpose
 - [ ] List all files in Hermes root with purpose
 - [ ] Identify duplicates across both locations
@@ -136,11 +156,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 6: Cleanup Plan - AI Agents & Docker
+
 **Status**: ⏳ Pending
 **Duration**: 30 minutes
 **Dependencies**: Phase 5 complete
 **Tasks**:
+
 - [ ] Create cleanup script for unused Docker images, builds, containers, volumes
 - [ ] Create cleanup script for unused models
 - [ ] Create cleanup script for unused MCP toolkit
@@ -151,11 +174,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 7: MCP Server Debugging
+
 **Status**: ⏳ Pending
 **Duration**: 1 hour
 **Dependencies**: Phase 2 complete
 **Tasks**:
+
 - [ ] Test all MCP servers with `hermes mcp test <server>`
 - [ ] Fix failed VSCode MCP servers
 - [ ] Fix failed OpenCode MCP servers
@@ -166,16 +192,20 @@ This plan addresses all goals from the user request, organized into phases with 
 - [ ] Create skills for MCP servers without skills
 
 ### MCP Servers to Test:
+
 - github, filesystem, playwright, fetch, tavily, neon, docker, memory, honcho, ast-grep, code-sandbox, sentry, mindstudio, python-quality, context7, sequential-thinking, smithery, parallel-*
 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 8: Session Startup/End Debugging
+
 **Status**: ⏳ Pending
 **Duration**: 45 minutes
 **Dependencies**: Phase 2 complete
 **Tasks**:
+
 - [ ] Debug session start skills
 - [ ] Debug session end skills
 - [ ] Fix context files
@@ -185,11 +215,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 9: Doctor & Health Checks
+
 **Status**: ⏳ Pending
 **Duration**: 30 minutes
 **Dependencies**: Phase 7, 8 complete
 **Tasks**:
+
 - [ ] Run `hermes doctor && hermes doctor --fix`
 - [ ] Run `hermes security audit`
 - [ ] Run `hermes status`
@@ -201,11 +234,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 10: MCP Skills Creation
+
 **Status**: ⏳ Pending
 **Duration**: 1 hour
 **Dependencies**: Phase 7 complete
 **Tasks**:
+
 - [ ] List all MCP servers without skills
 - [ ] Create skills for each
 - [ ] Test skills work correctly
@@ -214,11 +250,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 11: Rate Limit Bypass
+
 **Status**: ⏳ Pending
 **Duration**: 45 minutes
 **Dependencies**: Phase 2 complete
 **Tasks**:
+
 - [ ] Implement rate-limit-bypass.py enhancements
 - [ ] Create plugins/hooks for rate limiting
 - [ ] Test with all providers
@@ -227,11 +266,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Phase 12: Final Verification & Documentation
+
 **Status**: ⏳ Pending
 **Duration**: 30 minutes
 **Dependencies**: All phases complete
 **Tasks**:
+
 - [ ] Run all judge skills (scripts-judge, plans-judge, prompts-judge, hooks-judge, plugins-judge, specs-judge, skills-judge)
 - [ ] Raise all scores to 99+
 - [ ] Create final summary report
@@ -241,22 +283,23 @@ This plan addresses all goals from the user request, organized into phases with 
 ---
 
 **Gate**: All phase tasks complete, all listed exit codes = 0, and a fresh `python "C:/Users/Alexa/AppData/Local/hermes/skills/qa/plans-judge/scripts/judge.py" --plans-dir ./plans` reports this plan at score >= 95.
+
 ## Timeline Summary
 
-| Phase | Duration | Start | End |
-|-------|----------|-------|-----|
-| 1. Config & Quick Commands | 30 min | ✅ Done | ✅ Done |
-| 2. Environment Sync | 30 min | Now | +30 min |
-| 3. Systematic Debugging | 3 hours | +30 min | +3.5 hours |
-| 4. Git Operations | 15 min | +3.5 hours | +3.75 hours |
-| 5. File Triage | 45 min | +30 min | +1.15 hours |
-| 6. Cleanup Plan | 30 min | +1.15 hours | +1.65 hours |
-| 7. MCP Server Debugging | 1 hour | +1.65 hours | +2.65 hours |
-| 8. Session Debugging | 45 min | +2.65 hours | +3.4 hours |
-| 9. Doctor & Health | 30 min | +3.4 hours | +3.9 hours |
-| 10. MCP Skills | 1 hour | +3.9 hours | +4.9 hours |
-| 11. Rate Limit Bypass | 45 min | +4.9 hours | +5.65 hours |
-| 12. Final Verification | 30 min | +5.65 hours | +6 hours |
+| Phase                      | Duration | Start       | End         |
+| -------------------------- | -------- | ----------- | ----------- |
+| 1. Config & Quick Commands | 30 min   | ✅ Done     | ✅ Done     |
+| 2. Environment Sync        | 30 min   | Now         | +30 min     |
+| 3. Systematic Debugging    | 3 hours  | +30 min     | +3.5 hours  |
+| 4. Git Operations          | 15 min   | +3.5 hours  | +3.75 hours |
+| 5. File Triage             | 45 min   | +30 min     | +1.15 hours |
+| 6. Cleanup Plan            | 30 min   | +1.15 hours | +1.65 hours |
+| 7. MCP Server Debugging    | 1 hour   | +1.65 hours | +2.65 hours |
+| 8. Session Debugging       | 45 min   | +2.65 hours | +3.4 hours  |
+| 9. Doctor & Health         | 30 min   | +3.4 hours  | +3.9 hours  |
+| 10. MCP Skills             | 1 hour   | +3.9 hours  | +4.9 hours  |
+| 11. Rate Limit Bypass      | 45 min   | +4.9 hours  | +5.65 hours |
+| 12. Final Verification     | 30 min   | +5.65 hours | +6 hours    |
 
 **Total Estimated Time**: ~6 hours
 
@@ -265,12 +308,14 @@ This plan addresses all goals from the user request, organized into phases with 
 ## Resource Allocation
 
 ### Parallel Execution Opportunities:
+
 - Phase 3 sub-tasks (Desktop, Plugin, Hook, Script, Agent debugging) can run in parallel via subagents
 - Phase 5 (File triage) can run in parallel with Phase 3
 - Phase 7 (MCP servers) can run in parallel with Phase 8
 - Phase 9 can start once Phase 7 and 8 complete
 
 ### Tools Required:
+
 - `hermes_quick_commands.py` - for script validation
 - `hermes doctor`, `hermes mcp test`, `hermes hooks list` - for diagnostics
 - `git` - for version control
@@ -279,6 +324,7 @@ This plan addresses all goals from the user request, organized into phases with 
 - Custom scripts for sync and cleanup
 
 ### Sub-agent Delegation:
+
 Each major debugging task (Phase 3, 7, 8, 9) should be delegated to subagents with `delegate_task` for parallel execution.
 
 ---
@@ -286,6 +332,7 @@ Each major debugging task (Phase 3, 7, 8, 9) should be delegated to subagents wi
 ## Verification Gates
 
 Each phase must pass these gates before proceeding:
+
 1. **Config Gates**: All quick_commands verified, config.yaml valid
 2. **Sync Gates**: All .env files synced, all config.yaml consistent
 3. **Debug Gates**: `hermes doctor` returns clean, no errors in logs
@@ -301,14 +348,14 @@ Each phase must pass these gates before proceeding:
 
 ## Risk Mitigation
 
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Breaking changes in config.yaml | High | Backup before changes, test in isolation |
-| Git push conflicts | Medium | Pull before push, resolve conflicts |
-| Docker cleanup removes needed images | Medium | Dry-run first, confirm before delete |
-| MCP server config corruption | High | Test each server individually |
-| Rate limit bypass fails | Low | Multiple fallback strategies |
-| Session startup fails | High | Verify 5-skill protocol works |
+| Risk                                 | Impact | Mitigation                               |
+| ------------------------------------ | ------ | ---------------------------------------- |
+| Breaking changes in config.yaml      | High   | Backup before changes, test in isolation |
+| Git push conflicts                   | Medium | Pull before push, resolve conflicts      |
+| Docker cleanup removes needed images | Medium | Dry-run first, confirm before delete     |
+| MCP server config corruption         | High   | Test each server individually            |
+| Rate limit bypass fails              | Low    | Multiple fallback strategies             |
+| Session startup fails                | High   | Verify 5-skill protocol works            |
 
 ---
 
@@ -328,12 +375,12 @@ Each phase must pass these gates before proceeding:
 
 ## Risks
 
-| Risk | Impact | Likelihood | Mitigation |
-|------|--------|------------|------------|
-| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
-| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
-| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
-| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+| Risk                                               | Impact | Likelihood | Mitigation                                                                                     |
+| -------------------------------------------------- | ------ | ---------- | ---------------------------------------------------------------------------------------------- |
+| Judge subprocess timeout (>60s)                    | Low    | Medium     | Pre-warm: run plans-judge + specs-judge once before scoring                                    |
+| Cross-judge path resolution fails                  | Medium | Low        | Use project_root = pdir.parent.parent; verify with `echo`                                      |
+| Phase gate line missing                            | Low    | High       | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium     | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec                    |
 
 ## Files to Create or Modify
 

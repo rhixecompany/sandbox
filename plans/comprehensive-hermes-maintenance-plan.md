@@ -50,29 +50,29 @@ Captured at M0 from live state:
 
 Estimates are elapsed work time for one primary agent plus up to three read-only review streams. Network/authentication and external dependency failures can extend the schedule.
 
-| Milestone | Phase | Duration | Exit evidence |
-|---|---|---:|---|
-| M0 | Baseline/inventory | 30–45 min | repository, profile, script, config, env, MCP, Hermes, Docker, and process evidence |
-| M1 | Prompt/spec/plan/approval | 45–90 min | validated artifacts and recorded owner approval |
-| M2 | Env/config/MCP source audit | 45–90 min | secret-safe inventory and schema-drift report |
-| M3 | Quick commands/scripts judge | 60–120 min | registry readback, full wrapper smoke, judge gate |
-| M4 | Hermes desktop/hooks/plugins/agents/session assets | 90–180 min | focused diagnostics and regression report |
-| M5 | MCP repair/synchronization | 60–120 min | schema parity, live/local probes, runtime tool evidence |
-| M6 | Dedupe and cleanup | 30–90 min | reference-aware manifest and Docker post-check |
-| M7 | Tests, commit, push | 15–45 min + network | safe staged diff, commit IDs, remote readback |
-| M8 | Final verification/handoff | 30–60 min | current report, acceptance matrix, blockers |
+| Milestone | Phase                                              |            Duration | Exit evidence                                                                       |
+| --------- | -------------------------------------------------- | ------------------: | ----------------------------------------------------------------------------------- |
+| M0        | Baseline/inventory                                 |           30–45 min | repository, profile, script, config, env, MCP, Hermes, Docker, and process evidence |
+| M1        | Prompt/spec/plan/approval                          |           45–90 min | validated artifacts and recorded owner approval                                     |
+| M2        | Env/config/MCP source audit                        |           45–90 min | secret-safe inventory and schema-drift report                                       |
+| M3        | Quick commands/scripts judge                       |          60–120 min | registry readback, full wrapper smoke, judge gate                                   |
+| M4        | Hermes desktop/hooks/plugins/agents/session assets |          90–180 min | focused diagnostics and regression report                                           |
+| M5        | MCP repair/synchronization                         |          60–120 min | schema parity, live/local probes, runtime tool evidence                             |
+| M6        | Dedupe and cleanup                                 |           30–90 min | reference-aware manifest and Docker post-check                                      |
+| M7        | Tests, commit, push                                | 15–45 min + network | safe staged diff, commit IDs, remote readback                                       |
+| M8        | Final verification/handoff                         |           30–60 min | current report, acceptance matrix, blockers                                         |
 
 ## Resource allocation
 
-| Resource | Allocation | Owner | Constraint |
-|---|---:|---|---|
-| Primary agent | 8–14 hours | controller | sole writer for shared configs and release |
-| Read-only inventory agents | up to 3 × 30–60 min | delegated reviewers | no shared mutable writes |
-| Code/QA stream | 2–4 hours | implementer + reviewers | spec review before quality review |
-| Operations stream | 1–3 hours | admin reviewer | hooks/Docker/Git are approval-gated |
-| Hermes CLI/MCP | on demand | controller | use supported interfaces and readback |
-| Docker engine | one dry-run + one allowlisted apply | controller | preserve active/reference-required resources |
-| Git remotes | one status and one push/readback per eligible repo | release owner | fast-forward, non-forced only |
+| Resource                   |                                         Allocation | Owner                   | Constraint                                   |
+| -------------------------- | -------------------------------------------------: | ----------------------- | -------------------------------------------- |
+| Primary agent              |                                         8–14 hours | controller              | sole writer for shared configs and release   |
+| Read-only inventory agents |                                up to 3 × 30–60 min | delegated reviewers     | no shared mutable writes                     |
+| Code/QA stream             |                                          2–4 hours | implementer + reviewers | spec review before quality review            |
+| Operations stream          |                                          1–3 hours | admin reviewer          | hooks/Docker/Git are approval-gated          |
+| Hermes CLI/MCP             |                                          on demand | controller              | use supported interfaces and readback        |
+| Docker engine              |                one dry-run + one allowlisted apply | controller              | preserve active/reference-required resources |
+| Git remotes                | one status and one push/readback per eligible repo | release owner           | fast-forward, non-forced only                |
 
 ## Phase execution
 
@@ -163,17 +163,17 @@ Gate: no criterion is marked complete from a stale report or an unverified subag
 
 ## File ownership
 
-| Area | Canonical owner |
-|---|---|
+| Area                               | Canonical owner                                                  |
+| ---------------------------------- | ---------------------------------------------------------------- |
 | Hermes root quick-command registry | `scripts/hermes_quick_commands.py` + Hermes CLI `quick_commands` |
-| Workspace MCP source | `.mcp/registry.json` |
-| OpenCode translation | `opencode.json` |
-| Copilot translation | `.github/mcp.json` |
-| Codex translation | `.codex/mcp.json` |
-| VS Code translation | `.vscode/mcp.json` |
-| Hermes MCP store | `hermes mcp` CLI/internal store; not a workspace-file mirror |
-| Environment values | local credential wrappers only; never committed or synchronized |
-| Plan/spec/prompt | the three paths declared in frontmatter |
+| Workspace MCP source               | `.mcp/registry.json`                                             |
+| OpenCode translation               | `opencode.json`                                                  |
+| Copilot translation                | `.github/mcp.json`                                               |
+| Codex translation                  | `.codex/mcp.json`                                                |
+| VS Code translation                | `.vscode/mcp.json`                                               |
+| Hermes MCP store                   | `hermes mcp` CLI/internal store; not a workspace-file mirror     |
+| Environment values                 | local credential wrappers only; never committed or synchronized  |
+| Plan/spec/prompt                   | the three paths declared in frontmatter                          |
 
 ## Rollback and failure handling
 
@@ -200,12 +200,12 @@ Gate: no criterion is marked complete from a stale report or an unverified subag
 
 ## Risks
 
-| Risk | Impact | Likelihood | Mitigation |
-|------|--------|------------|------------|
-| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
-| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
-| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
-| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+| Risk                                               | Impact | Likelihood | Mitigation                                                                                     |
+| -------------------------------------------------- | ------ | ---------- | ---------------------------------------------------------------------------------------------- |
+| Judge subprocess timeout (>60s)                    | Low    | Medium     | Pre-warm: run plans-judge + specs-judge once before scoring                                    |
+| Cross-judge path resolution fails                  | Medium | Low        | Use project_root = pdir.parent.parent; verify with `echo`                                      |
+| Phase gate line missing                            | Low    | High       | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium     | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec                    |
 
 ## Files to Create or Modify
 

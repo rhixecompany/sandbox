@@ -40,56 +40,56 @@ Sequential execution of 4 goals, each gated by verification before the next star
 
 - GOAL-001: Create/test/debug/fix/verify skills, scripts, hooks derived from research/ markdown (11 topics), update requirements.txt
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-001 | Inventory research/ topic dirs + md files; map topic → skill name → script name | ✅ | 2026-09-11 |
-| TASK-002 | Create 11 SKILL.md (frontmatter-compliant, ≤250 lines, references/ for detail) | ✅ | 2026-09-11 |
-| TASK-003 | Create 11 scripts (one per topic; scripts/ dir; no inline scripts) | ✅ | 2026-09-11 |
-| TASK-004 | Create 11 tests (pytest or shell assert per script; scripts run, exit 0) | ✅ | 2026-09-11 |
-| TASK-005 | Create 1 research-folder hook (e.g., new-md watch/format gate) | ✅ | 2026-09-11 |
-| TASK-006 | Run all tests; debug + fix failures (trace before fix) | ✅ | 2026-09-11 |
-| TASK-007 | Update requirements.txt = union(pip freeze, python-packages.md); verify importable | ✅ | 2026-09-11 |
-| TASK-008 | Gate: all 11 scripts tested green; requirements.txt valid (pip check) | ✅ | 2026-09-11 |
+| Task     | Description                                                                        | Completed | Date       |
+| -------- | ---------------------------------------------------------------------------------- | --------- | ---------- |
+| TASK-001 | Inventory research/ topic dirs + md files; map topic → skill name → script name    | ✅        | 2026-09-11 |
+| TASK-002 | Create 11 SKILL.md (frontmatter-compliant, ≤250 lines, references/ for detail)     | ✅        | 2026-09-11 |
+| TASK-003 | Create 11 scripts (one per topic; scripts/ dir; no inline scripts)                 | ✅        | 2026-09-11 |
+| TASK-004 | Create 11 tests (pytest or shell assert per script; scripts run, exit 0)           | ✅        | 2026-09-11 |
+| TASK-005 | Create 1 research-folder hook (e.g., new-md watch/format gate)                     | ✅        | 2026-09-11 |
+| TASK-006 | Run all tests; debug + fix failures (trace before fix)                             | ✅        | 2026-09-11 |
+| TASK-007 | Update requirements.txt = union(pip freeze, python-packages.md); verify importable | ✅        | 2026-09-11 |
+| TASK-008 | Gate: all 11 scripts tested green; requirements.txt valid (pip check)              | ✅        | 2026-09-11 |
 
 ### Implementation Phase 2 — G2: Skills dedupe + judge + fix
 
 - GOAL-002: Shrink + harden skill library: dedupe, judge ≥90, fix debts, prove count decreased
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-010 | Run `hermes skills list` → `initial-skills.txt`; record count | ✅ | 2026-09-11 |
-| TASK-011 | Read initial-skills.txt; detect duplicates (name collisions across categories, near-exact bodies) | ✅ | 2026-09-11 |
-| TASK-012 | For each dup: keep canonical category version, enhance (merge unique content), delete others | ✅ | 2026-09-11 |
-| TASK-013 | Run skill-judge on remaining skills; collect scores | ✅ | 2026-09-11 |
-| TASK-014 | systematic-debugging: fix all debts/bugs/issues/warnings; raise scores ≥90 | ✅ | 2026-09-11 |
-| TASK-015 | Run `hermes skills list` → `updated-skills.txt`; verify initial count > updated count | ✅ | 2026-09-11 |
-| TASK-016 | Debug/fix/verify ALL skills in `updated-skills.txt`, ascending order of `hermes skills list-modified` | ✅ | 2026-09-11 |
-| TASK-017 | Subgoal: `hermes skills audit && hermes skills check && hermes skills update`; fix findings | ✅ | 2026-09-11 |
-| TASK-018 | Gate: counts proven (initial > updated), audit/check clean or documented residual | ✅ | 2026-09-11 |
+| Task     | Description                                                                                           | Completed | Date       |
+| -------- | ----------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| TASK-010 | Run `hermes skills list` → `initial-skills.txt`; record count                                         | ✅        | 2026-09-11 |
+| TASK-011 | Read initial-skills.txt; detect duplicates (name collisions across categories, near-exact bodies)     | ✅        | 2026-09-11 |
+| TASK-012 | For each dup: keep canonical category version, enhance (merge unique content), delete others          | ✅        | 2026-09-11 |
+| TASK-013 | Run skill-judge on remaining skills; collect scores                                                   | ✅        | 2026-09-11 |
+| TASK-014 | systematic-debugging: fix all debts/bugs/issues/warnings; raise scores ≥90                            | ✅        | 2026-09-11 |
+| TASK-015 | Run `hermes skills list` → `updated-skills.txt`; verify initial count > updated count                 | ✅        | 2026-09-11 |
+| TASK-016 | Debug/fix/verify ALL skills in `updated-skills.txt`, ascending order of `hermes skills list-modified` | ✅        | 2026-09-11 |
+| TASK-017 | Subgoal: `hermes skills audit && hermes skills check && hermes skills update`; fix findings           | ✅        | 2026-09-11 |
+| TASK-018 | Gate: counts proven (initial > updated), audit/check clean or documented residual                     | ✅        | 2026-09-11 |
 
 ### Implementation Phase 3 — G3: Free-model benchmark
 
 - GOAL-003: Enumerate free models across opencode-zen/openrouter/nous; benchmark latency/accuracy/context/capabilities/tools/vision; report success set
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-020 | Load test-providers-models skill workflow; list free/non-premium models per provider (opencode-zen first) | ✅ | 2026-09-11 |
-| TASK-021 | Capture baseline: `hermes auth list`, `hermes models` (or provider equivalents) → model inventory table | ✅ | 2026-09-11 |
-| TASK-022 | Run `hermes chat` queries per model: latency, accuracy (factual probe), context (long-input probe), capabilities, tools (function-call probe), vision (image probe where supported) | 🔄 | 2026-09-11 |
-| TASK-023 | Record per-query status (success/timeout/error) to results/ benchmark md | | |
-| TASK-024 | Gate: report which queries completed successfully; no fabricated results — only observed | | |
+| Task     | Description                                                                                                                                                                         | Completed | Date       |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| TASK-020 | Load test-providers-models skill workflow; list free/non-premium models per provider (opencode-zen first)                                                                           | ✅        | 2026-09-11 |
+| TASK-021 | Capture baseline: `hermes auth list`, `hermes models` (or provider equivalents) → model inventory table                                                                             | ✅        | 2026-09-11 |
+| TASK-022 | Run `hermes chat` queries per model: latency, accuracy (factual probe), context (long-input probe), capabilities, tools (function-call probe), vision (image probe where supported) | 🔄        | 2026-09-11 |
+| TASK-023 | Record per-query status (success/timeout/error) to results/ benchmark md                                                                                                            |           |            |
+| TASK-024 | Gate: report which queries completed successfully; no fabricated results — only observed                                                                                            |           |            |
 
 ### Implementation Phase 4 — G4: Profile asset sync
 
 - GOAL-004: Reset + propagate root hermes assets into every profile subdir
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-030 | Inventory `~/AppData/Local/hermes/profiles/*` (15 subdirs incl. `skills` anomaly — verify what it is first) | | |
-| TASK-031 | Delete skills/hooks/plugins/scripts dirs + config.yaml + .env in each profile subdir | | |
-| TASK-032 | Copy root `~/AppData/Local/hermes/{skills,hooks,plugins,scripts,config.yaml,.env}` into every profile subdir | | |
-| TASK-033 | Verify parity: dir trees + file counts match root per profile; config.yaml valid YAML parse | | |
-| TASK-034 | Gate: per-profile tree diff vs root = empty; report anomaly handling for profiles/skills | | |
+| Task     | Description                                                                                                  | Completed | Date |
+| -------- | ------------------------------------------------------------------------------------------------------------ | --------- | ---- |
+| TASK-030 | Inventory `~/AppData/Local/hermes/profiles/*` (15 subdirs incl. `skills` anomaly — verify what it is first)  |           |      |
+| TASK-031 | Delete skills/hooks/plugins/scripts dirs + config.yaml + .env in each profile subdir                         |           |      |
+| TASK-032 | Copy root `~/AppData/Local/hermes/{skills,hooks,plugins,scripts,config.yaml,.env}` into every profile subdir |           |      |
+| TASK-033 | Verify parity: dir trees + file counts match root per profile; config.yaml valid YAML parse                  |           |      |
+| TASK-034 | Gate: per-profile tree diff vs root = empty; report anomaly handling for profiles/skills                     |           |      |
 
 ## 3. Alternatives
 

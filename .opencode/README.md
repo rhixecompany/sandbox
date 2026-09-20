@@ -1,5 +1,7 @@
 # OpenCode / OpenRouter Sync Reference
+
 # Verified session 2026-09-16
+
 Provider: openrouter (primary), nous (fallback)
 Models verified: upstage/solar-pro4:free, deepseek-v4-flash-free, nemotron-3-ultra-free
 Auth: vault handles only; .env protected (5274 B workspace / 30269 B hermes home)

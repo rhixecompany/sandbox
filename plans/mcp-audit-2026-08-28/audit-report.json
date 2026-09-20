@@ -1,338 +1,273 @@
 {
-  "generated": "2026-09-08T03:13:32",
-  "registry": ".mcp\\registry.json",
-  "total": 37,
-  "counts": {
-    "PASS": 26,
-    "WARN": 1,
-    "FAIL": 0,
-    "SKIP": 10
-  },
-  "results": [
-    {
-      "name": "anthropic-resources",
-      "type": "http",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "ast-grep",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @notprolands/ast-grep-mcp"
-      ]
-    },
-    {
-      "name": "atlassian",
-      "type": "sse",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.atlassian.com/v1/sse: HTTP 401 (reachable)"
-      ]
-    },
-    {
-      "name": "cloudinary",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://asset-management.mcp.cloudinary.com/mcp: HTTP 405 (reachable)"
-      ]
-    },
-    {
-      "name": "code-sandbox",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: node-code-sandbox-mcp"
-      ]
-    },
-    {
-      "name": "context7",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.context7.com/mcp: HTTP 405 (reachable)"
-      ]
-    },
-    {
-      "name": "django",
-      "type": "stdio",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "docs",
-      "type": "stdio",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "evals",
-      "type": "stdio",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "everart",
-      "type": "http",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "fetch",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: mcp-server-fetch-typescript"
-      ]
-    },
-    {
-      "name": "filesystem",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @modelcontextprotocol/server-filesystem",
-        "· args[2]: C:/Users/Alexa",
-        "· args[3]: C:/Users/Alexa/AppData/Local/hermes",
-        "✓ args[4]: workspace placeholder (OK)"
-      ]
-    },
-    {
-      "name": "github",
-      "type": "stdio",
-      "status": "WARN",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @modelcontextprotocol/server-github",
-        "⚠ env.GITHUB_PERSONAL_ACCESS_TOKEN: unresolved placeholder ${env:GITHUB_TOKEN}"
-      ]
-    },
-    {
-      "name": "honcho",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.honcho.dev/: HTTP 401 (reachable)"
-      ]
-    },
-    {
-      "name": "mcp-docker",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command on PATH: docker -> C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE",
-        "· args[0]: mcp",
-        "· args[1]: gateway",
-        "· args[2]: run",
-        "· args[3]: --profile",
-        "· args[4]: adminbot"
-      ]
-    },
-    {
-      "name": "memory",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @modelcontextprotocol/server-memory"
-      ]
-    },
-    {
-      "name": "mindstudio",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command path exists: C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe",
-        "· args[0]: mcp"
-      ]
-    },
-    {
-      "name": "neon",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.neon.tech/mcp: HTTP 401 (reachable)"
-      ]
-    },
-    {
-      "name": "parallel-search",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://search.parallel.ai/mcp: HTTP 405 (reachable)"
-      ]
-    },
-    {
-      "name": "parallel-task",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://task-mcp.parallel.ai/mcp: HTTP 405 (reachable)"
-      ]
-    },
-    {
-      "name": "paypal",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.paypal.com/sse: HTTP 401 (reachable)"
-      ]
-    },
-    {
-      "name": "plaid",
-      "type": "http",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "playwright",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @playwright/mcp@0.0.78"
-      ]
-    },
-    {
-      "name": "postgres",
-      "type": "stdio",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "pytest",
-      "type": "stdio",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "python-quality",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command path exists: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-        "✓ args[0]: C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"
-      ]
-    },
-    {
-      "name": "sentry",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.sentry.dev/mcp: HTTP 401 (reachable)"
-      ]
-    },
-    {
-      "name": "sequential-thinking",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command: bunx (resolved at runtime)",
-        "· args[0]: -y",
-        "· args[1]: @modelcontextprotocol/server-sequential-thinking"
-      ]
-    },
-    {
-      "name": "smithery",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.smithery.ai/alexanderrhixe30: HTTP 405 (reachable)"
-      ]
-    },
-    {
-      "name": "stripe",
-      "type": "http",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "supabase",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.supabase.com/mcp: HTTP 401 (reachable)"
-      ]
-    },
-    {
-      "name": "tavily",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.tavily.com/mcp/?tavilyApiKey=tvly-dev-3qid56-RU7ijydkVpR89PP5CFm9lg5: HTTP 405 (reachable)"
-      ]
-    },
-    {
-      "name": "time",
-      "type": "stdio",
-      "status": "SKIP",
-      "checks": [
-        "⊘ disabled in registry"
-      ]
-    },
-    {
-      "name": "tooling-config",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command path exists: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-        "✓ args[0]: C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"
-      ]
-    },
-    {
-      "name": "tooling-lint",
-      "type": "stdio",
-      "status": "PASS",
-      "checks": [
-        "✓ command path exists: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
-        "✓ args[0]: C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
-      ]
-    },
-    {
-      "name": "twilio-docs",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.twilio.com/docs: HTTP 405 (reachable)"
-      ]
-    },
-    {
-      "name": "vercel",
-      "type": "http",
-      "status": "PASS",
-      "checks": [
-        "✓ https://mcp.vercel.com: HTTP 401 (reachable)"
-      ]
-    }
-  ]
+	"generated": "2026-09-08T03:13:32",
+	"registry": ".mcp\\registry.json",
+	"total": 37,
+	"counts": {
+		"PASS": 26,
+		"WARN": 1,
+		"FAIL": 0,
+		"SKIP": 10
+	},
+	"results": [
+		{
+			"name": "anthropic-resources",
+			"type": "http",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "ast-grep",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": ["✓ command: bunx (resolved at runtime)", "· args[0]: -y", "· args[1]: @notprolands/ast-grep-mcp"]
+		},
+		{
+			"name": "atlassian",
+			"type": "sse",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.atlassian.com/v1/sse: HTTP 401 (reachable)"]
+		},
+		{
+			"name": "cloudinary",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://asset-management.mcp.cloudinary.com/mcp: HTTP 405 (reachable)"]
+		},
+		{
+			"name": "code-sandbox",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": ["✓ command: bunx (resolved at runtime)", "· args[0]: -y", "· args[1]: node-code-sandbox-mcp"]
+		},
+		{
+			"name": "context7",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.context7.com/mcp: HTTP 405 (reachable)"]
+		},
+		{
+			"name": "django",
+			"type": "stdio",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "docs",
+			"type": "stdio",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "evals",
+			"type": "stdio",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "everart",
+			"type": "http",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "fetch",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": ["✓ command: bunx (resolved at runtime)", "· args[0]: -y", "· args[1]: mcp-server-fetch-typescript"]
+		},
+		{
+			"name": "filesystem",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": [
+				"✓ command: bunx (resolved at runtime)",
+				"· args[0]: -y",
+				"· args[1]: @modelcontextprotocol/server-filesystem",
+				"· args[2]: C:/Users/Alexa",
+				"· args[3]: C:/Users/Alexa/AppData/Local/hermes",
+				"✓ args[4]: workspace placeholder (OK)"
+			]
+		},
+		{
+			"name": "github",
+			"type": "stdio",
+			"status": "WARN",
+			"checks": [
+				"✓ command: bunx (resolved at runtime)",
+				"· args[0]: -y",
+				"· args[1]: @modelcontextprotocol/server-github",
+				"⚠ env.GITHUB_PERSONAL_ACCESS_TOKEN: unresolved placeholder ${env:GITHUB_TOKEN}"
+			]
+		},
+		{
+			"name": "honcho",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.honcho.dev/: HTTP 401 (reachable)"]
+		},
+		{
+			"name": "mcp-docker",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": [
+				"✓ command on PATH: docker -> C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE",
+				"· args[0]: mcp",
+				"· args[1]: gateway",
+				"· args[2]: run",
+				"· args[3]: --profile",
+				"· args[4]: adminbot"
+			]
+		},
+		{
+			"name": "memory",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": [
+				"✓ command: bunx (resolved at runtime)",
+				"· args[0]: -y",
+				"· args[1]: @modelcontextprotocol/server-memory"
+			]
+		},
+		{
+			"name": "mindstudio",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": ["✓ command path exists: C:\\Users\\Alexa\\.mindstudio\\bin\\mindstudio.exe", "· args[0]: mcp"]
+		},
+		{
+			"name": "neon",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.neon.tech/mcp: HTTP 401 (reachable)"]
+		},
+		{
+			"name": "parallel-search",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://search.parallel.ai/mcp: HTTP 405 (reachable)"]
+		},
+		{
+			"name": "parallel-task",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://task-mcp.parallel.ai/mcp: HTTP 405 (reachable)"]
+		},
+		{
+			"name": "paypal",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.paypal.com/sse: HTTP 401 (reachable)"]
+		},
+		{
+			"name": "plaid",
+			"type": "http",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "playwright",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": ["✓ command: bunx (resolved at runtime)", "· args[0]: -y", "· args[1]: @playwright/mcp@0.0.78"]
+		},
+		{
+			"name": "postgres",
+			"type": "stdio",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "pytest",
+			"type": "stdio",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "python-quality",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": [
+				"✓ command path exists: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+				"✓ args[0]: C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\python_quality_mcp_server.py"
+			]
+		},
+		{
+			"name": "sentry",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.sentry.dev/mcp: HTTP 401 (reachable)"]
+		},
+		{
+			"name": "sequential-thinking",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": [
+				"✓ command: bunx (resolved at runtime)",
+				"· args[0]: -y",
+				"· args[1]: @modelcontextprotocol/server-sequential-thinking"
+			]
+		},
+		{
+			"name": "smithery",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.smithery.ai/alexanderrhixe30: HTTP 405 (reachable)"]
+		},
+		{
+			"name": "stripe",
+			"type": "http",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "supabase",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.supabase.com/mcp: HTTP 401 (reachable)"]
+		},
+		{
+			"name": "tavily",
+			"type": "http",
+			"status": "PASS",
+			"checks": [
+				"✓ https://mcp.tavily.com/mcp/?tavilyApiKey=tvly-dev-3qid56-RU7ijydkVpR89PP5CFm9lg5: HTTP 405 (reachable)"
+			]
+		},
+		{
+			"name": "time",
+			"type": "stdio",
+			"status": "SKIP",
+			"checks": ["⊘ disabled in registry"]
+		},
+		{
+			"name": "tooling-config",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": [
+				"✓ command path exists: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+				"✓ args[0]: C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_config_mcp_server.py"
+			]
+		},
+		{
+			"name": "tooling-lint",
+			"type": "stdio",
+			"status": "PASS",
+			"checks": [
+				"✓ command path exists: C:\\Users\\Alexa\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+				"✓ args[0]: C:\\Users\\Alexa\\AppData\\Local\\hermes\\scripts\\tooling_lint_mcp_server.py"
+			]
+		},
+		{
+			"name": "twilio-docs",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.twilio.com/docs: HTTP 405 (reachable)"]
+		},
+		{
+			"name": "vercel",
+			"type": "http",
+			"status": "PASS",
+			"checks": ["✓ https://mcp.vercel.com: HTTP 401 (reachable)"]
+		}
+	]
 }

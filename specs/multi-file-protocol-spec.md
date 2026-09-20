@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 # Multi-File Change Protocol Specification
 
 ## Overview
@@ -16,6 +14,7 @@ Defines the mandatory protocol for any user request that will modify 3 or more f
 ## Trigger Condition
 
 **AUTOMATIC TRIGGER**: When a user request will modify ≥3 files
+
 - Creating new files counts
 - Modifying existing files counts
 - Deleting files counts
@@ -24,7 +23,9 @@ Defines the mandatory protocol for any user request that will modify 3 or more f
 ## Protocol Requirements
 
 ### REQ-MFP-001: Mandatory Skill Loading
+
 Before ANY response or action, load all 14 skills:
+
 1. `/using-superpowers` - Foundational workflow
 2. `/brainstorming` - Structured idea generation
 3. `/user-communication-preferences` - Alexa's execution style
@@ -41,6 +42,7 @@ Before ANY response or action, load all 14 skills:
 14. `/subagent-driven-development` - Parallel subagent delegation
 
 ### REQ-MFP-002: Protocol Execution Steps
+
 1. **Load Skills** - Verify all 14 skills loaded successfully
 2. **Create Plan** - Use `/create-implementation-plan` to create detailed plan
 3. **Verify Plan** - Present plan to user for approval
@@ -48,7 +50,9 @@ Before ANY response or action, load all 14 skills:
 5. **Verify Gates** - All verification gates must pass before completion
 
 ### REQ-MFP-003: Plan Structure
+
 Plan must include:
+
 - [ ] Plan name, version, description
 - [ ] Phases with entry/exit criteria
 - [ ] Tasks with assignees and dependencies
@@ -57,6 +61,7 @@ Plan must include:
 - [ ] Resource requirements
 
 ### REQ-MFP-004: Execution Guardrails
+
 - **Linear Execution**: Validate Step N before Step N+1
 - **Checkpoint Rule**: Pause on failure/ambiguity, request approval
 - **Fallback Trigger**: After 2 failures, generate alternative plan
@@ -64,6 +69,7 @@ Plan must include:
 - **Checkpointing**: Save progress to plan document
 
 ### REQ-MFP-005: Subagent Delegation Rules
+
 - Use `delegate_task` for parallel/isolated work
 - Inject FULL context to subagents
 - Fresh subagent per task
@@ -71,7 +77,9 @@ Plan must include:
 - Never skip reviews
 
 ### REQ-MFP-006: Verification Gates
+
 Every plan must have gates:
+
 - **Pre-flight**: Environment, dependencies, token budget
 - **Phase Gates**: Each phase has entry/exit criteria
 - **Quality Gates**: Spec compliance, code quality
@@ -81,26 +89,31 @@ Every plan must have gates:
 ## Acceptance Criteria
 
 ### AC-MFP-001: Protocol Activation
+
 - [ ] Protocol triggers automatically on ≥3 file changes
 - [ ] All 14 skills load without error
 - [ ] No action taken before skills loaded
 
 ### AC-MFP-002: Plan Quality
+
 - [ ] Plan created via skill (not ad-hoc)
 - [ ] All required sections present
 - [ ] Gates defined with measurable criteria
 
 ### AC-MFP-003: Execution Discipline
+
 - [ ] Linear execution followed
 - [ ] Checkpoints honored
 - [ ] Fallback triggered on repeated failure
 
 ### AC-MFP-004: Subagent Quality
+
 - [ ] Fresh subagent per task
 - [ ] Two-stage review completed
 - [ ] No scope creep
 
 ### AC-MFP-005: Gate Compliance
+
 - [ ] All gates pass before completion claim
 - [ ] Failed gates trigger remediation
 - [ ] Rollback executed if needed
@@ -108,6 +121,7 @@ Every plan must have gates:
 ## Verification Gates
 
 ### Gate 1: Skill Load Verification
+
 ```bash
 # All 14 skills must load successfully
 hermes skill load using-superpowers
@@ -116,22 +130,26 @@ hermes skill load brainstorming
 ```
 
 ### Gate 2: Plan Validation
+
 - Plan file exists in `./plans/`
 - Frontmatter complete
 - Phases, tasks, gates defined
 - Dependencies resolved
 
 ### Gate 3: Execution Verification
+
 - Each phase completes with verification
 - Progress logged to plan artifact
 - No skipped phases
 
 ### Gate 4: Quality Review
+
 - Spec compliance review PASS
 - Code quality review APPROVED
 - Integration review PASS
 
 ### Gate 5: Completion Verification
+
 - All acceptance criteria met
 - All artifacts created
 - No legacy artifacts remain
@@ -140,26 +158,31 @@ hermes skill load brainstorming
 ## Integration Points
 
 ### With Specs
+
 - Plan references spec in `./specs/`
 - Spec requirements trace to plan tasks
 - Spec acceptance criteria = plan gates
 
 ### With Prompts
+
 - Prompt companion files reference plan
 - Prompt `plans.md` → `./plans/`
 - Prompt `gates.md` = plan gates
 
 ### With Skills
+
 - Protocol skills enhanced per skill-enhancement-spec
 - Judge skills validate protocol compliance
 - Skill library hygiene maintained
 
 ### With Context Files
+
 - SOUL.md contains canonical protocol
 - USER.md references protocol
 - AGENTS.md quick-rules include protocol
 
 ## Dependencies
+
 - 14 mandatory skills available
 - MCP servers: filesystem, ast-grep, memory, sequential-thinking
 - Git for rollback
@@ -167,13 +190,13 @@ hermes skill load brainstorming
 
 ## Risks & Mitigations
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| Skills not loading | Medium | High | Pre-load verification; fallback to native |
-| Plan approval bypassed | Low | High | Hard gate - no execution without approval |
-| Subagent context loss | Medium | Medium | Full context injection; progress artifacts |
-| Gate skipping | Low | High | Automated gate enforcement in executing-plans |
-| Protocol not triggered | Medium | High | Automated file count check in using-superpowers |
+| Risk                   | Likelihood | Impact | Mitigation                                      |
+| ---------------------- | ---------- | ------ | ----------------------------------------------- |
+| Skills not loading     | Medium     | High   | Pre-load verification; fallback to native       |
+| Plan approval bypassed | Low        | High   | Hard gate - no execution without approval       |
+| Subagent context loss  | Medium     | Medium | Full context injection; progress artifacts      |
+| Gate skipping          | Low        | High   | Automated gate enforcement in executing-plans   |
+| Protocol not triggered | Medium     | High   | Automated file count check in using-superpowers |
 
 ## Enforcement
 

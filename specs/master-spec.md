@@ -5,14 +5,11 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 ## Goal
 
 Master specification that couples all plan files in `./plans/` for cross-validation. Every plan references this spec, and this spec references every plan back.
 
 ## Linked Plans
-
 
 ## Acceptance Criteria
 

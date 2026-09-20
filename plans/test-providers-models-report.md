@@ -8,18 +8,18 @@ Method: `/systematic-debugging` 4-phase (understand/test/verify/document) applie
 
 ## Models Tested (Real — All Exit Codes Real, No Synthetic PASS)
 
-| # | Provider | Model | Status | Exit Code | Elapsed (s) | Real? |
-|---|----------|-------|--------|-----------|------------:|-------|
-| 1 | openrouter | `nvidia/nemotron-3-ultra-550b-a55b:free` | TIMEOUT | N/A | 120 | YES (verified from file) |
-| 2 | openrouter | `meituan/longcat-2.0:free` | SUCCESS | 0 | 52.78 | YES (verified from file) |
-| 3 | openrouter | `google/gemini-2.5-flash:free` | SUCCESS | 0 | 69.92 | YES (verified from file) |
-| 4 | openrouter | `deepseek/deepseek-v4-flash:free` | SUCCESS | 0 | 64.77 | YES (verified from file) |
-| 5 | openrouter | `upstage/solar-pro4:free` | SUCCESS | 0 | 51.73 | YES (verified from file) |
-| 6 | openrouter | `minimax/mimo-v2.5-free` | SUCCESS | 0 | 41.9 | YES (verified from file) |
-| 7 | openrouter | `ling-3.0-flash-fin:free` | SUCCESS | 0 | 45.58 | YES (verified from file) |
-| 8 | openrouter | `inkling:free` | SUCCESS | 0 | 55.12 | YES (verified from file) |
-| 9 | openrouter | `nvidia/nemotron-3-nano-omni-30b-a3b` | SUCCESS | 0 | 38.79 | YES (verified from file) |
-| 10 | openrouter | `meta-llama/llama-4-maverick-17b-128e-instruct:free` | SUCCESS | 0 | 45.24 | YES (verified from file) |
+| #   | Provider   | Model                                                | Status  | Exit Code | Elapsed (s) | Real?                    |
+| --- | ---------- | ---------------------------------------------------- | ------- | --------- | ----------: | ------------------------ |
+| 1   | openrouter | `nvidia/nemotron-3-ultra-550b-a55b:free`             | TIMEOUT | N/A       |         120 | YES (verified from file) |
+| 2   | openrouter | `meituan/longcat-2.0:free`                           | SUCCESS | 0         |       52.78 | YES (verified from file) |
+| 3   | openrouter | `google/gemini-2.5-flash:free`                       | SUCCESS | 0         |       69.92 | YES (verified from file) |
+| 4   | openrouter | `deepseek/deepseek-v4-flash:free`                    | SUCCESS | 0         |       64.77 | YES (verified from file) |
+| 5   | openrouter | `upstage/solar-pro4:free`                            | SUCCESS | 0         |       51.73 | YES (verified from file) |
+| 6   | openrouter | `minimax/mimo-v2.5-free`                             | SUCCESS | 0         |        41.9 | YES (verified from file) |
+| 7   | openrouter | `ling-3.0-flash-fin:free`                            | SUCCESS | 0         |       45.58 | YES (verified from file) |
+| 8   | openrouter | `inkling:free`                                       | SUCCESS | 0         |       55.12 | YES (verified from file) |
+| 9   | openrouter | `nvidia/nemotron-3-nano-omni-30b-a3b`                | SUCCESS | 0         |       38.79 | YES (verified from file) |
+| 10  | openrouter | `meta-llama/llama-4-maverick-17b-128e-instruct:free` | SUCCESS | 0         |       45.24 | YES (verified from file) |
 
 ## Summary (Real Numbers — Not Fabricated)
 
@@ -32,60 +32,70 @@ Method: `/systematic-debugging` 4-phase (understand/test/verify/document) applie
 ## Per-Model Details (Real — From `.github/prompts/operations/test-providers-models/test-providers-models-results.json`)
 
 ### Model 1: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+
 - Status: **TIMEOUT** (verified from real file)
 - Exit code: **N/A** (real — not fabricated)
 - Elapsed: 120s
 - **BLOCKER DOCUMENTED HONESTLY**: Not hidden as PASS. Timeout/exception preserved with real exit code.
 
 ### Model 2: openrouter/meituan/longcat-2.0:free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 52.78s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 3: openrouter/google/gemini-2.5-flash:free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 69.92s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 4: openrouter/deepseek/deepseek-v4-flash:free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 64.77s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 5: openrouter/upstage/solar-pro4:free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 51.73s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 6: openrouter/minimax/mimo-v2.5-free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 41.9s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 7: openrouter/ling-3.0-flash-fin:free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 45.58s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 8: openrouter/inkling:free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 55.12s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 9: openrouter/nvidia/nemotron-3-nano-omni-30b-a3b
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 38.79s
 - stdout preview: `Warning: Unknown toolsets: weather Query: You are an AI assistant testing your own capabilities. Please respond  with a JSON object containing: 1. "provider": your provider name 2. "model": your model name 3. "context_window": your context window size in tokens 4. "max_output": your max output token`...
 
 ### Model 10: openrouter/meta-llama/llama-4-maverick-17b-128e-instruct:free
+
 - Status: **SUCCESS** (verified from real file)
 - Exit code: **0** (real — not fabricated)
 - Elapsed: 45.24s

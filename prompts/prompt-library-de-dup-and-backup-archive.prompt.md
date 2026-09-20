@@ -32,6 +32,7 @@ cat ./specs/prompt-library-de-dup-action-log.md | tail -n 5
 ```
 
 ## Artifact Checklist (post-execution verification)
+
 - [ ] `.github/prompts_backup` deleted
 - [ ] `./plans/prompt-library-de-dup-and-backup-archive-plan.md` exists
 - [ ] `./specs/prompt-library-de-dup-and-backup-archive-spec.md` exists
@@ -42,6 +43,7 @@ cat ./specs/prompt-library-de-dup-action-log.md | tail -n 5
 - [ ] No placeholder text in artifacts; SKILL.md ≤250 lines (verified: 55 lines)
 
 ## Related
+
 - Skill: `skills/prompt-library-de-dup-and-backup-archive/`
 - Plan: `./plans/prompt-library-de-dup-and-backup-archive-plan.md`
 - Spec: `./specs/prompt-library-de-dup-and-backup-archive-spec.md`

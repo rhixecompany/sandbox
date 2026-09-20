@@ -51,25 +51,26 @@ Parse `hermes auth list` text output, extract per-provider info.
 **Inputs:** `hermes auth list` text
 **Output:** `scripts/.runtime/provider_inventory.json`
 **Schema:**
+
 ```json
 {
-  "generated": "...",
-  "providers": [
-    {
-      "name": "openrouter",
-      "credential_count": 1,
-      "primary": {"env_var": "OPENROUTER_API_KEY", "auth_type": "api_key", "label": "OPENROUTER_API_KEY"},
-      "credentials": [{"label": "OPENROUTER_API_KEY", "auth_type": "api_key", "source": "env", "is_active": true}],
-      "capabilities_static": {
-        "vision": false,
-        "tools": true,
-        "json_mode": true,
-        "streaming": true,
-        "system_prompt": true,
-        "context_window_default": 32768
-      }
-    }
-  ]
+	"generated": "...",
+	"providers": [
+		{
+			"name": "openrouter",
+			"credential_count": 1,
+			"primary": { "env_var": "OPENROUTER_API_KEY", "auth_type": "api_key", "label": "OPENROUTER_API_KEY" },
+			"credentials": [{ "label": "OPENROUTER_API_KEY", "auth_type": "api_key", "source": "env", "is_active": true }],
+			"capabilities_static": {
+				"vision": false,
+				"tools": true,
+				"json_mode": true,
+				"streaming": true,
+				"system_prompt": true,
+				"context_window_default": 32768
+			}
+		}
+	]
 }
 ```
 
@@ -82,25 +83,26 @@ Walk `packages/*/`, parse `package.json` (TS) or `pyproject.toml` (Python), emit
 **Inputs:** `packages/**/*`
 **Output:** `scripts/.runtime/packages.json`
 **Schema:**
+
 ```json
 {
-  "generated": "...",
-  "packages": [
-    {
-      "name": "openrouter-client",
-      "type": "typescript",
-      "version": "1.0.0",
-      "runtime": "bun@1.3.14",
-      "entrypoints": ["src/client.ts", "src/chat.ts"],
-      "exports": ["OpenRouterClient", "sendChat", "Message", "ChatCompletion"],
-      "dependencies": ["@openrouter/sdk"],
-      "dev_dependencies": ["@types/bun", "typescript"],
-      "tests": ["test/chat.test.ts"],
-      "spec": "SPEC.md",
-      "plan": "PLAN.md"
-    },
-    {"name": "openrouter-client-py", "type": "python", "...": "..."}
-  ]
+	"generated": "...",
+	"packages": [
+		{
+			"name": "openrouter-client",
+			"type": "typescript",
+			"version": "1.0.0",
+			"runtime": "bun@1.3.14",
+			"entrypoints": ["src/client.ts", "src/chat.ts"],
+			"exports": ["OpenRouterClient", "sendChat", "Message", "ChatCompletion"],
+			"dependencies": ["@openrouter/sdk"],
+			"dev_dependencies": ["@types/bun", "typescript"],
+			"tests": ["test/chat.test.ts"],
+			"spec": "SPEC.md",
+			"plan": "PLAN.md"
+		},
+		{ "name": "openrouter-client-py", "type": "python", "...": "..." }
+	]
 }
 ```
 
@@ -114,6 +116,7 @@ Two files in `scripts/fanout/providers/`:
 - `openai_compat.py` — generic OpenAI-compatible `/chat/completions` caller (deepseek, gemini, xai, nous, ollama-cloud, huggingface)
 
 Both expose a uniform interface:
+
 ```python
 async def call(prompt: str, model: str, api_key: str, base_url: str, **kwargs) -> dict:
     """Returns {output_text, output_tokens, latency_ms, error?, raw?}"""

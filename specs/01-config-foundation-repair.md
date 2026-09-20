@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 ## Goal
 
 Fix YAML corruption in config.yaml and ensure all Hermes operations function correctly. Repair the config foundation so that all 14+ MCP servers load properly and profile persistence works.
@@ -14,6 +12,7 @@ Fix YAML corruption in config.yaml and ensure all Hermes operations function cor
 ## Requirements
 
 ### Functional
+
 - [ ] Fix YAML syntax error at line 958 (and any others found during full parse)
 - [ ] Ensure all `mcp_servers.*.args` are YAML lists, not JSON strings (pattern: `args: '["arg1","arg2"]'` → `args:\n  - "arg1"\n  - "arg2"`)
 - [ ] `hermes config validate` exits 0 with no errors
@@ -21,19 +20,20 @@ Fix YAML corruption in config.yaml and ensure all Hermes operations function cor
 - [ ] Profile_name persists in state.db sessions table (currently `None`)
 
 ### Non-Functional
+
 - [ ] No backup files created (use git for rollback)
 - [ ] Fix applied via python file I/O (not `patch`/`write_file` - security guard)
 - [ ] Verification within 30 seconds of fix
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| Config valid | `hermes config validate` | Exit 0, no YAML errors |
-| MCP list | `hermes mcp list` | All 14+ servers shown, enabled |
-| Profile persist | New session → check state.db | `profile_name` = "default" not `None` |
-| No corruption backups | `ls config.yaml.corrupt.*` | No new corrupt files after fix |
-| Config get works | `hermes config get model.provider` | Returns valid provider name |
+| Check                 | Command                            | Expected                              |
+| --------------------- | ---------------------------------- | ------------------------------------- |
+| Config valid          | `hermes config validate`           | Exit 0, no YAML errors                |
+| MCP list              | `hermes mcp list`                  | All 14+ servers shown, enabled        |
+| Profile persist       | New session → check state.db       | `profile_name` = "default" not `None` |
+| No corruption backups | `ls config.yaml.corrupt.*`         | No new corrupt files after fix        |
+| Config get works      | `hermes config get model.provider` | Returns valid provider name           |
 
 ## Non-Functional Requirements
 
@@ -65,8 +65,10 @@ ls ~/AppData/Local/hermes/config.yaml.corrupt.* 2>/dev/null || echo "No corrupt 
 ```
 
 ## Linked Specs
+
 - 01-config-foundation-repair.md
 
 ## Linked Plan
+
 - ../skill-implementation-master-plan.md
 - ../2026-08-15_hermes-profile-skills-enhancement-plan.md

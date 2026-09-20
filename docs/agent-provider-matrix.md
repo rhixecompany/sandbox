@@ -104,3 +104,9 @@ summary.json                         # machine-readable roll-up
 - `provider-model-audit` / `test-providers-models` — provider inventory concepts
 - `prompts/agent-provider-matrix.prompt.md` — prompt template
 - `packages/openrouter-client/` and `packages/openrouter-client-py/` — package context source
+
+
+## MCP Server Sync (2026-09-20)
+- Identical MCP server set enforced across all agent profiles (opencode/copilot/cursor-agent/hermes).
+- Heavy/large servers converted to lightweight native equivalents globally.
+- Verification: snapshot saved at $HERMES_HOME/specs/config-sync-spec/verification/pre-execution-snapshot.md.

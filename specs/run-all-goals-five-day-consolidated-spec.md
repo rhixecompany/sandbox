@@ -10,11 +10,10 @@ tags: [spec, consolidation, sessions, local-only, run-all-goals]
 status: "completed"
 ---
 
-
-
 # Run All Goals — Five-Day Consolidation Specification
 
 ## Goal
+
 Create an auditable, local-only execution package from the default-profile Hermes session corpus for **Sep 6–10, 2026 WAT inclusive**, then execute it against the SandBox workspace and verify every deliverable on disk.
 
 ## Scope and evidence
@@ -43,24 +42,28 @@ Create an auditable, local-only execution package from the default-profile Herme
 ## Consolidated goals and subgoals
 
 ### GOAL-1 — Session and artifact evidence
+
 - **SG1.1:** Capture session-start state and validate memory/profile prerequisites.
 - **SG1.2:** Enumerate default-profile sessions for the fixed WAT window.
 - **SG1.3:** Recall and classify goal/spec/plan/prompt/phase/task/action evidence.
 - **SG1.4:** Inventory workspace specs, plans, prompts, scripts, skills, templates, references, approvals, tests, and results.
 
 ### GOAL-2 — Consolidated artifact package
+
 - **SG2.1:** Create this specification with measurable acceptance criteria.
 - **SG2.2:** Create the linked implementation plan with dependency gates.
 - **SG2.3:** Create the executable `/run-all-goals-five-day` prompt.
 - **SG2.4:** Create deterministic scripts and a reusable workflow skill.
 
 ### GOAL-3 — Local execution
+
 - **SG3.1:** Re-validate sources and links before execution.
 - **SG3.2:** Run the consolidated prompt in phase order.
 - **SG3.3:** Run workspace-native verification plus artifact-specific verification.
 - **SG3.4:** Capture the end state and preserve blockers.
 
 ### GOAL-4 — Integrity and safety
+
 - **SG4.1:** No secrets or credentials enter generated artifacts.
 - **SG4.2:** No destructive or external action executes outside the clarified scope.
 - **SG4.3:** Every completion claim is backed by fresh tool output.

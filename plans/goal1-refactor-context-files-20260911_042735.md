@@ -10,27 +10,27 @@ trigger_threshold: >6 file changes → load 14-skill stack
 
 ## Decision Lock (from clarifications)
 
-| Decision | Value | Source |
-|---|---|---|
-| Auto-trigger threshold | **>6 file changes** | user literal request |
-| Protocol location | extract into dedicated skill `multi-file-change-protocol` | user pick #2 |
-| Slimming style | **Strict DRY** — pure cross-references, no inline duplicates | user pick #1 |
-| Dedupe workflow skill | single `dedupe-skills` skill | user pick #1 |
+| Decision               | Value                                                        | Source               |
+| ---------------------- | ------------------------------------------------------------ | -------------------- |
+| Auto-trigger threshold | **>6 file changes**                                          | user literal request |
+| Protocol location      | extract into dedicated skill `multi-file-change-protocol`    | user pick #2         |
+| Slimming style         | **Strict DRY** — pure cross-references, no inline duplicates | user pick #1         |
+| Dedupe workflow skill  | single `dedupe-skills` skill                                 | user pick #1         |
 
 ## Scope (10 files affected)
 
-| # | Path | Action | New line target |
-|---|---|---|---|
-| 1 | `SandBox/$HERMES_HOME.md` | rewrite as pointer + add >6 trigger + reference new skill | ~50 |
-| 2 | `SandBox/AGENTS.md` | rewrite as pointer + add >6 trigger + reference new skill | ~40 |
-| 3 | `SandBox/CLAUDE.md` | rewrite as pointer | ~15 |
-| 4 | `SandBox/.cursorrules` | rewrite as pointer | ~15 |
-| 5 | `~/AppData/Local/hermes/SOUL.md` | strip to persona + invariants, reference new skill | ~120 |
-| 6 | `~/AppData/Local/hermes/memories/USER.md` | already pointer — verify no duplication | ~50 |
-| 7 | `~/AppData/Local/hermes/memories/MEMORY.md` | already §-delimited — verify no H1, trim duplicates | ~50 |
-| 8 | NEW: `~/AppData/Local/hermes/skills/multi-file-change-protocol/SKILL.md` | create | ~80 |
-| 9 | NEW: `~/AppData/Local/hermes/skills/multi-file-change-protocol/references/14-skill-stack.md` | create | ~60 |
-| 10 | NEW: `~/AppData/Local/hermes/skills/dedupe-skills/SKILL.md` | create | ~60 |
+| #   | Path                                                                                         | Action                                                    | New line target |
+| --- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------- |
+| 1   | `SandBox/$HERMES_HOME.md`                                                                    | rewrite as pointer + add >6 trigger + reference new skill | ~50             |
+| 2   | `SandBox/AGENTS.md`                                                                          | rewrite as pointer + add >6 trigger + reference new skill | ~40             |
+| 3   | `SandBox/CLAUDE.md`                                                                          | rewrite as pointer                                        | ~15             |
+| 4   | `SandBox/.cursorrules`                                                                       | rewrite as pointer                                        | ~15             |
+| 5   | `~/AppData/Local/hermes/SOUL.md`                                                             | strip to persona + invariants, reference new skill        | ~120            |
+| 6   | `~/AppData/Local/hermes/memories/USER.md`                                                    | already pointer — verify no duplication                   | ~50             |
+| 7   | `~/AppData/Local/hermes/memories/MEMORY.md`                                                  | already §-delimited — verify no H1, trim duplicates       | ~50             |
+| 8   | NEW: `~/AppData/Local/hermes/skills/multi-file-change-protocol/SKILL.md`                     | create                                                    | ~80             |
+| 9   | NEW: `~/AppData/Local/hermes/skills/multi-file-change-protocol/references/14-skill-stack.md` | create                                                    | ~60             |
+| 10  | NEW: `~/AppData/Local/hermes/skills/dedupe-skills/SKILL.md`                                  | create                                                    | ~60             |
 
 (Skill_manage creates new skills at `~/AppData/Local/hermes/skills/<name>/SKILL.md` — auto-creates folder.)
 
@@ -98,11 +98,11 @@ trigger_threshold: >6 file changes → load 14-skill stack
 
 ## Risks & Mitigations
 
-| Risk | Mitigation |
-|---|---|
-| Strict DRY breaks TUI rendering if links fail | keep `>6 trigger` text + skill name verbatim in every file (no fragile markdown links) |
-| Profile copy (Goal 5) wipes profile-only customizations | backup first per user clarification |
-| New skill folder structure wrong | `skill_manage` `create` action auto-creates folder per docs |
+| Risk                                                    | Mitigation                                                                             |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Strict DRY breaks TUI rendering if links fail           | keep `>6 trigger` text + skill name verbatim in every file (no fragile markdown links) |
+| Profile copy (Goal 5) wipes profile-only customizations | backup first per user clarification                                                    |
+| New skill folder structure wrong                        | `skill_manage` `create` action auto-creates folder per docs                            |
 
 ## Out of Scope (Goals 2-5)
 

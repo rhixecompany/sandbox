@@ -1,176 +1,159 @@
 ---
-name: all-repo-docker-setup
-title: All Repository Docker Setup and Cleanup
-description: No description
-version: 1.1.0
-license: MIT
-author: Hermes Agent
+description: Create and verify Dockerfiles only — no build, no scan, no prune. Setup bun + uv. One repo at a time.
 trigger: /all-repo-docker-setup
-toolsets:
-- file
-- terminal
-skills: []
-dependencies: []
-formatter: default
-metadata:
-  hermes:
-    profile: alexa
-    mcp_servers:
-    - filesystem
-    - github
-    - terminal
-    context_size: medium
-  copilot:
-    context_size: medium
-    extensions: []
-    keybinding: null
-  opencode:
-    command: opencode /all-repo-docker-setup
-    flags: {}
-    help: No description
-  codex:
-    model_override: null
-    system_prompt_id: null
-    temperature: null
-    max_tokens: null
-tags:
-- agent-type:hermes
-- complexity:intermediate
-- domain:infra
-- domain:setup
-- tool:docker
-scripts: []
+category: ci-cd
+profile: alexa
+personality: Direct, methodical, safety-conscious
+model: nemotron-3-ultra-free (opencode-zen / openrouter)
+---
+
+# All Repository Dockerfile Create & Verify
+
+For **each repository in the rhixecompany org** that has a local copy, perform a Docker setup pass: ensure a working `Dockerfile` exists (create it if missing), verify it is syntactically correct, and record the result. **Do NOT build images, run security scans, or prune Docker resources.**
+
+Additionally, ensure **bun** and **uv** are installed and available in the environment.
+
 ## Goal
 
-For **each repository in the rhixecompany org**, perform a complete Docker setup pass: clone the repo, ensure a working `Dockerfile` (create it if missing), build the image, run a security scan, suggest and implement a cleanup plan, fix all container errors, and finish by cleaning up unused Docker resources and reporting what was freed.
+Standardize Dockerfiles across repositories without the cost of building images — create or verify Dockerfiles, validate syntax, and ensure the toolchain (bun + uv) is ready.
 
 ## Subgoals
 
-1. **Clone** — Clone every rhixecompany repository into `./projects`.
-2. **Dockerfile** — Create, debug, fix, or optimize a `Dockerfile` in every repo (prefer smaller images).
-3. **Build** — Build the Docker image successfully (`docker build` or `docker-compose build`).
-4. **Secure** — Security-scan images and fix/flag findings.
-5. **Cleanup plan** — Suggest, create, and implement a cleanup plan for container errors and bloat.
-6. **Prune** — Remove unused containers, images, volumes, and build caches.
-7. **Report** — Log per-repo status and summarize what was freed.
+1. **Dockerfile** — Create or verify a `Dockerfile` in every repo (prefer smaller images; multi-stage where possible).
+2. **Verify** — Validate each Dockerfile syntax (e.g., `docker parse`, or manual review of `FROM`/`RUN`/`COPY`/`ENTRYPOINT` structure).
+3. **Bun + UV Setup** — Ensure `bun` and `uv` are installed and available; install if missing.
+4. **Report** — Log per-repo Dockerfile status and toolchain availability.
 
 ## Personas
 
-- **DevOps Engineer** — Performs the clone/build/scan/prune workflow on every repo.
-- **Security Reviewer** — Validates scan results and flags unresolved findings.
-- **Reporter** — Produces the final cleanup report (what was freed, image sizes, remaining risks).
+- **DevOps Engineer** — Performs the clone/file-creation/verify workflow on every repo.
+- **Toolchain Manager** — Ensures bun and uv are installed and working.
+- **Reporter** — Produces the final status report (Dockerfile state per repo, bun/uv versions).
 
 ## Personality
 
 - **Tone**: Direct, methodical, safety-conscious.
 - **Style**: One repo at a time; record each result in `docker_setup.log`.
-- **Avoid**: Skipping repos, running scans on unverified images, silent failures.
-- **Encourage**: Distroless/multi-stage builds, `.dockerignore`, `docker scout`/`trivy` scans, pruning only after verification.
+- **Avoid**: Building images, running scans on unverified images, silent failures, blanket prune commands.
+- **Encourage**: Multi-stage builds, `.dockerignore`, minimal base images (e.g. `alpine`, `distroless`), bun+uv availability checks.
 
 ## Context
 
-The source is `all-repo-docker-setup.prompt.txt` — an operational runbook for applying a standardized Docker lifecycle across the org's repositories. It is authoritative for the work items and reporting format.
+The source is `all-repo-docker-setup.prompt.txt` — an operational runbook for applying a standardized Dockerfile lifecycle across the org's repositories. This version is scoped to **create and verify only** — no image builds, no security scans, no resource pruning.
 
 ## Rules
-
 
 > Core rules: [`templates/_shared/rules-core.md`](templates/_shared/rules-core.md)
 > Domain-specific additions below.
 
 ### Domain Rules
 
-1. **One repo at a time** — Clone, build, scan, and report per repository before moving to the next.
-2. **Verify before destructive ops** — Never `docker system prune -a` without confirming the image list first.
-3. **Log everything** — Create/update `docker_setup.log` in the repo root with the exact message for repos with no Docker config.
-4. **DRY** — Reuse one logging and reporting format across all repos.
-5. **Small images** — Prefer multi-stage builds and minimal base images (e.g. `alpine`, `distroless`); justify every change.
-6. **Never skip** — If a repo has neither `Dockerfile` nor `docker-compose.yml`, record that explicitly (do not silently skip).
+1. **One repo at a time** — Check, create/verify, and report per repository before moving to the next.
+2. **No builds** — Never run `docker build` or `docker-compose build`. Only create or verify Dockerfile contents.
+3. **No scans** — Do not run `trivy`, `docker scout`, `grype`, or any image scanner.
+4. **No prune** — Do not run `docker system prune` or any cleanup commands.
+5. **Verify before creating** — Check if a `Dockerfile` already exists and is valid before creating a new one.
+6. **Log everything** — Create/update `docker_setup.log` in the repo root with the exact status for each repo.
+7. **DRY** — Reuse one logging and reporting format across all repos.
+8. **Small images** — Prefer multi-stage builds and minimal base images (e.g. `alpine`, `distroless`); justify every change.
+9. **Bun + UV required** — Before processing repos, verify `bun --version` and `uv --version` succeed. Install if missing.
+10. **Never skip** — If a repo has neither `Dockerfile` nor `docker-compose.yml`, record that explicitly (do not silently skip).
 
 ## Steps
 
-For each repo **in the list of repositories by rhixecompany**:
+For each repo **in the list of repositories by rhixecompany** that has a local copy in `./projects`:
 
-1. Clone the repository to `./projects`:
+### 1. Navigate into the repo
 
-   ```bash
-   git clone <repository_url> ./projects/<repository_name>
-   ```
+```bash
+cd ./projects/<repository_name>
+```
 
-2. Navigate into the cloned repository:
+### 2. Check Dockerfile presence
 
-   ```bash
-   cd ./projects/<repository_name>
-   ```
+- **If `Dockerfile` exists** — verify its syntax:
+  - Check `FROM` line is valid
+  - Check `RUN`, `COPY`, `ENTRYPOINT`/`CMD` structure
+  - Optionally run `docker build --dry-run .` if available (no actual build)
+  - Log result
+- **If `Dockerfile` does not exist** — create a minimal, correct `Dockerfile`:
+  - Use a small base image (`alpine`, `distroless`, or language-specific slim variant)
+  - Multi-stage where applicable
+  - Include `.dockerignore` if helpful
+  - Log as `created`
 
-3. Check if a `Dockerfile` exists:
-   - **If it does not exist** — create a minimal, correct `Dockerfile` (multi-stage where possible; set a small base image).
-   - **If it does exist** — debug and fix it, update it to a smaller image where safe, then build:
+### 2. If no `Dockerfile` but `docker-compose.yml` exists
 
-     ```bash
-     docker build -t <image_name> .
-     ```
+- Verify `docker-compose.yml` syntax (e.g., `docker compose config` dry-run)
+- Log result
+- Do NOT build
 
-4. If no `Dockerfile` exists but `docker-compose.yml` does, build with:
+### 5. If neither exists
 
-   ```bash
-   docker-compose build
-   ```
+```bash
+printf 'No Docker configuration found for this repository.\n' > docker_setup.log
+```
 
-5. If neither `Dockerfile` nor `docker-compose.yml` exists, log the exact message and create the log file in the repo root:
+### 3. Bun + UV Setup (run once before processing repos)
 
-   ```bash
-   printf 'No Docker configuration found for this repository.\n' > docker_setup.log
-   ```
+```bash
+# Check bun
+bun --version || echo "bun not found — install with: npm install -g bun"
 
-6. Security scan the built image (e.g. `trivy image`, `docker scout cves`, `grype`) and implement or suggest fixes for High/Critical findings.
-7. Suggest, create, and implement a cleanup plan for the repo's Docker assets (`.dockerignore`, removal of junk blobs, multi-stage consolidation, unused deps).
-8. Fix all container errors found during build/run verification.
-9. Clean up unused Docker resources with a **specific plan** (no blanket `prune -a` without review):
-   - Remove unused containers
-   - Remove unused images
-   - Remove unused volumes
-   - Remove unused build caches
-   - Report what was freed
+# Check uv
+uv --version || echo "uv not found — install with: curl -LsSf https://astral.sh/uv/install.sh | sh"
+```
 
-## Verification
+If either tool is missing, install it and re-verify.
 
-- Each repo has a working, successful `docker build` (or a recorded reason why not).
-- A `docker_setup.log` exists where required and states the exact message.
-- Every small-image/multistage change is justified and the image runs.
-- Final cleanup report lists containers/images/volumes/build cache removed and total bytes freed.
-- No `docker` errors remaining in the cloned repos.
+### 7. Report
 
-## Output Format
-
-Per repo, report:
+Per repo, record:
 
 ```
 repo: <name>
-dockerfile: <created|fixed|optimized|missing>
-image: <name>:<tag>
-security: <scanner> — <high> high / <crit> critical
-cleanup: <items removed>
+dockerfile: <created|verified|missing|docker-compose-verified>
+bun: <version or not-installed>
+uv: <version or not-installed>
 ```
 
-Then a global summary of all `docker system prune` results.
+Then a global summary of Dockerfile status and toolchain availability.
+
+## Verification
+
+- Each repo has a recorded Dockerfile status (created, verified, missing, or docker-compose-verified).
+- A `docker_setup.log` exists where required and states the exact message.
+- Every new Dockerfile uses a small base image and is syntactically valid.
+- `bun --version` and `uv --version` both succeed.
+- No `docker build`, `docker-compose build`, `docker scan`, `trivy`, `grype`, or `docker system prune` commands were run.
+
+## Output Format
+
+Per repo:
+
+```
+repo: <name>
+dockerfile: <created|verified|missing|docker-compose-verified>
+bun: <version>
+uv: <version>
+```
+
+Global summary: Dockerfile counts by status + bun/uv versions.
 
 ## MCP Servers & Tools
 
-- **Docker MCP** — container/image/compose management across repos.
-- **Terminal** — docker CLI builds, scans, and logs.
-- **File tools** — Dockerfile/docker-compose.yml inspection and patches.
-- **GitHub MCP** — repo discovery and clone workflows.
-
+- **Terminal** — file inspection, bun/uv version checks, Dockerfile syntax verification.
+- **File tools** — Dockerfile/docker-compose.yml inspection and creation.
+- **GitHub MCP** — repo discovery and clone workflows (if needed).
 
 ## Hooks
 
 Shared workspace hooks run around this prompt's execution — see [`.github/hooks/README.md`](../hooks/README.md): `session-logger`, `session-auto-commit`, `governance-audit`, `pre-exec-validate.sh`, `post-exec-state-log.py`.
 
-
 ## Scripts
 
 Prompt-library tooling (see `.enhance/`):
 
-- `.enhance/analyze_prompts.py` — prompt-library analyzer (Phase 5/7 gate)
+- `.enhance/analyze_prompts.py` — prompt-library analyzer
 - `.enhance/verify_phase3.py`, `.enhance/fix_class_e.py`, `.enhance/fix_frontmatter_plan.py` — Class C–E repair/verify tooling
 - `.github/hooks/*` — hook implementations referenced in the Hooks section

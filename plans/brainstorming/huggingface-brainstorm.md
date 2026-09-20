@@ -8,20 +8,20 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `huggingface` (alias: `hf`) |
-| Default model | Qwen/Qwen3.5-397B-A17B |
-| Auth type | Token |
-| Env vars | `HF_TOKEN` (or `HF_INFERENCE_TOKEN` for separate inference token) |
-| Base URL | `https://router.huggingface.co/v1` |
-| Override | `HF_BASE_URL` env var |
-| Models | 100s of open models from 17+ providers (Groq, Together, SambaNova, etc.) |
-| Credential pool | Single token |
-| Pool strategy | fill_first |
-| Role | Fill-first provider (not in main fallback chain) |
-| Free tier | $0.10/month credit, no markup on provider rates |
-| Routing suffixes | `:fastest` (default), `:cheapest`, `:provider_name` |
+| Property         | Value                                                                    |
+| ---------------- | ------------------------------------------------------------------------ |
+| Config key       | `huggingface` (alias: `hf`)                                              |
+| Default model    | Qwen/Qwen3.5-397B-A17B                                                   |
+| Auth type        | Token                                                                    |
+| Env vars         | `HF_TOKEN` (or `HF_INFERENCE_TOKEN` for separate inference token)        |
+| Base URL         | `https://router.huggingface.co/v1`                                       |
+| Override         | `HF_BASE_URL` env var                                                    |
+| Models           | 100s of open models from 17+ providers (Groq, Together, SambaNova, etc.) |
+| Credential pool  | Single token                                                             |
+| Pool strategy    | fill_first                                                               |
+| Role             | Fill-first provider (not in main fallback chain)                         |
+| Free tier        | $0.10/month credit, no markup on provider rates                          |
+| Routing suffixes | `:fastest` (default), `:cheapest`, `:provider_name`                      |
 
 ---
 
@@ -55,24 +55,30 @@ Adapting the 8-step template to HuggingFace:
 ## SCAMPER Analysis
 
 ### Substitute
+
 - Substitute any model via the unified endpoint — Qwen, Llama, Mistral, DeepSeek-V3.2, etc.
 - Substitute backends via routing suffixes — Groq, Together, SambaNova, etc.
 
 ### Combine
+
 - HF_TOKEN + OpenRouter = dual open-model access paths
 - HuggingFace + local models = comprehensive open-model workflow
 
 ### Adapt
+
 - Adapt 8-step template — HF-specific: routing suffixes, backend failover, HF_INFERENCE_TOKEN distinction
 
 ### Modify
+
 - Not in main fallback chain — fill_first in credential pool only
 - Model access depends on token permissions (Inference Providers permission required)
 
 ### Eliminate
+
 - Eliminate if HF_TOKEN lacks Inference Providers permission or is expired
 
 ### Reverse
+
 - HuggingFace as primary for open-model workloads? Yes — best access to 100s of open models
 
 ---

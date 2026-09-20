@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 # Comprehensive Implementation Spec
 
 ## Overview
@@ -24,6 +22,7 @@ Detailed specifications for the multi-phase implementation plan. Each requiremen
 Automated inventory of all workspace artifacts including files, directories, dependencies, configurations, and cross-references.
 
 **Acceptance Criteria:**
+
 - [ ] Inventory covers 100% of workspace directories
 - [ ] Each artifact classified by type (code, config, doc, skill, plugin, hook)
 - [ ] Dependencies mapped with version constraints
@@ -32,6 +31,7 @@ Automated inventory of all workspace artifacts including files, directories, dep
 - [ ] Report generated within 2h of initiation
 
 **Interfaces:**
+
 - Input: Workspace root path
 - Output: `workspace-inventory.json`
 - Tools: MCP filesystem, search_files
@@ -47,6 +47,7 @@ Automated inventory of all workspace artifacts including files, directories, dep
 Generate structured specification documents from requirements with YAML frontmatter, acceptance criteria, and traceability links.
 
 **Acceptance Criteria:**
+
 - [ ] Spec includes YAML frontmatter (name, title, description, version, author, license, tags)
 - [ ] Each requirement has unique ID (FR-XXX format)
 - [ ] Acceptance criteria are testable and unambiguous
@@ -55,6 +56,7 @@ Generate structured specification documents from requirements with YAML frontmat
 - [ ] Traceability to plan milestones
 
 **Interfaces:**
+
 - Input: Requirements doc, plan phases
 - Output: `./specs/*.md`
 - Tools: write_file, patch
@@ -70,6 +72,7 @@ Generate structured specification documents from requirements with YAML frontmat
 Create phased implementation plans with task breakdowns, dependencies, timelines, and resource allocation.
 
 **Acceptance Criteria:**
+
 - [ ] Plan has ≥3 phases with clear objectives
 - [ ] Each task has: description, deliverable, owner, duration
 - [ ] Dependencies documented (task A → task B)
@@ -78,6 +81,7 @@ Create phased implementation plans with task breakdowns, dependencies, timelines
 - [ ] Risk register with mitigations
 
 **Interfaces:**
+
 - Input: Specs, resource constraints
 - Output: `./plans/*.md`
 - Tools: write_file, patch
@@ -93,6 +97,7 @@ Create phased implementation plans with task breakdowns, dependencies, timelines
 Dispatch bounded implementation tasks to fresh subagents with full context, then verify outputs against spec.
 
 **Acceptance Criteria:**
+
 - [ ] Each subagent receives complete task context (no plan file reading)
 - [ ] Implementer subagent produces working code
 - [ ] Spec reviewer validates against requirements
@@ -101,6 +106,7 @@ Dispatch bounded implementation tasks to fresh subagents with full context, then
 - [ ] Two-stage review (spec → quality) strictly ordered
 
 **Interfaces:**
+
 - Input: Task spec, project context
 - Output: Implemented code, review reports
 - Tools: delegate_task
@@ -116,6 +122,7 @@ Dispatch bounded implementation tasks to fresh subagents with full context, then
 Automated verification pipeline that runs tests, linting, type-checking, and security scans on all changes.
 
 **Acceptance Criteria:**
+
 - [ ] Unit tests pass (≥80% coverage)
 - [ ] Integration tests pass
 - [ ] Linting clean (zero errors)
@@ -124,6 +131,7 @@ Automated verification pipeline that runs tests, linting, type-checking, and sec
 - [ ] Performance within SLA
 
 **Interfaces:**
+
 - Input: Code changes
 - Output: Verification report
 - Tools: terminal (bun run check, bun run lint, bun run typecheck)
@@ -139,6 +147,7 @@ Automated verification pipeline that runs tests, linting, type-checking, and sec
 Manage release preparation, deployment execution, health verification, and rollback procedures.
 
 **Acceptance Criteria:**
+
 - [ ] Release notes generated from changes
 - [ ] Deployment executed with zero downtime
 - [ ] Health checks pass post-deploy
@@ -147,6 +156,7 @@ Manage release preparation, deployment execution, health verification, and rollb
 - [ ] Post-deploy review completed
 
 **Interfaces:**
+
 - Input: Approved changes, deployment target
 - Output: Live system, monitoring dash, runbook
 - Tools: terminal (git, deploy commands)
@@ -162,6 +172,7 @@ Manage release preparation, deployment execution, health verification, and rollb
 Maintain comprehensive documentation across all phases — plans, specs, decisions, lessons learned.
 
 **Acceptance Criteria:**
+
 - [ ] Every phase has documented decisions with rationale
 - [ ] Lessons learned captured post-phase
 - [ ] README updated for user-facing features
@@ -170,6 +181,7 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 - [ ] Cross-references valid
 
 **Interfaces:**
+
 - Input: Phase outputs, decisions
 - Output: Markdown docs
 - Tools: write_file, patch
@@ -226,41 +238,42 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 
 ## Constraints
 
-| Constraint | Description | Impact |
-|------------|-------------|--------|
-| C-001 | Windows/MSYS2 host | Path handling, tool availability |
-| C-002 | MCP-first tool precedence | Token efficiency, capability bounds |
-| C-003 | No inline scripts | All scripts in `scripts/` dir |
-| C-004 | Git for rollback | No backup files, clean history |
-| C-005 | DRY strict | No duplicate facts across files |
-| C-006 | Destructive ops need approval | Safety over velocity |
+| Constraint | Description                   | Impact                              |
+| ---------- | ----------------------------- | ----------------------------------- |
+| C-001      | Windows/MSYS2 host            | Path handling, tool availability    |
+| C-002      | MCP-first tool precedence     | Token efficiency, capability bounds |
+| C-003      | No inline scripts             | All scripts in `scripts/` dir       |
+| C-004      | Git for rollback              | No backup files, clean history      |
+| C-005      | DRY strict                    | No duplicate facts across files     |
+| C-006      | Destructive ops need approval | Safety over velocity                |
 
 ## Traceability Matrix
 
-| Requirement | Plan Phase | Spec Section | Test | Status |
-|-------------|------------|--------------|------|--------|
-| FR-001 | Phase 1 | §FR-001 | Inventory validation | ⏳ pending |
-| FR-002 | Phase 2 | §FR-002 | Spec checklist | ⏳ pending |
-| FR-003 | Phase 2 | §FR-003 | Plan checklist | ⏳ pending |
-| FR-004 | Phase 3 | §FR-004 | Subagent review | ⏳ pending |
-| FR-005 | Phase 4 | §FR-005 | Pipeline run | ⏳ pending |
-| FR-006 | Phase 5 | §FR-006 | Deploy + health | ⏳ pending |
-| FR-007 | All | §FR-007 | Doc audit | ⏳ pending |
+| Requirement | Plan Phase | Spec Section | Test                 | Status     |
+| ----------- | ---------- | ------------ | -------------------- | ---------- |
+| FR-001      | Phase 1    | §FR-001      | Inventory validation | ⏳ pending |
+| FR-002      | Phase 2    | §FR-002      | Spec checklist       | ⏳ pending |
+| FR-003      | Phase 2    | §FR-003      | Plan checklist       | ⏳ pending |
+| FR-004      | Phase 3    | §FR-004      | Subagent review      | ⏳ pending |
+| FR-005      | Phase 4    | §FR-005      | Pipeline run         | ⏳ pending |
+| FR-006      | Phase 5    | §FR-006      | Deploy + health      | ⏳ pending |
+| FR-007      | All        | §FR-007      | Doc audit            | ⏳ pending |
 
 ## Glossary
 
-| Term | Definition |
-|------|------------|
-| Subagent | Fresh delegate_task instance with isolated context |
-| Two-stage review | Spec compliance → Code quality (strict order) |
-| Bounded batch | ≤7 files per processing batch |
-| Verification gate | Pass/fail checkpoint before phase transition |
-| Rollback | Revert to last known good state |
-| DRY | Don't Repeat Yourself — single source of truth |
+| Term              | Definition                                         |
+| ----------------- | -------------------------------------------------- |
+| Subagent          | Fresh delegate_task instance with isolated context |
+| Two-stage review  | Spec compliance → Code quality (strict order)      |
+| Bounded batch     | ≤7 files per processing batch                      |
+| Verification gate | Pass/fail checkpoint before phase transition       |
+| Rollback          | Revert to last known good state                    |
+| DRY               | Don't Repeat Yourself — single source of truth     |
 
 ## Acceptance Criteria
 
 ### AC-001: Workspace Inventory
+
 - [ ] Inventory covers 100% of workspace directories
 - [ ] Each artifact classified by type
 - [ ] Dependencies mapped with version constraints
@@ -269,6 +282,7 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 - [ ] Report generated within 2h
 
 ### AC-002: Specification Documents
+
 - [ ] All specs have YAML frontmatter (name, title, description, version, author, license, tags, status, owner, plan)
 - [ ] Each requirement has unique FR-XXX ID
 - [ ] Acceptance criteria are testable with Given/When/Then or specific numbers
@@ -277,6 +291,7 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 - [ ] Traceability to plan milestones
 
 ### AC-003: Implementation Plans
+
 - [ ] Plans have ≥3 phases with ## Phase X headings
 - [ ] Each phase ends with **Gate**: <verifiable condition>
 - [ ] Tasks have dependencies and estimates
@@ -284,12 +299,14 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 - [ ] Risk register with mitigations
 
 ### AC-004: Subagent Execution
+
 - [ ] Each subagent receives complete context (no plan file reading)
 - [ ] Two-stage review: spec compliance → code quality (strict order)
 - [ ] No shared mutable config between parallel subagents
 - [ ] Review reports generated per task
 
 ### AC-005: Verification Pipeline
+
 - [ ] Unit tests pass (≥80% coverage)
 - [ ] Integration tests pass
 - [ ] Linting clean (zero errors)
@@ -298,6 +315,7 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 - [ ] Performance within SLA
 
 ### AC-006: Deployment
+
 - [ ] Release notes generated from changes
 - [ ] Deployment executed with zero downtime
 - [ ] Health checks pass post-deploy
@@ -305,12 +323,14 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 - [ ] Monitoring active within 1h
 
 ### AC-007: Documentation
+
 - [ ] Every phase has documented decisions with rationale
 - [ ] Lessons learned captured post-phase
 - [ ] No duplicate documentation (DRY enforced)
 - [ ] Cross-references valid
 
 ## Verification
+
 - Run specs-judge with threshold 98 on all specs in ./specs/
 - Run plans-judge with threshold 98 on all plans in ./plans/
 - Run prompts-judge with threshold 98 on all prompts in .github/prompts/
@@ -321,6 +341,7 @@ Maintain comprehensive documentation across all phases — plans, specs, decisio
 - Confirm git push succeeds on all three branches
 
 ## Linked Plan
+
 ../plans/comprehensive-implementation-plan.md
 
 ---

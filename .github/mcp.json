@@ -5,11 +5,6 @@
       "args": ["-y", "@notprolands/ast-grep-mcp"],
       "enabled": true
     },
-    "code-sandbox": {
-      "command": "npx.cmd",
-      "args": ["-y", "node-code-sandbox-mcp"],
-      "enabled": true
-    },
     "context7": {
       "url": "https://mcp.context7.com/mcp",
       "enabled": true
@@ -50,11 +45,6 @@
       "url": "https://task-mcp.parallel.ai/mcp",
       "enabled": true
     },
-    "playwright": {
-      "command": "npx.cmd",
-      "args": ["-y", "@playwright/mcp@latest"],
-      "enabled": true
-    },
     "python-quality": {
       "command": "C:/Users/Alexa/myvenv/Scripts/python",
       "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/python_quality_mcp_server.py"],
@@ -63,10 +53,6 @@
     "sequential-thinking": {
       "command": "npx.cmd",
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-      "enabled": true
-    },
-    "smithery": {
-      "url": "https://mcp.smithery.ai/",
       "enabled": true
     },
     "tavily": {
@@ -83,18 +69,8 @@
       "args": ["C:/Users/Alexa/AppData/Local/hermes/scripts/tooling_lint_mcp_server.py"],
       "enabled": true
     },
-    "mcp-docker": {
-      "command": "docker",
-      "args": ["mcp", "gateway", "run"],
-      "enabled": true
-    },
     "sentry": {
       "url": "https://mcp.sentry.dev/mcp",
-      "enabled": true
-    },
-    "mindstudio": {
-      "command": "mindstudio",
-      "args": ["mcp"],
       "enabled": true
     },
     "vercel": {
@@ -110,12 +86,40 @@
       "url": "https://mcp.atlassian.com/v1/mcp/authv2",
       "auth": "oauth",
       "enabled": true
+    },
+    "django": {
+      "command": "npx.cmd",
+      "args": ["-y", "django-mcp"],
+      "enabled": true
+    },
+    "docs": {
+      "command": "npx.cmd",
+      "args": ["-y", "docs-mcp", "docs/"],
+      "enabled": true
+    },
+    "evals": {
+      "command": "npx.cmd",
+      "args": ["-y", "@modelcontextprotocol/server-evals"],
+      "enabled": true
+    },
+    "postgres": {
+      "command": "npx.cmd",
+      "args": ["-y", "postgres-mcp"],
+      "enabled": true
+    },
+    "pytest": {
+      "command": "npx.cmd",
+      "args": ["-y", "pytest-mcp"],
+      "enabled": true
+    },
+    "time": {
+      "command": "npx.cmd",
+      "args": ["-y", "@modelcontextprotocol/server-time"],
+      "enabled": true
     }
   },
   "disabledServers": [
-    "atlassian",
-    "docs",
-    "postgres"
+    "atlassian"
   ],
-  "notes": "Canonical repo-level MCP mapping derived from live `hermes mcp list` on 2026-08-31. Copilot/Codex/OpenCode should reference this file for parity."
+  "notes": "Canonical repo-level MCP mapping. Supersets OpenCode extras (django, docs, evals, postgres, pytest, time). Heavy servers replaced with Hermes native tools: playwright→browser_exec, code-sandbox→execute_code+terminal, smithery→tool_search+tool_describe+tool_call, mcp-docker→docker CLI via terminal, mindstudio→terminal. Synced to .vscode/mcp.json for VS Code parity."
 }

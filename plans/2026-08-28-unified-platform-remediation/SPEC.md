@@ -15,7 +15,7 @@
 4. **Multi-agent fanout** — Resume from last session: OAuth re-auth, live /models
    capability query, per-provider concurrency, report generation.
 5. **Diagnostic sweep** — `hermes doctor && hermes doctor --fix && hermes
-   security audit && hermes status && hermes insights && hermes logs {list,errors,desktop,gateway,gui,agent} && bun run check`.
+security audit && hermes status && hermes insights && hermes logs {list,errors,desktop,gateway,gui,agent} && bun run check`.
    Fix all new issues.
 
 ## Constraints (non-negotiable)
@@ -30,22 +30,22 @@
 
 ## Non-Destructive Pass (executes now)
 
-| Phase | Action | Gate |
-|-------|--------|------|
-| A1 | Full diagnostic sweep | `hermes doctor` == "All checks passed" |
-| A2 | Profile config audit script | Exit 0; report lists drift items |
-| A3 | MCP server config audit + sync | `python scripts/mcp_sync.py --dry-run` clean |
-| A4 | Disk cleanup (caches only) | `df -h` shows regained space |
-| A5 | Large-file inventory (>50MB) | Report + manual-review list |
-| A6 | Ollama install + model pull | `ollama run <model> "test"` works |
+| Phase | Action                         | Gate                                         |
+| ----- | ------------------------------ | -------------------------------------------- |
+| A1    | Full diagnostic sweep          | `hermes doctor` == "All checks passed"       |
+| A2    | Profile config audit script    | Exit 0; report lists drift items             |
+| A3    | MCP server config audit + sync | `python scripts/mcp_sync.py --dry-run` clean |
+| A4    | Disk cleanup (caches only)     | `df -h` shows regained space                 |
+| A5    | Large-file inventory (>50MB)   | Report + manual-review list                  |
+| A6    | Ollama install + model pull    | `ollama run <model> "test"` works            |
 
 ## Destructive Pass (CHECKPOINT — requires user approval)
 
-| Phase | Action | Requirement |
-|-------|--------|-------------|
-| B1 | Package-manager app uninstalls | User must approve each app list |
-| B2 | Profile memory rewrites | User must approve per-profile changes |
-| B3 | Ollama wiring to agent configs | Verified one-at-a-time, rollback plan |
+| Phase | Action                         | Requirement                           |
+| ----- | ------------------------------ | ------------------------------------- |
+| B1    | Package-manager app uninstalls | User must approve each app list       |
+| B2    | Profile memory rewrites        | User must approve per-profile changes |
+| B3    | Ollama wiring to agent configs | Verified one-at-a-time, rollback plan |
 
 ## Output Artifacts
 

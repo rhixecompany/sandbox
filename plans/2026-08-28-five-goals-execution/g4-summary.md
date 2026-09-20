@@ -6,16 +6,16 @@
 
 ## Disk cleanup
 
-| Source                  | Before  | After  | Freed   |
-|-------------------------|---------|--------|---------|
-| user temp (>7d)         | 3.04 GB | 36 MB  | 3.00 GB |
-| npm cache               | 0 MB    | 0 MB   | 0       |
-| pnpm store              | 0 MB    | 0 MB   | 0       |
-| uv cache                | 0 MB    | 0 MB   | 0       |
-| VS Code cache           | 0 MB    | 0 MB   | 0       |
-| Chrome cache            | 0 MB    | 0 MB   | 0       |
-| winget cache            | 0 MB    | 0 MB   | 0       |
-| **Total**               |         |        | **3.00 GB** |
+| Source          | Before  | After | Freed       |
+| --------------- | ------- | ----- | ----------- |
+| user temp (>7d) | 3.04 GB | 36 MB | 3.00 GB     |
+| npm cache       | 0 MB    | 0 MB  | 0           |
+| pnpm store      | 0 MB    | 0 MB  | 0           |
+| uv cache        | 0 MB    | 0 MB  | 0           |
+| VS Code cache   | 0 MB    | 0 MB  | 0           |
+| Chrome cache    | 0 MB    | 0 MB  | 0           |
+| winget cache    | 0 MB    | 0 MB  | 0           |
+| **Total**       |         |       | **3.00 GB** |
 
 Command: `python scripts/disk_cleanup.py`
 Report: `./plans/2026-08-28-unified-platform-remediation/disk-cleanup-20260828T194524.json`
@@ -25,13 +25,13 @@ authorization is required before any application removal.
 
 ## Ollama setup
 
-| Step | Command | Result |
-|------|---------|--------|
-| Install (already present) | `which ollama` | `/c/Users/Alexa/AppData/Local/Programs/Ollama/ollama` |
-| Version | `ollama --version` | `0.33.1` |
-| Model selection | (decision) | **gemma3:4b** — 3.3 GB, vision+text, strong reasoning |
-| Pull | `ollama pull gemma3:4b` | success (100%, 3.3 GB) |
-| Verify | `curl -X POST localhost:11434/api/generate ...` | response: `OLLAMA_OK` |
+| Step                      | Command                                         | Result                                                |
+| ------------------------- | ----------------------------------------------- | ----------------------------------------------------- |
+| Install (already present) | `which ollama`                                  | `/c/Users/Alexa/AppData/Local/Programs/Ollama/ollama` |
+| Version                   | `ollama --version`                              | `0.33.1`                                              |
+| Model selection           | (decision)                                      | **gemma3:4b** — 3.3 GB, vision+text, strong reasoning |
+| Pull                      | `ollama pull gemma3:4b`                         | success (100%, 3.3 GB)                                |
+| Verify                    | `curl -X POST localhost:11434/api/generate ...` | response: `OLLAMA_OK`                                 |
 
 ### Why gemma3:4b
 
@@ -46,19 +46,21 @@ authorization is required before any application removal.
 
 ## Cross-agent wiring
 
-| Agent    | Wired? | Config                                                                                              |
-|----------|--------|-----------------------------------------------------------------------------------------------------|
-| Hermes   | ✅     | `hermes config set providers.ollama.base_url http://localhost:11434` (already set)                  |
-| OpenCode | ✅     | Added `provider.ollama` block to `opencode.json` with `gemma3:4b` model                            |
+| Agent    | Wired? | Config                                                                                                  |
+| -------- | ------ | ------------------------------------------------------------------------------------------------------- |
+| Hermes   | ✅     | `hermes config set providers.ollama.base_url http://localhost:11434` (already set)                      |
+| OpenCode | ✅     | Added `provider.ollama` block to `opencode.json` with `gemma3:4b` model                                 |
 | Codex    | ⚠      | Codex CLI does not natively support arbitrary OpenAI-compatible endpoints; would require a custom proxy |
-| Copilot  | ❌     | GitHub Copilot only supports GitHub-hosted models; Ollama local models not supported                |
+| Copilot  | ❌     | GitHub Copilot only supports GitHub-hosted models; Ollama local models not supported                    |
 
 To use Hermes with the local model:
+
 ```bash
 hermes --provider ollama --model gemma3:4b -p "Your prompt"
 ```
 
 To use OpenCode with the local model:
+
 ```bash
 opencode run --model ollama/gemma3:4b "Your prompt"
 ```

@@ -8,18 +8,18 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `opencode-zen` |
-| Default model | laguna-s-2.1-free |
-| Active model | deepseek-v4-flash-free |
-| Fallback model | nemotron-3-ultra-free |
-| Auth type | API key |
-| Env var | `OPENCODE_ZEN_API_KEY` |
-| Base URL | `https://opencode.ai/zen/v1` |
-| Credential pool | 2 keys (vault primary + zen-backup manual) |
-| Pool strategy | fill_first |
-| Profile usage | default (primary), creative-director, code-architect, exec-assistant, research-analyst, patient-tutor, ops, pm, qa, security, dev, cto, designer, alexa |
+| Property        | Value                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Config key      | `opencode-zen`                                                                                                                                          |
+| Default model   | laguna-s-2.1-free                                                                                                                                       |
+| Active model    | deepseek-v4-flash-free                                                                                                                                  |
+| Fallback model  | nemotron-3-ultra-free                                                                                                                                   |
+| Auth type       | API key                                                                                                                                                 |
+| Env var         | `OPENCODE_ZEN_API_KEY`                                                                                                                                  |
+| Base URL        | `https://opencode.ai/zen/v1`                                                                                                                            |
+| Credential pool | 2 keys (vault primary + zen-backup manual)                                                                                                              |
+| Pool strategy   | fill_first                                                                                                                                              |
+| Profile usage   | default (primary), creative-director, code-architect, exec-assistant, research-analyst, patient-tutor, ops, pm, qa, security, dev, cto, designer, alexa |
 
 ---
 
@@ -28,6 +28,7 @@
 ### Step 1: Credential Verification
 
 **Actions:**
+
 - [ ] Confirm `OPENCODE_ZEN_API_KEY` is set in `.env` (vault primary)
 - [ ] Confirm backup key exists in opencode auth.json (`zen-backup`)
 - [ ] Run `hermes auth list opencode-zen` to verify 2 credentials
@@ -42,6 +43,7 @@
 ### Step 2: Model Selection & Validation
 
 **Actions:**
+
 - [ ] Run `hermes model` → verify opencode-zen provider shows available models
 - [ ] Confirm deepseek-v4-flash-free is selectable
 - [ ] Test fallback: if primary fails, does it fall back to openrouter → gemini → ollama-cloud?
@@ -55,6 +57,7 @@
 ### Step 3: Config.yaml Review
 
 **Actions:**
+
 - [ ] Verify `model.base_url: https://opencode.ai/zen/v1`
 - [ ] Verify `model.provider: opencode-zen`
 - [ ] Verify `fallback_providers` chain includes opencode-zen first
@@ -69,6 +72,7 @@
 ### Step 4: MCP Server Compatibility
 
 **Actions:**
+
 - [ ] Test sequential-thinking MCP with opencode-zen model
 - [ ] Test github MCP with opencode-zen model
 - [ ] Test filesystem MCP with opencode-zen model
@@ -83,6 +87,7 @@
 ### Step 5: Rate Limit / Quota Management
 
 **Actions:**
+
 - [ ] Document known rate limits for deepseek-v4-flash-free
 - [ ] Document credential rotation behavior (2 keys in pool, fill_first)
 - [ ] Identify any failures from previous sessions due to rate limits
@@ -96,6 +101,7 @@
 ### Step 6: Auxiliary Model Offload
 
 **Actions:**
+
 - [ ] Check if opencode-zen is used for auxiliary tasks (vision, compression, session_search)
 - [ ] If not, evaluate whether it should be (cost/quality tradeoffs)
 

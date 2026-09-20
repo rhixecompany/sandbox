@@ -18,6 +18,7 @@ Likely cause: mcp_servers args stored as JSON string `'["arg1","arg2"]'` instead
 ## Requirements
 
 ### Functional
+
 - [ ] Fix YAML syntax error at line 958 (and any others)
 - [ ] Ensure all `mcp_servers.*.args` are YAML lists, not JSON strings
 - [ ] `hermes config validate` exits 0 with no errors
@@ -25,18 +26,19 @@ Likely cause: mcp_servers args stored as JSON string `'["arg1","arg2"]'` instead
 - [ ] Profile_name persists in state.db sessions table (currently `None`)
 
 ### Non-Functional
+
 - [ ] No backup files created (use git for rollback)
 - [ ] Fix applied via python file I/O (not `patch`/`write_file` - security guard)
 - [ ] Verification within 30 seconds of fix
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| Config valid | `hermes config validate` | Exit 0, no YAML errors |
-| MCP list | `hermes mcp list` | All 14+ servers shown, enabled |
-| Profile persist | New session → check state.db | `profile_name` = "default" not `None` |
-| No corruption backups | `ls config.yaml.corrupt.*` | No new corrupt files after fix |
+| Check                 | Command                      | Expected                              |
+| --------------------- | ---------------------------- | ------------------------------------- |
+| Config valid          | `hermes config validate`     | Exit 0, no YAML errors                |
+| MCP list              | `hermes mcp list`            | All 14+ servers shown, enabled        |
+| Profile persist       | New session → check state.db | `profile_name` = "default" not `None` |
+| No corruption backups | `ls config.yaml.corrupt.*`   | No new corrupt files after fix        |
 
 ## Implementation Approach
 

@@ -16,18 +16,18 @@ Subagent: ops/adminbot (confirmed identity). Plan: `./plans/multi-goal-execution
 
 ## Key File Results
 
-| File                     | Size  | Env Ref Before | Updated? | Size After |
-|--------------------------|------:|---------------:|----------|-----------:|
-| `.env` (CWD)             | 5274B | N/A (protected) | No (never) | 5274B |
-| `.env` (hermes home)     | 30269B | N/A (protected) | No (never) | 30269B |
-| AGENTS.md                | 385B  | False          | Yes (+ref) | 498B |
-| CLAUDE.md                | 290B  | False          | Yes (+ref) | 391B |
-| $HERMES_HOME.md               | 471B  | False          | Yes (+ref) | 586B |
-| USER.md                  | 307B  | False          | Yes (+ref) | 418B |
-| MEMORY.md                | 393B  | True           | No        | 393B |
-| SOUL.md                  | 346B  | False          | Yes (+ref) | 459B |
-| .cursorrules             | 291B  | False          | Yes (+ref) | 399B |
-| config.yaml              | 98857B | True           | No (already) | 98857B |
+| File                 |   Size |  Env Ref Before | Updated?     | Size After |
+| -------------------- | -----: | --------------: | ------------ | ---------: |
+| `.env` (CWD)         |  5274B | N/A (protected) | No (never)   |      5274B |
+| `.env` (hermes home) | 30269B | N/A (protected) | No (never)   |     30269B |
+| AGENTS.md            |   385B |           False | Yes (+ref)   |       498B |
+| CLAUDE.md            |   290B |           False | Yes (+ref)   |       391B |
+| $HERMES_HOME.md      |   471B |           False | Yes (+ref)   |       586B |
+| USER.md              |   307B |           False | Yes (+ref)   |       418B |
+| MEMORY.md            |   393B |            True | No           |       393B |
+| SOUL.md              |   346B |           False | Yes (+ref)   |       459B |
+| .cursorrules         |   291B |           False | Yes (+ref)   |       399B |
+| config.yaml          | 98857B |            True | No (already) |     98857B |
 
 All updates are single-line DRY references (`.env protected reference`) — no duplication of identity rules, no secret exposure.
 

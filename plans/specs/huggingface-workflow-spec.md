@@ -8,18 +8,18 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `xai` (direct API) / `xai-oauth` (SuperGrok) |
-| Default model | grok-4.3 (OAuth) / varies (API key) |
-| Auth type | API key (XAI_API_KEY) OR OAuth (SuperGrok/X Premium+) |
-| Env var | `XAI_API_KEY` (direct API) |
-| Base URL | xAI API |
-| Models | grok-4.3 (1M context), grok-4.3-fast, grok-4.6, voxtral-mini-tts-2603 (TTS) |
-| Credential pool | Single key or OAuth token |
-| Pool strategy | fill_first |
-| Role | Fill-first provider (not in main fallback chain) |
-| Direct tools | TTS, image gen, video gen, transcription, X search |
+| Property        | Value                                                                       |
+| --------------- | --------------------------------------------------------------------------- |
+| Config key      | `xai` (direct API) / `xai-oauth` (SuperGrok)                                |
+| Default model   | grok-4.3 (OAuth) / varies (API key)                                         |
+| Auth type       | API key (XAI_API_KEY) OR OAuth (SuperGrok/X Premium+)                       |
+| Env var         | `XAI_API_KEY` (direct API)                                                  |
+| Base URL        | xAI API                                                                     |
+| Models          | grok-4.3 (1M context), grok-4.3-fast, grok-4.6, voxtral-mini-tts-2603 (TTS) |
+| Credential pool | Single key or OAuth token                                                   |
+| Pool strategy   | fill_first                                                                  |
+| Role            | Fill-first provider (not in main fallback chain)                            |
+| Direct tools    | TTS, image gen, video gen, transcription, X search                          |
 
 ---
 
@@ -28,6 +28,7 @@
 ### Step 1: Credential Verification
 
 **Actions:**
+
 - [ ] Confirm `XAI_API_KEY` is set in `.env` (direct API path) OR verify SuperGrok OAuth
 - [ ] Run `hermes auth list xai` / `hermes auth list xai-oauth` to verify credential
 - [ ] Run `hermes doctor` to validate connectivity
@@ -42,6 +43,7 @@
 ### Step 2: Model Selection & Validation
 
 **Actions:**
+
 - [ ] Run `hermes model` → select xai/xai-oauth → list available models
 - [ ] Confirm grok-4.3 (1M context) or grok-4.6 is selectable
 - [ ] Check grok-4.3-fast (cheaper, same large context)
@@ -56,6 +58,7 @@
 ### Step 3: Config.yaml Review
 
 **Actions:**
+
 - [ ] Verify `model.provider: xai` or `xai-oauth` is correct
 - [ ] Verify `model.default_model` is set appropriately
 - [ ] Check `fill_first` strategy in credential pool
@@ -70,6 +73,7 @@
 ### Step 4: Direct-to-xAI Tools Verification
 
 **Actions:**
+
 - [ ] Check TTS configuration: voxtral-mini-tts-2603
 - [ ] Verify image gen, video gen, transcription tools availability
 - [ ] Check X search tool availability
@@ -84,6 +88,7 @@
 ### Step 5: Provider Aliases
 
 **Actions:**
+
 - [ ] Document provider aliases: `xai-oauth`, `grok-oauth`, `x-ai-oauth`, `xai-grok-oauth`
 - [ ] Verify alias resolution works correctly
 
@@ -96,6 +101,7 @@
 ### Step 6: MCP Server Compatibility
 
 **Actions:**
+
 - [ ] Test MCP servers with xai backing model (sample at least 1)
 - [ ] Document any provider-specific quirks
 
@@ -108,6 +114,7 @@
 ## Two Auth Paths
 
 ### API Key Path (provider: `xai`)
+
 ```
 XAI_API_KEY in .env
 model:
@@ -116,6 +123,7 @@ model:
 ```
 
 ### OAuth Path (provider: `xai-oauth`)
+
 ```
 hermes auth xai  # browser OAuth flow
 model:
@@ -129,12 +137,12 @@ model:
 
 ## Provider Aliases
 
-| Alias | Resolves to |
-|-------|-------------|
-| `xai-oauth` | xai-oauth (canonical) |
-| `grok-oauth` | xai-oauth |
-| `x-ai-oauth` | xai-oauth |
-| `xai-grok-oauth` | xai-oauth |
+| Alias            | Resolves to           |
+| ---------------- | --------------------- |
+| `xai-oauth`      | xai-oauth (canonical) |
+| `grok-oauth`     | xai-oauth             |
+| `x-ai-oauth`     | xai-oauth             |
+| `xai-grok-oauth` | xai-oauth             |
 
 ---
 

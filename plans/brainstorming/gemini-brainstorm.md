@@ -8,17 +8,17 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `gemini` |
-| Default model | gemini-2.5-flash |
-| Auth type | API key |
-| Env vars | `GOOGLE_API_KEY` or `GEMINI_API_KEY` |
-| Base URL | `https://generativelanguage.googleapis.com/v1beta` |
-| Credential pool | Single API key |
-| Pool strategy | fill_first |
-| Role | 3rd in fallback chain |
-| TTS model | gemini-2.5-flash-preview-tts |
+| Property        | Value                                              |
+| --------------- | -------------------------------------------------- |
+| Config key      | `gemini`                                           |
+| Default model   | gemini-2.5-flash                                   |
+| Auth type       | API key                                            |
+| Env vars        | `GOOGLE_API_KEY` or `GEMINI_API_KEY`               |
+| Base URL        | `https://generativelanguage.googleapis.com/v1beta` |
+| Credential pool | Single API key                                     |
+| Pool strategy   | fill_first                                         |
+| Role            | 3rd in fallback chain                              |
+| TTS model       | gemini-2.5-flash-preview-tts                       |
 
 ---
 
@@ -48,24 +48,30 @@ Adapting the 8-step OpenRouter template to Gemini:
 ## SCAMPER Analysis
 
 ### Substitute
+
 - Gemini via OpenRouter (Option 3 from OpenClaw Launch guide) — routes through OpenRouter, no separate Google billing
 - Gemini OAuth (Google subscription) — but Google bans accounts for third-party app usage via OAuth; API key method is safer
 
 ### Combine
+
 - Gemini Flash for auxiliary tasks + Gemini Pro for main tasks = cost optimization
 - Gemini API key + OpenRouter fallback = dual-path reliability
 
 ### Adapt
+
 - Adapt 8-step OpenRouter template — Gemini-specific: free tier awareness, doctor false positive workaround
 
 ### Modify
+
 - 3rd in fallback chain — consider promoting if free tier is sufficient
 - Explicit auxiliary.<task>.provider config for Gemini Flash offload
 
 ### Eliminate
+
 - Eliminate free tier reliance for production agent workloads (move to paid or OpenRouter-routed)
 
 ### Reverse
+
 - Gemini as primary for cost-sensitive workloads? Free tier + OpenRouter routing = very cheap
 
 ---

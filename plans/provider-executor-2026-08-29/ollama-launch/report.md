@@ -5,6 +5,7 @@ Prompt: `Reply with exactly one word: OK`
 Timeout: 150s
 
 ## Summary
+
 - Tested: 1
 - OK: 0
 - FAIL: 1
@@ -12,8 +13,8 @@ Timeout: 150s
 
 ## Per-provider results
 
-| Provider | Model | OK | Elapsed (s) | Exit | Stderr (first 200) |
-|---|---|---|---|---|---|
-| ollama-launch | `gemma4:12b` | ✗ | 105.59 | 1 |  session_id: 20260829_012152_6f78c5  |
+| Provider      | Model        | OK  | Elapsed (s) | Exit | Stderr (first 200)                 |
+| ------------- | ------------ | --- | ----------- | ---- | ---------------------------------- |
+| ollama-launch | `gemma4:12b` | ✗   | 105.59      | 1    | session_id: 20260829_012152_6f78c5 |
 
 ## Successful responses (truncated)

@@ -10,25 +10,25 @@ Action: copy → verify → delete originals.
 
 ## Per-Profile Verification Log (14 of 16 profiles — 3 MISSING preserved honestly)
 
-| Profile              | USER.md copied | MEMORY.md copied | User deleted | Mem deleted | Status           |
-|----------------------|----------------:|-----------------:|-------------:|------------:|------------------|
-| alexa                | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| code-architect       | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| creative-director    | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| cto                  | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| designer             | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| dev                  | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| exec-assistant       | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| ops                  | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| patient-tutor        | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| pm                   | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| qa                   | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| research-analyst     | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| security             | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| skills               | ✓               | ✓                | ✓            | ✓           | Migrated         |
-| default              | ✗ (missing)     | ✗ (missing)      | N/A         | N/A        | **MISSING** (preserved) |
-| adminbot             | ✗ (missing)     | ✗ (missing)      | N/A         | N/A        | **MISSING** (preserved) |
-| alexa-alias          | ✗ (missing)     | ✗ (missing)      | N/A         | N/A        | **MISSING** (preserved) |
+| Profile           | USER.md copied | MEMORY.md copied | User deleted | Mem deleted | Status                  |
+| ----------------- | -------------: | ---------------: | -----------: | ----------: | ----------------------- |
+| alexa             |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| code-architect    |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| creative-director |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| cto               |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| designer          |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| dev               |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| exec-assistant    |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| ops               |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| patient-tutor     |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| pm                |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| qa                |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| research-analyst  |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| security          |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| skills            |              ✓ |                ✓ |            ✓ |           ✓ | Migrated                |
+| default           |    ✗ (missing) |      ✗ (missing) |          N/A |         N/A | **MISSING** (preserved) |
+| adminbot          |    ✗ (missing) |      ✗ (missing) |          N/A |         N/A | **MISSING** (preserved) |
+| alexa-alias       |    ✗ (missing) |      ✗ (missing) |          N/A |         N/A | **MISSING** (preserved) |
 
 ## Identity Preservation Check
 

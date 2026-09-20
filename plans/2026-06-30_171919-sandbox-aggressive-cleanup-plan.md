@@ -406,7 +406,7 @@ Phase 0 → Phase 1 → Phase 2 → Phase 3 → Phase 4 → Phase 5 → Phase 6 
 | .agents/       | 4KB          | 0          | ~4KB       |
 | docs/          | ~5MB         | ~3MB       | ~2MB       |
 | Root .md files | ~70KB        | ~50KB      | ~20KB      |
-| ./       | ~100KB       | ~50KB      | ~50KB      |
+| ./             | ~100KB       | ~50KB      | ~50KB      |
 | **Total**      | **~5.4MB**   | **~3.2MB** | **~2.2MB** |
 
 ---

@@ -1,6 +1,6 @@
 # Copilot Instructions — docs
 
-**Canonical reference:** See `../../AGENTS.md` (general agent guidance), `../../$HERMES_HOME.md` (Hermes-specific), `../../CLAUDE.md` (Claude-specific).
+**Canonical reference:** See `../../AGENTS.md` (general agent guidance), `../../.hermes.md` (Hermes-specific), `../../CLAUDE.md` (Claude-specific).
 
 ## Quick Start
 
@@ -11,3 +11,5 @@ cd C:/Users/Alexa/Desktop/SandBox/projects/docs
 ```
 
 *All conventions, workflows, and rules are in `../../AGENTS.md`.*
+
+- For new or changed requests, follow the clarification and timestamped artifact protocol in ../../AGENTS.md.

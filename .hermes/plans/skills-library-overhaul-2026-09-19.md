@@ -79,7 +79,6 @@ Spec: `.hermes/specs/skills-library-overhaul-2026-09-19.md`. Approval: clarify 2
 - Phase 2: skills-inventory-2026-09-19.json (1267 SKILL.md; states: flat=523, folder-no-fm=660, categorized=84; dup groups=75/150 files); skills-category-map-2026-09-19.md (full table; assignments: development 335, devops 113, creative 63, software-development 58, productivity 49, mcp 47, qa 41, mlops 37, research 31, oh-my-hermes 31, …; misc-review 343).
 - NEXT: Phase 3 migrate (dry-run first via scripts_unified/categorize_skills.py) → Phase 4 dedupe (75 groups: canonical=richer, merge, delete verified copies) → Phase 5 residuals → Phase 6 judge batches → Phase 7 report.
 
-
 ## PROGRESS 2 (2026-09-19 — Phases 3-5 COMPLETE)
 
 - Phase 3 (categorize+migrate): all flat skills migrated to `skills/<cat>/<name>/`; `category:` added to every SKILL.md (660 folder skills + 483 migrated); merge-on-collision for 3 orphaned dest dirs (references/templates preserved); 2 frontmatter fixes (hermes-skills→devops, honcho-legacy name).

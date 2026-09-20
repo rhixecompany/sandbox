@@ -21,11 +21,13 @@ You are processing the Hermes paste queue at `~/AppData/Local/hermes/pastes/`.
    ```
 
    terminal: background=true, notify=true. Do NOT use a foreground timeout.
+
 3. VERIFY the log (even when it returns quickly):
    - `grep -c '^===== ' cat-all.log` == 120
    - headers == `ls pastes/*.txt` (sorted diff, 1:1)
    - last non-empty line is the tail of the last file (no truncation)
 4. SUMMARIZE: read the log; emit one line per file: `name (size): what it is / what it asks`. Group into: actionable instruction, reference material, duplicate, system/irrelevant.
+
 ## TRIAGE
 
 5. Write `~/Desktop/SandBox/.hermes/results/pastes-triage-2026-09-19.md` — table of all 120 files with category + disposition (process now / queue / archive / ignore).

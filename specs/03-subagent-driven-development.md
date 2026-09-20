@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 ## Goal
 
 Enhance the existing `subagent-driven-development` skill with explicit context-budget-discipline integration, gates-taxonomy integration, TDD enforcement, and a skill-judge target score of ≥ 90. Ensure all references are loadable and the skill passes skill-judge verification.
@@ -14,6 +12,7 @@ Enhance the existing `subagent-driven-development` skill with explicit context-b
 ## Requirements
 
 ### Functional
+
 - [ ] SKILL.md enhanced with explicit context-budget-discipline integration (load reference when context degrades)
 - [ ] SKILL.md enhanced with explicit gates-taxonomy integration (Pre-flight, Revision, Escalation, Abort gates)
 - [ ] TDD enforcement in implementer context (test first, verify fail, implement, verify pass)
@@ -25,6 +24,7 @@ Enhance the existing `subagent-driven-development` skill with explicit context-b
 - [ ] Skill loads without error via `skill_view`
 
 ### Non-Functional
+
 - [ ] DRY: No duplication with other skills (reference instead)
 - [ ] Line count < 250 (move detail to references)
 - [ ] All references cited in SKILL.md body
@@ -32,16 +32,16 @@ Enhance the existing `subagent-driven-development` skill with explicit context-b
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| Skill loads | `skill_view subagent-driven-development` | Returns full content, no error |
-| References load | `skill_view subagent-driven-development references/context-budget-discipline.md` | Returns content |
-| References load | `skill_view subagent-driven-development references/gates-taxonomy.md` | Returns content |
-| Skill judge | `skill-judge subagent-driven-development` | Score ≥ 90 |
-| Frontmatter valid | Check SKILL.md | All required fields present |
-| Line count | `wc -l SKILL.md` | < 250 lines |
-| TDD mentioned | grep -i "tdd\|test.driven" SKILL.md | Found |
-| Gates mentioned | grep -i "gate\|pre.flight\|revision\|escalation\|abort" SKILL.md | Found |
+| Check             | Command                                                                          | Expected                       |
+| ----------------- | -------------------------------------------------------------------------------- | ------------------------------ |
+| Skill loads       | `skill_view subagent-driven-development`                                         | Returns full content, no error |
+| References load   | `skill_view subagent-driven-development references/context-budget-discipline.md` | Returns content                |
+| References load   | `skill_view subagent-driven-development references/gates-taxonomy.md`            | Returns content                |
+| Skill judge       | `skill-judge subagent-driven-development`                                        | Score ≥ 90                     |
+| Frontmatter valid | Check SKILL.md                                                                   | All required fields present    |
+| Line count        | `wc -l SKILL.md`                                                                 | < 250 lines                    |
+| TDD mentioned     | grep -i "tdd\|test.driven" SKILL.md                                              | Found                          |
+| Gates mentioned   | grep -i "gate\|pre.flight\|revision\|escalation\|abort" SKILL.md                 | Found                          |
 
 ## Non-Functional Requirements
 
@@ -73,8 +73,10 @@ head -30 ~/AppData/Local/hermes/skills/software-development/subagent-driven-deve
 ```
 
 ## Linked Specs
+
 - 03-subagent-driven-development.md
 
 ## Linked Plan
+
 - ../skill-implementation-master-plan.md
 - ../2026-08-15_202608_four-agent-prompt-audit-plan.md

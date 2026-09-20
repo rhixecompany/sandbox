@@ -34,12 +34,12 @@ Create and verify a reusable general-category prompt that discovers every defaul
 
 ## Artifact inventory and dedupe decisions
 
-| Requirement cluster | Canonical owner | Duplicate handling |
-|---|---|---|
-| WAT boundaries, source DB, exact session inventory | `run-today-and-yesterday-discovery-spec.md` | Remove repeated boundary/query rules from other specs; link back. |
-| One recall per session and field classification | `run-today-and-yesterday-recall-spec.md` | Keep extraction semantics here; report spec owns layout only. |
-| Markdown sections, counts, redaction, bounded excerpts | `run-today-and-yesterday-report-spec.md` | Keep schema and safety rules here; do not duplicate query logic. |
-| List/triage/consolidate/dedupe, dependency order, one-plan rule | `run-today-and-yesterday-orchestration-spec.md` | Keep workflow governance here; other specs link to this plan. |
+| Requirement cluster                                             | Canonical owner                                 | Duplicate handling                                                |
+| --------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------- |
+| WAT boundaries, source DB, exact session inventory              | `run-today-and-yesterday-discovery-spec.md`     | Remove repeated boundary/query rules from other specs; link back. |
+| One recall per session and field classification                 | `run-today-and-yesterday-recall-spec.md`        | Keep extraction semantics here; report spec owns layout only.     |
+| Markdown sections, counts, redaction, bounded excerpts          | `run-today-and-yesterday-report-spec.md`        | Keep schema and safety rules here; do not duplicate query logic.  |
+| List/triage/consolidate/dedupe, dependency order, one-plan rule | `run-today-and-yesterday-orchestration-spec.md` | Keep workflow governance here; other specs link to this plan.     |
 
 Historical five-day artifacts remain references and are not rewritten or deleted.
 

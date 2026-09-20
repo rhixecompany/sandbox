@@ -1,4 +1,5 @@
 # File Inventory Report
+
 **Generated:** September 7, 2026
 **SandBox Repo:** `C:\Users\Alexa\Desktop\SandBox`
 **Hermes Root:** `C:\Users\Alexa\AppData\Local\hermes`
@@ -7,16 +8,16 @@
 
 ## 1. Summary Statistics
 
-| Category | Count |
-|----------|-------|
+| Category                         | Count                                              |
+| -------------------------------- | -------------------------------------------------- |
 | SandBox `.github/prompts/` files | ~150+ (across 23 category directories + templates) |
-| SandBox `./plans/` files | ~140+ (including subdirectories) |
-| SandBox `./specs/` files | 6 |
-| Hermes `scripts/` files | ~250+ |
-| SandBox `scripts/` files | ~90+ (+ 50+ __pycache__ entries) |
-| `.env` files found | 2 |
-| `config.yaml` files found | 1 |
-| **TOTAL tracked files** | **~600+** |
+| SandBox `./plans/` files         | ~140+ (including subdirectories)                   |
+| SandBox `./specs/` files         | 6                                                  |
+| Hermes `scripts/` files          | ~250+                                              |
+| SandBox `scripts/` files         | ~90+ (+ 50+ **pycache** entries)                   |
+| `.env` files found               | 2                                                  |
+| `config.yaml` files found        | 1                                                  |
+| **TOTAL tracked files**          | **~600+**                                          |
 
 ---
 
@@ -26,6 +27,7 @@
 **Total prompt files:** ~150+ (excluding `.enhance/` cache)
 
 ### Prompt Categories Found:
+
 - `architecture/` — blueprint generators (architecture, code-exemplars, folder-structure, project-workflow, readme, technology-stack)
 - `ci-cd/` — deployment & setup (all-repo-docker, containerize-aspnetcore/framework, devops-rollout-plan, multi-stage-dockerfile, repo-init, setup variants)
 - `creative/` — ai-prompt-engineering-safety-review, comicwise, comprehensive-prompt-enhancer
@@ -51,9 +53,11 @@
 - `web/`
 
 ### Cache Artifacts:
+
 - `.github/prompts/.enhance/analysis_report.json` — cached analysis output
 
 ### File Sizes (representative prompt files):
+
 Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50-200 bytes. Template phase files are 200-500 bytes.
 
 ---
@@ -64,29 +68,30 @@ Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50
 
 ### Key Plan Files (by size, largest first):
 
-| File | Size | Notes |
-|------|------|-------|
-| `comprehensive-goals-implementation-plan.md` | 15,585 bytes | Major plan document |
-| `comprehensive-hermes-maintenance-plan.md` | 13,648 bytes | |
-| `comprehensive-implementation-plan.md` | 11,889 bytes | |
-| `2026-09-07_162000-test-providers-models-implementation.md` | 6,587 bytes | |
-| `2026-09-07_144500-multi-judge-remediation-progress.md` | 8,630 bytes | |
-| `2026-09-05_goal-using-superpowers-full.md` | 9,812 bytes | |
-| `2026-09-04-dedupe-triage-report.md` | 20,678 bytes | **Largest - dedup analysis** |
-| `2026-09-05_084556-hermes-ecosystem-reliability.md` | 17,148 bytes | |
-| `2026-09-05_test-providers-models-rebuild.md` | 3,677 bytes | |
-| `2026-09-07_ecosystem-master-plan-v2.md` | 2,853 bytes | |
-| `2026-09-07_180000-mega-ecosystem-plan.md` | 2,882 bytes | |
-| `2026-09-07_master-ecosystem-integration.md` | 3,345 bytes | |
-| `2026-09-05_docker-cleanup-plan.md` | 2,577 bytes | |
-| `2026-09-05_file-triage-summary.md` | 2,811 bytes | |
-| `hermes-root-scripts-quick-commands-plan.md` | 7,174 bytes | |
-| `judge-skills-enhancement-plan.md` | 7,056 bytes | |
-| `comprehensive-goals-implementation-spec.md` (in specs/) | 9,960 bytes | |
-| `comprehensive-hermes-maintenance-spec.md` | 13,910 bytes | |
-| `comprehensive-implementation-spec.md` | 13,067 bytes | |
+| File                                                        | Size         | Notes                        |
+| ----------------------------------------------------------- | ------------ | ---------------------------- |
+| `comprehensive-goals-implementation-plan.md`                | 15,585 bytes | Major plan document          |
+| `comprehensive-hermes-maintenance-plan.md`                  | 13,648 bytes |                              |
+| `comprehensive-implementation-plan.md`                      | 11,889 bytes |                              |
+| `2026-09-07_162000-test-providers-models-implementation.md` | 6,587 bytes  |                              |
+| `2026-09-07_144500-multi-judge-remediation-progress.md`     | 8,630 bytes  |                              |
+| `2026-09-05_goal-using-superpowers-full.md`                 | 9,812 bytes  |                              |
+| `2026-09-04-dedupe-triage-report.md`                        | 20,678 bytes | **Largest - dedup analysis** |
+| `2026-09-05_084556-hermes-ecosystem-reliability.md`         | 17,148 bytes |                              |
+| `2026-09-05_test-providers-models-rebuild.md`               | 3,677 bytes  |                              |
+| `2026-09-07_ecosystem-master-plan-v2.md`                    | 2,853 bytes  |                              |
+| `2026-09-07_180000-mega-ecosystem-plan.md`                  | 2,882 bytes  |                              |
+| `2026-09-07_master-ecosystem-integration.md`                | 3,345 bytes  |                              |
+| `2026-09-05_docker-cleanup-plan.md`                         | 2,577 bytes  |                              |
+| `2026-09-05_file-triage-summary.md`                         | 2,811 bytes  |                              |
+| `hermes-root-scripts-quick-commands-plan.md`                | 7,174 bytes  |                              |
+| `judge-skills-enhancement-plan.md`                          | 7,056 bytes  |                              |
+| `comprehensive-goals-implementation-spec.md` (in specs/)    | 9,960 bytes  |                              |
+| `comprehensive-hermes-maintenance-spec.md`                  | 13,910 bytes |                              |
+| `comprehensive-implementation-spec.md`                      | 13,067 bytes |                              |
 
 ### Stale Subdirectories (completed work, safe to archive):
+
 - `2026-08-31-10subgoal/` — old subgoal work
 - `2026-09-04_205724-hermes-health-sweep/` — completed health sweep
 - `2026-08-28-five-goals-execution/` — old execution plan
@@ -117,14 +122,14 @@ Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50
 
 **Total spec files:** 6
 
-| File | Size |
-|------|------|
-| `comprehensive-hermes-maintenance-spec.md` | 13,910 bytes |
-| `comprehensive-implementation-spec.md` | 13,067 bytes |
-| `hermes-ecosystem-reliability-spec.md` | 9,987 bytes |
-| `comprehensive-goals-implementation-spec.md` | 9,960 bytes |
-| `hermes-root-scripts-quick-commands-spec.md` | 6,668 bytes |
-| `test-providers-models-spec.md` | 6,937 bytes |
+| File                                         | Size         |
+| -------------------------------------------- | ------------ |
+| `comprehensive-hermes-maintenance-spec.md`   | 13,910 bytes |
+| `comprehensive-implementation-spec.md`       | 13,067 bytes |
+| `hermes-ecosystem-reliability-spec.md`       | 9,987 bytes  |
+| `comprehensive-goals-implementation-spec.md` | 9,960 bytes  |
+| `hermes-root-scripts-quick-commands-spec.md` | 6,668 bytes  |
+| `test-providers-models-spec.md`              | 6,937 bytes  |
 
 ---
 
@@ -135,39 +140,40 @@ Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50
 
 ### Top-level files by size (largest first):
 
-| File | Size | Purpose |
-|------|------|---------|
-| `_audit_prompts.json` | 107,472 bytes | Cached prompt audit data |
-| `gh-prompt-frontmatter-normalization-verification.json` | 12,155 bytes | |
-| `MEMORY_precompact.md` | 14,995 bytes | Memory data |
-| `existing_quick_commands.json` | 30,840 bytes | Quick commands registry |
-| `generated_quick_commands_clean.json` | 36,782 bytes | Generated registry |
-| `quick_commands_registry.json` | 38,527 bytes | Registry |
-| `generated_quick_commands.json` | 38,529 bytes | Registry |
-| `generated_quick_commands_hermes.json` | 41,587 bytes | Registry |
-| `gh-prompt-dedupe-report.json` | 43,774 bytes | Dedup report |
-| `quick_commands_registry_final.json` | 44,136 bytes | Registry |
-| `generate_vscode_configs.py` | 48,702 bytes | Config generation |
-| `merged_quick_commands.json` | 49,975 bytes | Merged registry |
-| `quick_commands_registry_final2.json` | 49,975 bytes | Registry (duplicate?) |
-| `quick_commands_registry_unified.json` | 49,975 bytes | Unified registry |
-| `generated_quick_commands_unified.json` | 49,977 bytes | Generated |
-| `generated_quick_commands_unified2.json` | 68,527 bytes | |
-| `generated_quick_commands_unified3.json` | 68,527 bytes | |
-| `generated_quick_commands_unified4.json` | 68,527 bytes | |
-| `quick_commands_registry_unified3.json` | 68,525 bytes | |
-| `quick_commands_registry_unified4.json` | 68,525 bytes | |
-| `generated_quick_commands_full.json` | 76,112 bytes | |
-| `quick_commands_registry_full.json` | 76,110 bytes | |
-| `gh-prompt-migration-manifest.json` | 73,014 bytes | Migration data |
-| `gh-path-audit.json` | 65,462 bytes | Audit data |
-| `gh-prompt-frontmatter-normalization-report.json` | 65,972 bytes | |
-| `skill_name_to_path.json` | 67,028 bytes | Mapping data |
-| `_pending_skills_report.json` | 5,705 bytes | |
-| `register-command.sh` | 67,641 bytes | Shell script |
-| Various `.py` files | 1K-15K each | Core tooling |
+| File                                                    | Size          | Purpose                  |
+| ------------------------------------------------------- | ------------- | ------------------------ |
+| `_audit_prompts.json`                                   | 107,472 bytes | Cached prompt audit data |
+| `gh-prompt-frontmatter-normalization-verification.json` | 12,155 bytes  |                          |
+| `MEMORY_precompact.md`                                  | 14,995 bytes  | Memory data              |
+| `existing_quick_commands.json`                          | 30,840 bytes  | Quick commands registry  |
+| `generated_quick_commands_clean.json`                   | 36,782 bytes  | Generated registry       |
+| `quick_commands_registry.json`                          | 38,527 bytes  | Registry                 |
+| `generated_quick_commands.json`                         | 38,529 bytes  | Registry                 |
+| `generated_quick_commands_hermes.json`                  | 41,587 bytes  | Registry                 |
+| `gh-prompt-dedupe-report.json`                          | 43,774 bytes  | Dedup report             |
+| `quick_commands_registry_final.json`                    | 44,136 bytes  | Registry                 |
+| `generate_vscode_configs.py`                            | 48,702 bytes  | Config generation        |
+| `merged_quick_commands.json`                            | 49,975 bytes  | Merged registry          |
+| `quick_commands_registry_final2.json`                   | 49,975 bytes  | Registry (duplicate?)    |
+| `quick_commands_registry_unified.json`                  | 49,975 bytes  | Unified registry         |
+| `generated_quick_commands_unified.json`                 | 49,977 bytes  | Generated                |
+| `generated_quick_commands_unified2.json`                | 68,527 bytes  |                          |
+| `generated_quick_commands_unified3.json`                | 68,527 bytes  |                          |
+| `generated_quick_commands_unified4.json`                | 68,527 bytes  |                          |
+| `quick_commands_registry_unified3.json`                 | 68,525 bytes  |                          |
+| `quick_commands_registry_unified4.json`                 | 68,525 bytes  |                          |
+| `generated_quick_commands_full.json`                    | 76,112 bytes  |                          |
+| `quick_commands_registry_full.json`                     | 76,110 bytes  |                          |
+| `gh-prompt-migration-manifest.json`                     | 73,014 bytes  | Migration data           |
+| `gh-path-audit.json`                                    | 65,462 bytes  | Audit data               |
+| `gh-prompt-frontmatter-normalization-report.json`       | 65,972 bytes  |                          |
+| `skill_name_to_path.json`                               | 67,028 bytes  | Mapping data             |
+| `_pending_skills_report.json`                           | 5,705 bytes   |                          |
+| `register-command.sh`                                   | 67,641 bytes  | Shell script             |
+| Various `.py` files                                     | 1K-15K each   | Core tooling             |
 
 ### Script Categories:
+
 - **Audit/Validation:** `audit_prompts.py`, `validate_prompts.py`, `validate_vscode_configs.py`, `validate_services.py`, `validate_skills.sh`, etc.
 - **Fix/Repair:** `fix_*.py` (40+ files) — prompt, frontmatter, lint, fence fixes
 - **Registry/Quick Commands:** `quick_commands_*.py`, `registry_*.py`
@@ -188,6 +194,7 @@ Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50
 **Location:** `C:\Users\Alexa\Desktop\SandBox\scripts\`
 
 ### Files present:
+
 - `agent_provider_matrix.py` (29,468 bytes) — **Largest script**
 - `agent-provider-matrix-smokecheck.sh` (764 bytes)
 - `apply_quick_commands.py`, `augment_plans_with_required_sections.py`, `augment_specs_with_required_sections.py`
@@ -211,24 +218,27 @@ Each prompt `.md` file is typically 200-2000 bytes. Template README files are 50
 - `verify_prompt_corpus.py`, `verify-full-implementation.py`
 
 ### Subdirectories:
+
 - `.runtime/` — Contains `_openrouter_runner.py`, `instruction-audit.json`, `packages.json`, `provider_inventory.json`, `v1.json`
 - `__pycache__/` — 50+ `.pyc` bytecode files
 - `fanout/` — Agent provider package with `agents/` and `providers/` subpackages
 
 ### `__pycache__/` (stale):
+
 Contains compiled `.pyc` files for essentially all `.py` scripts listed above. These are regenerated automatically and safe to delete.
 
 ---
 
 ## 7. `.env` and `config.yaml` Files
 
-| File | Path | Size |
-|------|------|------|
-| `.env` | `C:\Users\Alexa\Desktop\SandBox\.env` | 3,334 bytes |
-| `.env` | `C:\Users\Alexa\AppData\Local\hermes\.env` | 28,690 bytes |
+| File          | Path                                              | Size          |
+| ------------- | ------------------------------------------------- | ------------- |
+| `.env`        | `C:\Users\Alexa\Desktop\SandBox\.env`             | 3,334 bytes   |
+| `.env`        | `C:\Users\Alexa\AppData\Local\hermes\.env`        | 28,690 bytes  |
 | `config.yaml` | `C:\Users\Alexa\AppData\Local\hermes\config.yaml` | 189,366 bytes |
 
 **Observations:**
+
 - Hermes has both `.env` (28.7 KB) and `config.yaml` (189 KB) — substantial config
 - SandBox has only `.env` (3.3 KB) — minimal configuration
 - Hermes config is ~57x larger than SandBox `.env`
@@ -241,12 +251,12 @@ Contains compiled `.pyc` files for essentially all `.py` scripts listed above. T
 
 The following files exist in **both** `SandBox/scripts/` and `hermes/scripts/`:
 
-| Filename | SandBox Size | Hermes Size | Content Match |
-|----------|-------------|-------------|---------------|
-| `hq.py` | 734 bytes | 734 bytes | **IDENTICAL** (likely same) |
-| `hermes_quick_commands.py` | present | present | Need hash check |
-| `hermes_doctor.py` | present | present | Need hash check |
-| `_pending_skills_report.json` | present | present | Need hash check |
+| Filename                      | SandBox Size | Hermes Size | Content Match               |
+| ----------------------------- | ------------ | ----------- | --------------------------- |
+| `hq.py`                       | 734 bytes    | 734 bytes   | **IDENTICAL** (likely same) |
+| `hermes_quick_commands.py`    | present      | present     | Need hash check             |
+| `hermes_doctor.py`            | present      | present     | Need hash check             |
+| `_pending_skills_report.json` | present      | present     | Need hash check             |
 
 ### 8B. Duplicate Content (MD5 hash comparison)
 
@@ -258,16 +268,16 @@ Files with matching MD5 hashes between SandBox/scripts/ and hermes/scripts/ indi
 
 The following JSON registry files in `hermes/scripts/` have near-identical sizes suggesting overlapping/redundant content:
 
-| File | Size | Notes |
-|------|------|-------|
-| `quick_commands_registry_final.json` | 44,136 bytes | |
-| `quick_commands_registry_final2.json` | 49,975 bytes | **Same size as unified** |
-| `quick_commands_registry_unified.json` | 49,975 bytes | **Same size as final2** |
-| `generated_quick_commands_unified2.json` | 68,527 bytes | Same as unifed3/4 |
-| `generated_quick_commands_unified3.json` | 68,527 bytes | **Same size** |
-| `generated_quick_commands_unified4.json` | 68,527 bytes | **Same size** |
-| `quick_commands_registry_unified3.json` | 68,525 bytes | Same as unifed4 |
-| `quick_commands_registry_unified4.json` | 68,525 bytes | **Same size** |
+| File                                     | Size         | Notes                    |
+| ---------------------------------------- | ------------ | ------------------------ |
+| `quick_commands_registry_final.json`     | 44,136 bytes |                          |
+| `quick_commands_registry_final2.json`    | 49,975 bytes | **Same size as unified** |
+| `quick_commands_registry_unified.json`   | 49,975 bytes | **Same size as final2**  |
+| `generated_quick_commands_unified2.json` | 68,527 bytes | Same as unifed3/4        |
+| `generated_quick_commands_unified3.json` | 68,527 bytes | **Same size**            |
+| `generated_quick_commands_unified4.json` | 68,527 bytes | **Same size**            |
+| `quick_commands_registry_unified3.json`  | 68,525 bytes | Same as unifed4          |
+| `quick_commands_registry_unified4.json`  | 68,525 bytes | **Same size**            |
 
 **These 8 files are likely redundant** — 4 pairs of files with identical byte sizes.
 
@@ -333,6 +343,7 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 ## 10. Summary Recommendations
 
 ### DELETE (safe, ~300+ files):
+
 - All `__pycache__/` directories and `.pyc` files
 - `.github/prompts/.enhance/` directory
 - All stale plan subdirectories listed in Section 9 (~15-20 directories)
@@ -341,11 +352,13 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 - Old `.json` data files in `./plans/` that are superseded by `.md` versions
 
 ### CONSOLIDATE:
+
 - **Quick commands JSON registries:** Reduce 14+ JSON files to 2-3 canonical versions (latest, unified, backup)
 - **Cross-repo scripts:** `SandBox/scripts/` and `hermes/scripts/` have overlapping content — establish a single canonical source or symlink relationship
 - **Old plan JSON files:** Replace with markdown equivalents or archive to `.zip`
 
 ### KEEP:
+
 - All `.github/prompts/` prompt definitions — active skill content
 - All `./specs/` files — 6 spec documents, all relevant
 - Core `.py`, `.sh`, `.ps1` scripts in both directories
@@ -353,6 +366,7 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 - `README.md` and top-level documentation
 
 ### Inconsistencies:
+
 1. **Scripts duplicated across repos** — `SandBox/scripts/` and `hermes/scripts/` both contain `hq.py`, `hermes_quick_commands.py`, `hermes_doctor.py` at least
 2. **Registry explosion** — 14+ JSON registry files with near-identical sizes
 3. **SandBox has no `config.yaml`** — only `.env`, while hermes has both
@@ -363,4 +377,4 @@ The following JSON registry files in `hermes/scripts/` have near-identical sizes
 
 ---
 
-*Report generated by Hermes File Inventory tool.*
+_Report generated by Hermes File Inventory tool._

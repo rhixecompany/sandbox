@@ -1,301 +1,118 @@
 {
- "deleted": [
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\1password\\SKILL.md",
-   "1password"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\airtable\\SKILL.md",
-   "airtable"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\algorithmic-art\\SKILL.md",
-   "algorithmic-art"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\appinsights-instrumentation\\SKILL.md",
-   "appinsights-instrumentation"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\architecture-diagram\\SKILL.md",
-   "architecture-diagram"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\ascii-art\\SKILL.md",
-   "ascii-art"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\asdf\\SKILL.md",
-   "asdf"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\aspire\\SKILL.md",
-   "aspire"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\audit-skills-judge-fix\\SKILL.md",
-   "audit-skills-judge-fix"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-deployment-preflight\\SKILL.md",
-   "azure-deployment-preflight"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-devops-cli\\SKILL.md",
-   "azure-devops-cli"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-resource-visualizer\\SKILL.md",
-   "azure-resource-visualizer"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-role-selector\\SKILL.md",
-   "azure-role-selector"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-static-web-apps\\SKILL.md",
-   "azure-static-web-apps"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\banking\\SKILL.md",
-   "banking"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-article-illustrator\\SKILL.md",
-   "baoyu-article-illustrator"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-comic\\SKILL.md",
-   "baoyu-comic"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-creative-suite\\SKILL.md",
-   "baoyu-creative-suite"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-infographic\\SKILL.md",
-   "baoyu-infographic"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\bash-scripts-audit-remediation\\SKILL.md",
-   "bash-scripts-audit-remediation"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\batch-skills-remediation\\SKILL.md",
-   "batch-skills-remediation"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\bioinformatics\\SKILL.md",
-   "bioinformatics"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\blender-mcp\\SKILL.md",
-   "blender-mcp"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\boilerplate-stripper\\SKILL.md",
-   "boilerplate-stripper"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\box\\SKILL.md",
-   "box"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\brainstorming\\SKILL.md",
-   "brainstorming"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\brand-guidelines\\SKILL.md",
-   "brand-guidelines"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\canvas\\SKILL.md",
-   "canvas"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\canvas-design\\SKILL.md",
-   "canvas-design"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\caveman-unified\\SKILL.md",
-   "caveman-unified"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\claude-api\\SKILL.md",
-   "claude-api"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\claude-design\\SKILL.md",
-   "claude-design"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\cli\\SKILL.md",
-   "inference-sh-cli"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\clonedeps\\SKILL.md",
-   "clonedeps"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\cloudflare-temporary-deploy\\SKILL.md",
-   "cloudflare-temporary-deploy"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\code-docs\\SKILL.md",
-   "code-docs"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\code-wiki\\SKILL.md",
-   "code-wiki"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\codemap\\SKILL.md",
-   "codemap"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\comfyui\\SKILL.md",
-   "comfyui"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\concept-diagrams\\SKILL.md",
-   "concept-diagrams"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\content-research-writer\\SKILL.md",
-   "content-research-writer"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\context7\\SKILL.md",
-   "context7"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\convert-plaintext-to-md\\SKILL.md",
-   "convert-plaintext-to-md"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative-ideation\\SKILL.md",
-   "creative-ideation"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\customization-audit\\SKILL.md",
-   "customization-audit"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\darwinian-evolver\\SKILL.md",
-   "darwinian-evolver"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\datadog\\SKILL.md",
-   "datadog"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\debugging-hermes-tui-commands\\SKILL.md",
-   "debugging-hermes-tui-commands"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\dependabot\\SKILL.md",
-   "dependabot"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\deploy-to-vercel\\SKILL.md",
-   "deploy-to-vercel"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\design-md\\SKILL.md",
-   "design-md"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\disk-space-cleanup\\SKILL.md",
-   "disk-space-cleanup"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\doc-coauthoring\\SKILL.md",
-   "doc-coauthoring"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\docker-management\\SKILL.md",
-   "docker-management"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\documentation-writer\\SKILL.md",
-   "documentation-writer"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\docx\\SKILL.md",
-   "docx"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\SKILL.md",
-   "github"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\hermes-diagnostic-repair\\SKILL.md",
-   "hermes-diagnostic-repair"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\hermes-system-maintenance\\SKILL.md",
-   "hermes-system-maintenance"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp-docker\\SKILL.md",
-   "mcp-docker"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp-filesystem\\SKILL.md",
-   "mcp-filesystem"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\plans-judge\\SKILL.md",
-   "plans-judge"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\prompts-judge\\SKILL.md",
-   "prompts-judge"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\python-quality\\SKILL.md",
-   "python-quality"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\skill-judge\\SKILL.md",
-   "skill-judge"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\smithery-ai-cli\\SKILL.md",
-   "smithery-ai-cli"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\specs-judge\\SKILL.md",
-   "specs-judge"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\subagent-driven-development\\SKILL.md",
-   "subagent-driven-development"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\systematic-debugging\\SKILL.md",
-   "systematic-debugging"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\test\\SKILL.md",
-   "test"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\tooling-config\\SKILL.md",
-   "tooling-config"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\tooling-lint\\SKILL.md",
-   "tooling-lint"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\user-communication-preferences\\SKILL.md",
-   "user-communication-preferences"
-  ],
-  [
-   "C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\writing-clearly-and-concisely\\SKILL.md",
-   "writing-clearly-and-concisely"
-  ]
- ],
- "deleted_count": 74
+	"deleted": [
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\1password\\SKILL.md", "1password"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\airtable\\SKILL.md", "airtable"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\algorithmic-art\\SKILL.md", "algorithmic-art"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\appinsights-instrumentation\\SKILL.md",
+			"appinsights-instrumentation"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\architecture-diagram\\SKILL.md", "architecture-diagram"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\ascii-art\\SKILL.md", "ascii-art"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\asdf\\SKILL.md", "asdf"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\aspire\\SKILL.md", "aspire"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\audit-skills-judge-fix\\SKILL.md", "audit-skills-judge-fix"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-deployment-preflight\\SKILL.md",
+			"azure-deployment-preflight"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-devops-cli\\SKILL.md", "azure-devops-cli"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-resource-visualizer\\SKILL.md",
+			"azure-resource-visualizer"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-role-selector\\SKILL.md", "azure-role-selector"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\azure-static-web-apps\\SKILL.md", "azure-static-web-apps"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\banking\\SKILL.md", "banking"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-article-illustrator\\SKILL.md",
+			"baoyu-article-illustrator"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-comic\\SKILL.md", "baoyu-comic"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-creative-suite\\SKILL.md", "baoyu-creative-suite"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\baoyu-infographic\\SKILL.md", "baoyu-infographic"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\bash-scripts-audit-remediation\\SKILL.md",
+			"bash-scripts-audit-remediation"
+		],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\batch-skills-remediation\\SKILL.md",
+			"batch-skills-remediation"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\bioinformatics\\SKILL.md", "bioinformatics"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\blender-mcp\\SKILL.md", "blender-mcp"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\boilerplate-stripper\\SKILL.md", "boilerplate-stripper"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\box\\SKILL.md", "box"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\brainstorming\\SKILL.md", "brainstorming"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\brand-guidelines\\SKILL.md", "brand-guidelines"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\canvas\\SKILL.md", "canvas"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\canvas-design\\SKILL.md", "canvas-design"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\caveman-unified\\SKILL.md", "caveman-unified"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\claude-api\\SKILL.md", "claude-api"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\claude-design\\SKILL.md", "claude-design"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\cli\\SKILL.md", "inference-sh-cli"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\clonedeps\\SKILL.md", "clonedeps"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\cloudflare-temporary-deploy\\SKILL.md",
+			"cloudflare-temporary-deploy"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\code-docs\\SKILL.md", "code-docs"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\code-wiki\\SKILL.md", "code-wiki"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\codemap\\SKILL.md", "codemap"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\comfyui\\SKILL.md", "comfyui"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\concept-diagrams\\SKILL.md", "concept-diagrams"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\content-research-writer\\SKILL.md", "content-research-writer"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\context7\\SKILL.md", "context7"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\convert-plaintext-to-md\\SKILL.md", "convert-plaintext-to-md"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\creative-ideation\\SKILL.md", "creative-ideation"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\customization-audit\\SKILL.md", "customization-audit"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\darwinian-evolver\\SKILL.md", "darwinian-evolver"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\datadog\\SKILL.md", "datadog"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\debugging-hermes-tui-commands\\SKILL.md",
+			"debugging-hermes-tui-commands"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\dependabot\\SKILL.md", "dependabot"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\deploy-to-vercel\\SKILL.md", "deploy-to-vercel"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\design-md\\SKILL.md", "design-md"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\disk-space-cleanup\\SKILL.md", "disk-space-cleanup"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\doc-coauthoring\\SKILL.md", "doc-coauthoring"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\docker-management\\SKILL.md", "docker-management"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\documentation-writer\\SKILL.md", "documentation-writer"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\docx\\SKILL.md", "docx"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\github\\SKILL.md", "github"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\hermes-diagnostic-repair\\SKILL.md",
+			"hermes-diagnostic-repair"
+		],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\hermes-system-maintenance\\SKILL.md",
+			"hermes-system-maintenance"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp-docker\\SKILL.md", "mcp-docker"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\mcp-filesystem\\SKILL.md", "mcp-filesystem"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\plans-judge\\SKILL.md", "plans-judge"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\prompts-judge\\SKILL.md", "prompts-judge"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\python-quality\\SKILL.md", "python-quality"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\skill-judge\\SKILL.md", "skill-judge"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\smithery-ai-cli\\SKILL.md", "smithery-ai-cli"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\specs-judge\\SKILL.md", "specs-judge"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\subagent-driven-development\\SKILL.md",
+			"subagent-driven-development"
+		],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\systematic-debugging\\SKILL.md", "systematic-debugging"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\test\\SKILL.md", "test"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\tooling-config\\SKILL.md", "tooling-config"],
+		["C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\tooling-lint\\SKILL.md", "tooling-lint"],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\user-communication-preferences\\SKILL.md",
+			"user-communication-preferences"
+		],
+		[
+			"C:\\Users\\Alexa\\AppData\\Local\\hermes\\skills\\writing-clearly-and-concisely\\SKILL.md",
+			"writing-clearly-and-concisely"
+		]
+	],
+	"deleted_count": 74
 }

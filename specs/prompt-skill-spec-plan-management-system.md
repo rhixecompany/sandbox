@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 # Prompt/Skill/Spec/Plan Management System Specification
 
 ## Overview
@@ -16,24 +14,28 @@ This specification defines a comprehensive system for managing prompts, skills, 
 ## Requirements
 
 ### REQ-001: Multi-File Change Protocol
+
 - **Trigger**: Any operation touching ≥3 files
 - **Action**: Load 14 mandatory skills before proceeding
 - **Skills**: using-superpowers, brainstorming, user-communication-preferences, mcp-sequential-thinking, mcp-filesystem, mcp-ast-grep, mcp-memory, plan, plans-and-specs, create-implementation-plan, implementation-plan, executing-plans, writing-clearly-and-concisely, subagent-driven-development
 - **Output**: Implementation plan → verification → execution → gate validation
 
 ### REQ-002: Prompt Library Structure
+
 - **Location**: `/.github/prompts/{category}/{trigger}/`
 - **Files**: `{prompt-name}.prompt.md` + 10 companion files
 - **Companion files**: specs.md, plans.md, goals.md, subgoals.md, rules.md, phases.md, steps.md, tasks.md, actions.md, gates.md
 - **Categories**: development, planning, creative, testing, documentation, debugging, security, devops, mcp, research, productivity, github, qa
 
 ### REQ-003: Spec Management
+
 - **Location**: `/./specs/`
 - **Format**: YAML frontmatter + markdown body
 - **Fields**: name, title, description, version, author, license, tags, requirements[], acceptance_criteria[]
 - **Naming**: `{feature-name}-spec.md`
 
 ### REQ-004: Plan Management
+
 - **Location**: `/./plans/`
 - **Format**: YAML frontmatter + markdown body
 - **Fields**: name, title, description, version, author, license, tags, phases[], tasks[], gates[], dependencies[]
@@ -41,6 +43,7 @@ This specification defines a comprehensive system for managing prompts, skills, 
 - **Phases**: Preparation, Execution, Verification, Completion
 
 ### REQ-005: Skill Enhancement
+
 - **Target Skills**: 15+ skills requiring enhancement/refactoring
 - **Skills List**:
   1. prompts-judge
@@ -70,12 +73,14 @@ This specification defines a comprehensive system for managing prompts, skills, 
   - No placeholder text
 
 ### REQ-006: Context File Updates
+
 - **Files to Update**: SOUL.md, USER.md, MEMORY.md, AGENTS.md, CLAUDE.md, .cursorrules, $HERMES_HOME.md
 - **Update Type**: Full rewrite (delete artifacts, recreate fresh)
 - **Consistency**: All files must reference each other correctly
 - **Authority**: SOUL.md is the master for agent behavior
 
 ### REQ-007: Artifact Cleanliness
+
 - **Rule**: Delete ALL existing artifacts before creating new ones
 - **Scope**: All spec files, plan files, prompt files, skill files
 - **Verification**: Confirm zero legacy artifacts remain
@@ -84,36 +89,42 @@ This specification defines a comprehensive system for managing prompts, skills, 
 ## Acceptance Criteria
 
 ### AC-001: Multi-File Protocol Works
+
 - [ ] Loading 14 skills succeeds without errors
 - [ ] Plan creation follows protocol
 - [ ] Execution follows plan phases
 - [ ] Gates validate before completion
 
 ### AC-002: Prompt Library Complete
+
 - [ ] All categories exist with proper structure
 - [ ] Each prompt has .prompt.md + 10 companion files
 - [ ] Files are properly cross-referenced
 - [ ] No duplicate or orphaned files
 
 ### AC-003: Specs/Plans Functional
+
 - [ ] Specs in ./specs/ are valid and complete
 - [ ] Plans in ./plans/ are executable
 - [ ] Spec-to-plan traceability exists
 - [ ] Verification gates pass
 
 ### AC-004: Skills Enhanced
+
 - [ ] All 18 skills have complete SKILL.md
 - [ ] References, templates, scripts exist for each
 - [ ] Skill judge score ≥95
 - [ ] No placeholder text remains
 
 ### AC-005: Context Files Consistent
+
 - [ ] All 7 files exist and are current
 - [ ] Cross-references are accurate
 - [ ] SOUL.md is authoritative
 - [ ] No conflicting rules
 
 ### AC-006: Zero Legacy Artifacts
+
 - [ ] All old spec/plan/prompt files removed
 - [ ] Only new system files exist
 - [ ] Git status shows only new files
@@ -121,6 +132,7 @@ This specification defines a comprehensive system for managing prompts, skills, 
 ## Technical Architecture
 
 ### Directory Structure
+
 ```
 .github/prompts/
 ├── development/
@@ -168,6 +180,7 @@ This specification defines a comprehensive system for managing prompts, skills, 
 ### File Format Standards
 
 #### Spec File Format
+
 ```yaml
 ---
 name: {feature-name}-spec
@@ -187,6 +200,7 @@ acceptance_criteria:
 ```
 
 #### Plan File Format
+
 ```yaml
 ---
 name: {feature-name}-plan
@@ -212,6 +226,7 @@ dependencies:
 ```
 
 #### Prompt File Format
+
 ```yaml
 ---
 name: {category}/{trigger}/{prompt-name}
@@ -242,47 +257,54 @@ companion_files:
 ```
 
 #### Companion File Purposes
-| File | Purpose |
-|------|---------|
-| specs.md | Links to ./specs/ specification |
-| plans.md | Links to ./plans/ implementation plan |
-| goals.md | High-level goals and success metrics |
-| subgoals.md | Decomposed sub-goals with owners |
-| rules.md | Business rules, constraints, invariants |
-| phases.md | Phase definitions with entry/exit criteria |
-| steps.md | Detailed step-by-step instructions |
-| tasks.md | Individual tasks with assignees |
-| actions.md | Specific actions/commands to execute |
-| gates.md | Verification gates with pass/fail criteria |
+
+| File        | Purpose                                    |
+| ----------- | ------------------------------------------ |
+| specs.md    | Links to ./specs/ specification            |
+| plans.md    | Links to ./plans/ implementation plan      |
+| goals.md    | High-level goals and success metrics       |
+| subgoals.md | Decomposed sub-goals with owners           |
+| rules.md    | Business rules, constraints, invariants    |
+| phases.md   | Phase definitions with entry/exit criteria |
+| steps.md    | Detailed step-by-step instructions         |
+| tasks.md    | Individual tasks with assignees            |
+| actions.md  | Specific actions/commands to execute       |
+| gates.md    | Verification gates with pass/fail criteria |
 
 ## Verification Gates
 
 ### Gate 1: Spec Completeness
+
 - All required fields present
 - Requirements traceable to acceptance criteria
 - No TBD or placeholder content
 
 ### Gate 2: Plan Executability
+
 - All phases have concrete tasks
 - Dependencies resolved
 - Resource requirements specified
 
 ### Gate 3: Prompt Library Integrity
+
 - All 11 files present per prompt
 - Cross-references valid
 - No circular dependencies
 
 ### Gate 4: Skill Quality
+
 - Skill judge score ≥95
 - All sections complete
 - References and templates exist
 
 ### Gate 5: Context Consistency
+
 - All 7 files reference each other correctly
 - SOUL.md rules propagated
 - No duplicate or conflicting rules
 
 ### Gate 6: Artifact Cleanliness
+
 - No legacy files remain
 - Only new system files present
 - Git history clean
@@ -296,13 +318,13 @@ companion_files:
 
 ## Risks & Mitigations
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| Legacy artifact contamination | High | High | Delete all before create; verify with git status |
-| Skill enhancement scope creep | Medium | Medium | Fixed skill list; no additions during execution |
-| Context file conflicts | Medium | High | Single source of truth (SOUL.md); cross-validate |
-| Multi-file protocol failures | Low | High | Automated verification at each gate |
-| MCP server unavailability | Low | Medium | Fallback to native tools; retry with backoff |
+| Risk                          | Likelihood | Impact | Mitigation                                       |
+| ----------------------------- | ---------- | ------ | ------------------------------------------------ |
+| Legacy artifact contamination | High       | High   | Delete all before create; verify with git status |
+| Skill enhancement scope creep | Medium     | Medium | Fixed skill list; no additions during execution  |
+| Context file conflicts        | Medium     | High   | Single source of truth (SOUL.md); cross-validate |
+| Multi-file protocol failures  | Low        | High   | Automated verification at each gate              |
+| MCP server unavailability     | Low        | Medium | Fallback to native tools; retry with backoff     |
 
 ## Timeline
 

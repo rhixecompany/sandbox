@@ -33,18 +33,19 @@ status: In progress
 
 - **GOAL-001:** Create plan, spec, output folders, download list script.
 
-| Task | Description | Completed | Date |
-|---|---|---|---|
-| TASK-001 | Create `./plans/download-hermes-user-guide-docs-2026-09-13.md` (this file) | ✅ | 2026-09-13 |
-| TASK-002 | Create `./specs/download-hermes-user-guide-docs.md` (spec) | ✅ | 2026-09-13 |
-| TASK-003 | Verify `docs/user-guide/` does NOT exist yet; prepare to create it | ✅ | 2026-09-13 |
-| TASK-004 | Write Python download script `./plans/exec/download_guide_docs.py` | ⬜ | 2026-09-13 |
+| Task     | Description                                                                | Completed | Date       |
+| -------- | -------------------------------------------------------------------------- | --------- | ---------- |
+| TASK-001 | Create `./plans/download-hermes-user-guide-docs-2026-09-13.md` (this file) | ✅        | 2026-09-13 |
+| TASK-002 | Create `./specs/download-hermes-user-guide-docs.md` (spec)                 | ✅        | 2026-09-13 |
+| TASK-003 | Verify `docs/user-guide/` does NOT exist yet; prepare to create it         | ✅        | 2026-09-13 |
+| TASK-004 | Write Python download script `./plans/exec/download_guide_docs.py`         | ⬜        | 2026-09-13 |
 
 ### Phase 2 — Download (Bounded Batches ≤ 7)
 
 - **GOAL-002:** Download 344 `.md` files using verified `raw.githubusercontent.com` URLs.
 
 Method (derived from session-verified `urllib` discovery):
+
 1. Call `https://api.github.com/repos/NousResearch/hermes-agent/contents/website/docs/user-guide` → list root.
 2. Recurse directories (`egress/`, `features/`, `messaging/`, `secrets/`, `skills/` subdirs).
 3. For each `.md`: construct `https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/docs/user-guide/<rel_path>`.
@@ -57,17 +58,18 @@ Batch groups (≤ 7 files each): we'll process sequential batches; progress logg
 
 - **GOAL-003:** Confirm folders/subfolders created; confirm file counts; confirm no empty files.
 
-| Task | Description | Completed | Date |
-|---|---|---|---|
-| TASK-005 | Run `find docs/user-guide -type d | sort` → verify subfolder list matches source | ⬜ | 2026-09-13 |
-| TASK-006 | Run `find docs/user-guide -name '*.md' | wc -l` → confirm ≥ 344 | ⬜ | 2026-09-13 |
-| TASK-007 | Per-file: check size > 0; list any zero-byte files in `download-log.md` (error) | ⬜ | 2026-09-13 |
+| Task     | Description                                                                     | Completed                                    | Date       |
+| -------- | ------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
+| TASK-005 | Run `find docs/user-guide -type d                                               | sort` → verify subfolder list matches source | ⬜         | 2026-09-13 |
+| TASK-006 | Run `find docs/user-guide -name '*.md'                                          | wc -l` → confirm ≥ 344                       | ⬜         | 2026-09-13 |
+| TASK-007 | Per-file: check size > 0; list any zero-byte files in `download-log.md` (error) | ⬜                                           | 2026-09-13 |
 
 ### Phase 4 — Markdown Issue Scan
 
 - **GOAL-004:** Scan each downloaded `.md` for structural issues.
 
 Checks per file:
+
 - Frontmatter: starts with `---` (optional but common); ends with `---` before first `# ` heading.
 - At least one heading (`# `).
 - No broken internal links (`[text]()` — empty URL).
@@ -81,6 +83,7 @@ Results saved to `./specs/markdown-issues.md` (table: file | issue_type | detail
 - **GOAL-005:** For each `.md`, extract all fenced blocks; execute safe ones; skip dangerous ones.
 
 Rules:
+
 - Extract all ` ```python ` / ` ```bash ` / ` ```shell ` / ` ```sh ` / ` ```python3 ` blocks.
 - For each block: save to `./plans/exec/<slug>.py` (or `.sh`); execute; capture stdout + stderr + exit code.
 - **SKIPPED** if block contains: `rm -rf`, `git reset --hard`, `chmod -R`, `pip uninstall`, `del /F /Q`, `format`, `drop table`, `DROP DATABASE`.
@@ -93,6 +96,7 @@ Rules:
 - **GOAL-006:** Confirm all artifacts exist; summarize to user.
 
 Verification gates (per `executing-plans` Phase 3):
+
 - [ ] `docs/user-guide/` has subfolders (list in response)
 - [ ] `.md` file count ≥ 344
 - [ ] `download-log.md` has zero `error` rows (only potential `warning` for any non-.md artifacts like `_category_.json`, which are intentionally excluded)

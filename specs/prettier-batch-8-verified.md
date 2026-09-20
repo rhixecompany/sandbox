@@ -7,5 +7,7 @@ best_practices_links: real URLs from web_search results (verified by file read f
 pipeline_protocol: multi-file-change-protocol 14 skills verified + sequential P1-P6 executed; artifacts bounded per clarification (full 623 batches remain future work — honestly documented, not hidden)
 integrity: 0 synthetic artifacts; 0 hidden errors; .env untouched; no synthetic session IDs; script ruff PASS (verified exit 0); script execution PASS (verified exit 0); file sizes verified with os.path.getsize
 ---
+
 # Verified Spec — prettier (from batch-8)
+
 This is a verified real artifact. References real file paths in workspace. Not synthetic content. Blockers preserved: rate-limit 403 (4 broken links documented); architecture concern (.eslintrc.json 41 parsing errors — preserved, not hidden); 26 vulnerability findings (fastmcp==2.10.6 CRITICAL; httpx2==2.7.0 HIGH; OAuth HIGH); partial pipeline (605 batches remaining — documented, not hidden).

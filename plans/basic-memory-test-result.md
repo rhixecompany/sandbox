@@ -4,21 +4,21 @@ Evidence from mcp-stderr.log: FastMCP 4.0.0b1 banner + 'unexpected extra argumen
 Timestamp: 2026-09-14T09:57:04+01:00
 --- REAL TEST OUTPUT ---
 
-  Testing 'io.github.basicmachines-co/basic-memory'...
-  Transport: stdio → uvx
-  Auth: none
-  ✗ Connection failed (20183ms): Connection closed
+Testing 'io.github.basicmachines-co/basic-memory'...
+Transport: stdio → uvx
+Auth: none
+✗ Connection failed (20183ms): Connection closed
 Exit code: 0
 Note: If 'Connection closed' persists, this is a handshake/protocol mismatch blocker (not hidden).
 === SP-C Post-Fix: Basic-memory retest with corrected args ===
 Fix: config.yaml args corrected to '--from basic-memory@0.23.2 basic-memory mcp'
 Also .vscode/mcp.json verified (same syntax)
 
-  Testing 'io.github.basicmachines-co/basic-memory'...
-  Transport: stdio → uvx
-  Auth: none
-  ✓ Connected (27968ms)
-  ✓ Tools discovered: 21
+Testing 'io.github.basicmachines-co/basic-memory'...
+Transport: stdio → uvx
+Auth: none
+✓ Connected (27968ms)
+✓ Tools discovered: 21
 
     basic_memory_diagnostics             Return version, system, and configuration diagnostics f...
     delete_note                          Delete a note or directory by title, permalink, or path
@@ -36,16 +36,16 @@ Also .vscode/mcp.json verified (same syntax)
     list_memory_projects                 List all available projects with their status.
 
 Shows p...
-    create_memory_project                Create a new Basic Memory project.
+create_memory_project Create a new Basic Memory project.
 
 Creates a new proje...
-    delete_project                       Delete a Basic Memory project.
+delete_project Delete a Basic Memory project.
 
 Removes a project from ...
-    search                               Search for content across the knowledge base
-    fetch                                Fetch the full contents of a search result document
-    schema_validate                      Validate notes against their Picoschema definitions.
-    schema_infer                         Analyze existing notes and suggest a Picoschema definit...
-    schema_diff                          Detect drift between a schema definition and actual not...
+search Search for content across the knowledge base
+fetch Fetch the full contents of a search result document
+schema_validate Validate notes against their Picoschema definitions.
+schema_infer Analyze existing notes and suggest a Picoschema definit...
+schema_diff Detect drift between a schema definition and actual not...
 
 Post-fix exit: 0

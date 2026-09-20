@@ -1,6 +1,8 @@
 # Action Log — prompt-library-de-dup-and-backup-archive
+
 Subgoal: prompt-library-de-dup-and-backup-archive
 Rule: EXACT_DUP → delete backup; DIVERGENT → overwrite prompts + delete backup; ONLY_BACKUP → migrate to prompts + delete backup.
+
 - ACTION: DELETED_BACKUP | 11_related_specifications.md | path=C:/Users/Alexa/Desktop/SandBox/.github/prompts_backup\templates\update-specification\11_related_specifications.md
 - ACTION: DELETED_BACKUP | 1_project_understanding_p.md | path=C:/Users/Alexa/Desktop/SandBox/.github/prompts_backup\templates\gen-specs-as-issues\1_project_understanding_p.md
 - ACTION: DELETED_BACKUP | 1_requirements__constrain.md | path=C:/Users/Alexa/Desktop/SandBox/.github/prompts_backup\templates\create-implementation-plan\1_requirements__constrain.md

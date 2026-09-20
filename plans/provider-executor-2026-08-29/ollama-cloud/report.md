@@ -5,6 +5,7 @@ Prompt: `Reply with exactly one word: OK`
 Timeout: 150s
 
 ## Summary
+
 - Tested: 1
 - OK: 0
 - FAIL: 1
@@ -12,8 +13,8 @@ Timeout: 150s
 
 ## Per-provider results
 
-| Provider | Model | OK | Elapsed (s) | Exit | Stderr (first 200) |
-|---|---|---|---|---|---|
-| ollama-cloud | `nemotron-3-ultra` | ✗ | 139.0 | 1 |  session_id: 20260829_011817_4cfe32  |
+| Provider     | Model              | OK  | Elapsed (s) | Exit | Stderr (first 200)                 |
+| ------------ | ------------------ | --- | ----------- | ---- | ---------------------------------- |
+| ollama-cloud | `nemotron-3-ultra` | ✗   | 139.0       | 1    | session_id: 20260829_011817_4cfe32 |
 
 ## Successful responses (truncated)

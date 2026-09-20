@@ -212,11 +212,13 @@ CLAUDE.md / .cursorrules (IDE-Specific Stubs)
 ## File Locations
 
 ### Canonical (Profile Directory)
+
 - `/c/Users/Alexa/AppData/Local/hermes/profiles/default/SOUL.md`
 - `/c/Users/Alexa/AppData/Local/hermes/profiles/default/USER.md`
 - `/c/Users/Alexa/AppData/Local/hermes/profiles/default/MEMORY.md`
 
 ### Workspace Root (SandBox)
+
 - `/c/Users/Alexa/Desktop/SandBox/SOUL.md` (copy of canonical)
 - `/c/Users/Alexa/Desktop/SandBox/USER.md` (pointer to canonical)
 - `/c/Users/Alexa/Desktop/SandBox/MEMORY.md` (pointer to canonical)
@@ -228,7 +230,9 @@ CLAUDE.md / .cursorrules (IDE-Specific Stubs)
 ## Content Requirements
 
 ### SOUL.md (Master)
+
 All sections from context-files-spec.md REQ-CF-001:
+
 - Core Operating Principles
 - Persona, Cognitive Style
 - Execution Frameworks (Plans, Prompts, Skills, Hooks)
@@ -240,6 +244,7 @@ All sections from context-files-spec.md REQ-CF-001:
 - Profile Routing Table
 
 ### USER.md (Preferences)
+
 - Identity, Environment Stack, Model Config
 - Execution Preferences (communication, code, skills, hooks, profile routing)
 - Standing Goal (prompt library maintenance)
@@ -248,6 +253,7 @@ All sections from context-files-spec.md REQ-CF-001:
 - Session Info
 
 ### MEMORY.md (Facts)
+
 - §-delimited facts only
 - No headings (MD041 compliance)
 - Environment facts, lessons, conventions
@@ -255,6 +261,7 @@ All sections from context-files-spec.md REQ-CF-001:
 - NO procedures/workflows
 
 ### AGENTS.md (Workspace)
+
 - Directory map
 - Quick Rules (numbered)
 - Toolchain commands
@@ -264,6 +271,7 @@ All sections from context-files-spec.md REQ-CF-001:
 - Deferral to SOUL.md
 
 ### $HERMES_HOME.md (Overrides)
+
 - Profile table
 - MCP/hook/plugin commands
 - Live provider/model commands
@@ -274,11 +282,13 @@ All sections from context-files-spec.md REQ-CF-001:
 - MCP servers & tools priority table
 
 ### CLAUDE.md (Stub)
+
 - Thin deferral to AGENTS.md
 - MCP tool preferences
 - Multi-file protocol reference
 
 ### .cursorrules (Stub)
+
 - Thin deferral to AGENTS.md
 - Code style preferences
 - Multi-file protocol reference

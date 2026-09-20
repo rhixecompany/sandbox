@@ -13,27 +13,28 @@
 
 ## Required MCP Servers (14+)
 
-| Server | Purpose | Credentials Needed |
-|--------|---------|-------------------|
-| github | Repository management, issues, PRs | GitHub token |
-| filesystem | File read/write/edit | None (local) |
-| playwright | Browser automation | None |
-| fetch | Web content extraction | None |
-| tavily | Web search | Tavily API key |
-| neon | Database operations | Neon API key |
-| docker | Container management | Docker socket |
-| memory | Knowledge graph | None |
-| honcho | Cross-session memory | Honcho API key |
-| ast-grep | AST-based code search | None |
-| code-sandbox | Isolated code execution | None |
-| sentry | Error tracking | Sentry DSN |
-| context7 | Library docs resolution | Context7 API key |
-| sequential-thinking | Structured reasoning | None |
-| smithery | Toolbox search/management | None |
+| Server              | Purpose                            | Credentials Needed |
+| ------------------- | ---------------------------------- | ------------------ |
+| github              | Repository management, issues, PRs | GitHub token       |
+| filesystem          | File read/write/edit               | None (local)       |
+| playwright          | Browser automation                 | None               |
+| fetch               | Web content extraction             | None               |
+| tavily              | Web search                         | Tavily API key     |
+| neon                | Database operations                | Neon API key       |
+| docker              | Container management               | Docker socket      |
+| memory              | Knowledge graph                    | None               |
+| honcho              | Cross-session memory               | Honcho API key     |
+| ast-grep            | AST-based code search              | None               |
+| code-sandbox        | Isolated code execution            | None               |
+| sentry              | Error tracking                     | Sentry DSN         |
+| context7            | Library docs resolution            | Context7 API key   |
+| sequential-thinking | Structured reasoning               | None               |
+| smithery            | Toolbox search/management          | None               |
 
 ## Requirements
 
 ### Functional
+
 - [ ] All 14+ servers show as `enabled` in `hermes mcp list`
 - [ ] `hermes mcp test <server>` passes for each server
 - [ ] Credentials configured via vault_key_sync (not hardcoded)
@@ -43,30 +44,31 @@
 - [ ] Neon MCP connects to remote https://mcp.neon.tech/mcp (Bearer auth)
 
 ### Non-Functional
+
 - [ ] Test each server in < 10 seconds
 - [ ] No hardcoded credentials in config.yaml
 - [ ] Windows npx path: `C:\nvm4w\nodejs\npx.cmd` (bare `npx` fails in Python subprocess)
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| List servers | `hermes mcp list` | 14+ enabled |
-| Test github | `hermes mcp test github` | ✓ Connected, tools discovered |
-| Test filesystem | `hermes mcp test filesystem` | ✓ Connected |
-| Test playwright | `hermes mcp test playwright` | ✓ Connected |
-| Test fetch | `hermes mcp test fetch` | ✓ Connected |
-| Test tavily | `hermes mcp test tavily` | ✓ Connected |
-| Test neon | `hermes mcp test neon` | ✓ Connected (remote) |
-| Test docker | `hermes mcp test docker` | ✓ Connected |
-| Test memory | `hermes mcp test memory` | ✓ Connected |
-| Test honcho | `hermes mcp test honcho` | ✓ Connected |
-| Test ast-grep | `hermes mcp test ast-grep` | ✓ Connected |
-| Test code-sandbox | `hermes mcp test code-sandbox` | ✓ Connected |
-| Test sentry | `hermes mcp test sentry` | ✓ Connected |
-| Test context7 | `hermes mcp test context7` | ✓ Connected |
-| Test sequential-thinking | `hermes mcp test sequential-thinking` | ✓ Connected |
-| Test smithery | `hermes mcp test smithery` | ✓ Connected |
+| Check                    | Command                               | Expected                      |
+| ------------------------ | ------------------------------------- | ----------------------------- |
+| List servers             | `hermes mcp list`                     | 14+ enabled                   |
+| Test github              | `hermes mcp test github`              | ✓ Connected, tools discovered |
+| Test filesystem          | `hermes mcp test filesystem`          | ✓ Connected                   |
+| Test playwright          | `hermes mcp test playwright`          | ✓ Connected                   |
+| Test fetch               | `hermes mcp test fetch`               | ✓ Connected                   |
+| Test tavily              | `hermes mcp test tavily`              | ✓ Connected                   |
+| Test neon                | `hermes mcp test neon`                | ✓ Connected (remote)          |
+| Test docker              | `hermes mcp test docker`              | ✓ Connected                   |
+| Test memory              | `hermes mcp test memory`              | ✓ Connected                   |
+| Test honcho              | `hermes mcp test honcho`              | ✓ Connected                   |
+| Test ast-grep            | `hermes mcp test ast-grep`            | ✓ Connected                   |
+| Test code-sandbox        | `hermes mcp test code-sandbox`        | ✓ Connected                   |
+| Test sentry              | `hermes mcp test sentry`              | ✓ Connected                   |
+| Test context7            | `hermes mcp test context7`            | ✓ Connected                   |
+| Test sequential-thinking | `hermes mcp test sequential-thinking` | ✓ Connected                   |
+| Test smithery            | `hermes mcp test smithery`            | ✓ Connected                   |
 
 ## Implementation Approach
 

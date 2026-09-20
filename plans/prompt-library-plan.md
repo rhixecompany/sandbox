@@ -301,28 +301,88 @@ phases:
         phase: Phase 4 - Validation
         assignee: implementer
         status: pending
-        dependencies: [PL-T-3.1, PL-T-3.2, PL-T-3.3, PL-T-3.4, PL-T-3.5, PL-T-3.6, PL-T-3.7, PL-T-3.8, PL-T-3.9, PL-T-3.10, PL-T-3.11, PL-T-3.12, PL-T-3.13]
+        dependencies:
+          [
+            PL-T-3.1,
+            PL-T-3.2,
+            PL-T-3.3,
+            PL-T-3.4,
+            PL-T-3.5,
+            PL-T-3.6,
+            PL-T-3.7,
+            PL-T-3.8,
+            PL-T-3.9,
+            PL-T-3.10,
+            PL-T-3.11,
+            PL-T-3.12,
+            PL-T-3.13,
+          ]
       - id: PL-T-4.2
         name: Validate plans.md references
         description: Verify all plans.md point to valid ./plans/ files
         phase: Phase 4 - Validation
         assignee: implementer
         status: pending
-        dependencies: [PL-T-3.1, PL-T-3.2, PL-T-3.3, PL-T-3.4, PL-T-3.5, PL-T-3.6, PL-T-3.7, PL-T-3.8, PL-T-3.9, PL-T-3.10, PL-T-3.11, PL-T-3.12, PL-T-3.13]
+        dependencies:
+          [
+            PL-T-3.1,
+            PL-T-3.2,
+            PL-T-3.3,
+            PL-T-3.4,
+            PL-T-3.5,
+            PL-T-3.6,
+            PL-T-3.7,
+            PL-T-3.8,
+            PL-T-3.9,
+            PL-T-3.10,
+            PL-T-3.11,
+            PL-T-3.12,
+            PL-T-3.13,
+          ]
       - id: PL-T-4.3
         name: Validate companion file completeness
         description: Verify all 10 companion files exist per prompt
         phase: Phase 4 - Validation
         assignee: implementer
         status: pending
-        dependencies: [PL-T-3.1, PL-T-3.2, PL-T-3.3, PL-T-3.4, PL-T-3.5, PL-T-3.6, PL-T-3.7, PL-T-3.8, PL-T-3.9, PL-T-3.10, PL-T-3.11, PL-T-3.12, PL-T-3.13]
+        dependencies:
+          [
+            PL-T-3.1,
+            PL-T-3.2,
+            PL-T-3.3,
+            PL-T-3.4,
+            PL-T-3.5,
+            PL-T-3.6,
+            PL-T-3.7,
+            PL-T-3.8,
+            PL-T-3.9,
+            PL-T-3.10,
+            PL-T-3.11,
+            PL-T-3.12,
+            PL-T-3.13,
+          ]
       - id: PL-T-4.4
         name: Validate frontmatter
         description: Verify all prompt frontmatter is valid YAML with required fields
         phase: Phase 4 - Validation
         assignee: implementer
         status: pending
-        dependencies: [PL-T-3.1, PL-T-3.2, PL-T-3.3, PL-T-3.4, PL-T-3.5, PL-T-3.6, PL-T-3.7, PL-T-3.8, PL-T-3.9, PL-T-3.10, PL-T-3.11, PL-T-3.12, PL-T-3.13]
+        dependencies:
+          [
+            PL-T-3.1,
+            PL-T-3.2,
+            PL-T-3.3,
+            PL-T-3.4,
+            PL-T-3.5,
+            PL-T-3.6,
+            PL-T-3.7,
+            PL-T-3.8,
+            PL-T-3.9,
+            PL-T-3.10,
+            PL-T-3.11,
+            PL-T-3.12,
+            PL-T-3.13,
+          ]
 gates:
   - name: Gate 1 - Categories Created
     phase: Phase 1 - Category Structure
@@ -371,72 +431,86 @@ Implements the complete prompt library structure at `.github/prompts/` with 13 c
 ## Categories & Triggers
 
 ### Development (4 triggers)
+
 - `create-feature` - Create new features
 - `refactor-code` - Refactor existing code
 - `fix-bug` - Fix bugs
 - `write-test` - Write tests
 
 ### Planning (3 triggers)
+
 - `create-plan` - Create implementation plans
 - `create-spec` - Create specifications
 - `breakdown-feature` - Break down features
 
 ### Creative (3 triggers)
+
 - `write-content` - Write content/articles
 - `design-ui` - Design UI/UX
 - `generate-ideas` - Generate ideas
 
 ### Testing (3 triggers)
+
 - `write-unit-test` - Write unit tests
 - `write-integration-test` - Write integration tests
 - `run-tests` - Execute test suites
 
 ### Documentation (3 triggers)
+
 - `write-readme` - Write README files
 - `write-api-docs` - Write API documentation
 - `update-docs` - Update existing documentation
 
 ### Debugging (3 triggers)
+
 - `debug-issue` - Debug issues
 - `trace-bug` - Trace bug root cause
 - `analyze-logs` - Analyze log files
 
 ### Security (3 triggers)
+
 - `security-review` - Security code review
 - `threat-model` - Create threat models
 - `compliance-check` - Compliance validation
 
 ### DevOps (3 triggers)
+
 - `deploy-app` - Deploy applications
 - `setup-ci` - Set up CI/CD
 - `configure-infra` - Configure infrastructure
 
 ### MCP (3 triggers)
+
 - `add-mcp-server` - Add MCP servers
 - `test-mcp` - Test MCP servers
 - `debug-mcp` - Debug MCP issues
 
 ### Research (3 triggers)
+
 - `research-topic` - Research topics
 - `synthesize-findings` - Synthesize research
 - `literature-review` - Literature reviews
 
 ### Productivity (3 triggers)
+
 - `automate-task` - Automate tasks
 - `optimize-workflow` - Optimize workflows
 - `generate-report` - Generate reports
 
 ### GitHub (3 triggers)
+
 - `create-pr` - Create pull requests
 - `review-pr` - Review pull requests
 - `manage-issues` - Manage GitHub issues
 
 ### QA (3 triggers)
+
 - `audit-code` - Audit code quality
 - `run-quality-gates` - Run quality gates
 - `validate-spec` - Validate specifications
 
 ## Total Count
+
 - **Categories**: 13
 - **Triggers**: 39
 - **Prompt Directories**: 39

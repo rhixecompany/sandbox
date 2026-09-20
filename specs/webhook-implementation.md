@@ -5,23 +5,22 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
 # Webhook Implementation — Verified State (SG8 Update)
 
 > Updated: 2026-09-13 | Protocol: multi-file-change-protocol (sequential) | Profile: adminbot
 
 ## SG1–SG7 Verified Status (gates passed / total)
 
-| SG | Deliverable | File(s) | Gate Status |
-|---|---|---|---|
-| SG1 | Spec | `./specs/webhook-full.md` | PASS — 13 sections; no fabricated session IDs; security invariant §6 present |
-| SG2 | Plan | `./plans/webhook-execution-plan.md` | PASS — M1–M4 milestones; sequential order; 8 subgoals; resources listed |
-| SG3 | Prompt templates | `.github/prompts/webhook/webhook-template.md` + `direct-delivery-template.md` | PASS — `{dot}`, `{__raw__}`, response codes, security notes |
-| SG4 | Scripts | `scripts/webhook_filter_todoist.py` + `scripts/webhook_test_payload.py` | PASS — filter produces `[SILENT]` + SystemExit(0) or JSON stdout; test builds payloads for 3 routes |
-| SG5 | Skills | `skills/webhook-subscriptions.md` (SKILL.md), `skills/per-route-toolsets.md` (SKILL.md) | PASS — both ≥10 body lines; frontmatter complete; no stub/duplicate |
-| SG6 | Routes + config refs | `docs/webhook-routes-config.md`, `.env.webhook-example`, `webhook_subscriptions-example.json` | PASS — 3 routes present (`github-pr`, `deploy-notify`, `oom-emergency`); none use `INSECURE_NO_AUTH`; `oom-emergency` has `toolsets`; `deliver` real (`github_comment`/`telegram`); filters present on `deploy-notify`; `deliver_only:true` present |
-| SG7 | Implementation prompt | `.github/prompts/webhook/implementation-prompt.md` | PASS — references SG1–SG6 by exact filenames; includes skill-combining note; security reminder |
-| SG8 (this) | Implementation spec update + verification report | `./specs/webhook-implementation.md`, `docs/webhook-implementation-report.md` | IN PROGRESS — final gate after report verified |
+| SG         | Deliverable                                      | File(s)                                                                                       | Gate Status                                                                                                                                                                                                                                         |
+| ---------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SG1        | Spec                                             | `./specs/webhook-full.md`                                                                     | PASS — 13 sections; no fabricated session IDs; security invariant §6 present                                                                                                                                                                        |
+| SG2        | Plan                                             | `./plans/webhook-execution-plan.md`                                                           | PASS — M1–M4 milestones; sequential order; 8 subgoals; resources listed                                                                                                                                                                             |
+| SG3        | Prompt templates                                 | `.github/prompts/webhook/webhook-template.md` + `direct-delivery-template.md`                 | PASS — `{dot}`, `{__raw__}`, response codes, security notes                                                                                                                                                                                         |
+| SG4        | Scripts                                          | `scripts/webhook_filter_todoist.py` + `scripts/webhook_test_payload.py`                       | PASS — filter produces `[SILENT]` + SystemExit(0) or JSON stdout; test builds payloads for 3 routes                                                                                                                                                 |
+| SG5        | Skills                                           | `skills/webhook-subscriptions.md` (SKILL.md), `skills/per-route-toolsets.md` (SKILL.md)       | PASS — both ≥10 body lines; frontmatter complete; no stub/duplicate                                                                                                                                                                                 |
+| SG6        | Routes + config refs                             | `docs/webhook-routes-config.md`, `.env.webhook-example`, `webhook_subscriptions-example.json` | PASS — 3 routes present (`github-pr`, `deploy-notify`, `oom-emergency`); none use `INSECURE_NO_AUTH`; `oom-emergency` has `toolsets`; `deliver` real (`github_comment`/`telegram`); filters present on `deploy-notify`; `deliver_only:true` present |
+| SG7        | Implementation prompt                            | `.github/prompts/webhook/implementation-prompt.md`                                            | PASS — references SG1–SG6 by exact filenames; includes skill-combining note; security reminder                                                                                                                                                      |
+| SG8 (this) | Implementation spec update + verification report | `./specs/webhook-implementation.md`, `docs/webhook-implementation-report.md`                  | IN PROGRESS — final gate after report verified                                                                                                                                                                                                      |
 
 ## Adjustments From Original Plan (SG2)
 

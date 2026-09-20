@@ -10,6 +10,7 @@
 ## Problem Statement
 
 The existing `subagent-driven-development` skill at `skills/software-development/subagent-driven-development/` needs enhancement per user request: "implement each skills fully using best practices and dry principals". Current skill has good foundation but lacks:
+
 - context-budget-discipline reference (4-tier model)
 - gates-taxonomy reference (4 canonical gate types)
 - Explicit integration with test-driven-development
@@ -25,6 +26,7 @@ The existing `subagent-driven-development` skill at `skills/software-development
 ## Requirements
 
 ### Functional
+
 - [ ] SKILL.md enhanced with:
   - Explicit context-budget-discipline integration (load reference when context degrades)
   - Explicit gates-taxonomy integration (Pre-flight, Revision, Escalation, Abort gates)
@@ -39,6 +41,7 @@ The existing `subagent-driven-development` skill at `skills/software-development
 - [ ] Skill loads without error via `skill_view`
 
 ### Non-Functional
+
 - [ ] DRY: No duplication with other skills (reference instead)
 - [ ] Line count < 250 (move detail to references)
 - [ ] All references cited in SKILL.md body
@@ -46,16 +49,16 @@ The existing `subagent-driven-development` skill at `skills/software-development
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| Skill loads | `skill_view subagent-driven-development` | Returns full content, no error |
-| References load | `skill_view subagent-driven-development references/context-budget-discipline.md` | Returns content |
-| References load | `skill_view subagent-driven-development references/gates-taxonomy.md` | Returns content |
-| Skill judge | `skill-judge subagent-driven-development` | Score ≥ 90 |
-| Frontmatter valid | Check SKILL.md | All required fields present |
-| Line count | `wc -l SKILL.md` | < 250 lines |
-| TDD mentioned | grep -i "tdd\|test.driven" SKILL.md | Found |
-| Gates mentioned | grep -i "gate\|pre.flight\|revision\|escalation\|abort" SKILL.md | Found |
+| Check             | Command                                                                          | Expected                       |
+| ----------------- | -------------------------------------------------------------------------------- | ------------------------------ |
+| Skill loads       | `skill_view subagent-driven-development`                                         | Returns full content, no error |
+| References load   | `skill_view subagent-driven-development references/context-budget-discipline.md` | Returns content                |
+| References load   | `skill_view subagent-driven-development references/gates-taxonomy.md`            | Returns content                |
+| Skill judge       | `skill-judge subagent-driven-development`                                        | Score ≥ 90                     |
+| Frontmatter valid | Check SKILL.md                                                                   | All required fields present    |
+| Line count        | `wc -l SKILL.md`                                                                 | < 250 lines                    |
+| TDD mentioned     | grep -i "tdd\|test.driven" SKILL.md                                              | Found                          |
+| Gates mentioned   | grep -i "gate\|pre.flight\|revision\|escalation\|abort" SKILL.md                 | Found                          |
 
 ## Implementation Approach
 
@@ -81,6 +84,7 @@ skill-judge subagent-driven-development
 ## Enhanced Workflow Additions
 
 ### Phase 0: Context Budget Check (Before Dispatch)
+
 ```python
 # Load context-budget-discipline reference
 # Check current tier: PEAK/GOOD/DEGRADING/POOR
@@ -89,6 +93,7 @@ skill-judge subagent-driven-development
 ```
 
 ### Phase 1.5: Pre-flight Gate (Per Task)
+
 ```python
 # Before dispatching implementer:
 # - Verify task spec complete
@@ -98,6 +103,7 @@ skill-judge subagent-driven-development
 ```
 
 ### Phase 2.5: Revision Gate (After Spec Review)
+
 ```python
 # After spec compliance review:
 # - If PASS: proceed to quality review
@@ -106,6 +112,7 @@ skill-judge subagent-driven-development
 ```
 
 ### Phase 3.5: Escalation Gate (After Quality Review)
+
 ```python
 # After quality review:
 # - If APPROVED: mark complete

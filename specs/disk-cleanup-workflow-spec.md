@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 ## Goal
 
 Disk cleanup workflow specification covering dependency cleaning, archive removal, cache clearing, and hermes root cleanup with safe destructive operations.
@@ -14,12 +12,14 @@ Disk cleanup workflow specification covering dependency cleaning, archive remova
 ## Requirements
 
 ### Dependencies & Scope
+
 - [ ] Disk (C:) status documented: total, used, free space
 - [ ] SandBox git status documented (modified, untracked files)
 - [ ] Identify all cleanup categories: deps, archive, cache, logs, hermes root, temp
 
 ### Cleanup Categories
-- [ ] **deps**: node_modules, venv, .venv, __pycache__, dist, build in SandBox and subrepos
+
+- [ ] **deps**: node_modules, venv, .venv, **pycache**, dist, build in SandBox and subrepos
 - [ ] **archive**: .archive, backup, *.bak, *.orig, *.rej, *~
 - [ ] **cache**: .cache, npm-cache in workspace
 - [ ] **logs**: *.log, *.tmp in workspace
@@ -27,12 +27,14 @@ Disk cleanup workflow specification covering dependency cleaning, archive remova
 - [ ] **temp**: C:\Users\Alexa\AppData\Local\Temp — age-based (>3 days)
 
 ### Safety Requirements
+
 - [ ] Destructive operations require explicit approval before --apply
 - [ ] Dry-run mode available for all cleanup operations
 - [ ] Backup strategy before cleanup (git commits, file copies)
 - [ ] Cleanup script (cleanup_disk.py) available and tested
 
 ### Execution Plan
+
 - [ ] Phase 1: Dry-run and report what will be deleted
 - [ ] Phase 2: Get explicit approval for --apply
 - [ ] Phase 3: Execute cleanup with --apply
@@ -41,14 +43,14 @@ Disk cleanup workflow specification covering dependency cleaning, archive remova
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| Dry-run reports | `python cleanup_disk.py --dry-run` | Lists all files to be cleaned |
-| Disk before | `df -h /c` | Free space recorded |
-| Cleanup applied | `python cleanup_disk.py --apply` | Files deleted per categories |
-| Disk after | `df -h /c` | Free space increased |
-| Git clean | `git status --short` | No unexpected deletions |
-| No deps deleted | Verify hermes root | Only cache/logs/archive removed |
+| Check           | Command                            | Expected                        |
+| --------------- | ---------------------------------- | ------------------------------- |
+| Dry-run reports | `python cleanup_disk.py --dry-run` | Lists all files to be cleaned   |
+| Disk before     | `df -h /c`                         | Free space recorded             |
+| Cleanup applied | `python cleanup_disk.py --apply`   | Files deleted per categories    |
+| Disk after      | `df -h /c`                         | Free space increased            |
+| Git clean       | `git status --short`               | No unexpected deletions         |
+| No deps deleted | Verify hermes root                 | Only cache/logs/archive removed |
 
 ## Non-Functional Requirements
 
@@ -77,7 +79,9 @@ git status --short
 ```
 
 ## Linked Specs
+
 - disk-cleanup-workflow-spec.md
 
 ## Linked Plan
+
 - ../provider-workflow-master-plan.md

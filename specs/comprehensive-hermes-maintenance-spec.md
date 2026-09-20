@@ -5,11 +5,10 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 # Comprehensive Hermes Maintenance Specification
 
 ## Goal
+
 Build a deterministic inventory and remediation pipeline for the SandBox workspace and Hermes root installation, covering scripts, configs, secrets metadata, MCP servers, hooks, plugins, desktop assets, agents, Docker resources, and process state.
 
 ## Functional requirements
@@ -84,33 +83,33 @@ Every phase writes secret-safe JSON/Markdown evidence with timestamp, scope, com
 
 ## Acceptance criteria
 
-| ID | Pass condition |
-|---|---|
+| ID    | Pass condition                                                                                                                                                  |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AC-01 | Approved roots, independent nested repositories, profiles, scripts, configs, env paths, MCP, hooks, plugins, agents, Docker, and process state are inventoried. |
-| AC-02 | Reports contain no secret values and no secret-bearing files are staged. |
-| AC-03 | Live `quick_commands` readback covers every supported Hermes root script exactly once. |
-| AC-04 | Every generated entry invokes the safe wrapper in audit mode and all generated entries pass wrapper smoke. |
-| AC-05 | Canonical scripts-judge preserves five dimensions and passes its quick-command hard gate. |
-| AC-06 | Confirmed Hermes-surface defects are fixed with evidence or recorded with an exact external blocker. |
-| AC-07 | MCP files pass schema checks, enabled-server policy is explicit, and live failures are not false-positive HEAD-only results. |
-| AC-08 | Environment/config schema synchronization preserves secrets and intentional profile/platform differences. |
-| AC-09 | Any removed file/resource has an exact identity, proof of non-use, reason, and post-change verification. |
-| AC-10 | Root and changed nested repositories pass applicable gates; commits and pushes are non-forced and read back successfully. |
-| AC-11 | Prompt, spec, plan, scripts, skill changes, reports, decisions, and blockers are listed in the final handoff. |
+| AC-02 | Reports contain no secret values and no secret-bearing files are staged.                                                                                        |
+| AC-03 | Live `quick_commands` readback covers every supported Hermes root script exactly once.                                                                          |
+| AC-04 | Every generated entry invokes the safe wrapper in audit mode and all generated entries pass wrapper smoke.                                                      |
+| AC-05 | Canonical scripts-judge preserves five dimensions and passes its quick-command hard gate.                                                                       |
+| AC-06 | Confirmed Hermes-surface defects are fixed with evidence or recorded with an exact external blocker.                                                            |
+| AC-07 | MCP files pass schema checks, enabled-server policy is explicit, and live failures are not false-positive HEAD-only results.                                    |
+| AC-08 | Environment/config schema synchronization preserves secrets and intentional profile/platform differences.                                                       |
+| AC-09 | Any removed file/resource has an exact identity, proof of non-use, reason, and post-change verification.                                                        |
+| AC-10 | Root and changed nested repositories pass applicable gates; commits and pushes are non-forced and read back successfully.                                       |
+| AC-11 | Prompt, spec, plan, scripts, skill changes, reports, decisions, and blockers are listed in the final handoff.                                                   |
 
 ## Verification matrix
 
-| Area | Primary check | Evidence |
-|---|---|---|
-| Planning | frontmatter, traceability, approval | prompt/spec/plan/approval |
-| Environment | key-name-only scan | env/config inventory |
-| Scripts | inventory, registry verify, smoke, judge | quick-command report + judge |
-| Hermes | doctor/list/capabilities + focused tests | Hermes surface report |
-| Hooks | list/doctor + isolated lifecycle test | hook report |
-| MCP | schema, sync, JSON-RPC/local probes, live tools | MCP report |
-| Dedupe | hashes and references | dedupe manifest |
-| Docker | dry-run, allowlist, apply, post-check | Docker report |
-| Release | tests, secret scan, status, push readback | release report |
+| Area        | Primary check                                   | Evidence                     |
+| ----------- | ----------------------------------------------- | ---------------------------- |
+| Planning    | frontmatter, traceability, approval             | prompt/spec/plan/approval    |
+| Environment | key-name-only scan                              | env/config inventory         |
+| Scripts     | inventory, registry verify, smoke, judge        | quick-command report + judge |
+| Hermes      | doctor/list/capabilities + focused tests        | Hermes surface report        |
+| Hooks       | list/doctor + isolated lifecycle test           | hook report                  |
+| MCP         | schema, sync, JSON-RPC/local probes, live tools | MCP report                   |
+| Dedupe      | hashes and references                           | dedupe manifest              |
+| Docker      | dry-run, allowlist, apply, post-check           | Docker report                |
+| Release     | tests, secret scan, status, push readback       | release report               |
 
 ## Rollback
 
@@ -123,40 +122,45 @@ Every phase writes secret-safe JSON/Markdown evidence with timestamp, scope, com
 
 ## Traceability
 
-| Requirement | Plan milestone | Verification |
-|---|---|---|
-| FR-001–FR-004 | M0–M2 | inventory/config reports |
-| FR-005–FR-009 | M3 | quick-command + judge reports |
-| FR-010–FR-012 | M4 | Hermes surface report |
-| FR-013 | M5 | MCP report + live calls |
-| FR-014–FR-015 | M6 | dedupe/Docker reports |
-| FR-016–FR-017 | M7–M8 | release/final reports |
+| Requirement   | Plan milestone | Verification                  |
+| ------------- | -------------- | ----------------------------- |
+| FR-001–FR-004 | M0–M2          | inventory/config reports      |
+| FR-005–FR-009 | M3             | quick-command + judge reports |
+| FR-010–FR-012 | M4             | Hermes surface report         |
+| FR-013        | M5             | MCP report + live calls       |
+| FR-014–FR-015 | M6             | dedupe/Docker reports         |
+| FR-016–FR-017 | M7–M8          | release/final reports         |
 
 ## Non-Functional Requirements
 
 ### NFR1: Performance
+
 - Quick command generation: < 30 seconds
 - Smoke test for 265 scripts: < 60 seconds
 - Environment sync: < 10 seconds
 - Docker cleanup: < 5 minutes
 
 ### NFR2: Reliability
+
 - All operations must be idempotent
 - Rollback must be possible for all changes
 - No data loss during cleanup
 
 ### NFR3: Maintainability
+
 - All scripts must have quick_commands
 - All skills must follow SKILL.md format
 - All plans must follow ./plans/ format
 - Documentation must be updated with changes
 
 ### NFR4: Security
+
 - No secrets in output or config.yaml
 - .env files must not be committed
 - Credential pool strategies must be maintained
 
 ## Verification
+
 - Run specs-judge with threshold 98 on all specs in ./specs/
 - Run plans-judge with threshold 98 on all plans in ./plans/
 - Run prompts-judge with threshold 98 on all prompts in .github/prompts/
@@ -167,6 +171,7 @@ Every phase writes secret-safe JSON/Markdown evidence with timestamp, scope, com
 - Confirm git push succeeds on all three branches
 
 ## Linked Plan
+
 ../plans/comprehensive-hermes-maintenance-plan.md
 
 ---

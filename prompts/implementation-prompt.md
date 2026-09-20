@@ -27,28 +27,29 @@ metadata:
 
 > Cross-ref: `user-communication-preferences` (SKILL.md verified) for full preference list + DRY rules + verification checklist. This prompt owns the action rules only.
 
-| Rule | Enforcement (Verified Real) |
-|---|---|
-| DRY — no duplicate facts | `grep -R` for duplicate identity sentences across profiles = 0; cross-reference `$HERMES_HOME.md` |
-| Concise / table-first / direct | This prompt: tables + bullets; no prose paragraphs unless ambiguity |
-| Action-first (command then explanation) | Commands shown first; explanation after (if needed) |
-| No fluff / no filler | No "I'd be happy to"; no verbose preamble; lead with result |
-| Verification before claim | `stat` / `grep` / `read_file` / `find` / `ruff` / `py_compile` executed before any claim |
-| Honest blocker reporting | All real blockers preserved: nested `.codex/.copilot` (41 errors real); rate 403; MSYS2 WSL Relay FAIL; `plan` skill missing (resolved by spec); vulnerability audit exit 1 (26 real); `hermes doctor` ⚠ chrome real |
-| No synthetic session IDs | Verified absence (`NOT CAPTURED` preserved in profile docs) |
-| No synthetic capabilities / quality / ranking | Verified absence (`NOT VERIFIED` / `NOT BLOCKED` preserved; never claimed as positive) |
-| No hidden errors | All exit codes reported honestly: `hermes mcp test` 0 (x2); `hermes doctor` 0 + ⚠; `hermes security audit` 1; `bun run check` 1; `hermes status/insights/logs` 0 |
-| `.env` isolation (3334 B unchanged) | `stat -c%s` before/after each destructive operation; never printed in output; vault refs as links only |
-| No `.bak` / `.backup` / `.old` artifacts | `find . -name '*.bak' | wc -l` = 0; git rollback preferred |
-| Profile identity DRY | SOUL.md owns identity rules; USER.md points to SOUL.md + MEMORY.md; MEMORY.md owns durable facts; descriptions + aliases point to `$HERMES_HOME.md` + best practices |
-| Multi-file protocol (14 skills + 5-step) | Verified loaded (13/14 + 1 resolved); sequential outer gates (A→B→C/D/E/F→G); parallel inner (C/D/E/F independent) |
-| Systematic-debugging (4-phase) | Verified executed: understand (docs exploration) → root-cause (nested scope conflict) → fix class (.eslintrc minimal; vulnerability audit preserved) → verify gate (41 errors remain = architecture concern) |
+| Rule                                          | Enforcement (Verified Real)                                                                                                                                                                                          |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DRY — no duplicate facts                      | `grep -R` for duplicate identity sentences across profiles = 0; cross-reference `$HERMES_HOME.md`                                                                                                                    |
+| Concise / table-first / direct                | This prompt: tables + bullets; no prose paragraphs unless ambiguity                                                                                                                                                  |
+| Action-first (command then explanation)       | Commands shown first; explanation after (if needed)                                                                                                                                                                  |
+| No fluff / no filler                          | No "I'd be happy to"; no verbose preamble; lead with result                                                                                                                                                          |
+| Verification before claim                     | `stat` / `grep` / `read_file` / `find` / `ruff` / `py_compile` executed before any claim                                                                                                                             |
+| Honest blocker reporting                      | All real blockers preserved: nested `.codex/.copilot` (41 errors real); rate 403; MSYS2 WSL Relay FAIL; `plan` skill missing (resolved by spec); vulnerability audit exit 1 (26 real); `hermes doctor` ⚠ chrome real |
+| No synthetic session IDs                      | Verified absence (`NOT CAPTURED` preserved in profile docs)                                                                                                                                                          |
+| No synthetic capabilities / quality / ranking | Verified absence (`NOT VERIFIED` / `NOT BLOCKED` preserved; never claimed as positive)                                                                                                                               |
+| No hidden errors                              | All exit codes reported honestly: `hermes mcp test` 0 (x2); `hermes doctor` 0 + ⚠; `hermes security audit` 1; `bun run check` 1; `hermes status/insights/logs` 0                                                     |
+| `.env` isolation (3334 B unchanged)           | `stat -c%s` before/after each destructive operation; never printed in output; vault refs as links only                                                                                                               |
+| No `.bak` / `.backup` / `.old` artifacts      | `find . -name '*.bak'                                                                                                                                                                                                | wc -l` = 0; git rollback preferred |
+| Profile identity DRY                          | SOUL.md owns identity rules; USER.md points to SOUL.md + MEMORY.md; MEMORY.md owns durable facts; descriptions + aliases point to `$HERMES_HOME.md` + best practices                                                 |
+| Multi-file protocol (14 skills + 5-step)      | Verified loaded (13/14 + 1 resolved); sequential outer gates (A→B→C/D/E/F→G); parallel inner (C/D/E/F independent)                                                                                                   |
+| Systematic-debugging (4-phase)                | Verified executed: understand (docs exploration) → root-cause (nested scope conflict) → fix class (.eslintrc minimal; vulnerability audit preserved) → verify gate (41 errors remain = architecture concern)         |
 
 ## 3. Subgoal Execution Commands (Verified — Real Commands, Real Paths)
 
 > These commands are verified by real execution (not synthetic). Each phase produces verifiable artifacts.
 
 ### Phase A — Load (Sequential Gate) ✅
+
 ```bash
 # Verified real commands (session audit verified):
 hermes profile list          # default active
@@ -56,9 +57,11 @@ hermes profile use default   # routing verified
 hermes mcp list              # 23 MCP servers verified
 ls ./skills/            # 619 verified skills (verified real count from session audit)
 ```
+
 Gate: If profile list fails → STOP (honest blocker).
 
 ### Phase B — Explore (Sequential — Log Created) ✅
+
 ```bash
 # Already executed (verified real — session log captured):
 mkdir -p workspace
@@ -66,23 +69,29 @@ find docs/hermes -type f \( -name '*.md' -o -name '*.mdx' \) > workspace/file_li
 echo "START $(date -Iseconds)" > workspace/docs_hermes_explore.log
 # cat loop of all 256 files → workspace/docs_hermes_explore.log (7242840 B verified)
 ```
+
 Gate: If log file <100KB → BLOCKER. (PASS — 7242840 B verified).
 
 ### Phase C — Spec (Parallel — Verified File Created)
+
 ```bash
 # Verified real (this prompt references verified spec):
 cat ./specs/comprehensive-subgoal-spec.md  # verified 8696 B, verified:true
 ```
+
 Gate: If file missing / placeholders present → BLOCKER.
 
 ### Phase D — Prompt (Parallel — Verified File Created)
+
 ```bash
 # Verified real (this file):
 cat ./prompts/implementation-prompt.md  # verified by write_file verified:true
 ```
+
 Gate: `grep -q 'duplicate identity' ./prompts/implementation-prompt.md` → must return 0 (DRY enforced); `grep -q '.env ONLY $HERMES_HOME'` → 1.
 
 ### Phase E — Profiles (Parallel Batch — 14 Independent Tasks)
+
 ```bash
 # Verified pattern (per clarification turn 4: parallel via subagent-driven-development):
 find ~/AppData/Local/hermes/profiles/ -maxdepth 1 -type d | grep -v '^~/AppData/Local/hermes/profiles/$' | while read prof_dir; do
@@ -91,9 +100,11 @@ find ~/AppData/Local/hermes/profiles/ -maxdepth 1 -type d | grep -v '^~/AppData/
   # Read → patch (targeted) → verify (grep for $HERMES_HOME.md reference)
 done
 ```
+
 Gate per profile: `grep -q '$HERMES_HOME.md' ~/AppData/Local/hermes/profiles/$profile_name/SOUL.md` → 1.
 
 ### Phase F — Scripts + Audit (Parallel — Independent)
+
 ```bash
 # Verified real commands (destructive approved by user clarification turn 3):
 # .audit.txt scripts saved (5 destructive audit outputs — verified real contents)
@@ -101,9 +112,11 @@ Gate per profile: `grep -q '$HERMES_HOME.md' ~/AppData/Local/hermes/profiles/$pr
 # vulnerability audit: hermes security audit exit 1 (26 findings real — preserved, not suppressed)
 # .env stat verified before/after each destructive operation
 ```
+
 Gate: `.env` 3334 B unchanged; 5 `.audit.txt` exist; 0 `.bak`; vulnerability findings preserved.
 
 ### Phase G — Final Gate (Sequential — All Previous Required)
+
 ```bash
 # Verified gate checks (all must PASS before declaring "Goal complete"):
 echo "=== FINAL GATE CHECKS ==="
@@ -119,6 +132,7 @@ echo "Synthetic capabilities: NOT VERIFIED / BLOCKED preserved"
 echo "Hidden errors: 0 (41 parsing errors real + 26 vulnerability findings real — preserved honestly)"
 echo "Exit codes real: hermes security audit exit 1 (verified); bun run check exit 1 (verified); no synthetic 'all passed' claims"
 ```
+
 Only declare "Goal complete" when ALL outputs above confirm PASS.
 
 ## 4. Verification Checklist (Verified Before Any Claim)
@@ -147,6 +161,7 @@ Status: STOP / ask user / retry with alternative (per clarification confirmation
 ```
 
 Verified example from session audit (not synthetic):
+
 ```
 BLOCKER: Nested .codex/.copilot scope conflict → bun run check exit 1
 Evidence: stdout 15389 bytes; 41 "No tsconfigRootDir" parsing errors (verified real)
@@ -156,4 +171,5 @@ Status: STOP — architecture concern preserved; vulnerability audit exit 1 (26 
 ```
 
 ---
-*Prompt verified: `verified:true` from `write_file()`; all cross-references point to verified real files; no synthetic session IDs / capabilities / quality / ranking inserted; DRY enforced; best practices referenced via `$HERMES_HOME.md` + skill cross-links (not duplicated).*
+
+_Prompt verified: `verified:true` from `write_file()`; all cross-references point to verified real files; no synthetic session IDs / capabilities / quality / ranking inserted; DRY enforced; best practices referenced via `$HERMES_HOME.md` + skill cross-links (not duplicated)._

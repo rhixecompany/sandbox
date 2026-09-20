@@ -5,13 +5,12 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 # Run All Goals — Specification (Phases 5-11)
 
 ## Phase 5: Diagnostic Repair
 
 ### Requirements
+
 - `hermes doctor --fix` exits with code 0
 - All 11 MCP servers test PASS
 - All hooks registered and approved
@@ -20,20 +19,22 @@ status: "in_progress"
 - Tooling MCP servers (python-quality, tooling-config, tooling-lint) connected
 
 ### Acceptance Criteria
-| Check | Command | Expected |
-|-------|---------|----------|
-| Doctor | `hermes doctor --fix` | Exit 0, no errors |
-| MCP Test | `hermes mcp test all` | All 11 PASS |
-| Hooks | `hermes hooks list` | 4+ active, 0 failed |
-| Plugins | `hermes plugins list` | 3+ enabled |
-| Profiles | `hermes profile use adminbot && hermes profile use default` | Switches cleanly |
-| Tooling MCP | `hermes mcp test python-quality && hermes mcp test tooling-config && hermes mcp test tooling-lint` | All PASS |
+
+| Check       | Command                                                                                            | Expected            |
+| ----------- | -------------------------------------------------------------------------------------------------- | ------------------- |
+| Doctor      | `hermes doctor --fix`                                                                              | Exit 0, no errors   |
+| MCP Test    | `hermes mcp test all`                                                                              | All 11 PASS         |
+| Hooks       | `hermes hooks list`                                                                                | 4+ active, 0 failed |
+| Plugins     | `hermes plugins list`                                                                              | 3+ enabled          |
+| Profiles    | `hermes profile use adminbot && hermes profile use default`                                        | Switches cleanly    |
+| Tooling MCP | `hermes mcp test python-quality && hermes mcp test tooling-config && hermes mcp test tooling-lint` | All PASS            |
 
 ---
 
 ## Phase 6: Free Model Tests + Report
 
 ### Requirements
+
 - Test all `:free` models on OpenRouter
 - Test all free models on opencode-zen
 - Generate markdown report with emoji, table format
@@ -41,20 +42,23 @@ status: "in_progress"
 - Configure best primary + fallback chain in config.yaml
 
 ### Acceptance Criteria
-| Check | Expected |
-|-------|----------|
-| OpenRouter models tested | ≥10 free models |
-| OpenCode-Zen models tested | ≥5 free models |
-| Report format | Emoji markdown table |
-| Report sections | Capabilities, Vision, Reasoning, Speed, Context |
-| Config updated | Primary + 2 fallbacks configured |
+
+| Check                      | Expected                                        |
+| -------------------------- | ----------------------------------------------- |
+| OpenRouter models tested   | ≥10 free models                                 |
+| OpenCode-Zen models tested | ≥5 free models                                  |
+| Report format              | Emoji markdown table                            |
+| Report sections            | Capabilities, Vision, Reasoning, Speed, Context |
+| Config updated             | Primary + 2 fallbacks configured                |
 
 ---
 
 ## Phase 7: Agent Sync (5 Agents)
 
 ### Requirements
+
 Sync hooks, skills, plugins, instructions to:
+
 1. `.github/copilot` (GitHub Copilot)
 2. `.codex` (OpenAI Codex)
 3. `.opencode` (OpenCode)
@@ -62,56 +66,63 @@ Sync hooks, skills, plugins, instructions to:
 5. `.cursor` (Cursor IDE)
 
 ### Acceptance Criteria
-| Asset Type | All 5 Identical? |
-|------------|------------------|
-| Hooks | Yes |
-| Skills | Yes |
-| Plugins | Yes |
-| Instructions | Yes |
-| Config files | Yes |
+
+| Asset Type   | All 5 Identical? |
+| ------------ | ---------------- |
+| Hooks        | Yes              |
+| Skills       | Yes              |
+| Plugins      | Yes              |
+| Instructions | Yes              |
+| Config files | Yes              |
 
 ---
 
 ## Phase 8: Cleanup & Consolidation
 
 ### Requirements
+
 Delete/clean:
+
 - `.enhance/`, `.goals/`, `$HERMES_HOME_diagnostics/`, `.mcp/`, `.*_cache/`, `.worktrees/`
 - `*.json`, `*.log`, `*.txt` temp files in root
 - Convert `*.mjs` → `*.mts`
 - Update `package.json`, `tsconfig.json`, `pyproject.toml`, `requirements.txt`
 
 ### Acceptance Criteria
-| Check | Expected |
-|-------|----------|
-| Temp dirs removed | 0 temp dirs remain |
+
+| Check              | Expected            |
+| ------------------ | ------------------- |
+| Temp dirs removed  | 0 temp dirs remain  |
 | Temp files removed | 0 temp files remain |
-| mjs→mts | All converted |
-| Configs updated | All current |
+| mjs→mts            | All converted       |
+| Configs updated    | All current         |
 
 ---
 
 ## Phase 9: Config/Scripts Sync
 
 ### Requirements
+
 - Sync `.env` across profiles (use `hermes config set` only)
 - Sync `config.yaml` via CLI
 - Sync `quick_commands.json`
 - Verify all 7 profiles consistent
 
 ### Acceptance Criteria
-| Config | Synced? |
-|--------|---------|
-| .env | Yes |
-| config.yaml | Yes |
-| quick_commands.json | Yes |
-| All 7 profiles | Yes |
+
+| Config              | Synced? |
+| ------------------- | ------- |
+| .env                | Yes     |
+| config.yaml         | Yes     |
+| quick_commands.json | Yes     |
+| All 7 profiles      | Yes     |
 
 ---
 
 ## Phase 10: Git Push (3 Branches)
 
 ### Requirements
+
 - Commit to `clean-development`
 - Push to `origin/clean-development`
 - Verify `development` branch
@@ -119,19 +130,22 @@ Delete/clean:
 - Tag release
 
 ### Acceptance Criteria
-| Branch | Pushed? |
-|--------|---------|
-| clean-development | Yes |
-| development | Yes |
-| production | Yes |
-| Tag | Created |
+
+| Branch            | Pushed? |
+| ----------------- | ------- |
+| clean-development | Yes     |
+| development       | Yes     |
+| production        | Yes     |
+| Tag               | Created |
 
 ---
 
 ## Phase 11: Judge Scores ≥ 99
 
 ### Requirements
+
 Run all 7 judges on relevant artifacts:
+
 - `plans-judge` on `./plans/*.md`
 - `specs-judge` on `./specs/*.md`
 - `prompts-judge` on `.github/prompts/**/*.prompt.md`
@@ -141,28 +155,29 @@ Run all 7 judges on relevant artifacts:
 - `scripts-judge` on `scripts/`
 
 ### Acceptance Criteria
-| Judge | Score ≥ 99? |
-|-------|-------------|
-| plans-judge | Yes |
-| specs-judge | Yes |
-| prompts-judge | Yes |
-| skill-judge | Yes |
-| hooks-judge | Yes |
-| plugins-judge | Yes |
-| scripts-judge | Yes |
+
+| Judge         | Score ≥ 99? |
+| ------------- | ----------- |
+| plans-judge   | Yes         |
+| specs-judge   | Yes         |
+| prompts-judge | Yes         |
+| skill-judge   | Yes         |
+| hooks-judge   | Yes         |
+| plugins-judge | Yes         |
+| scripts-judge | Yes         |
 
 ---
 
 ## Cross-Phase Dependencies
 
-| Phase | Depends On |
-|-------|------------|
-| 6 | 5 (doctor must pass) |
-| 7 | 5 (profiles must work) |
-| 8 | 5 (clean workspace) |
-| 9 | 5, 8 (configs after cleanup) |
-| 10 | 9 (configs synced) |
-| 11 | All prior (artifacts must exist) |
+| Phase | Depends On                       |
+| ----- | -------------------------------- |
+| 6     | 5 (doctor must pass)             |
+| 7     | 5 (profiles must work)           |
+| 8     | 5 (clean workspace)              |
+| 9     | 5, 8 (configs after cleanup)     |
+| 10    | 9 (configs synced)               |
+| 11    | All prior (artifacts must exist) |
 
 ---
 

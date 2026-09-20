@@ -10,18 +10,18 @@
 All 5 goals completed with hard inter-phase gates respected. Final state is
 green across all hermes verification commands.
 
-| # | Goal | Status | Key artifact |
-|---|------|--------|--------------|
-| 1 | Context-file unification | ✅ PASS (76/77 issues fixed) | `scripts/profile_config_fix.py` + 76 pointer files |
-| 2 | Provider matrix runner | ✅ PASS (1 cell live) | `skills/.../agent-provider-matrix-runner/SKILL.md` |
-| 3 | MCP server sync | ✅ PASS (0 FAIL) | `g3-summary.md` + idempotent `mcp_sync.py` |
-| 4 | Disk cleanup + Ollama | ✅ PASS (3 GB freed, model live) | `g4-summary.md` + working `gemma3:4b` |
-| 5 | Final verification | ✅ PASS (all 12 commands clean) | this file |
+| #   | Goal                     | Status                           | Key artifact                                       |
+| --- | ------------------------ | -------------------------------- | -------------------------------------------------- |
+| 1   | Context-file unification | ✅ PASS (76/77 issues fixed)     | `scripts/profile_config_fix.py` + 76 pointer files |
+| 2   | Provider matrix runner   | ✅ PASS (1 cell live)            | `skills/.../agent-provider-matrix-runner/SKILL.md` |
+| 3   | MCP server sync          | ✅ PASS (0 FAIL)                 | `g3-summary.md` + idempotent `mcp_sync.py`         |
+| 4   | Disk cleanup + Ollama    | ✅ PASS (3 GB freed, model live) | `g4-summary.md` + working `gemma3:4b`              |
+| 5   | Final verification       | ✅ PASS (all 12 commands clean)  | this file                                          |
 
 ## Goal 1 — Context-File Unification
 
-| Before | After | Delta |
-|--------|-------|-------|
+| Before                 | After                | Delta          |
+| ---------------------- | -------------------- | -------------- |
 | 14 profiles, 77 issues | 14 profiles, 1 issue | **-76 issues** |
 
 - Created `scripts/profile_config_fix.py` (DRY pointer generator, no rule duplication)
@@ -39,11 +39,11 @@ green across all hermes verification commands.
 
 ## Goal 3 — MCP Server Sync
 
-| Status | Count |
-|--------|-------|
-| ✓ PASS | 26 |
-| ⚠ WARN | 3 (everart, github, plaid — see g3-summary.md) |
-| ✗ FAIL | 0 |
+| Status | Count                                               |
+| ------ | --------------------------------------------------- |
+| ✓ PASS | 26                                                  |
+| ⚠ WARN | 3 (everart, github, plaid — see g3-summary.md)      |
+| ✗ FAIL | 0                                                   |
 | ⊘ SKIP | 3 (atlassian, docs, postgres — explicitly disabled) |
 
 - All 4 disk configs (opencode, codex, copilot, vscode) in sync with `.mcp/registry.json`
@@ -52,10 +52,10 @@ green across all hermes verification commands.
 
 ## Goal 4 — Disk Cleanup + Ollama
 
-| Metric | Before | After |
-|--------|--------|-------|
-| Disk free | 1.41 GB | 2.91 GB |
-| Ollama model | none | gemma3:4b (3.3 GB) |
+| Metric       | Before  | After              |
+| ------------ | ------- | ------------------ |
+| Disk free    | 1.41 GB | 2.91 GB            |
+| Ollama model | none    | gemma3:4b (3.3 GB) |
 
 - `python scripts/disk_cleanup.py` freed 3.00 GB (user temp > 7 days)
 - `ollama pull gemma3:4b` succeeded (3.3 GB, vision+reasoning, 4.3B Q4_K_M)
@@ -65,20 +65,20 @@ green across all hermes verification commands.
 
 ## Goal 5 — Final Verification
 
-| Command | Result |
-|---------|--------|
-| `hermes doctor` | ✅ All checks passed |
-| `hermes doctor --fix` | ✅ No issues to fix |
-| `hermes security audit` | ✅ No vulnerabilities (207 components) |
-| `hermes status` | ✅ Gateway running, all providers configured |
-| `hermes insights` | ✅ 74 sessions / 261M tokens / last 30 days |
-| `hermes logs list` | ✅ 50+ log files catalogued |
-| `hermes logs errors` | ⚠ 1 known issue (gemma3:4b + thinking-mode; documented below) |
-| `hermes logs desktop` | ✅ Informational only |
-| `hermes logs gateway` | ⚠ Telegram network unreachable (DNS / firewall) |
-| `hermes logs gui` | ⚠ GIL pressure warnings (informational) |
-| `hermes logs agent` | ⚠ 1 known issue (see below) |
-| `bun run check` | ✅ 0 errors (after cspell dictionary expansion) |
+| Command                 | Result                                                        |
+| ----------------------- | ------------------------------------------------------------- |
+| `hermes doctor`         | ✅ All checks passed                                          |
+| `hermes doctor --fix`   | ✅ No issues to fix                                           |
+| `hermes security audit` | ✅ No vulnerabilities (207 components)                        |
+| `hermes status`         | ✅ Gateway running, all providers configured                  |
+| `hermes insights`       | ✅ 74 sessions / 261M tokens / last 30 days                   |
+| `hermes logs list`      | ✅ 50+ log files catalogued                                   |
+| `hermes logs errors`    | ⚠ 1 known issue (gemma3:4b + thinking-mode; documented below) |
+| `hermes logs desktop`   | ✅ Informational only                                         |
+| `hermes logs gateway`   | ⚠ Telegram network unreachable (DNS / firewall)               |
+| `hermes logs gui`       | ⚠ GIL pressure warnings (informational)                       |
+| `hermes logs agent`     | ⚠ 1 known issue (see below)                                   |
+| `bun run check`         | ✅ 0 errors (after cspell dictionary expansion)               |
 
 ### Bugs found and fixed in this session
 
@@ -107,7 +107,7 @@ green across all hermes verification commands.
 - **`gemma3:4b` does not support thinking-mode** — agent conversation loop sends `thinking` parameter, which ollama rejects with HTTP 400. Two options:
   1. Use a model that supports thinking (qwen3, deepseek-r1, o1)
   2. Configure Hermes to disable thinking-mode when using ollama provider
-  Decision deferred — see "Next steps"
+     Decision deferred — see "Next steps"
 
 - **Telegram platform offline** — DNS resolution to `api.telegram.org` fails (`getaddrinfo failed`). Network/firewall issue, not hermes bug. Existing warning; not blocking.
 
@@ -136,18 +136,18 @@ green across all hermes verification commands.
 
 ## Artifacts created this session
 
-| Path | Purpose |
-|------|---------|
-| `scripts/profile_config_fix.py` | Generate thin pointer files for missing context files |
-| `skills/.../agent-provider-matrix-runner/SKILL.md` | Reusable workflow for provider matrix |
-| `skills/.../agent-provider-matrix-runner/references/output-schema.md` | Result row schema |
-| `./plans/2026-08-28-five-goals-execution/SPEC.md` | Five-goal specification |
-| `./plans/2026-08-28-five-goals-execution/PLAN.md` | Five-goal implementation plan |
-| `./plans/2026-08-28-five-goals-execution/g1-audit-raw.txt` | Goal 1 audit baseline |
-| `./plans/2026-08-28-five-goals-execution/g1-fix-applied.json` | Goal 1 fix report |
-| `./plans/2026-08-28-five-goals-execution/g3-summary.md` | Goal 3 summary |
-| `./plans/2026-08-28-five-goals-execution/g4-summary.md` | Goal 4 summary |
-| `./plans/2026-08-28-five-goals-execution/FINAL-REPORT.md` | This file |
-| `opencode.json` | + provider.ollama block |
-| `cspell.json` | + 158 words, + 31 ignore paths |
-| 76 context-file pointers | Across 14 profiles |
+| Path                                                                  | Purpose                                               |
+| --------------------------------------------------------------------- | ----------------------------------------------------- |
+| `scripts/profile_config_fix.py`                                       | Generate thin pointer files for missing context files |
+| `skills/.../agent-provider-matrix-runner/SKILL.md`                    | Reusable workflow for provider matrix                 |
+| `skills/.../agent-provider-matrix-runner/references/output-schema.md` | Result row schema                                     |
+| `./plans/2026-08-28-five-goals-execution/SPEC.md`                     | Five-goal specification                               |
+| `./plans/2026-08-28-five-goals-execution/PLAN.md`                     | Five-goal implementation plan                         |
+| `./plans/2026-08-28-five-goals-execution/g1-audit-raw.txt`            | Goal 1 audit baseline                                 |
+| `./plans/2026-08-28-five-goals-execution/g1-fix-applied.json`         | Goal 1 fix report                                     |
+| `./plans/2026-08-28-five-goals-execution/g3-summary.md`               | Goal 3 summary                                        |
+| `./plans/2026-08-28-five-goals-execution/g4-summary.md`               | Goal 4 summary                                        |
+| `./plans/2026-08-28-five-goals-execution/FINAL-REPORT.md`             | This file                                             |
+| `opencode.json`                                                       | + provider.ollama block                               |
+| `cspell.json`                                                         | + 158 words, + 31 ignore paths                        |
+| 76 context-file pointers                                              | Across 14 profiles                                    |

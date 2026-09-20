@@ -8,6 +8,7 @@ slug: instruction-triage-impl-2026-08-28
 ## Step 1: Audit script (no execution yet)
 
 File: `scripts/instruction_audit.py`
+
 - 200-300 lines, stdlib only
 - Function: `audit(root_paths, skip_patterns) -> AuditReport`
 - Walks, classifies per SPEC §3, emits JSON per SPEC §4
@@ -23,12 +24,14 @@ cp scripts/.runtime/instruction-audit.json ./plans/instruction-file-triage-2026-
 ## Step 3: Generate human-readable report
 
 `scripts/render_audit_report.py` (or inline python): JSON → markdown
+
 - Table per file with: path, type, size, lines, class, issues
 - Summary section: counts, top 10 bloat files, top 10 duplicates
 
 ## Step 4: Fix script (whitelist only)
 
 File: `scripts/instruction_fix.py`
+
 - 150-200 lines
 - Loads `templates/whitelist-fixes.json`
 - For each file in scope, applies each rule
@@ -45,6 +48,7 @@ python scripts/instruction_fix.py --dry-run
 ## Step 6: Publish skill
 
 `~/AppData/Local/hermes/skills/agent-core-architecture/instruction-triage/`
+
 - `SKILL.md` (≤250 lines)
 - `references/classification-rules.md`
 - `references/whitelist-fixes.md`

@@ -9,6 +9,7 @@
 ## 📌 Quick Start
 
 ### View the Reports
+
 ```bash
 # Quick status (2-3 min read)
 cat ./mcp-validation-report.md
@@ -24,11 +25,13 @@ cat ./mcp-server-audit-index.md
 ```
 
 ### Run Validation
+
 ```bash
 python scripts/validate-mcp-servers.py
 ```
 
 ### Sync Configurations
+
 ```powershell
 powershell scripts/sync-mcp-configs.ps1
 ```
@@ -37,31 +40,33 @@ powershell scripts/sync-mcp-configs.ps1
 
 ## 📊 What Was Accomplished
 
-| Task | Result | Details |
-|------|--------|---------|
-| **Audit** | ✅ Complete | 31 servers tested across 4 configs |
-| **Validation** | ✅ Complete | 19 working, 12 analyzed |
-| **New Servers** | ✅ 6 Added | Stripe, Plaid, Anthropic, Time, Evals, EverArt |
-| **Sync** | ✅ Complete | opencode.json → Copilot & Codex |
-| **Automation** | ✅ Created | Validation + Sync scripts |
-| **Documentation** | ✅ 4 Reports | Quick, detailed, session, and index |
+| Task              | Result       | Details                                        |
+| ----------------- | ------------ | ---------------------------------------------- |
+| **Audit**         | ✅ Complete  | 31 servers tested across 4 configs             |
+| **Validation**    | ✅ Complete  | 19 working, 12 analyzed                        |
+| **New Servers**   | ✅ 6 Added   | Stripe, Plaid, Anthropic, Time, Evals, EverArt |
+| **Sync**          | ✅ Complete  | opencode.json → Copilot & Codex                |
+| **Automation**    | ✅ Created   | Validation + Sync scripts                      |
+| **Documentation** | ✅ 4 Reports | Quick, detailed, session, and index            |
 
 ---
 
 ## 🎯 Key Findings
 
 ### Working Servers (19) ✅
+
 - All local commands available
 - GitHub, Docker, Postgres, Playwright all functional
 - Python quality tools working
 - Sequential thinking and memory functional
 
 ### Broken Servers Analysis (12)
-| Category | Count | Explanation |
-|----------|-------|-------------|
-| False Positives | 7 | Auth/method issues, likely work at runtime |
-| Real Issues | 4 | Wrong endpoints or MCP not released |
-| Research Needed | 1 | Service availability unclear |
+
+| Category        | Count | Explanation                                |
+| --------------- | ----- | ------------------------------------------ |
+| False Positives | 7     | Auth/method issues, likely work at runtime |
+| Real Issues     | 4     | Wrong endpoints or MCP not released        |
+| Research Needed | 1     | Service availability unclear               |
 
 ---
 
@@ -91,6 +96,7 @@ Configuration Files (3, all synced):
 ## 🔧 Environment Setup
 
 ### Currently Configured
+
 ```
 ✓ TAVILY_API_KEY
 ✓ OPENCODE_ZEN_API_KEY
@@ -101,6 +107,7 @@ Configuration Files (3, all synced):
 ```
 
 ### Missing (Add to .env)
+
 ```
 GITHUB_TOKEN=ghp_your_token_here
 DATABASE_URL=postgresql://user:pass@host:5432/db
@@ -111,6 +118,7 @@ DATABASE_URL=postgresql://user:pass@host:5432/db
 ## 🚀 Usage Examples
 
 ### Validate All MCP Servers
+
 ```bash
 cd C:\Users\Alexa\Desktop\SandBox
 python scripts/validate-mcp-servers.py
@@ -119,6 +127,7 @@ python scripts/validate-mcp-servers.py
 ```
 
 ### Sync After Adding New Server
+
 ```bash
 # 1. Edit opencode.json, add new server
 # 2. Run sync script:
@@ -129,6 +138,7 @@ python scripts/validate-mcp-servers.py
 ```
 
 ### Check Specific Server
+
 ```bash
 # See detailed report for per-server information
 type ./mcp-validation-report-detailed.md | findstr "stripe"
@@ -139,10 +149,12 @@ type ./mcp-validation-report-detailed.md | findstr "stripe"
 ## 📋 Server Categories
 
 ### By Type
+
 - **Local (25)**: Commands run on Windows
 - **Remote (6)**: HTTP endpoints
 
 ### By Status
+
 - **Working (19)**: Fully functional
 - **Auth Needed (3)**: Env vars set, need runtime auth
 - **Method Issue (4)**: Don't accept HEAD, work with GET
@@ -150,30 +162,34 @@ type ./mcp-validation-report-detailed.md | findstr "stripe"
 - **DNS Fail (1)**: Domain lookup failed
 
 ### By Project
-| Project | Recommended | Status |
-|---------|-------------|--------|
-| Banking | github, postgres, plaid | ⚠️ Need GITHUB_TOKEN, DATABASE_URL, Plaid MCP |
-| comicwise | github, fetch, stripe | ⚠️ Need stripe integration |
-| ecom | django, postgres, pytest | ⚠️ Need DATABASE_URL |
-| Python | python-quality, pytest | ✅ Ready |
+
+| Project   | Recommended              | Status                                        |
+| --------- | ------------------------ | --------------------------------------------- |
+| Banking   | github, postgres, plaid  | ⚠️ Need GITHUB_TOKEN, DATABASE_URL, Plaid MCP |
+| comicwise | github, fetch, stripe    | ⚠️ Need stripe integration                    |
+| ecom      | django, postgres, pytest | ⚠️ Need DATABASE_URL                          |
+| Python    | python-quality, pytest   | ✅ Ready                                      |
 
 ---
 
 ## ⏭️ Recommended Actions
 
 ### This Week
+
 1. [ ] Add GITHUB_TOKEN to .env
 2. [ ] Add DATABASE_URL to .env
 3. [ ] Test with OpenCode/Copilot CLI
 4. [ ] Verify "broken" servers work at runtime
 
 ### This Sprint
+
 1. [ ] Research Stripe/Plaid MCP availability
 2. [ ] Add to CI/CD: `validate-mcp-servers.py`
 3. [ ] Remove placeholder servers if not available
 4. [ ] Create per-project setup guides
 
 ### This Quarter
+
 1. [ ] Build MCP discovery dashboard
 2. [ ] Document MCP capabilities for agents
 3. [ ] Create custom MCP wrappers if needed
@@ -186,6 +202,7 @@ type ./mcp-validation-report-detailed.md | findstr "stripe"
 ### Q: Why does the report show a server as broken but it works?
 
 **A:** The validation script tests raw HTTP without authentication headers. Servers showing:
+
 - **401 error** = Need auth (but env vars are set; will work at runtime)
 - **405 error** = Don't accept HEAD requests (but work with GET/POST)
 
@@ -194,6 +211,7 @@ These servers work fine when the agent loads them with proper credentials.
 ### Q: How do I add a new MCP server?
 
 **A:**
+
 1. Add config to `opencode.json` under `"mcp"` section
 2. Run `powershell scripts/sync-mcp-configs.ps1`
 3. Run `python scripts/validate-mcp-servers.py`
@@ -206,6 +224,7 @@ These servers work fine when the agent loads them with proper credentials.
 ### Q: Which servers are most important?
 
 **A:**
+
 - Essential: github, filesystem, postgres, python-quality
 - Useful: fetch, playwright, sequential-thinking, memory
 - Project-specific: django (ecom), pytest (testing)
@@ -215,12 +234,14 @@ These servers work fine when the agent loads them with proper credentials.
 ## 📞 Support
 
 ### Documentation References
+
 - Quick overview: `mcp-validation-report.md`
 - Full guide: `mcp-validation-report-detailed.md`
 - Session summary: `mcp-sync-session-summary.md`
 - Master index: `mcp-server-audit-index.md`
 
 ### Script Help
+
 ```bash
 # View script source
 type scripts/validate-mcp-servers.py
@@ -228,6 +249,7 @@ type scripts/sync-mcp-configs.ps1
 ```
 
 ### Git History
+
 ```bash
 git log --oneline | grep "MCP\|mcp"  # Find all MCP-related commits
 git show 9cbdc509                    # View latest MCP commit
@@ -237,19 +259,19 @@ git show 9cbdc509                    # View latest MCP commit
 
 ## 📈 Metrics Summary
 
-| Metric | Value |
-|--------|-------|
-| Total MCP Servers | 31 |
-| New Servers Added | 6 |
-| Working Servers | 19 (61%) |
-| Flagged Servers | 12 (39%) |
-| False Positives | ~8 |
-| Real Issues | ~4 |
-| Config Files Synced | 3/3 |
-| Env Vars Configured | 6/8 |
-| Automation Scripts | 2 |
-| Reports Generated | 4 |
-| Git Commits | 1 |
+| Metric              | Value    |
+| ------------------- | -------- |
+| Total MCP Servers   | 31       |
+| New Servers Added   | 6        |
+| Working Servers     | 19 (61%) |
+| Flagged Servers     | 12 (39%) |
+| False Positives     | ~8       |
+| Real Issues         | ~4       |
+| Config Files Synced | 3/3      |
+| Env Vars Configured | 6/8      |
+| Automation Scripts  | 2        |
+| Reports Generated   | 4        |
+| Git Commits         | 1        |
 
 ---
 

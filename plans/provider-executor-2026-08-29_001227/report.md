@@ -5,6 +5,7 @@ Prompt: `Reply OK`
 Timeout: 25s
 
 ## Summary
+
 - Tested: 1
 - OK: 0
 - FAIL: 1
@@ -12,8 +13,8 @@ Timeout: 25s
 
 ## Per-provider results
 
-| Provider | Model | OK | Elapsed (s) | Exit | Stderr (first 200) |
-|---|---|---|---|---|---|
-| gemini | `gemini-2.5-flash` | ✗ | 25.11 | -1 | TIMEOUT after 25s |
+| Provider | Model              | OK  | Elapsed (s) | Exit | Stderr (first 200) |
+| -------- | ------------------ | --- | ----------- | ---- | ------------------ |
+| gemini   | `gemini-2.5-flash` | ✗   | 25.11       | -1   | TIMEOUT after 25s  |
 
 ## Successful responses (truncated)

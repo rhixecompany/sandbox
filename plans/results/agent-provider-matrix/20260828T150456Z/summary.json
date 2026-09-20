@@ -1,88 +1,85 @@
 {
-  "generated_at": "2026-08-28T15:04:56+00:00",
-  "root": "C:/Users/Alexa/Desktop/SandBox",
-  "results_root": "C:/Users/Alexa/Desktop/SandBox/./plans/results/agent-provider-matrix/20260828T150456Z",
-  "providers": [
-    "copilot",
-    "deepseek",
-    "gemini",
-    "huggingface",
-    "ollama-cloud",
-    "openai-codex",
-    "opencode-zen",
-    "openrouter",
-    "xai",
-    "xai-oauth"
-  ],
-  "profiles": [
-    "default",
-    "alexa",
-    "code-architect",
-    "creative-director",
-    "cto",
-    "designer",
-    "dev",
-    "exec-assistant",
-    "ops",
-    "patient-tutor",
-    "pm",
-    "qa",
-    "research-analyst",
-    "security"
-  ],
-  "packages": [
-    "openrouter-client",
-    "openrouter-client-py"
-  ],
-  "result_count": 1,
-  "results": [
-    {
-      "profile": "default",
-      "provider": "copilot",
-      "package_context": "- openrouter-client (typescript, bun)\n  summary: TypeScript/Bun OpenRouter wrapper with TypeScript wrapper, OpenRouter SDK client, chat completions, streaming\n  capabilities: TypeScript wrapper, OpenRouter SDK client, chat completions, streaming, custom headers, max_tokens, temperature control, typed client\n  files: PLAN.md, README.md, SPEC.md, package.json, src/chat.ts, src/client.ts, src/types.ts, test/chat.test.ts … (+1 more)\n- openrouter-client-py (python, python)\n  summary: Python OpenRouter wrapper with Python wrapper, OpenRouter client, chat completions, streaming\n  capabilities: Python wrapper, OpenRouter client, chat completions, streaming, custom headers, max_tokens, temperature control, dataclasses\n  files: .pytest_cache/README.md, PLAN.md, README.md, SPEC.md, pyproject.toml, src/openrouter_client_py.egg-info/SOURCES.txt, src/openrouter_client_py.egg-info/dependency_links.txt, src/openrouter_client_py.egg-info/requires.txt … (+6 more)",
-      "max_output": 1200,
-      "capabilities": [
-        "TypeScript wrapper",
-        "OpenRouter SDK client",
-        "chat completions",
-        "streaming",
-        "custom headers",
-        "max_tokens",
-        "temperature control",
-        "typed client",
-        "Python wrapper",
-        "OpenRouter client",
-        "dataclasses"
-      ],
-      "model": "gpt-5.4-mini",
-      "command": [
-        "hermes",
-        "-p",
-        "default",
-        "chat",
-        "--query-file",
-        "C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T150456Z\\default\\copilot\\request.md",
-        "--provider",
-        "copilot",
-        "--quiet",
-        "--pass-session-id",
-        "--source",
-        "agent-provider-matrix",
-        "--max-turns",
-        "20",
-        "--run-budget",
-        "300"
-      ],
-      "exit_code": 0,
-      "duration_ms": 0,
-      "status": "dry-run",
-      "response_excerpt": "",
-      "result_path": "C:/Users/Alexa/Desktop/SandBox/./plans/results/agent-provider-matrix/20260828T150456Z/default/copilot/result.json",
-      "notes": "Dry run: command not executed.",
-      "assumptions": [
-        "provider/model defaults are selected by Hermes unless an explicit override is supplied",
-        "package capability extraction is heuristic and based on files under packages/**/*"
-      ]
-    }
-  ]
+	"generated_at": "2026-08-28T15:04:56+00:00",
+	"root": "C:/Users/Alexa/Desktop/SandBox",
+	"results_root": "C:/Users/Alexa/Desktop/SandBox/./plans/results/agent-provider-matrix/20260828T150456Z",
+	"providers": [
+		"copilot",
+		"deepseek",
+		"gemini",
+		"huggingface",
+		"ollama-cloud",
+		"openai-codex",
+		"opencode-zen",
+		"openrouter",
+		"xai",
+		"xai-oauth"
+	],
+	"profiles": [
+		"default",
+		"alexa",
+		"code-architect",
+		"creative-director",
+		"cto",
+		"designer",
+		"dev",
+		"exec-assistant",
+		"ops",
+		"patient-tutor",
+		"pm",
+		"qa",
+		"research-analyst",
+		"security"
+	],
+	"packages": ["openrouter-client", "openrouter-client-py"],
+	"result_count": 1,
+	"results": [
+		{
+			"profile": "default",
+			"provider": "copilot",
+			"package_context": "- openrouter-client (typescript, bun)\n  summary: TypeScript/Bun OpenRouter wrapper with TypeScript wrapper, OpenRouter SDK client, chat completions, streaming\n  capabilities: TypeScript wrapper, OpenRouter SDK client, chat completions, streaming, custom headers, max_tokens, temperature control, typed client\n  files: PLAN.md, README.md, SPEC.md, package.json, src/chat.ts, src/client.ts, src/types.ts, test/chat.test.ts … (+1 more)\n- openrouter-client-py (python, python)\n  summary: Python OpenRouter wrapper with Python wrapper, OpenRouter client, chat completions, streaming\n  capabilities: Python wrapper, OpenRouter client, chat completions, streaming, custom headers, max_tokens, temperature control, dataclasses\n  files: .pytest_cache/README.md, PLAN.md, README.md, SPEC.md, pyproject.toml, src/openrouter_client_py.egg-info/SOURCES.txt, src/openrouter_client_py.egg-info/dependency_links.txt, src/openrouter_client_py.egg-info/requires.txt … (+6 more)",
+			"max_output": 1200,
+			"capabilities": [
+				"TypeScript wrapper",
+				"OpenRouter SDK client",
+				"chat completions",
+				"streaming",
+				"custom headers",
+				"max_tokens",
+				"temperature control",
+				"typed client",
+				"Python wrapper",
+				"OpenRouter client",
+				"dataclasses"
+			],
+			"model": "gpt-5.4-mini",
+			"command": [
+				"hermes",
+				"-p",
+				"default",
+				"chat",
+				"--query-file",
+				"C:\\Users\\Alexa\\Desktop\\SandBox\\./\plans\\results\\agent-provider-matrix\\20260828T150456Z\\default\\copilot\\request.md",
+				"--provider",
+				"copilot",
+				"--quiet",
+				"--pass-session-id",
+				"--source",
+				"agent-provider-matrix",
+				"--max-turns",
+				"20",
+				"--run-budget",
+				"300"
+			],
+			"exit_code": 0,
+			"duration_ms": 0,
+			"status": "dry-run",
+			"response_excerpt": "",
+			"result_path": "C:/Users/Alexa/Desktop/SandBox/./plans/results/agent-provider-matrix/20260828T150456Z/default/copilot/result.json",
+			"notes": "Dry run: command not executed.",
+			"assumptions": [
+				"provider/model defaults are selected by Hermes unless an explicit override is supplied",
+				"package capability extraction is heuristic and based on files under packages/**/*"
+			]
+		}
+	]
 }

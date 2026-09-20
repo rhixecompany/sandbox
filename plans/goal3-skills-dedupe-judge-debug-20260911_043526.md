@@ -10,22 +10,22 @@ trigger_threshold: >6 file changes → load multi-file-change-protocol (this pla
 
 ## Decision Lock (from clarifications)
 
-| Decision | Value |
-|---|---|
-| Pipeline scope | FULL end-to-end (list → dedupe → judge ≥90 → debug ascending-modified) |
-| Judge method | Existing `skill-judge` skill via Hermes CLI / `batch-skill-judge` (development) |
-| Batch size | ≤5 skills per turn |
-| Order | ascending by `hermes skills list-modified` |
+| Decision       | Value                                                                           |
+| -------------- | ------------------------------------------------------------------------------- |
+| Pipeline scope | FULL end-to-end (list → dedupe → judge ≥90 → debug ascending-modified)          |
+| Judge method   | Existing `skill-judge` skill via Hermes CLI / `batch-skill-judge` (development) |
+| Batch size     | ≤5 skills per turn                                                              |
+| Order          | ascending by `hermes skills list-modified`                                      |
 
 ## Discovery (current state)
 
-| Metric | Value |
-|---|---|
-| Total installed skills (`hermes skills list`) | **~1,120** (1,123 rows − 3 header) |
-| User-modified bundled skills (`list-modified`) | **32** |
-| `skill-judge` skill | local, enabled |
-| `batch-skill-judge` skill | development category, enabled |
-| Existing `dedupe-skills` skill | patched this session |
+| Metric                                         | Value                              |
+| ---------------------------------------------- | ---------------------------------- |
+| Total installed skills (`hermes skills list`)  | **~1,120** (1,123 rows − 3 header) |
+| User-modified bundled skills (`list-modified`) | **32**                             |
+| `skill-judge` skill                            | local, enabled                     |
+| `batch-skill-judge` skill                      | development category, enabled      |
+| Existing `dedupe-skills` skill                 | patched this session               |
 
 ## Phase 1 — Capture Initial State
 
@@ -39,6 +39,7 @@ wc -l initial-skills.txt  # record baseline
 ## Phase 2 — Identify Duplicates
 
 Parse `initial-skills.txt`:
+
 1. Extract `Name` column (truncated names with `…` need expansion via `hermes skills inspect <name>`)
 2. Normalize: strip `-v2`, `-1`, `_final`, `(copy)`, `(2)`, `[old]`
 3. Group by normalized name
@@ -58,6 +59,7 @@ hermes skills uninstall <loser-name>
 ```
 
 Rules:
+
 - Preserve category version over root duplicate (e.g. keep `devops/hermes-setup`, delete root `hermes-setup`)
 - Preserve skills.sh (community) version over copy if both present (community is upstream)
 - If `[SKILL_PRUNED]` is in EVERY dup → restore from bundle before delete
@@ -109,13 +111,13 @@ Apply fixes via `patch` (no full rewrites unless ≥30% body change).
 
 ## Risks & Mitigations
 
-| Risk | Mitigation |
-|---|---|
-| Accidentally delete USER-OWNED skill | Cross-check against MEMORY.md USER-OWNED list before every delete |
-| Skill body has [SKILL_PRUNED] | Skip delete; run `hermes skills reset` to restore from bundle first |
+| Risk                                                                      | Mitigation                                                             |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Accidentally delete USER-OWNED skill                                      | Cross-check against MEMORY.md USER-OWNED list before every delete      |
+| Skill body has [SKILL_PRUNED]                                             | Skip delete; run `hermes skills reset` to restore from bundle first    |
 | 1,120 skills = many false-positive dups (similar names, different scopes) | Inspect before delete; only delete when normalized names match exactly |
-| Judge threshold unreachable for thin skills | Patch body to ≥10 lines with real workflow content |
-| Race with other sessions | Re-run `hermes skills list` immediately before each batch of deletes |
+| Judge threshold unreachable for thin skills                               | Patch body to ≥10 lines with real workflow content                     |
+| Race with other sessions                                                  | Re-run `hermes skills list` immediately before each batch of deletes   |
 
 ## Out of Scope
 
@@ -128,13 +130,13 @@ Apply fixes via `patch` (no full rewrites unless ≥30% body change).
 
 ## Estimated Effort
 
-| Phase | Skills touched | Turns |
-|---|---|---|
-| 1 (capture) | 0 | 1 |
-| 2 (identify dups) | 0 (analysis only) | 1-2 |
-| 3 (delete dups) | TBD (~50-200 expected) | 1-3 |
-| 4 (log updated) | 0 | 1 |
-| 5 (judge batch) | all remaining | 1 (script run) |
-| 6 (debug 32 modified) | 32 | 7 (5/turn, last = 2) |
+| Phase                 | Skills touched         | Turns                |
+| --------------------- | ---------------------- | -------------------- |
+| 1 (capture)           | 0                      | 1                    |
+| 2 (identify dups)     | 0 (analysis only)      | 1-2                  |
+| 3 (delete dups)       | TBD (~50-200 expected) | 1-3                  |
+| 4 (log updated)       | 0                      | 1                    |
+| 5 (judge batch)       | all remaining          | 1 (script run)       |
+| 6 (debug 32 modified) | 32                     | 7 (5/turn, last = 2) |
 
 Total: ~12-15 turns.

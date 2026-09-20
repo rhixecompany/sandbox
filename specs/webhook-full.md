@@ -5,7 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
 # Webhook Implementation Spec — Hermes Agent
 
 > Status: DRAFT | Version: 1.0.0 | Profile: adminbot | Date: 2026-09-13
@@ -35,15 +34,16 @@ Every route (static or dynamic) is a JSON/YAML object with these properties:
 
 ## 3. Signature Verification (security layer)
 
-| Source | Header(s) | Method |
-|---|---|---|
-| GitHub | `X-Hub-Signature-256` | HMAC-SHA256 hex, prefixed `sha256=` |
-| GitLab | `X-Gitlab-Token` | Plain secret string match (exact) |
-| Standard Webhooks | `webhook-id`, `webhook-timestamp`, `webhook-signature` | Signed content = `{id}.{timestamp}.{raw_body}`; `v1,<base64-hmac-sha256>` |
-| Generic V2 (recommended) | `X-Webhook-Signature-V2` + `X-Webhook-Timestamp` | HMAC-SHA256 of `<timestamp>.<body>`; timestamp in Unix seconds; must be within ±300s of server clock (replay protection) |
-| Generic V1 (legacy) | `X-Webhook-Signature` | Raw HMAC-SHA256 of body; no replay protection; gateway logs deprecation warning once per route; switch senders to V2 |
+| Source                   | Header(s)                                              | Method                                                                                                                   |
+| ------------------------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| GitHub                   | `X-Hub-Signature-256`                                  | HMAC-SHA256 hex, prefixed `sha256=`                                                                                      |
+| GitLab                   | `X-Gitlab-Token`                                       | Plain secret string match (exact)                                                                                        |
+| Standard Webhooks        | `webhook-id`, `webhook-timestamp`, `webhook-signature` | Signed content = `{id}.{timestamp}.{raw_body}`; `v1,<base64-hmac-sha256>`                                                |
+| Generic V2 (recommended) | `X-Webhook-Signature-V2` + `X-Webhook-Timestamp`       | HMAC-SHA256 of `<timestamp>.<body>`; timestamp in Unix seconds; must be within ±300s of server clock (replay protection) |
+| Generic V1 (legacy)      | `X-Webhook-Signature`                                  | Raw HMAC-SHA256 of body; no replay protection; gateway logs deprecation warning once per route; switch senders to V2     |
 
 Rules:
+
 - If secret configured but no recognized header present → reject.
 - If `secret` missing (and no global fallback) → adapter fails at startup.
 - `INSECURE_NO_AUTH` + loopback only; else adapter refuses to start.
@@ -71,6 +71,7 @@ Rules:
 > Authenticated ≠ trusted. HMAC validates sender identity, not payload content. PR titles, commit messages, issue descriptions, and any upstream text authored by arbitrary third parties must be treated as untrusted input.
 
 Hardening rules (from docs warning box):
+
 1. Sandbox runtime: use Docker or SSH terminal backend (or VM) when exposed to internet; a hijacked turn must not touch host.
 2. Scope toolset: disable `terminal`, `file`, outbound-action tools on webhook-triggered sessions if route only reads/summarizes. Fewer capabilities = smaller blast radius.
 3. Keep approvals on for destructive/outbound operations; injected instruction cannot act unattended.
@@ -105,6 +106,7 @@ Validation: unknown/restricted names dropped; route-level list replaces (not mer
 ## 9. Direct Delivery Mode (subgoal SG3/SG6)
 
 `deliver_only: true` skips agent; rendered `prompt` becomes literal message delivered synchronously.
+
 - Requires `deliver` to be real target (not `log`); adapter refuses to start otherwise.
 - `skills` ignored (no agent runs).
 - Template uses same `{dot}` syntax, including `{__raw__}`.
@@ -121,16 +123,16 @@ Supported `deliver` targets (must be enabled/connected in gateway): `github_comm
 
 ## 11. Subgoals → Deliverable Mapping (verified)
 
-| Subgoal | Deliverable file(s) | Section reference |
-|---|---|---|
-| SG1 (spec) | `./specs/webhook-full.md` (this file) | Sections 1–11 |
-| SG2 (plan) | `./plans/webhook-execution-plan.md` | Milestones M1–M4 |
-| SG3 (prompt) | `.github/prompts/webhook/webhook-template.md`, `.github/prompts/webhook/direct-delivery-template.md` | Section 5 |
-| SG4 (scripts) | `scripts/webhook_filter_todoist.py` (filter/transform), `scripts/webhook_test_payload.py` (test) | Section 2 (`script`) |
-| SG5 (skills) | `skills/webhook-subscriptions.md` (SKILL.md), `skills/per-route-toolsets.md` (SKILL.md) | Sections 7–8 |
-| SG6 (routes/config) | `docs/webhook-routes-config.md`, `.env.webhook-example`, `webhook_subscriptions-example.json` | Sections 2–4, 6–9 |
-| SG7 (impl prompt) | `.github/prompts/webhook/implementation-prompt.md` | References SG1–SG6 |
-| SG8 (verify) | `docs/webhook-implementation-report.md` | Checklist of 8 gates |
+| Subgoal             | Deliverable file(s)                                                                                  | Section reference    |
+| ------------------- | ---------------------------------------------------------------------------------------------------- | -------------------- |
+| SG1 (spec)          | `./specs/webhook-full.md` (this file)                                                                | Sections 1–11        |
+| SG2 (plan)          | `./plans/webhook-execution-plan.md`                                                                  | Milestones M1–M4     |
+| SG3 (prompt)        | `.github/prompts/webhook/webhook-template.md`, `.github/prompts/webhook/direct-delivery-template.md` | Section 5            |
+| SG4 (scripts)       | `scripts/webhook_filter_todoist.py` (filter/transform), `scripts/webhook_test_payload.py` (test)     | Section 2 (`script`) |
+| SG5 (skills)        | `skills/webhook-subscriptions.md` (SKILL.md), `skills/per-route-toolsets.md` (SKILL.md)              | Sections 7–8         |
+| SG6 (routes/config) | `docs/webhook-routes-config.md`, `.env.webhook-example`, `webhook_subscriptions-example.json`        | Sections 2–4, 6–9    |
+| SG7 (impl prompt)   | `.github/prompts/webhook/implementation-prompt.md`                                                   | References SG1–SG6   |
+| SG8 (verify)        | `docs/webhook-implementation-report.md`                                                              | Checklist of 8 gates |
 
 ## 12. Verification Gates (per subgoal)
 

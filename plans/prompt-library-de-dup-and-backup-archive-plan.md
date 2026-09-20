@@ -27,12 +27,14 @@ Status badge: ![In progress](https://img.shields.io/badge/status-in%20progress-y
 ## 2. Implementation Phases (audit-first sequential; then parallel artifact creation)
 
 ### Phase 1 — Audit & Triage (COMPLETE — verified via execute_code)
+
 - GOAL-P1: Build full audit (filename + MD5) of both directories.
 - TASK-P1-1: Run audit script → `./specs/prompt-library-de-dup-audit.md` + `.json`.
 - TASK-P1-2: Triage results saved (373 filename duplicates found across 1550 prompts / 676 backups; 29 exact + 21 divergent in first-50 sample).
 - GATE-P1: Audit artifacts exist and contain filename-match list.
 
 ### Phase 2 — Merge / Refactor Prompts (destructive to backup; updates prompts)
+
 - GOAL-P2: Apply triage rules file-by-file; delete .github/prompts_backup after migration.
 - TASK-P2-1: For each EXACT_DUP in audit JSON → delete backup file; log action.
 - TASK-P2-2: For each DIVERGENT → copy backup content over prompts file (overwrite); delete backup; log hash change.
@@ -41,6 +43,7 @@ Status badge: ![In progress](https://img.shields.io/badge/status-in%20progress-y
 - GATE-P2: .github/prompts_backup directory removed or empty; audit log shows each action; no backup file remains unprocessed.
 
 ### Phase 3 — Artifact Creation (parallel subagent-capable phases)
+
 - GOAL-P3-A: `./plans/prompt-library-de-dup-and-backup-archive-plan.md` (this file) — complete.
 - GOAL-P3-B: `./specs/prompt-library-de-dup-and-backup-archive-spec.md` — spec document with architecture, acceptance criteria, file list.
 - GOAL-P3-C: `.github/prompts/` updates — merged/refactored versions (already done by Phase 2 script actions).
@@ -50,18 +53,22 @@ Status badge: ![In progress](https://img.shields.io/badge/status-in%20progress-y
 - GATE-P3: All artifacts present; cross-references verified; no placeholder text; SKILL.md ≤250 lines; script executable.
 
 ### Phase 4 — Final Gate & Verification
+
 - GATE-FINAL: `.github/prompts_backup` deleted; all audit actions logged; artifacts verified; git status clean; user told to confirm.
 
 ## 3. Alternatives
+
 - ALT-001: Skip audit → bulk delete backup. Rejected: violates verification-before-claim + could lose divergent content.
 - ALT-002: Keep backup alongside prompts. Rejected: user's explicit instruction is delete backup after merging.
 
 ## 4. Dependencies
+
 - DEP-001: Multi-file-change-protocol skill loaded (verified).
 - DEP-002: .github/prompts and .github/prompts_backup exist (verified via terminal ls).
 - DEP-003: Scripts dir (`scripts/`) available.
 
 ## 5. Files Affected
+
 - FILE-001: `.github/prompts/*` (updated by Phase 2; some overwritten by backup content).
 - FILE-002: `.github/prompts_backup/*` (deleted by Phase 2 after audit).
 - FILE-003: `./plans/prompt-library-de-dup-and-backup-archive-plan.md` (this file).
@@ -72,12 +79,14 @@ Status badge: ![In progress](https://img.shields.io/badge/status-in%20progress-y
 - FILE-008: `./prompts/prompt-library-de-dup-and-backup-archive.prompt.md`.
 
 ## 6. Testing / Verification Gates
+
 - TEST-001: Audit artifacts exist (`os.path.isfile` verified).
 - TEST-002: For every deleted backup file, audit JSON logs basename + action.
 - TEST-003: `.github/prompts_backup` directory removed (`os.path.exists` = False after Phase 2).
 - TEST-004: All new artifacts reference subgoal name and cross-reference each other.
 
 ## 7. Risks & Assumptions
+
 - RISK-001: Divergent duplicates could overwrite newer prompt versions with older backup versions. Mitigation: user explicitly directed to use backup versions; log hash difference so rollback is possible via git.
 - RISK-002: Large file count (676 backup files) → execution time. Mitigation: script runs sequentially; no subagent needed for destructive phase since audit-then-act is sequential.
 - ASSUMPTION-001: User has approved destructive ops (confirmed in clarification turn 3: "all destructive operations approved").

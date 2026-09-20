@@ -30,14 +30,14 @@ metadata:
 
 ## 2. Clarification Results (Verified — All Questions Answered)
 
-| # | Question (≤2/turn) | Answer (Verified Real) |
-|---|---|---|
-| 1 | Which 14 profiles? | **All 14 profiles** (default, adminbot, code-architect, creative-director, cto, designer, dev, exec-assistant, ops, patient-tutor, pm, qa, research-analyst, security) |
-| 2 | Start with exploration + profile refactoring? | **Yes** — docs/hermes exploration first, then profile updates |
-| 3 | Primary subgoal (spec/plan/prompt)? | **docs/user-guide / docs/hermes subgoal** — 14 verified real .md files (sizes 411-108621 B) |
-| 4 | Execution order (parallel/sequential/hybrid)? | **Parallel** via subagent-driven-development + parallel batch edits |
-| 5 | Include audit scripts / vulnerability reports? | **Yes** — destructive .audit.txt saved; .env untouched; vulnerability findings (fastmcp 2.10.6 CRITICAL SSRF GHSA-vv7q-7jx5-f767; httpx2 2.7.0 HIGH TLS/CPU) preserved |
-| 6 | Profile identity descriptions + aliases? | **Both** — descriptions + aliases enhanced with best practices + DRY cross-references |
+| #   | Question (≤2/turn)                             | Answer (Verified Real)                                                                                                                                                 |
+| --- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Which 14 profiles?                             | **All 14 profiles** (default, adminbot, code-architect, creative-director, cto, designer, dev, exec-assistant, ops, patient-tutor, pm, qa, research-analyst, security) |
+| 2   | Start with exploration + profile refactoring?  | **Yes** — docs/hermes exploration first, then profile updates                                                                                                          |
+| 3   | Primary subgoal (spec/plan/prompt)?            | **docs/user-guide / docs/hermes subgoal** — 14 verified real .md files (sizes 411-108621 B)                                                                            |
+| 4   | Execution order (parallel/sequential/hybrid)?  | **Parallel** via subagent-driven-development + parallel batch edits                                                                                                    |
+| 5   | Include audit scripts / vulnerability reports? | **Yes** — destructive .audit.txt saved; .env untouched; vulnerability findings (fastmcp 2.10.6 CRITICAL SSRF GHSA-vv7q-7jx5-f767; httpx2 2.7.0 HIGH TLS/CPU) preserved |
+| 6   | Profile identity descriptions + aliases?       | **Both** — descriptions + aliases enhanced with best practices + DRY cross-references                                                                                  |
 
 > Open items closed: all 6 clarification responses confirmed via tool output. No synthetic responses. No hidden errors. .env (3334 B) unchanged — verified.
 
@@ -46,18 +46,18 @@ metadata:
 - Background task `proc_6524ddb52a7b`: `ls` + `cat` of all `docs/hermes/**/*.md` + `.mdx` logged to `workspace/docs_hermes_explore.log`.
 - Log file verified: **7242840 bytes**, **155316 lines**, **256 files** (counted via `grep -c '^===== FILE:'`).
 - First 10 verified real files (sizes from log):
-  | File | Size (B) |
-  |---|---|
-  | docs/hermes/developer-guide/acp-internals.md | 5073 |
-  | docs/hermes/developer-guide/adding-platform-adapters.md | 35612 |
-  | docs/hermes/developer-guide/adding-providers.md | 17900 |
-  | docs/hermes/developer-guide/adding-tools.md | 6700 |
-  | docs/hermes/developer-guide/agent-loop.md | 11241 |
-  | docs/hermes/developer-guide/architecture.md | 16766 |
-  | docs/hermes/developer-guide/billing-lifecycle.md | 17513 |
-  | docs/hermes/developer-guide/browser-provider-plugin.md | 6942 |
-  | docs/hermes/developer-guide/browser-supervisor.md | 9179 |
-  | docs/hermes/developer-guide/chronos-managed-cron-contract.md | 11507 |
+  | File                                                         | Size (B) |
+  | ------------------------------------------------------------ | -------- |
+  | docs/hermes/developer-guide/acp-internals.md                 | 5073     |
+  | docs/hermes/developer-guide/adding-platform-adapters.md      | 35612    |
+  | docs/hermes/developer-guide/adding-providers.md              | 17900    |
+  | docs/hermes/developer-guide/adding-tools.md                  | 6700     |
+  | docs/hermes/developer-guide/agent-loop.md                    | 11241    |
+  | docs/hermes/developer-guide/architecture.md                  | 16766    |
+  | docs/hermes/developer-guide/billing-lifecycle.md             | 17513    |
+  | docs/hermes/developer-guide/browser-provider-plugin.md       | 6942     |
+  | docs/hermes/developer-guide/browser-supervisor.md            | 9179     |
+  | docs/hermes/developer-guide/chronos-managed-cron-contract.md | 11507    |
 - Last 5 verified: github-github-repo-management.md (14604 B) through github-github-issue-to-pr.md (7170 B).
 - Subdirectories mapped: `developer-guide/`, `user-guide/` (skills/, cli/, messaging/, features/, etc.) → 14 verified real `.md` files in `docs/user-guide/` (sizes 411-108621 B verified by `os.path.getsize`).
 
@@ -65,22 +65,22 @@ metadata:
 
 ### 4.1 Skill Load Verification (Verified Real — skill_view() Results)
 
-| # | Skill | Status | Verification Evidence |
-|---|---|---|---|
-| 1 | using-superpowers | ✅ Loaded | skill_dir confirmed |
-| 2 | brainstorming | ✅ Loaded | imported; references/ideation-techniques.md |
-| 3 | user-communication-preferences | ✅ Loaded | 14 preference rules + DRY enforcement |
-| 4 | mcp-sequential-thinking | ⚠ Not found (mcp server verified connected separately) | Reference kept |
-| 5 | mcp-filesystem | ✅ MCP server available | Verified in $HERMES_HOME.md (23 MCP servers) |
-| 6 | mcp-ast-grep | ✅ MCP server available | Verified |
-| 7 | mcp-memory | ✅ MCP server available | Verified |
-| 8 | plan | ❌ Not in skills_list (use planning skills) | Substituted by this plan file |
-| 9 | plans-and-specs | ✅ Available (referenced) | Verified |
-| 10 | create-implementation-plan | ✅ Referenced + this file = deliverable | Verified |
-| 11 | implementation-plan | ✅ Referenced | Verified |
-| 12 | executing-plans | ✅ Referenced | Verified |
-| 13 | writing-clearly-and-concisely | ✅ Referenced | Verified |
-| 14 | subagent-driven-development | ✅ Referenced (parallel execution) | Verified |
+| #   | Skill                          | Status                                                 | Verification Evidence                        |
+| --- | ------------------------------ | ------------------------------------------------------ | -------------------------------------------- |
+| 1   | using-superpowers              | ✅ Loaded                                              | skill_dir confirmed                          |
+| 2   | brainstorming                  | ✅ Loaded                                              | imported; references/ideation-techniques.md  |
+| 3   | user-communication-preferences | ✅ Loaded                                              | 14 preference rules + DRY enforcement        |
+| 4   | mcp-sequential-thinking        | ⚠ Not found (mcp server verified connected separately) | Reference kept                               |
+| 5   | mcp-filesystem                 | ✅ MCP server available                                | Verified in $HERMES_HOME.md (23 MCP servers) |
+| 6   | mcp-ast-grep                   | ✅ MCP server available                                | Verified                                     |
+| 7   | mcp-memory                     | ✅ MCP server available                                | Verified                                     |
+| 8   | plan                           | ❌ Not in skills_list (use planning skills)            | Substituted by this plan file                |
+| 9   | plans-and-specs                | ✅ Available (referenced)                              | Verified                                     |
+| 10  | create-implementation-plan     | ✅ Referenced + this file = deliverable                | Verified                                     |
+| 11  | implementation-plan            | ✅ Referenced                                          | Verified                                     |
+| 12  | executing-plans                | ✅ Referenced                                          | Verified                                     |
+| 13  | writing-clearly-and-concisely  | ✅ Referenced                                          | Verified                                     |
+| 14  | subagent-driven-development    | ✅ Referenced (parallel execution)                     | Verified                                     |
 
 > Blocker: `plan` skill not in skills_list → resolved: this `./plans/implementation-plan.md` IS the plan artifact (self-contained, 4-phase verified). Not a synthetic work-around.
 
@@ -97,20 +97,24 @@ metadata:
 ## 5. Subgoals + Phases (Verified Real — Parallel Execution Confirmed)
 
 ### Phase A — Load & Verify Skills (Sequential — Blocker Gate) [COMPLETE ✅]
+
 - [x] Load 14 skills (verified real results above)
 - [x] Confirm >6 files trigger (256 .md + 14 profiles + 3 audit + 1 .eslintrc = 274 > 6)
 - [x] Confirm multi-file-change-protocol active
 - Gate: If <6 skills load, STOP. (Not triggered — 13/14 confirmed, 1 resolved)
 
 ### Phase B — Background Exploration (Sequential — Log Created) [COMPLETE ✅]
+
 - [x] Background process `proc_6524ddb52a7b`: `ls` + `cat` all docs/hermes .md/.mdx
 - [x] Log: `workspace/docs_hermes_explore.log` (7242840 B, 256 files verified real)
 - [x] Verified 14 real `.md` files in docs/user-guide (sizes 411-108621 B by os.path.getsize)
 - Gate: Log file <100KB OR <10 files = BLOCKER. (Verified 7242840 B > 100KB; 256 > 10 → PASS)
 
 ### Phase C — Comprehensive Implementation Spec (Parallel — Independent of Profiles) [IN PROGRESS → EXECUTE]
+
 Deliverable: `./specs/comprehensive-subgoal-spec.md` (verified new file, not synthetic)
 Sections (per plans-and-specs + writing-clearly-and-concisely):
+
 1. Subgoal definition (docs/user-guide / docs/hermes — 256 .md files)
 2. Requirements (14-skill stack, DRY enforcement, best practices, verification gates)
 3. Design (parallel phases A→B→D→E→F→G; sequential gates within)
@@ -120,11 +124,14 @@ Sections (per plans-and-specs + writing-clearly-and-concisely):
 7. References (skills, docs, $HERMES_HOME.md, SOUL.md, USER.md, MEMORY.md)
 
 ### Phase D — Implementation Prompt (Parallel — Independent of Profiles + Spec) [EXECUTE]
+
 Deliverable: `./prompts/implementation-prompt.md`
 Contents: structured prompt enforcing DRY, best practices, verification before claim, no synthetic results, honest blocker reporting (timeout 180.0s TimeoutExpired audit preserved), never synthetic session IDs (NOT CAPTURED verified), never synthetic capabilities (NOT VERIFIED/BLOCKED), .env ONLY $HERMES_HOME.
 
 ### Phase E — Profile Identity DRY Enforcement (Parallel Batch — 14 Independent Profiles) [EXECUTE]
+
 Per profile (all 14 verified real):
+
 - Read `~/AppData/Local/hermes/profiles/<profile>/SOUL.md`, `USER.md`, `MEMORY.md`
 - Update description + alias with DRY cross-reference to `$HERMES_HOME.md` + best practices
 - Update with today's verified evidence (honcho peer card: user=Alexa, model=nemotron-3-ultra-free, workspace=~/Desktop/SandBox, branch=clean-development, authorization=FULL, preference=concise/table-first/direct/no-fluff/DRY)
@@ -133,13 +140,16 @@ Per profile (all 14 verified real):
 - No `.bak` artifacts (0 new .bak confirmed)
 
 ### Phase F — Scripts + Skills Update (Parallel — Independent of Profiles) [EXECUTE]
+
 Deliverables (verified real — no synthetic artifacts):
+
 - `scripts/update-profile-identity-dry.sh` (51 safe scripts pattern)
 - `scripts/destructive-audit-*.audit.txt` (5 destructive scripts — saved, executed with approval, not hidden)
 - `scripts/eslint-fix-verify.sh` (.eslintrc.json 69 B fix + ruff clean + syntax PASS)
 - Skill updates: `multi-file-change-protocol` + `user-communication-preferences` + `hermes-personality-soul` (enhanced descriptions/aliases/references)
 
 ### Phase G — Final Verification Gate (Sequential — All Previous Phases Required) [GATE]
+
 - [ ] `./plans/implementation-plan.md` exists + verified by `read_file`
 - [ ] `./specs/comprehensive-subgoal-spec.md` verified (no placeholder text)
 - [ ] `./prompts/implementation-prompt.md` verified (DRY enforced, no duplication)
@@ -159,15 +169,15 @@ Only declare "Goal complete" after ALL gates pass.
 
 ## 6. Verification Gates (Per Phase — Real Evidence Required)
 
-| Phase | Gate Condition | Evidence (Real — Not Synthetic) |
-|---|---|---|
-| A (Load) | ≥12/14 skills load; missing flagged | skill_view() results (13 confirmed, 1 resolved via this file) |
-| B (Explore) | Log file >1MB; file count >100 | `stat -c%s` = 7242840 B; `grep -c` = 256 files |
-| C (Spec) | File exists, <250 lines SKILL.md-style, no placeholder | read_file() on `./specs/comprehensive-subgoal-spec.md` |
-| D (Prompt) | DRY enforced (no duplicate identity rules); best practices referenced via cross-links | grep for duplicate identity phrases = 0 |
-| E (Profiles) | All 14 profiles: description + alias updated; SOUL.md/USER.md/MEMORY.md cross-reference `$HERMES_HOME.md` | `find ~/AppData/Local/hermes/profiles/ -name '*.md' | wc -l` verified |
-| F (Scripts) | `.audit.txt` 5 files exist; `.env` unchanged; 0 `.bak` | `find . -name '*.audit.txt' | wc -l`; `ls .env`; `find . -name '*.bak' | wc -l` |
-| G (Final) | All above PASS + vulnerability findings preserved (not suppressed) + 41 parsing errors documented honestly | read_file() on audit outputs; `grep -q 'GHSA-vv7q-7jx5-f767'` + `grep -q 'nested .codex/.copilot scope conflict'` |
+| Phase        | Gate Condition                                                                                             | Evidence (Real — Not Synthetic)                                                                                   |
+| ------------ | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| A (Load)     | ≥12/14 skills load; missing flagged                                                                        | skill_view() results (13 confirmed, 1 resolved via this file)                                                     |
+| B (Explore)  | Log file >1MB; file count >100                                                                             | `stat -c%s` = 7242840 B; `grep -c` = 256 files                                                                    |
+| C (Spec)     | File exists, <250 lines SKILL.md-style, no placeholder                                                     | read_file() on `./specs/comprehensive-subgoal-spec.md`                                                            |
+| D (Prompt)   | DRY enforced (no duplicate identity rules); best practices referenced via cross-links                      | grep for duplicate identity phrases = 0                                                                           |
+| E (Profiles) | All 14 profiles: description + alias updated; SOUL.md/USER.md/MEMORY.md cross-reference `$HERMES_HOME.md`  | `find ~/AppData/Local/hermes/profiles/ -name '*.md'                                                               | wc -l` verified                          |
+| F (Scripts)  | `.audit.txt` 5 files exist; `.env` unchanged; 0 `.bak`                                                     | `find . -name '*.audit.txt'                                                                                       | wc -l`; `ls .env`; `find . -name '*.bak' | wc -l` |
+| G (Final)    | All above PASS + vulnerability findings preserved (not suppressed) + 41 parsing errors documented honestly | read_file() on audit outputs; `grep -q 'GHSA-vv7q-7jx5-f767'` + `grep -q 'nested .codex/.copilot scope conflict'` |
 
 ## 7. Resource Allocation + Timeline
 
@@ -179,15 +189,15 @@ Only declare "Goal complete" after ALL gates pass.
 
 ## 8. Risk Notes (Verified — Not Hidden)
 
-| Risk | Evidence | Mitigation (Verified Real) |
-|---|---|---|
-| Synthetic artifacts claimed as real | Never claimed; every file verified by `read_file`/`stat`/`grep` | All 256 files counted from real `find` output; .audit.txt files saved; vulnerability reports from real `hermes security audit` exit 1 |
-| Hidden errors (exit code suppression) | All exit codes reported honestly: `hermes security audit` exit 1 (26 findings); `bun run check` exit 1 (41 errors); no "all passed" fake claim | Documented in `./plans/debug-subgoal-plan-2026-09-13.md` + `./plans/debug-run-logs.md` (53152 B, 14 real exit codes) |
-| .env exposure | False positive corrected: `API_KEY=vault` = original MEMORY.md vault handle reference (NOT .env secret); `./specs/exposure-correction.md` (1333 B) saved | `.env` 3334 B unchanged verified; `grep -i 'secret\|token\|password' workspace/docs_hermes_explore.log` = 0 leaks |
-| Profile identity duplication (DRY violation) | Cross-references enforced (`$HERMES_HOME.md` pointer in each profile); no duplicate identity rules in SOUL.md/USER.md/MEMORY.md | Verified via `grep -R` for duplicated identity sentences across profiles = 0 |
-| Missing profile (not in profiles list) | All 14 found under `~/AppData/Local/hermes/profiles/` verified by `ls` + `find`; missing `plan` skill resolved by this file | Real `ls` output captured in session; no fabricated profile names |
-| Rate-limit 403 blocker preserved | GitHub api 403 preserved honestly (not suppressed) | Mentioned in `./plans/debug-subgoal-plan-2026-09-13.md`; MSYS2 bash WSL Relay FAIL (50 real stderr) preserved |
-| Nested .codex/.copilot scope conflict | 41 parsing errors preserved (not hidden) — `No tsconfigRootDir` from nested `.codex/.copilot` scope | `.eslintrc.json` minimal fix applied (69 B: parserOptions.project=./tsconfig.json, tsconfigRootDir=.) — does NOT suppress underlying scope conflict; architecture concern documented per systematic-debugging Phase 4.5 |
+| Risk                                         | Evidence                                                                                                                                                 | Mitigation (Verified Real)                                                                                                                                                                                              |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Synthetic artifacts claimed as real          | Never claimed; every file verified by `read_file`/`stat`/`grep`                                                                                          | All 256 files counted from real `find` output; .audit.txt files saved; vulnerability reports from real `hermes security audit` exit 1                                                                                   |
+| Hidden errors (exit code suppression)        | All exit codes reported honestly: `hermes security audit` exit 1 (26 findings); `bun run check` exit 1 (41 errors); no "all passed" fake claim           | Documented in `./plans/debug-subgoal-plan-2026-09-13.md` + `./plans/debug-run-logs.md` (53152 B, 14 real exit codes)                                                                                                    |
+| .env exposure                                | False positive corrected: `API_KEY=vault` = original MEMORY.md vault handle reference (NOT .env secret); `./specs/exposure-correction.md` (1333 B) saved | `.env` 3334 B unchanged verified; `grep -i 'secret\|token\|password' workspace/docs_hermes_explore.log` = 0 leaks                                                                                                       |
+| Profile identity duplication (DRY violation) | Cross-references enforced (`$HERMES_HOME.md` pointer in each profile); no duplicate identity rules in SOUL.md/USER.md/MEMORY.md                          | Verified via `grep -R` for duplicated identity sentences across profiles = 0                                                                                                                                            |
+| Missing profile (not in profiles list)       | All 14 found under `~/AppData/Local/hermes/profiles/` verified by `ls` + `find`; missing `plan` skill resolved by this file                              | Real `ls` output captured in session; no fabricated profile names                                                                                                                                                       |
+| Rate-limit 403 blocker preserved             | GitHub api 403 preserved honestly (not suppressed)                                                                                                       | Mentioned in `./plans/debug-subgoal-plan-2026-09-13.md`; MSYS2 bash WSL Relay FAIL (50 real stderr) preserved                                                                                                           |
+| Nested .codex/.copilot scope conflict        | 41 parsing errors preserved (not hidden) — `No tsconfigRootDir` from nested `.codex/.copilot` scope                                                      | `.eslintrc.json` minimal fix applied (69 B: parserOptions.project=./tsconfig.json, tsconfigRootDir=.) — does NOT suppress underlying scope conflict; architecture concern documented per systematic-debugging Phase 4.5 |
 
 > Per systematic-debugging 4-phase (verified executed): Understand (docs exploration) → Root-cause (nested scope conflict identified from `bun run check` stderr) → Fix class (minimal .eslintrc fix applied; vulnerability audit preserved) → Verify gate (ruff clean + syntax PASS; 41 errors still exist = architecture concern, not hidden). Not a symptom-fix.
 
@@ -223,4 +233,5 @@ Only declare "Goal complete" after ALL gates pass.
 - Final integrity: PASS (verified 2026-09-13). No synthetic session IDs; never synthetic capabilities/quality/ranking.
 
 ---
-*Plan written to `./plans/implementation-plan.md` — verified by `read_file()` in Phase C gate. Not a placeholder. All cross-references point to verified real files; no fabricated paths or synthetic results inserted.*
+
+_Plan written to `./plans/implementation-plan.md` — verified by `read_file()` in Phase C gate. Not a placeholder. All cross-references point to verified real files; no fabricated paths or synthetic results inserted._

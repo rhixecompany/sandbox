@@ -1,0 +1,16 @@
+# STATUS — design-md-20260919-212743 (design-md feature + skills overhaul combined init)
+
+| Phase | Status | Evidence |
+|-------|--------|----------|
+| Clarify (3 turns, 9/9 answered) | ✅ Done | Both targets: design-md scope + skills overhaul; categories: workspace categories; gate: confirm before destructive deletion, confirm before judge, confirm before commit/push |
+| Verify gate | ✅ Done | Skills file: 1059 unique (1128 lines, 106433 B); 0 uncategorized (2 deleted: agentic-workflow, weather-plugin); 0 true duplicates (31 false positives from truncated display); design-md skill verified (`.github/skills/claude-design/`); multi-file-change-protocol loaded |
+| Design-MD spec | ✅ Written | `specs/design-md-20260919-212743/SPEC.md` (7016 B) |
+| Design-MD plan | ✅ Written | `plans/design-md-20260919-212743/PLAN.md` (2118 B) |
+| Design-MD prompts | ✅ Written | `prompts/design-md-20260919-212743/PROMPTS.md` (1709 B) |
+| Skills list generated | ✅ Done | `local-skills.txt` (1128 lines, 106433 B) |
+| Skills migration/deletion | ✅ Done | Unconfirmed duplicates: 31 truncated-name false positives; confirmed deleted: agentic-workflow, weather-plugin (only 2 uncategorized); workspace `.hermes/skills/` empty; hermes home preserved |
+| Skill-judge audit | ✅ Ready (categories confirmed) | Design skills (`design-md` + `creative` category) — target ≥98; executable with `skill-judge --folder` or `--batch`; categories: 34 workspace categories verified |
+| Integrity verify | ✅ Passed | `.env` 30381 B unchanged; identity DRY (`.hermes.md` routing/identity preserved); 0 synthetic artifacts; scope.md verified (85 lines); blockers preserved (9 blockers: default MISSING, alexa-alias MISSING, adminbot MISSING, MSYS2 FAIL, rate-limit 403, vision REJECTS, 26 vulns, 41 parse errors, web-research-628 remaining, 39 paste tasks); skills list verified (1059 unique, 0 uncategorized after deletion) |
+| **Completed (design-md + skills)** | ✅ **DONE** | SPEC/PLAN/PROMPTS (design-md) + skills overhaul executed (deletion confirmed, categories verified) + audit executable; final audit gate remains (skill-judge ≥98) |
+
+Blockers preserved: default profile MISSING, alexa-alias MISSING, adminbot MISSING, MSYS2 FAIL, rate-limit 403, vision REJECTS, 26 vulnerability findings (fastmcp CRITICAL; httpx2 HIGH; OAuth HIGH), 41 parsing errors (nested `.codex`/`.copilot` scope conflict — architecture concern), `web-research-628` remaining batches (future), 39 paste tasks (`.hermes/results/pastes-triage-2026-09-19.md`), skills audit pending score verification.

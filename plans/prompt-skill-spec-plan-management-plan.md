@@ -346,7 +346,9 @@ This plan implements the complete prompt, skill, spec, and plan management syste
 ## Phase Details
 
 ### Phase 1: Specifications (COMPLETED)
+
 All 5 specification files created in `./specs/`:
+
 1. `prompt-skill-spec-plan-management-system.md` - Master system spec
 2. `prompt-library-spec.md` - Prompt library structure
 3. `skill-enhancement-spec.md` - 18 skill enhancement requirements
@@ -356,7 +358,9 @@ All 5 specification files created in `./specs/`:
 **Gate 1 Status**: ✅ PASSED - All 5 specs created and validated
 
 ### Phase 2: Plans (IN PROGRESS)
+
 Creating 5 plan files in `./plans/`:
+
 1. `prompt-skill-spec-plan-management-plan.md` - This file (master plan)
 2. `prompt-library-plan.md` - Prompt library implementation
 3. `skill-enhancement-plan.md` - Skill enhancement implementation
@@ -364,19 +368,25 @@ Creating 5 plan files in `./plans/`:
 5. `multi-file-protocol-plan.md` - Protocol implementation
 
 ### Phase 3: Prompt Library
+
 Building complete prompt library at `.github/prompts/`:
+
 - 13 categories (development, planning, creative, testing, documentation, debugging, security, devops, mcp, research, productivity, github, qa)
 - Each category: ≥1 trigger directory
 - Each trigger: 11 files (.prompt.md + 10 companions)
 
 ### Phase 4: Skill Enhancement
+
 Enhancing 18 skills to skill-judge ≥95:
+
 - 14 core protocol skills
 - 4 quality gate skills
 - Each skill: SKILL.md + references/ + templates/ + scripts/
 
 ### Phase 5: Context Files
+
 Rewriting 7 context files with authority hierarchy:
+
 1. SOUL.md (canonical in profile, pointer in workspace)
 2. USER.md (canonical in profile, pointer in workspace)
 3. MEMORY.md (canonical in profile, pointer in workspace)
@@ -386,7 +396,9 @@ Rewriting 7 context files with authority hierarchy:
 7. .cursorrules (workspace root - stub)
 
 ### Phase 6: Verification
+
 Running 7 verification gates:
+
 1. Specs completeness
 2. Plans executability
 3. Prompt library integrity

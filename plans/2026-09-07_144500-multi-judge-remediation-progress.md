@@ -19,19 +19,19 @@ tool output, not aspiration.
 
 ## Verified results (this session, in order)
 
-| # | Step | Before | After | Notes |
-|---|------|--------|-------|-------|
-| 1 | Specs baseline | — | avg 77.4, 4/5 PASS | `./plans/judge-reports/specs-baseline.md` |
-| 2 | Specs after appendix augmentation | 77.4 | 87.8, 5/5 PASS | `scripts/augment_specs_with_required_sections.py` added 5 required sections to 3 specs |
-| 3 | Specs after judge bugfix | 87.8 | **99.8, 5/5 PASS** | Fixed `## Requirements` section split bug in `specs-judge/scripts/judge.py` |
-| 4 | Plans baseline | — | avg 82.4, 68/79 PASS | |
-| 5 | Plans after augmentation | 82.4 | **102.0, 79/79 PASS** | `scripts/augment_plans_with_required_sections.py` added frontmatter, gates, risks, files, and linked-specs blocks to all 79 plans |
-| 6 | Prompts baseline | — | avg 99.5, 235/236 PASS | Already at target except `test-providers-models.prompt.md` |
-| 7 | test-providers-models rewrite | FAIL @ 50 | **PASS @ 96** (with cross) | Moved from root straggler `.github/prompts/test-providers-models.prompt.md` to canonical `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` |
-| 8 | Prompts after prompts-judge bugfix | 99.5 | **99.7, 236/236 PASS** | Fixed `cross_judge_pts` and `verify_asset_exists` to compute project root from `pdir.parent.parent` instead of hard-coded path |
-| 9 | Scripts baseline | — | avg 84.6, 48/56 PASS | 8 scripts have CLI surface = 0 |
-| 10 | Hooks (Hermes root) | — | avg 87.5, 7/8 PASS | `capture_common.py` fails (not a hook; misclassified by glob) |
-| 11 | Plugins (Hermes root) | — | **avg 95.3, 12/12 PASS** | All 12 plugins PASS — closest to target |
+| #   | Step                               | Before    | After                      | Notes                                                                                                                                                                       |
+| --- | ---------------------------------- | --------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Specs baseline                     | —         | avg 77.4, 4/5 PASS         | `./plans/judge-reports/specs-baseline.md`                                                                                                                                   |
+| 2   | Specs after appendix augmentation  | 77.4      | 87.8, 5/5 PASS             | `scripts/augment_specs_with_required_sections.py` added 5 required sections to 3 specs                                                                                      |
+| 3   | Specs after judge bugfix           | 87.8      | **99.8, 5/5 PASS**         | Fixed `## Requirements` section split bug in `specs-judge/scripts/judge.py`                                                                                                 |
+| 4   | Plans baseline                     | —         | avg 82.4, 68/79 PASS       |                                                                                                                                                                             |
+| 5   | Plans after augmentation           | 82.4      | **102.0, 79/79 PASS**      | `scripts/augment_plans_with_required_sections.py` added frontmatter, gates, risks, files, and linked-specs blocks to all 79 plans                                           |
+| 6   | Prompts baseline                   | —         | avg 99.5, 235/236 PASS     | Already at target except `test-providers-models.prompt.md`                                                                                                                  |
+| 7   | test-providers-models rewrite      | FAIL @ 50 | **PASS @ 96** (with cross) | Moved from root straggler `.github/prompts/test-providers-models.prompt.md` to canonical `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` |
+| 8   | Prompts after prompts-judge bugfix | 99.5      | **99.7, 236/236 PASS**     | Fixed `cross_judge_pts` and `verify_asset_exists` to compute project root from `pdir.parent.parent` instead of hard-coded path                                              |
+| 9   | Scripts baseline                   | —         | avg 84.6, 48/56 PASS       | 8 scripts have CLI surface = 0                                                                                                                                              |
+| 10  | Hooks (Hermes root)                | —         | avg 87.5, 7/8 PASS         | `capture_common.py` fails (not a hook; misclassified by glob)                                                                                                               |
+| 11  | Plugins (Hermes root)              | —         | **avg 95.3, 12/12 PASS**   | All 12 plugins PASS — closest to target                                                                                                                                     |
 
 ## Judge rubric fixes landed
 
@@ -118,14 +118,14 @@ The user asked to actually execute the live `hermes chat` probe loop across all 
 
 ## Final verified results (no-cross-judges fast path)
 
-| Judge | Files | Avg | Passed | Target hit? |
-|-------|-------|-----|--------|-------------|
-| specs-judge | 5 | **99.8** | 5/5 | ✅ |
-| plans-judge | 80 | **102.0** | 80/80 | ✅ (capped 100) |
-| prompts-judge | 236 | **99.7** | 236/236 | ✅ |
-| scripts-judge | 56 | 84.6 | 48/56 | ❌ |
-| hooks-judge (Hermes root) | 8 | 87.5 | 7/8 | ❌ |
-| plugins-judge (Hermes root) | 12 | **95.3** | 12/12 | Near |
+| Judge                       | Files | Avg       | Passed  | Target hit?     |
+| --------------------------- | ----- | --------- | ------- | --------------- |
+| specs-judge                 | 5     | **99.8**  | 5/5     | ✅              |
+| plans-judge                 | 80    | **102.0** | 80/80   | ✅ (capped 100) |
+| prompts-judge               | 236   | **99.7**  | 236/236 | ✅              |
+| scripts-judge               | 56    | 84.6      | 48/56   | ❌              |
+| hooks-judge (Hermes root)   | 8     | 87.5      | 7/8     | ❌              |
+| plugins-judge (Hermes root) | 12    | **95.3**  | 12/12   | Near            |
 
 `test-providers-models.prompt.md` — was **FAIL @ 50**, now **PASS @ 96** (96 with cross-judge gate active and projects-root path fixed).
 
@@ -139,11 +139,11 @@ The user asked to actually execute the live `hermes chat` probe loop across all 
 
 ## Risks
 
-| Risk | Impact | Likelihood | Mitigation |
-|------|--------|------------|------------|
-| Plans-judge returncode != 0 (any plan < threshold) cascades into prompts-judge losing 8 cross-judge points | High | High | Always check the latest plans-judge output before re-running prompts-judge |
-| Augmenter mangled a plan that has special structure | Medium | Low | Augmenter is idempotent (skips plans already meeting all 5 requirements); revert per-file with `git checkout` |
-| Cross-judge subprocess timeout=60s per prompt × 236 × 2 = 8h+ worst case | High | Medium | Use `--no-cross-judges` flag in CI; run cross-judge only as a final gate |
+| Risk                                                                                                       | Impact | Likelihood | Mitigation                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------- | ------ | ---------- | ------------------------------------------------------------------------------------------------------------- |
+| Plans-judge returncode != 0 (any plan < threshold) cascades into prompts-judge losing 8 cross-judge points | High   | High       | Always check the latest plans-judge output before re-running prompts-judge                                    |
+| Augmenter mangled a plan that has special structure                                                        | Medium | Low        | Augmenter is idempotent (skips plans already meeting all 5 requirements); revert per-file with `git checkout` |
+| Cross-judge subprocess timeout=60s per prompt × 236 × 2 = 8h+ worst case                                   | High   | Medium     | Use `--no-cross-judges` flag in CI; run cross-judge only as a final gate                                      |
 
 ## Files to Create or Modify
 

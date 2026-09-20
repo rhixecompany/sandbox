@@ -8,16 +8,16 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `deepseek` |
-| Default model | varies (deepseek-v4-flash-free via opencode-zen, deepseek-chat, deepseek-coder, DeepSeek-V3.2) |
-| Auth type | API key |
-| Env var | `DEEPSEEK_API_KEY` |
-| Base URL | DeepSeek API |
-| Credential pool | Single API key |
-| Pool strategy | fill_first |
-| Role | Fill-first provider (not in main fallback chain) |
+| Property        | Value                                                                                          |
+| --------------- | ---------------------------------------------------------------------------------------------- |
+| Config key      | `deepseek`                                                                                     |
+| Default model   | varies (deepseek-v4-flash-free via opencode-zen, deepseek-chat, deepseek-coder, DeepSeek-V3.2) |
+| Auth type       | API key                                                                                        |
+| Env var         | `DEEPSEEK_API_KEY`                                                                             |
+| Base URL        | DeepSeek API                                                                                   |
+| Credential pool | Single API key                                                                                 |
+| Pool strategy   | fill_first                                                                                     |
+| Role            | Fill-first provider (not in main fallback chain)                                               |
 
 ---
 
@@ -39,6 +39,7 @@ Adapting the 8-step template to Deepseek:
 ## Known Bug
 
 **GitHub #21725**: The DeepSeek provider in Hermes Agent has an implementation defect:
+
 - It completely ignores the `api_key` field configured in config.yaml
 - Hardcoded to only read the `DEEPSEEK_API_KEY` environment variable
 - This is inconsistent with other providers (OpenAI, Anthropic, etc.) which read from config.yaml first, then fall back to env var
@@ -60,24 +61,30 @@ The deepseek provider in config.yaml may serve a different purpose than opencode
 ## SCAMPER Analysis
 
 ### Substitute
+
 - deepseek-v4-flash-free via opencode-zen vs direct deepseek provider — different access paths for different models
 - Substitute with DeepSeek-V3.2 via huggingface provider
 
 ### Combine
+
 - deepseek provider + opencode-zen = two access paths for DeepSeek models
 - DEEPSEEK_API_KEY + credential pooling = rate limit distribution
 
 ### Adapt
+
 - Adapt 8-step template — deepseek-specific: known bug workaround, dual access path clarification
 
 ### Modify
+
 - Not in main fallback chain — fill_first in credential pool only
 - Bug #21725: must set DEEPSEEK_API_KEY env var, not just config.yaml api_key
 
 ### Eliminate
+
 - Eliminate if DEEPSEEK_API_KEY is not set or invalid
 
 ### Reverse
+
 - deepseek as primary via opencode-zen (already the case for active model) — direct deepseek provider is supplementary
 
 ---

@@ -8,7 +8,6 @@ profile: default
 model: inclusionai/ling-3.0-flash
 ---
 
-
 ## Goal
 
 **Awesome Extract Awesome Opencode**
@@ -88,28 +87,25 @@ Opencode's plugin ecosystem uses its own extension format. While not natively He
 
 - **Gate**: All tasks in this phase complete and verified.
 
-
 ## Phase 2
 
 - **Gate**: All tasks in this phase complete and verified.
-
 
 ## Phase 3
 
 - **Gate**: All tasks in this phase complete and verified.
 
-
 ## Linked Specs
+
 - ./specs/master-spec.md
 
 ## Risks
 
-| Risk | Likelihood | Impact |
-|------|-----------|--------|
-| Scope creep | Medium | Medium |
-| Dependencies change | Low | High |
-| Timeline slippage | Medium | Medium |
-
+| Risk                | Likelihood | Impact |
+| ------------------- | ---------- | ------ |
+| Scope creep         | Medium     | Medium |
+| Dependencies change | Low        | High   |
+| Timeline slippage   | Medium     | Medium |
 
 ## Files to Create/Modify
 
@@ -128,7 +124,6 @@ Opencode's plugin ecosystem uses its own extension format. While not natively He
 - [ ] Phase 2 complete
 - [ ] Phase 3 complete
 - [ ] Verification passed
-
 
 ## Linked Plan
 

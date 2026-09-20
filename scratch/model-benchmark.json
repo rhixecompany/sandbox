@@ -1,104 +1,104 @@
 {
-  "started": "2026-09-11T03:50:31Z",
-  "runs": [
-    {
-      "label": "openrouter/nemotron-3-ultra",
-      "provider": "openrouter",
-      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
-      "exit_code": -1,
-      "elapsed_sec": 120.07,
-      "status": "timeout",
-      "ts": "2026-09-11T03:52:31Z"
-    },
-    {
-      "label": "openrouter/inkling",
-      "provider": "openrouter",
-      "model": "thinkingmachines/inkling:free",
-      "exit_code": 0,
-      "elapsed_sec": 70.45,
-      "stdout_chars": 1639,
-      "stderr_chars": 0,
-      "stdout_tail": "sume this session with:\n  hermes --resume 20260911_045235_0cdb78\n  hermes -c \"Respond with the current UTC time and the word\u2026 #2\"\n\nSession:        20260911_045235_0cdb78\nTitle:          Respond with the current UTC time and the word\u2026 #2\nDuration:       1m 0s\nMessages:       6 (1 user, 4 tool calls)\n",
-      "stderr_tail": "",
-      "status": "success",
-      "ts": "2026-09-11T03:53:41Z"
-    },
-    {
-      "label": "openrouter/deepseek-v4-flash",
-      "provider": "openrouter",
-      "model": "deepseek/deepseek-v4-flash-0731",
-      "exit_code": 0,
-      "elapsed_sec": 57.18,
-      "stdout_chars": 1715,
-      "stderr_chars": 0,
-      "stdout_tail": "Resume this session with:\n  hermes --resume 20260911_045345_b434a8\n  hermes -c \"Respond with the current UTC time and the word\u2026 #3\"\n\nSession:        20260911_045345_b434a8\nTitle:          Respond with the current UTC time and the word\u2026 #3\nDuration:       48s\nMessages:       4 (1 user, 2 tool calls)\n",
-      "stderr_tail": "",
-      "status": "success",
-      "ts": "2026-09-11T03:54:39Z"
-    },
-    {
-      "label": "openrouter/nemotron-3.5-lightning",
-      "provider": "openrouter",
-      "model": "nvidia/nemotron-3.5-lightning:free",
-      "exit_code": -1,
-      "elapsed_sec": 120.03,
-      "status": "timeout",
-      "ts": "2026-09-11T03:56:50Z"
-    },
-    {
-      "label": "openrouter/gemma-4-31b",
-      "provider": "openrouter",
-      "model": "google/gemma-4-31b-it:free",
-      "exit_code": 0,
-      "elapsed_sec": 64.63,
-      "stdout_chars": 1793,
-      "stderr_chars": 0,
-      "status": "success",
-      "ts": "2026-09-11T03:57:54Z"
-    },
-    {
-      "label": "nous/longcat-2.0",
-      "provider": "nous",
-      "model": "meituan/longcat-2.0:free",
-      "exit_code": 0,
-      "elapsed_sec": 63.99,
-      "stdout_chars": 1519,
-      "stderr_chars": 0,
-      "status": "success",
-      "ts": "2026-09-11T03:58:58Z"
-    },
-    {
-      "label": "opencode-zen/minimax-m3 (current active)",
-      "provider": "opencode-zen",
-      "model": "minimax/minimax-m3",
-      "exit_code": 0,
-      "elapsed_sec": 93.63,
-      "stdout_chars": 1482,
-      "stderr_chars": 0,
-      "status": "success",
-      "ts": "2026-09-11T04:00:40Z"
-    },
-    {
-      "label": "nous/solar-pro4",
-      "provider": "nous",
-      "model": "upstage/solar-pro4:free",
-      "exit_code": 0,
-      "elapsed_sec": 59.29,
-      "stdout_chars": 1654,
-      "stderr_chars": 0,
-      "status": "success",
-      "ts": "2026-09-11T04:01:40Z"
-    },
-    {
-      "label": "openrouter/step-3.7-flash",
-      "provider": "openrouter",
-      "model": "stepfun/step-3.7-flash:free",
-      "exit_code": 0,
-      "elapsed_sec": 71.71,
-      "stdout_chars": 1670,
-      "stderr_chars": 0,
-      "status": "success",
-      "ts": "2026-09-11T04:02:51Z"
-    }
-  ]
+	"started": "2026-09-11T03:50:31Z",
+	"runs": [
+		{
+			"label": "openrouter/nemotron-3-ultra",
+			"provider": "openrouter",
+			"model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+			"exit_code": -1,
+			"elapsed_sec": 120.07,
+			"status": "timeout",
+			"ts": "2026-09-11T03:52:31Z"
+		},
+		{
+			"label": "openrouter/inkling",
+			"provider": "openrouter",
+			"model": "thinkingmachines/inkling:free",
+			"exit_code": 0,
+			"elapsed_sec": 70.45,
+			"stdout_chars": 1639,
+			"stderr_chars": 0,
+			"stdout_tail": "sume this session with:\n  hermes --resume 20260911_045235_0cdb78\n  hermes -c \"Respond with the current UTC time and the word\u2026 #2\"\n\nSession:        20260911_045235_0cdb78\nTitle:          Respond with the current UTC time and the word\u2026 #2\nDuration:       1m 0s\nMessages:       6 (1 user, 4 tool calls)\n",
+			"stderr_tail": "",
+			"status": "success",
+			"ts": "2026-09-11T03:53:41Z"
+		},
+		{
+			"label": "openrouter/deepseek-v4-flash",
+			"provider": "openrouter",
+			"model": "deepseek/deepseek-v4-flash-0731",
+			"exit_code": 0,
+			"elapsed_sec": 57.18,
+			"stdout_chars": 1715,
+			"stderr_chars": 0,
+			"stdout_tail": "Resume this session with:\n  hermes --resume 20260911_045345_b434a8\n  hermes -c \"Respond with the current UTC time and the word\u2026 #3\"\n\nSession:        20260911_045345_b434a8\nTitle:          Respond with the current UTC time and the word\u2026 #3\nDuration:       48s\nMessages:       4 (1 user, 2 tool calls)\n",
+			"stderr_tail": "",
+			"status": "success",
+			"ts": "2026-09-11T03:54:39Z"
+		},
+		{
+			"label": "openrouter/nemotron-3.5-lightning",
+			"provider": "openrouter",
+			"model": "nvidia/nemotron-3.5-lightning:free",
+			"exit_code": -1,
+			"elapsed_sec": 120.03,
+			"status": "timeout",
+			"ts": "2026-09-11T03:56:50Z"
+		},
+		{
+			"label": "openrouter/gemma-4-31b",
+			"provider": "openrouter",
+			"model": "google/gemma-4-31b-it:free",
+			"exit_code": 0,
+			"elapsed_sec": 64.63,
+			"stdout_chars": 1793,
+			"stderr_chars": 0,
+			"status": "success",
+			"ts": "2026-09-11T03:57:54Z"
+		},
+		{
+			"label": "nous/longcat-2.0",
+			"provider": "nous",
+			"model": "meituan/longcat-2.0:free",
+			"exit_code": 0,
+			"elapsed_sec": 63.99,
+			"stdout_chars": 1519,
+			"stderr_chars": 0,
+			"status": "success",
+			"ts": "2026-09-11T03:58:58Z"
+		},
+		{
+			"label": "opencode-zen/minimax-m3 (current active)",
+			"provider": "opencode-zen",
+			"model": "minimax/minimax-m3",
+			"exit_code": 0,
+			"elapsed_sec": 93.63,
+			"stdout_chars": 1482,
+			"stderr_chars": 0,
+			"status": "success",
+			"ts": "2026-09-11T04:00:40Z"
+		},
+		{
+			"label": "nous/solar-pro4",
+			"provider": "nous",
+			"model": "upstage/solar-pro4:free",
+			"exit_code": 0,
+			"elapsed_sec": 59.29,
+			"stdout_chars": 1654,
+			"stderr_chars": 0,
+			"status": "success",
+			"ts": "2026-09-11T04:01:40Z"
+		},
+		{
+			"label": "openrouter/step-3.7-flash",
+			"provider": "openrouter",
+			"model": "stepfun/step-3.7-flash:free",
+			"exit_code": 0,
+			"elapsed_sec": 71.71,
+			"stdout_chars": 1670,
+			"stderr_chars": 0,
+			"status": "success",
+			"ts": "2026-09-11T04:02:51Z"
+		}
+	]
 }

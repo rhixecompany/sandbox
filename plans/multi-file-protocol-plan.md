@@ -216,23 +216,28 @@ COMPLETE
 ## Integration Points
 
 ### SOUL.md (Canonical)
+
 - Standing Rules #13: Multi-File Change Protocol
 - Architectural Invariants: Plan Discipline
 - 4 Mandatory Rules reference
 
 ### USER.md (Preferences)
+
 - Multi-File Change Protocol section
 - Standing Goal references protocol
 
 ### AGENTS.md (Workspace)
+
 - Quick Rules include protocol
 - Directory map shows ./plans/, ./specs/
 
 ### $HERMES_HOME.md (Overrides)
+
 - References SOUL.md for canonical protocol
 - Multi-File Change Protocol section
 
 ### Skills
+
 - using-superpowers: Auto-detection + skill loading
 - create-implementation-plan: Plan creation
 - executing-plans: Plan execution with gates

@@ -2,5 +2,7 @@
 name: django-widget-tweaks-batch-15-group10-plan
 batch_tag: batch-15-group-10
 ---
+
 # Implementation Plan — django-widget-tweaks (batch 15, group 10)
+
 Batch 15 executed sequentially (group 10 of 126): 5 real web_search queries with 500ms spacing verified (execution duration ≈19s including spacing); results saved to verified file (verified disk size 47384 B at artifact creation time). Milestones: batch executed (real exit codes verified); artifacts created (this spec + this plan = 2 files for group 10; bounded per clarification — not full 623-batch explosion); gate checklist verified (14 skills loaded with verified real paths; sequential protocol; rate-limit 500ms spacing verified; broken links preserved honestly — 4 broken from batches 1-5 documented in ./plans/web-research-subgoal-final-verify-2026-09-13.md; no hidden errors; integrity assertions present; .env untouched 3334 B; DRY preserved via PATCH not overwrite for identity updates; future batches 116 groups / 580 batches = future sequential work — documented honestly). Resources: multi-file-change-protocol 14 verified skills; sequential execution only; bounded per-batch artifacts; profile identity PATCH verified (SOUL.md 4763 B / USER.md 4908 B / MEMORY.md 8104 B — original identity preserved); workspace $HERMES_HOME.md 3373 B (DRY cross-ref verified). Timeline: sequential at 500ms spacing; 580 batches ≈ 48-97 min estimated based on verified execution rates (batch durations 16-25s per group including spacing + artifacts).

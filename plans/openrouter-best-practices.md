@@ -17,13 +17,14 @@ Note: `https://openrouter.ai/models?variant=free` fetch via web_extract timed ou
 
 ## Verified Free-Tier Rate Limits (Real Data Only)
 
-| Tier                        | Per-minute | Daily    | 429 Trigger                      |
-|----------------------------|-----------:|---------:|----------------------------------|
-| No credits purchased      | 20 req/min | 50/day   | Cap hit + provider congestion      |
-| $10+ lifetime credits     | 20 req/min | 1000/day | Cap hit + provider congestion      |
-| Paid (non-free)           | No fixed   | Credit balance | Negative balance + provider-side |
+| Tier                  | Per-minute |          Daily | 429 Trigger                      |
+| --------------------- | ---------: | -------------: | -------------------------------- |
+| No credits purchased  | 20 req/min |         50/day | Cap hit + provider congestion    |
+| $10+ lifetime credits | 20 req/min |       1000/day | Cap hit + provider congestion    |
+| Paid (non-free)       |   No fixed | Credit balance | Negative balance + provider-side |
 
 Key verified facts (from real search results):
+
 - Per-minute cap is 20 requests ALWAYS — buying credits does NOT raise it.
 - Daily cap: 50/day (unfunded) vs 1000/day ($10+ lifetime unlock, sticks even if balance drops to 0).
 - Free variants use `:free` suffix (e.g., `nvidia/nemotron-3.5-content-safety:free`).

@@ -16,6 +16,7 @@ linked_specs:
 # Run All Goals — Five-Day Consolidated Implementation Plan
 
 ## Goal
+
 Turn the verified five-day session corpus and workspace inventory into a linked, executable, locally verified implementation package.
 
 ## Evidence baseline
@@ -29,12 +30,12 @@ Turn the verified five-day session corpus and workspace inventory into a linked,
 
 ## Dependencies
 
-| ID | Dependency | Gate |
-|---|---|---|
-| DEP-001 | Session corpus exists | Phase 1 |
-| DEP-002 | Disk inventory exists | Phase 2 |
-| DEP-003 | Spec and plan links parse | Phase 3 |
-| DEP-004 | Prompt and scripts verify | Phase 4 |
+| ID      | Dependency                    | Gate    |
+| ------- | ----------------------------- | ------- |
+| DEP-001 | Session corpus exists         | Phase 1 |
+| DEP-002 | Disk inventory exists         | Phase 2 |
+| DEP-003 | Spec and plan links parse     | Phase 3 |
+| DEP-004 | Prompt and scripts verify     | Phase 4 |
 | DEP-005 | Local execution output exists | Phase 5 |
 
 ## Phases
@@ -106,14 +107,14 @@ Turn the verified five-day session corpus and workspace inventory into a linked,
 
 ## Resource allocation
 
-| Resource | Allocation |
-|---|---|
-| Main agent | Sequential gates, artifact authoring, final verification |
-| MCP filesystem | Read/list/write workspace artifacts |
-| session_search | Historical session recall |
-| Terminal | Local scripts, syntax, tests |
-| Subagents | None required; corpus and gates are stateful/sequential |
-| External APIs | 0; explicitly out of scope |
+| Resource       | Allocation                                               |
+| -------------- | -------------------------------------------------------- |
+| Main agent     | Sequential gates, artifact authoring, final verification |
+| MCP filesystem | Read/list/write workspace artifacts                      |
+| session_search | Historical session recall                                |
+| Terminal       | Local scripts, syntax, tests                             |
+| Subagents      | None required; corpus and gates are stateful/sequential  |
+| External APIs  | 0; explicitly out of scope                               |
 
 ## Rollback
 

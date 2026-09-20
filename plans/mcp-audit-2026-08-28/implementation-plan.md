@@ -19,6 +19,7 @@ status: ready
 
 **File:** `opencode.json`
 **Diffs:**
+
 - `python-quality.command` → fix filename to `python_quality_mcp_server.py`
 - `tooling-lint.command` → fix filename to `tooling_lint_mcp_server.py`
 - `tooling-config.command` → fix filename to `tooling_config_mcp_server.py`
@@ -51,7 +52,7 @@ status: ready
 ## T7 · Write skill `mcp-audit-orchestrator`
 
 **Path:** `C:\Users\Alexa\AppData\Local\hermes\skills\mcp\mcp-audit-orchestrator\`
-**Files:** SKILL.md, references/*.md, scripts/*, templates/*
+**Files:** SKILL.md, references/_.md, scripts/_, templates/*
 **Verify:** `skill_view(name='mcp\mcp-audit-orchestrator')` returns full content
 
 ## T8 · Write prompt `.github/prompts/mcp-audit.prompt.md`

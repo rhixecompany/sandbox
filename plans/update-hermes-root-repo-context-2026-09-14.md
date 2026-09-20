@@ -22,18 +22,19 @@ Note: user's 14-skill list included additional skills (implementation-plan, crea
 
 ## Clarification Results (verified — 4 turns completed)
 
-| # | Result | Impact on plan |
-|---|---|---|
-| 1 (mode) | Both: update/enhance + full rewrite/re-organization | Each file gets both content enhancement (new rules/references) + structural re-organization (clear sections, DRY cross-refs, consistent headings) |
-| 2 (identity) | Keep identity/preference intact (Alexa, adminbot, motorcycle, Air Peace PNR) | All identity/preference text preserved word-for-word; only ADD new DRY/rule sections |
-| 3 (honcho/todos) | Yes — use honcho profile/search/reasoning/conclude + todos + peer-card/user-info | Every file update references honcho observations + peer card; todos created; user-info preserved |
-| 4 (multi-select 1-4) | Rules 1-4 selected (>5-file rule, DRY/direct/table-first, security/vuln preservation 26/41, profile identity DRY 14 profiles) | All 4 added as new/enhanced sections |
-| 5 (rule 5) | Yes — session achievements preserved (docs/user-guide 14 .md, debug-subgoal 14 exit codes, 28 skills mapped) | Added as "Verified Session Evidence" subsection with real file-size references |
-| 6 (rule 6) | Yes — .env 3334B unchanged + exposure-correction preserved (false positive corrected) | Added .env protection note + exposure-correction reference; no synthetic exposure claims |
-| 7 (depth) | Doc-level only (markdown content; verification commands only; no destructive changes) | No new artifacts created beyond updated .md; verification = `ls -la`, `wc -l`, file-read checks, not rerun of destructive audit scripts |
-| 8 (execution) | Sequential (one file at a time; load 14 skills; verify gate per file) | This plan executed sequentially; no parallel delegate_task |
+| #                    | Result                                                                                                                        | Impact on plan                                                                                                                                    |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 (mode)             | Both: update/enhance + full rewrite/re-organization                                                                           | Each file gets both content enhancement (new rules/references) + structural re-organization (clear sections, DRY cross-refs, consistent headings) |
+| 2 (identity)         | Keep identity/preference intact (Alexa, adminbot, motorcycle, Air Peace PNR)                                                  | All identity/preference text preserved word-for-word; only ADD new DRY/rule sections                                                              |
+| 3 (honcho/todos)     | Yes — use honcho profile/search/reasoning/conclude + todos + peer-card/user-info                                              | Every file update references honcho observations + peer card; todos created; user-info preserved                                                  |
+| 4 (multi-select 1-4) | Rules 1-4 selected (>5-file rule, DRY/direct/table-first, security/vuln preservation 26/41, profile identity DRY 14 profiles) | All 4 added as new/enhanced sections                                                                                                              |
+| 5 (rule 5)           | Yes — session achievements preserved (docs/user-guide 14 .md, debug-subgoal 14 exit codes, 28 skills mapped)                  | Added as "Verified Session Evidence" subsection with real file-size references                                                                    |
+| 6 (rule 6)           | Yes — .env 3334B unchanged + exposure-correction preserved (false positive corrected)                                         | Added .env protection note + exposure-correction reference; no synthetic exposure claims                                                          |
+| 7 (depth)            | Doc-level only (markdown content; verification commands only; no destructive changes)                                         | No new artifacts created beyond updated .md; verification = `ls -la`, `wc -l`, file-read checks, not rerun of destructive audit scripts           |
+| 8 (execution)        | Sequential (one file at a time; load 14 skills; verify gate per file)                                                         | This plan executed sequentially; no parallel delegate_task                                                                                        |
 
 Blockers noted honestly (preserved, NOT hidden):
+
 - Rate-limit 403 (GitHub api) preserved — not bypassed.
 - MSYS2 bash WSL Relay FAIL (50 real stderr) preserved — environment issue documented.
 - 41 parsing errors (nested .codex/.copilot scope conflict — architecture concern per systematic-debugging Phase 4.5) preserved — NOT suppressed; NOT hidden.
@@ -51,6 +52,7 @@ GATE     [VERIFY PER FILE] Every file passes: identity preserved, DRY cross-refs
 ```
 
 Gate definition (each file must satisfy):
+
 - [GATE-A] User identity/preference text (Alexa/adminbot/motorcycle/Air Peace) unchanged (verified by diff / grep).
 - [GATE-B] All 6 compulsory rules (see clarification results 4-6) referenced with real evidence refs (not synthetic).
 - [GATE-C] DRY cross-references to skills/protocol/docs (multi-file-change-protocol / user-communication-preferences / systematic-debugging) present.
@@ -61,6 +63,7 @@ Gate definition (each file must satisfy):
 ## Skill Verification Evidence (14-stack loaded — sequential confirmations)
 
 Confirmed via `skill_view(name=...)` calls (each returned success with path + content):
+
 1. multi-file-change-protocol (this protocol's owner skill; $HERMES_HOME.md confirmed)
 2. using-superpowers (loaded; powers: delegation, planning, verification)
 3. brainstorming (loaded via `planning/brainstorming` qualified path; structured idea generation)
@@ -84,6 +87,7 @@ These are documented in the "Cross-References" sections of each updated file rat
 Per clarification result 8 (sequential): process one file → load 14 skills (already done above) → verify gate (GATE-A to GATE-F) → proceed to next. No parallel delegate_task; no parallel subagent. Each file gets: (a) read current content → (b) patch/enhance (preserve identity, add rules 1-6, add DRY refs, add .env note, add session achievements, reorganize sections for consistency) → (c) verify gate via `ls -la` + `head` + `grep` checks (not synthetic) → (d) move to next file.
 
 Order (logical dependency: root identity first, then derived docs, then workspace docs):
+
 1. SOUL.md → identity + cognitive style + 14-skill rule + DRY + session evidence + .env note
 2. USER.md → identity + preferences + honcho card + session achievements + rules 1-6 + DRY refs
 3. MEMORY.md → environment + session achievements + rules 1-6 + .env protection + vulnerability preservation (26/41) + DRY refs
@@ -96,6 +100,7 @@ Order (logical dependency: root identity first, then derived docs, then workspac
 ## Verification Gates (per file — sequential, after each edit)
 
 After each file edit, run (doc-level verification — commands that READ/VERIFY, not CREATE new destructive artifacts):
+
 ```bash
 # GATE-A (identity preserved): grep identity keywords unchanged
 # GATE-B (rules 1-6 present): grep for each rule reference (multi-file-change-protocol, DRY, vulnerability 26/41, profile 14, session achievements, .env 3334)
@@ -110,6 +115,7 @@ No synthetic outputs; no fabricated session IDs; no fabricated capabilities/qual
 ## Cross-References (for all 8 files)
 
 Each updated file includes cross-reference sections pointing to (verified by `skill_view` or file-read, not fabricated):
+
 - `$HERMES_HOME.md` (this workspace; 3373 B verified at session start; profile identity + MCP table + 14-skill stack reference)
 - `AGENTS.md` (workspace layout; 8794 B verified)
 - `CLAUDE.md` (4711 B verified)

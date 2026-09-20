@@ -1,7 +1,7 @@
 [
-  {
-    "server": "code-sandbox",
-    "status": "FAIL",
-    "reason": "timed out"
-  }
+	{
+		"server": "code-sandbox",
+		"status": "FAIL",
+		"reason": "timed out"
+	}
 ]

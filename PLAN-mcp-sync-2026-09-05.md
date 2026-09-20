@@ -84,6 +84,7 @@
 
 **Command:** `powershell scripts/sync-mcp-configs.ps1`
 **Action:** The script should:
+
 1. Detect 0 new servers in opencode.json (since opencode.json already has the 32 servers).
 2. Sync opencode.json → `.github/mcp.json` (will fix any drift).
 3. Sync opencode.json → `.codex/mcp.json` (will fix any drift).
@@ -115,6 +116,7 @@
 
 **Path:** `C:\Users\Alexa\.opencode\skills\hermes-mcp-sync\SKILL.md` (or workspace `.opencode/skills/`)
 **Content:** Frontmatter (name, description, trigger phrases), then sections:
+
 - When to use this skill
 - MCP config architecture (4 platforms, schema translation)
 - How to run validation
@@ -149,6 +151,7 @@
 ## Rollback Strategy
 
 If sync breaks a config:
+
 1. `git checkout opencode.json .github/mcp.json .codex/mcp.json .vscode/mcp.json`
 2. Re-run `python scripts/validate-mcp-servers.py` to confirm baseline state.
 
@@ -156,18 +159,19 @@ If sync breaks a config:
 
 ## Risks and Mitigations
 
-| Risk | Mitigation |
-|------|------------|
-| Sync script corrupts `.github/mcp.json` schema | Backup via git before first run; verify after run with `python -m json.tool < .github/mcp.json` |
-| Validation script false-positives a working server | Acceptable to leave a server marked "broken" if runtime is the only test — but our POST initialize approach should cover all real cases |
-| Removing entries from `.vscode/mcp.json` breaks VSCode MCP picker | Add `notes` field documenting the disabled list so VSCode users can re-add manually |
-| Hermes store drift | Out of scope — Hermes has its own CLI; document in skill, do not auto-sync |
+| Risk                                                              | Mitigation                                                                                                                              |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Sync script corrupts `.github/mcp.json` schema                    | Backup via git before first run; verify after run with `python -m json.tool < .github/mcp.json`                                         |
+| Validation script false-positives a working server                | Acceptable to leave a server marked "broken" if runtime is the only test — but our POST initialize approach should cover all real cases |
+| Removing entries from `.vscode/mcp.json` breaks VSCode MCP picker | Add `notes` field documenting the disabled list so VSCode users can re-add manually                                                     |
+| Hermes store drift                                                | Out of scope — Hermes has its own CLI; document in skill, do not auto-sync                                                              |
 
 ---
 
 ## Definition of Done
 
 All acceptance criteria in SPEC §5 checked, plus:
+
 - [ ] No file outside the 5 listed configs and 2 scripts (`sync-mcp-configs.ps1`, `validate-mcp-servers.py`) was modified
 - [ ] All edits pass `python -m json.tool < file` (valid JSON)
 - [ ] Git diff reviewed before commit

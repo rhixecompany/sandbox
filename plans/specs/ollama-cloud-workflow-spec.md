@@ -8,17 +8,17 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `gemini` |
-| Default model | gemini-2.5-flash |
-| Auth type | API key |
-| Env vars | `GOOGLE_API_KEY` or `GEMINI_API_KEY` |
-| Base URL | `https://generativelanguage.googleapis.com/v1beta` |
-| Credential pool | Single API key |
-| Pool strategy | fill_first |
-| Role | 3rd in fallback chain |
-| TTS model | gemini-2.5-flash-preview-tts |
+| Property        | Value                                              |
+| --------------- | -------------------------------------------------- |
+| Config key      | `gemini`                                           |
+| Default model   | gemini-2.5-flash                                   |
+| Auth type       | API key                                            |
+| Env vars        | `GOOGLE_API_KEY` or `GEMINI_API_KEY`               |
+| Base URL        | `https://generativelanguage.googleapis.com/v1beta` |
+| Credential pool | Single API key                                     |
+| Pool strategy   | fill_first                                         |
+| Role            | 3rd in fallback chain                              |
+| TTS model       | gemini-2.5-flash-preview-tts                       |
 
 ---
 
@@ -27,6 +27,7 @@
 ### Step 1: Credential Verification
 
 **Actions:**
+
 - [ ] Confirm `GOOGLE_API_KEY` or `GEMINI_API_KEY` is set in `.env`
 - [ ] Run `hermes auth list gemini` to verify credential
 - [ ] Run `hermes doctor` to validate connectivity
@@ -41,6 +42,7 @@
 ### Step 2: Model Selection & Validation
 
 **Actions:**
+
 - [ ] Run `hermes model` → select gemini → list available models
 - [ ] Confirm gemini-2.5-flash is selectable
 - [ ] Check available models: gemini-2.5-flash, gemini-2.5-pro, gemma models
@@ -55,6 +57,7 @@
 ### Step 3: Config.yaml Review
 
 **Actions:**
+
 - [ ] Verify `model.provider: gemini` is correct
 - [ ] Verify `model.default_model: gemini-2.5-flash` is set
 - [ ] Check that gemini is 3rd in `fallback_providers` chain
@@ -68,6 +71,7 @@
 ### Step 4: Free Tier Quota Awareness
 
 **Actions:**
+
 - [ ] **Critical:** Document free tier quota limitations
 - [ ] Estimate per-session quota consumption (tool calls, retries, compression, auxiliary tasks)
 - [ ] Check for quota exhaustion in recent sessions
@@ -82,6 +86,7 @@
 ### Step 5: MCP Server Compatibility
 
 **Actions:**
+
 - [ ] Test MCP servers with gemini backing model (sample at least 2)
 - [ ] Document any Gemini-specific MCP quirks
 - [ ] Test structured tool calls (function calling) — Gemini support varies by model
@@ -95,6 +100,7 @@
 ### Step 6: Auxiliary Model Offload
 
 **Actions:**
+
 - [ ] Gemini Flash is recommended for auxiliary tasks (cheap, fast)
 - [ ] Consider explicit `auxiliary.<task>.provider` + `auxiliary.<task>.model` config
 - [ ] Document cost/quality tradeoffs vs OpenRouter routing
@@ -108,6 +114,7 @@
 ### Step 7: Gateway Compatibility
 
 **Actions:**
+
 - [ ] Gemini works with all Hermes gateway platforms (Telegram, Discord, Slack, etc.)
 - [ ] Verify gateway config if gateway is used
 
@@ -119,11 +126,11 @@
 
 ## Known Issues
 
-| Issue | ID | Workaround |
-|-------|----|------------|
-| hermes doctor false positive | #26623 | Test actual chat instead of relying on doctor |
-| Free tier exhaustion | N/A | Monitor usage; consider paid tier for agent workloads |
-| Tier detection bug | #21399 | probe_gemini_tier() may report "paid" for free keys; verify manually |
+| Issue                        | ID     | Workaround                                                           |
+| ---------------------------- | ------ | -------------------------------------------------------------------- |
+| hermes doctor false positive | #26623 | Test actual chat instead of relying on doctor                        |
+| Free tier exhaustion         | N/A    | Monitor usage; consider paid tier for agent workloads                |
+| Tier detection bug           | #21399 | probe_gemini_tier() may report "paid" for free keys; verify manually |
 
 ---
 

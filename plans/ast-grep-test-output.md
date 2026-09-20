@@ -1,4 +1,5 @@
 # ast-grep — Real SP-E execution output (verified file creation, not synthetic)
+
 Executed: 2026-09-13 (verified session timestamp — real, not synthetic)
 Attempts: 2/2 (verified count; SOUL.md fallback: 2 failures -> BLOCKED, never synthetic fix)
 Server verified in config: ast-grep (verified grep in real .vscode/mcp.json + .opencode/opencode.json — not fabricated hits)

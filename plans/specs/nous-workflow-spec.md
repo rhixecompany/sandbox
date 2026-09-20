@@ -8,16 +8,16 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `deepseek` |
-| Default model | varies (deepseek-v4-flash-free via opencode-zen, deepseek-chat, deepseek-coder, DeepSeek-V3.2) |
-| Auth type | API key |
-| Env var | `DEEPSEEK_API_KEY` |
-| Base URL | DeepSeek API |
-| Credential pool | Single API key |
-| Pool strategy | fill_first |
-| Role | Fill-first provider (not in main fallback chain) |
+| Property        | Value                                                                                          |
+| --------------- | ---------------------------------------------------------------------------------------------- |
+| Config key      | `deepseek`                                                                                     |
+| Default model   | varies (deepseek-v4-flash-free via opencode-zen, deepseek-chat, deepseek-coder, DeepSeek-V3.2) |
+| Auth type       | API key                                                                                        |
+| Env var         | `DEEPSEEK_API_KEY`                                                                             |
+| Base URL        | DeepSeek API                                                                                   |
+| Credential pool | Single API key                                                                                 |
+| Pool strategy   | fill_first                                                                                     |
+| Role            | Fill-first provider (not in main fallback chain)                                               |
 
 ---
 
@@ -26,6 +26,7 @@
 ### Step 1: Credential Verification
 
 **Actions:**
+
 - [ ] Confirm `DEEPSEEK_API_KEY` is set in `.env`
 - [ ] Run `hermes auth list deepseek` to verify credential
 - [ ] Run `hermes doctor` to validate connectivity
@@ -39,6 +40,7 @@
 ### Step 2: Model Selection & Validation
 
 **Actions:**
+
 - [ ] Run `hermes model` → select deepseek → list available models
 - [ ] **Critical distinction:** deepseek-v4-flash-free is accessed via opencode-zen, NOT directly via deepseek provider
 - [ ] Check available models via direct deepseek provider: deepseek-chat, deepseek-coder, DeepSeek-V3.2
@@ -53,6 +55,7 @@
 ### Step 3: Config.yaml Review
 
 **Actions:**
+
 - [ ] Verify `model.provider: deepseek` is correct
 - [ ] **BUG AWARENESS (GitHub #21725):** The deepseek provider IGNORES `api_key` in config.yaml — only reads `DEEPSEEK_API_KEY` env var
 - [ ] Verify `DEEPSEEK_API_KEY` env var is set (NOT just config.yaml api_key)
@@ -67,6 +70,7 @@
 ### Step 4: Fallback Chain Position
 
 **Actions:**
+
 - [ ] Document that deepseek is NOT in the main `fallback_providers` chain
 - [ ] Explain fill_first role: used when credential pool fires, not as systematic fallback
 
@@ -79,6 +83,7 @@
 ### Step 5: MCP Server Compatibility
 
 **Actions:**
+
 - [ ] Test MCP servers with deepseek backing model (sample at least 1)
 - [ ] Document any provider-specific quirks
 
@@ -91,6 +96,7 @@
 ### Step 6: Rate Limit & Quota Management
 
 **Actions:**
+
 - [ ] Document rate limits for DeepSeek API
 - [ ] Identify pricing model (free tier vs paid)
 - [ ] Document known DeepSeek API reliability patterns
@@ -106,6 +112,7 @@
 **Issue:** DeepSeek provider ignores `api_key` in config.yaml
 
 **Description:** The DeepSeek provider in Hermes Agent has an implementation defect:
+
 - It completely ignores the `api_key` field configured in config.yaml
 - Hardcoded to only read the `DEEPSEEK_API_KEY` environment variable
 - This is inconsistent with other providers (OpenAI, Anthropic, etc.) which read from config.yaml first, then fall back to env var
@@ -120,12 +127,12 @@
 
 ## Model Access Clarification
 
-| Model | Access Path | Notes |
-|-------|------------|-------|
-| deepseek-v4-flash-free | opencode-zen provider | Active model across all profiles |
-| deepseek-chat | direct deepseek provider | May be available |
-| deepseek-coder | direct deepseek provider | May be available |
-| DeepSeek-V3.2 | huggingface provider or direct deepseek | Available via HF Inference |
+| Model                  | Access Path                             | Notes                            |
+| ---------------------- | --------------------------------------- | -------------------------------- |
+| deepseek-v4-flash-free | opencode-zen provider                   | Active model across all profiles |
+| deepseek-chat          | direct deepseek provider                | May be available                 |
+| deepseek-coder         | direct deepseek provider                | May be available                 |
+| DeepSeek-V3.2          | huggingface provider or direct deepseek | Available via HF Inference       |
 
 ---
 

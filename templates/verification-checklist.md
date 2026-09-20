@@ -58,10 +58,10 @@ Apply in order. Halt on first failure; do not proceed to next phase until gate p
 
 ## Score Scale (From Skill-Judge / Audit Patterns â Verified Reference)
 
-| Score | Meaning | Action |
-|---|---|---|
-| 99â100 | Excellent â passes all gates | Proceed; claim complete |
-| 95â98 | Near-pass â minor issues | Fix and re-verify (do not claim complete) |
-| <95 | Fail â major structural/content/safety issues | Halt; fix root cause; do not retry same failing path (SOUL.md Fallback Trigger) |
+| Score  | Meaning                                       | Action                                                                          |
+| ------ | --------------------------------------------- | ------------------------------------------------------------------------------- |
+| 99â100 | Excellent â passes all gates                  | Proceed; claim complete                                                         |
+| 95â98  | Near-pass â minor issues                      | Fix and re-verify (do not claim complete)                                       |
+| <95    | Fail â major structural/content/safety issues | Halt; fix root cause; do not retry same failing path (SOUL.md Fallback Trigger) |
 
 If 2 consecutive verification passes report the same HIGH issue: stop batch automation (per `prompt-management` pitfall rules); switch to per-file `read_file` + targeted `patch` or manual repair.

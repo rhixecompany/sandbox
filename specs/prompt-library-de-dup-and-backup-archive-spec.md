@@ -10,9 +10,11 @@ dependencies: multi-file-change-protocol, user-communication-preferences, plans-
 # Spec — prompt-library-de-dup-and-backup-archive
 
 ## Overview
+
 Audit, triage (filename + content hash), merge/update, delete `.github/prompts_backup`, and produce full artifact bundle (plan, spec, script, skill, prompt).
 
 ## Acceptance Criteria
+
 1. `./specs/prompt-library-de-dup-audit.md` exists with filename-match count, exact/near/divergent counts, only-prompts / only-backups lists.
 2. `.github/prompts_backup/` removed; no file remains in it.
 3. Every deleted backup file is logged in audit JSON (basename, action `DELETED_BACKUP` or `MIGRATED_THEN_DELETED`).
@@ -21,21 +23,25 @@ Audit, triage (filename + content hash), merge/update, delete `.github/prompts_b
 6. Artifacts: `./plans/*.md`, `./specs/*.md`, `scripts/*.sh`, `skills/*/SKILL.md`, `./prompts/*.prompt.md` all present and cross-referenced.
 
 ## Architecture
+
 ```
 Audit (audit script) → Triage JSON → Action script (merge/delete) → Verification gate → Artifact generation
 ```
+
 Sequential dependency: audit must complete before destructive phase.
 Parallel phases (after audit): artifacts (plan/spec/prompt/script/skill) can be built in parallel, but since the user wants comprehensive artifacts, we'll create sequentially for verification.
 
 ## Triage Rules (implemented in script)
-| Category | Filename match? | Content hash equal? | Action | Log entry |
-|---|---|---|---|---|
-| EXACT_DUP | Yes | Yes | Delete backup | `DELETED_BACKUP` |
-| DIVERGENT | Yes | No | Overwrite prompts with backup content; delete backup | `OVERWROTE_PROMPTS_WITH_BACKUP` + `DELETED_BACKUP` |
-| ONLY_PROMPTS | No (in prompts only) | N/A | Keep prompts; no action | `KEPT_PROMPTS_ONLY` |
-| ONLY_BACKUP | No (in backup only) | N/A | Copy to prompts; delete backup | `MIGRATED_TO_PROMPTS` + `DELETED_BACKUP` |
+
+| Category     | Filename match?      | Content hash equal? | Action                                               | Log entry                                          |
+| ------------ | -------------------- | ------------------- | ---------------------------------------------------- | -------------------------------------------------- |
+| EXACT_DUP    | Yes                  | Yes                 | Delete backup                                        | `DELETED_BACKUP`                                   |
+| DIVERGENT    | Yes                  | No                  | Overwrite prompts with backup content; delete backup | `OVERWROTE_PROMPTS_WITH_BACKUP` + `DELETED_BACKUP` |
+| ONLY_PROMPTS | No (in prompts only) | N/A                 | Keep prompts; no action                              | `KEPT_PROMPTS_ONLY`                                |
+| ONLY_BACKUP  | No (in backup only)  | N/A                 | Copy to prompts; delete backup                       | `MIGRATED_TO_PROMPTS` + `DELETED_BACKUP`           |
 
 ## File List (Artfacts)
+
 - `./plans/prompt-library-de-dup-and-backup-archive-plan.md`
 - `./specs/prompt-library-de-dup-and-backup-archive-spec.md` (this file)
 - `./specs/prompt-library-de-dup-audit.md`
@@ -45,6 +51,7 @@ Parallel phases (after audit): artifacts (plan/spec/prompt/script/skill) can be 
 - `./prompts/prompt-library-de-dup-and-backup-archive.prompt.md`
 
 ## Verification (final gate)
+
 - [ ] `.github/prompts_backup` not present (`os.path.exists` false)
 - [ ] `./specs/prompt-library-de-dup-audit.md` readable
 - [ ] Each artifact references subgoal name and cross-links to at least one other artifact.

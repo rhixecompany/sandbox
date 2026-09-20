@@ -8,16 +8,16 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `ollama-cloud` |
-| Default model | nemotron-3-ultra |
-| Auth type | API key |
-| Env var | `OLLAMA_API_KEY` |
-| Base URL | Ollama Cloud API (`https://ollama.com/v1`) |
-| Credential pool | Single API key |
-| Pool strategy | fill_first |
-| Role | 4th/last in fallback chain |
+| Property        | Value                                              |
+| --------------- | -------------------------------------------------- |
+| Config key      | `ollama-cloud`                                     |
+| Default model   | nemotron-3-ultra                                   |
+| Auth type       | API key                                            |
+| Env var         | `OLLAMA_API_KEY`                                   |
+| Base URL        | Ollama Cloud API (`https://ollama.com/v1`)         |
+| Credential pool | Single API key                                     |
+| Pool strategy   | fill_first                                         |
+| Role            | 4th/last in fallback chain                         |
 | Model discovery | Dynamic from `ollama.com/v1/models`, cached 1 hour |
 
 ---
@@ -49,23 +49,29 @@ Adapting the 8-step template to Ollama-Cloud:
 ## SCAMPER Analysis
 
 ### Substitute
+
 - Ollama Cloud vs local Ollama: cloud requires API key but no GPU; local is free but needs GPU
 - Substitute models within Ollama Cloud catalog freely
 
 ### Combine
+
 - Ollama Cloud as last-resort fallback + local Ollama for offline = hybrid reliability
 
 ### Adapt
+
 - Adapt 8-step template — Ollama-Cloud-specific: dynamic model discovery, model:tag notation
 
 ### Modify
+
 - Last in fallback chain — only used when all others fail
 - Model discovery is dynamic — models can change between sessions
 
 ### Eliminate
+
 - Eliminate if OLLAMA_API_KEY is invalid or no free tier available
 
 ### Reverse
+
 - Ollama Cloud as primary for privacy-focused workloads? No — it's cloud, not local
 
 ---

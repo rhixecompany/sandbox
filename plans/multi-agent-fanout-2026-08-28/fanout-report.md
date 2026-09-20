@@ -4,6 +4,6 @@
 
 **Total:** 1 cells | ok=1
 
-| # | Provider | Model | Agent | Status | Latency | Output tokens |
-|---|----------|-------|-------|--------|---------|---------------|
-| 1 | `openrouter` | `minimax/minimax-m3:free` | `openai-compat (matches openrouter-client-py protocol)` | ok | 2038ms | 1 |
+| #   | Provider     | Model                     | Agent                                                   | Status | Latency | Output tokens |
+| --- | ------------ | ------------------------- | ------------------------------------------------------- | ------ | ------- | ------------- |
+| 1   | `openrouter` | `minimax/minimax-m3:free` | `openai-compat (matches openrouter-client-py protocol)` | ok     | 2038ms  | 1             |

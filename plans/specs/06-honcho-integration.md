@@ -21,6 +21,7 @@ Integrate Honcho for persistent cross-session memory and user modeling. User has
 ## Requirements
 
 ### Functional
+
 - [ ] honcho_profile returns user peer card with preferences, goals, working style
 - [ ] honcho_context returns raw peer context from recent sessions
 - [ ] honcho_reasoning with reasoning_level=high synthesizes working style summary
@@ -30,6 +31,7 @@ Integrate Honcho for persistent cross-session memory and user modeling. User has
 - [ ] Memory persists across profile switches (default ↔ code-architect ↔ adminbot, etc.)
 
 ### Non-Functional
+
 - [ ] Honcho MCP server connected and tested
 - [ ] Tools respond in < 5 seconds
 - [ ] No duplicate memory entries
@@ -37,16 +39,16 @@ Integrate Honcho for persistent cross-session memory and user modeling. User has
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| Honcho MCP | `hermes mcp test honcho` | ✓ Connected |
-| Profile tool | `honcho_profile` | Returns peer card JSON |
-| Context tool | `honcho_context` | Returns raw context |
-| Reasoning high | `honcho_reasoning level=high "summarize working style"` | Synthesized summary |
-| Search tool | `honcho_search "TypeScript"` | Finds relevant memories |
-| Conclude tool | `honcho_conclude "User prefers systematic skill-driven development"` | Saved |
-| Cross-session | New session → `honcho_profile` | Preferences recalled |
-| Profile switch | `hermes profile use code-architect` → `honcho_profile` | Same preferences |
+| Check          | Command                                                              | Expected                |
+| -------------- | -------------------------------------------------------------------- | ----------------------- |
+| Honcho MCP     | `hermes mcp test honcho`                                             | ✓ Connected             |
+| Profile tool   | `honcho_profile`                                                     | Returns peer card JSON  |
+| Context tool   | `honcho_context`                                                     | Returns raw context     |
+| Reasoning high | `honcho_reasoning level=high "summarize working style"`              | Synthesized summary     |
+| Search tool    | `honcho_search "TypeScript"`                                         | Finds relevant memories |
+| Conclude tool  | `honcho_conclude "User prefers systematic skill-driven development"` | Saved                   |
+| Cross-session  | New session → `honcho_profile`                                       | Preferences recalled    |
+| Profile switch | `hermes profile use code-architect` → `honcho_profile`               | Same preferences        |
 
 ## Implementation Approach
 
@@ -72,29 +74,35 @@ honcho_profile
 ## Honcho Tool Specifications
 
 ### honcho_profile
+
 Returns structured peer card:
+
 ```json
 {
-  "user": "Alexa",
-  "preferences": {
-    "language": "TypeScript",
-    "editor": "VS Code",
-    "theme": "dark",
-    "methodology": "systematic skill-driven development",
-    "principles": ["DRY", "stacked skill bundles", "MCP-first"]
-  },
-  "goals": ["prompt library maintenance", "full Hermes automation"],
-  "working_style": "concise, action-first, blunt+technical"
+	"user": "Alexa",
+	"preferences": {
+		"language": "TypeScript",
+		"editor": "VS Code",
+		"theme": "dark",
+		"methodology": "systematic skill-driven development",
+		"principles": ["DRY", "stacked skill bundles", "MCP-first"]
+	},
+	"goals": ["prompt library maintenance", "full Hermes automation"],
+	"working_style": "concise, action-first, blunt+technical"
 }
 ```
 
 ### honcho_reasoning
+
 Reasoning levels: minimal, low, medium, high, max
+
 - high: Synthesizes patterns across sessions, identifies preferences, predicts needs
 - max: Deep analysis with full context, generates actionable recommendations
 
 ### honcho_conclude
+
 Saves structured observations for future retrieval:
+
 - Fact type: preference, goal, working_style, project_context
 - Confidence: high/medium/low
 - Source sessions: list of session IDs

@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 # 2026 08 31 Goal2 Plugins Hooks
 
 ## Goal

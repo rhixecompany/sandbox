@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 ## Goal
 
 Integrate Honcho for persistent cross-session memory and user modeling. Verify that all honcho tools function correctly and cross-session recall works across profile switches.
@@ -14,6 +12,7 @@ Integrate Honcho for persistent cross-session memory and user modeling. Verify t
 ## Requirements
 
 ### Functional
+
 - [ ] honcho_profile returns user peer card with preferences, goals, working style
 - [ ] honcho_context returns raw peer context from recent sessions
 - [ ] honcho_reasoning with reasoning_level=high synthesizes working style summary
@@ -23,6 +22,7 @@ Integrate Honcho for persistent cross-session memory and user modeling. Verify t
 - [ ] Memory persists across profile switches (default ↔ code-architect ↔ adminbot, etc.)
 
 ### Non-Functional
+
 - [ ] Honcho MCP server connected and tested
 - [ ] Tools respond in < 5 seconds
 - [ ] No duplicate memory entries
@@ -30,16 +30,16 @@ Integrate Honcho for persistent cross-session memory and user modeling. Verify t
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| Honcho MCP | `hermes mcp test honcho` | ✓ Connected |
-| Profile tool | `honcho_profile` | Returns peer card JSON |
-| Context tool | `honcho_context` | Returns raw context |
-| Reasoning high | `honcho_reasoning level=high "summarize working style"` | Synthesized summary |
-| Search tool | `honcho_search "TypeScript"` | Finds relevant memories |
-| Conclude tool | `honcho_conclude "User prefers systematic skill-driven development"` | Saved |
-| Cross-session | New session → `honcho_profile` | Preferences recalled |
-| Profile switch | `hermes profile use code-architect` → `honcho_profile` | Same preferences |
+| Check          | Command                                                              | Expected                |
+| -------------- | -------------------------------------------------------------------- | ----------------------- |
+| Honcho MCP     | `hermes mcp test honcho`                                             | ✓ Connected             |
+| Profile tool   | `honcho_profile`                                                     | Returns peer card JSON  |
+| Context tool   | `honcho_context`                                                     | Returns raw context     |
+| Reasoning high | `honcho_reasoning level=high "summarize working style"`              | Synthesized summary     |
+| Search tool    | `honcho_search "TypeScript"`                                         | Finds relevant memories |
+| Conclude tool  | `honcho_conclude "User prefers systematic skill-driven development"` | Saved                   |
+| Cross-session  | New session → `honcho_profile`                                       | Preferences recalled    |
+| Profile switch | `hermes profile use code-architect` → `honcho_profile`               | Same preferences        |
 
 ## Non-Functional Requirements
 
@@ -77,7 +77,9 @@ honcho_conclude "User prefers TypeScript with VS Code dark theme, systematic ski
 ```
 
 ## Linked Specs
+
 - 06-honcho-integration.md
 
 ## Linked Plan
+
 - ../skill-implementation-master-plan.md

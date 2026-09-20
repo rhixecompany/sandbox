@@ -6,6 +6,7 @@ status: "in_progress"
 ---
 
 # Master Plan Index (verified inventory)
+
 - Total fragments: 108 (verified from C:/Users/Alexa/Desktop/SandBox/./plans)
 - Categories verified:
   - comprehensive/plans
@@ -124,6 +125,7 @@ status: "in_progress"
   - xai-workflow.md
 
 ## Consolidation Note (verified, non-destructive)
+
 This file serves as a single index pointing to all fragments. Individual fragments preserved (no `git rm` without explicit authorization). Consolidation requires `plan-mode` / `plans-and-specs` skills and user authorization for any deletions or rewrites.
 
 Verified workspace: `~/Desktop/SandBox` (`C:\Users\Alexa\Desktop\SandBox`); branch `clean-development` (`a3e09c2`).

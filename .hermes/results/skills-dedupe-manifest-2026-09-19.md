@@ -84,6 +84,7 @@
 - writing-clearly-and-concisely: deleted `\writing-clearly-and-concisely\SKILL.md` — canonical twin `\creative\writing-clearly-and-concisely\SKILL.md`
 
 ## Gates
+
 - [x] 1267 − 74 = 1193
 - [x] 0 names lost (twin-checked)
 - [x] flat=0 · no_category=0 · dup_names=NONE

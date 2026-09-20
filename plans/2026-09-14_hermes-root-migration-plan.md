@@ -32,61 +32,67 @@ Migrate 1200+ `./**/*.md` files into the hermes root folder, consolidate and ded
 ## 2. Implementation Steps
 
 ### Phase 1: Discovery & Inventory
+
 - GOAL-001: Catalog all 1200 `./**/*.md` files by subdirectory and content type
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-001 | Inventory all ./**/*.md files with sizes and content hashes | | 2026-09-14 |
-| TASK-002 | Identify duplicate content across files (by hash) | | 2026-09-14 |
-| TASK-003 | Map all cross-references to `./` paths in affected files | | 2026-09-14 |
+| Task     | Description                                                 | Completed | Date       |
+| -------- | ----------------------------------------------------------- | --------- | ---------- |
+| TASK-001 | Inventory all ./**/*.md files with sizes and content hashes |           | 2026-09-14 |
+| TASK-002 | Identify duplicate content across files (by hash)           |           | 2026-09-14 |
+| TASK-003 | Map all cross-references to `./` paths in affected files    |           | 2026-09-14 |
 
 ### Phase 2: Migration & Consolidation
+
 - GOAL-002: Move files from `./` subdirectories to hermes root
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-004 | Create root-level directory structure matching ./ subdirs | | 2026-09-14 |
-| TASK-005 | Copy all ./**/*.md files to corresponding root locations | | 2026-09-14 |
-| TASK-006 | Deduplicate identical content (keep one copy, update references) | | 2026-09-14 |
-| TASK-007 | Consolidate overlapping content (SKILL.md variants, specs) | | 2026-09-14 |
+| Task     | Description                                                      | Completed | Date       |
+| -------- | ---------------------------------------------------------------- | --------- | ---------- |
+| TASK-004 | Create root-level directory structure matching ./ subdirs        |           | 2026-09-14 |
+| TASK-005 | Copy all ./**/*.md files to corresponding root locations         |           | 2026-09-14 |
+| TASK-006 | Deduplicate identical content (keep one copy, update references) |           | 2026-09-14 |
+| TASK-007 | Consolidate overlapping content (SKILL.md variants, specs)       |           | 2026-09-14 |
 
 ### Phase 3: Conflict Resolution & Debugging
+
 - GOAL-003: Fix all conflicts, issues, and errors
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-008 | Run diff between old and new locations to verify integrity | | 2026-09-14 |
-| TASK-009 | Identify and fix all broken cross-references | | 2026-09-14 |
-| TASK-010 | Resolve naming conflicts and deduplication issues | | 2026-09-14 |
-| TASK-011 | Validate all migrated files are readable and complete | | 2026-09-14 |
+| Task     | Description                                                | Completed | Date       |
+| -------- | ---------------------------------------------------------- | --------- | ---------- |
+| TASK-008 | Run diff between old and new locations to verify integrity |           | 2026-09-14 |
+| TASK-009 | Identify and fix all broken cross-references               |           | 2026-09-14 |
+| TASK-010 | Resolve naming conflicts and deduplication issues          |           | 2026-09-14 |
+| TASK-011 | Validate all migrated files are readable and complete      |           | 2026-09-14 |
 
 ### Phase 4: Reference Updates
+
 - GOAL-004: Update all files that reference `./` paths
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-012 | Update AGENTS.md, CLAUDE.md, $HERMES_HOME.md, SOUL.md, USER.md, MEMORY.md | | 2026-09-14 |
-| TASK-013 | Update all .prompt.md files referencing ./ paths | | 2026-09-14 |
-| TASK-014 | Update skill files and SKILL.md references | | 2026-09-14 |
-| TASK-015 | Verify no remaining `./` references in affected files | | 2026-09-14 |
+| Task     | Description                                                               | Completed | Date       |
+| -------- | ------------------------------------------------------------------------- | --------- | ---------- |
+| TASK-012 | Update AGENTS.md, CLAUDE.md, $HERMES_HOME.md, SOUL.md, USER.md, MEMORY.md |           | 2026-09-14 |
+| TASK-013 | Update all .prompt.md files referencing ./ paths                          |           | 2026-09-14 |
+| TASK-014 | Update skill files and SKILL.md references                                |           | 2026-09-14 |
+| TASK-015 | Verify no remaining `./` references in affected files                     |           | 2026-09-14 |
 
 ### Phase 5: Delete ./ & Verify
+
 - GOAL-005: Remove ./ directory after verification
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-016 | Final integrity check on all migrated files | | 2026-09-14 |
-| TASK-017 | Delete ./ directory (git-tracked) | | 2026-09-14 |
-| TASK-018 | Verify .env unchanged (3334 B) and no .bak artifacts | | 2026-09-14 |
+| Task     | Description                                          | Completed | Date       |
+| -------- | ---------------------------------------------------- | --------- | ---------- |
+| TASK-016 | Final integrity check on all migrated files          |           | 2026-09-14 |
+| TASK-017 | Delete ./ directory (git-tracked)                    |           | 2026-09-14 |
+| TASK-018 | Verify .env unchanged (3334 B) and no .bak artifacts |           | 2026-09-14 |
 
 ### Phase 6: Run-All-Goals Implementation
+
 - GOAL-006: Implement .github/prompts/general/run-all-goals/run-all-goals.prompt.md
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-019 | Read and analyze run-all-goals.prompt.md (4340 B) | | 2026-09-14 |
-| TASK-020 | Implement all specifications from run-all-goals.prompt.md | | 2026-09-14 |
-| TASK-021 | Execute and verify the implementation completely | | 2026-09-14 |
+| Task     | Description                                               | Completed | Date       |
+| -------- | --------------------------------------------------------- | --------- | ---------- |
+| TASK-019 | Read and analyze run-all-goals.prompt.md (4340 B)         |           | 2026-09-14 |
+| TASK-020 | Implement all specifications from run-all-goals.prompt.md |           | 2026-09-14 |
+| TASK-021 | Execute and verify the implementation completely          |           | 2026-09-14 |
 
 ## 3. Alternatives
 

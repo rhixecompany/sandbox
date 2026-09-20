@@ -1,35 +1,26 @@
-# .cursorrules (VERIFIED ENHANCED 2026-09-14)
+# Cursor Agent Rules — SandBox
 
-**Canonical**: `/c/Users/Alexa/AppData/Local/hermes/profiles/default/.cursorrules`
-**This file**: Thin pointer — canonical content lives in the profile directory.
+**Canonical repository context:** [`AGENTS.md`](AGENTS.md)
+**Hermes-only overrides:** [`.hermes.md`](.hermes.md)
 
-Cursor IDE pointer. All workspace rules in `AGENTS.md`. Persona in `SOUL.md`.
+Use the nearest `AGENTS.md` and project manifest before editing. Treat `projects/*` as autonomous applications; do not apply root commands blindly.
 
-# .env protected reference (see .env — protected, never expose contents)
+## Cursor Agent contract
 
-# Enhanced G5 — .cursorrules additions (verified 2026-09-14)
-# DRY refs: .hermes.md + user-communication-preferences + multi-file-change-protocol + systematic-debugging
-# Subagent: ops/adminbot; user: Alexa; workspace: ~/Desktop/SandBox; auth FULL
-# Blockers: adminbot MISSING, MSYS2 FAIL, rate-limit 403 — preserved honestly
-# .env protected: 5274 B CWD / 30269 B hermes — never expose contents, never modify
+- Inspect before editing: relevant instructions, package manifest, existing implementation, and tests.
+- Make surgical changes and preserve unrelated worktree modifications.
+- Prefer accessible, user-facing behavior and existing project patterns.
+- Run the narrowest relevant validation and report failures or unverified assumptions.
+- Never expose or modify protected secrets (`.env`, `.pem`, `.key`, credentials).
+- Do not invent APIs, model capabilities, profile state, or test results.
+- When interaction is available, clarify new or changed requests before implementation with up to three focused questions per turn.
+- Maintain the current run's spec, plan, and prompt in `ai-agent-home/{specs,plans,prompts}/<unique-timestamped-run>/`; mark them complete only after validation.
+- Use `.github/mcp.json` as the canonical MCP mapping; use Playwright, tooling-lint, python-quality, and GitHub integrations where the task requires them.
 
-<!-- Enhanced G5 2026-09-14 — ops/adminbot subagent — verified session evidence included -->
-<!-- DRY refs: .hermes.md (4495 B verified) + user-communication-preferences + multi-file-change-protocol + systematic-debugging -->
-<!-- Honcho peer: Alexa | adminbot+patient-tutor | workspace ~/Desktop/SandBox | full auth | 28 skills verified | 26 findings + 41 errors preserved -->
-<!-- Blockers preserved honestly: adminbot MISSING, default MISSING, MSYS2 FAIL, rate-limit 403 -->
-<!-- .env protected: never expose (5274 B CWD / 30269 B hermes home — verified unchanged) -->
+For scoped Cursor rules, see [`.cursor/rules/sandbox.mdc`](.cursor/rules/sandbox.mdc).
 
-# Workflow Reference (Updated — Agentic Engineering, Verified Skills)
-# Skills verified at ~/.agents/skills/: scope, architect, audit, check, debug, develop, test, document, sync.
-# Workflow discipline (no synthetic artifacts, real verification, state in files):
-# 1. Plan: /scope → docs/scope/
-# 2. Design: /architect → docs/specs/
-# 3. Build: /develop (reads spec + AGENTS.md; stops on missing decision → routes to architect)
-# 4. Verify: /check verify (drive real app; /check review reads diff with fresh model)
-# 5. Test: /test (tests for what a caller relies on; happy path + edge + error + accessibility)
-# 6. Document: /document (pr | changelog | release-note | postmortem from real diff)
-# 7. Fix root cause: /debug (reproduce → localize → one hypothesis → minimal fix → regression test)
-# 8. Reconcile state: /sync (update AGENTS.md, reconcile scope, flag stale specs; surgical edits only)
-# Marketing/course mention from Untitled-1.txt excluded per clarification (D: ignore).
-# Blockers preserved honestly: adminbot/default profile MISSING; MSYS2 FAIL; rate-limit 403; .env protected (5274 B CWD / 30269 B hermes).
-# No hidden errors; identity DRY preserved; verification-first enforced.
+
+## MCP Sync Note (2026-09-20)
+- Same MCP server list applied globally across all 5 configs (opencode/copilot/cursor-agent/agent/hermes).
+- Heavy servers (playwright, code-sandbox, smithery, mcp-docker, mindstudio) replaced with native equivalents (browser_exec, execute_code, tool_search, terminal, subagent/delegate).
+- DRY: identity/routing rules owned by SOUL.md/USER.md; execution prefs by user-communication-preferences; protocol by multi-file-change-protocol.

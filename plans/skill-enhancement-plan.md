@@ -169,7 +169,23 @@ phases:
         phase: Phase 4 - Validation
         assignee: implementer
         status: pending
-        dependencies: [SE-T-2.1, SE-T-2.2, SE-T-2.3, SE-T-2.4, SE-T-2.5, SE-T-2.6, SE-T-2.7, SE-T-2.8, SE-T-2.9, SE-T-2.10, SE-T-2.11, SE-T-2.12, SE-T-2.13, SE-T-2.14]
+        dependencies:
+          [
+            SE-T-2.1,
+            SE-T-2.2,
+            SE-T-2.3,
+            SE-T-2.4,
+            SE-T-2.5,
+            SE-T-2.6,
+            SE-T-2.7,
+            SE-T-2.8,
+            SE-T-2.9,
+            SE-T-2.10,
+            SE-T-2.11,
+            SE-T-2.12,
+            SE-T-2.13,
+            SE-T-2.14,
+          ]
       - id: SE-T-4.2
         name: Run skill-judge on quality gate skills
         description: Validate all 4 judge skills score ≥95
@@ -240,6 +256,7 @@ Enhances 18 target skills to achieve skill-judge score ≥95 with full structura
 ## Target Skills
 
 ### Core Protocol Skills (14 - Mandatory)
+
 1. using-superpowers
 2. brainstorming
 3. user-communication-preferences
@@ -256,6 +273,7 @@ Enhances 18 target skills to achieve skill-judge score ≥95 with full structura
 14. subagent-driven-development
 
 ### Quality Gate Skills (4)
+
 15. prompts-judge
 16. specs-judge
 17. plans-judge
@@ -264,6 +282,7 @@ Enhances 18 target skills to achieve skill-judge score ≥95 with full structura
 ## Enhancement Requirements Per Skill
 
 ### SKILL.md Structure (All Skills)
+
 - Complete YAML frontmatter
 - Description with overview
 - When to Use / When NOT to Use
@@ -275,16 +294,19 @@ Enhances 18 target skills to achieve skill-judge score ≥95 with full structura
 - References to linked files
 
 ### References/ Directory (All Skills)
+
 - overview.md - Skill overview and architecture
 - ≥2 domain-specific reference files
 - Cross-references to related skills
 
 ### Templates/ Directory (All Skills)
+
 - ≥1 reusable template
 - Follows project conventions
 - Documented in SKILL.md
 
 ### Scripts/ Directory (All Skills)
+
 - ≥1 validation/utility script
 - Executable and tested
 - Documented in SKILL.md
@@ -292,7 +314,9 @@ Enhances 18 target skills to achieve skill-judge score ≥95 with full structura
 ## Special Requirements
 
 ### plan skill (CREATE FROM SCRATCH)
+
 This skill doesn't exist - must be created:
+
 - Location: `planning/plan/`
 - Based on plan-mode patterns
 - Plan file format specification
@@ -300,6 +324,7 @@ This skill doesn't exist - must be created:
 - Gate definitions
 
 ### Judge Skills (prompts-judge, specs-judge, plans-judge)
+
 - Detailed rubric with specific criteria
 - Scoring calibration examples
 - Remediation patterns
@@ -314,6 +339,7 @@ This skill doesn't exist - must be created:
 5. Multi-file protocol integration test
 
 ## Dependencies
+
 - skill-judge skill available
 - All skill directories accessible
 - MCP servers for validation

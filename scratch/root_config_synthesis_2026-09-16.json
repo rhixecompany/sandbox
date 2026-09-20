@@ -1,70 +1,41 @@
 {
-  "hermes": {
-    "root_folder": "C:\\Users\\Alexa\\AppData\\Local\\Hermes",
-    "config_files": [
-      "config.yaml",
-      ".env",
-      "$HERMES_HOME.md"
-    ],
-    "commands_ran": [
-      "hermes mcp --help",
-      "hermes mcp list",
-      "hermes doctor"
-    ],
-    "mcp_help_exit": 0,
-    "mcp_list_exit": 0,
-    "doctor_exit": 0
-  },
-  "copilot": {
-    "root_folder": ".github/copilot/",
-    "config_files": [
-      "copilot-instructions.md",
-      ".github/copilot/"
-    ],
-    "commands_ran": [
-      "copilot --help",
-      "copilot mcp --help"
-    ],
-    "help_exit": 0,
-    "mcp_help_exit": null
-  },
-  "opencode": {
-    "root_folder": ".opencode/",
-    "config_files": [
-      ".opencode/README.md",
-      "config.yaml"
-    ],
-    "commands_ran": [
-      "opencode.cmd --help"
-    ],
-    "help_available": true
-  },
-  "cursor_agent": {
-    "root_folder": ".cursor/",
-    "config_files": [
-      ".cursorrules",
-      ".cursor/"
-    ],
-    "exists": false,
-    "note": ".cursor/ directory not present in workspace; identity preserved via .cursorrules (existing) and profile routing rules.",
-    "commands_ran": [
-      "ls .cursor/ (verified missing)"
-    ]
-  },
-  "codex": {
-    "root_folder": ".github/copilot/",
-    "config_files": [
-      "copilot-instructions.md",
-      ".github/prompts/"
-    ],
-    "commands_ran": [
-      "hermes mcp list (includes codex-related references)"
-    ],
-    "note": "Codex integration verified via copilot CLI (opencode/codex auth verified in hermes doctor output); .github/copilot-instructions.md preserved."
-  },
-  "env_protection": {
-    ".env_size_bytes": 5274,
-    ".env_exposed_in_chat": false,
-    "$HERMES_HOME_home_env_size": 30269
-  }
+	"hermes": {
+		"root_folder": "C:\\Users\\Alexa\\AppData\\Local\\Hermes",
+		"config_files": ["config.yaml", ".env", "$HERMES_HOME.md"],
+		"commands_ran": ["hermes mcp --help", "hermes mcp list", "hermes doctor"],
+		"mcp_help_exit": 0,
+		"mcp_list_exit": 0,
+		"doctor_exit": 0
+	},
+	"copilot": {
+		"root_folder": ".github/copilot/",
+		"config_files": ["copilot-instructions.md", ".github/copilot/"],
+		"commands_ran": ["copilot --help", "copilot mcp --help"],
+		"help_exit": 0,
+		"mcp_help_exit": null
+	},
+	"opencode": {
+		"root_folder": ".opencode/",
+		"config_files": [".opencode/README.md", "config.yaml"],
+		"commands_ran": ["opencode.cmd --help"],
+		"help_available": true
+	},
+	"cursor_agent": {
+		"root_folder": ".cursor/",
+		"config_files": [".cursorrules", ".cursor/"],
+		"exists": false,
+		"note": ".cursor/ directory not present in workspace; identity preserved via .cursorrules (existing) and profile routing rules.",
+		"commands_ran": ["ls .cursor/ (verified missing)"]
+	},
+	"codex": {
+		"root_folder": ".github/copilot/",
+		"config_files": ["copilot-instructions.md", ".github/prompts/"],
+		"commands_ran": ["hermes mcp list (includes codex-related references)"],
+		"note": "Codex integration verified via copilot CLI (opencode/codex auth verified in hermes doctor output); .github/copilot-instructions.md preserved."
+	},
+	"env_protection": {
+		".env_size_bytes": 5274,
+		".env_exposed_in_chat": false,
+		"$HERMES_HOME_home_env_size": 30269
+	}
 }

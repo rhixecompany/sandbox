@@ -12,10 +12,12 @@
         ## Package Context
 
         - openrouter-client (`typescript`) — TypeScript/Bun OpenRouter wrapper with TypeScript wrapper, OpenRouter SDK client, chat completions, streaming
+
 - openrouter-client-py (`python`) — Python OpenRouter wrapper with Python wrapper, OpenRouter client, chat completions, streaming
 
         ## Results
 
         | Profile | Provider | Status  | Duration ms | Max output | Model        | Result file |
+
 | ------- | -------- | ------- | ----------- | ---------- | ------------ | ----------- |
-| default | copilot  | dry-run | 0           | 1200       | gpt-5.4-mini | result.json |
+| default | copilot | dry-run | 0 | 1200 | gpt-5.4-mini | result.json |

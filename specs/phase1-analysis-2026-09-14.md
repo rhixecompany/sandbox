@@ -163,4 +163,5 @@ File: `./plans/debug-run-logs.md` — 56246 B (verified `os.path.getsize`), 946 
 - **Next action (per `systematic-debugging` Phase 2):** single minimal fix directions isolated per failure class (stashes = separate from `.eslintrc.json` fix; `.eslintrc.json` fix = separate from vulnerability updates; vulnerability updates = separate from parsing architecture fix). No bundled unrelated fixes.
 
 ---
-*Verified 2026-09-14. All evidence from real file reads (`os.path.getsize`, `stat`), real session notes (`debug-run-logs.md` content verified line-by-line), and real workspace state (`.env` untouched; `$HERMES_HOME.md` unchanged; `.eslintrc.json` 70 B real fix). Blocker documented per `systematic-debugging` Phase 1 evidence-gathering: evidence before claim; no suppression; no fabrication.*
+
+_Verified 2026-09-14. All evidence from real file reads (`os.path.getsize`, `stat`), real session notes (`debug-run-logs.md` content verified line-by-line), and real workspace state (`.env` untouched; `$HERMES_HOME.md` unchanged; `.eslintrc.json` 70 B real fix). Blocker documented per `systematic-debugging` Phase 1 evidence-gathering: evidence before claim; no suppression; no fabrication._

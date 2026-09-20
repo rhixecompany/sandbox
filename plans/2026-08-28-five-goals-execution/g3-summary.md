@@ -6,13 +6,13 @@
 
 ## Status
 
-| Metric | Count | Notes |
-|--------|-------|-------|
-| ✓ PASS | 26 | All stdio+http servers reachable / configured |
-| ⚠ WARN | 3  | `everart`, `github`, `plaid` — see below |
-| ✗ FAIL | 0  | — |
-| ⊘ SKIP | 3  | `atlassian`, `docs`, `postgres` — explicitly disabled |
-| **Total** | **32** | — |
+| Metric    | Count  | Notes                                                 |
+| --------- | ------ | ----------------------------------------------------- |
+| ✓ PASS    | 26     | All stdio+http servers reachable / configured         |
+| ⚠ WARN    | 3      | `everart`, `github`, `plaid` — see below              |
+| ✗ FAIL    | 0      | —                                                     |
+| ⊘ SKIP    | 3      | `atlassian`, `docs`, `postgres` — explicitly disabled |
+| **Total** | **32** | —                                                     |
 
 ## Disk configs in sync
 
@@ -23,23 +23,24 @@ All 4 disk MCP configs (`opencode.json`, `.codex/mcp.json`,
 
 ## WARN servers (reachable but degraded)
 
-| Server     | Issue                                                  | Recommended action |
-|------------|--------------------------------------------------------|--------------------|
-| `everart`  | HTTPS endpoint unreachable (URLError)                 | Re-verify URL or disable if endpoint decommissioned |
-| `github`   | `GITHUB_PERSONAL_ACCESS_TOKEN` placeholder unresolved  | Set `GITHUB_TOKEN` env var (already exported in `~/.bashrc`); audit script needs to read from `os.environ` |
-| `plaid`    | HTTPS endpoint unreachable                             | Re-verify URL or disable |
+| Server    | Issue                                                 | Recommended action                                                                                         |
+| --------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `everart` | HTTPS endpoint unreachable (URLError)                 | Re-verify URL or disable if endpoint decommissioned                                                        |
+| `github`  | `GITHUB_PERSONAL_ACCESS_TOKEN` placeholder unresolved | Set `GITHUB_TOKEN` env var (already exported in `~/.bashrc`); audit script needs to read from `os.environ` |
+| `plaid`   | HTTPS endpoint unreachable                            | Re-verify URL or disable                                                                                   |
 
 ## SKIP servers (explicitly disabled)
 
-| Server     | Reason                                                                 |
-|------------|------------------------------------------------------------------------|
-| `atlassian` | Requires `ATLASSIAN_TOKEN`; not configured                            |
-| `docs`      | Removed from registry (not in canonical `.mcp/registry.json`)         |
-| `postgres`  | Replaced by `neon` (project uses Neon for hosted Postgres)            |
+| Server      | Reason                                                        |
+| ----------- | ------------------------------------------------------------- |
+| `atlassian` | Requires `ATLASSIAN_TOKEN`; not configured                    |
+| `docs`      | Removed from registry (not in canonical `.mcp/registry.json`) |
+| `postgres`  | Replaced by `neon` (project uses Neon for hosted Postgres)    |
 
 To re-enable `atlassian`: `hermes config set mcp.servers.atlassian.enabled true`
-+ `hermes auth set atlassian ATLASSIAN_TOKEN`. To remove `docs` permanently:
-edit `.mcp/registry.json` and remove the entry, then re-run `mcp_sync.py`.
+
+- `hermes auth set atlassian ATLASSIAN_TOKEN`. To remove `docs` permanently:
+  edit `.mcp/registry.json` and remove the entry, then re-run `mcp_sync.py`.
 
 ## Verification
 

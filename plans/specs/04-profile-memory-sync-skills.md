@@ -10,6 +10,7 @@
 ## Problem Statement
 
 User requested implementation of 6 profile/memory sync skills:
+
 1. **soul-enhancer** — SOUL.md enhancement, persona→tone→traits mapping for all 14 Hermes profiles
 2. **hermes-personality-soul** — Personality config for all 14 Hermes profiles
 3. **create-missing-souls** — Discover/create SOUL.md for profiles missing it
@@ -22,6 +23,7 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 ## Skill Requirements (Per Skill)
 
 ### Common Requirements
+
 - [ ] SKILL.md with complete frontmatter
 - [ ] Skills Required table
 - [ ] Workflow with ≥ 3 phases
@@ -35,10 +37,12 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 ---
 
 ### 1. soul-enhancer
+
 **Location:** `skills/profiles/soul-enhancer/`
 **Purpose:** Enhance SOUL.md files with persona→tone→traits mapping for all 14 Hermes profiles
 
 **Workflow:**
+
 1. **Analyze** — Read target SOUL.md, identify gaps in persona/tone/traits
 2. **Map** — Apply 14-profile personality matrix (default, adminbot, code-architect, research-analyst, creative-director, exec-assistant, patient-tutor, cto, pm, security, etc.)
 3. **Enhance** — Add missing sections: cognitive style, execution frameworks, architectural invariants, standing rules
@@ -49,10 +53,12 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 ---
 
 ### 2. hermes-personality-soul
+
 **Location:** `skills/profiles/hermes-personality-soul/`
 **Purpose:** Define personality config for all 14 Hermes profiles
 
 **Workflow:**
+
 1. **Inventory** — List all 14 profiles and their intended use cases
 2. **Define** — Map each profile to: model, temperature, system prompt additions, tool preferences
 3. **Document** — Create personality reference with examples
@@ -63,10 +69,12 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 ---
 
 ### 3. create-missing-souls
+
 **Location:** `skills/profiles/create-missing-souls/`
 **Purpose:** Discover profiles missing SOUL.md or with stub SOUL.md; create from template
 
 **Workflow:**
+
 1. **Discover** — Scan `~/AppData/Local/hermes/profiles/` for directories
 2. **Check** — For each profile, verify SOUL.md exists and has content (> 100 lines)
 3. **Create** — For missing/stub: generate from soul-template.md with profile-specific persona
@@ -77,10 +85,12 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 ---
 
 ### 4. create-missing-memories
+
 **Location:** `skills/profiles/create-missing-memories/`
 **Purpose:** Discover profiles missing USER.md/MEMORY.md; create from template
 
 **Workflow:**
+
 1. **Discover** — Scan all profiles for USER.md and MEMORY.md
 2. **Check** — Verify files exist and meet minimum criteria
 3. **Create** — Generate USER.md (pointer to MEMORY.md) and MEMORY.md (§-delimited)
@@ -91,10 +101,12 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 ---
 
 ### 5. hermes-profile-sync
+
 **Location:** `skills/profiles/hermes-profile-sync/`
 **Purpose:** Bidirectional-safe propagation of root Hermes config.yaml into profile configs
 
 **Workflow:**
+
 1. **Read** — Load root config.yaml and all profile config.yaml files
 2. **Diff** — Compare root vs profile for each configurable section
 3. **Plan** — Generate sync plan (what to propagate, direction, conflicts)
@@ -106,10 +118,12 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 ---
 
 ### 6. hermes-profile-memory-sync
+
 **Location:** `skills/profiles/hermes-profile-memory-sync/`
 **Purpose:** Sync memory files (USER.md, MEMORY.md) and aliases safely across profiles
 
 **Workflow:**
+
 1. **Read** — Load memory files from all 7 profiles
 2. **Normalize** — Ensure consistent format (§-delimited, no H1)
 3. **Merge** — Intelligently merge facts (newest wins, preserve profile-specific)
@@ -123,17 +137,17 @@ Each skill must be class-level (not one-off), with SKILL.md + references/ + temp
 
 ## Acceptance Criteria (All 6 Skills)
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| soul-enhancer loads | `skill_view soul-enhancer` | Success |
-| hermes-personality-soul loads | `skill_view hermes-personality-soul` | Success |
-| create-missing-souls loads | `skill_view create-missing-souls` | Success |
-| create-missing-memories loads | `skill_view create-missing-memories` | Success |
-| hermes-profile-sync loads | `skill_view hermes-profile-sync` | Success |
-| hermes-profile-memory-sync loads | `skill_view hermes-profile-memory-sync` | Success |
-| All skill-judge ≥ 90 | `skill-judge <each>` | Score ≥ 90 |
-| Each has ≥ 3 support files | `ls skills/profiles/<skill>/{references,templates,scripts}/` | ≥ 3 files |
-| Cross-profile sync works | `verify-sync` | 65 checks pass |
+| Check                            | Command                                                      | Expected       |
+| -------------------------------- | ------------------------------------------------------------ | -------------- |
+| soul-enhancer loads              | `skill_view soul-enhancer`                                   | Success        |
+| hermes-personality-soul loads    | `skill_view hermes-personality-soul`                         | Success        |
+| create-missing-souls loads       | `skill_view create-missing-souls`                            | Success        |
+| create-missing-memories loads    | `skill_view create-missing-memories`                         | Success        |
+| hermes-profile-sync loads        | `skill_view hermes-profile-sync`                             | Success        |
+| hermes-profile-memory-sync loads | `skill_view hermes-profile-memory-sync`                      | Success        |
+| All skill-judge ≥ 90             | `skill-judge <each>`                                         | Score ≥ 90     |
+| Each has ≥ 3 support files       | `ls skills/profiles/<skill>/{references,templates,scripts}/` | ≥ 3 files      |
+| Cross-profile sync works         | `verify-sync`                                                | 65 checks pass |
 
 ## Implementation Approach
 

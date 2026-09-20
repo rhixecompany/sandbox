@@ -10,26 +10,26 @@
 
 MCP servers give LLM agents standardized access to tools, resources, and prompts. This workspace runs four agent platforms side-by-side, each with its own MCP configuration format:
 
-| Platform | Config Path(s) | Schema Root |
-|----------|----------------|-------------|
-| **Hermes Agent** (default profile) | `~/./...` (managed by `hermes mcp` CLI; canonical source = `hermes mcp list`) | hermes-internal store |
-| **OpenCode** | workspace `opencode.json` (root `mcp.*` block) + user `~/.config/opencode/opencode.json` (merged at runtime) | `https://opencode.ai/config.json` |
-| **GitHub Copilot CLI** | workspace `.github/mcp.json` (`mcpServers.*` block) | copilot-internal |
-| **Codex CLI** | workspace `.codex/mcp.json` (`mcpServers.*` block) + global OpenAI-managed | codex-internal |
-| **VS Code MCP** | `.vscode/mcp.json` (`servers.*` block, schema is identical to Copilot's) | vscode-internal |
+| Platform                           | Config Path(s)                                                                                               | Schema Root                       |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| **Hermes Agent** (default profile) | `~/./...` (managed by `hermes mcp` CLI; canonical source = `hermes mcp list`)                                | hermes-internal store             |
+| **OpenCode**                       | workspace `opencode.json` (root `mcp.*` block) + user `~/.config/opencode/opencode.json` (merged at runtime) | `https://opencode.ai/config.json` |
+| **GitHub Copilot CLI**             | workspace `.github/mcp.json` (`mcpServers.*` block)                                                          | copilot-internal                  |
+| **Codex CLI**                      | workspace `.codex/mcp.json` (`mcpServers.*` block) + global OpenAI-managed                                   | codex-internal                    |
+| **VS Code MCP**                    | `.vscode/mcp.json` (`servers.*` block, schema is identical to Copilot's)                                     | vscode-internal                   |
 
 Hermes MCP servers are configured by `hermes mcp add` and stored in the hermes install directory (`~/./...`). They are NOT read from any workspace file. OpenCode uses `opencode.json`, and `~/.config/opencode/opencode.json` (user-global) is merged into the workspace config at runtime.
 
 ### 1.1 Schema Translation Matrix
 
-| Field | opencode.json | .github/mcp.json / .codex/mcp.json / .vscode/mcp.json | hermes mcp list |
-|-------|---------------|-------------------------------------------------------|----------------|
-| Top-level key | `mcp` | `mcpServers` (github/codex) / `servers` (vscode) | (CLI command) |
-| HTTP server | `{type: "remote", url: "..."}` | `{type: "http", url: "..."}` | `{type: "http", url: "..."}` |
-| Stdio server | `{type: "local", command: [...], env: {...}}` | `{type: "stdio", command: "...", args: [...], env: {...}}` | `{type: "stdio", command: "...", args: [...], env: {...}}` |
-| Disabled flag | `enabled: false` | absent from file + listed in `disabledServers[]` (github only) or simply omitted | `enabled: false` |
-| Bearer token env | `url: "...${env:KEY}..."` | `url: "...${env:KEY}..."` or `env: { KEY: "..." }` | `headers: {Authorization: "Bearer ${env:KEY}"}` |
-| Per-server env vars | `env: { KEY: "${env:KEY}" }` | `env: { KEY: "${env:KEY}" }` | `env: { KEY: "${env:KEY}" }` |
+| Field               | opencode.json                                 | .github/mcp.json / .codex/mcp.json / .vscode/mcp.json                            | hermes mcp list                                            |
+| ------------------- | --------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Top-level key       | `mcp`                                         | `mcpServers` (github/codex) / `servers` (vscode)                                 | (CLI command)                                              |
+| HTTP server         | `{type: "remote", url: "..."}`                | `{type: "http", url: "..."}`                                                     | `{type: "http", url: "..."}`                               |
+| Stdio server        | `{type: "local", command: [...], env: {...}}` | `{type: "stdio", command: "...", args: [...], env: {...}}`                       | `{type: "stdio", command: "...", args: [...], env: {...}}` |
+| Disabled flag       | `enabled: false`                              | absent from file + listed in `disabledServers[]` (github only) or simply omitted | `enabled: false`                                           |
+| Bearer token env    | `url: "...${env:KEY}..."`                     | `url: "...${env:KEY}..."` or `env: { KEY: "..." }`                               | `headers: {Authorization: "Bearer ${env:KEY}"}`            |
+| Per-server env vars | `env: { KEY: "${env:KEY}" }`                  | `env: { KEY: "${env:KEY}" }`                                                     | `env: { KEY: "${env:KEY}" }`                               |
 
 ### 1.2 Disabled List Convention
 
@@ -50,21 +50,21 @@ The canonical workspace source of truth is `opencode.json` (per the existing aud
 
 ### 2.2 Workspace Configs
 
-| Platform | Servers | Same as Hermes? |
-|----------|---------|-----------------|
-| opencode.json | 29 entries (26 enabled + 3 disabled) | Close, but missing 3 hermes-only servers: `alexanderrhixe30`, `everart` (DNS fail in hermes), and `time` is in opencode; `stripe`/`plaid`/`everart` are placeholders |
-| .codex/mcp.json | 29 entries (matches opencode.json) | Yes |
-| .github/mcp.json | 22 enabled + 3 disabled | Missing several: atlassian, evals, time, stripe, plaid, everart, anthropic-resources, alexanderrhixe30, copilot_mcp_server |
-| .vscode/mcp.json | 29 entries (no disabled field) | Yes (everything enabled, including atlassian/docs/postgres) |
+| Platform         | Servers                              | Same as Hermes?                                                                                                                                                      |
+| ---------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| opencode.json    | 29 entries (26 enabled + 3 disabled) | Close, but missing 3 hermes-only servers: `alexanderrhixe30`, `everart` (DNS fail in hermes), and `time` is in opencode; `stripe`/`plaid`/`everart` are placeholders |
+| .codex/mcp.json  | 29 entries (matches opencode.json)   | Yes                                                                                                                                                                  |
+| .github/mcp.json | 22 enabled + 3 disabled              | Missing several: atlassian, evals, time, stripe, plaid, everart, anthropic-resources, alexanderrhixe30, copilot_mcp_server                                           |
+| .vscode/mcp.json | 29 entries (no disabled field)       | Yes (everything enabled, including atlassian/docs/postgres)                                                                                                          |
 
 ### 2.3 Server Categorization (2026-09-05 runtime check)
 
-| Category | Servers | Status |
-|----------|---------|--------|
-| **HTTP MCP — verified runtime** | context7, parallel-search, tavily, mindstudio, honcho, neon, sentry, smithery | 200/401 with valid JSON-RPC `initialize` (working at runtime with bearer auth) |
-| **HTTP MCP — dead endpoints** | anthropic-resources (404), stripe (404), plaid (DNS), everart (DNS), parallel-task (405 wrong URL), atlassian (disabled, 401 = needs OAuth) | Should be disabled or removed |
-| **Local MCP — verified local command** | ast-grep, code-sandbox, django, evals, fetch, filesystem, github, memory, mcp-docker, playwright, postgres, pytest, python-quality, sequential-thinking, time, tooling-config, tooling-lint | Working |
-| **Hermes-specific** | copilot_mcp_server, alexanderrhixe30 | Hermes-only; not in workspace configs |
+| Category                               | Servers                                                                                                                                                                                     | Status                                                                         |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **HTTP MCP — verified runtime**        | context7, parallel-search, tavily, mindstudio, honcho, neon, sentry, smithery                                                                                                               | 200/401 with valid JSON-RPC `initialize` (working at runtime with bearer auth) |
+| **HTTP MCP — dead endpoints**          | anthropic-resources (404), stripe (404), plaid (DNS), everart (DNS), parallel-task (405 wrong URL), atlassian (disabled, 401 = needs OAuth)                                                 | Should be disabled or removed                                                  |
+| **Local MCP — verified local command** | ast-grep, code-sandbox, django, evals, fetch, filesystem, github, memory, mcp-docker, playwright, postgres, pytest, python-quality, sequential-thinking, time, tooling-config, tooling-lint | Working                                                                        |
+| **Hermes-specific**                    | copilot_mcp_server, alexanderrhixe30                                                                                                                                                        | Hermes-only; not in workspace configs                                          |
 
 ---
 
@@ -86,19 +86,20 @@ The canonical workspace source of truth is `opencode.json` (per the existing aud
 
 ### 3.3 Dead MCP Endpoints (CRITICAL — clean up)
 
-| Server | URL | Status |
-|--------|-----|--------|
-| `anthropic-resources` | `https://resources.anthropic.com/mcp` | 404 — does not exist |
-| `stripe` | `https://mcp.stripe.com/mcp` | 404 — Stripe MCP not released yet (or URL wrong) |
-| `plaid` | `https://mcp.plaid.com/mcp` | DNS fail — `mcp.plaid.com` does not resolve |
-| `everart` | `https://mcp.everart.ai/mcp` | DNS fail — `mcp.everart.ai` does not resolve |
-| `parallel-task` | `https://task-mcp.parallel.ai/mcp` | 405 wrong endpoint (correct one is task-mcp.parallel.ai/mcp but it may not exist) |
+| Server                | URL                                   | Status                                                                            |
+| --------------------- | ------------------------------------- | --------------------------------------------------------------------------------- |
+| `anthropic-resources` | `https://resources.anthropic.com/mcp` | 404 — does not exist                                                              |
+| `stripe`              | `https://mcp.stripe.com/mcp`          | 404 — Stripe MCP not released yet (or URL wrong)                                  |
+| `plaid`               | `https://mcp.plaid.com/mcp`           | DNS fail — `mcp.plaid.com` does not resolve                                       |
+| `everart`             | `https://mcp.everart.ai/mcp`          | DNS fail — `mcp.everart.ai` does not resolve                                      |
+| `parallel-task`       | `https://task-mcp.parallel.ai/mcp`    | 405 wrong endpoint (correct one is task-mcp.parallel.ai/mcp but it may not exist) |
 
 **Fix direction:** Mark these as `enabled: false` in all configs where they exist. Add a one-line note in `opencode.json` documenting why. Do NOT delete the entries — preserves audit trail.
 
 ### 3.4 Hermes Workspace Coupling Gap
 
 Hermes Agent reads MCP servers from its own internal store (`~/./...`), not from any workspace file. This means:
+
 - The workspace `opencode.json` is the canonical source for **OpenCode only**.
 - Hermes must be configured separately via `hermes mcp add` (it is).
 - A workspace change to `opencode.json` does NOT auto-propagate to Hermes.
@@ -107,13 +108,13 @@ Hermes Agent reads MCP servers from its own internal store (`~/./...`), not from
 
 ### 3.5 Schema Mismatches Across Platforms
 
-| Issue | Where | Fix |
-|-------|-------|-----|
-| `type: "remote"` (opencode) vs `type: "http"` (others) | opencode.json | Document; both forms work in their respective parsers. Do NOT change. |
-| `mcp-server-fetch-typescript` (opencode/codex/vscode) vs `mcp-server-fetch-tools` (github) | .github/mcp.json | Update github to use the canonical name to match other configs |
+| Issue                                                                                                                    | Where                                                 | Fix                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `type: "remote"` (opencode) vs `type: "http"` (others)                                                                   | opencode.json                                         | Document; both forms work in their respective parsers. Do NOT change.                                            |
+| `mcp-server-fetch-typescript` (opencode/codex/vscode) vs `mcp-server-fetch-tools` (github)                               | .github/mcp.json                                      | Update github to use the canonical name to match other configs                                                   |
 | `python_quality_mcp_server.py` (opencode/codex/vscode) vs `python_quality_server.py` (github + projects/Python-projects) | .github/mcp.json + projects/Python-projects/.mcp.json | Update github/projects to canonical filename; both files exist on disk actually so this is a doc/inventory issue |
-| `tooling_lint_mcp_server.py` vs `tooling_lint_server.py` | .github/mcp.json + projects/Python-projects/.mcp.json | Same as above |
-| `bunx` (opencode/codex/vscode) vs `npx.cmd` (github) | .github/mcp.json | Both work; no fix needed |
+| `tooling_lint_mcp_server.py` vs `tooling_lint_server.py`                                                                 | .github/mcp.json + projects/Python-projects/.mcp.json | Same as above                                                                                                    |
+| `bunx` (opencode/codex/vscode) vs `npx.cmd` (github)                                                                     | .github/mcp.json                                      | Both work; no fix needed                                                                                         |
 
 ### 3.6 Disabled-Server Inconsistency
 

@@ -1,6 +1,7 @@
 # Download Log — Hermes User-Guide .md Files
+
 | file_path | status | detail | severity | batch |
-|---|---|---|---|---|
+| --------- | ------ | ------ | -------- | ----- |
 
 --- SUMMARY ---
 Total discovered .md entries: 0

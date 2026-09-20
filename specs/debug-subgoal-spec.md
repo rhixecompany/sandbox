@@ -45,6 +45,7 @@ Batch 3 — Logs inspection:
 - `./specs/debug-subgoal-final-verification.md` (final gate)
 
 ## Constraints
+
 - `systematic-debugging` Phase 1 gate: NO fix applied until evidence confirms root cause.
 - `systematic-debugging` Phase 2 gate: ONE hypothesis per failure; no multi-change batches.
 - `systematic-debugging` Phase 4 gate: 3 failed fixes → STOP and question architecture (per `multi-file-change-protocol` gate discipline); document architectural concern if it occurs.

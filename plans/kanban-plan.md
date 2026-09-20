@@ -4,7 +4,9 @@ title: "Plan — Kanban (Multi-Agent Board)"
 version: 1.0.0
 status: "in_progress"
 ---
+
 # Plan: kanban
+
 - Source file: docs/features/kanban.md (1276 lines)
 - Title from frontmatter: Kanban (Multi-Agent Board)
 - Phase sequence: read → summarize → spec → prompt → skill → execute → verify

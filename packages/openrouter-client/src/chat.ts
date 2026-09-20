@@ -52,8 +52,7 @@ export async function sendChat(
 	if (options?.memory?.inject) {
 		try {
 			const mem = new SupermemoryMemory(options.memory.containerTag);
-			const lastUser =
-				[...messages].reverse().find((m) => m.role === "user")?.content ?? "";
+			const lastUser = [...messages].reverse().find((m) => m.role === "user")?.content ?? "";
 			const q = options.memory.searchQuery ?? lastUser;
 			if (q) {
 				chatMessages = (await mem.injectContext(chatMessages, q, {

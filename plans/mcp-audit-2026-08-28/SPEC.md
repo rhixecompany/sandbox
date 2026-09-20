@@ -13,13 +13,13 @@ status: draft → ready
 
 The SandBox workspace has MCP server definitions spread across **5 config files** with no single source of truth:
 
-| File | Servers | Format | Owner |
-|------|---------|--------|-------|
-| `opencode.json` | 25 | opencode schema (`mcp.<name>.command`) | OpenCode |
-| `.codex/mcp.json` | 30 | MCP std (`mcpServers.<name>`) | Codex CLI |
-| `.copilot/mcp.json` | 30 | MCP std (pretty-printed) | GitHub Copilot |
-| `.vscode/mcp.json` | 19 | MCP std (subset) | VS Code |
-| `~/AppData/Local/hermes/config.yaml` (mcp_servers) | 25 | Hermes (npx std + http) | Hermes Agent |
+| File                                               | Servers | Format                                 | Owner          |
+| -------------------------------------------------- | ------- | -------------------------------------- | -------------- |
+| `opencode.json`                                    | 25      | opencode schema (`mcp.<name>.command`) | OpenCode       |
+| `.codex/mcp.json`                                  | 30      | MCP std (`mcpServers.<name>`)          | Codex CLI      |
+| `.copilot/mcp.json`                                | 30      | MCP std (pretty-printed)               | GitHub Copilot |
+| `.vscode/mcp.json`                                 | 19      | MCP std (subset)                       | VS Code        |
+| `~/AppData/Local/hermes/config.yaml` (mcp_servers) | 25      | Hermes (npx std + http)                | Hermes Agent   |
 
 **Issues observed (baseline 2026-08-28 17:30):**
 
@@ -33,17 +33,17 @@ The SandBox workspace has MCP server definitions spread across **5 config files*
 
 ## 2. Goals
 
-| # | Goal | Priority |
-|---|------|----------|
-| G1 | Single source of truth for all MCP server definitions | MUST |
-| G2 | Deterministic sync to 4 disk configs (opencode/codex/copilot/vscode) + hermes config | MUST |
-| G3 | Audit script that loads registry, tests every server, emits structured report | MUST |
-| G4 | Fix the 3 broken local MCP server script paths in `opencode.json` | MUST |
-| G5 | Update default model in hermes config to a verified-working model | MUST |
-| G6 | Add `.omo/` to `.prettierignore` so `bun run check` passes | MUST |
-| G7 | One umbrella skill `mcp-audit-orchestrator` to run the loop | MUST |
-| G8 | Reusable Python + TS scripts in `scripts/` for CI and local use | MUST |
-| G9 | Verify zero new warnings introduced; existing non-fixable warnings documented | SHOULD |
+| #   | Goal                                                                                 | Priority |
+| --- | ------------------------------------------------------------------------------------ | -------- |
+| G1  | Single source of truth for all MCP server definitions                                | MUST     |
+| G2  | Deterministic sync to 4 disk configs (opencode/codex/copilot/vscode) + hermes config | MUST     |
+| G3  | Audit script that loads registry, tests every server, emits structured report        | MUST     |
+| G4  | Fix the 3 broken local MCP server script paths in `opencode.json`                    | MUST     |
+| G5  | Update default model in hermes config to a verified-working model                    | MUST     |
+| G6  | Add `.omo/` to `.prettierignore` so `bun run check` passes                           | MUST     |
+| G7  | One umbrella skill `mcp-audit-orchestrator` to run the loop                          | MUST     |
+| G8  | Reusable Python + TS scripts in `scripts/` for CI and local use                      | MUST     |
+| G9  | Verify zero new warnings introduced; existing non-fixable warnings documented        | SHOULD   |
 
 ## 3. Non-Goals
 
@@ -97,6 +97,7 @@ registry → for each target:
 ### 4.3 Audit Algorithm
 
 For each server in registry:
+
 - **stdio**: spawn `bunx --version` (or check binary path exists), env-resolve `${env:...}` placeholders
 - **http/sse**: HEAD/GET to URL, expect 2xx/4xx (not 5xx, not network error)
 - **disabled**: skip, mark `⊘`
@@ -124,25 +125,25 @@ mcp-audit-orchestrator/
 
 Each gate is a hard check; cannot skip.
 
-| Gate | Pass condition |
-|------|---------------|
-| V1 | `python scripts/mcp_audit.py --registry .mcp/registry.json` exits 0, report generated |
-| V2 | `python scripts/mcp_sync.py --registry .mcp/registry.json` exits 0, all 4 files updated |
-| V3 | `hermes mcp list` shows same 22 enabled + 3 disabled as baseline |
-| V4 | `hermes doctor` shows no new warnings vs pre-session baseline |
-| V5 | `bun run check` exits 0 (lint + format + markdownlint + spellcheck) |
-| V6 | `python -c "import json; json.load(open('.mcp/registry.json'))"` succeeds (valid JSON) |
-| V7 | All 4 disk configs pass `python -c "import json; json.load(open(p))"` |
-| V8 | SESSION_REPORT.md updated with this session's results |
+| Gate | Pass condition                                                                          |
+| ---- | --------------------------------------------------------------------------------------- |
+| V1   | `python scripts/mcp_audit.py --registry .mcp/registry.json` exits 0, report generated   |
+| V2   | `python scripts/mcp_sync.py --registry .mcp/registry.json` exits 0, all 4 files updated |
+| V3   | `hermes mcp list` shows same 22 enabled + 3 disabled as baseline                        |
+| V4   | `hermes doctor` shows no new warnings vs pre-session baseline                           |
+| V5   | `bun run check` exits 0 (lint + format + markdownlint + spellcheck)                     |
+| V6   | `python -c "import json; json.load(open('.mcp/registry.json'))"` succeeds (valid JSON)  |
+| V7   | All 4 disk configs pass `python -c "import json; json.load(open(p))"`                   |
+| V8   | SESSION_REPORT.md updated with this session's results                                   |
 
 ## 6. Risks
 
-| Risk | Likelihood | Mitigation |
-|------|-----------|------------|
-| opencode.json format drift breaks sync | M | Use opencode.json parser, not regex |
-| Hermes `mcp_servers` schema is different from codex stdio | M | Tested in baseline; sync handles both forms |
-| Registry grows stale again | M | Skill workflow includes `regenerate` from `hermes mcp list --json` |
-| User's `projects/*` working tree conflicts | L | Never touch projects/*; only touch MCP configs |
+| Risk                                                      | Likelihood | Mitigation                                                         |
+| --------------------------------------------------------- | ---------- | ------------------------------------------------------------------ |
+| opencode.json format drift breaks sync                    | M          | Use opencode.json parser, not regex                                |
+| Hermes `mcp_servers` schema is different from codex stdio | M          | Tested in baseline; sync handles both forms                        |
+| Registry grows stale again                                | M          | Skill workflow includes `regenerate` from `hermes mcp list --json` |
+| User's `projects/*` working tree conflicts                | L          | Never touch projects/*; only touch MCP configs                     |
 
 ## 7. Open Questions
 

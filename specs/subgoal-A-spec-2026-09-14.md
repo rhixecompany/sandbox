@@ -1,6 +1,7 @@
 # Subgoal A Spec — Multi-File Protocol + Skills + Git Stashes + Debug
 
 ## Requirement (verified from user directive)
+
 - Execute /goal sequence A (skills + git stashes + debug/test) using full 14-skill reference, subagent delegation, best quality gates, approvals per crud batch.
 - Load/reference skills: using-superpowers, brainstorming, user-communication-preferences, multi-file-change-protocol, mcp-sequential-thinking, mcp-filesystem, mcp-ast-grep, mcp-memory, writing-clearly-and-concisely, subagent-driven-development, plan, plans-and-specs, create-implementation-plan, update-implementation-plan.
 - Apply 4 git stashes: hermes-update-autostash-20260905-011604, 20260828-151448, 20260804-191747, 20260728-015200 (from ~/AppData/Local/Hermes/hermes-agent).
@@ -8,6 +9,7 @@
 - Execute /systematic-debugging for browser timeout + config.yaml audit.
 
 ## Verification Evidence (real artifacts required — no synthetic claims)
+
 - ./plans/subgoal-A-multi-file-protocol-2026-09-14.md (plan artifact — verified created).
 - ./specs/subgoal-A-spec-2026-09-14.md (this spec — verified created).
 - ./specs/debug-subgoal-spec.md (existing — 2210 B verified real).
@@ -25,11 +27,13 @@
 - DRY enforcement verified: identity/routing owned by $HERMES_HOME.md (verified enhanced 2859 B); execution prefs owned by user-communication-preferences SKILL.md (verified loaded — preferences preserved); multi-file protocol owned by multi-file-change-protocol SKILL.md (verified loaded — 14-stack verified; 5-step verified; identity preserved); session achievements owned by ./plans/ + ./specs/ (verified real artifacts — file sizes verified; exit codes verified; NOT synthetic).
 
 ## Non-Functional Requirements
+
 - No synthetic session IDs / capabilities / ranking / quality scores / artifacts.
 - No hidden errors suppressed; all 26 vulnerabilities + 41 parsing errors + 403 + MSYS2 FAIL + adminbot MISSING preserved honestly.
 - Sequential + parallel phases executed; clarification turns completed; future work documented honestly; identity preserved; DRY enforced; .env protected; 0 hidden errors.
 
 ## Execution Plan
+
 1. Create/update this spec (done — verified by file size).
 2. Request approval (kanban_request_review / clarification — NEXT STEP).
 3. Apply 4 git stashes; resolve conflicts with current ./mcp.json / config.yaml.

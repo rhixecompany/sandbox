@@ -12,6 +12,7 @@ the Hermes/SandBox ecosystem. Each goal depends on the previous ("and only then"
 so the work is partitioned into 5 phases with hard inter-phase gates.
 
 Prior sessions (2026-06..2026-08-28) produced a deep infrastructure:
+
 - `scripts/profile_config_audit.py` — reports missing context files per profile
 - `scripts/mcp_audit.py` + `scripts/mcp_sync.py` — MCP config drift detection
 - `scripts/agent_provider_matrix.py` — noninteractive provider+profile runner
@@ -82,13 +83,13 @@ This spec covers the remaining surface area and tightens the existing assets.
 
 ## Deliverables (per goal)
 
-| Goal | Spec | Plan | Script/Skill | Artifact |
-|------|------|------|--------------|----------|
-| 1 | this file | PLAN.md §1 | `scripts/profile_config_fix.py` + `skills/devops/profile-context-unification` | `profile-config-fix-report.json` + populated missing context files |
-| 2 | this file | PLAN.md §2 | existing `agent_provider_matrix.py` + `agent-provider-matrix-runner` skill | `agent-provider-matrix-results.json` |
-| 3 | this file | PLAN.md §3 | existing `mcp_audit.py` + `mcp_sync.py` | synced disk configs + new `mcp-validation-report.md` |
-| 4 | this file | PLAN.md §4 | new `scripts/ollama_setup.py` | Ollama model running + cross-agent wiring verified |
-| 5 | this file | PLAN.md §5 | n/a (verification commands only) | `final-verification-report.md` |
+| Goal | Spec      | Plan       | Script/Skill                                                                  | Artifact                                                           |
+| ---- | --------- | ---------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| 1    | this file | PLAN.md §1 | `scripts/profile_config_fix.py` + `skills/devops/profile-context-unification` | `profile-config-fix-report.json` + populated missing context files |
+| 2    | this file | PLAN.md §2 | existing `agent_provider_matrix.py` + `agent-provider-matrix-runner` skill    | `agent-provider-matrix-results.json`                               |
+| 3    | this file | PLAN.md §3 | existing `mcp_audit.py` + `mcp_sync.py`                                       | synced disk configs + new `mcp-validation-report.md`               |
+| 4    | this file | PLAN.md §4 | new `scripts/ollama_setup.py`                                                 | Ollama model running + cross-agent wiring verified                 |
+| 5    | this file | PLAN.md §5 | n/a (verification commands only)                                              | `final-verification-report.md`                                     |
 
 ## Acceptance criteria
 

@@ -11,10 +11,13 @@ model: nemotron-3-ultra-free (opencode-zen)
 # Docker Cleanup Plan
 
 ## Goal
+
 Delete all unused Docker images, builds, containers, volumes, models, and MCP toolkit.
 
 ## Phase A: Inventory
+
 ### Tasks
+
 - A1: Run `docker system df` to inventory all resources
 - A2: List all Docker containers, images, volumes, networks
 - A3: Identify AI agent containers and their status
@@ -23,7 +26,9 @@ Delete all unused Docker images, builds, containers, volumes, models, and MCP to
 **Gate**: Complete inventory captured.
 
 ## Phase B: Cleanup
+
 ### Tasks
+
 - B1: Remove all unused images (`docker image prune --all`)
 - B2: Remove all stopped containers (`docker container prune`)
 - B3: Remove all unused volumes (`docker volume prune`)
@@ -33,7 +38,9 @@ Delete all unused Docker images, builds, containers, volumes, models, and MCP to
 **Gate**: All unused resources removed.
 
 ## Phase C: Verification
+
 ### Tasks
+
 - C1: Verify disk space freed
 - C2: Verify active resources unaffected
 - C3: Update documentation
@@ -41,5 +48,6 @@ Delete all unused Docker images, builds, containers, volumes, models, and MCP to
 **Gate**: Verification complete.
 
 ## Linked Specs
+
 - ../specs/hermes-ecosystem-reliability-spec.md
 - ../specs/comprehensive-implementation-spec.md

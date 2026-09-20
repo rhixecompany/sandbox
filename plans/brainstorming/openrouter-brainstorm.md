@@ -8,19 +8,19 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `openrouter` |
-| Default model | nvidia/nemotron-3-ultra-550b-a55b:free |
-| Auth type | API key |
-| Env var | `OPENROUTER_API_KEY` |
-| Base URL | `https://openrouter.ai/api/v1` |
-| Models available | 400+ across 70+ providers |
-| Credential pool | 1 key (OPENROUTER_API_KEY, env var) |
-| Pool strategy | fill_first |
-| Role | Primary fallback (2nd in chain after opencode-zen) |
-| Response cache | true, TTL: 300s |
-| min_coding_score | 0.65 |
+| Property         | Value                                              |
+| ---------------- | -------------------------------------------------- |
+| Config key       | `openrouter`                                       |
+| Default model    | nvidia/nemotron-3-ultra-550b-a55b:free             |
+| Auth type        | API key                                            |
+| Env var          | `OPENROUTER_API_KEY`                               |
+| Base URL         | `https://openrouter.ai/api/v1`                     |
+| Models available | 400+ across 70+ providers                          |
+| Credential pool  | 1 key (OPENROUTER_API_KEY, env var)                |
+| Pool strategy    | fill_first                                         |
+| Role             | Primary fallback (2nd in chain after opencode-zen) |
+| Response cache   | true, TTL: 300s                                    |
+| min_coding_score | 0.65                                               |
 
 ---
 
@@ -42,24 +42,30 @@ OpenRouter IS the template workflow. This is the reference implementation that a
 ## SCAMPER Analysis
 
 ### Substitute
+
 - OpenRouter IS the template — other providers adapt this workflow
 - Can substitute underlying providers via routing (Anthropic, Google, AWS Bedrock, Together AI)
 
 ### Combine
+
 - Response caching (300s TTL) + credential pooling = reduced API calls
 - Provider routing + fallback chains = maximum reliability
 
 ### Adapt
+
 - This IS the master template — all other 7 providers adapt this 8-step workflow
 
 ### Modify
+
 - Only 1 API key in pool (no backup) — consider adding a second key
 - No explicit provider_routing config — uses defaults
 
 ### Eliminate
+
 - Eliminate rate limit risks by adding credential pool backup
 
 ### Reverse
+
 - OpenRouter is 2nd in fallback — should it be 1st for some workloads?
 
 ---
@@ -68,14 +74,14 @@ OpenRouter IS the template workflow. This is the reference implementation that a
 
 From Hermes docs, OpenRouter provider routing supports:
 
-| Control | Description |
-|---------|-------------|
-| `sort` | Throughput/price sorting (`:nitro`, `:floor` suffixes) |
-| `only` | Restrict to specific underlying providers |
-| `ignore` | Exclude specific underlying providers |
-| `order` | Priority order for provider selection |
-| `require_parameters` | Require specific params |
-| `data_collection` | Data sharing preferences |
+| Control              | Description                                            |
+| -------------------- | ------------------------------------------------------ |
+| `sort`               | Throughput/price sorting (`:nitro`, `:floor` suffixes) |
+| `only`               | Restrict to specific underlying providers              |
+| `ignore`             | Exclude specific underlying providers                  |
+| `order`              | Priority order for provider selection                  |
+| `require_parameters` | Require specific params                                |
+| `data_collection`    | Data sharing preferences                               |
 
 ---
 

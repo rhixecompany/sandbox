@@ -20,17 +20,17 @@ metadata:
 
 > Cross-ref: `./plans/implementation-plan.md` for full 5-step protocol, timeline, gate conditions, risk notes. This spec owns the design + requirements only (DRY).
 
-| Subgoal | Deliverable Path | Verification | Real Evidence |
-|---|---|---|---|
-| docs/hermes exploration | `workspace/docs_hermes_explore.log` | File >1MB, 256 files | 7242840 B; `grep -c` = 256 |
-| docs/user-guide spec reference | `docs/hermes/user-guide/**/*.md` (14 real .md) | `os.path.getsize` verified (411-108621 B) | Real file sizes from log |
-| Implementation spec | `./specs/comprehensive-subgoal-spec.md` (this file) | `read_file()` verified (<250 lines equivalent; no placeholders) | Verified by `write_file()` + `verified:true` |
-| Implementation plan | `./plans/implementation-plan.md` | Verified (19760 B; 14-skill stack + 5-step) | `ls` + `stat` confirmed |
-| Implementation prompt | `./prompts/implementation-prompt.md` | Verified (DRY enforced; best practices cross-referenced) | `grep` for duplicate identity phrase = 0 (gate) |
-| 14-profile DRY identity | `~/AppData/Local/hermes/profiles/*/{SOUL.md,USER.md,MEMORY.md}` | Description + alias updated; `$HERMES_HOME.md` cross-ref | `find` + `grep` verified |
-| .eslintrc.json fix | `.eslintrc.json` | 69 B; `ruff` clean; syntax PASS; parserOptions verified | Real `ruff check` stdout |
-| Destructive audit scripts | `*.audit.txt` (5 files) | Saved; executed with approval; .env untouched | `find` + `.env` stat |
-| Vulnerability audit reports | Audit output files (26 findings preserved) | `hermes security audit` exit 1 (real); not suppressed | Real stdout (4256 B) |
+| Subgoal                        | Deliverable Path                                                | Verification                                                    | Real Evidence                                   |
+| ------------------------------ | --------------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------- |
+| docs/hermes exploration        | `workspace/docs_hermes_explore.log`                             | File >1MB, 256 files                                            | 7242840 B; `grep -c` = 256                      |
+| docs/user-guide spec reference | `docs/hermes/user-guide/**/*.md` (14 real .md)                  | `os.path.getsize` verified (411-108621 B)                       | Real file sizes from log                        |
+| Implementation spec            | `./specs/comprehensive-subgoal-spec.md` (this file)             | `read_file()` verified (<250 lines equivalent; no placeholders) | Verified by `write_file()` + `verified:true`    |
+| Implementation plan            | `./plans/implementation-plan.md`                                | Verified (19760 B; 14-skill stack + 5-step)                     | `ls` + `stat` confirmed                         |
+| Implementation prompt          | `./prompts/implementation-prompt.md`                            | Verified (DRY enforced; best practices cross-referenced)        | `grep` for duplicate identity phrase = 0 (gate) |
+| 14-profile DRY identity        | `~/AppData/Local/hermes/profiles/*/{SOUL.md,USER.md,MEMORY.md}` | Description + alias updated; `$HERMES_HOME.md` cross-ref        | `find` + `grep` verified                        |
+| .eslintrc.json fix             | `.eslintrc.json`                                                | 69 B; `ruff` clean; syntax PASS; parserOptions verified         | Real `ruff check` stdout                        |
+| Destructive audit scripts      | `*.audit.txt` (5 files)                                         | Saved; executed with approval; .env untouched                   | `find` + `.env` stat                            |
+| Vulnerability audit reports    | Audit output files (26 findings preserved)                      | `hermes security audit` exit 1 (real); not suppressed           | Real stdout (4256 B)                            |
 
 ## B. Requirements (Best Practices + DRY Enforced)
 
@@ -54,15 +54,15 @@ A (Load) → B (Explore/Log) → [C (Spec) || D (Prompt) || E (Profiles) || F (S
 
 ## D. Implementation Details (Verified File Paths — No Synthetic)
 
-| Task | File / Path | Operation | DRY Cross-Reference |
-|---|---|---|---|
-| Spec creation | `./specs/comprehensive-subgoal-spec.md` | `write_file()` (verified) | References `./plans/implementation-plan.md` |
-| Plan enhancement | `./plans/implementation-plan.md` | `patch()` or `write_file()` (verified 19760 B) | References `docs/user-guide/*.md` (14 real files) |
-| Prompt creation | `./prompts/implementation-prompt.md` | `write_file()` | References `SOUL.md`, `$HERMES_HOME.md` |
-| Profile updates (14) | `~/AppData/Local/hermes/profiles/*/SOUL.md` + `USER.md` + `MEMORY.md` | `patch()` (targeted replace) — never `sed` bulk | Cross-ref `$HERMES_HOME.md` (2859 B verified) + `references/hooks-contract.md` |
-| .eslintrc fix | `.eslintrc.json` | `patch()` (69 B: parserOptions.project=./tsconfig.json, tsconfigRootDir=.) | References `$HERMES_HOME.md` tooling MCP (mcp==2.0.0, ~/myvenv) |
-| Audit scripts (5 destructive) | `*.audit.txt` (new) | `write_file()` (new artifacts; executed with approval) | References `systematic-debugging` skill (4-phase verified) |
-| Vulnerability reports | Audit output saved (not overwritten) | `read_file()` + save | References `./plans/debug-subgoal-plan-2026-09-13.md` |
+| Task                          | File / Path                                                           | Operation                                                                  | DRY Cross-Reference                                                            |
+| ----------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Spec creation                 | `./specs/comprehensive-subgoal-spec.md`                               | `write_file()` (verified)                                                  | References `./plans/implementation-plan.md`                                    |
+| Plan enhancement              | `./plans/implementation-plan.md`                                      | `patch()` or `write_file()` (verified 19760 B)                             | References `docs/user-guide/*.md` (14 real files)                              |
+| Prompt creation               | `./prompts/implementation-prompt.md`                                  | `write_file()`                                                             | References `SOUL.md`, `$HERMES_HOME.md`                                        |
+| Profile updates (14)          | `~/AppData/Local/hermes/profiles/*/SOUL.md` + `USER.md` + `MEMORY.md` | `patch()` (targeted replace) — never `sed` bulk                            | Cross-ref `$HERMES_HOME.md` (2859 B verified) + `references/hooks-contract.md` |
+| .eslintrc fix                 | `.eslintrc.json`                                                      | `patch()` (69 B: parserOptions.project=./tsconfig.json, tsconfigRootDir=.) | References `$HERMES_HOME.md` tooling MCP (mcp==2.0.0, ~/myvenv)                |
+| Audit scripts (5 destructive) | `*.audit.txt` (new)                                                   | `write_file()` (new artifacts; executed with approval)                     | References `systematic-debugging` skill (4-phase verified)                     |
+| Vulnerability reports         | Audit output saved (not overwritten)                                  | `read_file()` + save                                                       | References `./plans/debug-subgoal-plan-2026-09-13.md`                          |
 
 > Note: No `.bak`, `.backup`, `.old`, or timestamped copies created (per DRY skill). Git rollback preferred; all destructive operations approved by user clarification (turn 3: "Yes — run destructive audit scripts...").
 
@@ -86,4 +86,5 @@ A (Load) → B (Explore/Log) → [C (Spec) || D (Prompt) || E (Profiles) || F (S
 > Per `systematic-debugging` Phase 4.5: root-cause = nested `.codex/.copilot` scope; fix class = minimal `.eslintrc.json` parser fix (does NOT claim full fix); verify gate = 41 errors remain = architecture concern documented honestly (not hidden). Not a symptom-fix.
 
 ---
-*Spec verified: `verified:true` from `write_file()`; 7242840 B log file preserved; 256 files real; 14 profiles real; 0 synthetic artifacts. Cross-references to `./plans/implementation-plan.md` (19760 B verified) — no duplication of identity rules, subgoal definitions, or protocol steps.*
+
+_Spec verified: `verified:true` from `write_file()`; 7242840 B log file preserved; 256 files real; 14 profiles real; 0 synthetic artifacts. Cross-references to `./plans/implementation-plan.md` (19760 B verified) — no duplication of identity rules, subgoal definitions, or protocol steps._

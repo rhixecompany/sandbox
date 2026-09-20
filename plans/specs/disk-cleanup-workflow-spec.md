@@ -8,20 +8,20 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `nous` |
-| Default model | varies (portal-dependent) |
-| Auth type | OAuth |
-| Auth method | `hermes auth` (Nous Portal) |
-| Base URL | `https://inference-api.nousresearch.com/v1` |
-| Portal URL | `https://portal.nousresearch.com` |
-| Model catalog | 300+ models with bundled tool use |
-| Model catalog URL | `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json` |
-| Credential pool | OAuth token via hermes auth |
-| Pool strategy | Primary base_url |
-| Role | Primary provider foundation (base_url for model) |
-| Current active model | upstage/solar-pro4:free (via Nous Portal) |
+| Property             | Value                                                               |
+| -------------------- | ------------------------------------------------------------------- |
+| Config key           | `nous`                                                              |
+| Default model        | varies (portal-dependent)                                           |
+| Auth type            | OAuth                                                               |
+| Auth method          | `hermes auth` (Nous Portal)                                         |
+| Base URL             | `https://inference-api.nousresearch.com/v1`                         |
+| Portal URL           | `https://portal.nousresearch.com`                                   |
+| Model catalog        | 300+ models with bundled tool use                                   |
+| Model catalog URL    | `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json` |
+| Credential pool      | OAuth token via hermes auth                                         |
+| Pool strategy        | Primary base_url                                                    |
+| Role                 | Primary provider foundation (base_url for model)                    |
+| Current active model | upstage/solar-pro4:free (via Nous Portal)                           |
 
 ---
 
@@ -30,6 +30,7 @@
 ### Step 1: Credential Verification
 
 **Actions:**
+
 - [ ] Run `hermes auth list nous` to verify OAuth token
 - [ ] Run `hermes doctor` to validate connectivity
 - [ ] Verify portal authentication is active
@@ -43,6 +44,7 @@
 ### Step 2: Model Selection & Validation
 
 **Actions:**
+
 - [ ] Run `hermes model` → verify nous provider shows available models
 - [ ] Check models available via Nous Portal (300+ models with bundled tool use)
 - [ ] Verify context window ≥ 64K minimum
@@ -57,6 +59,7 @@
 ### Step 3: Config.yaml Review
 
 **Actions:**
+
 - [ ] Verify `model.base_url: https://inference-api.nousresearch.com/v1` is correct
 - [ ] Verify `model.provider: nous` is set
 - [ ] Check that nous serves as the model foundation (base_url reference)
@@ -70,6 +73,7 @@
 ### Step 4: Portal Authentication
 
 **Actions:**
+
 - [ ] Verify `hermes auth` OAuth flow is complete
 - [ ] Check token expiration / refresh behavior
 - [ ] Test portal URL accessibility: `https://portal.nousresearch.com`
@@ -83,6 +87,7 @@
 ### Step 5: Model Catalog Access
 
 **Actions:**
+
 - [ ] Verify model catalog URL accessibility: `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json`
 - [ ] Document catalog refresh behavior
 - [ ] List key model categories available
@@ -96,6 +101,7 @@
 ### Step 6: MCP Server Compatibility
 
 **Actions:**
+
 - [ ] Test MCP servers with nous backing model (sample at least 1)
 - [ ] Document any provider-specific quirks
 
@@ -108,6 +114,7 @@
 ### Step 7: Rate Limit & Quota Management
 
 **Actions:**
+
 - [ ] Document rate limits for Nous Portal
 - [ ] Identify any quota or usage restrictions
 - [ ] Check model_catalog URL: `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json`
@@ -125,6 +132,7 @@
 **hermes model shows:** Nous Portal / upstage/solar-pro4:free (active provider)
 
 **Possible explanations:**
+
 1. The running session has overridden the config default
 2. The config hasn't been applied to the running session
 3. `hermes model` reads session state, not config defaults

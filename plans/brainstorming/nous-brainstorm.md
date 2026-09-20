@@ -8,20 +8,20 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `nous` |
-| Default model | varies (portal-dependent) |
-| Auth type | OAuth |
-| Auth method | `hermes auth` (Nous Portal) |
-| Base URL | `https://inference-api.nousresearch.com/v1` |
-| Portal URL | `https://portal.nousresearch.com` |
-| Model catalog | 300+ models with bundled tool use |
-| Model catalog URL | `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json` |
-| Credential pool | OAuth token via hermes auth |
-| Pool strategy | Primary base_url |
-| Role | Primary provider foundation (base_url for model) |
-| Current active model | upstage/solar-pro4:free (via Nous Portal) |
+| Property             | Value                                                               |
+| -------------------- | ------------------------------------------------------------------- |
+| Config key           | `nous`                                                              |
+| Default model        | varies (portal-dependent)                                           |
+| Auth type            | OAuth                                                               |
+| Auth method          | `hermes auth` (Nous Portal)                                         |
+| Base URL             | `https://inference-api.nousresearch.com/v1`                         |
+| Portal URL           | `https://portal.nousresearch.com`                                   |
+| Model catalog        | 300+ models with bundled tool use                                   |
+| Model catalog URL    | `https://hermes-agent.nousresearch.com/docs/api/model-catalog.json` |
+| Credential pool      | OAuth token via hermes auth                                         |
+| Pool strategy        | Primary base_url                                                    |
+| Role                 | Primary provider foundation (base_url for model)                    |
+| Current active model | upstage/solar-pro4:free (via Nous Portal)                           |
 
 ---
 
@@ -43,6 +43,7 @@ Adapting the 8-step template to Nous Portal:
 ## Key Insight
 
 Nous Portal is the **current active provider** for the default profile (upstage/solar-pro4:free). This is interesting because:
+
 - The config.yaml shows opencode-zen as the primary provider with deepseek-v4-flash-free
 - But `hermes model` shows Nous Portal / solar-pro4 as active
 - This suggests the running session has overridden the config, or the config hasn't been applied
@@ -54,24 +55,30 @@ Nous Portal serves as the **base_url foundation** — the model section referenc
 ## SCAMPER Analysis
 
 ### Substitute
+
 - Nous Portal vs OpenRouter — both aggregate multiple models, different backing infrastructure
 - solar-pro4:free vs deepseek-v4-flash-free — different models on different providers
 
 ### Combine
+
 - Nous Portal OAuth + opencode-zen API key = multi-provider primary setup
 - Model catalog (300+ models) + bundled tool use = comprehensive capability
 
 ### Adapt
+
 - Adapt 8-step template — Nous-specific: OAuth auth, portal URL, model catalog URL
 
 ### Modify
+
 - Current active model is solar-pro4:free via Nous Portal — different from config.yaml's opencode-zen/deepseek-v4-flash-free
 - This discrepancy needs investigation
 
 ### Eliminate
+
 - Eliminate if OAuth token is expired or portal access is unavailable
 
 ### Reverse
+
 - Nous Portal as primary (already the case for default profile) — opencode-zen is the config default but not the active session model
 
 ---

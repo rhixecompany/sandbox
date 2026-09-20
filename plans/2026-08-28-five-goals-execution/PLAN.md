@@ -29,13 +29,17 @@
 DRY: skeletons point to canonical sources, no duplication.
 
 ### Step 1.1 — Read full audit report
+
 ```bash
 python scripts/profile_config_audit.py > ./plans/2026-08-28-five-goals-execution/g1-audit.json
 ```
+
 Inspect: which files are missing in which profiles.
 
 ### Step 1.2 — Build `profile_config_fix.py`
+
 Non-mutating on first run (--dry-run). On apply:
+
 - For each profile, for each missing context file:
   - Create a thin pointer file at the canonical location
   - Each file is ≤ 20 lines, points to the source of truth
@@ -44,6 +48,7 @@ Non-mutating on first run (--dry-run). On apply:
   - Logs every creation with path + sha256 of canonical target
 
 ### Step 1.3 — Run fix
+
 ```bash
 python scripts/profile_config_fix.py --dry-run  # verify target list
 python scripts/profile_config_fix.py            # apply
@@ -51,6 +56,7 @@ python scripts/profile_config_audit.py          # re-verify
 ```
 
 **Gate 1 → 2:**
+
 - `python scripts/profile_config_audit.py` reports 0 `file_missing`
   (or all `file_missing` are explicitly waived with rationale)
 - `profile-config-fix-report.json` lists every file created
@@ -59,21 +65,26 @@ python scripts/profile_config_audit.py          # re-verify
 ## Phase 2 — Provider Matrix (Goal 2)
 
 **Goal:** Noninteractive runner executes one request against all 9 providers
-+ all 14 profiles, captures result rows with provider, context, max-output,
-capabilities.
+
+- all 14 profiles, captures result rows with provider, context, max-output,
+  capabilities.
 
 ### Step 2.1 — Read existing artifacts
+
 - `prompts/agent-provider-matrix.prompt.md` (exists from prior session)
 - `scripts/agent_provider_matrix.py` (exists)
 - `docs/agent-provider-matrix.md` (if exists)
 
 ### Step 2.2 — Build the runner skill
+
 Create `~/AppData/Local/hermes/skills/autonomous-ai-agents/agent-provider-matrix-runner/`:
+
 - `SKILL.md` — workflow + verification checklist
 - `references/output-schema.md` — row schema
 - `templates/prompt.md` — copy of `prompts/agent-provider-matrix.prompt.md`
 
 ### Step 2.3 — Execute
+
 ```bash
 # Dry-run the full matrix
 python scripts/agent_provider_matrix.py --dry-run
@@ -83,6 +94,7 @@ python scripts/agent_provider_matrix.py --request "Reply with: PROVIDER OK" --li
 ```
 
 **Gate 2 → 3:**
+
 - Dry-run exits 0, full matrix enumerated
 - Live run produces ≥ 1 result row with all 8 fields populated
 - `agent-provider-matrix-results.json` exists in `./plans/results/`
@@ -93,11 +105,13 @@ python scripts/agent_provider_matrix.py --request "Reply with: PROVIDER OK" --li
 canonical registry. Disabled hermes servers documented.
 
 ### Step 3.1 — Re-audit
+
 ```bash
 python scripts/mcp_audit.py
 ```
 
 ### Step 3.2 — Sync (idempotent)
+
 ```bash
 python scripts/mcp_sync.py --dry-run  # should show "no change"
 python scripts/mcp_sync.py            # apply if drift detected
@@ -105,12 +119,15 @@ python scripts/mcp_audit.py           # re-verify
 ```
 
 ### Step 3.3 — Document disabled servers
+
 Append a section to `./plans/2026-08-28-five-goals-execution/g3-summary.md`:
+
 - atlassian (needs ATLASSIAN_TOKEN)
 - docs (disabled, not in registry)
 - postgres (disabled, replaced by neon)
 
 **Gate 3 → 4:**
+
 - `mcp_audit.py` → 0 FAIL on all 4 disk configs
 - `mcp_sync.py --dry-run` → "no change" (idempotent)
 - Disabled servers documented with rationale
@@ -121,25 +138,32 @@ Append a section to `./plans/2026-08-28-five-goals-execution/g3-summary.md`:
 wire it into hermes + at least one of copilot/codex/opencode.
 
 ### Step 4.1 — Safe disk cleanup (no app uninstalls in this pass)
+
 ```bash
 python scripts/disk_cleanup.py --dry-run  # verify target list
 python scripts/disk_cleanup.py            # apply safe cleanups
 ```
+
 Reports before/after MB for each cache.
 
 ### Step 4.2 — App inventory (no removal in this pass)
+
 ```bash
 python scripts/disk_cleanup.py --scan-large > ./plans/2026-08-28-five-goals-execution/g4-large-files.json
 ```
+
 Capture `winget list` + `choco list` to `g4-installed-apps.txt` for user review.
 
 ### Step 4.3 — Ollama model selection
+
 Based on post-cleanup free space:
+
 - ≥ 5 GB: pull `gemma3:4b` (~3.3 GB, vision+text, strong reasoning)
 - 3-5 GB: pull `qwen2.5vl:3b` (~3.2 GB, vision+reasoning)
 - < 3 GB: report blocker, do not pull
 
 ### Step 4.4 — Pull + verify
+
 ```bash
 ollama pull <chosen-model>
 echo "Reply with: OLLAMA OK" | ollama run <chosen-model>
@@ -147,12 +171,14 @@ curl -s http://localhost:11434/api/tags
 ```
 
 ### Step 4.5 — Wire to agents
+
 - Hermes: `hermes config set model.ollama.<chosen-model> ollama:<chosen-model>`
 - OpenCode: edit `opencode.json` (small entry)
 - Codex: edit `.codex/config.json` (small entry)
 - Copilot: only supports GitHub-hosted models; document limitation
 
 **Gate 4 → 5:**
+
 - `ollama list` shows the model
 - `curl localhost:11434/api/tags` returns it
 - At least hermes + one of opencode/codex is wired
@@ -163,6 +189,7 @@ curl -s http://localhost:11434/api/tags
 **Goal:** Run all 12 verification commands; catalog and fix every finding.
 
 ### Step 5.1 — Commands
+
 ```bash
 hermes doctor
 hermes doctor --fix
@@ -179,17 +206,22 @@ bun run check
 ```
 
 ### Step 5.2 — Triage
+
 Each output → one of:
+
 - **PASS:** recorded, no action
 - **WARN:** documented, root cause, decision (fix or accept)
 - **FAIL:** must fix before completion
 
 ### Step 5.3 — Systematic debug
+
 For every FAIL or unaddressed WARN: apply 4-phase systematic-debugging
 (observe → hypothesize → test → confirm root cause → fix → verify).
 
 ### Step 5.4 — Final report
+
 `./plans/2026-08-28-five-goals-execution/FINAL-REPORT.md` with:
+
 - Phase-by-phase summary
 - All bugs found, root cause, fix, verification
 - Final hermes doctor + bun run check status
@@ -197,6 +229,7 @@ For every FAIL or unaddressed WARN: apply 4-phase systematic-debugging
 - Recommendations for next session
 
 **Gate 5 → Done:**
+
 - All phases pass
 - FINAL-REPORT.md written
 - SESSION_REPORT.md updated
@@ -215,6 +248,7 @@ For every FAIL or unaddressed WARN: apply 4-phase systematic-debugging
 ## Success criteria
 
 The pipeline is complete when:
+
 - All 5 goals show PASS in the final report
 - All 5 gates (G0..G4 → Done) green
 - No outstanding FAIL in any verification command

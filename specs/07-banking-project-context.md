@@ -5,8 +5,6 @@ description: "Set a standing goal and let Hermes keep working across turns until
 status: "in_progress"
 ---
 
-
-
 ## Goal
 
 Ensure the Banking project (`projects/Banking/`) AGENTS.md loads reliably as project context before any `.github/prompts/`. Fix context loading issues reported in sessions 221823, 222027, 222231 so that AGENTS.md is always recognized first.
@@ -14,6 +12,7 @@ Ensure the Banking project (`projects/Banking/`) AGENTS.md loads reliably as pro
 ## Requirements
 
 ### Functional
+
 - [ ] `projects/Banking/AGENTS.md` loads as project context in new Banking sessions
 - [ ] AGENTS.md recognized before `.github/prompts/` (canonical guidance first)
 - [ ] Project-specific specs reference `.github/instructions/` templates
@@ -21,20 +20,21 @@ Ensure the Banking project (`projects/Banking/`) AGENTS.md loads reliably as pro
 - [ ] Banking project stack recognized: Next.js 16, Drizzle ORM, Plaid, Dwolla, TypeScript strict
 
 ### Non-Functional
+
 - [ ] Context load time < 3 seconds
 - [ ] No duplicate context loading
 - [ ] Works across profile switches
 
 ## Acceptance Criteria
 
-| Check | Command | Expected |
-|-------|---------|----------|
-| AGENTS.md readable | `read_file ~/Desktop/SandBox/projects/Banking/AGENTS.md` | Returns full content |
-| Context loads | New session in Banking dir → check loaded context | AGENTS.md referenced |
-| Prompts load | `ls ~/Desktop/SandBox/projects/Banking/.github/prompts/` | Project prompts listed |
-| Stack recognized | Context mentions Next.js 16, Drizzle, Plaid, Dwolla | Found |
-| Load time < 3s | Measure context loading | < 3 seconds |
-| Cross-profile | Switch profile → Banking session | AGENTS.md still loads |
+| Check              | Command                                                  | Expected               |
+| ------------------ | -------------------------------------------------------- | ---------------------- |
+| AGENTS.md readable | `read_file ~/Desktop/SandBox/projects/Banking/AGENTS.md` | Returns full content   |
+| Context loads      | New session in Banking dir → check loaded context        | AGENTS.md referenced   |
+| Prompts load       | `ls ~/Desktop/SandBox/projects/Banking/.github/prompts/` | Project prompts listed |
+| Stack recognized   | Context mentions Next.js 16, Drizzle, Plaid, Dwolla      | Found                  |
+| Load time < 3s     | Measure context loading                                  | < 3 seconds            |
+| Cross-profile      | Switch profile → Banking session                         | AGENTS.md still loads  |
 
 ## Non-Functional Requirements
 
@@ -62,7 +62,9 @@ read_file ~/Desktop/SandBox/projects/Banking/.cursorrules 2>/dev/null || echo "N
 ```
 
 ## Linked Specs
+
 - 07-banking-project-context.md
 
 ## Linked Plan
+
 - ../2026-08-15_202608_four-agent-prompt-audit-plan.md

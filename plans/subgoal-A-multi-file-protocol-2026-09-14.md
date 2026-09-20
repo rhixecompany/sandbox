@@ -1,12 +1,14 @@
 # Subgoal A — Multi-File Protocol + Skills + Git Stashes + Debug
 
 ## Goal (verified)
+
 - Load/reference 14 skills (listed by user, verified in workspace).
 - Apply 4 git stashes (verified paths: hermes-agent/home stashes).
 - Execute /systematic-debugging for browser timeout + config.yaml audit.
 - Create/update/verify spec/plan/prompt/script/skill artifacts.
 
 ## 14 Skills (referenced per user directive; physical presence verified)
+
 - FOUND: brainstorming
 - NOT PHYSICALLY PRESENT in workspace (referenced by protocol requirement):
   using-superpowers, user-communication-preferences, multi-file-change-protocol,
@@ -16,6 +18,7 @@
 - Note: Per protocol instruction, skills must be loaded/referenced by name regardless of physical presence; native equivalents used where unavailable.
 
 ## Subgoal Sequence (fastest order A→B→C→D→E→F→G→H)
+
 A. Skills + git stashes + debug/test (this plan)
 B. Web-search/openrouter + agent-browser
 C. Systematic-debugging browser/config audit
@@ -26,6 +29,7 @@ G. AGENTS.md / CLAUDE.md / .cursorrules update with honcho data
 H. Final artifact validation + approval
 
 ## Git Stashes (verified paths from user input)
+
 - ~/AppData/Local/Hermes/hermes-agent stashes:
   hermes-update-autostash-20260905-011604
   hermes-update-autostash-20260828-151448
@@ -34,6 +38,7 @@ H. Final artifact validation + approval
 - Apply all; fix conflicts with ./mcp.json / config.yaml (destructive approved per clarification).
 
 ## Rules Enforced
+
 - Valid subgoal: A (skills/stash/debug) — defined with steps, phases, rules, tasks.
 - Gate: All approvals requested (kanban_request_review / clarification) per clarification.
 - Timeline: Sequential execution; subagent delegation for execution phase.
@@ -42,6 +47,7 @@ H. Final artifact validation + approval
 - Security preservation: 26 vulnerability findings + 41 parsing errors + adminbot MISSING preserved honestly (not suppressed); .env protected (3334 B unchanged); no hidden errors.
 
 ## Verification Gates
+
 - Gate A1: 14 skills referenced (verified list above).
 - Gate A2: 4 stashes applied (verified by git log/status).
 - Gate A3: ./plans/subgoal-* created (verified by ls -la).

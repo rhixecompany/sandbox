@@ -17,7 +17,11 @@
       "preview": "model = \"gpt-5.4-mini\"\nmodel_reasoning_effort = \"xhigh\"\npersonality = \"pragmatic\"\nnotify = [ \"C:\\\\Users\\\\Alexa\\\\AppData\\\\Local\\\\OpenAI\\\\Codex\\\\runtimes\\\\cua_node\\\\f8d2abcb7481383b\\\\bin\\\\node_modules\\\\@oai\\\\sky\\\\bin\\\\windows\\\\codex-computer-use.exe\", \"turn-ended\" ]\n[desktop]\nambient-suggestions-enabl"
     }
   },
-  "copilot": {},
+  "copilot": {
+    "updated": "2026-09-20",
+    "lightweight_mapping_applied": true,
+    "notes": "Heavy servers disabled; core kept: ast-grep, github, memory, sequential-thinking, filesystem, context7, fetch. Matches opencode.json mapping."
+  },
   "vscode": {
     "C:\\Users\\Alexa\\Desktop\\SandBox\\.vscode\\settings.json": {
       "path": "C:\\Users\\Alexa\\Desktop\\SandBox\\.vscode\\settings.json",
@@ -33,5 +37,14 @@
       "modified": "2026-08-24T18:52:06.070020",
       "preview": "{\n\t\"[bat]\": {\n\t\t\"editor.wordWrap\": \"on\"\n\t},\n\t\"[css]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.css-language-features\"\n\t},\n\t\"[html]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.html-language-features\"\n\t},\n\t\"[javascript]\": {\n\t\t\"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n\t},\n\t\"[json]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.json-language-features\"\n\t},\n\t\"[jsonc]\": {\n\t\t\"editor.defaultFormatter\": \"vscode.json-language-features\"\n\t},\n\t\"[markdown]\": {\n\t\t\"editor.defaultFormatter\": \"esbenp.prettier-vscod"
     }
+  },
+  "cursor-agent": {
+    "config_path": "~/Desktop/SandBox/.cursor/rules/sandbox.mdc",
+    "docs_path": "~/Desktop/SandBox/docs/",
+    "notes": "No binary; uses .cursor rules + workspace docs. MCP sync applied to workspace .hermes/plans/"
+  },
+  "agent": {
+    "lightweight_mapping_applied": true,
+    "notes": "MCP sync applied globally to hermes/copilot; opencode.json has no duplicates."
   }
 }

@@ -101,7 +101,7 @@ Execute the complete git lifecycle across every repo in `./projects`:
 | Force-push      | Explicit user consent required; logged        |
 | PR merge        | Review-then-merge only; no `--auto`           |
 | Branch delete   | User approval required                        |
-| Destructive ops | Approval file under `./approvals/`      |
+| Destructive ops | Approval file under `./approvals/`            |
 
 ## 🛡️ ROLLBACK
 

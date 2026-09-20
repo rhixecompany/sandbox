@@ -8,18 +8,18 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `opencode-zen` |
-| Default model | laguna-s-2.1-free |
-| Active model | deepseek-v4-flash-free |
-| Fallback model | nemotron-3-ultra-free |
-| Auth type | API key |
-| Env var | `OPENCODE_ZEN_API_KEY` |
-| Base URL | `https://opencode.ai/zen/v1` |
-| Credential pool | 2 keys (vault primary + zen-backup manual) |
-| Pool strategy | fill_first |
-| Profile usage | default (primary), creative-director, code-architect, exec-assistant, research-analyst, patient-tutor, ops, pm, qa, security, dev, cto, designer, alexa |
+| Property        | Value                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Config key      | `opencode-zen`                                                                                                                                          |
+| Default model   | laguna-s-2.1-free                                                                                                                                       |
+| Active model    | deepseek-v4-flash-free                                                                                                                                  |
+| Fallback model  | nemotron-3-ultra-free                                                                                                                                   |
+| Auth type       | API key                                                                                                                                                 |
+| Env var         | `OPENCODE_ZEN_API_KEY`                                                                                                                                  |
+| Base URL        | `https://opencode.ai/zen/v1`                                                                                                                            |
+| Credential pool | 2 keys (vault primary + zen-backup manual)                                                                                                              |
+| Pool strategy   | fill_first                                                                                                                                              |
+| Profile usage   | default (primary), creative-director, code-architect, exec-assistant, research-analyst, patient-tutor, ops, pm, qa, security, dev, cto, designer, alexa |
 
 ---
 
@@ -41,23 +41,29 @@ The OpenRouter workflow template adapted for OpenCode-Zen:
 ## SCAMPER Analysis
 
 ### Substitute
+
 - Can deepseek-v4-flash-free be substituted with another opencode-zen model? → laguna-s-2.1-free, nemotron-3-ultra-free
 - Can the credential pool be substituted with a single key? → Yes but loses rotation resilience
 
 ### Combine
+
 - Combine opencode-zen credential verification with doctor check
 - Combine model selection with MCP testing
 
 ### Adapt
+
 - Adapt the OpenRouter 8-step workflow template to opencode-zen's specific auth (API key + manual backup)
 
 ### Modify
+
 - The fill_first strategy means both keys tried before fallback — this is different from round_robin
 
 ### Eliminate
+
 - Eliminate the interactive `hermes model` picker — use config.yaml directly for non-interactive setup
 
 ### Reverse
+
 - Instead of testing model first, test MCP connectivity first (github MCP already confirmed working)
 
 ---

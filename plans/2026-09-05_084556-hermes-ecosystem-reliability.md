@@ -181,16 +181,16 @@ Use one canonical registry plus generated projections and secret-safe validators
 
 ## Verification matrix
 
-| Requirement | Evidence |
-|---|---|
-| Startup/end lifecycle | start/end capture artifacts, regenerated `SESSION_REPORT.md`, hook doctor, repeat run |
-| Context consistency | instruction audit JSON, profile/config cross-reference check, frontmatter validation |
-| MCP sync | normalized registry/projection diff, Hermes CLI reconciliation, per-server tool discovery |
-| Quick commands | inventory JSON, live `quick_commands` parse, script smoke results, scripts judge |
-| Rate limits | deterministic unit tests and bounded live provider probe |
-| Client health | client version/config validation and minimal real MCP invocation |
-| Secret safety | validator tests plus scan of generated reports for values/tokens |
-| Repository integrity | baseline status comparison, targeted diff review, all build/lint/type/check gates |
+| Requirement           | Evidence                                                                                  |
+| --------------------- | ----------------------------------------------------------------------------------------- |
+| Startup/end lifecycle | start/end capture artifacts, regenerated `SESSION_REPORT.md`, hook doctor, repeat run     |
+| Context consistency   | instruction audit JSON, profile/config cross-reference check, frontmatter validation      |
+| MCP sync              | normalized registry/projection diff, Hermes CLI reconciliation, per-server tool discovery |
+| Quick commands        | inventory JSON, live `quick_commands` parse, script smoke results, scripts judge          |
+| Rate limits           | deterministic unit tests and bounded live provider probe                                  |
+| Client health         | client version/config validation and minimal real MCP invocation                          |
+| Secret safety         | validator tests plus scan of generated reports for values/tokens                          |
+| Repository integrity  | baseline status comparison, targeted diff review, all build/lint/type/check gates         |
 
 ## Rollback
 
@@ -216,12 +216,12 @@ Use one canonical registry plus generated projections and secret-safe validators
 
 ## Risks
 
-| Risk | Impact | Likelihood | Mitigation |
-|------|--------|------------|------------|
-| Judge subprocess timeout (>60s) | Low | Medium | Pre-warm: run plans-judge + specs-judge once before scoring |
-| Cross-judge path resolution fails | Medium | Low | Use project_root = pdir.parent.parent; verify with `echo` |
-| Phase gate line missing | Low | High | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
-| Spec coupling broken (plan points at missing spec) | Medium | Medium | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec |
+| Risk                                               | Impact | Likelihood | Mitigation                                                                                     |
+| -------------------------------------------------- | ------ | ---------- | ---------------------------------------------------------------------------------------------- |
+| Judge subprocess timeout (>60s)                    | Low    | Medium     | Pre-warm: run plans-judge + specs-judge once before scoring                                    |
+| Cross-judge path resolution fails                  | Medium | Low        | Use project_root = pdir.parent.parent; verify with `echo`                                      |
+| Phase gate line missing                            | Low    | High       | `augment_plans_with_required_sections.py` appends a default gate to every `## Phase X` heading |
+| Spec coupling broken (plan points at missing spec) | Medium | Medium     | `pick_matching_spec` uses token overlap; fallback to the comprehensive spec                    |
 
 ## Files to Create or Modify
 

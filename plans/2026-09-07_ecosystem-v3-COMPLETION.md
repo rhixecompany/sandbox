@@ -38,11 +38,11 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 
 ## Risks
 
-| Risk | Likelihood | Impact |
-|------|-----------|--------|
-| Scope creep | Medium | Medium |
-| Dependencies change | Low | High |
-| Timeline slippage | Medium | Medium |
+| Risk                | Likelihood | Impact |
+| ------------------- | ---------- | ------ |
+| Scope creep         | Medium     | Medium |
+| Dependencies change | Low        | High   |
+| Timeline slippage   | Medium     | Medium |
 
 ## Files to Create/Modify
 
@@ -59,7 +59,6 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 
 - [../specs/master-spec.md](../specs/master-spec.md) — Master Spec
 
-
 # Ecosystem Master Plan v3 — Task Completion Status
 
 > **Date**: 2026-09-07T20:00+00:00
@@ -69,12 +68,14 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 ## All 5 Subgoals: Status
 
 ### ✅ SUBGOAL 1: Install Plugins from GitHub Awesome Lists — COMPLETE
+
 - Fetched all 4 repos (github/awesome-copilot, awesome-opencode, awesome-codex-cli, awesome-hermes-agent)
 - Extracted ~489 total items
 - Reports saved to `./plans/awesome-extract-*.md`
 - Hermes-compatible items identified and catalogued
 
 ### ✅ SUBGOAL 2: Install Code-Rabbit CLI — COMPLETE
+
 - `coderabbit` CLI v0.7.6 installed and verified
 - `coderabbitai-mcp` v1.1.1 installed globally via npm
 - MCP server `coderabbit-cli-mcp` enabled in config.yaml
@@ -82,11 +83,13 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 - Webhook configs created at `./webhooks/code-rabbit/`
 
 ### ✅ SUBGOAL 3: Create Skills for Every Hermes MCP Server — COMPLETE
+
 - 24 SKILL.md files created at `~/./skills/mcp/mcp-*/SKILL.md`
 - All 24 enabled servers covered
 - Standard format with workflow, tools table, test cases
 
 ### ✅ SUBGOAL 4: Doctor + Audit + Dependencies — COMPLETE
+
 - `hermes hooks doctor`: 0 "stdout was not valid JSON" errors ✅
 - Hook stdout fix: `_pathutil.py` and `lib.py` modified (print → stderr)
 - `requirements.txt`: Updated with 17 pip packages
@@ -94,10 +97,12 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 - `hermes skills update`: No updates available
 
 ### ⏳ SUBGOAL 5: Profile Sync (14 profiles) — IN PROGRESS
+
 - Background subagent collecting profile data
 - All 14 profiles being compared for differences
 
 ### ⏳ SUBGOAL 6: Judge Scores ≥99 — IN PROGRESS
+
 - Plans Judge: 32.3 → 93.9 (background subagent pushing to ≥99)
 - Scripts Judge: 70.4 → 83.2 (background subagent)
 - Specs Judge: 27.6 → 68.0 (background subagent)
@@ -113,22 +118,23 @@ Track completion of all Ecosystem v3 tasks across the SandBox workspace.
 
 ## Files Modified/Created
 
-| File | Action |
-|------|--------|
-| `~/./hooks/_pathutil.py` | Fixed print→stderr |
-| `~/./hooks/lib.py` | Fixed print→stderr |
-| `~/./skills/code-rabbit/SKILL.md` | Created |
-| `~/./skills/mcp/mcp-*/SKILL.md` | 24 files created |
-| `~/Desktop/SandBox/requirements.txt` | Updated with 17 packages |
-| `./webhooks/code-rabbit/` | Created webhook configs |
-| `./specs/` | Created spec directory |
-| `./plans/audit-log.md` | Updated |
-| `./plans/2026-09-07_ecosystem-v3*.md` | Master plans |
-| `SESSION_REPORT.md` | Updated |
+| File                                  | Action                   |
+| ------------------------------------- | ------------------------ |
+| `~/./hooks/_pathutil.py`              | Fixed print→stderr       |
+| `~/./hooks/lib.py`                    | Fixed print→stderr       |
+| `~/./skills/code-rabbit/SKILL.md`     | Created                  |
+| `~/./skills/mcp/mcp-*/SKILL.md`       | 24 files created         |
+| `~/Desktop/SandBox/requirements.txt`  | Updated with 17 packages |
+| `./webhooks/code-rabbit/`             | Created webhook configs  |
+| `./specs/`                            | Created spec directory   |
+| `./plans/audit-log.md`                | Updated                  |
+| `./plans/2026-09-07_ecosystem-v3*.md` | Master plans             |
+| `SESSION_REPORT.md`                   | Updated                  |
 
 ## Background Subagents (10 active)
 
 All working on final judge score improvements:
+
 - sg4-doctor-audit-deps: pip packages
 - sg5-profile-sync: 14-profile sync
 - sg6-fix-plans: Plans judge → ≥99

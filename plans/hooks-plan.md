@@ -4,7 +4,9 @@ title: "Plan — Event Hooks"
 version: 1.0.0
 status: "in_progress"
 ---
+
 # Plan: hooks
+
 - Source file: docs/features/hooks.md (2007 lines)
 - Title from frontmatter: Event Hooks
 - Phase sequence: read → summarize → spec → prompt → skill → execute → verify

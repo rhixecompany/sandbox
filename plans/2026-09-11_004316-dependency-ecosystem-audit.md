@@ -41,73 +41,73 @@ Audit every repository in the SandBox monorepo (root + `packages/` + all 23 `pro
 
 - GOAL-001: Enumerate all 26 repos, parse every manifest, produce consolidated `technology-stacks.md`.
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-001 | Enumerate repos + manifests (package.json, pyproject.toml, requirements*.txt, uv.lock) | | |
-| TASK-002 | Parse all package.json (18 node repos) for name/version/deps/devDeps | | |
-| TASK-003 | Parse all Python manifests (10 locations) for direct packages | | |
-| TASK-004 | Write `technology-stacks.md` (per-repo stack summary) at root | | |
+| Task     | Description                                                                            | Completed | Date |
+| -------- | -------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-001 | Enumerate repos + manifests (package.json, pyproject.toml, requirements*.txt, uv.lock) |           |      |
+| TASK-002 | Parse all package.json (18 node repos) for name/version/deps/devDeps                   |           |      |
+| TASK-003 | Parse all Python manifests (10 locations) for direct packages                          |           |      |
+| TASK-004 | Write `technology-stacks.md` (per-repo stack summary) at root                          |           |      |
 
 ### Implementation Phase 2 — node-dependency.md
 
 - GOAL-002: Produce `node-dependency.md` at root with per-repo + consolidated direct dependency index.
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-005 | Build master Node direct-dep index (name, version spec, repo(s), dep/devDep, purpose) | | |
-| TASK-006 | Write `node-dependency.md` (per-repo tables + unique package index + npm/npx/bun/bunx usage notes) | | |
+| Task     | Description                                                                                        | Completed | Date |
+| -------- | -------------------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-005 | Build master Node direct-dep index (name, version spec, repo(s), dep/devDep, purpose)              |           |      |
+| TASK-006 | Write `node-dependency.md` (per-repo tables + unique package index + npm/npx/bun/bunx usage notes) |           |      |
 
 ### Implementation Phase 3 — python-packages.md
 
 - GOAL-003: Produce `python-packages.md` at root with every direct Python package.
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-007 | Build master Python direct-package index from all manifests (dedupe by lowercase name) | | |
-| TASK-008 | Write `python-packages.md` (per-repo tables + unique package index + install/usage notes) | | |
+| Task     | Description                                                                               | Completed | Date |
+| -------- | ----------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-007 | Build master Python direct-package index from all manifests (dedupe by lowercase name)    |           |      |
+| TASK-008 | Write `python-packages.md` (per-repo tables + unique package index + install/usage notes) |           |      |
 
 ### Implementation Phase 4 — Web Research Cheat-Sheets (~245 docs)
 
 - GOAL-004: One cheat-sheet per direct package via parallel research subagents.
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-009 | Prepare package lists split across 6 parallel subagents (node ~34, python 210 in 5 batches of ~42) | | |
-| TASK-010 | Subagent batch A: node cheat-sheets → `research/packages/node/` | | |
-| TASK-011 | Subagent batches B–F: python cheat-sheets → `research/packages/python/` | | |
-| TASK-012 | Verify doc count == package count; re-dispatch missing docs | | |
+| Task     | Description                                                                                        | Completed | Date |
+| -------- | -------------------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-009 | Prepare package lists split across 6 parallel subagents (node ~34, python 210 in 5 batches of ~42) |           |      |
+| TASK-010 | Subagent batch A: node cheat-sheets → `research/packages/node/`                                    |           |      |
+| TASK-011 | Subagent batches B–F: python cheat-sheets → `research/packages/python/`                            |           |      |
+| TASK-012 | Verify doc count == package count; re-dispatch missing docs                                        |           |      |
 
 ### Implementation Phase 5 — Audit Skills, Scripts, Hooks
 
 - GOAL-005: Consolidated DRY skills/scripts/hooks per ecosystem.
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-013 | Create skill `node-dep-audit` (validate node-dependency.md vs live manifests) | | |
-| TASK-014 | Create skill `python-dep-audit` (validate python-packages.md + requirements.txt sync) | | |
-| TASK-015 | Create skill `research-doc-verify` (validate research/packages docs exist + meet template) | | |
-| TASK-016 | Write `scripts/node-dep-audit.py`, `scripts/python-dep-audit.py`, `scripts/research-doc-verify.py` | | |
-| TASK-017 | Write hook scripts in `hooks/` wiring the three audits (post-write verification) | | |
+| Task     | Description                                                                                        | Completed | Date |
+| -------- | -------------------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-013 | Create skill `node-dep-audit` (validate node-dependency.md vs live manifests)                      |           |      |
+| TASK-014 | Create skill `python-dep-audit` (validate python-packages.md + requirements.txt sync)              |           |      |
+| TASK-015 | Create skill `research-doc-verify` (validate research/packages docs exist + meet template)         |           |      |
+| TASK-016 | Write `scripts/node-dep-audit.py`, `scripts/python-dep-audit.py`, `scripts/research-doc-verify.py` |           |      |
+| TASK-017 | Write hook scripts in `hooks/` wiring the three audits (post-write verification)                   |           |      |
 
 ### Implementation Phase 6 — requirements.txt Reconciliation
 
 - GOAL-006: Reconcile `requirements.txt` with live env, organized and verified.
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-018 | Capture live env packages (`~/myvenv` pip freeze + uv) | | |
-| TASK-019 | Classify: direct (from manifests) / dev (test tooling) / transitive | | |
-| TASK-020 | Rewrite `requirements.txt` sections; verify every python-packages.md entry present | | |
+| Task     | Description                                                                        | Completed | Date |
+| -------- | ---------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-018 | Capture live env packages (`~/myvenv` pip freeze + uv)                             |           |      |
+| TASK-019 | Classify: direct (from manifests) / dev (test tooling) / transitive                |           |      |
+| TASK-020 | Rewrite `requirements.txt` sections; verify every python-packages.md entry present |           |      |
 
 ### Implementation Phase 7 — Verification & Commit
 
 - GOAL-007: All gates pass; commit with traceability.
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-021 | Run `node-dep-audit.py`, `python-dep-audit.py`, `research-doc-verify.py` — 0 failures | | |
-| TASK-022 | Run `bun run check` + `pytest` — no new regressions | | |
-| TASK-023 | Update plan status → Completed; git commit all artifacts | | |
+| Task     | Description                                                                           | Completed | Date |
+| -------- | ------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-021 | Run `node-dep-audit.py`, `python-dep-audit.py`, `research-doc-verify.py` — 0 failures |           |      |
+| TASK-022 | Run `bun run check` + `pytest` — no new regressions                                   |           |      |
+| TASK-023 | Update plan status → Completed; git commit all artifacts                              |           |      |
 
 ## 3. Alternatives
 

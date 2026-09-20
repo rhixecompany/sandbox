@@ -8,18 +8,18 @@
 
 ## Provider Overview
 
-| Property | Value |
-|----------|-------|
-| Config key | `opencode-zen` |
-| Default model | laguna-s-2.1-free |
-| Active model | deepseek-v4-flash-free |
-| Fallback model | nemotron-3-ultra-free |
-| Auth type | API key |
-| Env var | `OPENCODE_ZEN_API_KEY` |
-| Base URL | `https://opencode.ai/zen/v1` |
-| Credential pool | 2 keys (vault primary + zen-backup manual) |
-| Strategy | fill_first |
-| Profile usage | default (primary), creative-director, code-architect, exec-assistant, research-analyst, patient-tutor, ops, pm, qa, security, dev, cto, designer, alexa (all stopped profiles use deepseek-v4-flash-free) |
+| Property        | Value                                                                                                                                                                                                     |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Config key      | `opencode-zen`                                                                                                                                                                                            |
+| Default model   | laguna-s-2.1-free                                                                                                                                                                                         |
+| Active model    | deepseek-v4-flash-free                                                                                                                                                                                    |
+| Fallback model  | nemotron-3-ultra-free                                                                                                                                                                                     |
+| Auth type       | API key                                                                                                                                                                                                   |
+| Env var         | `OPENCODE_ZEN_API_KEY`                                                                                                                                                                                    |
+| Base URL        | `https://opencode.ai/zen/v1`                                                                                                                                                                              |
+| Credential pool | 2 keys (vault primary + zen-backup manual)                                                                                                                                                                |
+| Strategy        | fill_first                                                                                                                                                                                                |
+| Profile usage   | default (primary), creative-director, code-architect, exec-assistant, research-analyst, patient-tutor, ops, pm, qa, security, dev, cto, designer, alexa (all stopped profiles use deepseek-v4-flash-free) |
 
 ---
 

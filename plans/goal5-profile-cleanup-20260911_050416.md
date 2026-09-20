@@ -10,11 +10,11 @@ trigger_threshold: >6 file changes → load multi-file-change-protocol
 
 ## Decision Lock (from clarifications)
 
-| Decision | Value |
-|---|---|
-| Sequence | 1 → 2 → 3 → 4 → 5 (Goal 1 first, this last) |
+| Decision        | Value                                                                   |
+| --------------- | ----------------------------------------------------------------------- |
+| Sequence        | 1 → 2 → 3 → 4 → 5 (Goal 1 first, this last)                             |
 | Backup strategy | Full mirror to `~/AppData/Local/hermes/profiles-backup-<ts>/<profile>/` |
-| Diff before rm | Yes, capture for review |
+| Diff before rm  | Yes, capture for review                                                 |
 
 ## Scope (17 profiles)
 
@@ -60,6 +60,7 @@ done > ./scratch/profile-diff-pre.txt
 ## Phase 4 — Delete Target Files from Each Profile
 
 For each of 17 profiles, remove:
+
 - `skills/` (folder)
 - `hooks/` (folder, if exists)
 - `plugins/` (folder, if exists)
@@ -98,12 +99,12 @@ done
 
 ## Risks
 
-| Risk | Mitigation |
-|---|---|
-| Profile has unique customization outside scope | Backup captures everything; user can restore from backup |
-| Hermes config validation breaks | Use `hermes config check` after copy; if errors, restore profile's original config.yaml from backup |
-| Skills reference scripts/hooks/plugins by relative path | Root copy makes paths work the same as default profile |
-| Live profile sessions disrupted | Hermes uses one profile at a time; other profiles are passive. Profile copies won't affect active session. |
+| Risk                                                    | Mitigation                                                                                                 |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Profile has unique customization outside scope          | Backup captures everything; user can restore from backup                                                   |
+| Hermes config validation breaks                         | Use `hermes config check` after copy; if errors, restore profile's original config.yaml from backup        |
+| Skills reference scripts/hooks/plugins by relative path | Root copy makes paths work the same as default profile                                                     |
+| Live profile sessions disrupted                         | Hermes uses one profile at a time; other profiles are passive. Profile copies won't affect active session. |
 
 ## Out of Scope
 

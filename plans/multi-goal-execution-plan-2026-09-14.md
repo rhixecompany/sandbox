@@ -23,25 +23,27 @@ Per `/user-communication-preferences`: DRY (references, not duplication); concis
 
 ## Goals (7 verified)
 
-| # | Goal | Skill Stack | Output Artifact | Verification Gate |
-|---|---|---|---|---|
-| G1 | OpenRouter best practices (`https://openrouter.ai/models?variant=free` → markdown + web search) | `/agent-browser`, `/mcp-fetch`, `/mcp-parallel-search`, `/mcp-tavily`, `/web-research-pipeline` | `./plans/openrouter-best-practices.md` or `.github/prompts/` markdown | File exists + size > 0 + no synthetic content + real URLs referenced |
-| G2 | OpenCode-free + OpenCode-zen provider best practices + model config + hermes fallback | `/mcp-parallel-search`, `/repo-research-pipeline`, `/systematic-debugging` | `./plans/opencode-best-practices.md` + updated hermes config reference | Config updated with verified model names; no synthetic config |
-| G3 | Get all configured env vars; update files missing refs in repo + `~/AppData/Local/Hermes` | `/mcp-filesystem`, `/mcp-ast-grep` | Report file (`./plans/env-update-report.md`) + updated files list | `.env` 3334B unchanged; updated files verified with `ls -la`; no secrets exposed |
-| G4 | Profile descriptions (16 profiles) + task routing update/verify | `/honcho` (context/reasoning/search/profile) | Updated `$HERMES_HOME.md` + profile descriptions verified | All 16 profiles routed (code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot) |
-| G5 | Root context files (AGENTS.md, CLAUDE.md, .cursorrules, $HERMES_HOME.md, USER.md, MEMORY.md, SOUL.md) enhanced with full honcho data | `/mcp-memory`, `/multi-file-change-protocol`, `/user-communication-preferences` | Updated files (patch edits) + `./specs/context-enhancement-evidence.md` | DRY enforced (cross-references, not duplication); identity preserved; session achievements (26 findings, 41 errors, .eslintrc 69B, 28 skills) included |
-| G6 | Migrate USER.md/MEMORY.md (16 profiles) from repo + hermes home → `~/AppData/Local/Hermes/memories/`; remove originals | `/mcp-filesystem`, `/multi-file-change-protocol` | `~/AppData/Local/Hermes/memories/` directory + verification log | All 16 profile memory pairs exist; originals removed; no identity broken (`$HERMES_HOME.md` references preserved) |
-| G7 | Execute `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` on all models (openrouter + opencode + hermes fallback) | `/systematic-debugging`, `/skill-judge`, `/execute-implementation-prompt` | `./plans/test-providers-models-report.md` (PASS/FAIL per model + exit codes) | All real exit codes; no synthetic PASS; architecture concerns documented honestly |
+| #   | Goal                                                                                                                                               | Skill Stack                                                                                     | Output Artifact                                                              | Verification Gate                                                                                                                                      |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| G1  | OpenRouter best practices (`https://openrouter.ai/models?variant=free` → markdown + web search)                                                    | `/agent-browser`, `/mcp-fetch`, `/mcp-parallel-search`, `/mcp-tavily`, `/web-research-pipeline` | `./plans/openrouter-best-practices.md` or `.github/prompts/` markdown        | File exists + size > 0 + no synthetic content + real URLs referenced                                                                                   |
+| G2  | OpenCode-free + OpenCode-zen provider best practices + model config + hermes fallback                                                              | `/mcp-parallel-search`, `/repo-research-pipeline`, `/systematic-debugging`                      | `./plans/opencode-best-practices.md` + updated hermes config reference       | Config updated with verified model names; no synthetic config                                                                                          |
+| G3  | Get all configured env vars; update files missing refs in repo + `~/AppData/Local/Hermes`                                                          | `/mcp-filesystem`, `/mcp-ast-grep`                                                              | Report file (`./plans/env-update-report.md`) + updated files list            | `.env` 3334B unchanged; updated files verified with `ls -la`; no secrets exposed                                                                       |
+| G4  | Profile descriptions (16 profiles) + task routing update/verify                                                                                    | `/honcho` (context/reasoning/search/profile)                                                    | Updated `$HERMES_HOME.md` + profile descriptions verified                    | All 16 profiles routed (code→architect, research→analyst, design→creative, planning→exec, teaching→tutor, ops→adminbot)                                |
+| G5  | Root context files (AGENTS.md, CLAUDE.md, .cursorrules, $HERMES_HOME.md, USER.md, MEMORY.md, SOUL.md) enhanced with full honcho data               | `/mcp-memory`, `/multi-file-change-protocol`, `/user-communication-preferences`                 | Updated files (patch edits) + `./specs/context-enhancement-evidence.md`      | DRY enforced (cross-references, not duplication); identity preserved; session achievements (26 findings, 41 errors, .eslintrc 69B, 28 skills) included |
+| G6  | Migrate USER.md/MEMORY.md (16 profiles) from repo + hermes home → `~/AppData/Local/Hermes/memories/`; remove originals                             | `/mcp-filesystem`, `/multi-file-change-protocol`                                                | `~/AppData/Local/Hermes/memories/` directory + verification log              | All 16 profile memory pairs exist; originals removed; no identity broken (`$HERMES_HOME.md` references preserved)                                      |
+| G7  | Execute `.github/prompts/operations/test-providers-models/test-providers-models.prompt.md` on all models (openrouter + opencode + hermes fallback) | `/systematic-debugging`, `/skill-judge`, `/execute-implementation-prompt`                       | `./plans/test-providers-models-report.md` (PASS/FAIL per model + exit codes) | All real exit codes; no synthetic PASS; architecture concerns documented honestly                                                                      |
 
 ## 28 Skills Verified/Mapped (14 direct + 14 mapped/referenced)
 
 Verified directly via `skill_view` or `read_file` (SKILL.md exists):
+
 - `/using-superpowers` (READ verified)
 - `/brainstorming` (read_file verified — main SKILL.md 5352B)
 - `/user-communication-preferences` (skill_view verified — SKILL.md verified, preferences: DRY/concise/direct/table-first/action-first/verification-first)
 - `/multi-file-change-protocol` (skill_view verified — 14-skill stack listed, 5-step protocol, verification checklist)
 
 Available/referenced (verified by session evidence / name):
+
 - `/mcp-sequential-thinking`, `/mcp-filesystem`, `/mcp-ast-grep`, `/mcp-memory`
 - `/plan`, `/plan-mode`, `/plans-and-specs`
 - `/create-implementation-plan`, `/update-implementation-plan`, `/implementation-plan`, `/execute-implementation-plan`, `/executing-plans`
@@ -57,6 +59,7 @@ Evidence: `./specs/skill-verification-evidence.md` (2658 B verified) references 
 
 Profile: `ops/adminbot` (verified routing `$HERMES_HOME.md`: ops→adminbot; description verified; identity: operations/verification agent; DRY refs to `$HERMES_HOME.md` + `user-communication-preferences` + `multi-file-change-protocol`)
 Full context to pass (per user clarification):
+
 - Honcho peer card: user Alexa, active model nemotron-3-ultra-free (opencode-zen), profile adminbot+patient-tutor, workspace ~/Desktop/SandBox clean-development, authorization FULL, preference order (concise/direct/table-first/action-first/DRY/verification-first), session achievements 2026-09-13 (28 skills, 26 vulnerability findings, 41 parsing errors, .eslintrc.json 69B, rate-limit 403, MSYS2 FAIL, adminbot MISSING preserved)
 - Workspace state: 9 modified files, clean-development ahead 4 behind 0, `.env` 3334B protected
 - 7 goals defined above
@@ -67,16 +70,19 @@ Full context to pass (per user clarification):
 ## Verification Gates (per phase)
 
 ### GATE-A (LOAD): Skills loaded and verified
+
 - [x] 14 core skills loaded (verified by skill_view or read_file SKILL.md)
 - [x] 28 skills mapped/referenced (evidence `./specs/skill-verification-evidence.md` 2658B)
 - [x] No synthetic skills; 0 missing critical skills flagged as blockers
 
 ### GATE-B (PLAN): Plan file exists and verified
+
 - [x] This file created: `./plans/multi-goal-execution-plan-2026-09-14.md`
 - [x] All 7 goals defined with artifact targets, verification criteria, skill stacks
 - [x] Subagent profile (ops/adminbot) specified with full context
 
 ### GATE-C (VERIFY): Ambiguities resolved (clarification turns 1-3, 15 questions answered)
+
 - [x] Execution order: Best (confirmed turn 3)
 - [x] Skill loading: all 14 sequential + verify each (confirmed turn 2/3)
 - [x] Subagent: ops/adminbot (confirmed turn 2)
@@ -87,6 +93,7 @@ Full context to pass (per user clarification):
 - [x] Honcho inclusion: full peer card + session achievements (confirmed turn 2)
 
 ### GATE-D (EXECUTE): Artifacts created/updated per goal
+
 - [ ] G1: openrouter markdown created (real content, no synthetic)
 - [ ] G2: opencode best-practices + hermes config updated
 - [ ] G3: env scan complete, files updated, `.env` unchanged
@@ -96,6 +103,7 @@ Full context to pass (per user clarification):
 - [ ] G7: test-providers-models executed, results reported honestly
 
 ### GATE-E (GATE): Final integrity verification
+
 - [x] Integrity verified: `.env` 3334B unchanged; no new `.bak` artifacts
 - [x] DRY enforced: identity/routing owned by `$HERMES_HOME.md`; preferences by `user-communication-preferences`; protocol by `multi-file-change-protocol`; session artifacts by `./plans/` + `./specs/`
 - [x] No synthetic artifacts; 0 hidden errors; 26 vulnerability findings preserved; 41 parsing errors documented; rate-limit 403 preserved; MSYS2 FAIL preserved; adminbot MISSING preserved honestly
@@ -103,6 +111,7 @@ Full context to pass (per user clarification):
 - [x] Profile identity preserved across all 16 profiles (`$HERMES_HOME.md` verified 2859B + profile descriptions)
 
 ## References (DRY — verified real artifacts)
+
 - `./plans/debug-subgoal-plan-2026-09-13.md` (4340 B verified — 4-phase plan reference)
 - `./plans/update-hermes-root-repo-context-2026-09-14.md` (14601 B verified — session plan)
 - `./plans/debug-run-logs.md` (53152 B verified — 14 real sequential exit codes)
@@ -122,6 +131,7 @@ Full context to pass (per user clarification):
 - `.env` (3334 B — PROTECTED)
 
 ## Rules Enforced (verified by session evidence)
+
 - Valid goals/subgoals: 7 goals defined, each with sub-steps
 - Todos/steps/phases: 5-step protocol (LOAD→PLAN→VERIFY→EXECUTE→GATE) + 4-phase debugging
 - Rules: DRY, verification-first, honest blocker reporting, .env protected, authorization FULL with approvals
@@ -134,4 +144,5 @@ Full context to pass (per user clarification):
 - Model/resource allocation: nemotron-3-ultra-free (primary); deepseek-v4-flash-free (fallback); 16 profile resources assigned
 
 ---
+
 Status: PLAN CREATED. Awaiting approval before EXECUTE (destructive CRUD: delete USER.md/MEMORY.md originals, modify AGENTS.md/CLAUDE.md/.cursorrules/$HERMES_HOME.md, create/remove directories, modify .env-protected references). Subagent ops/adminbot ready.
