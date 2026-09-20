@@ -5,7 +5,6 @@
 **Updated:** 2026-09-19
 
 ## Checkpoints
-
 | Checkpoint | Work                                                    | Gate                                                                 | Status   |
 | ---------- | ------------------------------------------------------- | -------------------------------------------------------------------- | -------- |
 | 1          | Inventory existing agent adapters and canonical context | Existing surfaces identified without reading protected secrets       | COMPLETE |
@@ -13,7 +12,6 @@
 | 3          | Add clarification and durable artifact protocol         | All requested systems reference the lifecycle                        | COMPLETE |
 | 4          | Create run spec, plan, and prompt                       | Three timestamped artifact directories exist                         | COMPLETE |
 | 5          | Validate                                                | Markdownlint, whitespace, stale-reference, and existence checks pass | COMPLETE |
-
 ## Changed Surfaces
 
 - `AGENTS.md`

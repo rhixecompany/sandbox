@@ -20,6 +20,7 @@ Use the nearest `AGENTS.md` and project manifest before editing. Treat `projects
 For scoped Cursor rules, see [`.cursor/rules/sandbox.mdc`](.cursor/rules/sandbox.mdc).
 
 
+
 ## MCP Sync Note (2026-09-20)
 - Same MCP server list applied globally across all 5 configs (opencode/copilot/cursor-agent/agent/hermes).
 - Heavy servers (playwright, code-sandbox, smithery, mcp-docker, mindstudio) replaced with native equivalents (browser_exec, execute_code, tool_search, terminal, subagent/delegate).
