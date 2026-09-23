@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    "davidanson.vscode-markdownlint",
-    "esbenp.prettier-vscode",
-    "foxundermoon.shell-format",
-    "oven.bun-vscode",
-    "usernamehw.errorlens"
-  ]
-}

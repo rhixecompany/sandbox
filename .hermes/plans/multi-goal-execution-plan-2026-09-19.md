@@ -24,21 +24,22 @@ model: nemotron-3-ultra-free
 ## Goal
 
 Execute three parallel workstreams:
+
 1. Process all 39 pending actionable paste tasks
 2. Delete and recreate 5 failed/empty memories with session context
 3. Update, enhance, and verify writing/specs/plans/prompts skills with /scope and /design-md integration
 
 ## Subgoals
 
-| ID | Subgoal | Files Impacted |
-|----|---------|----------------|
-| SG-1 | Process 39 pending paste tasks | `.hermes/results/pastes-triage-2026-09-19.md` |
-| SG-2 | Clean up failed memories | supermemory container (hermes) |
-| SG-3 | Enhance writing skills with scope/design-md | `writing-clearly-and-concisely` SKILL.md |
-| SG-4 | Enhance specs skills with scope/design-md | `create-specification`, `plans-and-specs` SKILL.md |
-| SG-5 | Enhance plans skills with scope/design-md | `plan`, `implementation-plan`, `writing-plan`, `create-implementation-plan`, `update-implementation-plan` SKILL.md |
-| SG-6 | Enhance prompts skills with scope/design-md | `writing-prompt` SKILL.md |
-| SG-7 | Run judges and verify | `skill-judge`, `specs-judge`, `plans-judge` |
+| ID   | Subgoal                                     | Files Impacted                                                                                                     |
+| ---- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| SG-1 | Process 39 pending paste tasks              | `.hermes/results/pastes-triage-2026-09-19.md`                                                                      |
+| SG-2 | Clean up failed memories                    | supermemory container (hermes)                                                                                     |
+| SG-3 | Enhance writing skills with scope/design-md | `writing-clearly-and-concisely` SKILL.md                                                                           |
+| SG-4 | Enhance specs skills with scope/design-md   | `create-specification`, `plans-and-specs` SKILL.md                                                                 |
+| SG-5 | Enhance plans skills with scope/design-md   | `plan`, `implementation-plan`, `writing-plan`, `create-implementation-plan`, `update-implementation-plan` SKILL.md |
+| SG-6 | Enhance prompts skills with scope/design-md | `writing-prompt` SKILL.md                                                                                          |
+| SG-7 | Run judges and verify                       | `skill-judge`, `specs-judge`, `plans-judge`                                                                        |
 
 ## Steps
 
@@ -69,6 +70,7 @@ Execute three parallel workstreams:
 **Entry gate**: 39 actionable tasks identified in `.hermes/results/pastes-triage-2026-09-19.md`
 
 **Tasks**:
+
 - TASK-A1: Read paste triage index
 - TASK-A2: Process each actionable task (goals, brainstorming, skill loading)
 - TASK-A3: Mark tasks as processed
@@ -80,6 +82,7 @@ Execute three parallel workstreams:
 **Entry gate**: 5 failed memories identified (empty content)
 
 **Tasks**:
+
 - TASK-B1: Identify all failed/empty memories
 - TASK-B2: Delete failed memories
 - TASK-B3: Recreate with relevant session context
@@ -91,6 +94,7 @@ Execute three parallel workstreams:
 **Entry gate**: Skills identified for enhancement
 
 **Tasks** (per skill):
+
 - TASK-C1: Add cross-references to scope/design-md in SKILL.md
 - TASK-C2: Enhance content/workflow to integrate scope & design-md concepts
 - TASK-C3: Verify references are substantive
@@ -102,6 +106,7 @@ Execute three parallel workstreams:
 **Entry gate**: All modifications complete
 
 **Tasks**:
+
 - TASK-D1: Run skill-judge on all modified skills
 - TASK-D2: Run specs-judge on relevant specs
 - TASK-D3: Run plans-judge on relevant plans
@@ -159,6 +164,7 @@ Execute three parallel workstreams:
 ### TASK-C1-C6: Skills Enhancement
 
 Each skill gets:
+
 - Cross-references added to scope/design-md
 - Content enhanced with scope/design-md workflow concepts
 - Verification checklist updated
@@ -167,40 +173,41 @@ Each skill gets:
 
 ## Dependencies and Risks
 
-| Dependency | Risk |
-|------------|------|
-| Subagent availability for parallel work | Use sequential if needed |
-| Memory API rate limits | Batch operations with delays |
-| Skill edit conflicts | Read before write, use patch carefully |
+| Dependency                              | Risk                                   |
+| --------------------------------------- | -------------------------------------- |
+| Subagent availability for parallel work | Use sequential if needed               |
+| Memory API rate limits                  | Batch operations with delays           |
+| Skill edit conflicts                    | Read before write, use patch carefully |
 
 ## Verification Evidence
 
 ### Judge Results (2026-09-19 22:09 UTC)
 
-| Judge | Files | Avg | Passed | Status | Notes |
-|-------|-------|-----|--------|--------|-------|
-| specs-judge | 3 (workspace) | 69.3 | 2/3 | WARN | skills-library-overhaul 74 PASS, supermemory-paste 74 PASS, opencode-zen 60 WARN |
-| plans-judge | 5 (workspace) | 49.8 | 0/5 | FAIL | multi-goal 53 WARN, skills-library 65 WARN, supermemory 65 WARN, opencode-zen 33 FAIL, unified 33 FAIL |
-| prompts-judge | 401 | 69.4 | 204/401 | WARN | Below threshold; 114/401 valid structure; 6 unbalanced-fence files |
-| skill-judge | 8 modified | pending | pending | PENDING | No judge.py script; evaluate manually against v1.1.0 rubric |
+| Judge         | Files         | Avg     | Passed  | Status  | Notes                                                                                                  |
+| ------------- | ------------- | ------- | ------- | ------- | ------------------------------------------------------------------------------------------------------ |
+| specs-judge   | 3 (workspace) | 69.3    | 2/3     | WARN    | skills-library-overhaul 74 PASS, supermemory-paste 74 PASS, opencode-zen 60 WARN                       |
+| plans-judge   | 5 (workspace) | 49.8    | 0/5     | FAIL    | multi-goal 53 WARN, skills-library 65 WARN, supermemory 65 WARN, opencode-zen 33 FAIL, unified 33 FAIL |
+| prompts-judge | 401           | 69.4    | 204/401 | WARN    | Below threshold; 114/401 valid structure; 6 unbalanced-fence files                                     |
+| skill-judge   | 8 modified    | pending | pending | PENDING | No judge.py script; evaluate manually against v1.1.0 rubric                                            |
 
 ### Skills Modified (8 total)
 
-| Skill | Path | Scope/Design-md Integration | Status |
-|-------|------|---------------------------|--------|
-| writing-clearly-and-concisely | creative/ | Not modified (no scope/design-md relevance) | Unchanged |
-| writing-spec | software-development/ | ✅ Added scope + design-md to Skills Required table | Patched |
-| writing-prompt | development/prompt-engineering/ | ✅ Added scope + design-md to Frame/Write phases | Patched |
-| plan | planning/ | ✅ Added scope + design-md to related_skills, workflow, verification checklist | Rewritten |
-| create-implementation-plan | creative/ | ✅ Added scope/design-md Primary Directive, Phase 1, Section 8, Verification | Rewritten |
-| update-implementation-plan | creative/ | ✅ Added scope/design-md Primary Directive, Phase 1, Section 8, Verification | Rewritten |
-|| create-specification | planning/ | ✅ Added scope/design-md integration to Primary Directive, Section 11, Verification Checklist, tags | Patched |
-| plans-and-specs | planning/ | ✅ Added scope + design-md references and integration to When to Use | Patched |
+| Skill                         | Path                            | Scope/Design-md Integration                                                    | Status                                                                                              |
+| ----------------------------- | ------------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| writing-clearly-and-concisely | creative/                       | Not modified (no scope/design-md relevance)                                    | Unchanged                                                                                           |
+| writing-spec                  | software-development/           | ✅ Added scope + design-md to Skills Required table                            | Patched                                                                                             |
+| writing-prompt                | development/prompt-engineering/ | ✅ Added scope + design-md to Frame/Write phases                               | Patched                                                                                             |
+| plan                          | planning/                       | ✅ Added scope + design-md to related_skills, workflow, verification checklist | Rewritten                                                                                           |
+| create-implementation-plan    | creative/                       | ✅ Added scope/design-md Primary Directive, Phase 1, Section 8, Verification   | Rewritten                                                                                           |
+| update-implementation-plan    | creative/                       | ✅ Added scope/design-md Primary Directive, Phase 1, Section 8, Verification   | Rewritten                                                                                           |
+|                               | create-specification            | planning/                                                                      | ✅ Added scope/design-md integration to Primary Directive, Section 11, Verification Checklist, tags | Patched |
+| plans-and-specs               | planning/                       | ✅ Added scope + design-md references and integration to When to Use           | Patched                                                                                             |
 
 ### Verification Checklist
+
 - [x] skill-judge, specs-judge, plans-judge loaded
 - [x] specs-judge ran: 3 workspace specs scored
-- [x] plans-judge ran: 5 workspace plans scored  
+- [x] plans-judge ran: 5 workspace plans scored
 - [x] prompts-judge ran: 401 prompts scored
 - [ ] skill-judge runs on 8 modified skills (no judge.py; manual eval needed)
 - [ ] All judges pass (scores ≥70) — NOT YET MET

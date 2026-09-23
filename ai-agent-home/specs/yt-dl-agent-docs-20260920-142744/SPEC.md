@@ -6,13 +6,13 @@ Update, enhance, and verify project agent/user context files for `projects/youtu
 
 ## Targets
 
-| Path | Rule |
-| --- | --- |
+| Path           | Rule                                           |
+| -------------- | ---------------------------------------------- |
 | `.cursorrules` | if exists → update/enhance/verify; else create |
-| `AGENTS.md` | if exists → update/enhance/verify; else create |
-| `CLAUDE.md` | if exists → update/enhance/verify; else create |
-| `.hermes.md` | if exists → update/enhance/verify; else create |
-| `README.md` | if exists → update/enhance/verify; else create |
+| `AGENTS.md`    | if exists → update/enhance/verify; else create |
+| `CLAUDE.md`    | if exists → update/enhance/verify; else create |
+| `.hermes.md`   | if exists → update/enhance/verify; else create |
+| `README.md`    | if exists → update/enhance/verify; else create |
 
 ## Constraints
 

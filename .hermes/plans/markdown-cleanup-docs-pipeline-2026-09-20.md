@@ -5,6 +5,7 @@
 **Who it's for**: Workspace maintainers and agents that rely on clean docs.
 
 ## Pipeline (sequential)
+
 1. LOAD — verify 14-stack access (scope, multi-file-crud-protocol loaded; others checked)
 2. MEMORY — context saved (markdown cleanup feature, 2026-09-20)
 3. PLAN — this file
@@ -18,6 +19,7 @@
    - Phase F: Verify gates
 
 ## Gates
+
 - [ ] Scope file exists at docs/scope/ with feature table
 - [ ] Architect spec exists
 - [ ] Audit report exists (counts of .md files, empty dirs)
@@ -28,6 +30,7 @@
 - [ ] Integrity verified
 
 ## Evidence (real, not fabricated)
+
 - File counts from `ls` and `find` commands
 - Exit codes from `find`/`grep` verification commands
 - No synthetic session IDs, capabilities, rankings, or artifacts

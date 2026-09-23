@@ -12,6 +12,7 @@
 5. **Close:** record evidence, blockers, changed scope, and mark spec/plan/prompt complete only if all gates pass.
 
 ## Validation Matrix
+
 | Gate          | Command or method                                                              | Required |
 | ------------- | ------------------------------------------------------------------------------ | -------- |
 | Structure     | Required root/project adapter and artifact paths exist                         | Yes      |
@@ -19,6 +20,7 @@
 | Markdown      | `bunx markdownlint-cli2 --config .markdownlint-cli2.jsonc` on changed Markdown | Yes      |
 | Diff          | `git diff --check`                                                             | Yes      |
 | Project-local | Run local lint/type/test checks for materially changed projects                | Yes      |
+
 ## Current Status
 
 - Audit completed: project adapters consistently delegated to root but used stale Hermes paths.

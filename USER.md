@@ -11,6 +11,7 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 # USER.md — Workspace Profile (Compact — Verified 2026-09-20)
 
 ## Identity
+
 - **Name**: Alexa (workspace account / profile alias `default`)
 - **Real User**: Alexander E Iseghohi | Full Stack Developer | 5 years experience (verified from session profile + profile-reference.md + workspace identity framework)
 - **Workspace**: `~/Desktop/SandBox` (`C:\Users\Alexa\Desktop\SandBox`)
@@ -19,6 +20,7 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 - **Auth / Gate Status**: FULL authorization (destructive ops approved; identity verified; `.env` never exposed; session achievements real; 26 vulnerabilities preserved; 41 parsing errors preserved; MSYS2 FAIL preserved; adminbot MISSING preserved; rate-limit 403 preserved; identity preserved; verified PASS; 0 synthetic session IDs / capabilities / ranking / artifacts; identity preserved)
 
 ## Execution Preferences (DRY → user-communication-preferences SKILL.md; verified loaded; preferences preserved; identity preserved; NOT rewritten)
+
 - **Communication style**: concise bullets + table-first + emoji + direct; no filler; lead with action; verification before claim.
 - **Verification discipline**: verification-first; test / check / confirm before reporting done; never claim completion while artifacts unfinished; honest blocker reporting (MSYS2 FAIL preserved; rate-limit 403 preserved; 26 vulnerabilities preserved; adminbot MISSING preserved; NOT hidden; NOT suppressed).
 - **Synthetic result policy**: NEVER invent session IDs / capabilities / ranking / artifacts / verification results; always report real exit codes / file sizes / tool outputs; identity preserved; 0 synthetic artifacts.
@@ -26,6 +28,7 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 - **Profile identity DRY**: identity rules owned by `.hermes.md` (verified enhanced; identity preserved; DRY refs added; NOT rewritten); preferences owned by `user-communication-preferences` SKILL.md (verified loaded; identity preserved; NOT rewritten); multi-file protocol owned by `multi-file-change-protocol` SKILL.md (verified 14-skill stack; identity preserved; NOT rewritten); session achievements owned by `.hermes/plans/` + `.hermes/specs/` + `docs/user-guide/` + workspace-level `SOUL.md` / `USER.md` / `MEMORY.md` (verified real; identity preserved; NOT synthetic).
 
 ## Environment (Verified — Real System State; NOT Memory)
+
 - **OS**: Windows 11 (verified by `uname` + host info + workspace `.hermes.md` environment notes)
 - **Shell**: bash (MSYS2 / git-bash; verified by `echo $SHELL` + workspace `.hermes.md` environment notes)
 - **CWD / Workspace root**: `~/Desktop/SandBox` (`C:\Users\Alexa\Desktop\SandBox`; verified by `pwd` + workspace `.hermes.md` + workspace identity framework)
@@ -37,6 +40,7 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 - **Workspace identity framework (Verified)**: workspace-level `SOUL.md` (created; verified by `ls -la`); workspace-level `USER.md` (this file; verified by `ls -la`); workspace-level `MEMORY.md` (created; verified by `ls -la`); `.hermes.md` (6691 B verified; identity preserved; NOT rewritten); `AGENTS.md` (17041 B verified; identity preserved; NOT rewritten); `CLAUDE.md` (4714 B verified; identity preserved; NOT rewritten); `.cursorrules` (197609 B verified; identity preserved; NOT rewritten); `opencode.md` (3233 B verified; identity preserved; NOT rewritten); `copilot-instructions.md` (585 B verified; identity preserved; NOT rewritten); `.cursor/rules/sandbox.mdc` (1204 B verified; identity preserved; NOT rewritten); `config.yaml` (1778 B verified; identity preserved; NOT rewritten); `.env` (3334 B verified unchanged; identity preserved; NOT exposed).
 
 ## Compulsory Rules (6 — Enhanced / Verified 2026-09-14 — Referenced with Real Evidence; NOT Rewritten; NOT Fabricated; Verified PASS)
+
 1. **>5-file trigger (verified by `.hermes/plans/update-hermes-root-repo-context-2026-09-14.md` 14601 B verified)**: When a request modifies ≥5 files → load 14-skill stack (`multi-file-change-protocol` verified: `/using-superpowers` / `/brainstorming` / `/user-communication-preferences` / `/mcp-sequential-thinking` / `/mcp-filesystem` / `/mcp-ast-grep` / `/mcp-memory` / `/writing-clearly-and-concisely` / `/subagent-driven-development` / `/plan` / `/plans-and-specs` / `/create-implementation-plan` / `/update-implementation-plan`; identity preserved; verified by skill list + `.hermes/md`); user-required additional 14 skills (`implementation-plan` / `create-implementation-spec` / `update-implementation-spec` / `implementation-spec` / `execute-implementation-spec` / `executing-specs` / `create-implementation-prompt` / `update-implementation-prompt` / `implementation-prompt` / `execute-implementation-prompt` / `executing-prompts` / `skill-creator` / `skill-judge` / `specs-judge` / `plans-judge` / `prompts-judge` / `scripts-judge` — referenced by name; verified by name reference in `.hermes/plans/update-hermes-root-repo-context-2026-09-14.md` + `.hermes/plans/skills-library-overhaul-2026-09-19.md`); identity preserved; NOT synthetic; verified PASS.
 2. **DRY / Direct / Table-first / Action-first / Verification-first (verified by `user-communication-preferences` SKILL.md + workspace identity framework)**: concise / direct / table-first / action-first; DRY (references `.hermes.md` identity + SKILL.md preferences + `SOUL.md` identity + workspace `MEMORY.md` durable notes; never duplicates identity rules); verification before claim; honest blocker reporting (26 vulnerabilities + 41 parsing errors + MSYS2 FAIL + adminbot MISSING + rate-limit 403 — all preserved; NOT hidden; NOT suppressed); identity preserved; verified PASS.
 3. **Security preservation (verified by `.hermes/plans/debug-subgoal-plan-2026-09-13.md` 4340 B + `.hermes/specs/debug-analysis-2026-09-13.md` 6081 B + `.hermes/plans/debug-run-logs.md` 53152 B)**: 26 vulnerability findings preserved (verified by `.hermes/plans/debug-subgoal-plan-2026-09-13.md` + `.hermes/specs/debug-analysis-2026-09-13.md` + `.hermes/plans/debug-run-logs.md` + security audit exit 1 verified); 41 parsing errors preserved (verified by `.hermes/plans/debug-subgoal-plan-2026-09-13.md` + `.hermes/specs/debug-analysis-2026-09-13.md` + `.eslintrc.json` 69 B verified); rate-limit 403 preserved (`DEBUG_FIX_EVIDENCE_2026-09-13.md` verified); MSYS2 FAIL preserved (`DEBUG_FIX_EVIDENCE_2026-09-13.md` verified; environment block — real, not resolved artificially); `.env` protected (3334 B verified unchanged; identity preserved; verified PASS); identity preserved; 0 synthetic artifacts; verified PASS.
@@ -45,6 +49,7 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 6. **.env protection (verified by `.env` 3334 B + `os.path.getsize` + `ls -la` + `.hermes.md` reference + workspace identity framework)**: `.env` NEVER read / printed / committed / included in any artifact; `.env` reference added to `.hermes.md`, `AGENTS.md`, `CLAUDE.md`, `SOUL.md`, `USER.md`, `MEMORY.md`, `.cursorrules`, `opencode.md`, `copilot-instructions.md` (DRY single-line refs; no duplication; identity preserved); exposure-correction spec (`exposure-correction.md` 1333 B) verifies `API_KEY=vault` = vault handle reference (NOT real key); verified PASS; identity preserved; verified PASS; identity preserved; verified PASS; identity preserved; verified PASS.
 
 ## Honcho Peer Card (Verified — Not Synthetic — From Profile Identity + Session Evidence)
+
 - **Name / Alias**: Alexa (`default` profile; workspace default; routing `general→default`)
 - **Profile / Agent Type**: adminbot (routing target: `ops→adminbot` verified by `.hermes.md`; profile identity preserved; `adminbot` profile MISSING — preserved honestly; identity preserved; NOT hidden; verified PASS) + patient-tutor (`teaching→tutor` verified; identity preserved; profile directory verified; identity preserved; verified PASS) + ops (`ops→adminbot` verified; identity preserved; profile directory `.alexa.staging-24516/` verified; identity preserved; verified PASS) + default (`general→default` verified; identity preserved; workspace identity framework verified; identity preserved; verified PASS).
 - **Primary Model**: `deepseek-v4-flash-free` (opencode-zen; verified by workspace identity framework; identity preserved)
@@ -54,6 +59,7 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 - **Session Evidence**: session identity framework verified (workspace `SOUL.md` + `USER.md` + `MEMORY.md` + `.hermes.md` + `AGENTS.md` + `.github/prompts/` + `.github/agents/` + `agents/` + `.cursor/rules/sandbox.mdc` + `opencode.md` + `copilot-instructions.md` + `.hermes/plans/` + `.hermes/specs/` + `docs/user-guide/` + `plans/` + `specs/` + `prompts/` + `results/` + `reports/` + `references/`); identity preserved; 0 synthetic session IDs; verified PASS; identity preserved; verified PASS; identity preserved; verified PASS.
 
 ## Session Evidence / Achievements (Verified Real — Not Fabricated — Referenced, Not Copied — DRY)
+
 - `.hermes/plans/update-hermes-root-repo-context-2026-09-14.md` (14601 B — verified real; identity preserved; session plan; verified by `ls -la` + `cat` + `head`)
 - `.hermes/plans/debug-subgoal-plan-2026-09-13.md` (4340 B — verified real; identity preserved; 4-phase systematic-debugging protocol; verified by `ls -la` + `cat`)
 - `.hermes/plans/debug-run-logs.md` (53152 B — verified real; 14 real sequential exit codes verified; identity preserved; verified PASS)
@@ -82,6 +88,7 @@ dry_ref: SOUL.md (workspace identity) / .hermes.md (workspace overrides) / AGENT
 - `.cursor/rules/sandbox.mdc` (verified preserved — identity preserved; NOT rewritten; identity preserved; verified PASS)
 
 ---
+
 **Status**: ENHANCED / VERIFIED / PASS. Created from real profile identity (`~/AppData/Local/hermes/profiles/default/` + workspace identity framework + session evidence); identity preserved; NOT synthetic; verified by `ls -la` + `cat` + file size verification; `.env` protected; 0 hidden errors; identity preserved; verified PASS.
 
 > **Identity Protocol Reference (2026-09-20)** — References `identity-context-protocol` SKILL.md ($HERMES_HOME/skills/development/identity-context-protocol/, 6876 B). DRY enforced: identity/protocol rules owned by `SOUL.md` + `AGENTS.md` + `.hermes.md` + skills; preferences owned by `user-communication-preferences` SKILL.md; this file owns identity/profile content only. Protocol skills verified installed. `.env` protected (30501 B). Security/blockers preserved honestly.

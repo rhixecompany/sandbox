@@ -1,505 +1,499 @@
-
 {
-  "header": {
-    "reportVersion": 5,
-    "event": "Allocation failed - JavaScript heap out of memory",
-    "trigger": "OOMError",
-    "filename": "report.20260919.215019.1940.0.001.json",
-    "dumpEventTime": "2026-09-19T21:50:19Z",
-    "dumpEventTimeStamp": "1789851019687",
-    "processId": 1940,
-    "threadId": null,
-    "cwd": "C:\\Users\\Alexa\\Desktop\\SandBox",
-    "commandLine": [
-      "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links\\copilot.exe",
-      "--no-warnings",
-      "--report-on-fatalerror",
-      "--optimize-for-size",
-      "--expose-gc",
-      "--no-maglev",
-      "--no-sparkplug",
-      "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links\\copilot.exe"
-    ],
-    "nodejsVersion": "v24.20.0",
-    "wordSize": 64,
-    "arch": "x64",
-    "platform": "win32",
-    "componentVersions": {
-      "acorn": "8.18.0",
-      "ada": "4.0.0",
-      "amaro": "1.1.11",
-      "ares": "1.34.8",
-      "brotli": "1.2.0",
-      "cldr": "48.0",
-      "icu": "78.3",
-      "llhttp": "9.4.3",
-      "merve": "1.2.2",
-      "modules": "137",
-      "napi": "10",
-      "nbytes": "0.1.4",
-      "ncrypto": "0.0.1",
-      "nghttp2": "1.70.0",
-      "nghttp3": "",
-      "ngtcp2": "",
-      "node": "24.20.0",
-      "openssl": "3.5.7",
-      "simdjson": "4.6.6",
-      "simdutf": "6.4.0",
-      "sqlite": "3.53.4",
-      "tz": "2026c",
-      "undici": "7.29.0",
-      "unicode": "17.0",
-      "uv": "1.52.1",
-      "uvwasi": "0.0.23",
-      "v8": "13.6.233.17-node.53",
-      "zlib": "1.3.2.1-motley-42c2f19",
-      "zstd": "1.5.7"
-    },
-    "release": {
-      "name": "node",
-      "lts": "Krypton",
-      "headersUrl": "https://nodejs.org/download/release/v24.20.0/node-v24.20.0-headers.tar.gz",
-      "sourceUrl": "https://nodejs.org/download/release/v24.20.0/node-v24.20.0.tar.gz",
-      "libUrl": "https://nodejs.org/download/release/v24.20.0/win-x64/node.lib"
-    },
-    "osName": "Windows_NT",
-    "osRelease": "10.0.26200",
-    "osVersion": "Windows 11 Pro",
-    "osMachine": "x86_64",
-    "cpus": [
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 4019609,
-        "nice": 0,
-        "sys": 5624218,
-        "idle": 22413718,
-        "irq": 508375
-      },
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 3336015,
-        "nice": 0,
-        "sys": 3905125,
-        "idle": 24816312,
-        "irq": 126125
-      },
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 5262765,
-        "nice": 0,
-        "sys": 5428093,
-        "idle": 21366593,
-        "irq": 183484
-      },
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 3719375,
-        "nice": 0,
-        "sys": 4079156,
-        "idle": 24258921,
-        "irq": 128375
-      },
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 4214562,
-        "nice": 0,
-        "sys": 5627781,
-        "idle": 22215109,
-        "irq": 169875
-      },
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 3152484,
-        "nice": 0,
-        "sys": 4916796,
-        "idle": 23988171,
-        "irq": 121109
-      },
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 4130734,
-        "nice": 0,
-        "sys": 5886328,
-        "idle": 22040390,
-        "irq": 152218
-      },
-      {
-        "model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
-        "speed": 2112,
-        "user": 3616093,
-        "nice": 0,
-        "sys": 5820765,
-        "idle": 22620593,
-        "irq": 115703
-      }
-    ],
-    "host": "adminbot"
-  },
-  "javascriptStack": {
-    "message": "No stack.",
-    "stack": [
-      "Unavailable."
-    ],
-    "errorProperties": {
-    }
-  },
-  "javascriptHeap": {
-    "totalMemory": 59150336,
-    "executableMemory": 2723840,
-    "totalCommittedMemory": 59150336,
-    "availableMemory": 2101903936,
-    "totalGlobalHandlesMemory": 118856,
-    "usedGlobalHandlesMemory": 94208,
-    "usedMemory": 49617104,
-    "memoryLimit": 2150629376,
-    "mallocedMemory": 1073200,
-    "externalMemory": 29145449,
-    "peakMallocedMemory": 15261720,
-    "nativeContextCount": 2,
-    "detachedContextCount": 0,
-    "doesZapGarbage": 0,
-    "heapSpaces": {
-      "read_only_space": {
-        "memorySize": 0,
-        "committedMemory": 0,
-        "capacity": 0,
-        "used": 0,
-        "available": 0
-      },
-      "new_space": {
-        "memorySize": 1048576,
-        "committedMemory": 1048576,
-        "capacity": 1048512,
-        "used": 1048512,
-        "available": 0
-      },
-      "old_space": {
-        "memorySize": 49967104,
-        "committedMemory": 49967104,
-        "capacity": 49839648,
-        "used": 41603128,
-        "available": 8236520
-      },
-      "code_space": {
-        "memorySize": 2097152,
-        "committedMemory": 2097152,
-        "capacity": 2096896,
-        "used": 1687552,
-        "available": 409344
-      },
-      "shared_space": {
-        "memorySize": 0,
-        "committedMemory": 0,
-        "capacity": 0,
-        "used": 0,
-        "available": 0
-      },
-      "trusted_space": {
-        "memorySize": 3792896,
-        "committedMemory": 3792896,
-        "capacity": 3781432,
-        "used": 3050976,
-        "available": 730456
-      },
-      "shared_trusted_space": {
-        "memorySize": 0,
-        "committedMemory": 0,
-        "capacity": 0,
-        "used": 0,
-        "available": 0
-      },
-      "new_large_object_space": {
-        "memorySize": 0,
-        "committedMemory": 0,
-        "capacity": 1048576,
-        "used": 0,
-        "available": 1048576
-      },
-      "large_object_space": {
-        "memorySize": 1216512,
-        "committedMemory": 1216512,
-        "capacity": 1203912,
-        "used": 1203912,
-        "available": 0
-      },
-      "code_large_object_space": {
-        "memorySize": 626688,
-        "committedMemory": 626688,
-        "capacity": 623744,
-        "used": 623744,
-        "available": 0
-      },
-      "shared_large_object_space": {
-        "memorySize": 0,
-        "committedMemory": 0,
-        "capacity": 0,
-        "used": 0,
-        "available": 0
-      },
-      "shared_trusted_large_object_space": {
-        "memorySize": 0,
-        "committedMemory": 0,
-        "capacity": 0,
-        "used": 0,
-        "available": 0
-      },
-      "trusted_large_object_space": {
-        "memorySize": 401408,
-        "committedMemory": 401408,
-        "capacity": 399280,
-        "used": 399280,
-        "available": 0
-      }
-    }
-  },
-  "nativeStack": [
-    {
-      "pc": "0x00007ff6f8e59fb7",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f8e5645c",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f8e5c328",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f8f31d57",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f7b43617",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f7943e57",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f78dc44b",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f78b3e7e",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f79468f2",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f79458a7",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f79567e2",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f795630b",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f925492d",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f7941920",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f795c17a",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f7968616",
-      "symbol": ""
-    },
-    {
-      "pc": "0x00007ff6f7539277",
-      "symbol": ""
-    },
-    {
-      "pc": "0x000001f937e775fa",
-      "symbol": ""
-    }
-  ],
-  "resourceUsage": {
-    "free_memory": 919949312,
-    "total_memory": 8428695552,
-    "rss": 295116800,
-    "available_memory": 919949312,
-    "userCpuSeconds": 103.859,
-    "kernelCpuSeconds": 11.968,
-    "cpuConsumptionPercent": 62.9495,
-    "userCpuConsumptionPercent": 56.4451,
-    "kernelCpuConsumptionPercent": 6.50435,
-    "maxRss": 300789760,
-    "pageFaults": {
-      "IORequired": 487174,
-      "IONotRequired": 0
-    },
-    "fsActivity": {
-      "reads": 2656,
-      "writes": 115
-    }
-  },
-  "uvthreadResourceUsage": {
-    "userCpuSeconds": 37.468,
-    "kernelCpuSeconds": 5.265,
-    "cpuConsumptionPercent": 23.2245,
-    "userCpuConsumptionPercent": 20.363,
-    "kernelCpuConsumptionPercent": 2.86141,
-    "fsActivity": {
-      "reads": 0,
-      "writes": 0
-    }
-  },
-  "libuv": [
-  ],
-  "workers": [
-  ],
-  "environmentVariables": {
-    "ALLUSERSPROFILE": "C:\\ProgramData",
-    "APPDATA": "C:\\Users\\Alexa\\AppData\\Roaming",
-    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
-    "ChocolateyLastPathUpdate": "134013933618305367",
-    "ChocolateyToolsLocation": "C:\\tools",
-    "CommonProgramFiles": "C:\\Program Files\\Common Files",
-    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
-    "CommonProgramW6432": "C:\\Program Files\\Common Files",
-    "COMPUTERNAME": "ADMINBOT",
-    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
-    "COPILOT_CLI_BINARY_VERSION": "1.0.86",
-    "COPILOT_CLI_RESOLVED_DIST_DIR": "C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86",
-    "COPILOT_LOADER_PID": "1940",
-    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
-    "HERMES_GIT_BASH_PATH": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "HERMES_HOME": "C:\\Users\\Alexa\\AppData\\Local\\hermes",
-    "HOMEDRIVE": "C:",
-    "HOMEPATH": "\\Users\\Alexa",
-    "LOCALAPPDATA": "C:\\Users\\Alexa\\AppData\\Local",
-    "LOGONSERVER": "\\\\ADMINBOT",
-    "NoDefaultCurrentDirectoryInExePath": "1",
-    "NODE_ENV": "production",
-    "NUMBER_OF_PROCESSORS": "8",
-    "NVM_HOME": "C:\\Users\\Alexa\\AppData\\Local\\nvm",
-    "NVM_SYMLINK": "C:\\nvm4w\\nodejs",
-    "OMO_DISABLE_POSTHOG": "1",
-    "OMO_SEND_ANONYMOUS_TELEMETRY": "0",
-    "OneDrive": "C:\\Users\\Alexa\\OneDrive",
-    "OPENCODE_DISABLE_AUTOUPDATE": "true",
-    "OPENCODE_DISABLE_EMBEDDED_WEB_UI": "true",
-    "OPENCODE_DISABLE_SHARE": "true",
-    "OPENCODE_PORT": "4096",
-    "OS": "Windows_NT",
-    "Path": "C:\\Users\\Alexa\\.bun\\bin;C:\\Program Files\\PowerShell\\7;C:\\nvm4w\\nodejs;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links;C:\\Program Files\\PowerShell\\7;C:\\Python313\\Scripts\\;C:\\Python313\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\drivers\\chromedriver;C:\\Users\\Alexa\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Program Files\\dotnet\\;C:\\Users\\Alexa\\.opencode\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\WezTerm;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\Tailscale\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\GitHub CLI\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Python\\Python314\\;C:\\Users\\Alexa\\AppData\\Local\\hermes\\bin;C:\\Users\\Alexa\\.local\\bin;C:\\Users\\Alexa\\AppData\\Local\\pnpm;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Alexa\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links;C:\\Program Files\\PostgreSQL\\18\\bin;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Ollama;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\\Users\\Alexa\\.lmstudio\\bin;C:\\Users\\Alexa\\AppData\\Local\\JetBrains\\Toolbox\\scripts;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\GitHub.Copilot.Prerelease_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\\Users\\Alexa\\.opencode\\bin;C:\\Users\\Alexa\\.bun\\bin;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\arndawg.tmux-windows_Microsoft.Winget.Source_8wekyb3d8bbwe;c:\\users\\alexa\\appdata\\roaming\\python\\python314\\scripts;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\max-sixty.worktrunk_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\\Users\\Alexa\\.bun\\bin\\opencode.exe;C:\\Users\\Alexa\\.mindstudio\\bin;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Cua\\cua-driver\\bin;C:\\Users\\Alexa\\AppData\\Local\\Programs\\WezTerm;C:\\Users\\Alexa\\go\\bin;C:\\Program Files\\Go\\bin;C:\\Program Files\\Erlang OTP\\bin;C:\\Users\\Alexa\\AppData\\Local\\PowerToys\\DSCModules\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\bin;C:\\Users\\Alexa\\AppData\\Local\\cursor-agent",
-    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
-    "PNPM_HOME": "C:\\Users\\Alexa\\AppData\\Local\\pnpm",
-    "POWERSHELL_DISTRIBUTION_CHANNEL": "MSI:Windows 10 Pro",
-    "PROCESSOR_ARCHITECTURE": "AMD64",
-    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
-    "PROCESSOR_LEVEL": "6",
-    "PROCESSOR_REVISION": "8e0c",
-    "ProgramData": "C:\\ProgramData",
-    "ProgramFiles": "C:\\Program Files",
-    "ProgramFiles(x86)": "C:\\Program Files (x86)",
-    "ProgramW6432": "C:\\Program Files",
-    "PSModulePath": "C:\\Users\\Alexa\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
-    "PUBLIC": "C:\\Users\\Public",
-    "SESSIONNAME": "Console",
-    "SystemDrive": "C:",
-    "SystemRoot": "C:\\WINDOWS",
-    "TEMP": "C:\\Users\\Alexa\\AppData\\Local\\Temp",
-    "TMP": "C:\\Users\\Alexa\\AppData\\Local\\Temp",
-    "USERDOMAIN": "ADMINBOT",
-    "USERDOMAIN_ROAMINGPROFILE": "ADMINBOT",
-    "USERNAME": "Alexa",
-    "USERPROFILE": "C:\\Users\\Alexa",
-    "windir": "C:\\WINDOWS",
-    "WSLENV": "WT_SESSION:WT_PROFILE_ID:",
-    "WT_PROFILE_ID": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "WT_SESSION": "6ac3e421-778f-4b7c-8487-485f991d6687",
-    "ZES_ENABLE_SYSMAN": "1"
-  },
-  "sharedObjects": [
-    "C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links\\copilot.exe",
-    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
-    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
-    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
-    "C:\\WINDOWS\\System32\\CRYPT32.dll",
-    "C:\\WINDOWS\\System32\\ucrtbase.dll",
-    "C:\\WINDOWS\\System32\\WS2_32.dll",
-    "C:\\WINDOWS\\System32\\RPCRT4.dll",
-    "C:\\WINDOWS\\System32\\USER32.dll",
-    "C:\\WINDOWS\\System32\\win32u.dll",
-    "C:\\WINDOWS\\System32\\GDI32.dll",
-    "C:\\WINDOWS\\System32\\gdi32full.dll",
-    "C:\\WINDOWS\\System32\\msvcp_win.dll",
-    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
-    "C:\\WINDOWS\\System32\\msvcrt.dll",
-    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
-    "C:\\WINDOWS\\System32\\sechost.dll",
-    "C:\\WINDOWS\\System32\\combase.dll",
-    "C:\\WINDOWS\\System32\\SHELL32.dll",
-    "C:\\WINDOWS\\System32\\OLEAUT32.dll",
-    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
-    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
-    "C:\\WINDOWS\\System32\\ole32.dll",
-    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
-    "C:\\WINDOWS\\SYSTEM32\\dbgcore.DLL",
-    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
-    "C:\\WINDOWS\\System32\\IMM32.DLL",
-    "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
-    "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
-    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
-    "C:\\WINDOWS\\system32\\uxtheme.dll",
-    "C:\\WINDOWS\\system32\\mswsock.dll",
-    "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll",
-    "C:\\WINDOWS\\system32\\rsaenh.dll",
-    "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
-    "\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\cli-native.node",
-    "\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\runtime.node",
-    "C:\\WINDOWS\\System32\\psapi.dll",
-    "C:\\WINDOWS\\System32\\wintrust.dll",
-    "C:\\WINDOWS\\SYSTEM32\\ncrypt.dll",
-    "C:\\WINDOWS\\SYSTEM32\\secur32.dll",
-    "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
-    "C:\\WINDOWS\\SYSTEM32\\tdh.dll",
-    "C:\\WINDOWS\\SYSTEM32\\SSPICLI.DLL",
-    "C:\\WINDOWS\\SYSTEM32\\NTASN1.dll",
-    "C:\\WINDOWS\\SYSTEM32\\MSASN1.dll",
-    "\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\msal-node-runtime.node",
-    "\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\msalruntime.dll",
-    "C:\\WINDOWS\\SYSTEM32\\WININET.dll",
-    "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll",
-    "C:\\WINDOWS\\System32\\SHCORE.dll",
-    "C:\\WINDOWS\\System32\\shlwapi.dll",
-    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
-    "C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll",
-    "C:\\WINDOWS\\System32\\NSI.dll",
-    "C:\\Program Files\\Bonjour\\mdnsNSP.dll",
-    "C:\\Windows\\System32\\rasadhlp.dll",
-    "C:\\WINDOWS\\System32\\fwpuclnt.dll",
-    "C:\\WINDOWS\\SYSTEM32\\processmodel.dll",
-    "C:\\WINDOWS\\SYSTEM32\\FLTLIB.DLL",
-    "C:\\WINDOWS\\SYSTEM32\\MPR.dll",
-    "C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
-    "C:\\WINDOWS\\SYSTEM32\\gpapi.dll",
-    "C:\\Windows\\System32\\cryptnet.dll",
-    "C:\\WINDOWS\\SYSTEM32\\profapi.dll",
-    "C:\\WINDOWS\\SYSTEM32\\WINNSI.DLL",
-    "C:\\WINDOWS\\SYSTEM32\\CldApi.dll",
-    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
-    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL"
-  ]
+	"header": {
+		"reportVersion": 5,
+		"event": "Allocation failed - JavaScript heap out of memory",
+		"trigger": "OOMError",
+		"filename": "report.20260919.215019.1940.0.001.json",
+		"dumpEventTime": "2026-09-19T21:50:19Z",
+		"dumpEventTimeStamp": "1789851019687",
+		"processId": 1940,
+		"threadId": null,
+		"cwd": "C:\\Users\\Alexa\\Desktop\\SandBox",
+		"commandLine": [
+			"C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links\\copilot.exe",
+			"--no-warnings",
+			"--report-on-fatalerror",
+			"--optimize-for-size",
+			"--expose-gc",
+			"--no-maglev",
+			"--no-sparkplug",
+			"C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links\\copilot.exe"
+		],
+		"nodejsVersion": "v24.20.0",
+		"wordSize": 64,
+		"arch": "x64",
+		"platform": "win32",
+		"componentVersions": {
+			"acorn": "8.18.0",
+			"ada": "4.0.0",
+			"amaro": "1.1.11",
+			"ares": "1.34.8",
+			"brotli": "1.2.0",
+			"cldr": "48.0",
+			"icu": "78.3",
+			"llhttp": "9.4.3",
+			"merve": "1.2.2",
+			"modules": "137",
+			"napi": "10",
+			"nbytes": "0.1.4",
+			"ncrypto": "0.0.1",
+			"nghttp2": "1.70.0",
+			"nghttp3": "",
+			"ngtcp2": "",
+			"node": "24.20.0",
+			"openssl": "3.5.7",
+			"simdjson": "4.6.6",
+			"simdutf": "6.4.0",
+			"sqlite": "3.53.4",
+			"tz": "2026c",
+			"undici": "7.29.0",
+			"unicode": "17.0",
+			"uv": "1.52.1",
+			"uvwasi": "0.0.23",
+			"v8": "13.6.233.17-node.53",
+			"zlib": "1.3.2.1-motley-42c2f19",
+			"zstd": "1.5.7"
+		},
+		"release": {
+			"name": "node",
+			"lts": "Krypton",
+			"headersUrl": "https://nodejs.org/download/release/v24.20.0/node-v24.20.0-headers.tar.gz",
+			"sourceUrl": "https://nodejs.org/download/release/v24.20.0/node-v24.20.0.tar.gz",
+			"libUrl": "https://nodejs.org/download/release/v24.20.0/win-x64/node.lib"
+		},
+		"osName": "Windows_NT",
+		"osRelease": "10.0.26200",
+		"osVersion": "Windows 11 Pro",
+		"osMachine": "x86_64",
+		"cpus": [
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 4019609,
+				"nice": 0,
+				"sys": 5624218,
+				"idle": 22413718,
+				"irq": 508375
+			},
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 3336015,
+				"nice": 0,
+				"sys": 3905125,
+				"idle": 24816312,
+				"irq": 126125
+			},
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 5262765,
+				"nice": 0,
+				"sys": 5428093,
+				"idle": 21366593,
+				"irq": 183484
+			},
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 3719375,
+				"nice": 0,
+				"sys": 4079156,
+				"idle": 24258921,
+				"irq": 128375
+			},
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 4214562,
+				"nice": 0,
+				"sys": 5627781,
+				"idle": 22215109,
+				"irq": 169875
+			},
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 3152484,
+				"nice": 0,
+				"sys": 4916796,
+				"idle": 23988171,
+				"irq": 121109
+			},
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 4130734,
+				"nice": 0,
+				"sys": 5886328,
+				"idle": 22040390,
+				"irq": 152218
+			},
+			{
+				"model": "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz",
+				"speed": 2112,
+				"user": 3616093,
+				"nice": 0,
+				"sys": 5820765,
+				"idle": 22620593,
+				"irq": 115703
+			}
+		],
+		"host": "adminbot"
+	},
+	"javascriptStack": {
+		"message": "No stack.",
+		"stack": ["Unavailable."],
+		"errorProperties": {}
+	},
+	"javascriptHeap": {
+		"totalMemory": 59150336,
+		"executableMemory": 2723840,
+		"totalCommittedMemory": 59150336,
+		"availableMemory": 2101903936,
+		"totalGlobalHandlesMemory": 118856,
+		"usedGlobalHandlesMemory": 94208,
+		"usedMemory": 49617104,
+		"memoryLimit": 2150629376,
+		"mallocedMemory": 1073200,
+		"externalMemory": 29145449,
+		"peakMallocedMemory": 15261720,
+		"nativeContextCount": 2,
+		"detachedContextCount": 0,
+		"doesZapGarbage": 0,
+		"heapSpaces": {
+			"read_only_space": {
+				"memorySize": 0,
+				"committedMemory": 0,
+				"capacity": 0,
+				"used": 0,
+				"available": 0
+			},
+			"new_space": {
+				"memorySize": 1048576,
+				"committedMemory": 1048576,
+				"capacity": 1048512,
+				"used": 1048512,
+				"available": 0
+			},
+			"old_space": {
+				"memorySize": 49967104,
+				"committedMemory": 49967104,
+				"capacity": 49839648,
+				"used": 41603128,
+				"available": 8236520
+			},
+			"code_space": {
+				"memorySize": 2097152,
+				"committedMemory": 2097152,
+				"capacity": 2096896,
+				"used": 1687552,
+				"available": 409344
+			},
+			"shared_space": {
+				"memorySize": 0,
+				"committedMemory": 0,
+				"capacity": 0,
+				"used": 0,
+				"available": 0
+			},
+			"trusted_space": {
+				"memorySize": 3792896,
+				"committedMemory": 3792896,
+				"capacity": 3781432,
+				"used": 3050976,
+				"available": 730456
+			},
+			"shared_trusted_space": {
+				"memorySize": 0,
+				"committedMemory": 0,
+				"capacity": 0,
+				"used": 0,
+				"available": 0
+			},
+			"new_large_object_space": {
+				"memorySize": 0,
+				"committedMemory": 0,
+				"capacity": 1048576,
+				"used": 0,
+				"available": 1048576
+			},
+			"large_object_space": {
+				"memorySize": 1216512,
+				"committedMemory": 1216512,
+				"capacity": 1203912,
+				"used": 1203912,
+				"available": 0
+			},
+			"code_large_object_space": {
+				"memorySize": 626688,
+				"committedMemory": 626688,
+				"capacity": 623744,
+				"used": 623744,
+				"available": 0
+			},
+			"shared_large_object_space": {
+				"memorySize": 0,
+				"committedMemory": 0,
+				"capacity": 0,
+				"used": 0,
+				"available": 0
+			},
+			"shared_trusted_large_object_space": {
+				"memorySize": 0,
+				"committedMemory": 0,
+				"capacity": 0,
+				"used": 0,
+				"available": 0
+			},
+			"trusted_large_object_space": {
+				"memorySize": 401408,
+				"committedMemory": 401408,
+				"capacity": 399280,
+				"used": 399280,
+				"available": 0
+			}
+		}
+	},
+	"nativeStack": [
+		{
+			"pc": "0x00007ff6f8e59fb7",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f8e5645c",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f8e5c328",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f8f31d57",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f7b43617",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f7943e57",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f78dc44b",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f78b3e7e",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f79468f2",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f79458a7",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f79567e2",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f795630b",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f925492d",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f7941920",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f795c17a",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f7968616",
+			"symbol": ""
+		},
+		{
+			"pc": "0x00007ff6f7539277",
+			"symbol": ""
+		},
+		{
+			"pc": "0x000001f937e775fa",
+			"symbol": ""
+		}
+	],
+	"resourceUsage": {
+		"free_memory": 919949312,
+		"total_memory": 8428695552,
+		"rss": 295116800,
+		"available_memory": 919949312,
+		"userCpuSeconds": 103.859,
+		"kernelCpuSeconds": 11.968,
+		"cpuConsumptionPercent": 62.9495,
+		"userCpuConsumptionPercent": 56.4451,
+		"kernelCpuConsumptionPercent": 6.50435,
+		"maxRss": 300789760,
+		"pageFaults": {
+			"IORequired": 487174,
+			"IONotRequired": 0
+		},
+		"fsActivity": {
+			"reads": 2656,
+			"writes": 115
+		}
+	},
+	"uvthreadResourceUsage": {
+		"userCpuSeconds": 37.468,
+		"kernelCpuSeconds": 5.265,
+		"cpuConsumptionPercent": 23.2245,
+		"userCpuConsumptionPercent": 20.363,
+		"kernelCpuConsumptionPercent": 2.86141,
+		"fsActivity": {
+			"reads": 0,
+			"writes": 0
+		}
+	},
+	"libuv": [],
+	"workers": [],
+	"environmentVariables": {
+		"ALLUSERSPROFILE": "C:\\ProgramData",
+		"APPDATA": "C:\\Users\\Alexa\\AppData\\Roaming",
+		"ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+		"ChocolateyLastPathUpdate": "134013933618305367",
+		"ChocolateyToolsLocation": "C:\\tools",
+		"CommonProgramFiles": "C:\\Program Files\\Common Files",
+		"CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+		"CommonProgramW6432": "C:\\Program Files\\Common Files",
+		"COMPUTERNAME": "ADMINBOT",
+		"ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+		"COPILOT_CLI_BINARY_VERSION": "1.0.86",
+		"COPILOT_CLI_RESOLVED_DIST_DIR": "C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86",
+		"COPILOT_LOADER_PID": "1940",
+		"DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+		"HERMES_GIT_BASH_PATH": "C:\\Program Files\\Git\\bin\\bash.exe",
+		"HERMES_HOME": "C:\\Users\\Alexa\\AppData\\Local\\hermes",
+		"HOMEDRIVE": "C:",
+		"HOMEPATH": "\\Users\\Alexa",
+		"LOCALAPPDATA": "C:\\Users\\Alexa\\AppData\\Local",
+		"LOGONSERVER": "\\\\ADMINBOT",
+		"NoDefaultCurrentDirectoryInExePath": "1",
+		"NODE_ENV": "production",
+		"NUMBER_OF_PROCESSORS": "8",
+		"NVM_HOME": "C:\\Users\\Alexa\\AppData\\Local\\nvm",
+		"NVM_SYMLINK": "C:\\nvm4w\\nodejs",
+		"OMO_DISABLE_POSTHOG": "1",
+		"OMO_SEND_ANONYMOUS_TELEMETRY": "0",
+		"OneDrive": "C:\\Users\\Alexa\\OneDrive",
+		"OPENCODE_DISABLE_AUTOUPDATE": "true",
+		"OPENCODE_DISABLE_EMBEDDED_WEB_UI": "true",
+		"OPENCODE_DISABLE_SHARE": "true",
+		"OPENCODE_PORT": "4096",
+		"OS": "Windows_NT",
+		"Path": "C:\\Users\\Alexa\\.bun\\bin;C:\\Program Files\\PowerShell\\7;C:\\nvm4w\\nodejs;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links;C:\\Program Files\\PowerShell\\7;C:\\Python313\\Scripts\\;C:\\Python313\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\drivers\\chromedriver;C:\\Users\\Alexa\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Program Files\\dotnet\\;C:\\Users\\Alexa\\.opencode\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\WezTerm;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\Tailscale\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\GitHub CLI\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin;C:\\Python314\\Scripts\\;C:\\Python314\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Python\\Python314\\;C:\\Users\\Alexa\\AppData\\Local\\hermes\\bin;C:\\Users\\Alexa\\.local\\bin;C:\\Users\\Alexa\\AppData\\Local\\pnpm;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Alexa\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links;C:\\Program Files\\PostgreSQL\\18\\bin;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Ollama;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\\Users\\Alexa\\.lmstudio\\bin;C:\\Users\\Alexa\\AppData\\Local\\JetBrains\\Toolbox\\scripts;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\GitHub.Copilot.Prerelease_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\\Users\\Alexa\\.opencode\\bin;C:\\Users\\Alexa\\.bun\\bin;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\arndawg.tmux-windows_Microsoft.Winget.Source_8wekyb3d8bbwe;c:\\users\\alexa\\appdata\\roaming\\python\\python314\\scripts;C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Packages\\max-sixty.worktrunk_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\\Users\\Alexa\\.bun\\bin\\opencode.exe;C:\\Users\\Alexa\\.mindstudio\\bin;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Cua\\cua-driver\\bin;C:\\Users\\Alexa\\AppData\\Local\\Programs\\WezTerm;C:\\Users\\Alexa\\go\\bin;C:\\Program Files\\Go\\bin;C:\\Program Files\\Erlang OTP\\bin;C:\\Users\\Alexa\\AppData\\Local\\PowerToys\\DSCModules\\;C:\\Users\\Alexa\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\bin;C:\\Users\\Alexa\\AppData\\Local\\cursor-agent",
+		"PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+		"PNPM_HOME": "C:\\Users\\Alexa\\AppData\\Local\\pnpm",
+		"POWERSHELL_DISTRIBUTION_CHANNEL": "MSI:Windows 10 Pro",
+		"PROCESSOR_ARCHITECTURE": "AMD64",
+		"PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+		"PROCESSOR_LEVEL": "6",
+		"PROCESSOR_REVISION": "8e0c",
+		"ProgramData": "C:\\ProgramData",
+		"ProgramFiles": "C:\\Program Files",
+		"ProgramFiles(x86)": "C:\\Program Files (x86)",
+		"ProgramW6432": "C:\\Program Files",
+		"PSModulePath": "C:\\Users\\Alexa\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+		"PUBLIC": "C:\\Users\\Public",
+		"SESSIONNAME": "Console",
+		"SystemDrive": "C:",
+		"SystemRoot": "C:\\WINDOWS",
+		"TEMP": "C:\\Users\\Alexa\\AppData\\Local\\Temp",
+		"TMP": "C:\\Users\\Alexa\\AppData\\Local\\Temp",
+		"USERDOMAIN": "ADMINBOT",
+		"USERDOMAIN_ROAMINGPROFILE": "ADMINBOT",
+		"USERNAME": "Alexa",
+		"USERPROFILE": "C:\\Users\\Alexa",
+		"windir": "C:\\WINDOWS",
+		"WSLENV": "WT_SESSION:WT_PROFILE_ID:",
+		"WT_PROFILE_ID": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+		"WT_SESSION": "6ac3e421-778f-4b7c-8487-485f991d6687",
+		"ZES_ENABLE_SYSMAN": "1"
+	},
+	"sharedObjects": [
+		"C:\\Users\\Alexa\\AppData\\Local\\Microsoft\\WinGet\\Links\\copilot.exe",
+		"C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+		"C:\\WINDOWS\\System32\\KERNEL32.DLL",
+		"C:\\WINDOWS\\System32\\KERNELBASE.dll",
+		"C:\\WINDOWS\\System32\\CRYPT32.dll",
+		"C:\\WINDOWS\\System32\\ucrtbase.dll",
+		"C:\\WINDOWS\\System32\\WS2_32.dll",
+		"C:\\WINDOWS\\System32\\RPCRT4.dll",
+		"C:\\WINDOWS\\System32\\USER32.dll",
+		"C:\\WINDOWS\\System32\\win32u.dll",
+		"C:\\WINDOWS\\System32\\GDI32.dll",
+		"C:\\WINDOWS\\System32\\gdi32full.dll",
+		"C:\\WINDOWS\\System32\\msvcp_win.dll",
+		"C:\\WINDOWS\\System32\\ADVAPI32.dll",
+		"C:\\WINDOWS\\System32\\msvcrt.dll",
+		"C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+		"C:\\WINDOWS\\System32\\sechost.dll",
+		"C:\\WINDOWS\\System32\\combase.dll",
+		"C:\\WINDOWS\\System32\\SHELL32.dll",
+		"C:\\WINDOWS\\System32\\OLEAUT32.dll",
+		"C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+		"C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+		"C:\\WINDOWS\\System32\\ole32.dll",
+		"C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+		"C:\\WINDOWS\\SYSTEM32\\dbgcore.DLL",
+		"C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+		"C:\\WINDOWS\\System32\\IMM32.DLL",
+		"C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+		"C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+		"C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+		"C:\\WINDOWS\\system32\\uxtheme.dll",
+		"C:\\WINDOWS\\system32\\mswsock.dll",
+		"C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll",
+		"C:\\WINDOWS\\system32\\rsaenh.dll",
+		"C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+		"\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\cli-native.node",
+		"\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\runtime.node",
+		"C:\\WINDOWS\\System32\\psapi.dll",
+		"C:\\WINDOWS\\System32\\wintrust.dll",
+		"C:\\WINDOWS\\SYSTEM32\\ncrypt.dll",
+		"C:\\WINDOWS\\SYSTEM32\\secur32.dll",
+		"C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+		"C:\\WINDOWS\\SYSTEM32\\tdh.dll",
+		"C:\\WINDOWS\\SYSTEM32\\SSPICLI.DLL",
+		"C:\\WINDOWS\\SYSTEM32\\NTASN1.dll",
+		"C:\\WINDOWS\\SYSTEM32\\MSASN1.dll",
+		"\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\msal-node-runtime.node",
+		"\\\\?\\C:\\Users\\Alexa\\AppData\\Local\\copilot\\pkg\\win32-x64\\1.0.86\\prebuilds\\win32-x64\\msalruntime.dll",
+		"C:\\WINDOWS\\SYSTEM32\\WININET.dll",
+		"C:\\WINDOWS\\SYSTEM32\\windows.storage.dll",
+		"C:\\WINDOWS\\System32\\SHCORE.dll",
+		"C:\\WINDOWS\\System32\\shlwapi.dll",
+		"C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+		"C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll",
+		"C:\\WINDOWS\\System32\\NSI.dll",
+		"C:\\Program Files\\Bonjour\\mdnsNSP.dll",
+		"C:\\Windows\\System32\\rasadhlp.dll",
+		"C:\\WINDOWS\\System32\\fwpuclnt.dll",
+		"C:\\WINDOWS\\SYSTEM32\\processmodel.dll",
+		"C:\\WINDOWS\\SYSTEM32\\FLTLIB.DLL",
+		"C:\\WINDOWS\\SYSTEM32\\MPR.dll",
+		"C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
+		"C:\\WINDOWS\\SYSTEM32\\gpapi.dll",
+		"C:\\Windows\\System32\\cryptnet.dll",
+		"C:\\WINDOWS\\SYSTEM32\\profapi.dll",
+		"C:\\WINDOWS\\SYSTEM32\\WINNSI.DLL",
+		"C:\\WINDOWS\\SYSTEM32\\CldApi.dll",
+		"C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+		"C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL"
+	]
 }

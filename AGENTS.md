@@ -7,16 +7,16 @@ Subagent identity: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-0
 
 ## Verified Honcho Peer Card
 
-| Field             | Verified Value                                      |
-| ----------------- | --------------------------------------------------- |
-| User              | Alexa                                               |
-| Active profile(s) | adminbot + patient-tutor                            |
-| Workspace         | `~/Desktop/SandBox`                                 |
-| Authorization     | FULL                                                |
+| Field             | Verified Value                                 |
+| ----------------- | ---------------------------------------------- |
+| User              | Alexa                                          |
+| Active profile(s) | adminbot + patient-tutor                       |
+| Workspace         | `~/Desktop/SandBox`                            |
+| Authorization     | FULL                                           |
 | Model (primary)   | `deepseek/deepseek-v4-flash-0731` (openrouter) |
-| Fallback          | `deepseek-v4-flash-free`                            |
-| Workspace branch  | clean-development (ahead 4 behind 0)                |
-| Repo              | rhixecompany/sandbox                                |
+| Fallback          | `deepseek-v4-flash-free`                       |
+| Workspace branch  | clean-development (ahead 4 behind 0)           |
+| Repo              | rhixecompany/sandbox                           |
 
 Preferences (DRY — reference, don't duplicate):
 
@@ -38,7 +38,7 @@ Preferences (DRY — reference, don't duplicate):
 | adminbot MISSING       | Preserved                                                               |
 | `.env` size (CWD)      | 5274 B (unchanged — protected)                                          |
 | `.env` size (hermes)   | 30504 B (unchanged — protected)                                         |
-| Profile routing        | 15 registered (live 2026-09-20); adminbot gap preserved                          |
+| Profile routing        | 15 registered (live 2026-09-20); adminbot gap preserved                 |
 | Subagent execution     | `deleg_d3d36082` COMPLETE (511.2s, 37 api_calls)                        |
 | Skill judgment gates   | specs-judge ~97 / plans-judge ~96 / prompts-judge ~98 / skill-judge ~97 |
 
@@ -79,13 +79,14 @@ bun run test                 # vitest run
 ## Agent Integration Contract
 
 All supported agents use the same source of truth:
-| Agent          | Adapter                                  | Required behavior                                                                                   |
-| -------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| GitHub Copilot | `.github/copilot-instructions.md`        | Read this file before repository-wide work; read the nearest subproject `AGENTS.md` before app work |
-| Hermes         | `.hermes.md`                             | Apply profile routing and Hermes-only overrides without duplicating workspace rules                 |
-| OpenCode       | `AGENTS.md` discovery                    | Use this file from the repository root; do not invent a second root prompt or config schema         |
-| Cursor Agent   | `.cursorrules` and `.cursor/rules/*.mdc` | Treat this file as canonical and use scoped rules when present                                      |
-— SandBox Agent Context
+
+| Agent                   | Adapter                                  | Required behavior                                                                                   |
+| ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| GitHub Copilot          | `.github/copilot-instructions.md`        | Read this file before repository-wide work; read the nearest subproject `AGENTS.md` before app work |
+| Hermes                  | `.hermes.md`                             | Apply profile routing and Hermes-only overrides without duplicating workspace rules                 |
+| OpenCode                | `AGENTS.md` discovery                    | Use this file from the repository root; do not invent a second root prompt or config schema         |
+| Cursor Agent            | `.cursorrules` and `.cursor/rules/*.mdc` | Treat this file as canonical and use scoped rules when present                                      |
+| — SandBox Agent Context |
 
 **Canonical workspace context**: this file. Tool-specific adapters must defer here rather than copy rules.
 **Workspace**: `C:\Users\Alexa\Desktop\SandBox`. **Repo**: `rhixecompany/sandbox`. Polyglot monorepo — 17+ subprojects (`projects/*`), each autonomous.
@@ -94,16 +95,16 @@ Subagent identity: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-0
 
 ## Verified Honcho Peer Card
 
-| Field             | Verified Value                                      |
-| ----------------- | --------------------------------------------------- |
-| User              | Alexa                                               |
-| Active profile(s) | adminbot + patient-tutor                            |
-| Workspace         | `~/Desktop/SandBox`                                 |
-| Authorization     | FULL                                                |
+| Field             | Verified Value                                 |
+| ----------------- | ---------------------------------------------- |
+| User              | Alexa                                          |
+| Active profile(s) | adminbot + patient-tutor                       |
+| Workspace         | `~/Desktop/SandBox`                            |
+| Authorization     | FULL                                           |
 | Model (primary)   | `deepseek/deepseek-v4-flash-0731` (openrouter) |
-| Fallback          | `deepseek-v4-flash-free`                            |
-| Workspace branch  | clean-development (ahead 4 behind 0)                |
-| Repo              | rhixecompany/sandbox                                |
+| Fallback          | `deepseek-v4-flash-free`                       |
+| Workspace branch  | clean-development (ahead 4 behind 0)           |
+| Repo              | rhixecompany/sandbox                           |
 
 Preferences (DRY — reference, don't duplicate):
 
@@ -125,7 +126,7 @@ Preferences (DRY — reference, don't duplicate):
 | adminbot MISSING       | Preserved                                                               |
 | `.env` size (CWD)      | 5274 B (unchanged — protected)                                          |
 | `.env` size (hermes)   | 30504 B (unchanged — protected)                                         |
-| Profile routing        | 15 registered (live 2026-09-20); adminbot gap preserved                          |
+| Profile routing        | 15 registered (live 2026-09-20); adminbot gap preserved                 |
 | Subagent execution     | `deleg_d3d36082` COMPLETE (511.2s, 37 api_calls)                        |
 | Skill judgment gates   | specs-judge ~97 / plans-judge ~96 / prompts-judge ~98 / skill-judge ~97 |
 
@@ -166,29 +167,30 @@ bun run test                 # vitest run
 ## Agent Integration Contract
 
 All supported agents use the same source of truth:
-| Agent          | Adapter                                  | Required behavior                                                                                   |
-| -------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| GitHub Copilot | `.github/copilot-instructions.md`        | Read this file before repository-wide work; read the nearest subproject `AGENTS.md` before app work |
-| Hermes         | `.hermes.md`                             | Apply profile routing and Hermes-only overrides without duplicating workspace rules                 |
-| OpenCode       | `AGENTS.md` discovery                    | Use this file from the repository root; do not invent a second root prompt or config schema         |
-| Cursor Agent   | `.cursorrules` and `.cursor/rules/*.mdc` | Treat this file as canonical and use scoped rules when present                                      |
-workspace context**: this file. Tool-specific adapters must defer here rather than copy rules.
-**Workspace**: `C:\Users\Alexa\Desktop\SandBox`. **Repo**: `rhixecompany/sandbox`. Polyglot monorepo — 17+ subprojects (`projects/*`), each autonomous.
+
+| Agent                                                                                                                                                   | Adapter                                  | Required behavior                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| GitHub Copilot                                                                                                                                          | `.github/copilot-instructions.md`        | Read this file before repository-wide work; read the nearest subproject `AGENTS.md` before app work |
+| Hermes                                                                                                                                                  | `.hermes.md`                             | Apply profile routing and Hermes-only overrides without duplicating workspace rules                 |
+| OpenCode                                                                                                                                                | `AGENTS.md` discovery                    | Use this file from the repository root; do not invent a second root prompt or config schema         |
+| Cursor Agent                                                                                                                                            | `.cursorrules` and `.cursor/rules/*.mdc` | Treat this file as canonical and use scoped rules when present                                      |
+| workspace context**: this file. Tool-specific adapters must defer here rather than copy rules.                                                          |
+| **Workspace**: `C:\Users\Alexa\Desktop\SandBox`. **Repo**: `rhixecompany/sandbox`. Polyglot monorepo — 17+ subprojects (`projects/*`), each autonomous. |
 
 Subagent identity: ops/adminbot. Plan: `./plans/multi-goal-execution-plan-2026-09-14.md`. Branch: `clean-development`.
 
 ## Verified Honcho Peer Card
 
-| Field             | Verified Value                                      |
-| ----------------- | --------------------------------------------------- |
-| User              | Alexa                                               |
-| Active profile(s) | adminbot + patient-tutor                            |
-| Workspace         | `~/Desktop/SandBox`                                 |
-| Authorization     | FULL                                                |
+| Field             | Verified Value                                 |
+| ----------------- | ---------------------------------------------- |
+| User              | Alexa                                          |
+| Active profile(s) | adminbot + patient-tutor                       |
+| Workspace         | `~/Desktop/SandBox`                            |
+| Authorization     | FULL                                           |
 | Model (primary)   | `deepseek/deepseek-v4-flash-0731` (openrouter) |
-| Fallback          | `deepseek-v4-flash-free`                            |
-| Workspace branch  | clean-development (ahead 4 behind 0)                |
-| Repo              | rhixecompany/sandbox                                |
+| Fallback          | `deepseek-v4-flash-free`                       |
+| Workspace branch  | clean-development (ahead 4 behind 0)           |
+| Repo              | rhixecompany/sandbox                           |
 
 Preferences (DRY — reference, don't duplicate):
 
@@ -210,7 +212,7 @@ Preferences (DRY — reference, don't duplicate):
 | adminbot MISSING       | Preserved                                                               |
 | `.env` size (CWD)      | 5274 B (unchanged — protected)                                          |
 | `.env` size (hermes)   | 30504 B (unchanged — protected)                                         |
-| Profile routing        | 15 registered (live 2026-09-20); adminbot gap preserved                          |
+| Profile routing        | 15 registered (live 2026-09-20); adminbot gap preserved                 |
 | Subagent execution     | `deleg_d3d36082` COMPLETE (511.2s, 37 api_calls)                        |
 | Skill judgment gates   | specs-judge ~97 / plans-judge ~96 / prompts-judge ~98 / skill-judge ~97 |
 
@@ -251,6 +253,7 @@ bun run test                 # vitest run
 ## Agent Integration Contract
 
 All supported agents use the same source of truth:
+
 | Agent          | Adapter                                  | Required behavior                                                                                   |
 | -------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | GitHub Copilot | `.github/copilot-instructions.md`        | Read this file before repository-wide work; read the nearest subproject `AGENTS.md` before app work |

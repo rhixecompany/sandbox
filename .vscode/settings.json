@@ -12,7 +12,7 @@
   "python-envs.alwaysUseUv": true,
   "python-envs.autoActivate": true,
   "python.analysis.typeCheckingMode": "basic",
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.defaultInterpreterPath": "C:\\Users\\Alexa\\myvenv\\Scripts\\python.exe",
   "ruff.lineLength": 120,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "[python]": {
@@ -23,10 +23,23 @@
     }
   },
   "markdownlint.config": {
-    "MD001": false, "MD003": false, "MD041": false,
-    "MD024": false, "MD025": false, "MD026": false, "MD028": false,
-    "MD031": true, "MD032": true, "MD033": false, "MD034": false,
-    "MD036": false, "MD040": false, "MD046": true,
-    "MD047": true, "MD048": true, "MD059": false, "MD060": false
+    "MD001": false,
+    "MD003": false,
+    "MD041": false,
+    "MD024": false,
+    "MD025": false,
+    "MD026": false,
+    "MD028": false,
+    "MD031": true,
+    "MD032": true,
+    "MD033": false,
+    "MD034": false,
+    "MD036": false,
+    "MD040": false,
+    "MD046": true,
+    "MD047": true,
+    "MD048": true,
+    "MD059": false,
+    "MD060": false
   }
 }

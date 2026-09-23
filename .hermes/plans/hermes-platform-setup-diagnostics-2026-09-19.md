@@ -38,129 +38,129 @@ Comprehensive plan to configure, diagnose, repair, and verify the Hermes Agent p
 
 - **GOAL-001**: Enhance config.yaml and consolidate memory files
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-001 | Diff `$HERMES_HOME/config.yaml` against backups; identify changes needed | | |
-| TASK-002 | Enhance config.yaml: add quick_commands for all scripts, sync settings | | |
-| TASK-003 | Verify config.yaml with `hermes config show` and `hermes config` CLI | | |
-| TASK-004 | Locate all SOUL.md, USER.md, MEMORY.md in repo root and Hermes home | | |
-| TASK-005 | Merge ./SOUL.md into $HERMES_HOME/SOUL.md; delete ./SOUL.md | | |
-| TASK-006 | Merge ./USER.md and ./MEMORY.md into $HERMES_HOME/memories/; delete originals | | |
-| TASK-007 | Merge $HERMES_HOME/USER.md and $HERMES_HOME/MEMORY.md into memories/; delete originals | | |
+| Task     | Description                                                                            | Completed | Date |
+| -------- | -------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-001 | Diff `$HERMES_HOME/config.yaml` against backups; identify changes needed               |           |      |
+| TASK-002 | Enhance config.yaml: add quick_commands for all scripts, sync settings                 |           |      |
+| TASK-003 | Verify config.yaml with `hermes config show` and `hermes config` CLI                   |           |      |
+| TASK-004 | Locate all SOUL.md, USER.md, MEMORY.md in repo root and Hermes home                    |           |      |
+| TASK-005 | Merge ./SOUL.md into $HERMES_HOME/SOUL.md; delete ./SOUL.md                            |           |      |
+| TASK-006 | Merge ./USER.md and ./MEMORY.md into $HERMES_HOME/memories/; delete originals          |           |      |
+| TASK-007 | Merge $HERMES_HOME/USER.md and $HERMES_HOME/MEMORY.md into memories/; delete originals |           |      |
 
 ### Implementation Phase 2: Skills Creation
 
 - **GOAL-002**: Create writing-{spec|plan|prompt} skills
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-010 | Create writing-spec skill: $HERMES_HOME/specs/<spec-filename>/ with SPEC.md, scripts/, verification/ | | |
-| TASK-011 | Create writing-plan skill: $HERMES_HOME/plans/<spec-filename>/ with rules, steps, goal, phases, tasks, gates | | |
-| TASK-012 | Create writing-prompt skill: .github/prompts/<category>/<trigger>/ with prompt.md, templates/, scripts/, verification/ | | |
-| TASK-013 | Verify all three skills have valid content and folder structure | | |
+| Task     | Description                                                                                                            | Completed | Date |
+| -------- | ---------------------------------------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-010 | Create writing-spec skill: $HERMES_HOME/specs/<spec-filename>/ with SPEC.md, scripts/, verification/                   |           |      |
+| TASK-011 | Create writing-plan skill: $HERMES_HOME/plans/<spec-filename>/ with rules, steps, goal, phases, tasks, gates           |           |      |
+| TASK-012 | Create writing-prompt skill: .github/prompts/<category>/<trigger>/ with prompt.md, templates/, scripts/, verification/ |           |      |
+| TASK-013 | Verify all three skills have valid content and folder structure                                                        |           |      |
 
 ### Implementation Phase 3: Multi-File Protocol Update
 
 - **GOAL-003**: Update multi-file-change-protocol skill
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-020 | Read current multi-file-change-protocol SKILL.md | | |
-| TASK-021 | Add cross-references to: using-superpowers, brainstorming, user-communication-preferences, mcp-sequential-thinking, mcp-filesystem, mcp-ast-grep, mcp-memory, writing-clearly-and-concisely, subagent-driven-development, systematic-debugging, plan, plan-mode, plans-and-specs, implementation-{skill|specs|plans|prompts}, update-implementation-{skill|specs|plans|prompts}, create-implementation-{skill|specs|plans|prompts}, executing-{specs|plans|prompts}, {skill|specs|plans|prompts}-judge, writing-{spec|plan|prompt} | | |
-| TASK-022 | Verify updated skill loads correctly via skill_view | | |
+| Task     | Description                                                                                                                                                                                                                                                                                             | Completed | Date  |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ----- |
+| TASK-020 | Read current multi-file-change-protocol SKILL.md                                                                                                                                                                                                                                                        |           |       |
+| TASK-021 | Add cross-references to: using-superpowers, brainstorming, user-communication-preferences, mcp-sequential-thinking, mcp-filesystem, mcp-ast-grep, mcp-memory, writing-clearly-and-concisely, subagent-driven-development, systematic-debugging, plan, plan-mode, plans-and-specs, implementation-{skill | specs     | plans | prompts}, update-implementation-{skill | specs | plans | prompts}, create-implementation-{skill | specs | plans | prompts}, executing-{specs | plans | prompts}, {skill | specs | plans | prompts}-judge, writing-{spec | plan | prompt} |     |     |
+| TASK-022 | Verify updated skill loads correctly via skill_view                                                                                                                                                                                                                                                     |           |       |
 
 ### Implementation Phase 4: Diagnostics & Repair
 
 - **GOAL-004**: Run full Hermes diagnostics and fix all issues
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-030 | Execute `hermes doctor` in background; capture output | | |
-| TASK-031 | Execute `hermes doctor --fix` in background; capture output | | |
-| TASK-032 | Execute `hermes security audit` in background; capture output | | |
-| TASK-033 | Execute `hermes status` and `hermes insights` in background; capture output | | |
-| TASK-034 | Execute `hermes logs list` in background; capture output | | |
-| TASK-035 | Execute `hermes logs errors`, `hermes logs desktop`, `hermes logs gateway`, `hermes logs gui`, `hermes logs agent` in background; capture output | | |
-| TASK-036 | Execute `bun run check` in SandBox repo; capture output | | |
-| TASK-037 | Use `/systematic-debugging` to triage all diagnostic output; identify bugs, issues, warnings, errors | | |
-| TASK-038 | Debug, fix, verify all identified issues | | |
-| TASK-039 | Re-run diagnostics to confirm fixes (gate: hermes doctor exit 0, bun run check exit 0) | | |
+| Task     | Description                                                                                                                                      | Completed | Date |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ---- |
+| TASK-030 | Execute `hermes doctor` in background; capture output                                                                                            |           |      |
+| TASK-031 | Execute `hermes doctor --fix` in background; capture output                                                                                      |           |      |
+| TASK-032 | Execute `hermes security audit` in background; capture output                                                                                    |           |      |
+| TASK-033 | Execute `hermes status` and `hermes insights` in background; capture output                                                                      |           |      |
+| TASK-034 | Execute `hermes logs list` in background; capture output                                                                                         |           |      |
+| TASK-035 | Execute `hermes logs errors`, `hermes logs desktop`, `hermes logs gateway`, `hermes logs gui`, `hermes logs agent` in background; capture output |           |      |
+| TASK-036 | Execute `bun run check` in SandBox repo; capture output                                                                                          |           |      |
+| TASK-037 | Use `/systematic-debugging` to triage all diagnostic output; identify bugs, issues, warnings, errors                                             |           |      |
+| TASK-038 | Debug, fix, verify all identified issues                                                                                                         |           |      |
+| TASK-039 | Re-run diagnostics to confirm fixes (gate: hermes doctor exit 0, bun run check exit 0)                                                           |           |      |
 
 ### Implementation Phase 5: Plugins & Hooks
 
 - **GOAL-005**: Enable, debug, fix, verify all plugins and hooks
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-040 | List all Hermes plugins at $HERMES_HOME/plugins/ | | |
-| TASK-041 | For each plugin: enable, debug, fix, test, verify | | |
-| TASK-042 | List all Hermes hooks at $HERMES_HOME/hooks/ | | |
-| TASK-043 | For each hook: enable, debug, fix, test, verify; ensure every possible event is handled | | |
-| TASK-044 | Update, enhance, debug, fix, verify each plugin and hook | | |
-| TASK-045 | List all desktop-plugins; enable, debug, fix, verify | | |
+| Task     | Description                                                                             | Completed | Date |
+| -------- | --------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-040 | List all Hermes plugins at $HERMES_HOME/plugins/                                        |           |      |
+| TASK-041 | For each plugin: enable, debug, fix, test, verify                                       |           |      |
+| TASK-042 | List all Hermes hooks at $HERMES_HOME/hooks/                                            |           |      |
+| TASK-043 | For each hook: enable, debug, fix, test, verify; ensure every possible event is handled |           |      |
+| TASK-044 | Update, enhance, debug, fix, verify each plugin and hook                                |           |      |
+| TASK-045 | List all desktop-plugins; enable, debug, fix, verify                                    |           |      |
 
 ### Implementation Phase 6: MCP Servers
 
 - **GOAL-006**: Configure, debug, fix, enable all MCP servers
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-050 | Read `.github/mcp.json` — list all configured MCP servers | | |
-| TASK-051 | Check Copilot, Codex, Hermes configs for MCP servers | | |
-| TASK-052 | For each MCP server: configure, debug, fix, test, enable | | |
-| TASK-053 | Ensure all MCP servers work with Hermes, Copilot, Codex, OpenCode | | |
-| TASK-054 | Create skills for any Hermes MCP servers without skills | | |
-| TASK-055 | Create plugins/hooks/scripts/skills to bypass rate-limit errors | | |
+| Task     | Description                                                       | Completed | Date |
+| -------- | ----------------------------------------------------------------- | --------- | ---- |
+| TASK-050 | Read `.github/mcp.json` — list all configured MCP servers         |           |      |
+| TASK-051 | Check Copilot, Codex, Hermes configs for MCP servers              |           |      |
+| TASK-052 | For each MCP server: configure, debug, fix, test, enable          |           |      |
+| TASK-053 | Ensure all MCP servers work with Hermes, Copilot, Codex, OpenCode |           |      |
+| TASK-054 | Create skills for any Hermes MCP servers without skills           |           |      |
+| TASK-055 | Create plugins/hooks/scripts/skills to bypass rate-limit errors   |           |      |
 
 ### Implementation Phase 7: Vscode/OpenCode/MCP Sync
 
 - **GOAL-007**: Debug, fix, sync all agent MCP servers
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-060 | Debug, fix all failed Vscode MCP servers | | |
-| TASK-061 | Debug, fix all failed OpenCode MCP servers | | |
-| TASK-062 | Ensure Hermes, Copilot, Codex MCP servers synced and working | | |
-| TASK-063 | Sync hooks, skills, scripts, .env, prompts, plugins, config.yaml from Hermes root into repo | | |
-| TASK-064 | Sync Hermes default profile configs with each Hermes profile | | |
+| Task     | Description                                                                                 | Completed | Date |
+| -------- | ------------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-060 | Debug, fix all failed Vscode MCP servers                                                    |           |      |
+| TASK-061 | Debug, fix all failed OpenCode MCP servers                                                  |           |      |
+| TASK-062 | Ensure Hermes, Copilot, Codex MCP servers synced and working                                |           |      |
+| TASK-063 | Sync hooks, skills, scripts, .env, prompts, plugins, config.yaml from Hermes root into repo |           |      |
+| TASK-064 | Sync Hermes default profile configs with each Hermes profile                                |           |      |
 
 ### Implementation Phase 8: Git Operations
 
 - **GOAL-008**: Git add/commit/push across all branches and subrepos
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-070 | `git add -A` on repo and all subrepos | | |
-| TASK-071 | `git commit -m "platform setup: config, plugins, hooks, MCP, diagnostics"` | | |
-| TASK-072 | `git push -u origin clean-development` in background without timeout | | |
-| TASK-073 | `/systematic-debugging` — fix blockers, retry until push succeeds | | |
-| TASK-074 | `git push -u origin development` in background without timeout | | |
-| TASK-075 | `git push -u origin production` in background without timeout | | |
-| TASK-076 | Verify all pushes succeeded on repo and all subrepos | | |
+| Task     | Description                                                                | Completed | Date |
+| -------- | -------------------------------------------------------------------------- | --------- | ---- |
+| TASK-070 | `git add -A` on repo and all subrepos                                      |           |      |
+| TASK-071 | `git commit -m "platform setup: config, plugins, hooks, MCP, diagnostics"` |           |      |
+| TASK-072 | `git push -u origin clean-development` in background without timeout       |           |      |
+| TASK-073 | `/systematic-debugging` — fix blockers, retry until push succeeds          |           |      |
+| TASK-074 | `git push -u origin development` in background without timeout             |           |      |
+| TASK-075 | `git push -u origin production` in background without timeout              |           |      |
+| TASK-076 | Verify all pushes succeeded on repo and all subrepos                       |           |      |
 
 ### Implementation Phase 9: Scripts & Quick Commands
 
 - **GOAL-009**: Ensure all scripts have valid quick_commands
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-080 | List all scripts at $HERMES_HOME/scripts/ | | |
-| TASK-081 | For each script: verify it has a quick_command in config.yaml | | |
-| TASK-082 | Add missing quick_commands to config.yaml | | |
-| TASK-083 | Test each quick_command via `hermes <command>` | | |
-| TASK-084 | Update scripts-judge skill to validate quick_commands | | |
+| Task     | Description                                                   | Completed | Date |
+| -------- | ------------------------------------------------------------- | --------- | ---- |
+| TASK-080 | List all scripts at $HERMES_HOME/scripts/                     |           |      |
+| TASK-081 | For each script: verify it has a quick_command in config.yaml |           |      |
+| TASK-082 | Add missing quick_commands to config.yaml                     |           |      |
+| TASK-083 | Test each quick_command via `hermes <command>`                |           |      |
+| TASK-084 | Update scripts-judge skill to validate quick_commands         |           |      |
 
 ### Implementation Phase 10: Filesystem Cleanup
 
 - **GOAL-010**: Triage, dedupe, consolidate files
 
-| Task | Description | Completed | Date |
-|------|-------------|-----------|------|
-| TASK-090 | List all files in repo and Hermes root; provide summary of purpose | | |
-| TASK-091 | Identify duplicates between repo and Hermes root | | |
-| TASK-092 | Deduplicate, consolidate, delete duplicate files | | |
-| TASK-093 | Suggest cleanup plan for Docker images, builds, containers, volumes, models, MCP toolkit | | |
-| TASK-094 | Create cleanup spec, plan, scripts for Docker cleanup (if approved) | | |
+| Task     | Description                                                                              | Completed | Date |
+| -------- | ---------------------------------------------------------------------------------------- | --------- | ---- |
+| TASK-090 | List all files in repo and Hermes root; provide summary of purpose                       |           |      |
+| TASK-091 | Identify duplicates between repo and Hermes root                                         |           |      |
+| TASK-092 | Deduplicate, consolidate, delete duplicate files                                         |           |      |
+| TASK-093 | Suggest cleanup plan for Docker images, builds, containers, volumes, models, MCP toolkit |           |      |
+| TASK-094 | Create cleanup spec, plan, scripts for Docker cleanup (if approved)                      |           |      |
 
 ## 3. Alternatives
 

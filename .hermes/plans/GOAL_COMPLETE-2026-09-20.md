@@ -3,6 +3,7 @@
 Status: COMPLETE (user confirmed: 'Declare complete: pipeline verified; remaining uninstalled skills skipped; no further destructive actions').
 
 Verified artifacts (all exist, sizes verified, 0 synthetic):
+
 - `docs/scope/skill-cleanup.md`: 2770 B (expected 2770) ✅
 - `docs/scope/cleanup-docs-pipeline.md`: 1702 B (expected 1702) ✅
 - `docs/specs/skill-cleanup.md`: 1149 B (expected 1149) ✅
@@ -15,6 +16,7 @@ Verified artifacts (all exist, sizes verified, 0 synthetic):
 - `docs/project-docs/index.md`: 713 B (expected 713) ✅
 
 Pipeline phases executed (sequential, with gates):
+
 - /scope: docs/scope/skill-cleanup.md + cleanup-docs-pipeline.md
 - /architect: docs/specs/skill-cleanup.md + cleanup-docs-pipeline.md
 - /audit: docs/specs/skill-cleanup-audit.md + audit evidence (timeout/stale preserved honestly)

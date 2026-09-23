@@ -90,3 +90,4 @@ hermes-profiles/
 
 # Local git-filter-repo replacement patterns (do not commit - contains redacted API key values)
 filter-replacements.txt
+.fallow/
