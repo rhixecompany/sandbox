@@ -1,0 +1,290 @@
+{
+  "session": {
+    "slug": "identity-refactor-20260923-174707",
+    "generated_at": "2026-09-23T18:05:32+01:00",
+    "plan": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\plans\\identity-refactor-20260923-174707.md",
+    "plan_bytes": 3428,
+    "regenerated_at": "2026-09-23T18:06:26+01:00"
+  },
+  "user_identity_real_verified": {
+    "name": "Alexander E Iseghohi",
+    "role": "Full Stack Developer",
+    "experience_years": 5,
+    "account": "Alexa (Windows account only — not personal identity)",
+    "profile": "default",
+    "auth": "FULL (destructive ops approved)"
+  },
+  "persona_framework": {
+    "explicitly_fictional": true,
+    "disclaimer": "Persona frameworks are FICTIONAL and do not represent real identities, credentials, or authorizations. Real user identity is preserved in the default profile.",
+    "titles_canonical_2026-09-23": true,
+    "mapping": {
+      "Marcus Chen (Security Auditor, 15y)": [
+        "adminbot",
+        "ops",
+        "qa",
+        "security"
+      ],
+      "Elena Vasquez (Architect, 22y)": [
+        "alexa",
+        "cto",
+        "skills"
+      ],
+      "Amara Okafor (Researcher, 18y)": [
+        "code-architect",
+        "patient-tutor",
+        "research-analyst",
+        "analyst",
+        "architect",
+        "tutor"
+      ],
+      "Sofia Lindqvist (UX Researcher, 14y)": [
+        "creative-director",
+        "designer",
+        "creative"
+      ],
+      "Priya Sharma (DevOps Engineer, 10y)": [
+        "dev"
+      ],
+      "Jamie Torres (Product Strategist, 12y)": [
+        "exec-assistant",
+        "pm"
+      ]
+    }
+  },
+  "profiles_rewritten": {
+    "count": 30,
+    "persona_profile": 19,
+    "user_profile_real": 1,
+    "tool_profile_functional": 10,
+    "files": {
+      "default": {
+        "SOUL.md_bytes": 2398,
+        "profile.yaml_bytes": 1019,
+        "profile_yaml_valid": true
+      },
+      "adminbot": {
+        "SOUL.md_bytes": 3802,
+        "profile.yaml_bytes": 1338,
+        "profile_yaml_valid": true
+      },
+      "ops": {
+        "SOUL.md_bytes": 3725,
+        "profile.yaml_bytes": 1308,
+        "profile_yaml_valid": true
+      },
+      "qa": {
+        "SOUL.md_bytes": 3782,
+        "profile.yaml_bytes": 1357,
+        "profile_yaml_valid": true
+      },
+      "security": {
+        "SOUL.md_bytes": 3794,
+        "profile.yaml_bytes": 1308,
+        "profile_yaml_valid": true
+      },
+      "alexa": {
+        "SOUL.md_bytes": 3726,
+        "profile.yaml_bytes": 1317,
+        "profile_yaml_valid": true
+      },
+      "cto": {
+        "SOUL.md_bytes": 3702,
+        "profile.yaml_bytes": 1326,
+        "profile_yaml_valid": true
+      },
+      "skills": {
+        "SOUL.md_bytes": 3689,
+        "profile.yaml_bytes": 1306,
+        "profile_yaml_valid": true
+      },
+      "code-architect": {
+        "SOUL.md_bytes": 4029,
+        "profile.yaml_bytes": 1532,
+        "profile_yaml_valid": true
+      },
+      "patient-tutor": {
+        "SOUL.md_bytes": 3860,
+        "profile.yaml_bytes": 1434,
+        "profile_yaml_valid": true
+      },
+      "research-analyst": {
+        "SOUL.md_bytes": 3847,
+        "profile.yaml_bytes": 1435,
+        "profile_yaml_valid": true
+      },
+      "analyst": {
+        "SOUL.md_bytes": 3931,
+        "profile.yaml_bytes": 1453,
+        "profile_yaml_valid": true
+      },
+      "architect": {
+        "SOUL.md_bytes": 3967,
+        "profile.yaml_bytes": 1470,
+        "profile_yaml_valid": true
+      },
+      "tutor": {
+        "SOUL.md_bytes": 3957,
+        "profile.yaml_bytes": 1458,
+        "profile_yaml_valid": true
+      },
+      "creative-director": {
+        "SOUL.md_bytes": 3759,
+        "profile.yaml_bytes": 1374,
+        "profile_yaml_valid": true
+      },
+      "designer": {
+        "SOUL.md_bytes": 3673,
+        "profile.yaml_bytes": 1336,
+        "profile_yaml_valid": true
+      },
+      "creative": {
+        "SOUL.md_bytes": 3837,
+        "profile.yaml_bytes": 1396,
+        "profile_yaml_valid": true
+      },
+      "dev": {
+        "SOUL.md_bytes": 3578,
+        "profile.yaml_bytes": 1243,
+        "profile_yaml_valid": true
+      },
+      "exec-assistant": {
+        "SOUL.md_bytes": 3632,
+        "profile.yaml_bytes": 1294,
+        "profile_yaml_valid": true
+      },
+      "pm": {
+        "SOUL.md_bytes": 3586,
+        "profile.yaml_bytes": 1300,
+        "profile_yaml_valid": true
+      },
+      "adr-generator": {
+        "SOUL.md_bytes": 1839,
+        "profile.yaml_bytes": 762,
+        "profile_yaml_valid": true
+      },
+      "agent-governance-reviewer": {
+        "SOUL.md_bytes": 1917,
+        "profile.yaml_bytes": 795,
+        "profile_yaml_valid": true
+      },
+      "context7": {
+        "SOUL.md_bytes": 1810,
+        "profile.yaml_bytes": 750,
+        "profile_yaml_valid": true
+      },
+      "csharp-mcp-expert": {
+        "SOUL.md_bytes": 1845,
+        "profile.yaml_bytes": 763,
+        "profile_yaml_valid": true
+      },
+      "custom-agent-foundry": {
+        "SOUL.md_bytes": 1838,
+        "profile.yaml_bytes": 758,
+        "profile_yaml_valid": true
+      },
+      "declarative-agents-architect": {
+        "SOUL.md_bytes": 1922,
+        "profile.yaml_bytes": 796,
+        "profile_yaml_valid": true
+      },
+      "implementation-plan": {
+        "SOUL.md_bytes": 1873,
+        "profile.yaml_bytes": 776,
+        "profile_yaml_valid": true
+      },
+      "prompt-engineer": {
+        "SOUL.md_bytes": 1809,
+        "profile.yaml_bytes": 746,
+        "profile_yaml_valid": true
+      },
+      "python-mcp-expert": {
+        "SOUL.md_bytes": 1833,
+        "profile.yaml_bytes": 757,
+        "profile_yaml_valid": true
+      },
+      "qa-subagent": {
+        "SOUL.md_bytes": 1811,
+        "profile.yaml_bytes": 749,
+        "profile_yaml_valid": true
+      }
+    }
+  },
+  "root_files": {
+    "SOUL.md_bytes": 12410,
+    "memories/USER.md_chars": 1805,
+    "memories/MEMORY.md_bytes": 5319,
+    "profile.yaml_patched": "description refreshed (real identity + fictional-persona separation), lint ok"
+  },
+  "rollback": {
+    "archive": "C:\\Users\\Alexa\\AppData\\Local\\hermes\\backups\\identity-rollback-20260923-174707.tar.gz",
+    "created_before_edits": true,
+    "restore": "tar -xzf identity-rollback-20260923-174707.tar.gz -C $HERMES_HOME"
+  },
+  "supermemory_identity_card_id": "aGUU3QWfGRQBHVxjb7EbmF",
+  "honcho": {
+    "sdk_module_present": true,
+    "mcp_connector_in_session": false,
+    "honor_endpoint_configured": "https://mcp.honcho.dev/ (config.yaml)",
+    "status": "PARTIAL — peer-card content recorded in Supermemory (id above) + root memories/USER.md; live Honcho peer update not possible this session (no connected client / no HONCHO_* env vars) — honest blocker",
+    "config_state": "config.yaml honcho MCP: enabled: false (disabled by config) — live peer update intentionally not bypassed; peer card recorded in Supermemory + memories/USER.md"
+  },
+  "blockers_honest": [
+    "mcp__memory tool_call channel failed JSON parse x4 (infra) — durable context captured via supermemory + plan + disk files; native memory ops staged pending user approval (memory.write_approval on)",
+    "Honcho live peer-card update unavailable (see honcho field)",
+    "workspace .env: MISSING (unchanged; size refs only for hermes .env)"
+  ],
+  "gates": {
+    "G1_rollback_archive": {
+      "pass": true,
+      "bytes": 24634570
+    },
+    "G2_profile_yaml_valid": {
+      "pass": true,
+      "valid": 31,
+      "of": 31,
+      "checked": 31
+    },
+    "G3_root_user_md_compact": {
+      "pass": true,
+      "chars": 1805,
+      "bytes": 1829
+    },
+    "G3b_memory_compact": {
+      "pass": true,
+      "bytes": 5319
+    },
+    "G4_fictional_flags": {
+      "pass": true,
+      "true_count": 19,
+      "false_count": 11
+    },
+    "G5_env_unchanged": {
+      "pass": true,
+      "bytes": 30501,
+      "pre_bytes": 30501,
+      "content_reads": 0,
+      "post_bytes": 30501
+    },
+    "G6_identity_preserved": {
+      "pass": true,
+      "default_profile_real_user": true
+    },
+    "G7_dry_no_dup_agents_claude": {
+      "pass": true,
+      "note": "AGENTS.md/CLAUDE.md not modified (git status checked separately)"
+    },
+    "G7b_prefs_ref_preserved": {
+      "pass": true,
+      "skill": "user-communication-preferences"
+    },
+    "G7c_routing_ref_preserved": {
+      "pass": true,
+      "owner": ".hermes.md + config.yaml (untouched)"
+    },
+    "G8_no_bak_created": {
+      "pass": true,
+      "note": "single tar.gz rollback archive instead of scattered .bak"
+    }
+  }
+}
