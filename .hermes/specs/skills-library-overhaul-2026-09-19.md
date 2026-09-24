@@ -7,6 +7,7 @@ date_created: 2026-09-19
 status: Approved
 goal: "Skills/ → 100% categorized, 0 duplicates, skill-judge ≥98 on every categorized skill"
 ---
+Plan: `.hermes/plans/skills-library-overhaul-2026-09-19.md` (verified 6446 B; live SKILL.md count 1285; categories 154; `local-skills.txt` 106340 B; scope `docs/scope/scope.md` 16527 B updated with link).
 
 # Skills Library Overhaul Spec (2026-09-19)
 

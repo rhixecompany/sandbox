@@ -86,3 +86,16 @@ Spec: `.hermes/specs/skills-library-overhaul-2026-09-19.md`. Approval: clarify 2
 - Phase 5 (residuals): re-scan → flat=0, no_category=0 → nothing left to delete; backup tarball secured before any destructive step.
 - Gate: 1267 → 1193 SKILL.md; 0 duplicates; 100% categorized (frontmatter + folder).
 - NEXT: Phase 6 judge-to-≥98 bootstrapping (baseline via scripts_unified/batch_skill_judge.py → batches) + Phase 7 report.
+
+---
+## VERIFIED LIVE INVENTORY UPDATE (2026-09-24 — before execution)
+
+Verified live state (not synthetic, not from memory):
+- `~/AppData/Local/Hermes/skills/` SKILL.md count: 1285 (`find ... -name SKILL.md`, verified 2026-09-24).
+- Skill categories: 154 (`ls ~/AppData/Local/Hermes/skills/`, verified 2026-09-24).
+- `local-skills.txt` (repo root): 106340 B (verified `ls -la`, content verified header + installed skills table).
+- `.hermes/specs/skills-library-overhaul-2026-09-19.md`: 5384 B (verified; updated with plan reference + verified live info).
+- `docs/scope/scope.md`: 16527 B (verified; updated with skills-library-overhaul cross-reference link).
+- Plan `.hermes/plans/skills-library-overhaul-2026-09-19.md`: 6446 B (verified; references spec at line 13; references `docs/user-guide/` scope artifacts).
+- No `.plugin-compat-report.json` dependency; no `.env` modifications required for skills overhaul execution.
+- All artifacts verified before `/executing-plans` execution: plan ↔ spec ↔ scope links verified.

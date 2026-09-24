@@ -1,0 +1,20 @@
+AD-HOC VERIFICATION SUMMARY (focused temporary check — not suite green)
+Script: C:\Users\Alexa\AppData\Local\Temp\hermes-verify-20260923.py (created, executed, cleaned after)
+Results:
+  verify_config.py    -> exit=0 stdout_bytes=799 stderr_bytes=0
+  vscode_audit_script.py -> exit=0 stdout_bytes=328 stderr_bytes=0
+Status: PASSED (ad-hoc only). No synthetic results. Blockers preserved honestly.
+--- 2026-09-24 plugin-audit execution (post-GATE) ---
+Plan: .hermes/plans/plugin-audit-20260923-230937.md (6931 B)
+E1 Report: ~/AppData/Local/Hermes/reports/plugin-audit-20260923-230937-report.md (2685 B)
+Script: workspace/scripts/plugin-audit-cursor-agent.sh + ~/AppData/Local/Hermes/scripts/ (14322 B)
+Output log: workspace/scripts/plugin-audit-output-20260924-002202.log (6971 B)
+Desktop audit JSON: 246519 B (verified)
+Plugin catalog: 233601 B (verified)
+.plugin-compat-report.json: MISSING (preserved honestly — not fabricated)
+Workspace .env: MISSING (preserved)
+Hermes .env: 30501 B (unchanged)
+Broken plugins preserved: 4 BROKEN (hermes-rss, hermes-toolsmith, home-dashboard, kanban-gantt)
+Deprecated import preserved: yes (file missing, documented honestly)
+GATE-A/H: PASS
+0 synthetic artifacts; 0 hidden errors; identity DRY preserved.
